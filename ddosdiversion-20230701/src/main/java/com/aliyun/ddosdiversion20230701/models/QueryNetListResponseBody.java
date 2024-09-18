@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class QueryNetListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>*   **200**: The request was successful.</p>
-     * <p>*   Other codes: The request failed.</p>
+     * <ul>
+     * <li>200: The request was successful.</li>
+     * <li>Other codes: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -21,12 +25,18 @@ public class QueryNetListResponseBody extends TeaModel {
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24B652B5-AEFF-3F03-9114-00D053C42277</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -69,9 +79,21 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyDataNetsDDoSDefenseCleanTh extends TeaModel {
+        /**
+         * <p>The traffic scrubbing threshold in Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mbps")
         public Integer mbps;
 
+        /**
+         * <p>The traffic scrubbing threshold in packets per second (pps)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Pps")
         public Integer pps;
 
@@ -99,6 +121,12 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyDataNetsDDoSDefenseDjPolicy extends TeaModel {
+        /**
+         * <p>The name of the mitigation policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_polilciy-xxx</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
@@ -118,6 +146,12 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyDataNetsDDoSDefenseHoleTh extends TeaModel {
+        /**
+         * <p>The blackhole filtering threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ThreshMbps")
         public Integer threshMbps;
 
@@ -137,12 +171,21 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyDataNetsDDoSDefense extends TeaModel {
+        /**
+         * <p>The configuration of traffic scrubbing.</p>
+         */
         @NameInMap("CleanTh")
         public QueryNetListResponseBodyDataNetsDDoSDefenseCleanTh cleanTh;
 
+        /**
+         * <p>The configuration of the mitigation policy.</p>
+         */
         @NameInMap("DjPolicy")
         public QueryNetListResponseBodyDataNetsDDoSDefenseDjPolicy djPolicy;
 
+        /**
+         * <p>The configuration of blackhole filtering.</p>
+         */
         @NameInMap("HoleTh")
         public QueryNetListResponseBodyDataNetsDDoSDefenseHoleTh holeTh;
 
@@ -178,9 +221,25 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyDataNetsDeclared extends TeaModel {
+        /**
+         * <p>Indicates whether the CIDR block is advertised. Valid values:</p>
+         * <ul>
+         * <li>0: The CIDR block is not advertised.</li>
+         * <li>1: The CIDR block is advertised.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Declared")
         public String declared;
 
+        /**
+         * <p>The region in which the CIDR block is advertised.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oe26</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -208,45 +267,139 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyDataNets extends TeaModel {
+        /**
+         * <p>The DDoS mitigation configuration of the CIDR block.</p>
+         */
         @NameInMap("DDoSDefense")
         public QueryNetListResponseBodyDataNetsDDoSDefense DDoSDefense;
 
+        /**
+         * <p>The advertising details.</p>
+         */
         @NameInMap("Declared")
         public java.util.List<QueryNetListResponseBodyDataNetsDeclared> declared;
 
+        /**
+         * <p>The advertising status of the CIDR block. Valid values:</p>
+         * <ul>
+         * <li>0: The CIDR block is not advertised.</li>
+         * <li>1: The CIDR block is advertised.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DeclaredState")
         public Integer declaredState;
 
+        /**
+         * <p>Indicates whether the forwarding configuration takes effect. Valid values:</p>
+         * <ul>
+         * <li>0: The forwarding configuration takes effect.</li>
+         * <li>1: The forwarding configuration does not take effect.</li>
+         * <li>-1: The forwarding configuration is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FwdEffect")
         public Long fwdEffect;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-23 00:00:00</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-24 00:00:00</p>
+         */
         @NameInMap("GmtModify")
         public String gmtModify;
 
+        /**
+         * <p>The scheduling mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The CIDR block of the anti-DDoS diversion instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
+         */
         @NameInMap("Net")
         public String net;
 
+        /**
+         * <p>Indicates whether the CIDR block needs to be extended. Valid values:</p>
+         * <ul>
+         * <li>0: The CIDR block needs to be extended.</li>
+         * <li>1: The CIDR block does not need to be extended.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NetExtend")
         public String netExtend;
 
+        /**
+         * <p>The primary CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/22</p>
+         */
         @NameInMap("NetMain")
-        public Long netMain;
+        public String netMain;
 
+        /**
+         * <p>The type of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        @NameInMap("Permit")
+        public Integer permit;
+
+        /**
+         * <p>The ID of the anti-DDoS diversion instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddos_diversion_public_cn-xxxxxxxxxxxxx</p>
+         */
         @NameInMap("SaleId")
         public String saleId;
 
+        /**
+         * <p>The reinjection type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_line</p>
+         */
         @NameInMap("UpstreamType")
         public String upstreamType;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177xxxxxxxxxxxxx</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -327,11 +480,11 @@ public class QueryNetListResponseBody extends TeaModel {
             return this.netExtend;
         }
 
-        public QueryNetListResponseBodyDataNets setNetMain(Long netMain) {
+        public QueryNetListResponseBodyDataNets setNetMain(String netMain) {
             this.netMain = netMain;
             return this;
         }
-        public Long getNetMain() {
+        public String getNetMain() {
             return this.netMain;
         }
 
@@ -341,6 +494,14 @@ public class QueryNetListResponseBody extends TeaModel {
         }
         public String getNetType() {
             return this.netType;
+        }
+
+        public QueryNetListResponseBodyDataNets setPermit(Integer permit) {
+            this.permit = permit;
+            return this;
+        }
+        public Integer getPermit() {
+            return this.permit;
         }
 
         public QueryNetListResponseBodyDataNets setSaleId(String saleId) {
@@ -370,15 +531,36 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyData extends TeaModel {
+        /**
+         * <p>The configuration of the CIDR block.</p>
+         */
         @NameInMap("Nets")
         public java.util.List<QueryNetListResponseBodyDataNets> nets;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Num")
         public Long num;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Long page;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Long total;
 
