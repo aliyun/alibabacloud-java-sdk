@@ -353,6 +353,12 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("bucket")
         public String bucket;
 
+        @NameInMap("catalog")
+        public String catalog;
+
+        @NameInMap("database")
+        public String database;
+
         /**
          * <p>The endpoint of the MaxCompute data source.</p>
          * 
@@ -398,6 +404,9 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tag")
+        public String tag;
+
         public static ModifyTableRequestDataSourceConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyTableRequestDataSourceConfig self = new ModifyTableRequestDataSourceConfig();
             return TeaModel.build(map, self);
@@ -425,6 +434,22 @@ public class ModifyTableRequest extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public ModifyTableRequestDataSourceConfig setCatalog(String catalog) {
+            this.catalog = catalog;
+            return this;
+        }
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        public ModifyTableRequestDataSourceConfig setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
         }
 
         public ModifyTableRequestDataSourceConfig setEndpoint(String endpoint) {
@@ -465,6 +490,14 @@ public class ModifyTableRequest extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public ModifyTableRequestDataSourceConfig setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

@@ -67,6 +67,9 @@ public class BuildIndexRequest extends TeaModel {
     @NameInMap("partition")
     public String partition;
 
+    @NameInMap("tag")
+    public String tag;
+
     public static BuildIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         BuildIndexRequest self = new BuildIndexRequest();
         return TeaModel.build(map, self);
@@ -126,6 +129,14 @@ public class BuildIndexRequest extends TeaModel {
     }
     public String getPartition() {
         return this.partition;
+    }
+
+    public BuildIndexRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
 }
