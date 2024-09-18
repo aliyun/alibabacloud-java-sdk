@@ -57,6 +57,187 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListInstancesResponseBodyResultDataSourceDetailsConfig extends TeaModel {
+        @NameInMap("accessKey")
+        public String accessKey;
+
+        @NameInMap("bucket")
+        public String bucket;
+
+        @NameInMap("catalog")
+        public String catalog;
+
+        @NameInMap("database")
+        public String database;
+
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        @NameInMap("namespace")
+        public String namespace;
+
+        @NameInMap("ossPath")
+        public String ossPath;
+
+        @NameInMap("partition")
+        public String partition;
+
+        @NameInMap("path")
+        public String path;
+
+        @NameInMap("project")
+        public String project;
+
+        @NameInMap("table")
+        public String table;
+
+        @NameInMap("tag")
+        public String tag;
+
+        public static ListInstancesResponseBodyResultDataSourceDetailsConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyResultDataSourceDetailsConfig self = new ListInstancesResponseBodyResultDataSourceDetailsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setAccessKey(String accessKey) {
+            this.accessKey = accessKey;
+            return this;
+        }
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setCatalog(String catalog) {
+            this.catalog = catalog;
+            return this;
+        }
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setOssPath(String ossPath) {
+            this.ossPath = ossPath;
+            return this;
+        }
+        public String getOssPath() {
+            return this.ossPath;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setPartition(String partition) {
+            this.partition = partition;
+            return this;
+        }
+        public String getPartition() {
+            return this.partition;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setTable(String table) {
+            this.table = table;
+            return this;
+        }
+        public String getTable() {
+            return this.table;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class ListInstancesResponseBodyResultDataSourceDetails extends TeaModel {
+        @NameInMap("config")
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig config;
+
+        @NameInMap("indexName")
+        public String indexName;
+
+        @NameInMap("type")
+        public String type;
+
+        public static ListInstancesResponseBodyResultDataSourceDetails build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyResultDataSourceDetails self = new ListInstancesResponseBodyResultDataSourceDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetails setConfig(ListInstancesResponseBodyResultDataSourceDetailsConfig config) {
+            this.config = config;
+            return this;
+        }
+        public ListInstancesResponseBodyResultDataSourceDetailsConfig getConfig() {
+            return this.config;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetails setIndexName(String indexName) {
+            this.indexName = indexName;
+            return this;
+        }
+        public String getIndexName() {
+            return this.indexName;
+        }
+
+        public ListInstancesResponseBodyResultDataSourceDetails setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyResultNetwork extends TeaModel {
         @NameInMap("allow")
         public String allow;
@@ -364,6 +545,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("createTime")
         public String createTime;
 
+        @NameInMap("dataSourceDetails")
+        public java.util.List<ListInstancesResponseBodyResultDataSourceDetails> dataSourceDetails;
+
         /**
          * <p>The description of the instance.</p>
          * 
@@ -490,6 +674,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListInstancesResponseBodyResult setDataSourceDetails(java.util.List<ListInstancesResponseBodyResultDataSourceDetails> dataSourceDetails) {
+            this.dataSourceDetails = dataSourceDetails;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyResultDataSourceDetails> getDataSourceDetails() {
+            return this.dataSourceDetails;
         }
 
         public ListInstancesResponseBodyResult setDescription(String description) {

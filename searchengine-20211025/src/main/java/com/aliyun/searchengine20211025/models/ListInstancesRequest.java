@@ -4,6 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    @NameInMap("catalog")
+    public String catalog;
+
+    @NameInMap("dataSourceType")
+    public String dataSourceType;
+
+    @NameInMap("database")
+    public String database;
+
     /**
      * <p>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</p>
      * 
@@ -58,6 +67,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("table")
+    public String table;
+
     /**
      * <p>The tags of the instance.</p>
      */
@@ -67,6 +79,30 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setCatalog(String catalog) {
+        this.catalog = catalog;
+        return this;
+    }
+    public String getCatalog() {
+        return this.catalog;
+    }
+
+    public ListInstancesRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
+    }
+
+    public ListInstancesRequest setDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    public String getDatabase() {
+        return this.database;
     }
 
     public ListInstancesRequest setDescription(String description) {
@@ -115,6 +151,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListInstancesRequest setTable(String table) {
+        this.table = table;
+        return this;
+    }
+    public String getTable() {
+        return this.table;
     }
 
     public ListInstancesRequest setTags(java.util.List<ListInstancesRequestTags> tags) {

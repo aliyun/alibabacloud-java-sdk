@@ -25,6 +25,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("order")
     public CreateInstanceRequestOrder order;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("tags")
+    public java.util.List<CreateInstanceRequestTags> tags;
+
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
@@ -52,6 +58,22 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public CreateInstanceRequestOrder getOrder() {
         return this.order;
+    }
+
+    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateInstanceRequest setTags(java.util.List<CreateInstanceRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestTags> getTags() {
+        return this.tags;
     }
 
     public static class CreateInstanceRequestComponents extends TeaModel {
@@ -151,6 +173,36 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getPricingCycle() {
             return this.pricingCycle;
+        }
+
+    }
+
+    public static class CreateInstanceRequestTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateInstanceRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestTags self = new CreateInstanceRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateInstanceRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

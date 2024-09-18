@@ -150,6 +150,12 @@ public class CreateDataSourceRequest extends TeaModel {
         @NameInMap("bucket")
         public String bucket;
 
+        @NameInMap("catalog")
+        public String catalog;
+
+        @NameInMap("database")
+        public String database;
+
         /**
          * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
          * 
@@ -213,6 +219,9 @@ public class CreateDataSourceRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tag")
+        public String tag;
+
         public static CreateDataSourceRequestConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateDataSourceRequestConfig self = new CreateDataSourceRequestConfig();
             return TeaModel.build(map, self);
@@ -240,6 +249,22 @@ public class CreateDataSourceRequest extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public CreateDataSourceRequestConfig setCatalog(String catalog) {
+            this.catalog = catalog;
+            return this;
+        }
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        public CreateDataSourceRequestConfig setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
         }
 
         public CreateDataSourceRequestConfig setEndpoint(String endpoint) {
@@ -296,6 +321,14 @@ public class CreateDataSourceRequest extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public CreateDataSourceRequestConfig setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

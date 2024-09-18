@@ -4,6 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesShrinkRequest extends TeaModel {
+    @NameInMap("catalog")
+    public String catalog;
+
+    @NameInMap("dataSourceType")
+    public String dataSourceType;
+
+    @NameInMap("database")
+    public String database;
+
     /**
      * <p>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</p>
      * 
@@ -58,6 +67,9 @@ public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("table")
+    public String table;
+
     /**
      * <p>The tags of the instance.</p>
      */
@@ -67,6 +79,30 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesShrinkRequest setCatalog(String catalog) {
+        this.catalog = catalog;
+        return this;
+    }
+    public String getCatalog() {
+        return this.catalog;
+    }
+
+    public ListInstancesShrinkRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
+    }
+
+    public ListInstancesShrinkRequest setDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    public String getDatabase() {
+        return this.database;
     }
 
     public ListInstancesShrinkRequest setDescription(String description) {
@@ -115,6 +151,14 @@ public class ListInstancesShrinkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListInstancesShrinkRequest setTable(String table) {
+        this.table = table;
+        return this;
+    }
+    public String getTable() {
+        return this.table;
     }
 
     public ListInstancesShrinkRequest setTagsShrink(String tagsShrink) {

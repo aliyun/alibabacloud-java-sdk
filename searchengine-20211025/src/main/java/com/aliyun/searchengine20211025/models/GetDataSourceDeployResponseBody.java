@@ -265,6 +265,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         @NameInMap("bucket")
         public String bucket;
 
+        @NameInMap("catalog")
+        public String catalog;
+
+        @NameInMap("database")
+        public String database;
+
         /**
          * <p>The endpoint of the MaxCompute data source.</p>
          * 
@@ -320,6 +326,9 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tag")
+        public String tag;
+
         public static GetDataSourceDeployResponseBodyResultStorage build(java.util.Map<String, ?> map) throws Exception {
             GetDataSourceDeployResponseBodyResultStorage self = new GetDataSourceDeployResponseBodyResultStorage();
             return TeaModel.build(map, self);
@@ -347,6 +356,22 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public GetDataSourceDeployResponseBodyResultStorage setCatalog(String catalog) {
+            this.catalog = catalog;
+            return this;
+        }
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        public GetDataSourceDeployResponseBodyResultStorage setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
         }
 
         public GetDataSourceDeployResponseBodyResultStorage setEndpoint(String endpoint) {
@@ -403,6 +428,14 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public GetDataSourceDeployResponseBodyResultStorage setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

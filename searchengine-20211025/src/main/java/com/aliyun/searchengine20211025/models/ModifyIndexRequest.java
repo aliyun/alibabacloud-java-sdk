@@ -76,6 +76,9 @@ public class ModifyIndexRequest extends TeaModel {
     @NameInMap("domain")
     public String domain;
 
+    @NameInMap("extend")
+    public java.util.Map<String, ?> extend;
+
     /**
      * <p>The maximum number of full indexes that can be concurrently merged.</p>
      * 
@@ -194,6 +197,14 @@ public class ModifyIndexRequest extends TeaModel {
         return this.domain;
     }
 
+    public ModifyIndexRequest setExtend(java.util.Map<String, ?> extend) {
+        this.extend = extend;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtend() {
+        return this.extend;
+    }
+
     public ModifyIndexRequest setMergeParallelNum(Integer mergeParallelNum) {
         this.mergeParallelNum = mergeParallelNum;
         return this;
@@ -253,6 +264,12 @@ public class ModifyIndexRequest extends TeaModel {
          */
         @NameInMap("bucket")
         public String bucket;
+
+        @NameInMap("catalog")
+        public String catalog;
+
+        @NameInMap("database")
+        public String database;
 
         /**
          * <p>The endpoint of the MaxCompute data source.</p>
@@ -317,6 +334,9 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tag")
+        public String tag;
+
         public static ModifyIndexRequestDataSourceInfoConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyIndexRequestDataSourceInfoConfig self = new ModifyIndexRequestDataSourceInfoConfig();
             return TeaModel.build(map, self);
@@ -344,6 +364,22 @@ public class ModifyIndexRequest extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public ModifyIndexRequestDataSourceInfoConfig setCatalog(String catalog) {
+            this.catalog = catalog;
+            return this;
+        }
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        public ModifyIndexRequestDataSourceInfoConfig setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
         }
 
         public ModifyIndexRequestDataSourceInfoConfig setEndpoint(String endpoint) {
@@ -400,6 +436,14 @@ public class ModifyIndexRequest extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public ModifyIndexRequestDataSourceInfoConfig setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }
