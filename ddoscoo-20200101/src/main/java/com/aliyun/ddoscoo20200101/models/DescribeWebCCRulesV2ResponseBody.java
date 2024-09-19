@@ -84,6 +84,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The match content when the match method is Equals to One of Multiple Values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;2&quot;,&quot;3&quot;,&quot;ad&quot;]</p>
+         */
         @NameInMap("ContentList")
         public String contentList;
 

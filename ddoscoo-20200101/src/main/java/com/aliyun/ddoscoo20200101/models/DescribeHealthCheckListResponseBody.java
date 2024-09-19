@@ -11,7 +11,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     public java.util.List<DescribeHealthCheckListResponseBodyHealthCheckList> healthCheckList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>83B4AF42-E8EE-4DC9-BD73-87B7733A36F9</p>
@@ -44,7 +44,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         /**
          * <p>The domain name.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * <p> This parameter is returned only when the Layer 7 health check configuration is queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         /**
          * <p>The check path.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * <p> This parameter is returned only when the Layer 7 health check configuration is queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

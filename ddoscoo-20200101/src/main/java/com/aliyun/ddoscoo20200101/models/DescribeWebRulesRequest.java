@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeWebRulesRequest extends TeaModel {
     /**
+     * <p>The CNAME address to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>kzmk7b8tt351****.aliyunddos1014****</p>
      */
@@ -12,6 +14,11 @@ public class DescribeWebRulesRequest extends TeaModel {
     public String cname;
 
     /**
+     * <p>The domain name of the website to query.</p>
+     * <blockquote>
+     * <p>The domain must have been configured with website business forwarding rules. You can call <a href="~~DescribeDomains~~">DescribeDomains</a> to query all domains that have been configured with website business forwarding rules.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -19,6 +26,8 @@ public class DescribeWebRulesRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The list of DDoS protection instance IDs to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>ddoscoo-cn-mp91j1ao****</p>
      */
@@ -26,6 +35,8 @@ public class DescribeWebRulesRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>When paginating, set the page number of the current page. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,7 +44,7 @@ public class DescribeWebRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>When paginating, set the number of forwarding rules per page. The range of values is: 1~10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,6 +53,12 @@ public class DescribeWebRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query matching pattern. Values:</p>
+     * <ul>
+     * <li><strong>fuzzy</strong> (default): Indicates fuzzy query.</li>
+     * <li><strong>exact</strong>: Indicates exact query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>exact</p>
      */
@@ -49,6 +66,9 @@ public class DescribeWebRulesRequest extends TeaModel {
     public String queryDomainPattern;
 
     /**
+     * <p>The resource group ID of the DDoS protection instance in the resource management service.</p>
+     * <p>Not setting this parameter indicates the default resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>
      */

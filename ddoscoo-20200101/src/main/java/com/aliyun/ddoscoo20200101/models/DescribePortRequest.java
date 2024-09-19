@@ -40,8 +40,7 @@ public class DescribePortRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. For example, if you want to obtain results on the first page, set the value to <strong>1</strong>.</p>
-     * <p>This parameter is required.</p>
+     * <p>The page number. For example, if you want to obtain results on the first page, set the value to <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,8 +49,7 @@ public class DescribePortRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>This parameter is required.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

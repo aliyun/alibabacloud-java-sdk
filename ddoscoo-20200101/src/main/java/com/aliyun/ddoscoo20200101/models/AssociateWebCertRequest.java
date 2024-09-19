@@ -43,15 +43,6 @@ public class AssociateWebCertRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
-    /**
-     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     public static AssociateWebCertRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateWebCertRequest self = new AssociateWebCertRequest();
         return TeaModel.build(map, self);
@@ -111,14 +102,6 @@ public class AssociateWebCertRequest extends TeaModel {
     }
     public String getKey() {
         return this.key;
-    }
-
-    public AssociateWebCertRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

@@ -58,10 +58,10 @@ public class CreateDomainResourceRequest extends TeaModel {
     /**
      * <p>The address type of the origin server. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: IP address</p>
+     * <li><p><strong>0</strong>: IP address.</p>
      * </li>
-     * <li><p><strong>1</strong>: domain name</p>
-     * <p>This parameter is suitable for scenarios where another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Pro or Anti-DDoS Premium. The address is the jump address of the proxy service, such as the CNAME address of WAF.</p>
+     * <li><p><strong>1</strong>: domain name.</p>
+     * <p>This parameter is suitable for scenarios in which another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Proxy. The address is the redirection address of the proxy service, such as the CNAME of WAF.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

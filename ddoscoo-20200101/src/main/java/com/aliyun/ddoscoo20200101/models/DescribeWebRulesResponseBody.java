@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeWebRulesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0F5B72DD-96F4-423A-B12B-A5151DD746B8</p>
      */
@@ -12,12 +14,17 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of queried website business forwarding rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The configurations of the forwarding rule.</p>
+     */
     @NameInMap("WebRules")
     public java.util.List<DescribeWebRulesResponseBodyWebRules> webRules;
 
@@ -52,6 +59,8 @@ public class DescribeWebRulesResponseBody extends TeaModel {
 
     public static class DescribeWebRulesResponseBodyWebRulesGmCert extends TeaModel {
         /**
+         * <p>The ID of the SM certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>725****</p>
          */
@@ -59,6 +68,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public String certId;
 
         /**
+         * <p>Indicates whether Enable SM Certificate-based Verification is turned on.</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -66,6 +81,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Long gmEnable;
 
         /**
+         * <p>Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -104,10 +125,21 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebRulesResponseBodyWebRulesProxyTypes extends TeaModel {
+        /**
+         * <p>The ports.</p>
+         */
         @NameInMap("ProxyPorts")
         public java.util.List<String> proxyPorts;
 
         /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * <li><strong>websocket</strong></li>
+         * <li><strong>websockets</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>https</p>
          */
@@ -139,6 +171,8 @@ public class DescribeWebRulesResponseBody extends TeaModel {
 
     public static class DescribeWebRulesResponseBodyWebRulesRealServers extends TeaModel {
         /**
+         * <p>The address of the origin server.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
          */
@@ -146,6 +180,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public String realServer;
 
         /**
+         * <p>The type of the origin server address. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: IP address</li>
+         * <li><strong>1</strong>: domain name The domain name of the origin server is returned if you deploy proxies, such as Web Application Firewall (WAF), between the origin server and the instance. In this case, the address of the proxy, such as the CNAME provided by WAF, is returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -176,10 +216,19 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebRulesResponseBodyWebRules extends TeaModel {
+        /**
+         * <p>The IP addresses in the blacklist for the domain name.</p>
+         */
         @NameInMap("BlackList")
         public java.util.List<String> blackList;
 
         /**
+         * <p>Indicates whether the Frequency Control policy is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -187,6 +236,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Boolean ccEnabled;
 
         /**
+         * <p>Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -194,6 +249,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Boolean ccRuleEnabled;
 
         /**
+         * <p>The mode of the Frequency Control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: the Normal mode</li>
+         * <li><strong>gf_under_attack</strong>: the Emergency mode</li>
+         * <li><strong>gf_sos_verify</strong>: the Strict mode</li>
+         * <li><strong>gf_sos_verify</strong>: the Super Strict mode</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -201,36 +264,64 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public String ccTemplate;
 
         /**
+         * <p>The name of the SSL certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>testcert</p>
          */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The region where the certificate is used. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou (default): the Chinese mainland</li>
+         * <li>ap-southeast-1: outside the Chinese mainland</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("CertRegion")
         public String certRegion;
 
         /**
+         * <p>The CNAME provided by the Anti-DDoS Pro or Anti-DDoS Premium instance to which the domain name is added.</p>
+         * 
          * <strong>example:</strong>
          * <p>kzmk7b8tt351****.aliyunddos1014****</p>
          */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The custom cipher suites.</p>
+         */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
         /**
+         * <p>The domain name of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The SM certificate settings.</p>
+         */
         @NameInMap("GmCert")
         public DescribeWebRulesResponseBodyWebRulesGmCert gmCert;
 
         /**
+         * <p>Indicates whether Enable HTTP/2 is turned on. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -238,6 +329,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Boolean http2Enable;
 
         /**
+         * <p>Indicates whether Enable HTTPS Redirection was turned on. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -245,6 +342,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Boolean http2HttpsEnable;
 
         /**
+         * <p>Indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -252,6 +355,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Boolean https2HttpEnable;
 
         /**
+         * <p>Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -259,6 +368,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Boolean ocspEnabled;
 
         /**
+         * <p>The load balancing algorithm for back-to-origin traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
+         * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
+         * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ip_hash</p>
          */
@@ -266,16 +382,32 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public String policyMode;
 
         /**
+         * <p>Indicates whether the forwarding rule is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("ProxyEnabled")
         public Boolean proxyEnabled;
 
+        /**
+         * <p>The details of the protocol type and port number.</p>
+         */
         @NameInMap("ProxyTypes")
         public java.util.List<DescribeWebRulesResponseBodyWebRulesProxyTypes> proxyTypes;
 
         /**
+         * <p>The reason why the domain name is invalid. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: No Content Provider (ICP) filing is completed for the domain name.</li>
+         * <li><strong>2</strong>: The business for which you registered the domain name does not meet regulatory requirements.</li>
+         * </ul>
+         * <p>If the two reasons are both involved, the value <strong>2</strong> is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -283,16 +415,31 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Integer punishReason;
 
         /**
+         * <p>Indicates whether the domain name is invalid. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: You can view the specific reasons from the <strong>PunishReason</strong> parameter.</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("PunishStatus")
         public Boolean punishStatus;
 
+        /**
+         * <p>The details of the origin server address.</p>
+         */
         @NameInMap("RealServers")
         public java.util.List<DescribeWebRulesResponseBodyWebRulesRealServers> realServers;
 
         /**
+         * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -300,6 +447,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public Boolean ssl13Enabled;
 
         /**
+         * <p>The type of the cipher suite. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: custom cipher suites</li>
+         * <li><strong>all</strong>: all cipher suites, which contain strong and weak cipher suites</li>
+         * <li><strong>strong</strong>: strong cipher suites</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -307,12 +461,31 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         public String sslCiphers;
 
         /**
+         * <p>The version of the Transport Layer Security (TLS) protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tls1.0</strong>: TLS 1.0 or later</li>
+         * <li><strong>tls1.1</strong>: TLS 1.1 or later</li>
+         * <li><strong>tls1.2</strong>: TLS 1.2 or later</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tls1.1</p>
          */
         @NameInMap("SslProtocols")
         public String sslProtocols;
 
+        /**
+         * <p>The name of the certificate uploaded by the user to the certificate center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("UserCertName")
+        public String userCertName;
+
+        /**
+         * <p>The IP addresses in the whitelist for the domain name.</p>
+         */
         @NameInMap("WhiteList")
         public java.util.List<String> whiteList;
 
@@ -503,6 +676,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
         public String getSslProtocols() {
             return this.sslProtocols;
+        }
+
+        public DescribeWebRulesResponseBodyWebRules setUserCertName(String userCertName) {
+            this.userCertName = userCertName;
+            return this;
+        }
+        public String getUserCertName() {
+            return this.userCertName;
         }
 
         public DescribeWebRulesResponseBodyWebRules setWhiteList(java.util.List<String> whiteList) {
