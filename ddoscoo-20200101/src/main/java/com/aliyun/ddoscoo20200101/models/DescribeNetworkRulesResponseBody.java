@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesResponseBody extends TeaModel {
     /**
-     * <p>The details of a port forwarding rule.</p>
+     * <p>The details of the port forwarding rule.</p>
      */
     @NameInMap("NetworkRules")
     public java.util.List<DescribeNetworkRulesResponseBodyNetworkRules> networkRules;

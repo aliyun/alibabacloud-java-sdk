@@ -33,6 +33,9 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RsAttrRwTimeoutMax")
+    public Long rsAttrRwTimeoutMax;
+
     /**
      * <p>The back-to-origin retry switch. Valid values:</p>
      * <ul>
@@ -73,6 +76,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeL7RsPolicyResponseBody setRsAttrRwTimeoutMax(Long rsAttrRwTimeoutMax) {
+        this.rsAttrRwTimeoutMax = rsAttrRwTimeoutMax;
+        return this;
+    }
+    public Long getRsAttrRwTimeoutMax() {
+        return this.rsAttrRwTimeoutMax;
     }
 
     public DescribeL7RsPolicyResponseBody setUpstreamRetry(Integer upstreamRetry) {

@@ -146,11 +146,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public AssociateWebCertResponse associateWebCertWithOptions(AssociateWebCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cert)) {
             body.put("Cert", request.cert);
@@ -181,7 +176,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -7449,12 +7443,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
+     * Before calling this interface, you must have already called <a href="~~CreateWebRule~~">CreateWebRule</a> to create website business forwarding rules.</p>
+     * <h3>QPS Limit</h3>
+     * <p>The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.</p>
-     * <ul>
-     * <li>0: no</li>
-     * <li>1: yes</li>
-     * </ul>
+     * <p>Query Configuration of Website Business Forwarding Rules.</p>
      * 
      * @param request DescribeWebRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7509,12 +7505,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
+     * Before calling this interface, you must have already called <a href="~~CreateWebRule~~">CreateWebRule</a> to create website business forwarding rules.</p>
+     * <h3>QPS Limit</h3>
+     * <p>The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.</p>
-     * <ul>
-     * <li>0: no</li>
-     * <li>1: yes</li>
-     * </ul>
+     * <p>Query Configuration of Website Business Forwarding Rules.</p>
      * 
      * @param request DescribeWebRulesRequest
      * @return DescribeWebRulesResponse
@@ -8824,7 +8822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the session persistence settings of a port forwarding rule.</p>
+     * <p>Modifies the session persistence and DDoS mitigation policy settings of a port forwarding rule.</p>
      * 
      * @param request ModifyNetworkRuleAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8868,7 +8866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the session persistence settings of a port forwarding rule.</p>
+     * <p>Modifies the session persistence and DDoS mitigation policy settings of a port forwarding rule.</p>
      * 
      * @param request ModifyNetworkRuleAttributeRequest
      * @return ModifyNetworkRuleAttributeResponse
@@ -9892,7 +9890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the accurate access control rule of a website.</p>
+     * <p>Creates or modifies an accurate access control rule of a website.</p>
      * 
      * @param request ModifyWebPreciseAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9936,7 +9934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the accurate access control rule of a website.</p>
+     * <p>Creates or modifies an accurate access control rule of a website.</p>
      * 
      * @param request ModifyWebPreciseAccessRuleRequest
      * @return ModifyWebPreciseAccessRuleResponse
