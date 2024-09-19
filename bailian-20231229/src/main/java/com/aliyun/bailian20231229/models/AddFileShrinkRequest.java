@@ -3,7 +3,7 @@ package com.aliyun.bailian20231229.models;
 
 import com.aliyun.tea.*;
 
-public class AddFileRequest extends TeaModel {
+public class AddFileShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -32,14 +32,14 @@ public class AddFileRequest extends TeaModel {
     public String parser;
 
     @NameInMap("Tags")
-    public java.util.List<String> tags;
+    public String tagsShrink;
 
-    public static AddFileRequest build(java.util.Map<String, ?> map) throws Exception {
-        AddFileRequest self = new AddFileRequest();
+    public static AddFileShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        AddFileShrinkRequest self = new AddFileShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddFileRequest setCategoryId(String categoryId) {
+    public AddFileShrinkRequest setCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -47,7 +47,7 @@ public class AddFileRequest extends TeaModel {
         return this.categoryId;
     }
 
-    public AddFileRequest setLeaseId(String leaseId) {
+    public AddFileShrinkRequest setLeaseId(String leaseId) {
         this.leaseId = leaseId;
         return this;
     }
@@ -55,7 +55,7 @@ public class AddFileRequest extends TeaModel {
         return this.leaseId;
     }
 
-    public AddFileRequest setParser(String parser) {
+    public AddFileShrinkRequest setParser(String parser) {
         this.parser = parser;
         return this;
     }
@@ -63,12 +63,12 @@ public class AddFileRequest extends TeaModel {
         return this.parser;
     }
 
-    public AddFileRequest setTags(java.util.List<String> tags) {
-        this.tags = tags;
+    public AddFileShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<String> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

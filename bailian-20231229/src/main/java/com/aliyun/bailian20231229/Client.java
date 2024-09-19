@@ -79,13 +79,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</p>
      * 
-     * @param request AddFileRequest
+     * @param tmpReq AddFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddFileResponse
      */
-    public AddFileResponse addFileWithOptions(String WorkspaceId, AddFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AddFileResponse addFileWithOptions(String WorkspaceId, AddFileRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddFileShrinkRequest request = new AddFileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
             body.put("CategoryId", request.categoryId);
@@ -97,6 +103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.parser)) {
             body.put("Parser", request.parser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("Tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
