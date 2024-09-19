@@ -154,6 +154,9 @@ public class ListFileResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         public static ListFileResponseBodyDataFileList build(java.util.Map<String, ?> map) throws Exception {
             ListFileResponseBodyDataFileList self = new ListFileResponseBodyDataFileList();
             return TeaModel.build(map, self);
@@ -221,6 +224,14 @@ public class ListFileResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListFileResponseBodyDataFileList setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
     }
