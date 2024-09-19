@@ -266,6 +266,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
         /**
          * <strong>example:</strong>
          * <p>9957175DEDCF49C5ACF7A956B4FD67B2</p>
@@ -287,12 +290,21 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         @NameInMap("ImageUrls")
         public java.util.List<String> imageUrls;
 
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("Summary")
+        public String summary;
+
         /**
          * <strong>example:</strong>
          * <p>[&quot;标签1&quot;,&quot;标签2&quot;]</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
+
+        @NameInMap("Title")
+        public String title;
 
         /**
          * <strong>example:</strong>
@@ -301,9 +313,20 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         @NameInMap("Topic")
         public String topic;
 
+        @NameInMap("Url")
+        public String url;
+
         public static GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews build(java.util.Map<String, ?> map) throws Exception {
             GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews self = new GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews();
             return TeaModel.build(map, self);
+        }
+
+        public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setDocId(String docId) {
@@ -330,6 +353,22 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             return this.imageUrls;
         }
 
+        public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setTags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
@@ -338,12 +377,28 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             return this.tags;
         }
 
+        public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setTopic(String topic) {
             this.topic = topic;
             return this;
         }
         public String getTopic() {
             return this.topic;
+        }
+
+        public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
