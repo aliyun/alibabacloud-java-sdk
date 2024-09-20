@@ -4,15 +4,30 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class RefundApplyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4966***617111</p>
+     */
     @NameInMap("order_num")
     public Long orderNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_journeys")
     public java.util.List<RefundApplyRequestRefundJourneys> refundJourneys;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_passenger_list")
     public java.util.List<RefundApplyRequestRefundPassengerList> refundPassengerList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_type")
     public RefundApplyRequestRefundType refundType;
 
@@ -54,15 +69,39 @@ public class RefundApplyRequest extends TeaModel {
     }
 
     public static class RefundApplyRequestRefundJourneysSegmentList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_airport")
         public String arrivalAirport;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_city")
         public String arrivalCity;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PVG</p>
+         */
         @NameInMap("departure_airport")
         public String departureAirport;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA</p>
+         */
         @NameInMap("departure_city")
         public String departureCity;
 
@@ -106,6 +145,9 @@ public class RefundApplyRequest extends TeaModel {
     }
 
     public static class RefundApplyRequestRefundJourneys extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("segment_list")
         public java.util.List<RefundApplyRequestRefundJourneysSegmentList> segmentList;
 
@@ -125,12 +167,28 @@ public class RefundApplyRequest extends TeaModel {
     }
 
     public static class RefundApplyRequestRefundPassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>411***********4411</p>
+         */
         @NameInMap("document")
         public String document;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
@@ -166,12 +224,26 @@ public class RefundApplyRequest extends TeaModel {
     }
 
     public static class RefundApplyRequestRefundType extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[xxx,yyy]</p>
+         */
         @NameInMap("file")
         public java.util.List<String> file;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("refund_type_id")
         public Integer refundTypeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>remark desc</p>
+         */
         @NameInMap("remark")
         public String remark;
 

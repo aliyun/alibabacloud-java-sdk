@@ -4,20 +4,36 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class BookRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact")
     public BookRequestContact contact;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x091-2023-0220-j-0001</p>
+     */
     @NameInMap("out_order_num")
     public String outOrderNum;
 
     @NameInMap("passenger_ancillary_purchase_map_list")
     public java.util.List<BookRequestPassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_list")
     public java.util.List<BookRequestPassengerList> passengerList;
 
     /**
      * <p>solution_id</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
      */
     @NameInMap("solution_id")
     public String solutionId;
@@ -68,18 +84,38 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestContact extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gao******@gmail.com</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("mobile_country_code")
         public String mobileCountryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>183******96</p>
+         */
         @NameInMap("mobile_phone_num")
         public String mobilePhoneNum;
 
@@ -131,9 +167,17 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MDY2NTAxLCJleHAiOjE2NxNzM3MDEsIm5ix</p>
+         */
         @NameInMap("ancillary_id")
         public String ancillaryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ancillary_type")
         public Integer ancillaryType;
 
@@ -161,15 +205,33 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestPassengerAncillaryPurchaseMapListPassengerListCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_issue_place")
         public String certIssuePlace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>E1***5673</p>
+         */
         @NameInMap("credential_num")
         public String credentialNum;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("credential_type")
         public Integer credentialType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20290102</p>
+         */
         @NameInMap("expire_date")
         public String expireDate;
 
@@ -213,30 +275,72 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestPassengerAncillaryPurchaseMapListPassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20020320</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
         @NameInMap("credential")
         public BookRequestPassengerAncillaryPurchaseMapListPassengerListCredential credential;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("gender")
         public Integer gender;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("mobile_country_code")
         public String mobileCountryCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182******92</p>
+         */
         @NameInMap("mobile_phone_number")
         public String mobilePhoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
@@ -350,15 +454,33 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestPassengerListCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_issue_place")
         public String certIssuePlace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>E1***5674</p>
+         */
         @NameInMap("credential_num")
         public String credentialNum;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("credential_type")
         public Integer credentialType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20290101</p>
+         */
         @NameInMap("expire_date")
         public String expireDate;
 
@@ -402,30 +524,72 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestPassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20200320</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
         @NameInMap("credential")
         public BookRequestPassengerListCredential credential;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("gender")
         public Integer gender;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("mobile_country_code")
         public String mobileCountryCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183******95</p>
+         */
         @NameInMap("mobile_phone_number")
         public String mobilePhoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 

@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class FlightChangeOfOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public java.util.List<FlightChangeOfOrderResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,42 +111,94 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     }
 
     public static class FlightChangeOfOrderResponseBodyDataFlightChangeDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>天气</p>
+         */
         @NameInMap("change_reason")
         public String changeReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-01 10:01:00</p>
+         */
         @NameInMap("change_time")
         public String changeTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("change_type")
         public Integer changeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("new_arrival_airport")
         public String newArrivalAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-01 15:01:00</p>
+         */
         @NameInMap("new_arrival_time")
         public String newArrivalTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PVG</p>
+         */
         @NameInMap("new_departure_airport")
         public String newDepartureAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-01 13:01:00</p>
+         */
         @NameInMap("new_departure_time")
         public String newDepartureTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO1295</p>
+         */
         @NameInMap("new_flight_no")
         public String newFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("old_arrival_airport")
         public String oldArrivalAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>023-02-01 14:01:00</p>
+         */
         @NameInMap("old_arrival_time")
         public String oldArrivalTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PVG</p>
+         */
         @NameInMap("old_departure_airport")
         public String oldDepartureAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-01 12:01:00</p>
+         */
         @NameInMap("old_departure_time")
         public String oldDepartureTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO1295</p>
+         */
         @NameInMap("old_flight_no")
         public String oldFlightNo;
 
@@ -241,6 +317,10 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         @NameInMap("flight_change_detail")
         public FlightChangeOfOrderResponseBodyDataFlightChangeDetail flightChangeDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4966***617111</p>
+         */
         @NameInMap("order_num")
         public Long orderNum;
 

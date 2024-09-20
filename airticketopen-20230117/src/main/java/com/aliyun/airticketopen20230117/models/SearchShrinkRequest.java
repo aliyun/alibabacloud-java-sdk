@@ -4,20 +4,42 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class SearchShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("adults")
     public Integer adults;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("air_legs")
     public String airLegsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALL_CABIN</p>
+     */
     @NameInMap("cabin_class")
     public String cabinClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("children")
     public Integer children;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("infants")
     public Integer infants;
+
+    @NameInMap("search_control_options")
+    public String searchControlOptionsShrink;
 
     public static SearchShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchShrinkRequest self = new SearchShrinkRequest();
@@ -62,6 +84,14 @@ public class SearchShrinkRequest extends TeaModel {
     }
     public Integer getInfants() {
         return this.infants;
+    }
+
+    public SearchShrinkRequest setSearchControlOptionsShrink(String searchControlOptionsShrink) {
+        this.searchControlOptionsShrink = searchControlOptionsShrink;
+        return this;
+    }
+    public String getSearchControlOptionsShrink() {
+        return this.searchControlOptionsShrink;
     }
 
 }

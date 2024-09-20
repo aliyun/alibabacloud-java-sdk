@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class AncillarySuggestResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public AncillarySuggestResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -89,30 +113,45 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary extends TeaModel {
         /**
          * <p>行李件数 取值如：3、2、1、0、-2。 -2 表示计重</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("baggage_amount")
         public Integer baggageAmount;
 
         /**
          * <p>行李重量，0-50。isAllWeght=true 时，表示所有件数总重量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("baggage_weight")
         public Integer baggageWeight;
 
         /**
          * <p>行李重量单位</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KG</p>
          */
         @NameInMap("baggage_weight_unit")
         public String baggageWeightUnit;
 
         /**
          * <p>是否所有行李重量</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("is_all_weight")
         public Boolean isAllWeight;
 
         /**
          * <p>总价</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0</p>
          */
         @NameInMap("price")
         public Double price;
@@ -165,9 +204,17 @@ public class AncillarySuggestResponseBody extends TeaModel {
     }
 
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>eJwz8DeySEo0NjQ01TU3TU</p>
+         */
         @NameInMap("ancillary_id")
         public String ancillaryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ancillary_type")
         public Integer ancillaryType;
 
@@ -242,6 +289,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         @NameInMap("seg_ancillary_map_list")
         public java.util.List<AncillarySuggestResponseBodyDataSegAncillaryMapList> segAncillaryMapList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
+         */
         @NameInMap("solution_id")
         public String solutionId;
 

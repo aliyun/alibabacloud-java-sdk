@@ -4,12 +4,26 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class ChangeDetailListOfOrderNumRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4988430***700</p>
+     */
     @NameInMap("order_num")
     public Long orderNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_index")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 

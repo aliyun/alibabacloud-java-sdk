@@ -54,27 +54,59 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
     }
 
     public static class DataRefundChangeRuleMapValueRefundRuleAllUnusedList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hour</p>
+         */
         @NameInMap("time_unit")
         public String timeUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36</p>
+         */
         @NameInMap("rule_start_time")
         public Integer ruleStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("rule_end_time")
         public Integer ruleEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_refund")
         public Boolean canRefund;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("refund_fee")
         public Double refundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_return_all_tax")
         public Boolean canReturnAllTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("return_part_tax_fee")
         public Double returnPartTaxFee;
 
@@ -150,27 +182,59 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
     }
 
     public static class DataRefundChangeRuleMapValueRefundRulePartUnusedList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hour</p>
+         */
         @NameInMap("time_unit")
         public String timeUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36</p>
+         */
         @NameInMap("rule_start_time")
         public Integer ruleStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("rule_end_time")
         public Integer ruleEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_refund")
         public Boolean canRefund;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("refund_fee")
         public Double refundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_return_all_tax")
         public Boolean canReturnAllTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("return_part_tax_fee")
         public Double returnPartTaxFee;
 
@@ -246,21 +310,45 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
     }
 
     public static class DataRefundChangeRuleMapValueChangeRuleInUnusedList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hour</p>
+         */
         @NameInMap("time_unit")
         public String timeUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36</p>
+         */
         @NameInMap("rule_start_time")
         public Integer ruleStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("rule_end_time")
         public Integer ruleEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_change")
         public Boolean canChange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("change_fee")
         public Double changeFee;
 
@@ -320,21 +408,45 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
     }
 
     public static class DataRefundChangeRuleMapValueChangeRuleOutUnusedList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hour</p>
+         */
         @NameInMap("time_unit")
         public String timeUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36</p>
+         */
         @NameInMap("rule_start_time")
         public Integer ruleStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("rule_end_time")
         public Integer ruleEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_change")
         public Boolean canChange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("change_fee")
         public Double changeFee;
 

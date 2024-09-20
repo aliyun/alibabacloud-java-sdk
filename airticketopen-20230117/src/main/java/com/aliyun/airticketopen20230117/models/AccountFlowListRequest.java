@@ -4,15 +4,35 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class AccountFlowListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("day_num")
     public Integer dayNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_index")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1677427200000</p>
+     */
     @NameInMap("utc_begin_time")
     public Long utcBeginTime;
 

@@ -21,39 +21,101 @@ public class LuggageDirectRequest extends TeaModel {
     }
 
     public static class LuggageDirectRequestFlightSegmentParamList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIN</p>
+         */
         @NameInMap("arrival_airport")
         public String arrivalAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T1</p>
+         */
         @NameInMap("arrival_terminal")
         public String arrivalTerminal;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1705285430445</p>
+         */
         @NameInMap("arrival_time")
         public Long arrivalTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("code_share")
         public Boolean codeShare;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("departure_airport")
         public String departureAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T1</p>
+         */
         @NameInMap("departure_terminal")
         public String departureTerminal;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1705285430445</p>
+         */
         @NameInMap("departure_time")
         public Long departureTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CZ</p>
+         */
         @NameInMap("marketing_airline")
         public String marketingAirline;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CZ616</p>
+         */
         @NameInMap("marketing_flight_no")
         public String marketingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CZ</p>
+         */
         @NameInMap("operating_airline")
         public String operatingAirline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SEL,HKG</p>
+         */
         @NameInMap("stop_city_list")
         public String stopCityList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CZ</p>
+         */
         @NameInMap("ticketing_airline")
         public String ticketingAirline;
 

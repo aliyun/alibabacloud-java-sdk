@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetTokenRequest extends TeaModel {
     /**
      * <p>appKey</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fu1bltcu3400iurywuri</p>
      */
     @NameInMap("app_key")
     public String appKey;
 
     /**
      * <p>appSecret</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZzQ3MW1mb3E1ODAwI2ldUjYlWUdJn5YI</p>
      */
     @NameInMap("app_secret")
     public String appSecret;

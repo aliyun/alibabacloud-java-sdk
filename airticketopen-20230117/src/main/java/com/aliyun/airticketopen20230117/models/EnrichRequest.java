@@ -4,21 +4,41 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class EnrichRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("adults")
     public Integer adults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALL_CABIN</p>
+     */
     @NameInMap("cabin_class")
     public String cabinClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("children")
     public Integer children;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("infants")
     public Integer infants;
 
     @NameInMap("journey_param_list")
     public java.util.List<EnrichRequestJourneyParamList> journeyParamList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
+     */
     @NameInMap("solution_id")
     public String solutionId;
 
@@ -76,27 +96,67 @@ public class EnrichRequest extends TeaModel {
     }
 
     public static class EnrichRequestJourneyParamListSegmentParamList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_airport")
         public String arrivalAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_city")
         public String arrivalCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>V</p>
+         */
         @NameInMap("cabin")
         public String cabin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>E</p>
+         */
         @NameInMap("child_cabin")
         public String childCabin;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PVG</p>
+         */
         @NameInMap("departure_airport")
         public String departureAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SHA</p>
+         */
         @NameInMap("departure_city")
         public String departureCity;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-10 07:55:00</p>
+         */
         @NameInMap("departure_time")
         public String departureTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HO1295</p>
+         */
         @NameInMap("marketing_flight_no")
         public String marketingFlightNo;
 
@@ -172,15 +232,36 @@ public class EnrichRequest extends TeaModel {
     }
 
     public static class EnrichRequestJourneyParamList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_city")
         public String arrivalCity;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA</p>
+         */
         @NameInMap("departure_city")
         public String departureCity;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230310</p>
+         */
         @NameInMap("departure_date")
         public String departureDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("segment_param_list")
         public java.util.List<EnrichRequestJourneyParamListSegmentParamList> segmentParamList;
 

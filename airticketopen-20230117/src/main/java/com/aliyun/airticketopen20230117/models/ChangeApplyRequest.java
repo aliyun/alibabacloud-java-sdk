@@ -4,21 +4,46 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class ChangeApplyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("change_passenger_list")
     public java.util.List<ChangeApplyRequestChangePassengerList> changePassengerList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("changed_journeys")
     public java.util.List<ChangeApplyRequestChangedJourneys> changedJourneys;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact")
     public ChangeApplyRequestContact contact;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4988430***950</p>
+     */
     @NameInMap("order_num")
     public Long orderNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>remark desc</p>
+     */
     @NameInMap("remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("type")
     public Integer type;
 
@@ -76,12 +101,28 @@ public class ChangeApplyRequest extends TeaModel {
     }
 
     public static class ChangeApplyRequestChangePassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>411***********4411</p>
+         */
         @NameInMap("document")
         public String document;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
@@ -117,39 +158,95 @@ public class ChangeApplyRequest extends TeaModel {
     }
 
     public static class ChangeApplyRequestChangedJourneysSegmentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_airport")
         public String arrivalAirport;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_city")
         public String arrivalCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T1</p>
+         */
         @NameInMap("arrive_terminal")
         public String arriveTerminal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1677232999000</p>
+         */
         @NameInMap("arrive_time")
         public Long arriveTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("code_share")
         public Boolean codeShare;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PVG</p>
+         */
         @NameInMap("departure_airport")
         public String departureAirport;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA</p>
+         */
         @NameInMap("departure_city")
         public String departureCity;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230320</p>
+         */
         @NameInMap("departure_date")
         public String departureDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T2</p>
+         */
         @NameInMap("departure_terminal")
         public String departureTerminal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1677232998000</p>
+         */
         @NameInMap("departure_time")
         public Long departureTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HO1295</p>
+         */
         @NameInMap("marketing_flight_no")
         public String marketingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO1295</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
@@ -276,12 +373,24 @@ public class ChangeApplyRequest extends TeaModel {
     }
 
     public static class ChangeApplyRequestContact extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gao******@gmail.com</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("mobile_country_code")
         public String mobileCountryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>183*****92</p>
+         */
         @NameInMap("mobile_phone_num")
         public String mobilePhoneNum;
 

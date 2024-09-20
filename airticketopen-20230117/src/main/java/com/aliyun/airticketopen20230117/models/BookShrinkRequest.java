@@ -4,20 +4,36 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class BookShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact")
     public String contactShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x091-2023-0220-j-0001</p>
+     */
     @NameInMap("out_order_num")
     public String outOrderNum;
 
     @NameInMap("passenger_ancillary_purchase_map_list")
     public String passengerAncillaryPurchaseMapListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_list")
     public String passengerListShrink;
 
     /**
      * <p>solution_id</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
      */
     @NameInMap("solution_id")
     public String solutionId;

@@ -4,21 +4,41 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class EnrichShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("adults")
     public Integer adults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALL_CABIN</p>
+     */
     @NameInMap("cabin_class")
     public String cabinClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("children")
     public Integer children;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("infants")
     public Integer infants;
 
     @NameInMap("journey_param_list")
     public String journeyParamListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
+     */
     @NameInMap("solution_id")
     public String solutionId;
 
