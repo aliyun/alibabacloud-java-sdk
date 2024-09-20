@@ -4,27 +4,59 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("baggage_amount")
     public Integer baggageAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("baggage_weight")
     public Integer baggageWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kg</p>
+     */
     @NameInMap("baggage_weight_unit")
     public String baggageWeightUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("is_all_weight")
     public Boolean isAllWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("carry_on_amount")
     public Integer carryOnAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("carry_on_weight")
     public Integer carryOnWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kg</p>
+     */
     @NameInMap("carry_on_weight_unit")
     public String carryOnWeightUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("is_all_carry_on_weight")
     public Boolean isAllCarryOnWeight;
 

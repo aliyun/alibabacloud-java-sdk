@@ -4,6 +4,12 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class ChangeCancelRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4988430***950</p>
+     */
     @NameInMap("change_order_num")
     public Long changeOrderNum;
 

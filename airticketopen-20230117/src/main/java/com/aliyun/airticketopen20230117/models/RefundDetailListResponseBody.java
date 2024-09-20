@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class RefundDetailListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public RefundDetailListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,24 +111,52 @@ public class RefundDetailListResponseBody extends TeaModel {
     }
 
     public static class RefundDetailListResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_multi_refund")
         public Boolean isMultiRefund;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49884*****2345</p>
+         */
         @NameInMap("order_num")
         public Long orderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49884*****950</p>
+         */
         @NameInMap("refund_order_num")
         public Long refundOrderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("refund_order_status")
         public Integer refundOrderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49884*****2387</p>
+         */
         @NameInMap("related_refund_order_num")
         public String relatedRefundOrderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49884**tde-95za</p>
+         */
         @NameInMap("transaction_no")
         public String transactionNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1677229002000</p>
+         */
         @NameInMap("utc_create_time")
         public Long utcCreateTime;
 
@@ -172,15 +224,31 @@ public class RefundDetailListResponseBody extends TeaModel {
     }
 
     public static class RefundDetailListResponseBodyDataPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("current_page")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("total_count")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 

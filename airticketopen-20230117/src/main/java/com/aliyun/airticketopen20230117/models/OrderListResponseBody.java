@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class OrderListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public OrderListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,15 +111,31 @@ public class OrderListResponseBody extends TeaModel {
     }
 
     public static class OrderListResponseBodyDataListPassengerListCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_issue_place")
         public String certIssuePlace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>E1***5674</p>
+         */
         @NameInMap("credential_num")
         public String credentialNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("credential_type")
         public Integer credentialType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20290101</p>
+         */
         @NameInMap("expire_date")
         public String expireDate;
 
@@ -139,30 +179,62 @@ public class OrderListResponseBody extends TeaModel {
     }
 
     public static class OrderListResponseBodyDataListPassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20020301</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
         @NameInMap("credential")
         public OrderListResponseBodyDataListPassengerListCredential credential;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("gender")
         public Integer gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("mobile_country_code")
         public String mobileCountryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>183******96</p>
+         */
         @NameInMap("mobile_phone_number")
         public String mobilePhoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
@@ -246,42 +318,90 @@ public class OrderListResponseBody extends TeaModel {
     }
 
     public static class OrderListResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1677210784000</p>
+         */
         @NameInMap("book_time")
         public Long bookTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4966***617111</p>
+         */
         @NameInMap("order_num")
         public Long orderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("order_status")
         public String orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>x091-2023-0220-j-0001</p>
+         */
         @NameInMap("out_order_num")
         public String outOrderNum;
 
         @NameInMap("passenger_list")
         public java.util.List<OrderListResponseBodyDataListPassengerList> passengerList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("pay_status")
         public String payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1677210788000</p>
+         */
         @NameInMap("pay_time")
         public Long payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("promotion_price")
         public Double promotionPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("real_pay_price")
         public Double realPayPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nick</p>
+         */
         @NameInMap("session_nick")
         public String sessionNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1677210786000</p>
+         */
         @NameInMap("succeed_time")
         public Long succeedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("total_price")
         public Double totalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hkduendkd-2023-dj0</p>
+         */
         @NameInMap("transaction_no")
         public String transactionNo;
 
@@ -397,15 +517,31 @@ public class OrderListResponseBody extends TeaModel {
     }
 
     public static class OrderListResponseBodyDataPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("current_page")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("total_count")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 

@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class ChangeApplyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public ChangeApplyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,12 +111,24 @@ public class ChangeApplyResponseBody extends TeaModel {
     }
 
     public static class ChangeApplyResponseBodyDataChangeOrdersPassengers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>411***********4411</p>
+         */
         @NameInMap("document")
         public String document;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
@@ -128,12 +164,24 @@ public class ChangeApplyResponseBody extends TeaModel {
     }
 
     public static class ChangeApplyResponseBodyDataChangeOrders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>49884*****950</p>
+         */
         @NameInMap("change_order_num")
         public Long changeOrderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("change_order_status")
         public Integer changeOrderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>desc reason</p>
+         */
         @NameInMap("fail_reason")
         public String failReason;
 
@@ -183,6 +231,10 @@ public class ChangeApplyResponseBody extends TeaModel {
         @NameInMap("change_orders")
         public java.util.List<ChangeApplyResponseBodyDataChangeOrders> changeOrders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4988430***950</p>
+         */
         @NameInMap("order_num")
         public Long orderNum;
 

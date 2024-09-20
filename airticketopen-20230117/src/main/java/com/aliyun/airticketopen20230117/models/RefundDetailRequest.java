@@ -4,6 +4,12 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class RefundDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4966***617732</p>
+     */
     @NameInMap("refund_order_num")
     public Long refundOrderNum;
 

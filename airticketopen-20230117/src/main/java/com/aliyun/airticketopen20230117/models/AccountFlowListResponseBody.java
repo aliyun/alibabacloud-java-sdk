@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class AccountFlowListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public AccountFlowListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,39 +111,87 @@ public class AccountFlowListResponseBody extends TeaModel {
     }
 
     public static class AccountFlowListResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("after_available_amount")
         public Double afterAvailableAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1950.5</p>
+         */
         @NameInMap("before_available_amount")
         public Double beforeAvailableAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49880***971</p>
+         */
         @NameInMap("change_order_num")
         public Long changeOrderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1627239841225842666</p>
+         */
         @NameInMap("flow_id")
         public Long flowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1676799185000</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1676966530000</p>
+         */
         @NameInMap("gmt_modified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>950.5</p>
+         */
         @NameInMap("op_amount")
         public Double opAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("op_type")
         public Integer opType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4988430***971</p>
+         */
         @NameInMap("order_num")
         public Long orderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_type")
         public Integer orderType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4988430***971</p>
+         */
         @NameInMap("out_order_num")
         public String outOrderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>48430***971</p>
+         */
         @NameInMap("refund_order_num")
         public Long refundOrderNum;
 
@@ -227,15 +299,31 @@ public class AccountFlowListResponseBody extends TeaModel {
     }
 
     public static class AccountFlowListResponseBodyDataPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("current_page")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("total_count")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 

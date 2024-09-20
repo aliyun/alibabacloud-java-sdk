@@ -4,15 +4,31 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class ChangeDetailListOfBuyerRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_index")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1677415276000</p>
+     */
     @NameInMap("utc_create_begin")
     public Long utcCreateBegin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1677415279000</p>
+     */
     @NameInMap("utc_create_end")
     public Long utcCreateEnd;
 

@@ -4,15 +4,30 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class RefundApplyShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4966***617111</p>
+     */
     @NameInMap("order_num")
     public Long orderNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_journeys")
     public String refundJourneysShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_passenger_list")
     public String refundPassengerListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_type")
     public String refundTypeShrink;
 

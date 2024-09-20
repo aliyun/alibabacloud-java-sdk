@@ -4,9 +4,17 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class OrderDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4966***617111</p>
+     */
     @NameInMap("order_num")
     public Long orderNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>x091-2023-0220-j-0001</p>
+     */
     @NameInMap("out_order_num")
     public String outOrderNum;
 

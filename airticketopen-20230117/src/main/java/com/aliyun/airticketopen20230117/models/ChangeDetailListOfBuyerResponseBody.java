@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public ChangeDetailListOfBuyerResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,21 +111,45 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfBuyerResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4988430***950</p>
+         */
         @NameInMap("change_order_num")
         public Long changeOrderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4988430***971</p>
+         */
         @NameInMap("order_num")
         public Long orderNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("pay_status")
         public Integer payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hkduendkd-2023-dj0</p>
+         */
         @NameInMap("transaction_no")
         public String transactionNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1677415274000</p>
+         */
         @NameInMap("utc_create_time")
         public Long utcCreateTime;
 
@@ -161,15 +209,31 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfBuyerResponseBodyDataPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("current_page")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("total_count")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 

@@ -4,18 +4,42 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class RefundDetailListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>49884*****950</p>
+     */
     @NameInMap("order_num")
     public Long orderNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_index")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1677229002000</p>
+     */
     @NameInMap("refund_create_begin_time")
     public Long refundCreateBeginTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1677229005000</p>
+     */
     @NameInMap("refund_create_end_time")
     public Long refundCreateEndTime;
 

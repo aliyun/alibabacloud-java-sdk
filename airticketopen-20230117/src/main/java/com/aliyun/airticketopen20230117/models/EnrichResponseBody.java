@@ -4,24 +4,48 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class EnrichResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public EnrichResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,69 +111,157 @@ public class EnrichResponseBody extends TeaModel {
     }
 
     public static class EnrichResponseBodyDataSolutionListJourneyListSegmentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_airport")
         public String arrivalAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MFM</p>
+         */
         @NameInMap("arrival_city")
         public String arrivalCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("arrival_terminal")
         public String arrivalTerminal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-10 10:40:00</p>
+         */
         @NameInMap("arrival_time")
         public String arrivalTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("availability")
         public String availability;
 
+        /**
+         * <strong>example:</strong>
+         * <p>V</p>
+         */
         @NameInMap("cabin")
         public String cabin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("code_share")
         public Boolean codeShare;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PVG</p>
+         */
         @NameInMap("departure_airport")
         public String departureAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SHA</p>
+         */
         @NameInMap("departure_city")
         public String departureCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T2</p>
+         */
         @NameInMap("departure_terminal")
         public String departureTerminal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-10 07:55:00</p>
+         */
         @NameInMap("departure_time")
         public String departureTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32Q</p>
+         */
         @NameInMap("equip_type")
         public String equipType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>165</p>
+         */
         @NameInMap("flight_duration")
         public Integer flightDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO</p>
+         */
         @NameInMap("marketing_airline")
         public String marketingAirline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO1295</p>
+         */
         @NameInMap("marketing_flight_no")
         public String marketingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1295</p>
+         */
         @NameInMap("marketing_flight_no_int")
         public Integer marketingFlightNoInt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO</p>
+         */
         @NameInMap("operating_airline")
         public String operatingAirline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO1295</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO1295-PVG-MFM-20230310</p>
+         */
         @NameInMap("segment_id")
         public String segmentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("stop_city_list")
         public String stopCityList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("stop_quantity")
         public Integer stopQuantity;
 
@@ -340,6 +452,10 @@ public class EnrichResponseBody extends TeaModel {
         @NameInMap("segment_list")
         public java.util.List<EnrichResponseBodyDataSolutionListJourneyListSegmentList> segmentList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("transfer_count")
         public Integer transferCount;
 
@@ -367,6 +483,10 @@ public class EnrichResponseBody extends TeaModel {
     }
 
     public static class EnrichResponseBodyDataSolutionListSegmentBaggageCheckInInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("luggage_direct_info_type")
         public Integer luggageDirectInfoType;
 
@@ -457,30 +577,62 @@ public class EnrichResponseBody extends TeaModel {
     }
 
     public static class EnrichResponseBodyDataSolutionList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("adult_price")
         public Double adultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("adult_tax")
         public Double adultTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("child_price")
         public Double childPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("child_tax")
         public Double childTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("infant_price")
         public Double infantPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("infant_tax")
         public Double infantTax;
 
         @NameInMap("journey_list")
         public java.util.List<EnrichResponseBodyDataSolutionListJourneyList> journeyList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("product_type_description")
         public String productTypeDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("refund_ticket_coupon_description")
         public String refundTicketCouponDescription;
 
@@ -495,6 +647,9 @@ public class EnrichResponseBody extends TeaModel {
 
         /**
          * <p>solution_id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
          */
         @NameInMap("solution_id")
         public String solutionId;

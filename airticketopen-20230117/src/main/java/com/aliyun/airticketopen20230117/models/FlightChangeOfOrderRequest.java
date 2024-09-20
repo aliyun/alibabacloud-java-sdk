@@ -4,6 +4,12 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class FlightChangeOfOrderRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4966***617111</p>
+     */
     @NameInMap("order_num")
     public Long orderNum;
 

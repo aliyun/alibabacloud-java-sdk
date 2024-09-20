@@ -4,18 +4,42 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class OrderListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1677229006000</p>
+     */
     @NameInMap("book_time_end")
     public Long bookTimeEnd;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1677229005000</p>
+     */
     @NameInMap("book_time_start")
     public Long bookTimeStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_index")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("status")
     public Integer status;
 

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class PricingRequest extends TeaModel {
     /**
      * <p>solution_id</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
      */
     @NameInMap("solution_id")
     public String solutionId;

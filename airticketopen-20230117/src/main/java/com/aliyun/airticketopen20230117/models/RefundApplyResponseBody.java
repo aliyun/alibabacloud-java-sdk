@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RefundApplyResponseBody extends TeaModel {
     /**
      * <p>请求 RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -13,18 +16,38 @@ public class RefundApplyResponseBody extends TeaModel {
     @NameInMap("data")
     public RefundApplyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_code")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_data")
     public Object errorData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("error_msg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -90,12 +113,24 @@ public class RefundApplyResponseBody extends TeaModel {
     }
 
     public static class RefundApplyResponseBodyDataRefundResultsRefundPassengers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>411***********4411</p>
+         */
         @NameInMap("document")
         public String document;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SAN</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZHANG</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
@@ -131,15 +166,27 @@ public class RefundApplyResponseBody extends TeaModel {
     }
 
     public static class RefundApplyResponseBodyDataRefundResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>desc reason</p>
+         */
         @NameInMap("fail_reason")
         public String failReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4966***617202</p>
+         */
         @NameInMap("refund_order_num")
         public Long refundOrderNum;
 
         @NameInMap("refund_passengers")
         public java.util.List<RefundApplyResponseBodyDataRefundResultsRefundPassengers> refundPassengers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
@@ -183,6 +230,10 @@ public class RefundApplyResponseBody extends TeaModel {
     }
 
     public static class RefundApplyResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4966***617111</p>
+         */
         @NameInMap("order_num")
         public Long orderNum;
 
