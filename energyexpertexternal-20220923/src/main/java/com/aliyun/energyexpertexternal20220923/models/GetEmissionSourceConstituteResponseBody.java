@@ -12,6 +12,9 @@ public class GetEmissionSourceConstituteResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9bc20a5a-b26b-4c28-922a-7cd10b61f96f</p>
      */
     @NameInMap("requestId")
     public String requestId;

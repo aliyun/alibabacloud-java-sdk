@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetAreaElecConstituteRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Z-20240115-2</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>Year.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024</p>
      */
     @NameInMap("year")
     public Integer year;

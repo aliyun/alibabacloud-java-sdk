@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetGwpBenchmarkSummaryRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C-20080808-1</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>The product id.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("productId")
     public Long productId;
 
     /**
      * <p>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("productType")
     public Long productType;

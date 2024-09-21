@@ -12,6 +12,9 @@ public class GetEpdInventoryConstituteResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;

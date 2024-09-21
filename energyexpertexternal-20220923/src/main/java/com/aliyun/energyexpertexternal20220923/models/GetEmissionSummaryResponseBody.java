@@ -12,6 +12,9 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,60 +43,90 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
     public static class GetEmissionSummaryResponseBodyData extends TeaModel {
         /**
          * <p>Percentage of scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.7657</p>
          */
         @NameInMap("actualEmissionRatio")
         public Double actualEmissionRatio;
 
         /**
          * <p>Carbon emissions reduction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("carbonSaveConversion")
         public Double carbonSaveConversion;
 
         /**
          * <p>Statistical indicators for this cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>276.4</p>
          */
         @NameInMap("currentPeriodCarbonEmissionData")
         public Double currentPeriodCarbonEmissionData;
 
         /**
          * <p>Whether to show the weighting ratio carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isWeighting")
         public Boolean isWeighting;
 
         /**
          * <p>Last period statistical indicators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9.40100</p>
          */
         @NameInMap("lastPeriodCarbonEmissionData")
         public Double lastPeriodCarbonEmissionData;
 
         /**
          * <p>Calculation of carbon emissions based on shareholding ratio in the last cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.4609</p>
          */
         @NameInMap("lastPeriodWeightingCarbonEmissionData")
         public Double lastPeriodWeightingCarbonEmissionData;
 
         /**
          * <p>Year-on-year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28.410</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Total carbon emissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>276.46</p>
          */
         @NameInMap("totalCarbonEmissionData")
         public Double totalCarbonEmissionData;
 
         /**
          * <p>Calculate carbon emissions by share ratio</p>
+         * 
+         * <strong>example:</strong>
+         * <p>248.81400</p>
          */
         @NameInMap("weightingCarbonEmissionData")
         public Double weightingCarbonEmissionData;
 
         /**
          * <p>Year-on-year of weighting ratio carbon emissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28.4102</p>
          */
         @NameInMap("weightingRatio")
         public Double weightingRatio;

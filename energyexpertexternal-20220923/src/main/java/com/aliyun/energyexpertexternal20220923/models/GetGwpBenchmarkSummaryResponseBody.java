@@ -12,6 +12,9 @@ public class GetGwpBenchmarkSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetGwpBenchmarkSummaryResponseBody extends TeaModel {
     public static class GetGwpBenchmarkSummaryResponseBodyDataItems extends TeaModel {
         /**
          * <p>Name of carbon reduction details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Energy-Replacement</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>Percentage of emissions. The value is of the string type. Two decimal places are reserved for numbers. For example, "99.01" indicates the 99.01% of this type of emissions to the total emissions. Note that the returned string itself does not contain a percent sign.</p>
+         * <p>Percentage of emissions. The value is of the string type. Two decimal places are reserved for numbers. For example, &quot;99.01&quot; indicates the 99.01% of this type of emissions to the total emissions. Note that the returned string itself does not contain a percent sign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.01</p>
          */
         @NameInMap("percent")
         public String percent;
 
         /**
-         * <p>Emission amount is presented with four decimal places. Normally, modeling doesn\\"t result in negative values, but users can represent carbon reductions as negatives. The amount, paired with the unit, defines the emissions. Both are dynamically adjusted. If emissions exceed `1000 kgCO₂e/productUnit`, they convert to `tCO₂e/productUnit`. If they fall below `1 kgCO₂e/productUnit`, they convert to `gCO₂e/productUnit`. Otherwise, they stay in `kgCO₂e/productUnit`.</p>
+         * <p>Emission amount is presented with four decimal places. Normally, modeling doesn\&quot;t result in negative values, but users can represent carbon reductions as negatives. The amount, paired with the unit, defines the emissions. Both are dynamically adjusted. If emissions exceed <code>1000 kgCO₂e/productUnit</code>, they convert to <code>tCO₂e/productUnit</code>. If they fall below <code>1 kgCO₂e/productUnit</code>, they convert to <code>gCO₂e/productUnit</code>. Otherwise, they stay in <code>kgCO₂e/productUnit</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9.9763</p>
          */
         @NameInMap("quantity")
         public Long quantity;
 
         /**
-         * <p>Unit of emissions. The default value is `kgCO₂e/productUnit.` `productUnit` is the unit selected for the product. The unit value is changed to `tCO₂e/productUnit` or `gCO₂e/productUnit`. For more information, see the remarks in the quantity column.</p>
+         * <p>Unit of emissions. The default value is <code>kgCO₂e/productUnit.</code> <code>productUnit</code> is the unit selected for the product. The unit value is changed to <code>tCO₂e/productUnit</code> or <code>gCO₂e/productUnit</code>. For more information, see the remarks in the quantity column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kgCO₂e/kg</p>
          */
         @NameInMap("unit")
         public String unit;
@@ -109,13 +124,19 @@ public class GetGwpBenchmarkSummaryResponseBody extends TeaModel {
         public java.util.List<GetGwpBenchmarkSummaryResponseBodyDataItems> items;
 
         /**
-         * <p>Emission amount is presented with four decimal places. Normally, modeling doesn\\"t result in negative values, but users can represent carbon reductions as negatives. The amount, paired with the unit, defines the emissions. Both are dynamically adjusted. If emissions exceed `1000 kgCO₂e/productUnit`, they convert to `tCO₂e/productUnit`. If they fall below `1 kgCO₂e/productUnit`, they convert to `gCO₂e/productUnit`. Otherwise, they stay in `kgCO₂e/productUnit`.</p>
+         * <p>Emission amount is presented with four decimal places. Normally, modeling doesn\&quot;t result in negative values, but users can represent carbon reductions as negatives. The amount, paired with the unit, defines the emissions. Both are dynamically adjusted. If emissions exceed <code>1000 kgCO₂e/productUnit</code>, they convert to <code>tCO₂e/productUnit</code>. If they fall below <code>1 kgCO₂e/productUnit</code>, they convert to <code>gCO₂e/productUnit</code>. Otherwise, they stay in <code>kgCO₂e/productUnit</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000.0000</p>
          */
         @NameInMap("quantity")
         public Long quantity;
 
         /**
-         * <p>Unit of emissions. The default value is `kgCO₂e/productUnit.` `productUnit` is the unit selected for the product. The unit value is changed to `tCO₂e/productUnit` or `gCO₂e/productUnit`. For more information, see the remarks in the quantity column.</p>
+         * <p>Unit of emissions. The default value is <code>kgCO₂e/productUnit.</code> <code>productUnit</code> is the unit selected for the product. The unit value is changed to <code>tCO₂e/productUnit</code> or <code>gCO₂e/productUnit</code>. For more information, see the remarks in the quantity column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kgCO₂e/t</p>
          */
         @NameInMap("unit")
         public String unit;

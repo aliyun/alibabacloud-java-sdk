@@ -12,6 +12,9 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8AEC6D9-A359-5169-BD1A-BD848BA60D65</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -39,37 +42,55 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
 
     public static class GetGwpBenchmarkListResponseBodyDataItems extends TeaModel {
         /**
-         * <p>`activeReduction=benchmarkEmission-carbonEmission` Generally, baseline emissions are greater than inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
+         * <p><code>activeReduction=benchmarkEmission-carbonEmission</code> Generally, baseline emissions are greater than inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2169</p>
          */
         @NameInMap("activeReduction")
         public Double activeReduction;
 
         /**
          * <p>Benchmark emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0108</p>
          */
         @NameInMap("benchmarkEmission")
         public Double benchmarkEmission;
 
         /**
          * <p>Benchmark name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>old-energy</p>
          */
         @NameInMap("benchmarkName")
         public String benchmarkName;
 
         /**
          * <p>Inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-0.2061</p>
          */
         @NameInMap("carbonEmission")
         public Double carbonEmission;
 
         /**
          * <p>name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new-energy</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Unused temporarily.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("percent")
         public String percent;
@@ -137,8 +158,11 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
         public java.util.List<GetGwpBenchmarkListResponseBodyDataItems> items;
 
         /**
-         * <p>unit of emissions. The default value is `kgCO₂e/productUnit`. </p>
-         * <p>The `productUnit` is the unit selected for the product. The unit value is changed to `tCO₂e/productUnit` or `gCO₂e/productUnit`. For more information, see the remarks in the quantity column.</p>
+         * <p>unit of emissions. The default value is <code>kgCO₂e/productUnit</code>. 
+         * The <code>productUnit</code> is the unit selected for the product. The unit value is changed to <code>tCO₂e/productUnit</code> or <code>gCO₂e/productUnit</code>. For more information, see the remarks in the quantity column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kgCO₂e/kg</p>
          */
         @NameInMap("unit")
         public String unit;

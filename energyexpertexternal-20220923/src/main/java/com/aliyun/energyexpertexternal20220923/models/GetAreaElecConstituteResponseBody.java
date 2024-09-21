@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAreaElecConstituteResponseBody extends TeaModel {
     /**
      * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,6 +21,9 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;

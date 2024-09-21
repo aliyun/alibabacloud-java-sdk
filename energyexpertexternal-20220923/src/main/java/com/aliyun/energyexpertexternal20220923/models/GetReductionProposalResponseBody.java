@@ -12,6 +12,9 @@ public class GetReductionProposalResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetReductionProposalResponseBody extends TeaModel {
     public static class GetReductionProposalResponseBodyData extends TeaModel {
         /**
          * <p>Proactive carbon reduction recommendations and advice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reduce one-drop usage</p>
          */
         @NameInMap("reduction")
         public String reduction;
 
         /**
          * <p>Active carbon reduction assessment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Trying Energy Expert for a more detailed assessment.</p>
          */
         @NameInMap("reductionEvaluation")
         public String reductionEvaluation;

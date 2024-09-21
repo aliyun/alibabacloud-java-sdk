@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class PushDeviceDataResponseBody extends TeaModel {
     /**
      * <p>Whether the data is pushed successfully. Success is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;

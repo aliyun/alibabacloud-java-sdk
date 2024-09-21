@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetDeviceListRequest extends TeaModel {
     /**
      * <p>The ID of the site.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pn_95</p>
      */
     @NameInMap("factoryId")
     public String factoryId;

@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class GetOrgConstituteRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Z-20240115-2</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>Module code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>carbonInventory.check.scope_1_direct_ghg_emissions</p>
      */
     @NameInMap("moduleCode")
     public String moduleCode;
 
     /**
      * <p>Module type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("moduleType")
     public Integer moduleType;
 
     /**
      * <p>Year.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024</p>
      */
     @NameInMap("year")
     public Integer year;

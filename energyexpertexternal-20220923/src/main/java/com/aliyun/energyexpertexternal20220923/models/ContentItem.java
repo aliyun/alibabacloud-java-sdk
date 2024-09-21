@@ -7,12 +7,20 @@ public class ContentItem extends TeaModel {
     @NameInMap("extInfo")
     public java.util.List<ContentItemExtInfo> extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.45</p>
+     */
     @NameInMap("score")
     public Double score;
 
     @NameInMap("text")
     public String text;
 
+    /**
+     * <strong>example:</strong>
+     * <p>img</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -54,9 +62,17 @@ public class ContentItem extends TeaModel {
     }
 
     public static class ContentItemExtInfoPos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("x")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("y")
         public Long y;
 
@@ -84,12 +100,24 @@ public class ContentItem extends TeaModel {
     }
 
     public static class ContentItemExtInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>center</p>
+         */
         @NameInMap("alignment")
         public String alignment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("index")
         public Long index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("level")
         public Long level;
 
@@ -99,15 +127,31 @@ public class ContentItem extends TeaModel {
         @NameInMap("pos")
         public java.util.List<ContentItemExtInfoPos> pos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>picture</p>
+         */
         @NameInMap("subType")
         public String subType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>版面内容</p>
+         */
         @NameInMap("text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>88c712db271443dd4e3697cb9b5dab3a</p>
+         */
         @NameInMap("uniqueId")
         public String uniqueId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetElecTrendResponseBody extends TeaModel {
     /**
      * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,6 +21,9 @@ public class GetElecTrendResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -54,48 +60,72 @@ public class GetElecTrendResponseBody extends TeaModel {
     public static class GetElecTrendResponseBodyDataLight extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>Power type name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Solar Power</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Power Type Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.light_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("rawData")
         public Double rawData;
 
         /**
          * <p>Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -174,48 +204,72 @@ public class GetElecTrendResponseBody extends TeaModel {
     public static class GetElecTrendResponseBodyDataNuclear extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The price unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>Power Type Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nuclear power</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Power Type Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.nuclear_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("rawData")
         public Double rawData;
 
         /**
          * <p>Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -294,48 +348,72 @@ public class GetElecTrendResponseBody extends TeaModel {
     public static class GetElecTrendResponseBodyDataRenewing extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The price unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>Power Type Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Renewable electricity</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Power Type Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.lingTanDianLi</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("rawData")
         public Double rawData;
 
         /**
          * <p>Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -414,48 +492,72 @@ public class GetElecTrendResponseBody extends TeaModel {
     public static class GetElecTrendResponseBodyDataUrban extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The price unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>Power Type Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Grid power</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Power Type Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.urban_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("rawData")
         public Double rawData;
 
         /**
          * <p>Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -534,48 +636,72 @@ public class GetElecTrendResponseBody extends TeaModel {
     public static class GetElecTrendResponseBodyDataWater extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>Power Type Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hydro power</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Power Type Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.water_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("rawData")
         public Double rawData;
 
         /**
          * <p>Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -654,48 +780,72 @@ public class GetElecTrendResponseBody extends TeaModel {
     public static class GetElecTrendResponseBodyDataWind extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The price unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>Power Type Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wind power</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Power Type Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.wind_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("rawData")
         public Double rawData;
 
         /**
          * <p>Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -774,48 +924,72 @@ public class GetElecTrendResponseBody extends TeaModel {
     public static class GetElecTrendResponseBodyDataZero extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The price unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>Power Type Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zero carbon electricity</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Power Type Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.lingTanDianLi</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("rawData")
         public Double rawData;
 
         /**
          * <p>Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;

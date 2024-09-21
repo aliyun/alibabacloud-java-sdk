@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class PushItemDataRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C-20210223-01</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
-     * <p>Push data list.</p>
-     * <br>
+     * <p>List of data to be pushed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
@@ -22,8 +23,10 @@ public class PushItemDataRequest extends TeaModel {
 
     /**
      * <p>The year of the data created.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024</p>
      */
     @NameInMap("year")
     public String year;
@@ -59,25 +62,31 @@ public class PushItemDataRequest extends TeaModel {
 
     public static class PushItemDataRequestItems extends TeaModel {
         /**
-         * <p>API data identification.<props="intl">For details: [GetDataItemList ](https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist)</p>
-         * <br>
+         * <p>API data identification.&lt;props=&quot;intl&quot;&gt;For details: <a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist">GetDataItemList </a></p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_api_code</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <p>The month.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("month")
         public String month;
 
         /**
          * <p>The value of the data item.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.11</p>
          */
         @NameInMap("value")
         public Double value;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetDataItemListRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C-202302-01</p>
      */
     @NameInMap("code")
     public String code;

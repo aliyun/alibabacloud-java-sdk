@@ -12,6 +12,9 @@ public class GetDataItemListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetDataItemListResponseBody extends TeaModel {
     public static class GetDataItemListResponseBodyData extends TeaModel {
         /**
          * <p>The identifier of the data item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_api_code</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <p>The name of the data item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_bbb</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Data filling method, 1: monthly value 2: annual value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("period")
         public Integer period;
 
         /**
          * <p>The data item unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kg</p>
          */
         @NameInMap("unit")
         public String unit;

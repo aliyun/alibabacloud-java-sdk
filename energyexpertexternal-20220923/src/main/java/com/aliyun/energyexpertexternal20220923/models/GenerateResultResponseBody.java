@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class GenerateResultResponseBody extends TeaModel {
     /**
-     * <p>The returned data. `true` indicates that the request is successful, `false` indicates that the request fails.</p>
+     * <p>The returned data. <code>true</code> indicates that the request is successful, <code>false</code> indicates that the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("data")
     public Boolean data;
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;

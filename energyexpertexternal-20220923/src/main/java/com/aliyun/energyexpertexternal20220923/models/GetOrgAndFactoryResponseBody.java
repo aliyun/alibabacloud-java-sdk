@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetOrgAndFactoryResponseBody extends TeaModel {
     /**
      * <p>The code returned for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,18 +21,27 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     public static class GetOrgAndFactoryResponseBodyDataFactoryList extends TeaModel {
         /**
          * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_95</p>
          */
         @NameInMap("factoryId")
         public String factoryId;
 
         /**
          * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ledi Industrial Park 1</p>
          */
         @NameInMap("factoryName")
         public String factoryName;
@@ -118,6 +136,9 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     public static class GetOrgAndFactoryResponseBodyData extends TeaModel {
         /**
          * <p>The Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1319617584664960</p>
          */
         @NameInMap("aliyunPk")
         public String aliyunPk;
@@ -130,12 +151,18 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
         /**
          * <p>The enterprise ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6265f42XXXX2fec150</p>
          */
         @NameInMap("organizationId")
         public String organizationId;
 
         /**
          * <p>The enterprise name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ledi Industrial Park</p>
          */
         @NameInMap("organizationName")
         public String organizationName;
