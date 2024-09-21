@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RecalculateCarbonEmissionResponseBody extends TeaModel {
     /**
      * <p>The returned data. A value of true indicates that the request is successful. A value of false indicates that the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;

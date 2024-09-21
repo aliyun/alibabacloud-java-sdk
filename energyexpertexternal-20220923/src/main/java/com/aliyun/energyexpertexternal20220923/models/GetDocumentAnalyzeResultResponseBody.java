@@ -7,6 +7,10 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
     @NameInMap("data")
     public GetDocumentAnalyzeResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
     }
 
     public static class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9994202852249146</p>
+         */
         @NameInMap("keyConfidence")
         public Double keyConfidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9794202852249146</p>
+         */
         @NameInMap("valueConfidence")
         public Double valueConfidence;
 

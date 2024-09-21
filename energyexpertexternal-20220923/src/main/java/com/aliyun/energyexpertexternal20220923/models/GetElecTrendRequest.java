@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class GetElecTrendRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C-20240115-3</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>List of years.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("yearList")

@@ -12,6 +12,9 @@ public class GetGasConstituteResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class GetGasConstituteResponseBody extends TeaModel {
     public static class GetGasConstituteResponseBodyData extends TeaModel {
         /**
          * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>Gas emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.14</p>
          */
         @NameInMap("gasEmissionData")
         public Double gasEmissionData;
 
         /**
          * <p>Name of gas</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CO₂</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Proportion of carbon emissions. Example value: 0.5 (50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Gas Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("type")
         public Integer type;

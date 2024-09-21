@@ -12,6 +12,9 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
     public static class GetGwpInventorySummaryResponseBodyDataItems extends TeaModel {
         /**
          * <p>Inventory resource type name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Energy</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.01</p>
          */
         @NameInMap("percent")
         public String percent;
 
         /**
          * <p>Quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9.9763</p>
          */
         @NameInMap("quantity")
         public Double quantity;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kgCO₂e/Piece(s)</p>
          */
         @NameInMap("unit")
         public String unit;
@@ -110,18 +125,27 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
 
         /**
          * <p>The emission quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0100</p>
          */
         @NameInMap("quantity")
         public Double quantity;
 
         /**
          * <p>The time when the result was generated, in the millisecond timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709108026000</p>
          */
         @NameInMap("resultGenerateTime")
         public Long resultGenerateTime;
 
         /**
          * <p>Emission Unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tCO₂e/Piece(s)</p>
          */
         @NameInMap("unit")
         public String unit;

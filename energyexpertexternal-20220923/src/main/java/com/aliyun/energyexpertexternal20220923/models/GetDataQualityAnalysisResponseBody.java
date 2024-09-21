@@ -12,6 +12,9 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A0AEC56-5C9A-5D47-93DF-7227836FFF82</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
     public static class GetDataQualityAnalysisResponseBodyDataDataQualityScore extends TeaModel {
         /**
          * <p>Data quality evaluation indicator 1: activity data credibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("g1")
         public Double g1;
 
         /**
          * <p>Data quality evaluation indicator 2: data factor reliability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("g2")
         public Double g2;
 
         /**
          * <p>Data quality evaluation indicator 3: time representativeness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("g3")
         public Double g3;
 
         /**
          * <p>Data quality evaluation indicator 4: geographic representativeness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("g4")
         public Double g4;
@@ -104,6 +119,9 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
     public static class GetDataQualityAnalysisResponseBodyDataDataQuality extends TeaModel {
         /**
          * <p>Inventory name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>energy</p>
          */
         @NameInMap("inventory")
         public String inventory;
@@ -140,30 +158,45 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
     public static class GetDataQualityAnalysisResponseBodyDataDataQualityResult extends TeaModel {
         /**
          * <p>The score. This parameter is applicable to DQR results. The distribution ranges from 1 to 5. A value closer to 1 indicates better data quality. The number of valid digits is kept to four decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2345</p>
          */
         @NameInMap("data_quality_score")
         public Double dataQualityScore;
 
         /**
          * <p>Data quality evaluation indicator 1: activity data credibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2345</p>
          */
         @NameInMap("g1")
         public Double g1;
 
         /**
          * <p>Data quality evaluation indicator 2: data factor reliability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2345</p>
          */
         @NameInMap("g2")
         public Double g2;
 
         /**
          * <p>Data quality evaluation indicator 3: time representativeness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2345</p>
          */
         @NameInMap("g3")
         public Double g3;
 
         /**
          * <p>Data quality evaluation indicator 4: geographic representativeness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2345</p>
          */
         @NameInMap("g4")
         public Double g4;
@@ -218,12 +251,18 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
     public static class GetDataQualityAnalysisResponseBodyDataSensitivityList extends TeaModel {
         /**
          * <p>Inventory id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>Name of the inventory item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>energy</p>
          */
         @NameInMap("inventory")
         public String inventory;
@@ -236,6 +275,9 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
 
         /**
          * <p>Sensitivity percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91.7</p>
          */
         @NameInMap("sensitivity")
         public Double sensitivity;
@@ -282,12 +324,18 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
     public static class GetDataQualityAnalysisResponseBodyDataUncertaintyValues extends TeaModel {
         /**
          * <p>The name of the inventory. Format: process name / inventory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>process-1/inventory-1</p>
          */
         @NameInMap("inventory")
         public String inventory;
 
         /**
-         * <p>Inventory uncertainty absolute contribution size. The impact of the quality of each inventory data on the carbon footprint results in the modeling process, when the uncertain contribution of a list is large, please improve its data quality as much as possible to improve the accuracy of carbon footprint analysis. The meaning of "1.4964" is not determined to contribute 1.4964 kgCO₂ e/unit, where unit is the unit of the product.</p>
+         * <p>Inventory uncertainty absolute contribution size. The impact of the quality of each inventory data on the carbon footprint results in the modeling process, when the uncertain contribution of a list is large, please improve its data quality as much as possible to improve the accuracy of carbon footprint analysis. The meaning of &quot;1.4964&quot; is not determined to contribute 1.4964 kgCO₂ e/unit, where unit is the unit of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.4964</p>
          */
         @NameInMap("uncertaintyContribution")
         public String uncertaintyContribution;
@@ -335,7 +383,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         public java.util.List<GetDataQualityAnalysisResponseBodyDataSensitivityList> sensitivityList;
 
         /**
-         * <p>Uncertainty value. The model\\"s overall percentage uncertainty results. "10.00%" symbolizes a 10.00% uncertainty, indicating that the carbon footprint lies within ±10.00%. This is derived from a weighted aggregation of individual inventory uncertainties.</p>
+         * <p>Uncertainty value. The model\&quot;s overall percentage uncertainty results. &quot;10.00%&quot; symbolizes a 10.00% uncertainty, indicating that the carbon footprint lies within ±10.00%. This is derived from a weighted aggregation of individual inventory uncertainties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.00</p>
          */
         @NameInMap("uncertainty")
         public String uncertainty;

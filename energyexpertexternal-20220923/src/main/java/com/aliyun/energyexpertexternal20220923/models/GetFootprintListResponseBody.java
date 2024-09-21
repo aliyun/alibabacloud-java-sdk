@@ -12,6 +12,9 @@ public class GetFootprintListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06DA2909-7736-5738-AA31-ACD617D828F1</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,78 +43,117 @@ public class GetFootprintListResponseBody extends TeaModel {
     public static class GetFootprintListResponseBodyDataRecords extends TeaModel {
         /**
          * <p>The amount of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0000000000000000000000000</p>
          */
         @NameInMap("amount")
         public Double amount;
 
         /**
-         * <p>Authentication status enumeration value, please refer to [link](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).</p>
+         * <p>Authentication status enumeration value, please refer to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">link</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("authStatus")
         public Long authStatus;
 
         /**
          * <p>Calculation end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024/01/31</p>
          */
         @NameInMap("checkEndTime")
         public String checkEndTime;
 
         /**
          * <p>Calculation start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024/01/01</p>
          */
         @NameInMap("checkStartTime")
         public String checkStartTime;
 
         /**
          * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20080808-1</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <p>The user who created it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Energy Expert</p>
          */
         @NameInMap("createdBy")
         public String createdBy;
 
         /**
          * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("id")
         public Long id;
 
         /**
          * <p>Indicates whether the demo model is a built-in model. A value of 1 indicates a true value and a value of 0 indicates a false value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("isDemoModel")
         public Long isDemoModel;
 
         /**
-         * <p>The literal expression corresponding to lifeCycleType, `From Cradle to Gate` and `From Cradle to Grave`.</p>
+         * <p>The literal expression corresponding to lifeCycleType, <code>From Cradle to Gate</code> and <code>From Cradle to Grave</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>From Cradle to Gate</p>
          */
         @NameInMap("lifeCycle")
         public String lifeCycle;
 
         /**
-         * <p>1 is `From Cradle to Gate`, and 2 is `From Cradle to Grave`.</p>
+         * <p>1 is <code>From Cradle to Gate</code>, and 2 is <code>From Cradle to Grave</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("lifeCycleType")
         public Long lifeCycleType;
 
         /**
          * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Carbon-footprint-demo</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>Product category enumeration value, please refer to [Carbon Footprint Appendices](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).</p>
+         * <p>Product category enumeration value, please refer to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">Carbon Footprint Appendices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158-159</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>Unit enumeration value. Please refer to [Carbon Footprint Appendices](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).</p>
+         * <p>Unit enumeration value. Please refer to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">Carbon Footprint Appendices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1-4</p>
          */
         @NameInMap("unit")
         public String unit;
@@ -230,12 +272,18 @@ public class GetFootprintListResponseBody extends TeaModel {
     public static class GetFootprintListResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("currentPage")
         public Long currentPage;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
@@ -248,12 +296,18 @@ public class GetFootprintListResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         @NameInMap("total")
         public Long total;
 
         /**
          * <p>Total Pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("totalPage")
         public Long totalPage;

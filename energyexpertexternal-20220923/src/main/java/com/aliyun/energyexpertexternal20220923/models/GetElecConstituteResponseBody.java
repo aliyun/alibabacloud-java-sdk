@@ -12,6 +12,9 @@ public class GetElecConstituteResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static class GetElecConstituteResponseBodyDataLight extends TeaModel {
         /**
          * <p>Carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The unique identifier of name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.light_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("rawData")
         public Double rawData;
@@ -132,36 +153,54 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static class GetElecConstituteResponseBodyDataNuclear extends TeaModel {
         /**
          * <p>Carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.3</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nuclear</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The unique identifier of name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.nuclear_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("rawData")
         public Double rawData;
@@ -224,36 +263,54 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static class GetElecConstituteResponseBodyDataRenewing extends TeaModel {
         /**
          * <p>Carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.3</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>renewing</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The unique identifier of name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.keZaiShengZiYuan</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.44</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.3</p>
          */
         @NameInMap("rawData")
         public Double rawData;
@@ -316,36 +373,54 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static class GetElecConstituteResponseBodyDataUrban extends TeaModel {
         /**
          * <p>Carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urban</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The unique identifier of name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.urban_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("rawData")
         public Double rawData;
@@ -408,36 +483,54 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static class GetElecConstituteResponseBodyDataWater extends TeaModel {
         /**
          * <p>Carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>water</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The unique identifier of name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.water_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("rawData")
         public Double rawData;
@@ -500,36 +593,54 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static class GetElecConstituteResponseBodyDataWind extends TeaModel {
         /**
          * <p>Carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wind</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The unique identifier of name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.wind_electricity</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.3</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         @NameInMap("rawData")
         public Double rawData;
@@ -592,36 +703,54 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static class GetElecConstituteResponseBodyDataZero extends TeaModel {
         /**
          * <p>Carbon emission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kWh</p>
          */
         @NameInMap("dataUnit")
         public String dataUnit;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zero</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The unique identifier of name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.lingTanDianLi</p>
          */
         @NameInMap("nameKey")
         public String nameKey;
 
         /**
          * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.33</p>
          */
         @NameInMap("ratio")
         public Double ratio;
 
         /**
          * <p>Electricity consumption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>444.3</p>
          */
         @NameInMap("rawData")
         public Double rawData;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class RecalculateCarbonEmissionRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C-20240202-01</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>Year of inventory.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024</p>
      */
     @NameInMap("year")
     public String year;

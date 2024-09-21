@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class GetEmissionSummaryRequest extends TeaModel {
     /**
      * <p>The enterprise code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C-20240119-1</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>Module code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>carbonInventory.check.scope_1_direct_ghg_emissions</p>
      */
     @NameInMap("moduleCode")
     public String moduleCode;
 
     /**
      * <p>Module type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("moduleType")
     public Integer moduleType;
 
     /**
      * <p>Year of inventory.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024</p>
      */
     @NameInMap("year")
     public Integer year;

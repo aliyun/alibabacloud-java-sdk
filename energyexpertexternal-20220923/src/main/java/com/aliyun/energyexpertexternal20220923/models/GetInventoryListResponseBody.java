@@ -12,6 +12,9 @@ public class GetInventoryListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,26 +43,39 @@ public class GetInventoryListResponseBody extends TeaModel {
     public static class GetInventoryListResponseBodyDataItems extends TeaModel {
         /**
          * <p>Emission quantity: may be positive, negative, or 0. To ensure the calculation accuracy, 24 decimal places are reserved for the calculation process. We recommend that you intercept data based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000.000000000000000000000000000000</p>
          */
         @NameInMap("carbonEmission")
         public Double carbonEmission;
 
         /**
          * <p>Name </p>
-         * <br>
-         * <p>> The name is related to the request parameters group. Request parameters: resource, return name parameter meaning: list name; request parameters: process, return name parameter meaning: process name; request parameters: resourceType, return name parameter meaning: inventory resource type name; request parameters: processType, return name parameter meaning: flow name.</p>
+         * <blockquote>
+         * <p>The name is related to the request parameters group. Request parameters: resource, return name parameter meaning: list name; request parameters: process, return name parameter meaning: process name; request parameters: resourceType, return name parameter meaning: inventory resource type name; request parameters: processType, return name parameter meaning: flow name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Energy</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Percentage</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.01</p>
          */
         @NameInMap("percent")
         public String percent;
 
         /**
          * <p>Process Name: It is only meaningful when the request parameters group is resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Process-1</p>
          */
         @NameInMap("processName")
         public String processName;
@@ -112,12 +128,18 @@ public class GetInventoryListResponseBody extends TeaModel {
 
         /**
          * <p>Unit of product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kg</p>
          */
         @NameInMap("productUnit")
         public String productUnit;
 
         /**
          * <p>Emission Unit: The default value is kgCO₂ /productUnit. productUnit is the unit selected for the product. The unit value is changed to tCO₂ e/productUnit or gCO₂ e/productUnit based on the emission quantity. For more information, see the quantity column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kgCO₂e/kg</p>
          */
         @NameInMap("unit")
         public String unit;

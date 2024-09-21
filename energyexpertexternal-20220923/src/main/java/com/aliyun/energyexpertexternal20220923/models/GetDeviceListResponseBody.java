@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDeviceListResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,18 +21,27 @@ public class GetDeviceListResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -81,32 +93,47 @@ public class GetDeviceListResponseBody extends TeaModel {
 
     public static class GetDeviceListResponseBodyDataDeviceListInfo extends TeaModel {
         /**
-         * <p>The rated capacity.</p>
-         * <p>Unit is kVA.</p>
+         * <p>The rated capacity.
+         * Unit is kVA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("constKva")
         public Integer constKva;
 
         /**
          * <p>The transformation ratio of current.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ct")
         public Integer ct;
 
         /**
          * <p>The magnification ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("magnification")
         public Integer magnification;
 
         /**
          * <p>The high and low voltage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("pressure")
         public Integer pressure;
 
         /**
          * <p>The transformation ratio of voltage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("pt")
         public Integer pt;
@@ -161,18 +188,27 @@ public class GetDeviceListResponseBody extends TeaModel {
     public static class GetDeviceListResponseBodyDataDeviceList extends TeaModel {
         /**
          * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_69873</p>
          */
         @NameInMap("deviceId")
         public String deviceId;
 
         /**
          * <p>The device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Main transformer 4#</p>
          */
         @NameInMap("deviceName")
         public String deviceName;
 
         /**
          * <p>The level 1 meter type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Electric meter</p>
          */
         @NameInMap("firstTypeName")
         public String firstTypeName;
@@ -185,12 +221,18 @@ public class GetDeviceListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the parent device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_6987</p>
          */
         @NameInMap("parentDevice")
         public String parentDevice;
 
         /**
          * <p>The level 2 meter type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Gateway meter</p>
          */
         @NameInMap("secondTypeName")
         public String secondTypeName;
@@ -253,6 +295,9 @@ public class GetDeviceListResponseBody extends TeaModel {
     public static class GetDeviceListResponseBodyData extends TeaModel {
         /**
          * <p>The code returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("code")
         public String code;
@@ -265,18 +310,27 @@ public class GetDeviceListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_95</p>
          */
         @NameInMap("factoryId")
         public String factoryId;
 
         /**
          * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("httpCode")
         public Integer httpCode;
 
         /**
          * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("success")
         public Boolean success;

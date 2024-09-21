@@ -4,17 +4,31 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocumentAnalyzeJobAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fileName")
     public String fileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/example.pdf">https://example.com/example.pdf</a></p>
+     */
     @NameInMap("fileUrl")
     public java.io.InputStream fileUrlObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>folderCode</p>
+     */
     @NameInMap("folderId")
     public String folderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>templateCode</p>
      */
     @NameInMap("templateId")
     public String templateId;

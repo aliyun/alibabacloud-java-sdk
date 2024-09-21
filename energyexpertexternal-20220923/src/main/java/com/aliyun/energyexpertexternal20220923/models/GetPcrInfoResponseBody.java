@@ -12,6 +12,9 @@ public class GetPcrInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A0AEC56-5C9A-5D47-93DF-7227836FFF82</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetPcrInfoResponseBody extends TeaModel {
     public static class GetPcrInfoResponseBodyData extends TeaModel {
         /**
          * <p>The timestamp when the report was created. The timestamp is in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709109790532</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>Report name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>report name</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Download url link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://energy.alibabacloud.com">https://energy.alibabacloud.com</a></p>
          */
         @NameInMap("url")
         public String url;

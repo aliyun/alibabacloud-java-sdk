@@ -7,6 +7,10 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
     @NameInMap("data")
     public SendDocumentAskQuestionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

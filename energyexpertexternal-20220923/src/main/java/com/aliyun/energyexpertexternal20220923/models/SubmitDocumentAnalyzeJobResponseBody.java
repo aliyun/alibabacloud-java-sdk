@@ -9,6 +9,9 @@ public class SubmitDocumentAnalyzeJobResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A0AEC56-5C9A-5D47-93DF-7227836FFF82</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,6 +38,10 @@ public class SubmitDocumentAnalyzeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitDocumentAnalyzeJobResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>adkc-kk2k41-kk2ol-222424</p>
+         */
         @NameInMap("jobId")
         public String jobId;
 

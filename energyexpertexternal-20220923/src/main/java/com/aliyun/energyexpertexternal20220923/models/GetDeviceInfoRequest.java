@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetDeviceInfoRequest extends TeaModel {
     /**
      * <p>The ID of the device.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pn_69873</p>
      */
     @NameInMap("deviceId")
     public String deviceId;
 
     /**
      * <p>The time string in the YYYY-mm-dd format.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-26</p>
      */
     @NameInMap("ds")
     public String ds;
 
     /**
      * <p>The ID of the site.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pn_95</p>
      */
     @NameInMap("factoryId")
     public String factoryId;

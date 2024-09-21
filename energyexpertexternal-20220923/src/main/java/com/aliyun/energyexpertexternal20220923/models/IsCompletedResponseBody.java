@@ -12,6 +12,9 @@ public class IsCompletedResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class IsCompletedResponseBody extends TeaModel {
     public static class IsCompletedResponseBodyData extends TeaModel {
         /**
          * <p>Modified time in milliseconds, e.g. 1711438780000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1711438780000</p>
          */
         @NameInMap("modifiedTime")
         public Long modifiedTime;
 
         /**
          * <p>The unique key of this generation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550c2b7b-f2e0-4176-ab0a-53ea4b355721</p>
          */
         @NameInMap("taskKey")
         public String taskKey;
 
         /**
          * <p>Unused temporarily.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("taskShortResult")
         public String taskShortResult;
 
         /**
-         * <p>The status of the report generation task. The possible values are `running`, `success`, and `error`, which mean generating, generating succeeded, and generating failed, respectively. If you encounter a result generation failure, check the model, correct the model, and then generate the result again.</p>
+         * <p>The status of the report generation task. The possible values are <code>running</code>, <code>success</code>, and <code>error</code>, which mean generating, generating succeeded, and generating failed, respectively. If you encounter a result generation failure, check the model, correct the model, and then generate the result again.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("taskStatus")
         public String taskStatus;

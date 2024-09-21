@@ -12,6 +12,9 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9bc20a5a-b26b-4c28-922a-7cd10b61f96f</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
     public static class GetCarbonEmissionTrendResponseBodyDataActualEmissionListItems extends TeaModel {
         /**
          * <p>Carbon emissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.22</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>The year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -96,6 +108,9 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
 
         /**
          * <p>The year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -126,18 +141,27 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
     public static class GetCarbonEmissionTrendResponseBodyDataTargetEmissionListItems extends TeaModel {
         /**
          * <p>Carbon emissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.22</p>
          */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
         /**
          * <p>The month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("month")
         public Integer month;
 
         /**
          * <p>The year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
@@ -182,6 +206,9 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
 
         /**
          * <p>The year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         @NameInMap("year")
         public String year;
