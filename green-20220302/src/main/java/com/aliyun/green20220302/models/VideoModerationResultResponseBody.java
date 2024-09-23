@@ -153,6 +153,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Labels")
         public String labels;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         /**
          * <p>Subcategory labels. Multiple labels are separated by commas (,).</p>
          * 
@@ -253,6 +256,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.labels;
         }
 
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetails setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
         public VideoModerationResultResponseBodyDataAudioResultSliceDetails setRiskTips(String riskTips) {
             this.riskTips = riskTips;
             return this;
@@ -318,6 +329,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("AudioSummarys")
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> audioSummarys;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         /**
          * <p>The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.</p>
          */
@@ -337,6 +351,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.audioSummarys;
         }
 
+        public VideoModerationResultResponseBodyDataAudioResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
         public VideoModerationResultResponseBodyDataAudioResult setSliceDetails(java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> sliceDetails) {
             this.sliceDetails = sliceDetails;
             return this;
@@ -348,6 +370,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFrameSummarys extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The label against which a captured frame is matched.</p>
          * 
@@ -369,6 +394,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public static VideoModerationResultResponseBodyDataFrameResultFrameSummarys build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataFrameResultFrameSummarys self = new VideoModerationResultResponseBodyDataFrameResultFrameSummarys();
             return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFrameSummarys setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public VideoModerationResultResponseBodyDataFrameResultFrameSummarys setLabel(String label) {
@@ -466,6 +499,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.</p>
          * 
@@ -486,6 +522,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public Float getConfidence() {
             return this.confidence;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsResult setLabel(String label) {
@@ -595,6 +639,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Results")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResults> results;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         /**
          * <p>The temporary URL of a captured frame. This URL is valid for 30 minutes.</p>
          * 
@@ -632,6 +679,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResults> getResults() {
             return this.results;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFrames setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public VideoModerationResultResponseBodyDataFrameResultFrames setTempUrl(String tempUrl) {
@@ -674,6 +729,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Frames")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrames> frames;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         public static VideoModerationResultResponseBodyDataFrameResult build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataFrameResult self = new VideoModerationResultResponseBodyDataFrameResult();
             return TeaModel.build(map, self);
@@ -701,6 +759,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrames> getFrames() {
             return this.frames;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
     }
@@ -735,6 +801,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
          */
         @NameInMap("LiveId")
         public String liveId;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         /**
          * <p>The task ID.</p>
@@ -780,6 +849,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public String getLiveId() {
             return this.liveId;
+        }
+
+        public VideoModerationResultResponseBodyData setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public VideoModerationResultResponseBodyData setTaskId(String taskId) {
