@@ -58,6 +58,9 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static ListIpamResourceCidrsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIpamResourceCidrsRequest self = new ListIpamResourceCidrsRequest();
         return TeaModel.build(map, self);
@@ -125,6 +128,14 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public ListIpamResourceCidrsRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

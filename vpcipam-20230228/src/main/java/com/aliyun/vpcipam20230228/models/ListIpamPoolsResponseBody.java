@@ -4,6 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamPoolsResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Long count;
+
     @NameInMap("IpamPools")
     public java.util.List<ListIpamPoolsResponseBodyIpamPools> ipamPools;
 
@@ -38,6 +41,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
     public static ListIpamPoolsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIpamPoolsResponseBody self = new ListIpamPoolsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListIpamPoolsResponseBody setCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    public Long getCount() {
+        return this.count;
     }
 
     public ListIpamPoolsResponseBody setIpamPools(java.util.List<ListIpamPoolsResponseBodyIpamPools> ipamPools) {
@@ -140,6 +151,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @NameInMap("AllocationMinCidrMask")
         public Integer allocationMinCidrMask;
 
+        @NameInMap("AutoImport")
+        public Boolean autoImport;
+
         /**
          * <strong>example:</strong>
          * <p>2023-04-19T16:49:01Z</p>
@@ -209,6 +223,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
          */
         @NameInMap("IpamScopeType")
         public String ipamScopeType;
+
+        @NameInMap("IsShared")
+        public Boolean isShared;
 
         /**
          * <strong>example:</strong>
@@ -282,6 +299,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
         public Integer getAllocationMinCidrMask() {
             return this.allocationMinCidrMask;
+        }
+
+        public ListIpamPoolsResponseBodyIpamPools setAutoImport(Boolean autoImport) {
+            this.autoImport = autoImport;
+            return this;
+        }
+        public Boolean getAutoImport() {
+            return this.autoImport;
         }
 
         public ListIpamPoolsResponseBodyIpamPools setCreateTime(String createTime) {
@@ -362,6 +387,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
         public String getIpamScopeType() {
             return this.ipamScopeType;
+        }
+
+        public ListIpamPoolsResponseBodyIpamPools setIsShared(Boolean isShared) {
+            this.isShared = isShared;
+            return this;
+        }
+        public Boolean getIsShared() {
+            return this.isShared;
         }
 
         public ListIpamPoolsResponseBodyIpamPools setOwnerId(Long ownerId) {

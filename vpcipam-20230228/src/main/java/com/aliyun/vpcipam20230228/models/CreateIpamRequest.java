@@ -66,6 +66,9 @@ public class CreateIpamRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateIpamRequestTag> tag;
+
     public static CreateIpamRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIpamRequest self = new CreateIpamRequest();
         return TeaModel.build(map, self);
@@ -157,6 +160,44 @@ public class CreateIpamRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateIpamRequest setTag(java.util.List<CreateIpamRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateIpamRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateIpamRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateIpamRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateIpamRequestTag self = new CreateIpamRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIpamRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateIpamRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
