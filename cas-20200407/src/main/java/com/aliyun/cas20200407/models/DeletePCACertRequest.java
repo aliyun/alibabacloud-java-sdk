@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePCACertRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/452331.html">ListCert</a> operation to query the unique identifiers of certificates.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
