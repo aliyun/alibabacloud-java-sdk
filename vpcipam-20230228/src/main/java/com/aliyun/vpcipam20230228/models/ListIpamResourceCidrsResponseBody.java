@@ -4,6 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamResourceCidrsResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Long count;
+
     @NameInMap("IpamResourceCidrs")
     public java.util.List<ListIpamResourceCidrsResponseBodyIpamResourceCidrs> ipamResourceCidrs;
 
@@ -38,6 +41,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     public static ListIpamResourceCidrsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIpamResourceCidrsResponseBody self = new ListIpamResourceCidrsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListIpamResourceCidrsResponseBody setCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    public Long getCount() {
+        return this.count;
     }
 
     public ListIpamResourceCidrsResponseBody setIpamResourceCidrs(java.util.List<ListIpamResourceCidrsResponseBodyIpamResourceCidrs> ipamResourceCidrs) {
@@ -193,6 +204,9 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static ListIpamResourceCidrsResponseBodyIpamResourceCidrs build(java.util.Map<String, ?> map) throws Exception {
             ListIpamResourceCidrsResponseBodyIpamResourceCidrs self = new ListIpamResourceCidrsResponseBodyIpamResourceCidrs();
             return TeaModel.build(map, self);
@@ -324,6 +338,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrs setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

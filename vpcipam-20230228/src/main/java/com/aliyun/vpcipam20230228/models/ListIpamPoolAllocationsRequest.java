@@ -15,6 +15,8 @@ public class ListIpamPoolAllocationsRequest extends TeaModel {
     public java.util.List<String> ipamPoolAllocationIds;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-pool-6rcq3tobayc20t****</p>
      */

@@ -25,6 +25,9 @@ public class CreateIpamPoolRequest extends TeaModel {
     @NameInMap("AllocationMinCidrMask")
     public Integer allocationMinCidrMask;
 
+    @NameInMap("AutoImport")
+    public Boolean autoImport;
+
     /**
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -104,6 +107,9 @@ public class CreateIpamPoolRequest extends TeaModel {
     @NameInMap("SourceIpamPoolId")
     public String sourceIpamPoolId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateIpamPoolRequestTag> tag;
+
     public static CreateIpamPoolRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIpamPoolRequest self = new CreateIpamPoolRequest();
         return TeaModel.build(map, self);
@@ -131,6 +137,14 @@ public class CreateIpamPoolRequest extends TeaModel {
     }
     public Integer getAllocationMinCidrMask() {
         return this.allocationMinCidrMask;
+    }
+
+    public CreateIpamPoolRequest setAutoImport(Boolean autoImport) {
+        this.autoImport = autoImport;
+        return this;
+    }
+    public Boolean getAutoImport() {
+        return this.autoImport;
     }
 
     public CreateIpamPoolRequest setClientToken(String clientToken) {
@@ -235,6 +249,44 @@ public class CreateIpamPoolRequest extends TeaModel {
     }
     public String getSourceIpamPoolId() {
         return this.sourceIpamPoolId;
+    }
+
+    public CreateIpamPoolRequest setTag(java.util.List<CreateIpamPoolRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateIpamPoolRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateIpamPoolRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateIpamPoolRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateIpamPoolRequestTag self = new CreateIpamPoolRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIpamPoolRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateIpamPoolRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

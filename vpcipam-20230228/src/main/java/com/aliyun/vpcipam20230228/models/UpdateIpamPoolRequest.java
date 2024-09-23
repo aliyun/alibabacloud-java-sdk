@@ -25,6 +25,9 @@ public class UpdateIpamPoolRequest extends TeaModel {
     @NameInMap("AllocationMinCidrMask")
     public Integer allocationMinCidrMask;
 
+    @NameInMap("AutoImport")
+    public Boolean autoImport;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -117,6 +120,14 @@ public class UpdateIpamPoolRequest extends TeaModel {
     }
     public Integer getAllocationMinCidrMask() {
         return this.allocationMinCidrMask;
+    }
+
+    public UpdateIpamPoolRequest setAutoImport(Boolean autoImport) {
+        this.autoImport = autoImport;
+        return this;
+    }
+    public Boolean getAutoImport() {
+        return this.autoImport;
     }
 
     public UpdateIpamPoolRequest setClearAllocationDefaultCidrMask(Boolean clearAllocationDefaultCidrMask) {

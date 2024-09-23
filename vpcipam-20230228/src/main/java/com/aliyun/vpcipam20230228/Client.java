@@ -201,6 +201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -248,6 +252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.allocationMinCidrMask)) {
             query.put("AllocationMinCidrMask", request.allocationMinCidrMask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoImport)) {
+            query.put("AutoImport", request.autoImport);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -300,6 +308,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIpamPoolId)) {
             query.put("SourceIpamPoolId", request.sourceIpamPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -436,6 +448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -970,6 +986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IpamScopeId", request.ipamScopeId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isShared)) {
+            query.put("IsShared", request.isShared);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -1078,6 +1098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1674,6 +1698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.allocationMinCidrMask)) {
             query.put("AllocationMinCidrMask", request.allocationMinCidrMask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoImport)) {
+            query.put("AutoImport", request.autoImport);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clearAllocationDefaultCidrMask)) {

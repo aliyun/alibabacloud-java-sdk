@@ -69,6 +69,9 @@ public class CreateIpamScopeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateIpamScopeRequestTag> tag;
+
     public static CreateIpamScopeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIpamScopeRequest self = new CreateIpamScopeRequest();
         return TeaModel.build(map, self);
@@ -160,6 +163,44 @@ public class CreateIpamScopeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateIpamScopeRequest setTag(java.util.List<CreateIpamScopeRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateIpamScopeRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateIpamScopeRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateIpamScopeRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateIpamScopeRequestTag self = new CreateIpamScopeRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIpamScopeRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateIpamScopeRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -21,6 +21,9 @@ public class ListIpamPoolsRequest extends TeaModel {
     @NameInMap("IpamScopeId")
     public String ipamScopeId;
 
+    @NameInMap("IsShared")
+    public Boolean isShared;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -107,6 +110,14 @@ public class ListIpamPoolsRequest extends TeaModel {
     }
     public String getIpamScopeId() {
         return this.ipamScopeId;
+    }
+
+    public ListIpamPoolsRequest setIsShared(Boolean isShared) {
+        this.isShared = isShared;
+        return this;
+    }
+    public Boolean getIsShared() {
+        return this.isShared;
     }
 
     public ListIpamPoolsRequest setMaxResults(Integer maxResults) {

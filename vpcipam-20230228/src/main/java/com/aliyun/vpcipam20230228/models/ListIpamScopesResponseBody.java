@@ -4,6 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamScopesResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Long count;
+
     @NameInMap("IpamScopes")
     public java.util.List<ListIpamScopesResponseBodyIpamScopes> ipamScopes;
 
@@ -38,6 +41,14 @@ public class ListIpamScopesResponseBody extends TeaModel {
     public static ListIpamScopesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIpamScopesResponseBody self = new ListIpamScopesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListIpamScopesResponseBody setCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    public Long getCount() {
+        return this.count;
     }
 
     public ListIpamScopesResponseBody setIpamScopes(java.util.List<ListIpamScopesResponseBodyIpamScopes> ipamScopes) {
