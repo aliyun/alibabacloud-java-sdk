@@ -26,6 +26,9 @@ public class CreateCsrRequest extends TeaModel {
 
     /**
      * <p>The name of the company.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aly</p>
      */
     @NameInMap("CorpName")
     public String corpName;

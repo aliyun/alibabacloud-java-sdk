@@ -36,6 +36,15 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String cert;
 
     /**
+     * <p>The unique identifier of the certificate. The value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10741304-cn-hangzhou</p>
+     */
+    @NameInMap("CertIdentifier")
+    public String certIdentifier;
+
+    /**
      * <p>The city of the company or organization to which the certificate purchaser belongs.</p>
      * 
      * <strong>example:</strong>
@@ -290,6 +299,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
     public String getCert() {
         return this.cert;
+    }
+
+    public GetUserCertificateDetailResponseBody setCertIdentifier(String certIdentifier) {
+        this.certIdentifier = certIdentifier;
+        return this;
+    }
+    public String getCertIdentifier() {
+        return this.certIdentifier;
     }
 
     public GetUserCertificateDetailResponseBody setCity(String city) {

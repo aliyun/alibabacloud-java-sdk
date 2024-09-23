@@ -112,6 +112,9 @@ public class ListCsrResponseBody extends TeaModel {
 
         /**
          * <p>The name of the company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corp_name</p>
          */
         @NameInMap("CorpName")
         public String corpName;
