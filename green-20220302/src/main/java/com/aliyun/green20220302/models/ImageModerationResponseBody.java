@@ -134,9 +134,21 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataBang extends TeaModel {
+        /**
+         * <p>The confidence level of the bang recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81.88</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>Indicates whether the recognition result of bangs is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Has</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -164,9 +176,27 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataGender extends TeaModel {
+        /**
+         * <p>The confidence level of the gender recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81.88</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The gender recognition result. Valid values:</p>
+         * <ul>
+         * <li><p>Male</p>
+         * </li>
+         * <li><p>FeMale</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FeMale</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -194,9 +224,29 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataHairstyle extends TeaModel {
+        /**
+         * <p>The confidence level of the hairstyle recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81.88</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The hairstyle recognition result. Valid values:</p>
+         * <ul>
+         * <li><p>Bald: bald head.</p>
+         * </li>
+         * <li><p>Long: Long hair.</p>
+         * </li>
+         * <li><p>Short: Short hair.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Short</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -224,9 +274,27 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataHat extends TeaModel {
+        /**
+         * <p>The confidence level of the result of wearing the hat. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88.88</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The recognition result of whether to wear the hat. Valid values:</p>
+         * <ul>
+         * <li><p>Wear: Wear a hat.</p>
+         * </li>
+         * <li><p>None: No hat.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Wear</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -254,15 +322,39 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataLocation extends TeaModel {
+        /**
+         * <p>The height of the face area. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <p>The width of the face area. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <p>The distance from the upper-left corner of the face area to the y-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>The distance from the upper-left corner of the face area to the x-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -306,9 +398,27 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataMask extends TeaModel {
+        /**
+         * <p>The confidence level of the result of wearing the mask. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.99</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The recognition result of whether to wear a mask. Valid values:</p>
+         * <ul>
+         * <li><p>Wear a mask.</p>
+         * </li>
+         * <li><p>None: No mask.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Wear</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -336,9 +446,27 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataMustache extends TeaModel {
+        /**
+         * <p>The confidence level of the result of the beard. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.99</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The identification result of whether there is a beard.Valid values:</p>
+         * <ul>
+         * <li><p>Has:have a beard.</p>
+         * </li>
+         * <li><p>None:No beard.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Has</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -366,18 +494,52 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceDataQuality extends TeaModel {
+        /**
+         * <p>The blur of the face image. Valid values: 0 to 100. The higher the score, the more fuzzy it is.
+         * Recommended values: 0 to 25.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.88</p>
+         */
         @NameInMap("Blur")
         public Float blur;
 
+        /**
+         * <p>The integrity of the human face. Recommended values:80 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("Integrity")
         public Float integrity;
 
+        /**
+         * <p>The head-up or head-down angle of the face.
+         * Recommended values:-30 to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.88</p>
+         */
         @NameInMap("Pitch")
         public Float pitch;
 
+        /**
+         * <p>The plane rotation angle of the face.
+         * Recommended values:-30 to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.18</p>
+         */
         @NameInMap("Roll")
         public Float roll;
 
+        /**
+         * <p>The left and right shaking angle of the human face.
+         * Recommended values:-30 to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.18</p>
+         */
         @NameInMap("Yaw")
         public Float yaw;
 
@@ -429,36 +591,86 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtFaceData extends TeaModel {
+        /**
+         * <p>The age recognition result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("Age")
         public Integer age;
 
+        /**
+         * <p>Indicates whether the recognition result of bangs is available.</p>
+         */
         @NameInMap("Bang")
         public ImageModerationResponseBodyDataExtFaceDataBang bang;
 
+        /**
+         * <p>The gender recognition result.</p>
+         */
         @NameInMap("Gender")
         public ImageModerationResponseBodyDataExtFaceDataGender gender;
 
+        /**
+         * <p>The recognition result of whether to wear glasses.</p>
+         * <ul>
+         * <li><p>None: No glasses.</p>
+         * </li>
+         * <li><p>Wear: Wear glasses.</p>
+         * </li>
+         * <li><p>Sunglass: Wear sunglasses.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
         @NameInMap("Glasses")
         public String glasses;
 
+        /**
+         * <p>The hairstyle recognition result.</p>
+         */
         @NameInMap("Hairstyle")
         public ImageModerationResponseBodyDataExtFaceDataHairstyle hairstyle;
 
+        /**
+         * <p>The recognition result of whether to wear a hat.</p>
+         */
         @NameInMap("Hat")
         public ImageModerationResponseBodyDataExtFaceDataHat hat;
 
+        /**
+         * <p>The location of the face.</p>
+         */
         @NameInMap("Location")
         public ImageModerationResponseBodyDataExtFaceDataLocation location;
 
+        /**
+         * <p>The recognition result of whether to wear a mask.</p>
+         */
         @NameInMap("Mask")
         public ImageModerationResponseBodyDataExtFaceDataMask mask;
 
+        /**
+         * <p>The identification result of whether there is a beard.</p>
+         */
         @NameInMap("Mustache")
         public ImageModerationResponseBodyDataExtFaceDataMustache mustache;
 
+        /**
+         * <p>The quality information of the face image.</p>
+         */
         @NameInMap("Quality")
         public ImageModerationResponseBodyDataExtFaceDataQuality quality;
 
+        /**
+         * <p>The smiling degree of the face.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85.88</p>
+         */
         @NameInMap("Smile")
         public Float smile;
 
@@ -1248,6 +1460,9 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("CustomImage")
         public java.util.List<ImageModerationResponseBodyDataExtCustomImage> customImage;
 
+        /**
+         * <p>The returned face attribute information</p>
+         */
         @NameInMap("FaceData")
         public java.util.List<ImageModerationResponseBodyDataExtFaceData> faceData;
 
