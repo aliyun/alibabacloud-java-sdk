@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyAccessPointResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70EACC9C-D07A-4A34-ADA4-77506C42****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

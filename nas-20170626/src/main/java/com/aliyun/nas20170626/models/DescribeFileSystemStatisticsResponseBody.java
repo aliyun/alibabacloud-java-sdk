@@ -18,24 +18,36 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F088138-FD73-4B68-95CC-DFAD4D85****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of file system entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,36 +108,48 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
     public static class DescribeFileSystemStatisticsResponseBodyFileSystemStatisticsFileSystemStatistic extends TeaModel {
         /**
          * <p>The number of expired file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ExpiredCount")
         public Integer expiredCount;
 
         /**
          * <p>The number of expiring file systems.</p>
-         * <br>
          * <p>File systems whose expiration time is less than or equal to seven days away from the current time are counted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ExpiringCount")
         public Integer expiringCount;
 
         /**
          * <p>The type of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
          * <p>The storage usage of the file system.</p>
-         * <br>
          * <p>The value of this parameter is the maximum storage usage of the file system over the last hour.</p>
-         * <br>
          * <p>Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611</p>
          */
         @NameInMap("MeteredSize")
         public Long meteredSize;
 
         /**
          * <p>The number of file systems of the current type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -199,24 +223,36 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
     public static class DescribeFileSystemStatisticsResponseBodyFileSystemsFileSystemPackagesPackage extends TeaModel {
         /**
          * <p>The end time of the validity period for the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-05T16:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The ID of the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>naspackage-0be9c4b624-37****</p>
          */
         @NameInMap("PackageId")
         public String packageId;
 
         /**
          * <p>The capacity of the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107374182400</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The start time of the validity period for the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-05T01:40:56Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -282,72 +318,96 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
     public static class DescribeFileSystemStatisticsResponseBodyFileSystemsFileSystem extends TeaModel {
         /**
          * <p>The capacity of the file system.</p>
-         * <br>
          * <p>Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
          * <p>The billing method.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Subscription: The subscription billing method is used.</p>
-         * <p>*   PayAsYouGo: The pay-as-you-go billing method is used.</p>
-         * <p>*   Package: A storage plan is attached to the file system.</p>
+         * <ul>
+         * <li>Subscription: The subscription billing method is used.</li>
+         * <li>PayAsYouGo: The pay-as-you-go billing method is used.</li>
+         * <li>Package: A storage plan is attached to the file system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The time when the NAS file system was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-05-27T15:43:06CST</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e48eda</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the file system expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-08-27T15:43:06CST</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109c04****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The type of the file system.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   standard: General-purpose NAS file system</p>
-         * <p>*   extreme: Extreme NAS file system</p>
-         * <p>*   cpfs: CPFS file system</p>
+         * <ul>
+         * <li>standard: General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>cpfs: CPFS file system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
          * <p>The storage usage of the Infrequent Access (IA) storage medium.</p>
-         * <br>
          * <p>Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>362832</p>
          */
         @NameInMap("MeteredIASize")
         public Long meteredIASize;
 
         /**
          * <p>The storage usage of the file system.</p>
-         * <br>
          * <p>The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611661312</p>
          */
         @NameInMap("MeteredSize")
         public Long meteredSize;
@@ -360,51 +420,66 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type of the file system.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   NFS: Network File System (NFS)</p>
-         * <p>*   SMB: Server Message Block (SMB)</p>
-         * <p>*   cpfs: the protocol type supported by the CPFS file system</p>
+         * <ul>
+         * <li>NFS: Network File System (NFS)</li>
+         * <li>SMB: Server Message Block (SMB)</li>
+         * <li>cpfs: the protocol type supported by the CPFS file system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the file system.</p>
-         * <br>
          * <p>This parameter is returned for Extreme NAS file systems and Cloud Parallel File Storage (CPFS) file systems. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The file system is being created or modified.</p>
-         * <p>*   Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.</p>
-         * <p>*   Stopped: The file system is unavailable.</p>
-         * <p>*   Extending: The file system is being scaled out.</p>
-         * <p>*   Stopping: The file system is being disabled.</p>
-         * <p>*   Deleting: The file system is being deleted.</p>
+         * <ul>
+         * <li>Pending: The file system is being created or modified.</li>
+         * <li>Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.</li>
+         * <li>Stopped: The file system is unavailable.</li>
+         * <li>Extending: The file system is being scaled out.</li>
+         * <li>Stopping: The file system is being disabled.</li>
+         * <li>Deleting: The file system is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Valid values for General-purpose NAS file systems: Capacity and Performance.</p>
-         * <p>*   Valid values for Extreme NAS file systems: standard and advance.</p>
-         * <p>*   Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).</p>
+         * <ul>
+         * <li>Valid values for General-purpose NAS file systems: Capacity and Performance.</li>
+         * <li>Valid values for Extreme NAS file systems: standard and advance.</li>
+         * <li>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Performance</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

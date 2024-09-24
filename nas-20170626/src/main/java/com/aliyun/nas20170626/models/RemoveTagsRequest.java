@@ -6,13 +6,16 @@ import com.aliyun.tea.*;
 public class RemoveTagsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0addcw****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The details about the tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -41,13 +44,19 @@ public class RemoveTagsRequest extends TeaModel {
 
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
-         * <p>The key (TagKey) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify 1 to 10 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.</p>
+         * <p>The key of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify 1 to 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keyN</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value (TagValue) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify a maximum of 5 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.</p>
+         * <p>The value of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify a maximum of five tags at a time. The tag key cannot be empty. The tag value can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valueN</p>
          */
         @NameInMap("Value")
         public String value;

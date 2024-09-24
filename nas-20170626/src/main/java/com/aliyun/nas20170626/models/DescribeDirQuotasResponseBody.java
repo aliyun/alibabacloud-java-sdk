@@ -12,24 +12,36 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BC5CB97-9F28-42FE-84A4-0CD0DF42****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of directories.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,48 +94,76 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     public static class DescribeDirQuotasResponseBodyDirQuotaInfosUserQuotaInfos extends TeaModel {
         /**
          * <p>The maximum number of files that a user can create in the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("FileCountLimit")
         public Long fileCountLimit;
 
         /**
          * <p>The total number of files that a user has created in the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5100</p>
          */
         @NameInMap("FileCountReal")
         public Long fileCountReal;
 
         /**
          * <p>The type of the quota. Valid values: Accounting and Enforcement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Accounting</p>
          */
         @NameInMap("QuotaType")
         public String quotaType;
 
         /**
          * <p>The maximum size of files that a user can create in the directory. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("SizeLimit")
         public Long sizeLimit;
 
         /**
          * <p>The total size of files that a user has created in the directory. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         @NameInMap("SizeReal")
         public Long sizeReal;
 
+        /**
+         * <p>The total size of files that a user has created in the directory. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>858995833870</p>
+         */
         @NameInMap("SizeRealInByte")
         public Long sizeRealInByte;
 
         /**
          * <p>The ID of the user that you specify to create a quota for the directory. The value depends on the value of the UserType parameter. Valid values: Uid and Gid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The type of the user ID. Valid values: Uid, Gid, and AllUsers.</p>
-         * <br>
-         * <p>*   If the parameter is set to Uid or Gid, the value of the UserId parameter is returned.</p>
-         * <p>*   If the parameter is set to AllUsers, the value of the UserID parameter is empty.</p>
+         * <p>The type of user. Valid values: Uid, Gid, and AllUsers.</p>
+         * <ul>
+         * <li>If Uid or Gid is returned, a value is returned for UserId.</li>
+         * <li>If AllUsers is returned, UserId is empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Uid</p>
          */
         @NameInMap("UserType")
         public String userType;
@@ -202,18 +242,27 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     public static class DescribeDirQuotasResponseBodyDirQuotaInfos extends TeaModel {
         /**
          * <p>The inode number of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1123</p>
          */
         @NameInMap("DirInode")
         public String dirInode;
 
         /**
          * <p>The absolute path of a directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/sub1</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The status of the quota created for the directory. Valid values: Initializing and Normal. The Initializing state indicates that the quota is being created. The Normal state indicates that the quota is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;

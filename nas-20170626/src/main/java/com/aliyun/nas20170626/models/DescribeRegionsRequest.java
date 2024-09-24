@@ -6,33 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   all: all types of file systems</p>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
-     * <p>*   cpfs: Cloud Parallel File Storage (CPFS) file system</p>
-     * <br>
-     * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <ul>
+     * <li>all: all types of file systems</li>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+     * </ul>
+     * <blockquote>
+     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

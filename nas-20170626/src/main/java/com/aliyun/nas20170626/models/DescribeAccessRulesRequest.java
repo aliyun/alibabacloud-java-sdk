@@ -6,43 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeAccessRulesRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
+     * <ul>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

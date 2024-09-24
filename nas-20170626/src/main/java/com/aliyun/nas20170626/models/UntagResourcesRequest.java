@@ -6,37 +6,45 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the file system.</p>
-     * <br>
      * <p>This parameter is valid only if the TagKey.N parameter is not specified.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true: All tags are removed from the file system. If the file system does not have tags, a success message is returned.</p>
-     * <p>*   false (default): No tags are removed from the file system and a success message is returned.</p>
+     * <ul>
+     * <li>true: All tags are removed from the file system. If the file system does not have tags, a success message is returned.</li>
+     * <li>false (default): No tags are removed from the file system and a success message is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The resource IDs. Valid values of N: 1 to 50.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03e08484f0</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>Set the value to filesystem.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>filesystem</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag keys of the resources. Valid values of N: 1 to 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nastest</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

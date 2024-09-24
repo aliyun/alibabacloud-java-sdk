@@ -12,24 +12,36 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of data retrieval tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,57 +94,90 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     public static class ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-30T10:08:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The total number of files that are read in the data retrieval task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DiscoveredFileCount")
         public Long discoveredFileCount;
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The ID of the data retrieval task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lrj-nfstest-ia-160****853-hshvw</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The execution path of the data retrieval task.</p>
+         */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
         /**
          * <p>The total number of files that are retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("RetrievedFileCount")
         public Long retrievedFileCount;
 
         /**
          * <p>The status of the data retrieval task. Valid values:</p>
-         * <br>
-         * <p>*   active: The task is running.</p>
-         * <p>*   canceled: The task is canceled.</p>
-         * <p>*   completed: The task is completed.</p>
-         * <p>*   failed: The task has failed.</p>
+         * <ul>
+         * <li>active: The task is running.</li>
+         * <li>canceled: The task is canceled.</li>
+         * <li>completed: The task is completed.</li>
+         * <li>failed: The task has failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the IA storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
          * <p>The time when the task was updated.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-30T11:08:08Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The name of the lifecycle policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lifecyclepolicy1</p>
      */
     @NameInMap("LifecyclePolicyName")
     public String lifecyclePolicyName;

@@ -12,6 +12,9 @@ public class DescribeNfsAclResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1098673-1746-505E-A5F1-08527B7EDBDF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class DescribeNfsAclResponseBody extends TeaModel {
     public static class DescribeNfsAclResponseBodyAcl extends TeaModel {
         /**
          * <p>Indicates whether the NFS ACL feature is enabled.</p>
-         * <br>
-         * <p>*   true: The NFS ACL feature is enabled.</p>
-         * <p>*   false: The NFS ACL feature is disabled.</p>
+         * <ul>
+         * <li>true: The NFS ACL feature is enabled.</li>
+         * <li>false: The NFS ACL feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;

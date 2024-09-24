@@ -6,82 +6,102 @@ import com.aliyun.tea.*;
 public class ModifyAccessRuleRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The rule ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
+     * <ul>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The IPv6 address or CIDR block of the authorized object.</p>
-     * <br>
      * <p>You must set this parameter to an IPv6 IP address or CIDR block.</p>
-     * <br>
-     * <p>> *   Only Extreme NAS file systems that reside in the China (Hohhot) region support IPv6.</p>
-     * <p>>*   Only permission groups that reside in virtual private clouds (VPCs) support IPv6.</p>
-     * <p>>*   This parameter is unavailable if you specify the SourceCidrIp parameter.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Only Extreme NAS file systems that reside in the China (Hohhot) region support IPv6.</li>
+     * <li>Only permission groups that reside in virtual private clouds (VPCs) support IPv6.</li>
+     * <li>This parameter is unavailable if you specify the SourceCidrIp parameter.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>fe80::3d4a:80fd:f05d:****</p>
      */
     @NameInMap("Ipv6SourceCidrIp")
     public String ipv6SourceCidrIp;
 
     /**
      * <p>The priority of the rule.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 1, which indicates the highest priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The access permissions of the authorized object on the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   RDWR (default): the read and write permissions</p>
-     * <p>*   RDONLY: the read-only permissions</p>
+     * <ul>
+     * <li>RDWR (default): the read and write permissions</li>
+     * <li>RDONLY: the read-only permissions</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RDWR</p>
      */
     @NameInMap("RWAccessType")
     public String RWAccessType;
 
     /**
      * <p>The IP address or CIDR block of the authorized object.</p>
-     * <br>
      * <p>You must set this parameter to an IP address or CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.**.**</p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
     /**
      * <p>The access permissions for different types of users in the authorized object.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   no_squash: allows access from root users to the file system.</p>
-     * <p>*   root_squash: grants root users the least permissions as the nobody user.</p>
-     * <p>*   all_squash: grants all users the least permissions as the nobody user.</p>
-     * <br>
+     * <ul>
+     * <li>no_squash: allows access from root users to the file system.</li>
+     * <li>root_squash: grants root users the least permissions as the nobody user.</li>
+     * <li>all_squash: grants all users the least permissions as the nobody user.</li>
+     * </ul>
      * <p>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all_squash</p>
      */
     @NameInMap("UserAccessType")
     public String userAccessType;

@@ -4,11 +4,18 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointResponseBody extends TeaModel {
+    /**
+     * <p>The information about the access point.</p>
+     */
     @NameInMap("AccessPoint")
     public DescribeAccessPointResponseBodyAccessPoint accessPoint;
 
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,12 +42,27 @@ public class DescribeAccessPointResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessPointResponseBodyAccessPointPosixUser extends TeaModel {
+        /**
+         * <p>The ID of the POSIX user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("PosixGroupId")
         public Integer posixGroupId;
 
+        /**
+         * <p>The IDs of the secondary user groups.</p>
+         */
         @NameInMap("PosixSecondaryGroupIds")
         public java.util.List<Integer> posixSecondaryGroupIds;
 
+        /**
+         * <p>The ID of the POSIX user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("PosixUserId")
         public Integer posixUserId;
 
@@ -76,12 +98,30 @@ public class DescribeAccessPointResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessPointResponseBodyAccessPointRootPathPermission extends TeaModel {
+        /**
+         * <p>The ID of the owner group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("OwnerGroupId")
         public Integer ownerGroupId;
 
+        /**
+         * <p>The owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OwnerUserId")
         public Integer ownerUserId;
 
+        /**
+         * <p>The POSIX permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0755</p>
+         */
         @NameInMap("Permission")
         public String permission;
 
@@ -117,54 +157,164 @@ public class DescribeAccessPointResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessPointResponseBodyAccessPoint extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
+         */
         @NameInMap("ARN")
         public String ARN;
 
+        /**
+         * <p>The name of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AccessGroup")
         public String accessGroup;
 
+        /**
+         * <p>The ID of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-ie15yd****</p>
+         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
+        /**
+         * <p>The name of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AccessPointName")
         public String accessPointName;
 
+        /**
+         * <p>The time when the access point was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709619668276167</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The domain name of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Indicates whether the RAM policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnabledRam")
         public Boolean enabledRam;
 
+        /**
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
+         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>The time when the access point was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709619668276167</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The POSIX user.</p>
+         */
         @NameInMap("PosixUser")
         public DescribeAccessPointResponseBodyAccessPointPosixUser posixUser;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The root directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("RootPath")
         public String rootPath;
 
+        /**
+         * <p>The permissions to create the root directory.</p>
+         */
         @NameInMap("RootPathPermission")
         public DescribeAccessPointResponseBodyAccessPointRootPathPermission rootPathPermission;
 
+        /**
+         * <p>The status of the root directory.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: The rootpath status is unknown.</li>
+         * <li>1: The rootpath does not exist and may be deleted.</li>
+         * <li>2: The rootpath is normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RootPathStatus")
         public String rootPathStatus;
 
+        /**
+         * <p>The status of the access point.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Active: The access point is available.</li>
+         * <li>Inactive: The access point is unavailable.</li>
+         * <li>Pending: The access point is being created.</li>
+         * <li>Deleting: The access point is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zevmwkwyztjuoffg****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>You must select the VPC of the Elastic Compute Service (ECS) instance on which you want to mount the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zesj9afh3y518k9o****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

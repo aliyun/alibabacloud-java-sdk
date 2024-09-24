@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateAccessGroupResponseBody extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189F4F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

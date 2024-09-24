@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeProtocolMountTargetResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aBcdeg==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,6 +21,9 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,72 +60,108 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
     public static class DescribeProtocolMountTargetResponseBodyProtocolMountTargets extends TeaModel {
         /**
          * <p>The permission group that is associated with the export directory of the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         @NameInMap("AccessGroupName")
         public String accessGroupName;
 
         /**
          * <p>The time when the export directory of the protocol service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-12T07:28:38Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the export directory for the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the export directory for the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-19abf5beab8d****</p>
          */
         @NameInMap("ExportId")
         public String exportId;
 
         /**
          * <p>The fileset ID of the export directory for the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fset-1902718ea0ae****</p>
          */
         @NameInMap("FsetId")
         public String fsetId;
 
         /**
          * <p>The export directory of the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path/</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The domain name of the export directory for the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-123****.cn-hangzhou.cpfs.aliyuncs.com</p>
          */
         @NameInMap("ProtocolMountTargetDomain")
         public String protocolMountTargetDomain;
 
         /**
          * <p>The ID of the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ptc-123****</p>
          */
         @NameInMap("ProtocolServiceId")
         public String protocolServiceId;
 
         /**
          * <p>The protocol type supported by the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The status of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The vSwitch ID of the export directory for the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2vc3c2lybvdllxyq4****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The VPC ID of the export directory for the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2vct297b8157bth9z****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

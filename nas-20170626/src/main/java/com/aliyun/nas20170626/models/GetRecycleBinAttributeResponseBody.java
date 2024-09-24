@@ -12,6 +12,9 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,39 +41,56 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
     }
 
     public static class GetRecycleBinAttributeResponseBodyRecycleBinAttribute extends TeaModel {
+        @NameInMap("ArchiveSize")
+        public Long archiveSize;
+
         /**
          * <p>The time at which the recycle bin was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-30T10:08:08Z</p>
          */
         @NameInMap("EnableTime")
         public String enableTime;
 
         /**
          * <p>The retention period of the files in the recycle bin. Unit: days.</p>
-         * <br>
          * <p>If the recycle bin is disabled, 0 is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReservedDays")
         public Long reservedDays;
 
         /**
          * <p>The size of the cold data that is dumped to the recycle bin. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SecondarySize")
         public Long secondarySize;
 
         /**
          * <p>The size of the files that are dumped to the recycle bin. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The status of the recycle bin.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Enable: The recycle bin is enabled.</p>
-         * <p>*   Disable: The recycle bin is disabled.</p>
+         * <ul>
+         * <li>Enable: The recycle bin is enabled.</li>
+         * <li>Disable: The recycle bin is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disable</p>
          */
         @NameInMap("Status")
         public String status;
@@ -78,6 +98,14 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         public static GetRecycleBinAttributeResponseBodyRecycleBinAttribute build(java.util.Map<String, ?> map) throws Exception {
             GetRecycleBinAttributeResponseBodyRecycleBinAttribute self = new GetRecycleBinAttributeResponseBodyRecycleBinAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public GetRecycleBinAttributeResponseBodyRecycleBinAttribute setArchiveSize(Long archiveSize) {
+            this.archiveSize = archiveSize;
+            return this;
+        }
+        public Long getArchiveSize() {
+            return this.archiveSize;
         }
 
         public GetRecycleBinAttributeResponseBodyRecycleBinAttribute setEnableTime(String enableTime) {

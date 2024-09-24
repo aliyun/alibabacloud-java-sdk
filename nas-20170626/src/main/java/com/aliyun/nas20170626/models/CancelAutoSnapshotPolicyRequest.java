@@ -6,10 +6,11 @@ import com.aliyun.tea.*;
 public class CancelAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The IDs of file systems.</p>
-     * <br>
      * <p>You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>extreme-233e6****,extreme-23vbp****,extreme-23vas****</p>
      */
     @NameInMap("FileSystemIds")
     public String fileSystemIds;

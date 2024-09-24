@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateRecycleBinRestoreJobResponseBody extends TeaModel {
     /**
      * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rb-10<strong><strong>491ff-r-162</strong></strong>165400</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowsResponseBody extends TeaModel {
     /**
-     * <p>The details about dataflows.</p>
+     * <p>The details about data flows.</p>
      */
     @NameInMap("DataFlowInfo")
     public DescribeDataFlowsResponseBodyDataFlowInfo dataFlowInfo;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,14 +60,18 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
     public static class DescribeDataFlowsResponseBodyDataFlowInfoDataFlowAutoRefreshAutoRefresh extends TeaModel {
         /**
          * <p>The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.</p>
-         * <br>
          * <p>Limits:</p>
-         * <br>
-         * <p>*   The directory must be 2 to 1,024 characters in length.</p>
-         * <p>*   The directory must be encoded in UTF-8.</p>
-         * <p>*   The directory must start and end with a forward slash (/).</p>
-         * <br>
-         * <p>>  The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.</p>
+         * <ul>
+         * <li>The directory must be 2 to 1,024 characters in length.</li>
+         * <li>The directory must be encoded in UTF-8.</li>
+         * <li>The directory must start and end with a forward slash (/).</li>
+         * </ul>
+         * <blockquote>
+         * <p> The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/prefix1/prefix2/</p>
          */
         @NameInMap("RefreshPath")
         public String refreshPath;
@@ -103,158 +113,230 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
     public static class DescribeDataFlowsResponseBodyDataFlowInfoDataFlow extends TeaModel {
         /**
          * <p>The details about automatic update policies.</p>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
          */
         @NameInMap("AutoRefresh")
         public DescribeDataFlowsResponseBodyDataFlowInfoDataFlowAutoRefresh autoRefresh;
 
         /**
          * <p>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.</p>
-         * <br>
          * <p>Valid values: 5 to 526600. Default value: 10.</p>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("AutoRefreshInterval")
         public Long autoRefreshInterval;
 
         /**
          * <p>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:</p>
-         * <br>
-         * <p>*   None: Updated data in the source storage is not automatically imported to the CPFS file system. You can run a dataflow task to import the updated data from the source storage.</p>
-         * <p>*   ImportChanged: Updated data in the source storage is automatically imported to the CPFS file system.</p>
+         * <ul>
+         * <li>None: Updated data in the source storage is not automatically imported into the CPFS file system. You can run a data flow task to import the updated data from the source storage.</li>
+         * <li>ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("AutoRefreshPolicy")
         public String autoRefreshPolicy;
 
         /**
          * <p>The time when the fileset was created.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-30T10:08:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The dataflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfid-123456</p>
          */
         @NameInMap("DataFlowId")
         public String dataFlowId;
 
         /**
          * <p>The description of the dataflow.</p>
-         * <br>
          * <p>Limits:</p>
-         * <br>
-         * <p>*   The description must be 2 to 128 characters in length.</p>
-         * <p>*   The description must start with a letter but cannot start with `http://` or `https://`.</p>
-         * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <ul>
+         * <li>The description must be 2 to 128 characters in length.</li>
+         * <li>The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The error message returned. Valid values:</p>
-         * <br>
-         * <p>*   None (default): The dataflow status is normal.</p>
-         * <p>*   SourceStorageUnreachable: The access path of the source storage is not found.</p>
-         * <p>*   ThroughputTooLow: The dataflow throughput is low.</p>
+         * <ul>
+         * <li>None (default): The dataflow status is normal.</li>
+         * <li>SourceStorageUnreachable: The access path of the source storage is not found.</li>
+         * <li>ThroughputTooLow: The dataflow throughput is low.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SourceStorageUnreachable</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-12345678</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The directory of the fileset in the CPFS file system.</p>
-         * <br>
          * <p>Limits:</p>
-         * <br>
-         * <p>*   The directory must be 2 to 1,024 characters in length.</p>
-         * <p>*   The directory must be encoded in UTF-8.</p>
-         * <p>*   The directory must start and end with a forward slash (/).</p>
-         * <p>*   The directory must be a fileset directory in the CPFS file system.</p>
+         * <ul>
+         * <li>The directory must be 2 to 1,024 characters in length.</li>
+         * <li>The directory must be encoded in UTF-8.</li>
+         * <li>The directory must start and end with a forward slash (/).</li>
+         * <li>The directory must be a fileset directory in the CPFS file system.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/a/b/c/</p>
          */
         @NameInMap("FileSystemPath")
         public String fileSystemPath;
 
         /**
          * <p>The description of the automatic update.</p>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FsetTest</p>
          */
         @NameInMap("FsetDescription")
         public String fsetDescription;
 
         /**
          * <p>The fileset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fset-123456</p>
          */
         @NameInMap("FsetId")
         public String fsetId;
 
         /**
          * <p>The type of security mechanism for the source storage. This parameter must be specified if the source storage is accessed with a security mechanism. Valid values:</p>
-         * <br>
-         * <p>*   None (default): The source storage can be accessed without a security mechanism.</p>
-         * <p>*   SSL: The source storage must be accessed with an SSL certificate.</p>
+         * <ul>
+         * <li>None (default): The source storage can be accessed without a security mechanism.</li>
+         * <li>SSL: The source storage must be accessed with an SSL certificate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SSL</p>
          */
         @NameInMap("SourceSecurityType")
         public String sourceSecurityType;
 
         /**
-         * <p>The access path of the source storage. Format:://.</p>
-         * <br>
+         * <p>The access path of the source storage. Format: <code>&lt;storage type&gt;://&lt;path&gt;</code>.</p>
          * <p>Parameters:</p>
-         * <br>
-         * <p>*   storage type: Only OSS is supported.</p>
-         * <br>
-         * <p>*   path: the name of the OSS bucket.</p>
-         * <br>
-         * <p>    *   The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.</p>
-         * <p>    *   The name must be 8 to 128 characters in length.</p>
-         * <p>    *   The name must be encoded in UTF-8.</p>
-         * <p>    *   The name cannot start with http:// or https://.</p>
-         * <br>
-         * <p>>  The OSS bucket must be an existing bucket in the region.</p>
+         * <ul>
+         * <li><p>storage type: Only Object Storage Service (OSS) is supported.</p>
+         * </li>
+         * <li><p>path: the name of the OSS bucket.</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.</li>
+         * <li>The name must be 8 to 128 characters in length.</li>
+         * <li>The name must be encoded in UTF-8.</li>
+         * <li>The name cannot start with http:// or https://.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> The OSS bucket must be an existing bucket in the region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket1</p>
          */
         @NameInMap("SourceStorage")
         public String sourceStorage;
 
         /**
-         * <p>源端存储内的访问路径。</p>
+         * <p>The access path in the bucket of the source storage.</p>
+         * <blockquote>
+         * <p> Only CPFS for LINGJUN supports this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/prefix/</p>
          */
         @NameInMap("SourceStoragePath")
         public String sourceStoragePath;
 
         /**
          * <p>The dataflow status. Valid values:</p>
-         * <br>
-         * <p>*   Starting: The dataflow is being created or enabled.</p>
-         * <p>*   Running: The dataflow has been created and is running properly.</p>
-         * <p>*   Updating: The dataflow is being modified. For example, the dataflow throughput is increased and the automatic update interval is modified.</p>
-         * <p>*   Deleting: The dataflow is being deleted.</p>
-         * <p>*   Stopping: The dataflow is being disabled.</p>
-         * <p>*   Stopped: The dataflow has been disabled.</p>
-         * <p>*   Misconfigured: The dataflow configuration is abnormal. For example, the source storage is inaccessible, and the automatic update cannot be completed due to low dataflow throughput.</p>
+         * <ul>
+         * <li>Starting: The dataflow is being created or enabled.</li>
+         * <li>Running: The dataflow has been created and is running properly.</li>
+         * <li>Updating: The dataflow is being modified. For example, the dataflow throughput is increased and the automatic update interval is modified.</li>
+         * <li>Deleting: The dataflow is being deleted.</li>
+         * <li>Stopping: The dataflow is being disabled.</li>
+         * <li>Stopped: The dataflow has been disabled.</li>
+         * <li>Misconfigured: The dataflow configuration is abnormal. For example, the source storage is inaccessible, and the automatic update cannot be completed due to low dataflow throughput.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The maximum dataflow throughput. Unit: MB/s. Valid values:</p>
-         * <br>
-         * <p>*   600</p>
-         * <p>*   1,200</p>
-         * <p>*   1,500</p>
-         * <br>
-         * <p>>  The dataflow throughput must be less than the I/O throughput of the file system.</p>
+         * <ul>
+         * <li>600</li>
+         * <li>1,200</li>
+         * <li>1,500</li>
+         * </ul>
+         * <blockquote>
+         * <p> The dataflow throughput must be less than the I/O throughput of the file system.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("Throughput")
         public Long throughput;
 
         /**
          * <p>The time when the fileset was last updated.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-30T10:08:08Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

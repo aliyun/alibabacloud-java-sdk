@@ -12,24 +12,36 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of jobs returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of jobs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,13 +94,15 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
     public static class ListRecycleBinJobsResponseBodyJobs extends TeaModel {
         /**
          * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-30T10:08:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The error code.</p>
-         * <br>
+         * <p>The error code returned.</p>
          * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
          */
         @NameInMap("ErrorCode")
@@ -96,7 +110,6 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message.</p>
-         * <br>
          * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
          */
         @NameInMap("ErrorMessage")
@@ -104,48 +117,67 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the file or directory in the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04***08</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
          * <p>The name of the file or directory that is associated with the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test001</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C****C54</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The progress of the job.</p>
-         * <br>
          * <p>Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   Running: The job is running.</p>
-         * <p>*   Defragmenting: The job is defragmenting data.</p>
-         * <p>*   PartialSuccess: The job is partially completed.</p>
-         * <p>*   Success: The job is completed.</p>
-         * <p>*   Fail: The job failed.</p>
-         * <p>*   Cancelled: The job is canceled.</p>
+         * <ul>
+         * <li>Running: The job is running.</li>
+         * <li>Defragmenting: The job is defragmenting data.</li>
+         * <li>PartialSuccess: The job is partially completed.</li>
+         * <li>Success: The job is completed.</li>
+         * <li>Fail: The job failed.</li>
+         * <li>Cancelled: The job is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the job. Valid values:</p>
-         * <br>
-         * <p>*   Restore: a file restoration job</p>
-         * <p>*   Delete: a file deletion job</p>
+         * <ul>
+         * <li>Restore: a file restoration job</li>
+         * <li>Delete: a file deletion job</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Restore</p>
          */
         @NameInMap("Type")
         public String type;

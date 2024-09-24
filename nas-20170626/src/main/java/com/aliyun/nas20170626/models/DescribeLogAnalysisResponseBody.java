@@ -12,30 +12,45 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of log dump entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C84F77AF-3DE5-48F1-B19B-37FCBE24****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of log dump entries in the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,24 +111,36 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     public static class DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue extends TeaModel {
         /**
          * <p>The name of the dedicated Logstore that is used to store NAS operation logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas-nfs</p>
          */
         @NameInMap("Logstore")
         public String logstore;
 
         /**
          * <p>The name of the project where the dedicated Logstore resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas-1746495857602745-cn-hangzhou</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
          * <p>The region where the dedicated Logstore resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The role that is used by NAS to access Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::162165525211xxxx:role/aliyunnaslogarchiverole</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
@@ -160,6 +187,9 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     public static class DescribeLogAnalysisResponseBodyAnalysesAnalysis extends TeaModel {
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c7154xxxx</p>
          */
         @NameInMap("MetaKey")
         public String metaKey;

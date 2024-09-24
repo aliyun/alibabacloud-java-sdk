@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeNfsAclRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>206614xxxx</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

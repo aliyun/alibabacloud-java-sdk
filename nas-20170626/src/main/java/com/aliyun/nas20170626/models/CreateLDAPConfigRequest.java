@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class CreateLDAPConfigRequest extends TeaModel {
     /**
      * <p>An LDAP entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn=alibaba,dc=com</p>
      */
     @NameInMap("BindDN")
     public String bindDN;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>109c04****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>An LDAP search base.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc=example</p>
      */
     @NameInMap("SearchBase")
     public String searchBase;
 
     /**
      * <p>An LDAP URI.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ldap://ldap.example.example</p>
      */
     @NameInMap("URI")
     public String URI;

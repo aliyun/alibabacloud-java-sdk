@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class GetDirectoryOrFilePropertiesRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The absolute path of the directory.</p>
-     * <br>
      * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/pathway/to/folder</p>
      */
     @NameInMap("Path")
     public String path;

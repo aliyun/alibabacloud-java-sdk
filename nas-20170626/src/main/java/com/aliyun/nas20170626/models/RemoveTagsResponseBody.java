@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class RemoveTagsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98696EF0-1607-4E9D-B01D-F20930B68845</p>
      */
     @NameInMap("RequestId")
     public String requestId;

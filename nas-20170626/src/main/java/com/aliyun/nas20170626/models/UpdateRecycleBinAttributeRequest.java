@@ -6,20 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateRecycleBinAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The retention period of the files in the recycle bin. Unit: days.</p>
-     * <br>
      * <p>Valid values: 1 to 180.</p>
-     * <br>
      * <p>Default value: 3.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ReservedDays")
     public Long reservedDays;

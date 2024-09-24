@@ -6,76 +6,95 @@ import com.aliyun.tea.*;
 public class CreateAccessRuleRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
+     * <ul>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The IPv6 address or CIDR block of the authorized object.</p>
-     * <br>
      * <p>You must set this parameter to an IPv6 address or CIDR block.</p>
-     * <br>
-     * <p>> *   Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you specify this parameter, you must enable IPv6 for the file system.</p>
-     * <p>>*   Only permission groups that reside in virtual private clouds (VPCs) support IPv6.</p>
-     * <p>>*   You cannot specify an IPv4 address and an IPv6 address at the same time.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you specify this parameter, you must enable IPv6 for the file system.</li>
+     * <li>Only permission groups that reside in virtual private clouds (VPCs) support IPv6.</li>
+     * <li>You cannot specify an IPv4 address and an IPv6 address at the same time.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:250:6000::***</p>
      */
     @NameInMap("Ipv6SourceCidrIp")
     public String ipv6SourceCidrIp;
 
     /**
      * <p>The priority of the rule.</p>
-     * <br>
      * <p>The rule with the highest priority takes effect if multiple rules are attached to the authorized object.</p>
-     * <br>
      * <p>Valid values: 1 to 100. The value 1 indicates the highest priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The access permissions of the authorized object on the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   RDWR (default): the read and write permissions</p>
-     * <p>*   RDONLY: the read-only permissions</p>
+     * <ul>
+     * <li>RDWR (default): the read and write permissions</li>
+     * <li>RDONLY: the read-only permissions</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RDWR</p>
      */
     @NameInMap("RWAccessType")
     public String RWAccessType;
 
     /**
      * <p>The IP address or CIDR block of the authorized object.</p>
-     * <br>
      * <p>You must set this parameter to an IP address or CIDR block.</p>
-     * <br>
-     * <p>> If the permission group resides in the classic network, you must set this parameter to an IP address.</p>
+     * <blockquote>
+     * <p>If the permission group resides in the classic network, you must set this parameter to an IP address.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0/16</p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
     /**
      * <p>The access permissions for different types of users in the authorized object.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   no_squash (default): grants root users the permissions to access the file system.</p>
-     * <p>*   root_squash: grants root users the least permissions as the nobody user.</p>
-     * <p>*   all_squash: grants all users the least permissions as the nobody user.</p>
-     * <br>
+     * <ul>
+     * <li>no_squash (default): grants root users the permissions to access the file system.</li>
+     * <li>root_squash: grants root users the least permissions as the nobody user.</li>
+     * <li>all_squash: grants all users the least permissions as the nobody user.</li>
+     * </ul>
      * <p>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>no_squash</p>
      */
     @NameInMap("UserAccessType")
     public String userAccessType;

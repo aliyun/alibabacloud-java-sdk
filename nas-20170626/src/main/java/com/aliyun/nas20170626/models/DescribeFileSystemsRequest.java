@@ -6,49 +6,68 @@ import com.aliyun.tea.*;
 public class DescribeFileSystemsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
-     * <p>*   Sample ID of a General-purpose NAS file system: 31a8e4\\*\\*\\*\\*.</p>
-     * <p>*   The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015\\*\\*\\*\\*.</p>
-     * <p>*   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487\\*\\*\\*\\*.</p>
-     * <br>
-     * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <ul>
+     * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
+     * <li>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.</li>
+     * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.<blockquote>
+     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   all (default): all types</p>
-     * <p>*   standard: General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
-     * <p>*   cpfs: CPFS file system</p>
-     * <br>
-     * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <ul>
+     * <li>all (default): all types</li>
+     * <li>standard: General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * <li>cpfs: CPFS file system<blockquote>
+     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The resource group ID.</p>
+     * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwavnfdf****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -60,8 +79,10 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
-     * <br>
      * <p>If you want to mount the file system on an Elastic Compute Service (ECS) instance, the file system and the ECS instance must reside in the same VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1sevsgtqvk5gxbl****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -130,26 +151,32 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public static class DescribeFileSystemsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource.</p>
-         * <br>
          * <p>Limits:</p>
-         * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   The tag key must be 1 to 128 characters in length.</p>
-         * <p>*   The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <p>*   The tag key cannot contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The tag key must be 1 to 128 characters in length.</li>
+         * <li>The tag key cannot start with aliyun or acs:.</li>
+         * <li>The tag key cannot contain http:// or https://.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource.</p>
-         * <br>
          * <p>Limits:</p>
-         * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   The tag value must be 1 to 128 characters in length.</p>
-         * <p>*   The tag value cannot start with `aliyun` or `acs:`.</p>
-         * <p>*   The tag value cannot contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The tag value must be 1 to 128 characters in length.</li>
+         * <li>The tag value cannot start with aliyun or acs:.</li>
+         * <li>The tag value cannot contain http:// or https://.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
          */
         @NameInMap("Value")
         public String value;

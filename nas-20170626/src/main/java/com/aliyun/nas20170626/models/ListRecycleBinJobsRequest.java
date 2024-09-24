@@ -6,46 +6,58 @@ import com.aliyun.tea.*;
 public class ListRecycleBinJobsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rb-15<strong><strong>ed-r-1625</strong></strong>2441</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The status of the job. Valid values:</p>
-     * <br>
-     * <p>*   Running: The job is running.</p>
-     * <p>*   Defragmenting: The job is defragmenting data.</p>
-     * <p>*   PartialSuccess: The job is partially completed.</p>
-     * <p>*   Success: The job is completed.</p>
-     * <p>*   Fail: The job failed.</p>
-     * <p>*   Cancelled: The job is canceled.</p>
-     * <p>*   All: all.Default value:All.</p>
+     * <p>The job status. Valid values:</p>
+     * <ul>
+     * <li>Running: The job is running.</li>
+     * <li>Defragmenting: The job is defragmenting data.</li>
+     * <li>PartialSuccess: The job is partially completed.</li>
+     * <li>Success: The job is completed.</li>
+     * <li>Fail: The job failed.</li>
+     * <li>Cancelled: The job is canceled.</li>
+     * <li>all (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("Status")
     public String status;

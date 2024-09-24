@@ -6,76 +6,94 @@ import com.aliyun.tea.*;
 public class SetDirQuotaRequest extends TeaModel {
     /**
      * <p>The number of files that a user can create in the directory.</p>
-     * <br>
      * <p>This number includes the number of files, subdirectories, and special files.</p>
-     * <br>
      * <p>If you set the QuotaType parameter to Enforcement, you must specify at least one of the SizeLimit and FileCountLimit parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("FileCountLimit")
     public Long fileCountLimit;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
-     * <p>The absolute path of a directory.</p>
-     * <br>
+     * <p>The absolute path of the directory in the file system.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can set quotas only for the directories that have been created in a NAS file system. The path of the directory that you specify for a quota is the absolute path of the directory in the NAS file system, but not the local path of the compute node, such as an Elastic Compute Service (ECS) instance or a container.</li>
+     * <li>Directories whose names contain Chinese characters are not supported.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/data/sub1</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The type of the quota.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Accounting: a statistical quota. If you set this parameter to Accounting, NAS calculates only the storage usage of the directory.</p>
-     * <p>*   Enforcement: a restricted quota. If you set this parameter to Enforcement and the storage usage exceeds the quota, you can no longer create files or subdirectories for the directory, or write data to the directory.</p>
-     * <br>
+     * <ul>
+     * <li>Accounting: a statistical quota. If you set this parameter to Accounting, NAS calculates only the storage usage of the directory.</li>
+     * <li>Enforcement: a restricted quota. If you set this parameter to Enforcement and the storage usage exceeds the quota, you can no longer create files or subdirectories for the directory, or write data to the directory.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Accounting</p>
      */
     @NameInMap("QuotaType")
     public String quotaType;
 
     /**
      * <p>The size of files that a user can create in the directory.</p>
-     * <br>
      * <p>Unit: GiB.</p>
-     * <br>
      * <p>If you set the QuotaType parameter to Enforcement, you must specify at least one of the SizeLimit and FileCountLimit parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("SizeLimit")
     public Long sizeLimit;
 
     /**
      * <p>The UID or GID of the user for whom you want to set a directory quota.</p>
-     * <br>
      * <p>This parameter is required and valid only if the UserType parameter is set to Uid or Gid.</p>
-     * <br>
      * <p>Examples:</p>
-     * <br>
-     * <p>*   If you want to set a directory quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.</p>
-     * <p>*   If you want to set a directory quota for a user group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.</p>
+     * <ul>
+     * <li>If you want to set a directory quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.</li>
+     * <li>If you want to set a directory quota for a user group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The type of the user.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Uid: user ID</p>
-     * <p>*   Gid: user group ID</p>
-     * <p>*   AllUsers: all users</p>
-     * <br>
+     * <ul>
+     * <li>Uid: user ID</li>
+     * <li>Gid: user group ID</li>
+     * <li>AllUsers: all users</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Uid</p>
      */
     @NameInMap("UserType")
     public String userType;

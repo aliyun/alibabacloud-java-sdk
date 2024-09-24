@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CancelRecycleBinJobRequest extends TeaModel {
     /**
      * <p>The job ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rb-15<strong><strong>ed-r-1625</strong></strong>2441</p>
      */
     @NameInMap("JobId")
     public String jobId;

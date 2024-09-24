@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of snapshots returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,106 +94,152 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
         /**
          * <p>The time when the snapshot was created.</p>
-         * <br>
-         * <p>The time follows the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard in UTC. The time is displayed in the `yyyy-MM-ddThh:mmZ` format.</p>
+         * <p>The time follows the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> standard in UTC. The time is displayed in the <code>yyyy-MM-ddThh:mmZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-07-24T13:00:52Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the snapshot is encrypted.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: The snapshot is not encrypted.</p>
-         * <p>*   1: The snapshot is encrypted.</p>
+         * <ul>
+         * <li>0: The snapshot is not encrypted.</li>
+         * <li>1: The snapshot is encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EncryptType")
         public Integer encryptType;
 
+        /**
+         * <p>The type of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme</p>
+         */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
          * <p>The progress of the snapshot creation. The value of this parameter is expressed as a percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The remaining time that is required to create the snapshot.</p>
-         * <br>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
          * <p>The retention period of the auto snapshot.</p>
-         * <br>
          * <p>Unit: days.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   \\-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</p>
-         * <p>*   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</p>
+         * <ul>
+         * <li>\-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</li>
+         * <li>1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("RetentionDays")
         public Integer retentionDays;
 
         /**
          * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-extreme-snapsho****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The snapshot name.</p>
-         * <br>
          * <p>If you specify a name to create a snapshot, the name of the snapshot is returned. Otherwise, no value is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
+        /**
+         * <p>The snapshot type. Valid values:</p>
+         * <ul>
+         * <li>auto: automatically created snapshots</li>
+         * <li>user: manually created snapshots</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
         /**
          * <p>The ID of the source file system.</p>
-         * <br>
          * <p>This parameter is retained even if the source file system of the snapshot is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-012****</p>
          */
         @NameInMap("SourceFileSystemId")
         public String sourceFileSystemId;
 
         /**
          * <p>The capacity of the source file system.</p>
-         * <br>
          * <p>Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("SourceFileSystemSize")
         public Long sourceFileSystemSize;
 
         /**
          * <p>The version of the source file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SourceFileSystemVersion")
         public String sourceFileSystemVersion;
 
         /**
          * <p>The status of the snapshot.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   progressing: The snapshot is being created.</p>
-         * <p>*   accomplished: The snapshot is created.</p>
-         * <p>*   failed: The snapshot fails to be created.</p>
+         * <ul>
+         * <li>progressing: The snapshot is being created.</li>
+         * <li>accomplished: The snapshot is created.</li>
+         * <li>failed: The snapshot fails to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>accomplished</p>
          */
         @NameInMap("Status")
         public String status;

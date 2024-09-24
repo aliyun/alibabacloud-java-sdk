@@ -12,12 +12,18 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,113 +60,150 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
     public static class ListDirectoriesAndFilesResponseBodyEntries extends TeaModel {
         /**
          * <p>The time when the file was queried.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
-         * <br>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-01T10:08:08Z</p>
          */
         @NameInMap("Atime")
         public String atime;
 
         /**
          * <p>The time when the raw data was modified.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
-         * <br>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-11T10:08:10Z</p>
          */
         @NameInMap("Ctime")
         public String ctime;
 
         /**
          * <p>The ID of the directory or file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>Indicates whether the directory contains files stored in the Archive storage class.</p>
+         * <p>This parameter is returned and valid only if the value of the Type parameter is Directory.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: The directory contains files stored in the Archive storage class.</li>
+         * <li>false: The directory does not contain files stored in the Archive storage class.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasArchiveFile")
         public String hasArchiveFile;
 
         /**
-         * <p>Indicates whether the directory contains files stored in the IA storage medium.</p>
-         * <br>
+         * <p>Indicates whether the directory contains files stored in the IA storage class.</p>
          * <p>This parameter is returned and valid only if the value of the Type parameter is Directory.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: The directory contains files stored in the IA storage medium.</p>
-         * <p>*   false: The directory does not contain files stored in the IA storage medium.</p>
+         * <ul>
+         * <li>true: The directory contains files stored in the IA storage class.</li>
+         * <li>false: The directory does not contain files stored in the IA storage class.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasInfrequentAccessFile")
         public Boolean hasInfrequentAccessFile;
 
         /**
          * <p>The file or directory inode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("Inode")
         public String inode;
 
         /**
          * <p>The time when the file was modified.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
-         * <br>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-11T10:08:08Z</p>
          */
         @NameInMap("Mtime")
         public String mtime;
 
         /**
          * <p>The name of the file or directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file.txt</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the portable account. This parameter is returned and valid only if the value of the ProtocolType parameter is SMB and RAM-based access control is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37862c****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The time when the last data retrieval task was run.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
-         * <br>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-11T10:08:08Z</p>
          */
         @NameInMap("RetrieveTime")
         public String retrieveTime;
 
         /**
          * <p>The size of the file.</p>
-         * <br>
          * <p>Unit: bytes.</p>
-         * <br>
          * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The storage type of the file.</p>
-         * <br>
+         * <p>The storage class.</p>
          * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   InfrequentAccess: IA storage medium</p>
+         * <ul>
+         * <li>InfrequentAccess: the IA storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
          * <p>The type of the query result.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   File</p>
-         * <p>*   Directory</p>
+         * <ul>
+         * <li>File</li>
+         * <li>Directory</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Directory</p>
          */
         @NameInMap("Type")
         public String type;

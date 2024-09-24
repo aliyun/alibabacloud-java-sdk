@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class DeleteAccessRuleRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The rule ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
+     * <ul>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
