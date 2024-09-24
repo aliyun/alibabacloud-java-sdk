@@ -91,11 +91,17 @@ public class UpdateApplicationInput extends TeaModel {
     @NameInMap("memorySize")
     public Integer memorySize;
 
+    @NameInMap("namespaceID")
+    public String namespaceID;
+
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
+
+    @NameInMap("programmingLanguage")
+    public String programmingLanguage;
 
     @NameInMap("runtime")
     public String runtime;
@@ -355,6 +361,14 @@ public class UpdateApplicationInput extends TeaModel {
         return this.memorySize;
     }
 
+    public UpdateApplicationInput setNamespaceID(String namespaceID) {
+        this.namespaceID = namespaceID;
+        return this;
+    }
+    public String getNamespaceID() {
+        return this.namespaceID;
+    }
+
     public UpdateApplicationInput setNasConfig(NASConfig nasConfig) {
         this.nasConfig = nasConfig;
         return this;
@@ -369,6 +383,14 @@ public class UpdateApplicationInput extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public UpdateApplicationInput setProgrammingLanguage(String programmingLanguage) {
+        this.programmingLanguage = programmingLanguage;
+        return this;
+    }
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     public UpdateApplicationInput setRuntime(String runtime) {

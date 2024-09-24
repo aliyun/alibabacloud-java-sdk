@@ -130,6 +130,9 @@ public class Application extends TeaModel {
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    @NameInMap("programmingLanguage")
+    public String programmingLanguage;
+
     @NameInMap("runtime")
     public String runtime;
 
@@ -499,6 +502,14 @@ public class Application extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public Application setProgrammingLanguage(String programmingLanguage) {
+        this.programmingLanguage = programmingLanguage;
+        return this;
+    }
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     public Application setRuntime(String runtime) {

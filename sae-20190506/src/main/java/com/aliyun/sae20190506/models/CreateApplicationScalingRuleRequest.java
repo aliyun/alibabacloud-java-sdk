@@ -13,6 +13,9 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("EnableIdle")
+    public Boolean enableIdle;
+
     /**
      * <strong>example:</strong>
      * <p>-1</p>
@@ -77,6 +80,14 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CreateApplicationScalingRuleRequest setEnableIdle(Boolean enableIdle) {
+        this.enableIdle = enableIdle;
+        return this;
+    }
+    public Boolean getEnableIdle() {
+        return this.enableIdle;
     }
 
     public CreateApplicationScalingRuleRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {

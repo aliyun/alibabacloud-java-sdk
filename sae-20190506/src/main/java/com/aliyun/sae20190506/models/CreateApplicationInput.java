@@ -40,6 +40,9 @@ public class CreateApplicationInput extends TeaModel {
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    @NameInMap("enableAppMetric")
+    public Boolean enableAppMetric;
+
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
@@ -96,6 +99,9 @@ public class CreateApplicationInput extends TeaModel {
 
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
+
+    @NameInMap("programmingLanguage")
+    public String programmingLanguage;
 
     @NameInMap("runtime")
     public String runtime;
@@ -217,6 +223,14 @@ public class CreateApplicationInput extends TeaModel {
     }
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    public CreateApplicationInput setEnableAppMetric(Boolean enableAppMetric) {
+        this.enableAppMetric = enableAppMetric;
+        return this;
+    }
+    public Boolean getEnableAppMetric() {
+        return this.enableAppMetric;
     }
 
     public CreateApplicationInput setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
@@ -369,6 +383,14 @@ public class CreateApplicationInput extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public CreateApplicationInput setProgrammingLanguage(String programmingLanguage) {
+        this.programmingLanguage = programmingLanguage;
+        return this;
+    }
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     public CreateApplicationInput setRuntime(String runtime) {

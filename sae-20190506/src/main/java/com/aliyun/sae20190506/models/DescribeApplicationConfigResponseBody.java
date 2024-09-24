@@ -515,6 +515,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("CustomHostAlias")
         public String customHostAlias;
 
+        @NameInMap("Dotnet")
+        public String dotnet;
+
         /**
          * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
          * 
@@ -1236,6 +1239,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getCustomHostAlias() {
             return this.customHostAlias;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setDotnet(String dotnet) {
+            this.dotnet = dotnet;
+            return this;
+        }
+        public String getDotnet() {
+            return this.dotnet;
         }
 
         public DescribeApplicationConfigResponseBodyData setEdasContainerVersion(String edasContainerVersion) {

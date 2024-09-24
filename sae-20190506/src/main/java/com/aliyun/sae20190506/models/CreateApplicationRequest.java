@@ -119,6 +119,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Deploy")
     public Boolean deploy;
 
+    @NameInMap("Dotnet")
+    public String dotnet;
+
     /**
      * <p>3.5.3</p>
      * 
@@ -620,6 +623,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Boolean getDeploy() {
         return this.deploy;
+    }
+
+    public CreateApplicationRequest setDotnet(String dotnet) {
+        this.dotnet = dotnet;
+        return this;
+    }
+    public String getDotnet() {
+        return this.dotnet;
     }
 
     public CreateApplicationRequest setEdasContainerVersion(String edasContainerVersion) {

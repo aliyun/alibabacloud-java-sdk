@@ -383,6 +383,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Deploy", request.deploy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dotnet)) {
+            query.put("Dotnet", request.dotnet);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.edasContainerVersion)) {
             query.put("EdasContainerVersion", request.edasContainerVersion);
         }
@@ -646,6 +650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIdle)) {
+            query.put("EnableIdle", request.enableIdle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
             query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
         }
@@ -878,6 +886,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idleTimeout)) {
+            query.put("IdleTimeout", request.idleTimeout);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.listenerPort)) {
@@ -2036,6 +2048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deploy)) {
             query.put("Deploy", request.deploy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dotnet)) {
+            query.put("Dotnet", request.dotnet);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.edasContainerVersion)) {
@@ -5879,6 +5895,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Memory", request.memory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoEnableApplicationScalingRule)) {
+            query.put("autoEnableApplicationScalingRule", request.autoEnableApplicationScalingRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("minReadyInstanceRatio", request.minReadyInstanceRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
+            query.put("minReadyInstances", request.minReadyInstances);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -6623,6 +6651,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIdle)) {
+            query.put("EnableIdle", request.enableIdle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
             query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
         }
@@ -6866,6 +6898,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idleTimeout)) {
+            query.put("IdleTimeout", request.idleTimeout);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ingressId)) {

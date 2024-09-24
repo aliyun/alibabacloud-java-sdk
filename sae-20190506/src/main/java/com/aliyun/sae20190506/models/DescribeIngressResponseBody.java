@@ -367,6 +367,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("IdleTimeout")
+        public Integer idleTimeout;
+
         /**
          * <p>The default rule.</p>
          * 
@@ -491,6 +494,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeIngressResponseBodyData setIdleTimeout(Integer idleTimeout) {
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
         }
 
         public DescribeIngressResponseBodyData setListenerPort(Integer listenerPort) {

@@ -480,6 +480,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
         /**
          * <p>The number of application instances.</p>
          * 
@@ -524,6 +527,9 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
+
+        @NameInMap("PackageUrl")
+        public String packageUrl;
 
         @NameInMap("ProgrammingLanguage")
         public String programmingLanguage;
@@ -613,6 +619,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.cpu;
         }
 
+        public ListApplicationsResponseBodyDataApplications setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
         public ListApplicationsResponseBodyDataApplications setInstances(Integer instances) {
             this.instances = instances;
             return this;
@@ -651,6 +665,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getNamespaceId() {
             return this.namespaceId;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setPackageUrl(String packageUrl) {
+            this.packageUrl = packageUrl;
+            return this;
+        }
+        public String getPackageUrl() {
+            return this.packageUrl;
         }
 
         public ListApplicationsResponseBodyDataApplications setProgrammingLanguage(String programmingLanguage) {

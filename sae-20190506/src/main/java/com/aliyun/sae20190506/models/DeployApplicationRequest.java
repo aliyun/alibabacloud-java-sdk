@@ -151,6 +151,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Deploy")
     public String deploy;
 
+    @NameInMap("Dotnet")
+    public String dotnet;
+
     /**
      * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
      * 
@@ -798,6 +801,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getDeploy() {
         return this.deploy;
+    }
+
+    public DeployApplicationRequest setDotnet(String dotnet) {
+        this.dotnet = dotnet;
+        return this;
+    }
+    public String getDotnet() {
+        return this.dotnet;
     }
 
     public DeployApplicationRequest setEdasContainerVersion(String edasContainerVersion) {
