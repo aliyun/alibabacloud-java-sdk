@@ -173,6 +173,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         @NameInMap("ServiceNameList")
         public java.util.List<String> serviceNameList;
 
+        @NameInMap("SrcIpCnt")
+        public Long srcIpCnt;
+
+        @NameInMap("TotalReplyBytes")
+        public Long totalReplyBytes;
+
         /**
          * <p>The percentage of traffic of a day. Unit: percent (%).</p>
          * 
@@ -299,6 +305,22 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
         public java.util.List<String> getServiceNameList() {
             return this.serviceNameList;
+        }
+
+        public DescribeInternetOpenIpResponseBodyDataList setSrcIpCnt(Long srcIpCnt) {
+            this.srcIpCnt = srcIpCnt;
+            return this;
+        }
+        public Long getSrcIpCnt() {
+            return this.srcIpCnt;
+        }
+
+        public DescribeInternetOpenIpResponseBodyDataList setTotalReplyBytes(Long totalReplyBytes) {
+            this.totalReplyBytes = totalReplyBytes;
+            return this;
+        }
+        public Long getTotalReplyBytes() {
+            return this.totalReplyBytes;
         }
 
         public DescribeInternetOpenIpResponseBodyDataList setTrafficPercent1Day(String trafficPercent1Day) {

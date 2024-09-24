@@ -268,8 +268,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the AddInstanceMembers operation to add members to Cloud Firewall. </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to add members to Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -305,8 +305,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the AddInstanceMembers operation to add members to Cloud Firewall. </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to add members to Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -630,7 +630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建安全正向代理</p>
+     * <p>Creates a NAT firewall.</p>
      * 
      * @param request CreateSecurityProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -702,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建安全正向代理</p>
+     * <p>Creates a NAT firewall.</p>
      * 
      * @param request CreateSecurityProxyRequest
      * @return CreateSecurityProxyResponse
@@ -1564,8 +1564,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about the members that are added to Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -1601,8 +1601,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about the members that are added to Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -2519,10 +2519,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries Domain Name System (DNS) records.</p>
      * 
+     * @deprecated OpenAPI DescribeDomainResolve is deprecated
+     * 
      * @param request DescribeDomainResolveRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainResolveResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeDomainResolveResponse describeDomainResolveWithOptions(DescribeDomainResolveRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2572,9 +2576,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries Domain Name System (DNS) records.</p>
      * 
+     * @deprecated OpenAPI DescribeDomainResolve is deprecated
+     * 
      * @param request DescribeDomainResolveRequest
      * @return DescribeDomainResolveResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeDomainResolveResponse describeDomainResolve(DescribeDomainResolveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainResolveWithOptions(request, runtime);
@@ -3618,12 +3626,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to query the priority range of the access control policies that match specific query conditions.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the priority range of the access control policies that match specific query conditions.</p>
+     * <p>Queries the priority range of access control policies.</p>
      * 
      * @param request DescribePolicyPriorUsedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3667,12 +3675,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to query the priority range of the access control policies that match specific query conditions.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the priority range of the access control policies that match specific query conditions.</p>
+     * <p>Queries the priority range of access control policies.</p>
      * 
      * @param request DescribePolicyPriorUsedRequest
      * @return DescribePolicyPriorUsedResponse
@@ -3714,6 +3722,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
+            query.put("RegionNo", request.regionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchItem)) {
@@ -4457,6 +4469,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户版本信息</p>
+     * 
+     * @param request DescribeUserBuyVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserBuyVersionResponse
+     */
+    public DescribeUserBuyVersionResponse describeUserBuyVersionWithOptions(DescribeUserBuyVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserBuyVersion"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserBuyVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户版本信息</p>
+     * 
+     * @param request DescribeUserBuyVersionRequest
+     * @return DescribeUserBuyVersionResponse
+     */
+    public DescribeUserBuyVersionResponse describeUserBuyVersion(DescribeUserBuyVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserBuyVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户IPS白名单</p>
+     * 
      * @param request DescribeUserIPSWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserIPSWhitelistResponse
@@ -4494,6 +4553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户IPS白名单</p>
+     * 
      * @param request DescribeUserIPSWhitelistRequest
      * @return DescribeUserIPSWhitelistResponse
      */
@@ -5122,8 +5184,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -5163,8 +5225,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -5413,7 +5475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the address book that is configured for access control.</p>
+     * <p>Modifies the address book that is specified in an access control policy.</p>
      * 
      * @param request ModifyAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5486,7 +5548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the address book that is configured for access control.</p>
+     * <p>Modifies the address book that is specified in an access control policy.</p>
      * 
      * @param request ModifyAddressBookRequest
      * @return ModifyAddressBookResponse
@@ -6086,7 +6148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改对象组操作</p>
+     * <p>Modifies information about an operation on an object group.</p>
      * 
      * @param request ModifyObjectGroupOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6142,7 +6204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改对象组操作</p>
+     * <p>Modifies information about an operation on an object group.</p>
      * 
      * @param request ModifyObjectGroupOperationRequest
      * @return ModifyObjectGroupOperationResponse
@@ -6341,6 +6403,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改用户IPS白名单</p>
+     * 
      * @param request ModifyUserIPSWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyUserIPSWhitelistResponse
@@ -6398,6 +6463,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改用户IPS白名单</p>
+     * 
      * @param request ModifyUserIPSWhitelistRequest
      * @return ModifyUserIPSWhitelistResponse
      */
@@ -6828,9 +6896,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call this operation to modify the intrusion prevention configurations of a VPC firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</p>
@@ -6893,9 +6961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call this operation to modify the intrusion prevention configurations of a VPC firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</p>
@@ -7238,7 +7306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</p>
      * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * <p>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables firewalls for specific assets.</p>
@@ -7291,7 +7359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</p>
      * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * <p>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables firewalls for specific assets.</p>

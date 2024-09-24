@@ -8,8 +8,8 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
      * <p>The direction of the traffic to which the access control policy applies.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound traffic</li>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>in</strong>: inbound.</li>
+     * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,8 +23,8 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
      * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>4</strong>: IPv4 (default)</li>
-     * <li><strong>6</strong>: IPv6</li>
+     * <li><strong>4</strong> (default): IPv4.</li>
+     * <li><strong>6</strong>: IPv6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,11 +34,11 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The natural language of the request and response.</p>
+     * <p>The language of the content within the request and response.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

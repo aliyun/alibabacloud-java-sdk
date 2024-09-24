@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallPolicyPriorUsedRequest extends TeaModel {
     /**
-     * <p>The natural language of the request and response. </p>
+     * <p>The language of the content within the request and response.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,16 +19,15 @@ public class DescribeVpcFirewallPolicyPriorUsedRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the policy group to which the access control policy belongs. You can call the DescribeVpcFirewallAclGroupList operation to query the ID.  </p>
-     * <p>Valid values:</p>
+     * <p>The ID of the access control policy group. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
      * <ul>
-     * <li>If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</li>
+     * <li><p>If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
+     * <p>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall.</p>
+     * <p>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em>.</p>
+     * </li>
      * </ul>
-     * <p>Example: cen-ervw0g12b5jbw****</p>
-     * <ul>
-     * <li>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.</li>
-     * </ul>
-     * <p>Example: vfw-a42bbb7b887148c9****</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -9,9 +9,9 @@ public class DescribeAssetRiskListRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>Example of an IPv4 address: 47.97.XX.XX</p>
+     * <li><p>Example IPv4 address: 47.97.XX.XX.</p>
      * </li>
-     * <li><p>Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff</p>
+     * <li><p>Example IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</p>
      * </li>
      * </ul>
      */

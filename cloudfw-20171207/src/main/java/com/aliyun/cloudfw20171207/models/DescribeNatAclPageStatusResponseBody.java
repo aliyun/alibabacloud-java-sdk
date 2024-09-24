@@ -4,6 +4,12 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatAclPageStatusResponseBody extends TeaModel {
+    /**
+     * <p>Extra error information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy_not_exist</p>
+     */
     @NameInMap("Detail")
     public String detail;
 

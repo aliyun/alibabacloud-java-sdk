@@ -7,8 +7,8 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable basic protection. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes.</li>
+     * <li><strong>0</strong>: no.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,8 +21,8 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable virtual patching. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes.</li>
+     * <li><strong>0</strong>: no.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,8 +35,8 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,14 +54,25 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     @NameInMap("MemberUid")
     public String memberUid;
 
+    /**
+     * <p>The level of the rule group for the IPS. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: loose</li>
+     * <li><strong>2</strong>: medium</li>
+     * <li><strong>3</strong>: strict</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleClass")
     public String ruleClass;
 
     /**
      * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: block mode</li>
-     * <li><strong>0</strong>: monitor mode</li>
+     * <li><strong>1</strong>: block mode.</li>
+     * <li><strong>0</strong>: monitor mode.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -82,10 +93,10 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The instance ID of the VPC firewall. Valid values:</p>
+     * <p>The instance ID of the VPC firewall.</p>
      * <ul>
-     * <li>If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the IDs of CEN instances.</li>
-     * <li>If the VPC firewall protects mutual access traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</li>
+     * <li>If the VPC firewall protects traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the IDs of CEN instances.</li>
+     * <li>If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -116,9 +116,9 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String destinationType;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies.</p>
+     * <p>The direction of the traffic to which the access control policy applies. Valid value:</p>
      * <ul>
-     * <li>Set the value to <strong>out</strong>.</li>
+     * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * 
      * <strong>example:</strong>

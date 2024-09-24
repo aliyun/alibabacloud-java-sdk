@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetRiskListResponseBody extends TeaModel {
     /**
-     * <p>The details of the asset.</p>
+     * <p>The details of the assets.</p>
      */
     @NameInMap("AssetList")
     public java.util.List<DescribeAssetRiskListResponseBodyAssetList> assetList;

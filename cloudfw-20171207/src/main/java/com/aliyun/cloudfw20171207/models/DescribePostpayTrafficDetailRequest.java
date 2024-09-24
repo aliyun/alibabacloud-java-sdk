@@ -58,6 +58,9 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RegionNo")
+    public String regionNo;
+
     /**
      * <p>The instance ID or the IP address of the asset.</p>
      * 
@@ -80,9 +83,9 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     /**
      * <p>The traffic type. This parameter is required. Valid values:</p>
      * <ul>
-     * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall</li>
-     * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls</li>
-     * <li><strong>VPC_TRAFFIC</strong>: traffic for virtual private cloud (VPC) firewalls</li>
+     * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall.</li>
+     * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls.</li>
+     * <li><strong>VPC_TRAFFIC</strong>: traffic for virtual private cloud (VPC) firewalls.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -135,6 +138,14 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribePostpayTrafficDetailRequest setRegionNo(String regionNo) {
+        this.regionNo = regionNo;
+        return this;
+    }
+    public String getRegionNo() {
+        return this.regionNo;
     }
 
     public DescribePostpayTrafficDetailRequest setSearchItem(String searchItem) {

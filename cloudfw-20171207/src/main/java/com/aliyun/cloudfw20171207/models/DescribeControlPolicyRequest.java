@@ -72,10 +72,10 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String destination;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+     * <p>The direction of the traffic to which the access control policies apply. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound traffic</li>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>in</strong>: inbound.</li>
+     * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * 
      * <strong>example:</strong>
