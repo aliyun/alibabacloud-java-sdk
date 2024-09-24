@@ -14,12 +14,11 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The cluster type, which is available only when the cluster type is set to <code>ManagedKubernetes</code>. Valid values:</p>
+     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
      * <ul>
-     * <li><code>ack.pro.small</code>: ACK Pro cluster</li>
-     * <li><code>ack.standard</code>: ACK Basic cluster</li>
+     * <li><code>ack.pro.small</code>: ACK Pro cluster.</li>
+     * <li><code>ack.standard</code>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</li>
      * </ul>
-     * <p>By default, this parameter is left empty, which means that ACK clusters are not filtered by this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -28,10 +27,9 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>The cluster type. Valid values:</p>
      * <ul>
      * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
      * <li><code>ExternalKubernetes</code>: registered cluster.</li>
      * </ul>
      * 
@@ -70,15 +68,13 @@ public class DescribeClustersV1Request extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The identifier of the cluster. Valid values when the cluster_type parameter is set to <code>ManagedKubernetes</code>:</p>
+     * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
      * <ul>
-     * <li><code>Default</code>: ACK managed cluster</li>
-     * <li><code>Serverless</code>: ACK Serverless cluster</li>
-     * <li><code>Edge</code>: ACK Edge cluster</li>
+     * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+     * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+     * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+     * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
      * </ul>
-     * <p>Valid values when the cluster_type parameter is set to <code>Ask</code>:</p>
-     * <p><code>ask.v2</code>: ACK Serverless cluster</p>
-     * <p>By default, this parameter is left empty. If you leave this parameter empty, ACK clusters are not filtered by identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>Default</p>

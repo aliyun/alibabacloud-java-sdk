@@ -5,40 +5,40 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>The access control list (ACL) rule of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
+     * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
      */
     @NameInMap("access_control_list")
     public java.util.List<String> accessControlList;
 
     /**
-     * <p>The components that you want to install in the cluster. When you create a cluster, you can configure the <code>addons</code> parameter to install specific components.</p>
+     * <p>The components that you want to install in the cluster. When you create a cluster, you can configure the <code>addons</code> parameter to specify the components that you want to install.</p>
      * <p><strong>Network plug-in</strong>: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</p>
      * <ul>
-     * <li>Specify the Flannel plug-in in the following format: [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}].</li>
-     * <li>Specify the Flannel plug-in in the following format: [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;config&quot;: &quot;&quot;}].</li>
+     * <li>If you want to use the Terway component, specify the network plug-in in the [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}] format.</li>
+     * <li>If you want to use the Terway component, specify the value network plug-in in the [{&quot;Name&quot;: &quot;terway-eniip&quot;,&quot;Config&quot;: &quot;&quot;}] format.</li>
      * </ul>
-     * <p><strong>Volume plug-in</strong>: optional. Only the <code>CSI</code> plug-in is supported.</p>
+     * <p><strong>Volume plug-in</strong>: optional. Only the <code>Container Storage Interface (CSI)</code> plug-in is supported.</p>
      * <p>Specify the <code>CSI</code> plug-in in the following format: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}].</p>
      * <p><strong>Simple Log Service component</strong>: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
      * <ul>
-     * <li>To use an existing <code>Simple Log Service project</code>, specify the value in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</li>
-     * <li>To create a <code>Simple Log Service project</code>, specify the value in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</li>
+     * <li>Specify an existing <code>Simple Log Service project</code> in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</li>
+     * <li>To create a <code>Simple Log Service project</code>, specify the component in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</li>
      * </ul>
      * <p><strong>Ingress controller</strong>: optional. By default, the <code>nginx-ingress-controller</code> component is installed in ACK dedicated clusters.</p>
      * <ul>
-     * <li>To install nginx-ingress-controller and enable Internet access, specify the value in the following format: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</li>
-     * <li>To disable the system to automatically install nginx-ingress-controller, specify the value in the following format: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</li>
+     * <li>To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</li>
+     * <li>To disable the automatic installation of nginx-ingress-controller, specify the Ingress controller in the following format: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</li>
      * </ul>
      * <p><strong>Event center</strong>: optional. By default, the event center feature is enabled.</p>
-     * <p>You can use Kubernetes event centers to store and query events and configure alerts. You can use the Logstores that are associated with Kubernetes event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use a Kubernetes event center</a>.</p>
-     * <p>To enable the ack-node-problem-detector component, specify the value in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</p>
+     * <p>You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use an event center</a>.</p>
+     * <p>To enable the event center feature, specify the event center component in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</p>
      */
     @NameInMap("addons")
     public java.util.List<Addon> addons;
 
     /**
-     * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. <code>api-audiences</code> are used by the <code>API server</code> to check whether the <code>tokens</code> of requests are legitimate.`` Separate multiple <code>audiences</code> with commas (,).</p>
-     * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
+     * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. The <code>api-audiences</code> parameter validates <code>tokens</code> and is used by the <code>API server</code> to check whether the <code>tokens</code> of requests are valid. Separate multiple values with commas (,).``</p>
+     * <p>For more information about <code>service accounts</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes.default.svc</p>
@@ -47,9 +47,23 @@ public class CreateClusterRequest extends TeaModel {
     public String apiAudiences;
 
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("auto_renew")
+    public Boolean autoRenew;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("auto_renew_period")
+    public Long autoRenewPeriod;
+
+    /**
      * <p>The billing method of the cluster. The following resources are billed on a subscription basis:</p>
      * <p>ECS instances in node pools.</p>
-     * <p>The internal-facing SLB instance used by the API server.</p>
+     * <p>The internal-facing SLB instance associated with the API server.</p>
      * <p>Valid values:</p>
      * <p>PrePaid: subscription.</p>
      * <p>PostPaid: pay-as-you-go.</p>
@@ -62,8 +76,7 @@ public class CreateClusterRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>[This parameter is deprecated]</p>
-     * <p>Please replace this parameter with security_hardening_os.</p>
+     * <p>This parameter is deprecated. Use security_hardening_os instead.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -97,10 +110,10 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterDomain;
 
     /**
-     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
+     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the cluster edition. Valid values:</p>
      * <ul>
-     * <li><code>ack.pro.small</code>: Pro.</li>
-     * <li><code>ack.standard</code>: Basic. If you leave the parameter empty, the Basic edition is selected.</li>
+     * <li><code>ack.pro.small</code>: Pro Edition.</li>
+     * <li><code>ack.standard</code>: Basic Edition. If you leave the parameter empty, an ACK Basic cluster is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +125,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <ul>
      * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).</li>
      * <li><code>ExternalKubernetes</code>: registered cluster.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -124,10 +137,10 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The CIDR block of pods. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the CIDR block of pods. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
-     * <p>For more information about subnetting for ACK clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster that is deployed in a VPC</a>.</p>
+     * <p>The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
+     * <p>For more information about how to plan the network of an ACK cluster, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan the network of an ACK cluster</a>.</p>
      * <blockquote>
-     * <p> This parameter is required if the cluster uses Flannel as the network plug-in.</p>
+     * <p> This parameter is required if the cluster uses the Flannel plug-in.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -138,7 +151,7 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The list of control plane components for which you want to enable log collection.</p>
-     * <p>By default, the log of kube-apiserver, kube-controller-manager, and kube-scheduler is collected.</p>
+     * <p>By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.</p>
      */
     @NameInMap("controlplane_log_components")
     public java.util.List<String> controlplaneLogComponents;
@@ -162,7 +175,7 @@ public class CreateClusterRequest extends TeaModel {
     public String controlplaneLogTtl;
 
     /**
-     * <p>The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+     * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
      * <ul>
      * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
      * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
@@ -176,7 +189,7 @@ public class CreateClusterRequest extends TeaModel {
     public String cpuPolicy;
 
     /**
-     * <p>Specifies custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses or domain names with commas (,).</p>
+     * <p>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cs.aliyun.com</p>
@@ -185,10 +198,10 @@ public class CreateClusterRequest extends TeaModel {
     public String customSan;
 
     /**
-     * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+     * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.</li>
-     * <li><code>false</code>: disables deletion protection for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.</li>
+     * <li><code>true</code>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</li>
+     * <li><code>false</code>: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -199,10 +212,10 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>Specifies whether to perform a rollback if the cluster fails to be created. Valid values:</p>
+     * <p>Specifies whether to perform a rollback when the cluster fails to be created. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: performs a rollback if the system fails to create the cluster.</li>
-     * <li><code>false</code>: does not perform a rollback if the system fails to create the cluster.</li>
+     * <li><code>true</code>: performs a rollback when the cluster fails to be created.</li>
+     * <li><code>false</code>: does not perform a rollback when the cluster fails to be created.</li>
      * </ul>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -223,7 +236,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean enableRrsa;
 
     /**
-     * <p>The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">KMS</a>.</p>
+     * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">What is KMS?</a></p>
      * <blockquote>
      * <p> The key can be used only in ACK Pro clusters.</p>
      * </blockquote>
@@ -237,8 +250,8 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enables Internet access.</li>
-     * <li><code>false</code>: disables Internet access. If you set this parameter to false, the API server cannot be accessed over the Internet.</li>
+     * <li><code>true</code>: enables Internet access for the cluster.</li>
+     * <li><code>false</code>: disables Internet access for the cluster. If you set the value to false, the API server cannot be accessed over the Internet.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -251,7 +264,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: stores the data of containers and images on a data disk. Back up the existing data on the data disk first.</li>
+     * <li><code>true</code>: stores the data of containers and images on a data disk. The existing data stored on the data disk is lost. Back up the existing data first.</li>
      * <li><code>false</code>: does not store the data of containers and images on a data disk.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
@@ -268,7 +281,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean formatDisk;
 
     /**
-     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
+     * <p>The custom image. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Use a custom image to create an ACK cluster</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp16z7xko3vvv8gt****</p>
@@ -298,9 +311,9 @@ public class CreateClusterRequest extends TeaModel {
     public String imageType;
 
     /**
-     * <p>The list of existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.</p>
+     * <p>The existing ECS instances that are specified as worker nodes for the cluster.</p>
      * <blockquote>
-     * <p> This parameter is required when you create worker nodes based on existing ECS instances.</p>
+     * <p> This parameter is required if you create worker nodes on existing ECS instances.</p>
      * </blockquote>
      */
     @NameInMap("instances")
@@ -317,9 +330,9 @@ public class CreateClusterRequest extends TeaModel {
     public String ipStack;
 
     /**
-     * <p>Specifies whether to create an advanced security group. This parameter takes effect only if <code>security_group_id</code> is left empty.</p>
+     * <p>Specifies whether to create an advanced security group. This parameter takes effect only if <code>security_group_id</code> is not specified.</p>
      * <blockquote>
-     * <p> To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that has Terway installed.</p>
+     * <p> To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that uses Terway.</p>
      * </blockquote>
      * <ul>
      * <li><code>true</code>: creates an advanced security group.</li>
@@ -348,7 +361,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p>The name of the key pair. You must configure this parameter or the <code>login_password</code> parameter.</p>
+     * <p>The name of the key pair. You must specify this parameter or the <code>login_password</code> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>secrity-key</p>
@@ -357,8 +370,8 @@ public class CreateClusterRequest extends TeaModel {
     public String keyPair;
 
     /**
-     * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</p>
-     * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the API. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes on Kubernetes versions</a>.</p>
+     * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
+     * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the ACK API. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Support for Kubernetes versions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.16.9-aliyun.1</p>
@@ -366,6 +379,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>lb-wz9t256gqa3vbouk****</p>
+     */
     @NameInMap("load_balancer_id")
     public String loadBalancerId;
 
@@ -388,7 +405,7 @@ public class CreateClusterRequest extends TeaModel {
     public String loadBalancerSpec;
 
     /**
-     * <p>Enables Simple Log Service for the cluster. This parameter takes effect only on ACK Serverless clusters. Set the value to <code>SLS</code>.</p>
+     * <p>Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Valid value: <code>SLS</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>SLS</p>
@@ -397,7 +414,7 @@ public class CreateClusterRequest extends TeaModel {
     public String loggingType;
 
     /**
-     * <p>The password for SSH logon. You must configure this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>The password for SSH logon. You must specify this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Hello@1234</p>
@@ -406,7 +423,7 @@ public class CreateClusterRequest extends TeaModel {
     public String loginPassword;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only if <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables auto-renewal.</li>
      * <li><code>false</code>: disables auto-renewal.</li>
@@ -420,7 +437,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean masterAutoRenew;
 
     /**
-     * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</p>
+     * <p>The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for master nodes.</p>
      * <p>Valid values: 1, 2, 3, 6, and 12.</p>
      * <p>Default value: 1.</p>
      * 
@@ -444,7 +461,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The billing method of master nodes. Valid values:</p>
      * <ul>
      * <li><code>PrePaid</code>: subscription.</li>
-     * <li><code>PostPaid</code>: pay-as-you-go.</li>
+     * <li><code>PostPaid</code>: the pay-as-you-go.</li>
      * </ul>
      * <p>Default value: <code>PostPaid</code>.</p>
      * 
@@ -461,7 +478,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> masterInstanceTypes;
 
     /**
-     * <p>The subscription duration of master nodes. This parameter takes effect and is required only if <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+     * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
      * <p>Default value: 1.</p>
      * 
@@ -472,8 +489,8 @@ public class CreateClusterRequest extends TeaModel {
     public Long masterPeriod;
 
     /**
-     * <p>The billing cycle of master nodes. This parameter is required if master_instance_charge_type is set to <code>PrePaid</code>.</p>
-     * <p>Set the value to <code>Month</code>. Master nodes are billed only on a monthly basis.</p>
+     * <p>The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to <code>PrePaid</code>.</p>
+     * <p>Valid value: <code>Month</code>, which indicates that master nodes are billed only on a monthly basis.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -482,11 +499,11 @@ public class CreateClusterRequest extends TeaModel {
     public String masterPeriodUnit;
 
     /**
-     * <p>The type of system disk that you want to use for the master nodes. Valid values:</p>
+     * <p>The system disk type of master nodes. Valid values:</p>
      * <ul>
      * <li><code>cloud_efficiency</code>: ultra disk.</li>
      * <li><code>cloud_ssd</code>: standard SSD.</li>
-     * <li><code>cloud_essd</code>: enhanced SSD (ESSD).</li>
+     * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
      * </ul>
      * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
      * 
@@ -506,7 +523,7 @@ public class CreateClusterRequest extends TeaModel {
     public String masterSystemDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system disk that is specified for master nodes. Valid values: 40 to 500. Unit: GiB.</p>
+     * <p>The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.</p>
      * <p>Default value: <code>120</code>.</p>
      * 
      * <strong>example:</strong>
@@ -526,13 +543,13 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</p>
-     * <p>The number of vSwitches must be the same as that specified in <code>master_count</code> and the same as those specified in <code>master_vswitch_ids</code>.</p>
+     * <p>The number of vSwitches must be the same as the value of the <code>master_count</code> parameter and also the same as the number of vSwitches specified in the <code>master_vswitch_ids</code> parameter.</p>
      */
     @NameInMap("master_vswitch_ids")
     public java.util.List<String> masterVswitchIds;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
      * <p>This parameter is required.</p>
      * 
@@ -543,10 +560,10 @@ public class CreateClusterRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to create a NAT gateway and configure SNAT rules when the system creates the ACK Serverless cluster. Valid values:</p>
+     * <p>Specifies whether to create a NAT gateway and configure SNAT rules if you create an ACK Serverless cluster. Valid values:</p>
      * <ul>
      * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. This enables Internet access for the VPC in which the cluster is deployed.</li>
-     * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. In this case, the cluster in the VPC cannot access the Internet.</li>
+     * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. If you specify this value, the cluster in the VPC cannot access the Internet.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -557,7 +574,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean natGateway;
 
     /**
-     * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel as the network plug-in.</p>
+     * <p>The maximum number of IP addresses that can be assigned to each node. This number is determined by the subnet mask of the specified CIDR block. This parameter takes effect only if the cluster uses the Flannel plug-in.</p>
      * <p>Default value: <code>26</code>.</p>
      * 
      * <strong>example:</strong>
@@ -567,13 +584,13 @@ public class CreateClusterRequest extends TeaModel {
     public String nodeCidrMask;
 
     /**
-     * <p>The name of the custom node.</p>
-     * <p>A node name consists of a prefix, an IP substring, and a suffix.</p>
+     * <p>The custom node name.</p>
+     * <p>A custom node name consists of a prefix, a node IP address, and a suffix.</p>
      * <ul>
      * <li>The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.</li>
      * <li>The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</li>
      * </ul>
-     * <p>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.</p>
+     * <p>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will aliyun.com00055test.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun.com00055test</p>
@@ -622,7 +639,7 @@ public class CreateClusterRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The subscription duration. This parameter takes effect and is required only if you set charge_type to PrePaid.</p>
+     * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
      * <p>Default value: 1.</p>
      * 
@@ -634,7 +651,7 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
-     * <p>Set the value to Month. Master nodes are billed only on a monthly basis.</p>
+     * <p>Set the value to Month. Subscription clusters are billed only on a monthly basis.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -643,7 +660,7 @@ public class CreateClusterRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The OS distribution. Valid values:</p>
+     * <p>The OS distribution that is used. Valid values:</p>
      * <ul>
      * <li>CentOS</li>
      * <li>AliyunLinux</li>
@@ -661,9 +678,9 @@ public class CreateClusterRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch, and the pod vSwitches must be different from the node vSwitches (<code>vswitch</code>). We recommend that you specify pod vSwitches whose mask lengths are no longer than 19.</p>
+     * <p>If you select Terway as the network plug-in, you must allocate vSwitches to pods. For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods.</p>
      * <blockquote>
-     * <p> The <code>pod_vswitch_ids</code> parameter is required if the cluster uses Terway as the network plug-in.</p>
+     * <p> We recommend that you select pod vSwitches whose subnet masks that do not exceed 19 bits in length. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask exceeds 25 bits in length, the IP addresses that can be allocated to pods may be insufficient.</p>
      * </blockquote>
      */
     @NameInMap("pod_vswitch_ids")
@@ -687,8 +704,8 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The kube-proxy mode. Valid values:</p>
      * <ul>
-     * <li><code>iptables</code>: iptables is a kube-proxy mode. It uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
-     * <li><code>ipvs</code>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios when high load balancing performance is required.</li>
+     * <li><code>iptables</code>: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+     * <li><code>ipvs</code>: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.</li>
      * </ul>
      * <p>Default value: <code>ipvs</code>.</p>
      * 
@@ -699,13 +716,13 @@ public class CreateClusterRequest extends TeaModel {
     public String proxyMode;
 
     /**
-     * <p>The list of ApsaraDB RDS instances. Select the ApsaraDB RDS instances that you want to add to the whitelist. We recommend that you add the CIDR block of pods and CIDR block of nodes to the ApsaraDB RDS instances in the ApsaraDB RDS console. When you set the ApsaraDB RDS instances, you cannot scale out the number of nodes because the instances are not in the Running state.</p>
+     * <p>The ApsaraDB RDS instances. The pod CIDR block and node CIDR block are added to the whitelists of the ApsaraDB RDS instances. We recommend that you add the pod CIDR block and node CIDR block to the whitelists of the ApsaraDB RDS instances in the ApsaraDB RDS console. If the RDS instances are not in the Running state, new nodes cannot be added to the cluster.</p>
      */
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
 
     /**
-     * <p>The ID of the region in which you want to deploy the cluster.</p>
+     * <p>The ID of the region in which the cluster is deployed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -725,13 +742,13 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
-     * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">How to select between Docker and Sandboxed-Container</a>.</p>
+     * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</p>
      */
     @NameInMap("runtime")
     public Runtime runtime;
 
     /**
-     * <p>The ID of an existing security group. You need to choose between this parameter and the <code>is_enterprise_security_group</code> parameter. Cluster nodes are automatically added to the security group.</p>
+     * <p>The ID of an existing security group. You must specify this parameter or the <code>is_enterprise_security_group</code> parameter. Cluster nodes are automatically added to the security group.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1bdue0qc1g7k****</p>
@@ -740,13 +757,12 @@ public class CreateClusterRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. </p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
      * <ul>
-     * <li>true: enables Alibaba Cloud Linux Security Hardening.</li>
-     * <li>false: disables Alibaba Cloud Linux Security Hardening.</li>
+     * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
+     * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
      * </ul>
-     * <p>Default value: false</p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -755,8 +771,8 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean securityHardeningOs;
 
     /**
-     * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. <code>service-account-issuer</code> is the issuer of the <code>serviceaccount token</code>, which corresponds to the <code>iss</code> field in the <code>token payload</code>.</p>
-     * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
+     * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. The <code>service-account-issuer</code> parameter specifies the issuer of the <code>service account token</code>, which is specified by using the <code>iss</code> field in the <code>token payload</code>.</p>
+     * <p>For more information about <code>service accounts</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes.default.svc</p>
@@ -765,8 +781,8 @@ public class CreateClusterRequest extends TeaModel {
     public String serviceAccountIssuer;
 
     /**
-     * <p>The CIDR block of Services. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block of Services cannot overlap with the CIDR block of the VPC (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the CIDR block of Services after the cluster is created.</p>
-     * <p>By default, the CIDR block of Services is set to 172.19.0.0/20.</p>
+     * <p>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.</p>
+     * <p>By default, the Service CIDR block is set to 172.19.0.0/20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -778,8 +794,8 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The type of service discovery that is implemented in the <code>ACK Serverless</code> cluster.</p>
      * <ul>
-     * <li><code>CoreDNS</code>: CoreDNS is a standard service discovery plug-in that is provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCores and 512 MiB of memory.</li>
-     * <li><code>PrivateZone</code>: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.</li>
+     * <li><code>CoreDNS</code>: a standard service discovery plug-in provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCPUs and 512 MiB of memory.</li>
+     * <li><code>PrivateZone</code>: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it to implement service discovery.</li>
      * </ul>
      * <p>By default, this parameter is not specified.</p>
      */
@@ -787,13 +803,13 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> serviceDiscoveryTypes;
 
     /**
-     * <p>Specifies whether to configure Source Network Address Translation (SNAT) rules for the VPC in which the cluster is deployed. Valid values:</p>
+     * <p>Specifies whether to configure SNAT rules for the VPC in which your cluster is deployed. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
+     * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. Set the value to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
      * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</li>
      * </ul>
      * <blockquote>
-     * <p> If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/178480.html">Manually create a NAT gateway and configure SNAT rules</a>.</p>
+     * <p> If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/178480.html">Enable an existing ACK cluster to access the Internet</a>.</p>
      * </blockquote>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -804,11 +820,11 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean snatEntry;
 
     /**
-     * <p>Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK reinforcement based on classified protection</a>.</p>
+     * <p>Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enables reinforcement based on MLPS.</li>
-     * <li><code>false</code>: disables reinforcement based on MLPS.</li>
+     * <li><code>true</code>: enables security hardening based on MLPS.</li>
+     * <li><code>false</code>: disables security hardening based on MLPS.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -843,7 +859,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taints of the nodes in the node pool. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+     * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
      */
     @NameInMap("taints")
     public java.util.List<Taint> taints;
@@ -886,8 +902,7 @@ public class CreateClusterRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
-     * <p>This parameter is required.</p>
+     * <p>The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zeik9h3ahvv2zz95****</p>
@@ -896,19 +911,18 @@ public class CreateClusterRequest extends TeaModel {
     public String vpcid;
 
     /**
-     * <p>The vSwitches that are specified for nodes in the cluster. This parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
-     * <p>This parameter is required.</p>
+     * <p>The vSwitches for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables auto-renewal.</li>
      * <li><code>false</code>: disables auto-renewal.</li>
      * </ul>
-     * <p>Default value: <code>true</code>.</p>
+     * <p>Default value: <code>true</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -918,7 +932,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean workerAutoRenew;
 
     /**
-     * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
+     * <p>The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for worker nodes.</p>
      * <p>Valid values: 1, 2, 3, 6, and 12.</p>
      * 
      * <strong>example:</strong>
@@ -958,7 +972,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> workerInstanceTypes;
 
     /**
-     * <p>The subscription duration of worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+     * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
      * <p>Default value: 1.</p>
      * 
@@ -971,7 +985,7 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
-     * <p>Set the value to <code>Month</code>. Worker nodes are billed only on a monthly basis.</p>
+     * <p>Set the value to <code>Month</code>. Subscription worker nodes are billed only on a monthly basis.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -981,7 +995,7 @@ public class CreateClusterRequest extends TeaModel {
     public String workerPeriodUnit;
 
     /**
-     * <p>The category of the system disks for worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</p>
+     * <p>The system disk type of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Overview of Block Storage</a>.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><code>cloud_efficiency</code>: ultra disk.</li>
@@ -997,7 +1011,7 @@ public class CreateClusterRequest extends TeaModel {
     public String workerSystemDiskCategory;
 
     /**
-     * <p>If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+     * <p>If the system disk is an ESSD, you can specify the PL of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>PL0</li>
@@ -1016,7 +1030,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The system disk size of worker nodes. Unit: GiB.</p>
      * <p>Valid values: 40 to 500.</p>
-     * <p>The value of this parameter must be at least 40 and no less than the image size.</p>
+     * <p>The value of this parameter must be at least 40 and greater than or equal to the image size.</p>
      * <p>Default value: <code>120</code>.</p>
      * 
      * <strong>example:</strong>
@@ -1037,22 +1051,26 @@ public class CreateClusterRequest extends TeaModel {
     public String workerSystemDiskSnapshotPolicyId;
 
     /**
-     * <p>The list of vSwitches that are specified for nodes. Each node is allocated a vSwitch.</p>
-     * <p>The <code>worker_vswitch_ids</code> parameter is optional but the <code>vswitch_ids</code> parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
+     * <p>The vSwitches for worker nodes. Each worker node is allocated a vSwitch.</p>
+     * <p><code>worker_vswitch_ids</code> is optional but <code>vswitch_ids</code> is required if you create an ACK managed cluster that does not contain nodes.</p>
      */
     @NameInMap("worker_vswitch_ids")
     @Deprecated
     public java.util.List<String> workerVswitchIds;
 
     /**
-     * <p>The ID of the zone to which the cluster belongs. This parameter takes effect for only ACK Serverless clusters.</p>
-     * <p>When you create an ACK Serverless cluster, you must configure <code>zone_id</code> if <code>vpc_id</code> and <code>vswitch_ids</code> are not configured. This way, the system automatically creates a VPC in the specified zone.</p>
+     * <p>The ID of the zone to which the cluster belongs. This parameter takes effect only for ACK Serverless clusters.</p>
+     * <p>If you create an ACK Serverless cluster, you must specify <code>zone_id</code> if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified. This way, the system automatically creates a VPC in the specified zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beiji****</p>
      */
     @NameInMap("zone_id")
+    @Deprecated
     public String zoneId;
+
+    @NameInMap("zone_ids")
+    public java.util.List<String> zoneIds;
 
     public static CreateClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterRequest self = new CreateClusterRequest();
@@ -1081,6 +1099,22 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getApiAudiences() {
         return this.apiAudiences;
+    }
+
+    public CreateClusterRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreateClusterRequest setAutoRenewPeriod(Long autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Long getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     public CreateClusterRequest setChargeType(String chargeType) {
@@ -1795,9 +1829,17 @@ public class CreateClusterRequest extends TeaModel {
         return this.zoneId;
     }
 
+    public CreateClusterRequest setZoneIds(java.util.List<String> zoneIds) {
+        this.zoneIds = zoneIds;
+        return this;
+    }
+    public java.util.List<String> getZoneIds() {
+        return this.zoneIds;
+    }
+
     public static class CreateClusterRequestWorkerDataDisks extends TeaModel {
         /**
-         * <p>The type of a data disk.</p>
+         * <p>The data disk type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1821,7 +1863,7 @@ public class CreateClusterRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -1830,7 +1872,7 @@ public class CreateClusterRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the data disk. Valid values: 40 to 32767. Unit: GiB.</p>
+         * <p>The data disk size. Valid values: 40 to 32767. Unit: GiB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

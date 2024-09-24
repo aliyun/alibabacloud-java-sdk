@@ -7,8 +7,8 @@ public class OpenAckServiceRequest extends TeaModel {
     /**
      * <p>The type of service that you want to activate. Valid values:</p>
      * <ul>
-     * <li><code>propayasgo</code>: professional managed Kubernetes service.</li>
-     * <li><code>edgepayasgo</code>: ACK Edge.</li>
+     * <li><code>propayasgo</code>: ACK clusters (including ACK managed clusters and ACK dedicated clusters), ACK Serverless clusters, and registered clusters.</li>
+     * <li><code>edgepayasgo</code>: ACK Edge clusters.</li>
      * </ul>
      * 
      * <strong>example:</strong>

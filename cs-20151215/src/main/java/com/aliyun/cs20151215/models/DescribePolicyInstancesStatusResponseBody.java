@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     /**
-     * <p>Information about the number of policy instances of each severity level.</p>
+     * <p>The number of policy instances that are deployed in the cluster at different severity levels.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</p>
@@ -14,7 +14,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     public java.util.Map<String, ?> instancesSeverityCount;
 
     /**
-     * <p>Details about policy instances of different types.</p>
+     * <p>The number of policy instances of each policy type.</p>
      */
     @NameInMap("policy_instances")
     public java.util.List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> policyInstances;
@@ -42,7 +42,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     public static class DescribePolicyInstancesStatusResponseBodyPolicyInstances extends TeaModel {
         /**
-         * <p>The policy type. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+         * <p>The type of the policy. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>compliance</p>

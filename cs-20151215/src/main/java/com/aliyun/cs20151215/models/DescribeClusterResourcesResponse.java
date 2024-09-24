@@ -281,11 +281,11 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior;
 
         /**
-         * <p>The type of the resource creator. Valid values:</p>
+         * <p>The resource creator. Valid values:</p>
          * <ul>
-         * <li>user: the resource is created by the user.</li>
-         * <li>system: the resource is created by the ACK management system.</li>
-         * <li>addon: the resource is created by a cluster component.</li>
+         * <li>user: The resource is created by the user.</li>
+         * <li>system: The resource is created by the ACK management system.</li>
+         * <li>addon: The resource is created by a cluster component.</li>
          * </ul>
          * 
          * <strong>example:</strong>

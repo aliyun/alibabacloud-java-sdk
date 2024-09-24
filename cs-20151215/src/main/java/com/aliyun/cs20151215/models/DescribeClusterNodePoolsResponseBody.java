@@ -1257,7 +1257,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupPrivatePoolOptions privatePoolOptions;
 
         /**
-         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</p>
+         * <p>This field is deprecated and replaced by the ram_role_name parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>KubernetesWorkerRole-021dc54f-929b-437a-8ae0-34c24d3e****</p>
@@ -1315,14 +1315,6 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
-        /**
-         * <p>阿里云OS安全加固。取值：</p>
-         * <ul>
-         * <li><code>true</code>：开启阿里云OS安全加固。</li>
-         * <li><code>false</code>：不开启阿里云OS安全加固。</li>
-         * </ul>
-         * <p>默认值：<code>false</code>。</p>
-         */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 
@@ -2109,7 +2101,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo nodepoolInfo;
 
         /**
-         * <p>The configurations of the scaling group.</p>
+         * <p>The configuration of the scaling group.</p>
          */
         @NameInMap("scaling_group")
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup scalingGroup;

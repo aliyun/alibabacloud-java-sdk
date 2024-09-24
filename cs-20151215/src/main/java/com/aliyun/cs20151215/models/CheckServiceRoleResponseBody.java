@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceRoleResponseBody extends TeaModel {
+    /**
+     * <p>The check results.</p>
+     */
     @NameInMap("roles")
     public java.util.List<CheckServiceRoleResponseBodyRoles> roles;
 
@@ -22,6 +25,8 @@ public class CheckServiceRoleResponseBody extends TeaModel {
 
     public static class CheckServiceRoleResponseBodyRoles extends TeaModel {
         /**
+         * <p>Specifies whether the service role is granted required permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -29,6 +34,8 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         public Boolean granted;
 
         /**
+         * <p>The message returned if the service role is not granted required permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>The role does not exist: AliyunCSManagedAutoScalerRole</p>
          */
@@ -36,6 +43,8 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The service role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliyunCSManagedAutoScalerRole</p>
          */

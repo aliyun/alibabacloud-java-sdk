@@ -11,12 +11,12 @@ public class DeleteClusterRequest extends TeaModel {
     public java.util.List<DeleteClusterRequestDeleteOptions> deleteOptions;
 
     /**
-     * <p>Specifies whether to retain the Server Load Balancer (SLB) instances that are created by the cluster.</p>
+     * <p>Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.</p>
      * <ul>
      * <li><code>true</code>: retains the SLB instances that are created by the cluster.</li>
      * <li><code>false</code>: does not retain the SLB instances that are created by the cluster.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: <code>false</code>. Set resource_type to <code>SLB</code> in the <code>delete_options</code> parameter to manage SLB instances.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -26,10 +26,10 @@ public class DeleteClusterRequest extends TeaModel {
     public Boolean keepSlb;
 
     /**
-     * <p>Specifies whether to retain all resources. If you set the parameter to <code>true</code>, the <code>retain_resources</code> parameter is ignored.</p>
+     * <p>Specifies whether to retain all resources. If you set the parameter to <code>true</code>, the <code>retain_resources</code> parameter is ignored. The cloud resources that are created by the cluster are retained. You can call the <code>DescribeClusterResources</code> operation to query cloud resources created by the cluster. If you set the parameter to <code>false</code>, resources to be retained by default in the <code>delete_options</code> parameter are still retained. To delete these resources, set <code>delete_mode</code> to <code>delete</code> in <code>delete_options</code>.</p>
      * <ul>
-     * <li><code>true</code>: retains all resources.</li>
-     * <li><code>false</code>: does not retain all resources.</li>
+     * <li><code>true</code>: retains all resources, including cloud resources created by the cluster.</li>
+     * <li><code>false</code>: does not retain all resources. Resources to be retained by default in the <code>delete_options</code> parameter are retained. For example, <code>ALB</code> instances are retained when this parameter is set to <code>false</code>.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -97,7 +97,7 @@ public class DeleteClusterRequest extends TeaModel {
         public String deleteMode;
 
         /**
-         * <p>Valid values:</p>
+         * <p>The type of the resource. Valid values:</p>
          * <ul>
          * <li>SLB: SLB resources created for Services. By default, the SLB resources are automatically deleted.</li>
          * <li>ALB: Application Load Balancer (ALB) resources created by the ALB Ingress controller. By default, the ALB resources are retained.</li>

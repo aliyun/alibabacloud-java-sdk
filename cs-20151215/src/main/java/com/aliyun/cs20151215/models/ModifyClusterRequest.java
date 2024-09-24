@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterRequest extends TeaModel {
     /**
-     * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
+     * <p>The network access control lists (ACLs) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
      */
     @NameInMap("access_control_list")
     public java.util.List<String> accessControlList;
 
+    /**
+     * <p>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. This parameter is available only for ACK managed clusters.</p>
+     */
     @NameInMap("api_server_custom_cert_sans")
     public ModifyClusterRequestApiServerCustomCertSans apiServerCustomCertSans;
 
     /**
-     * <p>Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used for accessing the API server over the Internet. Valid values:</p>
+     * <p>Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used to enable access to the API server over the Internet. Valid values:</p>
      * <ul>
      * <li><code>true</code>: associates an EIP with the cluster.</li>
      * <li><code>false</code>: does not associate an EIP with the cluster.</li>
@@ -36,8 +39,8 @@ public class ModifyClusterRequest extends TeaModel {
     public String apiServerEipId;
 
     /**
-     * <p>The cluster name.</p>
-     * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (_). The cluster name cannot start with a hyphen (-).</p>
+     * <p>The name of the cluster.</p>
+     * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The cluster name cannot start with a hyphen (-).</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-new-name</p>
@@ -46,12 +49,12 @@ public class ModifyClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+     * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: enables cluster deletion protection.</li>
+     * <li><code>false</code>: disables cluster deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -60,10 +63,10 @@ public class ModifyClusterRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>Specifies whether to enable the RRSA feature. Valid values:</p>
+     * <p>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature. This parameter is available only for ACK managed clusters. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: enables the RRSA feature.</li>
+     * <li><code>false</code>: disables the RRSA feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,10 +78,10 @@ public class ModifyClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to remap the test domain name of the cluster. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: remaps the test domain name of the cluster.</li>
+     * <li><code>false</code>: does not remap the test domain name of the cluster.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,12 +99,12 @@ public class ModifyClusterRequest extends TeaModel {
     public String ingressLoadbalancerId;
 
     /**
-     * <p>Specifies whether to enable instance deletion protection. If this option is enabled, the instance cannot be deleted in the console or by calling API operations. Valid values:</p>
+     * <p>Specifies whether to enable instance deletion protection. If you enable this option, the instance cannot be deleted in the console or by calling API operations. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: enables instance deletion protection.</li>
+     * <li><code>false</code>: disables instance deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,16 +113,19 @@ public class ModifyClusterRequest extends TeaModel {
     public Boolean instanceDeletionProtection;
 
     /**
-     * <p>The cluster maintenance window. This feature takes effect only for managed Pro clusters.</p>
+     * <p>The cluster maintenance window. This feature takes effect only for ACK Pro clusters.</p>
      */
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
+    /**
+     * <p>The automatic O\&amp;M policy of the cluster.</p>
+     */
     @NameInMap("operation_policy")
     public ModifyClusterRequestOperationPolicy operationPolicy;
 
     /**
-     * <p>The ID of the cluster resource group.</p>
+     * <p>The cluster resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyvw3wjm****</p>
@@ -252,12 +258,21 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestApiServerCustomCertSans extends TeaModel {
         /**
+         * <p>Specifies whether to overwrite or add SANs. Valid values:</p>
+         * <ul>
+         * <li>overwrite: overwrites SANs.</li>
+         * <li>append: adds SANs.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>append</p>
          */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <p>The SANs.</p>
+         */
         @NameInMap("subject_alternative_names")
         public java.util.List<String> subjectAlternativeNames;
 
@@ -286,6 +301,13 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
+         * <p>The frequency of auto cluster updates. Valid values:</p>
+         * <ul>
+         * <li>patch</li>
+         * <li>stable</li>
+         * <li>rapid</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>patch</p>
          */
@@ -293,6 +315,8 @@ public class ModifyClusterRequest extends TeaModel {
         public String channel;
 
         /**
+         * <p>Specifies whether to enable auto cluster update.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -323,6 +347,9 @@ public class ModifyClusterRequest extends TeaModel {
     }
 
     public static class ModifyClusterRequestOperationPolicy extends TeaModel {
+        /**
+         * <p>The configurations of auto cluster update.</p>
+         */
         @NameInMap("cluster_auto_upgrade")
         public ModifyClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
 
@@ -352,7 +379,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The name of the LogProject that stores system events.</p>
+         * <p>The name of the Simple Log Service project that stores system events.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-cb95aa626a47740afbf6aa099b65****</p>

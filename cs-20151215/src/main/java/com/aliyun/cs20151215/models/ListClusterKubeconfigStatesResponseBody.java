@@ -11,7 +11,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
     public ListClusterKubeconfigStatesResponseBodyPage page;
 
     /**
-     * <p>The status of the kubeconfig files associated with the cluster.</p>
+     * <p>The status list of the kubeconfig files associated with the cluster.</p>
      */
     @NameInMap("states")
     public java.util.List<ListClusterKubeconfigStatesResponseBodyStates> states;
@@ -98,7 +98,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
 
     public static class ListClusterKubeconfigStatesResponseBodyStates extends TeaModel {
         /**
-         * <p>The display name of the account.</p>
+         * <p>The displayed name or role name of the RAM user.</p>
          * 
          * <strong>example:</strong>
          * <p>tom</p>
@@ -116,7 +116,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The logon name or role name of the RAM user.</p>
          * 
          * <strong>example:</strong>
          * <p>tom</p>
@@ -125,7 +125,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The status of the account. Valid values:</p>
+         * <p>The status of the account.</p>
          * <ul>
          * <li>Active: The account is active.</li>
          * <li>InActive: The account is locked.</li>
@@ -139,7 +139,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountState;
 
         /**
-         * <p>The type of the account. Valid values:</p>
+         * <p>The type of the account.</p>
          * <ul>
          * <li>RootAccount: Alibaba Cloud account.</li>
          * <li>RamUser: RAM user.</li>
@@ -153,7 +153,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>Expiration time of the certificate.</p>
+         * <p>The expiration time of the client certificate for the kubeconfig file.</p>
          * 
          * <strong>example:</strong>
          * <p>2027-07-15T01:32:20Z</p>
@@ -162,7 +162,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String certExpireTime;
 
         /**
-         * <p>The status of the certificate.</p>
+         * <p>The status of the client certificate for the kubeconfig file.</p>
          * <ul>
          * <li>Unexpired: The certificate is not expired.</li>
          * <li>Expired: The certificate is expired.</li>
@@ -176,7 +176,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String certState;
 
         /**
-         * <p>Indicates whether the certificate can be revoked.</p>
+         * <p>Indicates whether the client certificate for the kubeconfig file can be revoked.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

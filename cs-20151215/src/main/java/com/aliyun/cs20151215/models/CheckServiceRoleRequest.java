@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckServiceRoleRequest extends TeaModel {
     /**
+     * <p>The service roles that you want to check.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("roles")
@@ -25,6 +26,7 @@ public class CheckServiceRoleRequest extends TeaModel {
 
     public static class CheckServiceRoleRequestRoles extends TeaModel {
         /**
+         * <p>The service role name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

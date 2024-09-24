@@ -19,12 +19,11 @@ public class DescribeAddonsRequest extends TeaModel {
     public String clusterProfile;
 
     /**
-     * <p>The edition of the cluster. If you set the cluster type to <code>ManagedKubernetes</code>, the following editions are supported:</p>
+     * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and specify <code>profile</code>, you can further specify the edition of the cluster. Valid values:</p>
      * <ul>
-     * <li><code>ack.pro.small</code>: ACK Pro cluster</li>
-     * <li><code>ack.standard</code>: ACK Basic cluster</li>
+     * <li><code>ack.pro.small</code>: creates an ACK Pro cluster.</li>
+     * <li><code>ack.standard</code>: creates an ACK Basic cluster. If you leave the parameter empty, an ACK Basic cluster is created.</li>
      * </ul>
-     * <p>By default, this parameter is left empty. If you leave this parameter empty, clusters are not filtered by edition.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -33,10 +32,9 @@ public class DescribeAddonsRequest extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>The type of cluster. Valid values:</p>
      * <ul>
      * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
      * <li><code>ExternalKubernetes</code>: registered cluster.</li>
      * </ul>
      * 
