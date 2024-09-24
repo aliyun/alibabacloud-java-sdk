@@ -11,7 +11,7 @@ public class RunClusterCheckRequest extends TeaModel {
     public java.util.Map<String, String> options;
 
     /**
-     * <p>检查目标。</p>
+     * <p>The target to be checked.</p>
      * 
      * <strong>example:</strong>
      * <p>np1f6779297c4444a3a1cdd29be8e5****</p>

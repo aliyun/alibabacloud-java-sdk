@@ -4,10 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class GetClusterAuditProjectResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the cluster auditing feature is enabled for the cluster. <code>true</code>: The cluster auditing feature is enabled for the cluster. <code>false</code>: The cluster auditing feature is disabled for the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("audit_enabled")
     public Boolean auditEnabled;
 
     /**
+     * <p>The SLS project in which the audit logs of the API server are stored.</p>
+     * 
      * <strong>example:</strong>
      * <p>k8s-log-cad1230511cbb4db4a488e58518******</p>
      */

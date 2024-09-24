@@ -106,7 +106,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The type of operating system. Examples:</p>
+         * <p>The type of OS. Examples:</p>
          * <ul>
          * <li><code>Windows</code></li>
          * <li><code>Linux</code></li>
@@ -239,7 +239,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<Runtime> runtimes;
 
         /**
-         * <p>The Kubernetes version that is supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+         * <p>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.16.9-aliyun.1</p>
@@ -274,6 +274,9 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         @NameInMap("creatable")
         public Boolean creatable;
 
+        /**
+         * <p>The list of available versions for updates.</p>
+         */
         @NameInMap("upgradable_versions")
         public java.util.List<String> upgradableVersions;
 

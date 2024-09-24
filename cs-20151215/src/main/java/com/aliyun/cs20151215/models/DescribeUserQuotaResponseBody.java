@@ -41,8 +41,8 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public Long clusterQuota;
 
     /**
-     * <p>This parameter is deprecated.</p>
-     * <p>The quota of enhanced edge node pools.</p>
+     * <p>This parameter is discontinued.</p>
+     * <p>The quotas of enhanced edge node pools.</p>
      */
     @NameInMap("edge_improved_nodepool_quota")
     public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota;
@@ -125,8 +125,8 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
 
     public static class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota extends TeaModel {
         /**
-         * <p>This parameter is deprecated.</p>
-         * <p>The maximum bandwidth of each enhanced node pool. Unit: Mbit/s.</p>
+         * <p>This parameter is discontinued.</p>
+         * <p>The maximum bandwidth of each enhanced edge node pool. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -135,8 +135,8 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>This parameter is deprecated.</p>
-         * <p>The quota of enhanced edge node pools that belong to an Alibaba Cloud account.</p>
+         * <p>This parameter is discontinued.</p>
+         * <p>The maximum number of enhanced edge node pools that you can create within an Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -145,10 +145,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is discontinued.</p>
          * <p>The maximum subscription duration of an enhanced edge node pool. Unit: months.</p>
          * <blockquote>
-         * <p>You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.</p>
+         * <p> You are charged for enhanced edge node pools based on the pay-as-you-go billing method. Therefore, you can ignore this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class RemoveNodePoolNodesRequest extends TeaModel {
     /**
-     * <p>是否并发移除。</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

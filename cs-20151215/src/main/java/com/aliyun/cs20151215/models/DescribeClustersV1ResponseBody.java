@@ -48,10 +48,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The type of ACK managed cluster. This parameter is available only for ACK managed clusters. Valid values:</p>
+         * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
          * <ul>
-         * <li><code>ack.pro.small</code>: ACK Pro cluster</li>
-         * <li><code>ack.standard</code>: ACK Basic cluster</li>
+         * <li><code>ack.pro.small</code>: ACK Pro cluster.</li>
+         * <li><code>ack.standard</code>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -61,12 +61,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterSpec;
 
         /**
-         * <p>The cluster type. Valid values:</p>
          * <ul>
-         * <li><code>Kubernetes</code>: ACK dedicated cluster</li>
-         * <li><code>ManagedKubernetes</code>: ACK managed cluster</li>
-         * <li><code>Ask</code>: ACK Serverless cluster</li>
-         * <li><code>ExternalKubernetes</code>: registered cluster</li>
+         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
+         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,10 +92,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</p>
+         * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Deletion protection is enabled for the cluster. The cluster cannot be deleted in the ACK console or by calling API operations.</li>
-         * <li><code>false</code>: Deletion protection is disabled for the cluster. The cluster can be deleted in the ACK console or by calling API operations.</li>
+         * <li><code>true</code>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</li>
+         * <li><code>false</code>: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String dockerVersion;
 
         /**
-         * <p>The ID of the Server Load Balancer (SLB) instance that is used by the Ingress of the cluster.</p>
+         * <p>The ID of the Server Load Balancer (SLB) instance that is used by the Ingresses of the cluster.</p>
          * <p>The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.</p>
          * 
          * <strong>example:</strong>
@@ -126,8 +124,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String externalLoadbalancerId;
 
         /**
-         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
-         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</p>
+         * <p>You can create clusters that run the latest two Kubernetes versions in the ACK console. You can call the API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.16.9-aliyun.1</p>
@@ -136,13 +134,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String initVersion;
 
         /**
-         * <p>The maintenance window of the cluster. This feature is available only for ACK Pro clusters.</p>
+         * <p>The maintenance window of the cluster. This feature is available only for ACK managed clusters and ACK Serverless clusters.</p>
          */
         @NameInMap("maintenance_window")
         public MaintenanceWindow maintenanceWindow;
 
         /**
-         * <p>The endpoint of the cluster API server, including an internal endpoint and a public endpoint.</p>
+         * <p>The address of the cluster API server. It includes an internal endpoint and a public endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;api_server_endpoint\&quot;:\&quot;\&quot;,\&quot;intranet_api_server_endpoint\&quot;:\&quot;<a href="https://192.168.0.251:6443%5C%5C%22%7D">https://192.168.0.251:6443\\&quot;}</a></p>
@@ -161,7 +159,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
         /**
          * <p>The cluster name.</p>
-         * <p>The name must be 1 to 63 characters in length and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
          * 
          * <strong>example:</strong>
          * <p>cluster-demo</p>
@@ -172,9 +170,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The network mode of the cluster. Valid values:</p>
          * <ul>
-         * <li><code>classic</code>: classic network</li>
-         * <li><code>vpc</code>: virtual private cloud (VPC)</li>
-         * <li><code>overlay</code>: overlay network</li>
+         * <li><code>classic</code>: classic network.</li>
+         * <li><code>vpc</code>: virtual private cloud (VPC).</li>
+         * <li><code>overlay</code>: overlay network.</li>
          * <li><code>calico</code>: network powered by Calico.</li>
          * </ul>
          * 
@@ -209,8 +207,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The cluster identifier. Valid values:</p>
          * <ul>
-         * <li><code>Edge</code>: The cluster is an ACK Edge cluster.</li>
-         * <li><code>Default</code>: The cluster is not an ACK Edge cluster.</li>
+         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the security group to which the instances of the cluster belong.</p>
+         * <p>The ID of the security group of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-2vcgwsrwgt5mp0yi****</p>
@@ -283,8 +283,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <li>172.16-31.0.0/12-16</li>
          * <li>192.168.0.0/16</li>
          * </ul>
-         * <p>The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.</p>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</p>
+         * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
+         * <p>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.0.0/16</p>
@@ -326,7 +326,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.</p>
+         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</p>
@@ -335,7 +335,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String workerRamRoleName;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The ID of the zone where the cluster is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-b</p>

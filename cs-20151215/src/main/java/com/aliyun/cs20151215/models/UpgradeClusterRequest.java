@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
     /**
-     * <p>This parameter is discontinued.</p>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s</p>
@@ -17,8 +17,8 @@ public class UpgradeClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to update only the master nodes. Valid values:</p>
      * <ul>
-     * <li>true: Updates only the master nodes.</li>
-     * <li>false: Updates the master nodes and worker nodes.</li>
+     * <li>true: updates only the master nodes.</li>
+     * <li>false: updates the master nodes and worker nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
 
     /**
-     * <p>This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.</p>
+     * <p>This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1.14.8-aliyun.1</p>

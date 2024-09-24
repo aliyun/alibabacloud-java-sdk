@@ -29,10 +29,10 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Long count;
 
     /**
-     * <p>The CPU management policy of the nodes in a node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
+     * <p>The CPU management policy of nodes. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
      * <ul>
-     * <li><code>static</code>: This policy allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
-     * <li><code>none</code>: The default CPU affinity is used.</li>
+     * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
+     * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
      * </ul>
      * <p>Default value: <code>none</code>.</p>
      * 
@@ -43,7 +43,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String cpuPolicy;
 
     /**
-     * <p>Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
+     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp16z7xko3vvv8gt****</p>
@@ -52,7 +52,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The name of the key pair. You must set this parameter or the <code>login_password</code> parameter.</p>
+     * <p>The name of the key pair. You must configure this parameter or the <code>login_password</code> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String keyPair;
 
     /**
-     * <p>The password for SSH logon. You must set this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>The password for SSH logon. You must configure this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String loginPassword;
 
     /**
-     * <p>After you specify the list of ApsaraDB RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
+     * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
      */
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
@@ -86,21 +86,21 @@ public class ScaleOutClusterRequest extends TeaModel {
     /**
      * <p>The labels that you want to add to nodes. You must add labels based on the following rules:</p>
      * <ul>
-     * <li>Each label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-     * <li>A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+     * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+     * <li>When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
      * </ul>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">Taints and Tolerations</a>.</p>
+     * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
      */
     @NameInMap("taints")
     public java.util.List<Taint> taints;
 
     /**
-     * <p>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+     * <p>The user-defined data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
@@ -109,17 +109,17 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
+     * <p>The vSwitch IDs. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables auto-renewal.</li>
-     * <li><code>false</code>: disables auto-renewal.</li>
+     * <li><code>false</code>: does not enable auto-renewal.</li>
      * </ul>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -130,7 +130,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Boolean workerAutoRenew;
 
     /**
-     * <p>The auto-renewal period for worker nodes after the subscriptions of worker nodes expire. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
+     * <p>The auto-renewal duration of worker nodes. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
      * <p>Valid values: 1, 2, 3, 6, and 12.</p>
      * <p>Default value: <code>1</code>.</p>
      * 
@@ -141,7 +141,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Long workerAutoRenewPeriod;
 
     /**
-     * <p>The configuration of the data disk that is mounted to worker nodes. The configuration includes the disk type and disk size.</p>
+     * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.</p>
      */
     @NameInMap("worker_data_disks")
     public java.util.List<ScaleOutClusterRequestWorkerDataDisks> workerDataDisks;
@@ -179,7 +179,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Long workerPeriod;
 
     /**
-     * <p>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
+     * <p>The billing cycle of worker nodes. This parameter is required only if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
      * <p>Set the value to <code>Month</code>. Worker nodes are billed only on a monthly basis.</p>
      * 
      * <strong>example:</strong>
@@ -189,11 +189,11 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String workerPeriodUnit;
 
     /**
-     * <p>The type of system disk that you want to use for worker nodes. Valid values:</p>
+     * <p>The system disk type of worker nodes. Valid values:</p>
      * <ul>
      * <li><code>cloud_efficiency</code>: ultra disk.</li>
      * <li><code>cloud_ssd</code>: standard SSD.</li>
-     * <li><code>cloud_essd</code>: enhanced SSD (ESSD).</li>
+     * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
      * </ul>
      * <p>Default value: <code>cloud_ssd</code>.</p>
      * <p>This parameter is required.</p>
@@ -205,7 +205,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String workerSystemDiskCategory;
 
     /**
-     * <p>The size of the system disk that you want to use for worker nodes. Unit: GiB.</p>
+     * <p>The system disk size of worker nodes. Unit: GiB.</p>
      * <p>Valid values: 40 to 500.</p>
      * <p>Default value: <code>120</code>.</p>
      * <p>This parameter is required.</p>
@@ -391,8 +391,8 @@ public class ScaleOutClusterRequest extends TeaModel {
 
     public static class ScaleOutClusterRequestWorkerDataDisks extends TeaModel {
         /**
-         * <p>The ID of an automatic snapshot policy. Automatic backup is performed for a disk based on the specified automatic snapshot policy.</p>
-         * <p>By default, this parameter is empty, which indicates that automatic backup is disabled.</p>
+         * <p>The ID of the automatic snapshot policy. The system performs automatic backup for a cloud disk based on the specified automatic snapshot policy.</p>
+         * <p>By default, this parameter is left empty, which indicates that automatic backup is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-bp14yziiuvu3s6jn****</p>
@@ -410,10 +410,10 @@ public class ScaleOutClusterRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to encrypt the data disks. Valid values:</p>
+         * <p>Specifies whether to encrypt the data disk. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: encrypts data disks.</li>
-         * <li><code>false</code>: does not encrypt data disks.</li>
+         * <li><code>true</code>: encrypts the data disk.</li>
+         * <li><code>false</code>: does not encrypt the data disk.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -424,7 +424,7 @@ public class ScaleOutClusterRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The size of the data disk. Valid values: 40 to 32767.</p>
+         * <p>The data disk size. Valid values: 40 to 32767.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>

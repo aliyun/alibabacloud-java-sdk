@@ -14,10 +14,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The edition of the cluster if the cluster is an ACK managed cluster. Valid values:</p>
+     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster.</p>
      * <ul>
-     * <li><code>ack.pro.small</code>: ACK Pro</li>
-     * <li><code>ack.standard</code>: ACK Basic</li>
+     * <li><code>ack.pro.small</code>: Pro.</li>
+     * <li><code>ack.standard</code>: Basic. If you leave the parameter empty, the Basic edition is selected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>The type of cluster. Valid values:</p>
      * <ul>
      * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</li>
      * <li><code>ExternalKubernetes</code>: registered cluster.</li>
      * </ul>
      * 
@@ -158,10 +157,12 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Boolean privateZone;
 
     /**
-     * <p>Indicates the scenario in which the cluster is used. Valid values:</p>
+     * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition.</p>
      * <ul>
-     * <li><code>Default</code>: non-edge computing scenarios</li>
-     * <li><code>Edge</code>: edge computing scenarios</li>
+     * <li><code>Default</code>. ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+     * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+     * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+     * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>

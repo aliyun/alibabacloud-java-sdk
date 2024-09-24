@@ -21,7 +21,7 @@ public class ListClusterKubeconfigStatesRequest extends TeaModel {
      * <p>The number of entries per page.</p>
      * <ul>
      * <li>Valid values: 10 to 50.</li>
-     * <li>Default value: 10.</li>
+     * <li>Default value: 10</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -59,6 +59,12 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     @NameInMap("Profile")
     public String profile;
 
+    /**
+     * <p>Specify whether to query the Kubernetes versions available for updates. This parameter takes effect only when the KubernetesVersion parameter is specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.30.1-aliyun.1</p>
+     */
     @NameInMap("QueryUpgradableVersion")
     public Boolean queryUpgradableVersion;
 
