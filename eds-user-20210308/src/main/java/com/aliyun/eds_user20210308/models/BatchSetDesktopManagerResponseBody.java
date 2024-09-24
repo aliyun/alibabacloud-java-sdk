@@ -3,22 +3,20 @@ package com.aliyun.eds_user20210308.models;
 
 import com.aliyun.tea.*;
 
-public class LockMfaDeviceResponseBody extends TeaModel {
+public class BatchSetDesktopManagerResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>42FE70D8-4336-471B-8314-CCCFCE4159FD</p>
+     * <p>868B8926-2E7A-5BE7-9897-E811E994****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static LockMfaDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        LockMfaDeviceResponseBody self = new LockMfaDeviceResponseBody();
+    public static BatchSetDesktopManagerResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        BatchSetDesktopManagerResponseBody self = new BatchSetDesktopManagerResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public LockMfaDeviceResponseBody setRequestId(String requestId) {
+    public BatchSetDesktopManagerResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,14 +4,26 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersResponseBody extends TeaModel {
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the convenience users.</p>
+     * <p>The information about the convenience users.</p>
      */
     @NameInMap("Users")
     public java.util.List<DescribeUsersResponseBodyUsers> users;
@@ -45,10 +57,41 @@ public class DescribeUsersResponseBody extends TeaModel {
         return this.users;
     }
 
+    public static class DescribeUsersResponseBodyUsersExtras extends TeaModel {
+        @NameInMap("AssignedResourceCount")
+        public java.util.Map<String, ?> assignedResourceCount;
+
+        public static DescribeUsersResponseBodyUsersExtras build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersResponseBodyUsersExtras self = new DescribeUsersResponseBodyUsersExtras();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersResponseBodyUsersExtras setAssignedResourceCount(java.util.Map<String, ?> assignedResourceCount) {
+            this.assignedResourceCount = assignedResourceCount;
+            return this;
+        }
+        public java.util.Map<String, ?> getAssignedResourceCount() {
+            return this.assignedResourceCount;
+        }
+
+    }
+
     public static class DescribeUsersResponseBodyUsersGroups extends TeaModel {
+        /**
+         * <p>The ID of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-12341234****</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User Group 1</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -76,9 +119,21 @@ public class DescribeUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersResponseBodyUsersOrgs extends TeaModel {
+        /**
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-4mdgc1cocc59z****</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The organization name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Organization 1</p>
+         */
         @NameInMap("OrgName")
         public String orgName;
 
@@ -106,108 +161,189 @@ public class DescribeUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The work address of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou \<em>\</em>\*</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The profile picture of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cdn">https://cdn</a>.*****</p>
+         */
         @NameInMap("Avatar")
         public String avatar;
 
         /**
-         * <p>The email address.</p>
+         * <p>The email address of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        @NameInMap("Extras")
+        public DescribeUsersResponseBodyUsersExtras extras;
+
+        /**
+         * <p>The user groups to which the convenience user belongs.</p>
+         */
         @NameInMap("Groups")
         public java.util.List<DescribeUsersResponseBodyUsersGroups> groups;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The ID of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4205**</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>Indicates whether the user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile phone of the user administrator. For more information, see [Create a convenience user](~~214472~~).</p>
+         * <p>Indicates whether the convenience user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile number of the user administrator. For more information, see <a href="https://help.aliyun.com/document_detail/214472.html">Create a convenience user</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        /**
+         * <p>The employee number of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A10000**</p>
+         */
         @NameInMap("JobNumber")
         public String jobNumber;
 
         /**
-         * <p>The nickname of the user.</p>
+         * <p>The nickname of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lee</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>The ID of the organization to which the user belongs.</p>
+         * <p>The ID of the organization to which the convenience user belongs.</p>
+         * <blockquote>
+         * <p> This parameter will be deprecated in the future.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>org-4mdgc1cocc59z****</p>
          */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The organizations to which the convenience user belongs.</p>
+         */
         @NameInMap("Orgs")
         public java.util.List<DescribeUsersResponseBodyUsersOrgs> orgs;
 
         /**
          * <p>The type of the convenience account.</p>
-         * <br>
-         * <p>*   The administrator-activated type. The administrator specifies the username and the password of the convenience account. User notifications such as password reset are sent to the email address or mobile number of the administrator.</p>
-         * <p>*   The user-activated type. The administrator specifies the username and the email address or mobile number of a user. Activation notifications are sent to the email address or mobile number of the user.</p>
-         * <br>
+         * <ul>
+         * <li>Administrator-activated type: The administrator specifies the username and password of the convenience account. User notifications such as password reset notifications are sent to the email address or mobile number of the administrator.</li>
+         * <li>User-activated type: The administrator specifies the username and the email address or mobile number of a convenience user. Notifications such as activation notifications that contain the default password are sent to the email address or mobile number of the convenience user.</li>
+         * </ul>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   CreateFromManager</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    administrator-activated</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Normal: user-activated</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>CreateFromManager</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>administrator-activated</p>
+         * <!-- -->
+         * </li>
+         * <li><p>Normal</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>user-activated</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("OwnerType")
         public String ownerType;
 
         /**
-         * <p>The mobile number of the user. If you leave this parameter empty, the value of this parameter is not returned.</p>
+         * <p>The mobile number of the convenience user. If you leave this parameter empty, the value of this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("RealNickName")
+        public String realNickName;
+
         /**
-         * <p>The remarks on the user.</p>
+         * <p>The remarks on the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUser</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The status of the user.</p>
+         * <p>The status of the convenience user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>0: The convenience user is normal.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>9: The convenience user is locked.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
-         * <p>The user ID that is globally unique.</p>
+         * <p>The globally unique ID of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41fd1254d8f7****</p>
          */
         @NameInMap("WyId")
         public String wyId;
@@ -247,6 +383,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        public DescribeUsersResponseBodyUsers setExtras(DescribeUsersResponseBodyUsersExtras extras) {
+            this.extras = extras;
+            return this;
+        }
+        public DescribeUsersResponseBodyUsersExtras getExtras() {
+            return this.extras;
         }
 
         public DescribeUsersResponseBodyUsers setGroups(java.util.List<DescribeUsersResponseBodyUsersGroups> groups) {
@@ -319,6 +463,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public DescribeUsersResponseBodyUsers setRealNickName(String realNickName) {
+            this.realNickName = realNickName;
+            return this;
+        }
+        public String getRealNickName() {
+            return this.realNickName;
         }
 
         public DescribeUsersResponseBodyUsers setRemark(String remark) {

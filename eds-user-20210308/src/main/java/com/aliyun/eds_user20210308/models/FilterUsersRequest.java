@@ -12,48 +12,101 @@ public class FilterUsersRequest extends TeaModel {
 
     /**
      * <p>The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (\*) are supported for this parameter. For example, if you set this parameter to a\*m, the usernames or an email addresses that start with a or end with m are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
-     * <p>Specifies whether to return information about cloud desktops that are assigned to the convenience user.</p>
+     * <p>Specifies whether to return the number of cloud desktops that are assigned to the convenience user.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeDesktopCount")
     public Boolean includeDesktopCount;
 
     /**
-     * <p>Specifies whether to return the number of desktop groups that are assigned to the user.</p>
+     * <p>Specifies whether to return the number of cloud desktop pools that are assigned to the convenience user.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeDesktopGroupCount")
     public Boolean includeDesktopGroupCount;
 
     /**
      * <p>The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The parameter that supports to sort query results.</p>
+     * <p>The parameters that are used to sort query results.</p>
      */
     @NameInMap("OrderParam")
     public FilterUsersRequestOrderParam orderParam;
 
     /**
      * <p>The ID of the organization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org-aliyun-wy-org-id</p>
      */
     @NameInMap("OrgId")
     public String orgId;
 
     /**
      * <p>The type of the account ownership.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("OwnerType")
     public String ownerType;
@@ -69,6 +122,9 @@ public class FilterUsersRequest extends TeaModel {
      */
     @NameInMap("PropertyKeyValueFilterParam")
     public java.util.List<FilterUsersRequestPropertyKeyValueFilterParam> propertyKeyValueFilterParam;
+
+    @NameInMap("Status")
+    public Integer status;
 
     public static FilterUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         FilterUsersRequest self = new FilterUsersRequest();
@@ -163,59 +219,51 @@ public class FilterUsersRequest extends TeaModel {
         return this.propertyKeyValueFilterParam;
     }
 
+    public FilterUsersRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static class FilterUsersRequestOrderParam extends TeaModel {
         /**
-         * <p>The way to sort query results.</p>
-         * <br>
+         * <p>The parameter based on which to sort query results.</p>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   EndUserId</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   id</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   gmt_created</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li>EndUserId: the username.</li>
+         * <li>id: the ID of the user primary key.</li>
+         * <li>gmt_created: the time when the convenience user was created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("OrderField")
         public String orderField;
 
         /**
-         * <p>Specifies whether to sort query results in ascending or descending order. Valid values:</p>
-         * <br>
+         * <p>Specifies whether to sort query results in ascending or descending order.</p>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   ASC: ascending</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DESC (default): descending</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>ASC: ascending</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DESC (default): descending</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         @NameInMap("OrderType")
         public String orderType;
@@ -246,12 +294,18 @@ public class FilterUsersRequest extends TeaModel {
     public static class FilterUsersRequestPropertyFilterParam extends TeaModel {
         /**
          * <p>The ID of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
          * <p>The IDs of the property values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PropertyValueIds")
         public String propertyValueIds;
@@ -282,12 +336,18 @@ public class FilterUsersRequest extends TeaModel {
     public static class FilterUsersRequestPropertyKeyValueFilterParam extends TeaModel {
         /**
          * <p>The property name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
          * <p>The property values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("PropertyValues")
         public String propertyValues;

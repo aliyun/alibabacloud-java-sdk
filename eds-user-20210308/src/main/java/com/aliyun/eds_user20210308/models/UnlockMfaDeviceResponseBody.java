@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UnlockMfaDeviceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9BD39C60-4E38-43BE-BA2F-69136C6C5190</p>
      */
     @NameInMap("RequestId")
     public String requestId;

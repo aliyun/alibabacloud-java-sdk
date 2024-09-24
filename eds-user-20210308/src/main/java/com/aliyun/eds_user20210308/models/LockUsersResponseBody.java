@@ -4,9 +4,18 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class LockUsersResponseBody extends TeaModel {
+    /**
+     * <p>The result of the locking the convenience user.</p>
+     */
     @NameInMap("LockUsersResult")
     public LockUsersResponseBodyLockUsersResult lockUsersResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class LockUsersResponseBody extends TeaModel {
     }
 
     public static class LockUsersResponseBodyLockUsersResultFailedUsers extends TeaModel {
+        /**
+         * <p>The ID of the convenience user that failed to be locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidUsername</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123 is an invalid username.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -73,9 +100,15 @@ public class LockUsersResponseBody extends TeaModel {
     }
 
     public static class LockUsersResponseBodyLockUsersResult extends TeaModel {
+        /**
+         * <p>The convenience users that failed to be locked.</p>
+         */
         @NameInMap("FailedUsers")
         public java.util.List<LockUsersResponseBodyLockUsersResultFailedUsers> failedUsers;
 
+        /**
+         * <p>The convenience users that were locked.</p>
+         */
         @NameInMap("LockedUsers")
         public java.util.List<String> lockedUsers;
 

@@ -6,12 +6,22 @@ import com.aliyun.tea.*;
 public class ResetUserPasswordRequest extends TeaModel {
     /**
      * <p>The method to notify the user after the password is reset.</p>
+     * <blockquote>
+     * <p>Alibaba Cloud accounts of the international site do not support sending notification through text messages.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NotifyType")
     public Integer notifyType;
 
     /**
      * <p>The names of the convenience users whose passwords you want to reset.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("Users")
     public java.util.List<String> users;

@@ -4,21 +4,41 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySyncStatusByAliUidResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +96,66 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
     }
 
     public static class QuerySyncStatusByAliUidResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>131239236086****</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cdrs948144195608****</p>
+         */
         @NameInMap("CorpId")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-06-30 07:50:42</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-02 14:27:39</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18500</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-02 14:31:39</p>
+         */
         @NameInMap("LatestBeginTime")
         public String latestBeginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-02 16:13:12</p>
+         */
         @NameInMap("LatestEndTime")
         public String latestEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-02 18:24:01</p>
+         */
         @NameInMap("LatestSuccessTime")
         public String latestSuccessTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Status")
         public String status;
 

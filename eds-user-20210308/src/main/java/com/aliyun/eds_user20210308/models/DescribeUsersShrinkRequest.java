@@ -3,7 +3,7 @@ package com.aliyun.eds_user20210308.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeUsersRequest extends TeaModel {
+public class DescribeUsersShrinkRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
@@ -29,7 +29,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String filter;
 
     @NameInMap("FilterWithAssignedResources")
-    public java.util.Map<String, Boolean> filterWithAssignedResources;
+    public String filterWithAssignedResourcesShrink;
 
     /**
      * <p>The ID of the organization in which you want to query convenience users.</p>
@@ -73,17 +73,17 @@ public class DescribeUsersRequest extends TeaModel {
     public String orgId;
 
     @NameInMap("ShowExtras")
-    public java.util.Map<String, ?> showExtras;
+    public String showExtrasShrink;
 
     @NameInMap("SolutionId")
     public String solutionId;
 
-    public static DescribeUsersRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeUsersRequest self = new DescribeUsersRequest();
+    public static DescribeUsersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeUsersShrinkRequest self = new DescribeUsersShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUsersRequest setBizType(String bizType) {
+    public DescribeUsersShrinkRequest setBizType(String bizType) {
         this.bizType = bizType;
         return this;
     }
@@ -91,7 +91,7 @@ public class DescribeUsersRequest extends TeaModel {
         return this.bizType;
     }
 
-    public DescribeUsersRequest setEndUserIds(java.util.List<String> endUserIds) {
+    public DescribeUsersShrinkRequest setEndUserIds(java.util.List<String> endUserIds) {
         this.endUserIds = endUserIds;
         return this;
     }
@@ -99,7 +99,7 @@ public class DescribeUsersRequest extends TeaModel {
         return this.endUserIds;
     }
 
-    public DescribeUsersRequest setExcludeEndUserIds(java.util.List<String> excludeEndUserIds) {
+    public DescribeUsersShrinkRequest setExcludeEndUserIds(java.util.List<String> excludeEndUserIds) {
         this.excludeEndUserIds = excludeEndUserIds;
         return this;
     }
@@ -107,7 +107,7 @@ public class DescribeUsersRequest extends TeaModel {
         return this.excludeEndUserIds;
     }
 
-    public DescribeUsersRequest setFilter(String filter) {
+    public DescribeUsersShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -115,15 +115,15 @@ public class DescribeUsersRequest extends TeaModel {
         return this.filter;
     }
 
-    public DescribeUsersRequest setFilterWithAssignedResources(java.util.Map<String, Boolean> filterWithAssignedResources) {
-        this.filterWithAssignedResources = filterWithAssignedResources;
+    public DescribeUsersShrinkRequest setFilterWithAssignedResourcesShrink(String filterWithAssignedResourcesShrink) {
+        this.filterWithAssignedResourcesShrink = filterWithAssignedResourcesShrink;
         return this;
     }
-    public java.util.Map<String, Boolean> getFilterWithAssignedResources() {
-        return this.filterWithAssignedResources;
+    public String getFilterWithAssignedResourcesShrink() {
+        return this.filterWithAssignedResourcesShrink;
     }
 
-    public DescribeUsersRequest setGroupId(String groupId) {
+    public DescribeUsersShrinkRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
@@ -131,7 +131,7 @@ public class DescribeUsersRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DescribeUsersRequest setMaxResults(Long maxResults) {
+    public DescribeUsersShrinkRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -139,7 +139,7 @@ public class DescribeUsersRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public DescribeUsersRequest setNextToken(String nextToken) {
+    public DescribeUsersShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -147,7 +147,7 @@ public class DescribeUsersRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeUsersRequest setOrgId(String orgId) {
+    public DescribeUsersShrinkRequest setOrgId(String orgId) {
         this.orgId = orgId;
         return this;
     }
@@ -155,15 +155,15 @@ public class DescribeUsersRequest extends TeaModel {
         return this.orgId;
     }
 
-    public DescribeUsersRequest setShowExtras(java.util.Map<String, ?> showExtras) {
-        this.showExtras = showExtras;
+    public DescribeUsersShrinkRequest setShowExtrasShrink(String showExtrasShrink) {
+        this.showExtrasShrink = showExtrasShrink;
         return this;
     }
-    public java.util.Map<String, ?> getShowExtras() {
-        return this.showExtras;
+    public String getShowExtrasShrink() {
+        return this.showExtrasShrink;
     }
 
-    public DescribeUsersRequest setSolutionId(String solutionId) {
+    public DescribeUsersShrinkRequest setSolutionId(String solutionId) {
         this.solutionId = solutionId;
         return this;
     }

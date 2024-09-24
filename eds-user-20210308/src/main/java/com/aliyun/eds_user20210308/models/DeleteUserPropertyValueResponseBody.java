@@ -4,6 +4,12 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserPropertyValueResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6C62E40-F937-5803-B008-92E813399BA5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

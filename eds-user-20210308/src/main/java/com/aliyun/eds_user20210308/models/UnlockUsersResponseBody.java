@@ -4,9 +4,18 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class UnlockUsersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>023F4EC4-3602-4A3E-A514-4970847D59DB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of unlocking the convenience user.</p>
+     */
     @NameInMap("UnlockUsersResult")
     public UnlockUsersResponseBodyUnlockUsersResult unlockUsersResult;
 
@@ -32,12 +41,30 @@ public class UnlockUsersResponseBody extends TeaModel {
     }
 
     public static class UnlockUsersResponseBodyUnlockUsersResultFailedUsers extends TeaModel {
+        /**
+         * <p>The ID of the convenience user that failed to be unlocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidUsername</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123 is an invalid username.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -73,9 +100,15 @@ public class UnlockUsersResponseBody extends TeaModel {
     }
 
     public static class UnlockUsersResponseBodyUnlockUsersResult extends TeaModel {
+        /**
+         * <p>The convenience users that failed to be unlocked.</p>
+         */
         @NameInMap("FailedUsers")
         public java.util.List<UnlockUsersResponseBodyUnlockUsersResultFailedUsers> failedUsers;
 
+        /**
+         * <p>The convenience users that were unlocked.</p>
+         */
         @NameInMap("UnlockedUsers")
         public java.util.List<String> unlockedUsers;
 

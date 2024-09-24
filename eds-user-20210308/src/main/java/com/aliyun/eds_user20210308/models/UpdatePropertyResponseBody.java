@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdatePropertyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class UpdatePropertyResponseBody extends TeaModel {
     public static class UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelFailedPropertyValues extends TeaModel {
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExistedPropertyValue</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The property value is used by another property.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
@@ -104,12 +119,18 @@ public class UpdatePropertyResponseBody extends TeaModel {
     public static class UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelSavePropertyValues extends TeaModel {
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue2</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
         /**
          * <p>The ID of the property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>978</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
@@ -176,12 +197,18 @@ public class UpdatePropertyResponseBody extends TeaModel {
     public static class UpdatePropertyResponseBodyUpdateResult extends TeaModel {
         /**
          * <p>The ID of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
          * <p>The name of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey2</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;

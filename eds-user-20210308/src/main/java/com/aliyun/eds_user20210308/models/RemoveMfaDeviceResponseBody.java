@@ -4,6 +4,12 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class RemoveMfaDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FB550AAB-FB36-4A91-93F6-F4374AF65403</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

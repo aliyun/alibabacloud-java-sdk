@@ -12,6 +12,9 @@ public class ListPropertyValueResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C52013A5-3422-5D1F-B22C-A57110972AD9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListPropertyValueResponseBody extends TeaModel {
     public static class ListPropertyValueResponseBodyPropertyValueInfos extends TeaModel {
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HR</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
         /**
          * <p>The ID of the property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>978</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;

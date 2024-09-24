@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ResetUserPasswordResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32D05B39-E6EE-4D7A-9FD0-762A26859D0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ResetUserPasswordResponseBody extends TeaModel {
     public static class ResetUserPasswordResponseBodyResetUsersResultFailedUsers extends TeaModel {
         /**
          * <p>The ID of the convenience user whose password failed to be reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidUsername</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123 is an invalid username.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
