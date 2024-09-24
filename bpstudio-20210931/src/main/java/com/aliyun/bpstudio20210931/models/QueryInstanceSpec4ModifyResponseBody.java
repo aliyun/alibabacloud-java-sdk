@@ -27,7 +27,7 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public String data;
+    public QueryInstanceSpec4ModifyResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -71,11 +71,11 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryInstanceSpec4ModifyResponseBody setData(String data) {
+    public QueryInstanceSpec4ModifyResponseBody setData(QueryInstanceSpec4ModifyResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public QueryInstanceSpec4ModifyResponseBodyData getData() {
         return this.data;
     }
 
@@ -101,6 +101,88 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class QueryInstanceSpec4ModifyResponseBodyDataOptionalValues extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Max")
+        public Double max;
+
+        @NameInMap("Min")
+        public Double min;
+
+        @NameInMap("Step")
+        public Double step;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QueryInstanceSpec4ModifyResponseBodyDataOptionalValues build(java.util.Map<String, ?> map) throws Exception {
+            QueryInstanceSpec4ModifyResponseBodyDataOptionalValues self = new QueryInstanceSpec4ModifyResponseBodyDataOptionalValues();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryInstanceSpec4ModifyResponseBodyDataOptionalValues setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public QueryInstanceSpec4ModifyResponseBodyDataOptionalValues setMax(Double max) {
+            this.max = max;
+            return this;
+        }
+        public Double getMax() {
+            return this.max;
+        }
+
+        public QueryInstanceSpec4ModifyResponseBodyDataOptionalValues setMin(Double min) {
+            this.min = min;
+            return this;
+        }
+        public Double getMin() {
+            return this.min;
+        }
+
+        public QueryInstanceSpec4ModifyResponseBodyDataOptionalValues setStep(Double step) {
+            this.step = step;
+            return this;
+        }
+        public Double getStep() {
+            return this.step;
+        }
+
+        public QueryInstanceSpec4ModifyResponseBodyDataOptionalValues setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class QueryInstanceSpec4ModifyResponseBodyData extends TeaModel {
+        @NameInMap("OptionalValues")
+        public java.util.List<QueryInstanceSpec4ModifyResponseBodyDataOptionalValues> optionalValues;
+
+        public static QueryInstanceSpec4ModifyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryInstanceSpec4ModifyResponseBodyData self = new QueryInstanceSpec4ModifyResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryInstanceSpec4ModifyResponseBodyData setOptionalValues(java.util.List<QueryInstanceSpec4ModifyResponseBodyDataOptionalValues> optionalValues) {
+            this.optionalValues = optionalValues;
+            return this;
+        }
+        public java.util.List<QueryInstanceSpec4ModifyResponseBodyDataOptionalValues> getOptionalValues() {
+            return this.optionalValues;
+        }
+
     }
 
 }
