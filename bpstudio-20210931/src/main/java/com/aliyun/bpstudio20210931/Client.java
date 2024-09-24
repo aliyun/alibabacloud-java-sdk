@@ -806,6 +806,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取询价应用变配记录</p>
+     * 
+     * @param request GetResource4ModifyRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResource4ModifyRecordResponse
+     */
+    public GetResource4ModifyRecordResponse getResource4ModifyRecordWithOptions(GetResource4ModifyRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            body.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResource4ModifyRecord"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResource4ModifyRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取询价应用变配记录</p>
+     * 
+     * @param request GetResource4ModifyRecordRequest
+     * @return GetResource4ModifyRecordResponse
+     */
+    public GetResource4ModifyRecordResponse getResource4ModifyRecord(GetResource4ModifyRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getResource4ModifyRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取询价结果</p>
+     * 
+     * @param request GetResult4QueryInstancePrice4ModifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResult4QueryInstancePrice4ModifyResponse
+     */
+    public GetResult4QueryInstancePrice4ModifyResponse getResult4QueryInstancePrice4ModifyWithOptions(GetResult4QueryInstancePrice4ModifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            body.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResult4QueryInstancePrice4Modify"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResult4QueryInstancePrice4ModifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取询价结果</p>
+     * 
+     * @param request GetResult4QueryInstancePrice4ModifyRequest
+     * @return GetResult4QueryInstancePrice4ModifyResponse
+     */
+    public GetResult4QueryInstancePrice4ModifyResponse getResult4QueryInstancePrice4Modify(GetResult4QueryInstancePrice4ModifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getResult4QueryInstancePrice4ModifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Get template images and information about architecture diagrams.</p>
      * 
      * @param request GetTemplateRequest
@@ -1215,6 +1315,180 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTemplateResponse listTemplate(ListTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交应用变配</p>
+     * 
+     * @param tmpReq ModifyApplicationSpecRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyApplicationSpecResponse
+     */
+    public ModifyApplicationSpecResponse modifyApplicationSpecWithOptions(ModifyApplicationSpecRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyApplicationSpecShrinkRequest request = new ModifyApplicationSpecShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceSpec)) {
+            request.instanceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceSpec, "InstanceSpec", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            body.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSpecShrink)) {
+            body.put("InstanceSpec", request.instanceSpecShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApplicationSpec"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyApplicationSpecResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交应用变配</p>
+     * 
+     * @param request ModifyApplicationSpecRequest
+     * @return ModifyApplicationSpecResponse
+     */
+    public ModifyApplicationSpecResponse modifyApplicationSpec(ModifyApplicationSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyApplicationSpecWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询变配价格</p>
+     * 
+     * @param tmpReq QueryInstancePrice4ModifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryInstancePrice4ModifyResponse
+     */
+    public QueryInstancePrice4ModifyResponse queryInstancePrice4ModifyWithOptions(QueryInstancePrice4ModifyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryInstancePrice4ModifyShrinkRequest request = new QueryInstancePrice4ModifyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.configuration)) {
+            request.configurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configuration, "Configuration", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            body.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configurationShrink)) {
+            body.put("Configuration", request.configurationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryInstancePrice4Modify"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryInstancePrice4ModifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询变配价格</p>
+     * 
+     * @param request QueryInstancePrice4ModifyRequest
+     * @return QueryInstancePrice4ModifyResponse
+     */
+    public QueryInstancePrice4ModifyResponse queryInstancePrice4Modify(QueryInstancePrice4ModifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryInstancePrice4ModifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询变配规格列表</p>
+     * 
+     * @param tmpReq QueryInstanceSpec4ModifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryInstanceSpec4ModifyResponse
+     */
+    public QueryInstanceSpec4ModifyResponse queryInstanceSpec4ModifyWithOptions(QueryInstanceSpec4ModifyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryInstanceSpec4ModifyShrinkRequest request = new QueryInstanceSpec4ModifyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
+            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            body.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.methodName)) {
+            body.put("MethodName", request.methodName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parametersShrink)) {
+            body.put("Parameters", request.parametersShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryInstanceSpec4Modify"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryInstanceSpec4ModifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询变配规格列表</p>
+     * 
+     * @param request QueryInstanceSpec4ModifyRequest
+     * @return QueryInstanceSpec4ModifyResponse
+     */
+    public QueryInstanceSpec4ModifyResponse queryInstanceSpec4Modify(QueryInstanceSpec4ModifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryInstanceSpec4ModifyWithOptions(request, runtime);
     }
 
     /**
