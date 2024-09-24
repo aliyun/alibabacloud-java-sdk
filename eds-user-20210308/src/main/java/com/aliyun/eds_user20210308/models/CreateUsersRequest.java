@@ -4,17 +4,36 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateUsersRequest extends TeaModel {
+    /**
+     * <p>The date on which the convenience users are automatically locked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-03-03</p>
+     */
     @NameInMap("AutoLockTime")
     public String autoLockTime;
 
+    @NameInMap("IsLocalAdmin")
+    public Boolean isLocalAdmin;
+
     /**
      * <p>The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test123****</p>
      */
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("PasswordExpireDays")
+    public String passwordExpireDays;
+
     /**
-     * <p>Details of the convenience users.</p>
+     * <p>The information about the convenience user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateUsers</p>
      */
     @NameInMap("Users")
     public java.util.List<CreateUsersRequestUsers> users;
@@ -32,12 +51,28 @@ public class CreateUsersRequest extends TeaModel {
         return this.autoLockTime;
     }
 
+    public CreateUsersRequest setIsLocalAdmin(Boolean isLocalAdmin) {
+        this.isLocalAdmin = isLocalAdmin;
+        return this;
+    }
+    public Boolean getIsLocalAdmin() {
+        return this.isLocalAdmin;
+    }
+
     public CreateUsersRequest setPassword(String password) {
         this.password = password;
         return this;
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public CreateUsersRequest setPasswordExpireDays(String passwordExpireDays) {
+        this.passwordExpireDays = passwordExpireDays;
+        return this;
+    }
+    public String getPasswordExpireDays() {
+        return this.passwordExpireDays;
     }
 
     public CreateUsersRequest setUsers(java.util.List<CreateUsersRequestUsers> users) {
@@ -50,46 +85,82 @@ public class CreateUsersRequest extends TeaModel {
 
     public static class CreateUsersRequestUsers extends TeaModel {
         /**
-         * <p>The email address of the end user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.</p>
+         * <p>The email address of the convenience user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The name of the end user. The name must be 3 to 24 characters in length, and can contain lowercase letters, digits, and underscores (\_).</p>
+         * <p>The username of the convenience user. The name can contain lowercase letters, digits, and underscores (_), and must be 3 to 24 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The organization to which the end user belongs.</p>
+         * <p>The organization to which the convenience user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111****</p>
          */
         @NameInMap("OrgId")
         public String orgId;
 
         /**
          * <p>The type of the account ownership.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CreateFromManager: administrator-activated</li>
+         * <li>Normal: user-activated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("OwnerType")
         public String ownerType;
 
         /**
-         * <p>The password of the end user.</p>
+         * <p>The user password.</p>
+         * <blockquote>
+         * <p> The password must be at least 10 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>password1</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>Mobile numbers are not supported on the international site (alibabacloud.com).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The display name of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bean</p>
+         */
         @NameInMap("RealNickName")
         public String realNickName;
 
         /**
-         * <p>The remarks of the end user.</p>
+         * <p>The remarks on the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark1</p>
          */
         @NameInMap("Remark")
         public String remark;

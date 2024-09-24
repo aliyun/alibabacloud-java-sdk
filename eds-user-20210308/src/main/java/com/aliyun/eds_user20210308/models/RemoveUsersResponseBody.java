@@ -4,9 +4,18 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class RemoveUsersResponseBody extends TeaModel {
+    /**
+     * <p>The result of removing the convenience user.</p>
+     */
     @NameInMap("RemoveUsersResult")
     public RemoveUsersResponseBodyRemoveUsersResult removeUsersResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class RemoveUsersResponseBody extends TeaModel {
     }
 
     public static class RemoveUsersResponseBodyRemoveUsersResultFailedUsers extends TeaModel {
+        /**
+         * <p>The ID of the convenience user that failed to be removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidUsername</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2 is an invalid username.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -73,9 +100,15 @@ public class RemoveUsersResponseBody extends TeaModel {
     }
 
     public static class RemoveUsersResponseBodyRemoveUsersResult extends TeaModel {
+        /**
+         * <p>The convenience users that failed to be removed.</p>
+         */
         @NameInMap("FailedUsers")
         public java.util.List<RemoveUsersResponseBodyRemoveUsersResultFailedUsers> failedUsers;
 
+        /**
+         * <p>The convenience users that were removed.</p>
+         */
         @NameInMap("RemovedUsers")
         public java.util.List<String> removedUsers;
 

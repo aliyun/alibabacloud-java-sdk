@@ -4,21 +4,57 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
+    /**
+     * <p>The organization ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678901234****</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>The mobile number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1301234****</p>
+     */
     @NameInMap("Phone")
     public String phone;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The team name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>devteam</p>
+     */
     @NameInMap("TeamName")
     public String teamName;
 
+    /**
+     * <p>The tenant name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>The ID of the Elastic Desktop Service account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678901234****</p>
+     */
     @NameInMap("WaId")
     public Long waId;
 

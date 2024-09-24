@@ -12,6 +12,9 @@ public class CreateUsersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,45 @@ public class CreateUsersResponseBody extends TeaModel {
     public static class CreateUsersResponseBodyCreateResultCreatedUsers extends TeaModel {
         /**
          * <p>The email address of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The name of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The mobile number of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The display name of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bean</p>
+         */
         @NameInMap("RealNickName")
         public String realNickName;
 
         /**
          * <p>The remarks of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark1</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -115,30 +136,45 @@ public class CreateUsersResponseBody extends TeaModel {
     public static class CreateUsersResponseBodyCreateResultFailedUsers extends TeaModel {
         /**
          * <p>The email address of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username2@example.com">username2@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The name of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExistedEndUserId</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The username test is used by another user.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The mobile number of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         @NameInMap("Phone")
         public String phone;

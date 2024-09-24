@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class CheckUsedPropertyValueRequest extends TeaModel {
     /**
-     * <p>The ID of the property.</p>
+     * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query property ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>380</p>
      */
     @NameInMap("PropertyId")
     public Long propertyId;
 
     /**
-     * <p>The ID of the property value.</p>
+     * <p>The ID of the property value. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the ID of the property value.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>978</p>
      */
     @NameInMap("PropertyValueId")
     public Long propertyValueId;

@@ -3,7 +3,7 @@ package com.aliyun.eds_user20210308.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyUserResponse extends TeaModel {
+public class DescribeOrgsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ModifyUserResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ModifyUserResponseBody body;
+    public DescribeOrgsResponseBody body;
 
-    public static ModifyUserResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyUserResponse self = new ModifyUserResponse();
+    public static DescribeOrgsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeOrgsResponse self = new DescribeOrgsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyUserResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeOrgsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ModifyUserResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyUserResponse setStatusCode(Integer statusCode) {
+    public DescribeOrgsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ModifyUserResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ModifyUserResponse setBody(ModifyUserResponseBody body) {
+    public DescribeOrgsResponse setBody(DescribeOrgsResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyUserResponseBody getBody() {
+    public DescribeOrgsResponseBody getBody() {
         return this.body;
     }
 

@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdatePropertyRequest extends TeaModel {
     /**
-     * <p>The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.</p>
+     * <p>The ID of the property that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>390</p>
      */
     @NameInMap("PropertyId")
     public Long propertyId;
 
     /**
      * <p>The new property name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testkey</p>
      */
     @NameInMap("PropertyKey")
     public String propertyKey;
@@ -54,12 +62,18 @@ public class UpdatePropertyRequest extends TeaModel {
     public static class UpdatePropertyRequestPropertyValues extends TeaModel {
         /**
          * <p>The new property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
         /**
-         * <p>The ID of property value that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.</p>
+         * <p>The ID of property value that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property value ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>978</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CheckUsedPropertyValueResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of convenience users that are associated with the property value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UseCount")
     public Long useCount;

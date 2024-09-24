@@ -4,6 +4,13 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class GetManagerInfoByAuthCodeRequest extends TeaModel {
+    /**
+     * <p>The authorization code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e49cd070452f0044813a467d4743****</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 

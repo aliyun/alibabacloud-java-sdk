@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesResponseBody extends TeaModel {
     /**
-     * <p>Details about the virtual MFA devices.</p>
+     * <p>The information about the virtual MFA devices.</p>
      */
     @NameInMap("MfaDevices")
     public java.util.List<DescribeMfaDevicesResponseBodyMfaDevices> mfaDevices;
 
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6na6YlN9asMM31MsMcdQNpp</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33DBB8EC-6E68-4726-91C4-E09C59D9A7D8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,59 +59,109 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
 
     public static class DescribeMfaDevicesResponseBodyMfaDevices extends TeaModel {
         /**
-         * <p>The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.</p>
+         * <p>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ConsecutiveFails")
         public Integer consecutiveFails;
 
         /**
-         * <p>The types of the virtual MFA device. Set the value to TOTP_VIRTUAL, which indicates that the virtual MFA devices follow the Time-based One-time Password (TOTP) algorithm.</p>
+         * <p>The type of the virtual MFA device. The value can only be TOTP_VIRTUAL. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TOTP_VIRTUAL</p>
          */
         @NameInMap("DeviceType")
         public String deviceType;
 
         /**
-         * <p>This parameter is unavailable.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The username of the convenience user that uses the virtual MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-22T06:20:49Z</p>
          */
         @NameInMap("GmtEnabled")
         public String gmtEnabled;
 
         /**
-         * <p>The time when a locked virtual MFA device is automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-23T06:20:49Z</p>
          */
         @NameInMap("GmtUnlock")
         public String gmtUnlock;
 
         /**
-         * <p>This parameter is unavailable.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
+         * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc856334-446b-4035-bfbc-18af261e****</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         /**
-         * <p>The status of the virtual MFA device. Valid values:</p>
-         * <br>
-         * <p>*   UNBOUND</p>
-         * <p>*   NORMAL</p>
-         * <p>*   LOCKED</p>
+         * <p>The status of the virtual MFA device.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>LOCKED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>UNBOUND</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NORMAL</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;

@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class FilterUsersResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBD276B5-00FF-5E04-8EF7-5CBA09BF112A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the convenience users.</p>
+     * <p>The information about the convenience user.</p>
      */
     @NameInMap("Users")
     public java.util.List<FilterUsersResponseBodyUsers> users;
@@ -53,13 +59,19 @@ public class FilterUsersResponseBody extends TeaModel {
 
     public static class FilterUsersResponseBodyUsersExternalInfo extends TeaModel {
         /**
-         * <p>The account that is connected to the user.</p>
+         * <p>The account that is associated with the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ExternalName")
         public String externalName;
 
         /**
-         * <p>The account, student ID, or employee ID that is connected to the user.</p>
+         * <p>The account, student ID, or employee ID that is associated with the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>030801</p>
          */
         @NameInMap("JobNumber")
         public String jobNumber;
@@ -90,12 +102,18 @@ public class FilterUsersResponseBody extends TeaModel {
     public static class FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues extends TeaModel {
         /**
          * <p>The property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
         /**
-         * <p>The property value ID.</p>
+         * <p>The ID of the property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
@@ -126,36 +144,51 @@ public class FilterUsersResponseBody extends TeaModel {
     public static class FilterUsersResponseBodyUsersUserSetPropertiesModels extends TeaModel {
         /**
          * <p>The property ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
          * <p>The property name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
-         * <p>The property ID.</p>
+         * <p>The property type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PropertyType")
         public Integer propertyType;
 
         /**
-         * <p>The property value.</p>
+         * <p>The property values.</p>
          */
         @NameInMap("PropertyValues")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues> propertyValues;
 
         /**
-         * <p>The ID of the user that is bound to the property.</p>
+         * <p>The ID of the convenience user that is bound to the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
-         * <p>The name of the user that is bound to the property.</p>
+         * <p>The username of the convenience user that is bound to the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -216,163 +249,184 @@ public class FilterUsersResponseBody extends TeaModel {
     }
 
     public static class FilterUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("AutoLockTime")
+        public String autoLockTime;
+
         /**
-         * <p>The number of cloud desktops that are assigned to the user.</p>
+         * <p>The number of cloud desktops that are assigned to the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DesktopCount")
         public Long desktopCount;
 
         /**
-         * <p>The number of authorized desktop groups that are owned by the user. This value is returned if you set `IncludeDesktopGroupCount` to `true`.</p>
+         * <p>The number of cloud desktop pools that are assigned to the convenience user. This value is returned if you set <code>IncludeDesktopGroupCount</code> to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DesktopGroupCount")
         public Long desktopGroupCount;
 
         /**
-         * <p>The email address.</p>
+         * <p>The email address of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:testName@example.com">testName@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>Indicates whether the user is a local administrator.</p>
-         * <br>
+         * <p>Indicates whether the convenience user is a local administrator.</p>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
         /**
-         * <p>The username.</p>
+         * <p>The username of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The additional information about the user.</p>
+         * <p>The additional information about the convenience user.</p>
          */
         @NameInMap("ExternalInfo")
         public FilterUsersResponseBodyUsersExternalInfo externalInfo;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>Indicates whether the user is a tenant administrator.</p>
-         * <br>
+         * <p>Indicates whether the convenience user is a tenant administrator.</p>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
         /**
          * <p>The type of the account ownership.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   CreateFromManager</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    administrator-activated</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Normal</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    user-activated</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li>CreateFromManager: administrator-activated</li>
+         * <li>Normal: user-activated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("OwnerType")
         public String ownerType;
 
+        @NameInMap("PasswordExpireDays")
+        public Integer passwordExpireDays;
+
+        @NameInMap("PasswordExpireRestDays")
+        public Integer passwordExpireRestDays;
+
         /**
-         * <p>The mobile number.</p>
+         * <p>The mobile number of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The nickname of the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oliver</p>
+         */
         @NameInMap("RealNickName")
         public String realNickName;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remarks on the convenience user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The user status.</p>
-         * <br>
+         * <p>The status of the convenience user.</p>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: The user status is normal.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   9: The user is locked.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>0: The convenience user is normal.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>9: The convenience user is locked.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
-         * <p>Details of the properties.</p>
+         * <p>The information about the properties.</p>
          */
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModels> userSetPropertiesModels;
@@ -380,6 +434,14 @@ public class FilterUsersResponseBody extends TeaModel {
         public static FilterUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             FilterUsersResponseBodyUsers self = new FilterUsersResponseBodyUsers();
             return TeaModel.build(map, self);
+        }
+
+        public FilterUsersResponseBodyUsers setAutoLockTime(String autoLockTime) {
+            this.autoLockTime = autoLockTime;
+            return this;
+        }
+        public String getAutoLockTime() {
+            return this.autoLockTime;
         }
 
         public FilterUsersResponseBodyUsers setDesktopCount(Long desktopCount) {
@@ -452,6 +514,22 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public String getOwnerType() {
             return this.ownerType;
+        }
+
+        public FilterUsersResponseBodyUsers setPasswordExpireDays(Integer passwordExpireDays) {
+            this.passwordExpireDays = passwordExpireDays;
+            return this;
+        }
+        public Integer getPasswordExpireDays() {
+            return this.passwordExpireDays;
+        }
+
+        public FilterUsersResponseBodyUsers setPasswordExpireRestDays(Integer passwordExpireRestDays) {
+            this.passwordExpireRestDays = passwordExpireRestDays;
+            return this;
+        }
+        public Integer getPasswordExpireRestDays() {
+            return this.passwordExpireRestDays;
         }
 
         public FilterUsersResponseBodyUsers setPhone(String phone) {
