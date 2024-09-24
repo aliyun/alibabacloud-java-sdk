@@ -376,6 +376,9 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("EnableIdle")
+        public Boolean enableIdle;
+
         /**
          * <strong>example:</strong>
          * <p>1641882854484</p>
@@ -436,6 +439,14 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyData setEnableIdle(Boolean enableIdle) {
+            this.enableIdle = enableIdle;
+            return this;
+        }
+        public Boolean getEnableIdle() {
+            return this.enableIdle;
         }
 
         public CreateApplicationScalingRuleResponseBodyData setLastDisableTime(Long lastDisableTime) {

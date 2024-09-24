@@ -34,6 +34,9 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -125,6 +128,14 @@ public class CreateIngressRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateIngressRequest setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     public CreateIngressRequest setListenerPort(Integer listenerPort) {

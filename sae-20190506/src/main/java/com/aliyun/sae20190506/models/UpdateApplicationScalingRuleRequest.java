@@ -14,6 +14,9 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("EnableIdle")
+    public Boolean enableIdle;
+
     /**
      * <p>The percentage of the minimum number of available instances. Take note of the following rules:</p>
      * <ul>
@@ -174,6 +177,14 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UpdateApplicationScalingRuleRequest setEnableIdle(Boolean enableIdle) {
+        this.enableIdle = enableIdle;
+        return this;
+    }
+    public Boolean getEnableIdle() {
+        return this.enableIdle;
     }
 
     public UpdateApplicationScalingRuleRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {

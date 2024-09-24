@@ -34,6 +34,15 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     @NameInMap("Memory")
     public String memory;
 
+    @NameInMap("autoEnableApplicationScalingRule")
+    public Boolean autoEnableApplicationScalingRule;
+
+    @NameInMap("minReadyInstanceRatio")
+    public Integer minReadyInstanceRatio;
+
+    @NameInMap("minReadyInstances")
+    public Integer minReadyInstances;
+
     public static RescaleApplicationVerticallyRequest build(java.util.Map<String, ?> map) throws Exception {
         RescaleApplicationVerticallyRequest self = new RescaleApplicationVerticallyRequest();
         return TeaModel.build(map, self);
@@ -61,6 +70,30 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     }
     public String getMemory() {
         return this.memory;
+    }
+
+    public RescaleApplicationVerticallyRequest setAutoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
+        this.autoEnableApplicationScalingRule = autoEnableApplicationScalingRule;
+        return this;
+    }
+    public Boolean getAutoEnableApplicationScalingRule() {
+        return this.autoEnableApplicationScalingRule;
+    }
+
+    public RescaleApplicationVerticallyRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+        this.minReadyInstanceRatio = minReadyInstanceRatio;
+        return this;
+    }
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
+    }
+
+    public RescaleApplicationVerticallyRequest setMinReadyInstances(Integer minReadyInstances) {
+        this.minReadyInstances = minReadyInstances;
+        return this;
+    }
+    public Integer getMinReadyInstances() {
+        return this.minReadyInstances;
     }
 
 }

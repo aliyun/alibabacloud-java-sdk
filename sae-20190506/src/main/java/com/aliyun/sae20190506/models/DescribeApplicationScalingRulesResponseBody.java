@@ -899,6 +899,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("EnableIdle")
+        public Boolean enableIdle;
+
         /**
          * <p>The time when the auto scaling policy was last disabled.</p>
          * 
@@ -990,6 +993,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRules setEnableIdle(Boolean enableIdle) {
+            this.enableIdle = enableIdle;
+            return this;
+        }
+        public Boolean getEnableIdle() {
+            return this.enableIdle;
         }
 
         public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRules setLastDisableTime(Long lastDisableTime) {

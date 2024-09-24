@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigMapRequest extends TeaModel {
     /**
-     * <p>The key-value pairs of the ConfigMap in the JSON format. Format:</p>
-     * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
-     * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage a Kubernetes ConfigMap</a>.</p>
+     * <p>The ConfigMap data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +15,9 @@ public class CreateConfigMapRequest extends TeaModel {
     public String data;
 
     /**
-     * <p>The description. The description must be 1 to 255 characters in length, and cannot contain spaces.</p>
+     * <p>The key-value pairs of the ConfigMap in the JSON format. Format:</p>
+     * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
+     * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage a Kubernetes ConfigMap</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>test-desc</p>
