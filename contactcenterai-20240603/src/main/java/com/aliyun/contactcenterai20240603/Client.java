@@ -38,6 +38,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AnalyzeConversationResponse analyzeConversationWithOptions(String workspaceId, String appId, AnalyzeConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryTags)) {
+            body.put("categoryTags", request.categoryTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dialogue)) {
             body.put("dialogue", request.dialogue);
         }
@@ -68,6 +72,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
             body.put("stream", request.stream);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProfiles)) {
+            body.put("userProfiles", request.userProfiles);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
