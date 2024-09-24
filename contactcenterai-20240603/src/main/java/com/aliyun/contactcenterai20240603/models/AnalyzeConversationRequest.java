@@ -4,6 +4,9 @@ package com.aliyun.contactcenterai20240603.models;
 import com.aliyun.tea.*;
 
 public class AnalyzeConversationRequest extends TeaModel {
+    @NameInMap("categoryTags")
+    public java.util.List<AnalyzeConversationRequestCategoryTags> categoryTags;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -44,9 +47,20 @@ public class AnalyzeConversationRequest extends TeaModel {
     @NameInMap("stream")
     public Boolean stream;
 
+    @NameInMap("userProfiles")
+    public java.util.List<AnalyzeConversationRequestUserProfiles> userProfiles;
+
     public static AnalyzeConversationRequest build(java.util.Map<String, ?> map) throws Exception {
         AnalyzeConversationRequest self = new AnalyzeConversationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AnalyzeConversationRequest setCategoryTags(java.util.List<AnalyzeConversationRequestCategoryTags> categoryTags) {
+        this.categoryTags = categoryTags;
+        return this;
+    }
+    public java.util.List<AnalyzeConversationRequestCategoryTags> getCategoryTags() {
+        return this.categoryTags;
     }
 
     public AnalyzeConversationRequest setDialogue(AnalyzeConversationRequestDialogue dialogue) {
@@ -111,6 +125,44 @@ public class AnalyzeConversationRequest extends TeaModel {
     }
     public Boolean getStream() {
         return this.stream;
+    }
+
+    public AnalyzeConversationRequest setUserProfiles(java.util.List<AnalyzeConversationRequestUserProfiles> userProfiles) {
+        this.userProfiles = userProfiles;
+        return this;
+    }
+    public java.util.List<AnalyzeConversationRequestUserProfiles> getUserProfiles() {
+        return this.userProfiles;
+    }
+
+    public static class AnalyzeConversationRequestCategoryTags extends TeaModel {
+        @NameInMap("tagDesc")
+        public String tagDesc;
+
+        @NameInMap("tagName")
+        public String tagName;
+
+        public static AnalyzeConversationRequestCategoryTags build(java.util.Map<String, ?> map) throws Exception {
+            AnalyzeConversationRequestCategoryTags self = new AnalyzeConversationRequestCategoryTags();
+            return TeaModel.build(map, self);
+        }
+
+        public AnalyzeConversationRequestCategoryTags setTagDesc(String tagDesc) {
+            this.tagDesc = tagDesc;
+            return this;
+        }
+        public String getTagDesc() {
+            return this.tagDesc;
+        }
+
+        public AnalyzeConversationRequestCategoryTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
     }
 
     public static class AnalyzeConversationRequestDialogueSentences extends TeaModel {
@@ -452,6 +504,36 @@ public class AnalyzeConversationRequest extends TeaModel {
         }
         public String getSceneIntroduction() {
             return this.sceneIntroduction;
+        }
+
+    }
+
+    public static class AnalyzeConversationRequestUserProfiles extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("value")
+        public String value;
+
+        public static AnalyzeConversationRequestUserProfiles build(java.util.Map<String, ?> map) throws Exception {
+            AnalyzeConversationRequestUserProfiles self = new AnalyzeConversationRequestUserProfiles();
+            return TeaModel.build(map, self);
+        }
+
+        public AnalyzeConversationRequestUserProfiles setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AnalyzeConversationRequestUserProfiles setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
