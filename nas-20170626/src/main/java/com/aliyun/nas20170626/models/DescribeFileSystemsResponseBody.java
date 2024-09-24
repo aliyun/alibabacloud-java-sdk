@@ -12,24 +12,36 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>035B3A3A-E514-4B41-B906-5D906CFB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of file systems.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap extends TeaModel {
         /**
          * <p>An LDAP entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn=alibaba,dc=com</p>
          */
         @NameInMap("BindDN")
         public String bindDN;
 
         /**
          * <p>An LDAP search base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc=example</p>
          */
         @NameInMap("SearchBase")
         public String searchBase;
 
         /**
          * <p>An LDAP URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ldap://ldap.example.example</p>
          */
         @NameInMap("URI")
         public String URI;
@@ -132,18 +153,27 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode extends TeaModel {
         /**
          * <p>The default logon password of the ECS instance on the client management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("DefaultPasswd")
         public String defaultPasswd;
 
         /**
          * <p>The ID of the ECS instance on the client management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp3i3odi5ory1buo****</p>
          */
         @NameInMap("EcsId")
         public String ecsId;
 
         /**
          * <p>The IP address of the ECS instance on the client management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0</p>
          */
         @NameInMap("EcsIp")
         public String ecsIp;
@@ -201,12 +231,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -256,13 +292,15 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget extends TeaModel {
         /**
          * <p>The name of the permission group that is attached to the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-001</p>
          */
         @NameInMap("AccessGroupName")
         public String accessGroupName;
 
         /**
          * <p>The information about client management nodes.</p>
-         * <br>
          * <p>This parameter is available only for CPFS file systems.</p>
          */
         @NameInMap("ClientMasterNodes")
@@ -270,35 +308,48 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         /**
          * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
-         * <br>
-         * <p>> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * <blockquote>
+         * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("DualStackMountTargetDomain")
         public String dualStackMountTargetDomain;
 
         /**
          * <p>The domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109c042666-w****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
         /**
          * <p>The network type. Valid value: vpc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The status of the mount target.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Active: The mount target is available.</p>
-         * <p>*   Inactive: The mount target is unavailable.</p>
-         * <p>*   Pending: The mount target is being created or modified.</p>
-         * <p>*   Deleting: The mount target is being deleted.</p>
-         * <p>*   Hibernating: The mount target is being hibernated.</p>
-         * <p>*   Hibernated: The mount target is hibernated.</p>
+         * <ul>
+         * <li>Active: The mount target is available.</li>
+         * <li>Inactive: The mount target is unavailable.</li>
+         * <li>Pending: The mount target is being processed.</li>
+         * <li>Deleting: The mount target is being deleted.</li>
+         * <li>Hibernating: The mount target is being hibernated.</li>
+         * <li>Hibernated: The mount target is hibernated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -311,12 +362,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1sevsgtqvk5gxbl****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1omfzsszekkvaxn****</p>
          */
         @NameInMap("VswId")
         public String vswId;
@@ -419,38 +476,85 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the oplock feature. Valid values:</p>
+         * <ul>
+         * <li>true: enables the feature.</li>
+         * <li>false: disables the feature.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only Server Message Block (SMB) file systems support this feature.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableOplock")
+        public Boolean enableOplock;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions setEnableOplock(Boolean enableOplock) {
+            this.enableOplock = enableOplock;
+            return this;
+        }
+        public Boolean getEnableOplock() {
+            return this.enableOplock;
+        }
+
+    }
+
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage extends TeaModel {
         /**
          * <p>The end time of the validity period for the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-05T16:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The ID of the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>naspackage-0be9c4b624-37****</p>
          */
         @NameInMap("PackageId")
         public String packageId;
 
         /**
          * <p>The type of the storage plan.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   ssd: the storage plan for Performance NAS file systems</p>
-         * <p>*   hybrid: the storage plan for Capacity NAS file systems</p>
+         * <ul>
+         * <li>ssd: the storage plan for Performance NAS file systems.</li>
+         * <li>hybrid: the storage plan for Capacity NAS file systems.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hybrid</p>
          */
         @NameInMap("PackageType")
         public String packageType;
 
         /**
          * <p>The capacity of the storage plan. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107374182400</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The start time of the validity period for the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-05T01:40:56Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -543,12 +647,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -596,116 +706,161 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystem extends TeaModel {
+        /**
+         * <p>Number of access points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AccessPointCount")
         public String accessPointCount;
 
         /**
          * <p>The bandwidth of the file system.</p>
-         * <br>
          * <p>Unit: MB/s. This parameter is unavailable for General-purpose NAS file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
          * <p>The capacity of the file system.</p>
-         * <br>
          * <p>Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
          * <p>The billing method.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Subscription: The subscription billing method is used.</p>
-         * <p>*   PayAsYouGo: The pay-as-you-go billing method is used.</p>
-         * <p>*   Package: A storage plan is attached to the file system.</p>
+         * <ul>
+         * <li>Subscription: The subscription billing method is used.</li>
+         * <li>PayAsYouGo: The pay-as-you-go billing method is used.</li>
+         * <li>Package: A storage plan is attached to the file system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The time when the file system was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-05T16:00:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The encryption type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: The data in the file system is not encrypted.</p>
-         * <p>*   1: A NAS-managed key is used to encrypt the data in the file system.</p>
-         * <p>*   2: A KMS-managed key is used to encrypt the data in the file system.</p>
+         * <ul>
+         * <li>0: The data in the file system is not encrypted.</li>
+         * <li>1: A NAS-managed key is used to encrypt the data in the file system.</li>
+         * <li>2: A KMS-managed key is used to encrypt the data in the file system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EncryptType")
         public Integer encryptType;
 
         /**
          * <p>The time when the file system expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-05T16:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109c04****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The type of the file system.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   standard: General-purpose NAS file system</p>
-         * <p>*   extreme: Extreme NAS file system</p>
-         * <p>*   cpfs: CPFS file system</p>
-         * <br>
-         * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>standard: General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>cpfs: CPFS file system<blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
          * <p>The ID of the key that is managed by Key Management Service (KMS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
         /**
          * <p>The Lightweight Directory Access Protocol (LDAP) configurations.</p>
-         * <br>
          * <p>This parameter is available only for CPFS file systems.</p>
          */
         @NameInMap("Ldap")
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap ldap;
 
+        /**
+         * <p>Archive storage usage.</p>
+         * <p>Unit: Byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611661312</p>
+         */
         @NameInMap("MeteredArchiveSize")
         public Long meteredArchiveSize;
 
         /**
          * <p>The storage usage of the Infrequent Access (IA) storage medium.</p>
-         * <br>
          * <p>Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>362832</p>
          */
         @NameInMap("MeteredIASize")
         public Long meteredIASize;
 
         /**
          * <p>The storage usage of the file system.</p>
-         * <br>
          * <p>The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611661312</p>
          */
         @NameInMap("MeteredSize")
         public Long meteredSize;
@@ -717,6 +872,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets mountTargets;
 
         /**
+         * <p>The options.</p>
+         */
+        @NameInMap("Options")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions options;
+
+        /**
          * <p>The information about storage plans.</p>
          */
         @NameInMap("Packages")
@@ -724,50 +885,72 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type of the file system.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   NFS: Network File System (NFS)</p>
-         * <p>*   SMB: Server Message Block (SMB)</p>
-         * <p>*   cpfs: the protocol type supported by the CPFS file system</p>
-         * <br>
-         * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>NFS: Network File System (NFS)</li>
+         * <li>SMB: Server Message Block (SMB)</li>
+         * <li>cpfs: the protocol type supported by the CPFS file system</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource group ID.</p>
+         * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwavnfdf****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the file system. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The file system is being created or modified.</p>
-         * <p>*   Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.</p>
-         * <p>*   Stopped: The file system is unavailable.</p>
-         * <p>*   Extending: The file system is being scaled up.</p>
-         * <p>*   Stopping: The file system is being stopped.</p>
-         * <p>*   Deleting: The file system is being deleted.</p>
+         * <ul>
+         * <li>Pending: The file system is being created or modified.</li>
+         * <li>Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.</li>
+         * <li>Stopped: The file system is unavailable.</li>
+         * <li>Extending: The file system is being scaled up.</li>
+         * <li>Stopping: The file system is being stopped.</li>
+         * <li>Deleting: The file system is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Valid values for General-purpose NAS file systems: Capacity and Performance.</p>
-         * <p>*   Valid values for Extreme NAS file systems: standard and advance.</p>
-         * <p>*   Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).</p>
-         * <br>
-         * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.</li>
+         * <li>Valid values for Extreme NAS file systems: standard and advance.</li>
+         * <li>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).<blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Performance</p>
          */
         @NameInMap("StorageType")
         public String storageType;
@@ -786,14 +969,19 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         /**
          * <p>The version number of the file system.</p>
-         * <br>
-         * <p>This parameter is available only for Extreme NAS file systems.</p>
+         * <p>This parameter is available only for Extreme NAS file systems and CPFS file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.3.4</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
          * <p>The ID of the zone where the file system resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -929,6 +1117,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets getMountTargets() {
             return this.mountTargets;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setOptions(DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions options) {
+            this.options = options;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions getOptions() {
+            return this.options;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setPackages(DescribeFileSystemsResponseBodyFileSystemsFileSystemPackages packages) {

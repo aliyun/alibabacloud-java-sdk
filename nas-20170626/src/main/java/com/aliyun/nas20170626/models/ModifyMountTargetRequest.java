@@ -6,42 +6,61 @@ import com.aliyun.tea.*;
 public class ModifyMountTargetRequest extends TeaModel {
     /**
      * <p>The name of the permission group that is attached to the mount target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>classic-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
-     * <br>
-     * <p>>  Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+     * <blockquote>
+     * <p> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("DualStackMountTargetDomain")
     public String dualStackMountTargetDomain;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
-     * <p>*   Sample ID of a General-purpose NAS file system: `31a8e4****`.</p>
-     * <p>*   The IDs of Extreme NAS file systems must start with `extreme-`, for example, `extreme-0015****`.</p>
-     * <br>
+     * <ul>
+     * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
+     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The IPv4 domain name of the mount target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
     /**
      * <p>The status of the mount target.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Active: The mount target is available.</p>
-     * <p>*   Inactive: The mount target is unavailable.</p>
+     * <ul>
+     * <li>Active: The mount target is available.</li>
+     * <li>Inactive: The mount target is unavailable.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Only General-purpose Apsara File Storage NAS (NAS) file systems support changing the mount target status.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Inactive</p>
      */
     @NameInMap("Status")
     public String status;

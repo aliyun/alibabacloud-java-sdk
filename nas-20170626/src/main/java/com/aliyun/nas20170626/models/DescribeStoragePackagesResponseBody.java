@@ -12,24 +12,36 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of storage plans returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>035B3A3A-E514-4B41-B906-5D906CFB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of storage plans.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,54 +94,74 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
     public static class DescribeStoragePackagesResponseBodyPackagesPackage extends TeaModel {
         /**
          * <p>The end time of the validity period for the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-05T16:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The ID of the file system that is bound to the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109c****66</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The ID of the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>naspackage-@string(\&quot;*****\&quot;, *)-@string(\&quot;*****\&quot;, *)</p>
          */
         @NameInMap("PackageId")
         public String packageId;
 
         /**
          * <p>The capacity of the storage plan.</p>
-         * <br>
          * <p>Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The start time of the validity period for the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-05T01:40:56Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the storage plan.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   free: The storage plan is not bound to a file system. You can bind the storage plan to a file system of the same storage type.</p>
-         * <p>*   bound: The storage plan is bound to a file system.</p>
+         * <ul>
+         * <li>free: The storage plan is not bound to a file system. You can bind the storage plan to a file system of the same storage type.</li>
+         * <li>bound: The storage plan is bound to a file system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>free</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the storage plan.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Performance</p>
-         * <p>*   Capacity</p>
+         * <ul>
+         * <li>Performance</li>
+         * <li>Capacity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         @NameInMap("StorageType")
         public String storageType;

@@ -4,6 +4,12 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class ModifyLDAPConfigResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B4511A7-C99E-4071-AA8C-32E2529DA963</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -6,13 +6,16 @@ import com.aliyun.tea.*;
 public class AddTagsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0addcw****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The details about the tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -41,13 +44,19 @@ public class AddTagsRequest extends TeaModel {
 
     public static class AddTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.</p>
+         * <p>The key of each tag. A tag consists of a tag key and a tag value. You can add a maximum of 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keyN</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.</p>
+         * <p>The value of each tag. A tag consists of a tag key and a tag value. You can add a maximum of 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valueN</p>
          */
         @NameInMap("Value")
         public String value;

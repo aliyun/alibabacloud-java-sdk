@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDataFlowTaskResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the dataflow task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>taskId-12345678</p>
      */
     @NameInMap("TaskId")
     public String taskId;

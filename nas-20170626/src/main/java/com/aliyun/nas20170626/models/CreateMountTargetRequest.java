@@ -6,78 +6,99 @@ import com.aliyun.tea.*;
 public class CreateMountTargetRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <br>
      * <p>This parameter is required if you create a mount target for a General-purpose NAS file system or an Extreme NAS file system.</p>
-     * <br>
      * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>Specifies whether to perform a dry run to check for existing mount targets. This parameter is valid only for CPFS file systems.</p>
-     * <br>
      * <p>If you set this parameter to true, the system checks whether the request parameters are valid and whether the requested resources are available. In this case, no mount target is created and no fee is incurred.</p>
-     * <br>
-     * <p>*   true: performs a dry run but does not create a mount target. In the dry run, the system checks the request format, service limits, available CPFS resources, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code `200` is returned. No value is returned for the `MountTargetDomain` parameter.</p>
-     * <p>*   false (default): sends the request. If the request passes the dry run, a mount target is created.</p>
+     * <ul>
+     * <li>true: performs a dry run but does not create a mount target. In the dry run, the system checks the request format, service limits, available CPFS resources, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code <code>200</code> is returned. No value is returned for the <code>MountTargetDomain</code> parameter.</li>
+     * <li>false (default): sends the request. If the request passes the dry run, a mount target is created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Specifies whether to create an IPv6 domain name for the mount target.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true: An IPv6 domain name is created for the mount target.</p>
-     * <p>*   false (default): No IPv6 domain name is created for the mount target.</p>
-     * <br>
-     * <p>> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you want to create an IPv6 domain name for the mount target, you must enable IPv6 for the file system.</p>
+     * <ul>
+     * <li>true: An IPv6 domain name is created for the mount target.</li>
+     * <li>false (default): No IPv6 domain name is created for the mount target.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you want to create an IPv6 domain name for the mount target, you must enable IPv6 for the file system.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
-     * <p>*   Sample ID of a General-purpose NAS file system: 31a8e4\\*\\*\\*\\*.</p>
-     * <p>*   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\\*\\*\\*\\*.</p>
-     * <p>*   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\\*\\*\\*\\*.</p>
-     * <br>
-     * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
-     * <br>
+     * <ul>
+     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>174494****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
-     * <p>The network type of the mount target. Valid value: **Vpc**.</p>
-     * <br>
+     * <p>The network type of the mount target. Valid value: <strong>Vpc</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Vpc</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1fg655nh68xyz9****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
      * <p>This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VSwitchId parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-2zevmwkwyztjuoffg****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC.</p>
-     * <br>
      * <p>This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VpcId parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zesj9afh3y518k9o****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

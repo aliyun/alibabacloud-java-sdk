@@ -5,52 +5,134 @@ import com.aliyun.tea.*;
 
 public class CreateAccessPointRequest extends TeaModel {
     /**
+     * <p>The name of the permission group.</p>
+     * <p>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</p>
+     * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_VPC_GROUP_NAME</p>
      */
     @NameInMap("AccessGroup")
     public String accessGroup;
 
+    /**
+     * <p>The name of the access point.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("AccessPointName")
     public String accessPointName;
 
+    /**
+     * <p>Specifies whether to enable the RAM policy. Valid values:</p>
+     * <ul>
+     * <li>true: The RAM policy is enabled.</li>
+     * <li>false (default): The RAM policy is disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnabledRam")
     public Boolean enabledRam;
 
     /**
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The ID of the owner group.</p>
+     * <p>This parameter is required if the RootDirectory directory does not exist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OwnerGroupId")
     public Integer ownerGroupId;
 
+    /**
+     * <p>The owner ID.</p>
+     * <p>This parameter is required if the RootDirectory directory does not exist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OwnerUserId")
     public Integer ownerUserId;
 
+    /**
+     * <p>The Portable Operating System Interface for UNIX (POSIX) permission. Default value: 0777.</p>
+     * <p>This field takes effect only if you specify the OwnerUserId and OwnerGroupId parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0777</p>
+     */
     @NameInMap("Permission")
     public String permission;
 
+    /**
+     * <p>The ID of the POSIX user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("PosixGroupId")
     public Integer posixGroupId;
 
+    /**
+     * <p>The secondary user group. Separate multiple user group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123,345</p>
+     */
     @NameInMap("PosixSecondaryGroupIds")
     public String posixSecondaryGroupIds;
 
+    /**
+     * <p>The ID of the POSIX user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("PosixUserId")
     public Integer posixUserId;
 
+    /**
+     * <p>The root directory of the access point. The default value is /. If the directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("RootDirectory")
     public String rootDirectory;
 
     /**
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zesj9afh3y518k9o****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-2zevmwkwyztjuoffg****</p>
      */
     @NameInMap("VswId")
     public String vswId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetRecycleBinAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

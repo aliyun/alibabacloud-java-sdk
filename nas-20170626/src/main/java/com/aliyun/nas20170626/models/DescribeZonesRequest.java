@@ -6,24 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
-     * <p>*   cpfs: Cloud Parallel File Storage (CPFS) file system</p>
-     * <br>
-     * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <ul>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+     * </ul>
+     * <blockquote>
+     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The ID of the region where you want to query zones.</p>
-     * <br>
      * <p>You can call the DescribeRegions operation to query the latest region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

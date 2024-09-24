@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteProtocolMountTargetResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

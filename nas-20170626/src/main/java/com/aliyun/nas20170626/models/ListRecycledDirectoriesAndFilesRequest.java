@@ -6,36 +6,42 @@ import com.aliyun.tea.*;
 public class ListRecycledDirectoriesAndFilesRequest extends TeaModel {
     /**
      * <p>The ID of the directory that you want to query.</p>
-     * <br>
-     * <p>You can call the [ListRecycleBinJobs](https://help.aliyun.com/document_detail/264192.html) operation to query the value of the FileId parameter.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories </a>operation to query the file ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04***08</p>
      */
     @NameInMap("FileId")
     public String fileId;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The number of files or directories to return for each query.</p>
-     * <br>
      * <p>Valid values: 10 to 1000.</p>
-     * <br>
      * <p>Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
-     * <br>
      * <p>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CJyNARIsMTY5OTI2NjQ3NTEzMjY2OTMwOF8xODA5NF8ufnl0YkROTl9uZXcuaXB5bmI=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

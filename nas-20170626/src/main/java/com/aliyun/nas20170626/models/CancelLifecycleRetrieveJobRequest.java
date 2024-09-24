@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CancelLifecycleRetrieveJobRequest extends TeaModel {
     /**
      * <p>The ID of the data retrieval task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lrj-nfstest-ia-160****853-hshvw</p>
      */
     @NameInMap("JobId")
     public String jobId;

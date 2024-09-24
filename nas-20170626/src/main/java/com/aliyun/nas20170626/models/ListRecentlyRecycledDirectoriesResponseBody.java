@@ -12,14 +12,19 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token.</p>
-     * <br>
      * <p>If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1256****25</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,24 +61,36 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
     public static class ListRecentlyRecycledDirectoriesResponseBodyEntries extends TeaModel {
         /**
          * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04***08</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
          * <p>The time when the directory was last deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-30T10:08:08Z</p>
          */
         @NameInMap("LastDeleteTime")
         public String lastDeleteTime;
 
         /**
          * <p>The name of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The absolute path to the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a/b</p>
          */
         @NameInMap("Path")
         public String path;

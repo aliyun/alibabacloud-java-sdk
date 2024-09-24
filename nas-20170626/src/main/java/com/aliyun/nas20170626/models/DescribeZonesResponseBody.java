@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeZonesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A70BEE5D-76D3-49FB-B58F-1F398211****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,24 +62,34 @@ public class DescribeZonesResponseBody extends TeaModel {
     public static class DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType extends TeaModel {
         /**
          * <p>The protocol type.</p>
-         * <br>
-         * <p>*   If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</p>
-         * <p>*   If the FileSystemType parameter is set to extreme, the protocol type is nfs.</p>
-         * <p>*   If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</p>
-         * <br>
-         * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</li>
+         * <li>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</li>
+         * <li>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>nfs</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The storage type.</p>
-         * <br>
-         * <p>*   If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</p>
-         * <p>*   If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</p>
-         * <p>*   If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</p>
-         * <br>
-         * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</li>
+         * <li>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</li>
+         * <li>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         @NameInMap("StorageType")
         public String storageType;
@@ -163,6 +176,9 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteLDAPConfigRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404a348</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

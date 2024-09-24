@@ -6,16 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeDataFlowTasksRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Filters")
     public java.util.List<DescribeDataFlowTasksRequestFilters> filters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -58,35 +73,49 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
 
     public static class DescribeDataFlowTasksRequestFilters extends TeaModel {
         /**
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DataFlowIds</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>*   ````</p>
-         * <p>*   ````</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*   ``</p>
-         * <p>*   ``</p>
-         * <p>*   ``</p>
-         * <p>*   ``</p>
-         * <p>*   ``</p>
-         * <p>*   ``</p>
+         * <ul>
+         * <li><pre><code>
+         * </code></pre>
+         * </li>
+         * <li><pre><code>
+         * </code></pre>
+         * </li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li>``</li>
+         * <li>``</li>
+         * <li>``</li>
+         * <li>``</li>
+         * <li>``</li>
+         * <li>``</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dfid-12345678</p>
          */
         @NameInMap("Value")
         public String value;

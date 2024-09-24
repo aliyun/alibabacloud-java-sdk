@@ -12,18 +12,27 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,48 +77,78 @@ public class DescribeFilesetsResponseBody extends TeaModel {
     public static class DescribeFilesetsResponseBodyEntriesEntrie extends TeaModel {
         /**
          * <p>The time when the fileset was created.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-30T10:08:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
         /**
          * <p>The fileset description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The fileset path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pathtoroot/fset</p>
          */
         @NameInMap("FileSystemPath")
         public String fileSystemPath;
 
         /**
          * <p>The fileset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fset-1902718ea0ae****</p>
          */
         @NameInMap("FsetId")
         public String fsetId;
 
         /**
          * <p>The fileset status. Valid values:</p>
-         * <br>
-         * <p>*   CREATING: The fileset is being created.</p>
-         * <p>*   CREATED: The fileset has been created and is running properly.</p>
-         * <p>*   RELEASING: The fileset is being released.</p>
-         * <p>*   RELEASED: The fileset has been deleted.</p>
+         * <ul>
+         * <li>CREATING: The fileset is being created.</li>
+         * <li>CREATED: The fileset has been created and is running properly.</li>
+         * <li>RELEASING: The fileset is being released.</li>
+         * <li>RELEASED: The fileset has been deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the fileset was last updated.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-30T10:08:08Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

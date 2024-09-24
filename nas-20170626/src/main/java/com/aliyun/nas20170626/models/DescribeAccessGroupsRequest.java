@@ -6,54 +6,67 @@ import com.aliyun.tea.*;
 public class DescribeAccessGroupsRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <br>
      * <p>Limits:</p>
-     * <br>
-     * <p>*   The name must be 3 to 64 characters in length.</p>
-     * <p>*   The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <ul>
+     * <li>The name must be 3 to 64 characters in length.</li>
+     * <li>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_VPC_GROUP_NAME</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
-     * <p>*   cpfs: Cloud Parallel File Storage (CPFS) file system</p>
-     * <br>
-     * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <ul>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+     * </ul>
+     * <blockquote>
+     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Specifies whether to display the creation time of the permission group in UTC.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true (default): The time is displayed in UTC.</p>
-     * <p>*   false: The time is not displayed in UTC.</p>
+     * <ul>
+     * <li>true (default): The time is displayed in UTC.</li>
+     * <li>false: The time is not displayed in UTC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UseUTCDateTime")
     public Boolean useUTCDateTime;

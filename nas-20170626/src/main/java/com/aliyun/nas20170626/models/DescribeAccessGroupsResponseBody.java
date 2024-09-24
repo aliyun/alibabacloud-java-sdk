@@ -12,24 +12,36 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of permission groups returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2514F97E-FFF0-4A1F-BF04-729CEAC6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of permission groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,42 +94,81 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
     public static class DescribeAccessGroupsResponseBodyAccessGroupsAccessGroup extends TeaModel {
         /**
          * <p>The name of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         @NameInMap("AccessGroupName")
         public String accessGroupName;
 
         /**
-         * <p>The network type of the permission group. Valid value: **Vpc**.</p>
+         * <p>The network type of the permission group. Valid value: <strong>Vpc</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vpc</p>
          */
         @NameInMap("AccessGroupType")
         public String accessGroupType;
 
         /**
          * <p>The time when the permission group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-05T16:00:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test access group.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
          * <p>The number of mount targets to which the permission group is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MountTargetCount")
         public Integer mountTargetCount;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The total number of rules in the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;

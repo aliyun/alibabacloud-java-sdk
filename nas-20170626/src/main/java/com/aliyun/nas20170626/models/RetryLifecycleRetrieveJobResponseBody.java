@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RetryLifecycleRetrieveJobResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

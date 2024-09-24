@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateFileSystemResponseBody extends TeaModel {
     /**
      * <p>The ID of the file system that is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

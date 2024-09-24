@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAccessGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED2AE737-9D50-4CA4-B0DA-31BD610C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

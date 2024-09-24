@@ -6,44 +6,52 @@ import com.aliyun.tea.*;
 public class DescribeAutoSnapshotTasksRequest extends TeaModel {
     /**
      * <p>The IDs of automatic snapshot policies.</p>
-     * <br>
      * <p>You can specify a maximum of 100 policy IDs. If you want to query the tasks of multiple automatic snapshot policies, you must separate the policy IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-extreme-233e6****,sp-extreme-233e6****, sp-extreme-233e6****</p>
      */
     @NameInMap("AutoSnapshotPolicyIds")
     public String autoSnapshotPolicyIds;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>You can specify a maximum of 100 file system IDs. If you want to query the snapshots of multiple file systems, you must separate the file system IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>extreme-233e6****,extreme -23vbp****,extreme -23vas****</p>
      */
     @NameInMap("FileSystemIds")
     public String fileSystemIds;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>extreme</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

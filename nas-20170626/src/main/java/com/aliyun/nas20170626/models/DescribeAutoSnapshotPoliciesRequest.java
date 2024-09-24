@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeAutoSnapshotPoliciesRequest extends TeaModel {
     /**
      * <p>The ID of the automatic snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-extreme-233e6****</p>
      */
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
-     * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
+     * <p>Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>extreme</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

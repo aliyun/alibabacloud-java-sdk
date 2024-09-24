@@ -6,37 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeStoragePackagesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of storage plans to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether the time to return is in UTC.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true (default): returns UTC time.</p>
-     * <p>*   false: returns UNIX timestamp.</p>
+     * <ul>
+     * <li>true (default): returns UTC time.</li>
+     * <li>false: returns UNIX timestamp.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UseUTCDateTime")
     public Boolean useUTCDateTime;

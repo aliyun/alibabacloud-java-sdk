@@ -6,36 +6,60 @@ import com.aliyun.tea.*;
 public class DescribeLifecyclePoliciesRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The name of the lifecycle policy. The name must meet the following conventions:</p>
-     * <br>
      * <p>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lifecyclepolicy_01</p>
      */
     @NameInMap("LifecyclePolicyName")
     public String lifecyclePolicyName;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The storage class.</p>
+     * <ul>
+     * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+     * <li>Archive: the Archive storage class.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>InfrequentAccess</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 

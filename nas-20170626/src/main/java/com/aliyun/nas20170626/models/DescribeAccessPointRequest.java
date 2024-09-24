@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessPointRequest extends TeaModel {
     /**
+     * <p>The ID of the access point.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-ie15yd****</p>
      */
     @NameInMap("AccessPointId")
     public String accessPointId;
 
     /**
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

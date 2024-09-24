@@ -6,39 +6,62 @@ import com.aliyun.tea.*;
 public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The status of the data retrieval task. Valid values:</p>
-     * <br>
-     * <p>*   active: The task is running.</p>
-     * <p>*   canceled: The task is canceled.</p>
-     * <p>*   completed: The task is completed.</p>
-     * <p>*   failed: The task has failed.</p>
+     * <ul>
+     * <li>active: The task is running.</li>
+     * <li>canceled: The task is canceled.</li>
+     * <li>completed: The task is completed.</li>
+     * <li>failed: The task has failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>completed</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The storage class.</p>
+     * <ul>
+     * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+     * <li>Archive: the Archive storage class.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>InfrequentAccess</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 

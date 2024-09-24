@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteSnapshotRequest extends TeaModel {
     /**
      * <p>The snapshot ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-extreme-snapsho****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

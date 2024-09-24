@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeProtocolServiceResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aBcdeg==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,6 +21,9 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,101 +60,141 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
     public static class DescribeProtocolServiceResponseBodyProtocolServices extends TeaModel {
         /**
          * <p>The time when the protocol service was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-12T07:28:38Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the protocol service.</p>
-         * <br>
          * <p>Limits:</p>
-         * <br>
-         * <p>*   The description must be 2 to 128 characters in length.</p>
-         * <p>*   The description must start with a letter and cannot start with `http://` or `https://`.</p>
-         * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <ul>
+         * <li>The description must be 2 to 128 characters in length.</li>
+         * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-099394bd928c****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The base throughput of the protocol service. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InstanceBaseThroughput")
         public Integer instanceBaseThroughput;
 
         /**
          * <p>The burst throughput of the protocol service. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InstanceBurstThroughput")
         public Integer instanceBurstThroughput;
 
         /**
          * <p>The memory cache size of the protocol service. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstanceRAM")
         public Integer instanceRAM;
 
         /**
          * <p>The time when the protocol service was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-12T07:28:38Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The total number of CPFS directories and filesets exported in the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MountTargetCount")
         public Integer mountTargetCount;
 
         /**
          * <p>The ID of the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ptc-197ed6a00f2b****</p>
          */
         @NameInMap("ProtocolServiceId")
         public String protocolServiceId;
 
         /**
          * <p>The specification of the protocol service.</p>
-         * <br>
-         * <p>*   Valid value: General.</p>
-         * <p>*   Default value: General.</p>
+         * <ul>
+         * <li>Valid value: General.</li>
+         * <li>Default value: General.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         @NameInMap("ProtocolSpec")
         public String protocolSpec;
 
         /**
          * <p>The throughput of the protocol service. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("ProtocolThroughput")
         public Integer protocolThroughput;
 
         /**
          * <p>The protocol type supported by the protocol service.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   NFS: The protocol service supports access over the Network File System (NFS) protocol.</p>
+         * <ul>
+         * <li>NFS: The protocol service supports access over the Network File System (NFS) protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The status of the protocol service.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Creating: The protocol service is being created.</p>
-         * <p>*   Starting: The protocol service is being started.</p>
-         * <p>*   Running: The protocol service is running.</p>
-         * <p>*   Updating: The protocol service is being updated.</p>
-         * <p>*   Deleting: The protocol service is being deleted.</p>
-         * <p>*   Stopping: The protocol service is being stopped.</p>
-         * <p>*   Stopped: The protocol service is stopped.</p>
+         * <ul>
+         * <li>Creating: The protocol service is being created.</li>
+         * <li>Starting: The protocol service is being started.</li>
+         * <li>Running: The protocol service is running.</li>
+         * <li>Updating: The protocol service is being updated.</li>
+         * <li>Deleting: The protocol service is being deleted.</li>
+         * <li>Stopping: The protocol service is being stopped.</li>
+         * <li>Stopped: The protocol service is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;

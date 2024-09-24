@@ -12,14 +12,19 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token.</p>
-     * <br>
      * <p>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CKuO8QMSIjE2OTc3NzI0NjI5MTcyMTYyNDVfMzEzNTUyMF81MjEzODY=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,59 +61,86 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
     public static class ListRecycledDirectoriesAndFilesResponseBodyEntries extends TeaModel {
         /**
          * <p>The time when the file or directory was last accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-30T10:08:08Z</p>
          */
         @NameInMap("ATime")
         public String ATime;
 
         /**
          * <p>The time when the metadata was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-30T10:08:08Z</p>
          */
         @NameInMap("CTime")
         public String CTime;
 
         /**
          * <p>The time when the file or directory was deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-30T10:08:08Z</p>
          */
         @NameInMap("DeleteTime")
         public String deleteTime;
 
         /**
          * <p>The IDs of the files or directories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04***08</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
          * <p>The inode of the file or directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04***08</p>
          */
         @NameInMap("Inode")
         public String inode;
 
         /**
          * <p>The time when the file or directory was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-30T10:08:08Z</p>
          */
         @NameInMap("MTime")
         public String MTime;
 
         /**
          * <p>The name of the file or directory before it was deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test001</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The size of the file. Unit: bytes.</p>
-         * <br>
          * <p>The value 0 is returned for this parameter if Directory is returned for the Type parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The type of the returned object. Valid values:</p>
-         * <br>
-         * <p>*   File</p>
-         * <p>*   Directory</p>
+         * <ul>
+         * <li>File</li>
+         * <li>Directory</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>File</p>
          */
         @NameInMap("Type")
         public String type;

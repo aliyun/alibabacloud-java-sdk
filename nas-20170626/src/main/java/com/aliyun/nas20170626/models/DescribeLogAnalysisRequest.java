@@ -4,25 +4,45 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogAnalysisRequest extends TeaModel {
+    /**
+     * <p>The type of the file system.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>standard: General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * <li>all (default): all types</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

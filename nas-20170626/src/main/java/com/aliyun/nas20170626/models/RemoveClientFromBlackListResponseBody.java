@@ -4,6 +4,10 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class RemoveClientFromBlackListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A70BEE5D-76D3-49FB-B58F-1F398211****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

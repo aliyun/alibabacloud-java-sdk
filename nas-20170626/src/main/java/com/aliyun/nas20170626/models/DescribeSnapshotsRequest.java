@@ -6,71 +6,90 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>extreme-22f****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
-     * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
+     * <p>Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>extreme</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The snapshot IDs.</p>
-     * <br>
      * <p>You can specify a maximum of 100 snapshot IDs. You must separate snapshot IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-extreme-67pxwk9aevrkr****,s-extreme-snapsho****,s-extreme-6tmsbas6ljhwh****</p>
      */
     @NameInMap("SnapshotIds")
     public String snapshotIds;
 
     /**
      * <p>The snapshot name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FinanceJoshua</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
     /**
      * <p>The type of the snapshot.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   auto: auto snapshot</p>
-     * <p>*   user: manual snapshot</p>
-     * <p>*   all (default): all snapshot types</p>
+     * <ul>
+     * <li>auto: auto snapshot</li>
+     * <li>user: manual snapshot</li>
+     * <li>all (default): all snapshot types</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("SnapshotType")
     public String snapshotType;
 
     /**
      * <p>The status of the snapshot.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   progressing: The snapshot is being created.</p>
-     * <p>*   accomplished: The snapshot is created.</p>
-     * <p>*   failed: The snapshot fails to be created.</p>
-     * <p>*   all (default): all snapshot states.</p>
+     * <ul>
+     * <li>progressing: The snapshot is being created.</li>
+     * <li>accomplished: The snapshot is created.</li>
+     * <li>failed: The snapshot fails to be created.</li>
+     * <li>all (default): all snapshot states.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("Status")
     public String status;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisableNfsAclResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24487C24-AE54-57EC-B4E4-4EDEEEB83B01</p>
      */
     @NameInMap("RequestId")
     public String requestId;

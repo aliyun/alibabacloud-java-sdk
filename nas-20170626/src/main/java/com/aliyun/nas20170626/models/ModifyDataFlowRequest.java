@@ -6,63 +6,80 @@ import com.aliyun.tea.*;
 public class ModifyDataFlowRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](https://help.aliyun.com/document_detail/25693.html)</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The dataflow ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dfid-194433a5be31****</p>
      */
     @NameInMap("DataFlowId")
     public String dataFlowId;
 
     /**
      * <p>The description of the dataflow.</p>
-     * <br>
      * <p>Limits:</p>
-     * <br>
-     * <p>*   The description must be 2 to 128 characters in length.</p>
-     * <p>*   The description must start with a letter but cannot start with http:// or https://.</p>
-     * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <ul>
+     * <li>The description must be 2 to 128 characters in length.</li>
+     * <li>The description must start with a letter but cannot start with http:// or https://.</li>
+     * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to perform a dry run.</p>
-     * <br>
      * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.</p>
-     * <p>*   false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.</p>
+     * <ul>
+     * <li>true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.</li>
+     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
-     * <p>The maximum transmission bandwidth for a dataflow. Unit: MB/s. Valid values:</p>
-     * <br>
-     * <p>*   600</p>
-     * <p>*   1,200</p>
-     * <p>*   1,500</p>
-     * <br>
-     * <p>>  The dataflow throughput must be less than the I/O throughput of the file system.</p>
+     * <p>The maximum data flow throughput. Unit: MB/s. Valid values:</p>
+     * <ul>
+     * <li>600</li>
+     * <li>1200</li>
+     * <li>1500</li>
+     * </ul>
+     * <blockquote>
+     * <p> The data flow throughput must be less than the I/O throughput of the file system.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("Throughput")
     public Long throughput;

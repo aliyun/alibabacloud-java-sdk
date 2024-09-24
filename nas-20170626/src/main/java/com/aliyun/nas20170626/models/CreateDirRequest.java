@@ -5,34 +5,76 @@ import com.aliyun.tea.*;
 
 public class CreateDirRequest extends TeaModel {
     /**
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The ID of the owner group for the directory. Valid values: 0 to 4294967295.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("OwnerGroupId")
     public Integer ownerGroupId;
 
     /**
+     * <p>The owner ID for the directory. Valid values: 0 to 4294967295.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OwnerUserId")
     public Integer ownerUserId;
 
     /**
+     * <p>The Portable Operating System Interface (POSIX) permissions applied to the root directory. The value is a valid octal number, such as 0755.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0755</p>
      */
     @NameInMap("Permission")
     public String permission;
 
+    /**
+     * <p>Specifies whether to create a multi-level directory. Valid values:</p>
+     * <ul>
+     * <li>true (default): If no multi-level directory exists, directories are created level by level.</li>
+     * <li>false: Only the last level of directory is created. An error message is returned because the parent directory does not exist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Recursion")
     public Boolean recursion;
 
     /**
+     * <p>The directory name.</p>
+     * <ul>
+     * <li>The directory must start with a forward slash (/).</li>
+     * <li>The directory can contain digits and letters.</li>
+     * <li>The directory can contain underscores (_), hyphens (-), and periods (.).</li>
+     * <li>The directory cannot contain symbolic links, such as the current directory (.), the upper-level directory (..), and other symbolic links.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If the root directory does not exist, configure the information for directory creation. The system then automatically creates the specified root directory based on your settings.</li>
+     * <li>If the root directory exists, you do not need to configure the information for directory creation. The configurations for directory creation are ignored even if you configure the information.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RootDirectory")
     public String rootDirectory;

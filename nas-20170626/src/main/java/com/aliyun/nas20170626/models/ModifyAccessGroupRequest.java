@@ -6,36 +6,44 @@ import com.aliyun.tea.*;
 public class ModifyAccessGroupRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <br>
      * <p>Limits:</p>
-     * <br>
-     * <p>*   The name must be 3 to 64 characters in length.</p>
-     * <p>*   The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</p>
-     * <br>
+     * <ul>
+     * <li>The name must be 3 to 64 characters in length.</li>
+     * <li>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The description of the permission group.</p>
-     * <br>
      * <p>Limits:</p>
-     * <br>
-     * <p>*   By default, the description of the permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length.</p>
-     * <p>*   The description must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <ul>
+     * <li>By default, the description of the permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length.</li>
+     * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The type of the file system.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard (default): General-purpose NAS file system</p>
-     * <p>*   extreme: Extreme NAS file system</p>
+     * <ul>
+     * <li>standard (default): General-purpose NAS file system</li>
+     * <li>extreme: Extreme NAS file system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;

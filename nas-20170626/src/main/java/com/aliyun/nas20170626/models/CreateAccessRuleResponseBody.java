@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateAccessRuleResponseBody extends TeaModel {
     /**
      * <p>The rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A323836B-5BC6-45A6-8048-60675C23****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

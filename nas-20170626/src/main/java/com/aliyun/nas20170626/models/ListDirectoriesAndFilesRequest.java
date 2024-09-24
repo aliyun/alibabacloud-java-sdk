@@ -6,55 +6,76 @@ import com.aliyun.tea.*;
 public class ListDirectoriesAndFilesRequest extends TeaModel {
     /**
      * <p>Specifies whether to query only directories.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   false (default): queries both directories and files</p>
-     * <p>*   true: queries only directories</p>
+     * <ul>
+     * <li>false (default): queries both directories and files.</li>
+     * <li>true: queries only directories.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DirectoryOnly")
     public Boolean directoryOnly;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The maximum number of directories or files to include in the results of each query.</p>
-     * <br>
      * <p>Valid values: 10 to 128.</p>
-     * <br>
      * <p>Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The absolute path of the directory.</p>
-     * <br>
      * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/pathway/to/folder</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
-     * <p>The storage type of the files.</p>
-     * <br>
-     * <p>Default value: InfrequentAccess (IA).</p>
-     * <br>
+     * <p>The storage class.</p>
+     * <ul>
+     * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+     * <li>Archive: the Archive storage class.</li>
+     * <li>All: all stored data.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InfrequentAccess</p>
      */
     @NameInMap("StorageType")
     public String storageType;

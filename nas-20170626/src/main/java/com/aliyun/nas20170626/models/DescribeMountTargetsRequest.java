@@ -6,46 +6,60 @@ import com.aliyun.tea.*;
 public class DescribeMountTargetsRequest extends TeaModel {
     /**
      * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
-     * <br>
-     * <p>> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+     * <blockquote>
+     * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("DualStackMountTargetDomain")
     public String dualStackMountTargetDomain;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
-     * <p>*   Sample ID of a General-purpose NAS file system: 31a8e4\\*\\*\\*\\*.</p>
-     * <p>*   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\\*\\*\\*\\*.</p>
-     * <p>*   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\\*\\*\\*\\*.</p>
-     * <br>
-     * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
-     * <br>
+     * <ul>
+     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The domain name of the mount target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ca404a666-x****.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

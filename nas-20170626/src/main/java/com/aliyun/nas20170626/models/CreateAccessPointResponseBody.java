@@ -4,9 +4,18 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessPointResponseBody extends TeaModel {
+    /**
+     * <p>The access point.</p>
+     */
     @NameInMap("AccessPoint")
     public CreateAccessPointResponseBodyAccessPoint accessPoint;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class CreateAccessPointResponseBody extends TeaModel {
     }
 
     public static class CreateAccessPointResponseBodyAccessPoint extends TeaModel {
+        /**
+         * <p>The domain name of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
+         */
         @NameInMap("AccessPointDomain")
         public String accessPointDomain;
 
+        /**
+         * <p>The ID of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-ie15yd****</p>
+         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 

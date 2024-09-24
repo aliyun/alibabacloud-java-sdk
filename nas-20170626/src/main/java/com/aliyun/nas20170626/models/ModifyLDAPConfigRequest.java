@@ -4,23 +4,41 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class ModifyLDAPConfigRequest extends TeaModel {
+    /**
+     * <p>The LDAP entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn=alibaba,dc=com</p>
+     */
     @NameInMap("BindDN")
     public String bindDN;
 
     /**
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>109c042666</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The LDAP search base.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc=example</p>
      */
     @NameInMap("SearchBase")
     public String searchBase;
 
     /**
+     * <p>The LDAP service address.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ldap://ldap.example.example</p>
      */
     @NameInMap("URI")
     public String URI;
