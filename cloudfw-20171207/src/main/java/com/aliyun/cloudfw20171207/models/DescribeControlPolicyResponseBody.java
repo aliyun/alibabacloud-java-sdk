@@ -212,12 +212,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destPortType;
 
         /**
-         * <p>The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:</p>
+         * <p>The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType.</p>
          * <ul>
-         * <li>If <strong>DestinationType</strong> is set to <strong>net</strong>, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.</li>
-         * <li>If <strong>DestinationType</strong> is set to <strong>domain</strong>, the value of Destination is a domain name. Example: aliyuncs.com.</li>
-         * <li>If <strong>DestinationType</strong> is set to <strong>group</strong>, the value of Destination is the name of an address book. Example: db_group.</li>
-         * <li>If <strong>DestinationType</strong> is set to <strong>location</strong>, the value of Destination is a location. For more information about location codes, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+         * <li>If the value of <strong>DestinationType</strong> is <strong>net</strong>, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.</li>
+         * <li>If the value of <strong>DestinationType</strong> is <strong>domain</strong>, the value of Destination is a domain name. Example: aliyuncs.com.</li>
+         * <li>If the value of <strong>DestinationType</strong> is <strong>group</strong>, the value of Destination is the name of an address book. Example: db_group.</li>
+         * <li>If the value of <strong>DestinationType</strong> is <strong>location</strong>, the value of Destination is the name of a location. For more information about location codes, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String direction;
 
         /**
-         * <p>The DNS resolution result.</p>
+         * <p>The DNS resolution results.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX,192.0.XX.XX</p>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityProxyRequest extends TeaModel {
     /**
+     * <p>The status of the NAT firewall. Valid values:</p>
+     * <ul>
+     * <li><strong>open</strong>: enabled</li>
+     * <li><strong>close</strong>: disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>close</p>
      */
@@ -12,6 +18,12 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String firewallSwitch;
 
     /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +31,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the NAT gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,12 +41,14 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String natGatewayId;
 
     /**
+     * <p>The routes to be switched to the NAT gateway.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NatRouteEntryList")
     public java.util.List<CreateSecurityProxyRequestNatRouteEntryList> natRouteEntryList;
 
     /**
+     * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +58,10 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String proxyName;
 
     /**
+     * <p>The region ID of the virtual private cloud (VPC).</p>
+     * <blockquote>
+     * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +71,12 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>Specifies whether to enable the strict mode. Valid values:</p>
+     * <ul>
+     * <li>1: yes</li>
+     * <li>0: no</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -59,6 +84,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public Integer strictMode;
 
     /**
+     * <p>The ID of the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +94,12 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The mode of the vSwitch that you want to use. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: automatic</li>
+     * <li><strong>false</strong>: manual</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -75,6 +107,8 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String vswitchAuto;
 
     /**
+     * <p>The CIDR block of the vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
      */
@@ -82,6 +116,8 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String vswitchCidr;
 
     /**
+     * <p>The ID of the vSwitch. This parameter is required if you set the VswitchAuto parameter to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1sqg9wms9w9y1uxcs1x</p>
      */
@@ -183,6 +219,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
 
     public static class CreateSecurityProxyRequestNatRouteEntryList extends TeaModel {
         /**
+         * <p>The destination CIDR block of the default route.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +229,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String destinationCidr;
 
         /**
+         * <p>The next hop of the original NAT gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,6 +239,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String nextHopId;
 
         /**
+         * <p>The network type of the next hop. Set the value to NatGateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +249,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String nextHopType;
 
         /**
+         * <p>The route table to which the default route of the NAT gateway belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

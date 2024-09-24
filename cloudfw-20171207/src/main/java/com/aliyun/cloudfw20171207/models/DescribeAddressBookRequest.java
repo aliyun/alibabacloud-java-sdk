@@ -32,10 +32,11 @@ public class DescribeAddressBookRequest extends TeaModel {
      * <li><strong>tag</strong>: Elastic Compute Service (ECS) tag-based address book</li>
      * <li><strong>allCloud</strong>: cloud service address book</li>
      * <li><strong>threat</strong>: threat intelligence address book</li>
-     * </ul>
-     * <blockquote>
+     * <li><strong>ipv6</strong>: IPv6 address book<blockquote>
      * <p> If you do not specify a type, the domain address books and ECS tag-based address books are queried.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ip</p>

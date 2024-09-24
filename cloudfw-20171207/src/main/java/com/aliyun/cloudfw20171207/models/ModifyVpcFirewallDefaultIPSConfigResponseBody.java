@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3B51B5BF-3C26-5009-ADAB-190E58DE4D6E</p>

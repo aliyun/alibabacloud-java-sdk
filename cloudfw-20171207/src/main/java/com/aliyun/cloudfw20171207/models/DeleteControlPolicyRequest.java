@@ -19,8 +19,8 @@ public class DeleteControlPolicyRequest extends TeaModel {
      * <p>The direction of the traffic to which the access control policy applies.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound traffic</li>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>in</strong>: inbound.</li>
+     * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * 
      * <strong>example:</strong>

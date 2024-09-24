@@ -128,6 +128,17 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("DestinationType")
     public String destinationType;
 
+    /**
+     * <p>The domain name resolution method of the access control policy. Valid values:</p>
+     * <ul>
+     * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
+     * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
+     * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DNS</p>
+     */
     @NameInMap("DomainResolveType")
     public String domainResolveType;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceMembersRequest extends TeaModel {
     /**
-     * <p>The unique identifiers (UID) of members that you want to remove from Cloud Firewall.</p>
+     * <p>The UIDs of the members.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

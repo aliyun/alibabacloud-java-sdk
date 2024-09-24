@@ -97,6 +97,9 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         @NameInMap("ProtectionDuration")
         public Long protectionDuration;
 
+        @NameInMap("RegionNo")
+        public String regionNo;
+
         /**
          * <p>The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.</p>
          * 
@@ -181,6 +184,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
         public Long getProtectionDuration() {
             return this.protectionDuration;
+        }
+
+        public DescribePostpayTrafficDetailResponseBodyTrafficList setRegionNo(String regionNo) {
+            this.regionNo = regionNo;
+            return this;
+        }
+        public String getRegionNo() {
+            return this.regionNo;
         }
 
         public DescribePostpayTrafficDetailResponseBodyTrafficList setResourceId(String resourceId) {

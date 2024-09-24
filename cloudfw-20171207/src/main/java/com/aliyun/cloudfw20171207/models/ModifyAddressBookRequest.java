@@ -77,6 +77,21 @@ public class ModifyAddressBookRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Modification mode with the following values:</p>
+     * <ul>
+     * <li><strong>Cover</strong>: Use the value of the AddressList parameter to overwrite the original address book.</li>
+     * <li><strong>Append</strong>: After the original address book, append addresses using the value of the AddressList parameter.</li>
+     * <li><strong>Delete</strong>: Delete addresses using the value of the AddressList parameter from the address book.</li>
+     * </ul>
+     * <blockquote>
+     * <p>When GroupType is <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong>, if this parameter is not configured, the default is to use the <strong>Cover</strong> method to modify the address book.
+     * Notice: When GroupType is <strong>tag</strong>, this parameter must be empty.</notice></p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Cover</p>
+     */
     @NameInMap("ModifyMode")
     public String modifyMode;
 

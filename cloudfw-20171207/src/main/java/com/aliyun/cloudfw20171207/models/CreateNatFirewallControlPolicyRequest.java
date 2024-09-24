@@ -128,9 +128,9 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public String destinationType;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+     * <p>The direction of the traffic to which the access control policy applies. Valid value:</p>
      * <ul>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -216,11 +216,14 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <p>The protocol type in the access control policy.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ANY: all types of protocols</li>
+     * <li>ANY: all types of protocols.</li>
      * <li>TCP</li>
      * <li>UDP</li>
      * <li>ICMP</li>
      * </ul>
+     * <blockquote>
+     * <p> If the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto only to TCP and set ApplicationNameList to HTTP, HTTPS, SMTP, SMTPS, or SSL.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

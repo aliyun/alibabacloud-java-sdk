@@ -7,12 +7,12 @@ public class AddAddressBookRequest extends TeaModel {
     /**
      * <p>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</p>
      * <blockquote>
-     * <p> If you set GroupType to <code>ip</code>, <code>port</code>, or <code>domain</code>, you must specify the AddressList parameter.</p>
+     * <p> If you set GroupType to <code>ip</code>, <code>port</code> or <code>domain</code>, you must specify AddressList.</p>
      * </blockquote>
      * <ul>
-     * <li>If you set GroupType to <code>ip</code>, you must add IP addresses to the address book. Example: 192.0.XX.XX/32, 192.0.XX.XX/24.</li>
-     * <li>If you set GroupType to <code>port</code>, you must add port numbers or port ranges to the address book. Example: 80, 100/200.</li>
-     * <li>If you set GroupType to <code>domain</code>, you must add domain names to the address book. Example: example.com, aliyundoc.com.</li>
+     * <li>If you set GroupType to <code>ip</code>, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.</li>
+     * <li>If you set GroupType to <code>port</code>, you must add port numbers or port ranges to the address book. Example: 80,100/200.</li>
+     * <li>If you set GroupType to <code>domain</code>, you must add domain names to the address book. Example: example.com,aliyundoc.com.</li>
      * </ul>
      * 
      * <strong>example:</strong>
