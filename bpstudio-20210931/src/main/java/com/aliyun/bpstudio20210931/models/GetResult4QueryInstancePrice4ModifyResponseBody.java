@@ -96,8 +96,8 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
         @NameInMap("DiscountAmount")
         public Double discountAmount;
 
-        @NameInMap("ERROR")
-        public String ERROR;
+        @NameInMap("Error")
+        public String error;
 
         /**
          * <strong>example:</strong>
@@ -139,12 +139,12 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
             return this.discountAmount;
         }
 
-        public GetResult4QueryInstancePrice4ModifyResponseBodyDataPriceList setERROR(String ERROR) {
-            this.ERROR = ERROR;
+        public GetResult4QueryInstancePrice4ModifyResponseBodyDataPriceList setError(String error) {
+            this.error = error;
             return this;
         }
-        public String getERROR() {
-            return this.ERROR;
+        public String getError() {
+            return this.error;
         }
 
         public GetResult4QueryInstancePrice4ModifyResponseBodyDataPriceList setNodeType(String nodeType) {
