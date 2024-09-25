@@ -65,6 +65,36 @@ public class CredentialVerifyResponseBody extends TeaModel {
         return this.resultObject;
     }
 
+    public static class CredentialVerifyResponseBodyResultObjectVlResult extends TeaModel {
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("VlContent")
+        public java.util.Map<String, ?> vlContent;
+
+        public static CredentialVerifyResponseBodyResultObjectVlResult build(java.util.Map<String, ?> map) throws Exception {
+            CredentialVerifyResponseBodyResultObjectVlResult self = new CredentialVerifyResponseBodyResultObjectVlResult();
+            return TeaModel.build(map, self);
+        }
+
+        public CredentialVerifyResponseBodyResultObjectVlResult setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public CredentialVerifyResponseBodyResultObjectVlResult setVlContent(java.util.Map<String, ?> vlContent) {
+            this.vlContent = vlContent;
+            return this;
+        }
+        public java.util.Map<String, ?> getVlContent() {
+            return this.vlContent;
+        }
+
+    }
+
     public static class CredentialVerifyResponseBodyResultObject extends TeaModel {
         @NameInMap("MaterialInfo")
         public String materialInfo;
@@ -104,6 +134,9 @@ public class CredentialVerifyResponseBody extends TeaModel {
          */
         @NameInMap("VerifyResult")
         public String verifyResult;
+
+        @NameInMap("VlResult")
+        public CredentialVerifyResponseBodyResultObjectVlResult vlResult;
 
         public static CredentialVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             CredentialVerifyResponseBodyResultObject self = new CredentialVerifyResponseBodyResultObject();
@@ -164,6 +197,14 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
         public String getVerifyResult() {
             return this.verifyResult;
+        }
+
+        public CredentialVerifyResponseBodyResultObject setVlResult(CredentialVerifyResponseBodyResultObjectVlResult vlResult) {
+            this.vlResult = vlResult;
+            return this;
+        }
+        public CredentialVerifyResponseBodyResultObjectVlResult getVlResult() {
+            return this.vlResult;
         }
 
     }

@@ -3,7 +3,7 @@ package com.aliyun.cloudauth20190307.models;
 
 import com.aliyun.tea.*;
 
-public class CredentialVerifyRequest extends TeaModel {
+public class CredentialVerifyShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>4601*****</p>
@@ -61,7 +61,7 @@ public class CredentialVerifyRequest extends TeaModel {
     public String isOCR;
 
     @NameInMap("MerchantDetail")
-    public java.util.List<CredentialVerifyRequestMerchantDetail> merchantDetail;
+    public String merchantDetailShrink;
 
     @NameInMap("MerchantId")
     public String merchantId;
@@ -78,12 +78,12 @@ public class CredentialVerifyRequest extends TeaModel {
     @NameInMap("UserName")
     public String userName;
 
-    public static CredentialVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
-        CredentialVerifyRequest self = new CredentialVerifyRequest();
+    public static CredentialVerifyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CredentialVerifyShrinkRequest self = new CredentialVerifyShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CredentialVerifyRequest setCertNum(String certNum) {
+    public CredentialVerifyShrinkRequest setCertNum(String certNum) {
         this.certNum = certNum;
         return this;
     }
@@ -91,7 +91,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.certNum;
     }
 
-    public CredentialVerifyRequest setCredName(String credName) {
+    public CredentialVerifyShrinkRequest setCredName(String credName) {
         this.credName = credName;
         return this;
     }
@@ -99,7 +99,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.credName;
     }
 
-    public CredentialVerifyRequest setCredType(String credType) {
+    public CredentialVerifyShrinkRequest setCredType(String credType) {
         this.credType = credType;
         return this;
     }
@@ -107,7 +107,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.credType;
     }
 
-    public CredentialVerifyRequest setIdentifyNum(String identifyNum) {
+    public CredentialVerifyShrinkRequest setIdentifyNum(String identifyNum) {
         this.identifyNum = identifyNum;
         return this;
     }
@@ -115,7 +115,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.identifyNum;
     }
 
-    public CredentialVerifyRequest setImageContext(String imageContext) {
+    public CredentialVerifyShrinkRequest setImageContext(String imageContext) {
         this.imageContext = imageContext;
         return this;
     }
@@ -123,7 +123,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.imageContext;
     }
 
-    public CredentialVerifyRequest setImageUrl(String imageUrl) {
+    public CredentialVerifyShrinkRequest setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
@@ -131,7 +131,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.imageUrl;
     }
 
-    public CredentialVerifyRequest setIsCheck(String isCheck) {
+    public CredentialVerifyShrinkRequest setIsCheck(String isCheck) {
         this.isCheck = isCheck;
         return this;
     }
@@ -139,7 +139,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.isCheck;
     }
 
-    public CredentialVerifyRequest setIsOCR(String isOCR) {
+    public CredentialVerifyShrinkRequest setIsOCR(String isOCR) {
         this.isOCR = isOCR;
         return this;
     }
@@ -147,15 +147,15 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.isOCR;
     }
 
-    public CredentialVerifyRequest setMerchantDetail(java.util.List<CredentialVerifyRequestMerchantDetail> merchantDetail) {
-        this.merchantDetail = merchantDetail;
+    public CredentialVerifyShrinkRequest setMerchantDetailShrink(String merchantDetailShrink) {
+        this.merchantDetailShrink = merchantDetailShrink;
         return this;
     }
-    public java.util.List<CredentialVerifyRequestMerchantDetail> getMerchantDetail() {
-        return this.merchantDetail;
+    public String getMerchantDetailShrink() {
+        return this.merchantDetailShrink;
     }
 
-    public CredentialVerifyRequest setMerchantId(String merchantId) {
+    public CredentialVerifyShrinkRequest setMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
@@ -163,7 +163,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.merchantId;
     }
 
-    public CredentialVerifyRequest setProductCode(String productCode) {
+    public CredentialVerifyShrinkRequest setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
@@ -171,7 +171,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.productCode;
     }
 
-    public CredentialVerifyRequest setPrompt(String prompt) {
+    public CredentialVerifyShrinkRequest setPrompt(String prompt) {
         this.prompt = prompt;
         return this;
     }
@@ -179,7 +179,7 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.prompt;
     }
 
-    public CredentialVerifyRequest setPromptModel(String promptModel) {
+    public CredentialVerifyShrinkRequest setPromptModel(String promptModel) {
         this.promptModel = promptModel;
         return this;
     }
@@ -187,42 +187,12 @@ public class CredentialVerifyRequest extends TeaModel {
         return this.promptModel;
     }
 
-    public CredentialVerifyRequest setUserName(String userName) {
+    public CredentialVerifyShrinkRequest setUserName(String userName) {
         this.userName = userName;
         return this;
     }
     public String getUserName() {
         return this.userName;
-    }
-
-    public static class CredentialVerifyRequestMerchantDetail extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CredentialVerifyRequestMerchantDetail build(java.util.Map<String, ?> map) throws Exception {
-            CredentialVerifyRequestMerchantDetail self = new CredentialVerifyRequestMerchantDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public CredentialVerifyRequestMerchantDetail setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CredentialVerifyRequestMerchantDetail setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }
