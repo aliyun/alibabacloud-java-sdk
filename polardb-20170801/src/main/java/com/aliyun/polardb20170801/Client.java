@@ -4614,7 +4614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes that are supported by a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, such as the character sets and collations.</p>
+     * <p>Queries attributes such as character sets and collations supported by a database in a PolarDB cluster.</p>
      * 
      * @param request DescribeDBInitializeVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4662,7 +4662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes that are supported by a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, such as the character sets and collations.</p>
+     * <p>Queries attributes such as character sets and collations supported by a database in a PolarDB cluster.</p>
      * 
      * @param request DescribeDBInitializeVariableRequest
      * @return DescribeDBInitializeVariableResponse

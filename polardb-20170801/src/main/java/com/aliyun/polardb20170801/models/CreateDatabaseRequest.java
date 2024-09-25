@@ -54,14 +54,15 @@ public class CreateDatabaseRequest extends TeaModel {
     public String characterSetName;
 
     /**
-     * <p>The language that indicates the collation of the databases that are created.</p>
+     * <p>The language that defines the collation rules in the database.</p>
      * <blockquote>
-     * <ul>
-     * <li>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</li>
-     * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is not supported by PolarDB for MySQL clusters.</li>
-     * </ul>
      * </blockquote>
-     * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
+     * <ul>
+     * <li><p>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</p>
+     * </li>
+     * <li><p>This parameter is required for a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster. To view the valid values of this parameter, perform the following steps: Log on to the PolarDB console and click the ID of the cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>C</p>

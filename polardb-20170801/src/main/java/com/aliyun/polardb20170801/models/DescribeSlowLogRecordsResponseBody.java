@@ -207,6 +207,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        @NameInMap("SQLHash")
+        public String SQLHash;
+
         /**
          * <p>The SQL statement that is executed in the query.</p>
          */
@@ -288,6 +291,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public Long getReturnRowCounts() {
             return this.returnRowCounts;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setSQLHash(String SQLHash) {
+            this.SQLHash = SQLHash;
+            return this;
+        }
+        public String getSQLHash() {
+            return this.SQLHash;
         }
 
         public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setSQLText(String SQLText) {
