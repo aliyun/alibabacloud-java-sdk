@@ -607,12 +607,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>凭证核验</p>
      * 
-     * @param request CredentialVerifyRequest
+     * @param tmpReq CredentialVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CredentialVerifyResponse
      */
-    public CredentialVerifyResponse credentialVerifyWithOptions(CredentialVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CredentialVerifyResponse credentialVerifyWithOptions(CredentialVerifyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CredentialVerifyShrinkRequest request = new CredentialVerifyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.merchantDetail)) {
+            request.merchantDetailShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.merchantDetail, "MerchantDetail", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.certNum)) {
             query.put("CertNum", request.certNum);
@@ -642,8 +648,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsOCR", request.isOCR);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantDetailShrink)) {
+            query.put("MerchantDetail", request.merchantDetailShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.merchantId)) {
             query.put("MerchantId", request.merchantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            query.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptModel)) {
+            query.put("PromptModel", request.promptModel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
@@ -1451,6 +1473,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>新增实人白名单</p>
+     * 
+     * @param request InsertWhiteListSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InsertWhiteListSettingResponse
+     */
+    public InsertWhiteListSettingResponse insertWhiteListSettingWithOptions(InsertWhiteListSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certNo)) {
+            query.put("CertNo", request.certNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validDay)) {
+            query.put("ValidDay", request.validDay);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InsertWhiteListSetting"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InsertWhiteListSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增实人白名单</p>
+     * 
+     * @param request InsertWhiteListSettingRequest
+     * @return InsertWhiteListSettingResponse
+     */
+    public InsertWhiteListSettingResponse insertWhiteListSetting(InsertWhiteListSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.insertWhiteListSettingWithOptions(request, runtime);
+    }
+
+    /**
      * @param request LivenessFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return LivenessFaceVerifyResponse
@@ -1850,6 +1936,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDeviceInfoResponse modifyDeviceInfo(ModifyDeviceInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDeviceInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询实人白名单配置</p>
+     * 
+     * @param request PageQueryWhiteListSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PageQueryWhiteListSettingResponse
+     */
+    public PageQueryWhiteListSettingResponse pageQueryWhiteListSettingWithOptions(PageQueryWhiteListSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certNo)) {
+            query.put("CertNo", request.certNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validEndDate)) {
+            query.put("ValidEndDate", request.validEndDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validStartDate)) {
+            query.put("ValidStartDate", request.validStartDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PageQueryWhiteListSetting"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PageQueryWhiteListSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询实人白名单配置</p>
+     * 
+     * @param request PageQueryWhiteListSettingRequest
+     * @return PageQueryWhiteListSettingResponse
+     */
+    public PageQueryWhiteListSettingResponse pageQueryWhiteListSetting(PageQueryWhiteListSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pageQueryWhiteListSettingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实人白名单</p>
+     * 
+     * @param tmpReq RemoveWhiteListSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveWhiteListSettingResponse
+     */
+    public RemoveWhiteListSettingResponse removeWhiteListSettingWithOptions(RemoveWhiteListSettingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RemoveWhiteListSettingShrinkRequest request = new RemoveWhiteListSettingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            query.put("Ids", request.idsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveWhiteListSetting"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveWhiteListSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实人白名单</p>
+     * 
+     * @param request RemoveWhiteListSettingRequest
+     * @return RemoveWhiteListSettingResponse
+     */
+    public RemoveWhiteListSettingResponse removeWhiteListSetting(RemoveWhiteListSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeWhiteListSettingWithOptions(request, runtime);
     }
 
     /**
