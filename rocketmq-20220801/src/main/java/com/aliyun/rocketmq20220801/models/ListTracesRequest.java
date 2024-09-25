@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTracesRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-05-19 10:10:09</p>
      */
@@ -26,6 +28,8 @@ public class ListTracesRequest extends TeaModel {
     public String messageKey;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +37,8 @@ public class ListTracesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +46,8 @@ public class ListTracesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>MESSAGE_ID</p>
      */
@@ -47,6 +55,8 @@ public class ListTracesRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-05-10 10:42:11</p>
      */
