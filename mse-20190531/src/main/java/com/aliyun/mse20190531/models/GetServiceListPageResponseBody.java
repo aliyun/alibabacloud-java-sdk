@@ -129,6 +129,9 @@ public class GetServiceListPageResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
         /**
          * <p>The service version.</p>
          * 
@@ -189,6 +192,14 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public GetServiceListPageResponseBodyDataResult setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
         }
 
         public GetServiceListPageResponseBodyDataResult setVersion(String version) {
