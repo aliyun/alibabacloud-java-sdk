@@ -73,7 +73,7 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The code of the version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</p>
+     * <p>The code of the db version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</p>
      * 
      * <strong>example:</strong>
      * <p>20230707</p>
@@ -81,6 +81,12 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     @NameInMap("TargetDBRevisionVersionCode")
     public String targetDBRevisionVersionCode;
 
+    /**
+     * <p>The code of the proxy version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20240702</p>
+     */
     @NameInMap("TargetProxyRevisionVersionCode")
     public String targetProxyRevisionVersionCode;
 
@@ -100,10 +106,10 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     public String upgradeLabel;
 
     /**
-     * <p>The upgrade policy. Valid values:</p>
+     * <p>The engine version upgrade policy. Valid values:</p>
      * <ul>
      * <li><strong>HOT</strong>: hot upgrade.</li>
-     * <li><strong>COLD</strong>: cold upgrade. Only PolarDB for MySQL Cluster Edition that runs MySQL 8.0 supports this upgrade method.</li>
+     * <li><strong>COLD</strong>: cold upgrade. Only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.</li>
      * </ul>
      * 
      * <strong>example:</strong>
