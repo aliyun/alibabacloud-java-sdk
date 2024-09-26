@@ -28,6 +28,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新闻播报-抽取分类获取播报热点</p>
+     * 
+     * @param request GenerateBroadcastNewsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateBroadcastNewsResponse
+     */
+    public GenerateBroadcastNewsResponse generateBroadcastNewsWithOptions(String workspaceId, GenerateBroadcastNewsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateBroadcastNews"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/GenerateBroadcastNews"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateBroadcastNewsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新闻播报-抽取分类获取播报热点</p>
+     * 
+     * @param request GenerateBroadcastNewsRequest
+     * @return GenerateBroadcastNewsResponse
+     */
+    public GenerateBroadcastNewsResponse generateBroadcastNews(String workspaceId, GenerateBroadcastNewsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.generateBroadcastNewsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>轻应用-新闻播报-获取热点话题摘要列表</p>
      * 
      * @param request ListHotTopicSummariesRequest
@@ -87,6 +134,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listHotTopicSummariesWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>评论生成服务</p>
+     * 
+     * @param request RunCommentGenerationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunCommentGenerationResponse
+     */
+    public RunCommentGenerationResponse runCommentGenerationWithOptions(String workspaceId, RunCommentGenerationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
+            body.put("length", request.length);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numComments)) {
+            body.put("numComments", request.numComments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceMaterial)) {
+            body.put("sourceMaterial", request.sourceMaterial);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.style)) {
+            body.put("style", request.style);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunCommentGeneration"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/runCommentGeneration"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunCommentGenerationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>评论生成服务</p>
+     * 
+     * @param request RunCommentGenerationRequest
+     * @return RunCommentGenerationResponse
+     */
+    public RunCommentGenerationResponse runCommentGeneration(String workspaceId, RunCommentGenerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runCommentGenerationWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -446,8 +552,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("originalSessionId", request.originalSessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotInterval)) {
+            body.put("snapshotInterval", request.snapshotInterval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoExtraInfo)) {
+            body.put("videoExtraInfo", request.videoExtraInfo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoModelCustomPromptTemplate)) {

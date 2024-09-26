@@ -31,12 +31,18 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
     @NameInMap("originalSessionId")
     public String originalSessionId;
 
+    @NameInMap("snapshotInterval")
+    public Double snapshotInterval;
+
     /**
      * <strong>example:</strong>
      * <p>a3d1c2ac-f086-4a21-9069-f5631542f5a2</p>
      */
     @NameInMap("taskId")
     public String taskId;
+
+    @NameInMap("videoExtraInfo")
+    public String videoExtraInfo;
 
     @NameInMap("videoModelCustomPromptTemplate")
     public String videoModelCustomPromptTemplate;
@@ -100,12 +106,28 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.originalSessionId;
     }
 
+    public RunVideoAnalysisShrinkRequest setSnapshotInterval(Double snapshotInterval) {
+        this.snapshotInterval = snapshotInterval;
+        return this;
+    }
+    public Double getSnapshotInterval() {
+        return this.snapshotInterval;
+    }
+
     public RunVideoAnalysisShrinkRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public RunVideoAnalysisShrinkRequest setVideoExtraInfo(String videoExtraInfo) {
+        this.videoExtraInfo = videoExtraInfo;
+        return this;
+    }
+    public String getVideoExtraInfo() {
+        return this.videoExtraInfo;
     }
 
     public RunVideoAnalysisShrinkRequest setVideoModelCustomPromptTemplate(String videoModelCustomPromptTemplate) {
