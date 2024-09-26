@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorDataRequest extends TeaModel {
     /**
-     * <p>The end of the time range for the query. Supported formats:</p>
+     * <p>The end of the time range to query. The following formats are supported:</p>
      * <ul>
-     * <li>UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</li>
-     * <li>Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</li>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</li>
+     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSiteMonitorDataRequest extends TeaModel {
     public Integer length;
 
     /**
-     * <p>The name of the metric. Valid values:</p>
+     * <p>The metric name. Valid values:</p>
      * <ul>
      * <li>Availability</li>
      * <li>ResponseTime</li>
@@ -41,7 +41,7 @@ public class DescribeSiteMonitorDataRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The pagination cursor.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>49f7b317-7645-4cc9-94fd-ea42e5220930ea42e5220930ea42e522****</p>
@@ -50,7 +50,7 @@ public class DescribeSiteMonitorDataRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.</p>
+     * <p>The statistical period. The value is an integral multiple of 60. Unit: seconds.</p>
      * <blockquote>
      * <p> The default value equals the minimum interval at which detection requests are sent to the monitored address.</p>
      * </blockquote>
@@ -65,10 +65,10 @@ public class DescribeSiteMonitorDataRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range for the query. Supported formats:</p>
+     * <p>The start of the time range to query. The following formats are supported:</p>
      * <ul>
-     * <li>UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</li>
-     * <li>Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</li>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</li>
+     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeSiteMonitorDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the site monitoring task.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

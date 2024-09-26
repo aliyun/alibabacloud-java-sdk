@@ -352,6 +352,7 @@ public class PutResourceMetricRuleRequest extends TeaModel {
          * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
          * <li>LessThanThreshold: less than the threshold</li>
          * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>EqualToThreshold: equal to the threshold</li>
          * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
          * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
          * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
@@ -454,6 +455,7 @@ public class PutResourceMetricRuleRequest extends TeaModel {
          * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
          * <li>LessThanThreshold: less than the threshold</li>
          * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>EqualToThreshold: equal to the threshold</li>
          * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
          * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
          * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
@@ -556,6 +558,7 @@ public class PutResourceMetricRuleRequest extends TeaModel {
          * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
          * <li>LessThanThreshold: less than the threshold</li>
          * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>EqualToThreshold: equal to the threshold</li>
          * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
          * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
          * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
@@ -699,6 +702,7 @@ public class PutResourceMetricRuleRequest extends TeaModel {
          * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
          * <li>LessThanThreshold: less than the threshold</li>
          * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>EqualToThreshold: equal to the threshold</li>
          * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
          * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
          * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>

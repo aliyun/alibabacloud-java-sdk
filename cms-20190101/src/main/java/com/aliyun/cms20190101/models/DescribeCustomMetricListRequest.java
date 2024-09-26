@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomMetricListRequest extends TeaModel {
     /**
-     * <p>The dimensions that specify the resources for which you want to query custom metrics.</p>
+     * <p>The dimensions based on which the resources are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>{sampleName1=value1&amp;sampleName2=value2}</p>
@@ -15,7 +15,7 @@ public class DescribeCustomMetricListRequest extends TeaModel {
 
     /**
      * <p>The ID of the application group.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <p>For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>7378****</p>
@@ -24,7 +24,7 @@ public class DescribeCustomMetricListRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported custom metrics.</p>
+     * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</p>
      * 
      * <strong>example:</strong>
      * <p>97c25982d9745a231276bff27469****</p>
@@ -42,7 +42,7 @@ public class DescribeCustomMetricListRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeCustomMetricListRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Pages start from page 1. Default value: 10.</p>
      * 
      * <strong>example:</strong>

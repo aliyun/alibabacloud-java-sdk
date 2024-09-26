@@ -7,7 +7,7 @@ public class DescribeContactListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DescribeContactListResponseBody extends TeaModel {
     public DescribeContactListResponseBodyContacts contacts;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>The Request is not authorization.</p>
@@ -32,7 +32,7 @@ public class DescribeContactListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</p>
@@ -41,10 +41,10 @@ public class DescribeContactListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeContactListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -144,7 +144,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         public String mail;
 
         /**
-         * <p>The phone number of the alert contact.</p>
+         * <p>The phone number of the alert contac.</p>
          * 
          * <strong>example:</strong>
          * <p>1333333****</p>
@@ -196,7 +196,7 @@ public class DescribeContactListResponseBody extends TeaModel {
          * <p>The status of the TradeManager ID.</p>
          * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
          * <blockquote>
-         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -218,8 +218,8 @@ public class DescribeContactListResponseBody extends TeaModel {
         /**
          * <p>The status of the email address. Valid values:</p>
          * <ul>
-         * <li>PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.</li>
-         * <li>OK: The email address is activated and can receive alert notifications.</li>
+         * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
+         * <li>OK: The phone number is activated and can receive alert notifications.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,7 +235,7 @@ public class DescribeContactListResponseBody extends TeaModel {
          * <li>OK: The phone number is activated and can receive alert notifications.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -317,7 +317,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         public DescribeContactListResponseBodyContactsContactChannelsState channelsState;
 
         /**
-         * <p>The alert contact groups.</p>
+         * <p>None.</p>
          */
         @NameInMap("ContactGroups")
         public DescribeContactListResponseBodyContactsContactContactGroups contactGroups;
@@ -333,7 +333,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the alert contact.</p>
+         * <p>The description.</p>
          */
         @NameInMap("Desc")
         public String desc;

@@ -346,7 +346,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String httpResponseMatchContent;
 
         /**
-         * <p>The URI that you want to monitor. This parameter must be specified when TaskType is set to HTTP.</p>
+         * <p>The URI that you want to monitor. This parameter is required if the TaskType parameter is set to HTTP or Telnet.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -369,7 +369,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         /**
          * <p>The domain name or IP address that you want to monitor.</p>
          * <blockquote>
-         * <p>This parameter must be specified when TaskType is set to PING or TELNET. For more information about how to configure the TaskType parameter, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
+         * <p> This parameter is required if the TaskType parameter is set to PING. For more information about how to set the TaskType parameter, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomMetricListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The responses code.</p>
      * <blockquote>
-     * <p> The value 200 indicates that the call is successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AF425E4-1DEA-54F2-910A-8117C9686140</p>

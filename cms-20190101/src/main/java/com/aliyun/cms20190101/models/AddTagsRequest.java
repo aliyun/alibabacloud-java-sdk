@@ -57,11 +57,11 @@ public class AddTagsRequest extends TeaModel {
 
     public static class AddTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key.</p>
          * <p>Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.</p>
          * <p>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
          * <blockquote>
-         * <p>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * <p> The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -72,11 +72,11 @@ public class AddTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
          * <p>Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.</p>
-         * <p>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagKeyList</a>.</p>
+         * <p>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</p>
          * <blockquote>
-         * <p>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * <p> The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

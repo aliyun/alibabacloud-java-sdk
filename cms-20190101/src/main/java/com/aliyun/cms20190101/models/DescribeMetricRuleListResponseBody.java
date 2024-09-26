@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleListResponseBody extends TeaModel {
     /**
-     * <p>The details of the alert rules.</p>
+     * <p>The alert rules.</p>
      */
     @NameInMap("Alarms")
     public DescribeMetricRuleListResponseBodyAlarms alarms;
@@ -285,11 +285,11 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         public String expressionRaw;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li>Critical</li>
-         * <li>Warn</li>
-         * <li>Info</li>
+         * <li>CRITICAL</li>
+         * <li>WARN</li>
+         * <li>INFO</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -867,11 +867,11 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations annotations;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li>Critical</li>
-         * <li>Warn</li>
-         * <li>Info</li>
+         * <li>CRITICAL</li>
+         * <li>WARN</li>
+         * <li>INFO</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1097,9 +1097,9 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         public String period;
 
         /**
-         * <p>The Prometheus alert rule.</p>
+         * <p>The Prometheus alerts.</p>
          * <blockquote>
-         * <p> This parameter is required only when you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
+         * <p> This parameter is required only if you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
          * </blockquote>
          */
         @NameInMap("Prometheus")

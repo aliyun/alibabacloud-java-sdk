@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleCountResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The responses code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The Request is not authorization.</p>
@@ -32,7 +32,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
     public DescribeMetricRuleCountResponseBodyMetricRuleCount metricRuleCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FF38D33A-67C1-40EB-AB65-FAEE51EDB644</p>
@@ -41,10 +41,10 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

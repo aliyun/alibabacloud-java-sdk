@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The responses code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call is successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The statistics of the specified metric.</p>
+     * <p>The statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -35,7 +35,7 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3AD2724D-E317-4BFB-B422-D6691D071BE1</p>
@@ -44,10 +44,10 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -3699,11 +3699,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call the DescribeMetricList operation to query the metrics of a cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>.</p>
+     * <p> You can call the DescribeMetricList operation to query the metrics of cloud services. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the reported custom metrics of a cloud service.</p>
+     * <p>Queries the reported monitoring data.</p>
      * 
      * @param request DescribeCustomMetricListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3756,11 +3756,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call the DescribeMetricList operation to query the metrics of a cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>.</p>
+     * <p> You can call the DescribeMetricList operation to query the metrics of cloud services. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the reported custom metrics of a cloud service.</p>
+     * <p>Queries the reported monitoring data.</p>
      * 
      * @param request DescribeCustomMetricListRequest
      * @return DescribeCustomMetricListResponse
@@ -6367,6 +6367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the fine-grained monitoring data of a site monitoring task.</p>
+     * 
      * @param request DescribeSiteMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSiteMonitorDataResponse
@@ -6424,6 +6427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the fine-grained monitoring data of a site monitoring task.</p>
+     * 
      * @param request DescribeSiteMonitorDataRequest
      * @return DescribeSiteMonitorDataResponse
      */
@@ -6665,6 +6671,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the quotas and version of site monitoring.</p>
+     * 
      * @param request DescribeSiteMonitorQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSiteMonitorQuotaResponse
@@ -6687,6 +6696,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the quotas and version of site monitoring.</p>
+     * 
      * @param request DescribeSiteMonitorQuotaRequest
      * @return DescribeSiteMonitorQuotaResponse
      */
@@ -6697,7 +6709,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to query the statistics of the <code>Availability</code> metric for a site monitoring task whose ID is <code>ef4cdc8b-9dc7-43e7-810e-f950e56c****</code>. The result indicates that the availability rate of the site is <code>100%</code>.</p>
+     * <p>This topic provides an example on how to query the statistics of the <code>Availability</code> metric for a site monitoring task whose ID is <code>ef4cdc8b-9dc7-43e7-810e-f950e56c****</code>. The result indicates that the availability rate of the site is <code>100%</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics of a specified metric for a specified site monitoring task.</p>
      * 
      * @param request DescribeSiteMonitorStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6741,7 +6756,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to query the statistics of the <code>Availability</code> metric for a site monitoring task whose ID is <code>ef4cdc8b-9dc7-43e7-810e-f950e56c****</code>. The result indicates that the availability rate of the site is <code>100%</code>.</p>
+     * <p>This topic provides an example on how to query the statistics of the <code>Availability</code> metric for a site monitoring task whose ID is <code>ef4cdc8b-9dc7-43e7-810e-f950e56c****</code>. The result indicates that the availability rate of the site is <code>100%</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics of a specified metric for a specified site monitoring task.</p>
      * 
      * @param request DescribeSiteMonitorStatisticsRequest
      * @return DescribeSiteMonitorStatisticsResponse
@@ -6749,6 +6767,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSiteMonitorStatisticsResponse describeSiteMonitorStatistics(DescribeSiteMonitorStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSiteMonitorStatisticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询拨测探测节点列表</p>
+     * 
+     * @param request DescribeSyntheticProbeListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSyntheticProbeListResponse
+     */
+    public DescribeSyntheticProbeListResponse describeSyntheticProbeListWithOptions(DescribeSyntheticProbeListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idcProbe)) {
+            query.put("IdcProbe", request.idcProbe);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4)) {
+            query.put("Ipv4", request.ipv4);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6)) {
+            query.put("Ipv6", request.ipv6);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isp)) {
+            query.put("Isp", request.isp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lmProbe)) {
+            query.put("LmProbe", request.lmProbe);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mbProbe)) {
+            query.put("MbProbe", request.mbProbe);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.viewAll)) {
+            query.put("ViewAll", request.viewAll);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSyntheticProbeList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSyntheticProbeListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询拨测探测节点列表</p>
+     * 
+     * @param request DescribeSyntheticProbeListRequest
+     * @return DescribeSyntheticProbeListResponse
+     */
+    public DescribeSyntheticProbeListResponse describeSyntheticProbeList(DescribeSyntheticProbeListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSyntheticProbeListWithOptions(request, runtime);
     }
 
     /**
@@ -7277,6 +7367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables alert rules.</p>
+     * 
      * @param request DisableMetricRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableMetricRulesResponse
@@ -7306,6 +7399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables alert rules.</p>
+     * 
      * @param request DisableMetricRulesRequest
      * @return DisableMetricRulesResponse
      */
@@ -7315,6 +7411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables site monitoring tasks.</p>
+     * 
      * @param request DisableSiteMonitorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableSiteMonitorsResponse
@@ -7344,6 +7443,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables site monitoring tasks.</p>
+     * 
      * @param request DisableSiteMonitorsRequest
      * @return DisableSiteMonitorsResponse
      */
@@ -7559,6 +7661,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables site monitoring tasks.</p>
+     * 
      * @param request EnableSiteMonitorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableSiteMonitorsResponse
@@ -7588,6 +7693,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables site monitoring tasks.</p>
+     * 
      * @param request EnableSiteMonitorsRequest
      * @return EnableSiteMonitorsResponse
      */
@@ -9487,7 +9595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an alert rule for a metric of a resource.</p>
+     * <p>Configures an alert rule.</p>
      * 
      * @param tmpReq PutResourceMetricRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9600,7 +9708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an alert rule for a metric of a resource.</p>
+     * <p>Configures an alert rule.</p>
      * 
      * @param request PutResourceMetricRuleRequest
      * @return PutResourceMetricRuleResponse

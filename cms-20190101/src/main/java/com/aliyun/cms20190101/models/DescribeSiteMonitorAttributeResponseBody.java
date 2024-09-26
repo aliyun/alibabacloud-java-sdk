@@ -563,6 +563,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("IspName")
         public String ispName;
 
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity build(java.util.Map<String, ?> map) throws Exception {
             DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity();
             return TeaModel.build(map, self);
@@ -598,6 +601,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getIspName() {
             return this.ispName;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -1042,6 +1053,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("dns_type")
         public String dnsType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("empty_message")
         public Boolean emptyMessage;
 
@@ -1098,6 +1113,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("http_method")
         public String httpMethod;
 
+        /**
+         * <p>ip_network indicates the network type of the task. Valid values: v4, v6, and auto. Default value: v4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v4</p>
+         */
         @NameInMap("ip_network")
         public String ipNetwork;
 
@@ -1154,6 +1175,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer pingPort;
 
         /**
+         * <p>The PING protocol type. Valid values:</p>
+         * <ul>
+         * <li>icmp</li>
+         * <li>tcp</li>
+         * <li>udp</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>icmp,tcp,udp</p>
          */
@@ -1178,9 +1206,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <p>Indicates whether the Quick UDP Internet Connections (QUIC) protocol is used for browser detection. Valid values: true false Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("quic_enabled")
         public Boolean quicEnabled;
 
+        /**
+         * <p>The sites for which the QUIC protocol is forcibly used.</p>
+         */
         @NameInMap("quic_target")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonQuicTarget quicTarget;
 
@@ -1234,6 +1271,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         @NameInMap("retry_delay")
         public Integer retryDelay;
+
+        @NameInMap("screen_shot")
+        public Boolean screenShot;
 
         /**
          * <strong>example:</strong>
@@ -1605,6 +1645,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.retryDelay;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setScreenShot(Boolean screenShot) {
+            this.screenShot = screenShot;
+            return this;
+        }
+        public Boolean getScreenShot() {
+            return this.screenShot;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setStrictMode(Boolean strictMode) {
             this.strictMode = strictMode;
             return this;
@@ -1664,6 +1712,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig extends TeaModel {
+        @NameInMap("Region")
+        public String region;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -1676,6 +1727,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig setSecurityGroupId(String securityGroupId) {

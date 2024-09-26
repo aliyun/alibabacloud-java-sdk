@@ -40,6 +40,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public Boolean enableSubscribeEvent;
 
     /**
+     * <p>The conditional expressions used to create an application group based on the tag.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MatchExpress")
@@ -176,7 +177,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public String tagName;
 
         /**
-         * <p>The tag values of the cloud resources. In this example, set the value of N to 1.</p>
+         * <p>The tag values of the cloud resources. Set the value of N to 1.</p>
          * <blockquote>
          * <p> If you set the <code>MatchExpress.N.TagValueMatchFunction</code> parameter, you must also set the <code>MatchExpress.N.TagValue</code> parameter.</p>
          * </blockquote>
@@ -188,7 +189,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public String tagValue;
 
         /**
-         * <p>The method that is used to match the tag values of the cloud resources. In this example, set the value of N to 1. Valid values:</p>
+         * <p>The method that is used to match the tag values of the cloud resources. Set the value of N to 1. Valid values:</p>
          * <ul>
          * <li>contains: contains</li>
          * <li>startWith: starts with a prefix</li>

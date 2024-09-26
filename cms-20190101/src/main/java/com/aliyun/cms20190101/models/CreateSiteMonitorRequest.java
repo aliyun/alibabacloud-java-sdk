@@ -79,8 +79,8 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the site monitoring task.</p>
-     * <p>Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+     * <p>The protocol that is used by the site monitoring task.</p>
+     * <p>Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
