@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlTablesRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeAdbMySqlTablesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>

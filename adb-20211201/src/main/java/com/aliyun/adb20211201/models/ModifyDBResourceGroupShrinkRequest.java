@@ -88,10 +88,10 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public Integer maxClusterCount;
 
     /**
-     * <p>The maximum amount of reserved computing resources. Unit: ACU.</p>
+     * <p>The maximum amount of reserved computing resources.</p>
      * <ul>
-     * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16 ACUs.</li>
-     * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8 ACUs.</li>
+     * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16ACU.</li>
+     * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8ACU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public Integer minClusterCount;
 
     /**
-     * <p>The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).</p>
+     * <p>The minimum amount of reserved computing resources.</p>
      * <ul>
      * <li>If the GroupType parameter is set to Interactive, set the value to 16ACU.</li>
      * <li>If GroupType is set to Job, set the value to 0ACU.</li>

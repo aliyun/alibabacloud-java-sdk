@@ -7,7 +7,7 @@ public class DescribeElasticPlansRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,8 +32,8 @@ public class DescribeElasticPlansRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the scaling plans that are immediately enabled after the plans are created. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,10 @@ public class DescribeElasticPlansRequest extends TeaModel {
 
     /**
      * <p>The type of the scaling plan. Valid values:</p>
-     * <p>EXECUTOR: the interactive resource group type, which specifies the computing resource type. WORKER: the EIU type.</p>
+     * <ul>
+     * <li><strong>EXECUTOR</strong>: the interactive resource group type, which specifies the computing resource type.</li>
+     * <li><strong>WORKER</strong>: the EIU type.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>EXECUTOR</p>

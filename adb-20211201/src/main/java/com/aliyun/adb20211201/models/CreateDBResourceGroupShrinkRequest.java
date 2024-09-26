@@ -73,7 +73,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
      * <li><strong>Job</strong></li>
      * </ul>
      * <blockquote>
-     * <p>For information about resource groups of Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+     * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -93,14 +93,14 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public Integer maxClusterCount;
 
     /**
-     * <p>The maximum reserved computing resources. Unit: ACU.</p>
+     * <p>The maximum reserved computing resources.</p>
      * <ul>
-     * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16 ACUs.</li>
-     * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8 ACUs.</li>
+     * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16ACU.</li>
+     * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8ACU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>48</p>
+     * <p>48ACU</p>
      */
     @NameInMap("MaxComputeResource")
     public String maxComputeResource;
@@ -115,14 +115,14 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public Integer minClusterCount;
 
     /**
-     * <p>The minimum reserved computing resources. Unit: AnalyticDB Compute Units (ACUs).</p>
+     * <p>The minimum reserved computing resources.</p>
      * <ul>
-     * <li>When GroupType is set to Interactive, set this parameter to 16 ACUs.</li>
-     * <li>When GroupType is set to Job, set this parameter to 0 ACUs.</li>
+     * <li>When GroupType is set to Interactive, set this parameter to 16ACU.</li>
+     * <li>When GroupType is set to Job, set this parameter to 0ACU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>0ACU</p>
      */
     @NameInMap("MinComputeResource")
     public String minComputeResource;
