@@ -39,7 +39,7 @@ public class DescribeContactListRequest extends TeaModel {
     public String contactName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeContactListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Default value: 100.</p>
      * 
      * <strong>example:</strong>

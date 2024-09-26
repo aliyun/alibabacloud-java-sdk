@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
     /**
-     * <p>The name of the metric. Valid values:</p>
+     * <p>The metric name. Valid values:</p>
      * <ul>
      * <li>Availability</li>
      * <li>ErrorRate</li>
@@ -23,7 +23,7 @@ public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The timestamp that specifies the beginning of the time range to query.</p>
+     * <p>The beginning of the time range to query.</p>
      * <p>Unit: milliseconds. The default value is 1 hour ahead of the current time.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
 
     /**
      * <p>The statistical period.</p>
-     * <p>Unit: minutes. Default value: 1440 (1 day). Maximum value: 43200 (30 days).</p>
+     * <p>Unit: minutes. Default value: 1440 (one day). Maximum value: 43200 (30 days).</p>
      * 
      * <strong>example:</strong>
      * <p>1440</p>

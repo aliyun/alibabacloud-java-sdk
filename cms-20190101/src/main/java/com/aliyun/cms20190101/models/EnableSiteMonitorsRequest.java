@@ -8,7 +8,7 @@ public class EnableSiteMonitorsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the site monitoring tasks. Separate multiple instance IDs with commas (,).</p>
+     * <p>The ID of the site monitoring task. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

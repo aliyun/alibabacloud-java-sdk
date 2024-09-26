@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleCountRequest extends TeaModel {
     /**
-     * <p>The name of the metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu_total</p>
@@ -14,7 +14,7 @@ public class DescribeMetricRuleCountRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The namespace of the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>

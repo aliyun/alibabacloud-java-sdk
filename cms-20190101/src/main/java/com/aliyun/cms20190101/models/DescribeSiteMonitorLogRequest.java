@@ -5,20 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorLogRequest extends TeaModel {
     /**
-     * <p>浏览器类型。</p>
-     * 
      * <strong>example:</strong>
      * <p>Chrome</p>
      */
     @NameInMap("Browser")
     public String browser;
 
-    /**
-     * <p>该参数已废弃，无需关注。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("BrowserInfo")
     public String browserInfo;
 
@@ -32,8 +24,6 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String city;
 
     /**
-     * <p>设备类型（模拟屏幕大小类型）。</p>
-     * 
      * <strong>example:</strong>
      * <p>laptop</p>
      */

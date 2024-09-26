@@ -351,7 +351,7 @@ public class CreateHostAvailabilityRequest extends TeaModel {
         public String httpResponseMatchContent;
 
         /**
-         * <p>The URI that you want to monitor. This parameter must be specified when TaskType is set to HTTP.</p>
+         * <p>The URI that you want to monitor. This parameter is required if the TaskType parameter is set to HTTP or Telnet.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -374,7 +374,7 @@ public class CreateHostAvailabilityRequest extends TeaModel {
         /**
          * <p>The domain name or IP address that you want to monitor.</p>
          * <blockquote>
-         * <p>This parameter must be specified when TaskType is set to PING or TELNET.</p>
+         * <p> This parameter is required if the TaskType parameter is set to PING.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

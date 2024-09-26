@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleResourcesRequest extends TeaModel {
     /**
-     * <p>The resources to be disassociated from the alert rule.</p>
+     * <p>The resources that are associated with the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
