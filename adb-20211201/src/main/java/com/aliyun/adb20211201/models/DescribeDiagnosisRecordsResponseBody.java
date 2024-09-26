@@ -96,6 +96,36 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties self = new DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeDiagnosisRecordsResponseBodyQuerys extends TeaModel {
         /**
          * <p>The source IP address.</p>
@@ -180,6 +210,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
          */
         @NameInMap("ProcessId")
         public String processId;
+
+        @NameInMap("QueryProperties")
+        public java.util.List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> queryProperties;
 
         /**
          * <p>The amount of time that is consumed for queuing. Unit: milliseconds.</p>
@@ -397,6 +430,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
         public String getProcessId() {
             return this.processId;
+        }
+
+        public DescribeDiagnosisRecordsResponseBodyQuerys setQueryProperties(java.util.List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> queryProperties) {
+            this.queryProperties = queryProperties;
+            return this;
+        }
+        public java.util.List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> getQueryProperties() {
+            return this.queryProperties;
         }
 
         public DescribeDiagnosisRecordsResponseBodyQuerys setQueueTime(Long queueTime) {

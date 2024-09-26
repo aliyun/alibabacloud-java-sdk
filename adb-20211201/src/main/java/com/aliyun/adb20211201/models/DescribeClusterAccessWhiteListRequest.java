@@ -14,6 +14,9 @@ public class DescribeClusterAccessWhiteListRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -28,6 +31,14 @@ public class DescribeClusterAccessWhiteListRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeClusterAccessWhiteListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeClusterAccessWhiteListRequest setResourceOwnerAccount(String resourceOwnerAccount) {

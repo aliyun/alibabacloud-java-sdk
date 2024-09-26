@@ -14,7 +14,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about the cluster resource usage.</p>
+     * <p>The queried resource usage.</p>
      */
     @NameInMap("Data")
     public DescribeClusterResourceDetailResponseBodyData data;
@@ -101,7 +101,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         public Integer maxClusterCount;
 
         /**
-         * <p>The maximum amount of reserved computing resources. Unit: ACUs.</p>
+         * <p>The maximum amount of reserved computing resources.</p>
          * 
          * <strong>example:</strong>
          * <p>128ACU</p>
@@ -119,7 +119,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         public Integer minClusterCount;
 
         /**
-         * <p>The minimum amount of reserved computing resources. Unit: ACUs.</p>
+         * <p>The minimum amount of reserved computing resources.</p>
          * 
          * <strong>example:</strong>
          * <p>16ACU</p>
@@ -308,7 +308,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         public String computeResource;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-adbxxxxx</p>

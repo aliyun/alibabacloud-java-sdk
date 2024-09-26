@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
      * <li><strong>Job</strong></li>
      * </ul>
      * <blockquote>
-     * <p>For information about resource groups of Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+     * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
     /**
-     * <p>The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+     * <p>The reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
      * <blockquote>
      * <p> This parameter must be specified with a unit.</p>
      * </blockquote>
@@ -49,6 +49,13 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <strong>example:</strong>
+     * <p>LegacyForm</p>
+     */
+    @NameInMap("ProductForm")
+    public String productForm;
+
+    /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
@@ -70,7 +77,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+     * <p>The reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
      * <blockquote>
      * <p> This parameter must be specified with a unit.</p>
      * </blockquote>
@@ -124,6 +131,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBClusterRequest setProductForm(String productForm) {
+        this.productForm = productForm;
+        return this;
+    }
+    public String getProductForm() {
+        return this.productForm;
     }
 
     public ModifyDBClusterRequest setRegionId(String regionId) {

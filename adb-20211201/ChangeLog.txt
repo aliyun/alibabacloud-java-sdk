@@ -1,3 +1,11 @@
+2024-09-26 Version: 2.0.4
+- Update API CreateDBCluster: add param CloneSourceRegionId.
+- Update API CreateDBCluster: update param ProductForm.
+- Update API DescribeClusterAccessWhiteList: add param RegionId.
+- Update API DescribeDiagnosisRecords: update response param.
+- Update API ModifyDBCluster: add param ProductForm.
+
+
 2024-08-20 Version: 2.0.3
 - Update API CreateDBResourceGroup: add param Engine.
 - Update API CreateDBResourceGroup: add param EngineParams.

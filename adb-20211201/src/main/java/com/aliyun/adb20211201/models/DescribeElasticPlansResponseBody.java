@@ -95,8 +95,8 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         /**
          * <p>Indicates whether <strong>Proportional Default Scaling for EIUs</strong> is enabled. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,10 +115,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         public String elasticPlanName;
 
         /**
-         * <p>Indicates whether the scaling plan was immediately enabled after the plan is created. Valid values:</p>
+         * <p>Indicates whether the scaling plan is immediately enabled after the plan is created. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,8 +163,8 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         /**
          * <p>The type of the scaling plan. Valid values:</p>
          * <ul>
-         * <li>EXECUTOR: interactive resource group.</li>
-         * <li>WORKER: EIU.</li>
+         * <li><strong>EXECUTOR</strong>: the interactive resource group type, which specifies the computing resource type.</li>
+         * <li><strong>WORKER</strong>: the EIU type.</li>
          * </ul>
          * 
          * <strong>example:</strong>

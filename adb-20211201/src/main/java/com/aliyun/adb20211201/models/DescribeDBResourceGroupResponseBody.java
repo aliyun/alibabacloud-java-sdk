@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The queried resource group.</p>
+     * <p>The queried resource groups.</p>
      */
     @NameInMap("GroupsInfo")
     public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfo> groupsInfo;
@@ -128,7 +128,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The minimum amount of elastic computing resources. Unit: ACUs.</p>
+         * <p>The minimum amount of elastic computing resources.</p>
          * 
          * <strong>example:</strong>
          * <p>16ACU</p>
@@ -200,7 +200,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public Integer maxClusterCount;
 
         /**
-         * <p>The maximum amount of reserved computing resources. Unit: ACUs.</p>
+         * <p>The maximum amount of reserved computing resources.</p>
          * 
          * <strong>example:</strong>
          * <p>512ACU</p>
@@ -224,7 +224,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public Integer minClusterCount;
 
         /**
-         * <p>The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).</p>
+         * <p>The minimum amount of reserved computing resources.</p>
          * 
          * <strong>example:</strong>
          * <p>0ACU</p>

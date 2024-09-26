@@ -36,7 +36,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer logBackupRetentionPeriod;
 
     /**
-     * <p>The cycle based on which backups are performed. If more than one day of the week are specified, the days of the week are separated by commas (,). Valid value:</p>
+     * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid value:</p>
      * <ul>
      * <li>Monday</li>
      * <li>Tuesday</li>

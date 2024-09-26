@@ -26,7 +26,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The queried SQL pattern.</p>
+     * <p>The queried SQL patterns.</p>
      */
     @NameInMap("PatternDetails")
     public java.util.List<DescribeSQLPatternsResponseBodyPatternDetails> patternDetails;
