@@ -4,9 +4,19 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class EditProhibitedDevicesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("data")
     public Boolean data;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9bc20a5a-b26b-4c28-922a-7cd10b61f96f</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

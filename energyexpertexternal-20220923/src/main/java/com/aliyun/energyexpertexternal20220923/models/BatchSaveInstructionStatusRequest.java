@@ -4,9 +4,17 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class BatchSaveInstructionStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("factoryId")
     public String factoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ib</p>
+     */
     @NameInMap("pKey")
     public String pKey;
 

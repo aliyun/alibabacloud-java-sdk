@@ -4,12 +4,20 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class EditUnfavorableAreaDevicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("factoryId")
     public String factoryId;
 
     @NameInMap("hvacDeviceConfigVOList")
     public java.util.List<EditUnfavorableAreaDevicesRequestHvacDeviceConfigVOList> hvacDeviceConfigVOList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system1</p>
+     */
     @NameInMap("systemId")
     public String systemId;
 
@@ -43,27 +51,59 @@ public class EditUnfavorableAreaDevicesRequest extends TeaModel {
     }
 
     public static class EditUnfavorableAreaDevicesRequestHvacDeviceConfigVOList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>buildingId1</p>
+         */
         @NameInMap("buildingId")
         public String buildingId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id1</p>
+         */
         @NameInMap("deviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name1</p>
+         */
         @NameInMap("deviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("deviceType")
         public String deviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fenceId1</p>
+         */
         @NameInMap("fenceId")
         public String fenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>floorId2</p>
+         */
         @NameInMap("floorId")
         public String floorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("isForbidden")
         public Integer isForbidden;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("isUnfavorableArea")
         public Integer isUnfavorableArea;
 

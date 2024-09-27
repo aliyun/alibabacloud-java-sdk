@@ -4,45 +4,101 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateSystemRunningPlanRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("controlType")
     public Integer controlType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("dateType")
     public Integer dateType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:00:00</p>
+     */
     @NameInMap("earliestStartupTime")
     public String earliestStartupTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-08-30</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("factoryId")
     public String factoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:30:00</p>
+     */
     @NameInMap("latestShutdownTime")
     public String latestShutdownTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>37.1</p>
+     */
     @NameInMap("maxCarbonDioxide")
     public Double maxCarbonDioxide;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25.3</p>
+     */
     @NameInMap("maxTem")
     public Double maxTem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20.1</p>
+     */
     @NameInMap("minTem")
     public Double minTem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("seasonMode")
     public Integer seasonMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-08-21</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system1</p>
+     */
     @NameInMap("systemId")
     public String systemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:30:00</p>
+     */
     @NameInMap("workingEndTime")
     public String workingEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:00:00</p>
+     */
     @NameInMap("workingStartTime")
     public String workingStartTime;
 
