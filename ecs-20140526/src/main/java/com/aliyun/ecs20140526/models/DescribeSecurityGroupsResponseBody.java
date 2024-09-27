@@ -237,6 +237,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
+        @NameInMap("GroupToGroupRuleCount")
+        public Integer groupToGroupRuleCount;
+
         /**
          * <p>The ID of the resource group to which the security group belongs.</p>
          * 
@@ -245,6 +248,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("RuleCount")
+        public Integer ruleCount;
 
         /**
          * <p>The ID of the security group.</p>
@@ -347,12 +353,28 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             return this.ecsCount;
         }
 
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setGroupToGroupRuleCount(Integer groupToGroupRuleCount) {
+            this.groupToGroupRuleCount = groupToGroupRuleCount;
+            return this;
+        }
+        public Integer getGroupToGroupRuleCount() {
+            return this.groupToGroupRuleCount;
+        }
+
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setRuleCount(Integer ruleCount) {
+            this.ruleCount = ruleCount;
+            return this;
+        }
+        public Integer getRuleCount() {
+            return this.ruleCount;
         }
 
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setSecurityGroupId(String securityGroupId) {

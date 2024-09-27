@@ -59,10 +59,6 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork extends TeaModel {
         /**
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * </ul>
          * <blockquote>
          * <p> This parameter is not publicly available.</p>
          * </blockquote>

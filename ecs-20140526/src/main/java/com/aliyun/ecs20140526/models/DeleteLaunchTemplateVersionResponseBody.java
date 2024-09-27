@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
     /**
-     * <p>The versions of the launch template.</p>
+     * <p>The deleted launch template versions.</p>
      */
     @NameInMap("LaunchTemplateVersions")
     public DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersions launchTemplateVersions;

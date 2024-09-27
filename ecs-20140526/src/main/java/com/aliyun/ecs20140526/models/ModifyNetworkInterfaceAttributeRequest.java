@@ -127,6 +127,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
+    @NameInMap("SourceDestCheck")
+    public Boolean sourceDestCheck;
+
     /**
      * <p>The Tx queue depth of the ENI.</p>
      * <p>Take note of the following items:</p>
@@ -264,6 +267,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setSourceDestCheck(Boolean sourceDestCheck) {
+        this.sourceDestCheck = sourceDestCheck;
+        return this;
+    }
+    public Boolean getSourceDestCheck() {
+        return this.sourceDestCheck;
     }
 
     public ModifyNetworkInterfaceAttributeRequest setTxQueueSize(Integer txQueueSize) {

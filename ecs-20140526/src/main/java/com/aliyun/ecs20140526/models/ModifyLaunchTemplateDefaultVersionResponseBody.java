@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLaunchTemplateDefaultVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>. You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+     * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-bp1apo0bbbkuy0rj****</p>

@@ -544,7 +544,9 @@ public class DescribeImagesResponseBody extends TeaModel {
          * <ul>
          * <li>BIOS: Basic Input/Output System (BIOS)</li>
          * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
+         * <li>UEFI-Preferred: BIOS and UEFI</li>
          * </ul>
+         * <p>For information about the image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>BIOS</p>
@@ -788,6 +790,9 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         /**
          * <p>The size of the image. Unit: GiB.</p>
+         * <blockquote>
+         * <p> If the image contains data disk snapshots, this parameter indicates only the size of the system disk snapshot contained in the image.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>60</p>

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskEncryptionByDefaultStatusResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether account-level default encryption of EBS resources is enabled in the region. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +19,8 @@ public class DescribeDiskEncryptionByDefaultStatusResponseBody extends TeaModel 
     public Boolean encrypted;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */

@@ -1011,7 +1011,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          * <p>The private IP address to assign to the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.1.**.**</p>
+         * <p><code>10.1.**.**</code></p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;

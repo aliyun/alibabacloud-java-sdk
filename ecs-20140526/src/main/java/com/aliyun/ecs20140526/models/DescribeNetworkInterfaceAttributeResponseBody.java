@@ -163,7 +163,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      * <p>The private IP address of the ENI.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.1.**.**</p>
+     * <p><code>10.1.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -266,6 +266,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     @NameInMap("SlaveInterfaceSpecification")
     public DescribeNetworkInterfaceAttributeResponseBodySlaveInterfaceSpecification slaveInterfaceSpecification;
+
+    @NameInMap("SourceDestCheck")
+    public Boolean sourceDestCheck;
 
     /**
      * <p>The state of the ENI. Valid values:</p>
@@ -570,6 +573,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         return this.slaveInterfaceSpecification;
     }
 
+    public DescribeNetworkInterfaceAttributeResponseBody setSourceDestCheck(Boolean sourceDestCheck) {
+        this.sourceDestCheck = sourceDestCheck;
+        return this;
+    }
+    public Boolean getSourceDestCheck() {
+        return this.sourceDestCheck;
+    }
+
     public DescribeNetworkInterfaceAttributeResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -640,7 +651,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
-         * <p>116.62.**.**</p>
+         * <p><code>116.62.**.**</code></p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
@@ -1210,7 +1221,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
-         * <p>116.62.**.**</p>
+         * <p><code>116.62.**.**</code></p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
@@ -1262,7 +1273,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>The private IP address of the ENI.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.17.**.**</p>
+         * <p><code>172.17.**.**</code></p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;

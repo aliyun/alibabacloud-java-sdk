@@ -59,7 +59,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
      * <p>To assign secondary private IP addresses to the ENI, you must specify <code>PrivateIpAddress.N</code> or <code>SecondaryPrivateIpAddressCount</code> but not both.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.1.**.**</p>
+     * <p><code>10.1.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;

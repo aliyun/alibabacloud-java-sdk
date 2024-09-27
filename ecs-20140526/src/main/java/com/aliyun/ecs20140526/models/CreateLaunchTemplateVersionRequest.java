@@ -168,7 +168,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5.large</p>
@@ -333,7 +333,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
      * <p>To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.1.**.**</p>
+     * <p><code>10.1.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -386,9 +386,9 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String securityEnhancementStrategy;
 
     /**
-     * <p>The ID of the security group to which to assign the instance. Instances within the same security group can access each other.</p>
+     * <p>The ID of the security group to which to assign the ECS instance created based on the launch template version. Instances in the same security group can access each other.</p>
      * <blockquote>
-     * <p>The <code>SecurityGroupId</code> parameter and the <code>SecurityGroupIds.N</code> parameter are mutually exclusive.</p>
+     * <p> You cannot specify <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> in the same request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -450,7 +450,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The tags to add to the instance, disks, and primary ENI.</p>
+     * <p>The tags to add to the ECS instance, disks, and primary elastic network interface (ENI) created based on the launch template version.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateLaunchTemplateVersionRequestTag> tag;
@@ -483,7 +483,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String versionDescription;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the virtual private cloud (VPC) in which to create the ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp12433upq1y5scen****</p>
@@ -1457,7 +1457,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <p>The primary private IP address of the secondary ENI. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.**.**</p>
+         * <p><code>192.168.**.**</code></p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
@@ -1568,7 +1568,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     public static class CreateLaunchTemplateVersionRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The key of tag N to add to the ECS instance, disks, and primary ENI created based on the launch template version. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1577,7 +1577,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         * <p>The value of tag N to add to the ECS instance, disks, and primary ENI created based on the launch template version. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

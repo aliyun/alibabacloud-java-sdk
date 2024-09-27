@@ -380,7 +380,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
-         * <p>42.112.**.**</p>
+         * <p><code>42.112.**.**</code></p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -743,7 +743,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The private IP address of the ENI.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.17.**.**</p>
+         * <p><code>172.17.**.**</code></p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -839,7 +839,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The primary private IP address of the ENI.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.17.**.***</p>
+         * <p><code>172.17.**.**</code>*</p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
@@ -1266,7 +1266,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The NAT IP address of the instance. The NAT IP address is used by ECS instances in different VPCs for communication.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.17.**.**</p>
+         * <p><code>172.17.**.**</code></p>
          */
         @NameInMap("NatIpAddress")
         public String natIpAddress;

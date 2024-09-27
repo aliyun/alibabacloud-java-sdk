@@ -71,7 +71,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
      * <p>The private IP address of the ENI.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.17.**.**</p>
+     * <p><code>172.17.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -494,7 +494,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
          * <p>The private IP address of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.17.**.**</p>
+         * <p><code>172.17.**.**</code></p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;

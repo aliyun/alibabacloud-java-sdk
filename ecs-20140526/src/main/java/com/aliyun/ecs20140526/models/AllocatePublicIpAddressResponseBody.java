@@ -8,7 +8,7 @@ public class AllocatePublicIpAddressResponseBody extends TeaModel {
      * <p>The public IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>112.124.**.**</p>
+     * <p><code>112.124.**.**</code></p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;

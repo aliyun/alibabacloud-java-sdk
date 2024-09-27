@@ -26,7 +26,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
      * <p>The internal or public IP address of the managed instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.**.**</p>
+     * <p><code>192.168.**.**</code></p>
      */
     @NameInMap("InstanceIp")
     public String instanceIp;
