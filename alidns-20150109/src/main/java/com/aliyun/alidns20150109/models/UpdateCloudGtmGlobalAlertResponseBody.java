@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmGlobalAlertResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
      */
@@ -12,6 +14,12 @@ public class UpdateCloudGtmGlobalAlertResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

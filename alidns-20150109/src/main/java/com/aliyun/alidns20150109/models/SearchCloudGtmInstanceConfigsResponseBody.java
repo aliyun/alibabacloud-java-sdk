@@ -4,10 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The instances list.</p>
+     */
     @NameInMap("InstanceConfigs")
     public SearchCloudGtmInstanceConfigsResponseBodyInstanceConfigs instanceConfigs;
 
     /**
+     * <p>Current page number, starting from 1, default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>6AEC7A64-3CB1-4C49-8B35-0B901F1E26BF</p>
      */
@@ -29,6 +38,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of instance configuration entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -36,6 +47,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -116,6 +129,14 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
 
     public static class SearchCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfigAddressPoolsAddressPool extends TeaModel {
         /**
+         * <p>Load balancing policy among addresses in the address pool:</p>
+         * <ul>
+         * <li>round_robin: Round-robin, where for any source of DNS resolution requests, all addresses are returned, with a rotation of the order for every request.</li>
+         * <li>sequence: Sequential, where for any source of DNS resolution requests, the address with the lower sequence number (indicating a higher priority, the smaller the number, the higher the priority) is returned. If the address with the lower sequence number is unavailable, the next address with a lower sequence number is returned.</li>
+         * <li>weight: Weighted, supporting the setting of different weight values for each address to realize returning addresses according to the ratio of weights in DNS query resolutions.</li>
+         * <li>source_nearest: Source-nearest, referring to the intelligent resolution feature, where GTM can return different addresses based on the source of different DNS resolution requests, achieving the effect of users accessing the nearest server.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>round_robin</p>
          */
@@ -123,6 +144,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String addressLbStrategy;
 
         /**
+         * <p>Address pool ID, uniquely identifying the address pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>pool-89564504435014**60</p>
          */
@@ -130,6 +153,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String addressPoolId;
 
         /**
+         * <p>Address pool name.</p>
+         * 
          * <strong>example:</strong>
          * <p>AddressPool-1</p>
          */
@@ -137,6 +162,13 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String addressPoolName;
 
         /**
+         * <p>Address pool type:</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * <li>domain</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IPv4</p>
          */
@@ -144,6 +176,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String addressPoolType;
 
         /**
+         * <p>Address pool availability status:</p>
+         * <ul>
+         * <li>available: Available</li>
+         * <li>unavailable: Unavailable</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>available</p>
          */
@@ -151,6 +189,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String availableStatus;
 
         /**
+         * <p>Address pool creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15T01:46Z</p>
          */
@@ -158,6 +198,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Address pool creation time (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1527690629357</p>
          */
@@ -165,6 +207,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>Address pool status:</p>
+         * <ul>
+         * <li>enable: Enabled status</li>
+         * <li>disable: Disabled status</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -172,6 +220,15 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String enableStatus;
 
         /**
+         * <p>The condition for determining the health status of the address pool. Valid values:</p>
+         * <ul>
+         * <li>any_ok: At least one address in the address pool is available.</li>
+         * <li>p30_ok: At least 30% of the addresses in the address pool are available.</li>
+         * <li>p50_ok: At least 50% of the addresses in the address pool are available.</li>
+         * <li>p70_ok: At least 70% of the addresses in the address pool are available.</li>
+         * <li>all_ok: All addresses in the address pool are available.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>any_ok</p>
          */
@@ -179,16 +236,32 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String healthJudgement;
 
         /**
+         * <p>The health state of the address pool. Valid values:</p>
+         * <ul>
+         * <li>ok: The health state of the address pool is normal and all addresses that are referenced by the address pool are available.</li>
+         * <li>ok_alert: The health state of the address pool is warning and some of the addresses that are referenced by the address pool are unavailable. However, the address pool is deemed normal. In this case, only the available addresses are returned for DNS requests.</li>
+         * <li>exceptional: The health state of the address pool is abnormal and some or all of the addresses that are referenced by the address pool are unavailable. In this case, the address pool is deemed abnormal.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        /**
+         * <p>Parse the request source list.</p>
+         */
         @NameInMap("RequestSource")
         public SearchCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfigAddressPoolsAddressPoolRequestSource requestSource;
 
         /**
+         * <p>Indicates whether it is a sequential (non-preemptive) scheduling object for hybrid cloud management scenarios: </p>
+         * <ul>
+         * <li>true: yes </li>
+         * <li>false: no</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -196,6 +269,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public Boolean seqNonPreemptiveSchedule;
 
         /**
+         * <p>The mode used if the address with the smallest sequence number is recovered. This parameter is required only when the policy for load balancing between addresses is sequence. Valid values:</p>
+         * <ul>
+         * <li>preemptive: The address with the smallest sequence number is preferentially used if this address is recovered.</li>
+         * <li>non_preemptive: The current address is still used even if the address with the smallest sequence number is recovered.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>preemptive</p>
          */
@@ -203,6 +282,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String sequenceLbStrategyMode;
 
         /**
+         * <p>Sequence number. For any parsing request, the address pool with the smaller sequence number (indicating the priority of the address pool returned, with smaller numbers having higher priority) will be returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -210,6 +291,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public Integer serialNumber;
 
         /**
+         * <p>Last modification time of the address pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15T01:46Z</p>
          */
@@ -217,6 +300,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Update time (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1527690629357</p>
          */
@@ -224,6 +309,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
+         * <p>Weight value (an integer between 1 and 100, inclusive), allowing different weight values to be set for each address pool, implementing the return of address pools according to weight ratios in resolution queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -394,16 +481,33 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
 
     public static class SearchCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfig extends TeaModel {
         /**
+         * <p>The policy for load balancing between address pools. Valid values:</p>
+         * <ul>
+         * <li>round_robin: All address pools are returned for DNS requests from any source. All address pools are sorted in round-robin mode each time they are returned.</li>
+         * <li>sequence: The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number indicates the priority for returning the address pool. A smaller sequence number indicates a higher priority. If the address pool with the smallest sequence number is unavailable, the address pool with the second smallest sequence number is returned.</li>
+         * <li>weight: You can set a different weight value for each address pool. This way, address pools are returned based on the weight values.</li>
+         * <li>source_nearest: Different address pools are returned based on the sources of DNS requests. This way, users can access nearby address pools.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>round_robin</p>
          */
         @NameInMap("AddressPoolLbStrategy")
         public String addressPoolLbStrategy;
 
+        /**
+         * <p>The address pools.</p>
+         */
         @NameInMap("AddressPools")
         public SearchCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfigAddressPools addressPools;
 
         /**
+         * <p>The availability state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>available: If the access domain name is <strong>enabled</strong> and the health state is <strong>normal</strong>, the access domain name is deemed <strong>available</strong>.</li>
+         * <li>unavailable: If the access domain name is <strong>disabled</strong> or the health state is <strong>abnormal</strong>, the access domain name is deemed <strong>unavailable</strong>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>available</p>
          */
@@ -411,6 +515,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String availableStatus;
 
         /**
+         * <p>The commodity code. Valid values:</p>
+         * <ul>
+         * <li>dns_gtm_public_cn: the commodity code on the China site (aliyun.com)</li>
+         * <li>dns_gtm_public_intl: the commodity code on the international site (alibabacloud.com)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>dns_gtm_public_cn</p>
          */
@@ -418,6 +528,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>Config-000**11</p>
          */
@@ -425,6 +537,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String configId;
 
         /**
+         * <p>Domain instance creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15T01:46Z</p>
          */
@@ -432,6 +546,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Domain instance creation time (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1527690629357</p>
          */
@@ -439,6 +555,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The enabling state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</li>
+         * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance does not take effect.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -446,6 +568,13 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String enableStatus;
 
         /**
+         * <p>The health state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>ok: The health state of the access domain name is normal and all address pools that are referenced by the access domain name are available.</li>
+         * <li>ok_alert: The health state of the access domain name is warning and some of the address pools that are referenced by the access domain name are unavailable. In this case, only the available address pools are returned for DNS requests.</li>
+         * <li>exceptional: The health state of the access domain name is abnormal and all address pools that are referenced by the access domain name are unavailable. In this case, addresses in the non-empty address pool with the smallest sequence number are preferentially used for fallback resolution. This returns DNS results for clients as much as possible.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -453,6 +582,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String healthStatus;
 
         /**
+         * <p>The ID of the GTM 3.0 instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>gtm-cn-x0r38e0**03</p>
          */
@@ -460,6 +591,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Remarks for the domain instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -467,6 +600,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The access domain name. The value of this parameter is composed of the value of ScheduleHostname and the value of ScheduleZoneName.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -474,6 +609,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String scheduleDomainName;
 
         /**
+         * <p>Host record of the domain accessed by GTM.</p>
+         * 
          * <strong>example:</strong>
          * <p>www</p>
          */
@@ -481,6 +618,13 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String scheduleHostname;
 
         /**
+         * <p>DNS record types for the scheduling domain:</p>
+         * <ul>
+         * <li>A: IPv4 address</li>
+         * <li>AAAA: IPv6 address</li>
+         * <li>CNAME: Domain name</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -488,6 +632,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String scheduleRrType;
 
         /**
+         * <p>The allocation mode of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>custom: custom allocation. You must specify a custom hostname and associate the hostname with a zone that is hosted by the Public Authoritative DNS module within the account to which the GTM instance belongs to generate an access domain name.</li>
+         * <li>sys_assign: system allocation. This mode is not supported. Do not set ScheduleZoneMode to sys_assign.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -495,6 +645,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String scheduleZoneMode;
 
         /**
+         * <p>The zone such as example.com or subzone such as a.example.com of the access domain name. In most cases, the zone or subzone is hosted by the Public Authoritative DNS module of Alibaba Cloud DNS. This zone belongs to the account to which the GTM instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -502,6 +654,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String scheduleZoneName;
 
         /**
+         * <p>The mode used if the address pool with the smallest sequence number is recovered. This parameter is returned when AddressPoolLbStrategy is set to sequence. Valid values:</p>
+         * <ul>
+         * <li>preemptive: The address pool with the smallest sequence number is preferentially used if this address pool is recovered.</li>
+         * <li>non_preemptive: The current address pool is still used even if the address pool with the smallest sequence number is recovered.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>preemptive</p>
          */
@@ -509,6 +667,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String sequenceLbStrategyMode;
 
         /**
+         * <p>Global TTL (in seconds), the TTL value for resolving the access domain name to the address pool, which affects the caching time of DNS records in the operator\&quot;s LocalDNS. Supports custom TTL values.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -516,6 +676,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public Integer ttl;
 
         /**
+         * <p>The last modification time of the domain instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15T01:46Z</p>
          */
@@ -523,6 +685,8 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The last modification time of the domain instance (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1527690629357</p>
          */
@@ -530,6 +694,12 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
+         * <p>Global Traffic Management version 3.0 instance types:</p>
+         * <ul>
+         * <li>standard: Standard Edition</li>
+         * <li>ultimate: Ultimate Edition</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ultimate</p>
          */

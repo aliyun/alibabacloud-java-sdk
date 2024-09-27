@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSupportLinesResponseBody extends TeaModel {
     /**
-     * <p>云解析线路列表。</p>
+     * <p>The Alibaba Cloud DNS lines.</p>
      */
     @NameInMap("RecordLines")
     public DescribeSupportLinesResponseBodyRecordLines recordLines;
 
     /**
-     * <p>请求ID。</p>
-     * 
      * <strong>example:</strong>
      * <p>CFDA0830-7D6E-4C13-8632-B57C7EDCF079</p>
      */
@@ -42,7 +40,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
 
     public static class DescribeSupportLinesResponseBodyRecordLinesRecordLine extends TeaModel {
         /**
-         * <p>2021-12-06T02:47:26.000+0000</p>
+         * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
          * 
          * <strong>example:</strong>
          * <p>unicom</p>
@@ -51,7 +49,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         public String fatherCode;
 
         /**
-         * <p>子线路Code。</p>
+         * <p>The code of the line.</p>
          * 
          * <strong>example:</strong>
          * <p>cn_unicom_shanxi</p>
@@ -60,19 +58,19 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         public String lineCode;
 
         /**
-         * <p>父线路展示名称。</p>
+         * <p>The display name of the parent line.</p>
          * 
          * <strong>example:</strong>
-         * <p>联通</p>
+         * <p>China Unicom</p>
          */
         @NameInMap("LineDisplayName")
         public String lineDisplayName;
 
         /**
-         * <p>子线路展示名称。</p>
+         * <p>The display name of the line.</p>
          * 
          * <strong>example:</strong>
-         * <p>联通_山西</p>
+         * <p>China Unicom_Shanxi</p>
          */
         @NameInMap("LineName")
         public String lineName;

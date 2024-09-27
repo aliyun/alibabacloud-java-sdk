@@ -24,8 +24,8 @@ public class AddDomainRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The DNS resolution line. Default value: <strong>default</strong>. For more information, see</p>
-     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS lines</a>.</p>
+     * <p>The resolution line. Default value: <strong>default</strong>. For more information, see</p>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS resolution lines</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -35,7 +35,7 @@ public class AddDomainRecordRequest extends TeaModel {
 
     /**
      * <p>The priority of the mail exchanger (MX) record. Valid values: <code>1 to 50</code>.</p>
-     * <p>This parameter must be specified if the type of the DNS record is MX. A smaller value indicates a higher priority.</p>
+     * <p>This parameter is required if the type of the DNS record is MX. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class AddDomainRecordRequest extends TeaModel {
     public String RR;
 
     /**
-     * <p>The time-to-live (TTL) of the DNS record. Default value: 600. Unit: seconds. For more information, see</p>
+     * <p>The time to live (TTL) period of the Domain Name System (DNS) record. Default value: 600. Unit: seconds. For more information, see</p>
      * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</p>
      * 
      * <strong>example:</strong>

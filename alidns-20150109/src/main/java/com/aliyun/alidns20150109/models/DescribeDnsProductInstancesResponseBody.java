@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstancesResponseBody extends TeaModel {
     /**
-     * <p>The list of Alibaba Cloud DNS instances obtained by this operation.</p>
+     * <p>The paid Alibaba Cloud DNS instances.</p>
      */
     @NameInMap("DnsProducts")
     public DescribeDnsProductInstancesResponseBodyDnsProducts dnsProducts;
@@ -42,7 +42,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -114,14 +114,11 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
 
     public static class DescribeDnsProductInstancesResponseBodyDnsProductsDnsProduct extends TeaModel {
         /**
-         * <p>Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:</p>
+         * <p>Indicates whether auto-renewal was enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
-         * <li><strong>false</strong>: Auto-renewal is disabled.</li>
+         * <li>true: Auto-renewal was enabled.</li>
+         * <li>false: Auto-renewal was not enabled.</li>
          * </ul>
-         * <blockquote>
-         * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -193,11 +190,11 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public Long dnsSLBCount;
 
         /**
-         * <p>The DNS security policy. Valid values:</p>
+         * <p>The level of DNS protection. Valid values:</p>
          * <ul>
-         * <li><strong>no</strong>: not required.</li>
-         * <li><strong>basic</strong>: anti-DDoS basic.</li>
-         * <li><strong>advanced</strong>: anti-DDoS advanced.</li>
+         * <li>no: No DNS protection is provided.</li>
+         * <li>basic: Basic DNS protection is provided.</li>
+         * <li>advanced: Advanced DNS protection is provided.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +231,11 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public Long endTimestamp;
 
         /**
-         * <p>Indicates whether global server load balancing (GSLB) was allowed.</p>
+         * <p>Indicates whether global server load balancing (GSLB) is supported.</p>
+         * <ul>
+         * <li>true: GSLB is supported.</li>
+         * <li>false: GSLB is not supported.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,7 +244,15 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public Boolean gslb;
 
         /**
-         * <p>The list of ISP lines.</p>
+         * <p>The ISP resolution lines.</p>
+         * <ul>
+         * <li>China Telecom</li>
+         * <li>China Mobile</li>
+         * <li>China Unicom</li>
+         * <li>CERNET</li>
+         * <li>China Broadcasting Network (CBN)</li>
+         * <li>Dr Peng Telecom &amp; Media Group</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>China Mobile,China Unicom,China Telecom,China Edu</p>
@@ -252,7 +261,13 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public String ISPLines;
 
         /**
-         * <p>The list of ISP line subdivisions.</p>
+         * <p>The regional ISP resolution lines. Valid values:</p>
+         * <ul>
+         * <li>China Telecom (province)</li>
+         * <li>China Mobile (province)</li>
+         * <li>China Unicom (province)</li>
+         * <li>China Education and Research Network (CERNET) (province)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Telecom (Province), Mobile (Province), Unicom (Province), Education Network (Province)</p>
@@ -261,7 +276,11 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public String ISPRegionLines;
 
         /**
-         * <p>Indicates whether the request for domain name resolution was in the black hole.</p>
+         * <p>Indicates whether the Domain Name System (DNS) servers stopped responding to all requests. Valid values:</p>
+         * <ul>
+         * <li>true: The DNS servers stopped responding to all requests.</li>
+         * <li>false: The DNS servers did not stop responding to all requests.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -333,10 +352,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public String overseaLine;
 
         /**
-         * <p>The billing method. Valid value:</p>
-         * <ul>
-         * <li>Subscription: You can pay in advance for the use of resources.</li>
-         * </ul>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>Subscription</p>
@@ -345,7 +361,11 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>Indicates whether regional lines were allowed.</p>
+         * <p>Indicates whether the DNS request lines are regional lines.</p>
+         * <ul>
+         * <li>true: The DNS request lines are regional lines.</li>
+         * <li>false: The DNS request lines are not regional lines.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -354,7 +374,13 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         public Boolean regionLines;
 
         /**
-         * <p>The list of search engine lines.</p>
+         * <p>The search engine resolution lines. Valid values:</p>
+         * <ul>
+         * <li>Google</li>
+         * <li>Baidu</li>
+         * <li>Bing</li>
+         * <li>Youdao</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Search Engine Robots,Google Robots,Baidu Robots,Bing Robots</p>

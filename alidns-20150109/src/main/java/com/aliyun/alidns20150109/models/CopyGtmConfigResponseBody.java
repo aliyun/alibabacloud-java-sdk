@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyGtmConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>

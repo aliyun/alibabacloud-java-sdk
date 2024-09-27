@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     /**
-     * <p>The time when the health check task was created.</p>
+     * <p>The time when the health check configuration was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-28T13:08Z</p>
@@ -14,7 +14,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The timestamp that indicates when the health check task was created.</p>
+     * <p>The time when the health check configuration was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -23,7 +23,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The number of consecutive times of failed health check attempts.</p>
+     * <p>The number of consecutive failures.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public Integer evaluationCount;
 
     /**
-     * <p>The interval at which the health check task is executed. Unit: seconds.</p>
+     * <p>The health check interval. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,13 +41,13 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The monitored node.</p>
+     * <p>The health check nodes.</p>
      */
     @NameInMap("IspCityNodes")
     public DescribeDnsGtmMonitorConfigResponseBodyIspCityNodes ispCityNodes;
 
     /**
-     * <p>The ID of the health check task.</p>
+     * <p>The ID of the health check configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>MonitorConfigId1</p>
@@ -56,27 +56,27 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public String monitorConfigId;
 
     /**
-     * <p>The extended information. The following parameters are required for different health check protocols:</p>
+     * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
      * <ul>
-     * <li><p>HTTP or HTTPS:</p>
+     * <li><p>HTTP or HTTPS</p>
      * <ul>
-     * <li><p>port: the check port.</p>
+     * <li><p>port: the port that you want to check</p>
      * </li>
-     * <li><p>host: the host settings.</p>
+     * <li><p>host: the host settings</p>
      * </li>
-     * <li><p>path: the URL path.</p>
+     * <li><p>path: the URL path</p>
      * </li>
-     * <li><p>code: the return code greater than the specified value.</p>
+     * <li><p>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</p>
      * </li>
-     * <li><p>failureRate: the failure rate.</p>
+     * <li><p>failureRate: the failure rate</p>
      * </li>
-     * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is used only for the HTTPS protocol. Valid values:</p>
+     * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
      * <ul>
-     * <li>true: enable SNI.</li>
-     * <li>false: disable SNI.</li>
+     * <li>true: enables SNI.</li>
+     * <li>false: disables SNI.</li>
      * </ul>
      * </li>
-     * <li><p>nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
+     * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
      * <ul>
      * <li>IPV4</li>
      * <li>IPV6</li>
@@ -86,13 +86,13 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
      * </li>
      * <li><p>PING:</p>
      * <ul>
-     * <li><p>failureRate: the failure rate.</p>
+     * <li><p>failureRate: the failure rate</p>
      * </li>
-     * <li><p>packetNum: the number of ping packets.</p>
+     * <li><p>packetNum: the number of ping packets</p>
      * </li>
-     * <li><p>packetLossRate: the loss rate of ping packets.</p>
+     * <li><p>packetLossRate: the loss rate of ping packets</p>
      * </li>
-     * <li><p>nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
+     * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
      * <ul>
      * <li>IPV4</li>
      * <li>IPV6</li>
@@ -100,13 +100,13 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
      * </li>
      * </ul>
      * </li>
-     * <li><p>TCP:</p>
+     * <li><p>TCP</p>
      * <ul>
-     * <li><p>port: the check port.</p>
+     * <li><p>port: the port that you want to check</p>
      * </li>
-     * <li><p>failureRate: the failure rate.</p>
+     * <li><p>failureRate: the failure rate</p>
      * </li>
-     * <li><p>nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
+     * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
      * <ul>
      * <li>IPV4</li>
      * <li>IPV6</li>
@@ -138,7 +138,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -156,7 +156,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The time when the information about the health check task was updated.</p>
+     * <p>The time when the health check configuration was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-03T08:57Z</p>
@@ -165,7 +165,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The timestamp that indicates when the information about the health check task was updated.</p>
+     * <p>The time when the health check configuration was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -276,7 +276,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
 
     public static class DescribeDnsGtmMonitorConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
         /**
-         * <p>The code of the monitored city node.</p>
+         * <p>The city code.</p>
          * 
          * <strong>example:</strong>
          * <p>572</p>
@@ -285,7 +285,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         public String cityCode;
 
         /**
-         * <p>The display name of the monitored city node.</p>
+         * <p>The display name of the city.</p>
          * 
          * <strong>example:</strong>
          * <p>Qingdao</p>
@@ -312,7 +312,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         public String countryName;
 
         /**
-         * <p>The code of the monitored Internet service provider (ISP) node.</p>
+         * <p>The Internet service provider (ISP) code.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -321,7 +321,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         public String ispCode;
 
         /**
-         * <p>The name of the ISP.</p>
+         * <p>The display name of the ISP.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>

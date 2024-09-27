@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmMonitorTemplateRemarkResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
@@ -12,6 +14,12 @@ public class UpdateCloudGtmMonitorTemplateRemarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Modify the health check template remark operation status:</p>
+     * <ul>
+     * <li>true: Operation successful</li>
+     * <li>false: Operation failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

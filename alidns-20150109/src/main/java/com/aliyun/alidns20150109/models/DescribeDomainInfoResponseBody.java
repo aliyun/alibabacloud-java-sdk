@@ -43,6 +43,9 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("DomainId")
     public String domainId;
 
+    /**
+     * <p>Indicates whether the DNS traffic analysis feature is enabled. Valid values:</p>
+     */
     @NameInMap("DomainLoggingSwitchStatus")
     public String domainLoggingSwitchStatus;
 

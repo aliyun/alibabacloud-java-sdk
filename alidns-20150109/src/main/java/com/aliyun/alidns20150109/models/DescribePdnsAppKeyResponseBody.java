@@ -44,6 +44,9 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("Remark")
+        public String remark;
+
         @NameInMap("State")
         public String state;
 
@@ -82,6 +85,14 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
         }
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        public DescribePdnsAppKeyResponseBodyAppKey setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public DescribePdnsAppKeyResponseBodyAppKey setState(String state) {

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class SetGtmAccessModeRequest extends TeaModel {
     /**
-     * <p>The target access policy of the GTM instance. Valid values:</p>
+     * <p>The desired access policy. Valid values:</p>
      * <ul>
-     * <li><strong>AUTO</strong>: Automatic switch</li>
-     * <li><strong>DEFAULT</strong>: Default address pool</li>
-     * <li><strong>FAILOVER</strong>: Failover address pool</li>
+     * <li><strong>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</strong></li>
+     * <li><strong>DEFAULT: specifies the primary address pool set.</strong></li>
+     * <li>**FAILOVER: specifies the secondary address pool set.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class SetGtmAccessModeRequest extends TeaModel {
     public String accessMode;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

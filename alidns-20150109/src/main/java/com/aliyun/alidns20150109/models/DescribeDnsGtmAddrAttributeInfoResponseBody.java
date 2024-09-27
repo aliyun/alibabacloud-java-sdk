@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
     /**
-     * <p>The addresses that were queried.</p>
+     * <p>The address in the address pool.</p>
      */
     @NameInMap("Addr")
     public DescribeDnsGtmAddrAttributeInfoResponseBodyAddr addr;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -135,7 +135,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
 
     public static class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr extends TeaModel {
         /**
-         * <p>The address that was queried.</p>
+         * <p>The address in the address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -144,7 +144,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         public String addr;
 
         /**
-         * <p>The source region of the address.</p>
+         * <p>The information about the source region of the address.</p>
          */
         @NameInMap("AttributeInfo")
         public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo attributeInfo;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeDomainGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the destination domain name group.</p>
+     * <p>The ID of the target domain name group.</p>
      * 
      * <strong>example:</strong>
      * <p>2223</p>

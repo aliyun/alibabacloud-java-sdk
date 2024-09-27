@@ -4,10 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SearchCloudGtmInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The instances.</p>
+     */
     @NameInMap("Instances")
     public SearchCloudGtmInstancesResponseBodyInstances instances;
 
     /**
+     * <p>Current page number, starting at <strong>1</strong>, default is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
@@ -29,6 +38,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of instances found from the search.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,6 +110,12 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
 
     public static class SearchCloudGtmInstancesResponseBodyInstancesInstance extends TeaModel {
         /**
+         * <p>The commodity code. Valid values:</p>
+         * <ul>
+         * <li>dns_gtm_public_cn: commodity code on the China site (aliyun.com)</li>
+         * <li>dns_gtm_public_intl: commodity code on the international site (alibabacloud.com)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>dns_gtm_public_cn</p>
          */
@@ -104,6 +123,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>Instance creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15T01:46Z</p>
          */
@@ -111,6 +132,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Instance creation time (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1710467214858</p>
          */
@@ -118,6 +141,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>Instance expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-05T16:00Z</p>
          */
@@ -125,6 +150,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>Instance expiration time (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1725552000000</p>
          */
@@ -132,6 +159,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public String expireTimestamp;
 
         /**
+         * <p>The ID of the GTM 3.0 instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>gtm-cn-wwo3a3hbz**</p>
          */
@@ -139,6 +168,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Schedule instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -146,6 +177,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>Monitor probe task quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -153,6 +186,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Integer monitorTaskQuota;
 
         /**
+         * <p>Monthly email sending volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -160,6 +195,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Integer monthlyEmailUsed;
 
         /**
+         * <p>SMS quota, only supported on the China site. International site does not support SMS.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -167,6 +204,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Integer monthlySmsQuota;
 
         /**
+         * <p>Monthly SMS sending volume, only supported by the China site as international sites do not support SMS.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -174,6 +213,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Integer monthlySmsUsed;
 
         /**
+         * <p>Monthly webhook dispatch volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -181,6 +222,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Integer monthlyWebhookUsed;
 
         /**
+         * <p>The access domain name, which consists of a hostname and a zone or a subzone.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -188,6 +231,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public String scheduleDomainName;
 
         /**
+         * <p>The last modified time of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15T01:46Z</p>
          */
@@ -195,6 +240,8 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The last modified time of the instance (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1710467214858</p>
          */
@@ -202,6 +249,12 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
+         * <p>Global Traffic Management version 3.0 instance types:</p>
+         * <ul>
+         * <li>standard: Standard Edition</li>
+         * <li>ultimate: Ultimate Edition</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ultimate</p>
          */

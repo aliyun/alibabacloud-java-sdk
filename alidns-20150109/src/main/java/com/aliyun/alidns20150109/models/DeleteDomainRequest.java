@@ -15,7 +15,12 @@ public class DeleteDomainRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

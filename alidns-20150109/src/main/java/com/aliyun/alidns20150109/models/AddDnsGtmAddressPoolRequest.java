@@ -69,21 +69,21 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     public String lbaStrategy;
 
     /**
-     * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
+     * <p>The extended information. The required parameters vary based on the health check protocol.</p>
      * <ul>
-     * <li><p>HTTP or HTTPS</p>
+     * <li><p>HTTP or HTTPS:</p>
      * <ul>
      * <li><p>port: the port that you want to check</p>
      * </li>
      * <li><p>host: the host settings</p>
      * </li>
-     * <li><p>path: the URL path</p>
+     * <li><p>path: the URL</p>
      * </li>
-     * <li><p>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value. Values: 400, 500.</p>
+     * <li><p>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</p>
      * </li>
      * <li><p>failureRate: the failure rate</p>
      * </li>
-     * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
+     * <li><p>sni: specifies whether to enable Server Name Indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
      * <ul>
      * <li>true: enables SNI.</li>
      * <li>other: disables SNI.</li>
@@ -97,7 +97,7 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
      * </li>
      * </ul>
      * </li>
-     * <li><p>PING</p>
+     * <li><p>ping:</p>
      * <ul>
      * <li><p>failureRate: the failure rate</p>
      * </li>
@@ -113,7 +113,7 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
      * </li>
      * </ul>
      * </li>
-     * <li><p>TCP</p>
+     * <li><p>TCP:</p>
      * <ul>
      * <li><p>port: the port that you want to check</p>
      * </li>

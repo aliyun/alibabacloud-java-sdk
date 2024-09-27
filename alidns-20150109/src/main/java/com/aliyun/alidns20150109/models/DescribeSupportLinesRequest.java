@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSupportLinesRequest extends TeaModel {
     /**
-     * <p>域名名称。</p>
-     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -14,8 +12,6 @@ public class DescribeSupportLinesRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>语言。</p>
-     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -23,8 +19,6 @@ public class DescribeSupportLinesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>用户端IP。</p>
-     * 
      * <strong>example:</strong>
      * <p>1.1.<em>.</em></p>
      */

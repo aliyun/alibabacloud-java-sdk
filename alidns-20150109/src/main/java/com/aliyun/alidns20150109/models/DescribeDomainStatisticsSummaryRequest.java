@@ -42,7 +42,7 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Minimum value: <strong>1</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

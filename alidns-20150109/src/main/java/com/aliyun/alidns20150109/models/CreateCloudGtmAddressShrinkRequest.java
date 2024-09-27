@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -12,6 +18,7 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>IP address or domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +27,21 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>Address ownership information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>当前版本不支持传入此参数，请不要传入参数。</p>
+     */
     @NameInMap("AttributeInfo")
     public String attributeInfo;
 
     /**
+     * <p>The failover mode that is used when address exceptions are identified. Valid values:</p>
+     * <ul>
+     * <li>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
+     * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for DNS requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +51,8 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     public String availableMode;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */
@@ -40,6 +60,11 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Indicates the current enabled status of the address:</p>
+     * <ul>
+     * <li>enable: Enabled status </li>
+     * <li>disable: Disabled status</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +74,14 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     public String enableStatus;
 
     /**
+     * <p>The condition for determining the health status of the address. This parameter is required when HealthTasks is specified. Valid values:</p>
+     * <ul>
+     * <li>any_ok: The health check results of at least one health check template are normal.</li>
+     * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
+     * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
+     * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
+     * <li>all_ok: The health check results of all health check templates are normal.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,10 +90,19 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     @NameInMap("HealthJudgement")
     public String healthJudgement;
 
+    /**
+     * <p>The health check tasks associated with the address.</p>
+     */
     @NameInMap("HealthTasks")
     public String healthTasksShrink;
 
     /**
+     * <p>The availability state of the address. This parameter is required when AvailableMode is set to <strong>manual</strong>. Valid values:</p>
+     * <ul>
+     * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+     * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>available</p>
      */
@@ -68,6 +110,7 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     public String manualAvailableStatus;
 
     /**
+     * <p>Address name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +120,8 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -84,6 +129,12 @@ public class CreateCloudGtmAddressShrinkRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>Address type:</p>
+     * <ul>
+     * <li>IPv4</li>
+     * <li>IPv6</li>
+     * <li>domain</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

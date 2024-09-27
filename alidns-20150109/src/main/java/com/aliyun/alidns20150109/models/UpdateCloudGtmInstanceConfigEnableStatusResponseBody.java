@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmInstanceConfigEnableStatusResponseBody extends TeaModel {
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
      */
@@ -12,6 +14,12 @@ public class UpdateCloudGtmInstanceConfigEnableStatusResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful: </p>
+     * <ul>
+     * <li><strong>true</strong>: The call succeeded. </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -23,7 +23,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public Integer addrPoolNotAvailableNum;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
@@ -32,10 +32,10 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>The state of the instance. Valid values:</p>
      * <ul>
-     * <li>ALLOW: Operations on the instance are allowed.</li>
-     * <li>DENY: Operations on the instance are not allowed.</li>
+     * <li>ALLOW: The operation on the instance is allowed.</li>
+     * <li>DENY: The operation on the instance is not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>List of reasons for an instance status. Valid values:</p>
+     * <p>The reasons why the instance is in the current state. Valid values:</p>
      * <ul>
-     * <li>INSTANCE_OPERATE_BLACK_LIST: The instance is in the blacklist.</li>
+     * <li>INSTANCE_OPERATE_BLACK_LIST: The operation on the instance is not allowed.</li>
      * <li>BETA_INSTANCE: The instance is in public preview.</li>
      * </ul>
      * 
@@ -58,7 +58,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public String statusReason;
 
     /**
-     * <p>The number of access policies that are unavailable in the active address pool.</p>
+     * <p>The number of unavailable access policies.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -67,7 +67,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public Integer strategyNotAvailableNum;
 
     /**
-     * <p>The number of access policies that fail over to the secondary address pool.</p>
+     * <p>The number of access policies switched to the secondary address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

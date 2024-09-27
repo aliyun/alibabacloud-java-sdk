@@ -4,10 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetDnsLogsRequest extends TeaModel {
+    /**
+     * <p>The account ID displayed on the Recursive Resolution (Public DNS) page after you activate Alibaba Cloud Public DNS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51**4</p>
+     */
     @NameInMap("AccountId")
     public Long accountId;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudGtmInstanceConfigResponseBody extends TeaModel {
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
@@ -12,6 +14,11 @@ public class DeleteCloudGtmInstanceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation to delete domain instance configurations was successful:</p>
+     * <ul>
+     * <li>true: Operation successful - false: Operation failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

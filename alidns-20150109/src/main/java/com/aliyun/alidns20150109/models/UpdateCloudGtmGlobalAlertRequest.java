@@ -5,19 +5,33 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The alert configurations.</p>
+     */
     @NameInMap("AlertConfig")
     public java.util.List<UpdateCloudGtmGlobalAlertRequestAlertConfig> alertConfig;
 
+    /**
+     * <p>The alert contact groups.</p>
+     */
     @NameInMap("AlertGroup")
     public java.util.List<String> alertGroup;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */
@@ -63,6 +77,12 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
 
     public static class UpdateCloudGtmGlobalAlertRequestAlertConfig extends TeaModel {
         /**
+         * <p>Specifies whether to configure DingTalk notifications. Valid values:</p>
+         * <ul>
+         * <li>true: configures DingTalk notifications. DingTalk notifications are sent when alerts are triggered.</li>
+         * <li>false: does not configure DingTalk notifications.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -70,6 +90,12 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public Boolean dingtalkNotice;
 
         /**
+         * <p>Specifies whether to configure email notifications. Valid values:</p>
+         * <ul>
+         * <li>true: configures email notifications. Emails are sent when alerts are triggered.</li>
+         * <li>false｜null: does not configure email notifications.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -77,6 +103,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public Boolean emailNotice;
 
         /**
+         * <p>The type of the alert event. Valid values:</p>
+         * <ul>
+         * <li>addr_alert: The address is unavailable.</li>
+         * <li>addr_resume: The address becomes available.</li>
+         * <li>addr_pool_unavailable: The address pool is unavailable.</li>
+         * <li>addr_pool_available: The address pool becomes available.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>addr_alert</p>
          */
@@ -84,6 +118,13 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public String noticeType;
 
         /**
+         * <p>Specifies whether to configure text message notifications. Valid values:</p>
+         * <ul>
+         * <li>true: configures text message notifications. Text messages are sent when alerts are triggered.</li>
+         * <li>false｜null: does not configure text message notifications.</li>
+         * </ul>
+         * <p>Only the China site (aliyun.com) supports text message notifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

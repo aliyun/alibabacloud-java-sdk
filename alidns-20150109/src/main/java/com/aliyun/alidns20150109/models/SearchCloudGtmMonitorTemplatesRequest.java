@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class SearchCloudGtmMonitorTemplatesRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,6 +18,12 @@ public class SearchCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The IP address type of health check nodes. An exact search is performed based on the IP address type. Valid values:</p>
+     * <ul>
+     * <li>IPv4: applicable when the destination address of health checks is an IPv4 address</li>
+     * <li>IPv6: applicable when the destination address of health checks is an IPv6 address</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>IPv4</p>
      */

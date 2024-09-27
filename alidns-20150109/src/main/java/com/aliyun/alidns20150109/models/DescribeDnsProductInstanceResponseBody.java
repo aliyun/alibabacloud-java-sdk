@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     /**
-     * <p>The auto-renewal status of the instance. Valid values:</p>
+     * <p>Indicates whether auto-renewal was enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
-     * <li><strong>false</strong>: Auto-renewal is disabled.</li>
+     * <li>true: Auto-renewal was enabled.</li>
+     * <li>false: Auto-renewal was not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,11 +81,11 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public Long dnsSLBCount;
 
     /**
-     * <p>The DNS protection level. Valid values:</p>
+     * <p>The level of DNS protection. Valid values:</p>
      * <ul>
-     * <li><strong>no</strong>: DNS protection is not provided.</li>
-     * <li><strong>basic</strong>: Basic DNS attack defense is provided.</li>
-     * <li><strong>advanced</strong>: Advanced DNS attack defense is provided.</li>
+     * <li>no: No DNS protection is provided.</li>
+     * <li>basic: Basic DNS protection is provided.</li>
+     * <li>advanced: Advanced DNS protection is provided.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,7 +142,11 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public Long endTimestamp;
 
     /**
-     * <p>Indicates whether global server load balancing (GSLB) is supported.</p>
+     * <p>Indicates whether global server load balancing (GSLB) is supported. Valid values:</p>
+     * <ul>
+     * <li>true: GSLB is supported.</li>
+     * <li>false: GSLB is not supported.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -151,19 +155,37 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public Boolean gslb;
 
     /**
-     * <p>The Internet service provider (ISP) lines for DNS resolution.</p>
+     * <p>The ISP resolution lines. Valid values:</p>
+     * <ul>
+     * <li>China Telecom</li>
+     * <li>China Mobile</li>
+     * <li>China Unicom</li>
+     * <li>China Education and Research Network (CERNET)</li>
+     * <li>China Broadcasting Network (CBN)</li>
+     * <li>Dr Peng Telecom &amp; Media Group</li>
+     * </ul>
      */
     @NameInMap("ISPLines")
     public String ISPLines;
 
     /**
-     * <p>The regional ISP lines for DNS resolution.</p>
+     * <p>The regional ISP resolution lines. Valid values:</p>
+     * <ul>
+     * <li>China Telecom (province)</li>
+     * <li>China Mobile (province)</li>
+     * <li>China Unicom (province)</li>
+     * <li>CERNET (province)</li>
+     * </ul>
      */
     @NameInMap("ISPRegionLines")
     public String ISPRegionLines;
 
     /**
-     * <p>Indicates whether the Domain Name System (DNS) servers stopped responding to all requests sent to the domain names.</p>
+     * <p>Indicates whether the Domain Name System (DNS) servers stopped responding to all DNS requests. Valid values:</p>
+     * <ul>
+     * <li>true: The DNS servers stopped responding to all DNS requests.</li>
+     * <li>false: The DNS servers did not stop responding to all DNS requests.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -173,6 +195,10 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the DNS servers stopped responding to abnormal requests sent to the domain names.</p>
+     * <ul>
+     * <li>true: The DNS servers stopped responding to abnormal requests sent to the domain names.</li>
+     * <li>false: The DNS servers did not stop responding to abnormal requests sent to the domain names.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -241,7 +267,11 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>Indicates whether regional lines are supported.</p>
+     * <p>Indicates whether the DNS request lines are regional lines. Valid values:</p>
+     * <ul>
+     * <li>true: The DNS request lines are regional lines.</li>
+     * <li>false: The DNS request lines are not regional lines.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -259,7 +289,13 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The search engine lines for DNS resolution.</p>
+     * <p>The search engine resolution lines. Valid values:</p>
+     * <ul>
+     * <li>Google</li>
+     * <li>Baidu</li>
+     * <li>Bing</li>
+     * <li>Youdao</li>
+     * </ul>
      */
     @NameInMap("SearchEngineLines")
     public String searchEngineLines;

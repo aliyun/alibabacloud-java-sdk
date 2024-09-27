@@ -133,7 +133,7 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The health check timeout period. Unit: milliseconds.</p>
+     * <p>The timeout period. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>

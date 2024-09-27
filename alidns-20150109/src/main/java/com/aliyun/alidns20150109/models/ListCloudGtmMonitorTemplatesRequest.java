@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,6 +18,12 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The IP address type of health check nodes. Valid values:</p>
+     * <ul>
+     * <li>IPv4: applicable when health checks are performed on IPv4 addresses.</li>
+     * <li>IPv6: applicable when health checks are performed on IPv6 addresses.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>IPv4</p>
      */
@@ -19,6 +31,8 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String ipVersion;
 
     /**
+     * <p>The name of the health check probe template, which is recommended to be distinguishable for configuration personnel to differentiate and remember, ideally indicating the health check protocol.</p>
+     * 
      * <strong>example:</strong>
      * <p>IPv4-Ping</p>
      */
@@ -26,6 +40,7 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +50,7 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +60,14 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Protocol types for initiating probes to the target IP address:</p>
+     * <ul>
+     * <li>ping</li>
+     * <li>tcp</li>
+     * <li>http</li>
+     * <li>https</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ping</p>
      */

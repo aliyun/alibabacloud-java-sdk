@@ -15,7 +15,12 @@ public class UpdateDomainRemarkRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -25,6 +30,7 @@ public class UpdateDomainRemarkRequest extends TeaModel {
 
     /**
      * <p>The description of your domain name.</p>
+     * <p>It can be up to 50 characters in length and can contain digits, letters, and the following special characters: _ - , .</p>
      */
     @NameInMap("Remark")
     public String remark;

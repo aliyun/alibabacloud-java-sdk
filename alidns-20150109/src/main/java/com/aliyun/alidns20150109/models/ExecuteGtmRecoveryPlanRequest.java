@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class ExecuteGtmRecoveryPlanRequest extends TeaModel {
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: English.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,7 +19,7 @@ public class ExecuteGtmRecoveryPlanRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the disaster recovery plan that you want to executed.</p>
+     * <p>The ID of the disaster recovery plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

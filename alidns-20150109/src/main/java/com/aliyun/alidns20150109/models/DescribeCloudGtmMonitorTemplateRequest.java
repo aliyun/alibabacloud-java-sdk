@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmMonitorTemplateRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese</li>
+     * <li><strong>en-US</strong> (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,6 +18,7 @@ public class DescribeCloudGtmMonitorTemplateRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the health check template that you want to query. This ID uniquely identifies the health check template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

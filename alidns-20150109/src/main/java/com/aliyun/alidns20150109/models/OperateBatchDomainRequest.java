@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateBatchDomainRequest extends TeaModel {
     /**
-     * <p>The DNS records. You can submit up to 1000 DNS records.</p>
+     * <p>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DomainRecordInfo")
@@ -80,7 +80,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>The resolution line. Default value: default.</p>
+         * <p>The DNS request source. Default value: default.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

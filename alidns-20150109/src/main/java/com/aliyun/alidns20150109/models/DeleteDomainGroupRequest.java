@@ -15,7 +15,12 @@ public class DeleteDomainGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
