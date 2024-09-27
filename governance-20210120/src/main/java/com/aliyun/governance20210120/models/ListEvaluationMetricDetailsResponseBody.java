@@ -85,6 +85,9 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetricDetailsResponseBodyResources extends TeaModel {
+        @NameInMap("ComplianceType")
+        public String complianceType;
+
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -129,6 +132,14 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         public static ListEvaluationMetricDetailsResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
             ListEvaluationMetricDetailsResponseBodyResources self = new ListEvaluationMetricDetailsResponseBodyResources();
             return TeaModel.build(map, self);
+        }
+
+        public ListEvaluationMetricDetailsResponseBodyResources setComplianceType(String complianceType) {
+            this.complianceType = complianceType;
+            return this;
+        }
+        public String getComplianceType() {
+            return this.complianceType;
         }
 
         public ListEvaluationMetricDetailsResponseBodyResources setRegionId(String regionId) {
