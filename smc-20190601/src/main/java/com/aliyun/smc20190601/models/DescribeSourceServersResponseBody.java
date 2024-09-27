@@ -4,40 +4,59 @@ package com.aliyun.smc20190601.models;
 import com.aliyun.tea.*;
 
 public class DescribeSourceServersResponseBody extends TeaModel {
-    @NameInMap("SourceServers")
-    public DescribeSourceServersResponseBodySourceServers sourceServers;
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>410E6073-66D0-45D3-AB3E-4DC3F5E4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    /**
+     * <p>The information about migration sources.</p>
+     */
+    @NameInMap("SourceServers")
+    public DescribeSourceServersResponseBodySourceServers sourceServers;
+
+    /**
+     * <p>The total number of migration sources returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeSourceServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSourceServersResponseBody self = new DescribeSourceServersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSourceServersResponseBody setSourceServers(DescribeSourceServersResponseBodySourceServers sourceServers) {
-        this.sourceServers = sourceServers;
+    public DescribeSourceServersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public DescribeSourceServersResponseBodySourceServers getSourceServers() {
-        return this.sourceServers;
-    }
-
-    public DescribeSourceServersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSourceServersResponseBody setPageSize(Integer pageSize) {
@@ -56,29 +75,67 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSourceServersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSourceServersResponseBody setSourceServers(DescribeSourceServersResponseBodySourceServers sourceServers) {
+        this.sourceServers = sourceServers;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeSourceServersResponseBodySourceServers getSourceServers() {
+        return this.sourceServers;
+    }
+
+    public DescribeSourceServersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart extends TeaModel {
+        /**
+         * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanBlock")
         public Boolean canBlock;
 
-        @NameInMap("SizeBytes")
-        public Long sizeBytes;
-
-        @NameInMap("Need")
-        public Boolean need;
-
+        /**
+         * <p>The device ID of the data disk partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1_0</p>
+         */
         @NameInMap("Device")
         public String device;
 
+        /**
+         * <p>Indicates whether the data disk partition must be selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Need")
+        public Boolean need;
+
+        /**
+         * <p>The path of the data disk partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/data</p>
+         */
         @NameInMap("Path")
         public String path;
+
+        /**
+         * <p>The size of the data disk partition. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21474836480</p>
+         */
+        @NameInMap("SizeBytes")
+        public Long sizeBytes;
 
         public static DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart build(java.util.Map<String, ?> map) throws Exception {
             DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart self = new DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart();
@@ -93,12 +150,12 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.canBlock;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart setSizeBytes(Long sizeBytes) {
-            this.sizeBytes = sizeBytes;
+        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart setDevice(String device) {
+            this.device = device;
             return this;
         }
-        public Long getSizeBytes() {
-            return this.sizeBytes;
+        public String getDevice() {
+            return this.device;
         }
 
         public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart setNeed(Boolean need) {
@@ -109,20 +166,20 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.need;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart setDevice(String device) {
-            this.device = device;
-            return this;
-        }
-        public String getDevice() {
-            return this.device;
-        }
-
         public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart setPath(String path) {
             this.path = path;
             return this;
         }
         public String getPath() {
             return this.path;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskPartsPart setSizeBytes(Long sizeBytes) {
+            this.sizeBytes = sizeBytes;
+            return this;
+        }
+        public Long getSizeBytes() {
+            return this.sizeBytes;
         }
 
     }
@@ -147,17 +204,38 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     }
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDisk extends TeaModel {
+        /**
+         * <p>The index number of the data disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
-        @NameInMap("Size")
-        public Integer size;
-
+        /**
+         * <p>The information about the data disk partition.</p>
+         */
         @NameInMap("Parts")
         public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskParts parts;
 
+        /**
+         * <p>The path of the data disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/data</p>
+         */
         @NameInMap("Path")
         public String path;
+
+        /**
+         * <p>The size of the data disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("Size")
+        public Integer size;
 
         public static DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDisk self = new DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDisk();
@@ -170,14 +248,6 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
         public Integer getIndex() {
             return this.index;
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDisk setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
         }
 
         public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDisk setParts(DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskParts parts) {
@@ -194,6 +264,14 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
         public String getPath() {
             return this.path;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
         }
 
     }
@@ -217,21 +295,328 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart extends TeaModel {
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart extends TeaModel {
         @NameInMap("CanBlock")
         public Boolean canBlock;
+
+        @NameInMap("Path")
+        public String path;
 
         @NameInMap("SizeBytes")
         public Long sizeBytes;
 
-        @NameInMap("Need")
-        public Boolean need;
+        @NameInMap("Type")
+        public String type;
 
-        @NameInMap("Device")
-        public String device;
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart self = new DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart setCanBlock(Boolean canBlock) {
+            this.canBlock = canBlock;
+            return this;
+        }
+        public Boolean getCanBlock() {
+            return this.canBlock;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart setSizeBytes(Long sizeBytes) {
+            this.sizeBytes = sizeBytes;
+            return this;
+        }
+        public Long getSizeBytes() {
+            return this.sizeBytes;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts extends TeaModel {
+        @NameInMap("Part")
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart> part;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts self = new DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts setPart(java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart> part) {
+            this.part = part;
+            return this;
+        }
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart> getPart() {
+            return this.part;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData extends TeaModel {
+        @NameInMap("Offset")
+        public Long offset;
+
+        @NameInMap("Parts")
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts parts;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData self = new DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData setOffset(Long offset) {
+            this.offset = offset;
+            return this;
+        }
+        public Long getOffset() {
+            return this.offset;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData setParts(DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts parts) {
+            this.parts = parts;
+            return this;
+        }
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts getParts() {
+            return this.parts;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksData extends TeaModel {
+        @NameInMap("Data")
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData> data;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisksData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisksData self = new DescribeSourceServersResponseBodySourceServersSourceServerDisksData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksData setData(java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData> data) {
+            this.data = data;
+            return this;
+        }
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData> getData() {
+            return this.data;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart extends TeaModel {
+        @NameInMap("CanBlock")
+        public Boolean canBlock;
 
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("SizeBytes")
+        public Long sizeBytes;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart self = new DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart setCanBlock(Boolean canBlock) {
+            this.canBlock = canBlock;
+            return this;
+        }
+        public Boolean getCanBlock() {
+            return this.canBlock;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart setSizeBytes(Long sizeBytes) {
+            this.sizeBytes = sizeBytes;
+            return this;
+        }
+        public Long getSizeBytes() {
+            return this.sizeBytes;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts extends TeaModel {
+        @NameInMap("Part")
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart> part;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts self = new DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts setPart(java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart> part) {
+            this.part = part;
+            return this;
+        }
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart> getPart() {
+            return this.part;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem extends TeaModel {
+        @NameInMap("Offset")
+        public Long offset;
+
+        @NameInMap("Parts")
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts parts;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem self = new DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem setOffset(Long offset) {
+            this.offset = offset;
+            return this;
+        }
+        public Long getOffset() {
+            return this.offset;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem setParts(DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts parts) {
+            this.parts = parts;
+            return this;
+        }
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts getParts() {
+            return this.parts;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerDisks extends TeaModel {
+        @NameInMap("Data")
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksData data;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("System")
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem system;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerDisks self = new DescribeSourceServersResponseBodySourceServersSourceServerDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisks setData(DescribeSourceServersResponseBodySourceServersSourceServerDisksData data) {
+            this.data = data;
+            return this;
+        }
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksData getData() {
+            return this.data;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisks setSystem(DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem system) {
+            this.system = system;
+            return this;
+        }
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem getSystem() {
+            return this.system;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart extends TeaModel {
+        /**
+         * <p>Indicates whether block replication is enabled for the system disk partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("CanBlock")
+        public Boolean canBlock;
+
+        /**
+         * <p>The device ID of the system disk partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0_0</p>
+         */
+        @NameInMap("Device")
+        public String device;
+
+        /**
+         * <p>Indicates whether the system disk partition must be selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Need")
+        public Boolean need;
+
+        /**
+         * <p>The path of the system disk partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/boot</p>
+         */
+        @NameInMap("Path")
+        public String path;
+
+        /**
+         * <p>The size of the system disk partition. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254803968</p>
+         */
+        @NameInMap("SizeBytes")
+        public Long sizeBytes;
 
         public static DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart build(java.util.Map<String, ?> map) throws Exception {
             DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart self = new DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart();
@@ -246,12 +631,12 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.canBlock;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart setSizeBytes(Long sizeBytes) {
-            this.sizeBytes = sizeBytes;
+        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart setDevice(String device) {
+            this.device = device;
             return this;
         }
-        public Long getSizeBytes() {
-            return this.sizeBytes;
+        public String getDevice() {
+            return this.device;
         }
 
         public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart setNeed(Boolean need) {
@@ -262,20 +647,20 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.need;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart setDevice(String device) {
-            this.device = device;
-            return this;
-        }
-        public String getDevice() {
-            return this.device;
-        }
-
         public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart setPath(String path) {
             this.path = path;
             return this;
         }
         public String getPath() {
             return this.path;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskPartsSystemDiskPart setSizeBytes(Long sizeBytes) {
+            this.sizeBytes = sizeBytes;
+            return this;
+        }
+        public Long getSizeBytes() {
+            return this.sizeBytes;
         }
 
     }
@@ -299,120 +684,267 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerTagsTag extends TeaModel {
+        /**
+         * <p>The key of tag N that is added to the SMC resource. Valid values of N: 1 to 20</p>
+         * <p>You cannot specify empty strings as tag keys. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20</p>
+         * <p>The tag key can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerTagsTag self = new DescribeSourceServersResponseBodySourceServersSourceServerTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeSourceServersResponseBodySourceServersSourceServerTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerTagsTag> tag;
+
+        public static DescribeSourceServersResponseBodySourceServersSourceServerTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSourceServersResponseBodySourceServersSourceServerTags self = new DescribeSourceServersResponseBodySourceServersSourceServerTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServerTags setTag(java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeSourceServersResponseBodySourceServersSourceServerTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeSourceServersResponseBodySourceServersSourceServer extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("HeartbeatRate")
-        public Integer heartbeatRate;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("DataDisks")
-        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisks dataDisks;
-
-        @NameInMap("SystemDiskParts")
-        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskParts systemDiskParts;
-
-        @NameInMap("KernelLevel")
-        public Integer kernelLevel;
-
-        @NameInMap("SourceId")
-        public String sourceId;
-
+        /**
+         * <p>The version number of the SMC client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.5.2.3</p>
+         */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
-        @NameInMap("StatusInfo")
-        public String statusInfo;
+        /**
+         * <p>The system architecture of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
+         */
+        @NameInMap("Architecture")
+        public String architecture;
 
-        @NameInMap("SystemDiskSize")
-        public Integer systemDiskSize;
+        /**
+         * <p>The time when the migration source was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-27T02:58:09Z</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
 
+        /**
+         * <p>The data disk on the migration source.</p>
+         */
+        @NameInMap("DataDisks")
+        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisks dataDisks;
+
+        /**
+         * <p>The description of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Server Source Imported By GotoAliyun.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Disks")
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisks disks;
+
+        /**
+         * <p>The error code of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SourceServer.Offline</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The interval at which heartbeats are sent from the SMC client. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("HeartbeatRate")
+        public Integer heartbeatRate;
+
+        /**
+         * <p>The ID of the last migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp19vlwm0tyigbmj****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("Platform")
-        public String platform;
+        /**
+         * <p>The kernel level of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("KernelLevel")
+        public Integer kernelLevel;
 
-        @NameInMap("ReplicationDriver")
-        public String replicationDriver;
-
+        /**
+         * <p>The name of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SourceServerName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The operating system of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenSUSE</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
+         * <p>The replication driver used for migration. Default value: SMT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMT</p>
+         */
+        @NameInMap("ReplicationDriver")
+        public String replicationDriver;
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw3ty5y7****</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1e2fsl57knvuug****</p>
+         */
+        @NameInMap("SourceId")
+        public String sourceId;
+
+        /**
+         * <p>The state of the migration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InUse</p>
+         */
+        @NameInMap("State")
+        public String state;
+
+        /**
+         * <p>The status information of the migration source. This parameter is returned if the migration source is in the Unavailable state. The value of this parameter consists of key-value pairs in the JSON format. Sample keys:</p>
+         * <pre><code>error_code: the error code.error_msg: the error message.
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;error_code&quot;: &quot;S1&quot;, &quot;error_msg&quot;: &quot;Rsync not found. Please install rsync.&quot;}</p>
+         */
+        @NameInMap("StatusInfo")
+        public String statusInfo;
+
+        /**
+         * <p>The information about the system disk partition.</p>
+         */
+        @NameInMap("SystemDiskParts")
+        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskParts systemDiskParts;
+
+        /**
+         * <p>The system disk size of the migration source. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
+        @NameInMap("SystemDiskSize")
+        public Integer systemDiskSize;
+
+        /**
+         * <p>The system information of the migration source. The value of this parameter consists of key-value pairs in the JSON format. The key-value pairs are extensible and have fixed keys. The JSON string does not exceed 1 KB in size. Sample keys:</p>
+         * <pre><code>agent_mode: The migration mode.
+         * agent_type: The migration type.
+         * client_type: The client type.
+         * hostname: The host name.
+         * ipv4: The IPv4 address.
+         * ipv6: The IPv6 address.
+         * .cores: The number of CPU cores.
+         * cpu_usage: The CPU utilization.
+         * memory: The memory size.
+         * memory_usage: The memory usage.
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;agent_mode\&quot;:\&quot;daemon\&quot;,\&quot;agent_type\&quot;:\&quot;aliyun\&quot;,\&quot;client_type\&quot;:\&quot;\&quot;,\&quot;cores\&quot;:\&quot;2\&quot;,\&quot;cpu_usage\&quot;:\&quot;0.00\&quot;,\&quot;hostname\&quot;:\&quot;ixxxxxxxxxx\&quot;,\&quot;ipv4\&quot;:\&quot;10.0.0.1\&quot;,\&quot;memory\&quot;:\&quot;8.00\&quot;,\&quot;memory_usage\&quot;:\&quot;3.61\&quot;}</p>
+         */
         @NameInMap("SystemInfo")
         public String systemInfo;
 
-        @NameInMap("Architecture")
-        public String architecture;
+        /**
+         * <p>The information about the tags.</p>
+         */
+        @NameInMap("Tags")
+        public DescribeSourceServersResponseBodySourceServersSourceServerTags tags;
+
+        @NameInMap("WorkgroupId")
+        public String workgroupId;
 
         public static DescribeSourceServersResponseBodySourceServersSourceServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeSourceServersResponseBodySourceServersSourceServer self = new DescribeSourceServersResponseBodySourceServersSourceServer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServer setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServer setHeartbeatRate(Integer heartbeatRate) {
-            this.heartbeatRate = heartbeatRate;
-            return this;
-        }
-        public Integer getHeartbeatRate() {
-            return this.heartbeatRate;
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServer setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServer setDataDisks(DescribeSourceServersResponseBodySourceServersSourceServerDataDisks dataDisks) {
-            this.dataDisks = dataDisks;
-            return this;
-        }
-        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisks getDataDisks() {
-            return this.dataDisks;
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServer setSystemDiskParts(DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskParts systemDiskParts) {
-            this.systemDiskParts = systemDiskParts;
-            return this;
-        }
-        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskParts getSystemDiskParts() {
-            return this.systemDiskParts;
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServer setKernelLevel(Integer kernelLevel) {
-            this.kernelLevel = kernelLevel;
-            return this;
-        }
-        public Integer getKernelLevel() {
-            return this.kernelLevel;
-        }
-
-        public DescribeSourceServersResponseBodySourceServersSourceServer setSourceId(String sourceId) {
-            this.sourceId = sourceId;
-            return this;
-        }
-        public String getSourceId() {
-            return this.sourceId;
         }
 
         public DescribeSourceServersResponseBodySourceServersSourceServer setAgentVersion(String agentVersion) {
@@ -423,20 +955,28 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.agentVersion;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServer setStatusInfo(String statusInfo) {
-            this.statusInfo = statusInfo;
+        public DescribeSourceServersResponseBodySourceServersSourceServer setArchitecture(String architecture) {
+            this.architecture = architecture;
             return this;
         }
-        public String getStatusInfo() {
-            return this.statusInfo;
+        public String getArchitecture() {
+            return this.architecture;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServer setSystemDiskSize(Integer systemDiskSize) {
-            this.systemDiskSize = systemDiskSize;
+        public DescribeSourceServersResponseBodySourceServersSourceServer setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setDataDisks(DescribeSourceServersResponseBodySourceServersSourceServerDataDisks dataDisks) {
+            this.dataDisks = dataDisks;
+            return this;
+        }
+        public DescribeSourceServersResponseBodySourceServersSourceServerDataDisks getDataDisks() {
+            return this.dataDisks;
         }
 
         public DescribeSourceServersResponseBodySourceServersSourceServer setDescription(String description) {
@@ -447,6 +987,14 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeSourceServersResponseBodySourceServersSourceServer setDisks(DescribeSourceServersResponseBodySourceServersSourceServerDisks disks) {
+            this.disks = disks;
+            return this;
+        }
+        public DescribeSourceServersResponseBodySourceServersSourceServerDisks getDisks() {
+            return this.disks;
+        }
+
         public DescribeSourceServersResponseBodySourceServersSourceServer setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
@@ -455,12 +1003,36 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.errorCode;
         }
 
+        public DescribeSourceServersResponseBodySourceServersSourceServer setHeartbeatRate(Integer heartbeatRate) {
+            this.heartbeatRate = heartbeatRate;
+            return this;
+        }
+        public Integer getHeartbeatRate() {
+            return this.heartbeatRate;
+        }
+
         public DescribeSourceServersResponseBodySourceServersSourceServer setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
         public String getJobId() {
             return this.jobId;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setKernelLevel(Integer kernelLevel) {
+            this.kernelLevel = kernelLevel;
+            return this;
+        }
+        public Integer getKernelLevel() {
+            return this.kernelLevel;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeSourceServersResponseBodySourceServersSourceServer setPlatform(String platform) {
@@ -479,12 +1051,52 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.replicationDriver;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServer setName(String name) {
-            this.name = name;
+        public DescribeSourceServersResponseBodySourceServersSourceServer setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setSourceId(String sourceId) {
+            this.sourceId = sourceId;
+            return this;
+        }
+        public String getSourceId() {
+            return this.sourceId;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setStatusInfo(String statusInfo) {
+            this.statusInfo = statusInfo;
+            return this;
+        }
+        public String getStatusInfo() {
+            return this.statusInfo;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setSystemDiskParts(DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskParts systemDiskParts) {
+            this.systemDiskParts = systemDiskParts;
+            return this;
+        }
+        public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskParts getSystemDiskParts() {
+            return this.systemDiskParts;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setSystemDiskSize(Integer systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
         public DescribeSourceServersResponseBodySourceServersSourceServer setSystemInfo(String systemInfo) {
@@ -495,12 +1107,20 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.systemInfo;
         }
 
-        public DescribeSourceServersResponseBodySourceServersSourceServer setArchitecture(String architecture) {
-            this.architecture = architecture;
+        public DescribeSourceServersResponseBodySourceServersSourceServer setTags(DescribeSourceServersResponseBodySourceServersSourceServerTags tags) {
+            this.tags = tags;
             return this;
         }
-        public String getArchitecture() {
-            return this.architecture;
+        public DescribeSourceServersResponseBodySourceServersSourceServerTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeSourceServersResponseBodySourceServersSourceServer setWorkgroupId(String workgroupId) {
+            this.workgroupId = workgroupId;
+            return this;
+        }
+        public String getWorkgroupId() {
+            return this.workgroupId;
         }
 
     }

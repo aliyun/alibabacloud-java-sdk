@@ -3,7 +3,7 @@ package com.aliyun.smc20190601.models;
 
 import com.aliyun.tea.*;
 
-public class ListTagResourcesResponse extends TeaModel {
+public class CreateCrossZoneMigrationJobResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListTagResourcesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListTagResourcesResponseBody body;
+    public CreateCrossZoneMigrationJobResponseBody body;
 
-    public static ListTagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListTagResourcesResponse self = new ListTagResourcesResponse();
+    public static CreateCrossZoneMigrationJobResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateCrossZoneMigrationJobResponse self = new CreateCrossZoneMigrationJobResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListTagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateCrossZoneMigrationJobResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListTagResourcesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListTagResourcesResponse setStatusCode(Integer statusCode) {
+    public CreateCrossZoneMigrationJobResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListTagResourcesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListTagResourcesResponse setBody(ListTagResourcesResponseBody body) {
+    public CreateCrossZoneMigrationJobResponse setBody(CreateCrossZoneMigrationJobResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListTagResourcesResponseBody getBody() {
+    public CreateCrossZoneMigrationJobResponseBody getBody() {
         return this.body;
     }
 

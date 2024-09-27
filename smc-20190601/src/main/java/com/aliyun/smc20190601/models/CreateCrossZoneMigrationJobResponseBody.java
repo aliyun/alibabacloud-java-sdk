@@ -3,10 +3,8 @@ package com.aliyun.smc20190601.models;
 
 import com.aliyun.tea.*;
 
-public class CreateReplicationJobResponseBody extends TeaModel {
+public class CreateCrossZoneMigrationJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the migration job.</p>
-     * 
      * <strong>example:</strong>
      * <p>j-bp17bclvg344jlyt****</p>
      */
@@ -14,20 +12,18 @@ public class CreateReplicationJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>C8B26B44-0189-443E-9816-D951F59623A9</p>
+     * <p>A9DBD2F8-DE5A-5844-BA6F-957A996CBD78</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateReplicationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateReplicationJobResponseBody self = new CreateReplicationJobResponseBody();
+    public static CreateCrossZoneMigrationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateCrossZoneMigrationJobResponseBody self = new CreateCrossZoneMigrationJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateReplicationJobResponseBody setJobId(String jobId) {
+    public CreateCrossZoneMigrationJobResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -35,7 +31,7 @@ public class CreateReplicationJobResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public CreateReplicationJobResponseBody setRequestId(String requestId) {
+    public CreateCrossZoneMigrationJobResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
