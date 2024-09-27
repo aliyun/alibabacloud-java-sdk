@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudGtmMonitorTemplateResponseBody extends TeaModel {
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -12,6 +14,12 @@ public class DeleteCloudGtmMonitorTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation to delete the health check template was successful:</p>
+     * <ul>
+     * <li>true: Operation successful</li>
+     * <li>false: Operation failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

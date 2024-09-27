@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstancesRequest extends TeaModel {
     /**
-     * <p>The Sorting direction. Values:</p>
+     * <p>The order in which you want to sort returned entries. Valid values:</p>
      * <ul>
-     * <li><strong>DESC</strong>: Descending (if not specified, the default is descending order)</li>
-     * <li><strong>ASC</strong>: Ascending</li>
+     * <li>DESC: Returned entries are sorted in descending order. If this parameter is left empty, returned entries are sorted in descending order by default.</li>
+     * <li>ASC: Returned entries are sorted in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,11 +31,12 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String domainType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> : Chinese</li>
-     * <li><strong>en</strong> (default) : English</li>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
      * </ul>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -44,10 +45,10 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The Sorting parameter. Values:</p>
+     * <p>The method that is used to sort returned entries. Valid values:</p>
      * <ul>
-     * <li>createDate: Sort by creation time (if not specified, the default is to sort by creation time)</li>
-     * <li>expireDate: Sort by expiration time</li>
+     * <li>createDate: sorts returned entries by creation time. If this parameter is left empty, returned entries are sorted by creation time by default.</li>
+     * <li>expireDate: sorts returned entries by expiration time.</li>
      * </ul>
      * 
      * <strong>example:</strong>

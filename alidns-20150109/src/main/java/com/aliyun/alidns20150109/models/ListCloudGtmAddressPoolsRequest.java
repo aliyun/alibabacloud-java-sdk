@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,6 +18,8 @@ public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>Address pool name.</p>
+     * 
      * <strong>example:</strong>
      * <p>AddressPool-1</p>
      */
@@ -19,6 +27,13 @@ public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     public String addressPoolName;
 
     /**
+     * <p>The type of the address pool. Valid values:</p>
+     * <ul>
+     * <li>IPv4: indicates that the service address to be resolved is an IPv4 address.</li>
+     * <li>IPv6: indicates that the service address to be resolved is an IPv6 address.</li>
+     * <li>domain: indicates that the service address to be resolved is a domain name.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>IPv4</p>
      */
@@ -26,6 +41,8 @@ public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     public String addressPoolType;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */
@@ -33,6 +50,12 @@ public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The enabling state of the address pool. Valid values:</p>
+     * <ul>
+     * <li>enable: The address pool is enabled.</li>
+     * <li>disable: The address pool is disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enable</p>
      */
@@ -40,6 +63,8 @@ public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     public String enableStatus;
 
     /**
+     * <p>Current page number, starting at <strong>1</strong>, default is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +72,8 @@ public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -54,6 +81,8 @@ public class ListCloudGtmAddressPoolsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The additional description of the address pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

@@ -18,6 +18,9 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     @NameInMap("CurPage")
     public Integer curPage;
 
+    /**
+     * <p>The logs.</p>
+     */
     @NameInMap("Logs")
     public DescribeInternetDnsLogsResponseBodyLogs logs;
 
@@ -148,6 +151,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The domain name for which you want to query Domain Name System (DNS) records.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -199,6 +204,12 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         @NameInMap("Value")
         public DescribeInternetDnsLogsResponseBodyLogsLogValue value;
 
+        /**
+         * <p>The zone name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 

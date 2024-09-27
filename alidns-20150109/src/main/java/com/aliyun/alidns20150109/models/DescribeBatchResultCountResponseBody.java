@@ -32,7 +32,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
     public String reason;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
@@ -41,11 +41,11 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The state of the task. Valid values:</p>
      * <ul>
      * <li><strong>-1</strong>: No task for importing domain names or DNS records is submitted.</li>
      * <li><strong>0</strong>: The task is being processed.</li>
-     * <li><strong>1</strong>: The task is completed.</li>
+     * <li><strong>1</strong>: The task is complete.</li>
      * <li><strong>2</strong>: The task failed.</li>
      * </ul>
      * 
@@ -56,7 +56,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The total number of successfully processed domain names or DNS records.</p>
+     * <p>The total number of domain names or DNS records that were processed.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

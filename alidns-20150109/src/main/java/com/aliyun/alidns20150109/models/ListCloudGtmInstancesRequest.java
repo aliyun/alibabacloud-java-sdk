@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmInstancesRequest extends TeaModel {
     /**
+     * <p>Return language value. Options:</p>
+     * <ul>
+     * <li>zh-CN: Chinese.</li>
+     * <li>en-US: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,6 +18,8 @@ public class ListCloudGtmInstancesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */
@@ -19,6 +27,8 @@ public class ListCloudGtmInstancesRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the GTM instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>gtm-cn-jmp3qnw**03</p>
      */
@@ -26,6 +36,8 @@ public class ListCloudGtmInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Instance name, used to distinguish the business purpose of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -33,6 +45,8 @@ public class ListCloudGtmInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +54,8 @@ public class ListCloudGtmInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

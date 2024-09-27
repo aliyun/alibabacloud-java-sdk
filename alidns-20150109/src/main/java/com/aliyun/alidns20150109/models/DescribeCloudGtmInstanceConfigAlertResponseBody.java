@@ -4,13 +4,25 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
+    /**
+     * <p>The alert configurations.</p>
+     */
     @NameInMap("AlertConfig")
     public DescribeCloudGtmInstanceConfigAlertResponseBodyAlertConfig alertConfig;
 
+    /**
+     * <p>The alert contact groups.</p>
+     */
     @NameInMap("AlertGroup")
     public DescribeCloudGtmInstanceConfigAlertResponseBodyAlertGroup alertGroup;
 
     /**
+     * <p>The alert configuration mode of the instance. Valid values:</p>
+     * <ul>
+     * <li>global: global alert configuration</li>
+     * <li>instance_config: custom alert configuration</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>global</p>
      */
@@ -18,6 +30,8 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     public String alertMode;
 
     /**
+     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>Config-000**11</p>
      */
@@ -25,6 +39,8 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     public String configId;
 
     /**
+     * <p>The ID of the GTM 3.0 instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>gtm-cn-wwo3a3hbz**</p>
      */
@@ -32,6 +48,8 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
      */
@@ -93,6 +111,12 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
 
     public static class DescribeCloudGtmInstanceConfigAlertResponseBodyAlertConfigAlertConfig extends TeaModel {
         /**
+         * <p>Indicates whether DingTalk notifications are configured. Valid values:</p>
+         * <ul>
+         * <li>true: DingTalk notifications are configured. DingTalk notifications are sent after alerts are triggered.</li>
+         * <li>false: DingTalk notifications are not configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -100,6 +124,12 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         public Boolean dingtalkNotice;
 
         /**
+         * <p>Indicates whether email notifications are configured. Valid values:</p>
+         * <ul>
+         * <li>true: Email notifications are configured. Emails are sent after alerts are triggered.</li>
+         * <li>false: Email notifications are not configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -107,6 +137,14 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         public Boolean emailNotice;
 
         /**
+         * <p>The type of the alert event. Valid values:</p>
+         * <ul>
+         * <li>addr_alert: The address is unavailable.</li>
+         * <li>addr_resume: The address becomes available.</li>
+         * <li>addr_pool_unavailable: The address pool is unavailable.</li>
+         * <li>addr_pool_available: The address pool becomes available.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>addr_alert</p>
          */
@@ -114,6 +152,13 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         public String noticeType;
 
         /**
+         * <p>Indicates whether text message notifications are configured. Valid values:</p>
+         * <ul>
+         * <li>true: Text message notifications are configured. Text messages are sent after alerts are triggered.</li>
+         * <li>false: Text message notifications are not configured.</li>
+         * </ul>
+         * <p>Only the China site (aliyun.com) supports text message notifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

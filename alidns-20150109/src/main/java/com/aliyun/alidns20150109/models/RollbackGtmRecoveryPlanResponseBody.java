@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackGtmRecoveryPlanResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>853805EA-3D47-47D5-9A1A-A45C24313ABD</p>

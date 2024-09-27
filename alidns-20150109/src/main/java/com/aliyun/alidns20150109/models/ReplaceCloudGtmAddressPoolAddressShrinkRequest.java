@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ReplaceCloudGtmAddressPoolAddressShrinkRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese</li>
+     * <li><strong>en-US (default)</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,16 +18,23 @@ public class ReplaceCloudGtmAddressPoolAddressShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the address pool for which you want to replace addresses. This ID uniquely identifies the address pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>pool-89618921167339**24</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
+    /**
+     * <p>The addresses.</p>
+     */
     @NameInMap("Addresses")
     public String addressesShrink;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */

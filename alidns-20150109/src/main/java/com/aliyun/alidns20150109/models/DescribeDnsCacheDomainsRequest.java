@@ -32,7 +32,7 @@ public class DescribeDnsCacheDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

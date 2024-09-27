@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmMonitorNodesRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese</li>
+     * <li><strong>en-US</strong> (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */

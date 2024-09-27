@@ -15,12 +15,12 @@ public class ChangeDomainGroupRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the destination domain name group.</p>
+     * <p>The ID of the target domain name group.</p>
      * <ul>
-     * <li>If you do not specify GroupId, the domain name is moved to the default group.</li>
-     * <li>If you set GroupId to an empty string, the domain name is moved to the default group.</li>
-     * <li>If you set GroupId to defaultGroup, the domain name is moved to the default group.</li>
-     * <li>If you do not set GroupId to one of the preceding values and set GroupId to an existing group ID, the domain name is moved to the existing group. If you set GroupId to a group ID that does not exist, the domain name remains in the original group.</li>
+     * <li>If you do not specify GroupId, the domain name belongs to the default group.</li>
+     * <li>If you specify an empty string &quot;&quot; for GroupId, the domain name belongs to the default group.</li>
+     * <li>If you set GroupId to defaultGroup, the domain name belongs to the default group.</li>
+     * <li>If you specify GroupId to another value and the value is verified existent, the value of GroupId for the target domain name is updated. If the value is verified inexistent, the value of GroupId for the target domain name is not updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,12 @@ public class ChangeDomainGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

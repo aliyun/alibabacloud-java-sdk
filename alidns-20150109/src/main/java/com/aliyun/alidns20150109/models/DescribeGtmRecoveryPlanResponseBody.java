@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     /**
-     * <p>The time when the disaster recovery plan was created.</p>
+     * <p>The time when the disaster recovery plan was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-11T05:04Z</p>
@@ -14,6 +14,8 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The time when the disaster recovery plan was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1565499867000</p>
      */
@@ -30,13 +32,13 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public Integer faultAddrPoolNum;
 
     /**
-     * <p>The list of faulty address pools.</p>
+     * <p>The faulty address pools.</p>
      */
     @NameInMap("FaultAddrPools")
     public DescribeGtmRecoveryPlanResponseBodyFaultAddrPools faultAddrPools;
 
     /**
-     * <p>The last time when the recovery plan was executed.</p>
+     * <p>The time when the disaster recovery plan was last executed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-11T05:04Z</p>
@@ -45,7 +47,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String lastExecuteTime;
 
     /**
-     * <p>A timestamp that indicates the last time when the recovery plan was executed.</p>
+     * <p>The time when the disaster recovery plan was last executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1565505898000</p>
@@ -54,7 +56,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public Long lastExecuteTimestamp;
 
     /**
-     * <p>The last time when the disaster recovery plan was rolled back.</p>
+     * <p>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-11T06:45Z</p>
@@ -63,7 +65,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String lastRollbackTime;
 
     /**
-     * <p>A timestamp that indicates the last time when the disaster recovery plan was rolled back.</p>
+     * <p>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1565505919000</p>
@@ -72,7 +74,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public Long lastRollbackTimestamp;
 
     /**
-     * <p>The name of the disaster recovery plan queried.</p>
+     * <p>The name of the disaster recovery plan.</p>
      * 
      * <strong>example:</strong>
      * <p>name-example</p>
@@ -81,7 +83,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the disaster recovery plan queried.</p>
+     * <p>The ID of the disaster recovery plan.</p>
      * 
      * <strong>example:</strong>
      * <p>55</p>
@@ -90,7 +92,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public Long recoveryPlanId;
 
     /**
-     * <p>The remarks on the disaster recovery plan.</p>
+     * <p>The description of the disaster recovery plan.</p>
      * 
      * <strong>example:</strong>
      * <p>remark-example</p>
@@ -99,7 +101,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A5F4315-D6E8-435E-82DF-24F4C97D6999</p>
@@ -108,7 +110,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the disaster recovery plan queried.</p>
+     * <p>The status of the disaster recovery plan.</p>
      * 
      * <strong>example:</strong>
      * <p>UNEXECUTED</p>
@@ -117,7 +119,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The last time when the disaster recovery plan was updated.</p>
+     * <p>The time when the disaster recovery plan was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-11T06:45Z</p>
@@ -126,7 +128,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>A timestamp that indicates the last time when the disaster recovery plan was updated.</p>
+     * <p>The time when the disaster recovery plan was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1565499867000</p>
@@ -261,7 +263,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr extends TeaModel {
         /**
-         * <p>The ID of the address.</p>
+         * <p>The address ID.</p>
          * 
          * <strong>example:</strong>
          * <p>739</p>
@@ -270,7 +272,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The address work mode. It is the mode that was set for the IP address to work.</p>
+         * <p>The address mode.</p>
          * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
@@ -279,7 +281,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The address value.</p>
+         * <p>The address.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -339,7 +341,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool extends TeaModel {
         /**
-         * <p>The ID of the address pool.</p>
+         * <p>The address pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hra0oq</p>
@@ -348,19 +350,16 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         public String addrPoolId;
 
         /**
-         * <p>The name of the address pool.</p>
+         * <p>The address pool name.</p>
          */
         @NameInMap("AddrPoolName")
         public String addrPoolName;
 
-        /**
-         * <p>The list of addresses in the address pool.</p>
-         */
         @NameInMap("Addrs")
         public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs addrs;
 
         /**
-         * <p>The ID of the GTM instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>instance-zwy-38</p>

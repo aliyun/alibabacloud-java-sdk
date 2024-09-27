@@ -134,8 +134,8 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
         /**
          * <p>Specifies whether to configure DingTalk notifications. Valid values:</p>
          * <ul>
-         * <li>true: DingTalk notifications are configured. DingTalk notifications are sent when alerts are triggered.</li>
-         * <li>false: DingTalk notifications are not configured.</li>
+         * <li>true: configures DingTalk notifications. DingTalk notifications are sent when alerts are triggered.</li>
+         * <li>false: does not configure DingTalk notifications.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,8 +147,8 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
         /**
          * <p>Specifies whether to configure email notifications. Valid values:</p>
          * <ul>
-         * <li>true: Email notifications are configured. Emails are sent when alerts are triggered.</li>
-         * <li>false: Email notifications are not configured.</li>
+         * <li>true: configures email notifications. Emails are sent when alerts are triggered.</li>
+         * <li>false: does not configure email notifications.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,8 +175,8 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
         /**
          * <p>Specifies whether to configure text message notifications. Valid values:</p>
          * <ul>
-         * <li>true: Text message notifications are configured. Text messages are sent when alerts are triggered.</li>
-         * <li>false: Text message notifications are not configured.</li>
+         * <li>true: configures text message notifications. Text messages are sent when alerts are triggered.</li>
+         * <li>false: does not configure text message notifications.</li>
          * </ul>
          * <p>Only the China site (aliyun.com) supports text message notifications.</p>
          * 

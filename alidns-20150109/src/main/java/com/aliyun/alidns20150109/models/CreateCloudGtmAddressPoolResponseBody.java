@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCloudGtmAddressPoolResponseBody extends TeaModel {
     /**
+     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>pool-89528023225442**16</p>
      */
@@ -12,6 +14,8 @@ public class CreateCloudGtmAddressPoolResponseBody extends TeaModel {
     public String addressPoolId;
 
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
      */
@@ -19,6 +23,12 @@ public class CreateCloudGtmAddressPoolResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the address pool creation operation was successful:</p>
+     * <ul>
+     * <li>true: Operation was successful</li>
+     * <li>false: Operation was failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

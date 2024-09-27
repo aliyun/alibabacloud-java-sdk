@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordStatisticsRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The primary domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The hostname. If you want to resolve the subdomain name <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set this parameter to www.</p>
+     * <p>The hostname. If you want to resolve <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set Rr to www.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

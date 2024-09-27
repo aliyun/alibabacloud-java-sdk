@@ -112,13 +112,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     public static class DescribeDomainsResponseBodyDomainsDomainTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag added to the resource.</p>
+         * <p>The key of tag N added to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag added to the resource.</p>
+         * <p>The value of tag N added to the resource.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -167,7 +167,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     public static class DescribeDomainsResponseBodyDomainsDomain extends TeaModel {
         /**
-         * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
+         * <p>Indicates whether the domain name was registered with Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -176,7 +176,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public Boolean aliDomain;
 
         /**
-         * <p>The time when the domain name was added.</p>
+         * <p>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-30T05:25Z</p>
@@ -194,7 +194,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The names of the DNS servers configured for the domain name.</p>
+         * <p>The names of the DNS servers configured for the domain name assigned by Alibaba Cloud DNS.</p>
          */
         @NameInMap("DnsServers")
         public DescribeDomainsResponseBodyDomainsDomainDnsServers dnsServers;
@@ -208,6 +208,16 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("DomainId")
         public String domainId;
 
+        /**
+         * <p>Indicates whether the DNS traffic analysis feature is enabled for the domain name. Valid values:</p>
+         * <ul>
+         * <li>OPEN</li>
+         * <li>CLOSE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
+         */
         @NameInMap("DomainLoggingSwitchStatus")
         public String domainLoggingSwitchStatus;
 
@@ -239,7 +249,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The time when the Alibaba Cloud DNS instance expires.</p>
+         * <p>The time when the Alibaba Cloud DNS instance expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-03-14T16:00Z</p>

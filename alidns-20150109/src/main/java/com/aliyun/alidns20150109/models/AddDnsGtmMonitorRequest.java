@@ -51,27 +51,27 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
+     * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
      * <ul>
-     * <li><p>HTTP or HTTPS:</p>
+     * <li><p>HTTP or HTTPS</p>
      * <ul>
-     * <li><p>port: the port to check.</p>
+     * <li><p>port: the port that you want to check</p>
      * </li>
-     * <li><p>host: the host configuration.</p>
+     * <li><p>host: the host settings</p>
      * </li>
-     * <li><p>path: the health check URL.</p>
+     * <li><p>path: the URL path</p>
      * </li>
-     * <li><p>code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal.</p>
+     * <li><p>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</p>
      * </li>
-     * <li><p>failureRate: the failure rate.</p>
+     * <li><p>failureRate: the failure rate</p>
      * </li>
-     * <li><p>sni: specifies whether to enable Server Name Indication (SNI). This parameter is only required for the HTTPS protocol. Valid values:</p>
+     * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
      * <ul>
      * <li>true: enables SNI.</li>
      * <li>false: disables SNI.</li>
      * </ul>
      * </li>
-     * <li><p>nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:</p>
+     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
      * <ul>
      * <li>IPV4</li>
      * <li>IPV6</li>
@@ -79,15 +79,15 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
      * </li>
      * </ul>
      * </li>
-     * <li><p>PING:</p>
+     * <li><p>PING</p>
      * <ul>
-     * <li><p>failureRate: the failure rate.</p>
+     * <li><p>failureRate: the failure rate</p>
      * </li>
-     * <li><p>packetNum: the number of ping packets.</p>
+     * <li><p>packetNum: the number of ping packets</p>
      * </li>
-     * <li><p>packetLossRate: the loss rate of ping packets.</p>
+     * <li><p>packetLossRate: the loss rate of ping packets</p>
      * </li>
-     * <li><p>nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:</p>
+     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
      * <ul>
      * <li>IPV4</li>
      * <li>IPV6</li>
@@ -95,13 +95,13 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
      * </li>
      * </ul>
      * </li>
-     * <li><p>TCP:</p>
+     * <li><p>TCP</p>
      * <ul>
-     * <li><p>port: the port to check.</p>
+     * <li><p>port: the port that you want to check</p>
      * </li>
-     * <li><p>failureRate: the failure rate.</p>
+     * <li><p>failureRate: the failure rate</p>
      * </li>
-     * <li><p>nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:</p>
+     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
      * <ul>
      * <li>IPV4</li>
      * <li>IPV6</li>
@@ -119,7 +119,7 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
     public String monitorExtendInfo;
 
     /**
-     * <p>The protocol used for the health check. Valid values:</p>
+     * <p>The health check protocol. Valid values:</p>
      * <ul>
      * <li>HTTP</li>
      * <li>HTTPS</li>
@@ -135,7 +135,7 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The health check timeout period. Unit: milliseconds.</p>
+     * <p>The timeout period. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

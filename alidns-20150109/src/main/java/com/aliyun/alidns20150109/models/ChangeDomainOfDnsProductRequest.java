@@ -33,7 +33,7 @@ public class ChangeDomainOfDnsProductRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The domain name that you want to bind to the instance. If you do not specify this parameter, this operation unbinds the original domain name from the instance.</p>
+     * <p>The domain name that you want to bind to the instance. If you leave this parameter empty, the domain name that is bound to the instance is unbound from the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>newdomain.com</p>

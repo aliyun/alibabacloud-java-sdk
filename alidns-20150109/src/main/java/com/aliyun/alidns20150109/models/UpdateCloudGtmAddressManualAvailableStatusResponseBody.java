@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressManualAvailableStatusResponseBody extends TeaModel {
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
      */
@@ -12,6 +14,12 @@ public class UpdateCloudGtmAddressManualAvailableStatusResponseBody extends TeaM
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

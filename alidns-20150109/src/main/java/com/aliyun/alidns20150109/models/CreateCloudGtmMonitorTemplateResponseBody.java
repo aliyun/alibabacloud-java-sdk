@@ -19,6 +19,8 @@ public class CreateCloudGtmMonitorTemplateResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the health check template. This ID uniquely identifies the health check template.</p>
+     * 
      * <strong>example:</strong>
      * <p>mtp-89518052425100**80</p>
      */

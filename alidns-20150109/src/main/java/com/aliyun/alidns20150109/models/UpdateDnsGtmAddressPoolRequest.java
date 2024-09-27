@@ -110,17 +110,17 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
         public String addr;
 
         /**
-         * <p>The source region of the address, in JSON-formatted string.</p>
+         * <p>The information about the source region of the address. The value of the parameter is a string in the JSON format. Valid values:</p>
          * <ul>
-         * <li><p>LineCode: the line code of the source region of the address. The LineCode field is deprecated, and the lineCodes field is used as a substitute.</p>
+         * <li><p>LineCode: the line code of the source region. This parameter is deprecated. Use lineCodes instead.</p>
          * </li>
-         * <li><p>LineCodes: the line code list of the source regions of addresses.</p>
+         * <li><p>lineCodes: the line codes of the source region</p>
          * </li>
-         * <li><p>lineCodeRectifyType: the rectification type of the line codes. Default value: AUTO. Valid values:</p>
+         * <li><p>lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:</p>
          * <ul>
-         * <li>NO_NEED: no need for rectification.</li>
-         * <li>RECTIFIED: rectified.</li>
-         * <li>AUTO: automatic rectification.</li>
+         * <li>NO_NEED: no need for rectification</li>
+         * <li>RECTIFIED: rectified</li>
+         * <li>AUTO: automatic rectification</li>
          * </ul>
          * </li>
          * </ul>
@@ -141,11 +141,11 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
         public Integer lbaWeight;
 
         /**
-         * <p>The response mode: Valid values:</p>
+         * <p>The return mode of the addresses. Valid values:</p>
          * <ul>
-         * <li>SMART: smart return.</li>
-         * <li>ONLINE: always online.</li>
-         * <li>OFFLINE: always offline.</li>
+         * <li>SMART: smart return</li>
+         * <li>ONLINE: always online</li>
+         * <li>OFFLINE: always offline</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -156,7 +156,7 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The additional information about the address.</p>
+         * <p>The description of the address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

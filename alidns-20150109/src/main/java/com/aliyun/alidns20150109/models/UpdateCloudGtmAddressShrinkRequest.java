@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,6 +18,8 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>IP address or domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
      */
@@ -19,6 +27,7 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>The ID of the address. This ID uniquely identifies the address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +36,18 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     @NameInMap("AddressId")
     public String addressId;
 
+    /**
+     * <p>Address Attribution information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This parameter is not supported in the current version and does not need to be input.</p>
+     */
     @NameInMap("AttributeInfo")
     public String attributeInfo;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */
@@ -38,16 +55,30 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The condition for determining the health status of the address. This parameter is required when HealthTasks is specified. Valid values:</p>
+     * <ul>
+     * <li>any_ok: The health check results of at least one health check template are normal.</li>
+     * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
+     * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
+     * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
+     * <li>all_ok: The health check results of all health check templates are normal.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>p50_ok</p>
      */
     @NameInMap("HealthJudgement")
     public String healthJudgement;
 
+    /**
+     * <p>The health check tasks.</p>
+     */
     @NameInMap("HealthTasks")
     public String healthTasksShrink;
 
     /**
+     * <p>Address name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Address-1</p>
      */

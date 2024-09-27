@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudGtmAddressPoolResponseBody extends TeaModel {
     /**
+     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>pool-89528023225442**16</p>
      */

@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
+    /**
+     * <p>The alert configurations.</p>
+     */
     @NameInMap("AlertConfig")
     public DescribeCloudGtmGlobalAlertResponseBodyAlertConfig alertConfig;
 
+    /**
+     * <p>The alert contact groups.</p>
+     */
     @NameInMap("AlertGroup")
     public DescribeCloudGtmGlobalAlertResponseBodyAlertGroup alertGroup;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
      */
@@ -48,6 +56,12 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
 
     public static class DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig extends TeaModel {
         /**
+         * <p>Indicates whether DingTalk notifications are configured. Valid values:</p>
+         * <ul>
+         * <li>true: DingTalk notifications are configured. DingTalk notifications are sent when alerts are triggered.</li>
+         * <li>false: DingTalk notifications are not configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -55,6 +69,12 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         public Boolean dingtalkNotice;
 
         /**
+         * <p>Indicates whether email notifications are configured. Valid values:</p>
+         * <ul>
+         * <li>true: Email notifications are configured. Emails are sent when alerts are triggered.</li>
+         * <li>false: Email notifications are not configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -62,6 +82,14 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         public Boolean emailNotice;
 
         /**
+         * <p>The type of the alert event. Valid values:</p>
+         * <ul>
+         * <li>addr_alert: The address is unavailable.</li>
+         * <li>addr_resume: The address becomes available.</li>
+         * <li>addr_pool_unavailable: The address pool is unavailable.</li>
+         * <li>addr_pool_available: The address pool becomes available.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>addr_alert</p>
          */
@@ -69,6 +97,13 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         public String noticeType;
 
         /**
+         * <p>Indicates whether text message notifications are configured. Valid values:</p>
+         * <ul>
+         * <li>true: Text message notifications are configured. Text messages are sent when alerts are triggered.</li>
+         * <li>false: Text message notifications are not configured.</li>
+         * </ul>
+         * <p>Only the China site (aliyun.com) supports text message notifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

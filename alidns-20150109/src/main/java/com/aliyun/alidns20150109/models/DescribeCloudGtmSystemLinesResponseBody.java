@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The system lines.</p>
+     */
     @NameInMap("SystemLines")
     public DescribeCloudGtmSystemLinesResponseBodySystemLines systemLines;
 
+    /**
+     * <p>The system lines, which are in a tree structure. Only a system line is listed in this example.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;displayName\&quot;:\&quot;Default\&quot;,\&quot;id\&quot;:\&quot;default\&quot;,\&quot;isAvailable\&quot;:true,\&quot;name\&quot;:\&quot;Default\&quot;,\&quot;parentId\&quot;:\&quot;\&quot;}]</p>
+     */
     @NameInMap("SystemLinesTree")
     public String systemLinesTree;
 
@@ -48,26 +59,48 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
 
     public static class DescribeCloudGtmSystemLinesResponseBodySystemLinesSystemLine extends TeaModel {
         /**
+         * <p>The line code.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun_r_ap-south-1</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The display name of the line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Indicates whether the line can be selected as the source of a Domain Name System (DNS) request. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsAvailable")
         public Boolean isAvailable;
 
+        /**
+         * <p>The name of the line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The code of the parent line.</p>
+         * 
          * <strong>example:</strong>
          * <p>String	aliyun</p>
          */

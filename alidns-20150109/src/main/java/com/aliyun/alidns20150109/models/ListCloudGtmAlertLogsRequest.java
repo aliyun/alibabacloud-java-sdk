@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmAlertLogsRequest extends TeaModel {
     /**
+     * <p>Alert type:</p>
+     * <ul>
+     * <li>ALERT</li>
+     * <li>RESUME</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ALERT</p>
      */
@@ -12,6 +18,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String actionType;
 
     /**
+     * <p>The end time of the query (timestamp).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,14 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
+     * <p>Alarm object types:</p>
+     * <ul>
+     * <li>GTM_ADDRESS: Address</li>
+     * <li>GTM_ADDRESS_POOL: Address Pool</li>
+     * <li>GTM_INSTANCE: Instance</li>
+     * <li>GTM_MONITOR_TEMPLATE: Health Check Template</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GTM_ADDRESS</p>
      */
@@ -28,6 +43,8 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>Search keyword, usually an address ID, address pool ID, domain information, etc.</p>
+     * 
      * <strong>example:</strong>
      * <p>pool-895280232254422016</p>
      */
@@ -35,6 +52,12 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>Language type of the returned information:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -42,6 +65,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +75,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +85,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time of the query (timestamp).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

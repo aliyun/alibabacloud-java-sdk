@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
     /**
-     * <p>The original domain name that was bound to the instance. If the value of this parameter is empty, the instance is bound with a domain name for the first time.</p>
+     * <p>The domain name that is originally bound to the instance. If no value is returned for this parameter, the instance is bound to a domain name for the first time.</p>
      * 
      * <strong>example:</strong>
      * <p>originaldomain.com</p>
@@ -14,7 +14,7 @@ public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
     public String originalDomain;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>

@@ -15,7 +15,12 @@ public class AddDomainBackupRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -26,8 +31,8 @@ public class AddDomainBackupRequest extends TeaModel {
     /**
      * <p>The backup cycle. Valid values:</p>
      * <ul>
-     * <li><strong>DAY</strong>: Backs up data once every day.</li>
-     * <li><strong>HOUR</strong>: Backs up data once every hour.</li>
+     * <li>DAY: backs up data on a daily basis.</li>
+     * <li>HOUR: backs up data on an hourly basis.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

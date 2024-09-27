@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
+    /**
+     * <p>Public IPv4 monitoring node list.</p>
+     */
     @NameInMap("Ipv4IspCityNodes")
     public ListCloudGtmMonitorNodesResponseBodyIpv4IspCityNodes ipv4IspCityNodes;
 
+    /**
+     * <p>List of public IPv6 monitoring nodes.</p>
+     */
     @NameInMap("Ipv6IspCityNodes")
     public ListCloudGtmMonitorNodesResponseBodyIpv6IspCityNodes ipv6IspCityNodes;
 
     /**
+     * <p>Unique request identification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -67,56 +75,104 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
 
     public static class ListCloudGtmMonitorNodesResponseBodyIpv4IspCityNodesIpv4IspCityNode extends TeaModel {
         /**
+         * <p>City code.</p>
+         * 
          * <strong>example:</strong>
          * <p>503</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>City name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
         /**
+         * <p>Country code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>001</p>
+         * <p>629</p>
          */
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>Country name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
+         */
         @NameInMap("CountryName")
         public String countryName;
 
         /**
+         * <p>Monitor node default selection:</p>
+         * <ul>
+         * <li>true: Selected by default</li>
+         * <li>false: Not selected by default</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
+        /**
+         * <p>Monitor probe group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP Nodes</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
+         * <p>Monitoring node group type, currently supported:</p>
+         * <ul>
+         * <li>BGP: BGP node</li>
+         * <li>OVERSEAS: International node</li>
+         * <li>ISP: Carrier node</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BGP</p>
          */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <p>List of node IP addresses.</p>
+         */
         @NameInMap("Ips")
         public ListCloudGtmMonitorNodesResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps ips;
 
         /**
+         * <p>Operator code.</p>
+         * 
          * <strong>example:</strong>
          * <p>465</p>
          */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>Operator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
         /**
+         * <p>Unique identifier ID of the probe node.</p>
+         * 
          * <strong>example:</strong>
          * <p>node-ewze1bysndy4gf**j8</p>
          */
@@ -258,56 +314,104 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
 
     public static class ListCloudGtmMonitorNodesResponseBodyIpv6IspCityNodesIpv6IspCityNode extends TeaModel {
         /**
+         * <p>City code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>503</p>
+         * <p>357</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>City name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shanghai</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
         /**
+         * <p>Country code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>001</p>
+         * <p>629</p>
          */
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>Country name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
+         */
         @NameInMap("CountryName")
         public String countryName;
 
         /**
+         * <p>Monitor node default selection:</p>
+         * <ul>
+         * <li>true: Selected by default</li>
+         * <li>false: Not selected by default</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
+        /**
+         * <p>Monitoring probe group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
+         * <p>Monitoring node group type, currently supported:</p>
+         * <ul>
+         * <li>BGP: BGP node</li>
+         * <li>OVERSEAS: International node</li>
+         * <li>ISP: Carrier node</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BGP</p>
          */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <p>List of node IP addresses.</p>
+         */
         @NameInMap("Ips")
         public ListCloudGtmMonitorNodesResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps ips;
 
         /**
+         * <p>Operator code.</p>
+         * 
          * <strong>example:</strong>
          * <p>465</p>
          */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>Operator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
         /**
+         * <p>Unique identifier ID of the probe node.</p>
+         * 
          * <strong>example:</strong>
          * <p>node-ewze1bysndy4gf**j8</p>
          */

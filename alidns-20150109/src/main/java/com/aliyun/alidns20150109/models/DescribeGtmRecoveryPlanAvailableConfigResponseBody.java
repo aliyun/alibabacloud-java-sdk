@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel {
     /**
-     * <p>The list of GTM instances involved in the disaster recovery plan.</p>
+     * <p>The instances.</p>
      */
     @NameInMap("Instances")
     public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstances instances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F8F8EF50-8B7F-4702-B294-97170A423403</p>
@@ -42,7 +42,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     public static class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPoolsAddrPool extends TeaModel {
         /**
-         * <p>The ID of the address pool.</p>
+         * <p>The address pool ID.</p>
          */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
@@ -100,13 +100,13 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     public static class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance extends TeaModel {
         /**
-         * <p>The list of address pools for the GTM instance.</p>
+         * <p>The address pools.</p>
          */
         @NameInMap("AddrPools")
         public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools addrPools;
 
         /**
-         * <p>The ID of the GTM instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>instance-example</p>
@@ -115,7 +115,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         public String instanceId;
 
         /**
-         * <p>The name of the GTM instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>instance-name-example</p>

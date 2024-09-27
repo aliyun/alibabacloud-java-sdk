@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the instance to query.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeGtmInstanceStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
