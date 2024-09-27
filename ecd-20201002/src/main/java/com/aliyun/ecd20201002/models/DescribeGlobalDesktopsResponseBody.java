@@ -302,6 +302,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("NewAppVersion")
         public String newAppVersion;
 
+        @NameInMap("NewDcdVersion")
+        public String newDcdVersion;
+
         /**
          * <strong>example:</strong>
          * <p>testProject</p>
@@ -360,6 +363,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
         public String getNewAppVersion() {
             return this.newAppVersion;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setNewDcdVersion(String newDcdVersion) {
+            this.newDcdVersion = newDcdVersion;
+            return this;
+        }
+        public String getNewDcdVersion() {
+            return this.newDcdVersion;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setProject(String project) {
