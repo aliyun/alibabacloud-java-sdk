@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNodePoolsRequest extends TeaModel {
     /**
+     * <p>Node pool name.</p>
+     * 
      * <strong>example:</strong>
      * <p>nodepool-test</p>
      */

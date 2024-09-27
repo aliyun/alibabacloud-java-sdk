@@ -36,6 +36,9 @@ public class UpgradeClusterRequest extends TeaModel {
     @NameInMap("next_version")
     public String nextVersion;
 
+    /**
+     * <p>Policy of rolling.</p>
+     */
     @NameInMap("rolling_policy")
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
 
@@ -95,6 +98,12 @@ public class UpgradeClusterRequest extends TeaModel {
     }
 
     public static class UpgradeClusterRequestRollingPolicy extends TeaModel {
+        /**
+         * <p>Maximum number of executions per batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("max_parallelism")
         public Integer maxParallelism;
 

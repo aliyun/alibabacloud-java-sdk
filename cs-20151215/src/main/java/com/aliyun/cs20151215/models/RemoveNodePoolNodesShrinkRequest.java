@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
     /**
+     * <p>Whether to remove concurrently.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

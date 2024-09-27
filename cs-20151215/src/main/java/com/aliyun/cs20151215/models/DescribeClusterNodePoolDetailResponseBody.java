@@ -46,6 +46,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("max_nodes")
     public Long maxNodes;
 
+    /**
+     * <p>Node configuration.</p>
+     */
     @NameInMap("node_config")
     public DescribeClusterNodePoolDetailResponseBodyNodeConfig nodeConfig;
 
@@ -455,6 +458,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
+        @NameInMap("pre_user_data")
+        public String preUserData;
+
         /**
          * <p>The name of the container runtime.</p>
          * 
@@ -480,6 +486,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public java.util.List<Taint> taints;
 
         /**
+         * <p>Whether the expanded node is schedulable.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -532,6 +540,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.nodeNameMode;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig setPreUserData(String preUserData) {
+            this.preUserData = preUserData;
+            return this;
+        }
+        public String getPreUserData() {
+            return this.preUserData;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig setRuntime(String runtime) {
             this.runtime = runtime;
             return this;
@@ -576,6 +592,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy extends TeaModel {
         /**
+         * <p>Whether to allow restarting nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -599,6 +617,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy extends TeaModel {
         /**
+         * <p>Whether to allow automatic upgrading of kubelet.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -622,6 +642,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy extends TeaModel {
         /**
+         * <p>Whether to allow restarting nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -629,6 +651,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean restartNode;
 
         /**
+         * <p>The vulnerability levels allowed for auto-fixing, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>asap,nntf</p>
          */
@@ -753,26 +777,39 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("auto_repair")
         public Boolean autoRepair;
 
+        /**
+         * <p>Automatic repair node policy.</p>
+         */
         @NameInMap("auto_repair_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy autoRepairPolicy;
 
         /**
+         * <p>Whether to automatically upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
+        /**
+         * <p>Automatic upgrade policy.</p>
+         */
         @NameInMap("auto_upgrade_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy autoUpgradePolicy;
 
         /**
+         * <p>Whether to automatically fix CVEs.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("auto_vul_fix")
         public Boolean autoVulFix;
 
+        /**
+         * <p>Automatically repair CVE policies.</p>
+         */
         @NameInMap("auto_vul_fix_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy autoVulFixPolicy;
 
@@ -867,6 +904,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolDetailResponseBodyNodeConfig extends TeaModel {
+        /**
+         * <p>Kubelet parameter configuration.</p>
+         */
         @NameInMap("kubelet_configuration")
         public KubeletConfig kubeletConfiguration;
 
@@ -1145,6 +1185,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
+         * <p>【The field is deprecated】Please use the parameter security_hardening_os instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1199,6 +1241,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>Operating system image type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliyunLinux</p>
          */
@@ -1219,7 +1263,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>实例属性</p>
+         * <p>Instance attributes</p>
          */
         @NameInMap("instance_patterns")
         public java.util.List<InstancePatterns> instancePatterns;
@@ -1258,6 +1302,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String keyPair;
 
         /**
+         * <p>Whether the popped ECS instance uses a non-root user for login.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1363,7 +1409,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String ramPolicy;
 
         /**
-         * <p>Worker RAM角色名称。</p>
+         * <p>Worker RAM role name.</p>
          * 
          * <strong>example:</strong>
          * <p>KubernetesWorkerRole-4a4fa089-80c1-48a5-b3c6-9349311f****</p>
@@ -1415,6 +1461,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
+         * <p>Alibaba Cloud OS security hardening. Values:</p>
+         * <ul>
+         * <li><code>true</code>: Enable Alibaba Cloud OS security hardening. </li>
+         * <li><code>false</code>: Do not enable Alibaba Cloud OS security hardening.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1422,6 +1475,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean securityHardeningOs;
 
         /**
+         * <p>Indicates whether to enable security reinforcement compliant with the hardening standards. This option is available only when the system image is set to Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3. Alibaba Cloud provides baseline check standards and scanning programs compliant with Grade 3, Version 2.0 of the hardening standards for both Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 images.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1472,6 +1527,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
+         * <p>Whether to enable Burst (performance burst) for the node system disk, configured when the disk type is cloud_auto.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1512,6 +1569,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
+         * <p>Encryption algorithm used for the system disk. Valid values: aes-256.</p>
+         * 
          * <strong>example:</strong>
          * <p>aes-256</p>
          */
@@ -1532,6 +1591,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean systemDiskEncrypted;
 
         /**
+         * <p>System disk\&quot;s KMS key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
@@ -1548,6 +1609,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
+         * <p>Pre-configured read and write IOPS for the system disk of the node, configured when the disk type is cloud_auto.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */

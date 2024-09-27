@@ -496,6 +496,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
+        @NameInMap("pre_user_data")
+        public String preUserData;
+
         /**
          * <p>The name of the container runtime. The following types of runtime are supported by Container Service for Kubernetes (ACK):</p>
          * <ul>
@@ -579,6 +582,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getNodeNameMode() {
             return this.nodeNameMode;
+        }
+
+        public CreateClusterNodePoolRequestKubernetesConfig setPreUserData(String preUserData) {
+            this.preUserData = preUserData;
+            return this;
+        }
+        public String getPreUserData() {
+            return this.preUserData;
         }
 
         public CreateClusterNodePoolRequestKubernetesConfig setRuntime(String runtime) {
