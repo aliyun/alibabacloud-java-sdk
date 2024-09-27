@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationResultsRequest extends TeaModel {
     /**
+     * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+     * 
      * <strong>example:</strong>
      * <p>176618589410****</p>
      */
@@ -12,6 +14,8 @@ public class ListEvaluationResultsRequest extends TeaModel {
     public Long accountId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

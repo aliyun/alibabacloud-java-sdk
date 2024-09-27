@@ -4,6 +4,9 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListEvaluationScoreHistoryRequest extends TeaModel {
+    @NameInMap("AccountId")
+    public Long accountId;
+
     /**
      * <strong>example:</strong>
      * <p>2024-07-11</p>
@@ -28,6 +31,14 @@ public class ListEvaluationScoreHistoryRequest extends TeaModel {
     public static ListEvaluationScoreHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEvaluationScoreHistoryRequest self = new ListEvaluationScoreHistoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListEvaluationScoreHistoryRequest setAccountId(Long accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public Long getAccountId() {
+        return this.accountId;
     }
 
     public ListEvaluationScoreHistoryRequest setEndDate(String endDate) {

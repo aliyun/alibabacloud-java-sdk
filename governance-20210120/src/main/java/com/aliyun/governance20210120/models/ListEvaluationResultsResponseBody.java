@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationResultsResponseBody extends TeaModel {
     /**
+     * <p>The Alibaba Cloud account ID of the member.</p>
+     * 
      * <strong>example:</strong>
      * <p>176618589410****</p>
      */
@@ -12,12 +14,17 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
     public Long accountId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BD57329E-131A-59F4-8746-E1CD8D7B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The check results, including the status of the overall check and the results of check items.</p>
+     */
     @NameInMap("Results")
     public ListEvaluationResultsResponseBodyResults results;
 
@@ -51,9 +58,21 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsInsightEnableFailed</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unable to enable ECS Insight due to a server error.</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -82,6 +101,8 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
     public static class ListEvaluationResultsResponseBodyResultsMetricResultsResourcesSummary extends TeaModel {
         /**
+         * <p>The number of non-compliant resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -104,10 +125,18 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationResultsResponseBodyResultsMetricResults extends TeaModel {
+        /**
+         * <p>The error information.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <code>Status</code> is <code>Failed</code>.</p>
+         * </blockquote>
+         */
         @NameInMap("ErrorInfo")
         public ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo errorInfo;
 
         /**
+         * <p>The end time of the check item. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-13T03:34:02Z</p>
          */
@@ -115,16 +144,23 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         public String evaluationTime;
 
         /**
+         * <p>The ID of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>r7xdcu****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The checked resources.</p>
+         */
         @NameInMap("ResourcesSummary")
         public ListEvaluationResultsResponseBodyResultsMetricResultsResourcesSummary resourcesSummary;
 
         /**
+         * <p>The rate of the non-compliant resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.67</p>
          */
@@ -132,6 +168,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         public Double result;
 
         /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li>Error: high risk</li>
+         * <li>Warning: medium risk</li>
+         * <li>None: no risk</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Error</p>
          */
@@ -139,6 +182,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         public String risk;
 
         /**
+         * <p>The status of the check item. Valid values:</p>
+         * <ul>
+         * <li>Running: The check is in progress.</li>
+         * <li>Finished: The check is complete.</li>
+         * <li>failed: The check fails.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -210,16 +260,28 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
     public static class ListEvaluationResultsResponseBodyResults extends TeaModel {
         /**
+         * <p>The end time of the overall check. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-13T03:35:00Z</p>
          */
         @NameInMap("EvaluationTime")
         public String evaluationTime;
 
+        /**
+         * <p>The check results.</p>
+         */
         @NameInMap("MetricResults")
         public java.util.List<ListEvaluationResultsResponseBodyResultsMetricResults> metricResults;
 
         /**
+         * <p>The status of the overall check. Valid values:</p>
+         * <ul>
+         * <li>Running: The check is in progress.</li>
+         * <li>Finished: The check is complete.</li>
+         * <li>failed: The check fails.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -227,6 +289,8 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The overall score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6453</p>
          */
