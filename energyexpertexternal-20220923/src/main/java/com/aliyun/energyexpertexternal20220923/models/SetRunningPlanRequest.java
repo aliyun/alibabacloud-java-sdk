@@ -4,51 +4,115 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class SetRunningPlanRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("controlType")
     public Integer controlType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("dateType")
     public Integer dateType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:00:00</p>
+     */
     @NameInMap("earliestStartupTime")
     public String earliestStartupTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-21</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("factoryId")
     public String factoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:30:00</p>
+     */
     @NameInMap("latestShutdownTime")
     public String latestShutdownTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.1</p>
+     */
     @NameInMap("maxCarbonDioxide")
     public Double maxCarbonDioxide;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3.1</p>
+     */
     @NameInMap("maxTem")
     public Double maxTem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.1</p>
+     */
     @NameInMap("minTem")
     public Double minTem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ib</p>
+     */
     @NameInMap("pKey")
     public String pKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("seasonMode")
     public Integer seasonMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-20</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-31</p>
+     */
     @NameInMap("statisticsTime")
     public String statisticsTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system1</p>
+     */
     @NameInMap("systemId")
     public String systemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:30:00</p>
+     */
     @NameInMap("workingEndTime")
     public String workingEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05:00:00</p>
+     */
     @NameInMap("workingStartTime")
     public String workingStartTime;
 

@@ -4,6 +4,9 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocumentAnalyzeJobRequest extends TeaModel {
+    @NameInMap("dataType")
+    public String dataType;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -36,6 +39,14 @@ public class SubmitDocumentAnalyzeJobRequest extends TeaModel {
     public static SubmitDocumentAnalyzeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocumentAnalyzeJobRequest self = new SubmitDocumentAnalyzeJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitDocumentAnalyzeJobRequest setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public String getDataType() {
+        return this.dataType;
     }
 
     public SubmitDocumentAnalyzeJobRequest setFileName(String fileName) {
