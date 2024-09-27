@@ -3,16 +3,16 @@ package com.aliyun.smc20190601.models;
 
 import com.aliyun.tea.*;
 
-public class StartReplicationJobRequest extends TeaModel {
+public class DeleteAccessTokenRequest extends TeaModel {
     /**
-     * <p>The migration job ID.</p>
+     * <p>The ID of the activation code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>j-bw526m1vi6x21q****</p>
+     * <p>at-bp1akz2zp67r0k6r****</p>
      */
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("AccessTokenId")
+    public String accessTokenId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -20,20 +20,20 @@ public class StartReplicationJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    public static StartReplicationJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartReplicationJobRequest self = new StartReplicationJobRequest();
+    public static DeleteAccessTokenRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAccessTokenRequest self = new DeleteAccessTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartReplicationJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public DeleteAccessTokenRequest setAccessTokenId(String accessTokenId) {
+        this.accessTokenId = accessTokenId;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getAccessTokenId() {
+        return this.accessTokenId;
     }
 
-    public StartReplicationJobRequest setOwnerId(Long ownerId) {
+    public DeleteAccessTokenRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -41,7 +41,7 @@ public class StartReplicationJobRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public StartReplicationJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DeleteAccessTokenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }

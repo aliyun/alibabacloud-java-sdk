@@ -1,3 +1,10 @@
+2024-09-27 Version: 1.0.1
+- Update API CreateReplicationJob: add param Disks.
+- Update API DescribeReplicationJobs: update response param.
+- Update API DescribeSourceServers: add param WorkgroupId.
+- Update API DescribeSourceServers: update response param.
+
+
 2021-01-04 Version: 1.0.0
 - AMP Version Change.
 

@@ -3,22 +3,22 @@ package com.aliyun.smc20190601.models;
 
 import com.aliyun.tea.*;
 
-public class UntagResourcesResponseBody extends TeaModel {
+public class DeleteAccessTokenResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
+     * <p>DB4A7EA2-6FDA-5655-B067-854532FB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UntagResourcesResponseBody self = new UntagResourcesResponseBody();
+    public static DeleteAccessTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAccessTokenResponseBody self = new DeleteAccessTokenResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UntagResourcesResponseBody setRequestId(String requestId) {
+    public DeleteAccessTokenResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

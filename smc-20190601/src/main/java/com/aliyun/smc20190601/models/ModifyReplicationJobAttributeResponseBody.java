@@ -4,6 +4,12 @@ package com.aliyun.smc20190601.models;
 import com.aliyun.tea.*;
 
 public class ModifyReplicationJobAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C488B66-B819-4D14-8711-C4EAAA13AC01</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
