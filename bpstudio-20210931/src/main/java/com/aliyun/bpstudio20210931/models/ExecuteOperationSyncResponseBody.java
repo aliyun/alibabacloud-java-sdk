@@ -16,7 +16,7 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
      * <p>op_xxxxxxxxxxxxxxxxxx_dds_modifyInstanceType_BYSOQGWUV6PME412_ERMEZLXNN3K9N3OL</p>
      */
     @NameInMap("Data")
-    public String data;
+    public ExecuteOperationSyncResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -45,11 +45,11 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ExecuteOperationSyncResponseBody setData(String data) {
+    public ExecuteOperationSyncResponseBody setData(ExecuteOperationSyncResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public ExecuteOperationSyncResponseBodyData getData() {
         return this.data;
     }
 
@@ -67,6 +67,58 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class ExecuteOperationSyncResponseBodyData extends TeaModel {
+        @NameInMap("Arguments")
+        public String arguments;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("OperationId")
+        public String operationId;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ExecuteOperationSyncResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ExecuteOperationSyncResponseBodyData self = new ExecuteOperationSyncResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ExecuteOperationSyncResponseBodyData setArguments(String arguments) {
+            this.arguments = arguments;
+            return this;
+        }
+        public String getArguments() {
+            return this.arguments;
+        }
+
+        public ExecuteOperationSyncResponseBodyData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ExecuteOperationSyncResponseBodyData setOperationId(String operationId) {
+            this.operationId = operationId;
+            return this;
+        }
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+        public ExecuteOperationSyncResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
 }
