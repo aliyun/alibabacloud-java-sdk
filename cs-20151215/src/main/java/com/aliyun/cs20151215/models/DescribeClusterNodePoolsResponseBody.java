@@ -317,6 +317,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
+        @NameInMap("pre_user_data")
+        public String preUserData;
+
         /**
          * <p>The name of the container runtime.</p>
          * 
@@ -394,6 +397,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public String getNodeNameMode() {
             return this.nodeNameMode;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setPreUserData(String preUserData) {
+            this.preUserData = preUserData;
+            return this;
+        }
+        public String getPreUserData() {
+            return this.preUserData;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setRuntime(String runtime) {
@@ -1119,6 +1130,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        /**
+         * <p>Instance attributes</p>
+         */
         @NameInMap("instance_patterns")
         public java.util.List<InstancePatterns> instancePatterns;
 
@@ -1266,6 +1280,8 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String ramPolicy;
 
         /**
+         * <p>Worker RAM role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>KubernetesWorkerRole-4a4fa089-80c1-48a5-b3c6-9349311f****</p>
          */
@@ -1315,6 +1331,16 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <p>Alibaba Cloud OS security hardening. Values:</p>
+         * <ul>
+         * <li><code>true</code>: Enable Alibaba Cloud OS security hardening. - <code>false</code>: Do not enable Alibaba Cloud OS security hardening.
+         * Default value: <code>false</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 

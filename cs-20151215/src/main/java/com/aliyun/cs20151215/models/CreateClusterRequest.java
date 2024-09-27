@@ -47,6 +47,14 @@ public class CreateClusterRequest extends TeaModel {
     public String apiAudiences;
 
     /**
+     * <p>Specifies whether to enable auto-renewal, which takes effect only when the <code>charge_type</code> value is set to <code>PrePaid</code>. </p>
+     * <p>Possible values:</p>
+     * <ul>
+     * <li><code>true</code>: Enable auto-renewal. </li>
+     * <li><code>false</code>: Do not auto-renew.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +62,9 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>Renewal period, which takes effect only when Prepaid and Auto-Renewal are selected. When <code>PeriodUnit=Month</code>, the value range is {1, 2, 3, 6, 12}.
+     * Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -380,6 +391,8 @@ public class CreateClusterRequest extends TeaModel {
     public String kubernetesVersion;
 
     /**
+     * <p>Specifies the CLB instance ID for accessing the APIServer. When this parameter is set, an APIServer CLB will no longer be automatically created.</p>
+     * 
      * <strong>example:</strong>
      * <p>lb-wz9t256gqa3vbouk****</p>
      */
@@ -1069,6 +1082,10 @@ public class CreateClusterRequest extends TeaModel {
     @Deprecated
     public String zoneId;
 
+    /**
+     * <p>List of availability zone IDs in the region where the cluster resides. This parameter is specific to ACK managed clusters.
+     * When creating an ACK managed cluster, if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified, specifying <code>zone_ids</code> allows for automatic creation of VPC network resources across multiple availability zones. If <code>vpc_id</code> and <code>vswitch_ids</code> are specified, this parameter becomes ineffective.</p>
+     */
     @NameInMap("zone_ids")
     public java.util.List<String> zoneIds;
 

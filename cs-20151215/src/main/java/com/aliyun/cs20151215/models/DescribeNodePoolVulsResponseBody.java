@@ -11,6 +11,8 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     public java.util.List<DescribeNodePoolVulsResponseBodyVulRecords> vulRecords;
 
     /**
+     * <p>Whether the Cloud Security CVE Remediation Service has been purchased</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -15,6 +15,9 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the status of deletion protection. A value of true indicates that deletion protection is enabled and a value of false indicates that deletion protection is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("protection")
     public String protection;
@@ -30,6 +33,9 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
 
     /**
      * <p>The type of resource for which deletion protection is enabled or disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespaces</p>
      */
     @NameInMap("resource_type")
     public String resourceType;

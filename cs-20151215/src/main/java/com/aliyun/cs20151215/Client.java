@@ -5459,10 +5459,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.</p>
+     * <p>You can call this API operation to modify the component parameters of an ACK Basic cluster or the control plane parameters of an ACK Pro cluster:</p>
      * <ul>
-     * <li>To query the customizable parameters of a component, call the <code>DescribeClusterAddonMetadata</code> API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2667944.html">Query the metadata of a specified component version</a>.</li>
-     * <li>For more information about the customizable parameters of control plane components in ACK Pro clusters, see <a href="https://help.aliyun.com/document_detail/199588.html">Customize the parameters of control plane components in ACK Pro clusters</a>.
+     * <li>To view the component parameters of an ACK Basic cluster, call the DescribeClusterAddonMetadata API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2667944.html">Query the metadata of a cluster component</a>.</li>
+     * <li>To view the control plane parameters of an ACK Pro cluster, see <a href="https://help.aliyun.com/document_detail/199588.html">Customize the control plane parameters of an ACK Pro cluster</a>.
      * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.</li>
      * </ul>
      * 
@@ -5501,10 +5501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.</p>
+     * <p>You can call this API operation to modify the component parameters of an ACK Basic cluster or the control plane parameters of an ACK Pro cluster:</p>
      * <ul>
-     * <li>To query the customizable parameters of a component, call the <code>DescribeClusterAddonMetadata</code> API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2667944.html">Query the metadata of a specified component version</a>.</li>
-     * <li>For more information about the customizable parameters of control plane components in ACK Pro clusters, see <a href="https://help.aliyun.com/document_detail/199588.html">Customize the parameters of control plane components in ACK Pro clusters</a>.
+     * <li>To view the component parameters of an ACK Basic cluster, call the DescribeClusterAddonMetadata API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2667944.html">Query the metadata of a cluster component</a>.</li>
+     * <li>To view the control plane parameters of an ACK Pro cluster, see <a href="https://help.aliyun.com/document_detail/199588.html">Customize the control plane parameters of an ACK Pro cluster</a>.
      * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.</li>
      * </ul>
      * 
@@ -6798,7 +6798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The cluster ID.</p>
+     * <p>Scans for vulnerabilities in a Container Service for Kubernetes (ACK) cluster, including workload vulnerabilities, third-party software vulnerabilities, CVE vulnerabilities, WebCMS vulnerabilities, and Windows vulnerabilities. We recommend that you scan your cluster on a regular basis to ensure cluster security.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6824,7 +6824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The cluster ID.</p>
+     * <p>Scans for vulnerabilities in a Container Service for Kubernetes (ACK) cluster, including workload vulnerabilities, third-party software vulnerabilities, CVE vulnerabilities, WebCMS vulnerabilities, and Windows vulnerabilities. We recommend that you scan your cluster on a regular basis to ensure cluster security.</p>
      * @return ScanClusterVulsResponse
      */
     public ScanClusterVulsResponse scanClusterVuls(String clusterId) throws Exception {
@@ -7688,6 +7688,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After successfully calling the UpgradeCluster interface, this API returns the <code>task_id</code> of the upgrade task. You can manage this operation task by calling the following task APIs:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2667985.html">Call DescribeTaskInfo to query task details</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2667986.html">Call PauseTask to pause a running task</a> </li>
+     * <li><a href="https://help.aliyun.com/document_detail/2667987.html">Call ResumeTask to resume a task that has been paused</a> </li>
+     * <li><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</p>
      * 
@@ -7738,6 +7747,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After successfully calling the UpgradeCluster interface, this API returns the <code>task_id</code> of the upgrade task. You can manage this operation task by calling the following task APIs:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2667985.html">Call DescribeTaskInfo to query task details</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2667986.html">Call PauseTask to pause a running task</a> </li>
+     * <li><a href="https://help.aliyun.com/document_detail/2667987.html">Call ResumeTask to resume a task that has been paused</a> </li>
+     * <li><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</p>
      * 

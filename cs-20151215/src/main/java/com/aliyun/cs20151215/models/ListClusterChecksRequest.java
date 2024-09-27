@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListClusterChecksRequest extends TeaModel {
     /**
      * <p>The targets to check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-bp19ay6nnvd4cexxxx</p>
      */
     @NameInMap("target")
     public String target;
