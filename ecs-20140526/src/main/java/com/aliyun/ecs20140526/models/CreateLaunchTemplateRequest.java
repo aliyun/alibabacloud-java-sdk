@@ -22,12 +22,15 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String autoReleaseTime;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. This parameter is valid only if <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
      * </ul>
      * <p>Default value: false.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set <code>InstanceChargeType</code> to <code>PrePaid</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -326,7 +329,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
      * <p>To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.1.**.**</p>
+     * <p><code>10.1.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -443,7 +446,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The tags to add to the instance, disks, and primary ENI.</p>
+     * <p>The tags to add to the instance, disks, and primary ENI that are created from the launch template.</p>
+     * <p><strong>Scenario</strong></p>
+     * <p>If you created a launch template by calling the CreateLaunchTemplate operation and use the default version that is automatically generated for the launch template to create instances, the specified tags are automatically added to the created instances, disks, and primary ENIs. For more information about the default versions of launch templates, see [xxxx]\(url).</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateLaunchTemplateRequestTag> tag;
@@ -459,6 +464,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     /**
      * <p>The tags to add to the launch template.</p>
+     * <blockquote>
+     * <p> You can add tags to or query the tags of launch templates by calling API operations. You cannot add tags to or query the tags of launch templates in the ECS console.</p>
+     * </blockquote>
      */
     @NameInMap("TemplateTag")
     public java.util.List<CreateLaunchTemplateRequestTemplateTag> templateTag;
@@ -1496,7 +1504,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>192.168.**.**</p>
+         * <p><code>192.168.**.**</code></p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
@@ -1622,7 +1630,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     public static class CreateLaunchTemplateRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The key of tag N to add to the instance, disks, and primary ENI that are created from the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1631,7 +1639,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         * <p>The value of tag N to add to the instance, disks, and primary ENI that are created from the launch template. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

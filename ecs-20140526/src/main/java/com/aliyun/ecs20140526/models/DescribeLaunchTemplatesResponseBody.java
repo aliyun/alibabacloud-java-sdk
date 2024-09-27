@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The information about the launch template.</p>
+     * <p>The queried launch templates.</p>
      */
     @NameInMap("LaunchTemplateSets")
     public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
@@ -93,6 +93,8 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
         /**
+         * <p>The tag value of the launch template.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -100,7 +102,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The key of tag N of the launch template.</p>
+         * <p>The tag key of the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -152,7 +154,8 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet extends TeaModel {
         /**
-         * <p>The ID of the resource group to which the launch template belongs.</p>
+         * <p>The time when the launch template was created.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-14T14:18:00Z</p>
@@ -161,7 +164,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The latest version number of the launch template.</p>
+         * <p>The ID of the Alibaba Cloud account that created the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -206,7 +209,8 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String launchTemplateName;
 
         /**
-         * <p>The ID of the launch template.</p>
+         * <p>The time when a version was added to or deleted from the launch template.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-14T14:18:00Z</p>
@@ -224,7 +228,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tag of the launch template.</p>
+         * <p>The tags of the launch template.</p>
+         * <blockquote>
+         * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
+         * </blockquote>
          */
         @NameInMap("Tags")
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags;

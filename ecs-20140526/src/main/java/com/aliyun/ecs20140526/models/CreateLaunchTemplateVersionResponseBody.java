@@ -15,7 +15,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>The version number of the launch template.</p>
+     * <p>The number of the created version of the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The queried regions.</p>
+     * <p>The information of the regions.</p>
      */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
@@ -60,7 +60,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionEndpoint;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao-et2-bo1</p>

@@ -7,6 +7,9 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
@@ -15,6 +18,9 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("InstanceAmount")
+    public Integer instanceAmount;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -51,12 +57,28 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         return this.privatePoolOptions;
     }
 
+    public ModifyElasticityAssuranceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public ModifyElasticityAssuranceRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyElasticityAssuranceRequest setInstanceAmount(Integer instanceAmount) {
+        this.instanceAmount = instanceAmount;
+        return this;
+    }
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
     }
 
     public ModifyElasticityAssuranceRequest setOwnerAccount(String ownerAccount) {

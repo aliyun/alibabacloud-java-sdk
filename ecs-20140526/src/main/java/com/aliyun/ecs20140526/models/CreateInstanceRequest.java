@@ -260,7 +260,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>The internal IP address to assign to the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.**.**</p>
+     * <p><code>192.168.**.**</code></p>
      */
     @NameInMap("InnerIpAddress")
     public String innerIpAddress;

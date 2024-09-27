@@ -73,7 +73,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:</p>
      * <ul>
      * <li>termination: releases the scaled-in instances in the auto provisioning group.</li>
-     * <li>no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.</li>
+     * <li>no-termination: removes the scaled-in instances from the auto provisioning group but does not release the instances.</li>
      * </ul>
      * <p>Default value: no-termination.</p>
      * 
