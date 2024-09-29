@@ -581,6 +581,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询告警组列表</p>
+     * 
+     * @param request ListAlertGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAlertGroupsResponse
+     */
+    public ListAlertGroupsResponse listAlertGroupsWithOptions(String projectId, ListAlertGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchVal)) {
+            query.put("searchVal", request.searchVal);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAlertGroups"),
+            new TeaPair("version", "2024-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dolphinscheduler/v3/alert-groups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAlertGroupsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAlertGroupsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询告警组列表</p>
+     * 
+     * @param request ListAlertGroupsRequest
+     * @return ListAlertGroupsResponse
+     */
+    public ListAlertGroupsResponse listAlertGroups(String projectId, ListAlertGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAlertGroupsWithOptions(projectId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取手动任务实例列表</p>
      * 
      * @param request ListManualTaskInstancesRequest
@@ -789,6 +853,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询调度资源组列表</p>
+     * 
+     * @param request ListResourceGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceGroupsResponse
+     */
+    public ListResourceGroupsResponse listResourceGroupsWithOptions(ListResourceGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("resourceGroupName", request.resourceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupType)) {
+            query.put("resourceGroupType", request.resourceGroupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceGroups"),
+            new TeaPair("version", "2024-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dolphinscheduler/v3/resourcegroups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceGroupsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListResourceGroupsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询调度资源组列表</p>
+     * 
+     * @param request ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
+     */
+    public ListResourceGroupsResponse listResourceGroups(ListResourceGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listResourceGroupsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取任务实例列表</p>
      * 
      * @param request ListTaskInstancesRequest
@@ -941,6 +1073,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询工作流目录列表</p>
+     * 
+     * @param request ListWorkflowDirectoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkflowDirectoriesResponse
+     */
+    public ListWorkflowDirectoriesResponse listWorkflowDirectoriesWithOptions(String projectId, ListWorkflowDirectoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDirectoryId)) {
+            query.put("parentDirectoryId", request.parentDirectoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkflowDirectories"),
+            new TeaPair("version", "2024-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dolphinscheduler/v3/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(projectId) + "/directories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkflowDirectoriesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListWorkflowDirectoriesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询工作流目录列表</p>
+     * 
+     * @param request ListWorkflowDirectoriesRequest
+     * @return ListWorkflowDirectoriesResponse
+     */
+    public ListWorkflowDirectoriesResponse listWorkflowDirectories(String projectId, ListWorkflowDirectoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWorkflowDirectoriesWithOptions(projectId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取工作流实例列表</p>
      * 
      * @param request ListWorkflowInstancesRequest
@@ -1077,6 +1277,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listWorkflowsWithOptions(projectId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>操作工作流实例</p>
+     * 
+     * @param request OperateWorkflowInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OperateWorkflowInstanceResponse
+     */
+    public OperateWorkflowInstanceResponse operateWorkflowInstanceWithOptions(String projectId, OperateWorkflowInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.execType)) {
+            body.put("execType", request.execType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowInstanceId)) {
+            body.put("workflowInstanceId", request.workflowInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OperateWorkflowInstance"),
+            new TeaPair("version", "2024-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dolphinscheduler/v3/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(projectId) + "/executors/execute"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new OperateWorkflowInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new OperateWorkflowInstanceResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>操作工作流实例</p>
+     * 
+     * @param request OperateWorkflowInstanceRequest
+     * @return OperateWorkflowInstanceResponse
+     */
+    public OperateWorkflowInstanceResponse operateWorkflowInstance(String projectId, OperateWorkflowInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.operateWorkflowInstanceWithOptions(projectId, request, headers, runtime);
     }
 
     /**
