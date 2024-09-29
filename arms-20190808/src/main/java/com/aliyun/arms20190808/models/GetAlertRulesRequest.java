@@ -51,7 +51,7 @@ public class GetAlertRulesRequest extends TeaModel {
     public String alertStatus;
 
     /**
-     * <p>The type of the alert rule. Valid values:</p>
+     * <p>The type of the alert rule. This parameter is required for the new version of Alert Management.</p>
      * <ul>
      * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
      * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>

@@ -14,7 +14,7 @@ public class GetRumAppInfoRequest extends TeaModel {
     public String appGroup;
 
     /**
-     * <p>The application ID.</p>
+     * <p>The process ID (PID) of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

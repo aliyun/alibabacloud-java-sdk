@@ -165,12 +165,45 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
     }
 
+    public static class GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig extends TeaModel {
+        @NameInMap("samplingRate")
+        public Integer samplingRate;
+
+        @NameInMap("samplingType")
+        public Integer samplingType;
+
+        public static GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig self = new GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig setSamplingRate(Integer samplingRate) {
+            this.samplingRate = samplingRate;
+            return this;
+        }
+        public Integer getSamplingRate() {
+            return this.samplingRate;
+        }
+
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig setSamplingType(Integer samplingType) {
+            this.samplingType = samplingType;
+            return this;
+        }
+        public Integer getSamplingType() {
+            return this.samplingType;
+        }
+
+    }
+
     public static class GetRumAppInfoResponseBodyDataBonreeSDKConfig extends TeaModel {
         /**
          * <p>The module configuration.</p>
          */
         @NameInMap("moduleConfig")
         public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig moduleConfig;
+
+        @NameInMap("samplingConfig")
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig samplingConfig;
 
         public static GetRumAppInfoResponseBodyDataBonreeSDKConfig build(java.util.Map<String, ?> map) throws Exception {
             GetRumAppInfoResponseBodyDataBonreeSDKConfig self = new GetRumAppInfoResponseBodyDataBonreeSDKConfig();
@@ -183,6 +216,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
         public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig getModuleConfig() {
             return this.moduleConfig;
+        }
+
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfig setSamplingConfig(GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig samplingConfig) {
+            this.samplingConfig = samplingConfig;
+            return this;
+        }
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig getSamplingConfig() {
+            return this.samplingConfig;
         }
 
     }
@@ -335,6 +376,13 @@ public class GetRumAppInfoResponseBody extends TeaModel {
          */
         @NameInMap("AppType")
         public String appType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("BackendServiceTraceRegion")
+        public String backendServiceTraceRegion;
 
         /**
          * <p>The mobile collection configurations.</p>
@@ -505,6 +553,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
         public String getAppType() {
             return this.appType;
+        }
+
+        public GetRumAppInfoResponseBodyData setBackendServiceTraceRegion(String backendServiceTraceRegion) {
+            this.backendServiceTraceRegion = backendServiceTraceRegion;
+            return this;
+        }
+        public String getBackendServiceTraceRegion() {
+            return this.backendServiceTraceRegion;
         }
 
         public GetRumAppInfoResponseBodyData setBonreeSDKConfig(GetRumAppInfoResponseBodyDataBonreeSDKConfig bonreeSDKConfig) {

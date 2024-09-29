@@ -13,6 +13,9 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the Grafana workspace.</p>
+     */
     @NameInMap("Data")
     public GrafanaWorkspace data;
 

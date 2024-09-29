@@ -144,7 +144,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public Boolean autoAddNewApplication;
 
     /**
-     * <p>The configurations that are automatically appended to monitor the application based on the specified alert rule. autoAddMatchType: the matching mode. Valid values: REGULAR and NOT_REGULAR. autoAddMatchExp: the regular expression</p>
+     * <p>The configurations that are automatically appended to monitor the application based on the specified alert rule.</p>
+     * <ul>
+     * <li><p>autoAddMatchType:</p>
+     * <p>the matching mode. Valid values: REGULAR and NOT_REGULAR.</p>
+     * </li>
+     * <li><p>autoAddMatchExp: the regular expression</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;autoAddMatchType\&quot;:\&quot;REGULAR\&quot;,\&quot;autoAddMatchExp\&quot;:\&quot;.<em>cbw.</em>\&quot;}</p>
@@ -283,7 +290,6 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
 
     /**
      * <p>The notification mode. You can specify the normal mode or simple mode.</p>
-     * <p>Valid values:</p>
      * <ul>
      * <li>DIRECTED_MODE</li>
      * <li>NORMAL_MODE</li>
@@ -318,7 +324,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String pids;
 
     /**
-     * <p>When creating a Prometheus alert rule, the backend will verify whether this product exists, which is used to distinguish cloud product filtering queries.</p>
+     * <p>The product code. If you specify this parameter when you create a Prometheus alert rule, the backend checks whether the product exists.</p>
      * 
      * <strong>example:</strong>
      * <p>clickhouse</p>

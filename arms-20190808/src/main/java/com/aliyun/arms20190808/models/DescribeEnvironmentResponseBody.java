@@ -382,6 +382,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the security group associated with the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-8vbdgmf4nraiqa9bx0jo</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -411,7 +414,10 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The switch ID bound to the environment.</p>
+         * <p>The ID of the vSwitch associated with the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze7yr3f1x8snryaioo7u</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;

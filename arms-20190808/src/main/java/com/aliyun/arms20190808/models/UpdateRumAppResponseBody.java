@@ -115,6 +115,9 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public static class UpdateRumAppResponseBodyData extends TeaModel {
         /**
          * <p>The user configurations. This is a reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Config")
         public String config;
