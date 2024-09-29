@@ -208,6 +208,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("MaxComputeResource")
         public String maxComputeResource;
 
+        @NameInMap("MaxGpuQuantity")
+        public Integer maxGpuQuantity;
+
         /**
          * <p>This parameter is required.</p>
          */
@@ -232,6 +235,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("MinComputeResource")
         public String minComputeResource;
 
+        @NameInMap("MinGpuQuantity")
+        public Integer minGpuQuantity;
+
         /**
          * <p>The job resubmission rules.</p>
          */
@@ -247,6 +253,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("RunningClusterCount")
         public Integer runningClusterCount;
 
+        @NameInMap("SpecName")
+        public String specName;
+
         /**
          * <p>The status of the resource group. Valid values:</p>
          * <ul>
@@ -260,6 +269,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TargetResourceGroupName")
+        public String targetResourceGroupName;
 
         /**
          * <p>The time when the resource group was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
@@ -371,6 +383,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return this.maxComputeResource;
         }
 
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setMaxGpuQuantity(Integer maxGpuQuantity) {
+            this.maxGpuQuantity = maxGpuQuantity;
+            return this;
+        }
+        public Integer getMaxGpuQuantity() {
+            return this.maxGpuQuantity;
+        }
+
         public DescribeDBResourceGroupResponseBodyGroupsInfo setMessage(String message) {
             this.message = message;
             return this;
@@ -395,6 +415,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return this.minComputeResource;
         }
 
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setMinGpuQuantity(Integer minGpuQuantity) {
+            this.minGpuQuantity = minGpuQuantity;
+            return this;
+        }
+        public Integer getMinGpuQuantity() {
+            return this.minGpuQuantity;
+        }
+
         public DescribeDBResourceGroupResponseBodyGroupsInfo setRules(java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRules> rules) {
             this.rules = rules;
             return this;
@@ -411,12 +439,28 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return this.runningClusterCount;
         }
 
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setSpecName(String specName) {
+            this.specName = specName;
+            return this;
+        }
+        public String getSpecName() {
+            return this.specName;
+        }
+
         public DescribeDBResourceGroupResponseBodyGroupsInfo setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setTargetResourceGroupName(String targetResourceGroupName) {
+            this.targetResourceGroupName = targetResourceGroupName;
+            return this;
+        }
+        public String getTargetResourceGroupName() {
+            return this.targetResourceGroupName;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setUpdateTime(String updateTime) {

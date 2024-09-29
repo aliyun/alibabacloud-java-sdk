@@ -100,6 +100,9 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("MaxComputeResource")
     public String maxComputeResource;
 
+    @NameInMap("MaxGpuQuantity")
+    public Integer maxGpuQuantity;
+
     /**
      * <p>A reserved parameter.</p>
      * 
@@ -122,6 +125,9 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("MinComputeResource")
     public String minComputeResource;
 
+    @NameInMap("MinGpuQuantity")
+    public Integer minGpuQuantity;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
@@ -139,6 +145,12 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      */
     @NameInMap("Rules")
     public String rulesShrink;
+
+    @NameInMap("SpecName")
+    public String specName;
+
+    @NameInMap("TargetResourceGroupName")
+    public String targetResourceGroupName;
 
     public static ModifyDBResourceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBResourceGroupShrinkRequest self = new ModifyDBResourceGroupShrinkRequest();
@@ -217,6 +229,14 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
         return this.maxComputeResource;
     }
 
+    public ModifyDBResourceGroupShrinkRequest setMaxGpuQuantity(Integer maxGpuQuantity) {
+        this.maxGpuQuantity = maxGpuQuantity;
+        return this;
+    }
+    public Integer getMaxGpuQuantity() {
+        return this.maxGpuQuantity;
+    }
+
     public ModifyDBResourceGroupShrinkRequest setMinClusterCount(Integer minClusterCount) {
         this.minClusterCount = minClusterCount;
         return this;
@@ -233,6 +253,14 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
         return this.minComputeResource;
     }
 
+    public ModifyDBResourceGroupShrinkRequest setMinGpuQuantity(Integer minGpuQuantity) {
+        this.minGpuQuantity = minGpuQuantity;
+        return this;
+    }
+    public Integer getMinGpuQuantity() {
+        return this.minGpuQuantity;
+    }
+
     public ModifyDBResourceGroupShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -247,6 +275,22 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     }
     public String getRulesShrink() {
         return this.rulesShrink;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setSpecName(String specName) {
+        this.specName = specName;
+        return this;
+    }
+    public String getSpecName() {
+        return this.specName;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setTargetResourceGroupName(String targetResourceGroupName) {
+        this.targetResourceGroupName = targetResourceGroupName;
+        return this;
+    }
+    public String getTargetResourceGroupName() {
+        return this.targetResourceGroupName;
     }
 
 }
