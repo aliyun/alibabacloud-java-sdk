@@ -33,7 +33,7 @@ public class CreateRumAppRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The nick name.</p>
+     * <p>The nickname of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>test-app</p>

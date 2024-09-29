@@ -5,19 +5,36 @@ import com.aliyun.tea.*;
 
 public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code.\
+     * <strong>Valid values:</strong></p>
+     * <ul>
+     * <li>2xx: The request was successful.</li>
+     * <li>3xx: The request was redirected.</li>
+     * <li>4xx: The request was invalid.</li>
+     * <li>5xx: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The version number and download URL of the agent.</p>
+     */
     @NameInMap("Data")
     public GetAgentDownloadUrlV2ResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
      */
@@ -25,6 +42,13 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.\
+     * <strong>Valid values:</strong></p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,6 +102,8 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
 
     public static class GetAgentDownloadUrlV2ResponseBodyData extends TeaModel {
         /**
+         * <p>The download URL of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://arms-apm-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/3.2.9/ArmsAgent.zip">http://arms-apm-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/3.2.9/ArmsAgent.zip</a></p>
          */
@@ -85,6 +111,8 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>The version number of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.2.9</p>
          */

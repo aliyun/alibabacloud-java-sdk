@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetAgentDownloadUrlV2Request extends TeaModel {
     /**
+     * <p>The agent type.\
+     * <strong>Valid values:</strong></p>
+     * <ul>
+     * <li><strong>JavaAgent</strong></li>
+     * <li><strong>Instgo</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,14 @@ public class GetAgentDownloadUrlV2Request extends TeaModel {
     public String agentType;
 
     /**
+     * <p>The architecture type of the environment where the agent is installed.\
+     * This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.\
+     * <strong>Valid values:</strong></p>
+     * <ul>
+     * <li><strong>amd64</strong></li>
+     * <li><strong>arm64</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>amd64</p>
      */
@@ -21,6 +35,15 @@ public class GetAgentDownloadUrlV2Request extends TeaModel {
     public String archType;
 
     /**
+     * <p>The operating system of the environment where the agent is installed.\
+     * This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.\
+     * <strong>Valid values:</strong></p>
+     * <ul>
+     * <li><strong>linux</strong></li>
+     * <li><strong>darwin</strong></li>
+     * <li><strong>windows</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>linux</p>
      */

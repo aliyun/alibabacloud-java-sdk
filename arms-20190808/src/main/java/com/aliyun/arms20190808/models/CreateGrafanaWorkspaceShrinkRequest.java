@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
     /**
-     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * <p>The language. Default value: zh. Valid values:</p>
+     * <ul>
+     * <li>zh</li>
+     * <li>en</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

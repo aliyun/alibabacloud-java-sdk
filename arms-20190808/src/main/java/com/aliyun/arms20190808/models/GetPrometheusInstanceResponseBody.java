@@ -136,7 +136,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer archiveDuration;
 
         /**
-         * <p>Read the whitelist policy for password-free addresses.</p>
+         * <p>The whitelist of IP addresses for which password-free read is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -145,7 +145,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String authFreeReadPolicy;
 
         /**
-         * <p>Write exempt password address whitelist policy.</p>
+         * <p>The whitelist of IP addresses for which password-free write is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -206,7 +206,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String dbInstanceStatus;
 
         /**
-         * <p>Whether to enable password-free reading.</p>
+         * <p>Indicates whether password-free read is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -215,7 +215,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Boolean enableAuthFreeRead;
 
         /**
-         * <p>Whether to enable write access without password.</p>
+         * <p>Indicates whether password-free write is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -232,6 +232,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("EnableAuthToken")
         public String enableAuthToken;
 
+        /**
+         * <p>扩展信息（仅控制台请求才返回）</p>
+         */
         @NameInMap("ExtraInfo")
         public java.util.Map<String, String> extraInfo;
 

@@ -134,7 +134,7 @@ public class CreateRumAppResponseBody extends TeaModel {
 
     public static class CreateRumAppResponseBodyData extends TeaModel {
         /**
-         * <p>The SDK Domain.</p>
+         * <p>The domain name of the SDK.</p>
          * 
          * <strong>example:</strong>
          * <p>bxxxxxxx-sdk.rum.aliyuncs.com/v2/browser-sdk.js</p>
@@ -143,7 +143,7 @@ public class CreateRumAppResponseBody extends TeaModel {
         public String cdnDomain;
 
         /**
-         * <p>The endpoint of the event target.</p>
+         * <p>The endpoint that is used to report application data.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxx-default-cn.rum.aliyuncs.com</p>
@@ -152,7 +152,7 @@ public class CreateRumAppResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The process ID (PID) of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>avccccxxxx@24cxxxxbf384dc6</p>

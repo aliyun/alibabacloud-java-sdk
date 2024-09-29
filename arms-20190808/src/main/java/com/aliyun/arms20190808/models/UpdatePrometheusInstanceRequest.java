@@ -14,6 +14,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
+     * <p>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -21,6 +23,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
+     * <p>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -38,6 +42,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Specifies whether to enable password-free read.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -45,6 +51,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
+     * <p>Specifies whether to enable password-free write.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -52,6 +60,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeWrite;
 
     /**
+     * <p>Specifies whether to enable access token authentication.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
