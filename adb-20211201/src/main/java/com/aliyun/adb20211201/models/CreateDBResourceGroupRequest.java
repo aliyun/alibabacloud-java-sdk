@@ -105,6 +105,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("MaxComputeResource")
     public String maxComputeResource;
 
+    @NameInMap("MaxGpuQuantity")
+    public Integer maxGpuQuantity;
+
     /**
      * <p>A reserved parameter.</p>
      * 
@@ -127,6 +130,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("MinComputeResource")
     public String minComputeResource;
 
+    @NameInMap("MinGpuQuantity")
+    public Integer minGpuQuantity;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
@@ -144,6 +150,12 @@ public class CreateDBResourceGroupRequest extends TeaModel {
      */
     @NameInMap("Rules")
     public java.util.List<CreateDBResourceGroupRequestRules> rules;
+
+    @NameInMap("SpecName")
+    public String specName;
+
+    @NameInMap("TargetResourceGroupName")
+    public String targetResourceGroupName;
 
     public static CreateDBResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBResourceGroupRequest self = new CreateDBResourceGroupRequest();
@@ -230,6 +242,14 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         return this.maxComputeResource;
     }
 
+    public CreateDBResourceGroupRequest setMaxGpuQuantity(Integer maxGpuQuantity) {
+        this.maxGpuQuantity = maxGpuQuantity;
+        return this;
+    }
+    public Integer getMaxGpuQuantity() {
+        return this.maxGpuQuantity;
+    }
+
     public CreateDBResourceGroupRequest setMinClusterCount(Integer minClusterCount) {
         this.minClusterCount = minClusterCount;
         return this;
@@ -246,6 +266,14 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         return this.minComputeResource;
     }
 
+    public CreateDBResourceGroupRequest setMinGpuQuantity(Integer minGpuQuantity) {
+        this.minGpuQuantity = minGpuQuantity;
+        return this;
+    }
+    public Integer getMinGpuQuantity() {
+        return this.minGpuQuantity;
+    }
+
     public CreateDBResourceGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -260,6 +288,22 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     }
     public java.util.List<CreateDBResourceGroupRequestRules> getRules() {
         return this.rules;
+    }
+
+    public CreateDBResourceGroupRequest setSpecName(String specName) {
+        this.specName = specName;
+        return this;
+    }
+    public String getSpecName() {
+        return this.specName;
+    }
+
+    public CreateDBResourceGroupRequest setTargetResourceGroupName(String targetResourceGroupName) {
+        this.targetResourceGroupName = targetResourceGroupName;
+        return this;
+    }
+    public String getTargetResourceGroupName() {
+        return this.targetResourceGroupName;
     }
 
     public static class CreateDBResourceGroupRequestRules extends TeaModel {
