@@ -91,6 +91,55 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListFoldersForParentResponseBodyFoldersFolderTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListFoldersForParentResponseBodyFoldersFolderTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListFoldersForParentResponseBodyFoldersFolderTagsTag self = new ListFoldersForParentResponseBodyFoldersFolderTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFoldersForParentResponseBodyFoldersFolderTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListFoldersForParentResponseBodyFoldersFolderTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListFoldersForParentResponseBodyFoldersFolderTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ListFoldersForParentResponseBodyFoldersFolderTagsTag> tag;
+
+        public static ListFoldersForParentResponseBodyFoldersFolderTags build(java.util.Map<String, ?> map) throws Exception {
+            ListFoldersForParentResponseBodyFoldersFolderTags self = new ListFoldersForParentResponseBodyFoldersFolderTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFoldersForParentResponseBodyFoldersFolderTags setTag(java.util.List<ListFoldersForParentResponseBodyFoldersFolderTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListFoldersForParentResponseBodyFoldersFolderTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ListFoldersForParentResponseBodyFoldersFolder extends TeaModel {
         /**
          * <p>The time when the folder was created.</p>
@@ -119,6 +168,9 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         @NameInMap("FolderName")
         public String folderName;
 
+        @NameInMap("Tags")
+        public ListFoldersForParentResponseBodyFoldersFolderTags tags;
+
         public static ListFoldersForParentResponseBodyFoldersFolder build(java.util.Map<String, ?> map) throws Exception {
             ListFoldersForParentResponseBodyFoldersFolder self = new ListFoldersForParentResponseBodyFoldersFolder();
             return TeaModel.build(map, self);
@@ -146,6 +198,14 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
         public String getFolderName() {
             return this.folderName;
+        }
+
+        public ListFoldersForParentResponseBodyFoldersFolder setTags(ListFoldersForParentResponseBodyFoldersFolderTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public ListFoldersForParentResponseBodyFoldersFolderTags getTags() {
+            return this.tags;
         }
 
     }

@@ -44,6 +44,9 @@ public class ListFoldersForParentRequest extends TeaModel {
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
+    @NameInMap("Tag")
+    public java.util.List<ListFoldersForParentRequestTag> tag;
+
     public static ListFoldersForParentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFoldersForParentRequest self = new ListFoldersForParentRequest();
         return TeaModel.build(map, self);
@@ -79,6 +82,44 @@ public class ListFoldersForParentRequest extends TeaModel {
     }
     public String getQueryKeyword() {
         return this.queryKeyword;
+    }
+
+    public ListFoldersForParentRequest setTag(java.util.List<ListFoldersForParentRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListFoldersForParentRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListFoldersForParentRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListFoldersForParentRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListFoldersForParentRequestTag self = new ListFoldersForParentRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFoldersForParentRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListFoldersForParentRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
