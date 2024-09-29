@@ -403,6 +403,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
         @NameInMap("audioUrl")
         public String audioUrl;
 
+        @NameInMap("speechOpen")
+        public Boolean speechOpen;
+
         /**
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -445,6 +448,14 @@ public class SubmitProjectTaskRequest extends TeaModel {
         }
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        public SubmitProjectTaskRequestFramesVideoScript setSpeechOpen(Boolean speechOpen) {
+            this.speechOpen = speechOpen;
+            return this;
+        }
+        public Boolean getSpeechOpen() {
+            return this.speechOpen;
         }
 
         public SubmitProjectTaskRequestFramesVideoScript setSpeedRate(String speedRate) {
