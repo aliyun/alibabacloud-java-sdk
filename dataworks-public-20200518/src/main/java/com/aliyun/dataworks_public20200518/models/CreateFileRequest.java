@@ -15,6 +15,12 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("AdvancedSettings")
     public String advancedSettings;
 
+    /**
+     * <p>Specifies whether scheduling configurations immediately take effect after the node is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ApplyScheduleImmediately")
     public Boolean applyScheduleImmediately;
 
@@ -24,7 +30,7 @@ public class CreateFileRequest extends TeaModel {
      * <li>true</li>
      * <li>false</li>
      * </ul>
-     * <p>This parameter corresponds to the Analyze Code parameter that is displayed after Same Cycle is selected in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter corresponds to the Analyze Code parameter that is displayed after Same Cycle is selected in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -79,7 +85,7 @@ public class CreateFileRequest extends TeaModel {
     public Boolean createFolderIfNotExists;
 
     /**
-     * <p>The CRON expression that represents the periodic scheduling policy of the node. This parameter corresponds to the Cron Expression parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the Scheduling Cycle and Scheduled time parameters in the DataWorks console, DataWorks generates the value of the Cron Expression parameter.</p>
+     * <p>The CRON expression that represents the periodic scheduling policy of the node. This parameter corresponds to the Cron Expression parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the Scheduling Cycle and Scheduled time parameters in the DataWorks console, DataWorks generates the value of the Cron Expression parameter.</p>
      * <p>Examples:</p>
      * <ul>
      * <li>CRON expression for a node that is scheduled to run at 05:30 every day: <code>00 30 05 * * ?</code></li>
@@ -104,7 +110,7 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.</p>
-     * <p>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>DAY</p>
@@ -262,7 +268,7 @@ public class CreateFileRequest extends TeaModel {
      * <li>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</li>
      * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
      * </ul>
-     * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_ALLOWED</p>
@@ -299,7 +305,7 @@ public class CreateFileRequest extends TeaModel {
      * <li>NORMAL: The node is an auto triggered node.</li>
      * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</li>
      * <li>PAUSE: The node is a paused node.</li>
-     * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to successful when the scheduling system starts to run the nodes.</li>
+     * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -310,7 +316,7 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The start time of automatic scheduling. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <p>Configuring this parameter is equivalent to specifying a start time for the Validity Period parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>Configuring this parameter is equivalent to specifying a start time for the Validity Period parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1671608450000</p>
@@ -334,7 +340,7 @@ public class CreateFileRequest extends TeaModel {
      * <li>true</li>
      * <li>false</li>
      * </ul>
-     * <p>This parameter corresponds to the Recurrence parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter corresponds to the Recurrence parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

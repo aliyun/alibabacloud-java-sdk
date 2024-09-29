@@ -750,6 +750,12 @@ public class GetFileResponseBody extends TeaModel {
     }
 
     public static class GetFileResponseBodyDataNodeConfiguration extends TeaModel {
+        /**
+         * <p>Indicates whether scheduling configurations immediately take effect after the deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ApplyScheduleImmediately")
         public String applyScheduleImmediately;
 
