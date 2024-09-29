@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListTablesResponseBodyData data;
 
@@ -170,6 +173,10 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AAAAAVY3rYiv9VoUJQSiCitgjgSwg+byk0FIjirFkm4zfM4G0xYwM/FQvOhgrTHsCPIZ5yqXYu2NG6qRCRC52HvwbOA=</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
