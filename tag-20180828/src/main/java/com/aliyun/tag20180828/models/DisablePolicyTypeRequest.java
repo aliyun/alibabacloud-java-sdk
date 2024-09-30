@@ -4,12 +4,19 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class DisablePolicyTypeRequest extends TeaModel {
+    @NameInMap("OpenType")
+    public String openType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +32,14 @@ public class DisablePolicyTypeRequest extends TeaModel {
     public static DisablePolicyTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DisablePolicyTypeRequest self = new DisablePolicyTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisablePolicyTypeRequest setOpenType(String openType) {
+        this.openType = openType;
+        return this;
+    }
+    public String getOpenType() {
+        return this.openType;
     }
 
     public DisablePolicyTypeRequest setOwnerAccount(String ownerAccount) {

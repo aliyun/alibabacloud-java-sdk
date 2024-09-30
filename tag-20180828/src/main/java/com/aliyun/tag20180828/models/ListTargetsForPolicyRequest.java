@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListTargetsForPolicyRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 50. Maximum value: 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,12 +31,19 @@ public class ListTargetsForPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the tag policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-de62a0bf400e4b69****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The region ID. Set the value to cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

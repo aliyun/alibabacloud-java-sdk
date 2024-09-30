@@ -9,29 +9,42 @@ public class ListTagKeysRequest extends TeaModel {
 
     /**
      * <p>The type of the resource tags. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   all (default value)</p>
-     * <p>*   custom</p>
-     * <p>*   system</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <ul>
+     * <li>all (default value)</li>
+     * <li>custom</li>
+     * <li>system</li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The type of the query. Valid values:</p>
-     * <br>
-     * <p>*   EQUAL: exact match. This is the default value.</p>
-     * <p>*   PREFIX: prefix-based fuzzy match.</p>
-     * <br>
-     * <p>>  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
+     * <ul>
+     * <li>EQUAL: exact match. This is the default value.</li>
+     * <li>PREFIX: prefix-based fuzzy match.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EQUAL</p>
      */
     @NameInMap("FuzzyType")
     public String fuzzyType;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -44,27 +57,37 @@ public class ListTagKeysRequest extends TeaModel {
 
     /**
      * <p>The number of tag keys to return on each page.</p>
-     * <br>
      * <p>Maximum value: 1000. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The category of the tags. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   ResourceTag: resource tags, including custom and system tags. This is the default value.</p>
-     * <p>*   MetaTag: preset tags.</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <ul>
+     * <li>ResourceTag: resource tags, including custom and system tags. This is the default value.</li>
+     * <li>MetaTag: preset tags.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceTag</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>For more information about the region ID, see [Endpoints](~~170112~~).</p>
+     * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/2330902.html">Endpoints</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -73,9 +96,15 @@ public class ListTagKeysRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the resources. This parameter specifies a filter condition for the query.</p>
-     * <br>
-     * <p>For more information about supported resource types, see [Types of resources that support Tag API operations](~~172061~~).</p>
+     * <p>The resource type. This parameter specifies a filter condition for the query.</p>
+     * <p>Format: <code>ALIYUN::${ProductCode}::${ResourceType}</code>. All letters in the value of this parameter must be in uppercase.</p>
+     * <ul>
+     * <li><code>ProductCode</code>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+     * <li><code>ResourceType</code>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::ECS::INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -176,10 +205,13 @@ public class ListTagKeysRequest extends TeaModel {
     public static class ListTagKeysRequestTagFilter extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>This parameter is used together with the `FuzzyType` parameter.</p>
-         * <br>
-         * <p>>  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
+         * <p>This parameter is used together with the <code>FuzzyType</code> parameter.</p>
+         * <blockquote>
+         * <p> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
          */
         @NameInMap("Key")
         public String key;

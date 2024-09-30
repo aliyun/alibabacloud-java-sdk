@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ModifyPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run for the request. Valid values:</p>
-     * <br>
-     * <p>*   false: The system performs the related operation based on the parameter settings in the request. This is the default value.</p>
-     * <p>*   true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.</p>
+     * <ul>
+     * <li>false: The system performs the related operation based on the parameter settings in the request. This is the default value.</li>
+     * <li>true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -21,36 +25,58 @@ public class ModifyPolicyRequest extends TeaModel {
 
     /**
      * <p>The document of the tag policy.</p>
-     * <br>
-     * <p>For more information about the syntax of a tag policy, see [Syntax of a tag policy](~~417436~~).</p>
+     * <p>For more information about the syntax of a tag policy, see <a href="https://help.aliyun.com/document_detail/417436.html">Syntax of a tag policy</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;tags&quot;:{&quot;CostCenter&quot;:{&quot;tag_value&quot;:{&quot;@@assign&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;]},&quot;tag_key&quot;:{&quot;@@assign&quot;:&quot;CostCenter&quot;}}}}</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("PolicyContent")
     public String policyContent;
 
     /**
      * <p>The description of the tag policy.</p>
-     * <br>
      * <p>The description must be 0 to 512 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a tag policy example.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("PolicyDesc")
     public String policyDesc;
 
     /**
      * <p>The ID of the tag policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-5732750813924f90****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The name of the tag policy.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (\_).</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The region ID. Set the value to cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

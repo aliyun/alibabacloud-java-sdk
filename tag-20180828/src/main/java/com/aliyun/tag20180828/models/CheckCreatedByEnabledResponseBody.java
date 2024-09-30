@@ -4,9 +4,17 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class CheckCreatedByEnabledResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OpenStatus")
     public Boolean openStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>682DD9E1-F530-5D14-A839-A6787FA82B74</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

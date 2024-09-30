@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListResourcesByTagResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the `next query` is required.</p>
-     * <br>
-     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the `next query` is not required.</p>
-     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the `token` used to start the next query.</p>
+     * <p>Indicates whether the <code>next query</code> is required.</p>
+     * <ul>
+     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the <code>next query</code> is not required.</li>
+     * <li>If the value of this parameter is not empty, the next query is required, and the value is the <code>token</code> used to start the next query.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7D61FF74-61C2-5768-B01F-05FC97F24F35</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,21 +65,31 @@ public class ListResourcesByTagResponseBody extends TeaModel {
     public static class ListResourcesByTagResponseBodyResourcesTags extends TeaModel {
         /**
          * <p>The type of the tag. Valid values:</p>
-         * <br>
-         * <p>*   custom</p>
-         * <p>*   system</p>
+         * <ul>
+         * <li>custom</li>
+         * <li>system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -110,14 +128,16 @@ public class ListResourcesByTagResponseBody extends TeaModel {
     public static class ListResourcesByTagResponseBodyResources extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9pifyuw26esxd05****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The information of the tags.</p>
-         * <br>
-         * <p>This parameter is returned only if the `IncludeAllTags` parameter is set to `True`.</p>
+         * <p>This parameter is returned only if the <code>IncludeAllTags</code> parameter is set to <code>True</code>.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListResourcesByTagResponseBodyResourcesTags> tags;

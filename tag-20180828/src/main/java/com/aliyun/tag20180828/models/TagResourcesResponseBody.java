@@ -5,17 +5,24 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The information of the resources to which tags fail to be added.</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   If tags are added to all resources, the value of `FailedResources` is empty.</p>
-     * <p>*   If tags fail to be added to some or all resources, the value of `FailedResources` contains the detailed information of the resources.</p>
+     * <p>The information about the resources to which tags fail to be added.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If tags are added to all resources, the value of <code>FailedResources</code> is empty.</p>
+     * </li>
+     * <li><p>If tags fail to be added to some or all resources, the value of <code>FailedResources</code> contains the detailed information about the resources.</p>
+     * </li>
+     * </ul>
      */
     @NameInMap("FailedResources")
     public TagResourcesResponseBodyFailedResources failedResources;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72086426-9F8C-4A60-852B-864048FD1199</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -44,12 +51,18 @@ public class TagResourcesResponseBody extends TeaModel {
     public static class TagResourcesResponseBodyFailedResourcesFailedResourceResult extends TeaModel {
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidResourceId.NotFound</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified ResourceIds are not found in our records.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -80,12 +93,15 @@ public class TagResourcesResponseBody extends TeaModel {
     public static class TagResourcesResponseBodyFailedResourcesFailedResource extends TeaModel {
         /**
          * <p>The ARN of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arn:acs:vpc:cn-hangzhou:123456789****:vpc/vpc-bp19dd90tkt6tz7wu****</p>
          */
         @NameInMap("ResourceARN")
         public String resourceARN;
 
         /**
-         * <p>The information of the error.</p>
+         * <p>The information about the error.</p>
          */
         @NameInMap("Result")
         public TagResourcesResponseBodyFailedResourcesFailedResourceResult result;

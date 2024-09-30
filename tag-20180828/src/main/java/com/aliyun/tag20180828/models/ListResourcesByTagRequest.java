@@ -9,32 +9,45 @@ public class ListResourcesByTagRequest extends TeaModel {
 
     /**
      * <p>The type of the query. Valid values:</p>
-     * <br>
-     * <p>*   EQUAL: exact match for resources to which the specified tag is added. This is the default value.</p>
-     * <p>*   NOT: exact match for resources to which the specified tag is not added.</p>
+     * <ul>
+     * <li>EQUAL: exact match for resources to which the specified tag is added. This is the default value.</li>
+     * <li>NOT: exact match for resources to which the specified tag is not added.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EQUAL</p>
      */
     @NameInMap("FuzzyType")
     public String fuzzyType;
 
     /**
      * <p>Specifies whether to return the information of tags added to the resources. Valid values:</p>
-     * <br>
-     * <p>*   False: does not return the information of tags added to the resources. This is the default value.</p>
-     * <p>*   True: returns the information of all tags added to the resources.</p>
+     * <ul>
+     * <li>False: does not return the information of tags added to the resources. This is the default value.</li>
+     * <li>True: returns the information of all tags added to the resources.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("IncludeAllTags")
     public Boolean includeAllTags;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 50. Maximum value: 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -47,8 +60,11 @@ public class ListResourcesByTagRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>For more information about the region ID, see [Endpoints](~~170112~~).</p>
+     * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/2330902.html">Endpoints</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -58,9 +74,14 @@ public class ListResourcesByTagRequest extends TeaModel {
 
     /**
      * <p>The resource type. This parameter specifies a filter condition for the query.</p>
-     * <br>
-     * <p>*   If you set the FuzzyType parameter to EQUAL, you can set this parameter to a resource type provided in [Types of resources that support Tag API operations](~~172061~~).</p>
-     * <p>*   If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in **Types of resources that support queries based on the NOT operator**.</p>
+     * <ul>
+     * <li>If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+     * <li>If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in <strong>Types of resources that support queries based on the NOT operator</strong>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::VPC::VPC</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -153,16 +174,21 @@ public class ListResourcesByTagRequest extends TeaModel {
     public static class ListResourcesByTagRequestTagFilter extends TeaModel {
         /**
          * <p>The tag key. This parameter specifies a filter condition for the query.</p>
-         * <br>
-         * <p>The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tag key can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. This parameter specifies a filter condition for the query.</p>
-         * <br>
-         * <p>The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

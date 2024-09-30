@@ -4,6 +4,14 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagRequest extends TeaModel {
+    /**
+     * <p>The tag key.</p>
+     * <p>If no tag value is associated with a tag key, you can specify the <code>Key</code> parameter without specifying the Value parameter to delete the tag key. Otherwise, you must specify both the <code>Key</code> and <code>Value</code> parameters to delete a preset tag.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Environment</p>
+     */
     @NameInMap("Key")
     public String key;
 
@@ -14,7 +22,14 @@ public class DeleteTagRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> Only <code>cn-hangzhou</code> is supported.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -22,6 +37,12 @@ public class DeleteTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The tag value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Value")
     public String value;
 

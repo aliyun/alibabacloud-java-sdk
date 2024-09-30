@@ -12,21 +12,31 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A68BD5BC-5B12-5A9B-8AE9-77884886BE10</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -71,33 +81,48 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
     public static class GetConfigRuleReportResponseBodyData extends TeaModel {
         /**
          * <p>The time when the report was generated. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655089159000</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
          * <p>The ID of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-ao0786618088006c****</p>
          */
         @NameInMap("ReportId")
         public String reportId;
 
         /**
          * <p>The ID of the object.</p>
-         * <br>
-         * <p>>  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.</p>
+         * <blockquote>
+         * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="https://help.aliyun.com/document_detail/433313.html">GenerateConfigRuleReport</a> operation to generate the report.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>154950938137****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The type of the object. Valid values:</p>
-         * <br>
-         * <p>*   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
-         * <p>*   ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-         * <p>*   FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-         * <p>*   ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-         * <br>
-         * <p>>  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.</p>
+         * <ul>
+         * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+         * <li>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="https://help.aliyun.com/document_detail/433313.html">GenerateConfigRuleReport</a> operation to generate the report.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ACCOUNT</p>
          */
         @NameInMap("TargetType")
         public String targetType;

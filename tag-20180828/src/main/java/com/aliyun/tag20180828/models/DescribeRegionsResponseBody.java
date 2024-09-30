@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The endpoint of the Tag service in the region.</p>
+     * <p>The information of the regions.</p>
      */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The name of the region.</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>632BBAE2-9C44-4212-8B51-B54742DA9713</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,14 +42,29 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The endpoint of the Tag service in the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag.aliyuncs.com</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

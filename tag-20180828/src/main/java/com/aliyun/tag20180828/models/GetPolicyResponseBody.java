@@ -12,6 +12,9 @@ public class GetPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E7A4802-AB57-570A-9860-F15B60E1586B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,29 +43,41 @@ public class GetPolicyResponseBody extends TeaModel {
     public static class GetPolicyResponseBodyPolicy extends TeaModel {
         /**
          * <p>The document of the tag policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;tags\&quot;:{\&quot;CostCenter\&quot;:{\&quot;tag_value\&quot;:{\&quot;@@assign\&quot;:[\&quot;Beijing\&quot;,\&quot;Shanghai\&quot;]},\&quot;tag_key\&quot;:{\&quot;@@assign\&quot;:\&quot;CostCenter\&quot;}}}}</p>
          */
         @NameInMap("PolicyContent")
         public String policyContent;
 
         /**
          * <p>The description of the tag policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a tag policy example.</p>
          */
         @NameInMap("PolicyDesc")
         public String policyDesc;
 
         /**
          * <p>The name of the tag policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The mode of the Tag Policy feature. Valid values:</p>
-         * <br>
-         * <p>*   USER: single-account mode</p>
-         * <p>*   RD: multi-account mode</p>
-         * <br>
-         * <p>For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).</p>
+         * <ul>
+         * <li>USER: single-account mode</li>
+         * <li>RD: multi-account mode</li>
+         * </ul>
+         * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         @NameInMap("UserType")
         public String userType;

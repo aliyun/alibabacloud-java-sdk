@@ -6,32 +6,47 @@ import com.aliyun.tea.*;
 public class ListTargetsForPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the object belongs to the resource directory. Valid values:</p>
-     * <br>
-     * <p>*   true: The object belongs to the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-     * <p>*   false: The object does not belong to the resource directory. This value is available if you use the Tag Policy feature in single-account mode.</p>
+     * <ul>
+     * <li>true: The object belongs to the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li>false: The object does not belong to the resource directory. This value is available if you use the Tag Policy feature in single-account mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsRd")
     public Boolean isRd;
 
     /**
      * <p>Indicates whether the next query is required.</p>
-     * <br>
-     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.</p>
-     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * <ul>
+     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
+     * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the resource directory.</p>
-     * <br>
-     * <p>>  This parameter is returned only if you use the Tag Policy feature in multi-account mode.</p>
+     * <blockquote>
+     * <p> This parameter is returned only if you use the Tag Policy feature in multi-account mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rd-3G****</p>
      */
     @NameInMap("RdId")
     public String rdId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2EE71C8D-6DB8-56AC-8B05-3D4C0116E6A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -90,17 +105,24 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
     public static class ListTargetsForPolicyResponseBodyTargets extends TeaModel {
         /**
          * <p>The ID of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>195320939469****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The type of the object. Valid values:</p>
-         * <br>
-         * <p>*   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
-         * <p>*   ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-         * <p>*   FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-         * <p>*   ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+         * <ul>
+         * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+         * <li>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACCOUNT</p>
          */
         @NameInMap("TargetType")
         public Integer targetType;
