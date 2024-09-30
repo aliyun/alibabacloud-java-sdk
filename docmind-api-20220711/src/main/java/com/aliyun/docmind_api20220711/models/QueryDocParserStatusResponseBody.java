@@ -66,15 +66,38 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
     }
 
     public static class QueryDocParserStatusResponseBodyData extends TeaModel {
+        @NameInMap("ImageCount")
+        public Integer imageCount;
+
         @NameInMap("NumberOfSuccessfulParsing")
         public Integer numberOfSuccessfulParsing;
+
+        @NameInMap("PageCountEstimate")
+        public Integer pageCountEstimate;
+
+        @NameInMap("ParagraphCount")
+        public Integer paragraphCount;
 
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TableCount")
+        public Integer tableCount;
+
+        @NameInMap("Tokens")
+        public Long tokens;
+
         public static QueryDocParserStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDocParserStatusResponseBodyData self = new QueryDocParserStatusResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDocParserStatusResponseBodyData setImageCount(Integer imageCount) {
+            this.imageCount = imageCount;
+            return this;
+        }
+        public Integer getImageCount() {
+            return this.imageCount;
         }
 
         public QueryDocParserStatusResponseBodyData setNumberOfSuccessfulParsing(Integer numberOfSuccessfulParsing) {
@@ -85,12 +108,44 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
             return this.numberOfSuccessfulParsing;
         }
 
+        public QueryDocParserStatusResponseBodyData setPageCountEstimate(Integer pageCountEstimate) {
+            this.pageCountEstimate = pageCountEstimate;
+            return this;
+        }
+        public Integer getPageCountEstimate() {
+            return this.pageCountEstimate;
+        }
+
+        public QueryDocParserStatusResponseBodyData setParagraphCount(Integer paragraphCount) {
+            this.paragraphCount = paragraphCount;
+            return this;
+        }
+        public Integer getParagraphCount() {
+            return this.paragraphCount;
+        }
+
         public QueryDocParserStatusResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public QueryDocParserStatusResponseBodyData setTableCount(Integer tableCount) {
+            this.tableCount = tableCount;
+            return this;
+        }
+        public Integer getTableCount() {
+            return this.tableCount;
+        }
+
+        public QueryDocParserStatusResponseBodyData setTokens(Long tokens) {
+            this.tokens = tokens;
+            return this;
+        }
+        public Long getTokens() {
+            return this.tokens;
         }
 
     }
