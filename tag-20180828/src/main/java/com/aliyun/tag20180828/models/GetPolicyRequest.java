@@ -12,12 +12,19 @@ public class GetPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the tag policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-557cb141331f41c7****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The region ID. Set the value to cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

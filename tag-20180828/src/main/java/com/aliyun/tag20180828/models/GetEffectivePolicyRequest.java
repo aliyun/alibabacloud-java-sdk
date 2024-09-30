@@ -12,6 +12,9 @@ public class GetEffectivePolicyRequest extends TeaModel {
 
     /**
      * <p>The region ID. Set the value to cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,21 +24,30 @@ public class GetEffectivePolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the object.</p>
-     * <br>
-     * <p>>  If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</p>
+     * <blockquote>
+     * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>154950938137****</p>
      */
     @NameInMap("TargetId")
     public String targetId;
 
     /**
      * <p>The type of the object. Valid values:</p>
-     * <br>
-     * <p>*   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
-     * <p>*   ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-     * <p>*   FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-     * <p>*   ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-     * <br>
-     * <p>>  If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</p>
+     * <ul>
+     * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+     * <li>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ACCOUNT</p>
      */
     @NameInMap("TargetType")
     public String targetType;

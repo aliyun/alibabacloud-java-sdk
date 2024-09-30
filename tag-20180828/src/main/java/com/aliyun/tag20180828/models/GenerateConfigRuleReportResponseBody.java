@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GenerateConfigRuleReportResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource non-compliance report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crp-ao0786618088006c****</p>
      */
     @NameInMap("ReportId")
     public String reportId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37B2AC06-89D8-5D95-98DF-3E68C12BDE05</p>
      */
     @NameInMap("RequestId")
     public String requestId;

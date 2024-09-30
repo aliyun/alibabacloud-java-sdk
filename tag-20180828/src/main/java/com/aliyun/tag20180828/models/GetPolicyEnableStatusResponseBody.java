@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPolicyEnableStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C8DF1B1-C65F-5D3A-9FDA-26A4683BB36B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,29 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
     public static class GetPolicyEnableStatusResponseBodyStatusModels extends TeaModel {
         /**
          * <p>The status of the Tag Policy feature. Valid values:</p>
-         * <br>
-         * <p>*   PendingEnable: The feature is being enabled.</p>
-         * <p>*   Enabled: The feature is enabled.</p>
-         * <p>*   Closing: The feature is being disabled.</p>
-         * <p>*   Disabled: The feature is disabled.</p>
+         * <ul>
+         * <li>PendingEnable: The feature is being enabled.</li>
+         * <li>Enabled: The feature is enabled.</li>
+         * <li>Closing: The feature is being disabled.</li>
+         * <li>Disabled: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The mode of the Tag Policy feature. Valid values:</p>
-         * <br>
-         * <p>*   USER: single-account mode</p>
-         * <p>*   RD: multi-account mode</p>
-         * <br>
-         * <p>For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).</p>
+         * <ul>
+         * <li>USER: single-account mode</li>
+         * <li>RD: multi-account mode</li>
+         * </ul>
+         * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD</p>
          */
         @NameInMap("UserType")
         public String userType;

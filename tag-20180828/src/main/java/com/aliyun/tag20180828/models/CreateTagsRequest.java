@@ -11,9 +11,14 @@ public class CreateTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the tag value.</p>
-     * <br>
-     * <p>Valid values of N: 1 to 10.</p>
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>Only <code>cn-hangzhou</code> is supported.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,6 +26,10 @@ public class CreateTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The information about the tags.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagKeyValueParamList")
     public java.util.List<CreateTagsRequestTagKeyValueParamList> tagKeyValueParamList;
 
@@ -70,11 +79,23 @@ public class CreateTagsRequest extends TeaModel {
     }
 
     public static class CreateTagsRequestTagKeyValueParamListTagValueParamList extends TeaModel {
+        /**
+         * <p>The description of the value for tag N.</p>
+         * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test environment</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The value of tag N.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. </p>
+         * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -103,17 +124,31 @@ public class CreateTagsRequest extends TeaModel {
     }
 
     public static class CreateTagsRequestTagKeyValueParamList extends TeaModel {
+        /**
+         * <p>The description of the key for tag N.</p>
+         * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business environment</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The description of the tag key.</p>
-         * <br>
+         * <p>The key of tag N.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * <p>Valid values of N: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Environment</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The information about the tag value.</p>
+         */
         @NameInMap("TagValueParamList")
         public java.util.List<CreateTagsRequestTagKeyValueParamListTagValueParamList> tagValueParamList;
 

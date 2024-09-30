@@ -11,17 +11,39 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resources.</p>
+     * <p>The region ID.</p>
+     * <ul>
+     * <li>If the resources belong to a service that is centrally deployed, set the value to <code>cn-hangzhou</code> or to the region ID of the resources by referring to <a href="https://help.aliyun.com/document_detail/2579691.html">Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services</a>.</li>
+     * <li>If the resources belong to a service that is not centrally deployed, set the value to the region ID of the resources.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arn:acs:vpc:cn-hangzhou:123456789****:vpc/vpc-bp19dd90tkt6tz7wu****</p>
+     */
     @NameInMap("ResourceARN")
     public java.util.List<String> resourceARN;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>A tag key.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k1</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

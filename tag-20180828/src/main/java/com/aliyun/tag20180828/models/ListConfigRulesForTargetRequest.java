@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListConfigRulesForTargetRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 50. Maximum value: 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,15 +31,22 @@ public class ListConfigRulesForTargetRequest extends TeaModel {
 
     /**
      * <p>The use scenario of the tag policy. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   tags: enables tags with specified tag values to be added to resources.</p>
-     * <p>*   rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</p>
+     * <ul>
+     * <li>tags: enables tags with specified tag values to be added to resources.</li>
+     * <li>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tags</p>
      */
     @NameInMap("PolicyType")
     public String policyType;
 
     /**
      * <p>The region ID. Set the value to cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,38 +56,53 @@ public class ListConfigRulesForTargetRequest extends TeaModel {
 
     /**
      * <p>The tag key. This parameter specifies a filter condition for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CostCenter</p>
      */
     @NameInMap("TagKey")
     public String tagKey;
 
     /**
      * <p>The ID of the object. This parameter specifies a filter condition for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>134254031178****</p>
      */
     @NameInMap("TargetId")
     public String targetId;
 
     /**
      * <p>The type of the object. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
-     * <p>*   ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-     * <p>*   FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-     * <p>*   ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <ul>
+     * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+     * <li>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ACCOUNT</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   USER: single-account mode</p>
-     * <p>*   RD: multi-account mode</p>
-     * <br>
-     * <p>For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <ul>
+     * <li>USER: single-account mode</li>
+     * <li>RD: multi-account mode</li>
+     * </ul>
+     * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
      */
     @NameInMap("UserType")
     public String userType;

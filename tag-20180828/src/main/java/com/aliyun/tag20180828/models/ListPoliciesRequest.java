@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListPoliciesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 50. Maximum value: 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,14 +29,23 @@ public class ListPoliciesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of a tag policy. This parameter specifies a filter condition for the query.</p>
+     */
     @NameInMap("PolicyIds")
     public java.util.List<String> policyIds;
 
+    /**
+     * <p>The name of a tag policy. This parameter specifies a filter condition for the query.</p>
+     */
     @NameInMap("PolicyNames")
     public java.util.List<String> policyNames;
 
     /**
      * <p>The region ID. Set the value to cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,13 +55,17 @@ public class ListPoliciesRequest extends TeaModel {
 
     /**
      * <p>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   USER: single-account mode</p>
-     * <p>*   RD: multi-account mode</p>
-     * <br>
-     * <p>For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <ul>
+     * <li>USER: single-account mode</li>
+     * <li>RD: multi-account mode</li>
+     * </ul>
+     * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
      */
     @NameInMap("UserType")
     public String userType;

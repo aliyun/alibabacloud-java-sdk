@@ -5,7 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The information of the regions.</p>
+     * <p>The supported natural language. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese (default value)</li>
+     * <li>en-US: English</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -17,7 +25,10 @@ public class DescribeRegionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

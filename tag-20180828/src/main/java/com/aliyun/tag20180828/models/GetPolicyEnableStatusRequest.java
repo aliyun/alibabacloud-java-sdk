@@ -4,6 +4,19 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class GetPolicyEnableStatusRequest extends TeaModel {
+    /**
+     * <p>The enabling type. Valid values:</p>
+     * <ul>
+     * <li>TAG_POLICY: the Tag Policy feature.</li>
+     * <li>VERIFY_NO_TAG: the strong verification feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TAG_POLICY</p>
+     */
+    @NameInMap("OpenType")
+    public String openType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -12,6 +25,9 @@ public class GetPolicyEnableStatusRequest extends TeaModel {
 
     /**
      * <p>The region ID. Set the value to cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -24,13 +40,17 @@ public class GetPolicyEnableStatusRequest extends TeaModel {
 
     /**
      * <p>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   USER: single-account mode</p>
-     * <p>*   RD: multi-account mode</p>
-     * <br>
-     * <p>For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <ul>
+     * <li>USER: single-account mode</li>
+     * <li>RD: multi-account mode</li>
+     * </ul>
+     * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>RD</p>
      */
     @NameInMap("UserType")
     public String userType;
@@ -38,6 +58,14 @@ public class GetPolicyEnableStatusRequest extends TeaModel {
     public static GetPolicyEnableStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPolicyEnableStatusRequest self = new GetPolicyEnableStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPolicyEnableStatusRequest setOpenType(String openType) {
+        this.openType = openType;
+        return this;
+    }
+    public String getOpenType() {
+        return this.openType;
     }
 
     public GetPolicyEnableStatusRequest setOwnerAccount(String ownerAccount) {

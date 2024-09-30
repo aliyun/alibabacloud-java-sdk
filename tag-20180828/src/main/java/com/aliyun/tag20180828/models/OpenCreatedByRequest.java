@@ -10,6 +10,13 @@ public class OpenCreatedByRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID. Set the value to cn-shanghai.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

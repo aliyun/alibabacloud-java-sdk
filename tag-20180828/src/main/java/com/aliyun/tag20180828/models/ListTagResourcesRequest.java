@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the tag. Valid values:</p>
-     * <br>
-     * <p>*   Custom</p>
-     * <p>*   System</p>
-     * <p>*   All</p>
-     * <br>
+     * <ul>
+     * <li>Custom</li>
+     * <li>System</li>
+     * <li>All</li>
+     * </ul>
      * <p>Default value: All.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -30,18 +36,34 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 1000. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the resources.</p>
+     * <p>The region ID.</p>
+     * <ul>
+     * <li>If the resources belong to a service that is centrally deployed, set the value to the region ID of the resources by referring to <a href="https://help.aliyun.com/document_detail/2579691.html">Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services</a>.</li>
+     * <li>If the resources belong to a service that is not centrally deployed, set the value to the region ID of the resources.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-bp15hr53jws84akg****</p>
+     */
     @NameInMap("ResourceARN")
     public java.util.List<String> resourceARN;
 
@@ -50,15 +72,17 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The key-value pairs of tags. You can specify 1 to 10 key-value pairs.</p>
-     * <br>
      * <p>If you specify multiple tags, the system queries the resources to which all these tags are added.</p>
-     * <br>
      * <p>Limits:</p>
-     * <br>
-     * <p>*   A tag key must be 1 to 128 characters in length.</p>
-     * <p>*   A tag value must be 1 to 128 characters in length.</p>
-     * <p>*   Tag keys and tag values are case-sensitive.</p>
-     * <p>*   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
+     * <ul>
+     * <li>A tag key must be 1 to 128 characters in length.</li>
+     * <li>A tag value must be 1 to 128 characters in length.</li>
+     * <li>Tag keys and tag values are case-sensitive.</li>
+     * <li>Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
      */
     @NameInMap("Tags")
     public String tags;

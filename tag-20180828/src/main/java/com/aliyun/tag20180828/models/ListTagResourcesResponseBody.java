@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the `next query` is required.</p>
-     * <br>
-     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the `next query` is not required.</p>
-     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the `token` used to start the next query.</p>
+     * <p>Indicates whether the <code>next query</code> is required.</p>
+     * <ul>
+     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the <code>next query</code> is not required.</li>
+     * <li>If the value of this parameter is not empty, the next query is required, and the value is the <code>token</code> used to start the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>014738E0-3C7F-47D8-8FB9-469500C6F387</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,21 +64,31 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTags extends TeaModel {
         /**
          * <p>The type of the tag. Valid values:</p>
-         * <br>
-         * <p>*   Custom</p>
-         * <p>*   System</p>
+         * <ul>
+         * <li>Custom</li>
+         * <li>System</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -110,6 +127,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The ARN of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-bp15hr53jws84akg****</p>
          */
         @NameInMap("ResourceARN")
         public String resourceARN;
