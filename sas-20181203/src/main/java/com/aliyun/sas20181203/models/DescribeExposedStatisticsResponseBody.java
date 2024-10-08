@@ -22,6 +22,12 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     @NameInMap("ExposedComponentCount")
     public Integer exposedComponentCount;
 
+    @NameInMap("ExposedDdsCount")
+    public Integer exposedDdsCount;
+
+    @NameInMap("ExposedEcsCount")
+    public Integer exposedEcsCount;
+
     /**
      * <p>The total number of servers that are exposed on the Internet.</p>
      * 
@@ -39,6 +45,9 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
      */
     @NameInMap("ExposedIpCount")
     public Integer exposedIpCount;
+
+    @NameInMap("ExposedKvstoreCount")
+    public Integer exposedKvstoreCount;
 
     /**
      * <p>The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
@@ -66,6 +75,9 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
      */
     @NameInMap("ExposedPortCount")
     public Integer exposedPortCount;
+
+    @NameInMap("ExposedRdsCount")
+    public Integer exposedRdsCount;
 
     /**
      * <p>The total number of system keys that are detected on your servers and are exposed on the Internet.</p>
@@ -115,6 +127,22 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         return this.exposedComponentCount;
     }
 
+    public DescribeExposedStatisticsResponseBody setExposedDdsCount(Integer exposedDdsCount) {
+        this.exposedDdsCount = exposedDdsCount;
+        return this;
+    }
+    public Integer getExposedDdsCount() {
+        return this.exposedDdsCount;
+    }
+
+    public DescribeExposedStatisticsResponseBody setExposedEcsCount(Integer exposedEcsCount) {
+        this.exposedEcsCount = exposedEcsCount;
+        return this;
+    }
+    public Integer getExposedEcsCount() {
+        return this.exposedEcsCount;
+    }
+
     public DescribeExposedStatisticsResponseBody setExposedInstanceCount(Integer exposedInstanceCount) {
         this.exposedInstanceCount = exposedInstanceCount;
         return this;
@@ -129,6 +157,14 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     }
     public Integer getExposedIpCount() {
         return this.exposedIpCount;
+    }
+
+    public DescribeExposedStatisticsResponseBody setExposedKvstoreCount(Integer exposedKvstoreCount) {
+        this.exposedKvstoreCount = exposedKvstoreCount;
+        return this;
+    }
+    public Integer getExposedKvstoreCount() {
+        return this.exposedKvstoreCount;
     }
 
     public DescribeExposedStatisticsResponseBody setExposedLaterVulCount(Integer exposedLaterVulCount) {
@@ -153,6 +189,14 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     }
     public Integer getExposedPortCount() {
         return this.exposedPortCount;
+    }
+
+    public DescribeExposedStatisticsResponseBody setExposedRdsCount(Integer exposedRdsCount) {
+        this.exposedRdsCount = exposedRdsCount;
+        return this;
+    }
+    public Integer getExposedRdsCount() {
+        return this.exposedRdsCount;
     }
 
     public DescribeExposedStatisticsResponseBody setExposedWeekPasswordMachineCount(Integer exposedWeekPasswordMachineCount) {

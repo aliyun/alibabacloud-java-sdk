@@ -40,6 +40,113 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         return this.securityEventOperationsResponse;
     }
 
+    public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("FillType")
+        public String fillType;
+
+        @NameInMap("MaxLength")
+        public Integer maxLength;
+
+        @NameInMap("MinLength")
+        public Integer minLength;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Required")
+        public Boolean required;
+
+        @NameInMap("ShowName")
+        public String showName;
+
+        @NameInMap("ShowValue")
+        public String showValue;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields self = new DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setFillType(String fillType) {
+            this.fillType = fillType;
+            return this;
+        }
+        public String getFillType() {
+            return this.fillType;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setMaxLength(Integer maxLength) {
+            this.maxLength = maxLength;
+            return this;
+        }
+        public Integer getMaxLength() {
+            return this.maxLength;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setMinLength(Integer minLength) {
+            this.minLength = minLength;
+            return this;
+        }
+        public Integer getMinLength() {
+            return this.minLength;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setShowName(String showName) {
+            this.showName = showName;
+            return this;
+        }
+        public String getShowName() {
+            return this.showName;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setShowValue(String showValue) {
+            this.showValue = showValue;
+            return this;
+        }
+        public String getShowValue() {
+            return this.showValue;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField extends TeaModel {
         /**
          * <p>The alias of the field that is used in the whitelist rule.</p>
@@ -228,6 +335,9 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse extends TeaModel {
+        @NameInMap("MappingMarkFields")
+        public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields> mappingMarkFields;
+
         /**
          * <p>An array consisting of the configuration information that is used when the value of the OperationCode parameter is <strong>advance_mark_mis_info</strong>.</p>
          */
@@ -289,6 +399,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         public static DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse self = new DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setMappingMarkFields(java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields> mappingMarkFields) {
+            this.mappingMarkFields = mappingMarkFields;
+            return this;
+        }
+        public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields> getMappingMarkFields() {
+            return this.mappingMarkFields;
         }
 
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setMarkField(java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField) {

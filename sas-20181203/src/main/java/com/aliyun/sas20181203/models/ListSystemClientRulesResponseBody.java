@@ -239,6 +239,19 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Whether the current rule switch takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SwitchEnable")
+        public Boolean switchEnable;
+
+        /**
          * <p>The switch ID of the system defense rule.</p>
          * 
          * <strong>example:</strong>
@@ -314,6 +327,14 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListSystemClientRulesResponseBodyRuleList setSwitchEnable(Boolean switchEnable) {
+            this.switchEnable = switchEnable;
+            return this;
+        }
+        public Boolean getSwitchEnable() {
+            return this.switchEnable;
         }
 
         public ListSystemClientRulesResponseBodyRuleList setSwitchId(String switchId) {

@@ -35,7 +35,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;VUL&quot;:1，&quot;CSPM&quot;:0}</p>
+     * <p>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</p>
      */
     @NameInMap("PostPayModuleSwitch")
     public String postPayModuleSwitch;

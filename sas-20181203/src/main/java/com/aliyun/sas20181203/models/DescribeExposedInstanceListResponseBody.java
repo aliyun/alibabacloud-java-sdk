@@ -64,6 +64,15 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         @NameInMap("AsapVulCount")
         public Integer asapVulCount;
 
+        @NameInMap("AssetType")
+        public Integer assetType;
+
+        @NameInMap("CloudAssetInfo")
+        public String cloudAssetInfo;
+
+        @NameInMap("CspmAlarmCount")
+        public Integer cspmAlarmCount;
+
         /**
          * <p>The total number of servers that are exposed on the Internet.</p>
          * 
@@ -243,6 +252,30 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         }
         public Integer getAsapVulCount() {
             return this.asapVulCount;
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstances setAssetType(Integer assetType) {
+            this.assetType = assetType;
+            return this;
+        }
+        public Integer getAssetType() {
+            return this.assetType;
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstances setCloudAssetInfo(String cloudAssetInfo) {
+            this.cloudAssetInfo = cloudAssetInfo;
+            return this;
+        }
+        public String getCloudAssetInfo() {
+            return this.cloudAssetInfo;
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstances setCspmAlarmCount(Integer cspmAlarmCount) {
+            this.cspmAlarmCount = cspmAlarmCount;
+            return this;
+        }
+        public Integer getCspmAlarmCount() {
+            return this.cspmAlarmCount;
         }
 
         public DescribeExposedInstanceListResponseBodyExposedInstances setExploitHealthCount(Integer exploitHealthCount) {

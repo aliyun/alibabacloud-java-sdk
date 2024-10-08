@@ -43,6 +43,9 @@ public class DescribeOnceTaskRequest extends TeaModel {
     @NameInMap("RootTaskId")
     public String rootTaskId;
 
+    @NameInMap("Source")
+    public String source;
+
     /**
      * <p>The timestamp when the root task starts. Unit: milliseconds.</p>
      * 
@@ -113,6 +116,14 @@ public class DescribeOnceTaskRequest extends TeaModel {
     }
     public String getRootTaskId() {
         return this.rootTaskId;
+    }
+
+    public DescribeOnceTaskRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public DescribeOnceTaskRequest setStartTimeQuery(Long startTimeQuery) {

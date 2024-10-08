@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceListRequest extends TeaModel {
+    @NameInMap("AssetType")
+    public String assetType;
+
+    @NameInMap("CspmStatus")
+    public Boolean cspmStatus;
+
     /**
      * <p>The number of the page to return.</p>
      * 
@@ -128,6 +134,22 @@ public class DescribeExposedInstanceListRequest extends TeaModel {
     public static DescribeExposedInstanceListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExposedInstanceListRequest self = new DescribeExposedInstanceListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeExposedInstanceListRequest setAssetType(String assetType) {
+        this.assetType = assetType;
+        return this;
+    }
+    public String getAssetType() {
+        return this.assetType;
+    }
+
+    public DescribeExposedInstanceListRequest setCspmStatus(Boolean cspmStatus) {
+        this.cspmStatus = cspmStatus;
+        return this;
+    }
+    public Boolean getCspmStatus() {
+        return this.cspmStatus;
     }
 
     public DescribeExposedInstanceListRequest setCurrentPage(Integer currentPage) {

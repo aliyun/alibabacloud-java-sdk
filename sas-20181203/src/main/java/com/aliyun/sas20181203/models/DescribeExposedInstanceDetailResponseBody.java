@@ -149,6 +149,113 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList extends TeaModel {
+        @NameInMap("AssetSubType")
+        public Integer assetSubType;
+
+        @NameInMap("AssetSubTypeName")
+        public String assetSubTypeName;
+
+        @NameInMap("AssetType")
+        public Integer assetType;
+
+        @NameInMap("AssetTypeName")
+        public String assetTypeName;
+
+        @NameInMap("CheckName")
+        public String checkName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        @NameInMap("Vendor")
+        public Integer vendor;
+
+        public static DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList self = new DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setAssetSubType(Integer assetSubType) {
+            this.assetSubType = assetSubType;
+            return this;
+        }
+        public Integer getAssetSubType() {
+            return this.assetSubType;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setAssetSubTypeName(String assetSubTypeName) {
+            this.assetSubTypeName = assetSubTypeName;
+            return this;
+        }
+        public String getAssetSubTypeName() {
+            return this.assetSubTypeName;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setAssetType(Integer assetType) {
+            this.assetType = assetType;
+            return this;
+        }
+        public Integer getAssetType() {
+            return this.assetType;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setAssetTypeName(String assetTypeName) {
+            this.assetTypeName = assetTypeName;
+            return this;
+        }
+        public String getAssetTypeName() {
+            return this.assetTypeName;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setCheckName(String checkName) {
+            this.checkName = checkName;
+            return this;
+        }
+        public String getCheckName() {
+            return this.checkName;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList setVendor(Integer vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public Integer getVendor() {
+            return this.vendor;
+        }
+
+    }
+
     public static class DescribeExposedInstanceDetailResponseBodyExposedChainsRealVulList extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
@@ -264,6 +371,9 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
          */
         @NameInMap("AllVulList")
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList> allVulList;
+
+        @NameInMap("CspmRiskList")
+        public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList> cspmRiskList;
 
         /**
          * <p>The server component that is exposed on the Internet.</p>
@@ -405,6 +515,14 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         }
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList> getAllVulList() {
             return this.allVulList;
+        }
+
+        public DescribeExposedInstanceDetailResponseBodyExposedChains setCspmRiskList(java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList> cspmRiskList) {
+            this.cspmRiskList = cspmRiskList;
+            return this;
+        }
+        public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList> getCspmRiskList() {
+            return this.cspmRiskList;
         }
 
         public DescribeExposedInstanceDetailResponseBodyExposedChains setExposureComponent(String exposureComponent) {

@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockCreateConfigResponseBody extends TeaModel {
+    @NameInMap("ConfigId")
+    public String configId;
+
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
@@ -16,6 +19,14 @@ public class ModifyWebLockCreateConfigResponseBody extends TeaModel {
     public static ModifyWebLockCreateConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyWebLockCreateConfigResponseBody self = new ModifyWebLockCreateConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyWebLockCreateConfigResponseBody setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
     }
 
     public ModifyWebLockCreateConfigResponseBody setRequestId(String requestId) {
