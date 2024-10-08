@@ -5,9 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetSavedQueryRequest extends TeaModel {
     /**
-     * <p>The ID of the template.</p>
-     * <br>
-     * <p>>  You can call the [ListSavedQueries](~~ListSavedQueries~~) operation to obtain the template ID.</p>
+     * <p>The template ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListSavedQueries~~">ListSavedQueries</a> operation to query the ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sq-GeAck****</p>
      */
     @NameInMap("QueryId")
     public String queryId;

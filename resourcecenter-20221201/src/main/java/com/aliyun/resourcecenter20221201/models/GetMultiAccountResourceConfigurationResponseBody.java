@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     /**
      * <p>The ID of the management account or member of the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1619302****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
@@ -18,12 +21,18 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The time when the resource was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-14T03:12:11Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The time when the resource expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-09-18T07:04:21Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
@@ -36,44 +45,63 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The IP addresses.</p>
-     * <br>
-     * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+     * <blockquote>
+     * <p>Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+     * </blockquote>
      */
     @NameInMap("IpAddresses")
     public java.util.List<String> ipAddresses;
 
     /**
      * <p>The region ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B2DCC08B-C12A-5705-879C-5A1450016156</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the resource belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzy6d****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-eb3hji****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The name of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_resource</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
     /**
      * <p>The type of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::VPC::RouteTable</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -86,6 +114,9 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The zone ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-a</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -210,21 +241,31 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public static class GetMultiAccountResourceConfigurationResponseBodyIpAddressAttributes extends TeaModel {
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.27.199.42</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: the Internet</p>
-         * <p>*   **Private**: internal network</p>
+         * <ul>
+         * <li><strong>Public</strong>: the Internet</li>
+         * <li><strong>Private</strong>: internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipv4</p>
          */
         @NameInMap("Version")
         public String version;
@@ -263,12 +304,18 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public static class GetMultiAccountResourceConfigurationResponseBodyTags extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

@@ -12,12 +12,16 @@ public class GetResourceCountsRequest extends TeaModel {
 
     /**
      * <p>The dimension by which resources are queried. Valid values:</p>
-     * <br>
-     * <p>*   ResourceType</p>
-     * <p>*   Region</p>
-     * <p>*   ResourceGroupId</p>
-     * <p>*   TagKey</p>
-     * <p>*   TagValue</p>
+     * <ul>
+     * <li>ResourceType</li>
+     * <li>Region</li>
+     * <li>ResourceGroupId</li>
+     * <li>TagKey</li>
+     * <li>TagValue</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceType</p>
      */
     @NameInMap("GroupByKey")
     public String groupByKey;
@@ -45,15 +49,20 @@ public class GetResourceCountsRequest extends TeaModel {
 
     public static class GetResourceCountsRequestFilter extends TeaModel {
         /**
-         * <p>The key of the filter condition. For more information, see `Supported filter parameters`.</p>
+         * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching mode.</p>
-         * <br>
          * <p>The value Equals indicates an equal match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equals</p>
          */
         @NameInMap("MatchType")
         public String matchType;

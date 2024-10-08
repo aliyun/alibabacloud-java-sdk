@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class GetExampleQueryRequest extends TeaModel {
     /**
      * <p>The ID of the template.</p>
-     * <br>
-     * <p>>  You can call the [ListExampleQueries](~~ListExampleQueries~~) operation to obtain the template ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListExampleQueries~~">ListExampleQueries</a> operation to obtain the template ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sq-0PfKy****</p>
      */
     @NameInMap("QueryId")
     public String queryId;

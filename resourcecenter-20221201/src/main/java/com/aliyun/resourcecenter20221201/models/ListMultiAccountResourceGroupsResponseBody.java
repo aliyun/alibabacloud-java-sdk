@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAU5VsT9R1adMTuz9GzginZ3Y+7Y/5JATS+6q5GK9kT75</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FF0A66E-781F-51EE-9531-928F197558F2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,40 +60,59 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     public static class ListMultiAccountResourceGroupsResponseBodyResourceGroups extends TeaModel {
         /**
          * <p>The ID of the management account or member of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1394339739****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The time when the resource group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T09:20:08Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The display name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The unique identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The resource group is being created.</p>
-         * <p>*   OK: The resource group is created.</p>
-         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
+         * <ul>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Status")
         public String status;

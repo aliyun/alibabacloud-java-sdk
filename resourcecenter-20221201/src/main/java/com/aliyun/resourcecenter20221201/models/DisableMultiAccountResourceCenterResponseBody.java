@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisableMultiAccountResourceCenterResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4951F920-48DB-5731-96AA-3A7C8AE617D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

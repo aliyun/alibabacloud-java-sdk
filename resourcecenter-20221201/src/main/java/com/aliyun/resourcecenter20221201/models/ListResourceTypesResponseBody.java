@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListResourceTypesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E5556E4C-479A-5BBB-B325-F07563E7E917</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,7 +40,47 @@ public class ListResourceTypesResponseBody extends TeaModel {
         return this.resourceTypes;
     }
 
+    public static class ListResourceTypesResponseBodyResourceTypesCodeMapping extends TeaModel {
+        @NameInMap("ResourceGroup")
+        public String resourceGroup;
+
+        @NameInMap("Tag")
+        public String tag;
+
+        public static ListResourceTypesResponseBodyResourceTypesCodeMapping build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceTypesResponseBodyResourceTypesCodeMapping self = new ListResourceTypesResponseBodyResourceTypesCodeMapping();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesCodeMapping setResourceGroup(String resourceGroup) {
+            this.resourceGroup = resourceGroup;
+            return this;
+        }
+        public String getResourceGroup() {
+            return this.resourceGroup;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesCodeMapping setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ListResourceTypesResponseBodyResourceTypes extends TeaModel {
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Authorized")
+        public Boolean authorized;
+
+        @NameInMap("CodeMapping")
+        public ListResourceTypesResponseBodyResourceTypesCodeMapping codeMapping;
+
         /**
          * <p>The supported filter conditions.</p>
          */
@@ -46,18 +89,27 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Container Service for Kubernetes</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ACK::Cluster</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The name of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster</p>
          */
         @NameInMap("ResourceTypeName")
         public String resourceTypeName;
@@ -65,6 +117,22 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public static ListResourceTypesResponseBodyResourceTypes build(java.util.Map<String, ?> map) throws Exception {
             ListResourceTypesResponseBodyResourceTypes self = new ListResourceTypesResponseBodyResourceTypes();
             return TeaModel.build(map, self);
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setAuthorized(Boolean authorized) {
+            this.authorized = authorized;
+            return this;
+        }
+        public Boolean getAuthorized() {
+            return this.authorized;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setCodeMapping(ListResourceTypesResponseBodyResourceTypesCodeMapping codeMapping) {
+            this.codeMapping = codeMapping;
+            return this;
+        }
+        public ListResourceTypesResponseBodyResourceTypesCodeMapping getCodeMapping() {
+            return this.codeMapping;
         }
 
         public ListResourceTypesResponseBodyResourceTypes setFilterKeys(java.util.List<String> filterKeys) {

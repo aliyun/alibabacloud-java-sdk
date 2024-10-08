@@ -10,8 +10,17 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
     @NameInMap("Columns")
     public java.util.List<ExecuteSQLQueryResponseBodyColumns> columns;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,6 +44,22 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
         return this.columns;
     }
 
+    public ExecuteSQLQueryResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ExecuteSQLQueryResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ExecuteSQLQueryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -54,12 +79,18 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
     public static class ExecuteSQLQueryResponseBodyColumns extends TeaModel {
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resource_id</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>varchar</p>
          */
         @NameInMap("Type")
         public String type;

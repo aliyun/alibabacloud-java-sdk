@@ -4,6 +4,12 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class AssociateDefaultFilterResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54673B22-2001-556A-B394-B8697AA9670B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

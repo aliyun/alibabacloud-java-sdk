@@ -6,20 +6,23 @@ import com.aliyun.tea.*;
 public class ExecuteSQLQueryRequest extends TeaModel {
     /**
      * <p>The SQL statement to be executed.</p>
-     * <br>
      * <p>The number of characters in the SQL statement must be less than 2,000.</p>
-     * <br>
-     * <p>For more information about the SQL syntax, see [Basic SQL syntax](~~2539395~~).</p>
+     * <p>For more information about the SQL syntax, see <a href="https://help.aliyun.com/document_detail/2539395.html">Basic SQL syntax</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT * FROM resources LIMIT 100;</p>
      */
     @NameInMap("Expression")
     public String expression;
 
     /**
      * <p>The search scope.</p>
-     * <br>
      * <p>Set this parameter to the ID of a resource group.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of a resource group, see [ListResourceGroups](~~158855~~).</p>
+     * <p>For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
      */
     @NameInMap("Scope")
     public String scope;

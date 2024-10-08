@@ -4,6 +4,13 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class DeleteFilterRequest extends TeaModel {
+    /**
+     * <p>The name of the filter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("FilterName")
     public String filterName;
 

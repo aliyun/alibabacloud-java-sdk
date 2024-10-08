@@ -6,30 +6,43 @@ import com.aliyun.tea.*;
 public class UpdateSavedQueryRequest extends TeaModel {
     /**
      * <p>The description of the template.</p>
-     * <br>
      * <p>The description must be 1 to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The query statement in the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT * FROM resources;</p>
      */
     @NameInMap("Expression")
     public String expression;
 
     /**
      * <p>The name of the template.</p>
-     * <br>
-     * <p>*   The name must be 1 to 64 characters in length.</p>
-     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must be unique.</p>
+     * <ul>
+     * <li>The name must be 1 to 64 characters in length.</li>
+     * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>The name must be unique.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Query of All Alibaba Cloud Resources</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>The template ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sq-GeAck****</p>
      */
     @NameInMap("QueryId")
     public String queryId;

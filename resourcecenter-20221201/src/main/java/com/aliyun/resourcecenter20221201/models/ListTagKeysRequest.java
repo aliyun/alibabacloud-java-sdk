@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The matching mode. Valid values:</p>
-     * <br>
-     * <p>*   Equals: equal match</p>
-     * <p>*   Prefix: match by prefix</p>
+     * <ul>
+     * <li>Equals: equal match</li>
+     * <li>Prefix: match by prefix</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Equals</p>
      */
     @NameInMap("MatchType")
     public String matchType;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.</p>
+     * <p>If the total number of entries returned for the current request exceeds the value of the <code>MaxResults</code> parameter, the entries are truncated. In this case, you can use the <code>token</code> to initiate another request and obtain the remaining entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAUYb00R0gHZBE8FVDeoh2ME93VeeEPUHs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The tag key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_key</p>
      */
     @NameInMap("TagKey")
     public String tagKey;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagValuesResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C1840B83-1193-5E83-AFA6-4B8D303E29F5</p>
      */
     @NameInMap("RequestId")
     public String requestId;

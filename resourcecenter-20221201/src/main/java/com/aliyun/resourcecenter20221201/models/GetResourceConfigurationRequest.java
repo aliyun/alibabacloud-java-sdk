@@ -6,20 +6,31 @@ import com.aliyun.tea.*;
 public class GetResourceConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-bp1kyg72m****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The region ID of the resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
-     * <p>For more information about the resource types supported by Resource Center, see [Services that work with Resource Center](~~477798~~).</p>
+     * <p>For more information about the resource types supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::VPC::RouteTable</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

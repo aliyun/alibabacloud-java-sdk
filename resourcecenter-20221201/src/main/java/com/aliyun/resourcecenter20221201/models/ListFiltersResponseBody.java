@@ -4,12 +4,24 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListFiltersResponseBody extends TeaModel {
+    /**
+     * <p>The name of the default filter.</p>
+     */
     @NameInMap("DefaultFilterName")
     public String defaultFilterName;
 
+    /**
+     * <p>The configurations of the filter.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<ListFiltersResponseBodyFilters> filters;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA39FB9C-CB74-5E73-8DFE-3A2B096F0759</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +55,28 @@ public class ListFiltersResponseBody extends TeaModel {
     }
 
     public static class ListFiltersResponseBodyFilters extends TeaModel {
+        /**
+         * <p>The configurations of the filter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;regions&quot;: [],
+         *   &quot;tagFilters&quot;: [
+         *     [{ &quot;type&quot;: &quot;notContainTagKey&quot;, &quot;tagKey&quot;: &quot;xxx&quot;, &quot;tagValue&quot;: &quot;&quot; }],
+         *     [{ &quot;tagKey&quot;: &quot;xxx&quot;, &quot;tagValue&quot;: &quot;xxx&quot; }]
+         *   ],
+         *   &quot;resourceTypes&quot;: [
+         *     &quot;ACS::ECS::AutoSnapshotPolicy&quot;
+         *   ]
+         * }</p>
+         */
         @NameInMap("FilterConfiguration")
         public String filterConfiguration;
 
+        /**
+         * <p>The name of the filter.</p>
+         */
         @NameInMap("FilterName")
         public String filterName;
 

@@ -12,11 +12,17 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
@@ -24,6 +30,9 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFA806B9-7F36-55AB-8B7A-D680C2C5EE57</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,11 +45,15 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The search scope.</p>
-     * <br>
-     * <p>*   ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</p>
-     * <p>*   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</p>
-     * <p>*   ID of a folder: Resources within all members in the folder are searched.</p>
-     * <p>*   ID of a member: Resources within the member are searched.</p>
+     * <ul>
+     * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</li>
+     * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</li>
+     * <li>ID of a folder: Resources within all members in the folder are searched.</li>
+     * <li>ID of a member: Resources within the member are searched.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rd-r4****</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -101,12 +114,18 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     public static class SearchMultiAccountResourcesResponseBodyFilters extends TeaModel {
         /**
          * <p>The key of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equals</p>
          */
         @NameInMap("MatchType")
         public String matchType;
@@ -157,15 +176,22 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: the Internet</p>
-         * <p>*   **Private**: internal network</p>
+         * <ul>
+         * <li><strong>Public</strong>: the Internet</li>
+         * <li><strong>Private</strong>: internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipv4</p>
          */
         @NameInMap("Version")
         public String version;
@@ -204,12 +230,18 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     public static class SearchMultiAccountResourcesResponseBodyResourcesTags extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -240,20 +272,30 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     public static class SearchMultiAccountResourcesResponseBodyResources extends TeaModel {
         /**
          * <p>The ID of the management account or member of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The time when the resource was created.</p>
-         * <br>
-         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <blockquote>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T09:20:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the resource expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-14T14:35:45Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -266,38 +308,54 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The IP addresses.</p>
-         * <br>
-         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <blockquote>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * </blockquote>
          */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp11lbh452fr8940s****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::VPC::RouteTable</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -310,8 +368,12 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The zone ID.</p>
-         * <br>
-         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <blockquote>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

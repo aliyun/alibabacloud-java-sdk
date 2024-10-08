@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSavedQueriesResponseBody extends TeaModel {
     /**
      * <p>The maximum number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAARfZmVDe9NvRXloR5+8CK9nNJufMdRA7W1miLC1P****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,31 +76,46 @@ public class ListSavedQueriesResponseBody extends TeaModel {
 
     public static class ListSavedQueriesResponseBodySavedQueries extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The time when the template was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-13T05:50:35Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Query of All Alibaba Cloud Resources</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sq-GeAck****</p>
          */
         @NameInMap("QueryId")
         public String queryId;
 
         /**
-         * <p>The time when the template was last updated.</p>
+         * <p>The time when the template was updated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-14 10:27:07</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

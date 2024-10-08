@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteSavedQueryResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D170D58E-6256-5344-8F5E-922EC9ECB7EA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

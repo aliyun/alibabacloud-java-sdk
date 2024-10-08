@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisableResourceCenterResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D170D58E-6256-5344-8F5E-922EC9ECB7EA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Sets a default filter.</p>
+     * 
+     * @param request AssociateDefaultFilterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateDefaultFilterResponse
+     */
     public AssociateDefaultFilterResponse associateDefaultFilterWithOptions(AssociateDefaultFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -50,11 +58,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateDefaultFilterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Sets a default filter.</p>
+     * 
+     * @param request AssociateDefaultFilterRequest
+     * @return AssociateDefaultFilterResponse
+     */
     public AssociateDefaultFilterResponse associateDefaultFilter(AssociateDefaultFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateDefaultFilterWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a filter.</p>
+     * 
+     * @param request CreateFilterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFilterResponse
+     */
     public CreateFilterResponse createFilterWithOptions(CreateFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -83,11 +106,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFilterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a filter.</p>
+     * 
+     * @param request CreateFilterRequest
+     * @return CreateFilterResponse
+     */
     public CreateFilterResponse createFilter(CreateFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFilterWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom query template.</p>
+     * 
+     * @param request CreateSavedQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSavedQueryResponse
+     */
     public CreateSavedQueryResponse createSavedQueryWithOptions(CreateSavedQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -120,11 +158,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSavedQueryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom query template.</p>
+     * 
+     * @param request CreateSavedQueryRequest
+     * @return CreateSavedQueryResponse
+     */
     public CreateSavedQueryResponse createSavedQuery(CreateSavedQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSavedQueryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a filter.</p>
+     * 
+     * @param request DeleteFilterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFilterResponse
+     */
     public DeleteFilterResponse deleteFilterWithOptions(DeleteFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -149,11 +202,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFilterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a filter.</p>
+     * 
+     * @param request DeleteFilterRequest
+     * @return DeleteFilterResponse
+     */
     public DeleteFilterResponse deleteFilter(DeleteFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFilterWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom query template.</p>
+     * 
+     * @param request DeleteSavedQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSavedQueryResponse
+     */
     public DeleteSavedQueryResponse deleteSavedQueryWithOptions(DeleteSavedQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -178,11 +246,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSavedQueryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom query template.</p>
+     * 
+     * @param request DeleteSavedQueryRequest
+     * @return DeleteSavedQueryResponse
+     */
     public DeleteSavedQueryResponse deleteSavedQuery(DeleteSavedQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSavedQueryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request DisableMultiAccountResourceCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableMultiAccountResourceCenterResponse
+     */
     public DisableMultiAccountResourceCenterResponse disableMultiAccountResourceCenterWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -199,11 +282,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableMultiAccountResourceCenterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
+     * @return DisableMultiAccountResourceCenterResponse
+     */
     public DisableMultiAccountResourceCenterResponse disableMultiAccountResourceCenter() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableMultiAccountResourceCenterWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deactivates the Resource Center service.</p>
+     * 
+     * @param request DisableResourceCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableResourceCenterResponse
+     */
     public DisableResourceCenterResponse disableResourceCenterWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -220,11 +316,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableResourceCenterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deactivates the Resource Center service.</p>
+     * @return DisableResourceCenterResponse
+     */
     public DisableResourceCenterResponse disableResourceCenter() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableResourceCenterWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels the default filter.</p>
+     * 
+     * @param request DisassociateDefaultFilterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateDefaultFilterResponse
+     */
     public DisassociateDefaultFilterResponse disassociateDefaultFilterWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -241,17 +350,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateDefaultFilterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels the default filter.</p>
+     * @return DisassociateDefaultFilterResponse
+     */
     public DisassociateDefaultFilterResponse disassociateDefaultFilter() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disassociateDefaultFilterWithOptions(runtime);
     }
 
     /**
-      * If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see [Resource Directory overview](~~200506~~).
-      *
-      * @param request EnableMultiAccountResourceCenterRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnableMultiAccountResourceCenterResponse
+     * <b>description</b> :
+     * <p>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request EnableMultiAccountResourceCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableMultiAccountResourceCenterResponse
      */
     public EnableMultiAccountResourceCenterResponse enableMultiAccountResourceCenterWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -270,15 +388,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see [Resource Directory overview](~~200506~~).
-      *
-      * @return EnableMultiAccountResourceCenterResponse
+     * <b>description</b> :
+     * <p>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
+     * @return EnableMultiAccountResourceCenterResponse
      */
     public EnableMultiAccountResourceCenterResponse enableMultiAccountResourceCenter() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableMultiAccountResourceCenterWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Activates the Resource Center service.</p>
+     * 
+     * @param request EnableResourceCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableResourceCenterResponse
+     */
     public EnableResourceCenterResponse enableResourceCenterWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -295,11 +424,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableResourceCenterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Activates the Resource Center service.</p>
+     * @return EnableResourceCenterResponse
+     */
     public EnableResourceCenterResponse enableResourceCenter() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableResourceCenterWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Executes an SQL statement to query resources across accounts.</p>
+     * 
+     * @param request ExecuteMultiAccountSQLQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteMultiAccountSQLQueryResponse
+     */
     public ExecuteMultiAccountSQLQueryResponse executeMultiAccountSQLQueryWithOptions(ExecuteMultiAccountSQLQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -328,11 +470,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteMultiAccountSQLQueryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Executes an SQL statement to query resources across accounts.</p>
+     * 
+     * @param request ExecuteMultiAccountSQLQueryRequest
+     * @return ExecuteMultiAccountSQLQueryResponse
+     */
     public ExecuteMultiAccountSQLQueryResponse executeMultiAccountSQLQuery(ExecuteMultiAccountSQLQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeMultiAccountSQLQueryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Executes an SQL statement to query the resources that can be accessed within the current account.</p>
+     * 
+     * @param request ExecuteSQLQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteSQLQueryResponse
+     */
     public ExecuteSQLQueryResponse executeSQLQueryWithOptions(ExecuteSQLQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -361,11 +518,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteSQLQueryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Executes an SQL statement to query the resources that can be accessed within the current account.</p>
+     * 
+     * @param request ExecuteSQLQueryRequest
+     * @return ExecuteSQLQueryResponse
+     */
     public ExecuteSQLQueryResponse executeSQLQuery(ExecuteSQLQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeSQLQueryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a sample query template.</p>
+     * 
+     * @param request GetExampleQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetExampleQueryResponse
+     */
     public GetExampleQueryResponse getExampleQueryWithOptions(GetExampleQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -390,11 +562,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetExampleQueryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a sample query template.</p>
+     * 
+     * @param request GetExampleQueryRequest
+     * @return GetExampleQueryResponse
+     */
     public GetExampleQueryResponse getExampleQuery(GetExampleQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getExampleQueryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request GetMultiAccountResourceCenterServiceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMultiAccountResourceCenterServiceStatusResponse
+     */
     public GetMultiAccountResourceCenterServiceStatusResponse getMultiAccountResourceCenterServiceStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -411,11 +598,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountResourceCenterServiceStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
+     * @return GetMultiAccountResourceCenterServiceStatusResponse
+     */
     public GetMultiAccountResourceCenterServiceStatusResponse getMultiAccountResourceCenterServiceStatus() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMultiAccountResourceCenterServiceStatusWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a resource within the management account or a member of a resource directory.</p>
+     * 
+     * @param request GetMultiAccountResourceConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMultiAccountResourceConfigurationResponse
+     */
     public GetMultiAccountResourceConfigurationResponse getMultiAccountResourceConfigurationWithOptions(GetMultiAccountResourceConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -452,11 +652,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountResourceConfigurationResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a resource within the management account or a member of a resource directory.</p>
+     * 
+     * @param request GetMultiAccountResourceConfigurationRequest
+     * @return GetMultiAccountResourceConfigurationResponse
+     */
     public GetMultiAccountResourceConfigurationResponse getMultiAccountResourceConfiguration(GetMultiAccountResourceConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMultiAccountResourceConfigurationWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Resource Center service.</p>
+     * 
+     * @param request GetResourceCenterServiceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceCenterServiceStatusResponse
+     */
     public GetResourceCenterServiceStatusResponse getResourceCenterServiceStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -473,11 +688,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceCenterServiceStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Resource Center service.</p>
+     * @return GetResourceCenterServiceStatusResponse
+     */
     public GetResourceCenterServiceStatusResponse getResourceCenterServiceStatus() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResourceCenterServiceStatusWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a resource within the current account.</p>
+     * 
+     * @param request GetResourceConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceConfigurationResponse
+     */
     public GetResourceConfigurationResponse getResourceConfigurationWithOptions(GetResourceConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -510,11 +738,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceConfigurationResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a resource within the current account.</p>
+     * 
+     * @param request GetResourceConfigurationRequest
+     * @return GetResourceConfigurationResponse
+     */
     public GetResourceConfigurationResponse getResourceConfiguration(GetResourceConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResourceConfigurationWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the numbers of resources on which the current account has access permissions.</p>
+     * 
+     * @param request GetResourceCountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceCountsResponse
+     */
     public GetResourceCountsResponse getResourceCountsWithOptions(GetResourceCountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -543,11 +786,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceCountsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the numbers of resources on which the current account has access permissions.</p>
+     * 
+     * @param request GetResourceCountsRequest
+     * @return GetResourceCountsResponse
+     */
     public GetResourceCountsResponse getResourceCounts(GetResourceCountsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResourceCountsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a custom query template.</p>
+     * 
+     * @param request GetSavedQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSavedQueryResponse
+     */
     public GetSavedQueryResponse getSavedQueryWithOptions(GetSavedQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -572,11 +830,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSavedQueryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a custom query template.</p>
+     * 
+     * @param request GetSavedQueryRequest
+     * @return GetSavedQueryResponse
+     */
     public GetSavedQueryResponse getSavedQuery(GetSavedQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSavedQueryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all sample query templates.</p>
+     * 
+     * @param request ListExampleQueriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExampleQueriesResponse
+     */
     public ListExampleQueriesResponse listExampleQueriesWithOptions(ListExampleQueriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -605,11 +878,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListExampleQueriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all sample query templates.</p>
+     * 
+     * @param request ListExampleQueriesRequest
+     * @return ListExampleQueriesResponse
+     */
     public ListExampleQueriesResponse listExampleQueries(ListExampleQueriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listExampleQueriesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of filters.</p>
+     * 
+     * @param request ListFiltersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFiltersResponse
+     */
     public ListFiltersResponse listFiltersWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -626,11 +914,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFiltersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of filters.</p>
+     * @return ListFiltersResponse
+     */
     public ListFiltersResponse listFilters() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFiltersWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request ListMultiAccountResourceGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMultiAccountResourceGroupsResponse
+     */
     public ListMultiAccountResourceGroupsResponse listMultiAccountResourceGroupsWithOptions(ListMultiAccountResourceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -667,11 +968,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountResourceGroupsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request ListMultiAccountResourceGroupsRequest
+     * @return ListMultiAccountResourceGroupsResponse
+     */
     public ListMultiAccountResourceGroupsResponse listMultiAccountResourceGroups(ListMultiAccountResourceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listMultiAccountResourceGroupsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request ListMultiAccountTagKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMultiAccountTagKeysResponse
+     */
     public ListMultiAccountTagKeysResponse listMultiAccountTagKeysWithOptions(ListMultiAccountTagKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -712,11 +1028,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountTagKeysResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request ListMultiAccountTagKeysRequest
+     * @return ListMultiAccountTagKeysResponse
+     */
     public ListMultiAccountTagKeysResponse listMultiAccountTagKeys(ListMultiAccountTagKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listMultiAccountTagKeysWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request ListMultiAccountTagValuesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMultiAccountTagValuesResponse
+     */
     public ListMultiAccountTagValuesResponse listMultiAccountTagValuesWithOptions(ListMultiAccountTagValuesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -761,11 +1092,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountTagValuesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * 
+     * @param request ListMultiAccountTagValuesRequest
+     * @return ListMultiAccountTagValuesResponse
+     */
     public ListMultiAccountTagValuesResponse listMultiAccountTagValues(ListMultiAccountTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listMultiAccountTagValuesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the resource types supported by Resource Center.</p>
+     * 
+     * @param request ListResourceTypesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceTypesResponse
+     */
     public ListResourceTypesResponse listResourceTypesWithOptions(ListResourceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -798,11 +1144,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceTypesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the resource types supported by Resource Center.</p>
+     * 
+     * @param request ListResourceTypesRequest
+     * @return ListResourceTypesResponse
+     */
     public ListResourceTypesResponse listResourceTypes(ListResourceTypesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listResourceTypesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all custom query templates.</p>
+     * 
+     * @param request ListSavedQueriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSavedQueriesResponse
+     */
     public ListSavedQueriesResponse listSavedQueriesWithOptions(ListSavedQueriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -831,11 +1192,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSavedQueriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all custom query templates.</p>
+     * 
+     * @param request ListSavedQueriesRequest
+     * @return ListSavedQueriesResponse
+     */
     public ListSavedQueriesResponse listSavedQueries(ListSavedQueriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSavedQueriesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag keys of resources within the current account.</p>
+     * 
+     * @param request ListTagKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagKeysResponse
+     */
     public ListTagKeysResponse listTagKeysWithOptions(ListTagKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -872,11 +1248,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag keys of resources within the current account.</p>
+     * 
+     * @param request ListTagKeysRequest
+     * @return ListTagKeysResponse
+     */
     public ListTagKeysResponse listTagKeys(ListTagKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagKeysWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag values of resources within the current account.</p>
+     * 
+     * @param request ListTagValuesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagValuesResponse
+     */
     public ListTagValuesResponse listTagValuesWithOptions(ListTagValuesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -917,22 +1308,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tag values of resources within the current account.</p>
+     * 
+     * @param request ListTagValuesRequest
+     * @return ListTagValuesResponse
+     */
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagValuesWithOptions(request, runtime);
     }
 
     /**
-      * *   You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
-      * *   Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see [Grant a RAM user the permissions to use Resource Center](~~600556~~).
-      * *   By default, the operation returns a maximum of 20 entries. You can configure the `MaxResults` parameter to specify the maximum number of entries to return.
-      * *   If the response does not contain the `NextToken` parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the `NextToken` parameter to the value of `NextToken` in the last response of the operation. If you do not configure the `NextToken` parameter, entries on the first page are returned by default.
-      * *   You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical `AND` relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical `OR` relations. Resources that meet any value of the filter condition are returned.
-      * *   You can visit [Sample Code Center](https://api.alibabacloud.com/api-tools/demo/ResourceCenter) to view more sample queries.
-      *
-      * @param request SearchMultiAccountResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SearchMultiAccountResourcesResponse
+     * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
+     * <ul>
+     * <li>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</li>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Searches for resources within the management account or members of a resource directory.</p>
+     * 
+     * @param request SearchMultiAccountResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchMultiAccountResourcesResponse
      */
     public SearchMultiAccountResourcesResponse searchMultiAccountResourcesWithOptions(SearchMultiAccountResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -975,15 +1379,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
-      * *   Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see [Grant a RAM user the permissions to use Resource Center](~~600556~~).
-      * *   By default, the operation returns a maximum of 20 entries. You can configure the `MaxResults` parameter to specify the maximum number of entries to return.
-      * *   If the response does not contain the `NextToken` parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the `NextToken` parameter to the value of `NextToken` in the last response of the operation. If you do not configure the `NextToken` parameter, entries on the first page are returned by default.
-      * *   You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical `AND` relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical `OR` relations. Resources that meet any value of the filter condition are returned.
-      * *   You can visit [Sample Code Center](https://api.alibabacloud.com/api-tools/demo/ResourceCenter) to view more sample queries.
-      *
-      * @param request SearchMultiAccountResourcesRequest
-      * @return SearchMultiAccountResourcesResponse
+     * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
+     * <ul>
+     * <li>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</li>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Searches for resources within the management account or members of a resource directory.</p>
+     * 
+     * @param request SearchMultiAccountResourcesRequest
+     * @return SearchMultiAccountResourcesResponse
      */
     public SearchMultiAccountResourcesResponse searchMultiAccountResources(SearchMultiAccountResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -991,15 +1401,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
-      * *   By default, the operation returns a maximum of 20 entries. You can configure the `MaxResults` parameter to specify the maximum number of entries to return.
-      * *   If the response does not contain the `NextToken` parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the `NextToken` parameter to the value of `NextToken` in the last response of the operation. If you do not configure the `NextToken` parameter, entries on the first page are returned by default.
-      * *   You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical `AND` relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical `OR` relations. Resources that meet any value of the filter condition are returned.
-      * *   You can visit [Sample Code Center](https://api.aliyun.com/api-tools/demo/ResourceCenter) to view more sample queries.
-      *
-      * @param request SearchResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SearchResourcesResponse
+     * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
+     * <ul>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Search for resources that you can access within the current account.</p>
+     * 
+     * @param request SearchResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchResourcesResponse
      */
     public SearchResourcesResponse searchResourcesWithOptions(SearchResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1042,20 +1458,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
-      * *   By default, the operation returns a maximum of 20 entries. You can configure the `MaxResults` parameter to specify the maximum number of entries to return.
-      * *   If the response does not contain the `NextToken` parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the `NextToken` parameter to the value of `NextToken` in the last response of the operation. If you do not configure the `NextToken` parameter, entries on the first page are returned by default.
-      * *   You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical `AND` relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical `OR` relations. Resources that meet any value of the filter condition are returned.
-      * *   You can visit [Sample Code Center](https://api.aliyun.com/api-tools/demo/ResourceCenter) to view more sample queries.
-      *
-      * @param request SearchResourcesRequest
-      * @return SearchResourcesResponse
+     * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
+     * <ul>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Search for resources that you can access within the current account.</p>
+     * 
+     * @param request SearchResourcesRequest
+     * @return SearchResourcesResponse
      */
     public SearchResourcesResponse searchResources(SearchResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a filter.</p>
+     * 
+     * @param request UpdateFilterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFilterResponse
+     */
     public UpdateFilterResponse updateFilterWithOptions(UpdateFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1084,11 +1514,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFilterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a filter.</p>
+     * 
+     * @param request UpdateFilterRequest
+     * @return UpdateFilterResponse
+     */
     public UpdateFilterResponse updateFilter(UpdateFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateFilterWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom query template.</p>
+     * 
+     * @param request UpdateSavedQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSavedQueryResponse
+     */
     public UpdateSavedQueryResponse updateSavedQueryWithOptions(UpdateSavedQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1125,6 +1570,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSavedQueryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom query template.</p>
+     * 
+     * @param request UpdateSavedQueryRequest
+     * @return UpdateSavedQueryResponse
+     */
     public UpdateSavedQueryResponse updateSavedQuery(UpdateSavedQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSavedQueryWithOptions(request, runtime);

@@ -10,8 +10,17 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
     @NameInMap("Columns")
     public java.util.List<ExecuteMultiAccountSQLQueryResponseBodyColumns> columns;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44C8A952-D6B0-5BC8-82D5-93BA02E26F2E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,6 +44,22 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         return this.columns;
     }
 
+    public ExecuteMultiAccountSQLQueryResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ExecuteMultiAccountSQLQueryResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ExecuteMultiAccountSQLQueryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -54,12 +79,18 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
     public static class ExecuteMultiAccountSQLQueryResponseBodyColumns extends TeaModel {
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resource_id</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>varchar</p>
          */
         @NameInMap("Type")
         public String type;
