@@ -413,6 +413,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加终端</p>
+     * 
+     * @param request AddTerminalsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddTerminalsResponse
+     */
+    public AddTerminalsResponse addTerminalsWithOptions(AddTerminalsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addTerminalParams)) {
+            bodyFlat.put("AddTerminalParams", request.addTerminalParams);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddTerminals"),
+            new TeaPair("version", "2021-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddTerminalsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加终端</p>
+     * 
+     * @param request AddTerminalsRequest
+     * @return AddTerminalsResponse
+     */
+    public AddTerminalsResponse addTerminals(AddTerminalsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addTerminalsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>设备绑定终端用户</p>
      * 
      * @param request AttachEndUsersRequest
