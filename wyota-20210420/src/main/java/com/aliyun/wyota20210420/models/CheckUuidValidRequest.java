@@ -43,6 +43,9 @@ public class CheckUuidValidRequest extends TeaModel {
     @NameInMap("Wlan")
     public String wlan;
 
+    @NameInMap("WosAppVersion")
+    public String wosAppVersion;
+
     public static CheckUuidValidRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckUuidValidRequest self = new CheckUuidValidRequest();
         return TeaModel.build(map, self);
@@ -118,6 +121,14 @@ public class CheckUuidValidRequest extends TeaModel {
     }
     public String getWlan() {
         return this.wlan;
+    }
+
+    public CheckUuidValidRequest setWosAppVersion(String wosAppVersion) {
+        this.wosAppVersion = wosAppVersion;
+        return this;
+    }
+    public String getWosAppVersion() {
+        return this.wosAppVersion;
     }
 
 }

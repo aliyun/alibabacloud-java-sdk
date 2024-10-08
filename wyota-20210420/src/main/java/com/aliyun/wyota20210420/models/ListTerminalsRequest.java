@@ -4,6 +4,9 @@ package com.aliyun.wyota20210420.models;
 import com.aliyun.tea.*;
 
 public class ListTerminalsRequest extends TeaModel {
+    @NameInMap("InManage")
+    public Boolean inManage;
+
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,6 +20,9 @@ public class ListTerminalsRequest extends TeaModel {
      */
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("PasswordFreeLoginUser")
+    public String passwordFreeLoginUser;
 
     /**
      * <strong>example:</strong>
@@ -38,9 +44,20 @@ public class ListTerminalsRequest extends TeaModel {
     @NameInMap("Uuids")
     public java.util.List<String> uuids;
 
+    @NameInMap("WithBindUser")
+    public Boolean withBindUser;
+
     public static ListTerminalsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTerminalsRequest self = new ListTerminalsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTerminalsRequest setInManage(Boolean inManage) {
+        this.inManage = inManage;
+        return this;
+    }
+    public Boolean getInManage() {
+        return this.inManage;
     }
 
     public ListTerminalsRequest setMaxResults(Integer maxResults) {
@@ -57,6 +74,14 @@ public class ListTerminalsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListTerminalsRequest setPasswordFreeLoginUser(String passwordFreeLoginUser) {
+        this.passwordFreeLoginUser = passwordFreeLoginUser;
+        return this;
+    }
+    public String getPasswordFreeLoginUser() {
+        return this.passwordFreeLoginUser;
     }
 
     public ListTerminalsRequest setSearchKeyword(String searchKeyword) {
@@ -89,6 +114,14 @@ public class ListTerminalsRequest extends TeaModel {
     }
     public java.util.List<String> getUuids() {
         return this.uuids;
+    }
+
+    public ListTerminalsRequest setWithBindUser(Boolean withBindUser) {
+        this.withBindUser = withBindUser;
+        return this;
+    }
+    public Boolean getWithBindUser() {
+        return this.withBindUser;
     }
 
 }

@@ -7,6 +7,9 @@ public class CheckUuidValidResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CheckUuidValidResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -26,6 +29,14 @@ public class CheckUuidValidResponseBody extends TeaModel {
         return this.code;
     }
 
+    public CheckUuidValidResponseBody setData(CheckUuidValidResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CheckUuidValidResponseBodyData getData() {
+        return this.data;
+    }
+
     public CheckUuidValidResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +51,25 @@ public class CheckUuidValidResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class CheckUuidValidResponseBodyData extends TeaModel {
+        @NameInMap("NewUpgrade")
+        public Boolean newUpgrade;
+
+        public static CheckUuidValidResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CheckUuidValidResponseBodyData self = new CheckUuidValidResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public CheckUuidValidResponseBodyData setNewUpgrade(Boolean newUpgrade) {
+            this.newUpgrade = newUpgrade;
+            return this;
+        }
+        public Boolean getNewUpgrade() {
+            return this.newUpgrade;
+        }
+
     }
 
 }

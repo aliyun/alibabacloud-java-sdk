@@ -133,6 +133,9 @@ public class ListTerminalsResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        @NameInMap("BindUserCount")
+        public Integer bindUserCount;
+
         /**
          * <strong>example:</strong>
          * <p>7.0.2-RS-20240805.044924</p>
@@ -168,6 +171,9 @@ public class ListTerminalsResponseBody extends TeaModel {
         @NameInMap("Ipv4")
         public String ipv4;
 
+        @NameInMap("LastLoginUser")
+        public String lastLoginUser;
+
         @NameInMap("LocationInfo")
         public String locationInfo;
 
@@ -194,6 +200,9 @@ public class ListTerminalsResponseBody extends TeaModel {
          */
         @NameInMap("PasswordFreeLoginUser")
         public String passwordFreeLoginUser;
+
+        @NameInMap("PublicIpv4")
+        public String publicIpv4;
 
         /**
          * <strong>example:</strong>
@@ -230,6 +239,14 @@ public class ListTerminalsResponseBody extends TeaModel {
         }
         public String getAlias() {
             return this.alias;
+        }
+
+        public ListTerminalsResponseBodyData setBindUserCount(Integer bindUserCount) {
+            this.bindUserCount = bindUserCount;
+            return this;
+        }
+        public Integer getBindUserCount() {
+            return this.bindUserCount;
         }
 
         public ListTerminalsResponseBodyData setBuildId(String buildId) {
@@ -272,6 +289,14 @@ public class ListTerminalsResponseBody extends TeaModel {
             return this.ipv4;
         }
 
+        public ListTerminalsResponseBodyData setLastLoginUser(String lastLoginUser) {
+            this.lastLoginUser = lastLoginUser;
+            return this;
+        }
+        public String getLastLoginUser() {
+            return this.lastLoginUser;
+        }
+
         public ListTerminalsResponseBodyData setLocationInfo(String locationInfo) {
             this.locationInfo = locationInfo;
             return this;
@@ -310,6 +335,14 @@ public class ListTerminalsResponseBody extends TeaModel {
         }
         public String getPasswordFreeLoginUser() {
             return this.passwordFreeLoginUser;
+        }
+
+        public ListTerminalsResponseBodyData setPublicIpv4(String publicIpv4) {
+            this.publicIpv4 = publicIpv4;
+            return this;
+        }
+        public String getPublicIpv4() {
+            return this.publicIpv4;
         }
 
         public ListTerminalsResponseBodyData setSerialNumber(String serialNumber) {
