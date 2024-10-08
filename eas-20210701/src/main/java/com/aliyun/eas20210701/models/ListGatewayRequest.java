@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRequest extends TeaModel {
     /**
+     * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
      */
@@ -12,6 +14,8 @@ public class ListGatewayRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The private gateway alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>mygateway1</p>
      */
@@ -19,6 +23,8 @@ public class ListGatewayRequest extends TeaModel {
     public String gatewayName;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListGatewayRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

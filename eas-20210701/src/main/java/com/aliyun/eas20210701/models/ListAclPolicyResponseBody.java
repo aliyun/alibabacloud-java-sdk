@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListAclPolicyResponseBody extends TeaModel {
     /**
+     * <p>The private gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
      */
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The access control policies of the private gateway over the Internet.</p>
+     */
     @NameInMap("InternetAclPolicyList")
     public java.util.List<ListAclPolicyResponseBodyInternetAclPolicyList> internetAclPolicyList;
 
+    /**
+     * <p>The access control policies of the private gateway over the internal network.</p>
+     */
     @NameInMap("IntranetVpcAclPolicyList")
     public java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyList> intranetVpcAclPolicyList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */
@@ -62,9 +72,21 @@ public class ListAclPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList extends TeaModel {
+        /**
+         * <p>The comment on the IP CIDR block in the VPC that can access the private gateway over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The IP CIDR block in the VPC that can access the private gateway over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.23.XX.XX/32</p>
+         */
         @NameInMap("Entry")
         public String entry;
 
@@ -92,6 +114,9 @@ public class ListAclPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAclPolicyResponseBodyInternetAclPolicyList extends TeaModel {
+        /**
+         * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway over the Internet.</p>
+         */
         @NameInMap("AclPolicyList")
         public java.util.List<ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList> aclPolicyList;
 
@@ -111,9 +136,21 @@ public class ListAclPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList extends TeaModel {
+        /**
+         * <p>The comment on the IP CIDR block in the VPC that can access the private gateway over the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Entry</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The IP CIDR block in the VPC that can access the private gateway over the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
+         */
         @NameInMap("Entry")
         public String entry;
 
@@ -141,10 +178,15 @@ public class ListAclPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAclPolicyResponseBodyIntranetVpcAclPolicyList extends TeaModel {
+        /**
+         * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway over the internal network.</p>
+         */
         @NameInMap("AclPolicyList")
         public java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList> aclPolicyList;
 
         /**
+         * <p>The VPC ID. For more information about how to obtain the VPC ID, see DescribeVpcs.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf66uio7md****</p>
          */

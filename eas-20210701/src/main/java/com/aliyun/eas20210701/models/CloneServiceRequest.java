@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CloneServiceRequest extends TeaModel {
+    /**
+     * <p>The label of the service to be cloned.</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
