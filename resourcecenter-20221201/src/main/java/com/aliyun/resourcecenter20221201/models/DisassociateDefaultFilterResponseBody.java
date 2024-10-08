@@ -4,6 +4,12 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class DisassociateDefaultFilterResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BCAB07BA-82FA-5DC0-9322-FB7ED726481D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class AssociateDefaultFilterRequest extends TeaModel {
+    /**
+     * <p>The name of the filter.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FilterName")
     public String filterName;
 

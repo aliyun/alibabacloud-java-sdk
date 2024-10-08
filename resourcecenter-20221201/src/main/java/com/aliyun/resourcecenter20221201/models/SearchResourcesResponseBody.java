@@ -12,18 +12,27 @@ public class SearchResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,12 +91,18 @@ public class SearchResourcesResponseBody extends TeaModel {
     public static class SearchResourcesResponseBodyFilters extends TeaModel {
         /**
          * <p>The key of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equals</p>
          */
         @NameInMap("MatchType")
         public String matchType;
@@ -138,15 +153,22 @@ public class SearchResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: the Internet</p>
-         * <p>*   **Private**: internal network</p>
+         * <ul>
+         * <li><strong>Public</strong>: the Internet</li>
+         * <li><strong>Private</strong>: internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipv4</p>
          */
         @NameInMap("Version")
         public String version;
@@ -185,12 +207,18 @@ public class SearchResourcesResponseBody extends TeaModel {
     public static class SearchResourcesResponseBodyResourcesTags extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -221,20 +249,30 @@ public class SearchResourcesResponseBody extends TeaModel {
     public static class SearchResourcesResponseBodyResources extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The time when the resource was created.</p>
-         * <br>
-         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <blockquote>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T09:20:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the resource expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-30T09:20:08Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -247,38 +285,54 @@ public class SearchResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The IP addresses.</p>
-         * <br>
-         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <blockquote>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * </blockquote>
          */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp11lbh452fr8940s****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::VPC::RouteTable</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -291,8 +345,12 @@ public class SearchResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The zone ID.</p>
-         * <br>
-         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <blockquote>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

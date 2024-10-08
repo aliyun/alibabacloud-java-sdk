@@ -12,12 +12,18 @@ public class GetResourceCountsResponseBody extends TeaModel {
 
     /**
      * <p>The dimension by which resources are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceType</p>
      */
     @NameInMap("GroupByKey")
     public String groupByKey;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D98D9B0-318D-56A4-910C-93B5F945AF2B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,6 +74,9 @@ public class GetResourceCountsResponseBody extends TeaModel {
     public static class GetResourceCountsResponseBodyFilters extends TeaModel {
         /**
          * <p>The key of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionId</p>
          */
         @NameInMap("Key")
         public String key;
@@ -104,12 +113,18 @@ public class GetResourceCountsResponseBody extends TeaModel {
     public static class GetResourceCountsResponseBodyResourceCounts extends TeaModel {
         /**
          * <p>The number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::NetworkInterface</p>
          */
         @NameInMap("GroupName")
         public String groupName;

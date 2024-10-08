@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListResourceTypesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   en-US: English</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -21,8 +25,10 @@ public class ListResourceTypesRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <br>
-     * <p>For more information about the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).</p>
+     * <p>For more information about the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ACK::Cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

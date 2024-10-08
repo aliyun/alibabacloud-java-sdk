@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSavedQueryResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

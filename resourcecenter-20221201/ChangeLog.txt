@@ -1,3 +1,15 @@
+2024-10-08 Version: 1.2.1
+- Update API ExecuteMultiAccountSQLQuery: update response param.
+- Update API ExecuteSQLQuery: update response param.
+- Update API GetMultiAccountResourceConfiguration: update response param.
+- Update API ListMultiAccountTagKeys: update param MatchType.
+- Update API ListResourceTypes: update response param.
+- Update API SearchMultiAccountResources: update param Filter.
+- Update API SearchMultiAccountResources: update param MaxResults.
+- Update API SearchMultiAccountResources: update param NextToken.
+- Update API SearchMultiAccountResources: update response param.
+
+
 2023-12-26 Version: 1.2.0
 - Generated java 2022-12-01 for ResourceCenter.
 

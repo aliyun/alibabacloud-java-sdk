@@ -6,20 +6,29 @@ import com.aliyun.tea.*;
 public class ListMultiAccountResourceGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the management account or member of the resource directory.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1394339739****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAS2Nboi3t4xGrdlG5/Ks/Q1xPG9jzviYEuZydevXIkgF</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

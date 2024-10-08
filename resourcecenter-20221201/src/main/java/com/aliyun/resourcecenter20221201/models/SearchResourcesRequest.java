@@ -12,24 +12,30 @@ public class SearchResourcesRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.</p>
+     * <p>If the total number of entries returned for the current request exceeds the value of the <code>MaxResults</code> parameter, the entries are truncated. In this case, you can use the <code>token</code> to initiate another request and obtain the remaining entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -87,15 +93,20 @@ public class SearchResourcesRequest extends TeaModel {
 
     public static class SearchResourcesRequestFilter extends TeaModel {
         /**
-         * <p>The key of the filter condition. For more information, see `Supported filter parameters`.</p>
+         * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching mode.</p>
-         * <br>
          * <p>The value Equals indicates an equal match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equals</p>
          */
         @NameInMap("MatchType")
         public String matchType;
@@ -140,17 +151,23 @@ public class SearchResourcesRequest extends TeaModel {
     public static class SearchResourcesRequestSortCriterion extends TeaModel {
         /**
          * <p>The attribute based on which the entries are sorted.</p>
-         * <br>
          * <p>The value CreateTime indicates the creation time of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The order in which the entries are sorted. Valid values:</p>
-         * <br>
-         * <p>*   ASC: The entries are sorted in ascending order. This value is the default value.</p>
-         * <p>*   DESC: The entries are sorted in descending order.</p>
+         * <ul>
+         * <li>ASC: The entries are sorted in ascending order. This value is the default value.</li>
+         * <li>DESC: The entries are sorted in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         @NameInMap("Order")
         public String order;
