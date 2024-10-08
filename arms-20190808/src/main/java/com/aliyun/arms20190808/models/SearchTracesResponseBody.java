@@ -63,7 +63,7 @@ public class SearchTracesResponseBody extends TeaModel {
          * <p>The IP address of the host where the application resides.</p>
          * 
          * <strong>example:</strong>
-         * <p><code>172.20.**.**</code></p>
+         * <p>172.20.**.**</p>
          */
         @NameInMap("ServiceIp")
         public String serviceIp;
@@ -76,6 +76,9 @@ public class SearchTracesResponseBody extends TeaModel {
          */
         @NameInMap("ServiceName")
         public String serviceName;
+
+        @NameInMap("SpanID")
+        public String spanID;
 
         /**
          * <p>The timestamp.</p>
@@ -130,6 +133,14 @@ public class SearchTracesResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public SearchTracesResponseBodyTraceInfos setSpanID(String spanID) {
+            this.spanID = spanID;
+            return this;
+        }
+        public String getSpanID() {
+            return this.spanID;
         }
 
         public SearchTracesResponseBodyTraceInfos setTimestamp(Long timestamp) {

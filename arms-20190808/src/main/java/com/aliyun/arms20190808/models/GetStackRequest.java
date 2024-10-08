@@ -42,6 +42,9 @@ public class GetStackRequest extends TeaModel {
     @NameInMap("RpcID")
     public String rpcID;
 
+    @NameInMap("SpanID")
+    public String spanID;
+
     /**
      * <p>The start time of the call method.</p>
      * 
@@ -96,6 +99,14 @@ public class GetStackRequest extends TeaModel {
     }
     public String getRpcID() {
         return this.rpcID;
+    }
+
+    public GetStackRequest setSpanID(String spanID) {
+        this.spanID = spanID;
+        return this;
+    }
+    public String getSpanID() {
+        return this.spanID;
     }
 
     public GetStackRequest setStartTime(Long startTime) {
