@@ -714,6 +714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Wlan", request.wlan);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.wosAppVersion)) {
+            body.put("WosAppVersion", request.wosAppVersion);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -2719,16 +2723,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public ListTerminalsResponse listTerminalsWithOptions(ListTerminalsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.serialNumbers)) {
-            query.put("SerialNumbers", request.serialNumbers);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
-            query.put("Uuids", request.uuids);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inManage)) {
+            body.put("InManage", request.inManage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             body.put("MaxResults", request.maxResults);
         }
@@ -2737,16 +2736,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.passwordFreeLoginUser)) {
+            body.put("PasswordFreeLoginUser", request.passwordFreeLoginUser);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.searchKeyword)) {
             body.put("SearchKeyword", request.searchKeyword);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serialNumbers)) {
+            bodyFlat.put("SerialNumbers", request.serialNumbers);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.terminalGroupId)) {
             body.put("TerminalGroupId", request.terminalGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
+            bodyFlat.put("Uuids", request.uuids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withBindUser)) {
+            body.put("WithBindUser", request.withBindUser);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
