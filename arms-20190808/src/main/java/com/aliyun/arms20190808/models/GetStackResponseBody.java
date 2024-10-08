@@ -92,6 +92,9 @@ public class GetStackResponseBody extends TeaModel {
         @NameInMap("Api")
         public String api;
 
+        @NameInMap("CallCount")
+        public String callCount;
+
         /**
          * <p>The duration. Unit: milliseconds.</p>
          * 
@@ -163,6 +166,14 @@ public class GetStackResponseBody extends TeaModel {
         }
         public String getApi() {
             return this.api;
+        }
+
+        public GetStackResponseBodyStackInfo setCallCount(String callCount) {
+            this.callCount = callCount;
+            return this;
+        }
+        public String getCallCount() {
+            return this.callCount;
         }
 
         public GetStackResponseBodyStackInfo setDuration(Long duration) {

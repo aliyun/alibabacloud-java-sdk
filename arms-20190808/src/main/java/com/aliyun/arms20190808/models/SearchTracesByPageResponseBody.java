@@ -77,6 +77,9 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("SpanID")
+        public String spanID;
+
         /**
          * <p>The timestamp.</p>
          * 
@@ -130,6 +133,14 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public SearchTracesByPageResponseBodyPageBeanTraceInfos setSpanID(String spanID) {
+            this.spanID = spanID;
+            return this;
+        }
+        public String getSpanID() {
+            return this.spanID;
         }
 
         public SearchTracesByPageResponseBodyPageBeanTraceInfos setTimestamp(Long timestamp) {
