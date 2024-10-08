@@ -135,6 +135,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("ShowAlbumIcon")
     public String showAlbumIcon;
 
+    @NameInMap("ShowGuidePage")
+    public String showGuidePage;
+
     @NameInMap("ShowOcrResult")
     public String showOcrResult;
 
@@ -344,6 +347,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getShowAlbumIcon() {
         return this.showAlbumIcon;
+    }
+
+    public InitializeRequest setShowGuidePage(String showGuidePage) {
+        this.showGuidePage = showGuidePage;
+        return this;
+    }
+    public String getShowGuidePage() {
+        return this.showGuidePage;
     }
 
     public InitializeRequest setShowOcrResult(String showOcrResult) {
