@@ -66,6 +66,18 @@ public class DescribeWebLockBindListRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The UUID of the asset that you want to query.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7151f27e-1d51-4e98-a540-8936a****</p>
+     */
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static DescribeWebLockBindListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeWebLockBindListRequest self = new DescribeWebLockBindListRequest();
         return TeaModel.build(map, self);
@@ -117,6 +129,14 @@ public class DescribeWebLockBindListRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeWebLockBindListRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }
