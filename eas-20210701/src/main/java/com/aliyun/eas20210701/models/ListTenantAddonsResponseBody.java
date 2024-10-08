@@ -4,10 +4,15 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListTenantAddonsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the plug-in.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<ListTenantAddonsResponseBodyAddons> addons;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */
@@ -36,10 +41,15 @@ public class ListTenantAddonsResponseBody extends TeaModel {
     }
 
     public static class ListTenantAddonsResponseBodyAddons extends TeaModel {
+        /**
+         * <p>The attributes of the plug-in.</p>
+         */
         @NameInMap("Attributes")
         public java.util.Map<String, String> attributes;
 
         /**
+         * <p>The name of the plug-in.</p>
+         * 
          * <strong>example:</strong>
          * <p>prometheus_discovery</p>
          */

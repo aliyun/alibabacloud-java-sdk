@@ -4,10 +4,15 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The private gateways.</p>
+     */
     @NameInMap("Gateways")
     public java.util.List<ListGatewayResponseBodyGateways> gateways;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListGatewayResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +29,8 @@ public class ListGatewayResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */
@@ -29,6 +38,8 @@ public class ListGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of private gateways returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,6 +93,8 @@ public class ListGatewayResponseBody extends TeaModel {
 
     public static class ListGatewayResponseBodyGateways extends TeaModel {
         /**
+         * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-05-19T14:19:42Z</p>
          */
@@ -89,6 +102,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The private gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
          */
@@ -96,6 +111,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The private gateway alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>mygateway1</p>
          */
@@ -103,6 +120,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String gatewayName;
 
         /**
+         * <p>The type of instances used for the private gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>2c4g</p>
          */
@@ -110,6 +129,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The public endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</p>
          */
@@ -117,6 +138,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String internetDomain;
 
         /**
+         * <p>Indicates whether Internet access is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -124,6 +147,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public Boolean internetEnabled;
 
         /**
+         * <p>The internal endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</p>
          */
@@ -131,6 +156,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String intranetDomain;
 
         /**
+         * <p>Indicates whether it is the default private gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -138,6 +165,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The number of nodes in the private gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -145,6 +174,18 @@ public class ListGatewayResponseBody extends TeaModel {
         public Integer replicas;
 
         /**
+         * <p>The state of the private gateway.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Deleted</li>
+         * <li>Deleting</li>
+         * <li>Waiting</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -152,6 +193,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-02-24T11:52:17Z</p>
          */

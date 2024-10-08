@@ -1,3 +1,7 @@
+2024-10-08 Version: 6.0.1
+- Update API ListServices: add param Role.
+
+
 2024-09-02 Version: 6.0.0
 - Update API ListAclPolicy: update response param.
 

@@ -136,7 +136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关访问权限ACL Policy</p>
+     * <p>Creates an access control list (ACL) for a private gateway. The IP CIDR blocks added to the ACL can access the private gateway.</p>
      * 
      * @param tmpReq CreateAclPolicyRequest
      * @param headers map
@@ -180,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关访问权限ACL Policy</p>
+     * <p>Creates an access control list (ACL) for a private gateway. The IP CIDR blocks added to the ACL can access the private gateway.</p>
      * 
      * @param request CreateAclPolicyRequest
      * @return CreateAclPolicyResponse
@@ -864,7 +864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除网关acl policy entry</p>
+     * <p>Deletes an access control list (ACL) for a private gateway. The IP CIDR block that is deleted from the ACL cannot access the private gateway.</p>
      * 
      * @param tmpReq DeleteAclPolicyRequest
      * @param headers map
@@ -908,7 +908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除网关acl policy entry</p>
+     * <p>Deletes an access control list (ACL) for a private gateway. The IP CIDR block that is deleted from the ACL cannot access the private gateway.</p>
      * 
      * @param request DeleteAclPolicyRequest
      * @return DeleteAclPolicyResponse
@@ -2199,7 +2199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网关所有ACL Policy</p>
+     * <p>Queries access control lists (ACLs) created for a private gateway.</p>
      * 
      * @param request ListAclPolicyRequest
      * @param headers map
@@ -2233,7 +2233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网关所有ACL Policy</p>
+     * <p>Queries access control lists (ACLs) created for a private gateway.</p>
      * 
      * @param request ListAclPolicyRequest
      * @return ListAclPolicyResponse
@@ -2305,7 +2305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举gateway</p>
+     * <p>Queries a list of private gateways.</p>
      * 
      * @param request ListGatewayRequest
      * @param headers map
@@ -2351,7 +2351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举gateway</p>
+     * <p>Queries a list of private gateways.</p>
      * 
      * @param request ListGatewayRequest
      * @return ListGatewayResponse
@@ -2955,6 +2955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceName", request.resourceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("ServiceName", request.serviceName);
         }
@@ -3012,7 +3016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取租户配置列表</p>
+     * <p>Queries a list of tenant plug-ins.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3038,7 +3042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取租户配置列表</p>
+     * <p>Queries a list of tenant plug-ins.</p>
      * @return ListTenantAddonsResponse
      */
     public ListTenantAddonsResponse listTenantAddons() throws Exception {
@@ -3049,7 +3053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置租户配置</p>
+     * <p>Updates the information about a tenant plug-in.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3075,7 +3079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置租户配置</p>
+     * <p>Updates the information about a tenant plug-in.</p>
      * @return ReinstallTenantAddonResponse
      */
     public ReinstallTenantAddonResponse reinstallTenantAddon(String ClusterId, String TenantAddonName) throws Exception {

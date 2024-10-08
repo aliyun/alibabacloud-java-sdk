@@ -4,10 +4,15 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DeleteAclPolicyRequest extends TeaModel {
+    /**
+     * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+     */
     @NameInMap("AclPolicyList")
     public java.util.List<DeleteAclPolicyRequestAclPolicyList> aclPolicyList;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC). For more information about how to obtain the VPC ID, see DescribeVpcs.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-uf66uio7md****</p>
      */
@@ -37,6 +42,8 @@ public class DeleteAclPolicyRequest extends TeaModel {
 
     public static class DeleteAclPolicyRequestAclPolicyList extends TeaModel {
         /**
+         * <p>The comment on the IP CIDR block in the VPC that can access the private gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -44,6 +51,8 @@ public class DeleteAclPolicyRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.23.XX.XX/32</p>
          */
