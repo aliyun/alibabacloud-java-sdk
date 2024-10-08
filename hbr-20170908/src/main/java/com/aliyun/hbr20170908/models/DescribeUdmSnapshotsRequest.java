@@ -6,52 +6,81 @@ import com.aliyun.tea.*;
 public class DescribeUdmSnapshotsRequest extends TeaModel {
     /**
      * <p>The ID of the disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp1560750pclffpzxy70</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The end of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1643092168</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The ID of the ECS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp18x2k7sw925ir7ofh8</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the backup job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-*********************</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The list of backup snapshots.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;s-000e3vhhu62xsm6v92r0\&quot;]</p>
      */
     @NameInMap("SnapshotIds")
     public java.util.Map<String, ?> snapshotIds;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **UDM_ECS**: ECS instance backup</p>
-     * <p>*   **UDM_ECS_DISK**: disk backup subtask of ECS instance backup</p>
-     * <p>*   **UDM_DISK**: disk backup</p>
+     * <ul>
+     * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+     * <li><strong>UDM_ECS_DISK</strong>: disk backup subtask of ECS instance backup</li>
+     * <li><strong>UDM_DISK</strong>: disk backup</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UDM_ECS</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The beginning of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1642057551</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>The ID of the region where the ECS instance resides.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("UdmRegionId")
     public String udmRegionId;

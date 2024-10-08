@@ -5,34 +5,50 @@ import com.aliyun.tea.*;
 
 public class StopHanaDatabaseAsyncResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD8B903B-DE8F-5969-9414-B2C634D504D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of the asynchronous job.</p>
+     * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-0007o3vqfukgd3y5bxxr</p>
      */
     @NameInMap("TaskId")
     public String taskId;

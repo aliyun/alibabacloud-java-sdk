@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHanaDatabasesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,40 +20,59 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
     public DescribeHanaDatabasesResponseBodyHanaDatabases hanaDatabases;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAAB6A29-34EB-5F56-962F-D5BDBFE8A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -127,39 +149,58 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
     public static class DescribeHanaDatabasesResponseBodyHanaDatabasesHanaDatabase extends TeaModel {
         /**
          * <p>Indicates whether the database is started. Valid values:</p>
-         * <br>
-         * <p>*   **YES**: The database is started.</p>
-         * <p>*   **NO**: The database is not started.</p>
+         * <ul>
+         * <li><strong>YES</strong>: The database is started.</li>
+         * <li><strong>NO</strong>: The database is not started.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("ActiveStatus")
         public String activeStatus;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEMDB</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
          * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>izbp1jbf3zy******antqmz</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>indexserver</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30013</p>
          */
         @NameInMap("SqlPort")
         public Integer sqlPort;

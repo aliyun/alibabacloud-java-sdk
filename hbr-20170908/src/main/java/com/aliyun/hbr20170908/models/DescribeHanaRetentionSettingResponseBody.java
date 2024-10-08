@@ -6,69 +6,102 @@ import com.aliyun.tea.*;
 public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-0003jyv******fsku5m</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Q01</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>Indicates whether the backup is permanently retained. Valid values:</p>
-     * <br>
-     * <p>*   true: The backup is permanently retained.</p>
-     * <p>*   false: The backup is retained for the specified number of days.</p>
+     * <ul>
+     * <li>true: The backup is permanently retained.</li>
+     * <li>false: The backup is retained for the specified number of days.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Disabled")
     public Boolean disabled;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>280DD872-EE25-52E8-9CB4-491067173DD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of days for which the backup is retained. If the value of the Disabled parameter is false, the backup is retained for the number of days specified by this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3650</p>
      */
     @NameInMap("RetentionDays")
     public Long retentionDays;
 
     /**
-     * <p>The policy to update the retention period. Format: `I|{startTime}|{interval}`, which indicates that the retention period is updated at an interval of {interval} starting from {startTime}.</p>
-     * <br>
-     * <p>*   startTime: the time at which the system starts to update the retention period. The time follows the UNIX time format. Unit: seconds.</p>
-     * <p>*   interval: the interval at which the system updates the retention period. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</p>
+     * <p>The policy to update the retention period. Format: <code>I|{startTime}|{interval}</code>, which indicates that the retention period is updated at an interval of {interval} starting from {startTime}.</p>
+     * <ul>
+     * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
+     * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>I|0|P1D</p>
      */
     @NameInMap("Schedule")
     public String schedule;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-0006wkn7******zkn</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

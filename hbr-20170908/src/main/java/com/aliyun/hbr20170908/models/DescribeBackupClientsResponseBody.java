@@ -5,52 +5,77 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupClientsResponseBody extends TeaModel {
     /**
-     * <p>The HBR clients.</p>
+     * <p>The queried backup clients.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Client\&quot;: []}</p>
      */
     @NameInMap("Clients")
     public java.util.List<DescribeBackupClientsResponseBodyClients> clients;
 
     /**
      * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned HBR clients that meet the specified conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -125,73 +150,115 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupClientsResponseBodyClientsSettings extends TeaModel {
+        /**
+         * <p>Indicates whether alerts are generated for partially completed jobs. This parameter is valid only for on-premises file backup and ECS file backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AlertOnPartialComplete")
         public Boolean alertOnPartialComplete;
 
         /**
          * <p>The type of the endpoint on the data plane. Valid values:</p>
-         * <br>
-         * <p>*   **PUBLIC**: Internet</p>
-         * <p>*   **VPC**: virtual private cloud (VPC)</p>
-         * <p>*   **CLASSIC**: classic network</p>
+         * <ul>
+         * <li><strong>PUBLIC</strong>: Internet</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>CLASSIC</strong>: classic network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("DataNetworkType")
         public String dataNetworkType;
 
         /**
          * <p>The proxy configuration on the data plane. Valid values:</p>
-         * <br>
-         * <p>*   **DISABLE**: The proxy is not used.</p>
-         * <p>*   \*\*USE_CONTROL_PROXY \*\* (default value): The configuration is the same as that on the control plane.</p>
-         * <p>*   **CUSTOM**: The configuration is customized (HTTP).</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: The proxy is not used.</li>
+         * <li><strong>USE_CONTROL_PROXY</strong> (default): The configuration is the same as that on the control plane.</li>
+         * <li><strong>CUSTOM</strong>: The configuration is customized (HTTP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USE_CONTROL_PROXY</p>
          */
         @NameInMap("DataProxySetting")
         public String dataProxySetting;
 
         /**
          * <p>The number of CPU cores used by a single backup job. The value 0 indicates that the number is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxCpuCore")
         public String maxCpuCore;
 
+        /**
+         * <p>The maximum memory that can be used by the client. Unit: bytes. Only V2.13.0 and later are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxMemory")
         public Long maxMemory;
 
         /**
          * <p>The number of concurrent backup jobs. The value 0 indicates that the number is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxWorker")
         public String maxWorker;
 
         /**
          * <p>The custom host IP address of the proxy server on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.11.100</p>
          */
         @NameInMap("ProxyHost")
         public String proxyHost;
 
         /**
          * <p>The custom password of the proxy server on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("ProxyPassword")
         public String proxyPassword;
 
         /**
          * <p>The custom host port of the proxy server on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3128</p>
          */
         @NameInMap("ProxyPort")
         public Integer proxyPort;
 
         /**
          * <p>The custom username of the proxy server on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("ProxyUser")
         public String proxyUser;
 
         /**
          * <p>Indicates whether data on the data plane is transmitted over HTTPS. Valid values:</p>
-         * <br>
-         * <p>*   true: Data is transmitted over HTTPS.</p>
-         * <p>*   false: Data is transmitted over HTTP.</p>
+         * <ul>
+         * <li>true: Data is transmitted over HTTPS.</li>
+         * <li>false: Data is transmitted over HTTP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UseHttps")
         public String useHttps;
@@ -293,21 +360,29 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
     public static class DescribeBackupClientsResponseBodyClientsTags extends TeaModel {
         /**
-         * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>*   The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <p>*   The tag key cannot contain `http://` or `https://`.</p>
-         * <p>*   The tag key cannot be an empty string.</p>
+         * <p>The tag key of the backup vault. Valid values of N: 1 to 20</p>
+         * <ul>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the backup vault. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>*   The tag value cannot start with `aliyun` or `acs:`.</p>
-         * <p>*   The tag value cannot contain `http://` or `https://`.</p>
-         * <p>*   The tag value cannot be an empty string.</p>
+         * <p>The tag value of the backup vault. Valid values of N: 1 to 20</p>
+         * <ul>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The tag value cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -337,125 +412,176 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
     public static class DescribeBackupClientsResponseBodyClients extends TeaModel {
         /**
-         * <p>Indicates whether the HBR client is installed on an all-in-one PC that integrates hardware and monitoring program. Valid values:</p>
-         * <br>
-         * <p>*   true: The HBR client is installed on an all-in-one PC that integrates hardware and monitoring program.</p>
-         * <p>*   false: The HBR client is not installed on an all-in-one PC that integrates hardware and monitoring program.</p>
+         * <p>Indicates whether the client is installed on an all-in-one PC that integrates hardware and monitoring program. Valid values:</p>
+         * <ul>
+         * <li>true: The client is installed on an all-in-one PC that integrates hardware and monitoring program.</li>
+         * <li>false: The client is not installed on an all-in-one PC that integrates hardware and monitoring program.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Appliance")
         public Boolean appliance;
 
         /**
-         * <p>This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the system architecture where the HBR client resides. Valid values:</p>
-         * <br>
-         * <p>*   **amd64**</p>
-         * <p>*   **386**</p>
+         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the system architecture where the backup client resides. Valid values:</p>
+         * <ul>
+         * <li><strong>amd64</strong></li>
+         * <li><strong>386</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>amd64</p>
          */
         @NameInMap("ArchType")
         public String archType;
 
         /**
-         * <p>The protection status of the HBR client. Valid values:</p>
-         * <br>
-         * <p>*   **UNPROTECTED**: The HBR client is not protected.</p>
-         * <p>*   **PROTECTED**: The HBR client is protected.</p>
+         * <p>The protection status of the backup client. Valid values:</p>
+         * <ul>
+         * <li><strong>UNPROTECTED</strong>: The backup client is not protected.</li>
+         * <li><strong>PROTECTED</strong>: The backup client is protected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROTECTED</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
-         * <p>The ID of the HBR client.</p>
+         * <p>The ID of the backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-*********************</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>The type of the HBR client. Valid value: **ECS_CLIENT**, which indicates an HBR client for ECS file backup.</p>
+         * <p>The type of the backup client. Valid value: <strong>ECS_CLIENT</strong>, which indicates a client for ECS file backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_CLIENT</p>
          */
         @NameInMap("ClientType")
         public String clientType;
 
         /**
-         * <p>The version number of the HBR client.</p>
+         * <p>The version number of the backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4.5</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
-         * <p>The time when the HBR client was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup client was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
-         * <p>The hostname of the HBR client.</p>
+         * <p>The hostname of the backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostname</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
-         * <p>The ID of the instance.</p>
-         * <br>
-         * <p>*   If the HBR client is used to back up ECS files, this parameter indicates the ID of an ECS instance.</p>
-         * <p>*   If the HBR client is used to back up on-premises files, this parameter indicates the hardware fingerprint that is generated based on the system information.</p>
+         * <p>The instance ID.</p>
+         * <ul>
+         * <li>If the client is used to back up ECS files, this parameter indicates the ID of an ECS instance.</li>
+         * <li>If the client is used to back up on-premises files, this parameter indicates the hardware fingerprint that is generated based on the system information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>i-*********************</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the name of the ECS instance.</p>
+         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the name of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The last heartbeat time of the HBR client. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The last heartbeat time of the backup client. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("LastHeartBeatTime")
         public Long lastHeartBeatTime;
 
         /**
-         * <p>The latest version number of the HBR client.</p>
+         * <p>The latest version number of the backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4.5</p>
          */
         @NameInMap("MaxClientVersion")
         public String maxClientVersion;
 
         /**
-         * <p>This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the operating system type of the HBR client. Valid values:</p>
-         * <br>
-         * <p>*   **windows**</p>
-         * <p>*   **linux**</p>
+         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the operating system type of the backup client. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong></li>
+         * <li><strong>linux</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the internal IP address of the ECS instance.</p>
+         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the internal IP address of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         @NameInMap("PrivateIpV4")
         public String privateIpV4;
 
         /**
-         * <p>The configuration information of the HBR client.</p>
+         * <p>The configuration information of the backup client.</p>
          */
         @NameInMap("Settings")
         public DescribeBackupClientsResponseBodyClientsSettings settings;
 
         /**
-         * <p>The status of the HBR client. Valid values:</p>
-         * <br>
-         * <p>*   **REGISTERED**: The HBR client is registered.</p>
-         * <p>*   **ACTIVATED**: The HBR client is enabled.</p>
-         * <p>*   **DEACTIVATED**: The HBR client fails to be enabled.</p>
-         * <p>*   **INSTALLING**: The HBR client is being installed.</p>
-         * <p>*   **INSTALL_FAILED**: The HBR client fails to be installed.</p>
-         * <p>*   **NOT_INSTALLED**: The HBR client is not installed.</p>
-         * <p>*   **UPGRADING**: The HBR client is being upgraded.</p>
-         * <p>*   **UPGRADE_FAILED**: The HBR client fails to be upgraded.</p>
-         * <p>*   **UNINSTALLING**: The HBR client is being uninstalled.</p>
-         * <p>*   **UNINSTALL_FAILED**: The HBR client fails to be uninstalled.</p>
-         * <p>*   **STOPPED**: The HBR client is out of service.</p>
-         * <p>*   **UNKNOWN**: The HBR client is disconnected.</p>
+         * <p>The status of the backup client. Valid values:</p>
+         * <ul>
+         * <li><strong>REGISTERED</strong>: The backup client is registered.</li>
+         * <li><strong>ACTIVATED</strong>: The backup client is activated.</li>
+         * <li><strong>DEACTIVATED</strong>: The backup client fails to be activated.</li>
+         * <li><strong>INSTALLING</strong>: The backup client is being installed.</li>
+         * <li><strong>INSTALL_FAILED</strong>: The backup client fails to be installed.</li>
+         * <li><strong>NOT_INSTALLED</strong>: The backup client is not installed.</li>
+         * <li><strong>UPGRADING</strong>: The backup client is being upgraded.</li>
+         * <li><strong>UPGRADE_FAILED</strong>: The backup client fails to be upgraded.</li>
+         * <li><strong>UNINSTALLING</strong>: The backup client is being uninstalled.</li>
+         * <li><strong>UNINSTALL_FAILED</strong>: The backup client fails to be uninstalled.</li>
+         * <li><strong>STOPPED</strong>: The backup client is out of service.</li>
+         * <li><strong>UNKNOWN</strong>: The backup client is disconnected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATED</p>
          */
         @NameInMap("Status")
         public String status;
@@ -467,13 +593,19 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public java.util.List<DescribeBackupClientsResponseBodyClientsTags> tags;
 
         /**
-         * <p>The time when the HBR client was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup client was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
         /**
-         * <p>This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the zone of the HBR client.</p>
+         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the zone of the backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

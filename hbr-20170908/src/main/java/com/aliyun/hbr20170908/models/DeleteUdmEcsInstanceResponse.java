@@ -3,7 +3,7 @@ package com.aliyun.hbr20170908.models;
 
 import com.aliyun.tea.*;
 
-public class AttachNasFileSystemResponse extends TeaModel {
+public class DeleteUdmEcsInstanceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AttachNasFileSystemResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AttachNasFileSystemResponseBody body;
+    public DeleteUdmEcsInstanceResponseBody body;
 
-    public static AttachNasFileSystemResponse build(java.util.Map<String, ?> map) throws Exception {
-        AttachNasFileSystemResponse self = new AttachNasFileSystemResponse();
+    public static DeleteUdmEcsInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteUdmEcsInstanceResponse self = new DeleteUdmEcsInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public AttachNasFileSystemResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteUdmEcsInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AttachNasFileSystemResponse extends TeaModel {
         return this.headers;
     }
 
-    public AttachNasFileSystemResponse setStatusCode(Integer statusCode) {
+    public DeleteUdmEcsInstanceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AttachNasFileSystemResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AttachNasFileSystemResponse setBody(AttachNasFileSystemResponseBody body) {
+    public DeleteUdmEcsInstanceResponse setBody(DeleteUdmEcsInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public AttachNasFileSystemResponseBody getBody() {
+    public DeleteUdmEcsInstanceResponseBody getBody() {
         return this.body;
     }
 

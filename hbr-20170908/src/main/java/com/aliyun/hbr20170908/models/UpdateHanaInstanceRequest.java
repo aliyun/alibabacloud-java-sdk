@@ -5,73 +5,111 @@ import com.aliyun.tea.*;
 
 public class UpdateHanaInstanceRequest extends TeaModel {
     /**
-     * <p>The alert settings. Valid value: INHERITED, which indicates that the backup client sends alert notifications in the same way as the backup vault.</p>
+     * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INHERITED</p>
      */
     @NameInMap("AlertSetting")
     public String alertSetting;
 
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-000axjt******c6j8</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the SAP HANA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAP-HANA-DEV</p>
      */
     @NameInMap("HanaName")
     public String hanaName;
 
     /**
      * <p>The private or internal IP address of the host where the primary node of the SAP HANA instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The instance number of the SAP HANA system.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00</p>
      */
     @NameInMap("InstanceNumber")
     public Integer instanceNumber;
 
     /**
      * <p>The password that is used to connect with the SAP HANA database.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzvx7d3c4kpny</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Specifies whether to connect with the SAP HANA database over Secure Sockets Layer (SSL). Valid values:</p>
-     * <br>
-     * <p>*   true: The SAP HANA database is connected over SSL.</p>
-     * <p>*   false: The SAP HANA database is not connected over SSL.</p>
+     * <ul>
+     * <li>true: The SAP HANA database is connected over SSL.</li>
+     * <li>false: The SAP HANA database is not connected over SSL.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UseSsl")
     public Boolean useSsl;
 
     /**
      * <p>The username of the SYSTEMDB database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
      * <p>Specifies whether to verify the SSL certificate of the SAP HANA database. Valid values:</p>
-     * <br>
-     * <p>*   true: The SSL certificate of the SAP HANA instance is verified.</p>
-     * <p>*   false: The SSL certificate of the SAP HANA instance is not verified.</p>
+     * <ul>
+     * <li>true: The SSL certificate of the SAP HANA database is verified.</li>
+     * <li>false: The SSL certificate of the SAP HANA database is not verified.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ValidateCertificate")
     public Boolean validateCertificate;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-0003v4ah******9xp</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

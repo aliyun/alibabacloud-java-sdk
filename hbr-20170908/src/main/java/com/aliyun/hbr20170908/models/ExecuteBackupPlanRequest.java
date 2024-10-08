@@ -6,28 +6,42 @@ import com.aliyun.tea.*;
 public class ExecuteBackupPlanRequest extends TeaModel {
     /**
      * <p>The ID of the backup plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-*********************</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>The ID of the backup rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule-0002*****ux8</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: Elastic Compute Service (ECS) files</p>
-     * <p>*   **OSS**: Object Storage Service (OSS) buckets</p>
-     * <p>*   **NAS**: Apsara File Storage NAS file systems</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+     * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

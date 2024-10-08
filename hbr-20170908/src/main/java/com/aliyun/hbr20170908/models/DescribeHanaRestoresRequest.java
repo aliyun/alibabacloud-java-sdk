@@ -5,62 +5,91 @@ import com.aliyun.tea.*;
 
 public class DescribeHanaRestoresRequest extends TeaModel {
     /**
-     * <p>The ID of the backup.</p>
+     * <p>The backup ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1632754800158</p>
      */
     @NameInMap("BackupId")
     public Long backupId;
 
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-000b******soejg</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEMDB</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm4ebtpkzx7zy</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the restore job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-0007o3vqfukfe92hvf13</p>
      */
     @NameInMap("RestoreId")
     public String restoreId;
 
     /**
      * <p>The status of the restore job. Valid values:</p>
-     * <br>
-     * <p>*   **RUNNING**: The restore job is running.</p>
-     * <p>*   **COMPLETE**: The restore job is completed.</p>
-     * <p>*   **PARTIAL_COMPLETE**: The restore job is partially completed.</p>
-     * <p>*   **FAILED**: The restore job has failed.</p>
-     * <p>*   **CANCELED**: The restore job is canceled.</p>
-     * <p>*   **EXPIRED**: The restore job has timed out.</p>
+     * <ul>
+     * <li><strong>RUNNING</strong>: The job is running.</li>
+     * <li><strong>COMPLETE</strong>: The job is completed.</li>
+     * <li><strong>PARTIAL_COMPLETE</strong>: The job is partially completed.</li>
+     * <li><strong>FAILED</strong>: The job failed.</li>
+     * <li><strong>CANCELED</strong>: The job is canceled.</li>
+     * <li><strong>EXPIRED</strong>: The job timed out.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLETE</p>
      */
     @NameInMap("RestoreStatus")
     public String restoreStatus;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-000au6bq******mpu</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

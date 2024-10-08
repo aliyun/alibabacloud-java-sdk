@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteBackupClientResourceRequest extends TeaModel {
     /**
      * <p>The IDs of HBR clients. The value can be a JSON array that consists of up to 100 client IDs. Separate the IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;c-0007kyu045r0********&quot;, &quot;c-000b6818umvo********&quot;]</p>
      */
     @NameInMap("ClientIds")
     public java.util.Map<String, ?> clientIds;

@@ -6,48 +6,73 @@ import com.aliyun.tea.*;
 public class CreateVaultRequest extends TeaModel {
     /**
      * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</p>
-     * <br>
-     * <p>*   **HBR_PRIVATE**: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</p>
-     * <p>*   **KMS**: The source data is encrypted by using Key Management Service (KMS).</p>
+     * <ul>
+     * <li><strong>HBR_PRIVATE</strong>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</li>
+     * <li><strong>KMS</strong>: The source data is encrypted by using Key Management Service (KMS).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>KMS</p>
      */
     @NameInMap("EncryptType")
     public String encryptType;
 
     /**
      * <p>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alias/yzs-hhht</p>
      */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
     /**
      * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>backupvaultname</p>
      */
     @NameInMap("VaultName")
     public String vaultName;
 
     /**
      * <p>The ID of the region where the backup vault resides.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("VaultRegionId")
     public String vaultRegionId;
 
     /**
-     * <p>The storage type of the backup vault. Valid value: **STANDARD**, which indicates standard storage.</p>
+     * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
      */
     @NameInMap("VaultStorageClass")
     public String vaultStorageClass;
 
     /**
      * <p>The type of the backup vault. Valid value</p>
-     * <br>
-     * <p>*   **STANDARD**: standard backup vault</p>
-     * <p>*   **OTS_BACKUP**: backup vault for Tablestore</p>
+     * <ul>
+     * <li><strong>STANDARD</strong>: standard backup vault</li>
+     * <li><strong>OTS_BACKUP</strong>: backup vault for Tablestore</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
      */
     @NameInMap("VaultType")
     public String vaultType;

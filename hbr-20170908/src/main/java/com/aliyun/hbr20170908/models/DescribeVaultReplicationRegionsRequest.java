@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeVaultReplicationRegionsRequest extends TeaModel {
     /**
      * <p>The access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01W3ZZOQ</p>
      */
     @NameInMap("Token")
     public String token;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-00030j3c******sn</p>
      */
     @NameInMap("VaultId")
     @Deprecated

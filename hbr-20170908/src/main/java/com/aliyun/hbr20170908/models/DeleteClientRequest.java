@@ -4,12 +4,24 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DeleteClientRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c-000************f3h</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acf************kwy</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v-000************gs3</p>
+     */
     @NameInMap("VaultId")
     public String vaultId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeHanaBackupSettingResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,22 +20,32 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
     public DescribeHanaBackupSettingResponseBodyHanaBackupSetting hanaBackupSetting;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9D0DB5BC-5071-5ADF-BCD1-14EBB0C17C54</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,57 +98,84 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
     public static class DescribeHanaBackupSettingResponseBodyHanaBackupSetting extends TeaModel {
         /**
          * <p>The configuration file for catalog backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
          */
         @NameInMap("CatalogBackupParameterFile")
         public String catalogBackupParameterFile;
 
         /**
          * <p>Indicates whether Backint is used to back up catalogs. Valid values:</p>
-         * <br>
-         * <p>*   true: Backint is used to back up catalogs.</p>
-         * <p>*   false: Backint is not used to back up catalogs.</p>
+         * <ul>
+         * <li>true: Backint is used to back up catalogs.</li>
+         * <li>false: Backint is not used to back up catalogs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CatalogBackupUsingBackint")
         public Boolean catalogBackupUsingBackint;
 
         /**
          * <p>The configuration file for data backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
          */
         @NameInMap("DataBackupParameterFile")
         public String dataBackupParameterFile;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEMDB</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>Indicates whether automatic log backup is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Automatic log backup is enabled.</p>
-         * <p>*   **false**: Automatic log backup is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: Automatic log backup is enabled.</li>
+         * <li><strong>false</strong>: Automatic log backup is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableAutoLogBackup")
         public Boolean enableAutoLogBackup;
 
         /**
          * <p>The configuration file for log backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
          */
         @NameInMap("LogBackupParameterFile")
         public String logBackupParameterFile;
 
         /**
          * <p>The interval at which logs are backed up. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         @NameInMap("LogBackupTimeout")
         public Long logBackupTimeout;
 
         /**
          * <p>Indicates whether Backint is used to back up logs. Valid values:</p>
-         * <br>
-         * <p>*   true: Backint is used to back up logs.</p>
-         * <p>*   false: Backint is not used to back up logs.</p>
+         * <ul>
+         * <li>true: Backint is used to back up logs.</li>
+         * <li>false: Backint is not used to back up logs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("LogBackupUsingBackint")
         public Boolean logBackupUsingBackint;

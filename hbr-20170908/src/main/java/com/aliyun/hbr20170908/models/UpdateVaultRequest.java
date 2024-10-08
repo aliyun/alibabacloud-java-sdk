@@ -4,15 +4,40 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class UpdateVaultRequest extends TeaModel {
+    /**
+     * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vault description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2fa2xeiebyy</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the backup vault.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
+     */
     @NameInMap("VaultId")
     public String vaultId;
 
+    /**
+     * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vaultname</p>
+     */
     @NameInMap("VaultName")
     public String vaultName;
 

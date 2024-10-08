@@ -5,21 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeRecoverableOtsInstancesRequest extends TeaModel {
     /**
-     * <p>The role name created in the RAM of the original account used for cross-account backup.</p>
+     * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbrcrossrole</p>
      */
     @NameInMap("CrossAccountRoleName")
     public String crossAccountRoleName;
 
     /**
-     * <p>The type of cross-account backup. Supported:</p>
-     * <p>* SELF_ACCOUNT: backup of this account</p>
-     * <p>* CROSS_ACCOUNT: Cross-account backup</p>
+     * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+     * <ul>
+     * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+     * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CROSS_ACCOUNT</p>
      */
     @NameInMap("CrossAccountType")
     public String crossAccountType;
 
     /**
-     * <p>The Alibaba Cloud Uid of the original account used to cross accounts.</p>
+     * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1440155109798732</p>
      */
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;

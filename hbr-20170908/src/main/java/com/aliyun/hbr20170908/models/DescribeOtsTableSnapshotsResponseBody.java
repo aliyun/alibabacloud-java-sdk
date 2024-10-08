@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of backup snapshots that are displayed on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
-     * <p>The returned message. If the request was successful, "successful" is returned. If the request failed, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The token that is required to obtain the next page of backup snapshots.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09376812-6290-5E36-B504-E8010D72D1F0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,9 +57,13 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,129 +132,191 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
     public static class DescribeOtsTableSnapshotsResponseBodySnapshots extends TeaModel {
         /**
          * <p>The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ActualBytes")
         public String actualBytes;
 
         /**
-         * <p>The backup type. Valid value: **COMPLETE**, which indicates full backup.</p>
+         * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
          * <p>The total amount of data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
         /**
          * <p>The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642496679</p>
          */
         @NameInMap("CompleteTime")
         public Long completeTime;
 
         /**
          * <p>The time when the Tablestore instance was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607436917</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642496679</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
          * <p>The name of the Tablestore instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The ID of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-00030j3chkt******2</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The hash value of the parent backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2fe..</p>
          */
         @NameInMap("ParentSnapshotHash")
         public String parentSnapshotHash;
 
         /**
          * <p>The time when the backup job ended. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642521709966</p>
          */
         @NameInMap("RangeEnd")
         public Long rangeEnd;
 
         /**
          * <p>The time when the backup job started. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642492553038</p>
          */
         @NameInMap("RangeStart")
         public Long rangeStart;
 
         /**
          * <p>The retention period of the backup snapshot. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>730</p>
          */
         @NameInMap("Retention")
         public Long retention;
 
         /**
          * <p>The hash value of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2fe...</p>
          */
         @NameInMap("SnapshotHash")
         public String snapshotHash;
 
         /**
          * <p>The ID of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-00047mxg17p26*****b</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   **ECS_FILE**: backup snapshots for Elastic Compute Service (ECS) files</p>
-         * <p>*   **OSS**: backup snapshots for Object Storage Service (OSS) buckets</p>
-         * <p>*   **NAS**: backup snapshots for Apsara File Storage NAS file systems</p>
-         * <p>*   **OTS_TABLE**: backup snapshots for Tablestore instances</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: backup snapshots for Elastic Compute Service (ECS) files</li>
+         * <li><strong>OSS</strong>: backup snapshots for Object Storage Service (OSS) buckets</li>
+         * <li><strong>NAS</strong>: backup snapshots for Apsara File Storage NAS file systems</li>
+         * <li><strong>OTS_TABLE</strong>: backup snapshots for Tablestore instances</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OTS_TABLE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The time when the backup snapshot started. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642496543</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the backup job. Valid values:</p>
-         * <br>
-         * <p>*   **COMPLETE**: The backup job is completed.</p>
-         * <p>*   **PARTIAL_COMPLETE**: The backup job is partially completed.</p>
-         * <p>*   **FAILED**: The backup job has failed.</p>
+         * <ul>
+         * <li><strong>COMPLETE</strong>: The backup job is completed.</li>
+         * <li><strong>PARTIAL_COMPLETE</strong>: The backup job is partially completed.</li>
+         * <li><strong>FAILED</strong>: The backup job has failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the table in the Tablestore instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table2</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642496679</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
         /**
          * <p>The ID of the backup vault that stores the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-00030j*******sn</p>
          */
         @NameInMap("VaultId")
         public String vaultId;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -23,16 +29,23 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
     public java.util.List<DescribeRecoverableOtsInstancesResponseBodyOtsInstances> otsInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14DC089E-5DD3-5028-AEDB-93D78E11DB2A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,6 +98,9 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
     public static class DescribeRecoverableOtsInstancesResponseBodyOtsInstances extends TeaModel {
         /**
          * <p>The name of the Tablestore instance that can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

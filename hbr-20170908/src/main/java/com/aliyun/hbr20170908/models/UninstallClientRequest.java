@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class UninstallClientRequest extends TeaModel {
     /**
      * <p>The ID of the HBR client.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-000iuqo******zi3rn</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm3erpwweavki</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-0008n2q******ax3</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeHanaRetentionSettingRequest extends TeaModel {
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-0002ys1i******wwtf</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4P</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-000ii8t******ntrt2</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

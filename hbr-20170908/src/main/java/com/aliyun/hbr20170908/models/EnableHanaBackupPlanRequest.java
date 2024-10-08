@@ -6,24 +6,39 @@ import com.aliyun.tea.*;
 public class EnableHanaBackupPlanRequest extends TeaModel {
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-0001zfcn******0pr3</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the backup plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-*********************</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm4ebtpkzx7zy</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-00030j3c******sn</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

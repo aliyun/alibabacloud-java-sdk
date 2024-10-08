@@ -6,45 +6,77 @@ import com.aliyun.tea.*;
 public class CreateReplicationVaultRequest extends TeaModel {
     /**
      * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EncryptType")
+    public String encryptType;
+
+    @NameInMap("KmsKeyId")
+    public String kmsKeyId;
+
     /**
      * <p>The data redundancy type of the backup vault. Valid values:</p>
-     * <br>
-     * <p>- LRS: Locally redundant storage (LRS) is enabled for the backup vault. HBR stores the copies of each object on multiple devices of different facilities in the same zone. This way, HBR ensures data durability and availability even if hardware failures occur.</p>
-     * <p>- ZRS: Zone-redundant storage (ZRS) is enabled for the backup vault. HBR uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone becomes unavailable, the data can still be accessed.</p>
+     * <ul>
+     * <li>LRS: standard locally redundant storage (LRS). Cloud Backup stores the copies of each object on multiple devices of different facilities in the same zone. This way, Cloud Backup ensures data durability and availability even if hardware failures occur.</li>
+     * <li>ZRS: standard zone-redundant storage (ZRS). Cloud Backup uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone fails, the data that is stored in the other two zones is still accessible.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LRS</p>
      */
     @NameInMap("RedundancyType")
     public String redundancyType;
 
     /**
      * <p>The ID of the region where the source vault resides.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ReplicationSourceRegionId")
     public String replicationSourceRegionId;
 
     /**
      * <p>The ID of the source vault.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
      */
     @NameInMap("ReplicationSourceVaultId")
     public String replicationSourceVaultId;
 
     /**
      * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mirrorvaultname</p>
      */
     @NameInMap("VaultName")
     public String vaultName;
 
     /**
      * <p>The ID of the region where the backup vault resides.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("VaultRegionId")
     public String vaultRegionId;
 
     /**
-     * <p>The storage type of the backup vault. Valid value: **STANDARD**. The value indicates standard storage.</p>
+     * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
      */
     @NameInMap("VaultStorageClass")
     public String vaultStorageClass;
@@ -60,6 +92,22 @@ public class CreateReplicationVaultRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateReplicationVaultRequest setEncryptType(String encryptType) {
+        this.encryptType = encryptType;
+        return this;
+    }
+    public String getEncryptType() {
+        return this.encryptType;
+    }
+
+    public CreateReplicationVaultRequest setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public CreateReplicationVaultRequest setRedundancyType(String redundancyType) {

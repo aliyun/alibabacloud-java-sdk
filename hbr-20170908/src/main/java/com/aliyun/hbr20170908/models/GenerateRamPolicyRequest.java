@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class GenerateRamPolicyRequest extends TeaModel {
     /**
      * <p>The type of the policy that you want to generate. Valid values:</p>
-     * <br>
-     * <p>*   custom: custom policy</p>
-     * <p>*   system: system policy</p>
+     * <ul>
+     * <li>custom: custom policy</li>
+     * <li>system: system policy</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("ActionType")
     public String actionType;
 
     /**
      * <p>Specifies whether to generate the policy based on an existing instance-specific rule. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RequireBasePolicy")
     public Boolean requireBasePolicy;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-*********************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-0007al3m******7ao</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

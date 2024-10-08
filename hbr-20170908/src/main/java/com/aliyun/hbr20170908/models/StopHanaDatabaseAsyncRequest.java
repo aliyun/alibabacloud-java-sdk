@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class StopHanaDatabaseAsyncRequest extends TeaModel {
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-000dw******45ijer</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BWP</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-0006wkn******gzkn</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

@@ -4,15 +4,35 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class ExecutePolicyV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i-bp1************dtv</p>
+     */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000************hky</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule-0002*****ux8</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UDM_ECS</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

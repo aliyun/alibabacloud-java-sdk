@@ -4,27 +4,71 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribeVaultsRequest extends TeaModel {
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-*********************</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The status of the backup vault. Valid values:</p>
+     * <ul>
+     * <li><strong>UNKNOWN</strong>: The backup vault is in an unknown state.</li>
+     * <li><strong>INITIALIZING</strong>: The backup vault is being initialized.</li>
+     * <li><strong>CREATED</strong>: The backup vault is created.</li>
+     * <li><strong>ERROR</strong>: An error occurs on the backup vault.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6a745bceffb042959b3b5206d6f12ad1</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeVaultsRequestTag> tag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
+     */
     @NameInMap("VaultId")
     public String vaultId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("VaultRegionId")
     public String vaultRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
     @NameInMap("VaultType")
     public String vaultType;
 
@@ -98,9 +142,17 @@ public class DescribeVaultsRequest extends TeaModel {
     }
 
     public static class DescribeVaultsRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

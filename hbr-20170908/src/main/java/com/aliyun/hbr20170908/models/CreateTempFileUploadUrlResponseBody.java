@@ -6,69 +6,103 @@ import com.aliyun.tea.*;
 public class CreateTempFileUploadUrlResponseBody extends TeaModel {
     /**
      * <p>The name of the OSS bucket to which the file is uploaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbr-temp-bucket</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
      * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The endpoint that is used to upload the file to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-cn-shenzhen.aliyuncs.com</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
     /**
      * <p>The expiration time of the signature that is used to upload the file to OSS. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1654326678</p>
      */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The AccessKey ID that is used to upload the file to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI****Up</p>
      */
     @NameInMap("OssAccessKeyId")
     public String ossAccessKeyId;
 
     /**
      * <p>The policy that is used to upload the file to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJleH****V19</p>
      */
     @NameInMap("Policy")
     public String policy;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F4EEB401-DD21-588D-AE3B-1E835C7655E1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The signature that is used to upload the file to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RmhI****0A=</p>
      */
     @NameInMap("Signature")
     public String signature;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The key that is used to upload the file to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>temp/1440155109798732/upload/2022-07-29/49bed34c-b430-4e7e-89b1-4be2b734f95c/iaclone.diff</p>
      */
     @NameInMap("TempFileKey")
     public String tempFileKey;

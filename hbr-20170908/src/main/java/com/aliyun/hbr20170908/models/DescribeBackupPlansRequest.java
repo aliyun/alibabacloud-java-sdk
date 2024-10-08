@@ -11,25 +11,35 @@ public class DescribeBackupPlansRequest extends TeaModel {
     public java.util.List<DescribeBackupPlansRequestFilters> filters;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: Elastic Compute Service (ECS) files</p>
-     * <p>*   **OSS**: Object Storage Service (OSS) buckets</p>
-     * <p>*   **NAS**: Apsara File Storage NAS file systems</p>
-     * <p>*   **OTS**: Tablestore instances</p>
-     * <p>*   **UDM_ECS**: ECS instances</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+     * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+     * <li><strong>OTS</strong>: Tablestore instances</li>
+     * <li><strong>UDM_ECS</strong>: ECS instances</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
@@ -74,20 +84,27 @@ public class DescribeBackupPlansRequest extends TeaModel {
     public static class DescribeBackupPlansRequestFilters extends TeaModel {
         /**
          * <p>The keys in the filter. Valid values:</p>
-         * <br>
-         * <p>*   **regionId**: the ID of a region</p>
-         * <p>*   **planId**: the ID of a backup plan</p>
-         * <p>*   **sourceType**: the type of a data source</p>
-         * <p>*   **vaultId**: the ID of a backup vault</p>
-         * <p>*   **instanceName**: the name of an instance</p>
-         * <p>*   **instanceId**: the ID of an instance</p>
-         * <p>*   **planName**: the name of a backup plan</p>
+         * <ul>
+         * <li><strong>regionId</strong>: the ID of a region</li>
+         * <li><strong>planId</strong>: the ID of a backup plan</li>
+         * <li><strong>sourceType</strong>: the type of a data source</li>
+         * <li><strong>vaultId</strong>: the ID of a backup vault</li>
+         * <li><strong>instanceName</strong>: the name of an instance</li>
+         * <li><strong>instanceId</strong>: the ID of an instance</li>
+         * <li><strong>planName</strong>: the name of a backup plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vaultId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The values that you want to match in the filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;v-*********************&quot;]</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;

@@ -12,38 +12,86 @@ public class UpdatePolicyBindingRequest extends TeaModel {
 
     /**
      * <p>The ID of the data source.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1************dtv</p>
      */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
     /**
-     * <p>Specifies whether to disable the backup policy for the data source.</p>
-     * <br>
-     * <p>*   true: disables the backup policy for the data source</p>
-     * <p>*   false: enables the backup policy for the data source</p>
+     * <p>Specifies whether to disable the backup policy for the data source. Valid values:</p>
+     * <ul>
+     * <li>true: disables the backup policy for the data source</li>
+     * <li>false: enables the backup policy for the data source</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Disabled")
     public Boolean disabled;
 
     /**
+     * <strong>example:</strong>
+     * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
+     */
+    @NameInMap("Exclude")
+    public String exclude;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
+     */
+    @NameInMap("Include")
+    public String include;
+
+    /**
      * <p>The description of the association.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000<strong><strong><strong><strong><strong><strong>5xx-i-2ze</strong></strong></strong></strong></strong></strong>nw4</p>
      */
     @NameInMap("PolicyBindingDescription")
     public String policyBindingDescription;
 
     /**
      * <p>The ID of the backup policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000************ky9</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
+     * <strong>example:</strong>
+     * <p>backup/</p>
+     */
+    @NameInMap("Source")
+    public String source;
+
+    /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **UDM_ECS**: ECS instance backup</p>
+     * <ul>
+     * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UDM_ECS</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0:24:5120</p>
+     */
+    @NameInMap("SpeedLimit")
+    public String speedLimit;
 
     public static UpdatePolicyBindingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePolicyBindingRequest self = new UpdatePolicyBindingRequest();
@@ -74,6 +122,22 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         return this.disabled;
     }
 
+    public UpdatePolicyBindingRequest setExclude(String exclude) {
+        this.exclude = exclude;
+        return this;
+    }
+    public String getExclude() {
+        return this.exclude;
+    }
+
+    public UpdatePolicyBindingRequest setInclude(String include) {
+        this.include = include;
+        return this;
+    }
+    public String getInclude() {
+        return this.include;
+    }
+
     public UpdatePolicyBindingRequest setPolicyBindingDescription(String policyBindingDescription) {
         this.policyBindingDescription = policyBindingDescription;
         return this;
@@ -90,6 +154,14 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         return this.policyId;
     }
 
+    public UpdatePolicyBindingRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
     public UpdatePolicyBindingRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -98,10 +170,26 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         return this.sourceType;
     }
 
+    public UpdatePolicyBindingRequest setSpeedLimit(String speedLimit) {
+        this.speedLimit = speedLimit;
+        return this;
+    }
+    public String getSpeedLimit() {
+        return this.speedLimit;
+    }
+
     public static class UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("FetchSliceSize")
         public Long fetchSliceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FullOnIncrementFail")
         public Boolean fullOnIncrementFail;
 
@@ -131,19 +219,27 @@ public class UpdatePolicyBindingRequest extends TeaModel {
     public static class UpdatePolicyBindingRequestAdvancedOptionsOssDetail extends TeaModel {
         /**
          * <p>Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:</p>
-         * <br>
-         * <p>*   **NO_CLEANUP**: Does not delete inventory lists.</p>
-         * <p>*   **DELETE_CURRENT**: Deletes the current inventory list.</p>
-         * <p>*   **DELETE_CURRENT_AND_PREVIOUS**: Deletes all inventory lists.</p>
+         * <ul>
+         * <li><strong>NO_CLEANUP</strong>: Does not delete inventory lists.</li>
+         * <li><strong>DELETE_CURRENT</strong>: Deletes the current inventory list.</li>
+         * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: Deletes all inventory lists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO_CLEANUP</p>
          */
         @NameInMap("InventoryCleanupPolicy")
         public String inventoryCleanupPolicy;
 
         /**
          * <p>The name of the OSS inventory list. The OSS inventory list specified for this parameter is used for performance optimization.</p>
-         * <br>
-         * <p>*   If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included in your OSS bills.</p>
-         * <p>*   An extended period of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</p>
+         * <ul>
+         * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included in your OSS bills.</li>
+         * <li>An extended period of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30663060</p>
          */
         @NameInMap("InventoryId")
         public String inventoryId;
@@ -174,6 +270,9 @@ public class UpdatePolicyBindingRequest extends TeaModel {
     public static class UpdatePolicyBindingRequestAdvancedOptionsUdmDetail extends TeaModel {
         /**
          * <p>Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AppConsistent")
         public Boolean appConsistent;
@@ -185,18 +284,24 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         public java.util.List<String> diskIdList;
 
         /**
-         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+         * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableFsFreeze")
         public Boolean enableFsFreeze;
 
         /**
-         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies whether to create application-consistent snapshots. Valid values:</p>
-         * <br>
-         * <p>*   true: creates application-consistent snapshots.</p>
-         * <p>*   false: creates file system-consistent snapshots.</p>
-         * <br>
+         * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies whether to create application-consistent snapshots. Valid values:</p>
+         * <ul>
+         * <li>true: creates application-consistent snapshots.</li>
+         * <li>false: creates file system-consistent snapshots.</li>
+         * </ul>
          * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableWriters")
         public Boolean enableWriters;
@@ -208,31 +313,46 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         public java.util.List<String> excludeDiskIdList;
 
         /**
-         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+         * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/postscript.sh</p>
          */
         @NameInMap("PostScriptPath")
         public String postScriptPath;
 
         /**
-         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+         * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/prescript.sh</p>
          */
         @NameInMap("PreScriptPath")
         public String preScriptPath;
 
         /**
-         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
+         * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunECSInstanceForHbrRole</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         /**
          * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SnapshotGroup")
         public Boolean snapshotGroup;
 
         /**
-         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+         * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TimeoutInSeconds")
         public Long timeoutInSeconds;
