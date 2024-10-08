@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-000*************hg9</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The identifier of container cluster.</p>
+     * <p>The identifier of the container cluster. For a Container Service for Kubernetes (ACK) cluster, specify the cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cca*******************************87a</p>
      */
     @NameInMap("Identifier")
     public String identifier;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

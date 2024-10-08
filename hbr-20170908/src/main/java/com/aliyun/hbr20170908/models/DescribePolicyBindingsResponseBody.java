@@ -4,15 +4,31 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyBindingsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,12 +38,24 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     @NameInMap("PolicyBindings")
     public java.util.List<DescribePolicyBindingsResponseBodyPolicyBindings> policyBindings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5225929A-4EBD-55EE-9FE1-4A130E582A76</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>38</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -101,9 +129,17 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("FetchSliceSize")
         public Long fetchSliceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FullOnIncrementFail")
         public Boolean fullOnIncrementFail;
 
@@ -132,25 +168,39 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonNasDetail extends TeaModel {
         /**
-         * <p>The ID of the HBR client.</p>
+         * <p>The ID of the Cloud Backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-0001eg6mcvjs93f46s2d</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cl-000gkcofngi04j6k680a</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The size of backup shards (the number of files).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("FetchSliceSize")
         public Long fetchSliceSize;
 
         /**
          * <p>Indicates whether the system performs full backup if incremental backup fails. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The system performs full backup if incremental backup fails.</p>
-         * <p>*   **false**: The system does not perform full backup if incremental backup fails.</p>
+         * <ul>
+         * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
+         * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FullOnIncrementFail")
         public Boolean fullOnIncrementFail;
@@ -197,18 +247,26 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsFileDetail extends TeaModel {
         /**
          * <p>Indicates whether an advanced policy is used. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AdvPolicy")
         public Boolean advPolicy;
 
         /**
          * <p>Indicates whether the Volume Shadow Copy Service (VSS) feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The feature is enabled.</p>
-         * <p>*   **false**: The feature is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: The feature is enabled.</li>
+         * <li><strong>false</strong>: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UseVSS")
         public Boolean useVSS;
@@ -239,19 +297,27 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail extends TeaModel {
         /**
          * <p>Indicates whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
-         * <br>
-         * <p>*   **NO_CLEANUP**: Inventory lists are not deleted.</p>
-         * <p>*   **DELETE_CURRENT**: The current inventory list is deleted.</p>
-         * <p>*   **DELETE_CURRENT_AND_PREVIOUS**: All inventory lists are deleted.</p>
+         * <ul>
+         * <li><strong>NO_CLEANUP</strong>: Inventory lists are not deleted.</li>
+         * <li><strong>DELETE_CURRENT</strong>: The current inventory list is deleted.</li>
+         * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: All inventory lists are deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DELETE_CURRENT_AND_PREVIOUS</p>
          */
         @NameInMap("InventoryCleanupPolicy")
         public String inventoryCleanupPolicy;
 
         /**
          * <p>The name of the OSS inventory. If this parameter is not empty, the OSS inventory is used for performance optimization.</p>
-         * <br>
-         * <p>*   If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.</p>
-         * <p>*   A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</p>
+         * <ul>
+         * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.</li>
+         * <li>A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inventory_test</p>
          */
         @NameInMap("InventoryId")
         public String inventoryId;
@@ -282,10 +348,19 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsUdmDetail extends TeaModel {
         /**
          * <p>Indicates whether application consistency is enabled. You can enable application consistency only if all disks are ESSDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AppConsistent")
         public Boolean appConsistent;
 
+        /**
+         * <p>The ID of the custom KMS key in the destination region. If this parameter is not empty and geo-replication is enabled, the key is used for encrypted geo-replication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ed37b1e-da51-4187-aceb-9db4f9b7148b</p>
+         */
         @NameInMap("DestinationKmsKeyId")
         public String destinationKmsKeyId;
 
@@ -296,54 +371,75 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public java.util.List<String> diskIdList;
 
         /**
-         * <p>This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates whether Linux fsfreeze is enabled to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableFsFreeze")
         public Boolean enableFsFreeze;
 
         /**
-         * <p>This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates whether application-consistent snapshots are created. Valid values:</p>
-         * <br>
-         * <p>*   true: Application-consistent snapshots are created.</p>
-         * <p>*   false: File system-consistent snapshots are created.</p>
-         * <br>
+         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates whether application-consistent snapshots are created. Valid values:</p>
+         * <ul>
+         * <li>true: Application-consistent snapshots are created.</li>
+         * <li>false: File system-consistent snapshots are created.</li>
+         * </ul>
          * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableWriters")
         public Boolean enableWriters;
 
         /**
-         * <p>The IDs of the disks that do not need to be protected. If DiskIdList is not empty, this parameter is ignored.</p>
+         * <p>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</p>
          */
         @NameInMap("ExcludeDiskIdList")
         public java.util.List<String> excludeDiskIdList;
 
         /**
-         * <p>This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/postscript.sh</p>
          */
         @NameInMap("PostScriptPath")
         public String postScriptPath;
 
         /**
-         * <p>This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/prescript.sh</p>
          */
         @NameInMap("PreScriptPath")
         public String preScriptPath;
 
         /**
-         * <p>This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the name of the RAM role that is required to create application-consistent snapshots.</p>
+         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the name of the RAM role that is required to create application-consistent snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunECSInstanceForHbrRole</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         /**
          * <p>Indicates whether a snapshot-consistent group is created. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SnapshotGroup")
         public Boolean snapshotGroup;
 
         /**
-         * <p>This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TimeoutInSeconds")
         public Long timeoutInSeconds;
@@ -518,6 +614,47 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribePolicyBindingsResponseBodyPolicyBindingsHitTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribePolicyBindingsResponseBodyPolicyBindingsHitTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolicyBindingsResponseBodyPolicyBindingsHitTags self = new DescribePolicyBindingsResponseBodyPolicyBindingsHitTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindingsHitTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindingsHitTags setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindingsHitTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribePolicyBindingsResponseBodyPolicyBindings extends TeaModel {
         /**
          * <p>The advanced options.</p>
@@ -525,76 +662,146 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         @NameInMap("AdvancedOptions")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions advancedOptions;
 
+        @NameInMap("CreatedByTag")
+        public Boolean createdByTag;
+
         /**
-         * <p>The time when the backup policy was created. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661399570</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
          * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbrcrossrole</p>
          */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
         /**
          * <p>Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-         * <br>
-         * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
-         * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         @NameInMap("CrossAccountType")
         public String crossAccountType;
 
         /**
          * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1480************</p>
          */
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
         /**
          * <p>The ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-8vb************5ly</p>
          */
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
         /**
          * <p>Indicates whether the backup policy is enabled for the data source. Valid values:</p>
-         * <br>
-         * <p>*   true: The backup policy is disabled.</p>
-         * <p>*   false: The backup policy is enabled.</p>
+         * <ul>
+         * <li>true: The backup policy is disabled.</li>
+         * <li>false: The backup policy is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
+         * <strong>example:</strong>
+         * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
+         */
+        @NameInMap("Exclude")
+        public String exclude;
+
+        @NameInMap("HitTags")
+        public java.util.List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> hitTags;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
+         */
+        @NameInMap("Include")
+        public String include;
+
+        /**
          * <p>The description of the association.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000<strong><strong><strong><strong><strong><strong>eslc-i-uf6</strong></strong></strong></strong></strong></strong>y5g</p>
          */
         @NameInMap("PolicyBindingDescription")
         public String policyBindingDescription;
 
         /**
          * <p>The ID of the association.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd-000************slc</p>
          */
         @NameInMap("PolicyBindingId")
         public String policyBindingId;
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************56y</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
 
         /**
+         * <strong>example:</strong>
+         * <p>backup/</p>
+         */
+        @NameInMap("Source")
+        public String source;
+
+        /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   **UDM_ECS**: ECS instances</p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
+         * <strong>example:</strong>
+         * <p>0:24:10240</p>
+         */
+        @NameInMap("SpeedLimit")
+        public String speedLimit;
+
+        /**
          * <p>The time when the backup policy was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653611573</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
@@ -610,6 +817,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         }
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions getAdvancedOptions() {
             return this.advancedOptions;
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindings setCreatedByTag(Boolean createdByTag) {
+            this.createdByTag = createdByTag;
+            return this;
+        }
+        public Boolean getCreatedByTag() {
+            return this.createdByTag;
         }
 
         public DescribePolicyBindingsResponseBodyPolicyBindings setCreatedTime(Long createdTime) {
@@ -660,6 +875,30 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             return this.disabled;
         }
 
+        public DescribePolicyBindingsResponseBodyPolicyBindings setExclude(String exclude) {
+            this.exclude = exclude;
+            return this;
+        }
+        public String getExclude() {
+            return this.exclude;
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindings setHitTags(java.util.List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> hitTags) {
+            this.hitTags = hitTags;
+            return this;
+        }
+        public java.util.List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> getHitTags() {
+            return this.hitTags;
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindings setInclude(String include) {
+            this.include = include;
+            return this;
+        }
+        public String getInclude() {
+            return this.include;
+        }
+
         public DescribePolicyBindingsResponseBodyPolicyBindings setPolicyBindingDescription(String policyBindingDescription) {
             this.policyBindingDescription = policyBindingDescription;
             return this;
@@ -684,12 +923,28 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             return this.policyId;
         }
 
+        public DescribePolicyBindingsResponseBodyPolicyBindings setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
         public DescribePolicyBindingsResponseBodyPolicyBindings setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindings setSpeedLimit(String speedLimit) {
+            this.speedLimit = speedLimit;
+            return this;
+        }
+        public String getSpeedLimit() {
+            return this.speedLimit;
         }
 
         public DescribePolicyBindingsResponseBodyPolicyBindings setUpdatedTime(Long updatedTime) {

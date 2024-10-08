@@ -6,123 +6,196 @@ import com.aliyun.tea.*;
 public class CreateBackupJobShrinkRequest extends TeaModel {
     /**
      * <p>The backup type. Valid values:</p>
-     * <br>
-     * <p>*   **COMPLETE**: full backup</p>
-     * <p>*   **INCREMENTAL**: incremental backup</p>
+     * <ul>
+     * <li><strong>COMPLETE</strong>: full backup</li>
+     * <li><strong>INCREMENTAL</strong>: incremental backup</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>INCREMENTAL</p>
      */
     @NameInMap("BackupType")
     public String backupType;
 
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-00068btz******oku</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the cluster. This parameter is required only if you set the **SourceType** parameter to **CONTAINER**.</p>
+     * <p>The ID of the cluster. This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>CONTAINER</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-000xxxxxxxxxxxxxxi00</p>
      */
     @NameInMap("ContainerClusterId")
     public String containerClusterId;
 
     /**
-     * <p>The cluster resources. This parameter is required only if you set the **SourceType** parameter to **CONTAINER**.</p>
+     * <p>The cluster resources. This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>CONTAINER</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;resourceType\&quot;:\&quot;PV\&quot;,\&quot;backupMethod\&quot;:\&quot;FILE\&quot;,\&quot;resourceId\&quot;:\&quot;674dac6d-74cd-47e9-a675-09e2f10d2c45\&quot;,\&quot;resourceInfo\&quot;:\&quot;{\\\&quot;pv_name\\\&quot;:\\\&quot;nas-650dac6d-74cd-47e9-a675-09e2f10d2c45\\\&quot;,\\\&quot;pv_size\\\&quot;:\\\&quot;8Gi\\\&quot;,\\\&quot;storage_class\\\&quot;:\\\&quot;alibabacloud-cnfs-nas\\\&quot;,\\\&quot;pvc_name\\\&quot;:\\\&quot;data-postgresql-default-0\\\&quot;,\\\&quot;namespace\\\&quot;:\\\&quot;database\\\&quot;}\&quot;,\&quot;host\&quot;:\&quot;cn-huhehaote.192.168.13.133\&quot;,\&quot;hostPrefix\&quot;:\&quot;6f5e758e-8d35-4584-b9ce-8333adfc7547/volumes/kubernetes.io~csi/nas-670dac6d-74cd-47e9-a675-09e2f10d2c45/mount\&quot;,\&quot;pvPath\&quot;:\&quot;/\&quot;}]</p>
      */
     @NameInMap("ContainerResources")
     public String containerResources;
 
     /**
      * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BackupRole</p>
      */
     @NameInMap("CrossAccountRoleName")
     public String crossAccountRoleName;
 
     /**
      * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-     * <br>
-     * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
-     * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
+     * <ul>
+     * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+     * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SELF_ACCOUNT</p>
      */
     @NameInMap("CrossAccountType")
     public String crossAccountType;
 
     /**
      * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>158975xxxxxx4625</p>
      */
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;doCopy&quot;: false,
+     *     &quot;destinationRegionId&quot;: &quot;&quot;,
+     *     &quot;destinationRetention&quot;: null,
+     *     &quot;diskIdList&quot;: [],
+     *     &quot;snapshotGroup&quot;: false,
+     *     &quot;appConsistent&quot;: false,
+     *     &quot;enableWriters&quot;: true,
+     *     &quot;preScriptPath&quot;: &quot;&quot;,
+     *     &quot;postScriptPath&quot;: &quot;&quot;,
+     *     &quot;enableFsFreeze&quot;: true,
+     *     &quot;timeoutInSeconds&quot;: 60
+     * }</p>
+     */
     @NameInMap("Detail")
     public String detailShrink;
 
     /**
-     * <p>This parameter is required only if you set the **SourceType** parameter to **ECS_FILE**. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
      */
     @NameInMap("Exclude")
     public String exclude;
 
     /**
-     * <p>This parameter is required only if you set the **SourceType** parameter to **ECS_FILE**. This parameter specifies the paths to the files that you want to back up. The value must be 1 to 255 characters in length.</p>
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that you want to back up. The value must be 1 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
      */
     @NameInMap("Include")
     public String include;
 
     /**
      * <p>This parameter specifies whether to initiate the request by using Container Service for Kubernetes (ACK). Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("InitiatedByAck")
     public Boolean initiatedByAck;
 
     /**
-     * <p>This parameter is required only if you set the **SourceType** parameter to **UDM_ECS**. This parameter specifies the ID of the ECS instance.</p>
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the ID of the ECS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1xxxxxxxxxxxxxxysm</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the backup job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s-backup-infra-20220131150046-hbr</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
-     * <p>This parameter is required only if you set the **SourceType** parameter to **ECS_FILE**. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a source path.</p>
-     * <br>
-     * <p>*   This parameter is available only for Windows ECS instances.</p>
-     * <p>*   If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to `["UseVSS":true]`.</p>
-     * <p>*   If you use VSS, you cannot back up data from multiple directories.</p>
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a source path.</p>
+     * <ul>
+     * <li>This parameter is available only for Windows ECS instances.</li>
+     * <li>If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
+     * <li>If you use VSS, you cannot back up data from multiple directories.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;UseVSS&quot;:false}</p>
      */
     @NameInMap("Options")
     public String options;
 
     /**
      * <p>The retention period of the backup data. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("Retention")
     public Long retention;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: Elastic Compute Service (ECS) files</p>
-     * <p>*   **UDM_ECS**: ECS instances</p>
-     * <p>*   **CONTAINER**: containers</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+     * <li><strong>UDM_ECS</strong>: ECS instances</li>
+     * <li><strong>CONTAINER</strong>: containers</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CONTAINER</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>This parameter is required only if you set the **SourceType** parameter to **ECS_FILE**. This parameter specifies the throttling rules. Format: `{start}|{end}|{bandwidth}`. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.</p>
-     * <br>
-     * <p>*   **start**: the start hour.</p>
-     * <p>*   **end**: the end hour.</p>
-     * <p>*   **bandwidth**: the bandwidth. Unit: KB/s.</p>
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies the throttling rules. Format: <code>{start}|{end}|{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.</p>
+     * <ul>
+     * <li><strong>start</strong>: the start hour.</li>
+     * <li><strong>end</strong>: the end hour.</li>
+     * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0:24:NaN</p>
      */
     @NameInMap("SpeedLimit")
     public String speedLimit;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-000xxxxxxxxxxxxxxy1v</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

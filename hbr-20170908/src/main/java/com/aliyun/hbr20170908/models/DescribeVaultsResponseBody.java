@@ -4,27 +4,61 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribeVaultsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The backup vaults.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Vault\&quot;: []}</p>
+     */
     @NameInMap("Vaults")
     public DescribeVaultsResponseBodyVaults vaults;
 
@@ -98,48 +132,143 @@ public class DescribeVaultsResponseBody extends TeaModel {
     }
 
     public static class DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics extends TeaModel {
+        /**
+         * <p>The number of archive plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Archive")
+        public Integer archive;
+
+        /**
+         * <p>The number of backup plans for General-purpose NAS file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CommonNas")
         public Integer commonNas;
 
+        /**
+         * <p>The number of backup plans for Cloud Storage Gateway (CSG) gateways.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Csg")
         public Integer csg;
 
+        /**
+         * <p>The number of backup plans for ECS files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EcsFile")
         public Integer ecsFile;
 
+        /**
+         * <p>The number of backup plans for SAP HANA instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EcsHana")
         public Integer ecsHana;
 
+        /**
+         * <p>The number of backup plans for Isilon storage systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Isilon")
         public Integer isilon;
 
+        /**
+         * <p>The number of backup plans for on-premises servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LocalFile")
         public Integer localFile;
 
+        /**
+         * <p>The number of backup plans for on-premises virtual machines (VMs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LocalVm")
         public Integer localVm;
 
+        /**
+         * <p>The number of backup plans for MySQL databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MySql")
         public Integer mySql;
 
+        /**
+         * <p>The number of backup plans for NAS file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Nas")
         public Integer nas;
 
+        /**
+         * <p>The number of backup plans for Oracle databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Oracle")
         public Integer oracle;
 
+        /**
+         * <p>The number of backup plans for OSS buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Oss")
         public Integer oss;
 
+        /**
+         * <p>The number of backup plans for Tablestore instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Ots")
         public Integer ots;
 
+        /**
+         * <p>The number of backup plans for SQL Server databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SqlServer")
         public Integer sqlServer;
 
         public static DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics self = new DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics setArchive(Integer archive) {
+            this.archive = archive;
+            return this;
+        }
+        public Integer getArchive() {
+            return this.archive;
         }
 
         public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics setCommonNas(Integer commonNas) {
@@ -249,9 +378,21 @@ public class DescribeVaultsResponseBody extends TeaModel {
     }
 
     public static class DescribeVaultsResponseBodyVaultsVaultReplicationProgress extends TeaModel {
+        /**
+         * <p>The progress of historical data synchronization from the backup vault to the mirror vault. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("HistoricalReplicationProgress")
         public Integer historicalReplicationProgress;
 
+        /**
+         * <p>The latest synchronization time of incremental data in the mirror vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579413159</p>
+         */
         @NameInMap("NewReplicationProgress")
         public Long newReplicationProgress;
 
@@ -298,9 +439,31 @@ public class DescribeVaultsResponseBody extends TeaModel {
     }
 
     public static class DescribeVaultsResponseBodyVaultsVaultTagsTag extends TeaModel {
+        /**
+         * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
+         * <ul>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the backup vault. Valid values of N: 1 to 20.</p>
+         * <ul>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The tag value cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>a1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -347,15 +510,39 @@ public class DescribeVaultsResponseBody extends TeaModel {
     }
 
     public static class DescribeVaultsResponseBodyVaultsVaultTrialInfo extends TeaModel {
+        /**
+         * <p>Indicates whether you are billed based on the pay-as-you-go method after the free trial ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("KeepAfterTrialExpiration")
         public Boolean keepAfterTrialExpiration;
 
+        /**
+         * <p>The expiration time of the free trial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1584597600</p>
+         */
         @NameInMap("TrialExpireTime")
         public Long trialExpireTime;
 
+        /**
+         * <p>The start time of the free trial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579413159</p>
+         */
         @NameInMap("TrialStartTime")
         public Long trialStartTime;
 
+        /**
+         * <p>The time when the free-trial backup vault is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594965600</p>
+         */
         @NameInMap("TrialVaultReleaseTime")
         public Long trialVaultReleaseTime;
 
@@ -399,126 +586,390 @@ public class DescribeVaultsResponseBody extends TeaModel {
     }
 
     public static class DescribeVaultsResponseBodyVaultsVault extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1024000</p>
+         */
         @NameInMap("ArchiveBytesDone")
         public Long archiveBytesDone;
 
+        /**
+         * <p>The billable storage usage of the Archive tier. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
+         */
         @NameInMap("ArchiveStorageSize")
         public Long archiveStorageSize;
 
+        /**
+         * <p>The statistics of backup plans that use the backup vault.</p>
+         */
         @NameInMap("BackupPlanStatistics")
         public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics backupPlanStatistics;
 
+        /**
+         * <p>The name of the OSS bucket used by the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbr-0005i51******t58</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <p>The amount of data that is backed up. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("BytesDone")
         public Long bytesDone;
 
+        /**
+         * <p>The billing method of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREE</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The billable storage usage of the archive vault. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
+         */
         @NameInMap("ChargedStorageSize")
         public Long chargedStorageSize;
 
+        /**
+         * <p>The encryption algorithm used to compress the backup vault. Valid values:</p>
+         * <ul>
+         * <li>DISABLED: The backup vault is not compressed.</li>
+         * <li>SNAPPY: The backup vault is compressed by using the SNAPPY encryption algorithm.</li>
+         * <li>ZSTD: The backup vault is compressed by using Zstandard, a fast lossless compression algorithm.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ZSTD</p>
+         */
         @NameInMap("CompressionAlgorithm")
         public String compressionAlgorithm;
 
+        /**
+         * <p>The time when the backup vault was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>Indicates whether the deduplication feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Dedup")
         public Boolean dedup;
 
+        /**
+         * <p>The description of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vault description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The encryption type of the backup vault. Valid values:</p>
+         * <ul>
+         * <li>NONE: The backup vault is not encrypted.</li>
+         * <li>HBR_PRIVATE (default): The backup vault is encrypted by using a key provided by Cloud Backup.</li>
+         * <li>KMS: The backup vault is encrypted by using a custom master key (CMK) created in Key Management Service (KMS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HBR_PRIVATE</p>
+         */
         @NameInMap("EncryptType")
         public String encryptType;
 
+        /**
+         * <p>Indicates whether indexes are available. Indexes are available when they are not being updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IndexAvailable")
         public Boolean indexAvailable;
 
+        /**
+         * <p>The index level.</p>
+         * <ul>
+         * <li>OFF: No indexes are created.</li>
+         * <li>META: Metadata indexes are created.</li>
+         * <li>ALL: Full-text indexes are created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
+         */
         @NameInMap("IndexLevel")
         public String indexLevel;
 
+        /**
+         * <p>The time when the index was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639645628</p>
+         */
         @NameInMap("IndexUpdateTime")
         public Long indexUpdateTime;
 
+        /**
+         * <p>The ID or alias of the CMK created in KMS. This parameter is returned only when EncryptType is set to KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias/acs/acm</p>
+         */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
+        /**
+         * <p>The time when the last remote backup was synchronized. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
+         */
         @NameInMap("LatestReplicationTime")
         public Long latestReplicationTime;
 
+        /**
+         * <p>The data redundancy type of the backup vault. Valid values:</p>
+         * <ul>
+         * <li>LRS: Locally redundant storage (LRS) is enabled for the backup vault. Cloud Backup stores the copies of each object on multiple devices of different facilities in the same zone. This way, Cloud Backup ensures data durability and availability even if hardware failures occur.</li>
+         * <li>ZRS: Zone-redundant storage (ZRS) is enabled for the backup vault. Cloud Backup uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone fails, the data that is stored in the other two zones is still accessible.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LRS</p>
+         */
         @NameInMap("RedundancyType")
         public String redundancyType;
 
+        /**
+         * <p>Indicates whether the backup vault is a remote backup vault. Valid values:</p>
+         * <ul>
+         * <li>true: The backup vault is a remote backup vault.</li>
+         * <li>false: The backup vault is a local backup vault.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Replication")
         public Boolean replication;
 
+        /**
+         * <p>The progress of data synchronization from the backup vault to the mirror vault.</p>
+         */
         @NameInMap("ReplicationProgress")
         public DescribeVaultsResponseBodyVaultsVaultReplicationProgress replicationProgress;
 
+        /**
+         * <p>The ID of the region in which the source vault resides. This parameter is valid only for remote backup vaults.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
+         */
         @NameInMap("ReplicationSourceRegionId")
         public String replicationSourceRegionId;
 
+        /**
+         * <p>Indicate whether the backup vault is the source vault that corresponds to the remote backup vault. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ReplicationSourceVault")
         public Boolean replicationSourceVault;
 
+        /**
+         * <p>The ID of the source vault that corresponds to the remote backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
+         */
         @NameInMap("ReplicationSourceVaultId")
         public String replicationSourceVaultId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("ReplicationTargetRegionId")
         public String replicationTargetRegionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-*********************</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The retention period of the backup vault. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Retention")
         public Long retention;
 
+        /**
+         * <p>Indicates whether the backup search feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SearchEnabled")
         public Boolean searchEnabled;
 
+        /**
+         * <p>The number of snapshots in the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SnapshotCount")
         public Long snapshotCount;
 
+        /**
+         * <p>The data source types of the backup vault.</p>
+         */
         @NameInMap("SourceTypes")
         public DescribeVaultsResponseBodyVaultsVaultSourceTypes sourceTypes;
 
+        /**
+         * <p>The status of the backup vault. Valid values:</p>
+         * <ul>
+         * <li><strong>UNKNOWN</strong>: The backup vault is in an unknown state.</li>
+         * <li><strong>INITIALIZING</strong>: The backup vault is being initialized.</li>
+         * <li><strong>CREATED</strong>: The backup vault is created.</li>
+         * <li><strong>ERROR</strong>: An error occurs on the backup vault.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The usage of the backup vault. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("StorageSize")
         public Long storageSize;
 
+        /**
+         * <p>The tags of the backup vault.</p>
+         */
         @NameInMap("Tags")
         public DescribeVaultsResponseBodyVaultsVaultTags tags;
 
+        /**
+         * <p>The free trial information.</p>
+         */
         @NameInMap("TrialInfo")
         public DescribeVaultsResponseBodyVaultsVaultTrialInfo trialInfo;
 
+        /**
+         * <p>The time when the backup vault was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
+         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
+        /**
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
+         */
         @NameInMap("VaultId")
         public String vaultId;
 
+        /**
+         * <p>The name of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vaultname</p>
+         */
         @NameInMap("VaultName")
         public String vaultName;
 
+        /**
+         * <p>The ID of the region in which the backup vault resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("VaultRegionId")
         public String vaultRegionId;
 
+        /**
+         * <p>The status message that is returned when the backup vault is in the ERROR state. This parameter is valid only for remote backup vaults. Valid values:</p>
+         * <ul>
+         * <li><strong>UNKNOWN_ERROR</strong>: An unknown error occurs.</li>
+         * <li><strong>SOURCE_VAULT_ALREADY_HAS_REPLICATION</strong>: A mirror vault is configured for the source vault.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SOURCE_VAULT_ALREADY_HAS_REPLICATION</p>
+         */
         @NameInMap("VaultStatusMessage")
         public String vaultStatusMessage;
 
+        /**
+         * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("VaultStorageClass")
         public String vaultStorageClass;
 
+        /**
+         * <p>The type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates a standard backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("VaultType")
         public String vaultType;
 
+        /**
+         * <p>Indicates whether the immutable backup feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("WormEnabled")
         public Boolean wormEnabled;
 

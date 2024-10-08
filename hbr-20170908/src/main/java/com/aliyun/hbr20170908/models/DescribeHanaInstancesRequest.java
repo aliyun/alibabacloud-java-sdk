@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeHanaInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-0001zfc******50pr3</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz24ikcjyqjkq</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tags of SAP HANA instance.</p>
+     * <p>The tags of the SAP HANA instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeHanaInstancesRequestTag> tag;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-000b0ov******6zs</p>
      */
     @NameInMap("VaultId")
     public String vaultId;
@@ -96,12 +111,18 @@ public class DescribeHanaInstancesRequest extends TeaModel {
     public static class DescribeHanaInstancesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ace:rm:rgld</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwutpyat2kwy</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,74 +6,109 @@ import com.aliyun.tea.*;
 public class DescribeTaskResponseBody extends TeaModel {
     /**
      * <p>HttpCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The time when the job was completed. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The time when the task was complete. The time is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615607706</p>
      */
     @NameInMap("CompletedTime")
     public Long completedTime;
 
     /**
      * <p>The time when the job was created. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615607706</p>
      */
     @NameInMap("CreatedTime")
     public Long createdTime;
 
     /**
      * <p>The status of the job. Valid values:</p>
-     * <br>
-     * <p>*   **created**: The job is created.</p>
-     * <p>*   **expired**: The job expires.</p>
-     * <p>*   **completed**: The job is completed.</p>
-     * <p>*   **cancelled**: The job is canceled.</p>
+     * <ul>
+     * <li><strong>created</strong>: The job is created.</li>
+     * <li><strong>expired</strong>: The job expires.</li>
+     * <li><strong>completed</strong>: The job is completed.</li>
+     * <li><strong>cancelled</strong>: The job is canceled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>completed</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The name of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstallBackupClientsTask</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The progress of the job. Valid values: 0 to 100. Unit: percentage (%). If the job fails, the value -1 is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Progress")
     public Integer progress;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Result")
     public String result;
 
     /**
      * <p>Indicates whether the call is successful.</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The time when the job was updated. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615607706</p>
      */
     @NameInMap("UpdatedTime")
     public Long updatedTime;

@@ -6,69 +6,107 @@ import com.aliyun.tea.*;
 public class UpdateHanaBackupSettingRequest extends TeaModel {
     /**
      * <p>The configuration file for catalog backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
      */
     @NameInMap("CatalogBackupParameterFile")
     public String catalogBackupParameterFile;
 
     /**
      * <p>Specifies whether to use Backint to back up catalogs. Valid values:</p>
-     * <br>
-     * <p>*   true: Backint is used to back up catalogs.</p>
-     * <p>*   false: Backint is not used to back up catalogs.</p>
+     * <ul>
+     * <li>true: Backint is used to back up catalogs.</li>
+     * <li>false: Backint is not used to back up catalogs.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CatalogBackupUsingBackint")
     public Boolean catalogBackupUsingBackint;
 
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-000ezvg******8znz</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The configuration file for data backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
      */
     @NameInMap("DataBackupParameterFile")
     public String dataBackupParameterFile;
 
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEMDB</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>Specifies whether to enable automatic log backup. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables automatic log backup.</p>
-     * <p>*   **false**: disables automatic log backup.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables automatic log backup.</li>
+     * <li><strong>false</strong>: disables automatic log backup.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAutoLogBackup")
     public Boolean enableAutoLogBackup;
 
     /**
      * <p>The configuration file for log backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
      */
     @NameInMap("LogBackupParameterFile")
     public String logBackupParameterFile;
 
     /**
      * <p>The interval at which logs are backed up. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("LogBackupTimeout")
     public Long logBackupTimeout;
 
     /**
      * <p>Specifies whether to use Backint to back up logs. Valid values:</p>
-     * <br>
-     * <p>*   true: Backint is used to back up logs.</p>
-     * <p>*   false: Backint is not used to back up logs.</p>
+     * <ul>
+     * <li>true: Backint is used to back up logs.</li>
+     * <li>false: Backint is not used to back up logs.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("LogBackupUsingBackint")
     public Boolean logBackupUsingBackint;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-0005n******rluw5</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

@@ -12,24 +12,34 @@ public class DescribeRestoreJobs2Request extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: Elastic Compute Service (ECS) files</p>
-     * <p>*   **OSS**: Object Storage Service (OSS) buckets</p>
-     * <p>*   **NAS**: Apsara File Storage NAS file systems</p>
-     * <p>*   **OTS_TABLE**: Tablestore instances</p>
-     * <p>*   **UDM_ECS_ROLLBACK**: ECS instances</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+     * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+     * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
+     * <li><strong>UDM_ECS_ROLLBACK</strong>: ECS instances</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;
@@ -74,33 +84,42 @@ public class DescribeRestoreJobs2Request extends TeaModel {
     public static class DescribeRestoreJobs2RequestFilters extends TeaModel {
         /**
          * <p>The key in the filter. Valid values:</p>
-         * <br>
-         * <p>*   **RegionId**: the region ID</p>
-         * <p>*   **PlanId**: the ID of a backup plan</p>
-         * <p>*   **JobId**: the ID of a backup job</p>
-         * <p>*   **VaultId**: the ID of a backup vault</p>
-         * <p>*   **InstanceId**: the ID of an ECS instance</p>
-         * <p>*   **Bucket**: the name of an OSS bucket</p>
-         * <p>*   **FileSystemId**: the ID of a file system</p>
-         * <p>*   **Status**: the status of a backup job</p>
-         * <p>*   **CompleteTime**: the end time of a backup job</p>
+         * <ul>
+         * <li><strong>RegionId</strong>: the region ID</li>
+         * <li><strong>PlanId</strong>: the ID of a backup plan</li>
+         * <li><strong>JobId</strong>: the ID of a backup job</li>
+         * <li><strong>VaultId</strong>: the ID of a backup vault</li>
+         * <li><strong>InstanceId</strong>: the ID of an ECS instance</li>
+         * <li><strong>Bucket</strong>: the name of an OSS bucket</li>
+         * <li><strong>FileSystemId</strong>: the ID of a file system</li>
+         * <li><strong>Status</strong>: the status of a backup job</li>
+         * <li><strong>CompleteTime</strong>: the end time of a backup job</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VaultId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching method. Default value: IN. This parameter specifies the operator that you want to use to match a key and a value in the filter. Valid values:</p>
-         * <br>
-         * <p>*   **EQUAL**: equal to</p>
-         * <p>*   **NOT_EQUAL**: not equal to</p>
-         * <p>*   **GREATER_THAN**: greater than</p>
-         * <p>*   **GREATER_THAN_OR_EQUAL**: greater than or equal to</p>
-         * <p>*   **LESS_THAN**: less than</p>
-         * <p>*   **LESS_THAN_OR_EQUAL**: less than or equal to</p>
-         * <p>*   **BETWEEN**: specifies a JSON array as a range. The results must fall within the range in the `[Minimum value,Maximum value]` format.</p>
-         * <p>*   **IN**: specifies an array as a collection. The results must fall within the collection.</p>
-         * <br>
-         * <p>> If you specify the **CompleteTime** parameter as a key to query backup jobs, you cannot use the IN operator to perform a match.</p>
+         * <ul>
+         * <li><strong>EQUAL</strong>: equal to</li>
+         * <li><strong>NOT_EQUAL</strong>: not equal to</li>
+         * <li><strong>GREATER_THAN</strong>: greater than</li>
+         * <li><strong>GREATER_THAN_OR_EQUAL</strong>: greater than or equal to</li>
+         * <li><strong>LESS_THAN</strong>: less than</li>
+         * <li><strong>LESS_THAN_OR_EQUAL</strong>: less than or equal to</li>
+         * <li><strong>BETWEEN</strong>: specifies a JSON array as a range. The results must fall within the range in the <code>[Minimum value,Maximum value]</code> format.</li>
+         * <li><strong>IN</strong>: specifies an array as a collection. The results must fall within the collection.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you specify the <strong>CompleteTime</strong> parameter as a key to query backup jobs, you cannot use the IN operator to perform a match.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
          */
         @NameInMap("Operator")
         public String operator;

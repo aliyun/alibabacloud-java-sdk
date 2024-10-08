@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UninstallBackupClientsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,27 +21,40 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of the asynchronous job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-*********************</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -99,26 +115,37 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
     public static class UninstallBackupClientsResponseBodyInstanceStatuses extends TeaModel {
         /**
          * <p>The error code. Valid values:</p>
-         * <br>
-         * <p>*   If the value is empty, the request is successful.</p>
-         * <p>*   **InstanceNotExists**: The ECS instance does not exist.</p>
-         * <p>*   **InstanceNotRunning**: The ECS instance is not running.</p>
-         * <p>*   **CloudAssistNotRunningOnInstance**: Cloud Assistant is unavailable.</p>
+         * <ul>
+         * <li>If the value is empty, the request is successful.</li>
+         * <li><strong>InstanceNotExists</strong>: The ECS instance does not exist.</li>
+         * <li><strong>InstanceNotRunning</strong>: The ECS instance is not running.</li>
+         * <li><strong>CloudAssistNotRunningOnInstance</strong>: Cloud Assistant is unavailable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceNotExists</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-0xi5w***v3j3bh2gj5</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether a backup client can be installed on the ECS instance.</p>
-         * <br>
-         * <p>*   true: A backup client can be installed on the ECS instance.</p>
-         * <p>*   false: A backup client cannot be installed on the ECS instance.</p>
+         * <ul>
+         * <li>true: A backup client can be installed on the ECS instance.</li>
+         * <li>false: A backup client cannot be installed on the ECS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ValidInstance")
         public Boolean validInstance;

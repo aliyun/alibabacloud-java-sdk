@@ -4,15 +4,31 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class Report extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>temp/report/r-0000dnz7p4pk31u6madf_failed.csv</p>
+     */
     @NameInMap("FailedFiles")
     public String failedFiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>temp/report/r-0000dnz7p4pk31u6madf_skipped.csv</p>
+     */
     @NameInMap("SkippedFiles")
     public String skippedFiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>temp/report/r-0000dnz7p4pk31u6madf_success.csv</p>
+     */
     @NameInMap("SuccessFiles")
     public String successFiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>temp/report/r-0000dnz7p4pk31u6madf_total.csv</p>
+     */
     @NameInMap("TotalFiles")
     public String totalFiles;
 

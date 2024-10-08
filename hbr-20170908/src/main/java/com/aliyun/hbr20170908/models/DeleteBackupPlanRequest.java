@@ -6,27 +6,44 @@ import com.aliyun.tea.*;
 public class DeleteBackupPlanRequest extends TeaModel {
     /**
      * <p>The ID of the backup plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-*********************</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
+    /**
+     * <p>Specifies whether no running jobs are required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RequireNoRunningJobs")
     public Boolean requireNoRunningJobs;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: Elastic Compute Service (ECS) files</p>
-     * <p>*   **OSS**: Object Storage Service (OSS) buckets</p>
-     * <p>*   **NAS**: Apsara File Storage NAS file systems</p>
-     * <p>*   **UDM_ECS**: ECS instances</p>
-     * <p>*   **OTS**: Tablestore instances</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+     * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+     * <li><strong>UDM_ECS</strong>: ECS instances</li>
+     * <li><strong>OTS</strong>: Tablestore instances</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

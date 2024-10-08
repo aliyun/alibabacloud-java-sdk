@@ -12,45 +12,67 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC94B755-C3C2-5B9D-BD77-E0FE819A4DB2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -127,55 +149,81 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
     public static class DescribeContainerClusterResponseBodyClusters extends TeaModel {
         /**
          * <p>The status of the client. Valid values:</p>
-         * <br>
-         * <p>*   **MISS**: The client is disconnected.</p>
-         * <p>*   **UNKNOWN**: The client is in an unknown state.</p>
-         * <p>*   **READY**: The client is ready.</p>
+         * <ul>
+         * <li><strong>MISS</strong>: The client is disconnected.</li>
+         * <li><strong>UNKNOWN</strong>: The client is in an unknown state.</li>
+         * <li><strong>READY</strong>: The client is ready.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
          */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0006gwppd0jtttpmb0ri</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The type of the cluster. Valid value: ACK, which indicates ACK clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description ack pv backup</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The identifier of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5bbd0931a30947f4ab85efd19380a72d</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack_pv_backup_location</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The network type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **CLASSIC**: the classic network</p>
-         * <p>*   **VPC**: virtual private cloud (VPC)</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: the classic network</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The token that is used to register the Hybrid Backup Recovery (HBR) client in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhY2Nvd******A/VnZpgXQC5A==</p>
          */
         @NameInMap("Token")
         public String token;

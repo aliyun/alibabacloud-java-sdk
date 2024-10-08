@@ -5,34 +5,50 @@ import com.aliyun.tea.*;
 
 public class UpgradeBackupClientsShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the HBR client. The sum of the number of HBR client IDs and the number of ECS instance IDs cannot exceed 100.</p>
+     * <p>The IDs of Cloud Backup clients. The total number of Cloud Backup client IDs and ECS instance IDs cannot exceed 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;i-0xi5wj******3j3bh2gj5&quot;]</p>
      */
     @NameInMap("ClientIds")
     public String clientIdsShrink;
 
     /**
      * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbrcrossrole</p>
      */
     @NameInMap("CrossAccountRoleName")
     public String crossAccountRoleName;
 
     /**
      * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-     * <br>
-     * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
-     * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
+     * <ul>
+     * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+     * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CROSS_ACCOUNT</p>
      */
     @NameInMap("CrossAccountType")
     public String crossAccountType;
 
     /**
      * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1283948272xxxxx</p>
      */
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
     /**
-     * <p>The IDs of the ECS instances. The sum of the number of HBR client IDs and the number of ECS instance IDs cannot exceed 100.</p>
+     * <p>The IDs of Elastic Compute Service (ECS) instances. The total number of ECS instance IDs and Cloud Backup client IDs cannot exceed 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;c-*********************&quot;]</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePolicyV2Request extends TeaModel {
     /**
      * <p>The ID of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000************2l6</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

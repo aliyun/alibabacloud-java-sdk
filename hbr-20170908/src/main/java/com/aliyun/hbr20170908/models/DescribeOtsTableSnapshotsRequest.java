@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class DescribeOtsTableSnapshotsRequest extends TeaModel {
     /**
      * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BackupRole</p>
      */
     @NameInMap("CrossAccountRoleName")
     public String crossAccountRoleName;
 
     /**
      * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-     * <br>
-     * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
-     * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
+     * <ul>
+     * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+     * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CROSS_ACCOUNT</p>
      */
     @NameInMap("CrossAccountType")
     public String crossAccountType;
 
     /**
      * <p>The UID of the source account used for cross-account backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>144015xxxxx98732</p>
      */
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
     /**
      * <p>The end time of the backup. The value must be a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1652068250881</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The maximum number of rows that you want the current query to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The token that is required to obtain the next page of backup snapshots.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -57,6 +76,9 @@ public class DescribeOtsTableSnapshotsRequest extends TeaModel {
 
     /**
      * <p>The start time of the backup. The value must be a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1611109271630</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -141,6 +163,9 @@ public class DescribeOtsTableSnapshotsRequest extends TeaModel {
     public static class DescribeOtsTableSnapshotsRequestOtsInstances extends TeaModel {
         /**
          * <p>The name of the Tablestore instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

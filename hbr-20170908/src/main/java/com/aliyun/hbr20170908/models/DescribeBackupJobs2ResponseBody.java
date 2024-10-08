@@ -12,45 +12,67 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned backup jobs that meet the specified conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -146,36 +168,54 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
     public static class DescribeBackupJobs2ResponseBodyBackupJobsBackupJobDetail extends TeaModel {
         /**
          * <p>The information about the remote replication failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS.CreatingSnapshot</p>
          */
         @NameInMap("DestinationNativeSnapshotErrorMessage")
         public String destinationNativeSnapshotErrorMessage;
 
         /**
          * <p>The ID of the remote replication snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-******************</p>
          */
         @NameInMap("DestinationNativeSnapshotId")
         public String destinationNativeSnapshotId;
 
         /**
          * <p>The progress of the remote replication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         @NameInMap("DestinationNativeSnapshotProgress")
         public Integer destinationNativeSnapshotProgress;
 
         /**
          * <p>The state of the remote replication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("DestinationNativeSnapshotStatus")
         public String destinationNativeSnapshotStatus;
 
         /**
          * <p>The retention period of the remote replication backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("DestinationRetention")
         public Long destinationRetention;
 
         /**
          * <p>The ID of the remote replication backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-******************</p>
          */
         @NameInMap("DestinationSnapshotId")
         public String destinationSnapshotId;
@@ -188,12 +228,21 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether remote replication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DoCopy")
         public Boolean doCopy;
 
+        @NameInMap("InstanceInfos")
+        public java.util.Map<String, ?> instanceInfos;
+
         /**
          * <p>The ID of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-******************</p>
          */
         @NameInMap("NativeSnapshotId")
         public String nativeSnapshotId;
@@ -265,6 +314,14 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
         public Boolean getDoCopy() {
             return this.doCopy;
+        }
+
+        public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobDetail setInstanceInfos(java.util.Map<String, ?> instanceInfos) {
+            this.instanceInfos = instanceInfos;
+            return this;
+        }
+        public java.util.Map<String, ?> getInstanceInfos() {
+            return this.instanceInfos;
         }
 
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobDetail setNativeSnapshotId(String nativeSnapshotId) {
@@ -340,111 +397,166 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
     public static class DescribeBackupJobs2ResponseBodyBackupJobsBackupJob extends TeaModel {
         /**
          * <p>The actual amount of data that is backed up after the system removes duplicate files. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("ActualBytes")
         public Long actualBytes;
 
         /**
          * <p>The number of files that are actually processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("ActualFiles")
         public Long actualFiles;
 
         /**
-         * <p>The actual number of objects that are backed up by the backup job. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
+         * <p>The actual number of objects that are backed up by the backup job. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("ActualItems")
         public Long actualItems;
 
         /**
-         * <p>The backup type. Only **COMPLETE** may be returned, which indicates full backup.</p>
+         * <p>The backup type. Only <strong>COMPLETE</strong> may be returned, which indicates full backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
-         * <p>The name of the OSS bucket that is backed up. This parameter is returned only if the value of **SourceType** is **OSS**.</p>
+         * <p>The name of the OSS bucket that is backed up. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>OSS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbr-backup-oss</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The actual amount of data that is generated by incremental backups. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         @NameInMap("BytesDone")
         public Long bytesDone;
 
         /**
          * <p>The total amount of data that is backed up from the data source. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
         /**
          * <p>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
          */
         @NameInMap("ChangeListPath")
         public String changeListPath;
 
         /**
-         * <p>The ID of the backup client. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
+         * <p>The ID of the backup client. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-*********************</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The time when the backup job was complete. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("CompleteTime")
         public Long completeTime;
 
         /**
-         * <p>The time when the file system was created. This parameter is returned only if the value of **SourceType** is **NAS**. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the file system was created. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>NAS</strong>. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607436917</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The time when the backup job was created. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
          * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BackupRole</p>
          */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
         /**
          * <p>The backup type. Valid values:</p>
-         * <br>
-         * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
-         * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF_ACCOUNT</p>
          */
         @NameInMap("CrossAccountType")
         public String crossAccountType;
 
         /**
          * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158975xxxxx4625</p>
          */
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
         /**
          * <p>The data source details at the destination. This parameter is returned only for data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;prefix\&quot;:\&quot;/\&quot;}</p>
          */
         @NameInMap("DestDataSourceDetail")
         public String destDataSourceDetail;
 
         /**
          * <p>The data source ID at the destination. This parameter is returned only for data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-000cov4ufudxklj24zdk</p>
          */
         @NameInMap("DestDataSourceId")
         public String destDataSourceId;
 
         /**
          * <p>The data source type at the destination. This parameter is returned only for data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("DestSourceType")
         public String destSourceType;
@@ -457,30 +569,45 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         /**
          * <p>The error message that is returned for the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARTIAL_COMPLETE</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The paths to the files that are excluded from the backup job. This parameter is returned only if the value of **SourceType** is **ECS_FILE**. The value can be up to 255 characters in length.</p>
+         * <p>The paths to the files that are excluded from the backup job. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>. The value can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
          */
         @NameInMap("Exclude")
         public String exclude;
 
         /**
-         * <p>The ID of the NAS file system. This parameter is returned only if the value of **SourceType** is **NAS**.</p>
+         * <p>The ID of the NAS file system. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>NAS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>005494</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The number of files that have been processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("FilesDone")
         public Long filesDone;
 
         /**
          * <p>The total number of files to be processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("FilesTotal")
         public Long filesTotal;
@@ -493,52 +620,77 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         /**
          * <p>The paths to the files that are included in the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
          */
         @NameInMap("Include")
         public String include;
 
         /**
-         * <p>The ID of the ECS instance. This parameter is returned only if the value of **SourceType** is **NAS**.</p>
+         * <p>The ID of the ECS instance. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>NAS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-*********************</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the Tablestore instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The number of objects that are backed up. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
+         * <p>The number of objects that are backed up. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("ItemsDone")
         public Long itemsDone;
 
         /**
-         * <p>The total number of objects in the data source. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
+         * <p>The total number of objects in the data source. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ItemsTotal")
         public Long itemsTotal;
 
         /**
          * <p>The ID of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-000g********w7</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The name of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobname</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
         /**
-         * <p>Indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
-         * <br>
-         * <p>*   This parameter is available only for Windows ECS instances.</p>
-         * <p>*   A value of `["UseVSS":true]` indicates that the consistency between the source data and backup data is ensured while data changes occur in the source data.</p>
-         * <p>*   If VSS is used, multiple directories cannot be backed up at a time.</p>
+         * <p>Indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+         * <ul>
+         * <li>This parameter is available only for Windows ECS instances.</li>
+         * <li>A value of <code>[&quot;UseVSS&quot;:true]</code> indicates that the consistency between the source data and backup data is ensured while data changes occur in the source data.</li>
+         * <li>If VSS is used, multiple directories cannot be backed up at a time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;UseVSS&quot;:false}</p>
          */
         @NameInMap("Options")
         public String options;
@@ -557,78 +709,114 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-20********35</p>
          */
         @NameInMap("PlanId")
         public String planId;
 
         /**
-         * <p>The prefix of objects that are backed up. This parameter is returned only if the value of **SourceType** is **OSS**.</p>
+         * <p>The prefix of objects that are backed up. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>OSS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example/</p>
          */
         @NameInMap("Prefix")
         public String prefix;
 
         /**
          * <p>The backup progress. Valid values: 0 to 10000. For example, a value of 10000 indicates that the progress is 100%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   **ECS_FILE**: ECS file.</p>
-         * <p>*   **OSS**: OSS bucket.</p>
-         * <p>*   **NAS**: NAS file system.</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: ECS file.</li>
+         * <li><strong>OSS</strong>: OSS bucket.</li>
+         * <li><strong>NAS</strong>: NAS file system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The average speed at which data is backed up. Unit: KB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Speed")
         public Long speed;
 
         /**
-         * <p>The throttling rules. This parameter is returned only if the value of **SourceType** is **ECS_FILE**. Format: `{start}:{end}:{bandwidth}`. Multiple throttling rules are separated by vertical bars (`|`). The time ranges of the throttling rules cannot overlap.</p>
-         * <br>
-         * <p>*   **start**: the start hour.</p>
-         * <p>*   **end**: the end hour</p>
-         * <p>*   **bandwidth**: the bandwidth. Unit: KB/s.</p>
+         * <p>The throttling rules. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>. Format: <code>{start}:{end}:{bandwidth}</code>. Multiple throttling rules are separated by vertical bars (<code>|</code>). The time ranges of the throttling rules cannot overlap.</p>
+         * <ul>
+         * <li><strong>start</strong>: the start hour.</li>
+         * <li><strong>end</strong>: the end hour</li>
+         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0:24:5120</p>
          */
         @NameInMap("SpeedLimit")
         public String speedLimit;
 
         /**
          * <p>The time when the backup job started. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The state of the backup job. Valid values:</p>
-         * <br>
-         * <p>*   **COMPLETE**</p>
-         * <p>*   **PARTIAL_COMPLETE**</p>
-         * <p>*   **FAILED**</p>
+         * <ul>
+         * <li><strong>COMPLETE</strong></li>
+         * <li><strong>PARTIAL_COMPLETE</strong></li>
+         * <li><strong>FAILED</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the table in the Tablestore instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table1</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The time when the backup job was last updated. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
         /**
          * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0006******q</p>
          */
         @NameInMap("VaultId")
         public String vaultId;

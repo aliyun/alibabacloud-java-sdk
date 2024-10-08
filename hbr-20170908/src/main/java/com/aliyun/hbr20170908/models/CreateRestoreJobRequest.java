@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class CreateRestoreJobRequest extends TeaModel {
     /**
      * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BackupRole</p>
      */
     @NameInMap("CrossAccountRoleName")
     public String crossAccountRoleName;
 
     /**
      * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-     * <br>
-     * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
-     * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
+     * <ul>
+     * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+     * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SELF_ACCOUNT</p>
      */
     @NameInMap("CrossAccountType")
     public String crossAccountType;
 
     /**
      * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>158975xxxxx4625</p>
      */
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
     /**
      * <p>The paths to the files that you do not want to restore. No files in the specified paths are restored. The value must be 1 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
      */
     @NameInMap("Exclude")
     public String exclude;
@@ -36,12 +49,18 @@ public class CreateRestoreJobRequest extends TeaModel {
 
     /**
      * <p>The paths to the files that you want to restore. All files in the specified paths are restored. The value must be 1 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
      */
     @NameInMap("Include")
     public String include;
 
     /**
      * <p>Specifies whether to initiate the request by using Container Service for Kubernetes (ACK). Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("InitiatedByAck")
     public Boolean initiatedByAck;
@@ -57,120 +76,178 @@ public class CreateRestoreJobRequest extends TeaModel {
 
     /**
      * <p>The type of the restore destination. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: restores data to Elastic Compute Service (ECS) files.</p>
-     * <p>*   **OSS**: restores data to Object Storage Service (OSS) buckets.</p>
-     * <p>*   **NAS**: restores data to Apsara File Storage NAS file systems.</p>
-     * <p>*   **OTS_TABLE**: restores data to Tablestore instances.</p>
-     * <p>*   **UDM_ECS_ROLLBACK**: restores data to ECS instances.</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: restores data to Elastic Compute Service (ECS) files.</li>
+     * <li><strong>OSS</strong>: restores data to Object Storage Service (OSS) buckets.</li>
+     * <li><strong>NAS</strong>: restores data to Apsara File Storage NAS file systems.</li>
+     * <li><strong>OTS_TABLE</strong>: restores data to Tablestore instances.</li>
+     * <li><strong>UDM_ECS_ROLLBACK</strong>: restores data to ECS instances.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;
 
     /**
      * <p>The hash value of the backup snapshot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f2fe...</p>
      */
     @NameInMap("SnapshotHash")
     public String snapshotHash;
 
     /**
      * <p>The ID of the backup snapshot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-********************</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: ECS files</p>
-     * <p>*   **OSS**: OSS buckets</p>
-     * <p>*   **NAS**: NAS file systems</p>
-     * <p>*   **OTS_TABLE**: Tablestore instances</p>
-     * <p>*   **UDM_ECS**: ECS instances</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: ECS files</li>
+     * <li><strong>OSS</strong>: OSS buckets</li>
+     * <li><strong>NAS</strong>: NAS file systems</li>
+     * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
+     * <li><strong>UDM_ECS</strong>: ECS instances</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>This parameter is required only if the **RestoreType** parameter is set to **OSS**. This parameter specifies the name of the OSS bucket to which you want to restore data.</p>
+     * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the name of the OSS bucket to which you want to restore data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbr-backup-oss</p>
      */
     @NameInMap("TargetBucket")
     public String targetBucket;
 
     /**
      * <p>The details about the container to which you want to restore data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;host\&quot;:\&quot;k8s-node1\&quot;,\&quot;hostPrefix\&quot;:\&quot;/var/lib/kubelet/pods/4acb31fe-8577-40ff-bc8c-eccabd835f73/volumes/kubernetes.io~csi/pvc-b050b00e-ef17-4792-aab1-1642355cf1f4/mount\&quot;,\&quot;pvPath\&quot;:\&quot;/\&quot;}</p>
      */
     @NameInMap("TargetContainer")
     public String targetContainer;
 
     /**
      * <p>The ID of the container cluster to which you want to restore data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-000amjsc7o1h9506oob7</p>
      */
     @NameInMap("TargetContainerClusterId")
     public String targetContainerClusterId;
 
     /**
-     * <p>This parameter is required only if the **RestoreType** parameter is set to **NAS**. This parameter specifies the time when the file system is created.</p>
+     * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the time when the file system is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1554347313</p>
      */
     @NameInMap("TargetCreateTime")
     public Long targetCreateTime;
 
     /**
-     * <p>This parameter is required only if the **RestoreType** parameter is set to **NAS**. This parameter specifies the ID of the file system to which you want to restore data.</p>
+     * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the ID of the file system to which you want to restore data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>005494</p>
      */
     @NameInMap("TargetFileSystemId")
     public String targetFileSystemId;
 
     /**
-     * <p>This parameter is required only if the **RestoreType** parameter is set to **ECS_FILE**. This parameter specifies the ID of the ECS instance to which you want to restore data.</p>
+     * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the ID of the ECS instance to which you want to restore data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-*********************</p>
      */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
 
     /**
      * <p>The name of the Tablestore instance to which you want to restore data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instancename</p>
      */
     @NameInMap("TargetInstanceName")
     public String targetInstanceName;
 
     /**
-     * <p>This parameter is required only if the **RestoreType** parameter is set to **ECS_FILE**. This parameter specifies the destination file path.</p>
+     * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the destination file path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C:\</p>
      */
     @NameInMap("TargetPath")
     public String targetPath;
 
     /**
-     * <p>This parameter is required only if the **RestoreType** parameter is set to **OSS**. This parameter specifies the prefix of objects that you want to restore.</p>
+     * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the prefix of objects that you want to restore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbr</p>
      */
     @NameInMap("TargetPrefix")
     public String targetPrefix;
 
     /**
      * <p>The name of the table that stores the restored data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tablename</p>
      */
     @NameInMap("TargetTableName")
     public String targetTableName;
 
     /**
      * <p>The time when data is restored to the Tablestore instance. The value must be a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1642496881</p>
      */
     @NameInMap("TargetTime")
     public Long targetTime;
 
     /**
      * <p>The details of ECS instance backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;sourceInstanceId\&quot;:\&quot;i-uf62te6pm3iwsyxyz66q\&quot;,\&quot;bootAfterRestore\&quot;:false}</p>
      */
     @NameInMap("UdmDetail")
     public java.util.Map<String, ?> udmDetail;
 
     /**
-     * <p>This parameter is required only if you set the **SourceType** parameter to **UDM_ECS**. This parameter specifies the region to which you want to restore data.</p>
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the region to which you want to restore data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("UdmRegionId")
     public String udmRegionId;
 
     /**
      * <p>The ID of the backup vault to which the backup snapshot belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

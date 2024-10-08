@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHanaRestoresResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,40 +20,59 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
     public DescribeHanaRestoresResponseBodyHanaRestore hanaRestore;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7DEFC897-8F05-5C05-912C-C9A9510FBFF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -126,193 +148,284 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
 
     public static class DescribeHanaRestoresResponseBodyHanaRestoreHanaRestores extends TeaModel {
         /**
-         * <p>The ID of the backup.</p>
+         * <p>The backup ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635315505</p>
          */
         @NameInMap("BackupID")
         public Long backupID;
 
         /**
          * <p>The backup prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INC_DATA_BACKUP</p>
          */
         @NameInMap("BackupPrefix")
         public String backupPrefix;
 
         /**
          * <p>Indicates whether the differential backup and log backup are validated. Valid values:</p>
-         * <br>
-         * <p>*   true: HBR checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, HBR does not start the restore job.</p>
-         * <p>*   false: HBR does not check whether the required differential backup and log backup are available before the restore job starts.</p>
+         * <ul>
+         * <li>true: Cloud Backup checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, Cloud Backup does not start the restore job.</li>
+         * <li>false: Cloud Backup does not check whether the required differential backup and log backup are available before the restore job starts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CheckAccess")
         public Boolean checkAccess;
 
         /**
          * <p>Indicates whether all log entries are deleted from the log area after the log entries are restored. Valid values: true and false. If the return value is false, all log entries are deleted from the log area after the log entries are restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ClearLog")
         public Boolean clearLog;
 
         /**
          * <p>The ID of the SAP HANA instance that is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-000923yu******p00j4</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The current recovery phase. This value is obtained from SAP HANA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CurrentPhase")
         public Integer currentPhase;
 
         /**
          * <p>The current progress. This value is obtained from SAP HANA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentProgress")
         public Long currentProgress;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BWD</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The ID of the database recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644038961030</p>
          */
         @NameInMap("DatabaseRestoreId")
         public Long databaseRestoreId;
 
         /**
          * <p>The time when the restore job ends. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634356382</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
-         * <p>The log position to which the database is restored. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_LOG_POSITION**.</p>
+         * <p>The log position to which the database is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LogPosition")
         public Long logPosition;
 
         /**
          * <p>The maximum recovery phase. This value is obtained from SAP HANA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("MaxPhase")
         public Integer maxPhase;
 
         /**
          * <p>The maximum progress. This value is obtained from SAP HANA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxProgress")
         public Long maxProgress;
 
         /**
          * <p>The details of the recovery phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL Error 448 - recovery could not be completed:</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The recovery mode. Valid values:</p>
-         * <br>
-         * <p>*   **RECOVERY_TO_MOST_RECENT**: The database is restored to the recently available state to which the database has been backed up.</p>
-         * <p>*   **RECOVERY_TO_POINT_IN_TIME**: The database is restored to a specified point in time.</p>
-         * <p>*   **RECOVERY_TO_SPECIFIC_BACKUP**: The database is restored to a specified backup.</p>
-         * <p>*   **RECOVERY_TO_LOG_POSITION**: The database is restored to a specified log position.</p>
+         * <ul>
+         * <li><strong>RECOVERY_TO_MOST_RECENT</strong>: The database is restored to the recently available state to which the database has been backed up.</li>
+         * <li><strong>RECOVERY_TO_POINT_IN_TIME</strong>: The database is restored to a specified point in time.</li>
+         * <li><strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>: The database is restored to a specified backup.</li>
+         * <li><strong>RECOVERY_TO_LOG_POSITION</strong>: The database is restored to a specified log position.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RECOVERY_TO_SPECIFIC_BACKUP</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The recovery phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>restart</p>
          */
         @NameInMap("Phase")
         public String phase;
 
         /**
          * <p>The point in time at which the database is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635315505</p>
          */
         @NameInMap("ReachedTime")
         public Long reachedTime;
 
         /**
-         * <p>The point in time to which the database is restored. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_POINT_IN_TIME**. HBR restores the database to a state closest to the specified point in time.</p>
+         * <p>The point in time to which the database is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_POINT_IN_TIME</strong>. Cloud Backup restores the database to a state closest to the specified point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649851200</p>
          */
         @NameInMap("RecoveryPointInTime")
         public Long recoveryPointInTime;
 
         /**
          * <p>The ID of the restore job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-000c1en183ayn9sesgqh</p>
          */
         @NameInMap("RestoreId")
         public String restoreId;
 
         /**
-         * <p>The name of the source system. This parameter indicates the name of the source database that is restored. Format: `<Source database name>@SID`.</p>
+         * <p>The name of the source system. This parameter indicates the name of the source database that is restored. Format: <code>&lt;Source database name&gt;@SID</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRD@H4P</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The ID of the source SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0000g3mvy******5cj</p>
          */
         @NameInMap("SourceClusterId")
         public String sourceClusterId;
 
         /**
          * <p>The time when the restore job starts. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1636970413</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The recovery status. This value is obtained from SAP HANA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The status of the restore job. Valid values:</p>
-         * <br>
-         * <p>*   **RUNNING**: The restore job is running.</p>
-         * <p>*   **COMPLETE**: The restore job is completed.</p>
-         * <p>*   **PARTIAL_COMPLETE**: The restore job is partially completed.</p>
-         * <p>*   **FAILED**: The restore job has failed.</p>
-         * <p>*   **CANCELED**: The restore job is canceled.</p>
-         * <p>*   **EXPIRED**: The restore job has timed out.</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: The job is running.</li>
+         * <li><strong>COMPLETE</strong>: The job is completed.</li>
+         * <li><strong>PARTIAL_COMPLETE</strong>: The job is partially completed.</li>
+         * <li><strong>FAILED</strong>: The job failed.</li>
+         * <li><strong>CANCELED</strong>: The job is canceled.</li>
+         * <li><strong>EXPIRED</strong>: The job timed out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>Indicates whether the database is restored to a different instance. Valid values:</p>
-         * <br>
-         * <p>*   true: The database is restored to a different instance.</p>
-         * <p>*   false: The database is restored within the same instance.</p>
+         * <ul>
+         * <li>true: The database is restored to a different instance.</li>
+         * <li>false: The database is restored within the same instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SystemCopy")
         public Boolean systemCopy;
 
         /**
-         * <p>Indicates whether a catalog backup is used to restore the database. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_SPECIFIC_BACKUP**. If the return value is false, HBR finds the backup file based on the specified prefix and then restores the backup file.</p>
+         * <p>Indicates whether a catalog backup is used to restore the database. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>. If the return value is false, Cloud Backup finds the backup file based on the specified prefix and then restores the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UseCatalog")
         public Boolean useCatalog;
 
         /**
-         * <p>Indicates whether a differential backup or an incremental backup is used to restore the database. Valid values: true and false. If the return value is true, HBR uses a differential backup or an incremental backup to restore the database. If the return value is false, HBR uses a log backup to restore the database.</p>
+         * <p>Indicates whether a differential backup or an incremental backup is used to restore the database. Valid values: true and false. If the return value is true, Cloud Backup uses a differential backup or an incremental backup to restore the database. If the return value is false, Cloud Backup uses a log backup to restore the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseDelta")
         public Boolean useDelta;
 
         /**
          * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000g9acf******gta</p>
          */
         @NameInMap("VaultId")
         public String vaultId;
 
         /**
-         * <p>The ID of the volume that is restored. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_LOG_POSITION**.</p>
+         * <p>The ID of the volume that is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("VolumeId")
         public Integer volumeId;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class CancelBackupJobRequest extends TeaModel {
     /**
      * <p>The ID of the backup job.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>j-******************************</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*****************************</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

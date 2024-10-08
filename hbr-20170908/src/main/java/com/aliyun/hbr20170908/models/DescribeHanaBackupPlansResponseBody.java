@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,40 +20,59 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     public DescribeHanaBackupPlansResponseBodyHanaBackupPlans hanaBackupPlans;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F029C1C7-26B6-5ADD-A73E-D85CCD7C73A9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -127,64 +149,94 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     public static class DescribeHanaBackupPlansResponseBodyHanaBackupPlansHanaBackupPlan extends TeaModel {
         /**
          * <p>The backup prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE_DATA_BACKUP</p>
          */
         @NameInMap("BackupPrefix")
         public String backupPrefix;
 
         /**
          * <p>The backup type. Valid values:</p>
-         * <br>
-         * <p>*   COMPLETE: full backup</p>
-         * <p>*   INCREMENTAL: incremental backup</p>
-         * <p>*   DIFFERENTIAL: differential backup</p>
+         * <ul>
+         * <li>COMPLETE: full backup</li>
+         * <li>INCREMENTAL: incremental backup</li>
+         * <li>DIFFERENTIAL: differential backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0002scknka*****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEMDB</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>Indicates whether the backup plan is disabled. Valid values:</p>
-         * <br>
-         * <p>*   true: The backup plan is disabled.</p>
-         * <p>*   false: The backup plan is enabled.</p>
+         * <ul>
+         * <li>true: The backup plan is disabled.</li>
+         * <li>false: The backup plan is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
          * <p>The ID of the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-0000tnyndg3ne5m4ubeu</p>
          */
         @NameInMap("PlanId")
         public String planId;
 
         /**
          * <p>The name of the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-20220118-141153</p>
          */
         @NameInMap("PlanName")
         public String planName;
 
         /**
-         * <p>The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
-         * <br>
-         * <p>*   startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</p>
-         * <p>*   interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</p>
+         * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <ul>
+         * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
+         * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>I|1602673264|P1D</p>
          */
         @NameInMap("Schedule")
         public String schedule;
 
         /**
          * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000csihw82pqkd7hcjws</p>
          */
         @NameInMap("VaultId")
         public String vaultId;

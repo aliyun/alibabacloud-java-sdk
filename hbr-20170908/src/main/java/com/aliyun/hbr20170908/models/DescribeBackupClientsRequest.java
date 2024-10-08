@@ -6,66 +6,99 @@ import com.aliyun.tea.*;
 public class DescribeBackupClientsRequest extends TeaModel {
     /**
      * <p>The IDs of HBR clients.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;c-*********************&quot;]</p>
      */
     @NameInMap("ClientIds")
     public java.util.List<String> clientIds;
 
     /**
      * <p>The type of the HBR client. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_CLIENT**: HBR client for Elastic Compute Service (ECS) file backup</p>
-     * <p>*   **CONTAINER_CLIENT**: HBR client for container backup</p>
+     * <ul>
+     * <li><strong>ECS_CLIENT</strong>: HBR client for Elastic Compute Service (ECS) file backup</li>
+     * <li><strong>CONTAINER_CLIENT</strong>: HBR client for container backup</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_CLIENT</p>
      */
     @NameInMap("ClientType")
     public String clientType;
 
     /**
      * <p>The ID of the cluster for the backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-000ge4wa61b4d337xblq</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbrcrossrole</p>
      */
     @NameInMap("CrossAccountRoleName")
     public String crossAccountRoleName;
 
     /**
      * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-     * <br>
-     * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
-     * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
+     * <ul>
+     * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+     * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CROSS_ACCOUNT</p>
      */
     @NameInMap("CrossAccountType")
     public String crossAccountType;
 
     /**
      * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>129374672382xxxx</p>
      */
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
     /**
      * <p>The IDs of ECS instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;i-*********************&quot;]</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33738719#</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeBackupClientsRequestTag> tag;
@@ -158,20 +191,28 @@ public class DescribeBackupClientsRequest extends TeaModel {
     public static class DescribeBackupClientsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>*   The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <p>*   The tag key cannot contain `http://` or `https://`.</p>
-         * <p>*   The tag key cannot be an empty string.</p>
+         * <ul>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the backup vault. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>*   The tag value cannot start with `aliyun` or `acs:`.</p>
-         * <p>*   The tag value cannot contain `http://` or `https://`.</p>
-         * <p>*   The tag value cannot be an empty string.</p>
+         * <ul>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The tag value cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

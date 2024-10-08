@@ -8,6 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "hbr.aliyuncs.com"),
@@ -61,6 +62,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Registers a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request AddContainerClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddContainerClusterResponse
+     */
     public AddContainerClusterResponse addContainerClusterWithOptions(AddContainerClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -101,56 +110,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddContainerClusterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Registers a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request AddContainerClusterRequest
+     * @return AddContainerClusterResponse
+     */
     public AddContainerClusterResponse addContainerCluster(AddContainerClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addContainerClusterWithOptions(request, runtime);
     }
 
-    public AttachNasFileSystemResponse attachNasFileSystemWithOptions(AttachNasFileSystemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.createTime)) {
-            query.put("CreateTime", request.createTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountRoleName)) {
-            query.put("CrossAccountRoleName", request.crossAccountRoleName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountType)) {
-            query.put("CrossAccountType", request.crossAccountType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountUserId)) {
-            query.put("CrossAccountUserId", request.crossAccountUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
-            query.put("FileSystemId", request.fileSystemId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AttachNasFileSystem"),
-            new TeaPair("version", "2017-09-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachNasFileSystemResponse());
-    }
-
-    public AttachNasFileSystemResponse attachNasFileSystem(AttachNasFileSystemRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.attachNasFileSystemWithOptions(request, runtime);
-    }
-
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a backup job.</p>
+     * 
+     * @param request CancelBackupJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelBackupJobResponse
+     */
     public CancelBackupJobResponse cancelBackupJobWithOptions(CancelBackupJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -179,11 +158,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelBackupJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a backup job.</p>
+     * 
+     * @param request CancelBackupJobRequest
+     * @return CancelBackupJobResponse
+     */
     public CancelBackupJobResponse cancelBackupJob(CancelBackupJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelBackupJobWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a restore job.</p>
+     * 
+     * @param request CancelRestoreJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelRestoreJobResponse
+     */
     public CancelRestoreJobResponse cancelRestoreJobWithOptions(CancelRestoreJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -212,19 +206,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelRestoreJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a restore job.</p>
+     * 
+     * @param request CancelRestoreJobRequest
+     * @return CancelRestoreJobResponse
+     */
     public CancelRestoreJobResponse cancelRestoreJob(CancelRestoreJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelRestoreJobWithOptions(request, runtime);
     }
 
     /**
-      * *   In the Hybrid Backup Recovery (HBR), you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.
-      * *   A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, a backup vault, or an SAP HANA instance.
-      * *   You can sort resources owned by your Alibaba Cloud account into various resource groups. This facilitates resource management among multiple projects or applications within your Alibaba Cloud account and simplifies permission management.
-      *
-      * @param request ChangeResourceGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ChangeResourceGroupResponse
+     * <b>description</b> :
+     * <p>  In Cloud Backup, you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.</p>
+     * <ul>
+     * <li>A resource is a cloud service entity that you create on Alibaba Cloud, such as an Elastic Compute Service (ECS) instance, a backup vault, or an SAP HANA instance.</li>
+     * <li>You can sort resources owned by your Alibaba Cloud account into various resource groups. Resource groups facilitate resource management among multiple projects or applications within your Alibaba Cloud account and simplify permission management.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which an instance belongs.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
      */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -259,18 +266,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   In the Hybrid Backup Recovery (HBR), you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.
-      * *   A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, a backup vault, or an SAP HANA instance.
-      * *   You can sort resources owned by your Alibaba Cloud account into various resource groups. This facilitates resource management among multiple projects or applications within your Alibaba Cloud account and simplifies permission management.
-      *
-      * @param request ChangeResourceGroupRequest
-      * @return ChangeResourceGroupResponse
+     * <b>description</b> :
+     * <p>  In Cloud Backup, you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.</p>
+     * <ul>
+     * <li>A resource is a cloud service entity that you create on Alibaba Cloud, such as an Elastic Compute Service (ECS) instance, a backup vault, or an SAP HANA instance.</li>
+     * <li>You can sort resources owned by your Alibaba Cloud account into various resource groups. Resource groups facilitate resource management among multiple projects or applications within your Alibaba Cloud account and simplify permission management.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which an instance belongs.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
      */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Checks whether the user has permissions to access the current resource or page.</p>
+     * 
+     * @param request CheckRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckRoleResponse
+     */
     public CheckRoleResponse checkRoleWithOptions(CheckRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -303,11 +324,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckRoleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Checks whether the user has permissions to access the current resource or page.</p>
+     * 
+     * @param request CheckRoleRequest
+     * @return CheckRoleResponse
+     */
     public CheckRoleResponse checkRole(CheckRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkRoleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a backup job.</p>
+     * 
+     * @param tmpReq CreateBackupJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBackupJobResponse
+     */
     public CreateBackupJobResponse createBackupJobWithOptions(CreateBackupJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateBackupJobShrinkRequest request = new CreateBackupJobShrinkRequest();
@@ -406,20 +442,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackupJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a backup job.</p>
+     * 
+     * @param request CreateBackupJobRequest
+     * @return CreateBackupJobResponse
+     */
     public CreateBackupJobResponse createBackupJob(CreateBackupJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBackupJobWithOptions(request, runtime);
     }
 
     /**
-      * *   A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup schedule.
-      * *   You can specify only one interval as a backup cycle in a backup schedule.
-      * *   Each backup schedule allows you to back up data to only one backup vault.
-      *
-      * @param tmpReq CreateBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateBackupPlanResponse
+     * <b>description</b> :
+     * <p>  A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>You can specify only one type of data source in a backup schedule.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup schedule.</li>
+     * <li>Each backup schedule allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup plan.</p>
+     * 
+     * @param tmpReq CreateBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBackupPlanResponse
      */
     public CreateBackupPlanResponse createBackupPlanWithOptions(CreateBackupPlanRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -578,13 +627,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup schedule.
-      * *   You can specify only one interval as a backup cycle in a backup schedule.
-      * *   Each backup schedule allows you to back up data to only one backup vault.
-      *
-      * @param request CreateBackupPlanRequest
-      * @return CreateBackupPlanResponse
+     * <b>description</b> :
+     * <p>  A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>You can specify only one type of data source in a backup schedule.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup schedule.</li>
+     * <li>Each backup schedule allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup plan.</p>
+     * 
+     * @param request CreateBackupPlanRequest
+     * @return CreateBackupPlanResponse
      */
     public CreateBackupPlanResponse createBackupPlan(CreateBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -592,11 +647,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see [Billable items and billing methods](~~89062~~).
-      *
-      * @param request CreateClientsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateClientsResponse
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billable items and billing methods</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs one or more HBR clients on specified instances.</p>
+     * 
+     * @param request CreateClientsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateClientsResponse
      */
     public CreateClientsResponse createClientsWithOptions(CreateClientsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -607,6 +666,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientInfo)) {
             query.put("ClientInfo", request.clientInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountRoleName)) {
+            query.put("CrossAccountRoleName", request.crossAccountRoleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountType)) {
+            query.put("CrossAccountType", request.crossAccountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountUserId)) {
+            query.put("CrossAccountUserId", request.crossAccountUserId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -639,10 +710,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see [Billable items and billing methods](~~89062~~).
-      *
-      * @param request CreateClientsRequest
-      * @return CreateClientsResponse
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billable items and billing methods</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs one or more HBR clients on specified instances.</p>
+     * 
+     * @param request CreateClientsRequest
+     * @return CreateClientsResponse
      */
     public CreateClientsResponse createClients(CreateClientsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -650,14 +725,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup plan.
-      * *   You can specify only one interval as a backup cycle in a backup plan.
-      * *   Each backup plan allows you to back up data to only one backup vault.
-      *
-      * @param request CreateHanaBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>  A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>You can specify only one type of data source in a backup plan.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup plan.</li>
+     * <li>Each backup plan allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup plan for an SAP HANA instance.</p>
+     * 
+     * @param request CreateHanaBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHanaBackupPlanResponse
      */
     public CreateHanaBackupPlanResponse createHanaBackupPlanWithOptions(CreateHanaBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -712,13 +793,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup plan.
-      * *   You can specify only one interval as a backup cycle in a backup plan.
-      * *   Each backup plan allows you to back up data to only one backup vault.
-      *
-      * @param request CreateHanaBackupPlanRequest
-      * @return CreateHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>  A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>You can specify only one type of data source in a backup plan.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup plan.</li>
+     * <li>Each backup plan allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup plan for an SAP HANA instance.</p>
+     * 
+     * @param request CreateHanaBackupPlanRequest
+     * @return CreateHanaBackupPlanResponse
      */
     public CreateHanaBackupPlanResponse createHanaBackupPlan(CreateHanaBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -726,17 +813,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, HBR installs an HBR client on the ECS instance that hosts the SAP HANA instance.
-      *
-      * @param request CreateHanaInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateHanaInstanceResponse
+     * <b>description</b> :
+     * <p>To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, Cloud Backup installs a Cloud Backup client on the Elastic Compute Service (ECS) instance that hosts the SAP HANA instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers an SAP HANA instance.</p>
+     * 
+     * @param request CreateHanaInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHanaInstanceResponse
      */
     public CreateHanaInstanceResponse createHanaInstanceWithOptions(CreateHanaInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.alertSetting)) {
             query.put("AlertSetting", request.alertSetting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountRoleName)) {
+            query.put("CrossAccountRoleName", request.crossAccountRoleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountType)) {
+            query.put("CrossAccountType", request.crossAccountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountUserId)) {
+            query.put("CrossAccountUserId", request.crossAccountUserId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsInstanceId)) {
@@ -801,10 +904,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, HBR installs an HBR client on the ECS instance that hosts the SAP HANA instance.
-      *
-      * @param request CreateHanaInstanceRequest
-      * @return CreateHanaInstanceResponse
+     * <b>description</b> :
+     * <p>To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, Cloud Backup installs a Cloud Backup client on the Elastic Compute Service (ECS) instance that hosts the SAP HANA instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers an SAP HANA instance.</p>
+     * 
+     * @param request CreateHanaInstanceRequest
+     * @return CreateHanaInstanceResponse
      */
     public CreateHanaInstanceResponse createHanaInstance(CreateHanaInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -812,11 +919,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see [Restore databases to an SAP HANA instance](~~101178~~).
-      *
-      * @param request CreateHanaRestoreRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateHanaRestoreResponse
+     * <b>description</b> :
+     * <p>If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see <a href="https://help.aliyun.com/document_detail/101178.html">Restore databases to an SAP HANA instance</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a restore job for an SAP HANA database.</p>
+     * 
+     * @param request CreateHanaRestoreRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHanaRestoreResponse
      */
     public CreateHanaRestoreResponse createHanaRestoreWithOptions(CreateHanaRestoreRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -911,10 +1022,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see [Restore databases to an SAP HANA instance](~~101178~~).
-      *
-      * @param request CreateHanaRestoreRequest
-      * @return CreateHanaRestoreResponse
+     * <b>description</b> :
+     * <p>If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see <a href="https://help.aliyun.com/document_detail/101178.html">Restore databases to an SAP HANA instance</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a restore job for an SAP HANA database.</p>
+     * 
+     * @param request CreateHanaRestoreRequest
+     * @return CreateHanaRestoreResponse
      */
     public CreateHanaRestoreResponse createHanaRestore(CreateHanaRestoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -922,12 +1037,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can bind data sources to only one policy in each request.
-      * *   Elastic Compute Service (ECS) instances can be bound to only one policy.
-      *
-      * @param tmpReq CreatePolicyBindingsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreatePolicyBindingsResponse
+     * <b>description</b> :
+     * <p>  You can bind data sources to only one policy in each request.</p>
+     * <ul>
+     * <li>Elastic Compute Service (ECS) instances can be bound to only one policy.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds one or more data sources to a backup policy.</p>
+     * 
+     * @param tmpReq CreatePolicyBindingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolicyBindingsResponse
      */
     public CreatePolicyBindingsResponse createPolicyBindingsWithOptions(CreatePolicyBindingsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -966,11 +1087,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can bind data sources to only one policy in each request.
-      * *   Elastic Compute Service (ECS) instances can be bound to only one policy.
-      *
-      * @param request CreatePolicyBindingsRequest
-      * @return CreatePolicyBindingsResponse
+     * <b>description</b> :
+     * <p>  You can bind data sources to only one policy in each request.</p>
+     * <ul>
+     * <li>Elastic Compute Service (ECS) instances can be bound to only one policy.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds one or more data sources to a backup policy.</p>
+     * 
+     * @param request CreatePolicyBindingsRequest
+     * @return CreatePolicyBindingsResponse
      */
     public CreatePolicyBindingsResponse createPolicyBindings(CreatePolicyBindingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -978,14 +1105,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.
-      * *   You can specify only one interval as a backup cycle in a backup policy.
-      * *   Each backup policy allows you to back up data to only one backup vault.
-      *
-      * @param tmpReq CreatePolicyV2Request
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreatePolicyV2Response
+     * <b>description</b> :
+     * <p>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup policy.</li>
+     * <li>Each backup policy allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup policy.</p>
+     * 
+     * @param tmpReq CreatePolicyV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolicyV2Response
      */
     public CreatePolicyV2Response createPolicyV2WithOptions(CreatePolicyV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1002,6 +1135,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
             body.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            body.put("PolicyType", request.policyType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rulesShrink)) {
@@ -1026,13 +1163,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.
-      * *   You can specify only one interval as a backup cycle in a backup policy.
-      * *   Each backup policy allows you to back up data to only one backup vault.
-      *
-      * @param request CreatePolicyV2Request
-      * @return CreatePolicyV2Response
+     * <b>description</b> :
+     * <p>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup policy.</li>
+     * <li>Each backup policy allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup policy.</p>
+     * 
+     * @param request CreatePolicyV2Request
+     * @return CreatePolicyV2Response
      */
     public CreatePolicyV2Response createPolicyV2(CreatePolicyV2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1040,17 +1183,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.
-      *
-      * @param request CreateReplicationVaultRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateReplicationVaultResponse
+     * <b>description</b> :
+     * <p>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a mirror vault.</p>
+     * 
+     * @param request CreateReplicationVaultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateReplicationVaultResponse
      */
     public CreateReplicationVaultResponse createReplicationVaultWithOptions(CreateReplicationVaultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {
+            query.put("EncryptType", request.encryptType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            query.put("KmsKeyId", request.kmsKeyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.redundancyType)) {
@@ -1095,10 +1250,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.
-      *
-      * @param request CreateReplicationVaultRequest
-      * @return CreateReplicationVaultResponse
+     * <b>description</b> :
+     * <p>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a mirror vault.</p>
+     * 
+     * @param request CreateReplicationVaultRequest
+     * @return CreateReplicationVaultResponse
      */
     public CreateReplicationVaultResponse createReplicationVault(CreateReplicationVaultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1106,12 +1265,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You must create a restore job based on the specified backup snapshot and restore destination.
-      * *   The type of the data source from which you restore data must be the same as the type of the restore destination.
-      *
-      * @param tmpReq CreateRestoreJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateRestoreJobResponse
+     * <b>description</b> :
+     * <p>  You must create a restore job based on the specified backup snapshot and restore destination.</p>
+     * <ul>
+     * <li>The type of the data source from which you restore data must be the same as the type of the restore destination.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a restore job.</p>
+     * 
+     * @param tmpReq CreateRestoreJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRestoreJobResponse
      */
     public CreateRestoreJobResponse createRestoreJobWithOptions(CreateRestoreJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1258,11 +1423,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You must create a restore job based on the specified backup snapshot and restore destination.
-      * *   The type of the data source from which you restore data must be the same as the type of the restore destination.
-      *
-      * @param request CreateRestoreJobRequest
-      * @return CreateRestoreJobResponse
+     * <b>description</b> :
+     * <p>  You must create a restore job based on the specified backup snapshot and restore destination.</p>
+     * <ul>
+     * <li>The type of the data source from which you restore data must be the same as the type of the restore destination.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a restore job.</p>
+     * 
+     * @param request CreateRestoreJobRequest
+     * @return CreateRestoreJobResponse
      */
     public CreateRestoreJobResponse createRestoreJob(CreateRestoreJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1270,13 +1441,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 1.  You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.
-      * 2.  For more information about how to upload a file to OSS by using a form, see OSS documentation.
-      * 3.  The system periodically deletes files that are uploaded to OSS.
-      *
-      * @param request CreateTempFileUploadUrlRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateTempFileUploadUrlResponse
+     * <b>description</b> :
+     * <ol>
+     * <li>You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.</li>
+     * <li>For more information about how to upload a file to OSS by using a form, see OSS documentation.</li>
+     * <li>The system periodically deletes files that are uploaded to OSS.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates the parameters and signature required for a file upload URL.</p>
+     * 
+     * @param request CreateTempFileUploadUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTempFileUploadUrlResponse
      */
     public CreateTempFileUploadUrlResponse createTempFileUploadUrlWithOptions(CreateTempFileUploadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1303,12 +1480,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 1.  You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.
-      * 2.  For more information about how to upload a file to OSS by using a form, see OSS documentation.
-      * 3.  The system periodically deletes files that are uploaded to OSS.
-      *
-      * @param request CreateTempFileUploadUrlRequest
-      * @return CreateTempFileUploadUrlResponse
+     * <b>description</b> :
+     * <ol>
+     * <li>You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.</li>
+     * <li>For more information about how to upload a file to OSS by using a form, see OSS documentation.</li>
+     * <li>The system periodically deletes files that are uploaded to OSS.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates the parameters and signature required for a file upload URL.</p>
+     * 
+     * @param request CreateTempFileUploadUrlRequest
+     * @return CreateTempFileUploadUrlResponse
      */
     public CreateTempFileUploadUrlResponse createTempFileUploadUrl(CreateTempFileUploadUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1316,12 +1499,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Each Alibaba Cloud account can create up to 100 backup vaults.
-      * *   After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-      *
-      * @param request CreateVaultRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateVaultResponse
+     * <b>description</b> :
+     * <p>  Each Alibaba Cloud account can create up to 100 backup vaults.</p>
+     * <ul>
+     * <li>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
+     * **
+     * <strong>Note</strong> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup vault.</p>
+     * 
+     * @param request CreateVaultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVaultResponse
      */
     public CreateVaultResponse createVaultWithOptions(CreateVaultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1372,11 +1563,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Each Alibaba Cloud account can create up to 100 backup vaults.
-      * *   After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-      *
-      * @param request CreateVaultRequest
-      * @return CreateVaultResponse
+     * <b>description</b> :
+     * <p>  Each Alibaba Cloud account can create up to 100 backup vaults.</p>
+     * <ul>
+     * <li>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
+     * **
+     * <strong>Note</strong> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup vault.</p>
+     * 
+     * @param request CreateVaultRequest
+     * @return CreateVaultResponse
      */
     public CreateVaultResponse createVault(CreateVaultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1384,15 +1583,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You cannot delete an active backup client from which a heartbeat packet is received within the previous hour. After you call the UninstallBackupClients operation to uninstall a backup client, the status of the backup client changes to inactive.
-      * *   This operation deletes the resources that are related to the backup client. The following resources are included:
-      *     *   Backup plans
-      *     *   Backup jobs
-      *     *   Backup files
-      *
-      * @param request DeleteBackupClientRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteBackupClientResponse
+     * <b>description</b> :
+     * <p>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</p>
+     * <ul>
+     * <li>When you perform this operation, resources that are associated with the client are also deleted, including:<ul>
+     * <li>Backup plans</li>
+     * <li>Backup jobs</li>
+     * <li>Snapshots</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Cloud Backup client.</p>
+     * 
+     * @param request DeleteBackupClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBackupClientResponse
      */
     public DeleteBackupClientResponse deleteBackupClientWithOptions(DeleteBackupClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1419,14 +1626,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You cannot delete an active backup client from which a heartbeat packet is received within the previous hour. After you call the UninstallBackupClients operation to uninstall a backup client, the status of the backup client changes to inactive.
-      * *   This operation deletes the resources that are related to the backup client. The following resources are included:
-      *     *   Backup plans
-      *     *   Backup jobs
-      *     *   Backup files
-      *
-      * @param request DeleteBackupClientRequest
-      * @return DeleteBackupClientResponse
+     * <b>description</b> :
+     * <p>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</p>
+     * <ul>
+     * <li>When you perform this operation, resources that are associated with the client are also deleted, including:<ul>
+     * <li>Backup plans</li>
+     * <li>Backup jobs</li>
+     * <li>Snapshots</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Cloud Backup client.</p>
+     * 
+     * @param request DeleteBackupClientRequest
+     * @return DeleteBackupClientResponse
      */
     public DeleteBackupClientResponse deleteBackupClient(DeleteBackupClientRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1434,11 +1649,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.
-      *
-      * @param tmpReq DeleteBackupClientResourceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteBackupClientResourceResponse
+     * <b>description</b> :
+     * <p>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the resources that are related to one or more HBR clients.</p>
+     * 
+     * @param tmpReq DeleteBackupClientResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBackupClientResourceResponse
      */
     public DeleteBackupClientResourceResponse deleteBackupClientResourceWithOptions(DeleteBackupClientResourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1471,10 +1690,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.
-      *
-      * @param request DeleteBackupClientResourceRequest
-      * @return DeleteBackupClientResourceResponse
+     * <b>description</b> :
+     * <p>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the resources that are related to one or more HBR clients.</p>
+     * 
+     * @param request DeleteBackupClientResourceRequest
+     * @return DeleteBackupClientResourceResponse
      */
     public DeleteBackupClientResourceResponse deleteBackupClientResource(DeleteBackupClientResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1482,12 +1705,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If you delete a backup plan, the backup jobs are also deleted.
-      * *   If you delete a backup plan, the created snapshot files are not deleted.
-      *
-      * @param request DeleteBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteBackupPlanResponse
+     * <b>description</b> :
+     * <p>  If you delete a backup plan, the backup jobs are also deleted.</p>
+     * <ul>
+     * <li>If you delete a backup plan, the created snapshot files are not deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup plan.</p>
+     * 
+     * @param request DeleteBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBackupPlanResponse
      */
     public DeleteBackupPlanResponse deleteBackupPlanWithOptions(DeleteBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1526,17 +1755,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If you delete a backup plan, the backup jobs are also deleted.
-      * *   If you delete a backup plan, the created snapshot files are not deleted.
-      *
-      * @param request DeleteBackupPlanRequest
-      * @return DeleteBackupPlanResponse
+     * <b>description</b> :
+     * <p>  If you delete a backup plan, the backup jobs are also deleted.</p>
+     * <ul>
+     * <li>If you delete a backup plan, the created snapshot files are not deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup plan.</p>
+     * 
+     * @param request DeleteBackupPlanRequest
+     * @return DeleteBackupPlanResponse
      */
     public DeleteBackupPlanResponse deleteBackupPlan(DeleteBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteBackupPlanWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DeleteClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteClientResponse
+     */
     public DeleteClientResponse deleteClientWithOptions(DeleteClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1569,11 +1809,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientResponse());
     }
 
+    /**
+     * @param request DeleteClientRequest
+     * @return DeleteClientResponse
+     */
     public DeleteClientResponse deleteClient(DeleteClientRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClientWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an SAP HANA backup plan.</p>
+     * 
+     * @param request DeleteHanaBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHanaBackupPlanResponse
+     */
     public DeleteHanaBackupPlanResponse deleteHanaBackupPlanWithOptions(DeleteHanaBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1610,17 +1862,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHanaBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an SAP HANA backup plan.</p>
+     * 
+     * @param request DeleteHanaBackupPlanRequest
+     * @return DeleteHanaBackupPlanResponse
+     */
     public DeleteHanaBackupPlanResponse deleteHanaBackupPlan(DeleteHanaBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteHanaBackupPlanWithOptions(request, runtime);
     }
 
     /**
-      * If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the data in the HBR client of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see [How to find sid user and instance number of HANA db?](https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?)
-      *
-      * @param request DeleteHanaInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteHanaInstanceResponse
+     * <b>description</b> :
+     * <p>If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the backup data of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see <a href="https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?">How to find sid user and instance number of HANA db?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an SAP HANA instance.</p>
+     * 
+     * @param request DeleteHanaInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHanaInstanceResponse
      */
     public DeleteHanaInstanceResponse deleteHanaInstanceWithOptions(DeleteHanaInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1659,16 +1922,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the data in the HBR client of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see [How to find sid user and instance number of HANA db?](https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?)
-      *
-      * @param request DeleteHanaInstanceRequest
-      * @return DeleteHanaInstanceResponse
+     * <b>description</b> :
+     * <p>If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the backup data of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see <a href="https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?">How to find sid user and instance number of HANA db?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an SAP HANA instance.</p>
+     * 
+     * @param request DeleteHanaInstanceRequest
+     * @return DeleteHanaInstanceResponse
      */
     public DeleteHanaInstanceResponse deleteHanaInstance(DeleteHanaInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteHanaInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates one or more data sources from a backup policy. After you disassociate the data sources from the backup policy, the backup policy no longer protects the data sources. Proceed with caution.</p>
+     * 
+     * @param tmpReq DeletePolicyBindingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolicyBindingResponse
+     */
     public DeletePolicyBindingResponse deletePolicyBindingWithOptions(DeletePolicyBindingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeletePolicyBindingShrinkRequest request = new DeletePolicyBindingShrinkRequest();
@@ -1709,17 +1984,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyBindingResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates one or more data sources from a backup policy. After you disassociate the data sources from the backup policy, the backup policy no longer protects the data sources. Proceed with caution.</p>
+     * 
+     * @param request DeletePolicyBindingRequest
+     * @return DeletePolicyBindingResponse
+     */
     public DeletePolicyBindingResponse deletePolicyBinding(DeletePolicyBindingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolicyBindingWithOptions(request, runtime);
     }
 
     /**
-      * If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.
-      *
-      * @param request DeletePolicyV2Request
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeletePolicyV2Response
+     * <b>description</b> :
+     * <p>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup policy.</p>
+     * 
+     * @param request DeletePolicyV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolicyV2Response
      */
     public DeletePolicyV2Response deletePolicyV2WithOptions(DeletePolicyV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1746,10 +2032,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.
-      *
-      * @param request DeletePolicyV2Request
-      * @return DeletePolicyV2Response
+     * <b>description</b> :
+     * <p>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup policy.</p>
+     * 
+     * @param request DeletePolicyV2Request
+     * @return DeletePolicyV2Response
      */
     public DeletePolicyV2Response deletePolicyV2(DeletePolicyV2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1757,11 +2047,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you delete the most recent backup file for a data source, you must set the `Force parameter to true`. Otherwise, an error occurs.
-      *
-      * @param request DeleteSnapshotRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteSnapshotResponse
+     * <b>description</b> :
+     * <p>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <code>true</code>. Otherwise, an error occurs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup snapshot.</p>
+     * 
+     * @param request DeleteSnapshotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSnapshotResponse
      */
     public DeleteSnapshotResponse deleteSnapshotWithOptions(DeleteSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1812,10 +2106,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you delete the most recent backup file for a data source, you must set the `Force parameter to true`. Otherwise, an error occurs.
-      *
-      * @param request DeleteSnapshotRequest
-      * @return DeleteSnapshotResponse
+     * <b>description</b> :
+     * <p>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <code>true</code>. Otherwise, an error occurs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup snapshot.</p>
+     * 
+     * @param request DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
      */
     public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1823,12 +2121,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.
-      * *   After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include backup clients of earlier versions, backup plans, backup jobs, snapshots, and restore jobs.
-      *
-      * @param request DeleteVaultRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteVaultResponse
+     * <b>summary</b> : 
+     * <p>取消保护云盘</p>
+     * 
+     * @param request DeleteUdmDiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUdmDiskResponse
+     */
+    public DeleteUdmDiskResponse deleteUdmDiskWithOptions(DeleteUdmDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUdmDisk"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUdmDiskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消保护云盘</p>
+     * 
+     * @param request DeleteUdmDiskRequest
+     * @return DeleteUdmDiskResponse
+     */
+    public DeleteUdmDiskResponse deleteUdmDisk(DeleteUdmDiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUdmDiskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops protection for Elastic Compute Service (ECS) instance backup.</p>
+     * 
+     * @param request DeleteUdmEcsInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUdmEcsInstanceResponse
+     */
+    public DeleteUdmEcsInstanceResponse deleteUdmEcsInstanceWithOptions(DeleteUdmEcsInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUdmEcsInstance"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUdmEcsInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops protection for Elastic Compute Service (ECS) instance backup.</p>
+     * 
+     * @param request DeleteUdmEcsInstanceRequest
+     * @return DeleteUdmEcsInstanceResponse
+     */
+    public DeleteUdmEcsInstanceResponse deleteUdmEcsInstance(DeleteUdmEcsInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUdmEcsInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.</p>
+     * <ul>
+     * <li>After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include the Cloud Backup client of the old version, backup plans, backup jobs, snapshots, and restore jobs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup vault.</p>
+     * 
+     * @param request DeleteVaultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVaultResponse
      */
     public DeleteVaultResponse deleteVaultWithOptions(DeleteVaultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1863,17 +2255,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.
-      * *   After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include backup clients of earlier versions, backup plans, backup jobs, snapshots, and restore jobs.
-      *
-      * @param request DeleteVaultRequest
-      * @return DeleteVaultResponse
+     * <b>description</b> :
+     * <p>  You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.</p>
+     * <ul>
+     * <li>After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include the Cloud Backup client of the old version, backup plans, backup jobs, snapshots, and restore jobs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backup vault.</p>
+     * 
+     * @param request DeleteVaultRequest
+     * @return DeleteVaultResponse
      */
     public DeleteVaultResponse deleteVault(DeleteVaultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVaultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more HBR clients that meet the specified conditions.</p>
+     * 
+     * @param tmpReq DescribeBackupClientsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupClientsResponse
+     */
     public DescribeBackupClientsResponse describeBackupClientsWithOptions(DescribeBackupClientsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeBackupClientsShrinkRequest request = new DescribeBackupClientsShrinkRequest();
@@ -1946,11 +2352,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupClientsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more HBR clients that meet the specified conditions.</p>
+     * 
+     * @param request DescribeBackupClientsRequest
+     * @return DescribeBackupClientsResponse
+     */
     public DescribeBackupClientsResponse describeBackupClients(DescribeBackupClientsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupClientsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup jobs that meet the specified conditions.</p>
+     * 
+     * @param request DescribeBackupJobs2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupJobs2Response
+     */
     public DescribeBackupJobs2Response describeBackupJobs2WithOptions(DescribeBackupJobs2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1991,11 +2412,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupJobs2Response());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup jobs that meet the specified conditions.</p>
+     * 
+     * @param request DescribeBackupJobs2Request
+     * @return DescribeBackupJobs2Response
+     */
     public DescribeBackupJobs2Response describeBackupJobs2(DescribeBackupJobs2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupJobs2WithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup plans that meet the specified conditions.</p>
+     * 
+     * @param request DescribeBackupPlansRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupPlansResponse
+     */
     public DescribeBackupPlansResponse describeBackupPlansWithOptions(DescribeBackupPlansRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2032,17 +2468,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupPlansResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup plans that meet the specified conditions.</p>
+     * 
+     * @param request DescribeBackupPlansRequest
+     * @return DescribeBackupPlansResponse
+     */
     public DescribeBackupPlansResponse describeBackupPlans(DescribeBackupPlansRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupPlansWithOptions(request, runtime);
     }
 
     /**
-      * This operation is applicable only to SAP HANA backup. For backup clients of other data sources, call the DescribeBackupClients operation.
-      *
-      * @param request DescribeClientsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeClientsResponse
+     * <b>description</b> :
+     * <p>This operation is applicable only to SAP HANA backup. For Cloud Backup clients of other data sources, call the DescribeBackupClients operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more Cloud Backup clients that meet the specified conditions.</p>
+     * 
+     * @param request DescribeClientsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeClientsResponse
      */
     public DescribeClientsResponse describeClientsWithOptions(DescribeClientsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2097,10 +2544,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is applicable only to SAP HANA backup. For backup clients of other data sources, call the DescribeBackupClients operation.
-      *
-      * @param request DescribeClientsRequest
-      * @return DescribeClientsResponse
+     * <b>description</b> :
+     * <p>This operation is applicable only to SAP HANA backup. For Cloud Backup clients of other data sources, call the DescribeBackupClients operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more Cloud Backup clients that meet the specified conditions.</p>
+     * 
+     * @param request DescribeClientsRequest
+     * @return DescribeClientsResponse
      */
     public DescribeClientsResponse describeClients(DescribeClientsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2108,11 +2559,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only Container Service for Kubernetes (ACK) clusters.
-      *
-      * @param request DescribeContainerClusterRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeContainerClusterResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more container clusters that meet the specified conditions.</p>
+     * 
+     * @param request DescribeContainerClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeContainerClusterResponse
      */
     public DescribeContainerClusterResponse describeContainerClusterWithOptions(DescribeContainerClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2151,16 +2606,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only Container Service for Kubernetes (ACK) clusters.
-      *
-      * @param request DescribeContainerClusterRequest
-      * @return DescribeContainerClusterResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more container clusters that meet the specified conditions.</p>
+     * 
+     * @param request DescribeContainerClusterRequest
+     * @return DescribeContainerClusterResponse
      */
     public DescribeContainerClusterResponse describeContainerCluster(DescribeContainerClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeContainerClusterWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about the accounts used in cross-account backup.</p>
+     * 
+     * @param request DescribeCrossAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCrossAccountsResponse
+     */
     public DescribeCrossAccountsResponse describeCrossAccountsWithOptions(DescribeCrossAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2189,11 +2656,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCrossAccountsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about the accounts used in cross-account backup.</p>
+     * 
+     * @param request DescribeCrossAccountsRequest
+     * @return DescribeCrossAccountsResponse
+     */
     public DescribeCrossAccountsResponse describeCrossAccounts(DescribeCrossAccountsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCrossAccountsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA backup plans that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaBackupPlansRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHanaBackupPlansResponse
+     */
     public DescribeHanaBackupPlansResponse describeHanaBackupPlansWithOptions(DescribeHanaBackupPlansRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2238,17 +2720,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHanaBackupPlansResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA backup plans that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaBackupPlansRequest
+     * @return DescribeHanaBackupPlansResponse
+     */
     public DescribeHanaBackupPlansResponse describeHanaBackupPlans(DescribeHanaBackupPlansRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHanaBackupPlansWithOptions(request, runtime);
     }
 
     /**
-      * If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.
-      *
-      * @param request DescribeHanaBackupSettingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeHanaBackupSettingResponse
+     * <b>description</b> :
+     * <p>If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup parameters of an SAP HANA database.</p>
+     * 
+     * @param request DescribeHanaBackupSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHanaBackupSettingResponse
      */
     public DescribeHanaBackupSettingResponse describeHanaBackupSettingWithOptions(DescribeHanaBackupSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2283,10 +2776,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.
-      *
-      * @param request DescribeHanaBackupSettingRequest
-      * @return DescribeHanaBackupSettingResponse
+     * <b>description</b> :
+     * <p>If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup parameters of an SAP HANA database.</p>
+     * 
+     * @param request DescribeHanaBackupSettingRequest
+     * @return DescribeHanaBackupSettingResponse
      */
     public DescribeHanaBackupSettingResponse describeHanaBackupSetting(DescribeHanaBackupSettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2294,11 +2791,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the execution result of the asynchronous job.
-      *
-      * @param request DescribeHanaBackupsAsyncRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeHanaBackupsAsyncResponse
+     * <b>description</b> :
+     * <p>After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the final result.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA backups that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaBackupsAsyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHanaBackupsAsyncResponse
      */
     public DescribeHanaBackupsAsyncResponse describeHanaBackupsAsyncWithOptions(DescribeHanaBackupsAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2389,10 +2890,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the execution result of the asynchronous job.
-      *
-      * @param request DescribeHanaBackupsAsyncRequest
-      * @return DescribeHanaBackupsAsyncResponse
+     * <b>description</b> :
+     * <p>After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the final result.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA backups that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaBackupsAsyncRequest
+     * @return DescribeHanaBackupsAsyncResponse
      */
     public DescribeHanaBackupsAsyncResponse describeHanaBackupsAsync(DescribeHanaBackupsAsyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2400,11 +2905,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you register an SAP HANA instance and install a backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.
-      *
-      * @param request DescribeHanaDatabasesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeHanaDatabasesResponse
+     * <b>description</b> :
+     * <p>After you register an SAP HANA instance and install a Cloud Backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about SAP HANA databases.</p>
+     * 
+     * @param request DescribeHanaDatabasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHanaDatabasesResponse
      */
     public DescribeHanaDatabasesResponse describeHanaDatabasesWithOptions(DescribeHanaDatabasesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2447,16 +2956,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you register an SAP HANA instance and install a backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.
-      *
-      * @param request DescribeHanaDatabasesRequest
-      * @return DescribeHanaDatabasesResponse
+     * <b>description</b> :
+     * <p>After you register an SAP HANA instance and install a Cloud Backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about SAP HANA databases.</p>
+     * 
+     * @param request DescribeHanaDatabasesRequest
+     * @return DescribeHanaDatabasesResponse
      */
     public DescribeHanaDatabasesResponse describeHanaDatabases(DescribeHanaDatabasesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHanaDatabasesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA instances that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHanaInstancesResponse
+     */
     public DescribeHanaInstancesResponse describeHanaInstancesWithOptions(DescribeHanaInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2503,11 +3024,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHanaInstancesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA instances that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaInstancesRequest
+     * @return DescribeHanaInstancesResponse
+     */
     public DescribeHanaInstancesResponse describeHanaInstances(DescribeHanaInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHanaInstancesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA restore jobs that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaRestoresRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHanaRestoresResponse
+     */
     public DescribeHanaRestoresResponse describeHanaRestoresWithOptions(DescribeHanaRestoresRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2564,18 +3100,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHanaRestoresResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more SAP HANA restore jobs that meet the specified conditions.</p>
+     * 
+     * @param request DescribeHanaRestoresRequest
+     * @return DescribeHanaRestoresResponse
+     */
     public DescribeHanaRestoresResponse describeHanaRestores(DescribeHanaRestoresRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHanaRestoresWithOptions(request, runtime);
     }
 
     /**
-      * *   If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.
-      * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
-      *
-      * @param request DescribeHanaRetentionSettingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeHanaRetentionSettingResponse
+     * <b>description</b> :
+     * <p>  If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.</p>
+     * <ul>
+     * <li>Cloud Backup deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup retention period of an SAP HANA database.</p>
+     * 
+     * @param request DescribeHanaRetentionSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHanaRetentionSettingResponse
      */
     public DescribeHanaRetentionSettingResponse describeHanaRetentionSettingWithOptions(DescribeHanaRetentionSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2610,17 +3159,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.
-      * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
-      *
-      * @param request DescribeHanaRetentionSettingRequest
-      * @return DescribeHanaRetentionSettingResponse
+     * <b>description</b> :
+     * <p>  If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.</p>
+     * <ul>
+     * <li>Cloud Backup deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup retention period of an SAP HANA database.</p>
+     * 
+     * @param request DescribeHanaRetentionSettingRequest
+     * @return DescribeHanaRetentionSettingResponse
      */
     public DescribeHanaRetentionSettingResponse describeHanaRetentionSetting(DescribeHanaRetentionSettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHanaRetentionSettingWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details about Tablestore instances that are backed up.</p>
+     * 
+     * @param request DescribeOtsTableSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOtsTableSnapshotsResponse
+     */
     public DescribeOtsTableSnapshotsResponse describeOtsTableSnapshotsWithOptions(DescribeOtsTableSnapshotsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2684,11 +3247,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOtsTableSnapshotsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details about Tablestore instances that are backed up.</p>
+     * 
+     * @param request DescribeOtsTableSnapshotsRequest
+     * @return DescribeOtsTableSnapshotsResponse
+     */
     public DescribeOtsTableSnapshotsResponse describeOtsTableSnapshots(DescribeOtsTableSnapshotsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeOtsTableSnapshotsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more backup policies.</p>
+     * 
+     * @param request DescribePoliciesV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePoliciesV2Response
+     */
     public DescribePoliciesV2Response describePoliciesV2WithOptions(DescribePoliciesV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2721,11 +3299,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePoliciesV2Response());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more backup policies.</p>
+     * 
+     * @param request DescribePoliciesV2Request
+     * @return DescribePoliciesV2Response
+     */
     public DescribePoliciesV2Response describePoliciesV2(DescribePoliciesV2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePoliciesV2WithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more data sources bound to a backup policy or queries one or more backup policies bound to a data source.</p>
+     * 
+     * @param tmpReq DescribePolicyBindingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolicyBindingsResponse
+     */
     public DescribePolicyBindingsResponse describePolicyBindingsWithOptions(DescribePolicyBindingsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribePolicyBindingsShrinkRequest request = new DescribePolicyBindingsShrinkRequest();
@@ -2778,11 +3371,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyBindingsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more data sources bound to a backup policy or queries one or more backup policies bound to a data source.</p>
+     * 
+     * @param request DescribePolicyBindingsRequest
+     * @return DescribePolicyBindingsResponse
+     */
     public DescribePolicyBindingsResponse describePolicyBindings(DescribePolicyBindingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolicyBindingsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tables of a restorable Tablestore instance.</p>
+     * 
+     * @param request DescribeRecoverableOtsInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRecoverableOtsInstancesResponse
+     */
     public DescribeRecoverableOtsInstancesResponse describeRecoverableOtsInstancesWithOptions(DescribeRecoverableOtsInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2815,21 +3423,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecoverableOtsInstancesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tables of a restorable Tablestore instance.</p>
+     * 
+     * @param request DescribeRecoverableOtsInstancesRequest
+     * @return DescribeRecoverableOtsInstancesResponse
+     */
     public DescribeRecoverableOtsInstancesResponse describeRecoverableOtsInstances(DescribeRecoverableOtsInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRecoverableOtsInstancesWithOptions(request, runtime);
     }
 
-    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.needVaultCount)) {
-            query.put("NeedVaultCount", request.needVaultCount);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
+    /**
+     * <b>summary</b> : 
+     * <p>Queries available regions.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeRegions"),
             new TeaPair("version", "2017-09-08"),
@@ -2844,11 +3459,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
-    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries available regions.</p>
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegions() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeRegionsWithOptions(request, runtime);
+        return this.describeRegionsWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more restore jobs that meet the specified conditions.</p>
+     * 
+     * @param request DescribeRestoreJobs2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRestoreJobs2Response
+     */
     public DescribeRestoreJobs2Response describeRestoreJobs2WithOptions(DescribeRestoreJobs2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2885,11 +3513,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRestoreJobs2Response());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more restore jobs that meet the specified conditions.</p>
+     * 
+     * @param request DescribeRestoreJobs2Request
+     * @return DescribeRestoreJobs2Response
+     */
     public DescribeRestoreJobs2Response describeRestoreJobs2(DescribeRestoreJobs2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRestoreJobs2WithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an asynchronous job.</p>
+     * 
+     * @param request DescribeTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTaskResponse
+     */
     public DescribeTaskResponse describeTaskWithOptions(DescribeTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2922,11 +3565,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an asynchronous job.</p>
+     * 
+     * @param request DescribeTaskRequest
+     * @return DescribeTaskResponse
+     */
     public DescribeTaskResponse describeTask(DescribeTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backup snapshots of an Elastic Compute Service (ECS) instance.</p>
+     * 
+     * @param tmpReq DescribeUdmSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUdmSnapshotsResponse
+     */
     public DescribeUdmSnapshotsResponse describeUdmSnapshotsWithOptions(DescribeUdmSnapshotsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeUdmSnapshotsShrinkRequest request = new DescribeUdmSnapshotsShrinkRequest();
@@ -2987,11 +3645,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUdmSnapshotsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backup snapshots of an Elastic Compute Service (ECS) instance.</p>
+     * 
+     * @param request DescribeUdmSnapshotsRequest
+     * @return DescribeUdmSnapshotsResponse
+     */
     public DescribeUdmSnapshotsResponse describeUdmSnapshots(DescribeUdmSnapshotsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUdmSnapshotsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the regions that support cross-region replication.</p>
+     * 
+     * @param request DescribeVaultReplicationRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVaultReplicationRegionsResponse
+     */
     public DescribeVaultReplicationRegionsResponse describeVaultReplicationRegionsWithOptions(DescribeVaultReplicationRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3020,11 +3693,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVaultReplicationRegionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the regions that support cross-region replication.</p>
+     * 
+     * @param request DescribeVaultReplicationRegionsRequest
+     * @return DescribeVaultReplicationRegionsResponse
+     */
     public DescribeVaultReplicationRegionsResponse describeVaultReplicationRegions(DescribeVaultReplicationRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVaultReplicationRegionsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup vaults that meet the specified conditions.</p>
+     * 
+     * @param request DescribeVaultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVaultsResponse
+     */
     public DescribeVaultsResponse describeVaultsWithOptions(DescribeVaultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3079,18 +3767,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVaultsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup vaults that meet the specified conditions.</p>
+     * 
+     * @param request DescribeVaultsRequest
+     * @return DescribeVaultsResponse
+     */
     public DescribeVaultsResponse describeVaults(DescribeVaultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVaultsWithOptions(request, runtime);
     }
 
     /**
-      * *   If the request is successful, the mount target is deleted.
-      * *   After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the **Status** column of the mount target of the NAS file system, the following information is displayed: **This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR**.
-      *
-      * @param request DetachNasFileSystemRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DetachNasFileSystemResponse
+     * <b>description</b> :
+     * <p>  If the request is successful, the mount target is deleted.</p>
+     * <ul>
+     * <li>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <strong>Status</strong> column of the mount target of the NAS file system, the following information is displayed: <strong>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</strong>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a mount target that is created by Hybrid Backup Recovery (HBR).</p>
+     * 
+     * @param request DetachNasFileSystemRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachNasFileSystemResponse
      */
     public DetachNasFileSystemResponse detachNasFileSystemWithOptions(DetachNasFileSystemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3133,11 +3834,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the request is successful, the mount target is deleted.
-      * *   After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the **Status** column of the mount target of the NAS file system, the following information is displayed: **This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR**.
-      *
-      * @param request DetachNasFileSystemRequest
-      * @return DetachNasFileSystemResponse
+     * <b>description</b> :
+     * <p>  If the request is successful, the mount target is deleted.</p>
+     * <ul>
+     * <li>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <strong>Status</strong> column of the mount target of the NAS file system, the following information is displayed: <strong>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</strong>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a mount target that is created by Hybrid Backup Recovery (HBR).</p>
+     * 
+     * @param request DetachNasFileSystemRequest
+     * @return DetachNasFileSystemResponse
      */
     public DetachNasFileSystemResponse detachNasFileSystem(DetachNasFileSystemRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3145,11 +3852,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the request is successful, the specified backup plan is disabled. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is set to true for the backup plan.
-      *
-      * @param request DisableBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisableBackupPlanResponse
+     * <b>description</b> :
+     * <p>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a backup plan.</p>
+     * 
+     * @param request DisableBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableBackupPlanResponse
      */
     public DisableBackupPlanResponse disableBackupPlanWithOptions(DisableBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3184,10 +3895,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the request is successful, the specified backup plan is disabled. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is set to true for the backup plan.
-      *
-      * @param request DisableBackupPlanRequest
-      * @return DisableBackupPlanResponse
+     * <b>description</b> :
+     * <p>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a backup plan.</p>
+     * 
+     * @param request DisableBackupPlanRequest
+     * @return DisableBackupPlanResponse
      */
     public DisableBackupPlanResponse disableBackupPlan(DisableBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3195,11 +3910,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To enable the backup plan again, call the EnableHanaBackupPlan operation.
-      *
-      * @param request DisableHanaBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisableHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>To enable the backup plan again, call the EnableHanaBackupPlan operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an SAP HANA backup plan.</p>
+     * 
+     * @param request DisableHanaBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableHanaBackupPlanResponse
      */
     public DisableHanaBackupPlanResponse disableHanaBackupPlanWithOptions(DisableHanaBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3238,10 +3957,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To enable the backup plan again, call the EnableHanaBackupPlan operation.
-      *
-      * @param request DisableHanaBackupPlanRequest
-      * @return DisableHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>To enable the backup plan again, call the EnableHanaBackupPlan operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an SAP HANA backup plan.</p>
+     * 
+     * @param request DisableHanaBackupPlanRequest
+     * @return DisableHanaBackupPlanResponse
      */
     public DisableHanaBackupPlanResponse disableHanaBackupPlan(DisableHanaBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3249,11 +3972,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the request is successful, the system enables the backup plan and backs up data based on the polices that are specified in the backup plan. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is automatically set to false for the backup plan.
-      *
-      * @param request EnableBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnableBackupPlanResponse
+     * <b>description</b> :
+     * <p>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a backup plan.</p>
+     * 
+     * @param request EnableBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableBackupPlanResponse
      */
     public EnableBackupPlanResponse enableBackupPlanWithOptions(EnableBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3288,10 +4015,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the request is successful, the system enables the backup plan and backs up data based on the polices that are specified in the backup plan. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is automatically set to false for the backup plan.
-      *
-      * @param request EnableBackupPlanRequest
-      * @return EnableBackupPlanResponse
+     * <b>description</b> :
+     * <p>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a backup plan.</p>
+     * 
+     * @param request EnableBackupPlanRequest
+     * @return EnableBackupPlanResponse
      */
     public EnableBackupPlanResponse enableBackupPlan(EnableBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3299,11 +4030,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To disable the backup plan again, call the DisableHanaBackupPlan operation.
-      *
-      * @param request EnableHanaBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnableHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>To disable the backup plan again, call the DisableHanaBackupPlan operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an SAP HANA backup plan.</p>
+     * 
+     * @param request EnableHanaBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableHanaBackupPlanResponse
      */
     public EnableHanaBackupPlanResponse enableHanaBackupPlanWithOptions(EnableHanaBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3342,16 +4077,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To disable the backup plan again, call the DisableHanaBackupPlan operation.
-      *
-      * @param request EnableHanaBackupPlanRequest
-      * @return EnableHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>To disable the backup plan again, call the DisableHanaBackupPlan operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an SAP HANA backup plan.</p>
+     * 
+     * @param request EnableHanaBackupPlanRequest
+     * @return EnableHanaBackupPlanResponse
      */
     public EnableHanaBackupPlanResponse enableHanaBackupPlan(EnableHanaBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableHanaBackupPlanWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Executes a backup plan.</p>
+     * 
+     * @param request ExecuteBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteBackupPlanResponse
+     */
     public ExecuteBackupPlanResponse executeBackupPlanWithOptions(ExecuteBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3388,11 +4135,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Executes a backup plan.</p>
+     * 
+     * @param request ExecuteBackupPlanRequest
+     * @return ExecuteBackupPlanResponse
+     */
     public ExecuteBackupPlanResponse executeBackupPlan(ExecuteBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeBackupPlanWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ExecutePolicyV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecutePolicyV2Response
+     */
     public ExecutePolicyV2Response executePolicyV2WithOptions(ExecutePolicyV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3431,11 +4190,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecutePolicyV2Response());
     }
 
+    /**
+     * @param request ExecutePolicyV2Request
+     * @return ExecutePolicyV2Response
+     */
     public ExecutePolicyV2Response executePolicyV2(ExecutePolicyV2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executePolicyV2WithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Generates a Resource Access Management (RAM) policy.</p>
+     * 
+     * @param request GenerateRamPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateRamPolicyResponse
+     */
     public GenerateRamPolicyResponse generateRamPolicyWithOptions(GenerateRamPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3472,11 +4243,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateRamPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Generates a Resource Access Management (RAM) policy.</p>
+     * 
+     * @param request GenerateRamPolicyRequest
+     * @return GenerateRamPolicyResponse
+     */
     public GenerateRamPolicyResponse generateRamPolicy(GenerateRamPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateRamPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains download links of files such as job reports.</p>
+     * 
+     * @param request GetTempFileDownloadLinkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTempFileDownloadLinkResponse
+     */
     public GetTempFileDownloadLinkResponse getTempFileDownloadLinkWithOptions(GetTempFileDownloadLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3501,19 +4287,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTempFileDownloadLinkResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains download links of files such as job reports.</p>
+     * 
+     * @param request GetTempFileDownloadLinkRequest
+     * @return GetTempFileDownloadLinkResponse
+     */
     public GetTempFileDownloadLinkResponse getTempFileDownloadLink(GetTempFileDownloadLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTempFileDownloadLinkWithOptions(request, runtime);
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.
-      * *   You can call the [DescribeTask](~~431265~~) operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.
-      *
-      * @param tmpReq InstallBackupClientsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return InstallBackupClientsResponse
+     * <b>description</b> :
+     * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs an HBR client on one or more Elastic Compute Service (ECS) instances.</p>
+     * 
+     * @param tmpReq InstallBackupClientsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallBackupClientsResponse
      */
     public InstallBackupClientsResponse installBackupClientsWithOptions(InstallBackupClientsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -3558,18 +4357,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.
-      * *   You can call the [DescribeTask](~~431265~~) operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.
-      *
-      * @param request InstallBackupClientsRequest
-      * @return InstallBackupClientsResponse
+     * <b>description</b> :
+     * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs an HBR client on one or more Elastic Compute Service (ECS) instances.</p>
+     * 
+     * @param request InstallBackupClientsRequest
+     * @return InstallBackupClientsResponse
      */
     public InstallBackupClientsResponse installBackupClients(InstallBackupClientsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installBackupClientsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Activates Hybrid Backup Recovery (HBR).</p>
+     * 
+     * @param request OpenHbrServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenHbrServiceResponse
+     */
     public OpenHbrServiceResponse openHbrServiceWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3586,11 +4399,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenHbrServiceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Activates Hybrid Backup Recovery (HBR).</p>
+     * @return OpenHbrServiceResponse
+     */
     public OpenHbrServiceResponse openHbrService() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openHbrServiceWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup snapshots that meet the specified conditions.</p>
+     * 
+     * @param tmpReq SearchHistoricalSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchHistoricalSnapshotsResponse
+     */
     public SearchHistoricalSnapshotsResponse searchHistoricalSnapshotsWithOptions(SearchHistoricalSnapshotsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SearchHistoricalSnapshotsShrinkRequest request = new SearchHistoricalSnapshotsShrinkRequest();
@@ -3641,17 +4467,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SearchHistoricalSnapshotsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about one or more backup snapshots that meet the specified conditions.</p>
+     * 
+     * @param request SearchHistoricalSnapshotsRequest
+     * @return SearchHistoricalSnapshotsResponse
+     */
     public SearchHistoricalSnapshotsResponse searchHistoricalSnapshots(SearchHistoricalSnapshotsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchHistoricalSnapshotsWithOptions(request, runtime);
     }
 
     /**
-      * To stop the database again, call the StopHanaDatabaseAsync operation.
-      *
-      * @param request StartHanaDatabaseAsyncRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartHanaDatabaseAsyncResponse
+     * <b>description</b> :
+     * <p>To stop the database again, call the StopHanaDatabaseAsync operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts an SAP HANA database.</p>
+     * 
+     * @param request StartHanaDatabaseAsyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartHanaDatabaseAsyncResponse
      */
     public StartHanaDatabaseAsyncResponse startHanaDatabaseAsyncWithOptions(StartHanaDatabaseAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3686,10 +4523,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To stop the database again, call the StopHanaDatabaseAsync operation.
-      *
-      * @param request StartHanaDatabaseAsyncRequest
-      * @return StartHanaDatabaseAsyncResponse
+     * <b>description</b> :
+     * <p>To stop the database again, call the StopHanaDatabaseAsync operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts an SAP HANA database.</p>
+     * 
+     * @param request StartHanaDatabaseAsyncRequest
+     * @return StartHanaDatabaseAsyncResponse
      */
     public StartHanaDatabaseAsyncResponse startHanaDatabaseAsync(StartHanaDatabaseAsyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3697,11 +4538,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To start the database again, call the StartHanaDatabaseAsync operation.
-      *
-      * @param request StopHanaDatabaseAsyncRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StopHanaDatabaseAsyncResponse
+     * <b>description</b> :
+     * <p>To start the database again, call the StartHanaDatabaseAsync operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an SAP HANA database.</p>
+     * 
+     * @param request StopHanaDatabaseAsyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopHanaDatabaseAsyncResponse
      */
     public StopHanaDatabaseAsyncResponse stopHanaDatabaseAsyncWithOptions(StopHanaDatabaseAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3736,10 +4581,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To start the database again, call the StartHanaDatabaseAsync operation.
-      *
-      * @param request StopHanaDatabaseAsyncRequest
-      * @return StopHanaDatabaseAsyncResponse
+     * <b>description</b> :
+     * <p>To start the database again, call the StartHanaDatabaseAsync operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an SAP HANA database.</p>
+     * 
+     * @param request StopHanaDatabaseAsyncRequest
+     * @return StopHanaDatabaseAsyncResponse
      */
     public StopHanaDatabaseAsyncResponse stopHanaDatabaseAsync(StopHanaDatabaseAsyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3747,13 +4596,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.
-      * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.
-      *
-      * @param tmpReq UninstallBackupClientsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UninstallBackupClientsResponse
+     * <b>description</b> :
+     * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.</p>
+     * <ul>
+     * <li>You can call the DescribeTask operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Uninstalls a Cloud Backup client from one or more Elastic Compute Service (ECS) instance.</p>
+     * 
+     * @param tmpReq UninstallBackupClientsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UninstallBackupClientsResponse
      */
     public UninstallBackupClientsResponse uninstallBackupClientsWithOptions(UninstallBackupClientsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -3806,12 +4661,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.
-      * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.
-      *
-      * @param request UninstallBackupClientsRequest
-      * @return UninstallBackupClientsResponse
+     * <b>description</b> :
+     * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.</p>
+     * <ul>
+     * <li>You can call the DescribeTask operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Uninstalls a Cloud Backup client from one or more Elastic Compute Service (ECS) instance.</p>
+     * 
+     * @param request UninstallBackupClientsRequest
+     * @return UninstallBackupClientsResponse
      */
     public UninstallBackupClientsResponse uninstallBackupClients(UninstallBackupClientsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3819,11 +4680,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.
-      *
-      * @param request UninstallClientRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UninstallClientResponse
+     * <b>description</b> :
+     * <p>If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uninstalls an HBR client.</p>
+     * 
+     * @param request UninstallClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UninstallClientResponse
      */
     public UninstallClientResponse uninstallClientWithOptions(UninstallClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3858,16 +4723,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.
-      *
-      * @param request UninstallClientRequest
-      * @return UninstallClientResponse
+     * <b>description</b> :
+     * <p>If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uninstalls an HBR client.</p>
+     * 
+     * @param request UninstallClientRequest
+     * @return UninstallClientResponse
      */
     public UninstallClientResponse uninstallClient(UninstallClientRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uninstallClientWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a backup plan.</p>
+     * 
+     * @param tmpReq UpdateBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateBackupPlanResponse
+     */
     public UpdateBackupPlanResponse updateBackupPlanWithOptions(UpdateBackupPlanRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateBackupPlanShrinkRequest request = new UpdateBackupPlanShrinkRequest();
@@ -3972,17 +4849,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a backup plan.</p>
+     * 
+     * @param request UpdateBackupPlanRequest
+     * @return UpdateBackupPlanResponse
+     */
     public UpdateBackupPlanResponse updateBackupPlan(UpdateBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateBackupPlanWithOptions(request, runtime);
     }
 
     /**
-      * You can call this operation to update the configurations of both the old and new HBR clients.
-      *
-      * @param request UpdateClientSettingsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateClientSettingsResponse
+     * <b>description</b> :
+     * <p>You can call this operation to update the configurations of both the old and new HBR clients.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configurations of an HBR client.</p>
+     * 
+     * @param request UpdateClientSettingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateClientSettingsResponse
      */
     public UpdateClientSettingsResponse updateClientSettingsWithOptions(UpdateClientSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4061,16 +4949,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the configurations of both the old and new HBR clients.
-      *
-      * @param request UpdateClientSettingsRequest
-      * @return UpdateClientSettingsResponse
+     * <b>description</b> :
+     * <p>You can call this operation to update the configurations of both the old and new HBR clients.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configurations of an HBR client.</p>
+     * 
+     * @param request UpdateClientSettingsRequest
+     * @return UpdateClientSettingsResponse
      */
     public UpdateClientSettingsResponse updateClientSettings(UpdateClientSettingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateClientSettingsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name and network type of a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request UpdateContainerClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContainerClusterResponse
+     */
     public UpdateContainerClusterResponse updateContainerClusterWithOptions(UpdateContainerClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4111,20 +5011,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContainerClusterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name and network type of a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request UpdateContainerClusterRequest
+     * @return UpdateContainerClusterResponse
+     */
     public UpdateContainerClusterResponse updateContainerCluster(UpdateContainerClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateContainerClusterWithOptions(request, runtime);
     }
 
     /**
-      * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup plan.
-      * *   You can specify only one interval as a backup cycle in a backup plan.
-      * *   Each backup plan allows you to back up data to only one backup vault.
-      *
-      * @param request UpdateHanaBackupPlanRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>  A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>You can specify only one type of data source in a backup plan.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup plan.</li>
+     * <li>Each backup plan allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an SAP HANA backup plan.</p>
+     * 
+     * @param request UpdateHanaBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHanaBackupPlanResponse
      */
     public UpdateHanaBackupPlanResponse updateHanaBackupPlanWithOptions(UpdateHanaBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4175,13 +5088,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup plan.
-      * *   You can specify only one interval as a backup cycle in a backup plan.
-      * *   Each backup plan allows you to back up data to only one backup vault.
-      *
-      * @param request UpdateHanaBackupPlanRequest
-      * @return UpdateHanaBackupPlanResponse
+     * <b>description</b> :
+     * <p>  A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>You can specify only one type of data source in a backup plan.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup plan.</li>
+     * <li>Each backup plan allows you to back up data to only one backup vault.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an SAP HANA backup plan.</p>
+     * 
+     * @param request UpdateHanaBackupPlanRequest
+     * @return UpdateHanaBackupPlanResponse
      */
     public UpdateHanaBackupPlanResponse updateHanaBackupPlan(UpdateHanaBackupPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4189,11 +5108,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.
-      *
-      * @param request UpdateHanaBackupSettingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateHanaBackupSettingResponse
+     * <b>description</b> :
+     * <p>You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the backup parameters of an SAP HANA database.</p>
+     * 
+     * @param request UpdateHanaBackupSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHanaBackupSettingResponse
      */
     public UpdateHanaBackupSettingResponse updateHanaBackupSettingWithOptions(UpdateHanaBackupSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4256,16 +5179,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.
-      *
-      * @param request UpdateHanaBackupSettingRequest
-      * @return UpdateHanaBackupSettingResponse
+     * <b>description</b> :
+     * <p>You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the backup parameters of an SAP HANA database.</p>
+     * 
+     * @param request UpdateHanaBackupSettingRequest
+     * @return UpdateHanaBackupSettingResponse
      */
     public UpdateHanaBackupSettingResponse updateHanaBackupSetting(UpdateHanaBackupSettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateHanaBackupSettingWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an SAP HANA instance.</p>
+     * 
+     * @param request UpdateHanaInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHanaInstanceResponse
+     */
     public UpdateHanaInstanceResponse updateHanaInstanceWithOptions(UpdateHanaInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4330,18 +5265,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHanaInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an SAP HANA instance.</p>
+     * 
+     * @param request UpdateHanaInstanceRequest
+     * @return UpdateHanaInstanceResponse
+     */
     public UpdateHanaInstanceResponse updateHanaInstance(UpdateHanaInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateHanaInstanceWithOptions(request, runtime);
     }
 
     /**
-      * *   If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.
-      * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
-      *
-      * @param request UpdateHanaRetentionSettingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateHanaRetentionSettingResponse
+     * <b>description</b> :
+     * <p>  If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.</p>
+     * <ul>
+     * <li>Cloud Backup deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the backup retention period of an SAP HANA database.</p>
+     * 
+     * @param request UpdateHanaRetentionSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHanaRetentionSettingResponse
      */
     public UpdateHanaRetentionSettingResponse updateHanaRetentionSettingWithOptions(UpdateHanaRetentionSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4388,17 +5336,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.
-      * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
-      *
-      * @param request UpdateHanaRetentionSettingRequest
-      * @return UpdateHanaRetentionSettingResponse
+     * <b>description</b> :
+     * <p>  If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.</p>
+     * <ul>
+     * <li>Cloud Backup deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the backup retention period of an SAP HANA database.</p>
+     * 
+     * @param request UpdateHanaRetentionSettingRequest
+     * @return UpdateHanaRetentionSettingResponse
      */
     public UpdateHanaRetentionSettingResponse updateHanaRetentionSetting(UpdateHanaRetentionSettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateHanaRetentionSettingWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the association between a backup policy and a data source.</p>
+     * 
+     * @param tmpReq UpdatePolicyBindingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePolicyBindingResponse
+     */
     public UpdatePolicyBindingResponse updatePolicyBindingWithOptions(UpdatePolicyBindingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdatePolicyBindingShrinkRequest request = new UpdatePolicyBindingShrinkRequest();
@@ -4416,12 +5378,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Disabled", request.disabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.exclude)) {
+            query.put("Exclude", request.exclude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.include)) {
+            query.put("Include", request.include);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyBindingDescription)) {
             query.put("PolicyBindingDescription", request.policyBindingDescription);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speedLimit)) {
+            query.put("SpeedLimit", request.speedLimit);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4451,17 +5429,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePolicyBindingResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the association between a backup policy and a data source.</p>
+     * 
+     * @param request UpdatePolicyBindingRequest
+     * @return UpdatePolicyBindingResponse
+     */
     public UpdatePolicyBindingResponse updatePolicyBinding(UpdatePolicyBindingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePolicyBindingWithOptions(request, runtime);
     }
 
     /**
-      * If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.
-      *
-      * @param tmpReq UpdatePolicyV2Request
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdatePolicyV2Response
+     * <b>description</b> :
+     * <p>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a backup policy.</p>
+     * 
+     * @param tmpReq UpdatePolicyV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePolicyV2Response
      */
     public UpdatePolicyV2Response updatePolicyV2WithOptions(UpdatePolicyV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -4506,16 +5495,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.
-      *
-      * @param request UpdatePolicyV2Request
-      * @return UpdatePolicyV2Response
+     * <b>description</b> :
+     * <p>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a backup policy.</p>
+     * 
+     * @param request UpdatePolicyV2Request
+     * @return UpdatePolicyV2Response
      */
     public UpdatePolicyV2Response updatePolicyV2(UpdatePolicyV2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePolicyV2WithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the configuration information about the backup vault.</p>
+     * 
+     * @param request UpdateVaultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVaultResponse
+     */
     public UpdateVaultResponse updateVaultWithOptions(UpdateVaultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4552,19 +5553,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVaultResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the configuration information about the backup vault.</p>
+     * 
+     * @param request UpdateVaultRequest
+     * @return UpdateVaultResponse
+     */
     public UpdateVaultResponse updateVault(UpdateVaultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateVaultWithOptions(request, runtime);
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.
-      * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes.
-      *
-      * @param tmpReq UpgradeBackupClientsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradeBackupClientsResponse
+     * <b>description</b> :
+     * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.</p>
+     * <ul>
+     * <li>You can call the DescribeTask operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades an HBR client on one or more Elastic Compute Service (ECS) instances.</p>
+     * 
+     * @param tmpReq UpgradeBackupClientsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeBackupClientsResponse
      */
     public UpgradeBackupClientsResponse upgradeBackupClientsWithOptions(UpgradeBackupClientsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -4617,12 +5631,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.
-      * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes.
-      *
-      * @param request UpgradeBackupClientsRequest
-      * @return UpgradeBackupClientsResponse
+     * <b>description</b> :
+     * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.</p>
+     * <ul>
+     * <li>You can call the DescribeTask operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades an HBR client on one or more Elastic Compute Service (ECS) instances.</p>
+     * 
+     * @param request UpgradeBackupClientsRequest
+     * @return UpgradeBackupClientsResponse
      */
     public UpgradeBackupClientsResponse upgradeBackupClients(UpgradeBackupClientsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4630,11 +5650,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to upgrade a backup client to the latest version. After the backup client is upgraded, the version of the backup client cannot be rolled back.
-      *
-      * @param request UpgradeClientRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradeClientResponse
+     * <b>description</b> :
+     * <p>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the Cloud Backup client.</p>
+     * 
+     * @param request UpgradeClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeClientResponse
      */
     public UpgradeClientResponse upgradeClientWithOptions(UpgradeClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4669,10 +5693,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to upgrade a backup client to the latest version. After the backup client is upgraded, the version of the backup client cannot be rolled back.
-      *
-      * @param request UpgradeClientRequest
-      * @return UpgradeClientResponse
+     * <b>description</b> :
+     * <p>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the Cloud Backup client.</p>
+     * 
+     * @param request UpgradeClientRequest
+     * @return UpgradeClientResponse
      */
     public UpgradeClientResponse upgradeClient(UpgradeClientRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

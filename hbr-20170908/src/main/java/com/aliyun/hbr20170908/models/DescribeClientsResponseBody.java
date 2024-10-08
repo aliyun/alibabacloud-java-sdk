@@ -5,52 +5,74 @@ import com.aliyun.tea.*;
 
 public class DescribeClientsResponseBody extends TeaModel {
     /**
-     * <p>The backup clients.</p>
+     * <p>The Cloud Backup clients.</p>
      */
     @NameInMap("Clients")
     public DescribeClientsResponseBodyClients clients;
 
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17189276-465D-5EF3-8FFD-0FF51B5A41A0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -126,116 +148,167 @@ public class DescribeClientsResponseBody extends TeaModel {
 
     public static class DescribeClientsResponseBodyClientsClient extends TeaModel {
         /**
-         * <p>The alert settings. Valid value: INHERITED, which indicates that the backup client sends alert notifications in the same way as the backup vault.</p>
+         * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INHERITED</p>
          */
         @NameInMap("AlertSetting")
         public String alertSetting;
 
         /**
-         * <p>The ID of the backup client.</p>
+         * <p>The ID of the Cloud Backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-00062uu******2fgj</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>The name of the backup client.</p>
+         * <p>The client name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-20211224-101226</p>
          */
         @NameInMap("ClientName")
         public String clientName;
 
         /**
-         * <p>The type of the backup client. Valid value:**ECS_AGENT**, which indicates an SAP HANA backup client.</p>
+         * <p>The type of the Cloud Backup client. Valid value: <strong>ECS_AGENT</strong>, which indicates an SAP HANA backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_AGENT</p>
          */
         @NameInMap("ClientType")
         public String clientType;
 
         /**
-         * <p>The version number of the backup client.</p>
+         * <p>The version number of the Cloud Backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.11.16</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0008c48frr******ncpk</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The time when the backup client was created.</p>
+         * <p>The time when the Cloud Backup client was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9b6wya******n8yo</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>swh-hbr</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The maximum version number of the backup client.</p>
+         * <p>The maximum version number of the Cloud Backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.11.23</p>
          */
         @NameInMap("MaxVersion")
         public String maxVersion;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **CLASSIC**: classic network</p>
-         * <p>*   **VPC**: virtual private cloud (VPC)</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: the classic network</li>
+         * <li><strong>VPC</strong>: the virtual private cloud (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The status of the backup client. Valid values:</p>
-         * <br>
-         * <p>*   **REGISTERED**: The backup client is registered.</p>
-         * <p>*   **ACTIVATED**: The backup client is enabled.</p>
-         * <p>*   **DEACTIVATED**: The backup client fails to be enabled.</p>
-         * <p>*   **INSTALLING**: The backup client is being installed.</p>
-         * <p>*   **INSTALL_FAILED**: The backup client fails to be installed.</p>
-         * <p>*   **NOT_INSTALLED**: The backup client is not installed.</p>
-         * <p>*   **UPGRADING**: The backup client is being upgraded.</p>
-         * <p>*   **UPGRADE_FAILED**: The backup client fails to be upgraded.</p>
-         * <p>*   **UNINSTALLING**: The backup client is being uninstalled.</p>
-         * <p>*   **UNINSTALL_FAILED**: The backup client fails to be uninstalled.</p>
-         * <p>*   **STOPPED**: The backup client is out of service.</p>
-         * <p>*   **UNKNOWN**: The backup client is disconnected.</p>
+         * <p>The status of the Cloud Backup client. Valid values:</p>
+         * <ul>
+         * <li><strong>REGISTERED</strong>: The backup client is registered.</li>
+         * <li><strong>ACTIVATED</strong>: The backup client is activated.</li>
+         * <li><strong>DEACTIVATED</strong>: The backup client fails to be activated.</li>
+         * <li><strong>INSTALLING</strong>: The backup client is being installed.</li>
+         * <li><strong>INSTALL_FAILED</strong>: The backup client fails to be installed.</li>
+         * <li><strong>NOT_INSTALLED</strong>: The backup client is not installed.</li>
+         * <li><strong>UPGRADING</strong>: The backup client is being upgraded.</li>
+         * <li><strong>UPGRADE_FAILED</strong>: The backup client fails to be upgraded.</li>
+         * <li><strong>UNINSTALLING</strong>: The backup client is being uninstalled.</li>
+         * <li><strong>UNINSTALL_FAILED</strong>: The backup client fails to be uninstalled.</li>
+         * <li><strong>STOPPED</strong>: The backup client is out of service.</li>
+         * <li><strong>UNKNOWN</strong>: The backup client is disconnected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The status information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HANA_NOT_SUPPORT</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
-         * <p>The time when the backup client was updated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the Cloud Backup client was updated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
         /**
          * <p>Indicates whether data is transmitted over HTTPS. Valid values:</p>
-         * <br>
-         * <p>*   true: Data is transmitted over HTTPS.</p>
-         * <p>*   false: Data is transmitted over HTTP.</p>
+         * <ul>
+         * <li>true: Data is transmitted over HTTPS.</li>
+         * <li>false: Data is transmitted over HTTP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UseHttps")
         public Boolean useHttps;
 
         /**
          * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-00029mx6o******n85lg</p>
          */
         @NameInMap("VaultId")
         public String vaultId;

@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class AddContainerClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-00049slr9iuvvv6pp134</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1FCBC078-FFCB-542A-8555-566477679720</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The token that is used to register the Hybrid Backup Recovery (HBR) client in the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJhY2NvdW*****VnZpgXQC5A==</p>
      */
     @NameInMap("Token")
     public String token;

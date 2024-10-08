@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OpenHbrServiceResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>215463686160696</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F4A1D5F4-5055-549A-8B25-6DD23311E299</p>
      */
     @NameInMap("RequestId")
     public String requestId;

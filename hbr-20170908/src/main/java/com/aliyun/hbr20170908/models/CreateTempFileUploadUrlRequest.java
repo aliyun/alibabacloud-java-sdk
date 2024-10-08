@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CreateTempFileUploadUrlRequest extends TeaModel {
     /**
      * <p>The name of the file to be uploaded.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file-list.txt</p>
      */
     @NameInMap("FileName")
     public String fileName;

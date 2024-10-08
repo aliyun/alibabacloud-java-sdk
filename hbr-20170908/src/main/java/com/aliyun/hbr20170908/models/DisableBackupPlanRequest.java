@@ -6,22 +6,33 @@ import com.aliyun.tea.*;
 public class DisableBackupPlanRequest extends TeaModel {
     /**
      * <p>The ID of the backup plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-*********************</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: The system backs up data from Elastic Compute Service (ECS) instances.</p>
-     * <p>*   **OSS**: The system backs up data from Object Storage Service (OSS) buckets.</p>
-     * <p>*   **NAS**: The system backs up data from Apsara File Storage NAS file systems.</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+     * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

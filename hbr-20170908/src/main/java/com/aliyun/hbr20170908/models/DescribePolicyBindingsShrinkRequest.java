@@ -10,15 +10,31 @@ public class DescribePolicyBindingsShrinkRequest extends TeaModel {
     @NameInMap("Filters")
     public java.util.List<DescribePolicyBindingsShrinkRequestFilters> filters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>po-000************hky</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UDM_ECS</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
@@ -76,9 +92,17 @@ public class DescribePolicyBindingsShrinkRequest extends TeaModel {
     }
 
     public static class DescribePolicyBindingsShrinkRequestFilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DataSourceType</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("Operator")
         public String operator;
 

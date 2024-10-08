@@ -12,14 +12,22 @@ public class DeletePolicyBindingShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the backup policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000************hgp</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   **UDM_ECS**: ECS instance backup</p>
+     * <ul>
+     * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>UDM_ECS</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

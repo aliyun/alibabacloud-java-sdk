@@ -6,33 +6,52 @@ import com.aliyun.tea.*;
 public class AddContainerClusterRequest extends TeaModel {
     /**
      * <p>The type of the cluster. Only Container Service for Kubernetes (ACK) clusters are supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACK</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The description of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description ack pv backup</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the cluster that you want to register.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cca8f35f0e0d84540b49d994511c2c87a</p>
      */
     @NameInMap("Identifier")
     public String identifier;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack_pv_backup_location</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The network type of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   **CLASSIC**: the classic network</p>
-     * <p>*   **VPC**: a virtual private cloud (VPC)</p>
+     * <ul>
+     * <li><strong>CLASSIC</strong>: the classic network</li>
+     * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;

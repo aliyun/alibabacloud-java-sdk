@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdatePolicyV2Request extends TeaModel {
     /**
      * <p>The description of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</p>
      */
     @NameInMap("PolicyDescription")
     public String policyDescription;
 
     /**
      * <p>The ID of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000************viy</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The name of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Daily Local Backup + Remote Backup</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
@@ -65,25 +74,65 @@ public class UpdatePolicyV2Request extends TeaModel {
         return this.rules;
     }
 
+    public static class UpdatePolicyV2RequestRulesDataSourceFilters extends TeaModel {
+        @NameInMap("DataSourceIds")
+        public java.util.List<String> dataSourceIds;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        public static UpdatePolicyV2RequestRulesDataSourceFilters build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePolicyV2RequestRulesDataSourceFilters self = new UpdatePolicyV2RequestRulesDataSourceFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdatePolicyV2RequestRulesDataSourceFilters setDataSourceIds(java.util.List<String> dataSourceIds) {
+            this.dataSourceIds = dataSourceIds;
+            return this;
+        }
+        public java.util.List<String> getDataSourceIds() {
+            return this.dataSourceIds;
+        }
+
+        public UpdatePolicyV2RequestRulesDataSourceFilters setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+    }
+
     public static class UpdatePolicyV2RequestRulesRetentionRules extends TeaModel {
         /**
          * <p>The type of the special retention rule. Valid values:</p>
-         * <br>
-         * <p>*   **WEEKLY**: weekly backups</p>
-         * <p>*   **MONTHLY**: monthly backups</p>
-         * <p>*   **YEARLY**: yearly backups</p>
+         * <ul>
+         * <li><strong>WEEKLY</strong>: retains weekly backups</li>
+         * <li><strong>MONTHLY</strong>: retains monthly backups</li>
+         * <li><strong>YEARLY</strong>: retains yearly backups</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YEARLY</p>
          */
         @NameInMap("AdvancedRetentionType")
         public String advancedRetentionType;
 
         /**
-         * <p>The retention period of the backup data. Minimum value: 1. Unit: days.</p>
+         * <p>The special retention period of backups. Minimum value: 1. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         @NameInMap("Retention")
         public Long retention;
 
         /**
          * <p>Specifies which backup is retained based on the special retention rule. Only the first backup can be retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("WhichSnapshot")
         public Long whichSnapshot;
@@ -119,79 +168,157 @@ public class UpdatePolicyV2Request extends TeaModel {
 
     }
 
+    public static class UpdatePolicyV2RequestRulesTagFilters extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdatePolicyV2RequestRulesTagFilters build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePolicyV2RequestRulesTagFilters self = new UpdatePolicyV2RequestRulesTagFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdatePolicyV2RequestRulesTagFilters setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UpdatePolicyV2RequestRulesTagFilters setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public UpdatePolicyV2RequestRulesTagFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class UpdatePolicyV2RequestRules extends TeaModel {
         /**
-         * <p>This parameter is required only if the **RuleType** parameter is set to **TRANSITION**. This parameter specifies the time when data is dumped from a backup vault to an archive vault. Unit: days.</p>
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the time when data is dumped from a backup vault to an archive vault. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("ArchiveDays")
         public Long archiveDays;
 
         /**
-         * <p>This parameter is required only if the **RuleType** parameter is set to **BACKUP**. This parameter specifies the backup type. Valid value: **COMPLETE**, which indicates full backup.</p>
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
-         * <p>This parameter is required only if the **RuleType** parameter is set to **TRANSITION**. This parameter specifies the time when data is dumped from a backup vault to a cold archive vault. Unit: days.</p>
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the time when data is dumped from a backup vault to a cold archive vault. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         @NameInMap("ColdArchiveDays")
         public Long coldArchiveDays;
 
+        @NameInMap("DataSourceFilters")
+        public java.util.List<UpdatePolicyV2RequestRulesDataSourceFilters> dataSourceFilters;
+
         /**
          * <p>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</p>
-         * <br>
-         * <p>*   0: The feature is disabled.</p>
-         * <p>*   1: The feature is enabled.</p>
+         * <ul>
+         * <li>0: The feature is disabled.</li>
+         * <li>1: The feature is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("KeepLatestSnapshots")
         public Long keepLatestSnapshots;
 
         /**
-         * <p>This parameter is required only if the **RuleType** parameter is set to **REPLICATION**. This parameter specifies the ID of the destination region.</p>
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>REPLICATION</strong>. This parameter specifies the ID of the destination region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("ReplicationRegionId")
         public String replicationRegionId;
 
         /**
-         * <p>This parameter is required only if the **RuleType** parameter is set to **TRANSITION** or **REPLICATION**.</p>
-         * <br>
-         * <p>*   If the **RuleType** parameter is set to **TRANSITION**, this parameter specifies the retention period of the backup data. Minimum value: 1. Unit: days.</p>
-         * <p>*   If the **RuleType** parameter is set to **REPLICATION**, this parameter specifies the retention period of remote backups. Minimum value: 1. Unit: days.</p>
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
+         * <ul>
+         * <li>If the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>, this parameter specifies the retention period of the backup data. Minimum value: 1. Unit: days.</li>
+         * <li>If the <strong>RuleType</strong> parameter is set to <strong>REPLICATION</strong>, this parameter specifies the retention period of remote backups. Minimum value: 1. Unit: days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("Retention")
         public Long retention;
 
         /**
-         * <p>This parameter is required only if the **RuleType** parameter is set to **TRANSITION**. This parameter specifies the special retention rules.</p>
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the special retention rules.</p>
          */
         @NameInMap("RetentionRules")
         public java.util.List<UpdatePolicyV2RequestRulesRetentionRules> retentionRules;
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-000************rof</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
-         * <p>The type of the rule. Each backup policy must have at least one rule of the **BACKUP** type and only one rule of the **TRANSITION** type.</p>
-         * <br>
-         * <p>*   **BACKUP**: backup rule</p>
-         * <p>*   **TRANSITION**: lifecycle rule</p>
-         * <p>*   **REPLICATION**: replication rule</p>
+         * <p>The type of the rule. Each backup policy must have at least one rule of the <strong>BACKUP</strong> type and only one rule of the <strong>TRANSITION</strong> type. Valid values:</p>
+         * <ul>
+         * <li><strong>BACKUP</strong>: backup rule</li>
+         * <li><strong>TRANSITION</strong>: lifecycle rule</li>
+         * <li><strong>REPLICATION</strong>: replication rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BACKUP</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
 
         /**
-         * <p>This parameter is required only if the **RuleType** parameter is set to **BACKUP**. This parameter specifies the backup schedule settings. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
-         * <br>
-         * <p>*   startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</p>
-         * <p>*   interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</p>
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup schedule settings. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <ul>
+         * <li>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
+         * <li>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of 1 hour. P1D specifies an interval of one day.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>I|1648647166|P1D</p>
          */
         @NameInMap("Schedule")
         public String schedule;
+
+        @NameInMap("TagFilters")
+        public java.util.List<UpdatePolicyV2RequestRulesTagFilters> tagFilters;
 
         public static UpdatePolicyV2RequestRules build(java.util.Map<String, ?> map) throws Exception {
             UpdatePolicyV2RequestRules self = new UpdatePolicyV2RequestRules();
@@ -220,6 +347,14 @@ public class UpdatePolicyV2Request extends TeaModel {
         }
         public Long getColdArchiveDays() {
             return this.coldArchiveDays;
+        }
+
+        public UpdatePolicyV2RequestRules setDataSourceFilters(java.util.List<UpdatePolicyV2RequestRulesDataSourceFilters> dataSourceFilters) {
+            this.dataSourceFilters = dataSourceFilters;
+            return this;
+        }
+        public java.util.List<UpdatePolicyV2RequestRulesDataSourceFilters> getDataSourceFilters() {
+            return this.dataSourceFilters;
         }
 
         public UpdatePolicyV2RequestRules setKeepLatestSnapshots(Long keepLatestSnapshots) {
@@ -276,6 +411,14 @@ public class UpdatePolicyV2Request extends TeaModel {
         }
         public String getSchedule() {
             return this.schedule;
+        }
+
+        public UpdatePolicyV2RequestRules setTagFilters(java.util.List<UpdatePolicyV2RequestRulesTagFilters> tagFilters) {
+            this.tagFilters = tagFilters;
+            return this;
+        }
+        public java.util.List<UpdatePolicyV2RequestRulesTagFilters> getTagFilters() {
+            return this.tagFilters;
         }
 
     }

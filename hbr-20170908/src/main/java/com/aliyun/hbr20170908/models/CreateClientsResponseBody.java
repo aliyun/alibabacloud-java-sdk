@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateClientsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,28 +20,41 @@ public class CreateClientsResponseBody extends TeaModel {
     public CreateClientsResponseBodyInstanceStatuses instanceStatuses;
 
     /**
-     * <p>The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A8A9AE4-F798-5E6D-853E-10F9F5A1BD4E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-000h9x5t02vhyksf1x7k</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -99,15 +115,22 @@ public class CreateClientsResponseBody extends TeaModel {
     public static class CreateClientsResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zegp3cdu******uj9i</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether an HBR client can be installed on the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   true: An HBR client can be installed on the ECS instance.</p>
-         * <p>*   false: An HBR client cannot be installed on the ECS instance.</p>
+         * <ul>
+         * <li>true: An HBR client can be installed on the ECS instance.</li>
+         * <li>false: An HBR client cannot be installed on the ECS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ValidInstance")
         public Boolean validInstance;

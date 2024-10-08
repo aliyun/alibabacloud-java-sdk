@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupClientRequest extends TeaModel {
     /**
-     * <p>The ID of the backup client.</p>
+     * <p>The ID of the Cloud Backup client.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-*********************</p>
      */
     @NameInMap("ClientId")
     public String clientId;

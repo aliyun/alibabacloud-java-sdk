@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeTaskRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmvywqfey5njq</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-*********************</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01W3ZZOQ</p>
      */
     @NameInMap("Token")
     public String token;

@@ -12,6 +12,9 @@ public class CreatePolicyBindingsShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000************8ep</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

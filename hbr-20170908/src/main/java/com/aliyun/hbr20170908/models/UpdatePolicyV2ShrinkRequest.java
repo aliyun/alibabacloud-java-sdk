@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdatePolicyV2ShrinkRequest extends TeaModel {
     /**
      * <p>The description of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</p>
      */
     @NameInMap("PolicyDescription")
     public String policyDescription;
 
     /**
      * <p>The ID of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>po-000************viy</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The name of the backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Daily Local Backup + Remote Backup</p>
      */
     @NameInMap("PolicyName")
     public String policyName;

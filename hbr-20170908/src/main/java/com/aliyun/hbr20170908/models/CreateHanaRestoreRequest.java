@@ -6,113 +6,172 @@ import com.aliyun.tea.*;
 public class CreateHanaRestoreRequest extends TeaModel {
     /**
      * <p>The ID of the backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1645628400235</p>
      */
     @NameInMap("BackupId")
     public Long backupId;
 
     /**
      * <p>The backup prefix.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLETE_DATA_BACKUP_2022_05_02_15_39</p>
      */
     @NameInMap("BackupPrefix")
     public String backupPrefix;
 
     /**
      * <p>Specifies whether to validate the differential backup and log backup. Valid values: true and false. If you set the value to true, HBR checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, HBR does not start the restore job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CheckAccess")
     public Boolean checkAccess;
 
     /**
      * <p>Specifies whether to delete all log entries from the log area after the log entries are restored. Valid values: true and false. If you set the value to false, all log entries are deleted from the log area after the log entries are restored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ClearLog")
     public Boolean clearLog;
 
     /**
      * <p>The ID of the SAP HANA instance that you want to restore.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-000fbrs5******ka9w</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the database that you want to restore.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TS2</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The log position to which you want to restore the database. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_LOG_POSITION**.</p>
+     * <p>The log position to which you want to restore the database. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("LogPosition")
     public Long logPosition;
 
     /**
      * <p>The ID of the client where the primary node of the SAP HANA resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-000ii8tzv**********</p>
      */
     @NameInMap("MasterClientId")
     public String masterClientId;
 
     /**
      * <p>The recovery mode. Valid values:</p>
-     * <br>
-     * <p>*   **RECOVERY_TO_MOST_RECENT**: restores the database to the recently available state to which the database has been backed up.</p>
-     * <p>*   **RECOVERY_TO_POINT_IN_TIME**: restores the database to a specified point in time.</p>
-     * <p>*   **RECOVERY_TO_SPECIFIC_BACKUP**: restores the database to a specified backup.</p>
-     * <p>*   **RECOVERY_TO_LOG_POSITION**: restores the database to a specified log position.</p>
+     * <ul>
+     * <li><strong>RECOVERY_TO_MOST_RECENT</strong>: restores the database to the recently available state to which the database has been backed up.</li>
+     * <li><strong>RECOVERY_TO_POINT_IN_TIME</strong>: restores the database to a specified point in time.</li>
+     * <li><strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>: restores the database to a specified backup.</li>
+     * <li><strong>RECOVERY_TO_LOG_POSITION</strong>: restores the database to a specified log position.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RECOVERY_TO_POINT_IN_TIME</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
-     * <p>The point in time to which you want to restore the database. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_POINT_IN_TIME**. HBR restores the database to a state closest to the specified point in time.</p>
+     * <p>The point in time to which you want to restore the database. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_POINT_IN_TIME</strong>. HBR restores the database to a state closest to the specified point in time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1635315505</p>
      */
     @NameInMap("RecoveryPointInTime")
     public Long recoveryPointInTime;
 
     /**
      * <p>The SID admin account that is created by SAP HANA.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DB</p>
      */
     @NameInMap("SidAdmin")
     public String sidAdmin;
 
     /**
-     * <p>The name of the source system. This parameter specifies the name of the source database that you want to restore. You must set the parameter in the `<Source database name>@SID` format.</p>
+     * <p>The name of the source system. This parameter specifies the name of the source database that you want to restore. You must set the parameter in the <code>&lt;Source database name&gt;@SID</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HNP@HNP</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The ID of the source SAP HANA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-000ii8tzv******xm0t</p>
      */
     @NameInMap("SourceClusterId")
     public String sourceClusterId;
 
     /**
      * <p>Specifies whether to restore the database to a different instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SystemCopy")
     public Boolean systemCopy;
 
     /**
-     * <p>Specifies whether to use a catalog backup to restore the database. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_SPECIFIC_BACKUP**. If you do not use a catalog backup, you must specify the prefix of a backup file. Then, HBR finds the backup file based on the specified prefix and restores the backup file.</p>
+     * <p>Specifies whether to use a catalog backup to restore the database. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>. If you do not use a catalog backup, you must specify the prefix of a backup file. Then, HBR finds the backup file based on the specified prefix and restores the backup file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("UseCatalog")
     public Boolean useCatalog;
 
     /**
      * <p>Specifies whether to use a differential backup or an incremental backup to restore the database. Valid values: true and false. If you want to use a differential backup or an incremental backup to restore the database, set the value to true. If you set the value to false, HBR uses a log backup to restore the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UseDelta")
     public Boolean useDelta;
 
     /**
-     * <p>The ID of the vault.</p>
+     * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-000************yqr</p>
      */
     @NameInMap("VaultId")
     public String vaultId;
 
     /**
-     * <p>The ID of the volume that you want to restore. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_LOG_POSITION**.</p>
+     * <p>The ID of the volume that you want to restore. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("VolumeId")
     public Integer volumeId;

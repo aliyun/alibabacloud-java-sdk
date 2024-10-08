@@ -5,50 +5,74 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
     /**
-     * <p>The ID of the backup client. If you delete a backup file for Elastic Compute Service (ECS) instances, you must set one of the **InstanceId** and ClientId parameters.</p>
+     * <p>The ID of the Cloud Backup client. If you delete a backup snapshot for Elastic Compute Service (ECS) instances, you must specify one of the ClientId and <strong>InstanceId</strong> parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-*********************</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
-     * <p>Specifies whether to forcibly delete the most recent backup file. Valid values:</p>
-     * <br>
-     * <p>*   true: The system forcibly deletes the last backup file.</p>
-     * <p>*   false: The system does not forcibly delete the last backup file. Default value: false.</p>
+     * <p>Specifies whether to forcibly delete the most recent backup snapshot. Valid values:</p>
+     * <ul>
+     * <li>true: The system forcibly deletes the most recent backup snapshot.</li>
+     * <li>false (default): The system does not forcibly delete the most recent backup snapshot.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
-     * <p>The ID of the ECS instance. If you delete a backup file for Elastic Compute Service (ECS) instances, you must set one of the **ClientId** and InstanceId parameters.</p>
+     * <p>The ID of the ECS instance. If you delete a backup snapshot for ECS instances, you must specify one of the InstanceId and <strong>ClientId</strong> parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-*********************</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the backup file.</p>
+     * <p>The ID of the backup snapshot.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-*********************</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
     /**
      * <p>The type of the backup source. Valid values:</p>
-     * <br>
-     * <p>*   **ECS_FILE**: indicates backup files for ECS instances.</p>
-     * <p>*   **OSS**: indicates backup files for Object Storage Service (OSS) buckets.</p>
-     * <p>*   **NAS**: indicates the backup files for Apsara File Storage NAS file systems.</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: backup snapshots for ECS files</li>
+     * <li><strong>OSS</strong>: backup snapshots for Object Storage Service (OSS) buckets</li>
+     * <li><strong>NAS</strong>: backup snapshots for Apsara File Storage NAS (NAS) file systems</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_FILE</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>The token.</p>
+     * <p>The token that you want to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02WJDOE7</p>
      */
     @NameInMap("Token")
     public String token;
 
     /**
      * <p>The ID of the backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-*********************</p>
      */
     @NameInMap("VaultId")
     public String vaultId;
