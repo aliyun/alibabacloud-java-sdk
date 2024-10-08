@@ -1,3 +1,12 @@
+2024-10-08 Version: 1.2.0
+- Support API DescribePackageDeductions.
+- Delete API CreateOrder.
+- Delete API DescribeBillings.
+- Delete API DescribePrice.
+- Delete API StartBilling.
+- Delete API StopBilling.
+
+
 2023-07-31 Version: 1.1.2
 - OpenAPI DescribeDeliveryAddress.
 

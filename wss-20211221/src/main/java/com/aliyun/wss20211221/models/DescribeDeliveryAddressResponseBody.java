@@ -7,9 +7,17 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     @NameInMap("Addresses")
     public java.util.List<DescribeDeliveryAddressResponseBodyAddresses> addresses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72481C12-69AB-5CE1-8A35-A8EFA921****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,6 +51,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeDeliveryAddressResponseBodyAddressesArea extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>33****</p>
+         */
         @NameInMap("AreaId")
         public Long areaId;
 
@@ -73,6 +85,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeDeliveryAddressResponseBodyAddressesCity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>33****</p>
+         */
         @NameInMap("CityId")
         public Long cityId;
 
@@ -103,6 +119,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeDeliveryAddressResponseBodyAddressesProvince extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>330000</p>
+         */
         @NameInMap("ProvinceId")
         public Long provinceId;
 
@@ -133,6 +153,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeDeliveryAddressResponseBodyAddressesTown extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3001****</p>
+         */
         @NameInMap("TownId")
         public Long townId;
 
@@ -169,18 +193,34 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         @NameInMap("City")
         public DescribeDeliveryAddressResponseBodyAddressesCity city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Alice</p>
+         */
         @NameInMap("Contacts")
         public String contacts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DefaultAddress")
         public Boolean defaultAddress;
 
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1381111****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>03****</p>
+         */
         @NameInMap("PostalCode")
         public String postalCode;
 
