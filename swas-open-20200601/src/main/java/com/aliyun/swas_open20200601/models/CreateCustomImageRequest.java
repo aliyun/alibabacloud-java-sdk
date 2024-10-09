@@ -61,6 +61,12 @@ public class CreateCustomImageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2bti7cf7****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

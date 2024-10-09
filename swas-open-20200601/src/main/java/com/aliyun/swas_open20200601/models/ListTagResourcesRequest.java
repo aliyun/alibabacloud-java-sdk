@@ -33,7 +33,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>The ID of the resource. You can specify up to 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -57,7 +57,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -117,7 +117,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the simple application server. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>
+         * <p>The key of the tag that you want to add to a resource. The tag key can be 1 to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -126,7 +126,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the simple application server. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.</p>
+         * <p>The value of the tag that you want to add to a resource. The tag value can be 1 to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

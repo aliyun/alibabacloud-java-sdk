@@ -134,6 +134,9 @@ public class ListCustomImagesResponseBody extends TeaModel {
     }
 
     public static class ListCustomImagesResponseBodyCustomImages extends TeaModel {
+        /**
+         * <p>The Information about instances created using the image.</p>
+         */
         @NameInMap("CreateInstances")
         public java.util.List<String> createInstances;
 
@@ -192,6 +195,8 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public Boolean inShare;
 
         /**
+         * <p>Whether the custom image is cross-account shared.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -226,6 +231,24 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the operating system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Linux</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Linux</p>
          */
@@ -241,6 +264,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RequiredDataDiskSize")
+        public Integer requiredDataDiskSize;
+
+        @NameInMap("RequiredSystemDiskSize")
+        public Integer requiredSystemDiskSize;
+
         /**
          * <p>The ID of the resource group.</p>
          * 
@@ -249,6 +278,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("SourceImageName")
+        public String sourceImageName;
+
+        @NameInMap("SourceImageVersion")
+        public String sourceImageVersion;
 
         /**
          * <p>The status of the custom image.</p>
@@ -284,6 +319,8 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public java.util.List<ListCustomImagesResponseBodyCustomImagesTags> tags;
 
         /**
+         * <p>The Primary Alibaba Cloud account ID of the image owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>180185828710****</p>
          */
@@ -399,12 +436,44 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListCustomImagesResponseBodyCustomImages setRequiredDataDiskSize(Integer requiredDataDiskSize) {
+            this.requiredDataDiskSize = requiredDataDiskSize;
+            return this;
+        }
+        public Integer getRequiredDataDiskSize() {
+            return this.requiredDataDiskSize;
+        }
+
+        public ListCustomImagesResponseBodyCustomImages setRequiredSystemDiskSize(Integer requiredSystemDiskSize) {
+            this.requiredSystemDiskSize = requiredSystemDiskSize;
+            return this;
+        }
+        public Integer getRequiredSystemDiskSize() {
+            return this.requiredSystemDiskSize;
+        }
+
         public ListCustomImagesResponseBodyCustomImages setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListCustomImagesResponseBodyCustomImages setSourceImageName(String sourceImageName) {
+            this.sourceImageName = sourceImageName;
+            return this;
+        }
+        public String getSourceImageName() {
+            return this.sourceImageName;
+        }
+
+        public ListCustomImagesResponseBodyCustomImages setSourceImageVersion(String sourceImageVersion) {
+            this.sourceImageVersion = sourceImageVersion;
+            return this;
+        }
+        public String getSourceImageVersion() {
+            return this.sourceImageVersion;
         }
 
         public ListCustomImagesResponseBodyCustomImages setStatus(String status) {
