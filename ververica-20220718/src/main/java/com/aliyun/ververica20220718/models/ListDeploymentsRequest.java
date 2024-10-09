@@ -81,6 +81,9 @@ public class ListDeploymentsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("sortName")
+    public String sortName;
+
     /**
      * <p>The latest status of the deployment.</p>
      * <p>Valid values:</p>
@@ -165,6 +168,14 @@ public class ListDeploymentsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDeploymentsRequest setSortName(String sortName) {
+        this.sortName = sortName;
+        return this;
+    }
+    public String getSortName() {
+        return this.sortName;
     }
 
     public ListDeploymentsRequest setStatus(String status) {

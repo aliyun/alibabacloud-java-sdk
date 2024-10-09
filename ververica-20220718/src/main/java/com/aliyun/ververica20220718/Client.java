@@ -2657,6 +2657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sortName)) {
+            query.put("sortName", request.sortName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
         }
