@@ -29,7 +29,7 @@ public class ReleasePublicIpAddressRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><code>121.40.**.**</code></p>
+     * <p>121.40.**.**</p>
      */
     @NameInMap("PublicIpAddress")
     public String publicIpAddress;

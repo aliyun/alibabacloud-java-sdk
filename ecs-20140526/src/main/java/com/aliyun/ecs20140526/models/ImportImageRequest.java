@@ -63,6 +63,12 @@ public class ImportImageRequest extends TeaModel {
     @NameInMap("DiskDeviceMapping")
     public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("Features")
+    public ImportImageRequestFeatures features;
+
     /**
      * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>acs:</code> or <code>aliyun</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
      * 
@@ -238,6 +244,22 @@ public class ImportImageRequest extends TeaModel {
     }
     public java.util.List<ImportImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
         return this.diskDeviceMapping;
+    }
+
+    public ImportImageRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public ImportImageRequest setFeatures(ImportImageRequestFeatures features) {
+        this.features = features;
+        return this;
+    }
+    public ImportImageRequestFeatures getFeatures() {
+        return this.features;
     }
 
     public ImportImageRequest setImageName(String imageName) {
@@ -469,6 +491,25 @@ public class ImportImageRequest extends TeaModel {
         }
         public String getOSSObject() {
             return this.OSSObject;
+        }
+
+    }
+
+    public static class ImportImageRequestFeatures extends TeaModel {
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static ImportImageRequestFeatures build(java.util.Map<String, ?> map) throws Exception {
+            ImportImageRequestFeatures self = new ImportImageRequestFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportImageRequestFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
         }
 
     }

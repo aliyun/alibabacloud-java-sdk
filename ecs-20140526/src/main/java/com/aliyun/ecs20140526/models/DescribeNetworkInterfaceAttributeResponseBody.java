@@ -163,7 +163,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      * <p>The private IP address of the ENI.</p>
      * 
      * <strong>example:</strong>
-     * <p><code>10.1.**.**</code></p>
+     * <p>10.1.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -651,7 +651,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
-         * <p><code>116.62.**.**</code></p>
+         * <p>116.62.**.**</p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
@@ -1221,7 +1221,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
-         * <p><code>116.62.**.**</code></p>
+         * <p>116.62.**.**</p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
@@ -1273,7 +1273,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>The private IP address of the ENI.</p>
          * 
          * <strong>example:</strong>
-         * <p><code>172.17.**.**</code></p>
+         * <p>172.17.**.**</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;

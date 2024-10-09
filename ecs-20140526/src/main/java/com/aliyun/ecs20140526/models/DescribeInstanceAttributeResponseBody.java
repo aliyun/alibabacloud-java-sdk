@@ -679,7 +679,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <p>The ID of the elastic IP address (EIP).</p>
          * 
          * <strong>example:</strong>
-         * <p><code>30.21.**.**</code></p>
+         * <p>30.21.**.**</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -855,7 +855,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <p>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</p>
          * 
          * <strong>example:</strong>
-         * <p><code>172.17.**.**</code></p>
+         * <p>172.17.**.**</p>
          */
         @NameInMap("NatIpAddress")
         public String natIpAddress;

@@ -30,7 +30,7 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
      * <p>The secondary private IP addresses to unassign.</p>
      * 
      * <strong>example:</strong>
-     * <p><code>192.168.**.**</code></p>
+     * <p>192.168.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
