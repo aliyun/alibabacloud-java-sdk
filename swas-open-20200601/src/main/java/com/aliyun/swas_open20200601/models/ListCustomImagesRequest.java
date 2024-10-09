@@ -41,6 +41,8 @@ public class ListCustomImagesRequest extends TeaModel {
     public String imageNames;
 
     /**
+     * <p>The ID of the Simple Application Server instance that the image originates from.</p>
+     * 
      * <strong>example:</strong>
      * <p>ace0706b2ac4454d984295a94213****</p>
      */
@@ -89,6 +91,15 @@ public class ListCustomImagesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Whether to query shared images. Value range:</p>
+     * <ul>
+     * <li><p>False: No. Indicates that shared images are not included in the returned results.</p>
+     * </li>
+     * <li><p>True: Yes. Indicates that only shared images are returned.</p>
+     * </li>
+     * </ul>
+     * <p>If not filled, all images are returned by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */

@@ -49,7 +49,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. You can specify up to 20 tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -102,8 +102,8 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the simple application server. Valid values of N: 1 to 20.</p>
-         * <p>You cannot specify an empty string as a tag key. A tag key can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>The key of tag N that you want to add to a resource.</p>
+         * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -112,8 +112,8 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the simple application server. Valid values of N: 1 to 20.</p>
-         * <p>You can specify an empty string as a tag value. A tag value can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>The value of tag N that you want to add to a resource.</p>
+         * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

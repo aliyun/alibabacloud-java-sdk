@@ -28,6 +28,15 @@ public class LoginInstanceRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Remote login instance port number:</p>
+     * <ul>
+     * <li>Linux Server: Default is 22.</li>
+     * <li>Windows Server: Default is 3389.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you need to connect to the server using a custom port, you must first modify the server\&quot;s default remote port. For more information, see <a href="https://help.aliyun.com/document_detail/2807402.html">Set a custom port to connect to a simple application server</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3389</p>
      */
