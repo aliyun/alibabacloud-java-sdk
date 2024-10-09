@@ -656,7 +656,7 @@ public class RunInstancesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p><code>10.1.**.**</code></p>
+     * <p>10.1.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -2640,7 +2640,7 @@ public class RunInstancesRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p><code>172.16.**.**</code></p>
+         * <p>172.16.**.**</p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;

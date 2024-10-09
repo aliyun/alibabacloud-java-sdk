@@ -329,7 +329,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
      * <p>To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p><code>10.1.**.**</code></p>
+     * <p>10.1.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -1504,7 +1504,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p><code>192.168.**.**</code></p>
+         * <p>192.168.**.**</p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;

@@ -230,9 +230,6 @@ public class DescribeImagesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the subscription image has expired.</p>
-     * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
