@@ -70,7 +70,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         public Boolean success;
 
         @NameInMap("VlContent")
-        public java.util.Map<String, ?> vlContent;
+        public String vlContent;
 
         public static CredentialVerifyResponseBodyResultObjectVlResult build(java.util.Map<String, ?> map) throws Exception {
             CredentialVerifyResponseBodyResultObjectVlResult self = new CredentialVerifyResponseBodyResultObjectVlResult();
@@ -85,11 +85,11 @@ public class CredentialVerifyResponseBody extends TeaModel {
             return this.success;
         }
 
-        public CredentialVerifyResponseBodyResultObjectVlResult setVlContent(java.util.Map<String, ?> vlContent) {
+        public CredentialVerifyResponseBodyResultObjectVlResult setVlContent(String vlContent) {
             this.vlContent = vlContent;
             return this;
         }
-        public java.util.Map<String, ?> getVlContent() {
+        public String getVlContent() {
             return this.vlContent;
         }
 
