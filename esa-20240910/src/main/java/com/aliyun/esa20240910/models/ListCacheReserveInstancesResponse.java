@@ -3,7 +3,7 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class AdvancePurgeObjectCacheResponse extends TeaModel {
+public class ListCacheReserveInstancesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AdvancePurgeObjectCacheResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AdvancePurgeObjectCacheResponseBody body;
+    public ListCacheReserveInstancesResponseBody body;
 
-    public static AdvancePurgeObjectCacheResponse build(java.util.Map<String, ?> map) throws Exception {
-        AdvancePurgeObjectCacheResponse self = new AdvancePurgeObjectCacheResponse();
+    public static ListCacheReserveInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListCacheReserveInstancesResponse self = new ListCacheReserveInstancesResponse();
         return TeaModel.build(map, self);
     }
 
-    public AdvancePurgeObjectCacheResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListCacheReserveInstancesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AdvancePurgeObjectCacheResponse extends TeaModel {
         return this.headers;
     }
 
-    public AdvancePurgeObjectCacheResponse setStatusCode(Integer statusCode) {
+    public ListCacheReserveInstancesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AdvancePurgeObjectCacheResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AdvancePurgeObjectCacheResponse setBody(AdvancePurgeObjectCacheResponseBody body) {
+    public ListCacheReserveInstancesResponse setBody(ListCacheReserveInstancesResponseBody body) {
         this.body = body;
         return this;
     }
-    public AdvancePurgeObjectCacheResponseBody getBody() {
+    public ListCacheReserveInstancesResponseBody getBody() {
         return this.body;
     }
 

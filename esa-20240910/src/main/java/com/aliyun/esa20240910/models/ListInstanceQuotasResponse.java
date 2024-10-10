@@ -3,7 +3,7 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class PutKvAccountResponse extends TeaModel {
+public class ListInstanceQuotasResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class PutKvAccountResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public PutKvAccountResponseBody body;
+    public ListInstanceQuotasResponseBody body;
 
-    public static PutKvAccountResponse build(java.util.Map<String, ?> map) throws Exception {
-        PutKvAccountResponse self = new PutKvAccountResponse();
+    public static ListInstanceQuotasResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListInstanceQuotasResponse self = new ListInstanceQuotasResponse();
         return TeaModel.build(map, self);
     }
 
-    public PutKvAccountResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListInstanceQuotasResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class PutKvAccountResponse extends TeaModel {
         return this.headers;
     }
 
-    public PutKvAccountResponse setStatusCode(Integer statusCode) {
+    public ListInstanceQuotasResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class PutKvAccountResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public PutKvAccountResponse setBody(PutKvAccountResponseBody body) {
+    public ListInstanceQuotasResponse setBody(ListInstanceQuotasResponseBody body) {
         this.body = body;
         return this;
     }
-    public PutKvAccountResponseBody getBody() {
+    public ListInstanceQuotasResponseBody getBody() {
         return this.body;
     }
 
