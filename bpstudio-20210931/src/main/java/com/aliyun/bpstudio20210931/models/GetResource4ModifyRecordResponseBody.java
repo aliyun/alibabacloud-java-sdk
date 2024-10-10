@@ -126,6 +126,9 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
         @NameInMap("Attribute")
         public String attribute;
 
+        @NameInMap("Error")
+        public String error;
+
         /**
          * <strong>example:</strong>
          * <p>1726645341000</p>
@@ -165,6 +168,14 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
         }
         public String getAttribute() {
             return this.attribute;
+        }
+
+        public GetResource4ModifyRecordResponseBodyData setError(String error) {
+            this.error = error;
+            return this;
+        }
+        public String getError() {
+            return this.error;
         }
 
         public GetResource4ModifyRecordResponseBodyData setModifyTime(String modifyTime) {
