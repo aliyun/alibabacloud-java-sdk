@@ -4798,6 +4798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ComponentType", request.componentType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.componentVersion)) {
+            query.put("ComponentVersion", request.componentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
         }
@@ -4941,6 +4945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imageFamily)) {
+            query.put("ImageFamily", request.imageFamily);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
             query.put("ImageName", request.imageName);
         }
@@ -4973,6 +4981,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repairMode)) {
+            query.put("RepairMode", request.repairMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -4995,6 +5007,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.testContent)) {
+            query.put("TestContent", request.testContent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.toRegionId)) {
@@ -14275,6 +14291,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeImageComponentsResponse describeImageComponentsWithOptions(DescribeImageComponentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentType)) {
+            query.put("ComponentType", request.componentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentVersion)) {
+            query.put("ComponentVersion", request.componentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageComponentId)) {
             query.put("ImageComponentId", request.imageComponentId);
         }
@@ -14325,6 +14349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemType)) {
+            query.put("SystemType", request.systemType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {

@@ -259,6 +259,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ImageFamily")
+        public String imageFamily;
+
         /**
          * <p>The name prefix of the image to be created based on the image template.</p>
          * 
@@ -304,6 +307,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("RepairMode")
+        public String repairMode;
+
         /**
          * <p>The ID of the resource group.</p>
          * 
@@ -327,6 +333,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         @NameInMap("Tags")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
+
+        @NameInMap("TestContent")
+        public String testContent;
 
         /**
          * <p>The IDs of regions to which to distribute the image that will be created based on the image template.</p>
@@ -404,6 +413,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageFamily(String imageFamily) {
+            this.imageFamily = imageFamily;
+            return this;
+        }
+        public String getImageFamily() {
+            return this.imageFamily;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageName(String imageName) {
             this.imageName = imageName;
             return this;
@@ -444,6 +461,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setRepairMode(String repairMode) {
+            this.repairMode = repairMode;
+            return this;
+        }
+        public String getRepairMode() {
+            return this.repairMode;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -466,6 +491,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags getTags() {
             return this.tags;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setTestContent(String testContent) {
+            this.testContent = testContent;
+            return this;
+        }
+        public String getTestContent() {
+            return this.testContent;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setToRegionIds(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds) {

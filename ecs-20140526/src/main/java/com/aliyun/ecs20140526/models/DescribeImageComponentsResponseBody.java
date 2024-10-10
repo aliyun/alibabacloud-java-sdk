@@ -91,6 +91,66 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter extends TeaModel {
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter self = new DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters extends TeaModel {
+        @NameInMap("Parameter")
+        public java.util.List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter> parameter;
+
+        public static DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters self = new DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters setParameter(java.util.List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter> parameter) {
+            this.parameter = parameter;
+            return this;
+        }
+        public java.util.List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter> getParameter() {
+            return this.parameter;
+        }
+
+    }
+
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -162,6 +222,9 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         @NameInMap("ComponentType")
         public String componentType;
 
+        @NameInMap("ComponentVersion")
+        public String componentVersion;
+
         /**
          * <p>The content of the image component.</p>
          * 
@@ -220,6 +283,9 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         @NameInMap("Owner")
         public String owner;
 
+        @NameInMap("Parameters")
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters parameters;
+
         /**
          * <p>The ID of the resource group to which the image component belongs.</p>
          * 
@@ -255,6 +321,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
         public String getComponentType() {
             return this.componentType;
+        }
+
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSet setComponentVersion(String componentVersion) {
+            this.componentVersion = componentVersion;
+            return this;
+        }
+        public String getComponentVersion() {
+            return this.componentVersion;
         }
 
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSet setContent(String content) {
@@ -303,6 +377,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
+        }
+
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSet setParameters(DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters getParameters() {
+            return this.parameters;
         }
 
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSet setResourceGroupId(String resourceGroupId) {
