@@ -1718,6 +1718,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>组织内查看邮件任务运行状态</p>
+     * 
+     * @param request GetMailTaskStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMailTaskStatusResponse
+     */
+    public GetMailTaskStatusResponse getMailTaskStatusWithOptions(GetMailTaskStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mailId)) {
+            query.put("MailId", request.mailId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMailTaskStatus"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMailTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织内查看邮件任务运行状态</p>
+     * 
+     * @param request GetMailTaskStatusRequest
+     * @return GetMailTaskStatusResponse
+     */
+    public GetMailTaskStatusResponse getMailTaskStatus(GetMailTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMailTaskStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Test description</p>
      * 
      * @param request GetUserGroupInfoRequest
@@ -1758,6 +1806,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserGroupInfoResponse getUserGroupInfo(GetUserGroupInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserGroupInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询已嵌入报表列表</p>
+     * 
+     * @param request GetWorksEmbedListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorksEmbedListResponse
+     */
+    public GetWorksEmbedListResponse getWorksEmbedListWithOptions(GetWorksEmbedListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.worksType)) {
+            query.put("WorksType", request.worksType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wsId)) {
+            query.put("WsId", request.wsId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorksEmbedList"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorksEmbedListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询已嵌入报表列表</p>
+     * 
+     * @param request GetWorksEmbedListRequest
+     * @return GetWorksEmbedListResponse
+     */
+    public GetWorksEmbedListResponse getWorksEmbedList(GetWorksEmbedListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWorksEmbedListWithOptions(request, runtime);
     }
 
     /**
@@ -2514,6 +2622,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWorkspaceRolesResponse listWorkspaceRoles(ListWorkspaceRolesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listWorkspaceRolesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动执行邮件任务</p>
+     * 
+     * @param request ManualRunMailTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ManualRunMailTaskResponse
+     */
+    public ManualRunMailTaskResponse manualRunMailTaskWithOptions(ManualRunMailTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mailId)) {
+            query.put("MailId", request.mailId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ManualRunMailTask"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ManualRunMailTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动执行邮件任务</p>
+     * 
+     * @param request ManualRunMailTaskRequest
+     * @return ManualRunMailTaskResponse
+     */
+    public ManualRunMailTaskResponse manualRunMailTask(ManualRunMailTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.manualRunMailTaskWithOptions(request, runtime);
     }
 
     /**
