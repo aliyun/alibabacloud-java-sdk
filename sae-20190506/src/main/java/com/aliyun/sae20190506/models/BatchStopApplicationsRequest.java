@@ -8,7 +8,7 @@ public class BatchStopApplicationsRequest extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****，ebf491f0-c1a5-45e2-b2c4-71025e2a****</p>
+     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</p>
      */
     @NameInMap("AppIds")
     public String appIds;

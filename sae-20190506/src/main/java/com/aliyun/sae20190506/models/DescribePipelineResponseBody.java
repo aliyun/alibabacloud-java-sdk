@@ -166,7 +166,7 @@ public class DescribePipelineResponseBody extends TeaModel {
          * <p>The error message returned when the task could not be executed. If the task is successfully executed, this parameter is not returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>EDAS-10022 \&lt;a target=\&quot;_blank\&quot; href=\&quot;<a href="https://help.aliyun.com/knowledge_detail/106573.html#EDAS-10022%5C%5C%22%3EREADINESS">https://help.aliyun.com/knowledge_detail/106573.html#EDAS-10022\\&quot;&gt;READINESS</a> check failed during the application startup.\</a></p>
+         * <p>EDAS-10022</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
