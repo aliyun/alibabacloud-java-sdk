@@ -85,6 +85,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImageFamily")
+    public String imageFamily;
+
     /**
      * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
@@ -143,6 +146,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RepairMode")
+    public String repairMode;
+
     /**
      * <p>The ID of the resource group.</p>
      * 
@@ -173,6 +179,9 @@ public class CreateImagePipelineRequest extends TeaModel {
      */
     @NameInMap("Tag")
     public java.util.List<CreateImagePipelineRequestTag> tag;
+
+    @NameInMap("TestContent")
+    public String testContent;
 
     /**
      * <p>The IDs of regions to which you want to distribute the image that is created based on the image template. You can specify up to 20 region IDs.</p>
@@ -255,6 +264,14 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateImagePipelineRequest setImageFamily(String imageFamily) {
+        this.imageFamily = imageFamily;
+        return this;
+    }
+    public String getImageFamily() {
+        return this.imageFamily;
+    }
+
     public CreateImagePipelineRequest setImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -311,6 +328,14 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateImagePipelineRequest setRepairMode(String repairMode) {
+        this.repairMode = repairMode;
+        return this;
+    }
+    public String getRepairMode() {
+        return this.repairMode;
+    }
+
     public CreateImagePipelineRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -349,6 +374,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public java.util.List<CreateImagePipelineRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateImagePipelineRequest setTestContent(String testContent) {
+        this.testContent = testContent;
+        return this;
+    }
+    public String getTestContent() {
+        return this.testContent;
     }
 
     public CreateImagePipelineRequest setToRegionId(java.util.List<String> toRegionId) {

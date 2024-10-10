@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsRequest extends TeaModel {
+    @NameInMap("ComponentType")
+    public String componentType;
+
+    @NameInMap("ComponentVersion")
+    public String componentVersion;
+
     /**
      * <p>The IDs of image components. Valid values of N: 1 to 20.</p>
      * 
@@ -88,6 +94,9 @@ public class DescribeImageComponentsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SystemType")
+    public String systemType;
+
     /**
      * <p>The tags of the image component.</p>
      */
@@ -97,6 +106,22 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public static DescribeImageComponentsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageComponentsRequest self = new DescribeImageComponentsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImageComponentsRequest setComponentType(String componentType) {
+        this.componentType = componentType;
+        return this;
+    }
+    public String getComponentType() {
+        return this.componentType;
+    }
+
+    public DescribeImageComponentsRequest setComponentVersion(String componentVersion) {
+        this.componentVersion = componentVersion;
+        return this;
+    }
+    public String getComponentVersion() {
+        return this.componentVersion;
     }
 
     public DescribeImageComponentsRequest setImageComponentId(java.util.List<String> imageComponentId) {
@@ -185,6 +210,14 @@ public class DescribeImageComponentsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeImageComponentsRequest setSystemType(String systemType) {
+        this.systemType = systemType;
+        return this;
+    }
+    public String getSystemType() {
+        return this.systemType;
     }
 
     public DescribeImageComponentsRequest setTag(java.util.List<DescribeImageComponentsRequestTag> tag) {

@@ -23,6 +23,9 @@ public class CreateImageComponentRequest extends TeaModel {
     @NameInMap("ComponentType")
     public String componentType;
 
+    @NameInMap("ComponentVersion")
+    public String componentVersion;
+
     /**
      * <p>The content of the image component. The content consists of up to 127 commands.</p>
      * 
@@ -119,6 +122,14 @@ public class CreateImageComponentRequest extends TeaModel {
     }
     public String getComponentType() {
         return this.componentType;
+    }
+
+    public CreateImageComponentRequest setComponentVersion(String componentVersion) {
+        this.componentVersion = componentVersion;
+        return this;
+    }
+    public String getComponentVersion() {
+        return this.componentVersion;
     }
 
     public CreateImageComponentRequest setContent(String content) {
