@@ -16,6 +16,12 @@ public class ExecuteSQLQueryRequest extends TeaModel {
     @NameInMap("Expression")
     public String expression;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The search scope.</p>
      * <p>Set this parameter to the ID of a resource group.</p>
@@ -38,6 +44,22 @@ public class ExecuteSQLQueryRequest extends TeaModel {
     }
     public String getExpression() {
         return this.expression;
+    }
+
+    public ExecuteSQLQueryRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ExecuteSQLQueryRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ExecuteSQLQueryRequest setScope(String scope) {
