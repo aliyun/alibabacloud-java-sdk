@@ -3,7 +3,7 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class AddUserBusinessFormResponse extends TeaModel {
+public class GetCacheReserveSpecificationResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AddUserBusinessFormResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AddUserBusinessFormResponseBody body;
+    public GetCacheReserveSpecificationResponseBody body;
 
-    public static AddUserBusinessFormResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddUserBusinessFormResponse self = new AddUserBusinessFormResponse();
+    public static GetCacheReserveSpecificationResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetCacheReserveSpecificationResponse self = new GetCacheReserveSpecificationResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddUserBusinessFormResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetCacheReserveSpecificationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AddUserBusinessFormResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddUserBusinessFormResponse setStatusCode(Integer statusCode) {
+    public GetCacheReserveSpecificationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AddUserBusinessFormResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AddUserBusinessFormResponse setBody(AddUserBusinessFormResponseBody body) {
+    public GetCacheReserveSpecificationResponse setBody(GetCacheReserveSpecificationResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddUserBusinessFormResponseBody getBody() {
+    public GetCacheReserveSpecificationResponseBody getBody() {
         return this.body;
     }
 
