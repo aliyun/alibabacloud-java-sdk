@@ -806,12 +806,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("HarmonyActionType", request.harmonyActionType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyBadgeAddNum)) {
+            query.put("HarmonyBadgeAddNum", request.harmonyBadgeAddNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyBadgeSetNum)) {
+            query.put("HarmonyBadgeSetNum", request.harmonyBadgeSetNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.harmonyCategory)) {
             query.put("HarmonyCategory", request.harmonyCategory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.harmonyExtParameters)) {
             query.put("HarmonyExtParameters", request.harmonyExtParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyExtensionExtraData)) {
+            query.put("HarmonyExtensionExtraData", request.harmonyExtensionExtraData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyExtensionPush)) {
+            query.put("HarmonyExtensionPush", request.harmonyExtensionPush);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.harmonyImageUrl)) {
