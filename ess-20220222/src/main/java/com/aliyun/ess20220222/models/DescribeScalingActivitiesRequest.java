@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingActivitiesRequest extends TeaModel {
+    @NameInMap("InstanceRefreshTaskId")
+    public String instanceRefreshTaskId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -86,6 +89,14 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     public static DescribeScalingActivitiesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingActivitiesRequest self = new DescribeScalingActivitiesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeScalingActivitiesRequest setInstanceRefreshTaskId(String instanceRefreshTaskId) {
+        this.instanceRefreshTaskId = instanceRefreshTaskId;
+        return this;
+    }
+    public String getInstanceRefreshTaskId() {
+        return this.instanceRefreshTaskId;
     }
 
     public DescribeScalingActivitiesRequest setOwnerAccount(String ownerAccount) {

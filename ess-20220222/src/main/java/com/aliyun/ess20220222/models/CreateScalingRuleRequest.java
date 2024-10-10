@@ -72,6 +72,12 @@ public class CreateScalingRuleRequest extends TeaModel {
     @NameInMap("EstimatedInstanceWarmup")
     public Integer estimatedInstanceWarmup;
 
+    @NameInMap("HybridMetrics")
+    public java.util.List<CreateScalingRuleRequestHybridMetrics> hybridMetrics;
+
+    @NameInMap("HybridMonitorNamespace")
+    public String hybridMonitorNamespace;
+
     /**
      * <p>The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify <code>PredictiveValueBehavior</code>.</p>
      * <p>The default value of this parameter is the value of MaxSize.</p>
@@ -86,12 +92,13 @@ public class CreateScalingRuleRequest extends TeaModel {
      * <p>The predefined metric of the scaling rule. If you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule, you must specify this parameter.</p>
      * <p>Valid values if you set ScalingRuleType to TargetTrackingScalingRule:</p>
      * <ul>
+     * <li>CpuUtilizationAgent (recommended): the CPU utilization.</li>
+     * <li>MemoryUtilization (recommended): the memory usage.</li>
      * <li>CpuUtilization: the average CPU utilization.</li>
      * <li>IntranetTx: the outbound traffic over an internal network.</li>
      * <li>IntranetRx: the inbound traffic over an internal network.</li>
      * <li>VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.</li>
      * <li>VpcInternetRx: the inbound traffic from the Internet to a VPC.</li>
-     * <li>MemoryUtilization: the memory usage.</li>
      * <li>LoadBalancerRealServerAverageQps:the queries per second (QPS) per Application Load Balancer (ALB) server group.</li>
      * </ul>
      * <p>Valid values if you set ScalingRuleType to PredictiveScalingRule:</p>
@@ -100,12 +107,16 @@ public class CreateScalingRuleRequest extends TeaModel {
      * <li>IntranetRx: the inbound traffic over an internal network.</li>
      * <li>IntranetTx: the outbound traffic over an internal network.</li>
      * </ul>
+     * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/auto-scaling/user-guide/event-triggered-tasks-of-the-system-monitoring-type">Event-triggered tasks of the system monitoring type</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CpuUtilization</p>
      */
     @NameInMap("MetricName")
     public String metricName;
+
+    @NameInMap("MetricType")
+    public String metricType;
 
     /**
      * <p>The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.</p>
@@ -308,6 +319,22 @@ public class CreateScalingRuleRequest extends TeaModel {
         return this.estimatedInstanceWarmup;
     }
 
+    public CreateScalingRuleRequest setHybridMetrics(java.util.List<CreateScalingRuleRequestHybridMetrics> hybridMetrics) {
+        this.hybridMetrics = hybridMetrics;
+        return this;
+    }
+    public java.util.List<CreateScalingRuleRequestHybridMetrics> getHybridMetrics() {
+        return this.hybridMetrics;
+    }
+
+    public CreateScalingRuleRequest setHybridMonitorNamespace(String hybridMonitorNamespace) {
+        this.hybridMonitorNamespace = hybridMonitorNamespace;
+        return this;
+    }
+    public String getHybridMonitorNamespace() {
+        return this.hybridMonitorNamespace;
+    }
+
     public CreateScalingRuleRequest setInitialMaxSize(Integer initialMaxSize) {
         this.initialMaxSize = initialMaxSize;
         return this;
@@ -322,6 +349,14 @@ public class CreateScalingRuleRequest extends TeaModel {
     }
     public String getMetricName() {
         return this.metricName;
+    }
+
+    public CreateScalingRuleRequest setMetricType(String metricType) {
+        this.metricType = metricType;
+        return this;
+    }
+    public String getMetricType() {
+        return this.metricType;
     }
 
     public CreateScalingRuleRequest setMinAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
@@ -490,6 +525,99 @@ public class CreateScalingRuleRequest extends TeaModel {
         }
         public String getDimensionValue() {
             return this.dimensionValue;
+        }
+
+    }
+
+    public static class CreateScalingRuleRequestHybridMetricsDimensions extends TeaModel {
+        @NameInMap("DimensionKey")
+        public String dimensionKey;
+
+        @NameInMap("DimensionValue")
+        public String dimensionValue;
+
+        public static CreateScalingRuleRequestHybridMetricsDimensions build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingRuleRequestHybridMetricsDimensions self = new CreateScalingRuleRequestHybridMetricsDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingRuleRequestHybridMetricsDimensions setDimensionKey(String dimensionKey) {
+            this.dimensionKey = dimensionKey;
+            return this;
+        }
+        public String getDimensionKey() {
+            return this.dimensionKey;
+        }
+
+        public CreateScalingRuleRequestHybridMetricsDimensions setDimensionValue(String dimensionValue) {
+            this.dimensionValue = dimensionValue;
+            return this;
+        }
+        public String getDimensionValue() {
+            return this.dimensionValue;
+        }
+
+    }
+
+    public static class CreateScalingRuleRequestHybridMetrics extends TeaModel {
+        @NameInMap("Dimensions")
+        public java.util.List<CreateScalingRuleRequestHybridMetricsDimensions> dimensions;
+
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Statistic")
+        public String statistic;
+
+        public static CreateScalingRuleRequestHybridMetrics build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingRuleRequestHybridMetrics self = new CreateScalingRuleRequestHybridMetrics();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingRuleRequestHybridMetrics setDimensions(java.util.List<CreateScalingRuleRequestHybridMetricsDimensions> dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public java.util.List<CreateScalingRuleRequestHybridMetricsDimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        public CreateScalingRuleRequestHybridMetrics setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public CreateScalingRuleRequestHybridMetrics setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateScalingRuleRequestHybridMetrics setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public CreateScalingRuleRequestHybridMetrics setStatistic(String statistic) {
+            this.statistic = statistic;
+            return this;
+        }
+        public String getStatistic() {
+            return this.statistic;
         }
 
     }

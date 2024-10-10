@@ -426,6 +426,9 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("SecurityOptions")
+    public CreateScalingConfigurationRequestSecurityOptions securityOptions;
+
     /**
      * <p>The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
      * <ul>
@@ -915,6 +918,14 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
+    }
+
+    public CreateScalingConfigurationRequest setSecurityOptions(CreateScalingConfigurationRequestSecurityOptions securityOptions) {
+        this.securityOptions = securityOptions;
+        return this;
+    }
+    public CreateScalingConfigurationRequestSecurityOptions getSecurityOptions() {
+        return this.securityOptions;
     }
 
     public CreateScalingConfigurationRequest setSpotDuration(Integer spotDuration) {
@@ -1679,13 +1690,13 @@ public class CreateScalingConfigurationRequest extends TeaModel {
 
     public static class CreateScalingConfigurationRequestInstancePatternInfos extends TeaModel {
         /**
-         * <p>The architecture types of the instance types. Valid values:</p>
+         * <p>The architecture types of instance types. Valid values:</p>
          * <ul>
-         * <li>X86: x86</li>
-         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
-         * <li>BareMetal: ECS Bare Metal Instance</li>
-         * <li>Arm: Arm</li>
-         * <li>SuperComputeCluster: Super Computing Cluster</li>
+         * <li>X86: x86.</li>
+         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
+         * <li>BareMetal: ECS Bare Metal Instance.</li>
+         * <li>Arm: Arm.</li>
+         * <li>SuperComputeCluster: Super Computing Cluster.</li>
          * </ul>
          * <p>By default, all values are included.</p>
          */
@@ -1708,12 +1719,12 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public String burstablePerformance;
 
         /**
-         * <p>The number of vCPUs per instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
-         * <p>Before you specify this parameter, take note of the following items:</p>
+         * <p>The number of vCPUs per instance type in intelligent configuration mode. You can use this parameter to match the available instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <p>Take note of the following items:</p>
          * <ul>
-         * <li>InstancePatternInfos is applicable only to the scaling groups that reside in virtual private clouds (VPCs).</li>
+         * <li>InstancePatternInfos applies only to the scaling groups that reside in virtual private clouds (VPCs).</li>
          * <li>If you specify InstancePatternInfos, you must also specify InstancePatternInfos.Cores and InstancePatternInfos.Memory.</li>
-         * <li>If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type does not have sufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.</li>
+         * <li>If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type has insufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1722,6 +1733,16 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         @NameInMap("Cores")
         public Integer cores;
 
+        /**
+         * <p>The CPU architectures of instance types. Valid values:</p>
+         * <blockquote>
+         * <p> You can specify 1 to 2 CPU architectures.</p>
+         * </blockquote>
+         * <ul>
+         * <li>x86</li>
+         * <li>Arm</li>
+         * </ul>
+         */
         @NameInMap("CpuArchitectures")
         public java.util.List<String> cpuArchitectures;
 
@@ -1735,14 +1756,41 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
 
+        /**
+         * <p>The GPU models.</p>
+         */
         @NameInMap("GpuSpecs")
         public java.util.List<String> gpuSpecs;
 
+        /**
+         * <p>The categories of instance types. Valid values:</p>
+         * <blockquote>
+         * <p> You can specify up to 10 categories.</p>
+         * </blockquote>
+         * <ul>
+         * <li>General-purpose</li>
+         * <li>Compute-optimized</li>
+         * <li>Memory-optimized</li>
+         * <li>Big data</li>
+         * <li>Local SSDs</li>
+         * <li>High Clock Speed</li>
+         * <li>Enhanced</li>
+         * <li>Shared</li>
+         * <li>Compute-optimized with GPU</li>
+         * <li>Visual Compute-optimized</li>
+         * <li>Heterogeneous Service</li>
+         * <li>Compute-optimized with FPGA</li>
+         * <li>Compute-optimized with NPU</li>
+         * <li>ECS Bare Metal</li>
+         * <li>Super Computing Cluster</li>
+         * <li>High Performance Compute</li>
+         * </ul>
+         */
         @NameInMap("InstanceCategories")
         public java.util.List<String> instanceCategories;
 
         /**
-         * <p>The level of the instance family. You can specify this parameter to specify the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
+         * <p>The level of the instance family. You can use this parameter to match the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
          * <ul>
          * <li>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
          * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
@@ -1755,6 +1803,9 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
+        /**
+         * <p>The instance families that you want to specify. You can specify up to 10 instance families in each call.</p>
+         */
         @NameInMap("InstanceTypeFamilies")
         public java.util.List<String> instanceTypeFamilies;
 
@@ -1771,6 +1822,11 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Float maxPrice;
 
         /**
+         * <p>The maximum number of vCPUs per instance type.</p>
+         * <blockquote>
+         * <p> The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -1778,6 +1834,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer maximumCpuCoreCount;
 
         /**
+         * <p>The maximum number of GPUs per instance. The value must be a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1785,6 +1843,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer maximumGpuAmount;
 
         /**
+         * <p>The maximum memory size per instance. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -1792,7 +1852,7 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Float maximumMemorySize;
 
         /**
-         * <p>The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.</p>
+         * <p>The memory size per instance type in intelligent configuration mode. Unit: GiB. You can use this parameter to match the available instance types.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1801,6 +1861,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Float memory;
 
         /**
+         * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -1808,6 +1870,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer minimumBaselineCredit;
 
         /**
+         * <p>The minimum number of vCPUs per instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1815,6 +1879,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer minimumCpuCoreCount;
 
         /**
+         * <p>The minimum number of IPv6 addresses per ENI.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1822,6 +1888,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer minimumEniIpv6AddressQuantity;
 
         /**
+         * <p>The minimum number of IPv4 addresses per ENI.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1829,6 +1897,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer minimumEniPrivateIpAddressQuantity;
 
         /**
+         * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1836,6 +1906,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer minimumEniQuantity;
 
         /**
+         * <p>The minimum number of GPUs per instance. The value must be a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1843,6 +1915,8 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer minimumGpuAmount;
 
         /**
+         * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -1850,12 +1924,17 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         public Integer minimumInitialCredit;
 
         /**
+         * <p>The minimum memory size per instance. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
         @NameInMap("MinimumMemorySize")
         public Float minimumMemorySize;
 
+        /**
+         * <p>The processor models of instance types. You can specify up to 10 processor models.</p>
+         */
         @NameInMap("PhysicalProcessorModels")
         public java.util.List<String> physicalProcessorModels;
 
@@ -2170,6 +2249,25 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+    }
+
+    public static class CreateScalingConfigurationRequestSecurityOptions extends TeaModel {
+        @NameInMap("ConfidentialComputingMode")
+        public String confidentialComputingMode;
+
+        public static CreateScalingConfigurationRequestSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingConfigurationRequestSecurityOptions self = new CreateScalingConfigurationRequestSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingConfigurationRequestSecurityOptions setConfidentialComputingMode(String confidentialComputingMode) {
+            this.confidentialComputingMode = confidentialComputingMode;
+            return this;
+        }
+        public String getConfidentialComputingMode() {
+            return this.confidentialComputingMode;
         }
 
     }

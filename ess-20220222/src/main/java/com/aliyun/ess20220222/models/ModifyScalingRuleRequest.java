@@ -70,6 +70,12 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("EstimatedInstanceWarmup")
     public Integer estimatedInstanceWarmup;
 
+    @NameInMap("HybridMetrics")
+    public java.util.List<ModifyScalingRuleRequestHybridMetrics> hybridMetrics;
+
+    @NameInMap("HybridMonitorNamespace")
+    public String hybridMonitorNamespace;
+
     /**
      * <p>The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify <code>PredictiveValueBehavior</code>.</p>
      * 
@@ -103,6 +109,9 @@ public class ModifyScalingRuleRequest extends TeaModel {
      */
     @NameInMap("MetricName")
     public String metricName;
+
+    @NameInMap("MetricType")
+    public String metricType;
 
     /**
      * <p>The minimum number of instances to scale. This parameter takes effect only if you create a simple scaling rule or step scaling rule and set <code>AdjustmentType</code> to <code>PercentChangeInCapacity</code>.</p>
@@ -276,6 +285,22 @@ public class ModifyScalingRuleRequest extends TeaModel {
         return this.estimatedInstanceWarmup;
     }
 
+    public ModifyScalingRuleRequest setHybridMetrics(java.util.List<ModifyScalingRuleRequestHybridMetrics> hybridMetrics) {
+        this.hybridMetrics = hybridMetrics;
+        return this;
+    }
+    public java.util.List<ModifyScalingRuleRequestHybridMetrics> getHybridMetrics() {
+        return this.hybridMetrics;
+    }
+
+    public ModifyScalingRuleRequest setHybridMonitorNamespace(String hybridMonitorNamespace) {
+        this.hybridMonitorNamespace = hybridMonitorNamespace;
+        return this;
+    }
+    public String getHybridMonitorNamespace() {
+        return this.hybridMonitorNamespace;
+    }
+
     public ModifyScalingRuleRequest setInitialMaxSize(Integer initialMaxSize) {
         this.initialMaxSize = initialMaxSize;
         return this;
@@ -290,6 +315,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
     }
     public String getMetricName() {
         return this.metricName;
+    }
+
+    public ModifyScalingRuleRequest setMetricType(String metricType) {
+        this.metricType = metricType;
+        return this;
+    }
+    public String getMetricType() {
+        return this.metricType;
     }
 
     public ModifyScalingRuleRequest setMinAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
@@ -450,6 +483,99 @@ public class ModifyScalingRuleRequest extends TeaModel {
         }
         public String getDimensionValue() {
             return this.dimensionValue;
+        }
+
+    }
+
+    public static class ModifyScalingRuleRequestHybridMetricsDimensions extends TeaModel {
+        @NameInMap("DimensionKey")
+        public String dimensionKey;
+
+        @NameInMap("DimensionValue")
+        public String dimensionValue;
+
+        public static ModifyScalingRuleRequestHybridMetricsDimensions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingRuleRequestHybridMetricsDimensions self = new ModifyScalingRuleRequestHybridMetricsDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingRuleRequestHybridMetricsDimensions setDimensionKey(String dimensionKey) {
+            this.dimensionKey = dimensionKey;
+            return this;
+        }
+        public String getDimensionKey() {
+            return this.dimensionKey;
+        }
+
+        public ModifyScalingRuleRequestHybridMetricsDimensions setDimensionValue(String dimensionValue) {
+            this.dimensionValue = dimensionValue;
+            return this;
+        }
+        public String getDimensionValue() {
+            return this.dimensionValue;
+        }
+
+    }
+
+    public static class ModifyScalingRuleRequestHybridMetrics extends TeaModel {
+        @NameInMap("Dimensions")
+        public java.util.List<ModifyScalingRuleRequestHybridMetricsDimensions> dimensions;
+
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Statistic")
+        public String statistic;
+
+        public static ModifyScalingRuleRequestHybridMetrics build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingRuleRequestHybridMetrics self = new ModifyScalingRuleRequestHybridMetrics();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingRuleRequestHybridMetrics setDimensions(java.util.List<ModifyScalingRuleRequestHybridMetricsDimensions> dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public java.util.List<ModifyScalingRuleRequestHybridMetricsDimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        public ModifyScalingRuleRequestHybridMetrics setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public ModifyScalingRuleRequestHybridMetrics setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ModifyScalingRuleRequestHybridMetrics setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public ModifyScalingRuleRequestHybridMetrics setStatistic(String statistic) {
+            this.statistic = statistic;
+            return this;
+        }
+        public String getStatistic() {
+            return this.statistic;
         }
 
     }

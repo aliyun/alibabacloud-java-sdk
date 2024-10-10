@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateNotificationConfigurationRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</p>
      * <ul>
-     * <li>If you use CloudMonitor as the notification method, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</li>
-     * <li>If you use an MNS queue as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</li>
-     * <li>If you use an MNS topic as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</li>
+     * <li>If you specify CloudMonitor as the notification recipient, specify the value in the <code>acs:ess:{region-id}:{account-id}:cloudmonitor</code> format.</li>
+     * <li>If you specify an MNS queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+     * <li>If you specify an MNS topic as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
      * </ul>
      * <p>The variables in the preceding formats have the following meanings:</p>
      * <ul>
-     * <li>region-id: the region ID of the scaling group.</li>
-     * <li>account-id: the ID of the Alibaba Cloud account.</li>
-     * <li>queuename: the name of the MNS queue.</li>
-     * <li>topicname: the name of the MNS topic.</li>
+     * <li><code>region-id</code>: the region ID of the scaling group.</li>
+     * <li><code>account-id</code>: the ID of the Alibaba Cloud account.</li>
+     * <li><code>queuename</code>: the name of the MNS queue.</li>
+     * <li><code>topicname</code>: the name of the MNS topic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class CreateNotificationConfigurationRequest extends TeaModel {
     public String notificationArn;
 
     /**
-     * <p>The types of the notifications that you want to create. You can create one to eight notifications. Specify multiple values in the repeated list form.</p>
+     * <p>The notification types. Specify multiple IDs in the repeated list form.</p>
      * <p>You can call the DescribeNotificationTypes operation to query the values of this parameter.</p>
      * <p>This parameter is required.</p>
      */
@@ -59,6 +59,12 @@ public class CreateNotificationConfigurationRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    /**
+     * <p>The time zone of the notification. Specify the value in UTC. For example, a value of UTC+8 specifies that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 specifies that the time is 7 hours behind Coordinated Universal Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UTC+8</p>
+     */
     @NameInMap("TimeZone")
     public String timeZone;
 

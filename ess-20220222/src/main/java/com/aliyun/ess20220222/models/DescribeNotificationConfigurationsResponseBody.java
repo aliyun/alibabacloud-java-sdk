@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>Details of the notifications.</p>
+     * <p>The notification settings.</p>
      */
     @NameInMap("NotificationConfigurationModels")
     public java.util.List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels> notificationConfigurationModels;
@@ -77,6 +77,12 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        /**
+         * <p>The time zone of the notification. The value must be in UTC. For example, a value of UTC+8 indicates that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 indicates that the time is 7 hours behind Coordinated Universal Time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
