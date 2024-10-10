@@ -16,6 +16,12 @@ public class ExecuteMultiAccountSQLQueryRequest extends TeaModel {
     @NameInMap("Expression")
     public String expression;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The search scope. The value of this parameter can be one of the following items:</p>
      * <ul>
@@ -45,6 +51,22 @@ public class ExecuteMultiAccountSQLQueryRequest extends TeaModel {
     }
     public String getExpression() {
         return this.expression;
+    }
+
+    public ExecuteMultiAccountSQLQueryRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ExecuteMultiAccountSQLQueryRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ExecuteMultiAccountSQLQueryRequest setScope(String scope) {
