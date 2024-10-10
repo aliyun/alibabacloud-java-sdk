@@ -354,6 +354,99 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions extends TeaModel {
+        @NameInMap("DimensionKey")
+        public String dimensionKey;
+
+        @NameInMap("DimensionValue")
+        public String dimensionValue;
+
+        public static DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions self = new DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions setDimensionKey(String dimensionKey) {
+            this.dimensionKey = dimensionKey;
+            return this;
+        }
+        public String getDimensionKey() {
+            return this.dimensionKey;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions setDimensionValue(String dimensionValue) {
+            this.dimensionValue = dimensionValue;
+            return this;
+        }
+        public String getDimensionValue() {
+            return this.dimensionValue;
+        }
+
+    }
+
+    public static class DescribeScalingRulesResponseBodyScalingRulesHybridMetrics extends TeaModel {
+        @NameInMap("Dimensions")
+        public java.util.List<DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions> dimensions;
+
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Statistic")
+        public String statistic;
+
+        public static DescribeScalingRulesResponseBodyScalingRulesHybridMetrics build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingRulesResponseBodyScalingRulesHybridMetrics self = new DescribeScalingRulesResponseBodyScalingRulesHybridMetrics();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesHybridMetrics setDimensions(java.util.List<DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions> dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public java.util.List<DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesHybridMetrics setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesHybridMetrics setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesHybridMetrics setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesHybridMetrics setStatistic(String statistic) {
+            this.statistic = statistic;
+            return this;
+        }
+        public String getStatistic() {
+            return this.statistic;
+        }
+
+    }
+
     public static class DescribeScalingRulesResponseBodyScalingRulesStepAdjustments extends TeaModel {
         /**
          * <p>The lower limit of a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
@@ -480,6 +573,12 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("EstimatedInstanceWarmup")
         public Integer estimatedInstanceWarmup;
 
+        @NameInMap("HybridMetrics")
+        public java.util.List<DescribeScalingRulesResponseBodyScalingRulesHybridMetrics> hybridMetrics;
+
+        @NameInMap("HybridMonitorNamespace")
+        public String hybridMonitorNamespace;
+
         /**
          * <p>The maximum number of ECS instances that can be contained in the scaling group. If you specify this parameter, you must also specify PredictiveValueBehavior.</p>
          * 
@@ -506,6 +605,9 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
          */
         @NameInMap("MetricName")
         public String metricName;
+
+        @NameInMap("MetricType")
+        public String metricType;
 
         /**
          * <p>The minimum number of instances that must be scaled. This parameter takes effect only if you set ScalingRuleType to SimpleScalingRule or StepScalingRule and set AdjustmentType to PercentChangeInCapacity.</p>
@@ -715,6 +817,22 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.estimatedInstanceWarmup;
         }
 
+        public DescribeScalingRulesResponseBodyScalingRules setHybridMetrics(java.util.List<DescribeScalingRulesResponseBodyScalingRulesHybridMetrics> hybridMetrics) {
+            this.hybridMetrics = hybridMetrics;
+            return this;
+        }
+        public java.util.List<DescribeScalingRulesResponseBodyScalingRulesHybridMetrics> getHybridMetrics() {
+            return this.hybridMetrics;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRules setHybridMonitorNamespace(String hybridMonitorNamespace) {
+            this.hybridMonitorNamespace = hybridMonitorNamespace;
+            return this;
+        }
+        public String getHybridMonitorNamespace() {
+            return this.hybridMonitorNamespace;
+        }
+
         public DescribeScalingRulesResponseBodyScalingRules setInitialMaxSize(Integer initialMaxSize) {
             this.initialMaxSize = initialMaxSize;
             return this;
@@ -737,6 +855,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
         public String getMetricName() {
             return this.metricName;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRules setMetricType(String metricType) {
+            this.metricType = metricType;
+            return this;
+        }
+        public String getMetricType() {
+            return this.metricType;
         }
 
         public DescribeScalingRulesResponseBodyScalingRules setMinAdjustmentMagnitude(Integer minAdjustmentMagnitude) {

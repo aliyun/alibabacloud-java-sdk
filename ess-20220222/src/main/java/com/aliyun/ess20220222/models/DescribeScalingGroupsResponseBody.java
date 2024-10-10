@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -26,12 +32,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the scaling groups.</p>
+     * <p>The scaling groups.</p>
      */
     @NameInMap("ScalingGroups")
     public java.util.List<DescribeScalingGroupsResponseBodyScalingGroups> scalingGroups;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -144,7 +152,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     public static class DescribeScalingGroupsResponseBodyScalingGroupsDBInstances extends TeaModel {
         /**
-         * <p>The database ID.</p>
+         * <p>The ID of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-m5eqju85s45mu0***</p>
@@ -153,7 +161,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The IDs of the security groups added to the security group whitelist of the attached database.</p>
+         * <p>The IDs of the security groups that are added to the security group whitelist of the attached database.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
@@ -161,9 +169,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the database. Valid values:</p>
          * <ul>
-         * <li>RDS</li>
-         * <li>Redis</li>
-         * <li>MongoDB</li>
+         * <li>RDS.</li>
+         * <li>Redis.</li>
+         * <li>MongoDB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +224,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         /**
          * <p>The maximum bid price of the instance type that is specified by <code>LaunchTemplateOverride.InstanceType</code>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you specify <code>LaunchTemplateId</code>.</p>
+         * <p> This parameter takes effect only if you use <code>LaunchTemplateId</code> to specify a launch template.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,7 +234,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Float spotPriceLimit;
 
         /**
-         * <p>The weight of the instance type. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A larger weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
+         * <p>The weight of the instance type. The value of this parameter indicates the capacity of a single instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -267,7 +275,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     public static class DescribeScalingGroupsResponseBodyScalingGroupsLoadBalancerConfigs extends TeaModel {
         /**
-         * <p>The ID of the CLB (formerly known as Server Load Balancer or SLB) instance.</p>
+         * <p>The ID of the CLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-2zep8alpq5zq1a2xwyxxx</p>
@@ -276,7 +284,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The weight of an ECS instance as a backend server in the CLB server group. If you increase the weight of an ECS instance, the number of access requests that are forwarded to the ECS instance increases. If you set the weight of an ECS instance to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
+         * <p>The weight of an ECS instance as a backend server in the CLB server group. An increase in the weight of an ECS instance indicates an increase in the number of access requests that are forwarded to the ECS instance. If you set the weight of an ECS instance to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -391,7 +399,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the tags of the scaling group can be propagated to instances. Valid values:</p>
          * <ul>
-         * <li>true: The tags of the scaling group can be propagated to only instances that are newly created.</li>
+         * <li>true: The tags of the scaling group can be propagated only to new instances.</li>
          * <li>false: The tags of the scaling group cannot be propagated to instances.</li>
          * </ul>
          * <p>Default value: false.</p>
@@ -521,7 +529,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The attributes of the backend vServer group.</p>
+         * <p>The attributes of the backend vServer groups.</p>
          */
         @NameInMap("VServerGroupAttributes")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsVServerGroupsVServerGroupAttributes> VServerGroupAttributes;
@@ -569,16 +577,16 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String activeScalingConfigurationId;
 
         /**
-         * <p>The information about the Application Load Balancer (ALB) server groups.</p>
+         * <p>The Application Load Balancer (ALB) server groups.</p>
          */
         @NameInMap("AlbServerGroups")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsAlbServerGroups> albServerGroups;
 
         /**
-         * <p>The allocation policy of instances. Auto Scaling selects instance types based on the allocation policy to create the required number of instances. You can apply the policy to pay-as-you-go instances and preemptible instances. This parameter takes effect only if you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>. Valid values:</p>
+         * <p>The instance allocation policy. Auto Scaling selects instance types based on the allocation policy to create the required number of preemptible instances. The policy is suitable for pay-as-you-go instances and preemptible instances. This parameter takes effect only if you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>. Valid values:</p>
          * <ul>
-         * <li>priority: Auto Scaling adheres to the predefined instance type sequence to create the required number of instances.</li>
-         * <li>lowestPrice: Auto Scaling selects instance types with the most economical vCPU pricing to create the required number of instances.</li>
+         * <li>priority: Auto Scaling adopts the predefined instance type sequence to create the required number of preemptible instances.</li>
+         * <li>lowestPrice: Auto Scaling selects instance types that have the most economical vCPU pricing to create the required number of instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -601,7 +609,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Boolean azBalance;
 
         /**
-         * <p>Indicates whether Auto Scaling would use pay-as-you-go instances as a backup when unable to create preemptible instances due to price fluctuations or stock shortages when MultiAZPolicy is set to COST_OPTIMIZED. Valid values:</p>
+         * <p>Indicates whether Auto Scaling can create pay-as-you-go instances to supplement preemptible instances if preemptible instances cannot be created due to price-related factors or insufficient inventory when MultiAZPolicy is set to COST_OPTIMIZED. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -614,7 +622,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Boolean compensateWithOnDemand;
 
         /**
-         * <p>The time at which the scaling group was created.</p>
+         * <p>The time when the scaling group was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2014-08-14T10:58Z</p>
@@ -624,7 +632,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not available for use.</p>
+         * <p> This parameter is unavailable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -649,7 +657,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public java.util.List<String> DBInstanceIds;
 
         /**
-         * <p>The databases attached to the scaling group.</p>
+         * <p>The databases that are attached to the scaling group.</p>
          */
         @NameInMap("DBInstances")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsDBInstances> DBInstances;
@@ -686,10 +694,10 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Boolean enableDesiredCapacity;
 
         /**
-         * <p>Indicates whether Deletion Protection is enabled for the scaling group. Valid values:</p>
+         * <p>Indicates whether the Deletion Protection feature is enabled for the scaling group. Valid values:</p>
          * <ul>
-         * <li>true: Deletion Protection is enabled for the scaling group. The scaling group cannot be deleted.</li>
-         * <li>false: Deletion Protection is disabled for the scaling group.</li>
+         * <li>true: The Deletion Protection feature is enabled for the scaling group. The scaling group cannot be deleted.</li>
+         * <li>false: The Deletion Protection feature is disabled for the scaling group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -699,7 +707,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Boolean groupDeletionProtection;
 
         /**
-         * <p>The type of the instances that are managed by the scaling group.</p>
+         * <p>The type of instances that are managed by the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -712,7 +720,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
          * <ul>
          * <li>NONE: Auto Scaling does not perform health checks.</li>
          * <li>ECS: Auto Scaling checks the health status of ECS instances in the scaling group.</li>
-         * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.</li>
+         * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB, formerly known as Server Load Balancer or SLB) instances are not used as the basis to perform health checks on the instances in the scaling group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -724,16 +732,16 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         /**
          * <p>The health check modes of the scaling group. Valid values:</p>
          * <ul>
-         * <li>NONE: Auto Scaling does not perform health checks in the scaling group.</li>
+         * <li>NONE: Auto Scaling does not perform health checks.</li>
          * <li>ECS: Auto Scaling checks the health status of ECS instances in the scaling group.</li>
-         * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.</li>
+         * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not used as the basis to perform health checks on the instances in the scaling group.</li>
          * </ul>
          */
         @NameInMap("HealthCheckTypes")
         public java.util.List<String> healthCheckTypes;
 
         /**
-         * <p>The number of instances that are initialized before they are actually added into the scaling group.</p>
+         * <p>The number of instances that are initialized before they are added into the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -762,7 +770,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String launchTemplateId;
 
         /**
-         * <p>The information about the instance types that are extended in the launch template.</p>
+         * <p>The instance types that are extended in the launch template.</p>
          */
         @NameInMap("LaunchTemplateOverrides")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsLaunchTemplateOverrides> launchTemplateOverrides;
@@ -777,10 +785,10 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String launchTemplateVersion;
 
         /**
-         * <p>The state of the scaling group. Valid values:</p>
+         * <p>The status of the scaling group. Valid values:</p>
          * <ul>
          * <li>Active: The scaling group is active. Active scaling groups can receive requests to execute scaling rules and trigger scaling activities.</li>
-         * <li>Inactive: The scaling group is inactive. Inactive scaling groups cannot receive requests to execute scaling rules.</li>
+         * <li>Inactive: The scaling group is in the Disabled state. Disabled scaling groups cannot receive requests to execute scaling rules.</li>
          * <li>Deleting: The scaling group is being deleted. Scaling groups that are being deleted cannot receive requests to execute scaling rules, and the parameter settings of the scaling groups cannot be modified.</li>
          * </ul>
          * 
@@ -803,8 +811,8 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public java.util.List<String> loadBalancerIds;
 
         /**
-         * <p>The maximum life span of an instance in the scaling group. Unit: seconds.</p>
-         * <p>Valid values: 0 or from 86400 to <code>Integer.maxValue</code>. A value of 0 for MaxInstanceLifetime indicates that any previously set limit has been removed, effectively disabling the maximum instance lifetime constraint.</p>
+         * <p>The maximum life span of each ECS instance in the scaling group. Unit: seconds.</p>
+         * <p>Valid values: 0 or <code>[86400, Integer.maxValue]</code>. A value of 0 for MaxInstanceLifetime indicates that a previously set limit has been removed. This effectively disables the maximum instance lifetime constraint.</p>
          * <p>Default value: null.</p>
          * <blockquote>
          * <p> This parameter is not supported by scaling groups of the Elastic Container Instance type and scaling groups whose ScalingPolicy is set to Recycle.</p>
@@ -835,7 +843,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Integer minSize;
 
         /**
-         * <p>The time when the scaling group was modified.</p>
+         * <p>The time when the scaling group was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2014-08-14T10:58Z</p>
@@ -857,11 +865,11 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
          * <ul>
          * <li><p>PRIORITY: ECS instances are created based on the value of VSwitchIds. If Auto Scaling cannot create ECS instances in the zone where the vSwitch of the highest priority resides, Auto Scaling creates ECS instances in the zone where the vSwitch of the next highest priority resides.</p>
          * </li>
-         * <li><p>COST_OPTIMIZED: ECS instances are created based on the unit prices of their vCPUs. Auto Scaling preferentially creates ECS instances whose vCPUs are provided at the lowest price. If preemptible instance types are specified in the scaling configuration, Auto Scaling preferentially creates preemptible instances. You can also specify CompensateWithOnDemand to allow Auto Scaling to create pay-as-you-go instances in the case that preemptible instances cannot be created due to limited stock.</p>
+         * <li><p>COST_OPTIMIZED: ECS instances are created based on the unit prices of their vCPUs. Auto Scaling preferentially creates ECS instances whose vCPUs are provided at the lowest price. If preemptible instance types are specified in the scaling configuration, Auto Scaling preferentially creates preemptible instances. You can also specify CompensateWithOnDemand to allow Auto Scaling to create pay-as-you-go instances if preemptible instances cannot be created due to limited stock.</p>
          * <p>**</p>
-         * <p><strong>Note</strong> The COST_OPTIMIZED setting takes effect only when your scaling configuration includes multiple instance types or specifically includes preemptible instance types.</p>
+         * <p><strong>Note</strong> The COST_OPTIMIZED setting takes effect only if your scaling configuration contains multiple instance types or contains preemptible instance types.</p>
          * </li>
-         * <li><p>BALANCE: ECS instances are evenly distributed across the zones that are specified for the scaling group. If ECS instances become unevenly distributed across the designated zones due to limited instance type availability, you can call the RebalanceInstance operation to rebalance the distribution of the ECS instances.</p>
+         * <li><p>BALANCE: ECS instances are evenly distributed across the zones that are specified for the scaling group. If ECS instances become unevenly distributed across the specified zones due to limited instance type availability, you can call the RebalanceInstance operation to balance the distribution of the ECS instances.</p>
          * </li>
          * </ul>
          * 
@@ -881,7 +889,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Integer onDemandBaseCapacity;
 
         /**
-         * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances reaches the requirement. Valid values: 0 to 100.</p>
+         * <p>The percentage of pay-as-you-go instances in excess when the minimum number of pay-as-you-go instances reaches the threshold. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -982,11 +990,11 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String scalingGroupName;
 
         /**
-         * <p>The reclaim mode of the scaling group. Valid values:</p>
+         * <p>The instance reclaim mode of the scaling group. Valid values:</p>
          * <ul>
-         * <li>recycle: economical mode</li>
-         * <li>release: release mode</li>
-         * <li>forcerelease: forced release mode</li>
+         * <li>recycle: economical mode.</li>
+         * <li>release: release mode.</li>
+         * <li>forcerelease: forced release mode.</li>
          * </ul>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</p>
          * 
@@ -997,9 +1005,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String scalingPolicy;
 
         /**
-         * <p>The information about the server groups.</p>
+         * <p>The server groups.</p>
          * <blockquote>
-         * <p> You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups associated with your scaling group.</p>
+         * <p> You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to the scaling group.</p>
          * </blockquote>
          */
         @NameInMap("ServerGroups")
@@ -1008,8 +1016,8 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         /**
          * <p>The allocation policy of preemptible instances. This parameter indicates the manner in which Auto Scaling selects instance types to create the required number of preemptible instances. This parameter takes effect only if you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>. Valid values:</p>
          * <ul>
-         * <li>priority: Auto Scaling adheres to the predefined instance type sequence to create the required number of preemptible instances.</li>
-         * <li>lowestPrice: Auto Scaling selects instance types with the most economical vCPU pricing to create the required number of preemptible instances.</li>
+         * <li>priority: Auto Scaling adopts the predefined instance type sequence to create the required number of preemptible instances.</li>
+         * <li>lowestPrice: Auto Scaling selects instance types that have the most economical vCPU pricing to create the required number of preemptible instances.</li>
          * </ul>
          * <p>Default value: priority.</p>
          * 
@@ -1020,7 +1028,16 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public String spotAllocationStrategy;
 
         /**
-         * <p>The number of instance types that are specified. Auto Scaling evenly creates preemptible instances of multiple instance types that are provided at the lowest price across the zones of the scaling group. Valid values: 0 to 10.</p>
+         * <p>伸缩组中抢占式实例的数量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("SpotCapacity")
+        public Integer spotCapacity;
+
+        /**
+         * <p>The number of instance types in the scaling group. Auto Scaling evenly creates preemptible instances of multiple instance types that are provided at the lowest price across the zones of the scaling group. Valid values: 0 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1029,7 +1046,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Integer spotInstancePools;
 
         /**
-         * <p>Indicates whether preemptible instances can be supplemented. If this parameter is set to true, Auto Scaling proactively creates new instances to replace preemptible instances upon receiving a system notification signaling their impending reclamation.</p>
+         * <p>Indicates whether preemptible instances can be supplemented. If this parameter is set to true, Auto Scaling proactively creates instances to replace the preemptible instances for reclamation when Auto Scaling receives a system notification.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1058,11 +1075,11 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         /**
          * <p>The processes that are suspended. If no process is suspended, null is returned. Valid values:</p>
          * <ul>
-         * <li>ScaleIn: the scale-in process</li>
-         * <li>ScaleOut: the scale-out process</li>
-         * <li>HealthCheck: the health check process</li>
-         * <li>AlarmNotification: the process of executing an event-triggered task</li>
-         * <li>ScheduledAction: the process of executing a scheduled task</li>
+         * <li>ScaleIn: scale-in processes.</li>
+         * <li>ScaleOut: scale-out processes.</li>
+         * <li>HealthCheck: health check processes.</li>
+         * <li>AlarmNotification: event-triggered task processes.</li>
+         * <li>ScheduledAction: scheduled task processes.</li>
          * </ul>
          */
         @NameInMap("SuspendedProcesses")
@@ -1071,7 +1088,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Auto Scaling stops executing scaling activities in the scaling group. Valid values:</p>
          * <ul>
-         * <li>true: Auto Scaling stops executing scaling activities in the scaling group if the scaling activities failed for more than seven consecutive days in the scaling group. You must modify the scaling group or scaling configuration to resume the execution of the scaling activities.</li>
+         * <li>true: Auto Scaling stops executing scaling activities in the scaling group if the scaling activities failed for more than seven consecutive days in the scaling group. In this case, you must modify the scaling group or scaling configuration to resume the scaling activities.</li>
          * <li>false: Auto Scaling does not stop executing scaling activities in the scaling group.</li>
          * </ul>
          * 
@@ -1097,7 +1114,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Integer totalCapacity;
 
         /**
-         * <p>The total number of Elastic Compute Service (ECS) instances in the scaling group.</p>
+         * <p>The total number of ECS instances in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1514,6 +1531,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public String getSpotAllocationStrategy() {
             return this.spotAllocationStrategy;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setSpotCapacity(Integer spotCapacity) {
+            this.spotCapacity = spotCapacity;
+            return this;
+        }
+        public Integer getSpotCapacity() {
+            return this.spotCapacity;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setSpotInstancePools(Integer spotInstancePools) {

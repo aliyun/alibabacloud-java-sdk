@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEciScalingConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>89945DD3-9072-47D0-A318-353284CF****</p>
@@ -14,7 +14,7 @@ public class CreateEciScalingConfigurationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the elastic container instance.</p>
+     * <p>The ID of the elastic container instance (container group).</p>
      * 
      * <strong>example:</strong>
      * <p>eci-uf6fonnghi50u374****</p>

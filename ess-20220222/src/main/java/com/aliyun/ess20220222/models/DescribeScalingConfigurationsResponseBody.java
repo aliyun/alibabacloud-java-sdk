@@ -453,6 +453,16 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("Cores")
         public Integer cores;
 
+        /**
+         * <p>The CPU architectures of the instance types. Valid values:</p>
+         * <blockquote>
+         * <p> You can specify 1 to 2 CPU architectures.</p>
+         * </blockquote>
+         * <ul>
+         * <li>x86</li>
+         * <li>Arm</li>
+         * </ul>
+         */
         @NameInMap("CpuArchitectures")
         public java.util.List<String> cpuArchitectures;
 
@@ -466,9 +476,36 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
 
+        /**
+         * <p>The GPU models.</p>
+         */
         @NameInMap("GpuSpecs")
         public java.util.List<String> gpuSpecs;
 
+        /**
+         * <p>The categories of the instance.families. Valid values:</p>
+         * <blockquote>
+         * <p> You can specify 1 to 10 categories.</p>
+         * </blockquote>
+         * <ul>
+         * <li>General-purpose</li>
+         * <li>Compute-optimized</li>
+         * <li>Memory-optimized</li>
+         * <li>Big data</li>
+         * <li>Local SSDs</li>
+         * <li>High Clock Speed</li>
+         * <li>Enhanced</li>
+         * <li>Shared</li>
+         * <li>Compute-optimized with GPU</li>
+         * <li>Visual Compute-optimized</li>
+         * <li>Heterogeneous Service</li>
+         * <li>Compute-optimized with FPGA</li>
+         * <li>Compute-optimized with NPU</li>
+         * <li>ECS Bare Metal</li>
+         * <li>Super Computing Cluster</li>
+         * <li>High Performance Compute</li>
+         * </ul>
+         */
         @NameInMap("InstanceCategories")
         public java.util.List<String> instanceCategories;
 
@@ -486,6 +523,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
+        /**
+         * <p>The instance families that are queried. You can query 1 to 10 instance families in each call.</p>
+         */
         @NameInMap("InstanceTypeFamilies")
         public java.util.List<String> instanceTypeFamilies;
 
@@ -498,12 +538,33 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
+        /**
+         * <p>The maximum number of vCPUs per instance type.</p>
+         * <blockquote>
+         * <p> The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MaximumCpuCoreCount")
         public Integer maximumCpuCoreCount;
 
+        /**
+         * <p>The maximum number of GPUs per instance. The value must be a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaximumGpuAmount")
         public Integer maximumGpuAmount;
 
+        /**
+         * <p>The maximum memory size per instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MaximumMemorySize")
         public Float maximumMemorySize;
 
@@ -516,30 +577,81 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Float memory;
 
+        /**
+         * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("MinimumBaselineCredit")
         public Integer minimumBaselineCredit;
 
+        /**
+         * <p>The minimum number of vCPUs per instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumCpuCoreCount")
         public Integer minimumCpuCoreCount;
 
+        /**
+         * <p>The minimum number of IPv6 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinimumEniIpv6AddressQuantity")
         public Integer minimumEniIpv6AddressQuantity;
 
+        /**
+         * <p>The minimum number of IPv4 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumEniPrivateIpAddressQuantity")
         public Integer minimumEniPrivateIpAddressQuantity;
 
+        /**
+         * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumEniQuantity")
         public Integer minimumEniQuantity;
 
+        /**
+         * <p>The minimum number of GPUs per instance. The value must be a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumGpuAmount")
         public Integer minimumGpuAmount;
 
+        /**
+         * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("MinimumInitialCredit")
         public Integer minimumInitialCredit;
 
+        /**
+         * <p>The minimum memory size per instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MinimumMemorySize")
         public Float minimumMemorySize;
 
+        /**
+         * <p>The processor models of the instance types. You can specify 1 to 10 processor models.</p>
+         */
         @NameInMap("PhysicalProcessorModels")
         public java.util.List<String> physicalProcessorModels;
 
@@ -838,6 +950,25 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getManagedPrivateSpaceId() {
             return this.managedPrivateSpaceId;
+        }
+
+    }
+
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions extends TeaModel {
+        @NameInMap("ConfidentialComputingMode")
+        public String confidentialComputingMode;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions setConfidentialComputingMode(String confidentialComputingMode) {
+            this.confidentialComputingMode = confidentialComputingMode;
+            return this;
+        }
+        public String getConfidentialComputingMode() {
+            return this.confidentialComputingMode;
         }
 
     }
@@ -1144,7 +1275,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The intelligent configuration settings, which determine the available instance types.</p>
+         * <p>The information about the intelligent configuration settings, which determine the available instance types.</p>
          */
         @NameInMap("InstancePatternInfos")
         public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos> instancePatternInfos;
@@ -1280,6 +1411,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("PasswordInherit")
         public Boolean passwordInherit;
 
+        /**
+         * <p>Indicates whether a password is configured for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PasswordSetted")
         public Boolean passwordSetted;
 
@@ -1369,6 +1506,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
+
+        @NameInMap("SecurityOptions")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions securityOptions;
 
         /**
          * <p>The protection period of the preemptible instances. Unit: hours.</p>
@@ -1978,6 +2118,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setSecurityOptions(DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions securityOptions) {
+            this.securityOptions = securityOptions;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions getSecurityOptions() {
+            return this.securityOptions;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setSpotDuration(Integer spotDuration) {

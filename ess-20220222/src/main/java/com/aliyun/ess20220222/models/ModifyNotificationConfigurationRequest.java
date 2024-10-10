@@ -58,6 +58,12 @@ public class ModifyNotificationConfigurationRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    /**
+     * <p>The time zone of the notification. Specify the value in UTC. For example, a value of UTC+8 specifies that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 specifies that the time is 7 hours behind Coordinated Universal Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UTC+8</p>
+     */
     @NameInMap("TimeZone")
     public String timeZone;
 

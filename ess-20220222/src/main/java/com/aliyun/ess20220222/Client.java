@@ -155,7 +155,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If an existing scaling group has a mapping relationship with your Kubernetes Deployment YAML file, you can update the scaling group by using the YAML file.</li>
      * <li>If no scaling group that has a mapping relationship with your Kubernetes Deployment YAML file exists, you can create a scaling group with ease by using the YAML file.</li>
      * </ul>
-     * <h3>Precautions</h3>
      * <ol>
      * <li>If you do not specify a virtual private cloud (VPC), vSwitch, security group, or annotation in your Kubernetes Deployment YAML file, the system creates a default VPC that has default vSwitches and uses the default security group ess-default-sg of Auto Scaling. By default, the security group rule allows traffic on Transmission Control Protocol (TCP)-based port 22 and port 3389 and enables Internet Control Message Protocol (ICMP) for IPv4 addresses. If you want to enable other ports or protocols, you can create custom security group rules.</li>
      * <li>If you want to use a public image, you must enable the Internet access feature and configure the k8s.aliyun.com/eci-with-eip pod annotation to enable the elastic IP address (EIP) feature.</li>
@@ -189,7 +188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>k8s.aliyun.com/eci-use-specs</td>
      * <td>2-4Gi</td>
-     * <td>The specifications of 2 vCPUs and 4 GB memory. For more information, see <a href="https://help.aliyun.com/document_detail/451267.html">Create pods by specifying multiple specifications</a>.</td>
+     * <td>The specifications of 2 vCPUs and 4 GiB of memory. For more information, see <a href="https://help.aliyun.com/document_detail/451267.html">Create pods by specifying multiple specifications</a>.</td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-vswitch</td>
@@ -214,12 +213,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>k8s.aliyun.com/eci-spot-strategy</td>
      * <td>SpotAsPriceGo</td>
-     * <td>The bidding policy for the preemptible instance. Valid values:<ul data-sourcepos="28:69-28:204"><li data-sourcepos="28:73-28:158">SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price If you set the value to SpotWithPriceLimit, you must configure the k8s.aliyun.com/eci-spot-price-limit annotation.</li><li data-sourcepos="28:158-28:199">SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</li></ul></td>
+     * <td>The bidding policy for preemptible instances. Valid values:<ul data-sourcepos="28:69-28:204"><li data-sourcepos="28:73-28:158">SpotWithPriceLimit: The instances are created as preemptible instances with a maximum hourly price. If you set the value to SpotWithPriceLimit, you must configure the k8s.aliyun.com/eci-spot-price-limit annotation.</li><li data-sourcepos="28:158-28:199">SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.</li></ul></td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-spot-price-limit</td>
      * <td>&quot;0.5&quot;</td>
-     * <td>The maximum hourly price of the preemptible instance. This value can be accurate to up to three decimal places.</td>
+     * <td>The maximum hourly price of preemptible instances. This value can be accurate to up to three decimal places.</td>
      * </tr>
      * <tr>
      * <td>This annotation takes effect only when you set the k8s.aliyun.com/eci-spot-strategy annotation to SpotWithPriceLimit.</td>
@@ -229,40 +228,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>k8s.aliyun.com/eci-with-eip</td>
      * <td>&quot;true&quot;</td>
-     * <td>If you set the value to true, an EIP is automatically created and bound to each elastic container instance.</td>
+     * <td>If you set the value to true, an elastic IP address (EIP) is automatically created and bound to each elastic container instance.</td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-bucket</td>
      * <td>default</td>
-     * <td>The bucket of the specified DataCache. If you want to use a DataCache to create a pod, you must configure this annotation.</td>
+     * <td>The bucket of data caches. If you want to create a pod based on data caches, you must configure this annotation.</td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-pl</td>
      * <td>PL1</td>
-     * <td>The performance level (PL) of the cloud disk that you want to create by using the specified DataCache.</td>
+     * <td>The performance level (PL) of the cloud disk that you want to create based on data caches.</td>
      * </tr>
      * <tr>
-     * <td>By default, enhanced SSDs (ESSDs) are created. Default value: PL1.</td>
+     * <td>By default, enterprise SSDs (ESSDs) are created. Default value: PL1.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-provisionedIops</td>
      * <td>&quot;40000&quot;</td>
-     * <td>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</td>
+     * <td>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</td>
      * </tr>
      * <tr>
-     * <td>If you configure this annotation, the cloud disk that is created by using the specified DataCache is of the ESSD AutoPL type.</td>
+     * <td>If you configure this annotation, the cloud disk that is created based on data caches is of the ESSD AutoPL type.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-burstingEnabled</td>
      * <td>&quot;true&quot;</td>
-     * <td>Specifies whether the Burst feature is enabled for the ESSD AutoPL disk. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</td>
+     * <td>Specifies whether the Burst feature is enabled for the ESSD AutoPL disk. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</td>
      * </tr>
      * <tr>
-     * <td>If you configure this annotation, the cloud disk that is created by using the specified DataCache is of the ESSD AutoPL type.</td>
+     * <td>If you configure this annotation, the cloud disk that is created based on data caches is of the ESSD AutoPL type.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -321,7 +320,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If an existing scaling group has a mapping relationship with your Kubernetes Deployment YAML file, you can update the scaling group by using the YAML file.</li>
      * <li>If no scaling group that has a mapping relationship with your Kubernetes Deployment YAML file exists, you can create a scaling group with ease by using the YAML file.</li>
      * </ul>
-     * <h3>Precautions</h3>
      * <ol>
      * <li>If you do not specify a virtual private cloud (VPC), vSwitch, security group, or annotation in your Kubernetes Deployment YAML file, the system creates a default VPC that has default vSwitches and uses the default security group ess-default-sg of Auto Scaling. By default, the security group rule allows traffic on Transmission Control Protocol (TCP)-based port 22 and port 3389 and enables Internet Control Message Protocol (ICMP) for IPv4 addresses. If you want to enable other ports or protocols, you can create custom security group rules.</li>
      * <li>If you want to use a public image, you must enable the Internet access feature and configure the k8s.aliyun.com/eci-with-eip pod annotation to enable the elastic IP address (EIP) feature.</li>
@@ -355,7 +353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>k8s.aliyun.com/eci-use-specs</td>
      * <td>2-4Gi</td>
-     * <td>The specifications of 2 vCPUs and 4 GB memory. For more information, see <a href="https://help.aliyun.com/document_detail/451267.html">Create pods by specifying multiple specifications</a>.</td>
+     * <td>The specifications of 2 vCPUs and 4 GiB of memory. For more information, see <a href="https://help.aliyun.com/document_detail/451267.html">Create pods by specifying multiple specifications</a>.</td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-vswitch</td>
@@ -380,12 +378,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>k8s.aliyun.com/eci-spot-strategy</td>
      * <td>SpotAsPriceGo</td>
-     * <td>The bidding policy for the preemptible instance. Valid values:<ul data-sourcepos="28:69-28:204"><li data-sourcepos="28:73-28:158">SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price If you set the value to SpotWithPriceLimit, you must configure the k8s.aliyun.com/eci-spot-price-limit annotation.</li><li data-sourcepos="28:158-28:199">SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</li></ul></td>
+     * <td>The bidding policy for preemptible instances. Valid values:<ul data-sourcepos="28:69-28:204"><li data-sourcepos="28:73-28:158">SpotWithPriceLimit: The instances are created as preemptible instances with a maximum hourly price. If you set the value to SpotWithPriceLimit, you must configure the k8s.aliyun.com/eci-spot-price-limit annotation.</li><li data-sourcepos="28:158-28:199">SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.</li></ul></td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-spot-price-limit</td>
      * <td>&quot;0.5&quot;</td>
-     * <td>The maximum hourly price of the preemptible instance. This value can be accurate to up to three decimal places.</td>
+     * <td>The maximum hourly price of preemptible instances. This value can be accurate to up to three decimal places.</td>
      * </tr>
      * <tr>
      * <td>This annotation takes effect only when you set the k8s.aliyun.com/eci-spot-strategy annotation to SpotWithPriceLimit.</td>
@@ -395,40 +393,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>k8s.aliyun.com/eci-with-eip</td>
      * <td>&quot;true&quot;</td>
-     * <td>If you set the value to true, an EIP is automatically created and bound to each elastic container instance.</td>
+     * <td>If you set the value to true, an elastic IP address (EIP) is automatically created and bound to each elastic container instance.</td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-bucket</td>
      * <td>default</td>
-     * <td>The bucket of the specified DataCache. If you want to use a DataCache to create a pod, you must configure this annotation.</td>
+     * <td>The bucket of data caches. If you want to create a pod based on data caches, you must configure this annotation.</td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-pl</td>
      * <td>PL1</td>
-     * <td>The performance level (PL) of the cloud disk that you want to create by using the specified DataCache.</td>
+     * <td>The performance level (PL) of the cloud disk that you want to create based on data caches.</td>
      * </tr>
      * <tr>
-     * <td>By default, enhanced SSDs (ESSDs) are created. Default value: PL1.</td>
+     * <td>By default, enterprise SSDs (ESSDs) are created. Default value: PL1.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-provisionedIops</td>
      * <td>&quot;40000&quot;</td>
-     * <td>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</td>
+     * <td>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</td>
      * </tr>
      * <tr>
-     * <td>If you configure this annotation, the cloud disk that is created by using the specified DataCache is of the ESSD AutoPL type.</td>
+     * <td>If you configure this annotation, the cloud disk that is created based on data caches is of the ESSD AutoPL type.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
      * <td>k8s.aliyun.com/eci-data-cache-burstingEnabled</td>
      * <td>&quot;true&quot;</td>
-     * <td>Specifies whether the Burst feature is enabled for the ESSD AutoPL disk. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</td>
+     * <td>Specifies whether the Burst feature is enabled for the ESSD AutoPL disk. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</td>
      * </tr>
      * <tr>
-     * <td>If you configure this annotation, the cloud disk that is created by using the specified DataCache is of the ESSD AutoPL type.</td>
+     * <td>If you configure this annotation, the cloud disk that is created based on data caches is of the ESSD AutoPL type.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -1019,6 +1017,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request CancelInstanceRefreshRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelInstanceRefreshResponse
+     */
+    public CancelInstanceRefreshResponse cancelInstanceRefreshWithOptions(CancelInstanceRefreshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceRefreshTaskId)) {
+            query.put("InstanceRefreshTaskId", request.instanceRefreshTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelInstanceRefresh"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelInstanceRefreshResponse());
+    }
+
+    /**
+     * @param request CancelInstanceRefreshRequest
+     * @return CancelInstanceRefreshResponse
+     */
+    public CancelInstanceRefreshResponse cancelInstanceRefresh(CancelInstanceRefreshRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelInstanceRefreshWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  A resource is an entity of cloud services that you create on Alibaba Cloud. For example, a scaling group is a resource.</p>
      * <ul>
@@ -1316,11 +1368,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A scaling configuration is a template that is used to create elastic container instances during scale-out activities.
-     * You can specify the Cpu and Memory parameters to determine the range of instance types. If you specify the parameters, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Auto Scaling preferentially creates elastic container instances of the instance type that is provided at the lowest price. This scaling mode is available only if Scaling Policy is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
+     * <p>A scaling configuration is a template that is used to create elastic container instances during scale-out events.
+     * You can specify CPU and Memory to determine the range of instance types. Then, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Auto Scaling preferentially creates elastic container instances by using the lowest-priced instance type. This method applies only if you set Scaling Policy to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scaling configuration of the Elastic Container Instance type. Auto Scaling uses the scaling configuration as a template to create elastic container instances to meet your business requirements during scale-outs.</p>
+     * <p>Creates a scaling configuration of the Elastic Container Instance type. Auto Scaling uses the scaling configuration as a template to create elastic container instances to meet your business requirements during scale-out events.</p>
      * 
      * @param request CreateEciScalingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1544,11 +1596,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A scaling configuration is a template that is used to create elastic container instances during scale-out activities.
-     * You can specify the Cpu and Memory parameters to determine the range of instance types. If you specify the parameters, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Auto Scaling preferentially creates elastic container instances of the instance type that is provided at the lowest price. This scaling mode is available only if Scaling Policy is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
+     * <p>A scaling configuration is a template that is used to create elastic container instances during scale-out events.
+     * You can specify CPU and Memory to determine the range of instance types. Then, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Auto Scaling preferentially creates elastic container instances by using the lowest-priced instance type. This method applies only if you set Scaling Policy to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scaling configuration of the Elastic Container Instance type. Auto Scaling uses the scaling configuration as a template to create elastic container instances to meet your business requirements during scale-outs.</p>
+     * <p>Creates a scaling configuration of the Elastic Container Instance type. Auto Scaling uses the scaling configuration as a template to create elastic container instances to meet your business requirements during scale-out events.</p>
      * 
      * @param request CreateEciScalingConfigurationRequest
      * @return CreateEciScalingConfigurationResponse
@@ -1656,8 +1708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>You can configure CloudMonitor system events, Message Service (MNS) queues, or MNS topics to receive notifications. When a specified type of scaling activity or resource change occurs in a scaling group, Auto Scaling sends notifications by using CloudMonitor or MNS.</p>
+     * <p>  You can enable a CloudMonitor system event, Message Service (MNS) queue, or MNS topic to receive notifications. When a scaling event of the specified type or resource change occurs in your scaling group, Auto Scaling automatically sends notifications to CloudMonitor or MNS.</p>
+     * <ul>
+     * <li>You cannot specify the same recipient for notifications of different event types in a scaling group.
+     * For example, you cannot enable the same CloudMonitor system event, MNS topic, or MNS queue to receive notifications of different event types in a scaling group.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates a notification rule. You can call the CreateNotificationConfiguration operation to create a notification rule to stay informed about scaling events or resource changes. This helps you learn about the dynamic status of your scaling group in real time and further automates the management of scaling events.</p>
@@ -1716,8 +1771,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>You can configure CloudMonitor system events, Message Service (MNS) queues, or MNS topics to receive notifications. When a specified type of scaling activity or resource change occurs in a scaling group, Auto Scaling sends notifications by using CloudMonitor or MNS.</p>
+     * <p>  You can enable a CloudMonitor system event, Message Service (MNS) queue, or MNS topic to receive notifications. When a scaling event of the specified type or resource change occurs in your scaling group, Auto Scaling automatically sends notifications to CloudMonitor or MNS.</p>
+     * <ul>
+     * <li>You cannot specify the same recipient for notifications of different event types in a scaling group.
+     * For example, you cannot enable the same CloudMonitor system event, MNS topic, or MNS queue to receive notifications of different event types in a scaling group.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates a notification rule. You can call the CreateNotificationConfiguration operation to create a notification rule to stay informed about scaling events or resource changes. This helps you learn about the dynamic status of your scaling group in real time and further automates the management of scaling events.</p>
@@ -1745,7 +1803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scaling configuration.</p>
+     * <p>Creates scaling configurations. When you call the CreateScalingConfiguration operation, you can specify the scaling group ID, instance type, and image to create a scaling configuration of the Elastic Compute Service (ECS) type.</p>
      * 
      * @param tmpReq CreateScalingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1932,6 +1990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityGroupIds", request.securityGroupIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityOptions)) {
+            query.put("SecurityOptions", request.securityOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.spotDuration)) {
             query.put("SpotDuration", request.spotDuration);
         }
@@ -2020,7 +2082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scaling configuration.</p>
+     * <p>Creates scaling configurations. When you call the CreateScalingConfiguration operation, you can specify the scaling group ID, instance type, and image to create a scaling configuration of the Elastic Compute Service (ECS) type.</p>
      * 
      * @param request CreateScalingConfigurationRequest
      * @return CreateScalingConfigurationResponse
@@ -2359,12 +2421,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EstimatedInstanceWarmup", request.estimatedInstanceWarmup);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridMetrics)) {
+            query.put("HybridMetrics", request.hybridMetrics);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridMonitorNamespace)) {
+            query.put("HybridMonitorNamespace", request.hybridMonitorNamespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.initialMaxSize)) {
             query.put("InitialMaxSize", request.initialMaxSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
             query.put("MetricName", request.metricName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricType)) {
+            query.put("MetricType", request.metricType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.minAdjustmentMagnitude)) {
@@ -3513,6 +3587,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeInstanceRefreshesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceRefreshesResponse
+     */
+    public DescribeInstanceRefreshesResponse describeInstanceRefreshesWithOptions(DescribeInstanceRefreshesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceRefreshTaskIds)) {
+            query.put("InstanceRefreshTaskIds", request.instanceRefreshTaskIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceRefreshes"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceRefreshesResponse());
+    }
+
+    /**
+     * @param request DescribeInstanceRefreshesRequest
+     * @return DescribeInstanceRefreshesResponse
+     */
+    public DescribeInstanceRefreshesResponse describeInstanceRefreshes(DescribeInstanceRefreshesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceRefreshesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>If a scaling activity is executed and a lifecycle hook is created for the scaling activity, the lifecycle hook triggers a lifecycle action. A lifecycle action can be in one of the following states:</p>
      * <ul>
@@ -3740,7 +3884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries notifications. If you want to learn about a notification regarding the status of a scaling event or resource changes, you can call the DescribeNotificationConfigurations operation. This operation enables you to retrieve notification details, analyze resource change data, and refine scaling policies to efficiently utilize resources and fulfill business needs.</p>
+     * <p>Queries notification settings. You can call the DescribeNotificationConfiguration operation to query notification settings of scaling events or resource changes, including the notification types and methods.</p>
      * 
      * @param request DescribeNotificationConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3784,7 +3928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries notifications. If you want to learn about a notification regarding the status of a scaling event or resource changes, you can call the DescribeNotificationConfigurations operation. This operation enables you to retrieve notification details, analyze resource change data, and refine scaling policies to efficiently utilize resources and fulfill business needs.</p>
+     * <p>Queries notification settings. You can call the DescribeNotificationConfiguration operation to query notification settings of scaling events or resource changes, including the notification types and methods.</p>
      * 
      * @param request DescribeNotificationConfigurationsRequest
      * @return DescribeNotificationConfigurationsResponse
@@ -3954,6 +4098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeScalingActivitiesResponse describeScalingActivitiesWithOptions(DescribeScalingActivitiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceRefreshTaskId)) {
+            query.put("InstanceRefreshTaskId", request.instanceRefreshTaskId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -4222,7 +4370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scaling groups. If you want to query the basic information, instances, and scaling configurations of a scaling group, you can call the DescribeScalingGroups operation.</p>
+     * <p>Queries information about scaling groups, such as the basic information, instances, and scaling configurations.</p>
      * 
      * @param request DescribeScalingGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4302,7 +4450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scaling groups. If you want to query the basic information, instances, and scaling configurations of a scaling group, you can call the DescribeScalingGroups operation.</p>
+     * <p>Queries information about scaling groups, such as the basic information, instances, and scaling configurations.</p>
      * 
      * @param request DescribeScalingGroupsRequest
      * @return DescribeScalingGroupsResponse
@@ -4314,7 +4462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instances in a scaling group. You can call the DescribeScalingInstances operation to query instance details such as the number of preemptible instances in the Running state, the number of Elastic Compute Service (ECS) instances, the warm-up status of ECS instances, and the lifecycle status of ECS instances in a scaling group. You can specify the desired scaling group whose instances you want to query by scaling group ID. In addition, if you want to filter instances based on conditions such as the instance health status, lifecycle status, or creation method, you can also call this operation.</p>
+     * <p>Queries instances in a scaling group. You can call the DescribeScalingInstances operation to query instance details, such as the number of preemptible instances in the Running state, the number of Elastic Compute Service (ECS) instances, the warm-up status of ECS instances, and the lifecycle status of ECS instances in a scaling group. You can specify the scaling group whose instances you want to query by scaling group ID. If you want to filter instances based on conditions, such as the instance health status, lifecycle status, or creation method, you can also call this operation.</p>
      * 
      * @param request DescribeScalingInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4406,7 +4554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instances in a scaling group. You can call the DescribeScalingInstances operation to query instance details such as the number of preemptible instances in the Running state, the number of Elastic Compute Service (ECS) instances, the warm-up status of ECS instances, and the lifecycle status of ECS instances in a scaling group. You can specify the desired scaling group whose instances you want to query by scaling group ID. In addition, if you want to filter instances based on conditions such as the instance health status, lifecycle status, or creation method, you can also call this operation.</p>
+     * <p>Queries instances in a scaling group. You can call the DescribeScalingInstances operation to query instance details, such as the number of preemptible instances in the Running state, the number of Elastic Compute Service (ECS) instances, the warm-up status of ECS instances, and the lifecycle status of ECS instances in a scaling group. You can specify the scaling group whose instances you want to query by scaling group ID. If you want to filter instances based on conditions, such as the instance health status, lifecycle status, or creation method, you can also call this operation.</p>
      * 
      * @param request DescribeScalingInstancesRequest
      * @return DescribeScalingInstancesResponse
@@ -6094,11 +6242,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to verify the modification result.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies scaling configurations of the Elastic Container Instance type. When you call the ModifyEciScalingConfiguration operation, you can specify the ID, name, and instance properties of the desired scaling configuration to modify information such as the instance restart policy, instance bidding policy, and elastic IP address (EIP) bandwidth.</p>
+     * <p>Modifies a scaling configuration of the Elastic Container Instance type. When you call the ModifyEciScalingConfiguration operation, you can specify the ID, name, and instance properties of the scaling configuration whose information you want to modify. You can modify the instance restart policy, instance bidding policy, and elastic IP address (EIP) bandwidth.</p>
      * 
      * @param request ModifyEciScalingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6328,11 +6476,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to verify the modification result.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies scaling configurations of the Elastic Container Instance type. When you call the ModifyEciScalingConfiguration operation, you can specify the ID, name, and instance properties of the desired scaling configuration to modify information such as the instance restart policy, instance bidding policy, and elastic IP address (EIP) bandwidth.</p>
+     * <p>Modifies a scaling configuration of the Elastic Container Instance type. When you call the ModifyEciScalingConfiguration operation, you can specify the ID, name, and instance properties of the scaling configuration whose information you want to modify. You can modify the instance restart policy, instance bidding policy, and elastic IP address (EIP) bandwidth.</p>
      * 
      * @param request ModifyEciScalingConfigurationRequest
      * @return ModifyEciScalingConfigurationResponse
@@ -6582,7 +6730,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can change the name of a scaling configuration in a scaling group. The name must be unique within the scaling group.</p>
+     * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <ul>
+     * <li>If you want to bind a primary elastic network interface (ENI) when you call this operation, you must use one of the following methods. If you use the following methods at the same time, the call fails and an error is reported. In addition, if you use one of the following methods to modify the ENI information when you call this operation, the ENI information configured by using the other method is cleared.<ul>
+     * <li>You can specify SecurityGroupId, SecurityGroupIds, and Ipv6AddressCount to configure ENI-related information.</li>
+     * <li>You can specify NetworkInterfaces to configure primary and secondary ENIs. You must use NetworkInterface to specify at least one primary ENI. If you set NetworkInterface.InstanceType to Primary, it specifies that a primary ENI is configured. If you set NetworkInterface.InstanceType to Secondary or leave it empty, it specifies that a secondary ENI is configured.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies a scaling configuration.</p>
@@ -6760,6 +6915,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityGroupIds", request.securityGroupIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityOptions)) {
+            query.put("SecurityOptions", request.securityOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.spotDuration)) {
             query.put("SpotDuration", request.spotDuration);
         }
@@ -6835,7 +6994,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can change the name of a scaling configuration in a scaling group. The name must be unique within the scaling group.</p>
+     * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <ul>
+     * <li>If you want to bind a primary elastic network interface (ENI) when you call this operation, you must use one of the following methods. If you use the following methods at the same time, the call fails and an error is reported. In addition, if you use one of the following methods to modify the ENI information when you call this operation, the ENI information configured by using the other method is cleared.<ul>
+     * <li>You can specify SecurityGroupId, SecurityGroupIds, and Ipv6AddressCount to configure ENI-related information.</li>
+     * <li>You can specify NetworkInterfaces to configure primary and secondary ENIs. You must use NetworkInterface to specify at least one primary ENI. If you set NetworkInterface.InstanceType to Primary, it specifies that a primary ENI is configured. If you set NetworkInterface.InstanceType to Secondary or leave it empty, it specifies that a secondary ENI is configured.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies a scaling configuration.</p>
@@ -7085,12 +7251,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EstimatedInstanceWarmup", request.estimatedInstanceWarmup);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridMetrics)) {
+            query.put("HybridMetrics", request.hybridMetrics);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridMonitorNamespace)) {
+            query.put("HybridMonitorNamespace", request.hybridMonitorNamespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.initialMaxSize)) {
             query.put("InitialMaxSize", request.initialMaxSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
             query.put("MetricName", request.metricName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricType)) {
+            query.put("MetricType", request.metricType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.minAdjustmentMagnitude)) {
@@ -7589,6 +7767,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ResumeInstanceRefreshRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResumeInstanceRefreshResponse
+     */
+    public ResumeInstanceRefreshResponse resumeInstanceRefreshWithOptions(ResumeInstanceRefreshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceRefreshTaskId)) {
+            query.put("InstanceRefreshTaskId", request.instanceRefreshTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeInstanceRefresh"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeInstanceRefreshResponse());
+    }
+
+    /**
+     * @param request ResumeInstanceRefreshRequest
+     * @return ResumeInstanceRefreshResponse
+     */
+    public ResumeInstanceRefreshResponse resumeInstanceRefresh(ResumeInstanceRefreshRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resumeInstanceRefreshWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Resumes suspended processes in a scaling group.</p>
      * 
@@ -7650,6 +7882,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeProcessesResponse resumeProcesses(ResumeProcessesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeProcessesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request RollbackInstanceRefreshRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RollbackInstanceRefreshResponse
+     */
+    public RollbackInstanceRefreshResponse rollbackInstanceRefreshWithOptions(RollbackInstanceRefreshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceRefreshTaskId)) {
+            query.put("InstanceRefreshTaskId", request.instanceRefreshTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RollbackInstanceRefresh"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackInstanceRefreshResponse());
+    }
+
+    /**
+     * @param request RollbackInstanceRefreshRequest
+     * @return RollbackInstanceRefreshResponse
+     */
+    public RollbackInstanceRefreshResponse rollbackInstanceRefresh(RollbackInstanceRefreshRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rollbackInstanceRefreshWithOptions(request, runtime);
     }
 
     /**
@@ -7964,6 +8250,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetInstancesProtectionResponse setInstancesProtection(SetInstancesProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setInstancesProtectionWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request StartInstanceRefreshRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartInstanceRefreshResponse
+     */
+    public StartInstanceRefreshResponse startInstanceRefreshWithOptions(StartInstanceRefreshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desiredConfiguration)) {
+            query.put("DesiredConfiguration", request.desiredConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxHealthyPercentage)) {
+            query.put("MaxHealthyPercentage", request.maxHealthyPercentage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minHealthyPercentage)) {
+            query.put("MinHealthyPercentage", request.minHealthyPercentage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartInstanceRefresh"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartInstanceRefreshResponse());
+    }
+
+    /**
+     * @param request StartInstanceRefreshRequest
+     * @return StartInstanceRefreshResponse
+     */
+    public StartInstanceRefreshResponse startInstanceRefresh(StartInstanceRefreshRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startInstanceRefreshWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request SuspendInstanceRefreshRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SuspendInstanceRefreshResponse
+     */
+    public SuspendInstanceRefreshResponse suspendInstanceRefreshWithOptions(SuspendInstanceRefreshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceRefreshTaskId)) {
+            query.put("InstanceRefreshTaskId", request.instanceRefreshTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SuspendInstanceRefresh"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SuspendInstanceRefreshResponse());
+    }
+
+    /**
+     * @param request SuspendInstanceRefreshRequest
+     * @return SuspendInstanceRefreshResponse
+     */
+    public SuspendInstanceRefreshResponse suspendInstanceRefresh(SuspendInstanceRefreshRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.suspendInstanceRefreshWithOptions(request, runtime);
     }
 
     /**

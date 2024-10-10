@@ -38,6 +38,8 @@ public class ApplyScalingGroupRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.</p>
+     * 
      * <strong>example:</strong>
      * <p>YAML</p>
      */
@@ -45,6 +47,8 @@ public class ApplyScalingGroupRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

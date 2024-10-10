@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyEciScalingConfigurationRequest extends TeaModel {
     /**
-     * <p>Information about the Container Registry Enterprise Edition instance.</p>
+     * <p>The Container Registry Enterprise Edition instances.</p>
      */
     @NameInMap("AcrRegistryInfos")
     public java.util.List<ModifyEciScalingConfigurationRequestAcrRegistryInfos> acrRegistryInfos;
 
     /**
-     * <p>The validity period. Unit: seconds.</p>
+     * <p>The validity period of the scaling configuration. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -20,7 +20,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Long activeDeadlineSeconds;
 
     /**
-     * <p>Specifies whether to automatically create an elastic IP address (EIP) and bind the EIP to the elastic container instance.</p>
+     * <p>Specifies whether to automatically create elastic IP addresses (EIPs) and bind the EIPs to elastic container instances.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Boolean autoCreateEip;
 
     /**
-     * <p>Specifies whether to automatically match the image cache.</p>
+     * <p>Specifies whether to automatically match image caches.</p>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Boolean autoMatchImageCache;
 
     /**
-     * <p>The name of the elastic container instance. The name must meet the following requirements:</p>
+     * <p>The name series of elastic container instances. Naming conventions:</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length</li>
-     * <li>The name can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).</li>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,6 +58,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public java.util.List<ModifyEciScalingConfigurationRequestContainers> containers;
 
     /**
+     * <p>The update mode of containers. Valid values:</p>
+     * <ul>
+     * <li>RenewUpdate: full update mode. This value takes effect based on the value of Containers in an update request. This value indicates that the previous setting of Containers is overwritten.</li>
+     * <li>IncrementalUpdate: incremental update mode. Container matching is performed based on the Container.name value. Only the parameters that are included in the request parameters are updated.</li>
+     * </ul>
+     * <p>Default value: RenewUpdate.</p>
+     * 
      * <strong>example:</strong>
      * <p>RenewUpdate</p>
      */
@@ -65,7 +72,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String containersUpdateType;
 
     /**
-     * <p>Specifies whether to enable the cost optimization feature. Valid values:</p>
+     * <p>Specifies whether to enable the Cost Optimization feature. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -79,7 +86,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Boolean costOptimization;
 
     /**
-     * <p>The number of vCPUs of the elastic container instance.</p>
+     * <p>The number of vCPUs per elastic container instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -88,7 +95,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The number of physical CPU cores. This parameter is not available for all instance types. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify custom CPU options</a>.</p>
+     * <p>The number of physical CPU cores. You can specify this parameter for only specific ECS instance types. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -97,7 +104,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Integer cpuOptionsCore;
 
     /**
-     * <p>The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify custom CPU options</a>.</p>
+     * <p>The number of threads per core. You can specify this parameter for only specific instance types. A value of 1 specifies that Hyper-Threading is disabled. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -106,6 +113,8 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Integer cpuOptionsThreadsPerCore;
 
     /**
+     * <p>The bucket in which data caches are stored.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -113,6 +122,16 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String dataCacheBucket;
 
     /**
+     * <p>Specifies whether to enable the Performance Burst feature for the ESSD AutoPL disk in which data caches are stored. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * <blockquote>
+     * <p> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -120,6 +139,18 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Boolean dataCacheBurstingEnabled;
 
     /**
+     * <p>The performance level (PL) of the cloud disk in which data caches are stored. We recommend that you use Enterprise SSDs (ESSDs). Valid values:</p>
+     * <ul>
+     * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+     * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+     * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+     * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+     * </ul>
+     * <p>Default value: PL1.</p>
+     * <blockquote>
+     * <p> For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>PL1</p>
      */
@@ -127,6 +158,11 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String dataCachePL;
 
     /**
+     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk in which data caches are stored. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.</p>
+     * <blockquote>
+     * <p> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>40000</p>
      */
@@ -135,7 +171,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is unavailable.</p>
+     * <p> This parameter is unavailable.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,7 +181,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The IP addresses of the DNS servers.</p>
+     * <p>The IP addresses of DNS servers.</p>
      */
     @NameInMap("DnsConfigNameServers")
     public java.util.List<String> dnsConfigNameServers;
@@ -157,7 +193,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public java.util.List<ModifyEciScalingConfigurationRequestDnsConfigOptions> dnsConfigOptions;
 
     /**
-     * <p>The DNS lookup domains.</p>
+     * <p>The search domains of DNS servers.</p>
      */
     @NameInMap("DnsConfigSearchs")
     public java.util.List<String> dnsConfigSearchs;
@@ -165,8 +201,8 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     /**
      * <p>The Domain Name System (DNS) policy. Valid values:</p>
      * <ul>
-     * <li>None: uses the DNS that is set for the DnsConfig field.</li>
-     * <li>Default: use the DNS that is set for the runtime environment.</li>
+     * <li>None: uses the DNS that is specified by DnsConfig.</li>
+     * <li>Default: uses the DNS that is specified for the runtime environment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -185,7 +221,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Long egressBandwidth;
 
     /**
-     * <p>The bandwidth of the EIP.</p>
+     * <p>The EIP bandwidth.</p>
      * <p>Default value: 5. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
@@ -196,7 +232,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is unavailable.</p>
+     * <p> This parameter is not available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -206,7 +242,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Boolean enableSls;
 
     /**
-     * <p>The size of the temporary storage space. By default, an enhanced SSD (ESSD) of the PL1 level is used. Unit: GiB.</p>
+     * <p>The size of the temporary storage space. By default, an Enterprise SSD (ESSD) of the PL1 type is used. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -215,13 +251,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Integer ephemeralStorage;
 
     /**
-     * <p>Information about the hosts.</p>
+     * <p>The hosts.</p>
      */
     @NameInMap("HostAliases")
     public java.util.List<ModifyEciScalingConfigurationRequestHostAliases> hostAliases;
 
     /**
-     * <p>The name of the elastic container instance.</p>
+     * <p>The hostname series of elastic container instances.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -230,7 +266,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>Information about the image repository.</p>
+     * <p>The image repositories.</p>
      */
     @NameInMap("ImageRegistryCredentials")
     public java.util.List<ModifyEciScalingConfigurationRequestImageRegistryCredentials> imageRegistryCredentials;
@@ -260,11 +296,11 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public java.util.List<ModifyEciScalingConfigurationRequestInitContainers> initContainers;
 
     /**
-     * <p>The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the <code>CostOptimization</code> parameter to true. Valid values:</p>
+     * <p>The level of the instance family, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
      * <ul>
-     * <li>EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-     * <li>EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</li>
-     * <li>CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> topic of burstable instances.</li>
+     * <li>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+     * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+     * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -273,6 +309,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    /**
+     * <p>The ECS instance types. You can specify up to five instance types.</p>
+     */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
@@ -286,7 +325,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
-     * <p>The weight of the elastic container instance as a backend server. Valid values: 1 to 100.</p>
+     * <p>The load balancing weight of each backend server. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -295,7 +334,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Integer loadBalancerWeight;
 
     /**
-     * <p>The memory size of the elastic container instance. Unit: GiB.</p>
+     * <p>The memory size per elastic container instance. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -304,7 +343,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Float memory;
 
     /**
-     * <p>The domain names of the NTP server.</p>
+     * <p>The endpoints of Network Time Protocol (NTP) servers.</p>
      */
     @NameInMap("NtpServers")
     public java.util.List<String> ntpServers;
@@ -313,7 +352,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the RAM role for the instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use an instance RAM role by calling API operations</a>.</p>
+     * <p>The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and Elastic Compute Service (ECS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use an instance RAM role by calling API operations</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>RamTestRole</p>
@@ -336,9 +375,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     /**
      * <p>The instance restart policy. Valid values:</p>
      * <ul>
-     * <li>Always: always restarts the elastic container instance.</li>
-     * <li>Never: never restarts the elastic container instance.</li>
-     * <li>OnFailure: restarts the elastic container instance upon failures.</li>
+     * <li>Always: always restarts elastic container instances.</li>
+     * <li>Never: never restarts elastic container instances.</li>
+     * <li>OnFailure: restarts elastic container instances upon failures.</li>
      * </ul>
      * <p>Default value: Always.</p>
      * 
@@ -359,8 +398,8 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String scalingConfigurationId;
 
     /**
-     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
-     * <p>The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the value of the ScalingConfigurationId parameter is used.</p>
+     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+     * <p>The name of a scaling configuration must be unique in the specified region. If you do not specify this parameter, the value of ScalingConfigurationId is used.</p>
      * 
      * <strong>example:</strong>
      * <p>test-modify</p>
@@ -369,14 +408,14 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String scalingConfigurationName;
 
     /**
-     * <p>The system information of the security context in which the elastic container instance runs.</p>
+     * <p>The security contexts in which the elastic container instance runs.</p>
      */
     @NameInMap("SecurityContextSysCtls")
     public java.util.List<ModifyEciScalingConfigurationRequestSecurityContextSysCtls> securityContextSysCtls;
 
     /**
-     * <p>The ID of the security group with which you want to associate the elastic container instance. Elastic container instances that are associated with the same security group can access each other.</p>
-     * <p>If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and the port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the declared container protocols and port numbers to the inbound rules of the security group.</p>
+     * <p>The ID of the security group to which elastic container instances belong. Elastic container instances that belong to the same security group can communicate with each other.</p>
+     * <p>If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-uf66jeqopgqa9hdn****</p>
@@ -385,8 +424,8 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.</p>
-     * <p>If you set the SpotStrategy parameter to SpotWithPriceLimit, you must also specify the SpotPriceLimit parameter.</p>
+     * <p>The maximum hourly price of preemptible elastic container instances. The value can be accurate to three decimal places.</p>
+     * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.</p>
      * 
      * <strong>example:</strong>
      * <p>0.025</p>
@@ -395,11 +434,11 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Float spotPriceLimit;
 
     /**
-     * <p>The bidding policy for the elastic container instance. Valid values:</p>
+     * <p>The instance bidding policy. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+     * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * 
@@ -410,13 +449,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>Information about the tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ModifyEciScalingConfigurationRequestTags> tags;
 
     /**
-     * <p>The buffer time in which the program handles operations before the program is stopped. Unit: seconds.</p>
+     * <p>The buffer period during which the program handles operations before the program is stopped. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -837,7 +876,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestAcrRegistryInfos extends TeaModel {
         /**
-         * <p>The domain names of the Container Registry Enterprise Edition instances. By default, all domain names of the Container Registry Enterprise Edition instances are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Separate multiple domain names with commas (,).</p>
          */
         @NameInMap("Domains")
         public java.util.List<String> domains;
@@ -1342,7 +1381,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public ModifyEciScalingConfigurationRequestContainersEnvironmentVarsFieldRef fieldRef;
 
         /**
-         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
+         * <p>The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>PATH</p>
@@ -1440,7 +1479,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         /**
          * <p>The directory within the container onto which you want to mount the volume.</p>
          * <blockquote>
-         * <p> The information stored within this directory will be overridden by the data present on the mounted volume. Specify this parameter with caution.</p>
+         * <p> The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1450,11 +1489,11 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</p>
+         * <p>The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</p>
          * <ul>
-         * <li>None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.</li>
-         * <li>HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.</li>
-         * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</li>
+         * <li>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</li>
+         * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</li>
+         * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1464,7 +1503,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String mountPropagation;
 
         /**
-         * <p>The volume name. The value of this parameter is the same as the value of Volume.N.Name.</p>
+         * <p>The volume name. The value of this parameter is the same as the name of the volume that is mounted to containers.</p>
          * 
          * <strong>example:</strong>
          * <p>default-volume1</p>
@@ -1483,7 +1522,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The subdirectory of the volume.</p>
+         * <p>The volume subdirectory.</p>
          * 
          * <strong>example:</strong>
          * <p>data2/</p>
@@ -1555,13 +1594,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public java.util.List<String> args;
 
         /**
-         * <p>The command that you want to run by using the CLI for liveness probing within the container.</p>
+         * <p>The commands that you can run in the container when you use the CLI to perform a liveness probe.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to the container.</p>
+         * <p>The number of vCPUs per container.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1576,7 +1615,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public java.util.List<ModifyEciScalingConfigurationRequestContainersEnvironmentVars> environmentVars;
 
         /**
-         * <p>The number of GPUs that you want to allocate to the container.</p>
+         * <p>The number of GPUs per container.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1585,7 +1624,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer gpu;
 
         /**
-         * <p>The image of the container.</p>
+         * <p>The container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
@@ -1596,7 +1635,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         /**
          * <p>The image pulling policy. Valid values:</p>
          * <ul>
-         * <li>Always: Each time instances are created, image pulling is performed.</li>
+         * <li>Always: Image pulling is performed each time instances are created.</li>
          * <li>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
          * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
          * </ul>
@@ -1608,13 +1647,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String imagePullPolicy;
 
         /**
-         * <p>The commands that you want to run by using the CLI for configuring the postStart callback function within the container.</p>
+         * <p>The commands that you can run within the container to configure the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerExecs")
         public java.util.List<String> lifecyclePostStartHandlerExecs;
 
         /**
-         * <p>The IP address of the host to which you want to send the HTTP GET requests for configuring the postStart callback function.</p>
+         * <p>The IP address of the host to which you want to send the HTTP GET request to configure the postStart callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -1623,7 +1662,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerHttpGetHost;
 
         /**
-         * <p>The path to which you want to send the HTTP GET requests for configuring the postStart callback function.</p>
+         * <p>The path to which you want to send the HTTP GET request to configure the postStart callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>/healthyz</p>
@@ -1632,7 +1671,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerHttpGetPath;
 
         /**
-         * <p>The port over which you want to send the HTTP GET requests for configuring the postStart callback function.</p>
+         * <p>The port over which you want to send the HTTP GET request to configure the postStart callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>5050</p>
@@ -1641,7 +1680,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer lifecyclePostStartHandlerHttpGetPort;
 
         /**
-         * <p>The protocol type of the HTTP GET requests that you want to send for configuring the postStart callback function. Valid values:</p>
+         * <p>The protocol type of the HTTP GET request that you want to send to configure the postStart callback function. Valid values:</p>
          * <ul>
          * <li>HTTP</li>
          * <li>HTTPS</li>
@@ -1654,7 +1693,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerHttpGetScheme;
 
         /**
-         * <p>The IP address of the host detected by the TCP sockets that you want to use for configuring the postStart callback function.</p>
+         * <p>The IP address of the host detected by the TCP socket that you want to use to configure the postStart callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -1663,7 +1702,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerTcpSocketHost;
 
         /**
-         * <p>The port detected by the TCP sockets that you want to use for configuring the postStart callback function.</p>
+         * <p>The port detected by the TCP socket that you want to use to configure the postStart callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -1672,13 +1711,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer lifecyclePostStartHandlerTcpSocketPort;
 
         /**
-         * <p>The commands that you want to run by using the CLI for configuring the preStop callback function within the container.</p>
+         * <p>The commands that you can run within the container to configure the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerExecs")
         public java.util.List<String> lifecyclePreStopHandlerExecs;
 
         /**
-         * <p>The IP address of the host to which you want to send the HTTP GET requests for configuring the preStop callback function.</p>
+         * <p>The IP address of the host to which you want to send the HTTP GET request to configure the preStop callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -1687,7 +1726,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetHost;
 
         /**
-         * <p>The path to which you want to send the HTTP GET requests for configuring the preStop callback function.</p>
+         * <p>The path to which you want to send the HTTP GET request to configure the preStop callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>/healthyz</p>
@@ -1696,7 +1735,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetPath;
 
         /**
-         * <p>The port over which you want to send the HTTP GET requests for configuring the preStop callback function.</p>
+         * <p>The port over which you want to send the HTTP GET request to configure the preStop callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -1705,7 +1744,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer lifecyclePreStopHandlerHttpGetPort;
 
         /**
-         * <p>The protocol type of the HTTP GET requests that you want to send for configuring the preStop callback function. Valid values:</p>
+         * <p>The protocol type of the HTTP GET request that you want to send to configure the preStop callback function. Valid values:</p>
          * <ul>
          * <li>HTTP</li>
          * <li>HTTPS</li>
@@ -1718,7 +1757,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetScheme;
 
         /**
-         * <p>The IP address of the host detected by the TCP sockets that you want to use for configuring the preStop callback function.</p>
+         * <p>The IP address of the host detected by the TCP socket that you want to use to configure the preStop callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -1727,7 +1766,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerTcpSocketHost;
 
         /**
-         * <p>The port detected by the TCP sockets that you want to use for configuring the preStop callback function.</p>
+         * <p>The port detected by the TCP socket that you want to use to configure the preStop callback function.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -1736,7 +1775,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer lifecyclePreStopHandlerTcpSocketPort;
 
         /**
-         * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
+         * <p>The memory size per container. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -1771,7 +1810,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
         /**
          * <p>Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.</p>
-         * <p>If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.</p>
+         * <p>If you set StdinOnce to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1780,7 +1819,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Boolean stdinOnce;
 
         /**
-         * <p>Specifies whether to enable the Interaction feature. Default value: false.</p>
+         * <p>Specifies whether to enable Interaction. Default value: false.</p>
          * <p>If the command is a /bin/bash command, set this parameter to true.</p>
          * 
          * <strong>example:</strong>
@@ -2111,7 +2150,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestHostAliases extends TeaModel {
         /**
-         * <p>The hostnames that you want to add.</p>
+         * <p>The names of the hosts that you want to add.</p>
          */
         @NameInMap("Hostnames")
         public java.util.List<String> hostnames;
@@ -2150,7 +2189,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestImageRegistryCredentials extends TeaModel {
         /**
-         * <p>The password that is used to access the image repository.</p>
+         * <p>The password of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>yourpaasword</p>
@@ -2159,7 +2198,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The domain name of the image repository.</p>
+         * <p>The address of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-shanghai.aliyuncs.com</p>
@@ -2168,7 +2207,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String server;
 
         /**
-         * <p>The username that is used to access the image repository.</p>
+         * <p>The username of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>yourusername</p>
@@ -2291,7 +2330,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public ModifyEciScalingConfigurationRequestInitContainersInitContainerEnvironmentVarsFieldRef fieldRef;
 
         /**
-         * <p>The key of the environment variable. The key must be 1 to 128 characters in length. Specify the name in the <code>[0-9a-zA-Z]</code> format. The name can contain underscores and cannot start with a digit.</p>
+         * <p>The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>Path</p>
@@ -2300,7 +2339,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the environment variable. The value must be 0 to 256 characters in length.</p>
+         * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/bin/</p>
@@ -2350,7 +2389,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
          * <li>TCP</li>
          * <li>UDP</li>
@@ -2387,9 +2426,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestInitContainersInitContainerVolumeMounts extends TeaModel {
         /**
-         * <p>The path where the container mounts the volume.</p>
+         * <p>The directory within the init container onto which you want to mount the volume.</p>
          * <blockquote>
-         * <p> Data stored in the path of the container is overwritten by the content of the volume.</p>
+         * <p> The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2399,11 +2438,11 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
+         * <p>The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</p>
          * <ul>
-         * <li>None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.</li>
-         * <li>HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.</li>
-         * <li>Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.</li>
+         * <li>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</li>
+         * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</li>
+         * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.</li>
          * </ul>
          * <p>Default value: None.</p>
          * 
@@ -2433,7 +2472,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The subdirectory of the volume. The elastic container instance can mount different directories of the same volume to different subdirectories of containers.</p>
+         * <p>The volume subdirectory. The pod can mount different directories of the same volume to different subdirectories of init containers.</p>
          * 
          * <strong>example:</strong>
          * <p>Always</p>
@@ -2493,19 +2532,19 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public ModifyEciScalingConfigurationRequestInitContainersSecurityContext securityContext;
 
         /**
-         * <p>The startup parameter of the container.</p>
+         * <p>The container startup arguments.</p>
          */
         @NameInMap("Args")
         public java.util.List<String> args;
 
         /**
-         * <p>The commands that you want to run to start the container.</p>
+         * <p>The commands that you can run to start the init container.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to the container.</p>
+         * <p>The number of vCPUs per init container.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -2514,7 +2553,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>The number of GPUs that you want to allocate to the container.</p>
+         * <p>The number of GPUs per init container.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2523,7 +2562,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer gpu;
 
         /**
-         * <p>The container image.</p>
+         * <p>The image of the init container.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx</p>
@@ -2534,9 +2573,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         /**
          * <p>The image pulling policy. Valid values:</p>
          * <ul>
-         * <li>Always: pulls images each time.</li>
-         * <li>IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
-         * <li>Never: never pulls images. On-premises images are always used. Image pulling is not performed.</li>
+         * <li>Always: Image pulling is performed each time instances are created.</li>
+         * <li>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
+         * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2558,13 +2597,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public java.util.List<ModifyEciScalingConfigurationRequestInitContainersInitContainerPorts> initContainerPorts;
 
         /**
-         * <p>Information about the volume mounts of the init container.</p>
+         * <p>The volume mounts of the init container.</p>
          */
         @NameInMap("InitContainerVolumeMounts")
         public java.util.List<ModifyEciScalingConfigurationRequestInitContainersInitContainerVolumeMounts> initContainerVolumeMounts;
 
         /**
-         * <p>The size of the memory. Unit: GiB.</p>
+         * <p>The memory size per init container. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -2573,7 +2612,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Float memory;
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The name of the init container.</p>
          * 
          * <strong>example:</strong>
          * <p>test-init</p>
@@ -2703,7 +2742,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestSecurityContextSysCtls extends TeaModel {
         /**
-         * <p>The name of the security context in which the elastic container instance runs.</p>
+         * <p>The variable name of the security context in which the elastic container instance runs.</p>
          * 
          * <strong>example:</strong>
          * <p>kernel.msgmax</p>
@@ -2745,7 +2784,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>version</p>
@@ -2754,7 +2793,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -3044,7 +3083,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public ModifyEciScalingConfigurationRequestVolumesNFSVolume NFSVolume;
 
         /**
-         * <p>The paths to configuration files.</p>
+         * <p>The paths to the configuration files.</p>
          */
         @NameInMap("ConfigFileVolumeConfigFileToPath")
         public java.util.List<ModifyEciScalingConfigurationRequestVolumesConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath;

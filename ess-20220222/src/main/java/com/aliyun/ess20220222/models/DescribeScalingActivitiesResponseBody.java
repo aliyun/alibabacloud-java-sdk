@@ -246,6 +246,9 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        @NameInMap("InstanceRefreshTaskId")
+        public String instanceRefreshTaskId;
+
         /**
          * <p>The context of the lifecycle hook.</p>
          */
@@ -497,6 +500,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setInstanceRefreshTaskId(String instanceRefreshTaskId) {
+            this.instanceRefreshTaskId = instanceRefreshTaskId;
+            return this;
+        }
+        public String getInstanceRefreshTaskId() {
+            return this.instanceRefreshTaskId;
         }
 
         public DescribeScalingActivitiesResponseBodyScalingActivities setLifecycleHookContext(DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext lifecycleHookContext) {

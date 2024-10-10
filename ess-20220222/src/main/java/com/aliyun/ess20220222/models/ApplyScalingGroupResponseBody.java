@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyScalingGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC107349-57B7-4405-B1BF-9BF5AF7F****</p>
      */
@@ -12,6 +14,8 @@ public class ApplyScalingGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the enabled scaling group.</p>
+     * 
      * <strong>example:</strong>
      * <p>asg-bp1igpak5ft1flyp****</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEciScalingConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>89945DD3-9072-47D0-A318-353284CF****</p>

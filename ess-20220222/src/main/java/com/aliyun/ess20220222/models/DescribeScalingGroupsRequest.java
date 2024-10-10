@@ -7,8 +7,8 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     /**
      * <p>The type of instances that are managed by the scaling group. Valid values:</p>
      * <ul>
-     * <li>ECS: ECS instances</li>
-     * <li>ECI: elastic container instances</li>
+     * <li>ECS: Elastic Compute Service (ECS) instances.</li>
+     * <li>ECI: elastic container instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,6 +44,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +54,11 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group to which the scaling group that you want to query belongs.</p>
+     * <blockquote>
+     * <p> If no scaling group belongs to the specified resource group, the query result is empty and no error is reported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>rg-123******</p>
      */
@@ -65,19 +71,32 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IDs of the scaling groups that you want to query.</p>
+     * <p>The IDs of inactive scaling groups are not included in the query results, and no error is returned.</p>
+     */
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
 
     /**
+     * <p>The name of the scaling group.</p>
+     * 
      * <strong>example:</strong>
      * <p>scalinggroup****</p>
      */
     @NameInMap("ScalingGroupName")
     public String scalingGroupName;
 
+    /**
+     * <p>The names of the scaling groups that you want to query.</p>
+     * <p>The names of inactive scaling groups are not displayed in the query results, and no error is reported.</p>
+     */
     @NameInMap("ScalingGroupNames")
     public java.util.List<String> scalingGroupNames;
 
+    /**
+     * <p>The tags of the scaling group.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeScalingGroupsRequestTags> tags;
 
@@ -192,6 +211,8 @@ public class DescribeScalingGroupsRequest extends TeaModel {
 
     public static class DescribeScalingGroupsRequestTags extends TeaModel {
         /**
+         * <p>The tag key of the scaling group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Department</p>
          */
@@ -199,6 +220,8 @@ public class DescribeScalingGroupsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value of the scaling group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Finance</p>
          */

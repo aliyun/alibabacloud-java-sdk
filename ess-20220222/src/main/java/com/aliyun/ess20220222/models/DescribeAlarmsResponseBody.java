@@ -301,6 +301,99 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions extends TeaModel {
+        @NameInMap("DimensionKey")
+        public String dimensionKey;
+
+        @NameInMap("DimensionValue")
+        public String dimensionValue;
+
+        public static DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions self = new DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions setDimensionKey(String dimensionKey) {
+            this.dimensionKey = dimensionKey;
+            return this;
+        }
+        public String getDimensionKey() {
+            return this.dimensionKey;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions setDimensionValue(String dimensionValue) {
+            this.dimensionValue = dimensionValue;
+            return this;
+        }
+        public String getDimensionValue() {
+            return this.dimensionValue;
+        }
+
+    }
+
+    public static class DescribeAlarmsResponseBodyAlarmListHybridMetrics extends TeaModel {
+        @NameInMap("Dimensions")
+        public java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions> dimensions;
+
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Statistic")
+        public String statistic;
+
+        public static DescribeAlarmsResponseBodyAlarmListHybridMetrics build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlarmsResponseBodyAlarmListHybridMetrics self = new DescribeAlarmsResponseBodyAlarmListHybridMetrics();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListHybridMetrics setDimensions(java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions> dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListHybridMetrics setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListHybridMetrics setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListHybridMetrics setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListHybridMetrics setStatistic(String statistic) {
+            this.statistic = statistic;
+            return this;
+        }
+        public String getStatistic() {
+            return this.statistic;
+        }
+
+    }
+
     public static class DescribeAlarmsResponseBodyAlarmList extends TeaModel {
         /**
          * <p>The unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
@@ -399,6 +492,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         @NameInMap("ExpressionsLogicOperator")
         public String expressionsLogicOperator;
 
+        @NameInMap("HybridMetrics")
+        public java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetrics> hybridMetrics;
+
+        @NameInMap("HybridMonitorNamespace")
+        public String hybridMonitorNamespace;
+
         /**
          * <p>The metric name. Valid values:</p>
          * <ul>
@@ -476,6 +575,9 @@ public class DescribeAlarmsResponseBody extends TeaModel {
          */
         @NameInMap("Period")
         public Integer period;
+
+        @NameInMap("PromQL")
+        public String promQL;
 
         /**
          * <p>The ID of the scaling group to which the event-triggered task is associated.</p>
@@ -608,6 +710,22 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             return this.expressionsLogicOperator;
         }
 
+        public DescribeAlarmsResponseBodyAlarmList setHybridMetrics(java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetrics> hybridMetrics) {
+            this.hybridMetrics = hybridMetrics;
+            return this;
+        }
+        public java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetrics> getHybridMetrics() {
+            return this.hybridMetrics;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmList setHybridMonitorNamespace(String hybridMonitorNamespace) {
+            this.hybridMonitorNamespace = hybridMonitorNamespace;
+            return this;
+        }
+        public String getHybridMonitorNamespace() {
+            return this.hybridMonitorNamespace;
+        }
+
         public DescribeAlarmsResponseBodyAlarmList setMetricName(String metricName) {
             this.metricName = metricName;
             return this;
@@ -638,6 +756,14 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
         public Integer getPeriod() {
             return this.period;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmList setPromQL(String promQL) {
+            this.promQL = promQL;
+            return this;
+        }
+        public String getPromQL() {
+            return this.promQL;
         }
 
         public DescribeAlarmsResponseBodyAlarmList setScalingGroupId(String scalingGroupId) {
