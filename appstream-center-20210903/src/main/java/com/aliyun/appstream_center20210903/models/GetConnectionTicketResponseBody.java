@@ -21,6 +21,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    @NameInMap("BindQueueInfo")
+    public GetConnectionTicketResponseBodyBindQueueInfo bindQueueInfo;
+
     /**
      * <strong>example:</strong>
      * <p>InternalError.TicketGenInternalError</p>
@@ -128,6 +131,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return this.appInstancePersistentId;
     }
 
+    public GetConnectionTicketResponseBody setBindQueueInfo(GetConnectionTicketResponseBodyBindQueueInfo bindQueueInfo) {
+        this.bindQueueInfo = bindQueueInfo;
+        return this;
+    }
+    public GetConnectionTicketResponseBodyBindQueueInfo getBindQueueInfo() {
+        return this.bindQueueInfo;
+    }
+
     public GetConnectionTicketResponseBody setCode(String code) {
         this.code = code;
         return this;
@@ -222,6 +233,80 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
     public String getTicket() {
         return this.ticket;
+    }
+
+    public static class GetConnectionTicketResponseBodyBindQueueInfo extends TeaModel {
+        @NameInMap("Length")
+        public Integer length;
+
+        @NameInMap("Rank")
+        public Integer rank;
+
+        @NameInMap("RemainingTimeMin")
+        public Integer remainingTimeMin;
+
+        @NameInMap("RequestKey")
+        public String requestKey;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        @NameInMap("WaitTimeMin")
+        public Integer waitTimeMin;
+
+        public static GetConnectionTicketResponseBodyBindQueueInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetConnectionTicketResponseBodyBindQueueInfo self = new GetConnectionTicketResponseBodyBindQueueInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConnectionTicketResponseBodyBindQueueInfo setLength(Integer length) {
+            this.length = length;
+            return this;
+        }
+        public Integer getLength() {
+            return this.length;
+        }
+
+        public GetConnectionTicketResponseBodyBindQueueInfo setRank(Integer rank) {
+            this.rank = rank;
+            return this;
+        }
+        public Integer getRank() {
+            return this.rank;
+        }
+
+        public GetConnectionTicketResponseBodyBindQueueInfo setRemainingTimeMin(Integer remainingTimeMin) {
+            this.remainingTimeMin = remainingTimeMin;
+            return this;
+        }
+        public Integer getRemainingTimeMin() {
+            return this.remainingTimeMin;
+        }
+
+        public GetConnectionTicketResponseBodyBindQueueInfo setRequestKey(String requestKey) {
+            this.requestKey = requestKey;
+            return this;
+        }
+        public String getRequestKey() {
+            return this.requestKey;
+        }
+
+        public GetConnectionTicketResponseBodyBindQueueInfo setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public GetConnectionTicketResponseBodyBindQueueInfo setWaitTimeMin(Integer waitTimeMin) {
+            this.waitTimeMin = waitTimeMin;
+            return this;
+        }
+        public Integer getWaitTimeMin() {
+            return this.waitTimeMin;
+        }
+
     }
 
     public static class GetConnectionTicketResponseBodyPolicy extends TeaModel {
