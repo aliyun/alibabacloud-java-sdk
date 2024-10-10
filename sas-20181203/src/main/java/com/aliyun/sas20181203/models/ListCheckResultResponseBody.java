@@ -295,6 +295,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("LastCheckTime")
         public Long lastCheckTime;
 
+        @NameInMap("OperationType")
+        public String operationType;
+
         /**
          * <p>The risk level of the check item. Valid values:</p>
          * <ul>
@@ -453,6 +456,14 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
         public Long getLastCheckTime() {
             return this.lastCheckTime;
+        }
+
+        public ListCheckResultResponseBodyChecks setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
         }
 
         public ListCheckResultResponseBodyChecks setRiskLevel(String riskLevel) {

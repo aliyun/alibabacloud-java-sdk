@@ -70,6 +70,9 @@ public class SubmitCheckResponseBody extends TeaModel {
         @NameInMap("OperateCode")
         public String operateCode;
 
+        @NameInMap("ThrottlingTimeSecond")
+        public Integer throttlingTimeSecond;
+
         public static SubmitCheckResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SubmitCheckResponseBodyData self = new SubmitCheckResponseBodyData();
             return TeaModel.build(map, self);
@@ -81,6 +84,14 @@ public class SubmitCheckResponseBody extends TeaModel {
         }
         public String getOperateCode() {
             return this.operateCode;
+        }
+
+        public SubmitCheckResponseBodyData setThrottlingTimeSecond(Integer throttlingTimeSecond) {
+            this.throttlingTimeSecond = throttlingTimeSecond;
+            return this;
+        }
+        public Integer getThrottlingTimeSecond() {
+            return this.throttlingTimeSecond;
         }
 
     }

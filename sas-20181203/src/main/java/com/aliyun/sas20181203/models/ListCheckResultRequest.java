@@ -87,6 +87,9 @@ public class ListCheckResultRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("OperationTypes")
+    public java.util.List<String> operationTypes;
+
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
      * 
@@ -229,6 +232,14 @@ public class ListCheckResultRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListCheckResultRequest setOperationTypes(java.util.List<String> operationTypes) {
+        this.operationTypes = operationTypes;
+        return this;
+    }
+    public java.util.List<String> getOperationTypes() {
+        return this.operationTypes;
     }
 
     public ListCheckResultRequest setPageSize(Integer pageSize) {
