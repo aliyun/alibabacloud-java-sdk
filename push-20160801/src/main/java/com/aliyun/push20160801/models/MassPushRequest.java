@@ -325,11 +325,23 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("HarmonyActionType")
         public String harmonyActionType;
 
+        @NameInMap("HarmonyBadgeAddNum")
+        public Integer harmonyBadgeAddNum;
+
+        @NameInMap("HarmonyBadgeSetNum")
+        public Integer harmonyBadgeSetNum;
+
         @NameInMap("HarmonyCategory")
         public String harmonyCategory;
 
         @NameInMap("HarmonyExtParameters")
         public String harmonyExtParameters;
+
+        @NameInMap("HarmonyExtensionExtraData")
+        public String harmonyExtensionExtraData;
+
+        @NameInMap("HarmonyExtensionPush")
+        public Boolean harmonyExtensionPush;
 
         @NameInMap("HarmonyImageUrl")
         public String harmonyImageUrl;
@@ -923,6 +935,22 @@ public class MassPushRequest extends TeaModel {
             return this.harmonyActionType;
         }
 
+        public MassPushRequestPushTask setHarmonyBadgeAddNum(Integer harmonyBadgeAddNum) {
+            this.harmonyBadgeAddNum = harmonyBadgeAddNum;
+            return this;
+        }
+        public Integer getHarmonyBadgeAddNum() {
+            return this.harmonyBadgeAddNum;
+        }
+
+        public MassPushRequestPushTask setHarmonyBadgeSetNum(Integer harmonyBadgeSetNum) {
+            this.harmonyBadgeSetNum = harmonyBadgeSetNum;
+            return this;
+        }
+        public Integer getHarmonyBadgeSetNum() {
+            return this.harmonyBadgeSetNum;
+        }
+
         public MassPushRequestPushTask setHarmonyCategory(String harmonyCategory) {
             this.harmonyCategory = harmonyCategory;
             return this;
@@ -937,6 +965,22 @@ public class MassPushRequest extends TeaModel {
         }
         public String getHarmonyExtParameters() {
             return this.harmonyExtParameters;
+        }
+
+        public MassPushRequestPushTask setHarmonyExtensionExtraData(String harmonyExtensionExtraData) {
+            this.harmonyExtensionExtraData = harmonyExtensionExtraData;
+            return this;
+        }
+        public String getHarmonyExtensionExtraData() {
+            return this.harmonyExtensionExtraData;
+        }
+
+        public MassPushRequestPushTask setHarmonyExtensionPush(Boolean harmonyExtensionPush) {
+            this.harmonyExtensionPush = harmonyExtensionPush;
+            return this;
+        }
+        public Boolean getHarmonyExtensionPush() {
+            return this.harmonyExtensionPush;
         }
 
         public MassPushRequestPushTask setHarmonyImageUrl(String harmonyImageUrl) {

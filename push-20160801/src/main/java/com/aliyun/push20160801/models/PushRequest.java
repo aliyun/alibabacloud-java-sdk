@@ -289,11 +289,23 @@ public class PushRequest extends TeaModel {
     @NameInMap("HarmonyActionType")
     public String harmonyActionType;
 
+    @NameInMap("HarmonyBadgeAddNum")
+    public Integer harmonyBadgeAddNum;
+
+    @NameInMap("HarmonyBadgeSetNum")
+    public Integer harmonyBadgeSetNum;
+
     @NameInMap("HarmonyCategory")
     public String harmonyCategory;
 
     @NameInMap("HarmonyExtParameters")
     public String harmonyExtParameters;
+
+    @NameInMap("HarmonyExtensionExtraData")
+    public String harmonyExtensionExtraData;
+
+    @NameInMap("HarmonyExtensionPush")
+    public Boolean harmonyExtensionPush;
 
     @NameInMap("HarmonyImageUrl")
     public String harmonyImageUrl;
@@ -922,6 +934,22 @@ public class PushRequest extends TeaModel {
         return this.harmonyActionType;
     }
 
+    public PushRequest setHarmonyBadgeAddNum(Integer harmonyBadgeAddNum) {
+        this.harmonyBadgeAddNum = harmonyBadgeAddNum;
+        return this;
+    }
+    public Integer getHarmonyBadgeAddNum() {
+        return this.harmonyBadgeAddNum;
+    }
+
+    public PushRequest setHarmonyBadgeSetNum(Integer harmonyBadgeSetNum) {
+        this.harmonyBadgeSetNum = harmonyBadgeSetNum;
+        return this;
+    }
+    public Integer getHarmonyBadgeSetNum() {
+        return this.harmonyBadgeSetNum;
+    }
+
     public PushRequest setHarmonyCategory(String harmonyCategory) {
         this.harmonyCategory = harmonyCategory;
         return this;
@@ -936,6 +964,22 @@ public class PushRequest extends TeaModel {
     }
     public String getHarmonyExtParameters() {
         return this.harmonyExtParameters;
+    }
+
+    public PushRequest setHarmonyExtensionExtraData(String harmonyExtensionExtraData) {
+        this.harmonyExtensionExtraData = harmonyExtensionExtraData;
+        return this;
+    }
+    public String getHarmonyExtensionExtraData() {
+        return this.harmonyExtensionExtraData;
+    }
+
+    public PushRequest setHarmonyExtensionPush(Boolean harmonyExtensionPush) {
+        this.harmonyExtensionPush = harmonyExtensionPush;
+        return this;
+    }
+    public Boolean getHarmonyExtensionPush() {
+        return this.harmonyExtensionPush;
     }
 
     public PushRequest setHarmonyImageUrl(String harmonyImageUrl) {
