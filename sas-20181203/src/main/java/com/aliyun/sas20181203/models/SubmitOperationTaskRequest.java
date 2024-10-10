@@ -23,6 +23,9 @@ public class SubmitOperationTaskRequest extends TeaModel {
     @NameInMap("OperationTaskInstances")
     public java.util.List<SubmitOperationTaskRequestOperationTaskInstances> operationTaskInstances;
 
+    @NameInMap("RelationKey")
+    public String relationKey;
+
     @NameInMap("RepairTempParam")
     public java.util.List<SubmitOperationTaskRequestRepairTempParam> repairTempParam;
 
@@ -62,6 +65,14 @@ public class SubmitOperationTaskRequest extends TeaModel {
     }
     public java.util.List<SubmitOperationTaskRequestOperationTaskInstances> getOperationTaskInstances() {
         return this.operationTaskInstances;
+    }
+
+    public SubmitOperationTaskRequest setRelationKey(String relationKey) {
+        this.relationKey = relationKey;
+        return this;
+    }
+    public String getRelationKey() {
+        return this.relationKey;
     }
 
     public SubmitOperationTaskRequest setRepairTempParam(java.util.List<SubmitOperationTaskRequestRepairTempParam> repairTempParam) {
