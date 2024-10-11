@@ -18,6 +18,9 @@ public class ListCallDetailRecordsV2Request extends TeaModel {
     @NameInMap("AgentId")
     public String agentId;
 
+    @NameInMap("AnalyticsReportReady")
+    public Boolean analyticsReportReady;
+
     /**
      * <strong>example:</strong>
      * <p>021****4972</p>
@@ -198,6 +201,14 @@ public class ListCallDetailRecordsV2Request extends TeaModel {
     }
     public String getAgentId() {
         return this.agentId;
+    }
+
+    public ListCallDetailRecordsV2Request setAnalyticsReportReady(Boolean analyticsReportReady) {
+        this.analyticsReportReady = analyticsReportReady;
+        return this;
+    }
+    public Boolean getAnalyticsReportReady() {
+        return this.analyticsReportReady;
     }
 
     public ListCallDetailRecordsV2Request setBroker(String broker) {
