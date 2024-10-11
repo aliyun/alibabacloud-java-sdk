@@ -7,6 +7,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeSecurityIPListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIPListResponseBodyDataGroupItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupTag")
         public String groupTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
+         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ipv4</p>
+         */
         @NameInMap("SecurityIPType")
         public String securityIPType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mix</p>
+         */
         @NameInMap("WhitelistNetType")
         public String whitelistNetType;
 
@@ -95,6 +119,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIPListResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 

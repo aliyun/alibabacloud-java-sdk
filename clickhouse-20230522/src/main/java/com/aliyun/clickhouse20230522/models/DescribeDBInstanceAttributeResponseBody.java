@@ -7,6 +7,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeDBInstanceAttributeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,48 +36,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyDataNodes extends TeaModel {
-        @NameInMap("CCU")
-        public Integer CCU;
-
-        @NameInMap("CpuCores")
-        public Integer cpuCores;
-
-        @NameInMap("Memory")
-        public Integer memory;
-
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
-        @NameInMap("String")
-        public String string;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeDBInstanceAttributeResponseBodyDataNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDataNodes self = new DescribeDBInstanceAttributeResponseBodyDataNodes();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstanceAttributeResponseBodyDataNodes setCCU(Integer CCU) {
-            this.CCU = CCU;
-            return this;
-        }
-        public Integer getCCU() {
-            return this.CCU;
-        }
-
-        public DescribeDBInstanceAttributeResponseBodyDataNodes setCpuCores(Integer cpuCores) {
-            this.cpuCores = cpuCores;
-            return this;
-        }
-        public Integer getCpuCores() {
-            return this.cpuCores;
-        }
-
-        public DescribeDBInstanceAttributeResponseBodyDataNodes setMemory(Integer memory) {
-            this.memory = memory;
-            return this;
-        }
-        public Integer getMemory() {
-            return this.memory;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDataNodes setNodeStatus(String nodeStatus) {
@@ -84,20 +59,28 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.nodeStatus;
         }
 
-        public DescribeDBInstanceAttributeResponseBodyDataNodes setString(String string) {
-            this.string = string;
+        public DescribeDBInstanceAttributeResponseBodyDataNodes setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public String getString() {
-            return this.string;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyDataTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ck</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -125,90 +108,192 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PD39050615820269****</p>
+         */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-14T08:14:48Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0/1</p>
+         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23.8.1.41495_6</p>
+         */
         @NameInMap("EngineMinorVersion")
         public String engineMinorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23.8</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-17T08:14:48Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("LatestEngineMinorVersion")
+        public String latestEngineMinorVersion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nolock</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21:00</p>
+         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00</p>
+         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
         @NameInMap("Nodes")
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDataNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13</p>
+         */
         @NameInMap("ObjectStoreSize")
         public String objectStoreSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-acfmzygvt54****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("ScaleMax")
         public Integer scaleMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("ScaleMin")
         public Integer scaleMin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("StorageSize")
         public Integer storageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
         @NameInMap("Tags")
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDataTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-uf67ij56zm9x4uc6hmilg</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9duj8xd6r1gzhsg*****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -303,6 +388,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setLatestEngineMinorVersion(String latestEngineMinorVersion) {
+            this.latestEngineMinorVersion = latestEngineMinorVersion;
+            return this;
+        }
+        public String getLatestEngineMinorVersion() {
+            return this.latestEngineMinorVersion;
         }
 
         public DescribeDBInstanceAttributeResponseBodyData setLockMode(String lockMode) {

@@ -7,6 +7,10 @@ public class StopDBInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
     public StopDBInstanceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,20 @@ public class StopDBInstanceResponseBody extends TeaModel {
     }
 
     public static class StopDBInstanceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceID")
         public Long DBInstanceID;
 
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100000785</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 

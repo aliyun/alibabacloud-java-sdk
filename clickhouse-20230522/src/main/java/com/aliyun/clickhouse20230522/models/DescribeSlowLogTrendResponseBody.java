@@ -7,6 +7,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeSlowLogTrendResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7D3ECB0E-98CA-5E08-A9CA-F70C5A1E9BDF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogTrendResponseBodyDataResultSet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("AvgQueryDurationMs")
         public Long avgQueryDurationMs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Cnt")
         public Long cnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("MaxQueryDurationMs")
         public Long maxQueryDurationMs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MinQueryDurationMs")
         public Long minQueryDurationMs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-13 17:48:00</p>
+         */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
 
@@ -95,6 +119,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogTrendResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 

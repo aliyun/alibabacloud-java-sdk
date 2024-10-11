@@ -7,6 +7,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAccountAuthorityResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountAuthorityResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Account")
         public String account;
 
@@ -41,12 +49,24 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         @NameInMap("AllowDictionaries")
         public java.util.List<String> allowDictionaries;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DdlAuthority")
         public Boolean ddlAuthority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DmlAuthority")
         public Integer dmlAuthority;
 

@@ -4,24 +4,52 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-xxxxx,cx-xxxx</p>
+     */
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

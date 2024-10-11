@@ -7,6 +7,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeDBInstancesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDataDBInstancesTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tag</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,75 +74,162 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDataDBInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1294****</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>186681****</p>
+         */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-04 21:16:15</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxxxxx</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("DeletionProtection")
         public String deletionProtection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_desc</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22.8</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-16 11:51:06</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>04:00:00Z</p>
+         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00Z</p>
+         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-acfmzy****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13</p>
+         */
         @NameInMap("ScaleMax")
         public Integer scaleMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScaleMin")
         public Integer scaleMin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public java.util.List<DescribeDBInstancesResponseBodyDataDBInstancesTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-8vb5mw****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6kg****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -329,12 +428,24 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("DBInstances")
         public java.util.List<DescribeDBInstancesResponseBodyDataDBInstances> DBInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public String totalCount;
 

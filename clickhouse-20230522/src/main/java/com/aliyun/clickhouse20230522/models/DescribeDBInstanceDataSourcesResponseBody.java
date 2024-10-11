@@ -7,6 +7,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeDBInstanceDataSourcesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F543E6CC-6868-523D-8D28-0E92CF977ED2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,41 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceDataSourcesResponseBodyDataColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c31</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbtest</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tableTest</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UInt64</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -109,9 +133,17 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         @NameInMap("Columns")
         public java.util.List<DescribeDBInstanceDataSourcesResponseBodyDataColumns> columns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Schemas")
         public String schemas;
 

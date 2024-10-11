@@ -7,6 +7,10 @@ public class ModifyAccountAuthorityResponseBody extends TeaModel {
     @NameInMap("Data")
     public ModifyAccountAuthorityResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ModifyAccountAuthorityResponseBody extends TeaModel {
     }
 
     public static class ModifyAccountAuthorityResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 

@@ -7,6 +7,10 @@ public class KillProcessResponseBody extends TeaModel {
     @NameInMap("Data")
     public KillProcessResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class KillProcessResponseBody extends TeaModel {
     }
 
     public static class KillProcessResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxxxxx</p>
+         */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxxxxx</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 

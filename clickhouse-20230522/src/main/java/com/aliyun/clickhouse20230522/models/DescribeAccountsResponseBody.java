@@ -7,6 +7,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAccountsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,27 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyDataAccounts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NormalAccount</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -87,12 +103,24 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("Accounts")
         public java.util.List<DescribeAccountsResponseBodyDataAccounts> accounts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

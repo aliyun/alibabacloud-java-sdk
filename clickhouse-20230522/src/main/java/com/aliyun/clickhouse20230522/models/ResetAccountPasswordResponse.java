@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public ResetAccountPasswordResponseBody body;
 
     public static ResetAccountPasswordResponse build(java.util.Map<String, ?> map) throws Exception {

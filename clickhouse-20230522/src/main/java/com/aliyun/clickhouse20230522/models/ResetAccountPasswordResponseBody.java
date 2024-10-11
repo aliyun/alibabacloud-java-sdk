@@ -7,6 +7,10 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
     @NameInMap("Data")
     public ResetAccountPasswordResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A6A077A-577C-536E-AC13-8E715D7A34C8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
     }
 
     public static class ResetAccountPasswordResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
