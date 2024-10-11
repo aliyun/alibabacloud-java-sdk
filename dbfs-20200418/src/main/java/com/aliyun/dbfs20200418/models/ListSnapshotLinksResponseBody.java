@@ -4,18 +4,34 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotLinksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SnapshotLinks")
     public java.util.List<ListSnapshotLinksResponseBodySnapshotLinks> snapshotLinks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +81,10 @@ public class ListSnapshotLinksResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotLinksResponseBodySnapshotLinksEcsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp1f4eo2biro*******</p>
+         */
         @NameInMap("EcsId")
         public String ecsId;
 
@@ -87,24 +107,52 @@ public class ListSnapshotLinksResponseBody extends TeaModel {
         @NameInMap("EcsList")
         public java.util.List<ListSnapshotLinksResponseBodySnapshotLinksEcsList> ecsList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-q7qsgyqptjk******</p>
+         */
         @NameInMap("FsId")
         public String fsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("FsName")
         public String fsName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sl-b3zlgraysgcs9jy*******</p>
+         */
         @NameInMap("LinkId")
         public String linkId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SnapshotCount")
         public Integer snapshotCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SourceSize")
         public Integer sourceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>attached</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50331648</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

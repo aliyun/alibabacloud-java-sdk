@@ -4,6 +4,12 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

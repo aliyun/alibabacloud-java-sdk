@@ -4,15 +4,35 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ModifySnapshotAttributeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>testDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-y2vZ3********vvMilZ2hQ</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testSnapshotName</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 

@@ -4,21 +4,49 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListAutoSnapshotPolicyAppliedDbfsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FsName</p>
+     */
     @NameInMap("FilterKey")
     public String filterKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DBFS1</p>
+     */
     @NameInMap("FilterValue")
     public String filterValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-z5siir3iq3m**********</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

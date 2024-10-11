@@ -4,51 +4,121 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class CreateDbfsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;cpuCoreCount&quot;:0.5,&quot;memorySize&quot;:512,&quot;pageCacheSize&quot;:128}</p>
+     */
     @NameInMap("AdvancedFeatures")
     public String advancedFeatures;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DeleteSnapshot")
     public Boolean deleteSnapshot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableRaid")
     public Boolean enableRaid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Encryption")
     public Boolean encryption;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdbfs-001</p>
+     */
     @NameInMap("FsName")
     public String fsName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dbfs.small</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
+     */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PL1</p>
+     */
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
 
     @NameInMap("RaidStripeUnitNumber")
     public Integer raidStripeUnitNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("SizeG")
     public Integer sizeG;
 
+    /**
+     * <strong>example:</strong>
+     * <p>s-y2vZ3********vvMilZ2hQ</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostgreSQL</p>
+     */
     @NameInMap("UsedScene")
     public String usedScene;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -7,6 +7,10 @@ public class ListDbfsAttachedEcsInstancesResponseBody extends TeaModel {
     @NameInMap("EcsLabelInfo")
     public java.util.List<ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo> ecsLabelInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class ListDbfsAttachedEcsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.g7se</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/dbfs/dbfs-nUy1tb********BQ4X8Gpw</p>
+         */
         @NameInMap("MountPoint")
         public String mountPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1606290930000</p>
+         */
         @NameInMap("MountedTime")
         public String mountedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Linux 2.1903 LTS 64 bit</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-test-01</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp10jb8mqajkmrejgo00</p>
+         */
         @NameInMap("value")
         public String value;
 

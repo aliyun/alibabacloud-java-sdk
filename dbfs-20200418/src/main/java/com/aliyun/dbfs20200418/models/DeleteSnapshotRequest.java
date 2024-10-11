@@ -4,12 +4,25 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

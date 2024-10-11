@@ -4,18 +4,34 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Snapshots")
     public java.util.List<ListSnapshotResponseBodySnapshots> snapshots;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,45 +81,101 @@ public class ListSnapshotResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotResponseBodySnapshots extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609330367000</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609330367000</p>
+         */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100%</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>38</p>
+         */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("RetentionDays")
         public Integer retentionDays;
 
+        /**
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
+         */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-bp67acfmxazb4p****</p>
+         */
         @NameInMap("SourceFsId")
         public String sourceFsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SourceFsSize")
         public Integer sourceFsSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SourceFsStripeWidth")
         public Integer sourceFsStripeWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accomplished</p>
+         */
         @NameInMap("Status")
         public String status;
 

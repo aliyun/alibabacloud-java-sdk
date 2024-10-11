@@ -7,15 +7,31 @@ public class ListDbfsResponseBody extends TeaModel {
     @NameInMap("DBFSInfo")
     public java.util.List<ListDbfsResponseBodyDBFSInfo> DBFSInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class ListDbfsResponseBody extends TeaModel {
     }
 
     public static class ListDbfsResponseBodyDBFSInfoEbsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-bp1383******3uir001r</p>
+         */
         @NameInMap("EbsId")
         public String ebsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SizeG")
         public Integer sizeG;
 
@@ -95,6 +119,10 @@ public class ListDbfsResponseBody extends TeaModel {
     }
 
     public static class ListDbfsResponseBodyDBFSInfoEcsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i-y2vZ3********vvMilZ2hQ</p>
+         */
         @NameInMap("EcsId")
         public String ecsId;
 
@@ -114,15 +142,31 @@ public class ListDbfsResponseBody extends TeaModel {
     }
 
     public static class ListDbfsResponseBodyDBFSInfoSnapshotInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sl-b3zlgraysgcs9jy*******</p>
+         */
         @NameInMap("LinkId")
         public String linkId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sp-ehuhzlfetb2jiwz*******</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SnapshotCount")
         public Integer snapshotCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50331648</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 
@@ -166,12 +210,24 @@ public class ListDbfsResponseBody extends TeaModel {
     }
 
     public static class ListDbfsResponseBodyDBFSInfoTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestTagKey1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestTagValue1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -207,15 +263,31 @@ public class ListDbfsResponseBody extends TeaModel {
     }
 
     public static class ListDbfsResponseBodyDBFSInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AttachNodeNumber")
         public Integer attachNodeNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609330367000</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c39EcDBf-2Ecb-C3C6-6526-018d4Dcf63eD</p>
+         */
         @NameInMap("DBFSClusterId")
         public String DBFSClusterId;
 
@@ -225,60 +297,128 @@ public class ListDbfsResponseBody extends TeaModel {
         @NameInMap("EcsList")
         public java.util.List<ListDbfsResponseBodyDBFSInfoEcsList> ecsList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableRaid")
         public Boolean enableRaid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Encryption")
         public Boolean encryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-GOrr********Yd0VLOyBpg</p>
+         */
         @NameInMap("FsId")
         public String fsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-test-01</p>
+         */
         @NameInMap("FsName")
         public String fsName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs.small</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb408***</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TargetIsBusy.DBFS</p>
+         */
         @NameInMap("LastFailed")
         public String lastFailed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1644915400000</p>
+         */
         @NameInMap("LastMountTime")
         public String lastMountTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1644915319000</p>
+         */
         @NameInMap("LastUmountTime")
         public String lastUmountTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>postpaid</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RaidStrip")
         public Integer raidStrip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SizeG")
         public Integer sizeG;
 
         @NameInMap("SnapshotInfo")
         public ListDbfsResponseBodyDBFSInfoSnapshotInfo snapshotInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>attached</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public java.util.List<ListDbfsResponseBodyDBFSInfoTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MySQL 5.7</p>
+         */
         @NameInMap("UsedScene")
         public String usedScene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

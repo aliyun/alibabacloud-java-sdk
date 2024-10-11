@@ -4,12 +4,30 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagsBatchRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;dbfs-nUy1tb<strong><strong><strong><strong>BQ4X8Gpw&quot;,&quot;dbfs-v0WvA</strong></strong></strong></strong>tVEVcgJLg&quot;]</p>
+     */
     @NameInMap("DbfsList")
     public String dbfsList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;TagKey&quot;:&quot;k1&quot;,&quot;TagValue&quot;:&quot;v1&quot;},{&quot;TagKey&quot;:&quot;k2&quot;,&quot;TagValue&quot;:&quot;v2&quot;}]</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

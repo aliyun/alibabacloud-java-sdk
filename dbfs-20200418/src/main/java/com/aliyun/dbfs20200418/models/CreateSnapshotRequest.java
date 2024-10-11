@@ -4,21 +4,49 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp131n0q38u3a4zi*****</p>
+     */
     @NameInMap("FsId")
     public String fsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testSnapshotName</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 

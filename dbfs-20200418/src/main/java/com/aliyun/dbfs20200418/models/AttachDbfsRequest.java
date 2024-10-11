@@ -4,21 +4,51 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class AttachDbfsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>create_new_mount_point</p>
+     */
     @NameInMap("AttachMode")
     public String attachMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/mnt/dbfs/dbfs-001</p>
+     */
     @NameInMap("AttachPoint")
     public String attachPoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1ecr********5go2go</p>
+     */
     @NameInMap("ECSInstanceId")
     public String ECSInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbfs-v0WvA********tVEVcgJLg</p>
+     */
     @NameInMap("FsId")
     public String fsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dbfs-pkg-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com</p>
+     */
     @NameInMap("ServerUrl")
     public String serverUrl;
 
