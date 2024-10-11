@@ -4,21 +4,42 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
-    // 账户名称
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 账户明文密码
+    /**
+     * <strong>example:</strong>
+     * <p>123456Aa</p>
+     */
     @NameInMap("Password")
     public String password;
 
-    // 账户密码sha256hex 优先使用明文密码
+    /**
+     * <strong>example:</strong>
+     * <p>b17e1e0450dac425ea318253f6f852972d69731d6c7499c001468b695b6da219</p>
+     */
     @NameInMap("PasswordSha256Hex")
     public String passwordSha256Hex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -7,15 +7,31 @@ public class DescribeRunningQueryResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeRunningQueryResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>48CBEEBE-FA07-5A06-8BA4-567B92ADD6A0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,26 +81,45 @@ public class DescribeRunningQueryResponseBody extends TeaModel {
     }
 
     public static class DescribeRunningQueryResponseBodyData extends TeaModel {
-        // 查询源地址
+        /**
+         * <strong>example:</strong>
+         * <p>::ffff:10.1.XX.XX</p>
+         */
         @NameInMap("InitialAddress")
         public String initialAddress;
 
-        // 查询ID
+        /**
+         * <strong>example:</strong>
+         * <p>7c28bbbb-753b-4eba-98b1-efcbe2b9bdf6</p>
+         */
         @NameInMap("InitialQueryId")
         public String initialQueryId;
 
-        // 查询用户
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("InitialUser")
         public String initialUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>select * from test order by score limit 1;</p>
+         */
         @NameInMap("Query")
         public String query;
 
-        // 查询持续时间 毫秒
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("QueryDurationMs")
         public Long queryDurationMs;
 
-        // 查询起始时间 UTC时间
+        /**
+         * <strong>example:</strong>
+         * <p>2021-02-02T09:14:48Z</p>
+         */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
 

@@ -4,17 +4,33 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class KillQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp1qx68m06981****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 指定查询ID列表 英文逗号分隔 不指定则匹配所有查询
+    /**
+     * <strong>example:</strong>
+     * <p>21152382576****</p>
+     */
     @NameInMap("QueryIds")
     public String queryIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 计算组ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vw-uf62965t8lt50****</p>
+     */
     @NameInMap("VirtualWareHouseId")
     public String virtualWareHouseId;
 

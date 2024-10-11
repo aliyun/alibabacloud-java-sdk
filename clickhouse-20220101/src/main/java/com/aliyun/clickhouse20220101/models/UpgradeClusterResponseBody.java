@@ -3,20 +3,20 @@ package com.aliyun.clickhouse20220101.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyAccountPrivilegeResponseBody extends TeaModel {
+public class UpgradeClusterResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyAccountPrivilegeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyAccountPrivilegeResponseBody self = new ModifyAccountPrivilegeResponseBody();
+    public static UpgradeClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpgradeClusterResponseBody self = new UpgradeClusterResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAccountPrivilegeResponseBody setRequestId(String requestId) {
+    public UpgradeClusterResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

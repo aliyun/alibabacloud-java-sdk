@@ -7,6 +7,10 @@ public class DescribeClusterSecurityInfoResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeClusterSecurityInfoResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2371CC7A-E9C3-5817-97C9-F6333D74BA6C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,11 +36,17 @@ public class DescribeClusterSecurityInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterSecurityInfoResponseBodyDataSecurityIpGroups extends TeaModel {
-        // 安全组名称
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // IP列表 英文逗号分隔
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx,192.168.xx.xx</p>
+         */
         @NameInMap("SecurityIps")
         public String securityIps;
 
@@ -64,7 +74,6 @@ public class DescribeClusterSecurityInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterSecurityInfoResponseBodyData extends TeaModel {
-        // 安全组列表
         @NameInMap("SecurityIpGroups")
         public java.util.List<DescribeClusterSecurityInfoResponseBodyDataSecurityIpGroups> securityIpGroups;
 

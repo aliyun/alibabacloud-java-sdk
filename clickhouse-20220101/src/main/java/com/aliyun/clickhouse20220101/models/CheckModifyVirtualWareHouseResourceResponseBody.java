@@ -7,6 +7,10 @@ public class CheckModifyVirtualWareHouseResourceResponseBody extends TeaModel {
     @NameInMap("Data")
     public CheckModifyVirtualWareHouseResourceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,24 @@ public class CheckModifyVirtualWareHouseResourceResponseBody extends TeaModel {
     }
 
     public static class CheckModifyVirtualWareHouseResourceResponseBodyData extends TeaModel {
-        // 预期变更后的实例状态
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceChanging</p>
+         */
         @NameInMap("ExpectedDBClusterStatus")
         public String expectedDBClusterStatus;
 
-        // 预期变更完成需要的时间 秒
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("ExpectedOrderFinishSeconds")
         public Long expectedOrderFinishSeconds;
 
-        // 预期变更后的计算组状态
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceChanging</p>
+         */
         @NameInMap("ExpectedTargetVirtualWareHouseStatus")
         public String expectedTargetVirtualWareHouseStatus;
 

@@ -7,6 +7,10 @@ public class DescribeAccountResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAccountResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>92016D5B-899D-5B77-A8A7-EFE523D4C80A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,23 +36,34 @@ public class DescribeAccountResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountResponseBodyData extends TeaModel {
-        // 账户名称
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Account")
         public String account;
 
-        // 账户备注
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
-        // 账户密码sha256hex
+        /**
+         * <strong>example:</strong>
+         * <p>cd0289a263bf4146a2e00888321178234b65e8c050142074ad05683e3749****</p>
+         */
         @NameInMap("PasswordSha256Hex")
         public String passwordSha256Hex;
 
-        // 账户权限描述
         @NameInMap("PrivilegeDescription")
         public String privilegeDescription;
 
-        // 账户权限类型
+        /**
+         * <strong>example:</strong>
+         * <p>Super</p>
+         */
         @NameInMap("PrivilegeType")
         public String privilegeType;
 

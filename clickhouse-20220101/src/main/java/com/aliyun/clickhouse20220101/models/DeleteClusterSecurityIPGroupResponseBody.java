@@ -4,6 +4,10 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterSecurityIPGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

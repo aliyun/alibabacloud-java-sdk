@@ -7,6 +7,10 @@ public class DescribeVirtualWareHouseEndpointInfoResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeVirtualWareHouseEndpointInfoResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7EE0EF77-B7BA-5EE3-9B11-F8DE7B65BAB8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,26 +36,45 @@ public class DescribeVirtualWareHouseEndpointInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualWareHouseEndpointInfoResponseBodyData extends TeaModel {
-        // Endpoint类型
+        /**
+         * <strong>example:</strong>
+         * <p>slb</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0.xx.xx</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
-        // 网络类型 intranet:内网 | internet:公网
+        /**
+         * <strong>example:</strong>
+         * <p>intranet</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
-        // 端口信息 英文逗号分隔
+        /**
+         * <strong>example:</strong>
+         * <p>tcp:9000,http:8123,mysql:9004</p>
+         */
         @NameInMap("Ports")
         public String ports;
 
-        // 创建状态 Creating:创建中 | Ready:可使用 | Deleting:删除中
+        /**
+         * <strong>example:</strong>
+         * <p>Ready</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // 链接串
+        /**
+         * <strong>example:</strong>
+         * <p>vw-bp11gxp8g992f****.clickhouse.ads.aliyuncs.com</p>
+         */
         @NameInMap("Url")
         public String url;
 

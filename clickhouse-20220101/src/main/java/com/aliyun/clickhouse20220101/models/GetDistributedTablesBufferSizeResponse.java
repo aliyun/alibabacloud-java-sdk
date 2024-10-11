@@ -3,7 +3,7 @@ package com.aliyun.clickhouse20220101.models;
 
 import com.aliyun.tea.*;
 
-public class RestartVirtualWareHouseResponse extends TeaModel {
+public class GetDistributedTablesBufferSizeResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RestartVirtualWareHouseResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RestartVirtualWareHouseResponseBody body;
+    public GetDistributedTablesBufferSizeResponseBody body;
 
-    public static RestartVirtualWareHouseResponse build(java.util.Map<String, ?> map) throws Exception {
-        RestartVirtualWareHouseResponse self = new RestartVirtualWareHouseResponse();
+    public static GetDistributedTablesBufferSizeResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetDistributedTablesBufferSizeResponse self = new GetDistributedTablesBufferSizeResponse();
         return TeaModel.build(map, self);
     }
 
-    public RestartVirtualWareHouseResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetDistributedTablesBufferSizeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RestartVirtualWareHouseResponse extends TeaModel {
         return this.headers;
     }
 
-    public RestartVirtualWareHouseResponse setStatusCode(Integer statusCode) {
+    public GetDistributedTablesBufferSizeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RestartVirtualWareHouseResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RestartVirtualWareHouseResponse setBody(RestartVirtualWareHouseResponseBody body) {
+    public GetDistributedTablesBufferSizeResponse setBody(GetDistributedTablesBufferSizeResponseBody body) {
         this.body = body;
         return this;
     }
-    public RestartVirtualWareHouseResponseBody getBody() {
+    public GetDistributedTablesBufferSizeResponseBody getBody() {
         return this.body;
     }
 

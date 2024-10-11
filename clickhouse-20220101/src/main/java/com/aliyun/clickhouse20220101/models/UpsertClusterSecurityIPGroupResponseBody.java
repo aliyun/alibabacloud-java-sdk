@@ -4,6 +4,10 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class UpsertClusterSecurityIPGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A6DB2D3E-3E87-5804-9D42-9D51EC7A7D33</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,26 +4,47 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
-    // 指定实例描述子串
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
-    // 指定实例ID子串
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 指定实例状态
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
-    // 分页码 从1开始 默认值1
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小 默认值30
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -7,6 +7,10 @@ public class CheckCreateVirtualWareHouseResponseBody extends TeaModel {
     @NameInMap("Data")
     public CheckCreateVirtualWareHouseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9A23C87D-87DF-4DA0-A50E-CB13F4F7923D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,24 @@ public class CheckCreateVirtualWareHouseResponseBody extends TeaModel {
     }
 
     public static class CheckCreateVirtualWareHouseResponseBodyData extends TeaModel {
-        // 预期变更后的实例状态
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceChanging</p>
+         */
         @NameInMap("ExpectedDBClusterStatus")
         public String expectedDBClusterStatus;
 
-        // 预期变更完成需要的时间 秒
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("ExpectedOrderFinishSeconds")
         public Long expectedOrderFinishSeconds;
 
-        // 预期变更后的计算组状态
+        /**
+         * <strong>example:</strong>
+         * <p>Creating</p>
+         */
         @NameInMap("ExpectedTargetVirtualWareHouseStatus")
         public String expectedTargetVirtualWareHouseStatus;
 

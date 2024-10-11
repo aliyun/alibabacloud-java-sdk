@@ -4,49 +4,102 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
-    // 是否自动续费
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    // 实例描述信息
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
-    // 付费类型 Prepaid | Postpaid
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Postpaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
-    // 预付费周期 Year | Month
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 预付费时长
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UsedTime")
     public String usedTime;
 
-    // 计算组本地缓存空间 GiB
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("VirtualWareHouseCacheStorage")
     public Integer virtualWareHouseCacheStorage;
 
-    // 计算组规格码
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n1.xlarge</p>
+     */
     @NameInMap("VirtualWareHouseClass")
     public String virtualWareHouseClass;
 
-    // 计算组描述信息
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("VirtualWareHouseDescription")
     public String virtualWareHouseDescription;
 
+    /**
+     * <p>VPC ID。</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6xmupdn7v6ui9f****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    // 默认交换机ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf632qye9oqt4x4sr****</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 
-    // 可用区ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

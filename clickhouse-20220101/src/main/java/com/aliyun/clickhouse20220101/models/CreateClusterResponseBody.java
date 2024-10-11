@@ -7,6 +7,10 @@ public class CreateClusterResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateClusterResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -31,57 +35,25 @@ public class CreateClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class CheckCreateClusterResponseBodyData extends TeaModel {
-        // 预期变更后的实例状态
-        @NameInMap("ExpectedDBClusterStatus")
-        public String expectedDBClusterStatus;
-
-        // 预期变更完成需要的时间 秒
-        @NameInMap("ExpectedOrderFinishSeconds")
-        public Long expectedOrderFinishSeconds;
-
-        // 预期变更后的计算组状态
-        @NameInMap("ExpectedTargetVirtualWareHouseStatus")
-        public String expectedTargetVirtualWareHouseStatus;
-
-        public static CheckCreateClusterResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            CheckCreateClusterResponseBodyData self = new CheckCreateClusterResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public CheckCreateClusterResponseBodyData setExpectedDBClusterStatus(String expectedDBClusterStatus) {
-            this.expectedDBClusterStatus = expectedDBClusterStatus;
-            return this;
-        }
-        public String getExpectedDBClusterStatus() {
-            return this.expectedDBClusterStatus;
-        }
-
-        public CheckCreateClusterResponseBodyData setExpectedOrderFinishSeconds(Long expectedOrderFinishSeconds) {
-            this.expectedOrderFinishSeconds = expectedOrderFinishSeconds;
-            return this;
-        }
-        public Long getExpectedOrderFinishSeconds() {
-            return this.expectedOrderFinishSeconds;
-        }
-
-        public CheckCreateClusterResponseBodyData setExpectedTargetVirtualWareHouseStatus(String expectedTargetVirtualWareHouseStatus) {
-            this.expectedTargetVirtualWareHouseStatus = expectedTargetVirtualWareHouseStatus;
-            return this;
-        }
-        public String getExpectedTargetVirtualWareHouseStatus() {
-            return this.expectedTargetVirtualWareHouseStatus;
-        }
-
-    }
-
     public static class CreateClusterResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp123bm6vy801****</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21154955706****</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vw-uf6a499c0m3w5****</p>
+         */
         @NameInMap("VirtualWareHouseId")
         public String virtualWareHouseId;
 

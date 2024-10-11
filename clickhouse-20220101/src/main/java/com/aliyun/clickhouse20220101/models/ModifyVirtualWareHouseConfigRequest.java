@@ -4,17 +4,32 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class ModifyVirtualWareHouseConfigRequest extends TeaModel {
-    // 参数变更列表
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConfigChanges")
     public java.util.List<ModifyVirtualWareHouseConfigRequestConfigChanges> configChanges;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp1qx68m06981****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 计算组ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vw-uf62965t8lt50****</p>
+     */
     @NameInMap("VirtualWareHouseId")
     public String virtualWareHouseId;
 
@@ -56,11 +71,21 @@ public class ModifyVirtualWareHouseConfigRequest extends TeaModel {
     }
 
     public static class ModifyVirtualWareHouseConfigRequestConfigChanges extends TeaModel {
-        // 参数路径
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keep_alive_timeout</p>
+         */
         @NameInMap("ConfigFullPath")
         public String configFullPath;
 
-        // 参数设定值
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Value")
         public String value;
 

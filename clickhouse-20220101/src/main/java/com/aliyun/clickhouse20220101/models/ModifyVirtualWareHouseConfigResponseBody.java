@@ -4,6 +4,10 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class ModifyVirtualWareHouseConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>108B73B2-F513-5250-81DD-48A63E48C373</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,13 +4,26 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class AllocateVirtualWareHousePublicConnectionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 计算组ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vw-uf6a499c0m3w5****</p>
+     */
     @NameInMap("VirtualWareHouseId")
     public String virtualWareHouseId;
 
