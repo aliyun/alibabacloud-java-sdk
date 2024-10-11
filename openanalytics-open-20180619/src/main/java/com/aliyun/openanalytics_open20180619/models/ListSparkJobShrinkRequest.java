@@ -3,13 +3,13 @@ package com.aliyun.openanalytics_open20180619.models;
 
 import com.aliyun.tea.*;
 
-public class ListSparkJobRequest extends TeaModel {
+public class ListSparkJobShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>{   &quot;createTime&quot;:&quot;2020-12-28 09:00:00&quot;,   &quot;jobName&quot;:&quot;SparkPi&quot; }</p>
      */
     @NameInMap("Condition")
-    public java.util.Map<String, ?> condition;
+    public String conditionShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -38,20 +38,20 @@ public class ListSparkJobRequest extends TeaModel {
     @NameInMap("VcName")
     public String vcName;
 
-    public static ListSparkJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListSparkJobRequest self = new ListSparkJobRequest();
+    public static ListSparkJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListSparkJobShrinkRequest self = new ListSparkJobShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSparkJobRequest setCondition(java.util.Map<String, ?> condition) {
-        this.condition = condition;
+    public ListSparkJobShrinkRequest setConditionShrink(String conditionShrink) {
+        this.conditionShrink = conditionShrink;
         return this;
     }
-    public java.util.Map<String, ?> getCondition() {
-        return this.condition;
+    public String getConditionShrink() {
+        return this.conditionShrink;
     }
 
-    public ListSparkJobRequest setPageNumber(Integer pageNumber) {
+    public ListSparkJobShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -59,7 +59,7 @@ public class ListSparkJobRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListSparkJobRequest setPageSize(Integer pageSize) {
+    public ListSparkJobShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -67,7 +67,7 @@ public class ListSparkJobRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListSparkJobRequest setVcName(String vcName) {
+    public ListSparkJobShrinkRequest setVcName(String vcName) {
         this.vcName = vcName;
         return this;
     }

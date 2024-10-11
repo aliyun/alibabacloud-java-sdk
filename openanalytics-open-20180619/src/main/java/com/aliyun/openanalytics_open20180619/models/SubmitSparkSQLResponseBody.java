@@ -3,27 +3,27 @@ package com.aliyun.openanalytics_open20180619.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitSparkJobResponseBody extends TeaModel {
+public class SubmitSparkSQLResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>j202011032013hangzhouf742a4330003679</p>
+     * <p>j202104261729hangzhou224ee5230000930</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <strong>example:</strong>
-     * <p>C039FD4D-2F3C-4556-AF09-864D3A6485B2</p>
+     * <p>B570310A-8A49-461B-B81D-AE0B58D63DA4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SubmitSparkJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SubmitSparkJobResponseBody self = new SubmitSparkJobResponseBody();
+    public static SubmitSparkSQLResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SubmitSparkSQLResponseBody self = new SubmitSparkSQLResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSparkJobResponseBody setJobId(String jobId) {
+    public SubmitSparkSQLResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -31,7 +31,7 @@ public class SubmitSparkJobResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public SubmitSparkJobResponseBody setRequestId(String requestId) {
+    public SubmitSparkSQLResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

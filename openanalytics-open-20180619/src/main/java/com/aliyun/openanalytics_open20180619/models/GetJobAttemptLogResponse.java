@@ -3,7 +3,7 @@ package com.aliyun.openanalytics_open20180619.models;
 
 import com.aliyun.tea.*;
 
-public class ListSparkJobResponse extends TeaModel {
+public class GetJobAttemptLogResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListSparkJobResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListSparkJobResponseBody body;
+    public GetJobAttemptLogResponseBody body;
 
-    public static ListSparkJobResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListSparkJobResponse self = new ListSparkJobResponse();
+    public static GetJobAttemptLogResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetJobAttemptLogResponse self = new GetJobAttemptLogResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListSparkJobResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetJobAttemptLogResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListSparkJobResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListSparkJobResponse setStatusCode(Integer statusCode) {
+    public GetJobAttemptLogResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListSparkJobResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListSparkJobResponse setBody(ListSparkJobResponseBody body) {
+    public GetJobAttemptLogResponse setBody(GetJobAttemptLogResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListSparkJobResponseBody getBody() {
+    public GetJobAttemptLogResponseBody getBody() {
         return this.body;
     }
 

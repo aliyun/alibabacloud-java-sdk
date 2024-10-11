@@ -3,13 +3,22 @@ package com.aliyun.openanalytics_open20180619.models;
 
 import com.aliyun.tea.*;
 
-public class ListSparkJobRequest extends TeaModel {
+public class ListSparkJobAttemptRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>{   &quot;createTime&quot;:&quot;2020-12-28 09:00:00&quot;,   &quot;jobName&quot;:&quot;SparkPi&quot; }</p>
+     * <p>{&quot;status&quot;:&quot;success&quot;, &quot;createTime&quot;:&quot;2021-05-27 11:00:00&quot;, &quot;timeZone&quot;:&quot;Asia/Shanghai&quot;}</p>
      */
     @NameInMap("Condition")
     public java.util.Map<String, ?> condition;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>j202105272322hangzhou5d64f1560000128</p>
+     */
+    @NameInMap("JobId")
+    public String jobId;
 
     /**
      * <p>This parameter is required.</p>
@@ -33,17 +42,17 @@ public class ListSparkJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MySparkCluster</p>
+     * <p>release-test</p>
      */
     @NameInMap("VcName")
     public String vcName;
 
-    public static ListSparkJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListSparkJobRequest self = new ListSparkJobRequest();
+    public static ListSparkJobAttemptRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListSparkJobAttemptRequest self = new ListSparkJobAttemptRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSparkJobRequest setCondition(java.util.Map<String, ?> condition) {
+    public ListSparkJobAttemptRequest setCondition(java.util.Map<String, ?> condition) {
         this.condition = condition;
         return this;
     }
@@ -51,7 +60,15 @@ public class ListSparkJobRequest extends TeaModel {
         return this.condition;
     }
 
-    public ListSparkJobRequest setPageNumber(Integer pageNumber) {
+    public ListSparkJobAttemptRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public ListSparkJobAttemptRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -59,7 +76,7 @@ public class ListSparkJobRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListSparkJobRequest setPageSize(Integer pageSize) {
+    public ListSparkJobAttemptRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -67,7 +84,7 @@ public class ListSparkJobRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListSparkJobRequest setVcName(String vcName) {
+    public ListSparkJobAttemptRequest setVcName(String vcName) {
         this.vcName = vcName;
         return this;
     }
