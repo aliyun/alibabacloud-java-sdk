@@ -563,6 +563,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("IspName")
         public String ispName;
 
+        /**
+         * <p>探测点网络类型。取值：
+         * IDC: IDC机房
+         * LASTMILE: 网民家宽
+         * MOBILE: 移动蜂窝网</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDC</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -1272,6 +1281,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("retry_delay")
         public Integer retryDelay;
 
+        /**
+         * <p>是否开启页面截图</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("screen_shot")
         public Boolean screenShot;
 
@@ -1712,15 +1727,33 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig extends TeaModel {
+        /**
+         * <p>内网拨测任务的目标站点所在地域。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-xxxxxx</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxx</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
