@@ -7,6 +7,10 @@ public class ModifyVirtualWareHouseResourceResponseBody extends TeaModel {
     @NameInMap("Data")
     public ModifyVirtualWareHouseResourceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -31,51 +35,11 @@ public class ModifyVirtualWareHouseResourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class CheckModifyVirtualWareHouseResourceResponseBodyData extends TeaModel {
-        // 预期变更后的实例状态
-        @NameInMap("ExpectedDBClusterStatus")
-        public String expectedDBClusterStatus;
-
-        // 预期变更完成需要的时间 秒
-        @NameInMap("ExpectedOrderFinishSeconds")
-        public Long expectedOrderFinishSeconds;
-
-        // 预期变更后的计算组状态
-        @NameInMap("ExpectedTargetVirtualWareHouseStatus")
-        public String expectedTargetVirtualWareHouseStatus;
-
-        public static CheckModifyVirtualWareHouseResourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            CheckModifyVirtualWareHouseResourceResponseBodyData self = new CheckModifyVirtualWareHouseResourceResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public CheckModifyVirtualWareHouseResourceResponseBodyData setExpectedDBClusterStatus(String expectedDBClusterStatus) {
-            this.expectedDBClusterStatus = expectedDBClusterStatus;
-            return this;
-        }
-        public String getExpectedDBClusterStatus() {
-            return this.expectedDBClusterStatus;
-        }
-
-        public CheckModifyVirtualWareHouseResourceResponseBodyData setExpectedOrderFinishSeconds(Long expectedOrderFinishSeconds) {
-            this.expectedOrderFinishSeconds = expectedOrderFinishSeconds;
-            return this;
-        }
-        public Long getExpectedOrderFinishSeconds() {
-            return this.expectedOrderFinishSeconds;
-        }
-
-        public CheckModifyVirtualWareHouseResourceResponseBodyData setExpectedTargetVirtualWareHouseStatus(String expectedTargetVirtualWareHouseStatus) {
-            this.expectedTargetVirtualWareHouseStatus = expectedTargetVirtualWareHouseStatus;
-            return this;
-        }
-        public String getExpectedTargetVirtualWareHouseStatus() {
-            return this.expectedTargetVirtualWareHouseStatus;
-        }
-
-    }
-
     public static class ModifyVirtualWareHouseResourceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>21152548723****</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 

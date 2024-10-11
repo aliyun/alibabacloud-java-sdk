@@ -7,6 +7,10 @@ public class DescribeSlowQueryTrendResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeSlowQueryTrendResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>48CBEEBE-FA07-5A06-8BA4-567B92ADD6A0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,23 +36,38 @@ public class DescribeSlowQueryTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowQueryTrendResponseBodyData extends TeaModel {
-        // 平均查询耗时 毫秒
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("AvgDurationMs")
         public Long avgDurationMs;
 
-        // 慢查询数量
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
-        // 最大查询耗时 毫秒
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("MaxDurationMs")
         public Long maxDurationMs;
 
-        // 最小查询耗时 毫秒
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MinDurationMs")
         public Long minDurationMs;
 
-        // 统计时间窗口起点 UTC时间
+        /**
+         * <strong>example:</strong>
+         * <p>2021-02-02T08:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

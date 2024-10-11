@@ -4,13 +4,28 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterSecurityIPGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 安全组名称
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

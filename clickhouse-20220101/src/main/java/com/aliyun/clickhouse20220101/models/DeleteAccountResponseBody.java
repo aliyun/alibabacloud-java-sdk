@@ -4,6 +4,10 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

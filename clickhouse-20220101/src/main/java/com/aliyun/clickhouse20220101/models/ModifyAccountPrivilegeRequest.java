@@ -4,17 +4,37 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountPrivilegeRequest extends TeaModel {
-    // 账户名称
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 账户权限类型 Normal:普通账户 | Readonly:只读账户 | Dml:DML账户-禁止DDL | Super:超级账户
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("PrivilegeType")
     public String privilegeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

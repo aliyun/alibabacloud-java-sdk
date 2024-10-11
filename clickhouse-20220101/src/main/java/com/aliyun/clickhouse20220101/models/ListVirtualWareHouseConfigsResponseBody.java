@@ -7,6 +7,10 @@ public class ListVirtualWareHouseConfigsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListVirtualWareHouseConfigsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>87B839E3-7384-52D5-9CAB-756DD3BF7B9B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,31 +36,54 @@ public class ListVirtualWareHouseConfigsResponseBody extends TeaModel {
     }
 
     public static class ListVirtualWareHouseConfigsResponseBodyData extends TeaModel {
-        // 参数路径
+        /**
+         * <strong>example:</strong>
+         * <p>keep_alive_timeout</p>
+         */
         @NameInMap("ConfigFullPath")
         public String configFullPath;
 
-        // 参数类型 config.xml | users.xml
+        /**
+         * <strong>example:</strong>
+         * <p>config.xml</p>
+         */
         @NameInMap("ConfigType")
         public String configType;
 
-        // 参数默认值 为空代表未设置
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        // 参数描述
+        /**
+         * <strong>example:</strong>
+         * <p>The number of seconds that ClickHouse HTTP server waits for incoming requests before closing the connection</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 修改后是否需要重启
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedRestart")
         public Boolean needRestart;
 
-        // 修改规范
+        /**
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=10</p>
+         * </blockquote>
+         */
         @NameInMap("Spec")
         public String spec;
 
-        // 参数设定值
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Value")
         public String value;
 

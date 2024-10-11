@@ -7,6 +7,10 @@ public class DescribeVirtualWareHouseClassSetResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeVirtualWareHouseClassSetResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,45 @@ public class DescribeVirtualWareHouseClassSetResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualWareHouseClassSetResponseBodyData extends TeaModel {
-        // 最大本地缓存空间调整步长 GiB
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CacheStorageStep")
         public Integer cacheStorageStep;
 
-        // CPU资源 cores
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("CpuCores")
         public Integer cpuCores;
 
-        // 最大本地缓存空间 GiB
+        /**
+         * <strong>example:</strong>
+         * <p>32000</p>
+         */
         @NameInMap("MaxCacheStorage")
         public Integer maxCacheStorage;
 
-        // 内存资源 GiB
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("MemoryGiB")
         public Integer memoryGiB;
 
-        // 最小本地缓存空间 GiB
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("MinCacheStorage")
         public Integer minCacheStorage;
 
-        // 规格码
+        /**
+         * <strong>example:</strong>
+         * <p>n1.2xlarge</p>
+         */
         @NameInMap("Value")
         public String value;
 

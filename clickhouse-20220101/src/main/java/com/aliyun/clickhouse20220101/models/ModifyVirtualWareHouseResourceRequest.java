@@ -4,21 +4,44 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class ModifyVirtualWareHouseResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 计算组本地缓存空间 GiB
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("VirtualWareHouseCacheStorage")
     public Integer virtualWareHouseCacheStorage;
 
-    // 计算组规格码
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n1.xlarge</p>
+     */
     @NameInMap("VirtualWareHouseClass")
     public String virtualWareHouseClass;
 
-    // 计算组ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vw-uf62965t8lt50****</p>
+     */
     @NameInMap("VirtualWareHouseId")
     public String virtualWareHouseId;
 

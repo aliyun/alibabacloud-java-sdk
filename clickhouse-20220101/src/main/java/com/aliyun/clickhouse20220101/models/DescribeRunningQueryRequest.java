@@ -4,37 +4,68 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRunningQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp1qx68m06981****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 分页码 从1开始 默认值1
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小 默认值30
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 指定查询最小持续时间 毫秒 最小值1000 默认值1000
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("QueryDurationMs")
     public Long queryDurationMs;
 
-    // 指定查询ID
+    /**
+     * <strong>example:</strong>
+     * <p>c8cbcbaf-d4ab-4e74-900d-90d7c0aecaae</p>
+     */
     @NameInMap("QueryId")
     public String queryId;
 
-    // 指定查询关键字
+    /**
+     * <strong>example:</strong>
+     * <p>order by</p>
+     */
     @NameInMap("QueryKeyWord")
     public String queryKeyWord;
 
-    // 指定查询用户
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("QueryUser")
     public String queryUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 计算组ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vw-uf62965t8lt50****</p>
+     */
     @NameInMap("VirtualWareHouseId")
     public String virtualWareHouseId;
 

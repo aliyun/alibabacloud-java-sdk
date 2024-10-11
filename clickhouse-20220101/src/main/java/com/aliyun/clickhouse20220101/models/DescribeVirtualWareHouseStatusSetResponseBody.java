@@ -7,6 +7,10 @@ public class DescribeVirtualWareHouseStatusSetResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeVirtualWareHouseStatusSetResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FDF272C3-8FD0-507B-8E63-A19495217339</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,11 +36,13 @@ public class DescribeVirtualWareHouseStatusSetResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualWareHouseStatusSetResponseBodyData extends TeaModel {
-        // 描述
         @NameInMap("Desc")
         public String desc;
 
-        // 状态值
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Value")
         public String value;
 

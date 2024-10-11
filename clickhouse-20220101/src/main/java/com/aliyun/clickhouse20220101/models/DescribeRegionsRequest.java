@@ -4,10 +4,17 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 可用区ID
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

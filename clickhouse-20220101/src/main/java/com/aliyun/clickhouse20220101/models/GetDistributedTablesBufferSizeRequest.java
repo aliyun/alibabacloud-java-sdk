@@ -3,7 +3,7 @@ package com.aliyun.clickhouse20220101.models;
 
 import com.aliyun.tea.*;
 
-public class CheckDeleteVirtualWareHouseRequest extends TeaModel {
+public class GetDistributedTablesBufferSizeRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>cc-bp1qx68m06981****</p>
@@ -22,17 +22,17 @@ public class CheckDeleteVirtualWareHouseRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vw-uf6a499c0m3w5****</p>
+     * <p>vw-uf62965t8lt50****</p>
      */
     @NameInMap("VirtualWareHouseId")
     public String virtualWareHouseId;
 
-    public static CheckDeleteVirtualWareHouseRequest build(java.util.Map<String, ?> map) throws Exception {
-        CheckDeleteVirtualWareHouseRequest self = new CheckDeleteVirtualWareHouseRequest();
+    public static GetDistributedTablesBufferSizeRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDistributedTablesBufferSizeRequest self = new GetDistributedTablesBufferSizeRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckDeleteVirtualWareHouseRequest setDBClusterId(String DBClusterId) {
+    public GetDistributedTablesBufferSizeRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -40,7 +40,7 @@ public class CheckDeleteVirtualWareHouseRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public CheckDeleteVirtualWareHouseRequest setRegionId(String regionId) {
+    public GetDistributedTablesBufferSizeRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -48,7 +48,7 @@ public class CheckDeleteVirtualWareHouseRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CheckDeleteVirtualWareHouseRequest setVirtualWareHouseId(String virtualWareHouseId) {
+    public GetDistributedTablesBufferSizeRequest setVirtualWareHouseId(String virtualWareHouseId) {
         this.virtualWareHouseId = virtualWareHouseId;
         return this;
     }

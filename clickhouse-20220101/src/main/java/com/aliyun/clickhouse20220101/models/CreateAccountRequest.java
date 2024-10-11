@@ -4,29 +4,58 @@ package com.aliyun.clickhouse20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
-    // 账户名称
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Account")
     public String account;
 
-    // 账户备注信息
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-8vbsom12x476u****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 账户明文密码
+    /**
+     * <strong>example:</strong>
+     * <p>123456Aa</p>
+     */
     @NameInMap("Password")
     public String password;
 
-    // 账户密码sha256hex 优先使用明文密码
+    /**
+     * <strong>example:</strong>
+     * <p>b17e1e0450dac425ea318253f6f852972d69731d6c7499c001468b695b6da219</p>
+     */
     @NameInMap("PasswordSha256Hex")
     public String passwordSha256Hex;
 
-    // 账户权限类型 Normal:普通账户 | Readonly:只读账户 | Dml:DML账户-禁止DDL | Super:超级账户
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("PrivilegeType")
     public String privilegeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

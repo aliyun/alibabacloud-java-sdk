@@ -7,15 +7,31 @@ public class ListClustersResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListClustersResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DDB109DC-E37D-5475-8D49-47542C57BD38</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,34 +81,59 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyDataVirtualWareHouses extends TeaModel {
-        // 端口信息 英文逗号分隔
+        /**
+         * <strong>example:</strong>
+         * <p>tcp:9000,http:8123,mysql:9004</p>
+         */
         @NameInMap("Ports")
         public String ports;
 
-        // 计算组本地缓存空间GiB
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("VirtualWareHouseCacheStorage")
         public Integer virtualWareHouseCacheStorage;
 
-        // 计算组规格码
+        /**
+         * <strong>example:</strong>
+         * <p>n1.xlarge</p>
+         */
         @NameInMap("VirtualWareHouseClass")
         public String virtualWareHouseClass;
 
-        // 计算组描述信息
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VirtualWareHouseDescription")
         public String virtualWareHouseDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vw-uf6a499c0m3w5****</p>
+         */
         @NameInMap("VirtualWareHouseId")
         public String virtualWareHouseId;
 
-        // 计算组状态 详见describeVirtualWareHouseStatusSet接口
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("VirtualWareHouseStatus")
         public String virtualWareHouseStatus;
 
-        // 交换机ID
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1tg609m5j85jejq****</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
-        // 可用区
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -168,84 +209,148 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyData extends TeaModel {
-        // 实例所属账户Uid
+        /**
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // 实例总本地缓存空间 GiB
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CacheStorageSizeGiB")
         public Integer cacheStorageSizeGiB;
 
-        // 实例本地缓存类型
+        /**
+         * <strong>example:</strong>
+         * <p>CloudESSD</p>
+         */
         @NameInMap("CacheStorageType")
         public String cacheStorageType;
 
-        // 商品Code
+        /**
+         * <strong>example:</strong>
+         * <p>clickhouse_go_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        // 实例创建时间 UTC时间
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18T08:14:48Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 实例描述信息
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        // 实例状态 详见describeClusterStatusSet接口
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
-        // 内核版本
+        /**
+         * <strong>example:</strong>
+         * <p>21.8</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
-        // 实例到期时间 UTC时间
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-17T08:14:48Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // 实例锁定状态 Unlock:正常 | ManualLock:手动锁定 | LockByExpiration:过期锁定
+        /**
+         * <strong>example:</strong>
+         * <p>Unlock</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
-        // 实例锁定原因
+        /**
+         * <strong>example:</strong>
+         * <p>DISK_FULL</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
-        // 实例总对象存储空间 GiB
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ObjectStoreSizeGiB")
         public Long objectStoreSizeGiB;
 
-        // 付费类型
+        /**
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // 实例总CPU资源 cores
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("ResourceCpuCores")
         public Integer resourceCpuCores;
 
-        // 实例总内存资源 GiB
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("ResourceMemoryGiB")
         public Integer resourceMemoryGiB;
 
-        // 计算组列表
         @NameInMap("VirtualWareHouses")
         public java.util.List<ListClustersResponseBodyDataVirtualWareHouses> virtualWareHouses;
 
+        /**
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zedznmtm8j7fksbc****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        // 默认交换机ID
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1tg609m5j85jejq****</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
-        // 默认可用区
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

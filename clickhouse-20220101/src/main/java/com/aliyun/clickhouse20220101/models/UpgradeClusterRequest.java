@@ -3,12 +3,12 @@ package com.aliyun.clickhouse20220101.models;
 
 import com.aliyun.tea.*;
 
-public class ListVirtualWareHousesRequest extends TeaModel {
+public class UpgradeClusterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cc-bp108z124a8o7****</p>
+     * <p>cc-8vbsom12x476u****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,12 +20,12 @@ public class ListVirtualWareHousesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static ListVirtualWareHousesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListVirtualWareHousesRequest self = new ListVirtualWareHousesRequest();
+    public static UpgradeClusterRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpgradeClusterRequest self = new UpgradeClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListVirtualWareHousesRequest setDBClusterId(String DBClusterId) {
+    public UpgradeClusterRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -33,7 +33,7 @@ public class ListVirtualWareHousesRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public ListVirtualWareHousesRequest setRegionId(String regionId) {
+    public UpgradeClusterRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

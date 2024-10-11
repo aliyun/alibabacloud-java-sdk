@@ -7,6 +7,10 @@ public class DescribeVirtualWareHouseResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeVirtualWareHouseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F543E6CC-6868-523D-8D28-0E92CF977ED2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,34 +36,59 @@ public class DescribeVirtualWareHouseResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualWareHouseResponseBodyData extends TeaModel {
-        // 端口信息 英文逗号分隔
+        /**
+         * <strong>example:</strong>
+         * <p>tcp:9000,http:8123,mysql:9004</p>
+         */
         @NameInMap("Ports")
         public String ports;
 
-        // 计算组本地缓存空间GiB
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("VirtualWareHouseCacheStorage")
         public Integer virtualWareHouseCacheStorage;
 
-        // 计算组规格码
+        /**
+         * <strong>example:</strong>
+         * <p>n1.xlarge</p>
+         */
         @NameInMap("VirtualWareHouseClass")
         public String virtualWareHouseClass;
 
-        // 计算组描述信息
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VirtualWareHouseDescription")
         public String virtualWareHouseDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vw-bp1w2728d535t****</p>
+         */
         @NameInMap("VirtualWareHouseId")
         public String virtualWareHouseId;
 
-        // 计算组状态 详见describeVirtualWareHouseStatusSet接口
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("VirtualWareHouseStatus")
         public String virtualWareHouseStatus;
 
-        // 交换机ID
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1tg609m5j85jejq****</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
-        // 可用区
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
