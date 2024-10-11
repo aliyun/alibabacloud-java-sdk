@@ -1052,6 +1052,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>资源转组</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
+    public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceRegionId)) {
+            query.put("ResourceRegionId", request.resourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeResourceGroup"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>资源转组</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can create up to 10 applications within an Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</p>
      * <h3>QPS limits</h3>
@@ -3727,11 +3783,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <p>This operation is available only in the China (Shanghai) region.</p>
      * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
      * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
      * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the Interval parameter. The following table describes the time period within which historical data is available and the data delay.<table>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
@@ -3756,7 +3813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>1 day</td>
      * <td>366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>4 to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
@@ -3820,11 +3877,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <p>This operation is available only in the China (Shanghai) region.</p>
      * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
      * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
      * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the Interval parameter. The following table describes the time period within which historical data is available and the data delay.<table>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
@@ -3849,7 +3907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>1 day</td>
      * <td>366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>4 to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
@@ -8613,7 +8671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Supports filtering queries by application status.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>You can query applications based on states.</p>
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the applications that you are authorized to manage based on query conditions.</p>
@@ -8660,7 +8721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Supports filtering queries by application status.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>You can query applications based on states.</p>
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the applications that you are authorized to manage based on query conditions.</p>

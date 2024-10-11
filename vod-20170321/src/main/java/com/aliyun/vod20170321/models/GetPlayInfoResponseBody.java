@@ -125,6 +125,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Encrypt")
         public Long encrypt;
 
+        @NameInMap("EncryptMode")
+        public String encryptMode;
+
         /**
          * <p>The encryption type of the media stream. Valid values:</p>
          * <ul>
@@ -358,6 +361,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
         public Long getEncrypt() {
             return this.encrypt;
+        }
+
+        public GetPlayInfoResponseBodyPlayInfoListPlayInfo setEncryptMode(String encryptMode) {
+            this.encryptMode = encryptMode;
+            return this;
+        }
+        public String getEncryptMode() {
+            return this.encryptMode;
         }
 
         public GetPlayInfoResponseBodyPlayInfoListPlayInfo setEncryptType(String encryptType) {

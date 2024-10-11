@@ -39,7 +39,7 @@ public class SetMessageCallbackRequest extends TeaModel {
      * <p>The callback method. Valid values:</p>
      * <ul>
      * <li><strong>HTTP</strong></li>
-     * <li><strong>MNS</strong></li>
+     * <li><strong>Simple Message Queue(formerly MNS)</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class SetMessageCallbackRequest extends TeaModel {
     public String eventTypeList;
 
     /**
-     * <p>The public endpoint of Message Service (MNS). This parameter only takes effect when the CallbackType parameter is set to <strong>MNS</strong>. To obtain the public endpoint, log on to the <a href="https://account.aliyun.com/login/login.html">MNS console</a> and click <strong>Get Endpoint</strong> in the upper-right corner of the Topics page. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoint</a>.</p>
+     * <p>The public endpoint of Message Service (MNS). This parameter only takes effect when the CallbackType parameter is set to <strong>Simple Message Queue(formerly MNS)</strong>. To obtain the public endpoint, log on to the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue(formerly MNS) console</a> and click <strong>Get Endpoint</strong> in the upper-right corner of the Topics page. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoint</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>http://****.mns.cn-shanghai.aliyuncs.com/</p>
@@ -76,7 +76,7 @@ public class SetMessageCallbackRequest extends TeaModel {
     public String mnsEndpoint;
 
     /**
-     * <p>The name of the MNS queue. You can obtain the name of the MNS queue on the <strong>Queues</strong> page in the <a href="https://account.aliyun.com/login/login.html">MNS console</a>. This parameter is required when you set CallbackType to <strong>MNS</strong>.</p>
+     * <p>The name of the Simple Message Queue(formerly MNS). You can obtain the name of the Simple Message Queue(formerly MNS) on the <strong>Queues</strong> page in the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue(formerly MNS) console</a>. This parameter is required when you set CallbackType to <strong>Simple Message Queue(formerly MNS)</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>quene_name</p>

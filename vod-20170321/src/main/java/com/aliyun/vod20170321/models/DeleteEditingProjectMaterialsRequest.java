@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     /**
+     * <p>The material ID. Separate multiple material IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     public String materialIds;
 
     /**
+     * <p>The type of the material. Valid values:</p>
+     * <ul>
+     * <li><strong>video</strong></li>
+     * <li><strong>audio</strong></li>
+     * <li><strong>image</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +36,7 @@ public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The ID of the online editing project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

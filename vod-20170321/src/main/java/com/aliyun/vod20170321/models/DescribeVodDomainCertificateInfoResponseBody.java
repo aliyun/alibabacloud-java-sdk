@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
     /**
-     * <p>The certificate information about the domain name.</p>
+     * <p>The certificate information.</p>
      */
     @NameInMap("CertInfos")
     public DescribeVodDomainCertificateInfoResponseBodyCertInfos certInfos;
@@ -59,6 +59,12 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        /**
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13227737-cn-hangzhou</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
@@ -89,9 +95,21 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertOrg")
         public String certOrg;
 
+        /**
+         * <p>The region where the certificate is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("CertRegion")
         public String certRegion;
 
+        /**
+         * <p>The time when the certificate became effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-26T20:23:38Z</p>
+         */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
@@ -109,9 +127,27 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertType")
         public String certType;
 
+        /**
+         * <p>The time at which the certificate was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-26T20:23:38Z</p>
+         */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
+        /**
+         * <p>The CNAME status of the domain name.</p>
+         * <ul>
+         * <li><strong>ok</strong>: The domain name points to the CNAME assigned by Alibaba Cloud CDN.</li>
+         * <li><strong>cname_error</strong>: An error occurred and the domain name cannot point to the CNAME.</li>
+         * <li><strong>op_domain_cname_error</strong> : An error occurred to the CNAME of the top-level domain. The domain name cannot point to the CNAME.</li>
+         * <li><strong>unsupport_wildcard</strong>: The wildcard domain name is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("DomainCnameStatus")
         public String domainCnameStatus;
 
@@ -124,6 +160,12 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The public key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ServerCertificate")
         public String serverCertificate;
 

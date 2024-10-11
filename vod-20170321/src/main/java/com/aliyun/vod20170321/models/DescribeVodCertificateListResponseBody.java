@@ -41,6 +41,12 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVodCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        /**
+         * <p>The algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
@@ -53,6 +59,12 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @NameInMap("CertId")
         public Long certId;
 
+        /**
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14173772-cn-hangzhou</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
@@ -74,12 +86,30 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @NameInMap("Common")
         public String common;
 
+        /**
+         * <p>The time when the certificate was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725206400000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>DomainMatchCert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DomainMatchCert")
         public Boolean domainMatchCert;
 
+        /**
+         * <p>The time when the certificate expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1759507200000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -92,6 +122,12 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-cn-cd806ae0fdfbfa60</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -113,6 +149,12 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The signAlgorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256withrsa</p>
+         */
         @NameInMap("SignAlgorithm")
         public String signAlgorithm;
 

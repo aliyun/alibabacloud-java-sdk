@@ -107,7 +107,6 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
      * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>ap-south-1</strong>: India (Mumbai) (disabled)</li>
      * </ul>
      * 
      * <strong>example:</strong>

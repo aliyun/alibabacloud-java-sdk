@@ -826,6 +826,12 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @NameInMap("OutputType")
         public String outputType;
 
+        /**
+         * <p>The preprocess status od the media.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnPreprocess</p>
+         */
         @NameInMap("PreprocessStatus")
         public String preprocessStatus;
 

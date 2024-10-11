@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDefaultAITemplateRequest extends TeaModel {
     /**
+     * <p>The ID of the AI template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
