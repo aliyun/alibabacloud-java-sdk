@@ -76,6 +76,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("DbNodeStorageType")
     public String dbNodeStorageType;
 
+    @NameInMap("DisableWriteWindows")
+    public String disableWriteWindows;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -141,6 +144,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getDbNodeStorageType() {
         return this.dbNodeStorageType;
+    }
+
+    public ModifyDBClusterRequest setDisableWriteWindows(String disableWriteWindows) {
+        this.disableWriteWindows = disableWriteWindows;
+        return this;
+    }
+    public String getDisableWriteWindows() {
+        return this.disableWriteWindows;
     }
 
     public ModifyDBClusterRequest setOwnerAccount(String ownerAccount) {

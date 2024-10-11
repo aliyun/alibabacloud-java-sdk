@@ -491,6 +491,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("ScaleOutDisableWriteWindows")
+        public String scaleOutDisableWriteWindows;
+
         /**
          * <p>The status of a data migration task.</p>
          */
@@ -757,6 +760,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClustersResponseBodyDBClustersDBCluster setScaleOutDisableWriteWindows(String scaleOutDisableWriteWindows) {
+            this.scaleOutDisableWriteWindows = scaleOutDisableWriteWindows;
+            return this;
+        }
+        public String getScaleOutDisableWriteWindows() {
+            return this.scaleOutDisableWriteWindows;
         }
 
         public DescribeDBClustersResponseBodyDBClustersDBCluster setScaleOutStatus(DescribeDBClustersResponseBodyDBClustersDBClusterScaleOutStatus scaleOutStatus) {
