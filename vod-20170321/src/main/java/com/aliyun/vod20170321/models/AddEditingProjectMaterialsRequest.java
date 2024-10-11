@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddEditingProjectMaterialsRequest extends TeaModel {
     /**
-     * <p>The ID of the material. Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</p>
+     * <p>Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</p>
      * <blockquote>
      * <p> If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.</p>
      * </blockquote>

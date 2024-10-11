@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInfoResponseBody extends TeaModel {
     /**
-     * <p>The details of each application.</p>
+     * <p>The details of applications.</p>
      */
     @NameInMap("AppInfoList")
     public java.util.List<ListAppInfoResponseBodyAppInfoList> appInfoList;
@@ -103,9 +103,21 @@ public class ListAppInfoResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>地域。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzko7fsuj****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

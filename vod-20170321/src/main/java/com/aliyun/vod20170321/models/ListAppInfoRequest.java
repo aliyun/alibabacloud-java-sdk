@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInfoRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. By default, pages start from page 1.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAppInfoRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -22,11 +22,17 @@ public class ListAppInfoRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzko7fsuj****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The status of the application. After an application is created, it enters the <strong>Normal</strong> state. Valid values:</p>
+     * <p>The status of the application. You can specify the status of the applications that you want to query. After an application is created, it enters the <strong>Normal</strong> state. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong></li>
      * <li><strong>Disable</strong></li>

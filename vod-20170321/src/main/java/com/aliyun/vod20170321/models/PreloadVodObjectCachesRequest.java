@@ -4,9 +4,29 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class PreloadVodObjectCachesRequest extends TeaModel {
+    /**
+     * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
+     */
     @NameInMap("Area")
     public String area;
 
+    /**
+     * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: prefetches content to nodes that include L2 DCDN nodes.</li>
+     * <li><strong>false</strong>: prefetches content to L2 POPs or L3 POPs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("L2Preload")
     public Boolean l2Preload;
 
@@ -26,6 +46,16 @@ public class PreloadVodObjectCachesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The custom header for prefetch in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;Accept-Encoding&quot;: [
+     *             &quot;gzip, deflate, br&quot;
+     *       ]
+     * }</p>
+     */
     @NameInMap("WithHeader")
     public String withHeader;
 

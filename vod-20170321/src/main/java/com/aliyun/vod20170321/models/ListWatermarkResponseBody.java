@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWatermarkResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
      */
@@ -84,6 +86,9 @@ public class ListWatermarkResponseBody extends TeaModel {
 
         /**
          * <p>The name of the watermark template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -103,6 +108,9 @@ public class ListWatermarkResponseBody extends TeaModel {
 
         /**
          * <p>The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FontColor&quot;: &quot;Blue&quot;,&quot;FontSize&quot;: 80,&quot;Content&quot;: &quot;test watermark&quot;}</p>
          */
         @NameInMap("WatermarkConfig")
         public String watermarkConfig;

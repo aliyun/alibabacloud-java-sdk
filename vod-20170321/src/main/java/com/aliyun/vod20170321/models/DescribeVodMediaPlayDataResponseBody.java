@@ -157,6 +157,9 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
 
         /**
          * <p>The name of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         @NameInMap("VideoTitle")
         public String videoTitle;

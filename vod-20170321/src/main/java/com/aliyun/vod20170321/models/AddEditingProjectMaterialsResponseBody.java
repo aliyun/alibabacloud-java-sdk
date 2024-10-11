@@ -52,6 +52,9 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
         /**
          * <p>The category name of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate1</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -72,7 +75,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1234751840694470</p>
@@ -82,6 +85,9 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test material</p>
          */
         @NameInMap("Description")
         public String description;

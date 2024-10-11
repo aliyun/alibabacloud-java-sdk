@@ -31,6 +31,12 @@ public class CreateAppInfoRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzko7fsuj****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

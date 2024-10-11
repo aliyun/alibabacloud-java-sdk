@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVodDomainRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class UpdateVodDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The information about the addresses of origin servers.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</p>
      */
@@ -27,6 +30,8 @@ public class UpdateVodDomainRequest extends TeaModel {
     public String sources;
 
     /**
+     * <p>The top-level domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

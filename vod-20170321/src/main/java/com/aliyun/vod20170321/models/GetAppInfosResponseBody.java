@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInfosResponseBody extends TeaModel {
     /**
-     * <p>The details of each application.</p>
+     * <p>The details of applications.</p>
      */
     @NameInMap("AppInfoList")
     public java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList;
@@ -117,6 +117,12 @@ public class GetAppInfosResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzko7fsuj****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

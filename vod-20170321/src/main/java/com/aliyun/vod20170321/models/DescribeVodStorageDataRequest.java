@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataRequest extends TeaModel {
     /**
+     * <p>The ID of the application. </p>
+     * <ul>
+     * <li>Default value: <strong>app-1000000</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>app-1000000</p>
      */
