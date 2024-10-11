@@ -2118,6 +2118,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除Namespace的Key-Value对</p>
+     * 
+     * @param request DeleteKvRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKvResponse
+     */
+    public DeleteKvResponse deleteKvWithOptions(DeleteKvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKv"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKvResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Namespace的Key-Value对</p>
+     * 
+     * @param request DeleteKvRequest
+     * @return DeleteKvResponse
+     */
+    public DeleteKvResponse deleteKv(DeleteKvRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKvWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Namespace</p>
+     * 
+     * @param request DeleteKvNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKvNamespaceResponse
+     */
+    public DeleteKvNamespaceResponse deleteKvNamespaceWithOptions(DeleteKvNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKvNamespace"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKvNamespaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Namespace</p>
+     * 
+     * @param request DeleteKvNamespaceRequest
+     * @return DeleteKvNamespaceResponse
+     */
+    public DeleteKvNamespaceResponse deleteKvNamespace(DeleteKvNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKvNamespaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除自定义列表</p>
      * 
      * @param request DeleteListRequest
@@ -2972,6 +3056,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询账户的KV状态信</p>
+     * 
+     * @param request DescribeKvAccountStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeKvAccountStatusResponse
+     */
+    public DescribeKvAccountStatusResponse describeKvAccountStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeKvAccountStatus"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKvAccountStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询账户的KV状态信</p>
+     * @return DescribeKvAccountStatusResponse
+     */
+    public DescribeKvAccountStatusResponse describeKvAccountStatus() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeKvAccountStatusWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>预热任务查询接口</p>
      * 
      * @param request DescribePreloadTasksRequest
@@ -3270,6 +3388,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCacheReserveSpecificationResponse getCacheReserveSpecification() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCacheReserveSpecificationWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Key-Value对的某个Key值</p>
+     * 
+     * @param request GetKvRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKvResponse
+     */
+    public GetKvResponse getKvWithOptions(GetKvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKv"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKvResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Key-Value对的某个Key值</p>
+     * 
+     * @param request GetKvRequest
+     * @return GetKvResponse
+     */
+    public GetKvResponse getKv(GetKvRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKvWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出账号下的NS</p>
+     * 
+     * @param request GetKvAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKvAccountResponse
+     */
+    public GetKvAccountResponse getKvAccountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKvAccount"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKvAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出账号下的NS</p>
+     * @return GetKvAccountResponse
+     */
+    public GetKvAccountResponse getKvAccount() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKvAccountWithOptions(runtime);
     }
 
     /**
