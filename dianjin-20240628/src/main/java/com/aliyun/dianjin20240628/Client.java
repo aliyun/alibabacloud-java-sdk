@@ -30,6 +30,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>创建财报总结任务</p>
      * 
+     * @param request CreateDocsSummaryTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDocsSummaryTaskResponse
+     */
+    public CreateDocsSummaryTaskResponse createDocsSummaryTaskWithOptions(String workspaceId, CreateDocsSummaryTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docInfos)) {
+            body.put("docInfos", request.docInfos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableTable)) {
+            body.put("enableTable", request.enableTable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instruction)) {
+            body.put("instruction", request.instruction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDocsSummaryTask"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/task/summary/docs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDocsSummaryTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建财报总结任务</p>
+     * 
+     * @param request CreateDocsSummaryTaskRequest
+     * @return CreateDocsSummaryTaskResponse
+     */
+    public CreateDocsSummaryTaskResponse createDocsSummaryTask(String workspaceId, CreateDocsSummaryTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDocsSummaryTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建财报总结任务</p>
+     * 
      * @param request CreateFinReportSummaryTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -276,6 +335,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createPredefinedDocumentWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建财报总结的任务</p>
+     * 
+     * @param request CreateQualityCheckTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateQualityCheckTaskResponse
+     */
+    public CreateQualityCheckTaskResponse createQualityCheckTaskWithOptions(String workspaceId, CreateQualityCheckTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationList)) {
+            body.put("conversationList", request.conversationList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtService)) {
+            body.put("gmtService", request.gmtService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaData)) {
+            body.put("metaData", request.metaData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualityGroup)) {
+            body.put("qualityGroup", request.qualityGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateQualityCheckTask"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/qualitycheck/task/submit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQualityCheckTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建财报总结的任务</p>
+     * 
+     * @param request CreateQualityCheckTaskRequest
+     * @return CreateQualityCheckTaskResponse
+     */
+    public CreateQualityCheckTaskResponse createQualityCheckTask(String workspaceId, CreateQualityCheckTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createQualityCheckTaskWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -922,6 +1048,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getParseResultWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取异步任务的结果</p>
+     * 
+     * @param request GetQualityCheckTaskResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQualityCheckTaskResultResponse
+     */
+    public GetQualityCheckTaskResultResponse getQualityCheckTaskResultWithOptions(String workspaceId, GetQualityCheckTaskResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetQualityCheckTaskResult"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/qualitycheck/task/query"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityCheckTaskResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取异步任务的结果</p>
+     * 
+     * @param request GetQualityCheckTaskResultRequest
+     * @return GetQualityCheckTaskResultResponse
+     */
+    public GetQualityCheckTaskResultResponse getQualityCheckTaskResult(String workspaceId, GetQualityCheckTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getQualityCheckTaskResultWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
