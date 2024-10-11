@@ -4,9 +4,21 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class GetJobDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>j202010271622hangzhouf742a4330000923</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyCluster</p>
+     */
     @NameInMap("VcName")
     public String vcName;
 

@@ -4,6 +4,10 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class ValidateVirtualClusterNameRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>abc123</p>
+     */
     @NameInMap("VcName")
     public String vcName;
 

@@ -7,6 +7,10 @@ public class ListSparkJobResponseBody extends TeaModel {
     @NameInMap("DataResult")
     public ListSparkJobResponseBodyDataResult dataResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E18B0634-F003-486A-90B9-4AA6932DA3AA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,78 +36,114 @@ public class ListSparkJobResponseBody extends TeaModel {
     }
 
     public static class ListSparkJobResponseBodyDataResultJobList extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("ExecutorResourceSpec")
-        public String executorResourceSpec;
-
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-27 17:51:05</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("DriverResourceSpec")
-        public String driverResourceSpec;
-
+        /**
+         * <strong>example:</strong>
+         * <p>1603792267000</p>
+         */
         @NameInMap("CreateTimeValue")
         public String createTimeValue;
 
-        @NameInMap("UpdateTimeValue")
-        public String updateTimeValue;
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;args&quot;:[&quot;100&quot;],&quot;name&quot;:...}</p>
+         */
+        @NameInMap("Detail")
+        public String detail;
 
-        @NameInMap("SparkUI")
-        public String sparkUI;
+        /**
+         * <strong>example:</strong>
+         * <p>small</p>
+         */
+        @NameInMap("DriverResourceSpec")
+        public String driverResourceSpec;
 
-        @NameInMap("SubmitTimeValue")
-        public String submitTimeValue;
-
-        @NameInMap("JobName")
-        public String jobName;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("VcName")
-        public String vcName;
-
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ExecutorInstances")
         public String executorInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>small</p>
+         */
+        @NameInMap("ExecutorResourceSpec")
+        public String executorResourceSpec;
+
+        /**
+         * <strong>example:</strong>
+         * <p>j202010271750hangzhouf742a4330000950</p>
+         */
+        @NameInMap("JobId")
+        public String jobId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SparkPi</p>
+         */
+        @NameInMap("JobName")
+        public String jobName;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dlaui-cn-hangzhou.aliyuncs.com/?token=xxx">https://dlaui-cn-hangzhou.aliyuncs.com/?token=xxx</a></p>
+         */
+        @NameInMap("SparkUI")
+        public String sparkUI;
+
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-27 17:51:05</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
-        @NameInMap("Detail")
-        public String detail;
+        /**
+         * <strong>example:</strong>
+         * <p>1603792267000</p>
+         */
+        @NameInMap("SubmitTimeValue")
+        public String submitTimeValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-27 17:51:05</p>
+         */
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1603792267000</p>
+         */
+        @NameInMap("UpdateTimeValue")
+        public String updateTimeValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>MyCluster</p>
+         */
+        @NameInMap("VcName")
+        public String vcName;
 
         public static ListSparkJobResponseBodyDataResultJobList build(java.util.Map<String, ?> map) throws Exception {
             ListSparkJobResponseBodyDataResultJobList self = new ListSparkJobResponseBodyDataResultJobList();
             return TeaModel.build(map, self);
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setExecutorResourceSpec(String executorResourceSpec) {
-            this.executorResourceSpec = executorResourceSpec;
-            return this;
-        }
-        public String getExecutorResourceSpec() {
-            return this.executorResourceSpec;
         }
 
         public ListSparkJobResponseBodyDataResultJobList setCreateTime(String createTime) {
@@ -114,84 +154,12 @@ public class ListSparkJobResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListSparkJobResponseBodyDataResultJobList setDriverResourceSpec(String driverResourceSpec) {
-            this.driverResourceSpec = driverResourceSpec;
-            return this;
-        }
-        public String getDriverResourceSpec() {
-            return this.driverResourceSpec;
-        }
-
         public ListSparkJobResponseBodyDataResultJobList setCreateTimeValue(String createTimeValue) {
             this.createTimeValue = createTimeValue;
             return this;
         }
         public String getCreateTimeValue() {
             return this.createTimeValue;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setUpdateTimeValue(String updateTimeValue) {
-            this.updateTimeValue = updateTimeValue;
-            return this;
-        }
-        public String getUpdateTimeValue() {
-            return this.updateTimeValue;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setSparkUI(String sparkUI) {
-            this.sparkUI = sparkUI;
-            return this;
-        }
-        public String getSparkUI() {
-            return this.sparkUI;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setSubmitTimeValue(String submitTimeValue) {
-            this.submitTimeValue = submitTimeValue;
-            return this;
-        }
-        public String getSubmitTimeValue() {
-            return this.submitTimeValue;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setJobName(String jobName) {
-            this.jobName = jobName;
-            return this;
-        }
-        public String getJobName() {
-            return this.jobName;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setVcName(String vcName) {
-            this.vcName = vcName;
-            return this;
-        }
-        public String getVcName() {
-            return this.vcName;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setExecutorInstances(String executorInstances) {
-            this.executorInstances = executorInstances;
-            return this;
-        }
-        public String getExecutorInstances() {
-            return this.executorInstances;
-        }
-
-        public ListSparkJobResponseBodyDataResultJobList setSubmitTime(String submitTime) {
-            this.submitTime = submitTime;
-            return this;
-        }
-        public String getSubmitTime() {
-            return this.submitTime;
         }
 
         public ListSparkJobResponseBodyDataResultJobList setDetail(String detail) {
@@ -202,18 +170,126 @@ public class ListSparkJobResponseBody extends TeaModel {
             return this.detail;
         }
 
+        public ListSparkJobResponseBodyDataResultJobList setDriverResourceSpec(String driverResourceSpec) {
+            this.driverResourceSpec = driverResourceSpec;
+            return this;
+        }
+        public String getDriverResourceSpec() {
+            return this.driverResourceSpec;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setExecutorInstances(String executorInstances) {
+            this.executorInstances = executorInstances;
+            return this;
+        }
+        public String getExecutorInstances() {
+            return this.executorInstances;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setExecutorResourceSpec(String executorResourceSpec) {
+            this.executorResourceSpec = executorResourceSpec;
+            return this;
+        }
+        public String getExecutorResourceSpec() {
+            return this.executorResourceSpec;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setJobName(String jobName) {
+            this.jobName = jobName;
+            return this;
+        }
+        public String getJobName() {
+            return this.jobName;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setSparkUI(String sparkUI) {
+            this.sparkUI = sparkUI;
+            return this;
+        }
+        public String getSparkUI() {
+            return this.sparkUI;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setSubmitTime(String submitTime) {
+            this.submitTime = submitTime;
+            return this;
+        }
+        public String getSubmitTime() {
+            return this.submitTime;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setSubmitTimeValue(String submitTimeValue) {
+            this.submitTimeValue = submitTimeValue;
+            return this;
+        }
+        public String getSubmitTimeValue() {
+            return this.submitTimeValue;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setUpdateTimeValue(String updateTimeValue) {
+            this.updateTimeValue = updateTimeValue;
+            return this;
+        }
+        public String getUpdateTimeValue() {
+            return this.updateTimeValue;
+        }
+
+        public ListSparkJobResponseBodyDataResultJobList setVcName(String vcName) {
+            this.vcName = vcName;
+            return this;
+        }
+        public String getVcName() {
+            return this.vcName;
+        }
+
     }
 
     public static class ListSparkJobResponseBodyDataResult extends TeaModel {
         @NameInMap("JobList")
         public java.util.List<ListSparkJobResponseBodyDataResultJobList> jobList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public String pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4998</p>
+         */
         @NameInMap("TotalCount")
         public String totalCount;
 
