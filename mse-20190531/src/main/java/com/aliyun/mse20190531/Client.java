@@ -7466,6 +7466,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>用户授权mseSLR</p>
+     * 
+     * @param request InitializeServiceLinkRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitializeServiceLinkRoleResponse
+     */
+    public InitializeServiceLinkRoleResponse initializeServiceLinkRoleWithOptions(InitializeServiceLinkRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitializeServiceLinkRole"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitializeServiceLinkRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用户授权mseSLR</p>
+     * 
+     * @param request InitializeServiceLinkRoleRequest
+     * @return InitializeServiceLinkRoleResponse
+     */
+    public InitializeServiceLinkRoleResponse initializeServiceLinkRole(InitializeServiceLinkRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.initializeServiceLinkRoleWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>

@@ -582,6 +582,9 @@ public class AddGatewayAuthRequest extends TeaModel {
         @NameInMap("TokenKey")
         public String tokenKey;
 
+        @NameInMap("WithRematchRoute")
+        public Boolean withRematchRoute;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -656,6 +659,14 @@ public class AddGatewayAuthRequest extends TeaModel {
         }
         public String getTokenKey() {
             return this.tokenKey;
+        }
+
+        public AddGatewayAuthRequestExternalAuthZJSON setWithRematchRoute(Boolean withRematchRoute) {
+            this.withRematchRoute = withRematchRoute;
+            return this;
+        }
+        public Boolean getWithRematchRoute() {
+            return this.withRematchRoute;
         }
 
         public AddGatewayAuthRequestExternalAuthZJSON setWithRequestBody(Boolean withRequestBody) {
