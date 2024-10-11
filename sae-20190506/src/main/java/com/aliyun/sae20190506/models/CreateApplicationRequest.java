@@ -131,6 +131,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
+    @NameInMap("EnableCpuBurst")
+    public Boolean enableCpuBurst;
+
     @NameInMap("EnableEbpf")
     public String enableEbpf;
 
@@ -639,6 +642,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getEdasContainerVersion() {
         return this.edasContainerVersion;
+    }
+
+    public CreateApplicationRequest setEnableCpuBurst(Boolean enableCpuBurst) {
+        this.enableCpuBurst = enableCpuBurst;
+        return this;
+    }
+    public Boolean getEnableCpuBurst() {
+        return this.enableCpuBurst;
     }
 
     public CreateApplicationRequest setEnableEbpf(String enableEbpf) {
