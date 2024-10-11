@@ -76,6 +76,277 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion extends TeaModel {
+        @NameInMap("Confidence")
+        public Integer confidence;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion build(java.util.Map<String, ?> map) throws Exception {
+            ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion self = new ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion setConfidence(Integer confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Integer getConfidence() {
+            return this.confidence;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving extends TeaModel {
+        @NameInMap("Problem")
+        public String problem;
+
+        @NameInMap("Solution")
+        public String solution;
+
+        @NameInMap("Solved")
+        public Boolean solved;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        public static ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving build(java.util.Map<String, ?> map) throws Exception {
+            ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving self = new ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving setProblem(String problem) {
+            this.problem = problem;
+            return this;
+        }
+        public String getProblem() {
+            return this.problem;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving setSolution(String solution) {
+            this.solution = solution;
+            return this;
+        }
+        public String getSolution() {
+            return this.solution;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving setSolved(Boolean solved) {
+            this.solved = solved;
+            return this;
+        }
+        public Boolean getSolved() {
+            return this.solved;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+    }
+
+    public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction extends TeaModel {
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("SatisfactionDescription")
+        public String satisfactionDescription;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        public static ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction build(java.util.Map<String, ?> map) throws Exception {
+            ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction self = new ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction setSatisfactionDescription(String satisfactionDescription) {
+            this.satisfactionDescription = satisfactionDescription;
+            return this;
+        }
+        public String getSatisfactionDescription() {
+            return this.satisfactionDescription;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+    }
+
+    public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList extends TeaModel {
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("Tasks")
+        public java.util.List<String> tasks;
+
+        public static ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList build(java.util.Map<String, ?> map) throws Exception {
+            ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList self = new ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList setTasks(java.util.List<String> tasks) {
+            this.tasks = tasks;
+            return this;
+        }
+        public java.util.List<String> getTasks() {
+            return this.tasks;
+        }
+
+    }
+
+    public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport extends TeaModel {
+        @NameInMap("Emotion")
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion emotion;
+
+        @NameInMap("ProblemSolving")
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving problemSolving;
+
+        @NameInMap("Satisfaction")
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction satisfaction;
+
+        @NameInMap("TodoList")
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList todoList;
+
+        public static ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport build(java.util.Map<String, ?> map) throws Exception {
+            ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport self = new ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport setEmotion(ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion emotion) {
+            this.emotion = emotion;
+            return this;
+        }
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion getEmotion() {
+            return this.emotion;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport setProblemSolving(ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving problemSolving) {
+            this.problemSolving = problemSolving;
+            return this;
+        }
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving getProblemSolving() {
+            return this.problemSolving;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport setSatisfaction(ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction satisfaction) {
+            this.satisfaction = satisfaction;
+            return this;
+        }
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction getSatisfaction() {
+            return this.satisfaction;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport setTodoList(ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList todoList) {
+            this.todoList = todoList;
+            return this;
+        }
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList getTodoList() {
+            return this.todoList;
+        }
+
+    }
+
     public static class ListCallDetailRecordsV2ResponseBodyDataList extends TeaModel {
         @NameInMap("AccessChannelName")
         public String accessChannelName;
@@ -113,6 +384,12 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
 
         @NameInMap("AgentNames")
         public String agentNames;
+
+        @NameInMap("AnalyticsReport")
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport analyticsReport;
+
+        @NameInMap("AnalyticsReportReady")
+        public Boolean analyticsReportReady;
 
         /**
          * <strong>example:</strong>
@@ -467,6 +744,22 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
         public String getAgentNames() {
             return this.agentNames;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataList setAnalyticsReport(ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport analyticsReport) {
+            this.analyticsReport = analyticsReport;
+            return this;
+        }
+        public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport getAnalyticsReport() {
+            return this.analyticsReport;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataList setAnalyticsReportReady(Boolean analyticsReportReady) {
+            this.analyticsReportReady = analyticsReportReady;
+            return this;
+        }
+        public Boolean getAnalyticsReportReady() {
+            return this.analyticsReportReady;
         }
 
         public ListCallDetailRecordsV2ResponseBodyDataList setBroker(String broker) {

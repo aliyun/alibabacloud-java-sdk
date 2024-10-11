@@ -189,6 +189,277 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
 
+    public static class GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion extends TeaModel {
+        @NameInMap("Confidence")
+        public Integer confidence;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion build(java.util.Map<String, ?> map) throws Exception {
+            GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion self = new GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion setConfidence(Integer confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Integer getConfidence() {
+            return this.confidence;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving extends TeaModel {
+        @NameInMap("Problem")
+        public String problem;
+
+        @NameInMap("Solution")
+        public String solution;
+
+        @NameInMap("Solved")
+        public Boolean solved;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        public static GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving build(java.util.Map<String, ?> map) throws Exception {
+            GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving self = new GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving setProblem(String problem) {
+            this.problem = problem;
+            return this;
+        }
+        public String getProblem() {
+            return this.problem;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving setSolution(String solution) {
+            this.solution = solution;
+            return this;
+        }
+        public String getSolution() {
+            return this.solution;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving setSolved(Boolean solved) {
+            this.solved = solved;
+            return this;
+        }
+        public Boolean getSolved() {
+            return this.solved;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+    }
+
+    public static class GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction extends TeaModel {
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("SatisfactionDescription")
+        public String satisfactionDescription;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        public static GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction build(java.util.Map<String, ?> map) throws Exception {
+            GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction self = new GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction setSatisfactionDescription(String satisfactionDescription) {
+            this.satisfactionDescription = satisfactionDescription;
+            return this;
+        }
+        public String getSatisfactionDescription() {
+            return this.satisfactionDescription;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+    }
+
+    public static class GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList extends TeaModel {
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("Tasks")
+        public java.util.List<String> tasks;
+
+        public static GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList build(java.util.Map<String, ?> map) throws Exception {
+            GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList self = new GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList setTasks(java.util.List<String> tasks) {
+            this.tasks = tasks;
+            return this;
+        }
+        public java.util.List<String> getTasks() {
+            return this.tasks;
+        }
+
+    }
+
+    public static class GetCallDetailRecordResponseBodyDataAnalyticsReport extends TeaModel {
+        @NameInMap("Emotion")
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion emotion;
+
+        @NameInMap("ProblemSolving")
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving problemSolving;
+
+        @NameInMap("Satisfaction")
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction satisfaction;
+
+        @NameInMap("TodoList")
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList todoList;
+
+        public static GetCallDetailRecordResponseBodyDataAnalyticsReport build(java.util.Map<String, ?> map) throws Exception {
+            GetCallDetailRecordResponseBodyDataAnalyticsReport self = new GetCallDetailRecordResponseBodyDataAnalyticsReport();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReport setEmotion(GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion emotion) {
+            this.emotion = emotion;
+            return this;
+        }
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion getEmotion() {
+            return this.emotion;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReport setProblemSolving(GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving problemSolving) {
+            this.problemSolving = problemSolving;
+            return this;
+        }
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving getProblemSolving() {
+            return this.problemSolving;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReport setSatisfaction(GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction satisfaction) {
+            this.satisfaction = satisfaction;
+            return this;
+        }
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction getSatisfaction() {
+            return this.satisfaction;
+        }
+
+        public GetCallDetailRecordResponseBodyDataAnalyticsReport setTodoList(GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList todoList) {
+            this.todoList = todoList;
+            return this;
+        }
+        public GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList getTodoList() {
+            return this.todoList;
+        }
+
+    }
+
     public static class GetCallDetailRecordResponseBodyDataCustomerEventsEventSequence extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -479,6 +750,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("AgentNames")
         public String agentNames;
 
+        @NameInMap("AnalyticsReport")
+        public GetCallDetailRecordResponseBodyDataAnalyticsReport analyticsReport;
+
+        @NameInMap("AnalyticsReportReady")
+        public Boolean analyticsReportReady;
+
         /**
          * <strong>example:</strong>
          * <p>50</p>
@@ -646,6 +923,22 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
         public String getAgentNames() {
             return this.agentNames;
+        }
+
+        public GetCallDetailRecordResponseBodyData setAnalyticsReport(GetCallDetailRecordResponseBodyDataAnalyticsReport analyticsReport) {
+            this.analyticsReport = analyticsReport;
+            return this;
+        }
+        public GetCallDetailRecordResponseBodyDataAnalyticsReport getAnalyticsReport() {
+            return this.analyticsReport;
+        }
+
+        public GetCallDetailRecordResponseBodyData setAnalyticsReportReady(Boolean analyticsReportReady) {
+            this.analyticsReportReady = analyticsReportReady;
+            return this;
+        }
+        public Boolean getAnalyticsReportReady() {
+            return this.analyticsReportReady;
         }
 
         public GetCallDetailRecordResponseBodyData setCallDuration(Long callDuration) {

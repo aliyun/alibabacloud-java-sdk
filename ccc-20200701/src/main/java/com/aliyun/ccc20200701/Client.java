@@ -5862,6 +5862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentId", request.agentId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.analyticsReportReady)) {
+            query.put("AnalyticsReportReady", request.analyticsReportReady);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.broker)) {
             query.put("Broker", request.broker);
         }
