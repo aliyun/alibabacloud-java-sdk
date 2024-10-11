@@ -4,12 +4,30 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DescribeDbfsSpecificationsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enterprise</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g7se</p>
+     */
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

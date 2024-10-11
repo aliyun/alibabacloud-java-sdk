@@ -7,15 +7,31 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
     @NameInMap("DbfsList")
     public java.util.List<ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList> dbfsList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +81,52 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
     }
 
     public static class ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-ejdvesb0qvuywvg*******</p>
+         */
         @NameInMap("FsId")
         public String fsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("FsName")
         public String fsName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SizeG")
         public Long sizeG;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SnapshotCount")
         public Integer snapshotCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>attached</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50331648</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

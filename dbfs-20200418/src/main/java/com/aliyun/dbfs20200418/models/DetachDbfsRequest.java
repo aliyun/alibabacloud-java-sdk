@@ -4,12 +4,30 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DetachDbfsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph***</p>
+     */
     @NameInMap("ECSInstanceId")
     public String ECSInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp131n0q38u3a4zi*****</p>
+     */
     @NameInMap("FsId")
     public String fsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

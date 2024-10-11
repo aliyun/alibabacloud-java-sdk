@@ -4,18 +4,38 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-z5siir3iq3m**********</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>policyTest</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("RepeatWeekdays")
     public java.util.List<String> repeatWeekdays;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 

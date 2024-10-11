@@ -4,27 +4,61 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListDbfsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FsName</p>
+     */
     @NameInMap("FilterKey")
     public String filterKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dbfs-test-01</p>
+     */
     @NameInMap("FilterValue")
     public String filterValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SizeG</p>
+     */
     @NameInMap("SortKey")
     public String sortKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;TagKey&quot;:&quot;k1&quot;,&quot;TagValue&quot;:&quot;v1&quot;},{&quot;TagKey&quot;:&quot;k2&quot;,&quot;TagValue&quot;:&quot;v2&quot;}]</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

@@ -7,6 +7,10 @@ public class GetSnapshotLinkResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetSnapshotLinkResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class GetSnapshotLinkResponseBody extends TeaModel {
     }
 
     public static class GetSnapshotLinkResponseBodyDataEcsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp19mogqud1w1*******</p>
+         */
         @NameInMap("EcsId")
         public String ecsId;
 
@@ -51,30 +59,62 @@ public class GetSnapshotLinkResponseBody extends TeaModel {
     }
 
     public static class GetSnapshotLinkResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("Category")
         public String category;
 
         @NameInMap("EcsList")
         public java.util.List<GetSnapshotLinkResponseBodyDataEcsList> ecsList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-194j6u20sp2gisx*******</p>
+         */
         @NameInMap("FsId")
         public String fsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("FsName")
         public String fsName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sl-b3zlgraysgcs9jy*******</p>
+         */
         @NameInMap("LinkId")
         public String linkId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SnapshotCount")
         public Integer snapshotCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SourceSize")
         public Integer sourceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>attached</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50331648</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

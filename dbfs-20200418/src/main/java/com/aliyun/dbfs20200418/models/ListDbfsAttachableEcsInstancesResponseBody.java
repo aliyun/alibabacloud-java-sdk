@@ -7,9 +7,17 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     @NameInMap("EcsLabelInfo")
     public java.util.List<ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo> ecsLabelInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3724CFEF-02DA-578B-AED6-67EE80671B4A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,24 +51,52 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4p****</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.g7se</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Linux 2.1903 LTS 64 bit</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs-test-01</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp10jb8mqajkmrejgo00</p>
+         */
         @NameInMap("value")
         public String value;
 

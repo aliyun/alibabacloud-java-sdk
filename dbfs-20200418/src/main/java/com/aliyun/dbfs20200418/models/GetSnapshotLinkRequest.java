@@ -4,9 +4,19 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class GetSnapshotLinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sl-b3zlgraysgcs9jy********</p>
+     */
     @NameInMap("LinkId")
     public String linkId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

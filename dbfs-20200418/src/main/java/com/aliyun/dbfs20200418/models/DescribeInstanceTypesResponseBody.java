@@ -7,6 +7,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     @NameInMap("InstanceTypes")
     public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypes> instanceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.25</p>
+         */
         @NameInMap("CpuCoreCount")
         public Float cpuCoreCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs.small</p>
+         */
         @NameInMap("InstanceTypeDescription")
         public String instanceTypeDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbfs.small</p>
+         */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("MemorySize")
         public Float memorySize;
 
