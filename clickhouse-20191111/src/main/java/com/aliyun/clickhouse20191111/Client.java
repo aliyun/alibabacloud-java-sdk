@@ -555,6 +555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建账号及权限</p>
+     * 
      * @param request CreateAccountAndAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccountAndAuthorityResponse
@@ -640,6 +643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建账号及权限</p>
+     * 
      * @param request CreateAccountAndAuthorityRequest
      * @return CreateAccountAndAuthorityResponse
      */
@@ -1917,6 +1923,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看备份集</p>
+     * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupsResponse
@@ -1982,6 +1991,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看备份集</p>
+     * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
      */
@@ -3651,6 +3663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dbNodeStorageType)) {
             query.put("DbNodeStorageType", request.dbNodeStorageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disableWriteWindows)) {
+            query.put("DisableWriteWindows", request.disableWriteWindows);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
