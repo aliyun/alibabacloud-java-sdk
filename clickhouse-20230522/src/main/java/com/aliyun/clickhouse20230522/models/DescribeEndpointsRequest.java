@@ -4,9 +4,19 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndpointsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-xxxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

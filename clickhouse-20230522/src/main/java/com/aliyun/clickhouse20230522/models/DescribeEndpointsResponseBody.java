@@ -7,6 +7,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeEndpointsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeEndpointsResponseBodyDataEndpointsPorts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8123</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HttpPort</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -62,30 +74,57 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeEndpointsResponseBodyDataEndpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-****-clickhouse.clickhouseserver.pre.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.30.XX.XX</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
         @NameInMap("Ports")
         public java.util.List<DescribeEndpointsResponseBodyDataEndpointsPorts> ports;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-0xi8829****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf61z****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-uf61z****</p>
+         */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 
@@ -164,6 +203,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         @NameInMap("Endpoints")
         public java.util.List<DescribeEndpointsResponseBodyDataEndpoints> endpoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 

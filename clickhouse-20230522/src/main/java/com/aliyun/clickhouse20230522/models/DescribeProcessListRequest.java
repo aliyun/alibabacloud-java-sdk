@@ -4,30 +4,68 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-xxxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("InitialQueryId")
     public String initialQueryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testuser</p>
+     */
     @NameInMap("InitialUser")
     public String initialUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SELECT</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("QueryDurationMs")
     public String queryDurationMs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("QueryOrder")
     public Long queryOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,15 +4,39 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testuser</p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-xxxxxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

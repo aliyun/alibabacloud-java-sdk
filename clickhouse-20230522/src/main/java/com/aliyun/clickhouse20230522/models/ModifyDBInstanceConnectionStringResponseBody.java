@@ -7,6 +7,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     @NameInMap("Data")
     public ModifyDBInstanceConnectionStringResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     }
 
     public static class ModifyDBInstanceConnectionStringResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxxx</p>
+         */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxxx</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 

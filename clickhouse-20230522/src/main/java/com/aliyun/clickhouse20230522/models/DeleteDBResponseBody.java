@@ -7,6 +7,10 @@ public class DeleteDBResponseBody extends TeaModel {
     @NameInMap("Data")
     public DeleteDBResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DeleteDBResponseBody extends TeaModel {
     }
 
     public static class DeleteDBResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testdb001</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 

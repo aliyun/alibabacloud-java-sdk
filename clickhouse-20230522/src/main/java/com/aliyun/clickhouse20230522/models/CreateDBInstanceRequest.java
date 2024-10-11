@@ -4,39 +4,76 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AB</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>clickhouse</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23.8</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("MultiZone")
     public java.util.List<CreateDBInstanceRequestMultiZone> multiZone;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("ScaleMax")
     public String scaleMax;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("ScaleMin")
     public String scaleMin;
 
     /**
      * <p>VPC ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6xmupdn7v6ui9f****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-uf632qye9oqt4x4sr****</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -137,6 +174,10 @@ public class CreateDBInstanceRequest extends TeaModel {
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

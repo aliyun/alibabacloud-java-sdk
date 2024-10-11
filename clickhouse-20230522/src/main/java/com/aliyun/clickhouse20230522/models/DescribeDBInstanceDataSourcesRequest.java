@@ -4,15 +4,33 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDataSourcesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp100p4q1g9z3****</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dbtest</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tableTest</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

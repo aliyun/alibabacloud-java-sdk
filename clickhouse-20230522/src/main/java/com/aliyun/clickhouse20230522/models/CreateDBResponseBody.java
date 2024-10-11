@@ -7,6 +7,10 @@ public class CreateDBResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateDBResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94F92113-FF63-5E57-8401-6FE123AD11DD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class CreateDBResponseBody extends TeaModel {
     }
 
     public static class CreateDBResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testdb001</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 

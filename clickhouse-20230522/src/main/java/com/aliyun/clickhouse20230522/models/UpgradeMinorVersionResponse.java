@@ -3,7 +3,7 @@ package com.aliyun.clickhouse20230522.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSlowLogTrendResponse extends TeaModel {
+public class UpgradeMinorVersionResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeSlowLogTrendResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeSlowLogTrendResponseBody body;
+    public UpgradeMinorVersionResponseBody body;
 
-    public static DescribeSlowLogTrendResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSlowLogTrendResponse self = new DescribeSlowLogTrendResponse();
+    public static UpgradeMinorVersionResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpgradeMinorVersionResponse self = new UpgradeMinorVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlowLogTrendResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpgradeMinorVersionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeSlowLogTrendResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSlowLogTrendResponse setStatusCode(Integer statusCode) {
+    public UpgradeMinorVersionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeSlowLogTrendResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeSlowLogTrendResponse setBody(DescribeSlowLogTrendResponseBody body) {
+    public UpgradeMinorVersionResponse setBody(UpgradeMinorVersionResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSlowLogTrendResponseBody getBody() {
+    public UpgradeMinorVersionResponseBody getBody() {
         return this.body;
     }
 

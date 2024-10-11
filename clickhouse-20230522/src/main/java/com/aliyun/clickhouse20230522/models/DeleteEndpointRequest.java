@@ -4,12 +4,26 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DeleteEndpointRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp100p4q1g9z3****</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

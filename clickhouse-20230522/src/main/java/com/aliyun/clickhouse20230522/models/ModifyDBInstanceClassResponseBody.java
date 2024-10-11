@@ -7,6 +7,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     @NameInMap("Data")
     public ModifyDBInstanceClassResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     }
 
     public static class ModifyDBInstanceClassResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxxxxx</p>
+         */
         @NameInMap("DBInstanceID")
         public Long DBInstanceID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxxxxx</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("ScaleMax")
         public Long scaleMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ScaleMin")
         public Long scaleMin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000****</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 

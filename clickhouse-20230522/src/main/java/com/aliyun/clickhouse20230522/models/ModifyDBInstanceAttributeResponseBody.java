@@ -4,6 +4,10 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

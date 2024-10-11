@@ -7,6 +7,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateDBInstanceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateDBInstanceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21154955706****</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 

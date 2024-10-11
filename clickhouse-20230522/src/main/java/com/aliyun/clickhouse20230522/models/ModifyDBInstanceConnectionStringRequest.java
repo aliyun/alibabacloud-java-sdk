@@ -4,15 +4,33 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cc-****-clickhouse</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-xxxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

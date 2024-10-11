@@ -7,6 +7,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeProcessListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyDataResultSet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0:0:0:0:0:ffff:1edd65ea</p>
+         */
         @NameInMap("InitialAddress")
         public String initialAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>\&quot;79f7e40b-87e2-4ef4-b6df-21889a3a030e\&quot;</p>
+         */
         @NameInMap("InitialQueryId")
         public String initialQueryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bany</p>
+         */
         @NameInMap("InitialUser")
         public String initialUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>select * from test</p>
+         */
         @NameInMap("Query")
         public String query;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("QueryDurationMs")
         public Long queryDurationMs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-23T10:13:23Z</p>
+         */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
 
@@ -106,6 +134,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-xxxx</p>
+         */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 
@@ -115,6 +147,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         @NameInMap("ResultSet")
         public java.util.List<DescribeProcessListResponseBodyDataResultSet> resultSet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

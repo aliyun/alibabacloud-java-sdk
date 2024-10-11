@@ -4,15 +4,35 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateEndpointRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
+     */
     @NameInMap("ConnectionPrefix")
     public String connectionPrefix;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp100p4q1g9z3****</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

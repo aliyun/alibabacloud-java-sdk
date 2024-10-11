@@ -4,18 +4,46 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBInstanceDescription</p>
+     */
     @NameInMap("AttributeType")
     public String attributeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("AttributeValue")
     public String attributeValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-xxxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>clickhouse</p>
+     */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

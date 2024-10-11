@@ -4,24 +4,54 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp100p4q1g9z3****</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-15 16:00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("QueryDurationMs")
     public String queryDurationMs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-11 16:00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
