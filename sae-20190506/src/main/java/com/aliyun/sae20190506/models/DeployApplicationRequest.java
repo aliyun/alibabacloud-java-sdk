@@ -176,6 +176,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("EnableAhas")
     public String enableAhas;
 
+    @NameInMap("EnableCpuBurst")
+    public Boolean enableCpuBurst;
+
     /**
      * <p>Indicates whether canary release rules are enabled. Canary release rules apply only to applications in Spring Cloud and Dubbo frameworks. Take note of the following rules:</p>
      * <ul>
@@ -825,6 +828,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getEnableAhas() {
         return this.enableAhas;
+    }
+
+    public DeployApplicationRequest setEnableCpuBurst(Boolean enableCpuBurst) {
+        this.enableCpuBurst = enableCpuBurst;
+        return this;
+    }
+    public Boolean getEnableCpuBurst() {
+        return this.enableCpuBurst;
     }
 
     public DeployApplicationRequest setEnableGreyTagRoute(Boolean enableGreyTagRoute) {

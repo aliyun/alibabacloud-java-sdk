@@ -391,6 +391,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EdasContainerVersion", request.edasContainerVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCpuBurst)) {
+            query.put("EnableCpuBurst", request.enableCpuBurst);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableEbpf)) {
             query.put("EnableEbpf", request.enableEbpf);
         }
@@ -2060,6 +2064,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableAhas)) {
             query.put("EnableAhas", request.enableAhas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCpuBurst)) {
+            query.put("EnableCpuBurst", request.enableCpuBurst);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableGreyTagRoute)) {

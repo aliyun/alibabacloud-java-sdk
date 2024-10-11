@@ -407,7 +407,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          * <p>The ID of the Internet-facing SLB instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>59.74.**.**</p>
+         * <p><code>59.74.**.**</code></p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
