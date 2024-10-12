@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-bp1r053byu48p****</p>

@@ -155,12 +155,18 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     public static class DescribeExcessivePrimaryKeysResponseBodyDetectionItems extends TeaModel {
         /**
          * <p>The detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;

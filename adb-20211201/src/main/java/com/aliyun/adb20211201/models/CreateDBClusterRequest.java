@@ -16,6 +16,15 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("BackupSetId")
     public String backupSetId;
 
+    /**
+     * <p>The region ID of the source cluster.</p>
+     * <blockquote>
+     * <p> This parameter must be specified for cloning clusters across regions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("CloneSourceRegionId")
     public String cloneSourceRegionId;
 

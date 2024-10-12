@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribePerformanceViewsResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * <blockquote>
+     * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -20,12 +25,17 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3A8F6106-6AFD-5A34-9C80-8DE2C42D06E8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>the list of view.</p>
+     */
     @NameInMap("Views")
     public java.util.List<DescribePerformanceViewsResponseBodyViews> views;
 
@@ -60,6 +70,8 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
 
     public static class DescribePerformanceViewsResponseBodyViews extends TeaModel {
         /**
+         * <p>The time when created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-18T07:06:53.000+00:00</p>
          */
@@ -67,12 +79,20 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-18T07:07:32.000+00:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The name of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
+         */
         @NameInMap("ViewName")
         public String viewName;
 

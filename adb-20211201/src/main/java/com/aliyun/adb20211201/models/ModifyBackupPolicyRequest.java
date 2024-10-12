@@ -74,7 +74,6 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <blockquote>
      * <p> To ensure data security, we recommend that you specify at least two values.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Monday,Wednesday,Friday,Sunday</p>

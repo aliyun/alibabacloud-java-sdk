@@ -4,6 +4,9 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    @NameInMap("FreeBackupSize")
+    public Long freeBackupSize;
+
     /**
      * <p>The queried backup sets.</p>
      */
@@ -37,6 +40,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalBackupSize")
+    public Long totalBackupSize;
+
     /**
      * <p>The total number of entries returned.</p>
      * 
@@ -49,6 +55,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public static DescribeBackupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupsResponseBody self = new DescribeBackupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupsResponseBody setFreeBackupSize(Long freeBackupSize) {
+        this.freeBackupSize = freeBackupSize;
+        return this;
+    }
+    public Long getFreeBackupSize() {
+        return this.freeBackupSize;
     }
 
     public DescribeBackupsResponseBody setItems(DescribeBackupsResponseBodyItems items) {
@@ -83,6 +97,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeBackupsResponseBody setTotalBackupSize(Long totalBackupSize) {
+        this.totalBackupSize = totalBackupSize;
+        return this;
+    }
+    public Long getTotalBackupSize() {
+        return this.totalBackupSize;
+    }
+
     public DescribeBackupsResponseBody setTotalCount(String totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -100,6 +122,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
+
+        @NameInMap("BackupExpiredTime")
+        public String backupExpiredTime;
 
         /**
          * <p>The backup set ID.</p>
@@ -170,6 +195,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupEndTime() {
             return this.backupEndTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupExpiredTime(String backupExpiredTime) {
+            this.backupExpiredTime = backupExpiredTime;
+            return this;
+        }
+        public String getBackupExpiredTime() {
+            return this.backupExpiredTime;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setBackupId(String backupId) {

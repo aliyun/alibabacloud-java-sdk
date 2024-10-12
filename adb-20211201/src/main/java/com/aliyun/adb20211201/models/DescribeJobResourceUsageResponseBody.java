@@ -77,6 +77,8 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public Float reservedAcuNumber;
 
         /**
+         * <p>The number of spot ACUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>16ACU</p>
          */
@@ -84,6 +86,8 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public Float spotAcuNumber;
 
         /**
+         * <p>The percent of spot ACUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
