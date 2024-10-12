@@ -14,6 +14,12 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,6 +42,12 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <strong>example:</strong>
@@ -65,6 +77,22 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public PurchaseElasticityAssuranceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public PurchaseElasticityAssuranceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public PurchaseElasticityAssuranceRequest setPeriod(Integer period) {
         this.period = period;
         return this;
@@ -87,6 +115,22 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PurchaseElasticityAssuranceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public PurchaseElasticityAssuranceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public PurchaseElasticityAssuranceRequest setStartTime(String startTime) {

@@ -28,7 +28,7 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
      * <p>By default, if this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.17.**.**</p>
+     * <p><code>172.17.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;

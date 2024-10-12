@@ -123,6 +123,15 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("HostName")
     public String hostName;
 
+    @NameInMap("HttpEndpoint")
+    public String httpEndpoint;
+
+    @NameInMap("HttpPutResponseHopLimit")
+    public Integer httpPutResponseHopLimit;
+
+    @NameInMap("HttpTokens")
+    public String httpTokens;
+
     /**
      * <p>The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images.</p>
      * 
@@ -333,7 +342,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
      * <p>To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.1.**.**</p>
+     * <p><code>10.1.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -591,6 +600,30 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
     public String getHostName() {
         return this.hostName;
+    }
+
+    public CreateLaunchTemplateVersionRequest setHttpEndpoint(String httpEndpoint) {
+        this.httpEndpoint = httpEndpoint;
+        return this;
+    }
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    public CreateLaunchTemplateVersionRequest setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+        return this;
+    }
+    public Integer getHttpPutResponseHopLimit() {
+        return this.httpPutResponseHopLimit;
+    }
+
+    public CreateLaunchTemplateVersionRequest setHttpTokens(String httpTokens) {
+        this.httpTokens = httpTokens;
+        return this;
+    }
+    public String getHttpTokens() {
+        return this.httpTokens;
     }
 
     public CreateLaunchTemplateVersionRequest setImageId(String imageId) {
@@ -1457,7 +1490,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <p>The primary private IP address of the secondary ENI. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.**.**</p>
+         * <p><code>192.168.**.**</code></p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;

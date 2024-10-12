@@ -188,7 +188,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * <p>The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.17.**.**</p>
+     * <p><code>172.17.**.**</code></p>
      */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
@@ -200,7 +200,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>172.17.**.**</p>
+     * <p><code>172.17.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;

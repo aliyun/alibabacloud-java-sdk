@@ -216,7 +216,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
          * <p>The public IP address of the managed instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>40.65.**.**</p>
+         * <p><code>40.65.**.**</code></p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
@@ -225,7 +225,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
          * <p>The internal IP address of the managed instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.0.**.**</p>
+         * <p><code>10.0.**.**</code></p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;

@@ -18,7 +18,7 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
      * <p>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>112.124.**.**</p>
+     * <p><code>112.124.**.**</code></p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;

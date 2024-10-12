@@ -104,7 +104,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <p>The primary private IPv4 address of the ENI.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.**.**</p>
+     * <p><code>192.168.**.**</code></p>
      */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
@@ -113,7 +113,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <p>An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.**.**</p>
+     * <p><code>192.168.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
