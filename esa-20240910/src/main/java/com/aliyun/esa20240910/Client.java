@@ -4391,6 +4391,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询站点下客户端证书列表</p>
+     * 
+     * @param request ListClientCertificatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListClientCertificatesResponse
+     */
+    public ListClientCertificatesResponse listClientCertificatesWithOptions(ListClientCertificatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListClientCertificates"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClientCertificatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点下客户端证书列表</p>
+     * 
+     * @param request ListClientCertificatesRequest
+     * @return ListClientCertificatesResponse
+     */
+    public ListClientCertificatesResponse listClientCertificates(ListClientCertificatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listClientCertificatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取一个边缘容器应用的全部域名记录</p>
      * 
      * @param request ListEdgeContainerAppRecordsRequest
