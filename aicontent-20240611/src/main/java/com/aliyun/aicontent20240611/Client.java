@@ -65,6 +65,208 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>阿里云控制台/列出阿里云控制台上可使用的服务列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse
+     */
+    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse aliyunConsoleOpenApiQueryAliyunConsoleServiceListWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AliyunConsoleOpenApiQueryAliyunConsoleServiceList"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aliyunconsole/queryAliyunConsoleServiceList"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>阿里云控制台/列出阿里云控制台上可使用的服务列表</p>
+     * @return AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse
+     */
+    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse aliyunConsoleOpenApiQueryAliyunConsoleServiceList() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aliyunConsoleOpenApiQueryAliyunConsoleServiceListWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个性化文生图/基于一个预训练模型创建图片推理任务</p>
+     * 
+     * @param request PersonalizedTextToImageAddInferenceJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PersonalizedTextToImageAddInferenceJobResponse
+     */
+    public PersonalizedTextToImageAddInferenceJobResponse personalizedTextToImageAddInferenceJobWithOptions(PersonalizedTextToImageAddInferenceJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageNumber)) {
+            body.put("imageNumber", request.imageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("imageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seed)) {
+            body.put("seed", request.seed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strength)) {
+            body.put("strength", request.strength);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trainSteps)) {
+            body.put("trainSteps", request.trainSteps);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PersonalizedTextToImageAddInferenceJob"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/personalizedtxt2img/addPreModelInferenceJob"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PersonalizedTextToImageAddInferenceJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个性化文生图/基于一个预训练模型创建图片推理任务</p>
+     * 
+     * @param request PersonalizedTextToImageAddInferenceJobRequest
+     * @return PersonalizedTextToImageAddInferenceJobResponse
+     */
+    public PersonalizedTextToImageAddInferenceJobResponse personalizedTextToImageAddInferenceJob(PersonalizedTextToImageAddInferenceJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.personalizedTextToImageAddInferenceJobWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个性化文生图/通过唯一的图片编号获取图片内容</p>
+     * 
+     * @param request PersonalizedTextToImageQueryImageAssetRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PersonalizedTextToImageQueryImageAssetResponse
+     */
+    public PersonalizedTextToImageQueryImageAssetResponse personalizedTextToImageQueryImageAssetWithOptions(PersonalizedTextToImageQueryImageAssetRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.encodeFormat)) {
+            query.put("encodeFormat", request.encodeFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("imageId", request.imageId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PersonalizedTextToImageQueryImageAsset"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/personalizedtxt2img/queryImageAssetFromImageId"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "any")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PersonalizedTextToImageQueryImageAssetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个性化文生图/通过唯一的图片编号获取图片内容</p>
+     * 
+     * @param request PersonalizedTextToImageQueryImageAssetRequest
+     * @return PersonalizedTextToImageQueryImageAssetResponse
+     */
+    public PersonalizedTextToImageQueryImageAssetResponse personalizedTextToImageQueryImageAsset(PersonalizedTextToImageQueryImageAssetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.personalizedTextToImageQueryImageAssetWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个性化文生图/查询预制模型推理任务的状态</p>
+     * 
+     * @param request PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PersonalizedTextToImageQueryPreModelInferenceJobInfoResponse
+     */
+    public PersonalizedTextToImageQueryPreModelInferenceJobInfoResponse personalizedTextToImageQueryPreModelInferenceJobInfoWithOptions(PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inferenceJobId)) {
+            query.put("inferenceJobId", request.inferenceJobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PersonalizedTextToImageQueryPreModelInferenceJobInfo"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/personalizedtxt2img/queryPreModelInferenceJobInfo"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PersonalizedTextToImageQueryPreModelInferenceJobInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个性化文生图/查询预制模型推理任务的状态</p>
+     * 
+     * @param request PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest
+     * @return PersonalizedTextToImageQueryPreModelInferenceJobInfoResponse
+     */
+    public PersonalizedTextToImageQueryPreModelInferenceJobInfoResponse personalizedTextToImageQueryPreModelInferenceJobInfo(PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.personalizedTextToImageQueryPreModelInferenceJobInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>个性化文生图/基于一个模型创建图片推理任务</p>
      * 
      * @param request Personalizedtxt2imgAddInferenceJobRequest
