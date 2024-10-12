@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.metastore20241012.models;
+
+import com.aliyun.tea.*;
+
+public class ColumnStatisticsDesc extends TeaModel {
+    @NameInMap("LastAnalyzedTime")
+    public Long lastAnalyzedTime;
+
+    @NameInMap("PartitionName")
+    public String partitionName;
+
+    public static ColumnStatisticsDesc build(java.util.Map<String, ?> map) throws Exception {
+        ColumnStatisticsDesc self = new ColumnStatisticsDesc();
+        return TeaModel.build(map, self);
+    }
+
+    public ColumnStatisticsDesc setLastAnalyzedTime(Long lastAnalyzedTime) {
+        this.lastAnalyzedTime = lastAnalyzedTime;
+        return this;
+    }
+    public Long getLastAnalyzedTime() {
+        return this.lastAnalyzedTime;
+    }
+
+    public ColumnStatisticsDesc setPartitionName(String partitionName) {
+        this.partitionName = partitionName;
+        return this;
+    }
+    public String getPartitionName() {
+        return this.partitionName;
+    }
+
+}
