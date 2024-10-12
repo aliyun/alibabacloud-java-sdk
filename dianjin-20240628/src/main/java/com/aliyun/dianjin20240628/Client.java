@@ -28,6 +28,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建按年文档总结任务</p>
+     * 
+     * @param request CreateAnnualDocSummaryTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAnnualDocSummaryTaskResponse
+     */
+    public CreateAnnualDocSummaryTaskResponse createAnnualDocSummaryTaskWithOptions(String workspaceId, CreateAnnualDocSummaryTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anaYears)) {
+            body.put("anaYears", request.anaYears);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docInfos)) {
+            body.put("docInfos", request.docInfos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableTable)) {
+            body.put("enableTable", request.enableTable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instruction)) {
+            body.put("instruction", request.instruction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAnnualDocSummaryTask"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/task/summary/doc/annual"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAnnualDocSummaryTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建按年文档总结任务</p>
+     * 
+     * @param request CreateAnnualDocSummaryTaskRequest
+     * @return CreateAnnualDocSummaryTaskResponse
+     */
+    public CreateAnnualDocSummaryTaskResponse createAnnualDocSummaryTask(String workspaceId, CreateAnnualDocSummaryTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAnnualDocSummaryTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建财报总结任务</p>
      * 
      * @param request CreateDocsSummaryTaskRequest
