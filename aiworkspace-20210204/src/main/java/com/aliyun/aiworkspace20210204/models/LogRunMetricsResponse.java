@@ -3,7 +3,7 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class GetServiceTemplateResponse extends TeaModel {
+public class LogRunMetricsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetServiceTemplateResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetServiceTemplateResponseBody body;
+    public LogRunMetricsResponseBody body;
 
-    public static GetServiceTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetServiceTemplateResponse self = new GetServiceTemplateResponse();
+    public static LogRunMetricsResponse build(java.util.Map<String, ?> map) throws Exception {
+        LogRunMetricsResponse self = new LogRunMetricsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetServiceTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+    public LogRunMetricsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetServiceTemplateResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetServiceTemplateResponse setStatusCode(Integer statusCode) {
+    public LogRunMetricsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetServiceTemplateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetServiceTemplateResponse setBody(GetServiceTemplateResponseBody body) {
+    public LogRunMetricsResponse setBody(LogRunMetricsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetServiceTemplateResponseBody getBody() {
+    public LogRunMetricsResponseBody getBody() {
         return this.body;
     }
 
