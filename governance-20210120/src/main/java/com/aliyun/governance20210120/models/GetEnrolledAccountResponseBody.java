@@ -503,6 +503,36 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     }
 
+    public static class GetEnrolledAccountResponseBodyInputsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEnrolledAccountResponseBodyInputsTag build(java.util.Map<String, ?> map) throws Exception {
+            GetEnrolledAccountResponseBodyInputsTag self = new GetEnrolledAccountResponseBodyInputsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEnrolledAccountResponseBodyInputsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetEnrolledAccountResponseBodyInputsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetEnrolledAccountResponseBodyInputs extends TeaModel {
         /**
          * <p>The prefix of the account name.</p>
@@ -555,6 +585,9 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         @NameInMap("PayerAccountUid")
         public Long payerAccountUid;
 
+        @NameInMap("Tag")
+        public java.util.List<GetEnrolledAccountResponseBodyInputsTag> tag;
+
         public static GetEnrolledAccountResponseBodyInputs build(java.util.Map<String, ?> map) throws Exception {
             GetEnrolledAccountResponseBodyInputs self = new GetEnrolledAccountResponseBodyInputs();
             return TeaModel.build(map, self);
@@ -606,6 +639,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
         public Long getPayerAccountUid() {
             return this.payerAccountUid;
+        }
+
+        public GetEnrolledAccountResponseBodyInputs setTag(java.util.List<GetEnrolledAccountResponseBodyInputsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<GetEnrolledAccountResponseBodyInputsTag> getTag() {
+            return this.tag;
         }
 
     }
