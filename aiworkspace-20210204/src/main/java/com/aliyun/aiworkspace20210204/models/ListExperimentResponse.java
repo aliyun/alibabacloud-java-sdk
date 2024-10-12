@@ -3,7 +3,7 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class ListServiceTemplatesResponse extends TeaModel {
+public class ListExperimentResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListServiceTemplatesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListServiceTemplatesResponseBody body;
+    public ListExperimentResponseBody body;
 
-    public static ListServiceTemplatesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListServiceTemplatesResponse self = new ListServiceTemplatesResponse();
+    public static ListExperimentResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListExperimentResponse self = new ListExperimentResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListServiceTemplatesResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListExperimentResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListServiceTemplatesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListServiceTemplatesResponse setStatusCode(Integer statusCode) {
+    public ListExperimentResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListServiceTemplatesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListServiceTemplatesResponse setBody(ListServiceTemplatesResponseBody body) {
+    public ListExperimentResponse setBody(ListExperimentResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListServiceTemplatesResponseBody getBody() {
+    public ListExperimentResponseBody getBody() {
         return this.body;
     }
 

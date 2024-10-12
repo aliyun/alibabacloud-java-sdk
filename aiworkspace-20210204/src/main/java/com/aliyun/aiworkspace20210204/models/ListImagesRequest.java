@@ -7,6 +7,9 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("ImageUri")
+    public String imageUri;
+
     /**
      * <strong>example:</strong>
      * <p>system.framework=XGBoost 1.6.0,system.official=true</p>
@@ -91,6 +94,14 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public ListImagesRequest setImageUri(String imageUri) {
+        this.imageUri = imageUri;
+        return this;
+    }
+    public String getImageUri() {
+        return this.imageUri;
     }
 
     public ListImagesRequest setLabels(String labels) {

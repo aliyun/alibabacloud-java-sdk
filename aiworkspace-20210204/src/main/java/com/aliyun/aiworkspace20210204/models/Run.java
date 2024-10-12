@@ -3,12 +3,9 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class Experiment extends TeaModel {
+public class Run extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
-
-    @NameInMap("ArtifactUri")
-    public String artifactUri;
 
     @NameInMap("ExperimentId")
     public String experimentId;
@@ -20,10 +17,10 @@ public class Experiment extends TeaModel {
     public String gmtModifiedTime;
 
     @NameInMap("Labels")
-    public java.util.List<ExperimentLabel> labels;
+    public java.util.List<RunLabel> labels;
 
-    @NameInMap("LatestRun")
-    public Run latestRun;
+    @NameInMap("Metrics")
+    public java.util.List<RunMetric> metrics;
 
     @NameInMap("Name")
     public String name;
@@ -31,11 +28,20 @@ public class Experiment extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    @NameInMap("Params")
+    public java.util.List<RunParam> params;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TensorboardLogUri")
-    public String tensorboardLogUri;
+    @NameInMap("RunId")
+    public String runId;
+
+    @NameInMap("SourceId")
+    public String sourceId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
 
     @NameInMap("UserId")
     public String userId;
@@ -43,12 +49,12 @@ public class Experiment extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static Experiment build(java.util.Map<String, ?> map) throws Exception {
-        Experiment self = new Experiment();
+    public static Run build(java.util.Map<String, ?> map) throws Exception {
+        Run self = new Run();
         return TeaModel.build(map, self);
     }
 
-    public Experiment setAccessibility(String accessibility) {
+    public Run setAccessibility(String accessibility) {
         this.accessibility = accessibility;
         return this;
     }
@@ -56,15 +62,7 @@ public class Experiment extends TeaModel {
         return this.accessibility;
     }
 
-    public Experiment setArtifactUri(String artifactUri) {
-        this.artifactUri = artifactUri;
-        return this;
-    }
-    public String getArtifactUri() {
-        return this.artifactUri;
-    }
-
-    public Experiment setExperimentId(String experimentId) {
+    public Run setExperimentId(String experimentId) {
         this.experimentId = experimentId;
         return this;
     }
@@ -72,7 +70,7 @@ public class Experiment extends TeaModel {
         return this.experimentId;
     }
 
-    public Experiment setGmtCreateTime(String gmtCreateTime) {
+    public Run setGmtCreateTime(String gmtCreateTime) {
         this.gmtCreateTime = gmtCreateTime;
         return this;
     }
@@ -80,7 +78,7 @@ public class Experiment extends TeaModel {
         return this.gmtCreateTime;
     }
 
-    public Experiment setGmtModifiedTime(String gmtModifiedTime) {
+    public Run setGmtModifiedTime(String gmtModifiedTime) {
         this.gmtModifiedTime = gmtModifiedTime;
         return this;
     }
@@ -88,23 +86,23 @@ public class Experiment extends TeaModel {
         return this.gmtModifiedTime;
     }
 
-    public Experiment setLabels(java.util.List<ExperimentLabel> labels) {
+    public Run setLabels(java.util.List<RunLabel> labels) {
         this.labels = labels;
         return this;
     }
-    public java.util.List<ExperimentLabel> getLabels() {
+    public java.util.List<RunLabel> getLabels() {
         return this.labels;
     }
 
-    public Experiment setLatestRun(Run latestRun) {
-        this.latestRun = latestRun;
+    public Run setMetrics(java.util.List<RunMetric> metrics) {
+        this.metrics = metrics;
         return this;
     }
-    public Run getLatestRun() {
-        return this.latestRun;
+    public java.util.List<RunMetric> getMetrics() {
+        return this.metrics;
     }
 
-    public Experiment setName(String name) {
+    public Run setName(String name) {
         this.name = name;
         return this;
     }
@@ -112,7 +110,7 @@ public class Experiment extends TeaModel {
         return this.name;
     }
 
-    public Experiment setOwnerId(String ownerId) {
+    public Run setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -120,7 +118,15 @@ public class Experiment extends TeaModel {
         return this.ownerId;
     }
 
-    public Experiment setRequestId(String requestId) {
+    public Run setParams(java.util.List<RunParam> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<RunParam> getParams() {
+        return this.params;
+    }
+
+    public Run setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -128,15 +134,31 @@ public class Experiment extends TeaModel {
         return this.requestId;
     }
 
-    public Experiment setTensorboardLogUri(String tensorboardLogUri) {
-        this.tensorboardLogUri = tensorboardLogUri;
+    public Run setRunId(String runId) {
+        this.runId = runId;
         return this;
     }
-    public String getTensorboardLogUri() {
-        return this.tensorboardLogUri;
+    public String getRunId() {
+        return this.runId;
     }
 
-    public Experiment setUserId(String userId) {
+    public Run setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    public Run setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    public Run setUserId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -144,7 +166,7 @@ public class Experiment extends TeaModel {
         return this.userId;
     }
 
-    public Experiment setWorkspaceId(String workspaceId) {
+    public Run setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
