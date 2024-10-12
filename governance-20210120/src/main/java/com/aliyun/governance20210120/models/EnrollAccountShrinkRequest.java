@@ -3,7 +3,7 @@ package com.aliyun.governance20210120.models;
 
 import com.aliyun.tea.*;
 
-public class EnrollAccountRequest extends TeaModel {
+public class EnrollAccountShrinkRequest extends TeaModel {
     /**
      * <p>The prefix for the account name of the member.</p>
      * <ul>
@@ -45,7 +45,7 @@ public class EnrollAccountRequest extends TeaModel {
      * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline of the specified account. The configurations of the same baseline items are subject to the configuration of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configuration of the account baseline to the account.</p>
      */
     @NameInMap("BaselineItems")
-    public java.util.List<EnrollAccountRequestBaselineItems> baselineItems;
+    public java.util.List<EnrollAccountShrinkRequestBaselineItems> baselineItems;
 
     /**
      * <p>The display name of the account.</p>
@@ -112,14 +112,14 @@ public class EnrollAccountRequest extends TeaModel {
     public String resellAccountType;
 
     @NameInMap("Tag")
-    public java.util.List<EnrollAccountRequestTag> tag;
+    public String tagShrink;
 
-    public static EnrollAccountRequest build(java.util.Map<String, ?> map) throws Exception {
-        EnrollAccountRequest self = new EnrollAccountRequest();
+    public static EnrollAccountShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        EnrollAccountShrinkRequest self = new EnrollAccountShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public EnrollAccountRequest setAccountNamePrefix(String accountNamePrefix) {
+    public EnrollAccountShrinkRequest setAccountNamePrefix(String accountNamePrefix) {
         this.accountNamePrefix = accountNamePrefix;
         return this;
     }
@@ -127,7 +127,7 @@ public class EnrollAccountRequest extends TeaModel {
         return this.accountNamePrefix;
     }
 
-    public EnrollAccountRequest setAccountUid(Long accountUid) {
+    public EnrollAccountShrinkRequest setAccountUid(Long accountUid) {
         this.accountUid = accountUid;
         return this;
     }
@@ -135,7 +135,7 @@ public class EnrollAccountRequest extends TeaModel {
         return this.accountUid;
     }
 
-    public EnrollAccountRequest setBaselineId(String baselineId) {
+    public EnrollAccountShrinkRequest setBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
     }
@@ -143,15 +143,15 @@ public class EnrollAccountRequest extends TeaModel {
         return this.baselineId;
     }
 
-    public EnrollAccountRequest setBaselineItems(java.util.List<EnrollAccountRequestBaselineItems> baselineItems) {
+    public EnrollAccountShrinkRequest setBaselineItems(java.util.List<EnrollAccountShrinkRequestBaselineItems> baselineItems) {
         this.baselineItems = baselineItems;
         return this;
     }
-    public java.util.List<EnrollAccountRequestBaselineItems> getBaselineItems() {
+    public java.util.List<EnrollAccountShrinkRequestBaselineItems> getBaselineItems() {
         return this.baselineItems;
     }
 
-    public EnrollAccountRequest setDisplayName(String displayName) {
+    public EnrollAccountShrinkRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
@@ -159,7 +159,7 @@ public class EnrollAccountRequest extends TeaModel {
         return this.displayName;
     }
 
-    public EnrollAccountRequest setFolderId(String folderId) {
+    public EnrollAccountShrinkRequest setFolderId(String folderId) {
         this.folderId = folderId;
         return this;
     }
@@ -167,7 +167,7 @@ public class EnrollAccountRequest extends TeaModel {
         return this.folderId;
     }
 
-    public EnrollAccountRequest setPayerAccountUid(Long payerAccountUid) {
+    public EnrollAccountShrinkRequest setPayerAccountUid(Long payerAccountUid) {
         this.payerAccountUid = payerAccountUid;
         return this;
     }
@@ -175,7 +175,7 @@ public class EnrollAccountRequest extends TeaModel {
         return this.payerAccountUid;
     }
 
-    public EnrollAccountRequest setRegionId(String regionId) {
+    public EnrollAccountShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -183,7 +183,7 @@ public class EnrollAccountRequest extends TeaModel {
         return this.regionId;
     }
 
-    public EnrollAccountRequest setResellAccountType(String resellAccountType) {
+    public EnrollAccountShrinkRequest setResellAccountType(String resellAccountType) {
         this.resellAccountType = resellAccountType;
         return this;
     }
@@ -191,15 +191,15 @@ public class EnrollAccountRequest extends TeaModel {
         return this.resellAccountType;
     }
 
-    public EnrollAccountRequest setTag(java.util.List<EnrollAccountRequestTag> tag) {
-        this.tag = tag;
+    public EnrollAccountShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<EnrollAccountRequestTag> getTag() {
-        return this.tag;
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
-    public static class EnrollAccountRequestBaselineItems extends TeaModel {
+    public static class EnrollAccountShrinkRequestBaselineItems extends TeaModel {
         /**
          * <p>The configurations of the baseline item.</p>
          * 
@@ -240,12 +240,12 @@ public class EnrollAccountRequest extends TeaModel {
         @NameInMap("Version")
         public String version;
 
-        public static EnrollAccountRequestBaselineItems build(java.util.Map<String, ?> map) throws Exception {
-            EnrollAccountRequestBaselineItems self = new EnrollAccountRequestBaselineItems();
+        public static EnrollAccountShrinkRequestBaselineItems build(java.util.Map<String, ?> map) throws Exception {
+            EnrollAccountShrinkRequestBaselineItems self = new EnrollAccountShrinkRequestBaselineItems();
             return TeaModel.build(map, self);
         }
 
-        public EnrollAccountRequestBaselineItems setConfig(String config) {
+        public EnrollAccountShrinkRequestBaselineItems setConfig(String config) {
             this.config = config;
             return this;
         }
@@ -253,7 +253,7 @@ public class EnrollAccountRequest extends TeaModel {
             return this.config;
         }
 
-        public EnrollAccountRequestBaselineItems setName(String name) {
+        public EnrollAccountShrinkRequestBaselineItems setName(String name) {
             this.name = name;
             return this;
         }
@@ -261,7 +261,7 @@ public class EnrollAccountRequest extends TeaModel {
             return this.name;
         }
 
-        public EnrollAccountRequestBaselineItems setSkip(Boolean skip) {
+        public EnrollAccountShrinkRequestBaselineItems setSkip(Boolean skip) {
             this.skip = skip;
             return this;
         }
@@ -269,42 +269,12 @@ public class EnrollAccountRequest extends TeaModel {
             return this.skip;
         }
 
-        public EnrollAccountRequestBaselineItems setVersion(String version) {
+        public EnrollAccountShrinkRequestBaselineItems setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
-        }
-
-    }
-
-    public static class EnrollAccountRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static EnrollAccountRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            EnrollAccountRequestTag self = new EnrollAccountRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public EnrollAccountRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public EnrollAccountRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
     }
