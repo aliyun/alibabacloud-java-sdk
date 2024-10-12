@@ -67,6 +67,36 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
         return this.topic;
     }
 
+    public static class SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments extends TeaModel {
+        @NameInMap("Text")
+        public String text;
+
+        @NameInMap("Username")
+        public String username;
+
+        public static SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments self = new SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
+        }
+
+    }
+
     public static class SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocuments extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -74,6 +104,9 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
          */
         @NameInMap("Author")
         public String author;
+
+        @NameInMap("Comments")
+        public java.util.List<SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments> comments;
 
         /**
          * <p>This parameter is required.</p>
@@ -130,6 +163,14 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
         }
         public String getAuthor() {
             return this.author;
+        }
+
+        public SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocuments setComments(java.util.List<SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments> comments) {
+            this.comments = comments;
+            return this;
+        }
+        public java.util.List<SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments> getComments() {
+            return this.comments;
         }
 
         public SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocuments setContent(String content) {
