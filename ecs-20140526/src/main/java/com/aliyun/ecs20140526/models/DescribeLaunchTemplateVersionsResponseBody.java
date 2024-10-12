@@ -851,6 +851,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
 
+        @NameInMap("HttpEndpoint")
+        public String httpEndpoint;
+
+        @NameInMap("HttpPutResponseHopLimit")
+        public Integer httpPutResponseHopLimit;
+
+        @NameInMap("HttpTokens")
+        public String httpTokens;
+
         /**
          * <p>The ID of the image.</p>
          * 
@@ -1011,7 +1020,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          * <p>The private IP address to assign to the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.1.**.**</p>
+         * <p><code>10.1.**.**</code></p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -1237,6 +1246,30 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public String getHostName() {
             return this.hostName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setHttpEndpoint(String httpEndpoint) {
+            this.httpEndpoint = httpEndpoint;
+            return this;
+        }
+        public String getHttpEndpoint() {
+            return this.httpEndpoint;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+            return this;
+        }
+        public Integer getHttpPutResponseHopLimit() {
+            return this.httpPutResponseHopLimit;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setHttpTokens(String httpTokens) {
+            this.httpTokens = httpTokens;
+            return this;
+        }
+        public String getHttpTokens() {
+            return this.httpTokens;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setImageId(String imageId) {

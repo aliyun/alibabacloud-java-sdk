@@ -90,7 +90,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
          * <p>The public IP address of the managed instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>47.8.**.**</p>
+         * <p><code>47.8.**.**</code></p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
@@ -99,7 +99,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
          * <p>The internal IP address of the managed instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.0.**.**</p>
+         * <p><code>10.0.**.**</code></p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;

@@ -129,6 +129,15 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     @NameInMap("HostName")
     public String hostName;
 
+    @NameInMap("HttpEndpoint")
+    public String httpEndpoint;
+
+    @NameInMap("HttpPutResponseHopLimit")
+    public Integer httpPutResponseHopLimit;
+
+    @NameInMap("HttpTokens")
+    public String httpTokens;
+
     /**
      * <p>The ID of the image to use to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images.</p>
      * 
@@ -329,7 +338,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
      * <p>To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.1.**.**</p>
+     * <p><code>10.1.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -607,6 +616,30 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     }
     public String getHostName() {
         return this.hostName;
+    }
+
+    public CreateLaunchTemplateRequest setHttpEndpoint(String httpEndpoint) {
+        this.httpEndpoint = httpEndpoint;
+        return this;
+    }
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    public CreateLaunchTemplateRequest setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+        return this;
+    }
+    public Integer getHttpPutResponseHopLimit() {
+        return this.httpPutResponseHopLimit;
+    }
+
+    public CreateLaunchTemplateRequest setHttpTokens(String httpTokens) {
+        this.httpTokens = httpTokens;
+        return this;
+    }
+    public String getHttpTokens() {
+        return this.httpTokens;
     }
 
     public CreateLaunchTemplateRequest setImageId(String imageId) {
@@ -1504,7 +1537,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>192.168.**.**</p>
+         * <p><code>192.168.**.**</code></p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
