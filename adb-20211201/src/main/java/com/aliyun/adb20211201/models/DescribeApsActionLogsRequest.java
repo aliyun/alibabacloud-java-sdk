@@ -18,7 +18,7 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time must be in UTC.</p>
+     * <p>The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mmZ</strong> format. The time must be in UTC.</p>
      * <blockquote>
      * <p> The end time must be later than the start time. The maximum time range that can be specified is 30 days.</p>
      * </blockquote>
@@ -105,7 +105,7 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public String stage;
 
     /**
-     * <p>The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time must be in UTC.</p>
+     * <p>The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mmZ</strong> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -25,6 +25,8 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The delete status.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -32,6 +34,8 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
     public Boolean deleteStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */

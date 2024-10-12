@@ -17,9 +17,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String computeResource;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,6 +70,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("ReservedNodeCount")
     public Integer reservedNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LegacyForm</p>
+     */
     @NameInMap("ReservedNodeSize")
     public String reservedNodeSize;
 

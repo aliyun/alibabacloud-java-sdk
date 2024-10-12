@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePerformanceViewRequest extends TeaModel {
     /**
+     * <p>The type of the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>Basic</p>
      */
@@ -70,7 +72,11 @@ public class CreatePerformanceViewRequest extends TeaModel {
     public CreatePerformanceViewRequestViewDetail viewDetail;
 
     /**
+     * <p>The name of the view.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>viewname</p>
      */
     @NameInMap("ViewName")
     public String viewName;

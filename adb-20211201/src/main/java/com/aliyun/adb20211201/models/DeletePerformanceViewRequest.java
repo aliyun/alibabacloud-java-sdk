@@ -43,7 +43,11 @@ public class DeletePerformanceViewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the view.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>view_dwd_plan_double_term</p>
      */
     @NameInMap("ViewName")
     public String viewName;

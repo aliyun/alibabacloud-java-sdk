@@ -43,7 +43,11 @@ public class DescribePerformanceViewAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the view.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("ViewName")
     public String viewName;

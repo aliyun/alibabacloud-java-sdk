@@ -52,6 +52,9 @@ public class ModifyPerformanceViewRequest extends TeaModel {
     /**
      * <p>The name of the monitoring view.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("ViewName")
     public String viewName;
