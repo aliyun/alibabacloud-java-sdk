@@ -463,6 +463,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String mountPath;
 
         @NameInMap("OptionType")
+        @Deprecated
         public String optionType;
 
         @NameInMap("Options")
