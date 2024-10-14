@@ -39,6 +39,9 @@ public class GetLifecycleRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("Token")
+    public String token;
+
     public static GetLifecycleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLifecycleRequest self = new GetLifecycleRequest();
         return TeaModel.build(map, self);
@@ -82,6 +85,14 @@ public class GetLifecycleRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public GetLifecycleRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
 }

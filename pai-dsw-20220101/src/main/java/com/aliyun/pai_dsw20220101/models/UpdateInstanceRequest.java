@@ -392,6 +392,7 @@ public class UpdateInstanceRequest extends TeaModel {
         public String mountPath;
 
         @NameInMap("OptionType")
+        @Deprecated
         public String optionType;
 
         @NameInMap("Options")

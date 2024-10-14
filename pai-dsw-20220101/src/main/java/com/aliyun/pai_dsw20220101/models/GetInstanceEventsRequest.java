@@ -25,6 +25,9 @@ public class GetInstanceEventsRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("Token")
+    public String token;
+
     public static GetInstanceEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceEventsRequest self = new GetInstanceEventsRequest();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class GetInstanceEventsRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public GetInstanceEventsRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
 }
