@@ -120,6 +120,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("OriginAlgoResult")
         public java.util.Map<String, ?> originAlgoResult;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         /**
          * <p>The risk details that are hit.</p>
          * 
@@ -228,6 +231,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             return this.originAlgoResult;
         }
 
+        public VoiceModerationResultResponseBodyDataSliceDetails setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
         public VoiceModerationResultResponseBodyDataSliceDetails setRiskTips(String riskTips) {
             this.riskTips = riskTips;
             return this;
@@ -305,6 +316,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         /**
          * <p>The details about the audio segments.</p>
          */
@@ -348,6 +362,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
         public String getLiveId() {
             return this.liveId;
+        }
+
+        public VoiceModerationResultResponseBodyData setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public VoiceModerationResultResponseBodyData setSliceDetails(java.util.List<VoiceModerationResultResponseBodyDataSliceDetails> sliceDetails) {

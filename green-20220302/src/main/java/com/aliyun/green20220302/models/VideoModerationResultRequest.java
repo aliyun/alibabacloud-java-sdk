@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class VideoModerationResultRequest extends TeaModel {
     /**
      * <p>The type of the moderation service.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>liveStreamDetection: live stream moderation</li>
+     * <li>videoDetection: video file moderation</li>
+     * <li>liveStreamDetection_cb: live stream moderation_For regions outside the Chinese mainland</li>
+     * <li>videoDetection_cb: video file moderation_For regions outside the Chinese mainland.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>videoDetection</p>
@@ -14,7 +21,7 @@ public class VideoModerationResultRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * <p>The parameters required by the moderation service. The ID of the task that you want to query. You can specify one task ID at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;taskId\&quot;:\&quot;au_f_8PoWiZKoLbczp5HRn69VdT-1y8@U5\&quot;}</p>
