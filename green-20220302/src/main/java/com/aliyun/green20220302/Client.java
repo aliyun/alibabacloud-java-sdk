@@ -687,8 +687,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取视频检测结果</p>
+     * <p>Obtains the moderation results of a Video Moderation 2.0 task</p>
      * 
      * @param request VideoModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -723,8 +726,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取视频检测结果</p>
+     * <p>Obtains the moderation results of a Video Moderation 2.0 task</p>
      * 
      * @param request VideoModerationResultRequest
      * @return VideoModerationResultResponse
