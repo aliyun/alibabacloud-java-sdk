@@ -37,6 +37,55 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         return this.pageInfo;
     }
 
+    public static class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade extends TeaModel {
+        @NameInMap("channel")
+        public String channel;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade self = new DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
+        }
+
+        public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class DescribeClustersV1ResponseBodyClustersOperationPolicy extends TeaModel {
+        @NameInMap("cluster_auto_upgrade")
+        public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
+
+        public static DescribeClustersV1ResponseBodyClustersOperationPolicy build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersV1ResponseBodyClustersOperationPolicy self = new DescribeClustersV1ResponseBodyClustersOperationPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersV1ResponseBodyClustersOperationPolicy setClusterAutoUpgrade(DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade clusterAutoUpgrade) {
+            this.clusterAutoUpgrade = clusterAutoUpgrade;
+            return this;
+        }
+        public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
+    }
+
     public static class DescribeClustersV1ResponseBodyClusters extends TeaModel {
         /**
          * <p>The cluster ID.</p>
@@ -190,6 +239,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         @NameInMap("next_version")
         public String nextVersion;
+
+        @NameInMap("operation_policy")
+        public DescribeClustersV1ResponseBodyClustersOperationPolicy operationPolicy;
 
         /**
          * <p>Indicates whether Alibaba Cloud DNS PrivateZone is enabled. Valid values:</p>
@@ -466,6 +518,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getNextVersion() {
             return this.nextVersion;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setOperationPolicy(DescribeClustersV1ResponseBodyClustersOperationPolicy operationPolicy) {
+            this.operationPolicy = operationPolicy;
+            return this;
+        }
+        public DescribeClustersV1ResponseBodyClustersOperationPolicy getOperationPolicy() {
+            return this.operationPolicy;
         }
 
         public DescribeClustersV1ResponseBodyClusters setPrivateZone(Boolean privateZone) {

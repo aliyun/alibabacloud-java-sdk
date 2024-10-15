@@ -918,6 +918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("login_password", request.loginPassword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maintenanceWindow)) {
+            body.put("maintenance_window", request.maintenanceWindow);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.masterAutoRenew)) {
             body.put("master_auto_renew", request.masterAutoRenew);
         }
@@ -992,6 +996,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.numOfNodes)) {
             body.put("num_of_nodes", request.numOfNodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationPolicy)) {
+            body.put("operation_policy", request.operationPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.osType)) {

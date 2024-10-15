@@ -435,6 +435,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("login_password")
     public String loginPassword;
 
+    @NameInMap("maintenance_window")
+    public MaintenanceWindow maintenanceWindow;
+
     /**
      * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
@@ -636,6 +639,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("num_of_nodes")
     @Deprecated
     public Long numOfNodes;
+
+    @NameInMap("operation_policy")
+    public CreateClusterRequestOperationPolicy operationPolicy;
 
     /**
      * <p>The type of OS. Valid values:</p>
@@ -1374,6 +1380,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.loginPassword;
     }
 
+    public CreateClusterRequest setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+        return this;
+    }
+    public MaintenanceWindow getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
     public CreateClusterRequest setMasterAutoRenew(Boolean masterAutoRenew) {
         this.masterAutoRenew = masterAutoRenew;
         return this;
@@ -1524,6 +1538,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public Long getNumOfNodes() {
         return this.numOfNodes;
+    }
+
+    public CreateClusterRequest setOperationPolicy(CreateClusterRequestOperationPolicy operationPolicy) {
+        this.operationPolicy = operationPolicy;
+        return this;
+    }
+    public CreateClusterRequestOperationPolicy getOperationPolicy() {
+        return this.operationPolicy;
     }
 
     public CreateClusterRequest setOsType(String osType) {
@@ -1852,6 +1874,55 @@ public class CreateClusterRequest extends TeaModel {
     }
     public java.util.List<String> getZoneIds() {
         return this.zoneIds;
+    }
+
+    public static class CreateClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
+        @NameInMap("channel")
+        public String channel;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static CreateClusterRequestOperationPolicyClusterAutoUpgrade build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestOperationPolicyClusterAutoUpgrade self = new CreateClusterRequestOperationPolicyClusterAutoUpgrade();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestOperationPolicyClusterAutoUpgrade setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
+        }
+
+        public CreateClusterRequestOperationPolicyClusterAutoUpgrade setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class CreateClusterRequestOperationPolicy extends TeaModel {
+        @NameInMap("cluster_auto_upgrade")
+        public CreateClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
+
+        public static CreateClusterRequestOperationPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestOperationPolicy self = new CreateClusterRequestOperationPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestOperationPolicy setClusterAutoUpgrade(CreateClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade) {
+            this.clusterAutoUpgrade = clusterAutoUpgrade;
+            return this;
+        }
+        public CreateClusterRequestOperationPolicyClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
     }
 
     public static class CreateClusterRequestWorkerDataDisks extends TeaModel {
