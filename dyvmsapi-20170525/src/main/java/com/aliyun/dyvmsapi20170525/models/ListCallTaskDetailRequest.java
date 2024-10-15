@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListCallTaskDetailRequest extends TeaModel {
     /**
      * <p>The called number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1300000****</p>
      */
     @NameInMap("CalledNum")
     public String calledNum;
@@ -14,13 +17,19 @@ public class ListCallTaskDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -33,16 +42,24 @@ public class ListCallTaskDetailRequest extends TeaModel {
 
     /**
      * <p>The task state. Valid values:</p>
-     * <br>
-     * <p>*   **SUCCESS**: The task is successful.</p>
-     * <p>*   **FAIL**: The task fails.</p>
-     * <p>*   **INIT**: The task is not started.</p>
+     * <ul>
+     * <li><strong>SUCCESS</strong>: The task is successful.</li>
+     * <li><strong>FAIL</strong>: The task fails.</li>
+     * <li><strong>INIT</strong>: The task is not started.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The task ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150001****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

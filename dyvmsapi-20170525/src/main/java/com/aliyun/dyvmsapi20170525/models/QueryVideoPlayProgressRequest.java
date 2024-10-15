@@ -4,9 +4,19 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryVideoPlayProgressRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>116004767703^102806****</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>159****0000</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 

@@ -6,42 +6,56 @@ import com.aliyun.tea.*;
 public class QueryCallDetailByCallIdResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The details of the call, in the JSON format.</p>
-     * <br>
-     * <p>*   **caller**: the calling number.</p>
-     * <p>*   **startDate**: the time when the call was started.</p>
-     * <p>*   **stateDesc**: the description of the call state.</p>
-     * <p>*   **duration**: the call duration. Unit: seconds. The value **0** indicates that the user was not connected.</p>
-     * <p>*   **callerShowNumber**: the calling number displayed to the called party.</p>
-     * <p>*   **gmtCreate**: the time when the call request was received.</p>
-     * <p>*   **state**: the call state. The call state is returned by the Internet service provider (ISP) in real time. For more information about call states, see [ISP-returned error codes](~~55085~~).</p>
-     * <p>*   **endDate**: the time when the call was ended.</p>
-     * <p>*   **calleeShowNumber**: the number displayed to the called party.</p>
-     * <p>*   **callee**: the called number.</p>
-     * <p>*   **aRingTime**: the time when Line A started to ring, in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <p>*   **aEndTime**: the time when ringing on Line A ended, in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <p>*   **bRingTime**: the time when Line B started to ring, in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <p>*   **bEndTime**: the time when ringing on Line B ended, in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <ul>
+     * <li><strong>caller</strong>: the calling number.</li>
+     * <li><strong>startDate</strong>: the time when the call was started.</li>
+     * <li><strong>stateDesc</strong>: the description of the call state.</li>
+     * <li><strong>duration</strong>: the call duration. Unit: seconds. The value <strong>0</strong> indicates that the user was not connected.</li>
+     * <li><strong>callerShowNumber</strong>: the calling number displayed to the called party.</li>
+     * <li><strong>gmtCreate</strong>: the time when the call request was received.</li>
+     * <li><strong>state</strong>: the call state. The call state is returned by the Internet service provider (ISP) in real time. For more information about call states, see <a href="https://help.aliyun.com/document_detail/55085.html">ISP-returned error codes</a>.</li>
+     * <li><strong>endDate</strong>: the time when the call was ended.</li>
+     * <li><strong>calleeShowNumber</strong>: the number displayed to the called party.</li>
+     * <li><strong>callee</strong>: the called number.</li>
+     * <li><strong>aRingTime</strong>: the time when Line A started to ring, in the yyyy-MM-dd HH:mm:ss format.</li>
+     * <li><strong>aEndTime</strong>: the time when ringing on Line A ended, in the yyyy-MM-dd HH:mm:ss format.</li>
+     * <li><strong>bRingTime</strong>: the time when Line B started to ring, in the yyyy-MM-dd HH:mm:ss format.</li>
+     * <li><strong>bEndTime</strong>: the time when ringing on Line B ended, in the yyyy-MM-dd HH:mm:ss format.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;caller&quot;:&quot;18767****&quot;,&quot;startDate&quot;:&quot;&quot;,&quot;stateDesc&quot;:&quot;502&quot;,&quot;duration&quot;:0,&quot;callerShowNumber&quot;:&quot;05344****&quot;,&quot;gmtCreate&quot;:&quot;2017-11-27 20:09:06&quot;,&quot;state&quot;:&quot;502&quot;,&quot;endDate&quot;:&quot;&quot;,&quot;calleeShowNumber&quot;:&quot;053447****&quot;,&quot;bRingTime&quot;:&quot;2022-01-01 12:02:00&quot;，&quot;bEndTime&quot;:&quot;2022-01-01 12:02:28&quot;，&quot;callee&quot;:&quot;1373546****&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

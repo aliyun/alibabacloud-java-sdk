@@ -4,12 +4,31 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class PlayVideoFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>116012354148^1028137841****</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("OnlyPhone")
+    public Boolean onlyPhone;
+
+    /**
+     * <strong>example:</strong>
+     * <p>342268*****</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
@@ -22,6 +41,12 @@ public class PlayVideoFileRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 
@@ -44,6 +69,14 @@ public class PlayVideoFileRequest extends TeaModel {
     }
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    public PlayVideoFileRequest setOnlyPhone(Boolean onlyPhone) {
+        this.onlyPhone = onlyPhone;
+        return this;
+    }
+    public Boolean getOnlyPhone() {
+        return this.onlyPhone;
     }
 
     public PlayVideoFileRequest setOutId(String outId) {

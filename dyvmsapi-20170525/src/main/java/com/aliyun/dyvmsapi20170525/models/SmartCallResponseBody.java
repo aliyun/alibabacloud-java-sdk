@@ -6,29 +6,41 @@ import com.aliyun.tea.*;
 public class SmartCallResponseBody extends TeaModel {
     /**
      * <p>The unique receipt ID for this call.</p>
-     * <br>
-     * <p>You can call the [QueryCallDetailByCallId](~~QueryCallDetailByCallId~~) operation to query the details of the call based on the receipt ID.</p>
+     * <p>You can call the <a href="~~QueryCallDetailByCallId~~">QueryCallDetailByCallId</a> operation to query the details of the call based on the receipt ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116012854210^10281427****</p>
      */
     @NameInMap("CallId")
     public String callId;
 
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,51 +6,83 @@ import com.aliyun.tea.*;
 public class SubmitHotlineTransferRegisterRequest extends TeaModel {
     /**
      * <p>The authenticity of the commitment. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The commitment is authentic.</p>
-     * <p>*   **false**: The commitment is not authentic.</p>
+     * <ul>
+     * <li><strong>true</strong>: The commitment is authentic.</li>
+     * <li><strong>false</strong>: The commitment is not authentic.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Agreement")
     public String agreement;
 
     /**
      * <p>The China 400 number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400****</p>
      */
     @NameInMap("HotlineNumber")
     public String hotlineNumber;
 
     /**
      * <p>The ID card number of the handler.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5****************9</p>
      */
     @NameInMap("OperatorIdentityCard")
     public String operatorIdentityCard;
 
     /**
      * <p>The email address of the handler.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
     @NameInMap("OperatorMail")
     public String operatorMail;
 
     /**
      * <p>The verification code that is received by the mailbox of the handler.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("OperatorMailVerifyCode")
     public String operatorMailVerifyCode;
 
     /**
      * <p>The mobile phone number of the handler.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>158****7230</p>
      */
     @NameInMap("OperatorMobile")
     public String operatorMobile;
 
     /**
      * <p>The verification code that is received by the mobile phone of the handler.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("OperatorMobileVerifyCode")
     public String operatorMobileVerifyCode;
 
     /**
      * <p>The name of the handler.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A***</p>
      */
     @NameInMap("OperatorName")
     public String operatorName;
@@ -59,7 +91,11 @@ public class SubmitHotlineTransferRegisterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.</p>
+     * <p>The qualification ID. You can call the <a href="https://help.aliyun.com/document_detail/393548.html">GetHotlineQualificationByOrder</a> operation to obtain the qualification ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000004933****</p>
      */
     @NameInMap("QualificationId")
     public String qualificationId;
@@ -72,6 +108,7 @@ public class SubmitHotlineTransferRegisterRequest extends TeaModel {
 
     /**
      * <p>The registration information about the China 400 number.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransferPhoneNumberInfos")
     public java.util.List<SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos> transferPhoneNumberInfos;
@@ -188,18 +225,30 @@ public class SubmitHotlineTransferRegisterRequest extends TeaModel {
     public static class SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos extends TeaModel {
         /**
          * <p>The ID card number of the number owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500***</p>
          */
         @NameInMap("IdentityCard")
         public String identityCard;
 
         /**
          * <p>The China 400 number that you want to submit for registration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1580000****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
          * <p>The real name or company name of the number owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A***</p>
          */
         @NameInMap("PhoneNumberOwnerName")
         public String phoneNumberOwnerName;

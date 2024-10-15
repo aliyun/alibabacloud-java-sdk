@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryRobotTaskDetailRequest extends TeaModel {
     /**
-     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.</p>
+     * <p>The unique ID of the robocall task. You can call the <a href="~~CreateRobotTask~~">CreateRobotTask</a> operation to obtain the task ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1045001</p>
      */
     @NameInMap("Id")
     public Long id;

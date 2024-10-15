@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class SmartCallOperateResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The action result. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The action was successful.</p>
-     * <p>*   **false**: The action failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The action was successful.</li>
+     * <li><strong>false</strong>: The action failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Status")
     public Boolean status;

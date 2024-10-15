@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class ListCallTaskRequest extends TeaModel {
     /**
      * <p>The type of the task template. Valid values:</p>
-     * <br>
-     * <p>*   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.</p>
-     * <p>*   **VMS_VOICE_CODE**: the voice notification template.</p>
-     * <p>*   **VMS_TTS**: the voice verification code template.</p>
+     * <ul>
+     * <li><strong>VMS_VOICE_TTS</strong>: the text-to-speech (TTS) notification template.</li>
+     * <li><strong>VMS_VOICE_CODE</strong>: the voice notification template.</li>
+     * <li><strong>VMS_TTS</strong>: the voice verification code template.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VMS_VOICE_CODE</p>
      */
     @NameInMap("BizType")
     public String bizType;
@@ -18,13 +22,19 @@ public class ListCallTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -37,33 +47,46 @@ public class ListCallTaskRequest extends TeaModel {
 
     /**
      * <p>The task state. Valid values:</p>
-     * <br>
-     * <p>*   **INIT**: The task is in the initial state.</p>
-     * <p>*   **RELEASE**: The task is being parsed.</p>
-     * <p>*   **RUNNING**: The task is running.</p>
-     * <p>*   **STOP**: The task is suspended.</p>
-     * <p>*   **SYSTEM_STOP**: The task is suspended by the system.</p>
-     * <p>*   **CANCEL**: The task is canceled.</p>
-     * <p>*   **SYSTEM_CANCEL**: The task is canceled by the system.</p>
-     * <p>*   **DONE**: The task is complete.</p>
+     * <ul>
+     * <li><strong>INIT</strong>: The task is in the initial state.</li>
+     * <li><strong>RELEASE</strong>: The task is being parsed.</li>
+     * <li><strong>RUNNING</strong>: The task is running.</li>
+     * <li><strong>STOP</strong>: The task is suspended.</li>
+     * <li><strong>SYSTEM_STOP</strong>: The task is suspended by the system.</li>
+     * <li><strong>CANCEL</strong>: The task is canceled.</li>
+     * <li><strong>SYSTEM_CANCEL</strong>: The task is canceled by the system.</li>
+     * <li><strong>DONE</strong>: The task is complete.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DONE</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>151001****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test Template</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

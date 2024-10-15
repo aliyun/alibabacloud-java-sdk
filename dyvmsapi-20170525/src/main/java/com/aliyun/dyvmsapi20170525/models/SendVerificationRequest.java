@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class SendVerificationRequest extends TeaModel {
     /**
-     * <p>The business type. Set the value to **CONTACT**.</p>
+     * <p>The business type. Set the value to <strong>CONTACT</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CONTACT</p>
      */
     @NameInMap("BizType")
     public String bizType;
@@ -21,12 +25,20 @@ public class SendVerificationRequest extends TeaModel {
 
     /**
      * <p>The mobile phone number that receives the SMS verification code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150****0000</p>
      */
     @NameInMap("Target")
     public String target;
 
     /**
-     * <p>The mode of sending the SMS verification code. Set the value to **SMS**.</p>
+     * <p>The mode of sending the SMS verification code. Set the value to <strong>SMS</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMS</p>
      */
     @NameInMap("VerifyType")
     public String verifyType;

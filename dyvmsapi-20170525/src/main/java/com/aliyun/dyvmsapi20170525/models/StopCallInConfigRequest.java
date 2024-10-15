@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class StopCallInConfigRequest extends TeaModel {
     /**
      * <p>The China 400 number from which the inbound call to be stopped is transferred.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400***</p>
      */
     @NameInMap("Number")
     public String number;

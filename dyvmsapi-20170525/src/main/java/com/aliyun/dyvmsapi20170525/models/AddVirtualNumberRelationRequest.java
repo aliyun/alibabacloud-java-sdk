@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class AddVirtualNumberRelationRequest extends TeaModel {
     /**
      * <p>The company names. Separate multiple company names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Company 1</p>
      */
     @NameInMap("CorpNameList")
     public String corpNameList;
 
     /**
      * <p>The real numbers. Separate multiple real numbers with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1321111****,1322222****</p>
      */
     @NameInMap("NumberList")
     public String numberList;
@@ -21,12 +28,19 @@ public class AddVirtualNumberRelationRequest extends TeaModel {
 
     /**
      * <p>The virtual number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05516214****</p>
      */
     @NameInMap("PhoneNum")
     public String phoneNum;
 
     /**
-     * <p>The service name. Default value: **dyvms**.</p>
+     * <p>The service name. Default value: <strong>dyvms</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dyvms</p>
      */
     @NameInMap("ProdCode")
     public String prodCode;
@@ -39,9 +53,14 @@ public class AddVirtualNumberRelationRequest extends TeaModel {
 
     /**
      * <p>The route type. Valid values:</p>
-     * <br>
-     * <p>*   **0**: number location first.</p>
-     * <p>*   **1**: random.</p>
+     * <ul>
+     * <li><strong>0</strong>: number location first.</li>
+     * <li><strong>1</strong>: random.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RouteType")
     public Integer routeType;

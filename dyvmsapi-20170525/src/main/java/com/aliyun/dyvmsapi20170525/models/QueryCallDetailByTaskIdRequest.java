@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class QueryCallDetailByTaskIdRequest extends TeaModel {
     /**
      * <p>The called number. You can view the outbound call records of only one called number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("Callee")
     public String callee;
@@ -15,6 +19,10 @@ public class QueryCallDetailByTaskIdRequest extends TeaModel {
 
     /**
      * <p>The start time of the outbound robocall task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-09 09:02:03</p>
      */
     @NameInMap("QueryDate")
     public Long queryDate;
@@ -26,7 +34,11 @@ public class QueryCallDetailByTaskIdRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique ID of the outbound robocall task. The task ID is returned after the outbound robocall task is successfully delivered. You can view the task ID on the [Task Management](https://dyvms.console.aliyun.com/job/list) page of the Voice Messaging Service console, or call the **BatchRobotSmartCall** operation to obtain the **task ID**.</p>
+     * <p>The unique ID of the outbound robocall task. The task ID is returned after the outbound robocall task is successfully delivered. You can view the task ID on the <a href="https://dyvms.console.aliyun.com/job/list">Task Management</a> page of the Voice Messaging Service console, or call the <strong>BatchRobotSmartCall</strong> operation to obtain the <strong>task ID</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4001112222</p>
      */
     @NameInMap("TaskId")
     public String taskId;

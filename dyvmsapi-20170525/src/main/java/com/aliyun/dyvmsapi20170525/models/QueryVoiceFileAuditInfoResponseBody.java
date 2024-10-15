@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>The value OK indicates that the request was successful. For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <p>The value OK indicates that the request was successful. For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,12 +22,18 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -70,27 +78,37 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
     public static class QueryVoiceFileAuditInfoResponseBodyData extends TeaModel {
         /**
          * <p>The review state of the voice file. Valid values:</p>
-         * <br>
-         * <p>*   **AUDIT_STATE_INIT**: The voice file was under review.</p>
-         * <p>*   **AUDIT_STATE_PASS**: The voice file was approved.</p>
-         * <p>*   **AUDIT_STATE_NOT_PASS**: The voice file was rejected.</p>
-         * <p>*   **AUDIT_STATE_UPLOADING**: The voice file was approved and is being uploaded.</p>
-         * <p>*   **AUDIT_STATE_REDOING**: The voice file was being reprocessed.</p>
-         * <p>*   **AUDIT_SATE_CANCEL**: The review of the voice file was canceled.</p>
-         * <p>*   **AUDIT_PAUSE**: The review of the voice file was suspended.</p>
-         * <p>*   **AUDIT_ORDER_FINISHED**: The voice file was approved by the ticket system and was waiting for the review of the Internet service provider (ISP).</p>
+         * <ul>
+         * <li><strong>AUDIT_STATE_INIT</strong>: The voice file was under review.</li>
+         * <li><strong>AUDIT_STATE_PASS</strong>: The voice file was approved.</li>
+         * <li><strong>AUDIT_STATE_NOT_PASS</strong>: The voice file was rejected.</li>
+         * <li><strong>AUDIT_STATE_UPLOADING</strong>: The voice file was approved and is being uploaded.</li>
+         * <li><strong>AUDIT_STATE_REDOING</strong>: The voice file was being reprocessed.</li>
+         * <li><strong>AUDIT_SATE_CANCEL</strong>: The review of the voice file was canceled.</li>
+         * <li><strong>AUDIT_PAUSE</strong>: The review of the voice file was suspended.</li>
+         * <li><strong>AUDIT_ORDER_FINISHED</strong>: The voice file was approved by the ticket system and was waiting for the review of the Internet service provider (ISP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUDIT_STATE_NOT_PASS</p>
          */
         @NameInMap("AuditState")
         public String auditState;
 
         /**
          * <p>The reason why the voice file was rejected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This business is not supported</p>
          */
         @NameInMap("RejectInfo")
         public String rejectInfo;
 
         /**
          * <p>The code of the voice file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8501d2eb-efbb-471f-xxx8-****.wav</p>
          */
         @NameInMap("VoiceCode")
         public String voiceCode;

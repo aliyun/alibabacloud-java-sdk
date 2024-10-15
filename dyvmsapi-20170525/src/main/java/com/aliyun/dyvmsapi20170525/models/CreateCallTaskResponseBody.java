@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateCallTaskResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED815433-724A-4357-9991-A54AD2FF09FD</p>
      */
     @NameInMap("RequestId")
     public String requestId;

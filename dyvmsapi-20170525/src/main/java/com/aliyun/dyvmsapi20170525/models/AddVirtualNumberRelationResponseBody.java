@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class AddVirtualNumberRelationResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value 200 indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value 200 indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The numbers that failed to be associated.</p>
-     * <br>
-     * <p>> If all numbers are associated, no value is returned for this parameter.</p>
+     * <blockquote>
+     * <p>If all numbers are associated, no value is returned for this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1321111****</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
      */
     @NameInMap("RequestId")
     public String requestId;

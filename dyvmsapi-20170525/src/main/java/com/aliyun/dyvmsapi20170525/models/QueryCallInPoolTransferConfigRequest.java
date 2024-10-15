@@ -9,6 +9,10 @@ public class QueryCallInPoolTransferConfigRequest extends TeaModel {
 
     /**
      * <p>The China 400 number used to transfer the call.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

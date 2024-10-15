@@ -14,7 +14,11 @@ public class StopRobotTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.</p>
+     * <p>The unique ID of the robocall task. You can call the <a href="~~CreateRobotTask~~">CreateRobotTask</a> operation to obtain the task ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1045001</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

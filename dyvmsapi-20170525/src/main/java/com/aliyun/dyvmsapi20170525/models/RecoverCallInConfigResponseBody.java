@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class RecoverCallInConfigResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the inbound call was resumed. Valid values:</p>
-     * <br>
-     * <p>*   true: The inbound call was resumed.</p>
-     * <p>*   false: The inbound call failed to be resumed.</p>
+     * <ul>
+     * <li>true: The inbound call was resumed.</li>
+     * <li>false: The inbound call failed to be resumed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a78278ff-26bb-48ec-805c-26a0f4c102***</p>
      */
     @NameInMap("RequestId")
     public String requestId;

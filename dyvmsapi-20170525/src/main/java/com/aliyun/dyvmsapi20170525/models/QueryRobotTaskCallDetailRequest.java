@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class QueryRobotTaskCallDetailRequest extends TeaModel {
     /**
      * <p>The called number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130****0000</p>
      */
     @NameInMap("Callee")
     public String callee;
@@ -15,6 +19,10 @@ public class QueryRobotTaskCallDetailRequest extends TeaModel {
 
     /**
      * <p>The timestamp of the time at which the call details you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-21 08:23:21</p>
      */
     @NameInMap("QueryDate")
     public Long queryDate;
@@ -26,7 +34,11 @@ public class QueryRobotTaskCallDetailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.</p>
+     * <p>The unique ID of the robocall task. You can call the <a href="https://help.aliyun.com/document_detail/393531.html">CreateRobotTask</a> operation to obtain the task ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1045001</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7BF47617-7851-48F7-A3A1-2021342A78E2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,6 +81,9 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     public static class QueryCallInPoolTransferConfigResponseBodyDataDetails extends TeaModel {
         /**
          * <p>The number used to transfer the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400****</p>
          */
         @NameInMap("Called")
         public String called;
@@ -93,9 +106,13 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     public static class QueryCallInPoolTransferConfigResponseBodyData extends TeaModel {
         /**
          * <p>The call mode. Valid values:</p>
-         * <br>
-         * <p>*   **roundRobin**</p>
-         * <p>*   **random**</p>
+         * <ul>
+         * <li><strong>roundRobin</strong></li>
+         * <li><strong>random</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>random</p>
          */
         @NameInMap("CalledRouteMode")
         public String calledRouteMode;
@@ -108,12 +125,18 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
 
         /**
          * <p>The time when the call transfer task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623137002000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The timeout period for transferring the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TransferTimeout")
         public String transferTimeout;

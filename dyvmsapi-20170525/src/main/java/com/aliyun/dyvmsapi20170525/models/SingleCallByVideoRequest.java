@@ -4,18 +4,36 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SingleCallByVideoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1590****000</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0571****5678</p>
+     */
     @NameInMap("CalledShowNumber")
     public String calledShowNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abcdefgh</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("PlayTimes")
     public Integer playTimes;
 
@@ -25,15 +43,32 @@ public class SingleCallByVideoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Speed")
     public Integer speed;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoCode")
     public String videoCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2d4c-4e78-8d2a-afbb06cf****.wav</p>
+     */
     @NameInMap("VoiceCode")
     public String voiceCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Volume")
     public Integer volume;
 

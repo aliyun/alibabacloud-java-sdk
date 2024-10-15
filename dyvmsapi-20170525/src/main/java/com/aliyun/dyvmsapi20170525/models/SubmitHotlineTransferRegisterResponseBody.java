@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The registration ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2258****</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6086693B-2250-17CE-A41F-06259AB6DB1B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

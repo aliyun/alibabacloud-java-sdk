@@ -4,9 +4,19 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class PauseVideoFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>116012854210^10281427****</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 

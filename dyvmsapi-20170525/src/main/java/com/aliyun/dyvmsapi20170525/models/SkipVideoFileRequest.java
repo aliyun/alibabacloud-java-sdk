@@ -4,12 +4,26 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SkipVideoFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>116012854210^10281427****</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1590****000</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PR0210428****</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
@@ -22,6 +36,12 @@ public class SkipVideoFileRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04:02:01</p>
+     */
     @NameInMap("SkipTimes")
     public Long skipTimes;
 
