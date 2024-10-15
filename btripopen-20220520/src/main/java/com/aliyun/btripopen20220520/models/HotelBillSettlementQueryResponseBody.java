@@ -137,6 +137,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("billing_entity")
+        public String billingEntity;
+
         @NameInMap("book_reason")
         public String bookReason;
 
@@ -164,6 +167,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("business_trip_result")
         public String businessTripResult;
+
+        @NameInMap("cancel_or_modify_reason")
+        public String cancelOrModifyReason;
+
+        @NameInMap("cancel_or_modify_scene")
+        public String cancelOrModifyScene;
 
         /**
          * <strong>example:</strong>
@@ -320,6 +329,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("order_type")
         public String orderType;
 
+        @NameInMap("original_reserve_rule")
+        public String originalReserveRule;
+
         /**
          * <strong>example:</strong>
          * <p>4234324</p>
@@ -396,6 +408,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("room_type")
         public String roomType;
+
+        @NameInMap("scene_id")
+        public String sceneId;
+
+        @NameInMap("scene_name")
+        public String sceneName;
 
         /**
          * <strong>example:</strong>
@@ -569,6 +587,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.billRecordTime;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBillingEntity(String billingEntity) {
+            this.billingEntity = billingEntity;
+            return this;
+        }
+        public String getBillingEntity() {
+            return this.billingEntity;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setBookReason(String bookReason) {
             this.bookReason = bookReason;
             return this;
@@ -631,6 +657,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBusinessTripResult() {
             return this.businessTripResult;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCancelOrModifyReason(String cancelOrModifyReason) {
+            this.cancelOrModifyReason = cancelOrModifyReason;
+            return this;
+        }
+        public String getCancelOrModifyReason() {
+            return this.cancelOrModifyReason;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCancelOrModifyScene(String cancelOrModifyScene) {
+            this.cancelOrModifyScene = cancelOrModifyScene;
+            return this;
+        }
+        public String getCancelOrModifyScene() {
+            return this.cancelOrModifyScene;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setCapitalDirection(String capitalDirection) {
@@ -897,6 +939,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.orderType;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setOriginalReserveRule(String originalReserveRule) {
+            this.originalReserveRule = originalReserveRule;
+            return this;
+        }
+        public String getOriginalReserveRule() {
+            return this.originalReserveRule;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setOverApplyId(String overApplyId) {
             this.overApplyId = overApplyId;
             return this;
@@ -1015,6 +1065,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getRoomType() {
             return this.roomType;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setSceneId(String sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setSceneName(String sceneName) {
+            this.sceneName = sceneName;
+            return this;
+        }
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setServiceFee(Double serviceFee) {

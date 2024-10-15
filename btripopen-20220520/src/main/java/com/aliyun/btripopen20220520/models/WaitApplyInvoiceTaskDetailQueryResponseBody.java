@@ -199,6 +199,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @NameInMap("train_invoice_fee")
         public String trainInvoiceFee;
 
+        @NameInMap("vas_mall_special_invoice_fee")
+        public String vasMallSpecialInvoiceFee;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -380,6 +383,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
         public String getTrainInvoiceFee() {
             return this.trainInvoiceFee;
+        }
+
+        public WaitApplyInvoiceTaskDetailQueryResponseBodyModule setVasMallSpecialInvoiceFee(String vasMallSpecialInvoiceFee) {
+            this.vasMallSpecialInvoiceFee = vasMallSpecialInvoiceFee;
+            return this;
+        }
+        public String getVasMallSpecialInvoiceFee() {
+            return this.vasMallSpecialInvoiceFee;
         }
 
         public WaitApplyInvoiceTaskDetailQueryResponseBodyModule setVehicleInvoiceFee(String vehicleInvoiceFee) {

@@ -473,6 +473,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("itinerary_id", request.itineraryId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.middlePage)) {
+            query.put("middle_page", request.middlePage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
             query.put("order_Id", request.orderId);
         }
@@ -487,6 +491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.taobaoCallbackUrl)) {
             query.put("taobao_callback_url", request.taobaoCallbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdpartApplyId)) {
+            query.put("thirdpart_apply_id", request.thirdpartApplyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.travelerId)) {
@@ -2689,6 +2697,158 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         CooperatorHotelBillSettlementQueryHeaders headers = new CooperatorHotelBillSettlementQueryHeaders();
         return this.cooperatorHotelBillSettlementQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店订单事件推送</p>
+     * 
+     * @param request CooperatorHotelEventPushRequest
+     * @param headers CooperatorHotelEventPushHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CooperatorHotelEventPushResponse
+     */
+    public CooperatorHotelEventPushResponse cooperatorHotelEventPushWithOptions(CooperatorHotelEventPushRequest request, CooperatorHotelEventPushHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.changeOrderStatus)) {
+            body.put("change_order_status", request.changeOrderStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.changeOrderStatusDesc)) {
+            body.put("change_order_status_desc", request.changeOrderStatusDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cooperatorOrderId)) {
+            body.put("cooperator_order_id", request.cooperatorOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.event)) {
+            body.put("event", request.event);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventDesc)) {
+            body.put("event_desc", request.eventDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventTime)) {
+            body.put("event_time", request.eventTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            body.put("order_id", request.orderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CooperatorHotelEventPush"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/coop-hotel/v1/orders/events"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CooperatorHotelEventPushResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店订单事件推送</p>
+     * 
+     * @param request CooperatorHotelEventPushRequest
+     * @return CooperatorHotelEventPushResponse
+     */
+    public CooperatorHotelEventPushResponse cooperatorHotelEventPush(CooperatorHotelEventPushRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CooperatorHotelEventPushHeaders headers = new CooperatorHotelEventPushHeaders();
+        return this.cooperatorHotelEventPushWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个人支付结果推送</p>
+     * 
+     * @param request CooperatorSyncPayStatusRequest
+     * @param headers CooperatorSyncPayStatusHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CooperatorSyncPayStatusResponse
+     */
+    public CooperatorSyncPayStatusResponse cooperatorSyncPayStatusWithOptions(CooperatorSyncPayStatusRequest request, CooperatorSyncPayStatusHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cooperatorOrderId)) {
+            body.put("cooperator_order_id", request.cooperatorOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cooperatorPayNo)) {
+            body.put("cooperator_pay_no", request.cooperatorPayNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            body.put("order_id", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payStatus)) {
+            body.put("pay_status", request.payStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payTime)) {
+            body.put("pay_time", request.payTime);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CooperatorSyncPayStatus"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/coop-pay/v1/cashiers/status"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CooperatorSyncPayStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>个人支付结果推送</p>
+     * 
+     * @param request CooperatorSyncPayStatusRequest
+     * @return CooperatorSyncPayStatusResponse
+     */
+    public CooperatorSyncPayStatusResponse cooperatorSyncPayStatus(CooperatorSyncPayStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CooperatorSyncPayStatusHeaders headers = new CooperatorSyncPayStatusHeaders();
+        return this.cooperatorSyncPayStatusWithOptions(request, headers, runtime);
     }
 
     /**

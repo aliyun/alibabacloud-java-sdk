@@ -363,6 +363,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        @NameInMap("invoice_type")
+        public Integer invoiceType;
+
         /**
          * <p>填开单位</p>
          */
@@ -384,6 +387,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         @NameInMap("itinerary_num")
         public String itineraryNum;
+
+        @NameInMap("ofd_oss_url")
+        public String ofdOssUrl;
 
         /**
          * <strong>example:</strong>
@@ -410,6 +416,12 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         @NameInMap("prompt_message")
         public String promptMessage;
+
+        @NameInMap("purchaser_name")
+        public String purchaserName;
+
+        @NameInMap("purchaser_type")
+        public Integer purchaserType;
 
         /**
          * <strong>example:</strong>
@@ -548,6 +560,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             return this.invoiceTitle;
         }
 
+        public FlightItineraryScanQueryResponseBodyModuleItems setInvoiceType(Integer invoiceType) {
+            this.invoiceType = invoiceType;
+            return this;
+        }
+        public Integer getInvoiceType() {
+            return this.invoiceType;
+        }
+
         public FlightItineraryScanQueryResponseBodyModuleItems setIssueCompany(String issueCompany) {
             this.issueCompany = issueCompany;
             return this;
@@ -570,6 +590,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getItineraryNum() {
             return this.itineraryNum;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setOfdOssUrl(String ofdOssUrl) {
+            this.ofdOssUrl = ofdOssUrl;
+            return this;
+        }
+        public String getOfdOssUrl() {
+            return this.ofdOssUrl;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setOrderId(Long orderId) {
@@ -610,6 +638,22 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getPromptMessage() {
             return this.promptMessage;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setPurchaserName(String purchaserName) {
+            this.purchaserName = purchaserName;
+            return this;
+        }
+        public String getPurchaserName() {
+            return this.purchaserName;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setPurchaserType(Integer purchaserType) {
+            this.purchaserType = purchaserType;
+            return this;
+        }
+        public Integer getPurchaserType() {
+            return this.purchaserType;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setTaxAmount(String taxAmount) {

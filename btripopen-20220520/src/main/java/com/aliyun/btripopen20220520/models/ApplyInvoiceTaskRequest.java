@@ -146,6 +146,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("train_invoice_fee")
         public String trainInvoiceFee;
 
+        @NameInMap("vas_mall_special_invoice_fee")
+        public String vasMallSpecialInvoiceFee;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -327,6 +330,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         }
         public String getTrainInvoiceFee() {
             return this.trainInvoiceFee;
+        }
+
+        public ApplyInvoiceTaskRequestInvoiceTaskList setVasMallSpecialInvoiceFee(String vasMallSpecialInvoiceFee) {
+            this.vasMallSpecialInvoiceFee = vasMallSpecialInvoiceFee;
+            return this;
+        }
+        public String getVasMallSpecialInvoiceFee() {
+            return this.vasMallSpecialInvoiceFee;
         }
 
         public ApplyInvoiceTaskRequestInvoiceTaskList setVehicleInvoiceFee(String vehicleInvoiceFee) {
