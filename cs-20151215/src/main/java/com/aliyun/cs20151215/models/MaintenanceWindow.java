@@ -20,7 +20,7 @@ public class MaintenanceWindow extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>03:00:00Z</p>
+     * <p>2020-10-15T12:31:00.000+08:00</p>
      */
     @NameInMap("maintenance_time")
     public String maintenanceTime;

@@ -143,6 +143,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("next_version")
     public String nextVersion;
 
+    @NameInMap("operation_policy")
+    public DescribeClusterDetailResponseBodyOperationPolicy operationPolicy;
+
     /**
      * <p>The ROS parameters of the cluster.</p>
      */
@@ -420,6 +423,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.nextVersion;
     }
 
+    public DescribeClusterDetailResponseBody setOperationPolicy(DescribeClusterDetailResponseBodyOperationPolicy operationPolicy) {
+        this.operationPolicy = operationPolicy;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyOperationPolicy getOperationPolicy() {
+        return this.operationPolicy;
+    }
+
     public DescribeClusterDetailResponseBody setParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -538,6 +549,55 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade extends TeaModel {
+        @NameInMap("channel")
+        public String channel;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade self = new DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
+        }
+
+        public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyOperationPolicy extends TeaModel {
+        @NameInMap("cluster_auto_upgrade")
+        public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
+
+        public static DescribeClusterDetailResponseBodyOperationPolicy build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyOperationPolicy self = new DescribeClusterDetailResponseBodyOperationPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyOperationPolicy setClusterAutoUpgrade(DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade clusterAutoUpgrade) {
+            this.clusterAutoUpgrade = clusterAutoUpgrade;
+            return this;
+        }
+        public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
     }
 
 }
