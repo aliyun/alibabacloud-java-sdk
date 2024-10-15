@@ -547,6 +547,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("instant_confirm")
         public Boolean instantConfirm;
 
+        @NameInMap("inventory_desc")
+        public String inventoryDesc;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -853,6 +856,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
         public Boolean getInstantConfirm() {
             return this.instantConfirm;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRates setInventoryDesc(String inventoryDesc) {
+            this.inventoryDesc = inventoryDesc;
+            return this;
+        }
+        public String getInventoryDesc() {
+            return this.inventoryDesc;
         }
 
         public HotelGoodsQueryResponseBodyModuleRoomsRates setInventoryPrice(String inventoryPrice) {

@@ -367,6 +367,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("index")
         public String index;
 
+        @NameInMap("ins_order_id")
+        public String insOrderId;
+
         /**
          * <strong>example:</strong>
          * <p>23.9</p>
@@ -380,6 +383,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("insurance_number")
         public String insuranceNumber;
+
+        @NameInMap("insurance_product_name")
+        public String insuranceProductName;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
@@ -607,6 +613,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("voucher_type")
         public Integer voucherType;
+
+        @NameInMap("voyage_name")
+        public String voyageName;
 
         public static IeFlightBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             IeFlightBillSettlementQueryResponseBodyModuleDataList self = new IeFlightBillSettlementQueryResponseBodyModuleDataList();
@@ -1021,6 +1030,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.index;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setInsOrderId(String insOrderId) {
+            this.insOrderId = insOrderId;
+            return this;
+        }
+        public String getInsOrderId() {
+            return this.insOrderId;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setInsuranceFee(Double insuranceFee) {
             this.insuranceFee = insuranceFee;
             return this;
@@ -1035,6 +1052,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getInsuranceNumber() {
             return this.insuranceNumber;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setInsuranceProductName(String insuranceProductName) {
+            this.insuranceProductName = insuranceProductName;
+            return this;
+        }
+        public String getInsuranceProductName() {
+            return this.insuranceProductName;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setInvoiceTitle(String invoiceTitle) {
@@ -1347,6 +1372,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setVoyageName(String voyageName) {
+            this.voyageName = voyageName;
+            return this;
+        }
+        public String getVoyageName() {
+            return this.voyageName;
         }
 
     }

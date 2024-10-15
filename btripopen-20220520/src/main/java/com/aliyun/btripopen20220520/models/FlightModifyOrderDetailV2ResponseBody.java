@@ -98,6 +98,69 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class FlightModifyOrderDetailV2ResponseBodyModuleAttributes extends TeaModel {
+        @NameInMap("baggage_rule")
+        public String baggageRule;
+
+        @NameInMap("change_rule")
+        public String changeRule;
+
+        @NameInMap("latest_pay_time")
+        public Object latestPayTime;
+
+        @NameInMap("latest_pay_time_str")
+        public String latestPayTimeStr;
+
+        @NameInMap("refund_rule")
+        public String refundRule;
+
+        public static FlightModifyOrderDetailV2ResponseBodyModuleAttributes build(java.util.Map<String, ?> map) throws Exception {
+            FlightModifyOrderDetailV2ResponseBodyModuleAttributes self = new FlightModifyOrderDetailV2ResponseBodyModuleAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleAttributes setBaggageRule(String baggageRule) {
+            this.baggageRule = baggageRule;
+            return this;
+        }
+        public String getBaggageRule() {
+            return this.baggageRule;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleAttributes setChangeRule(String changeRule) {
+            this.changeRule = changeRule;
+            return this;
+        }
+        public String getChangeRule() {
+            return this.changeRule;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleAttributes setLatestPayTime(Object latestPayTime) {
+            this.latestPayTime = latestPayTime;
+            return this;
+        }
+        public Object getLatestPayTime() {
+            return this.latestPayTime;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleAttributes setLatestPayTimeStr(String latestPayTimeStr) {
+            this.latestPayTimeStr = latestPayTimeStr;
+            return this;
+        }
+        public String getLatestPayTimeStr() {
+            return this.latestPayTimeStr;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleAttributes setRefundRule(String refundRule) {
+            this.refundRule = refundRule;
+            return this;
+        }
+        public String getRefundRule() {
+            return this.refundRule;
+        }
+
+    }
+
     public static class FlightModifyOrderDetailV2ResponseBodyModuleContactInfoDTO extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -158,6 +221,69 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
         public Boolean getSendMsgToPassenger() {
             return this.sendMsgToPassenger;
+        }
+
+    }
+
+    public static class FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange extends TeaModel {
+        @NameInMap("change_desc")
+        public String changeDesc;
+
+        @NameInMap("change_status")
+        public String changeStatus;
+
+        @NameInMap("change_status_code")
+        public String changeStatusCode;
+
+        @NameInMap("new_segment")
+        public Object newSegment;
+
+        @NameInMap("passenger_names")
+        public java.util.List<String> passengerNames;
+
+        public static FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange build(java.util.Map<String, ?> map) throws Exception {
+            FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange self = new FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange setChangeDesc(String changeDesc) {
+            this.changeDesc = changeDesc;
+            return this;
+        }
+        public String getChangeDesc() {
+            return this.changeDesc;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange setChangeStatus(String changeStatus) {
+            this.changeStatus = changeStatus;
+            return this;
+        }
+        public String getChangeStatus() {
+            return this.changeStatus;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange setChangeStatusCode(String changeStatusCode) {
+            this.changeStatusCode = changeStatusCode;
+            return this;
+        }
+        public String getChangeStatusCode() {
+            return this.changeStatusCode;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange setNewSegment(Object newSegment) {
+            this.newSegment = newSegment;
+            return this;
+        }
+        public Object getNewSegment() {
+            return this.newSegment;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange setPassengerNames(java.util.List<String> passengerNames) {
+            this.passengerNames = passengerNames;
+            return this;
+        }
+        public java.util.List<String> getPassengerNames() {
+            return this.passengerNames;
         }
 
     }
@@ -309,6 +435,9 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
          */
         @NameInMap("dep_time")
         public String depTime;
+
+        @NameInMap("flight_change")
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange flightChange;
 
         /**
          * <strong>example:</strong>
@@ -529,6 +658,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
         public String getDepTime() {
             return this.depTime;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOS setFlightChange(FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange flightChange) {
+            this.flightChange = flightChange;
+            return this;
+        }
+        public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOSFlightChange getFlightChange() {
+            return this.flightChange;
         }
 
         public FlightModifyOrderDetailV2ResponseBodyModuleDestFlightInfoDTOS setFlightNo(String flightNo) {
@@ -818,6 +955,9 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         @NameInMap("apply_time")
         public String applyTime;
 
+        @NameInMap("attributes")
+        public FlightModifyOrderDetailV2ResponseBodyModuleAttributes attributes;
+
         /**
          * <strong>example:</strong>
          * <p><a href="mailto:17635462345@163.com">17635462345@163.com</a></p>
@@ -931,6 +1071,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
         public String getApplyTime() {
             return this.applyTime;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModule setAttributes(FlightModifyOrderDetailV2ResponseBodyModuleAttributes attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public FlightModifyOrderDetailV2ResponseBodyModuleAttributes getAttributes() {
+            return this.attributes;
         }
 
         public FlightModifyOrderDetailV2ResponseBodyModule setBookUserEmail(String bookUserEmail) {

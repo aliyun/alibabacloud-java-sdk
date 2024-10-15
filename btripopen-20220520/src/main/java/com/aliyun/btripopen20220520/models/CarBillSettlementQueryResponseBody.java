@@ -150,6 +150,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("billing_entity")
+        public String billingEntity;
+
         @NameInMap("book_model")
         public String bookModel;
 
@@ -354,6 +357,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("remark")
         public String remark;
+
+        @NameInMap("scene_id")
+        public String sceneId;
+
+        @NameInMap("scene_name")
+        public String sceneName;
 
         /**
          * <strong>example:</strong>
@@ -561,6 +570,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setBillingEntity(String billingEntity) {
+            this.billingEntity = billingEntity;
+            return this;
+        }
+        public String getBillingEntity() {
+            return this.billingEntity;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setBookModel(String bookModel) {
@@ -905,6 +922,22 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setSceneId(String sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setSceneName(String sceneName) {
+            this.sceneName = sceneName;
+            return this;
+        }
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setServiceFee(Double serviceFee) {

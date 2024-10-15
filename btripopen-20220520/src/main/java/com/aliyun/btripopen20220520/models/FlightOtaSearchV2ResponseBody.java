@@ -1123,6 +1123,9 @@ public class FlightOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("shopping_item_map")
         public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValue> shoppingItemMap;
 
+        @NameInMap("tag")
+        public String tag;
+
         /**
          * <strong>example:</strong>
          * <p>07df0bd9-f803-4a50-8449-f4bd675d9939</p>
@@ -1141,6 +1144,14 @@ public class FlightOtaSearchV2ResponseBody extends TeaModel {
         }
         public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValue> getShoppingItemMap() {
             return this.shoppingItemMap;
+        }
+
+        public FlightOtaSearchV2ResponseBodyModuleItemListSubItems setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
         public FlightOtaSearchV2ResponseBodyModuleItemListSubItems setUniqKey(String uniqKey) {

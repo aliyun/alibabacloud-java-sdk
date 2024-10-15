@@ -177,6 +177,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("business_trip_result")
         public String businessTripResult;
 
+        @NameInMap("cabin_max_price")
+        public Double cabinMaxPrice;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -275,6 +278,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("is_transfer_order")
         public String isTransferOrder;
 
+        @NameInMap("max_cabin")
+        public String maxCabin;
+
         /**
          * <strong>example:</strong>
          * <p>23432692343243432</p>
@@ -346,6 +352,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("run_time")
         public String runTime;
+
+        @NameInMap("scene_id")
+        public String sceneId;
+
+        @NameInMap("scene_name")
+        public String sceneName;
 
         /**
          * <strong>example:</strong>
@@ -615,6 +627,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.businessTripResult;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setCabinMaxPrice(Double cabinMaxPrice) {
+            this.cabinMaxPrice = cabinMaxPrice;
+            return this;
+        }
+        public Double getCabinMaxPrice() {
+            return this.cabinMaxPrice;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setCapitalDirection(String capitalDirection) {
             this.capitalDirection = capitalDirection;
             return this;
@@ -791,6 +811,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.isTransferOrder;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setMaxCabin(String maxCabin) {
+            this.maxCabin = maxCabin;
+            return this;
+        }
+        public String getMaxCabin() {
+            return this.maxCabin;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setOrderId(String orderId) {
             this.orderId = orderId;
             return this;
@@ -917,6 +945,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getRunTime() {
             return this.runTime;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setSceneId(String sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setSceneName(String sceneName) {
+            this.sceneName = sceneName;
+            return this;
+        }
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setSeatNo(String seatNo) {

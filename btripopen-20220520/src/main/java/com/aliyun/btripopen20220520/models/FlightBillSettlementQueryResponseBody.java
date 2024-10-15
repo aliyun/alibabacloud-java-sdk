@@ -473,6 +473,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("project_name")
         public String projectName;
 
+        @NameInMap("refund_affiliate_no")
+        public String refundAffiliateNo;
+
+        @NameInMap("refund_apply_id")
+        public String refundApplyId;
+
         /**
          * <strong>example:</strong>
          * <p>23.9</p>
@@ -495,6 +501,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("repeat_refund")
         public String repeatRefund;
+
+        @NameInMap("scene_id")
+        public String sceneId;
+
+        @NameInMap("scene_name")
+        public String sceneName;
 
         /**
          * <strong>example:</strong>
@@ -1197,6 +1209,22 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.projectName;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setRefundAffiliateNo(String refundAffiliateNo) {
+            this.refundAffiliateNo = refundAffiliateNo;
+            return this;
+        }
+        public String getRefundAffiliateNo() {
+            return this.refundAffiliateNo;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setRefundApplyId(String refundApplyId) {
+            this.refundApplyId = refundApplyId;
+            return this;
+        }
+        public String getRefundApplyId() {
+            return this.refundApplyId;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setRefundFee(Double refundFee) {
             this.refundFee = refundFee;
             return this;
@@ -1235,6 +1263,22 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getRepeatRefund() {
             return this.repeatRefund;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setSceneId(String sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setSceneName(String sceneName) {
+            this.sceneName = sceneName;
+            return this;
+        }
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setSealPrice(Double sealPrice) {

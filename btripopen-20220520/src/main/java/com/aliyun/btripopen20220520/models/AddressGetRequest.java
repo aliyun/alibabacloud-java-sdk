@@ -38,6 +38,9 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("itinerary_id")
     public String itineraryId;
 
+    @NameInMap("middle_page")
+    public Integer middlePage;
+
     @NameInMap("order_Id")
     public String orderId;
 
@@ -53,6 +56,9 @@ public class AddressGetRequest extends TeaModel {
      */
     @NameInMap("taobao_callback_url")
     public String taobaoCallbackUrl;
+
+    @NameInMap("thirdpart_apply_id")
+    public String thirdpartApplyId;
 
     @NameInMap("traveler_id")
     public String travelerId;
@@ -142,6 +148,14 @@ public class AddressGetRequest extends TeaModel {
         return this.itineraryId;
     }
 
+    public AddressGetRequest setMiddlePage(Integer middlePage) {
+        this.middlePage = middlePage;
+        return this;
+    }
+    public Integer getMiddlePage() {
+        return this.middlePage;
+    }
+
     public AddressGetRequest setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -172,6 +186,14 @@ public class AddressGetRequest extends TeaModel {
     }
     public String getTaobaoCallbackUrl() {
         return this.taobaoCallbackUrl;
+    }
+
+    public AddressGetRequest setThirdpartApplyId(String thirdpartApplyId) {
+        this.thirdpartApplyId = thirdpartApplyId;
+        return this;
+    }
+    public String getThirdpartApplyId() {
+        return this.thirdpartApplyId;
     }
 
     public AddressGetRequest setTravelerId(String travelerId) {

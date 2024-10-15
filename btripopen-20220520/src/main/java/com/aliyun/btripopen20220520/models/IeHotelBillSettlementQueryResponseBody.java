@@ -365,6 +365,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("order_type")
         public String orderType;
 
+        @NameInMap("original_reserve_rule")
+        public String originalReserveRule;
+
         /**
          * <strong>example:</strong>
          * <p>534545345</p>
@@ -974,6 +977,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOrderType() {
             return this.orderType;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setOriginalReserveRule(String originalReserveRule) {
+            this.originalReserveRule = originalReserveRule;
+            return this;
+        }
+        public String getOriginalReserveRule() {
+            return this.originalReserveRule;
         }
 
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setOverApplyId(String overApplyId) {
