@@ -6,54 +6,76 @@ import com.aliyun.tea.*;
 public class QueryRobotTaskListResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The robocall tasks, in the JSON format.</p>
-     * <br>
-     * <p>*   **id**: the unique ID of the robocall task.</p>
-     * <p>*   **taskName**: the task name.</p>
-     * <p>*   **robotId**: the robot ID.</p>
-     * <p>*   **robotName**: the robot name.</p>
-     * <p>*   **status**: the task state.</p>
-     * <p>*   **scheduleType**: the scheduling type. Valid values: **SINGLE** and **ORDER**. The value SINGLE indicates that the task was started immediately after it was created. The value ORDER indicates that the task was started at a scheduled time.</p>
-     * <p>*   **createTime**: the time when the task was created, in the yyyy.MM.dd HH:mm:ss format.</p>
-     * <p>*   **completeTime**: the time when the task was completed, in the yyyy.MM.dd HH:mm:ss format.</p>
-     * <p>*   **fireTime**: the time when the task was started, in the yyyy.MM.dd HH:mm:ss format.</p>
-     * <p>*   **totalCount**: the total number of calls processed.</p>
-     * <p>*   **finishCount**: the number of calls completed.</p>
+     * <ul>
+     * <li><strong>id</strong>: the unique ID of the robocall task.</li>
+     * <li><strong>taskName</strong>: the task name.</li>
+     * <li><strong>robotId</strong>: the robot ID.</li>
+     * <li><strong>robotName</strong>: the robot name.</li>
+     * <li><strong>status</strong>: the task state.</li>
+     * <li><strong>scheduleType</strong>: the scheduling type. Valid values: <strong>SINGLE</strong> and <strong>ORDER</strong>. The value SINGLE indicates that the task was started immediately after it was created. The value ORDER indicates that the task was started at a scheduled time.</li>
+     * <li><strong>createTime</strong>: the time when the task was created, in the yyyy.MM.dd HH:mm:ss format.</li>
+     * <li><strong>completeTime</strong>: the time when the task was completed, in the yyyy.MM.dd HH:mm:ss format.</li>
+     * <li><strong>fireTime</strong>: the time when the task was started, in the yyyy.MM.dd HH:mm:ss format.</li>
+     * <li><strong>totalCount</strong>: the total number of calls processed.</li>
+     * <li><strong>finishCount</strong>: the number of calls completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[ {&quot;id&quot;: 1045001, &quot;taskName&quot;: &quot;Test Template&quot;, &quot;robotId&quot;: 1000000075003, &quot;robotName&quot;: &quot;robot&quot;, &quot;status&quot;: &quot;INIT&quot;,&quot;scheduleType&quot;: &quot;SINGLE&quot;, &quot;createTime&quot;: &quot;2019.06.14 14:55:23&quot;, &quot;completeTime&quot;: &quot;2019.06.14 14:55:23&quot;, &quot;fireTime&quot;: &quot;2019.06.14 14:55:23&quot;, &quot;totalCount&quot;: 1000, &quot;finishCount&quot;: 998} ]</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;

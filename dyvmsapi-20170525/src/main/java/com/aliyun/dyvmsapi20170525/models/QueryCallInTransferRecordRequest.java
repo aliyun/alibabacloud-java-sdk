@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryCallInTransferRecordRequest extends TeaModel {
     /**
      * <p>The calling number of the inbound call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150****0000</p>
      */
     @NameInMap("CallInCaller")
     public String callInCaller;
@@ -14,27 +17,44 @@ public class QueryCallInTransferRecordRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 10.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The phone number to which a call is transferred.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>The time at which call transfer records are queried, in the YYYY-MM-DD hh:mm:ss format.</p>
-     * <br>
-     * <p>> The query result is all the call transfer records of the specified day.</p>
+     * <blockquote>
+     * <p>The query result is all the call transfer records of the specified day.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-28 00:00:00</p>
      */
     @NameInMap("QueryDate")
     public String queryDate;

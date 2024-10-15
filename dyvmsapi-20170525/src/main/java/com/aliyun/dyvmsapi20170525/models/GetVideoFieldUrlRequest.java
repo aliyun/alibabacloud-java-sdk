@@ -13,6 +13,10 @@ public class GetVideoFieldUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("VideoFile")
     public String videoFile;
 

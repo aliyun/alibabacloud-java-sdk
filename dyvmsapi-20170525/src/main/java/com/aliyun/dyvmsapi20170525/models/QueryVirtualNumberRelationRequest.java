@@ -9,44 +9,64 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The virtual number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05516214****</p>
      */
     @NameInMap("PhoneNum")
     public String phoneNum;
 
     /**
-     * <p>The service name. Default value: **dyvms**.</p>
+     * <p>The service name. Default value: <strong>dyvms</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dyvms</p>
      */
     @NameInMap("ProdCode")
     public String prodCode;
 
     /**
      * <p>The qualification ID.</p>
-     * <br>
-     * <p>You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Qualifications\&Communication Scripts > Qualification Management**, and then click **Details** in the Actions column to view the qualification ID.</p>
+     * <p>You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a>, choose <strong>Qualifications\&amp;Communication Scripts &gt; Qualification Management</strong>, and then click <strong>Details</strong> in the Actions column to view the qualification ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000000542****</p>
      */
     @NameInMap("QualificationId")
     public Long qualificationId;
 
     /**
      * <p>The city to which the virtual number belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hangzhou</p>
      */
     @NameInMap("RegionNameCity")
     public String regionNameCity;
 
     /**
      * <p>The real number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1705559****</p>
      */
     @NameInMap("RelatedNum")
     public String relatedNum;
@@ -59,18 +79,24 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
 
     /**
      * <p>The route type. Valid values:</p>
-     * <br>
-     * <p>**0**: number location first. **1**: random.</p>
+     * <p><strong>0</strong>: number location first. <strong>1</strong>: random.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RouteType")
     public Integer routeType;
 
     /**
      * <p>The number type. Valid values:</p>
-     * <br>
-     * <p>*   **1**: the number provided by a virtual network operator, in the 05710000\*\*\*\* format.</p>
-     * <p>*   **2**: the number provided by an Internet service provider (ISP).</p>
-     * <p>*   **3**: a 5-digit phone number that starts with 95.</p>
+     * <ul>
+     * <li><strong>1</strong>: the number provided by a virtual network operator, in the 05710000\<em>\</em>\<em>\</em> format.</li>
+     * <li><strong>2</strong>: the number provided by an Internet service provider (ISP).</li>
+     * <li><strong>3</strong>: a 5-digit phone number that starts with 95.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SpecId")
     public Long specId;

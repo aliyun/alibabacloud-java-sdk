@@ -13,6 +13,12 @@ public class GetTemporaryFileUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45a04670582571eebf9e4531948c****</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

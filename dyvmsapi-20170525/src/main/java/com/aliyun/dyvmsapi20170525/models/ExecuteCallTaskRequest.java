@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ExecuteCallTaskRequest extends TeaModel {
     /**
      * <p>The time when the call task is executed, in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <br>
-     * <p>> You can leave this parameter empty.</p>
+     * <blockquote>
+     * <p>You can leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-09 00:00:00</p>
      */
     @NameInMap("FireTime")
     public String fireTime;
@@ -23,16 +27,25 @@ public class ExecuteCallTaskRequest extends TeaModel {
 
     /**
      * <p>The task state. Valid values:</p>
-     * <br>
-     * <p>*   **RUNNING**</p>
-     * <p>*   **STOP**</p>
-     * <p>*   **CANCEL**</p>
+     * <ul>
+     * <li><strong>RUNNING</strong></li>
+     * <li><strong>STOP</strong></li>
+     * <li><strong>CANCEL</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The task ID. You can call the [CreateCallTask](~~CreateCallTask~~) operation to obtain the task ID.</p>
+     * <p>The task ID. You can call the <a href="~~CreateCallTask~~">CreateCallTask</a> operation to obtain the task ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2256****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

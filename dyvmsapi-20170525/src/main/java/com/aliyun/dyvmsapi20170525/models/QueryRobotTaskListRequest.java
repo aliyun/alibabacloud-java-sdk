@@ -9,12 +9,18 @@ public class QueryRobotTaskListRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -27,29 +33,39 @@ public class QueryRobotTaskListRequest extends TeaModel {
 
     /**
      * <p>The task state. Valid values:</p>
-     * <br>
-     * <p>*   **INIT**: The task is not started.</p>
-     * <p>*   **READY**: The task is ready to start.</p>
-     * <p>*   **DISPATCH**: The task is being parsed.</p>
-     * <p>*   **EXCUTING**: The task is being executed.</p>
-     * <p>*   **MANUAL_STOP**: The task is manually suspended.</p>
-     * <p>*   **SYSTEM_STOP**: The task is suspended by the system.</p>
-     * <p>*   **ARREARS_STOP**: The task is suspended due to overdue payments.</p>
-     * <p>*   **CANCEL**: The task is manually canceled.</p>
-     * <p>*   **SYSTEM_CANCEL**: The task is canceled by the system.</p>
-     * <p>*   **FINISH**: The task is complete.</p>
+     * <ul>
+     * <li><strong>INIT</strong>: The task is not started.</li>
+     * <li><strong>READY</strong>: The task is ready to start.</li>
+     * <li><strong>DISPATCH</strong>: The task is being parsed.</li>
+     * <li><strong>EXCUTING</strong>: The task is being executed.</li>
+     * <li><strong>MANUAL_STOP</strong>: The task is manually suspended.</li>
+     * <li><strong>SYSTEM_STOP</strong>: The task is suspended by the system.</li>
+     * <li><strong>ARREARS_STOP</strong>: The task is suspended due to overdue payments.</li>
+     * <li><strong>CANCEL</strong>: The task is manually canceled.</li>
+     * <li><strong>SYSTEM_CANCEL</strong>: The task is canceled by the system.</li>
+     * <li><strong>FINISH</strong>: The task is complete.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EXCUTING</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test Template</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The date when the task is created, in the yyyy-MM-dd format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-14</p>
      */
     @NameInMap("Time")
     public String time;

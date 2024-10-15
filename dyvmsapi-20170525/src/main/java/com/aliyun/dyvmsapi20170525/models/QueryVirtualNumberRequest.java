@@ -9,18 +9,27 @@ public class QueryVirtualNumberRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The service name. Default value: **dyvms**.</p>
+     * <p>The service name. Default value: <strong>dyvms</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dyvms</p>
      */
     @NameInMap("ProdCode")
     public String prodCode;
@@ -33,9 +42,13 @@ public class QueryVirtualNumberRequest extends TeaModel {
 
     /**
      * <p>The route type. Valid values:</p>
-     * <br>
-     * <p>*   **0**: number location first.</p>
-     * <p>*   **1**: random.</p>
+     * <ul>
+     * <li><strong>0</strong>: number location first.</li>
+     * <li><strong>1</strong>: random.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RouteType")
     public Integer routeType;

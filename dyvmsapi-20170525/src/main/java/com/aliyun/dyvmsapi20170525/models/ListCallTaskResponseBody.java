@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListCallTaskResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,24 +21,36 @@ public class ListCallTaskResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B0F201F-DCDA-45C2-AA92-1AE177F94991</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -96,103 +111,150 @@ public class ListCallTaskResponseBody extends TeaModel {
     public static class ListCallTaskResponseBodyData extends TeaModel {
         /**
          * <p>The type of the task template. Valid values:</p>
-         * <br>
-         * <p>*   **VMS_VOICE_TTS**: the TTS notification template.</p>
-         * <p>*   **VMS_VOICE_CODE**: the voice notification template.</p>
-         * <p>*   **VMS_TTS**: the voice verification code template.</p>
+         * <ul>
+         * <li><strong>VMS_VOICE_TTS</strong>: the TTS notification template.</li>
+         * <li><strong>VMS_VOICE_CODE</strong>: the voice notification template.</li>
+         * <li><strong>VMS_TTS</strong>: the voice verification code template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VMS_VOICE_TTS</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The time when the task was completed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614330986000</p>
          */
         @NameInMap("CompleteTime")
         public String completeTime;
 
         /**
          * <p>The number of tasks that were complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CompletedCount")
         public Long completedCount;
 
         /**
          * <p>The task progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26%</p>
          */
         @NameInMap("CompletedRate")
         public Integer completedRate;
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Data")
         public String data;
 
         /**
          * <p>The type of the called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LIST</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The time when the scheduled task was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614330978000</p>
          */
         @NameInMap("FireTime")
         public String fireTime;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123879546214</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571000****</p>
          */
         @NameInMap("Resource")
         public String resource;
 
         /**
          * <p>The task state. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task was in the initial state.</p>
-         * <p>*   **RELEASE**: The task was being parsed.</p>
-         * <p>*   **RUNNING**: The task was running.</p>
-         * <p>*   **STOP**: The task was manually suspended.</p>
-         * <p>*   **SYSTEM_STOP**: The task was suspended by the system.</p>
-         * <p>*   **CANCEL**: The task was manually canceled.</p>
-         * <p>*   **SYSTEM_CANCEL**: The task was canceled by the system.</p>
-         * <p>*   **DONE**: The task was complete.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task was in the initial state.</li>
+         * <li><strong>RELEASE</strong>: The task was being parsed.</li>
+         * <li><strong>RUNNING</strong>: The task was running.</li>
+         * <li><strong>STOP</strong>: The task was manually suspended.</li>
+         * <li><strong>SYSTEM_STOP</strong>: The task was suspended by the system.</li>
+         * <li><strong>CANCEL</strong>: The task was manually canceled.</li>
+         * <li><strong>SYSTEM_CANCEL</strong>: The task was canceled by the system.</li>
+         * <li><strong>DONE</strong>: The task was complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DONE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StopTime")
         public String stopTime;
 
         /**
          * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The ID of the voice template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TTS_2100****</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Template</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The total number of called numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

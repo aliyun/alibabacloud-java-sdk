@@ -6,46 +6,64 @@ import com.aliyun.tea.*;
 public class BatchRobotSmartCallRequest extends TeaModel {
     /**
      * <p>The called number. Only mobile phone numbers in the Chinese mainland are supported.</p>
-     * <br>
      * <p>You can set up to 1,000 called numbers and separate the numbers with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
     /**
-     * <p>The number displayed to called parties, which must be a number you purchased. You can view the numbers you purchased in the [Voice Messaging Service console](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal).</p>
-     * <br>
+     * <p>The number displayed to called parties, which must be a number you purchased. You can view the numbers you purchased in the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/number/normal">Voice Messaging Service console</a>.</p>
      * <p>You can set up to 100 numbers and separate the numbers with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>222</p>
      */
     @NameInMap("CalledShowNumber")
     public String calledShowNumber;
 
     /**
-     * <p>The company name, which must be the same as the **company name** specified on the [qualification management page](https://dyvms.console.aliyun.com/dyvms.htm#/corp/normal).</p>
-     * <br>
-     * <p>> This parameter is optional if **isSelfLine** is set to **true**.</p>
+     * <p>The company name, which must be the same as the <strong>company name</strong> specified on the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/corp/normal">qualification management page</a>.</p>
+     * <blockquote>
+     * <p>This parameter is optional if <strong>isSelfLine</strong> is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba</p>
      */
     @NameInMap("CorpName")
     public String corpName;
 
     /**
      * <p>The ID of the robot or communication script that is used to initiate a call.</p>
-     * <br>
-     * <p>You can obtain the **communication script ID** from the [Communication script management](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list) page.</p>
+     * <p>You can obtain the <strong>communication script ID</strong> from the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list">Communication script management</a> page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567</p>
      */
     @NameInMap("DialogId")
     public String dialogId;
 
     /**
-     * <p>The speech recognition identifier of early media. The default value is **false**, which means that the speech recognition identifier of early media is not enabled.</p>
-     * <br>
-     * <p>Set the parameter to **true** if you want to enable the speech recognition identifier of early media.</p>
+     * <p>The speech recognition identifier of early media. The default value is <strong>false</strong>, which means that the speech recognition identifier of early media is not enabled.</p>
+     * <p>Set the parameter to <strong>true</strong> if you want to enable the speech recognition identifier of early media.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EarlyMediaAsr")
     public Boolean earlyMediaAsr;
 
     /**
-     * <p>Specifies whether to call the self-managed line. Default value: **false**.</p>
+     * <p>Specifies whether to call the self-managed line. Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSelfLine")
     public Boolean isSelfLine;
@@ -60,37 +78,52 @@ public class BatchRobotSmartCallRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether the call is scheduled. If you set this parameter to **true**, the **ScheduleTime** parameter is required.</p>
+     * <p>Specifies whether the call is scheduled. If you set this parameter to <strong>true</strong>, the <strong>ScheduleTime</strong> parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ScheduleCall")
     public Boolean scheduleCall;
 
     /**
      * <p>The preset call time. This value is a UNIX timestamp. Unit: milliseconds.</p>
-     * <br>
-     * <p>>  This parameter is required only when **ScheduleCall** is set to **true**.</p>
+     * <blockquote>
+     * <p> This parameter is required only when <strong>ScheduleCall</strong> is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("ScheduleTime")
     public Long scheduleTime;
 
     /**
      * <p>The task name. The task name can be up to 30 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Batch Tasks</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The variable value of the TTS template, in the JSON format.</p>
-     * <br>
      * <p>The variable value must correspond to a number. The TtsParam parameter must be used together with the TtsParamHead parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;number&quot;:&quot;1390000****&quot;,&quot;params&quot;:[“Miss li”,&quot;miss wang&quot;,&quot;Mr.li&quot;]}]</p>
      */
     @NameInMap("TtsParam")
     public String ttsParam;
 
     /**
      * <p>The call tasks with variables, in the JSON format.</p>
-     * <br>
      * <p>The parameter value is a list of variable names. The TtsParamHead parameter must be used together with the TtsParam parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;name1&quot;,&quot;name2&quot;,&quot;name3&quot;]</p>
      */
     @NameInMap("TtsParamHead")
     public String ttsParamHead;

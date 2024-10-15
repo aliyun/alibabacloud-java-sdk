@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class QueryRobotInfoListRequest extends TeaModel {
     /**
      * <p>The review state. Valid values:</p>
-     * <br>
-     * <p>*   **CONFIGURABLE**</p>
-     * <p>*   **AUDITING**</p>
-     * <p>*   **AUDITPASS**</p>
-     * <p>*   **AUDITFAIL**</p>
+     * <ul>
+     * <li><strong>CONFIGURABLE</strong></li>
+     * <li><strong>AUDITING</strong></li>
+     * <li><strong>AUDITPASS</strong></li>
+     * <li><strong>AUDITFAIL</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AUDITING</p>
      */
     @NameInMap("AuditStatus")
     public String auditStatus;

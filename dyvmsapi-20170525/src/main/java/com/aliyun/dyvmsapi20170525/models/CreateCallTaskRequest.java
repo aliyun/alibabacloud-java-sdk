@@ -6,34 +6,49 @@ import com.aliyun.tea.*;
 public class CreateCallTaskRequest extends TeaModel {
     /**
      * <p>The type of the task template. Valid values:</p>
-     * <br>
-     * <p>*   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.</p>
-     * <p>*   **VMS_VOICE_CODE**: the voice notification template.</p>
-     * <p>*   **VMS_TTS**: the voice verification code template.</p>
+     * <ul>
+     * <li><strong>VMS_VOICE_TTS</strong>: the text-to-speech (TTS) notification template.</li>
+     * <li><strong>VMS_VOICE_CODE</strong>: the voice notification template.</li>
+     * <li><strong>VMS_TTS</strong>: the voice verification code template.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VMS_VOICE_TTS</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
     /**
      * <p>The called numbers.</p>
-     * <br>
-     * <p>*   If you set DataType to LIST, the value of Data is in the LIST format.</p>
-     * <p>*   If you set DataType to JSON, the value of Data is in the JSON format.</p>
+     * <ul>
+     * <li>If you set DataType to LIST, the value of Data is in the LIST format.</li>
+     * <li>If you set DataType to JSON, the value of Data is in the JSON format.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;paramNames&quot;:[&quot;name1&quot;,&quot;name2&quot;,&quot;key3&quot;], &quot;calleeList&quot;:[ { &quot;callee&quot;:&quot;131222222&quot;, &quot;params&quot;:[&quot;zangsan&quot;,&quot;zhangsan01&quot;,&quot;zhangsan02&quot;] }, { &quot;callee&quot;:&quot;131222222&quot;, &quot;params&quot;:[&quot;zangsan&quot;,&quot;zhangsan01&quot;,&quot;zhangsan02&quot;] }, ] }</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The type of called numbers. Valid values:</p>
-     * <br>
-     * <p>*   **LIST**: the called numbers that are separated by commas (,).</p>
-     * <p>*   **JSON**: a JSON-formatted list of called numbers with template parameters.</p>
+     * <ul>
+     * <li><strong>LIST</strong>: the called numbers that are separated by commas (,).</li>
+     * <li><strong>JSON</strong>: a JSON-formatted list of called numbers with template parameters.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>JSON</p>
      */
     @NameInMap("DataType")
     public String dataType;
 
     /**
      * <p>This parameter is unavailable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FireTime")
     public String fireTime;
@@ -43,6 +58,9 @@ public class CreateCallTaskRequest extends TeaModel {
 
     /**
      * <p>The calling number. Only virtual numbers are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05516214****</p>
      */
     @NameInMap("Resource")
     public String resource;
@@ -54,37 +72,55 @@ public class CreateCallTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the calling number. Set the value to **LIST**.</p>
+     * <p>The type of the calling number. Set the value to <strong>LIST</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LIST</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>This parameter is unavailable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScheduleType")
     public String scheduleType;
 
     /**
      * <p>This parameter is unavailable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("StopTime")
     public String stopTime;
 
     /**
      * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TTS_2122****</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
      * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test Template</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

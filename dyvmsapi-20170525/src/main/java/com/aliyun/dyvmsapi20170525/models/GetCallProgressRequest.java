@@ -4,9 +4,19 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetCallProgressRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("CalledNum")
     public String calledNum;
 

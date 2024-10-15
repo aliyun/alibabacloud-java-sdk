@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6086693B-2250-17CE-A41F-06259AB6DB1B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,54 +81,81 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
     public static class ListHotlineTransferRegisterFileResponseBodyDataValues extends TeaModel {
         /**
          * <p>The authenticity of the commitment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Agree")
         public String agree;
 
         /**
          * <p>The enterprise name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A**</p>
          */
         @NameInMap("CorpName")
         public String corpName;
 
         /**
          * <p>The China 400 number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400****</p>
          */
         @NameInMap("HotlineNumber")
         public String hotlineNumber;
 
         /**
          * <p>The ID card number of the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5****************9</p>
          */
         @NameInMap("MngOpIdentityCard")
         public String mngOpIdentityCard;
 
         /**
          * <p>The email address of the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         @NameInMap("MngOpMail")
         public String mngOpMail;
 
         /**
          * <p>The mobile phone number of the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         @NameInMap("MngOpMobile")
         public String mngOpMobile;
 
         /**
          * <p>The name of the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A***</p>
          */
         @NameInMap("MngOpName")
         public String mngOpName;
 
         /**
          * <p>The qualification ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         @NameInMap("QualificationId")
         public String qualificationId;
 
         /**
          * <p>The unique code of the query operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResUniqueCode")
         public Long resUniqueCode;
@@ -205,18 +242,27 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
     public static class ListHotlineTransferRegisterFileResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

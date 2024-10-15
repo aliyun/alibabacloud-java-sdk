@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListHotlineTransferNumberResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6086693B-2250-17CE-A41F-06259AB6DB1B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,36 +81,54 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
     public static class ListHotlineTransferNumberResponseBodyDataValues extends TeaModel {
         /**
          * <p>The China 400 number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400****</p>
          */
         @NameInMap("HotlineNumber")
         public String hotlineNumber;
 
         /**
          * <p>The ID card number of the number owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500***4119</p>
          */
         @NameInMap("IdentityCard")
         public String identityCard;
 
         /**
          * <p>The real name of the number owner or the company name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A***</p>
          */
         @NameInMap("NumberOwnerName")
         public String numberOwnerName;
 
         /**
          * <p>The registered phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1580000****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
          * <p>The qualification ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100***</p>
          */
         @NameInMap("QualificationId")
         public String qualificationId;
 
         /**
          * <p>The resource code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1***</p>
          */
         @NameInMap("ResUniqueCode")
         public String resUniqueCode;
@@ -163,18 +191,27 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
     public static class ListHotlineTransferNumberResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

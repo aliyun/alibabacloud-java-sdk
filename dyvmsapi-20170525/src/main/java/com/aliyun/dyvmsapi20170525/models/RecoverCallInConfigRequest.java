@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class RecoverCallInConfigRequest extends TeaModel {
     /**
      * <p>The China 400 number that is used to transfer the inbound call.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400***</p>
      */
     @NameInMap("Number")
     public String number;

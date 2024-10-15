@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class SingleCallByTtsRequest extends TeaModel {
     /**
      * <p>The mobile phone number that receives voice notifications.</p>
-     * <br>
-     * <p>*   Number format in the Chinese mainland:</p>
-     * <br>
-     * <p>    *   Mobile phone number, for example, 159\*\*\*\*0000.</p>
-     * <p>    *   Landline number, for example, 0571\*\*\*\*5678.</p>
-     * <br>
-     * <p>*   Number format outside the Chinese mainland: country code + phone number, for example, 85200\*\*\*\*00.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Each request supports only one called number. For more information, see [How to use voice notifications in the Chinese mainland](~~150016~~) or [How to use voice verification codes in regions outside the Chinese mainland](~~270044~~).</p>
-     * <br>
-     * <p>*   Voice verification codes are sent to a called number at the following frequency: one time per minute, five times per hour, and 20 times per 24 hours.</p>
+     * <ul>
+     * <li><p>Number format in the Chinese mainland:</p>
+     * <ul>
+     * <li>Mobile phone number, for example, 159\<em>\</em>\*\*0000.</li>
+     * <li>Landline number, for example, 0571\<em>\</em>\*\*5678.</li>
+     * </ul>
+     * </li>
+     * <li><p>Number format outside the Chinese mainland: country code + phone number, for example, 85200\<em>\</em>\*\*00.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Each request supports only one called number. For more information, see <a href="https://help.aliyun.com/document_detail/150016.html">How to use voice notifications in the Chinese mainland</a> or <a href="https://help.aliyun.com/document_detail/270044.html">How to use voice verification codes in regions outside the Chinese mainland</a>.</p>
+     * </li>
+     * <li><p>Voice verification codes are sent to a called number at the following frequency: one time per minute, five times per hour, and 20 times per 24 hours.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1590****000</p>
      */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
     /**
      * <p>The number displayed to the called party.</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter if you use the text-to-speech (TTS) notification template or voice verification code template for outbound calls in the common mode. For more information, see [FAQ about the common outbound call mode](~~172104~~).</p>
-     * <p>*   If you use the TTS notification template or voice verification code template for outbound calls in the dedicated mode, you must specify a number you purchased and only one number can be specified. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Voice Numbers** > **Real Number Management** to view the number you purchased.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter if you use the text-to-speech (TTS) notification template or voice verification code template for outbound calls in the common mode. For more information, see <a href="https://help.aliyun.com/document_detail/172104.html">FAQ about the common outbound call mode</a>.</li>
+     * <li>If you use the TTS notification template or voice verification code template for outbound calls in the dedicated mode, you must specify a number you purchased and only one number can be specified. You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a> and choose <strong>Voice Numbers</strong> &gt; <strong>Real Number Management</strong> to view the number you purchased.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0571****5678</p>
      */
     @NameInMap("CalledShowNumber")
     public String calledShowNumber;
 
     /**
      * <p>The custom ID that is reserved for the caller of the operation when the request is initiated. This ID is returned to the caller in a receipt message.</p>
-     * <br>
      * <p>The value is of the STRING type and must be 1 to 15 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>225869*****</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -45,6 +60,9 @@ public class SingleCallByTtsRequest extends TeaModel {
 
     /**
      * <p>The number of times a voice notification is played back in a call. Valid values: 1 to 3. Default value: 3.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("PlayTimes")
     public Integer playTimes;
@@ -57,30 +75,44 @@ public class SingleCallByTtsRequest extends TeaModel {
 
     /**
      * <p>The playback speed. Valid value: -500 to 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Speed")
     public Integer speed;
 
     /**
      * <p>The ID of the approved TTS notification template or voice verification code template.</p>
-     * <br>
-     * <p>You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), and choose **Voice Messages** > **Voice Verification Codes** or choose **Voice Messages** > **Voice Notifications** to view the **template ID**.</p>
-     * <br>
-     * <p>> The account to which the TTS template belongs must be the same as the account that is used to call the SingleCallByTts operation.</p>
+     * <p>You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a>, and choose <strong>Voice Messages</strong> &gt; <strong>Voice Verification Codes</strong> or choose <strong>Voice Messages</strong> &gt; <strong>Voice Notifications</strong> to view the <strong>template ID</strong>.</p>
+     * <blockquote>
+     * <p>The account to which the TTS template belongs must be the same as the account that is used to call the SingleCallByTts operation.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TTS_100****</p>
      */
     @NameInMap("TtsCode")
     public String ttsCode;
 
     /**
      * <p>The variables in the template, in the JSON format.</p>
-     * <br>
-     * <p>> The variables in the template must be less than 250 characters in length. The length of each single variable is not limited. These variables do not support URLs. The variables in the verification code template support only digits and letters.</p>
+     * <blockquote>
+     * <p>The variables in the template must be less than 250 characters in length. The length of each single variable is not limited. These variables do not support URLs. The variables in the verification code template support only digits and letters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AckNum&quot;:&quot;123456&quot;}</p>
      */
     @NameInMap("TtsParam")
     public String ttsParam;
 
     /**
      * <p>The playback volume of the voice notification. Valid values: 0 to 100. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Volume")
     public Integer volume;

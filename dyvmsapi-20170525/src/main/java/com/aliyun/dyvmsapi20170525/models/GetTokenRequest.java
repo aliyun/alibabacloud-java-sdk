@@ -15,6 +15,9 @@ public class GetTokenRequest extends TeaModel {
 
     /**
      * <p>The token type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dyvms</p>
      */
     @NameInMap("TokenType")
     public String tokenType;

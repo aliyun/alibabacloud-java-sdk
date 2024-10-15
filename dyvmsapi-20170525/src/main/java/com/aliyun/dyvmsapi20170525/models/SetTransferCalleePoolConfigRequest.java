@@ -6,15 +6,21 @@ import com.aliyun.tea.*;
 public class SetTransferCalleePoolConfigRequest extends TeaModel {
     /**
      * <p>The call mode. Valid values:</p>
-     * <br>
-     * <p>*   **roundRobin**</p>
-     * <p>*   **random**</p>
+     * <ul>
+     * <li><strong>roundRobin</strong></li>
+     * <li><strong>random</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>roundRobin</p>
      */
     @NameInMap("CalledRouteMode")
     public String calledRouteMode;
 
     /**
      * <p>The information about the phone numbers for transferring the call.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Details")
     public java.util.List<SetTransferCalleePoolConfigRequestDetails> details;
@@ -24,12 +30,20 @@ public class SetTransferCalleePoolConfigRequest extends TeaModel {
 
     /**
      * <p>The phone number used for transferring the call.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
-     * <p>The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.</p>
+     * <p>The qualification ID. You can call the <a href="https://help.aliyun.com/document_detail/393548.html">GetHotlineQualificationByOrder</a> operation to obtain the qualification ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>190***</p>
      */
     @NameInMap("QualificationId")
     public String qualificationId;
@@ -104,12 +118,19 @@ public class SetTransferCalleePoolConfigRequest extends TeaModel {
     public static class SetTransferCalleePoolConfigRequestDetails extends TeaModel {
         /**
          * <p>The called number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151****0000</p>
          */
         @NameInMap("Called")
         public String called;
 
         /**
          * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         @NameInMap("Caller")
         public String caller;

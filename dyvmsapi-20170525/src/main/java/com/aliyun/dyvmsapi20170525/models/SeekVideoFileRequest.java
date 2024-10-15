@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SeekVideoFileRequest extends TeaModel {
     /**
      * <p>呼叫唯一ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
      */
     @NameInMap("CallId")
     public String callId;
 
     /**
      * <p>被叫号码</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CalledNumber")
     public String calledNumber;
@@ -27,6 +33,9 @@ public class SeekVideoFileRequest extends TeaModel {
 
     /**
      * <p>快进或快退值，负数为快退，单位秒</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92</p>
      */
     @NameInMap("SeekTimes")
     public Long seekTimes;

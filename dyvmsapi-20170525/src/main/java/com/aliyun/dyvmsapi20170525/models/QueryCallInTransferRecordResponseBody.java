@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class QueryCallInTransferRecordResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7BF47617-7851-48F7-A3A1-2021342A78E2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,36 +81,54 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
     public static class QueryCallInTransferRecordResponseBodyDataValues extends TeaModel {
         /**
          * <p>The called number of the inbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         @NameInMap("CallInCalled")
         public String callInCalled;
 
         /**
          * <p>The calling number of the inbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         @NameInMap("CallInCaller")
         public String callInCaller;
 
         /**
          * <p>The time when the call was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-03 10:21:21</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The recording URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://alicom-fc-media.cn-hangzhou.oss.aliyun-inc.com/dayuBizVoiceMrg/4238c230-9e74-41be-90b8-2fbe7684****.wav?Expires=1627538265&OSSAccessKeyId=bypFNbGJVk73****&Signature=****mUqkPqIQ%3D">http://alicom-fc-media.cn-hangzhou.oss.aliyun-inc.com/dayuBizVoiceMrg/4238c230-9e74-41be-90b8-2fbe7684****.wav?Expires=1627538265&amp;OSSAccessKeyId=bypFNbGJVk73****&amp;Signature=****mUqkPqIQ%3D</a></p>
          */
         @NameInMap("RecordUrl")
         public String recordUrl;
 
         /**
          * <p>The phone number to which the call was transferred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151****0000</p>
          */
         @NameInMap("TransferCalled")
         public String transferCalled;
 
         /**
          * <p>The calling number that transferred the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151****0000</p>
          */
         @NameInMap("TransferCaller")
         public String transferCaller;
@@ -163,18 +191,27 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
     public static class QueryCallInTransferRecordResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Total")
         public Long total;

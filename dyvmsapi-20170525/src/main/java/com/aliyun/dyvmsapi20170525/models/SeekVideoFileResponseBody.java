@@ -7,15 +7,27 @@ public class SeekVideoFileResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

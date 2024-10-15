@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class GetHotlineQualificationByOrderRequest extends TeaModel {
     /**
      * <p>The ticket ID.</p>
-     * <br>
-     * <p>You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Qualification\&Communication Script Management** > **Qualification Management**, and then click the **400 Qualifications** tab to view the ticket ID.</p>
+     * <p>You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a>, choose <strong>Qualification\&amp;Communication Script Management</strong> &gt; <strong>Qualification Management</strong>, and then click the <strong>400 Qualifications</strong> tab to view the ticket ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22456****</p>
      */
     @NameInMap("OrderId")
     public String orderId;

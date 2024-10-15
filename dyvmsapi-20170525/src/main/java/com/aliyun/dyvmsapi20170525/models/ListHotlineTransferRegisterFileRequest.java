@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListHotlineTransferRegisterFileRequest extends TeaModel {
     /**
      * <p>The China 400 number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400****</p>
      */
     @NameInMap("HotlineNumber")
     public String hotlineNumber;
@@ -14,19 +18,29 @@ public class ListHotlineTransferRegisterFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.</p>
+     * <p>The qualification ID. You can call the <a href="https://help.aliyun.com/document_detail/393548.html">GetHotlineQualificationByOrder</a> operation to obtain the qualification ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000****</p>
      */
     @NameInMap("QualificationId")
     public String qualificationId;

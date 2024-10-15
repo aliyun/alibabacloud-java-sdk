@@ -4,15 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ChangeMediaTypeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("CalledNum")
     public String calledNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("OutId")
     public String outId;
 

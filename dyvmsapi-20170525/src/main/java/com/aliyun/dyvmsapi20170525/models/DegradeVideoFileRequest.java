@@ -4,15 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DegradeVideoFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>116012354148^1028137841****</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1590****000</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>225869*****</p>
+     */
     @NameInMap("OutId")
     public String outId;
 

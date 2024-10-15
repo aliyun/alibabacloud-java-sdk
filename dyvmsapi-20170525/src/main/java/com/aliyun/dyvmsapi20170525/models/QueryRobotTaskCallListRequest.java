@@ -6,51 +6,74 @@ import com.aliyun.tea.*;
 public class QueryRobotTaskCallListRequest extends TeaModel {
     /**
      * <p>The call result. Valid values:</p>
-     * <br>
-     * <p>*   **200002**: The line is busy.</p>
-     * <p>*   **200005**: The called party cannot be connected.</p>
-     * <p>*   **200010**: The phone of the called party is powered off.</p>
-     * <p>*   **200011**: The called party is out of service.</p>
-     * <p>*   **200012**: The call is lost.</p>
+     * <ul>
+     * <li><strong>200002</strong>: The line is busy.</li>
+     * <li><strong>200005</strong>: The called party cannot be connected.</li>
+     * <li><strong>200010</strong>: The phone of the called party is powered off.</li>
+     * <li><strong>200011</strong>: The called party is out of service.</li>
+     * <li><strong>200012</strong>: The call is lost.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200002</p>
      */
     @NameInMap("CallResult")
     public String callResult;
 
     /**
      * <p>The called number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1300****0000</p>
      */
     @NameInMap("Called")
     public String called;
 
     /**
      * <p>The minimum number of conversation rounds in the call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DialogCountFrom")
     public String dialogCountFrom;
 
     /**
      * <p>The maximum number of conversation rounds in the call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("DialogCountTo")
     public String dialogCountTo;
 
     /**
      * <p>The minimum call duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DurationFrom")
     public String durationFrom;
 
     /**
      * <p>The maximum call duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("DurationTo")
     public String durationTo;
 
     /**
      * <p>The party who hangs up. Valid values:</p>
-     * <br>
-     * <p>*   **0**: the called party.</p>
-     * <p>*   **1**: the robot.</p>
+     * <ul>
+     * <li><strong>0</strong>: the called party.</li>
+     * <li><strong>1</strong>: the robot.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HangupDirection")
     public String hangupDirection;
@@ -60,12 +83,18 @@ public class QueryRobotTaskCallListRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -77,7 +106,11 @@ public class QueryRobotTaskCallListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.</p>
+     * <p>The unique ID of the robocall task. You can call the <a href="https://help.aliyun.com/document_detail/393531.html">CreateRobotTask</a> operation to obtain the task ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1045001****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

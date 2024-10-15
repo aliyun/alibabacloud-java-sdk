@@ -6,14 +6,23 @@ import com.aliyun.tea.*;
 public class UploadRobotTaskCalledFileRequest extends TeaModel {
     /**
      * <p>The called numbers. Separate multiple called numbers with commas (,).</p>
-     * <br>
-     * <p>> After you create a robocall task, you must upload called numbers in batches. You can upload up to 300,000 called numbers for each task.</p>
+     * <blockquote>
+     * <p>After you create a robocall task, you must upload called numbers in batches. You can upload up to 300,000 called numbers for each task.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1370<strong><strong>000,1370</strong></strong>111</p>
      */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
     /**
-     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the ID of the robocall task.</p>
+     * <p>The unique ID of the robocall task. You can call the <a href="~~CreateRobotTask~~">CreateRobotTask</a> operation to obtain the ID of the robocall task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1045****</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -29,15 +38,22 @@ public class UploadRobotTaskCalledFileRequest extends TeaModel {
 
     /**
      * <p>The values of the variable in the text-to-speech (TTS) template, in the JSON format. The variable values specified by the TtsParam parameter must match the variable names specified by the TtsParamHead parameter.</p>
-     * <br>
-     * <p>*   If all the called numbers carry the same variable values, you can set the value of the number field to **all** and upload only one copy of the variable values.</p>
-     * <p>*   If only some of the called numbers carry the same variable values, you can set the value of the number field to **all** for these called numbers and set the value of the number field and variable values for other called numbers based on your business requirements. The system preferentially selects the values that you set for the called numbers.</p>
+     * <ul>
+     * <li>If all the called numbers carry the same variable values, you can set the value of the number field to <strong>all</strong> and upload only one copy of the variable values.</li>
+     * <li>If only some of the called numbers carry the same variable values, you can set the value of the number field to <strong>all</strong> for these called numbers and set the value of the number field and variable values for other called numbers based on your business requirements. The system preferentially selects the values that you set for the called numbers.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;number&quot;:&quot;1370****000&quot;,&quot;params&quot;:[&quot;xiaowang&quot;,&quot;xiaoli&quot;,&quot;xiaozhou&quot;]}]</p>
      */
     @NameInMap("TtsParam")
     public String ttsParam;
 
     /**
      * <p>The list of variable names carried in the robocall task, in the JSON format. The TtsParamHead parameter must be used together with the TtsParam parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;name1&quot;,&quot;name2&quot;,&quot;name3&quot;]</p>
      */
     @NameInMap("TtsParamHead")
     public String ttsParamHead;
