@@ -176,6 +176,9 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         @NameInMap("Error")
         public String error;
 
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         /**
          * <p>The job ID.</p>
          * 
@@ -248,6 +251,14 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
         public String getError() {
             return this.error;
+        }
+
+        public GetUploadDocumentJobResponseBodyJob setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public GetUploadDocumentJobResponseBodyJob setId(String id) {

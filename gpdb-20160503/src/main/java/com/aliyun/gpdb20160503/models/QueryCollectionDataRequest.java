@@ -387,15 +387,31 @@ public class QueryCollectionDataRequest extends TeaModel {
     }
 
     public static class QueryCollectionDataRequestRelationalTableFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>doc_id</p>
+         */
         @NameInMap("CollectionMetadataField")
         public String collectionMetadataField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tags @&gt; ARRAY[\&quot;art\&quot;]</p>
+         */
         @NameInMap("Condition")
         public String condition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("TableField")
         public String tableField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_rds_table</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

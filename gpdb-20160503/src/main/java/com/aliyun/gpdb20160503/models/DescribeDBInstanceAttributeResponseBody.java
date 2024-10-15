@@ -320,6 +320,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceStorage")
         public Long DBInstanceStorage;
 
+        @NameInMap("DeployMode")
+        public String deployMode;
+
         /**
          * <p>The encryption key.</p>
          * <blockquote>
@@ -667,6 +670,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ServerlessResource")
         public Integer serverlessResource;
 
+        @NameInMap("StandbyZoneId")
+        public String standbyZoneId;
+
         /**
          * <p>The time when the instance started to run.</p>
          * 
@@ -954,6 +960,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.DBInstanceStorage;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDeployMode(String deployMode) {
+            this.deployMode = deployMode;
+            return this;
+        }
+        public String getDeployMode() {
+            return this.deployMode;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEncryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
@@ -1208,6 +1222,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getServerlessResource() {
             return this.serverlessResource;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStandbyZoneId(String standbyZoneId) {
+            this.standbyZoneId = standbyZoneId;
+            return this;
+        }
+        public String getStandbyZoneId() {
+            return this.standbyZoneId;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStartTime(String startTime) {

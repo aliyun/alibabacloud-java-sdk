@@ -17,6 +17,9 @@ public class UpgradeExtensionsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DatabaseName")
+    public String databaseName;
+
     /**
      * <p>The extensions that you want to update. Separate multiple extensions with commas (,).</p>
      * <p>This parameter is required.</p>
@@ -47,6 +50,14 @@ public class UpgradeExtensionsRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public UpgradeExtensionsRequest setDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    public String getDatabaseName() {
+        return this.databaseName;
     }
 
     public UpgradeExtensionsRequest setExtensions(String extensions) {

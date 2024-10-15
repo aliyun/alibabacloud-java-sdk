@@ -71,7 +71,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.10.**.**</p>
+     * <p><code>10.10.**.**</code></p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;

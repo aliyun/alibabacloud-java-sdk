@@ -133,16 +133,14 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     /**
      * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>For information about the supported data types, see <a href="https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/data-types-1/?spm=a2c4g.11186623.0.0.43e567a1C35QRD">Data types</a>.</p>
-     * </li>
-     * <li><p>The money data type is not supported.</p>
-     * </li>
+     * <li>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types?spm=a2c63.p38356.0.0.69b31bceLRFnrR">Data types</a>.</li>
+     * <li>The money data type is not supported.</li>
      * </ul>
-     * <p>**</p>
-     * <p><strong>Warning</strong>
-     * Reserved fields such as id, vector, doc_name, content, loader_metadata, source, and to_tsvector cannot be used.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>Warning: Reserved fields such as id, vector, doc_name, content, loader_metadata, source, and to_tsvector cannot be used.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;title&quot;:&quot;text&quot;,&quot;page&quot;:&quot;int&quot;}</p>

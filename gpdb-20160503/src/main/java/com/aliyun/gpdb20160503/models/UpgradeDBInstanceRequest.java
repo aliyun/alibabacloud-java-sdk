@@ -90,7 +90,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The performance level of enhanced SSDs (ESSDs). Valid values:</p>
+     * <p>The performance level of Enterprise SSDs (ESSDs). Valid values:</p>
      * <ul>
      * <li><strong>pl0</strong></li>
      * <li><strong>pl1</strong></li>
@@ -149,7 +149,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>The supported changes to compute node configurations vary based on the instance resource type. For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/50956.html">Usage notes</a>&quot; section of the Change compute node configurations topic.</p>
+     * <li><p>The supported changes to compute node configurations vary based on the instance resource type. For more information, see the &quot;Usage notes&quot; section of the <a href="https://help.aliyun.com/document_detail/50956.html">Change compute node configurations</a> topic.</p>
      * </li>
      * <li><p>After you specify a change type, only the corresponding parameters take effect. For example, if you set <strong>UpgradeType</strong> to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.</p>
      * </li>
