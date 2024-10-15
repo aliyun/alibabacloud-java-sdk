@@ -108,6 +108,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceMode")
     public String DBInstanceMode;
 
+    @NameInMap("DeployMode")
+    public String deployMode;
+
     @NameInMap("EnableSSL")
     public Boolean enableSSL;
 
@@ -422,6 +425,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("SrcDbInstanceName")
     public String srcDbInstanceName;
 
+    @NameInMap("StandbyVSwitchId")
+    public String standbyVSwitchId;
+
+    @NameInMap("StandbyZoneId")
+    public String standbyZoneId;
+
     /**
      * <p>The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.</p>
      * <blockquote>
@@ -597,6 +606,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceMode() {
         return this.DBInstanceMode;
+    }
+
+    public CreateDBInstanceRequest setDeployMode(String deployMode) {
+        this.deployMode = deployMode;
+        return this;
+    }
+    public String getDeployMode() {
+        return this.deployMode;
     }
 
     public CreateDBInstanceRequest setEnableSSL(Boolean enableSSL) {
@@ -789,6 +806,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getSrcDbInstanceName() {
         return this.srcDbInstanceName;
+    }
+
+    public CreateDBInstanceRequest setStandbyVSwitchId(String standbyVSwitchId) {
+        this.standbyVSwitchId = standbyVSwitchId;
+        return this;
+    }
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    public CreateDBInstanceRequest setStandbyZoneId(String standbyZoneId) {
+        this.standbyZoneId = standbyZoneId;
+        return this;
+    }
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
     }
 
     public CreateDBInstanceRequest setStorageSize(Long storageSize) {

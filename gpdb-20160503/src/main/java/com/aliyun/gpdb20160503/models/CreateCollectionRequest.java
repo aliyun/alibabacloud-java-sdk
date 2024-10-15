@@ -104,7 +104,7 @@ public class CreateCollectionRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>For information about the supported data types, see <a href="https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/data-types-1/?spm=a2c4g.11186623.0.0.43e567a1C35QRD">Data types</a>.</p>
+     * <li><p>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types?spm=a2c63.p38356.0.0.2b2c755axL2r4F">Data types</a>.</p>
      * </li>
      * <li><p>The money data type is not supported.</p>
      * </li>
@@ -173,6 +173,8 @@ public class CreateCollectionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>gp-ws-*****</p>
      */
