@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RetrieveResponseBody extends TeaModel {
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public RetrieveResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,7 +29,7 @@ public class RetrieveResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-7734-4F9A-8464-2446A84821CA</p>
@@ -31,6 +38,8 @@ public class RetrieveResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,12 @@ public class RetrieveResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,16 +113,24 @@ public class RetrieveResponseBody extends TeaModel {
     }
 
     public static class RetrieveResponseBodyDataNodes extends TeaModel {
+        /**
+         * <p>The metadata map of the chunk.</p>
+         */
         @NameInMap("Metadata")
         public Object metadata;
 
         /**
+         * <p>The similarity score of the chunk. Valid values:[0-1].</p>
+         * 
          * <strong>example:</strong>
          * <p>0.3</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The text of the chunk.</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -143,6 +166,9 @@ public class RetrieveResponseBody extends TeaModel {
     }
 
     public static class RetrieveResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of queried chunks.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<RetrieveResponseBodyDataNodes> nodes;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitIndexAddDocumentsJobResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,7 +29,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
@@ -31,6 +38,8 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,12 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +114,8 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
 
     public static class SubmitIndexAddDocumentsJobResponseBodyData extends TeaModel {
         /**
+         * <p>The primary key ID of the task, <code>JobId</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>42687eb254a34802bed398357f5498ae</p>
          */

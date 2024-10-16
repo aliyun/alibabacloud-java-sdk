@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateIndexResponseBody extends TeaModel {
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>Forbidden</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateIndexResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid input, variable name is missing</p>
      */
@@ -22,7 +29,7 @@ public class CreateIndexResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-7734-4F9A-8464-2446A84821CA</p>
@@ -31,6 +38,8 @@ public class CreateIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,12 @@ public class CreateIndexResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +114,11 @@ public class CreateIndexResponseBody extends TeaModel {
 
     public static class CreateIndexResponseBodyData extends TeaModel {
         /**
+         * <p>The primary key ID of the knowledge base, <code>IndexId</code>.</p>
+         * <blockquote>
+         * <p> We recommend that you store this ID. It is required for all subsequent API operations related to this knowledge base.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>jkurxhju6b</p>
          */

@@ -13,6 +13,9 @@ public class ListFileRequest extends TeaModel {
     @NameInMap("CategoryId")
     public String categoryId;
 
+    @NameInMap("FileName")
+    public String fileName;
+
     /**
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,6 +41,14 @@ public class ListFileRequest extends TeaModel {
     }
     public String getCategoryId() {
         return this.categoryId;
+    }
+
+    public ListFileRequest setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
     }
 
     public ListFileRequest setMaxResults(Integer maxResults) {

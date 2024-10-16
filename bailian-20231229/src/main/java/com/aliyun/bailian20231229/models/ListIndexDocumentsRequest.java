@@ -4,10 +4,22 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class ListIndexDocumentsRequest extends TeaModel {
+    /**
+     * <p>The names of the queried documents. The default value is null, which means the names are not used to filter the results.</p>
+     */
     @NameInMap("DocumentName")
     public String documentName;
 
     /**
+     * <p>The import status of the documents to be queried. Valid values:</p>
+     * <ul>
+     * <li>INSERT_ERROR</li>
+     * <li>RUNNING</li>
+     * <li>DELETED</li>
+     * <li>FINISH</li>
+     * </ul>
+     * <p>The default value is null, which means the import status is not used to filter the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>FINISH</p>
      */
@@ -15,6 +27,7 @@ public class ListIndexDocumentsRequest extends TeaModel {
     public String documentStatus;
 
     /**
+     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +37,8 @@ public class ListIndexDocumentsRequest extends TeaModel {
     public String indexId;
 
     /**
+     * <p>The page numbers of the pages to return. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -31,6 +46,8 @@ public class ListIndexDocumentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of documents displayed on each page. No maximum value. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteIndexDocumentShrinkRequest extends TeaModel {
     /**
+     * <p>The list of the primary key IDs of the documents.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DocumentIds")
     public String documentIdsShrink;
 
     /**
+     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

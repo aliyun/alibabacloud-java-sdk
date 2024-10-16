@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListChunksResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListChunksResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,7 +29,7 @@ public class ListChunksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8F97A63B-55F1-527F-9D6E-467B6A7E8CF1</p>
@@ -31,6 +38,8 @@ public class ListChunksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,12 @@ public class ListChunksResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,16 +113,24 @@ public class ListChunksResponseBody extends TeaModel {
     }
 
     public static class ListChunksResponseBodyDataNodes extends TeaModel {
+        /**
+         * <p>The metadata map of the chunk.</p>
+         */
         @NameInMap("Metadata")
         public Object metadata;
 
         /**
+         * <p>The similarity score of the chunk.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.3</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The text of the chunk.</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -143,10 +166,15 @@ public class ListChunksResponseBody extends TeaModel {
     }
 
     public static class ListChunksResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of chunks.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<ListChunksResponseBodyDataNodes> nodes;
 
         /**
+         * <p>The total number of chunks returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */

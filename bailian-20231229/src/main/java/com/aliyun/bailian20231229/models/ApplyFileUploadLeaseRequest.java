@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ApplyFileUploadLeaseRequest extends TeaModel {
     /**
+     * <p>The name of the uploaded document, including the extension. Supported formats: pdf, doc, docx, md, txt, ppt, and pptx. The document name must be 4 to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
+     * <p>The MD5 value of the uploaded document. This parameter is verified by the server (not in the current version).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ApplyFileUploadLeaseRequest extends TeaModel {
     public String md5;
 
     /**
+     * <p>The size of the uploaded document, in bytes. This parameter is verified by the server (not in the current version). Valid values: 1 to 100000000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AddFileResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data fields.</p>
+     */
     @NameInMap("Data")
     public AddFileResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource.</p>
      */
@@ -22,6 +29,8 @@ public class AddFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
      */
@@ -29,6 +38,8 @@ public class AddFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,12 @@ public class AddFileResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class AddFileResponseBody extends TeaModel {
 
     public static class AddFileResponseBodyData extends TeaModel {
         /**
+         * <p>The primary key ID of the document. We recommend that you store the ID because it is required for all subsequent API operations related to this document.</p>
+         * 
          * <strong>example:</strong>
          * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
          */
@@ -104,6 +123,11 @@ public class AddFileResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The parser that is used to parse the document. Valid value:</p>
+         * <ul>
+         * <li>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DASHSCOPE_DOCMIND</p>
          */

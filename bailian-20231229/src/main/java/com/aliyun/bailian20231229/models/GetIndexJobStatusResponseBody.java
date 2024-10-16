@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetIndexJobStatusResponseBody extends TeaModel {
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.Forbidden</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetIndexJobStatusResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource.</p>
      */
@@ -22,6 +29,8 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
      */
@@ -29,6 +38,8 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,12 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
 
     public static class GetIndexJobStatusResponseBodyDataDocuments extends TeaModel {
         /**
+         * <p>HTTP status code</p>
+         * 
          * <strong>example:</strong>
          * <p>Index.Document.ChunkError</p>
          */
@@ -104,16 +123,23 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The primary key ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
          */
         @NameInMap("DocId")
         public String docId;
 
+        /**
+         * <p>The name of the document.</p>
+         */
         @NameInMap("DocName")
         public String docName;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>document parse error</p>
          */
@@ -121,6 +147,14 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The import status of the document. Valid values:</p>
+         * <ul>
+         * <li>INSERT_ERROR</li>
+         * <li>RUNNING</li>
+         * <li>DELETED</li>
+         * <li>FINISH</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -175,10 +209,15 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     }
 
     public static class GetIndexJobStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of imported documents.</p>
+         */
         @NameInMap("Documents")
         public java.util.List<GetIndexJobStatusResponseBodyDataDocuments> documents;
 
         /**
+         * <p>The ID of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>66122af12a4e45ddae6bd6c845556647</p>
          */
@@ -186,6 +225,14 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The status of the knowledge base job. Valid values:</p>
+         * <ul>
+         * <li>COMPLETED</li>
+         * <li>FAILED</li>
+         * <li>RUNNING</li>
+         * <li>PENDING</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PENDING</p>
          */
