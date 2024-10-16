@@ -40,6 +40,9 @@ public class RegisterCustomFaceRequest extends TeaModel {
     @NameInMap("PersonId")
     public String personId;
 
+    @NameInMap("PersonName")
+    public String personName;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -89,6 +92,14 @@ public class RegisterCustomFaceRequest extends TeaModel {
     }
     public String getPersonId() {
         return this.personId;
+    }
+
+    public RegisterCustomFaceRequest setPersonName(String personName) {
+        this.personName = personName;
+        return this;
+    }
+    public String getPersonName() {
+        return this.personName;
     }
 
     public RegisterCustomFaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {

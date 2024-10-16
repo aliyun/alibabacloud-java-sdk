@@ -40,10 +40,11 @@ public class AddMediaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The path of the input file. You can query the path of the input file in the MPS or OSS console. For more information, see the <strong>Triggering and matching rules for a workflow</strong> section of this topic.</p>
+     * <p>The URL of the input file. You can obtain the URL in the MPS or OSS console. For more information, see the <strong>Triggering and matching rule for a workflow</strong> section of this topic.</p>
      * <ul>
-     * <li>The value can be up to 3,200 bytes in length.</li>
-     * <li>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</li>
+     * <li>Only OSS HTTP URLs are supported. Alibaba Cloud CDN URLs and HTTPS URLs are not supported.</li>
+     * <li>The value can be up to 3,200 bytes in size.</li>
+     * <li>The URL complies with RFC 2396 and is encoded in UTF-8. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -187,7 +187,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         public String formatLongName;
 
         /**
-         * <p>The short name of the container format. For more information about the parameters, see <a href="https://www.alibabacloud.com/help/zh/apsaravideo-for-media-processing/latest/parameter-details-a">Parameter details</a>.</p>
+         * <p>The short name of the container format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>mov</p>

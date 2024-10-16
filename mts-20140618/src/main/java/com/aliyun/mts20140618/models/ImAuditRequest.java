@@ -28,6 +28,9 @@ public class ImAuditRequest extends TeaModel {
      * <li>The image size cannot exceed 20 MB, the height or width of the image cannot exceed 30,000 pixels, and the image cannot exceed 0.25 billion pixels.</li>
      * <li>We recommend that you upload images of at least 256 × 256 pixels to ensure required moderation result.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;http://<code>127.66.**.**</code>/image.jpeg&quot;,&quot;http://<code>127.66.**.**</code>/photo.jpeg&quot;]</p>
      */
     @NameInMap("Images")
     public String images;

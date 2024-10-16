@@ -37,7 +37,11 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the MPS queue to which the analysis job is submitted. To view the ID of the MPS queue, log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+     * <p>The ID of the MPS queue to which the job was submitted. For more information, see <a href="https://help.aliyun.com/document_detail/29197.html">Terms</a>.</p>
+     * <ul>
+     * <li>To view the ID of the MPS queue, log on to the <a href="https://mps.console.aliyun.com/overview">MPS console</a> and choose <strong>Global Settings</strong> &gt; <strong>MPS queue and Callback</strong> in the left-side navigation pane. On the MPS queue and Callback page, you can view the ID of an MPS queue or create an MPS queue.</li>
+     * <li>If you want to receive asynchronous message notifications, associate an MNS queue or topic with the MPS queue. For more information, see <a href="https://www.alibabacloud.com/help/en/mps/receive-message-notifications/?spm=a2c63.p38356.0.0.b48576d2jxNSca">Receive message notifications</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>88c6ca184c0e432bbf5b665e2a15****</p>

@@ -33,6 +33,9 @@ public class RegisterCustomViewRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>http://<code>127.66.**.**</code>/image.jpeg</p>
      */
     @NameInMap("ImageUrl")
     public String imageUrl;

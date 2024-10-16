@@ -88,6 +88,10 @@ public class ListCustomViewsResponseBody extends TeaModel {
         @NameInMap("CustomViewId")
         public String customViewId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://<code>127.66.**.**</code>/photo.jpeg</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
