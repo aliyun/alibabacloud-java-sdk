@@ -4,17 +4,28 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GenerateCopilotResponseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SysomOpenAPI.ServerError</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Requests for llm service failed</p>
+     */
     @NameInMap("massage")
     public String massage;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */
     @NameInMap("requestId")
     public String requestId;

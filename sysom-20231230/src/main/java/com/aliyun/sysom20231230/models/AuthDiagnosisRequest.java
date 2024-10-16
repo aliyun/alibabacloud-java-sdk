@@ -4,12 +4,34 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class AuthDiagnosisRequest extends TeaModel {
+    @NameInMap("autoCreateRole")
+    public Boolean autoCreateRole;
+
+    @NameInMap("autoInstallAgent")
+    public Boolean autoInstallAgent;
+
     @NameInMap("instances")
     public java.util.List<AuthDiagnosisRequestInstances> instances;
 
     public static AuthDiagnosisRequest build(java.util.Map<String, ?> map) throws Exception {
         AuthDiagnosisRequest self = new AuthDiagnosisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AuthDiagnosisRequest setAutoCreateRole(Boolean autoCreateRole) {
+        this.autoCreateRole = autoCreateRole;
+        return this;
+    }
+    public Boolean getAutoCreateRole() {
+        return this.autoCreateRole;
+    }
+
+    public AuthDiagnosisRequest setAutoInstallAgent(Boolean autoInstallAgent) {
+        this.autoInstallAgent = autoInstallAgent;
+        return this;
+    }
+    public Boolean getAutoInstallAgent() {
+        return this.autoInstallAgent;
     }
 
     public AuthDiagnosisRequest setInstances(java.util.List<AuthDiagnosisRequestInstances> instances) {
