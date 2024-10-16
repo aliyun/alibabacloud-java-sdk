@@ -28,6 +28,9 @@ public class UpdateDocRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("DocMetadata")
+    public java.util.List<UpdateDocRequestDocMetadata> docMetadata;
+
     @NameInMap("DocName")
     public String docName;
 
@@ -104,6 +107,14 @@ public class UpdateDocRequest extends TeaModel {
         return this.content;
     }
 
+    public UpdateDocRequest setDocMetadata(java.util.List<UpdateDocRequestDocMetadata> docMetadata) {
+        this.docMetadata = docMetadata;
+        return this;
+    }
+    public java.util.List<UpdateDocRequestDocMetadata> getDocMetadata() {
+        return this.docMetadata;
+    }
+
     public UpdateDocRequest setDocName(String docName) {
         this.docName = docName;
         return this;
@@ -158,6 +169,88 @@ public class UpdateDocRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public static class UpdateDocRequestDocMetadataMetaCellInfoDTOList extends TeaModel {
+        @NameInMap("FieldCode")
+        public String fieldCode;
+
+        @NameInMap("FieldName")
+        public String fieldName;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateDocRequestDocMetadataMetaCellInfoDTOList build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDocRequestDocMetadataMetaCellInfoDTOList self = new UpdateDocRequestDocMetadataMetaCellInfoDTOList();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDocRequestDocMetadataMetaCellInfoDTOList setFieldCode(String fieldCode) {
+            this.fieldCode = fieldCode;
+            return this;
+        }
+        public String getFieldCode() {
+            return this.fieldCode;
+        }
+
+        public UpdateDocRequestDocMetadataMetaCellInfoDTOList setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public UpdateDocRequestDocMetadataMetaCellInfoDTOList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateDocRequestDocMetadata extends TeaModel {
+        @NameInMap("BusinessViewId")
+        public String businessViewId;
+
+        @NameInMap("BusinessViewName")
+        public String businessViewName;
+
+        @NameInMap("MetaCellInfoDTOList")
+        public java.util.List<UpdateDocRequestDocMetadataMetaCellInfoDTOList> metaCellInfoDTOList;
+
+        public static UpdateDocRequestDocMetadata build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDocRequestDocMetadata self = new UpdateDocRequestDocMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDocRequestDocMetadata setBusinessViewId(String businessViewId) {
+            this.businessViewId = businessViewId;
+            return this;
+        }
+        public String getBusinessViewId() {
+            return this.businessViewId;
+        }
+
+        public UpdateDocRequestDocMetadata setBusinessViewName(String businessViewName) {
+            this.businessViewName = businessViewName;
+            return this;
+        }
+        public String getBusinessViewName() {
+            return this.businessViewName;
+        }
+
+        public UpdateDocRequestDocMetadata setMetaCellInfoDTOList(java.util.List<UpdateDocRequestDocMetadataMetaCellInfoDTOList> metaCellInfoDTOList) {
+            this.metaCellInfoDTOList = metaCellInfoDTOList;
+            return this;
+        }
+        public java.util.List<UpdateDocRequestDocMetadataMetaCellInfoDTOList> getMetaCellInfoDTOList() {
+            return this.metaCellInfoDTOList;
+        }
+
     }
 
 }
