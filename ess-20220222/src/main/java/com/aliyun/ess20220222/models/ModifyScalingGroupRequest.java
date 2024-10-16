@@ -340,6 +340,9 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("SpotInstanceRemedy")
     public Boolean spotInstanceRemedy;
 
+    @NameInMap("StopInstanceTimeout")
+    public Integer stopInstanceTimeout;
+
     /**
      * <p>The IDs of vSwitches.</p>
      * <p>This parameter takes effect only when the network type of the scaling group is virtual private cloud (VPC). The specified vSwitches and the scaling group must reside in the same VPC.</p>
@@ -599,6 +602,14 @@ public class ModifyScalingGroupRequest extends TeaModel {
     }
     public Boolean getSpotInstanceRemedy() {
         return this.spotInstanceRemedy;
+    }
+
+    public ModifyScalingGroupRequest setStopInstanceTimeout(Integer stopInstanceTimeout) {
+        this.stopInstanceTimeout = stopInstanceTimeout;
+        return this;
+    }
+    public Integer getStopInstanceTimeout() {
+        return this.stopInstanceTimeout;
     }
 
     public ModifyScalingGroupRequest setVSwitchIds(java.util.List<String> vSwitchIds) {

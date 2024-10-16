@@ -1063,6 +1063,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @NameInMap("StandbyCapacity")
         public Integer standbyCapacity;
 
+        @NameInMap("StopInstanceTimeout")
+        public Integer stopInstanceTimeout;
+
         /**
          * <p>The number of instances that was stopped in Economical Mode in the scaling group.</p>
          * 
@@ -1563,6 +1566,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public Integer getStandbyCapacity() {
             return this.standbyCapacity;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setStopInstanceTimeout(Integer stopInstanceTimeout) {
+            this.stopInstanceTimeout = stopInstanceTimeout;
+            return this;
+        }
+        public Integer getStopInstanceTimeout() {
+            return this.stopInstanceTimeout;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setStoppedCapacity(Integer stoppedCapacity) {
