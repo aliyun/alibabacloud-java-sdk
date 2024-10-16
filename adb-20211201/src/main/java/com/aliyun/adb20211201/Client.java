@@ -634,6 +634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopInterval)) {
+            query.put("AutoStopInterval", request.autoStopInterval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterMode)) {
             query.put("ClusterMode", request.clusterMode);
         }
@@ -7846,6 +7850,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopInterval)) {
+            query.put("AutoStopInterval", request.autoStopInterval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterMode)) {
             query.put("ClusterMode", request.clusterMode);
         }
@@ -7908,6 +7916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.specName)) {
             query.put("SpecName", request.specName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetResourceGroupName)) {

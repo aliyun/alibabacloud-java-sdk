@@ -144,6 +144,15 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys extends TeaModel {
+        @NameInMap("EnableAutoMc")
+        public Boolean enableAutoMc;
+
+        @NameInMap("Engine")
+        public java.util.List<String> engine;
+
+        @NameInMap("GroupType")
+        public java.util.List<String> groupType;
+
         /**
          * <p>The name of the metric.</p>
          * 
@@ -169,6 +178,30 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         public static DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys build(java.util.Map<String, ?> map) throws Exception {
             DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys self = new DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys setEnableAutoMc(Boolean enableAutoMc) {
+            this.enableAutoMc = enableAutoMc;
+            return this;
+        }
+        public Boolean getEnableAutoMc() {
+            return this.enableAutoMc;
+        }
+
+        public DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys setEngine(java.util.List<String> engine) {
+            this.engine = engine;
+            return this;
+        }
+        public java.util.List<String> getEngine() {
+            return this.engine;
+        }
+
+        public DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys setGroupType(java.util.List<String> groupType) {
+            this.groupType = groupType;
+            return this;
+        }
+        public java.util.List<String> getGroupType() {
+            return this.groupType;
         }
 
         public DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys setKeyName(String keyName) {
