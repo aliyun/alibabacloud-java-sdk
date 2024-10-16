@@ -50,7 +50,29 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListInstancesResponseBodyInstancesFeatureDBInstanceInfo extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        public static ListInstancesResponseBodyInstancesFeatureDBInstanceInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesFeatureDBInstanceInfo self = new ListInstancesResponseBodyInstancesFeatureDBInstanceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesFeatureDBInstanceInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("FeatureDBInstanceInfo")
+        public ListInstancesResponseBodyInstancesFeatureDBInstanceInfo featureDBInstanceInfo;
+
         /**
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
@@ -96,6 +118,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static ListInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstances self = new ListInstancesResponseBodyInstances();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstances setFeatureDBInstanceInfo(ListInstancesResponseBodyInstancesFeatureDBInstanceInfo featureDBInstanceInfo) {
+            this.featureDBInstanceInfo = featureDBInstanceInfo;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesFeatureDBInstanceInfo getFeatureDBInstanceInfo() {
+            return this.featureDBInstanceInfo;
         }
 
         public ListInstancesResponseBodyInstances setGmtCreateTime(String gmtCreateTime) {
