@@ -4,6 +4,9 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    @NameInMap("FeatureDBInstanceInfo")
+    public GetInstanceResponseBodyFeatureDBInstanceInfo featureDBInstanceInfo;
+
     /**
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
@@ -63,6 +66,14 @@ public class GetInstanceResponseBody extends TeaModel {
     public static GetInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceResponseBody self = new GetInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceResponseBody setFeatureDBInstanceInfo(GetInstanceResponseBodyFeatureDBInstanceInfo featureDBInstanceInfo) {
+        this.featureDBInstanceInfo = featureDBInstanceInfo;
+        return this;
+    }
+    public GetInstanceResponseBodyFeatureDBInstanceInfo getFeatureDBInstanceInfo() {
+        return this.featureDBInstanceInfo;
     }
 
     public GetInstanceResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -127,6 +138,25 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class GetInstanceResponseBodyFeatureDBInstanceInfo extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        public static GetInstanceResponseBodyFeatureDBInstanceInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyFeatureDBInstanceInfo self = new GetInstanceResponseBodyFeatureDBInstanceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyFeatureDBInstanceInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
 }
