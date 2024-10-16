@@ -30,6 +30,9 @@ public class CreateDocShrinkRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("DocMetadata")
+    public String docMetadataShrink;
+
     /**
      * <strong>example:</strong>
      * <p>2032-05-25T16:28:36Z</p>
@@ -102,6 +105,14 @@ public class CreateDocShrinkRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public CreateDocShrinkRequest setDocMetadataShrink(String docMetadataShrink) {
+        this.docMetadataShrink = docMetadataShrink;
+        return this;
+    }
+    public String getDocMetadataShrink() {
+        return this.docMetadataShrink;
     }
 
     public CreateDocShrinkRequest setEndDate(String endDate) {

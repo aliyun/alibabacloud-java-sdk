@@ -45,6 +45,9 @@ public class DescribeDocResponseBody extends TeaModel {
     @NameInMap("DocInfo")
     public DescribeDocResponseBodyDocInfo docInfo;
 
+    @NameInMap("DocMetadata")
+    public java.util.List<DescribeDocResponseBodyDocMetadata> docMetadata;
+
     @NameInMap("DocName")
     public String docName;
 
@@ -201,6 +204,14 @@ public class DescribeDocResponseBody extends TeaModel {
     }
     public DescribeDocResponseBodyDocInfo getDocInfo() {
         return this.docInfo;
+    }
+
+    public DescribeDocResponseBody setDocMetadata(java.util.List<DescribeDocResponseBodyDocMetadata> docMetadata) {
+        this.docMetadata = docMetadata;
+        return this;
+    }
+    public java.util.List<DescribeDocResponseBodyDocMetadata> getDocMetadata() {
+        return this.docMetadata;
     }
 
     public DescribeDocResponseBody setDocName(String docName) {
@@ -418,6 +429,88 @@ public class DescribeDocResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDocResponseBodyDocInfoDocParas> getDocParas() {
             return this.docParas;
+        }
+
+    }
+
+    public static class DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList extends TeaModel {
+        @NameInMap("FieldCode")
+        public String fieldCode;
+
+        @NameInMap("FieldName")
+        public String fieldName;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList self = new DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList setFieldCode(String fieldCode) {
+            this.fieldCode = fieldCode;
+            return this;
+        }
+        public String getFieldCode() {
+            return this.fieldCode;
+        }
+
+        public DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeDocResponseBodyDocMetadata extends TeaModel {
+        @NameInMap("BusinessViewId")
+        public String businessViewId;
+
+        @NameInMap("BusinessViewName")
+        public String businessViewName;
+
+        @NameInMap("MetaCellInfoDTOList")
+        public java.util.List<DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList> metaCellInfoDTOList;
+
+        public static DescribeDocResponseBodyDocMetadata build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDocResponseBodyDocMetadata self = new DescribeDocResponseBodyDocMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDocResponseBodyDocMetadata setBusinessViewId(String businessViewId) {
+            this.businessViewId = businessViewId;
+            return this;
+        }
+        public String getBusinessViewId() {
+            return this.businessViewId;
+        }
+
+        public DescribeDocResponseBodyDocMetadata setBusinessViewName(String businessViewName) {
+            this.businessViewName = businessViewName;
+            return this;
+        }
+        public String getBusinessViewName() {
+            return this.businessViewName;
+        }
+
+        public DescribeDocResponseBodyDocMetadata setMetaCellInfoDTOList(java.util.List<DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList> metaCellInfoDTOList) {
+            this.metaCellInfoDTOList = metaCellInfoDTOList;
+            return this;
+        }
+        public java.util.List<DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList> getMetaCellInfoDTOList() {
+            return this.metaCellInfoDTOList;
         }
 
     }

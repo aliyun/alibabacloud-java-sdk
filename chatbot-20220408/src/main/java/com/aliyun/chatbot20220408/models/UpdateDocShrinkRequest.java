@@ -28,6 +28,9 @@ public class UpdateDocShrinkRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("DocMetadata")
+    public String docMetadataShrink;
+
     @NameInMap("DocName")
     public String docName;
 
@@ -102,6 +105,14 @@ public class UpdateDocShrinkRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public UpdateDocShrinkRequest setDocMetadataShrink(String docMetadataShrink) {
+        this.docMetadataShrink = docMetadataShrink;
+        return this;
+    }
+    public String getDocMetadataShrink() {
+        return this.docMetadataShrink;
     }
 
     public UpdateDocShrinkRequest setDocName(String docName) {

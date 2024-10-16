@@ -682,6 +682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDocShrinkRequest request = new CreateDocShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docMetadata)) {
+            request.docMetadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docMetadata, "DocMetadata", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagIds)) {
             request.tagIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagIds, "TagIds", "json");
         }
@@ -701,6 +705,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docMetadataShrink)) {
+            query.put("DocMetadata", request.docMetadataShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
@@ -3574,6 +3582,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询通义晓蜜的单个会话对话记录</p>
+     * 
+     * @param request ListTongyiConversationLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTongyiConversationLogsResponse
+     */
+    public ListTongyiConversationLogsResponse listTongyiConversationLogsWithOptions(ListTongyiConversationLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotInstanceId)) {
+            query.put("RobotInstanceId", request.robotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTongyiConversationLogs"),
+            new TeaPair("version", "2022-04-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTongyiConversationLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询通义晓蜜的单个会话对话记录</p>
+     * 
+     * @param request ListTongyiConversationLogsRequest
+     * @return ListTongyiConversationLogsResponse
+     */
+    public ListTongyiConversationLogsResponse listTongyiConversationLogs(ListTongyiConversationLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTongyiConversationLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>话术-列表</p>
      * 
      * @param request ListUserSayRequest
@@ -4278,6 +4338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateDocShrinkRequest request = new UpdateDocShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docMetadata)) {
+            request.docMetadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docMetadata, "DocMetadata", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagIds)) {
             request.tagIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagIds, "TagIds", "json");
         }
@@ -4297,6 +4361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docMetadataShrink)) {
+            query.put("DocMetadata", request.docMetadataShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.docName)) {
