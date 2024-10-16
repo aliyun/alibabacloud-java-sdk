@@ -4,12 +4,34 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class InvokeDiagnosisRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_assist</p>
+     */
     @NameInMap("channel")
     public String channel;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;instance&quot;: &quot;i-wz9gdv7qmdhusamc4dl01&quot;,
+     *     &quot;uid&quot;: &quot;xxxxxxxxxxxxxx&quot;,
+     *     &quot;region&quot;: &quot;cn-shenzhen&quot;
+     * }</p>
+     */
     @NameInMap("params")
     public String params;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>memgraph</p>
+     */
     @NameInMap("service_name")
     public String serviceName;
 

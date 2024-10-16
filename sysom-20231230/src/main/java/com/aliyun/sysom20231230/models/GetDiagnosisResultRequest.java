@@ -4,6 +4,12 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetDiagnosisResultRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quzuYl23</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

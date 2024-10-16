@@ -4,12 +4,24 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class AuthDiagnosisResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("data")
     public Object data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
+     */
     @NameInMap("message")
     public String message;
 
