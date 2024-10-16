@@ -1,3 +1,7 @@
+2024-10-16 Version: 2.3.0
+- Support API GetErService.
+
+
 2024-10-12 Version: 2.2.0
 - Support API ListClientCertificates.
 
