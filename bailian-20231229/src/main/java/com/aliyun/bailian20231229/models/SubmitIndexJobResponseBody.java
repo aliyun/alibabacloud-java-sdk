@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitIndexJobResponseBody extends TeaModel {
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitIndexJobResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,7 +29,7 @@ public class SubmitIndexJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -31,6 +38,8 @@ public class SubmitIndexJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -38,6 +47,12 @@ public class SubmitIndexJobResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -99,6 +114,8 @@ public class SubmitIndexJobResponseBody extends TeaModel {
 
     public static class SubmitIndexJobResponseBodyData extends TeaModel {
         /**
+         * <p>The primary key ID of the job, which is the <code>JobId</code> parameter of the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>eFDr2fGRzP9gdDZWAdo3YQ==</p>
          */
@@ -106,6 +123,8 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The primary key ID of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>khdyak1uuj</p>
          */

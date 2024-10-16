@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFileRequest extends TeaModel {
     /**
+     * <p>The primary key ID of the category to which the document is uploaded. This parameter corresponds to the <code>CategoryId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> operation. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddFileRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>The lease ID, which corresponds to the <code>FileUploadLeaseId</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,10 @@ public class AddFileRequest extends TeaModel {
     public String leaseId;
 
     /**
+     * <p>The parser. Valid value:</p>
+     * <ul>
+     * <li>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +37,9 @@ public class AddFileRequest extends TeaModel {
     @NameInMap("Parser")
     public String parser;
 
+    /**
+     * <p>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 

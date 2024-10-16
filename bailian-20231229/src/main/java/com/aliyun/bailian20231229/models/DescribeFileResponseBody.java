@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeFileResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data fields.</p>
+     */
     @NameInMap("Data")
     public DescribeFileResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Requests throttling triggered.</p>
      */
@@ -22,6 +29,8 @@ public class DescribeFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
      */
@@ -29,6 +38,8 @@ public class DescribeFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,12 @@ public class DescribeFileResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class DescribeFileResponseBody extends TeaModel {
 
     public static class DescribeFileResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the category to which the document belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
          */
@@ -104,6 +123,8 @@ public class DescribeFileResponseBody extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>The timestamp when the document was uploaded to Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC + 8.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-26 12:45:43</p>
          */
@@ -111,6 +132,8 @@ public class DescribeFileResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The primary key ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
          */
@@ -118,6 +141,8 @@ public class DescribeFileResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The name of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.pdf</p>
          */
@@ -125,6 +150,8 @@ public class DescribeFileResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file type of the document. The value is an extension. Valid values: pdf, docx, doc, txt, md, pptx, and ppt.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -132,6 +159,11 @@ public class DescribeFileResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The parser that is used to parse the document. Valid value:</p>
+         * <ul>
+         * <li>DASHSCOPE_DOCMIND: The default document parser.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DASHSCOPE_DOCMIND</p>
          */
@@ -139,6 +171,8 @@ public class DescribeFileResponseBody extends TeaModel {
         public String parser;
 
         /**
+         * <p>The size of the document. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -146,12 +180,23 @@ public class DescribeFileResponseBody extends TeaModel {
         public Long sizeInBytes;
 
         /**
+         * <p>The status of the document. Valid values:</p>
+         * <ul>
+         * <li>INIT: pending parsing.</li>
+         * <li>PARSING</li>
+         * <li>PARSE_SUCCESS</li>
+         * <li>PARSE_FAILED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PARSE_SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags that are associated with the document. A document can be associated with multiple tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 

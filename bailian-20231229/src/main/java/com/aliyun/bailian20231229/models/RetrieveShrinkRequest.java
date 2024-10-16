@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class RetrieveShrinkRequest extends TeaModel {
     /**
+     * <p>Vector retrieval top K. After generating vectors based on input text, the top K chunks in the knowledge base that are most similar to the vector representation of the input text are retrieved. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+     * <p>Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +15,13 @@ public class RetrieveShrinkRequest extends TeaModel {
     public Integer denseSimilarityTopK;
 
     /**
+     * <p>Specifies whether to enable reranking. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +29,13 @@ public class RetrieveShrinkRequest extends TeaModel {
     public Boolean enableReranking;
 
     /**
+     * <p>Specifies whether to enable multi-round conversation rewriting. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -29,6 +46,7 @@ public class RetrieveShrinkRequest extends TeaModel {
     public String imagesShrink;
 
     /**
+     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,13 +55,22 @@ public class RetrieveShrinkRequest extends TeaModel {
     @NameInMap("IndexId")
     public String indexId;
 
+    /**
+     * <p>The input query prompt. The length and characters of the query are not limited.</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>Ranking configurations.</p>
+     */
     @NameInMap("Rerank")
     public String rerankShrink;
 
     /**
+     * <p>Similarity Threshold The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00]. The priority of this parameter is greater than the similarity threshold configured for the knowledge base.</p>
+     * <p>By default, this parameter is left empty. In this case, the similarity threshold of the knowledge base is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.20</p>
      */
@@ -51,26 +78,44 @@ public class RetrieveShrinkRequest extends TeaModel {
     public Float rerankMinScore;
 
     /**
+     * <p>The top N return data after reranking. Valid values: 1 to 20. Default value: 5.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("RerankTopN")
     public Integer rerankTopN;
 
+    /**
+     * <p>Conversation rewriting configurations.</p>
+     */
     @NameInMap("Rewrite")
     public String rewriteShrink;
 
     /**
+     * <p>Specifies whether to save the retrieve test history. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("SaveRetrieverHistory")
     public Boolean saveRetrieverHistory;
 
+    /**
+     * <p>Specifies complex filter conditions. For more information about the syntax of SearchFilters, see the SearchFilter syntax section of this topic.</p>
+     */
     @NameInMap("SearchFilters")
     public String searchFiltersShrink;
 
     /**
+     * <p>The top K of keyword retrieval. Chunks that exactly match the keywords of the input text are retrieved from the knowledge base. This filters out irrelevant chunks and boosts accuracy. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+     * <p>Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

@@ -76,8 +76,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://help.aliyun.com/zh/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
+     * <blockquote>
+     * <p> After you call this operation, the used lease ID expires immediately. Do not use the same lease ID to submit new requests.</p>
+     * </blockquote>
+     * <ul>
+     * <li>You must call this operation within 12 hours after you call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
+     * <li>After you call this operation, the system parses and imports your document. The process takes some time.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</p>
+     * <p>Imports an unstructured document stored in the temporary storage space to Data Management.</p>
      * 
      * @param tmpReq AddFileRequest
      * @param headers map
@@ -128,8 +139,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://help.aliyun.com/zh/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
+     * <blockquote>
+     * <p> After you call this operation, the used lease ID expires immediately. Do not use the same lease ID to submit new requests.</p>
+     * </blockquote>
+     * <ul>
+     * <li>You must call this operation within 12 hours after you call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
+     * <li>After you call this operation, the system parses and imports your document. The process takes some time.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</p>
+     * <p>Imports an unstructured document stored in the temporary storage space to Data Management.</p>
      * 
      * @param request AddFileRequest
      * @return AddFileResponse
@@ -141,8 +163,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</p>
+     * <ul>
+     * <li>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</li>
+     * <li>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. Call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> interface in time to import the document to the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>请求文档上传租约，进行文档上传。</p>
+     * <p>Applies for a document upload lease to upload a document.</p>
      * 
      * @param request ApplyFileUploadLeaseRequest
      * @param headers map
@@ -183,8 +213,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</p>
+     * <ul>
+     * <li>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</li>
+     * <li>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. Call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> interface in time to import the document to the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>请求文档上传租约，进行文档上传。</p>
+     * <p>Applies for a document upload lease to upload a document.</p>
      * 
      * @param request ApplyFileUploadLeaseRequest
      * @return ApplyFileUploadLeaseResponse
@@ -261,8 +299,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <code>FileId</code>. The documents are the knowledge source of the knowledge base. To upload documents, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</li>
+     * <li>This operation only initializes a knowledge base creation job. You must also call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建并运行pipeline</p>
+     * <p>Creates an unstructured knowledge base and imports one or more parsed documents into the knowledge base. You cannot create a structured knowledge base by calling an API operation. Use the console instead.</p>
      * 
      * @param tmpReq CreateIndexRequest
      * @param headers map
@@ -377,8 +422,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <code>FileId</code>. The documents are the knowledge source of the knowledge base. To upload documents, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</li>
+     * <li>This operation only initializes a knowledge base creation job. You must also call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建并运行pipeline</p>
+     * <p>Creates an unstructured knowledge base and imports one or more parsed documents into the knowledge base. You cannot create a structured knowledge base by calling an API operation. Use the console instead.</p>
      * 
      * @param request CreateIndexRequest
      * @return CreateIndexResponse
@@ -481,6 +533,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createMemoryNodeWithOptions(workspaceId, memoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Prompt模板</p>
+     * 
+     * @param request CreatePromptTemplateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePromptTemplateResponse
+     */
+    public CreatePromptTemplateResponse createPromptTemplateWithOptions(String workspaceId, CreatePromptTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePromptTemplate"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/promptTemplates"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePromptTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Prompt模板</p>
+     * 
+     * @param request CreatePromptTemplateRequest
+     * @return CreatePromptTemplateResponse
+     */
+    public CreatePromptTemplateResponse createPromptTemplate(String workspaceId, CreatePromptTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPromptTemplateWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -590,8 +693,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</li>
+     * <li>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</li>
+     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除Index</p>
+     * <p>Deletes a specified knowledge base permanently.</p>
      * 
      * @param request DeleteIndexRequest
      * @param headers map
@@ -624,8 +736,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</li>
+     * <li>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</li>
+     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除Index</p>
+     * <p>Deletes a specified knowledge base permanently.</p>
      * 
      * @param request DeleteIndexRequest
      * @return DeleteIndexResponse
@@ -637,8 +758,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</li>
+     * <li>After you delete a document, it cannot be recovered and the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</li>
+     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除index doc</p>
+     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently.</p>
      * 
      * @param tmpReq DeleteIndexDocumentRequest
      * @param headers map
@@ -681,8 +811,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</li>
+     * <li>After you delete a document, it cannot be recovered and the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</li>
+     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除index doc</p>
+     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently.</p>
      * 
      * @param request DeleteIndexDocumentRequest
      * @return DeleteIndexDocumentResponse
@@ -769,7 +908,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文档基本信息，包括文档名称、类型、状态等。</p>
+     * <p>基于模板Id删除Prompt模板。</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePromptTemplateResponse
+     */
+    public DeletePromptTemplateResponse deletePromptTemplateWithOptions(String workspaceId, String promptTemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePromptTemplate"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/promptTemplates/" + com.aliyun.openapiutil.Client.getEncodeParam(promptTemplateId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePromptTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于模板Id删除Prompt模板。</p>
+     * @return DeletePromptTemplateResponse
+     */
+    public DeletePromptTemplateResponse deletePromptTemplate(String workspaceId, String promptTemplateId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deletePromptTemplateWithOptions(workspaceId, promptTemplateId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</p>
+     * <ul>
+     * <li>If you upload the document by calling an API, make sure that you have called the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to obtain <code>FileId</code>.</li>
+     * <li>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an unstructured document.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -794,8 +979,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</p>
+     * <ul>
+     * <li>If you upload the document by calling an API, make sure that you have called the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to obtain <code>FileId</code>.</li>
+     * <li>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取文档基本信息，包括文档名称、类型、状态等。</p>
+     * <p>Queries the details of an unstructured document.</p>
      * @return DescribeFileResponse
      */
     public DescribeFileResponse describeFile(String WorkspaceId, String FileId) throws Exception {
@@ -805,8 +999,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A knowledge base job is running. You can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
+     * <li>We recommend that you call this operation at intervals of more than 5 seconds.</li>
+     * <li>This interface is idempotent.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取Index运行状态</p>
+     * <p>Queries the current status of a specified knowledge base creation or add document job.</p>
      * 
      * @param request GetIndexJobStatusRequest
      * @param headers map
@@ -851,8 +1052,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A knowledge base job is running. You can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
+     * <li>We recommend that you call this operation at intervals of more than 5 seconds.</li>
+     * <li>This interface is idempotent.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取Index运行状态</p>
+     * <p>Queries the current status of a specified knowledge base creation or add document job.</p>
      * 
      * @param request GetIndexJobStatusRequest
      * @return GetIndexJobStatusResponse
@@ -935,6 +1143,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getMemoryNodeWithOptions(workspaceId, memoryId, memoryNodeId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于模板Id获取Prompt模板。</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPromptTemplateResponse
+     */
+    public GetPromptTemplateResponse getPromptTemplateWithOptions(String workspaceId, String promptTemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPromptTemplate"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/promptTemplates/" + com.aliyun.openapiutil.Client.getEncodeParam(promptTemplateId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPromptTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于模板Id获取Prompt模板。</p>
+     * @return GetPromptTemplateResponse
+     */
+    public GetPromptTemplateResponse getPromptTemplate(String workspaceId, String promptTemplateId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPromptTemplateWithOptions(workspaceId, promptTemplateId, headers, runtime);
     }
 
     /**
@@ -1034,8 +1279,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Chunk</p>
+     * <p>For unstructured knowledge base, obtains the details of all chunks of a specified document; for structured knowledge base, obtains the details of all chunks.</p>
      * 
      * @param request ListChunksRequest
      * @param headers map
@@ -1084,8 +1335,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Chunk</p>
+     * <p>For unstructured knowledge base, obtains the details of all chunks of a specified document; for structured knowledge base, obtains the details of all chunks.</p>
      * 
      * @param request ListChunksRequest
      * @return ListChunksResponse
@@ -1110,6 +1367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
             query.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("FileName", request.fileName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -1152,8 +1413,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询Index文件</p>
+     * <p>Queries the details of one or more documents in a specified knowledge base.</p>
      * 
      * @param request ListIndexDocumentsRequest
      * @param headers map
@@ -1202,8 +1469,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询Index文件</p>
+     * <p>Queries the details of one or more documents in a specified knowledge base.</p>
      * 
      * @param request ListIndexDocumentsRequest
      * @return ListIndexDocumentsResponse
@@ -1215,8 +1488,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is idempotent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询pipeline</p>
+     * <p>Lists knowledge bases in a specified workspace.</p>
      * 
      * @param request ListIndicesRequest
      * @param headers map
@@ -1257,8 +1533,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is idempotent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询pipeline</p>
+     * <p>Lists knowledge bases in a specified workspace.</p>
      * 
      * @param request ListIndicesRequest
      * @return ListIndicesResponse
@@ -1373,6 +1652,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取Prompt模板列表。</p>
+     * 
+     * @param request ListPromptTemplatesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPromptTemplatesResponse
+     */
+    public ListPromptTemplatesResponse listPromptTemplatesWithOptions(String workspaceId, ListPromptTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPromptTemplates"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/promptTemplates"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPromptTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prompt模板列表。</p>
+     * 
+     * @param request ListPromptTemplatesRequest
+     * @return ListPromptTemplatesResponse
+     */
+    public ListPromptTemplatesResponse listPromptTemplates(String workspaceId, ListPromptTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPromptTemplatesWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询已发布的智能体应用列表</p>
      * 
      * @param request ListPublishedAgentRequest
@@ -1423,8 +1761,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>The response time may be long because this operation involves complex retrieval and matching. We recommend that you set appropriate timeout and retry policy for requests.</li>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>召回测试</p>
+     * <p>Queries information from a specified knowledge base.</p>
      * 
      * @param tmpReq RetrieveRequest
      * @param headers map
@@ -1523,8 +1868,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>The response time may be long because this operation involves complex retrieval and matching. We recommend that you set appropriate timeout and retry policy for requests.</li>
+     * <li>This interface is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>召回测试</p>
+     * <p>Queries information from a specified knowledge base.</p>
      * 
      * @param request RetrieveRequest
      * @return RetrieveResponse
@@ -1536,8 +1888,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>Before you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to upload the documents to Model Studio.</li>
+     * <li>After you call this operation, you can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</li>
+     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>知识索引</p>
+     * <p>Adds parsed documents to an unstructured knowledge base.</p>
      * 
      * @param tmpReq SubmitIndexAddDocumentsJobRequest
      * @param headers map
@@ -1592,8 +1952,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <ul>
+     * <li>Before you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to upload the documents to Model Studio.</li>
+     * <li>After you call this operation, you can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</li>
+     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>知识索引</p>
+     * <p>Adds parsed documents to an unstructured knowledge base.</p>
      * 
      * @param request SubmitIndexAddDocumentsJobRequest
      * @return SubmitIndexAddDocumentsJobResponse
@@ -1605,8 +1973,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <code>IndexId</code>.</li>
+     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</li>
+     * <li>If you want to query the execution status of the job after you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>提交索引任务</p>
+     * <p>Submits a specified CreateIndex job to complete knowledge base creation.</p>
      * 
      * @param request SubmitIndexJobRequest
      * @param headers map
@@ -1639,8 +2015,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <code>IndexId</code>.</li>
+     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</li>
+     * <li>If you want to query the execution status of the job after you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</li>
+     * <li>This interface is not idempotent.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>提交索引任务</p>
+     * <p>Submits a specified CreateIndex job to complete knowledge base creation.</p>
      * 
      * @param request SubmitIndexJobRequest
      * @return SubmitIndexJobResponse
@@ -1808,5 +2192,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateMemoryNodeWithOptions(workspaceId, memoryId, memoryNodeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于模板Id增量更新Prompt模板。</p>
+     * 
+     * @param request UpdatePromptTemplateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePromptTemplateResponse
+     */
+    public UpdatePromptTemplateResponse updatePromptTemplateWithOptions(String workspaceId, String promptTemplateId, UpdatePromptTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePromptTemplate"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/promptTemplates/" + com.aliyun.openapiutil.Client.getEncodeParam(promptTemplateId) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePromptTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于模板Id增量更新Prompt模板。</p>
+     * 
+     * @param request UpdatePromptTemplateRequest
+     * @return UpdatePromptTemplateResponse
+     */
+    public UpdatePromptTemplateResponse updatePromptTemplate(String workspaceId, String promptTemplateId, UpdatePromptTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updatePromptTemplateWithOptions(workspaceId, promptTemplateId, request, headers, runtime);
     }
 }

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListIndicesResponseBody extends TeaModel {
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListIndicesResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,7 +29,7 @@ public class ListIndicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -31,6 +38,8 @@ public class ListIndicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,12 @@ public class ListIndicesResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +114,8 @@ public class ListIndicesResponseBody extends TeaModel {
 
     public static class ListIndicesResponseBodyDataIndices extends TeaModel {
         /**
+         * <p>The estimated length of chunks. Valid values: [1-2048].</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -106,16 +123,26 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer chunkSize;
 
         /**
+         * <p>The description of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>If each RAM user belongs to a RAM group, the configuration is considered compliant.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The list of the primary key IDs of the documents.</p>
+         */
         @NameInMap("DocumentIds")
         public java.util.List<String> documentIds;
 
         /**
+         * <p>The name of the embedding model. Valid values:</p>
+         * <ul>
+         * <li>text-embedding-v2</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>conv-rewrite-qwen-1.8b</p>
          */
@@ -123,6 +150,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String embeddingModelName;
 
         /**
+         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>259899</p>
          */
@@ -130,6 +159,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>temp_mUB4j</p>
          */
@@ -137,6 +168,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The overlap length. Valid values: [0-1024].</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -144,6 +177,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer overlapSize;
 
         /**
+         * <p>Similarity Threshold Valid values: [0.01-1.00].</p>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */
@@ -151,6 +186,12 @@ public class ListIndicesResponseBody extends TeaModel {
         public String rerankMinScore;
 
         /**
+         * <p>The name of the rank model. Valid values:</p>
+         * <ul>
+         * <li>gte-rerank-hybrid</li>
+         * <li>gte-rerank</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>gte-rerank-hybrid</p>
          */
@@ -158,6 +199,21 @@ public class ListIndicesResponseBody extends TeaModel {
         public String rerankModelName;
 
         /**
+         * <p>The clause identifier. Separate multiple clause identifiers with |. Valid values:</p>
+         * <ul>
+         * <li>\n: line break</li>
+         * <li>，: Chinese comma</li>
+         * <li>,: English comma</li>
+         * <li>。 : Chinese full stop</li>
+         * <li>.: English full stop</li>
+         * <li>！ : Chinese exclamation point</li>
+         * <li>! : English exclamation point</li>
+         * <li>；: Chinese semicolon</li>
+         * <li>;: English semicolon</li>
+         * <li>？ : Chinese question mark</li>
+         * <li>?: English question mark</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>\n</p>
          */
@@ -165,6 +221,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String separator;
 
         /**
+         * <p>The ID of the vector storage instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>gp-bp1gq62t1788yw2ol</p>
          */
@@ -172,6 +230,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String sinkInstanceId;
 
         /**
+         * <p>The region of the vector storage instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -179,6 +239,13 @@ public class ListIndicesResponseBody extends TeaModel {
         public String sinkRegion;
 
         /**
+         * <p>The vector storage type of the knowledge base. Valid values:</p>
+         * <ul>
+         * <li>ES: Built-in vector database.</li>
+         * <li>BUILT_IN: Built-in vector database.</li>
+         * <li>ADB: AnalyticDB for PostgreSQL database.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>es</p>
          */
@@ -186,6 +253,16 @@ public class ListIndicesResponseBody extends TeaModel {
         public String sinkType;
 
         /**
+         * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For unstructured knowledge base, possible values:</p>
+         * <ul>
+         * <li>DATA_CENTER_CATEGORY: The category type.</li>
+         * <li>DATA_CENTER_FILE: The document type.</li>
+         * </ul>
+         * <p>For structured knowledge base, possible values:</p>
+         * <ul>
+         * <li>DATA_CENTER_STRUCTURED_TABLE: The data table type.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_CENTER_FILE</p>
          */
@@ -193,6 +270,11 @@ public class ListIndicesResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>The vector storage type of the knowledge base. Valid values:</p>
+         * <ul>
+         * <li>UNSTRUCTURED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>structured</p>
          */
@@ -327,10 +409,15 @@ public class ListIndicesResponseBody extends TeaModel {
     }
 
     public static class ListIndicesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of knowledge bases.</p>
+         */
         @NameInMap("Indices")
         public java.util.List<ListIndicesResponseBodyDataIndices> indices;
 
         /**
+         * <p>The specified page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -338,6 +425,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The specified number of documents on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -345,6 +434,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of knowledge bases returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>48</p>
          */

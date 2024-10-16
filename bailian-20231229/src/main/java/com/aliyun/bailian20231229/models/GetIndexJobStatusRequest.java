@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIndexJobStatusRequest extends TeaModel {
     /**
+     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetIndexJobStatusRequest extends TeaModel {
     public String indexId;
 
     /**
+     * <p>The knowledge base job ID, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> or <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,9 +24,21 @@ public class GetIndexJobStatusRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>Both the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> and <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations support batch import of documents. This operation returns both the overall <code>Status</code> of the job and the <code>Document.Status</code> of each document. If there are a large number of documents, you can use the <code>PageNumber</code> parameter to perform a paged query. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of document import jobs that are displayed on each page. No maximum value. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
