@@ -7,15 +7,6 @@ public class QueryResult extends TeaModel {
     @NameInMap("data")
     public java.util.List<QueryResultData> data;
 
-    @NameInMap("errorCode")
-    public String errorCode;
-
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
-    @NameInMap("success")
-    public Boolean success;
-
     public static QueryResult build(java.util.Map<String, ?> map) throws Exception {
         QueryResult self = new QueryResult();
         return TeaModel.build(map, self);
@@ -27,30 +18,6 @@ public class QueryResult extends TeaModel {
     }
     public java.util.List<QueryResultData> getData() {
         return this.data;
-    }
-
-    public QueryResult setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public QueryResult setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryResult setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class QueryResultDataImages extends TeaModel {
