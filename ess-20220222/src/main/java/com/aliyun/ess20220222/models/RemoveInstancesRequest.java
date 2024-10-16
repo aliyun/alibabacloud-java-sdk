@@ -104,6 +104,9 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    @NameInMap("StopInstanceTimeout")
+    public Integer stopInstanceTimeout;
+
     public static RemoveInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveInstancesRequest self = new RemoveInstancesRequest();
         return TeaModel.build(map, self);
@@ -195,6 +198,14 @@ public class RemoveInstancesRequest extends TeaModel {
     }
     public String getScalingGroupId() {
         return this.scalingGroupId;
+    }
+
+    public RemoveInstancesRequest setStopInstanceTimeout(Integer stopInstanceTimeout) {
+        this.stopInstanceTimeout = stopInstanceTimeout;
+        return this;
+    }
+    public Integer getStopInstanceTimeout() {
+        return this.stopInstanceTimeout;
     }
 
 }

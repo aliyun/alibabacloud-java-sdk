@@ -2291,6 +2291,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SpotInstanceRemedy", request.spotInstanceRemedy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.stopInstanceTimeout)) {
+            query.put("StopInstanceTimeout", request.stopInstanceTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.syncAlarmRuleToCms)) {
             query.put("SyncAlarmRuleToCms", request.syncAlarmRuleToCms);
         }
@@ -7166,6 +7170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SpotInstanceRemedy", request.spotInstanceRemedy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.stopInstanceTimeout)) {
+            query.put("StopInstanceTimeout", request.stopInstanceTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIds)) {
             query.put("VSwitchIds", request.vSwitchIds);
         }
@@ -7721,6 +7729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
             query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopInstanceTimeout)) {
+            query.put("StopInstanceTimeout", request.stopInstanceTimeout);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

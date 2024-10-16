@@ -440,6 +440,9 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("SpotInstanceRemedy")
     public Boolean spotInstanceRemedy;
 
+    @NameInMap("StopInstanceTimeout")
+    public Integer stopInstanceTimeout;
+
     /**
      * <blockquote>
      * <p>This parameter is unavailable.</p>
@@ -813,6 +816,14 @@ public class CreateScalingGroupRequest extends TeaModel {
     }
     public Boolean getSpotInstanceRemedy() {
         return this.spotInstanceRemedy;
+    }
+
+    public CreateScalingGroupRequest setStopInstanceTimeout(Integer stopInstanceTimeout) {
+        this.stopInstanceTimeout = stopInstanceTimeout;
+        return this;
+    }
+    public Integer getStopInstanceTimeout() {
+        return this.stopInstanceTimeout;
     }
 
     public CreateScalingGroupRequest setSyncAlarmRuleToCms(Boolean syncAlarmRuleToCms) {
