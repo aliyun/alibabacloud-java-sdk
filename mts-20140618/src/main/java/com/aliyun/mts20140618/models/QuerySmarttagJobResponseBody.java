@@ -11,6 +11,9 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     @NameInMap("JobStatus")
     public String jobStatus;
 
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <strong>example:</strong>
      * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
@@ -39,6 +42,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     }
     public String getJobStatus() {
         return this.jobStatus;
+    }
+
+    public QuerySmarttagJobResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QuerySmarttagJobResponseBody setRequestId(String requestId) {
