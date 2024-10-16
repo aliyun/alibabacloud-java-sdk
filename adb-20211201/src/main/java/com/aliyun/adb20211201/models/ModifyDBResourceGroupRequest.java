@@ -4,6 +4,9 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBResourceGroupRequest extends TeaModel {
+    @NameInMap("AutoStopInterval")
+    public String autoStopInterval;
+
     /**
      * <p>A reserved parameter.</p>
      * 
@@ -149,12 +152,23 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("SpecName")
     public String specName;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("TargetResourceGroupName")
     public String targetResourceGroupName;
 
     public static ModifyDBResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBResourceGroupRequest self = new ModifyDBResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBResourceGroupRequest setAutoStopInterval(String autoStopInterval) {
+        this.autoStopInterval = autoStopInterval;
+        return this;
+    }
+    public String getAutoStopInterval() {
+        return this.autoStopInterval;
     }
 
     public ModifyDBResourceGroupRequest setClusterMode(String clusterMode) {
@@ -283,6 +297,14 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
     public String getSpecName() {
         return this.specName;
+    }
+
+    public ModifyDBResourceGroupRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ModifyDBResourceGroupRequest setTargetResourceGroupName(String targetResourceGroupName) {

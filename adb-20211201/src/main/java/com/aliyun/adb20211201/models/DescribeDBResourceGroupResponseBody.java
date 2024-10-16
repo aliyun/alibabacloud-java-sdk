@@ -100,6 +100,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfo extends TeaModel {
+        @NameInMap("AutoStopInterval")
+        public String autoStopInterval;
+
         /**
          * <p>A reserved parameter.</p>
          * 
@@ -285,6 +288,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public static DescribeDBResourceGroupResponseBodyGroupsInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBResourceGroupResponseBodyGroupsInfo self = new DescribeDBResourceGroupResponseBodyGroupsInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setAutoStopInterval(String autoStopInterval) {
+            this.autoStopInterval = autoStopInterval;
+            return this;
+        }
+        public String getAutoStopInterval() {
+            return this.autoStopInterval;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setClusterMode(String clusterMode) {

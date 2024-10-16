@@ -4,6 +4,9 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourceGroupShrinkRequest extends TeaModel {
+    @NameInMap("AutoStopInterval")
+    public String autoStopInterval;
+
     /**
      * <p>A reserved parameter.</p>
      * 
@@ -160,6 +163,14 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public static CreateDBResourceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBResourceGroupShrinkRequest self = new CreateDBResourceGroupShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBResourceGroupShrinkRequest setAutoStopInterval(String autoStopInterval) {
+        this.autoStopInterval = autoStopInterval;
+        return this;
+    }
+    public String getAutoStopInterval() {
+        return this.autoStopInterval;
     }
 
     public CreateDBResourceGroupShrinkRequest setClusterMode(String clusterMode) {
