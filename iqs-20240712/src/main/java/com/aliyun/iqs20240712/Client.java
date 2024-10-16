@@ -28,6 +28,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>自然语言通用查询</p>
+     * 
+     * @param request CommonQueryBySceneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CommonQueryBySceneResponse
+     */
+    public CommonQueryBySceneResponse commonQueryBySceneWithOptions(CommonQueryBySceneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CommonQueryByScene"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/amap-function-call-agent/iqs-agent-service/v2/nl/common"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CommonQueryBySceneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自然语言通用查询</p>
+     * 
+     * @param request CommonQueryBySceneRequest
+     * @return CommonQueryBySceneResponse
+     */
+    public CommonQueryBySceneResponse commonQueryByScene(CommonQueryBySceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.commonQueryBySceneWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>景点查询</p>
      * 
      * @param request QueryAttractionsRequest
@@ -70,7 +112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>餐厅查询</p>
+     * <p>酒店查询</p>
      * 
      * @param request QueryHotelsRequest
      * @param headers map
@@ -99,7 +141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>餐厅查询</p>
+     * <p>酒店查询</p>
      * 
      * @param request QueryHotelsRequest
      * @return QueryHotelsResponse
