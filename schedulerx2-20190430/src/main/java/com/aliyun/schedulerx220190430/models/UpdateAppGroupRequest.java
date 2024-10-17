@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppGroupRequest extends TeaModel {
     /**
+     * <p>The application version. 1: Basic version, 2: Professional version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAppGroupRequest extends TeaModel {
     public Integer appVersion;
 
     /**
+     * <p>The description of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>Test</p>
      */
@@ -19,6 +23,7 @@ public class UpdateAppGroupRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class UpdateAppGroupRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The maximum number of concurrent instances. Default value: 1. A value of 1 specifies that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the next instance is reached.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +42,7 @@ public class UpdateAppGroupRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class UpdateAppGroupRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

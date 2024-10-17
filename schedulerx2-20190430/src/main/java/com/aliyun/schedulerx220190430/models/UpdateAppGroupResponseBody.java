@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppGroupResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAppGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The additional information that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAppGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
@@ -26,6 +32,12 @@ public class UpdateAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

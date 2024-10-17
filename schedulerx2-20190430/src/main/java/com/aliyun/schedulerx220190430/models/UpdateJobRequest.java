@@ -86,11 +86,11 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>The execution mode of the job. Valid values:</p>
      * <ul>
-     * <li><strong>Stand-alone operation</strong></li>
-     * <li><strong>Broadcast run</strong></li>
-     * <li><strong>Visual MapReduce</strong></li>
-     * <li><strong>MapReduce</strong></li>
-     * <li><strong>Shard run</strong></li>
+     * <li><strong>Stand-alone operation</strong>: standalone</li>
+     * <li><strong>Broadcast run</strong>: broadcatst</li>
+     * <li><strong>Visual MapReduce</strong>: parallel</li>
+     * <li><strong>MapReduce</strong>: batch</li>
+     * <li><strong>Shard run</strong>: shard</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -282,6 +282,39 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("TaskMaxAttempt")
     public Integer taskMaxAttempt;
 
+    /**
+     * <p>Custom task template for the k8s task type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apiVersion: v1
+     * kind: Pod
+     * metadata:
+     *   name: schedulerx-node-{JOB_ID}
+     *   namespace: {NAMESPACE}
+     * spec:
+     *   containers:</p>
+     * <ul>
+     * <li>name: node-job
+     * image: node:16
+     * imagePullPolicy: IfNotPresent
+     * volumeMounts:<ul>
+     * <li>name: script-node
+     * mountPath: script/node
+     * command: [&quot;node&quot;, &quot;script/node/node-{JOB_ID}.js&quot;]
+     * volumes:</li>
+     * </ul>
+     * </li>
+     * <li>name: script-node
+     * configMap:
+     *   name: schedulerx-configmap
+     *   items:<ul>
+     * <li>key: schedulerx-node-{JOB_ID}
+     * path: node-{JOB_ID}.js</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>  restartPolicy: Never</p>
+     */
     @NameInMap("Template")
     public String template;
 
@@ -360,6 +393,8 @@ public class UpdateJobRequest extends TeaModel {
     public String timezone;
 
     /**
+     * <p>If you set JobType to k8s, this parameter is required. xxljob task: {&quot;resource&quot;:&quot;job&quot;} shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;resource&quot;:&quot;shell&quot;,&quot;fileFormat&quot;:&quot;unix&quot;,&quot;templateType&quot;:&quot;customTemplate&quot;}</p>
      */

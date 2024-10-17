@@ -97,7 +97,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceDagEdges extends TeaModel {
         /**
-         * <p>The upstream job instance of the current job instance. The value 0 indicates that the upstream job instance is the root node.</p>
+         * <p>The upstream job instance of the current job instance. A value of 0 indicates that the upstream job instance is the root node.</p>
          * 
          * <strong>example:</strong>
          * <p>24058798</p>
@@ -139,7 +139,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes extends TeaModel {
         /**
-         * <p>The number of retries when the job instance failed.</p>
+         * <p>The number of retries when the job failed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -148,7 +148,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public Integer attempt;
 
         /**
-         * <p>The data timestamp of the job instance.</p>
+         * <p>The data timestamp of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-03 18:00:00</p>
@@ -157,7 +157,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String dataTime;
 
         /**
-         * <p>The time when the job instance stopped running.</p>
+         * <p>The time when the job stopped running.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-03 18:00:21</p>
@@ -175,7 +175,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public Long jobId;
 
         /**
-         * <p>The job instance ID.</p>
+         * <p>The ID of the job instance.</p>
          * 
          * <strong>example:</strong>
          * <p>24058796</p>
@@ -183,11 +183,17 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @NameInMap("JobInstanceId")
         public Long jobInstanceId;
 
+        /**
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestJob</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
         /**
-         * <p>The state of the job instance.</p>
+         * <p>The execution result of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>code=200</p>
@@ -196,7 +202,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The time when the job instance was scheduled to run.</p>
+         * <p>The time when the job was scheduled.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-03 18:00:03</p>
@@ -205,7 +211,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
-         * <p>The time when the job instance started to run.</p>
+         * <p>The time when the job started to run.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-03 18:00:03</p>
@@ -213,11 +219,17 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The state of the job instance. Valid values: 1: The job instance is waiting for execution. 3: The job instance is running. 4: The job instance is run. 5: The job instance failed to run. 9: The job instance is rejected. Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The server on which the job instance was run.</p>
+         * <p>The worker on which the job instance run.</p>
          * 
          * <strong>example:</strong>
          * <p>10.163.0.101:34027</p>
@@ -458,7 +470,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     public static class GetWorkflowInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The directed acyclic graph (DAG) of the workflow instance, including job instances and dependencies.</p>
+         * <p>The directed acyclic graph (DAG) of the workflow instance, including nodes and dependencies.</p>
          */
         @NameInMap("WfInstanceDag")
         public GetWorkflowInstanceResponseBodyDataWfInstanceDag wfInstanceDag;

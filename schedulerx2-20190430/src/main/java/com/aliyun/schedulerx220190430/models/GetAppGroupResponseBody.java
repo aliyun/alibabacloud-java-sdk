@@ -4,17 +4,27 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetAppGroupResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public GetAppGroupResponseBodyAccessDeniedDetail accessDeniedDetail;
+
     /**
+     * <p>The HTTP status code that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the application group.</p>
+     */
     @NameInMap("Data")
     public GetAppGroupResponseBodyData data;
 
     /**
+     * <p>The additional information that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
      */
@@ -22,6 +32,8 @@ public class GetAppGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
      */
@@ -29,6 +41,12 @@ public class GetAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +56,14 @@ public class GetAppGroupResponseBody extends TeaModel {
     public static GetAppGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAppGroupResponseBody self = new GetAppGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAppGroupResponseBody setAccessDeniedDetail(GetAppGroupResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public GetAppGroupResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetAppGroupResponseBody setCode(Integer code) {
@@ -80,8 +106,95 @@ public class GetAppGroupResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetAppGroupResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static GetAppGroupResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            GetAppGroupResponseBodyAccessDeniedDetail self = new GetAppGroupResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAppGroupResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public GetAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public GetAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public GetAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public GetAppGroupResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public GetAppGroupResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public GetAppGroupResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+    }
+
     public static class GetAppGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The AppKey of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>QI4lWMZ+xk1rNB67jFUhaw==</p>
          */
@@ -89,6 +202,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>DocTest</p>
          */
@@ -96,6 +211,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The application version. 1: Basic version, 2: Professional version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -103,6 +220,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The number of jobs that are configured for the application group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +229,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public Integer curJobs;
 
         /**
+         * <p>The description of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
@@ -117,6 +238,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>testSchedulerx.defaultGroup</p>
          */
@@ -124,6 +247,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The maximum number of jobs that can be configured for the application group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -131,6 +256,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public Integer maxJobs;
 
         /**
+         * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</p>
          */

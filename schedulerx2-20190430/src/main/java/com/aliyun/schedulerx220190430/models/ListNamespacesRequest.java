@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNamespacesRequest extends TeaModel {
     /**
+     * <p>The namespace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
@@ -12,6 +14,8 @@ public class ListNamespacesRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The name of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>schedulerx-dev</p>
      */
