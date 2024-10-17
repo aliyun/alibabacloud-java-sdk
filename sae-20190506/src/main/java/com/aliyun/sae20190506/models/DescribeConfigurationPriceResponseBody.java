@@ -114,6 +114,9 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Float cpu;
 
+        @NameInMap("Cu")
+        public Float cu;
+
         /**
          * <strong>example:</strong>
          * <p>989802.563546</p>
@@ -132,6 +135,14 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
         public Float getCpu() {
             return this.cpu;
+        }
+
+        public DescribeConfigurationPriceResponseBodyDataBagUsage setCu(Float cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Float getCu() {
+            return this.cu;
         }
 
         public DescribeConfigurationPriceResponseBodyDataBagUsage setMem(Float mem) {

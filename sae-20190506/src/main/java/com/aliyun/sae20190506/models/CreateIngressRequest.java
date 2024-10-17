@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateIngressRequest extends TeaModel {
     /**
+     * <p>The ID of the certificate that is associated with the <strong>CLB</strong> instance.</p>
+     * <ul>
+     * <li>If you set <strong>LoadBalanceType</strong> to <strong>clb</strong>, you can use CertId to configure a certificate for the HTTPS listener.</li>
+     * </ul>
+     * <p>For more information about how to manage the SSL certificate IDs that are used by CLB instances, see <a href="https://help.aliyun.com/document_detail/90792.html">Overview</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>188077086902****_176993d****_181437****_108724****</p>
      */
@@ -12,6 +18,12 @@ public class CreateIngressRequest extends TeaModel {
     public String certId;
 
     /**
+     * <p>The IDs of the certificates that are associated with the <strong>ALB</strong> instance.</p>
+     * <ul>
+     * <li>If you set <strong>LoadBalanceType</strong> to <strong>alb</strong>, you can use CertIds to configure multiple certificates for the HTTPS listener. Separate multiple certificate IDs with commas (,).</li>
+     * <li>The ID of the SSL certificate that is used by an ALB instance can be obtained from Certificate Management Service. For example, if you specify <code>756***-cn-hangzhou</code>, <code>756***</code> is the certificate ID that is obtained from the service page, and <code>-cn-hangzhou</code> is the fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>87<em><strong>35-cn-hangzhou,812</strong></em>3-cn-hangzhou</p>
      */
@@ -19,6 +31,13 @@ public class CreateIngressRequest extends TeaModel {
     public String certIds;
 
     /**
+     * <p>Default forwarding rule. Traffic is forwarded to the specified application through a designated port based on the IP address. Parameter descriptions are as follows:</p>
+     * <ul>
+     * <li><strong>appId</strong>: Application ID. - <strong>containerPort</strong>: Application instance port.<blockquote>
+     * <p>All requests that do not match or do not meet the <strong>Rules</strong> for forwarding will be directed to this specified application.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,16 +47,27 @@ public class CreateIngressRequest extends TeaModel {
     public String defaultRule;
 
     /**
+     * <p>Route rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ingress-for-sae-test</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: 1 to 60.</p>
+     * <p>If no request is received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
+     * <p>SThe frontend port that is used by the ALB instance.
+     * Valid values: 1 to 65535.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +77,11 @@ public class CreateIngressRequest extends TeaModel {
     public Integer listenerPort;
 
     /**
+     * <p>Request forwarding protocol. The value description is as follows:</p>
+     * <ul>
+     * <li><strong>HTTP</strong>: Suitable for applications that need to identify data content. - <strong>HTTPS</strong>: Suitable for applications that require encrypted transmission.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -54,6 +89,12 @@ public class CreateIngressRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
+     * <p>The type of the SLB instance. The instance type can be specified only when you create a routing rule. You cannot change the instance type when you update the routing rule. Valid values:</p>
+     * <ul>
+     * <li><strong>clb</strong></li>
+     * <li><strong>alb</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>clb</p>
      */
@@ -61,6 +102,7 @@ public class CreateIngressRequest extends TeaModel {
     public String loadBalanceType;
 
     /**
+     * <p>The ID of the namespace where the application is located. Currently, cross-namespace applications are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,10 +111,29 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The timeout period of a request. Unit: seconds. Valid values: 1 to 180.
+     * If no response is received from the backend server within the specified timeout period, ALB returns an HTTP 504 error code to the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
     /**
+     * <p>The forwarding rules. You can specify a port and an application in a forwarding rule to forward traffic based on the specified domain name and request path. The following list describes the involved parameters:</p>
+     * <ul>
+     * <li><strong>appId</strong>: the ID of the application.</li>
+     * <li><strong>containerPort</strong>: the container port of the application.</li>
+     * <li><strong>domain</strong>: the domain name.</li>
+     * <li><strong>path</strong>: the request path.</li>
+     * <li><strong>backendProtocol</strong>: the backend service protocol. Valid values: http, https, and grpc. Default value: http.</li>
+     * <li><strong>rewritePath</strong>: the rewrite path.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The path rewrite feature is supported only by ALB instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,10 +142,20 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("Rules")
     public String rules;
 
+    /**
+     * <p>The security policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-bp1bpn0kn9****</p>
+     */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
+     * <p>The Server Load Balancer (SLB) instance that is used by the routing rule.</p>
+     * <blockquote>
+     * <p> The SLB instance can be a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

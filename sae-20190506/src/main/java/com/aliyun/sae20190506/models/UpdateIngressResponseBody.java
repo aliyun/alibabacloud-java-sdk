@@ -5,19 +5,43 @@ import com.aliyun.tea.*;
 
 public class UpdateIngressResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public UpdateIngressResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <ul>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see the <strong>Error codes</strong> section of this topic.</li>
+     * </ul>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The returned information.</p>
+     * <ul>
+     * <li>If the request was successful, <strong>success</strong> is returned.</li>
+     * <li>If the request failed, an error code is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +49,8 @@ public class UpdateIngressResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
@@ -32,6 +58,12 @@ public class UpdateIngressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the configurations of the routing rule were updated. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +71,8 @@ public class UpdateIngressResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The trace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -108,6 +142,8 @@ public class UpdateIngressResponseBody extends TeaModel {
 
     public static class UpdateIngressResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the routing rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>87</p>
          */

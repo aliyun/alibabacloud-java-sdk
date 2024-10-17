@@ -866,7 +866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</p>
+     * <p>Creates a routing rule.</p>
      * 
      * @param request CreateIngressRequest
      * @param headers map
@@ -950,7 +950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</p>
+     * <p>Creates a routing rule.</p>
      * 
      * @param request CreateIngressRequest
      * @return CreateIngressResponse
@@ -6980,6 +6980,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the configurations of a routing rule.</p>
+     * 
      * @param request UpdateIngressRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7057,6 +7060,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the configurations of a routing rule.</p>
+     * 
      * @param request UpdateIngressRequest
      * @return UpdateIngressResponse
      */

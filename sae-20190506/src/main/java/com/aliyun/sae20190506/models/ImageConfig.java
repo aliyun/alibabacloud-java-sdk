@@ -13,6 +13,9 @@ public class ImageConfig extends TeaModel {
     @NameInMap("instanceID")
     public String instanceID;
 
+    @NameInMap("registryConfig")
+    public RegistryConfig registryConfig;
+
     public static ImageConfig build(java.util.Map<String, ?> map) throws Exception {
         ImageConfig self = new ImageConfig();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ImageConfig extends TeaModel {
     }
     public String getInstanceID() {
         return this.instanceID;
+    }
+
+    public ImageConfig setRegistryConfig(RegistryConfig registryConfig) {
+        this.registryConfig = registryConfig;
+        return this;
+    }
+    public RegistryConfig getRegistryConfig() {
+        return this.registryConfig;
     }
 
 }
