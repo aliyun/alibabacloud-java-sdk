@@ -11,6 +11,9 @@ public class CheckResourceStockRequest extends TeaModel {
     @NameInMap("AcpSpecId")
     public String acpSpecId;
 
+    @NameInMap("Amount")
+    public Integer amount;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -41,6 +44,14 @@ public class CheckResourceStockRequest extends TeaModel {
     }
     public String getAcpSpecId() {
         return this.acpSpecId;
+    }
+
+    public CheckResourceStockRequest setAmount(Integer amount) {
+        this.amount = amount;
+        return this;
+    }
+    public Integer getAmount() {
+        return this.amount;
     }
 
     public CheckResourceStockRequest setBizRegionId(String bizRegionId) {

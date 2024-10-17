@@ -128,6 +128,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>数据备份</p>
+     * 
      * @param request BackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BackupFileResponse
@@ -177,6 +180,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>数据备份</p>
+     * 
      * @param request BackupFileRequest
      * @return BackupFileResponse
      */
@@ -198,6 +204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acpSpecId)) {
             query.put("AcpSpecId", request.acpSpecId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            query.put("Amount", request.amount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
@@ -542,6 +552,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
             body.put("LocalDrive", request.localDrive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lockResolution)) {
+            body.put("LockResolution", request.lockResolution);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.netRedirectPolicyShrink)) {
@@ -908,12 +922,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceName", request.androidInstanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupId)) {
             query.put("InstanceGroupId", request.instanceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupIds)) {
             query.put("InstanceGroupIds", request.instanceGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupName)) {
+            query.put("InstanceGroupName", request.instanceGroupName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
@@ -1318,6 +1340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSpecResponse describeSpecWithOptions(DescribeSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -2068,6 +2094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LocalDrive", request.localDrive);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lockResolution)) {
+            body.put("LockResolution", request.lockResolution);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.netRedirectPolicyShrink)) {
             body.put("NetRedirectPolicy", request.netRedirectPolicyShrink);
         }
@@ -2167,7 +2197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文件恢复</p>
+     * <p>数据恢复</p>
      * 
      * @param request RecoveryFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2215,7 +2245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文件恢复</p>
+     * <p>数据恢复</p>
      * 
      * @param request RecoveryFileRequest
      * @return RecoveryFileResponse

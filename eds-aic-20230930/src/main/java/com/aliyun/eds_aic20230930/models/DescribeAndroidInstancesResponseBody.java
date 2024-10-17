@@ -65,6 +65,36 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAndroidInstancesResponseBodyInstanceModelDisks extends TeaModel {
+        @NameInMap("DiskSize")
+        public Integer diskSize;
+
+        @NameInMap("DiskType")
+        public String diskType;
+
+        public static DescribeAndroidInstancesResponseBodyInstanceModelDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstancesResponseBodyInstanceModelDisks self = new DescribeAndroidInstancesResponseBodyInstanceModelDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisks setDiskSize(Integer diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public Integer getDiskSize() {
+            return this.diskSize;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisks setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+    }
+
     public static class DescribeAndroidInstancesResponseBodyInstanceModel extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -72,6 +102,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         @NameInMap("AndroidInstanceGroupId")
         public String androidInstanceGroupId;
+
+        @NameInMap("AndroidInstanceGroupName")
+        public String androidInstanceGroupName;
 
         /**
          * <strong>example:</strong>
@@ -122,6 +155,15 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("BindUserId")
         public String bindUserId;
 
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("Cpu")
+        public String cpu;
+
+        @NameInMap("Disks")
+        public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelDisks> disks;
+
         /**
          * <strong>example:</strong>
          * <p>FilePathNotFound</p>
@@ -136,12 +178,18 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        @NameInMap("GmtExpired")
+        public String gmtExpired;
+
         /**
          * <strong>example:</strong>
          * <p>2023-05-06 10:42:10</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         /**
          * <strong>example:</strong>
@@ -150,6 +198,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("KeyPairId")
         public String keyPairId;
 
+        @NameInMap("Memory")
+        public Integer memory;
+
         /**
          * <strong>example:</strong>
          * <p>192.168.22.48</p>
@@ -157,12 +208,18 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
+
         /**
          * <strong>example:</strong>
          * <p>p-0btrd5zj8epo****</p>
          */
         @NameInMap("PersistentAppInstanceId")
         public String persistentAppInstanceId;
+
+        @NameInMap("PolicyGroupId")
+        public String policyGroupId;
 
         /**
          * <strong>example:</strong>
@@ -192,6 +249,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getAndroidInstanceGroupId() {
             return this.androidInstanceGroupId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setAndroidInstanceGroupName(String androidInstanceGroupName) {
+            this.androidInstanceGroupName = androidInstanceGroupName;
+            return this;
+        }
+        public String getAndroidInstanceGroupName() {
+            return this.androidInstanceGroupName;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setAndroidInstanceId(String androidInstanceId) {
@@ -250,6 +315,30 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.bindUserId;
         }
 
+        public DescribeAndroidInstancesResponseBodyInstanceModel setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setDisks(java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelDisks> disks) {
+            this.disks = disks;
+            return this;
+        }
+        public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelDisks> getDisks() {
+            return this.disks;
+        }
+
         public DescribeAndroidInstancesResponseBodyInstanceModel setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
@@ -266,12 +355,28 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public DescribeAndroidInstancesResponseBodyInstanceModel setGmtExpired(String gmtExpired) {
+            this.gmtExpired = gmtExpired;
+            return this;
+        }
+        public String getGmtExpired() {
+            return this.gmtExpired;
+        }
+
         public DescribeAndroidInstancesResponseBodyInstanceModel setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setKeyPairId(String keyPairId) {
@@ -282,6 +387,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.keyPairId;
         }
 
+        public DescribeAndroidInstancesResponseBodyInstanceModel setMemory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Integer getMemory() {
+            return this.memory;
+        }
+
         public DescribeAndroidInstancesResponseBodyInstanceModel setNetworkInterfaceIp(String networkInterfaceIp) {
             this.networkInterfaceIp = networkInterfaceIp;
             return this;
@@ -290,12 +403,28 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.networkInterfaceIp;
         }
 
+        public DescribeAndroidInstancesResponseBodyInstanceModel setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
         public DescribeAndroidInstancesResponseBodyInstanceModel setPersistentAppInstanceId(String persistentAppInstanceId) {
             this.persistentAppInstanceId = persistentAppInstanceId;
             return this;
         }
         public String getPersistentAppInstanceId() {
             return this.persistentAppInstanceId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setPolicyGroupId(String policyGroupId) {
+            this.policyGroupId = policyGroupId;
+            return this;
+        }
+        public String getPolicyGroupId() {
+            return this.policyGroupId;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setRate(Integer rate) {

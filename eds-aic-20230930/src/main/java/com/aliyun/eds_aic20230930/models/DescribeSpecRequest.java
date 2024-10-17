@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpecRequest extends TeaModel {
+    @NameInMap("BizRegionId")
+    public String bizRegionId;
+
     /**
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,6 +41,14 @@ public class DescribeSpecRequest extends TeaModel {
     public static DescribeSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpecRequest self = new DescribeSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSpecRequest setBizRegionId(String bizRegionId) {
+        this.bizRegionId = bizRegionId;
+        return this;
+    }
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     public DescribeSpecRequest setMaxResults(Integer maxResults) {

@@ -32,6 +32,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("LocalDrive")
     public String localDrive;
 
+    @NameInMap("LockResolution")
+    public String lockResolution;
+
     @NameInMap("NetRedirectPolicy")
     public CreatePolicyGroupRequestNetRedirectPolicy netRedirectPolicy;
 
@@ -87,6 +90,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getLocalDrive() {
         return this.localDrive;
+    }
+
+    public CreatePolicyGroupRequest setLockResolution(String lockResolution) {
+        this.lockResolution = lockResolution;
+        return this;
+    }
+    public String getLockResolution() {
+        return this.lockResolution;
     }
 
     public CreatePolicyGroupRequest setNetRedirectPolicy(CreatePolicyGroupRequestNetRedirectPolicy netRedirectPolicy) {
