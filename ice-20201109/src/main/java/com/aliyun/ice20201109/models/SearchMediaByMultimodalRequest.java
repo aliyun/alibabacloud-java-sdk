@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByMultimodalRequest extends TeaModel {
     /**
+     * <p>The type of the media assets.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>image</li>
+     * <li>video (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>video</p>
      */
@@ -12,6 +19,8 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     public String mediaType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +28,8 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,12 +37,17 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The search library.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-1</p>
      */
     @NameInMap("SearchLibName")
     public String searchLibName;
 
+    /**
+     * <p>The content that you want to query. You can describe the content in natural language.</p>
+     */
     @NameInMap("Text")
     public String text;
 

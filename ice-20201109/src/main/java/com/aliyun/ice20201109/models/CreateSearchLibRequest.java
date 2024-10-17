@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSearchLibRequest extends TeaModel {
     /**
+     * <p>The name of the search library. The name can contain letters and digits and must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

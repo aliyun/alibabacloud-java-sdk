@@ -4,13 +4,21 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeletePlayInfoResponseBody extends TeaModel {
+    /**
+     * <p>The URLs of the media streams that cannot be deleted. Generally, media streams cannot be deleted if you do not have the required permissions.</p>
+     */
     @NameInMap("ForbiddenList")
     public java.util.List<String> forbiddenList;
 
+    /**
+     * <p>The URLs of ignored media streams. An error occurred while obtaining such media assets because the IDs or URLs of the media assets do not exist.</p>
+     */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

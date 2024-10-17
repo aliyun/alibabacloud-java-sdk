@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEditingProjectsRequest extends TeaModel {
     /**
+     * <p>The ID of the online editing project. You can specify multiple IDs separated with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>fb2101bf24bf41cb318787dc</strong></strong>,<strong><strong>87dcfb2101bf24bf41cb3187</strong></strong></p>
      */

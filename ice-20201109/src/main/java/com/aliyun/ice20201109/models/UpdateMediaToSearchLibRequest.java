@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaToSearchLibRequest extends TeaModel {
     /**
+     * <p>The ID of the media asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateMediaToSearchLibRequest extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>The message body.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class UpdateMediaToSearchLibRequest extends TeaModel {
     public String msgBody;
 
     /**
+     * <p>The name of the search library. Default value: ims-default-search-lib.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */

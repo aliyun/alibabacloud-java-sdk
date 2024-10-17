@@ -14,7 +14,8 @@ public class SearchMediaRequest extends TeaModel {
     public String entityId;
 
     /**
-     * <p>The filter conditions. For more information about the parameter syntax, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocols</a>.</p>
+     * <p>The filter conditions. For more information about the parameter syntax
+     * &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocols</a>.</p>
      */
     @NameInMap("Match")
     public String match;

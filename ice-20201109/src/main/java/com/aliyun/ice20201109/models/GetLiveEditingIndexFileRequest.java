@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLiveEditingIndexFileRequest extends TeaModel {
     /**
+     * <p>The application name of the live stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>testrecord</p>
      */
@@ -12,6 +14,8 @@ public class GetLiveEditingIndexFileRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The domain name of the live stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.alivecdn.com</p>
      */
@@ -19,6 +23,8 @@ public class GetLiveEditingIndexFileRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The ID of the live stream editing project.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong><strong>cb6307a4edea614d8b3f3c</strong></strong></em></p>
      */
@@ -26,6 +32,8 @@ public class GetLiveEditingIndexFileRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The name of the live stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>teststream</p>
      */

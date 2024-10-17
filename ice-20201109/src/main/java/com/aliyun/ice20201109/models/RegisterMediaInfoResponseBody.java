@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterMediaInfoResponseBody extends TeaModel {
     /**
+     * <p>The ID of the media asset in IMS.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class RegisterMediaInfoResponseBody extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>5A-CAAC-4850-A3AF-B74606</strong></strong></strong></p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaMarksRequest extends TeaModel {
     /**
+     * <p>The ID of the media asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateMediaMarksRequest extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>The marks of the media asset.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MediaMarks")

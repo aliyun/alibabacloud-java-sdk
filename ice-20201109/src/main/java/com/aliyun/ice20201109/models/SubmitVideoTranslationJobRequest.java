@@ -4,13 +4,28 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobRequest extends TeaModel {
+    /**
+     * <ul>
+     * <li>The client token.</li>
+     * </ul>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <ul>
+     * <li>The job description.</li>
+     * </ul>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <ul>
+     * <li>The configuration parameters of the video translation job.</li>
+     * <li>The value must be in the JSON format.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;DetextArea&quot;:&quot;Auto&quot;}</p>
      */
@@ -18,6 +33,12 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
+     * <ul>
+     * <li>The input parameters of the video translation job.</li>
+     * <li>A video translation job takes a video or subtitle file as the input.</li>
+     * <li>The value must be in the JSON format.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Type&quot;:&quot;Video&quot;,&quot;Media&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;}</a></p>
      */
@@ -25,15 +46,30 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String inputConfig;
 
     /**
+     * <ul>
+     * <li>The output parameters of the video translation job.</li>
+     * <li>A video translation job can generate a video or subtitle file as the output.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;MediaURL&quot;: &quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4&quot;}</a></p>
      */
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    /**
+     * <ul>
+     * <li>The job title.</li>
+     * </ul>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <ul>
+     * <li>The user data.</li>
+     * </ul>
+     */
     @NameInMap("UserData")
     public String userData;
 

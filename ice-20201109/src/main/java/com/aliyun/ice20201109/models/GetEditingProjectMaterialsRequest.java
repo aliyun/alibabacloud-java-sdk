@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEditingProjectMaterialsRequest extends TeaModel {
     /**
+     * <p>The ID of the online editing project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

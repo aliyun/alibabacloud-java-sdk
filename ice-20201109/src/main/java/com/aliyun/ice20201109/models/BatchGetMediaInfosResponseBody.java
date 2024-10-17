@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class BatchGetMediaInfosResponseBody extends TeaModel {
+    /**
+     * <p>The queried media assets.</p>
+     */
     @NameInMap("MediaInfos")
     public java.util.List<BatchGetMediaInfosResponseBodyMediaInfos> mediaInfos;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
         /**
+         * <p>The bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1132.68</p>
          */
@@ -44,6 +51,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -51,6 +60,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */
@@ -58,6 +69,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>30611502</p>
          */
@@ -65,6 +78,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String fileSize;
 
         /**
+         * <p>The file status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -72,6 +87,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String fileStatus;
 
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>source_file</p>
          */
@@ -79,6 +96,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
          */
@@ -86,6 +105,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The container format.</p>
+         * 
          * <strong>example:</strong>
          * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
          */
@@ -93,6 +114,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String formatName;
 
         /**
+         * <p>The height.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -100,6 +123,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String height;
 
         /**
+         * <p>The region in which the file resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -107,6 +132,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The width.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */
@@ -209,6 +236,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoList extends TeaModel {
+        /**
+         * <p>The basic information of the file, including the duration and size.</p>
+         */
         @NameInMap("FileBasicInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
 
@@ -229,16 +259,23 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
         /**
+         * <p>The business type of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <p>The category of the media asset.</p>
+         */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>The thumbnail URL of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
          */
@@ -246,6 +283,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String coverURL;
 
         /**
+         * <p>The time when the media asset was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
@@ -253,16 +292,23 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the media asset was deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
+        /**
+         * <p>The description of the media asset.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The URL of the media asset in another service.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
          */
@@ -278,10 +324,19 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The tags of the media asset.</p>
+         */
         @NameInMap("MediaTags")
         public String mediaTags;
 
         /**
+         * <p>The type of the media asset. Valid values:</p>
+         * <p>\- image</p>
+         * <p>\- video</p>
+         * <p>\- audio</p>
+         * <p>\- text</p>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -289,6 +344,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>The time when the media asset was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:12Z</p>
          */
@@ -296,6 +353,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The snapshots of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
          */
@@ -303,6 +362,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String snapshots;
 
         /**
+         * <p>The source of the media asset. Valid values:</p>
+         * <p>\- oss</p>
+         * <p>\- vod</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -310,6 +373,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The sprite.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
          */
@@ -317,16 +382,23 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String spriteImages;
 
         /**
+         * <p>The status of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The title of the media asset.</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The transcoding status of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>Init</p>
          */
@@ -334,6 +406,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String transcodeStatus;
 
         /**
+         * <p>The user data.</p>
+         * 
          * <strong>example:</strong>
          * <p>userDataTest</p>
          */
@@ -498,10 +572,15 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @NameInMap("FileInfoList")
         public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoList> fileInfoList;
 
+        /**
+         * <p>The basic information of the media asset.</p>
+         */
         @NameInMap("MediaBasicInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The media assets that meet the specified conditions.</p>
+     */
     @NameInMap("MediaInfos")
     public java.util.List<ListPublicMediaBasicInfosResponseBodyMediaInfos> mediaInfos;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>8EqYpQbZ6Eh7+Zz8DxVYoQ==</p>
      */
@@ -22,6 +29,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>B7-7F87-4792-BFE9-63CD21</strong></strong></strong></p>
      */
@@ -29,6 +38,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of media assets that meet the specified conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
 
     public static class ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
         /**
+         * <p>The bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>270112.12</p>
          */
@@ -89,6 +102,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.040000</p>
          */
@@ -96,6 +111,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.mp4</p>
          */
@@ -103,6 +120,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>338990717</p>
          */
@@ -110,6 +129,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String fileSize;
 
         /**
+         * <p>The file status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -117,6 +138,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String fileStatus;
 
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>source_file</p>
          */
@@ -124,6 +147,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
          */
@@ -131,6 +156,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The container format.</p>
+         * 
          * <strong>example:</strong>
          * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
          */
@@ -138,6 +165,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String formatName;
 
         /**
+         * <p>The height.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -145,6 +174,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String height;
 
         /**
+         * <p>The region in which the file resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -152,6 +183,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The width.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */
@@ -254,6 +287,9 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoList extends TeaModel {
+        /**
+         * <p>The basic information of the file, such as the duration and size.</p>
+         */
         @NameInMap("FileBasicInfo")
         public ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
 
@@ -274,6 +310,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
 
     public static class ListPublicMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
         /**
+         * <p>The business type of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -281,6 +319,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String businessType;
 
         /**
+         * <p>The category of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -288,6 +328,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The thumbnail URL of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
          */
@@ -295,6 +337,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String coverURL;
 
         /**
+         * <p>The time when the media asset was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-08T16:52:04Z</p>
          */
@@ -302,6 +346,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the media asset was deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-08T16:52:04Z</p>
          */
@@ -309,6 +355,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String deletedTime;
 
         /**
+         * <p>The description of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -316,6 +364,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The URL of the media asset in another service.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
          */
@@ -323,7 +373,7 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String inputURL;
 
         /**
-         * <p>MediaId</p>
+         * <p>The ID of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
@@ -332,6 +382,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The tags of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>sticker-daily</p>
          */
@@ -339,6 +391,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String mediaTags;
 
         /**
+         * <p>The type of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -346,6 +400,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>The time when the media asset was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-08T16:52:04Z</p>
          */
@@ -353,6 +409,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The snapshots of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -360,6 +418,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String snapshots;
 
         /**
+         * <p>The source of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -367,16 +427,23 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The status of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The title of the media asset.</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The transcoding status of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>Init</p>
          */
@@ -384,6 +451,8 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         public String transcodeStatus;
 
         /**
+         * <p>The user data.</p>
+         * 
          * <strong>example:</strong>
          * <p>userData</p>
          */
@@ -535,18 +604,20 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
 
     public static class ListPublicMediaBasicInfosResponseBodyMediaInfos extends TeaModel {
         /**
-         * <p>FileInfos</p>
+         * <p>The file information of the media asset.</p>
          */
         @NameInMap("FileInfoList")
         public java.util.List<ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoList> fileInfoList;
 
         /**
-         * <p>BasicInfo</p>
+         * <p>The basic information of the media asset.</p>
          */
         @NameInMap("MediaBasicInfo")
         public ListPublicMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
          */

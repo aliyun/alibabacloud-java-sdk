@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaAiAnalysisJobRequest extends TeaModel {
     /**
+     * <p>The analysis parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;nlpParams&quot;:{&quot;sourceLanguage&quot;:&quot;cn&quot;,&quot;diarizationEnabled&quot;:true,&quot;speakerCount&quot;:0,&quot;summarizationEnabled&quot;:false,&quot;translationEnabled&quot;:false}}</p>
      */
@@ -12,6 +14,8 @@ public class SubmitMediaAiAnalysisJobRequest extends TeaModel {
     public String analysisParams;
 
     /**
+     * <p>The media asset that you want to analyze. You can specify an Object Storage Service (OSS) URL, a media asset ID, or an external URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;MediaType&quot;:&quot;video&quot;,&quot;Media&quot;:&quot;<a href="https://xxx.com/your_movie.mp4%22%7D">https://xxx.com/your_movie.mp4&quot;}</a></p>
      */

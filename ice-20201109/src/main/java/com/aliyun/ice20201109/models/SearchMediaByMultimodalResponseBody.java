@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByMultimodalResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The media assets that contain the specified content.</p>
+     */
     @NameInMap("MediaList")
     public java.util.List<SearchMediaByMultimodalResponseBodyMediaList> mediaList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -22,6 +29,8 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true false</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,6 +38,8 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>The total number of data records that meet the specified filter condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
 
     public static class SearchMediaByMultimodalResponseBodyMediaListClipInfo extends TeaModel {
         /**
+         * <p>The start time of the clip.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -89,6 +102,8 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>The score.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.2</p>
          */
@@ -96,6 +111,8 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>The end time of the clip.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -134,10 +151,15 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     }
 
     public static class SearchMediaByMultimodalResponseBodyMediaList extends TeaModel {
+        /**
+         * <p>The information about the clip.</p>
+         */
         @NameInMap("ClipInfo")
         public java.util.List<SearchMediaByMultimodalResponseBodyMediaListClipInfo> clipInfo;
 
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>a18936e0e28771edb59ae6f6f47a****</p>
          */

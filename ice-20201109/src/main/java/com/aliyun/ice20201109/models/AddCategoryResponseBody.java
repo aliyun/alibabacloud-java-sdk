@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddCategoryResponseBody extends TeaModel {
+    /**
+     * <p>The information about the category.</p>
+     */
     @NameInMap("Category")
     public AddCategoryResponseBodyCategory category;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -37,16 +42,23 @@ public class AddCategoryResponseBody extends TeaModel {
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {
         /**
+         * <p>The ID of the created category.</p>
+         * 
          * <strong>example:</strong>
          * <p>45</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>The category name.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
         /**
+         * <p>The level of the category. A value of <strong>0</strong> indicates a level-1 category, a value of <strong>1</strong> indicates a level-2 category, and a value of <strong>2</strong> indicates a level-3 category.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -54,6 +66,8 @@ public class AddCategoryResponseBody extends TeaModel {
         public Long level;
 
         /**
+         * <p>The ID of the parent category. By default, if ParentId is left empty or less than 1, -1 is returned, which indicates that the created category is the root directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -61,6 +75,12 @@ public class AddCategoryResponseBody extends TeaModel {
         public Long parentId;
 
         /**
+         * <p>The type of the category. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
+         * <li><strong>material</strong>: short video materials.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */

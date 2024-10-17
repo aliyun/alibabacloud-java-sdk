@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetVideoListResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the audio and video files.</p>
+     */
     @NameInMap("MediaList")
     public java.util.List<GetVideoListResponseBodyMediaList> mediaList;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -24,6 +29,12 @@ public class GetVideoListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -31,6 +42,8 @@ public class GetVideoListResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>The total number of audio and video files that meet the conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>163</p>
      */
@@ -84,6 +97,8 @@ public class GetVideoListResponseBody extends TeaModel {
 
     public static class GetVideoListResponseBodyMediaList extends TeaModel {
         /**
+         * <p>The ID of the application. Default value: app-1000000.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-1000000</p>
          */
@@ -91,16 +106,23 @@ public class GetVideoListResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The ID of the category.</p>
+         * 
          * <strong>example:</strong>
          * <p>3679</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
         /**
+         * <p>The URL of the thumbnail.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333">http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333</a>****</p>
          */
@@ -108,16 +130,23 @@ public class GetVideoListResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-11-14T09:15:50Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the audio or video file.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>135.6</p>
          */
@@ -125,6 +154,8 @@ public class GetVideoListResponseBody extends TeaModel {
         public Float duration;
 
         /**
+         * <p>The ID of the audio or video file.</p>
+         * 
          * <strong>example:</strong>
          * <p>1c6ce34007d571ed94667630a6bc****</p>
          */
@@ -132,6 +163,8 @@ public class GetVideoListResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The time when the audio or video file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-11-14T09:16:50Z</p>
          */
@@ -139,16 +172,37 @@ public class GetVideoListResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
+         * <p>The size of the source file. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10897890</p>
          */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The array of video snapshot URLs.</p>
+         */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
+         * <p>The status of the video.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PrepareFail: The file is abnormal.</li>
+         * <li>UploadFail: The video failed to be uploaded.</li>
+         * <li>UploadSucc: The video is uploaded.</li>
+         * <li>Transcoding: The video is being transcoded.</li>
+         * <li>TranscodeFail: The video failed to be transcoded.</li>
+         * <li>ProduceFail: The video failed to be produced.</li>
+         * <li>Normal: The video is normal.</li>
+         * <li>Uploading: The video is being uploaded.</li>
+         * <li>Preparing: The file is being generated.</li>
+         * <li>Blocked: The video is blocked.</li>
+         * <li>checking: The video is being reviewed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -156,15 +210,23 @@ public class GetVideoListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The storage address.</p>
+         * 
          * <strong>example:</strong>
          * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
+        /**
+         * <p>The tags of the audio or video file.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The title of the audio or video file.</p>
+         */
         @NameInMap("Title")
         public String title;
 

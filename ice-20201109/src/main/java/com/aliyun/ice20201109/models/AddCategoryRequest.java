@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddCategoryRequest extends TeaModel {
     /**
+     * <p>The category name.</p>
+     * <ul>
+     * <li>The value can be up to 64 bytes in length.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CateName")
     public String cateName;
 
     /**
+     * <p>The ID of the parent category.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -18,6 +25,12 @@ public class AddCategoryRequest extends TeaModel {
     public Long parentId;
 
     /**
+     * <p>The type of the category. Valid values:</p>
+     * <ul>
+     * <li>default: audio, video, and image files. This is the default value.</li>
+     * <li>material: short video materials.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
