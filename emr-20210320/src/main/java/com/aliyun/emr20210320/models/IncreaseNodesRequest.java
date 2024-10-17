@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncreaseNodesRequest extends TeaModel {
     /**
-     * <p>The configurations of the applications. Valid values of N: 1 to 1000.</p>
+     * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -27,6 +27,16 @@ public class IncreaseNodesRequest extends TeaModel {
     @NameInMap("AutoPayOrder")
     public Boolean autoPayOrder;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal for nodes. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default value)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 

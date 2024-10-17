@@ -15,7 +15,12 @@ public class GetOperationRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the operation.</p>
+     * <p>The operation ID.</p>
+     * <p>References:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/454397.html">IncreaseNodes</a></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

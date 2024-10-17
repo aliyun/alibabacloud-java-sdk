@@ -222,7 +222,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The maximum and minimum numbers of node groups.</p>
+         * <p>The maximum and minimum number of nodes in the node group.</p>
          */
         @NameInMap("Constraints")
         public Constraints constraints;

@@ -40,15 +40,6 @@ public class ListComponentsRequest extends TeaModel {
     public java.util.List<String> componentStates;
 
     /**
-     * <p>是否包含过期配置。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("IncludeExpiredConfig")
-    public Boolean includeExpiredConfig;
-
-    /**
      * <p>一次获取的最大记录数。取值范围：1~100。</p>
      * 
      * <strong>example:</strong>
@@ -111,14 +102,6 @@ public class ListComponentsRequest extends TeaModel {
     }
     public java.util.List<String> getComponentStates() {
         return this.componentStates;
-    }
-
-    public ListComponentsRequest setIncludeExpiredConfig(Boolean includeExpiredConfig) {
-        this.includeExpiredConfig = includeExpiredConfig;
-        return this;
-    }
-    public Boolean getIncludeExpiredConfig() {
-        return this.includeExpiredConfig;
     }
 
     public ListComponentsRequest setMaxResults(Integer maxResults) {

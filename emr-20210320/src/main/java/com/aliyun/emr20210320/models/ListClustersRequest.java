@@ -69,6 +69,34 @@ public class ListClustersRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cn-qingdao</li>
+     * <li>cn-beijing</li>
+     * <li>cn-zhangjiakou</li>
+     * <li>cn-huhehaote</li>
+     * <li>cn-hangzhou</li>
+     * <li>cn-shanghai</li>
+     * <li>cn-shenzhen</li>
+     * <li>cn-chengdu</li>
+     * <li>cn-hongkong</li>
+     * <li>cn-wulanchabu</li>
+     * <li>cn-heyuan-acdr-1</li>
+     * <li>cn-qingdao-acdr-ut-1</li>
+     * <li>ap-northeast-1</li>
+     * <li>ap-southeast-1</li>
+     * <li>ap-southeast-2</li>
+     * <li>ap-southeast-3</li>
+     * <li>ap-southeast-5</li>
+     * <li>ap-south-1</li>
+     * <li>us-east-1</li>
+     * <li>us-west-1</li>
+     * <li>me-east-1</li>
+     * <li>me-central-1</li>
+     * <li>eu-central-1</li>
+     * <li>eu-west-1</li>
+     * <li>cn-north-2-gov-1</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +115,7 @@ public class ListClustersRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags. You can specify a maximum of 20 items.</p>
+     * <p>The tags. Number of elements in the array: 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;PayAsYouGo&quot;]</p>

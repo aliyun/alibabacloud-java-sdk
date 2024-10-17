@@ -13,6 +13,9 @@ public class NodeGroupConfig extends TeaModel {
     @NameInMap("AdditionalSecurityGroupIds")
     public java.util.List<String> additionalSecurityGroupIds;
 
+    @NameInMap("AutoScalingPolicy")
+    public AutoScalingPolicy autoScalingPolicy;
+
     @NameInMap("ComponentTags")
     public java.util.List<String> componentTags;
 
@@ -208,6 +211,14 @@ public class NodeGroupConfig extends TeaModel {
     }
     public java.util.List<String> getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
+    }
+
+    public NodeGroupConfig setAutoScalingPolicy(AutoScalingPolicy autoScalingPolicy) {
+        this.autoScalingPolicy = autoScalingPolicy;
+        return this;
+    }
+    public AutoScalingPolicy getAutoScalingPolicy() {
+        return this.autoScalingPolicy;
     }
 
     public NodeGroupConfig setComponentTags(java.util.List<String> componentTags) {

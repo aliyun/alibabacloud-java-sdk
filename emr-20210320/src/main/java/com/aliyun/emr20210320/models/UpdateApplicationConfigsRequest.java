@@ -86,7 +86,7 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>Specifies whether to refresh the configurations.</p>
+     * <p>Specifies whether to refresh the configurations. Default value: True.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

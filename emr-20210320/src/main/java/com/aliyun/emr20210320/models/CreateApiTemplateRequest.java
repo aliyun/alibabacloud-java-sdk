@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApiTemplateRequest extends TeaModel {
     /**
-     * <p>接口名。</p>
+     * <p>The name of the API operation. You can create only a cluster API operation template. Set the value to CreateCluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateApiTemplateRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>接口request内容。</p>
+     * <p>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/zh/emr/emr-on-ecs/developer-reference/api-emr-2021-03-20-createcluster">CreateCluster</a> API operation for creating a cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

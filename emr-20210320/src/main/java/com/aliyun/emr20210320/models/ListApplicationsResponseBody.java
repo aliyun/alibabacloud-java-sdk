@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The information about applications.</p>
+     * <p>The applications.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Applications> applications;
@@ -102,7 +102,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The status of the application operation.</p>
+         * <p>The status of the applications. Valid values:</p>
+         * <ul>
+         * <li>STOPPED: At least one application is in the Stopped state.</li>
+         * <li>RUNNING: All applications are in the Running state.</li>
+         * </ul>
+         * <p>This parameter is returned only for DataLake, OLAP, Dataflow, DataServing, and custom clusters. For other types of clusters, no value is returned for this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>

@@ -3,28 +3,28 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class CreateClusterRequest extends TeaModel {
+public class RunClusterRequest extends TeaModel {
     /**
-     * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
+     * <p>应用配置。数组元素个数N的取值范围：1~1000。</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>The applications. You can specify a maximum of 100 items.</p>
+     * <p>应用列表。数组元素个数N的取值范围：1~100。</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Application> applications;
 
     /**
-     * <p>The bootstrap actions. You can specify a maximum of 10 items.</p>
+     * <p>引导脚本。数组元素个数N的取值范围：1~10。</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
 
     /**
-     * <p>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</p>
+     * <p>幂等客户端TOKEN。同一个ClientToken多次调用的返回结果一致，同一个ClientToken最多只创建一个集群。</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
@@ -33,7 +33,7 @@ public class CreateClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>集群名称。长度为1~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,16 +43,15 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the cluster. Valid values:</p>
+     * <p>创建的EMR集群类型。取值范围：</p>
      * <ul>
-     * <li>DATALAKE: data lake</li>
-     * <li>OLAP: online analytical processing (OLAP)</li>
-     * <li>DATAFLOW: Dataflow</li>
-     * <li>DATASERVING: DataServing</li>
-     * <li>CUSTOM: a custom hybrid cluster.</li>
-     * <li>HADOOP: the old data lake. We recommend that you use the new data lake.</li>
+     * <li>DATALAKE：新版数据湖。</li>
+     * <li>OLAP：数据分析。</li>
+     * <li>DATAFLOW：实时数据流。</li>
+     * <li>DATASERVING：数据服务。</li>
+     * <li>CUSTOM：自定义集群。</li>
+     * <li>HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。</li>
      * </ul>
-     * <p>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,11 +61,12 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
+     * <p>集群中的应用部署模式。取值范围：</p>
      * <ul>
-     * <li>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</li>
-     * <li>HA: high availability (HA) mode. A cluster that contains three master nodes is created.</li>
+     * <li>NORMAL：非高可用部署。集群1个MASTER节点。</li>
+     * <li>HA：高可用部署。高可用部署要求至少3个MASTER节点。</li>
      * </ul>
+     * <p>默认值：NORMAL。</p>
      * 
      * <strong>example:</strong>
      * <p>HA</p>
@@ -74,33 +74,32 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("DeployMode")
     public String deployMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Emr cluster for ETL</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The attributes of all ECS instances.</p>
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>The node groups. You can specify a maximum of 100 items.</p>
-     * <p>This parameter is required.</p>
+     * <p>节点组。数组元素个数N的取值范围：1~100。</p>
+     * <p>
      * 
-     * <strong>example:</strong>
-     * <p>NORMAL</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroupConfig> nodeGroups;
 
     /**
-     * <p>The billing cycle of the instance. Valid values:</p>
+     * <p>集群的付费类型。取值范围：</p>
      * <ul>
-     * <li>PayAsYouGo: pay-as-you-go</li>
-     * <li>Subscription: subscription</li>
+     * <li>PayAsYouGo：后付费。</li>
+     * <li>Subscription：预付费。</li>
      * </ul>
-     * <p>Default value: PayAsYouGo.</p>
+     * <p>默认值：PayAsYouGo。</p>
      * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
@@ -109,7 +108,7 @@ public class CreateClusterRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>区域ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,17 +118,17 @@ public class CreateClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</p>
+     * <p>EMR发行版。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>EMR-5.8.0</p>
+     * <p>EMR-5.16.0</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
     /**
-     * <p>The ID of the resource group to which to assign the ENI.</p>
+     * <p>集群所在的企业资源组ID。</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -138,11 +137,12 @@ public class CreateClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The security mode of the cluster. Valid values:</p>
+     * <p>Kerberos安全模式。取值范围：</p>
      * <ul>
-     * <li>NORMAL: disables Kerberos authentication for the cluster. This is the default value.</li>
-     * <li>KERBEROS: enables Kerberos authentication for the cluster.</li>
+     * <li>NORMAL：普通模式，不开启Kerberos模式。</li>
+     * <li>KERBEROS：开启Kerberos模式。</li>
      * </ul>
+     * <p>默认值：NORMAL</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -150,27 +150,21 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("SecurityMode")
     public String securityMode;
 
-    /**
-     * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
-     */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The tags. You can specify a maximum of 20 items.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
+     * <p>标签。数组元数个数N的取值范围：0~20。</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
 
-    public static CreateClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateClusterRequest self = new CreateClusterRequest();
+    public static RunClusterRequest build(java.util.Map<String, ?> map) throws Exception {
+        RunClusterRequest self = new RunClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateClusterRequest setApplicationConfigs(java.util.List<ApplicationConfig> applicationConfigs) {
+    public RunClusterRequest setApplicationConfigs(java.util.List<ApplicationConfig> applicationConfigs) {
         this.applicationConfigs = applicationConfigs;
         return this;
     }
@@ -178,7 +172,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.applicationConfigs;
     }
 
-    public CreateClusterRequest setApplications(java.util.List<Application> applications) {
+    public RunClusterRequest setApplications(java.util.List<Application> applications) {
         this.applications = applications;
         return this;
     }
@@ -186,7 +180,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.applications;
     }
 
-    public CreateClusterRequest setBootstrapScripts(java.util.List<Script> bootstrapScripts) {
+    public RunClusterRequest setBootstrapScripts(java.util.List<Script> bootstrapScripts) {
         this.bootstrapScripts = bootstrapScripts;
         return this;
     }
@@ -194,7 +188,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.bootstrapScripts;
     }
 
-    public CreateClusterRequest setClientToken(String clientToken) {
+    public RunClusterRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -202,7 +196,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateClusterRequest setClusterName(String clusterName) {
+    public RunClusterRequest setClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
     }
@@ -210,7 +204,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.clusterName;
     }
 
-    public CreateClusterRequest setClusterType(String clusterType) {
+    public RunClusterRequest setClusterType(String clusterType) {
         this.clusterType = clusterType;
         return this;
     }
@@ -218,7 +212,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.clusterType;
     }
 
-    public CreateClusterRequest setDeployMode(String deployMode) {
+    public RunClusterRequest setDeployMode(String deployMode) {
         this.deployMode = deployMode;
         return this;
     }
@@ -226,7 +220,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.deployMode;
     }
 
-    public CreateClusterRequest setDescription(String description) {
+    public RunClusterRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -234,7 +228,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateClusterRequest setNodeAttributes(NodeAttributes nodeAttributes) {
+    public RunClusterRequest setNodeAttributes(NodeAttributes nodeAttributes) {
         this.nodeAttributes = nodeAttributes;
         return this;
     }
@@ -242,7 +236,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.nodeAttributes;
     }
 
-    public CreateClusterRequest setNodeGroups(java.util.List<NodeGroupConfig> nodeGroups) {
+    public RunClusterRequest setNodeGroups(java.util.List<NodeGroupConfig> nodeGroups) {
         this.nodeGroups = nodeGroups;
         return this;
     }
@@ -250,7 +244,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.nodeGroups;
     }
 
-    public CreateClusterRequest setPaymentType(String paymentType) {
+    public RunClusterRequest setPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
     }
@@ -258,7 +252,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.paymentType;
     }
 
-    public CreateClusterRequest setRegionId(String regionId) {
+    public RunClusterRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -266,7 +260,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateClusterRequest setReleaseVersion(String releaseVersion) {
+    public RunClusterRequest setReleaseVersion(String releaseVersion) {
         this.releaseVersion = releaseVersion;
         return this;
     }
@@ -274,7 +268,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.releaseVersion;
     }
 
-    public CreateClusterRequest setResourceGroupId(String resourceGroupId) {
+    public RunClusterRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -282,7 +276,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateClusterRequest setSecurityMode(String securityMode) {
+    public RunClusterRequest setSecurityMode(String securityMode) {
         this.securityMode = securityMode;
         return this;
     }
@@ -290,7 +284,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.securityMode;
     }
 
-    public CreateClusterRequest setSubscriptionConfig(SubscriptionConfig subscriptionConfig) {
+    public RunClusterRequest setSubscriptionConfig(SubscriptionConfig subscriptionConfig) {
         this.subscriptionConfig = subscriptionConfig;
         return this;
     }
@@ -298,7 +292,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.subscriptionConfig;
     }
 
-    public CreateClusterRequest setTags(java.util.List<Tag> tags) {
+    public RunClusterRequest setTags(java.util.List<Tag> tags) {
         this.tags = tags;
         return this;
     }

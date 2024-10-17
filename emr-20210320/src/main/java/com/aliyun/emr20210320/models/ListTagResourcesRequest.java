@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Marks the current position to start reading. If this field is empty, the data is read from the beginning.</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results. If NextToken is empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
