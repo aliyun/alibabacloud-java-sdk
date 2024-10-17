@@ -41,7 +41,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code. If OK is returned, the request is successful. For more information, see <a href="https://www.alibabacloud.com/help/zh/short-message-service/latest/error-codes">Error codes</a>.</p>
+     * <p>The status code. If OK is returned, the request is successful. For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/error-codes">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

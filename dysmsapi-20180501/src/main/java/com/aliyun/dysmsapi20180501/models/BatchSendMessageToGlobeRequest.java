@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchSendMessageToGlobeRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>sms-djnfjn344</p>
+     */
+    @NameInMap("ChannelId")
+    public String channelId;
+
+    /**
      * <p>The mobile phone number of the sender. You can also specify a sender ID. The sender ID can contain both letters and digits. If it does, the ID must be between 1 to 11 characters in length. If the sender ID contains only digits, it must be 1 to 15 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +41,7 @@ public class BatchSendMessageToGlobeRequest extends TeaModel {
 
     /**
      * <p>The mobile phone numbers to which the message is sent. You must add the dialing code to the beginning of each mobile phone number.</p>
-     * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes">Dialing codes</a>.</p>
+     * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/dialing-codes">Dialing codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,14 @@ public class BatchSendMessageToGlobeRequest extends TeaModel {
     public static BatchSendMessageToGlobeRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSendMessageToGlobeRequest self = new BatchSendMessageToGlobeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchSendMessageToGlobeRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public BatchSendMessageToGlobeRequest setFrom(String from) {

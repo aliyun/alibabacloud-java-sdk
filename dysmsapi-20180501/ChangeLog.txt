@@ -1,3 +1,7 @@
+2024-10-17 Version: 1.0.8
+- Update API BatchSendMessageToGlobe: add param ChannelId.
+
+
 2024-08-01 Version: 1.0.7
 - Generated java 2018-05-01 for Dysmsapi.
 
