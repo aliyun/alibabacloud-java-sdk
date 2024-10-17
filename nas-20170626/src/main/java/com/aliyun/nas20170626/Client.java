@@ -5458,6 +5458,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only General-purpose Apsara File Storage NAS (NAS) file systems support this operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the recycle bin configurations of a General-purpose NAS file system.</p>
      * 
@@ -5486,6 +5489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only General-purpose Apsara File Storage NAS (NAS) file systems support this operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the recycle bin configurations of a General-purpose NAS file system.</p>
      * 
