@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefreshUploadMediaRequest extends TeaModel {
     /**
+     * <p>The ID of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>411bed50018971edb60b0764a0ec6***</p>
      */

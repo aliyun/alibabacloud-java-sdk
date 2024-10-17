@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByFaceRequest extends TeaModel {
     /**
+     * <p>The ID of the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>2d3bf1e35a1e42b5ab338d701efa****</p>
      */
@@ -12,6 +14,7 @@ public class SearchMediaByFaceRequest extends TeaModel {
     public String entityId;
 
     /**
+     * <p>The token that is used to identify the query. You can use this parameter in the SearchMediaClipByFace operation to specify the same query conditions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,22 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("FaceSearchToken")
     public String faceSearchToken;
 
+    /**
+     * <p>The type of the media asset. Valid values:</p>
+     * <ul>
+     * <li>image</li>
+     * <li>video</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -31,6 +46,8 @@ public class SearchMediaByFaceRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,6 +55,7 @@ public class SearchMediaByFaceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The URL of the face image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +64,12 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("PersonImageUrl")
     public String personImageUrl;
 
+    /**
+     * <p>The name of the search library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

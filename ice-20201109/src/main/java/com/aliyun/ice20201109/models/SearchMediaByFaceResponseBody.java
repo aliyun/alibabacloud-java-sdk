@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByFaceResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The media assets that meet the conditions.</p>
+     */
     @NameInMap("MediaInfoList")
     public java.util.List<SearchMediaByFaceResponseBodyMediaInfoList> mediaInfoList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7CA7D615-CFB1-5437-9A12-2D185C3EE6CB</p>
      */
@@ -22,6 +29,8 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true false</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,6 +38,8 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>The total number of data records that meet the specified filter condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>163</p>
      */
@@ -82,6 +93,8 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
 
     public static class SearchMediaByFaceResponseBodyMediaInfoList extends TeaModel {
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b187b3620c8490886cfc2a9578c****</p>
          */

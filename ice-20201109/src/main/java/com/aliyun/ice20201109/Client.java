@@ -86,8 +86,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建媒资分类</p>
+     * <p>Creates a category.</p>
      * 
      * @param request AddCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -126,8 +129,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建媒资分类</p>
+     * <p>Creates a category.</p>
      * 
      * @param request AddCategoryRequest
      * @return AddCategoryResponse
@@ -139,7 +145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>剪辑工程增加素材</p>
+     * <p>Adds one or more materials to an online editing project.</p>
      * 
      * @param request AddEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -175,7 +181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>剪辑工程增加素材</p>
+     * <p>Adds one or more materials to an online editing project.</p>
      * 
      * @param request AddEditingProjectMaterialsRequest
      * @return AddEditingProjectMaterialsResponse
@@ -231,7 +237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为媒资增加标注信息</p>
+     * <p>Adds marks for a media asset.</p>
      * 
      * @param request AddMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -267,7 +273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为媒资增加标注信息</p>
+     * <p>Adds marks for a media asset.</p>
      * 
      * @param request AddMediaMarksRequest
      * @return AddMediaMarksResponse
@@ -353,7 +359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新搜索索引</p>
+     * <p>Modifies search index information including index status and configurations.</p>
      * 
      * @param request AlterSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -397,7 +403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新搜索索引</p>
+     * <p>Modifies search index information including index status and configurations.</p>
      * 
      * @param request AlterSearchIndexRequest
      * @return AlterSearchIndexResponse
@@ -409,7 +415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Queries the information about multiple media assets at a time based on media asset IDs.</p>
      * 
      * @param request BatchGetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -445,7 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Queries the information about multiple media assets at a time based on media asset IDs.</p>
      * 
      * @param request BatchGetMediaInfosRequest
      * @return BatchGetMediaInfosResponse
@@ -857,7 +863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建云剪辑工程</p>
+     * <p>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</p>
      * 
      * @param request CreateEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -927,7 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建云剪辑工程</p>
+     * <p>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</p>
      * 
      * @param request CreateEditingProjectRequest
      * @return CreateEditingProjectResponse
@@ -1158,6 +1164,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
+     * 
      * <b>summary</b> : 
      * <p>创建搜索索引</p>
      * 
@@ -1202,6 +1211,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
+     * 
      * <b>summary</b> : 
      * <p>创建搜索索引</p>
      * 
@@ -1215,7 +1227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建库</p>
+     * <p>Creates a search library to store media assets.</p>
      * 
      * @param request CreateSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1247,7 +1259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建库</p>
+     * <p>Creates a search library to store media assets.</p>
      * 
      * @param request CreateSearchLibRequest
      * @return CreateSearchLibResponse
@@ -1258,8 +1270,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</p>
+     * <ul>
+     * <li>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</li>
+     * <li>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</li>
+     * <li>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</li>
+     * <li>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
+     * <li>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>本地媒资上传</p>
+     * <p>Obtains the upload URL and credential of a media asset and creates information about the media asset.</p>
      * 
      * @param request CreateUploadMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1314,8 +1337,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</p>
+     * <ul>
+     * <li>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</li>
+     * <li>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</li>
+     * <li>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</li>
+     * <li>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
+     * <li>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>本地媒资上传</p>
+     * <p>Obtains the upload URL and credential of a media asset and creates information about the media asset.</p>
      * 
      * @param request CreateUploadMediaRequest
      * @return CreateUploadMediaResponse
@@ -1326,8 +1360,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>本地上传媒体流</p>
+     * <p>Obtains the upload URL and credential of a media stream.</p>
      * 
      * @param request CreateUploadStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1374,8 +1415,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>本地上传媒体流</p>
+     * <p>Obtains the upload URL and credential of a media stream.</p>
      * 
      * @param request CreateUploadStreamRequest
      * @return CreateUploadStreamResponse
@@ -1474,8 +1522,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除媒资分类</p>
+     * <p>Deletes a media asset category.</p>
      * 
      * @param request DeleteCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1506,8 +1557,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除媒资分类</p>
+     * <p>Deletes a media asset category.</p>
      * 
      * @param request DeleteCategoryRequest
      * @return DeleteCategoryResponse
@@ -1731,7 +1785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除剪辑工程关联素材</p>
+     * <p>Deletes one or more materials from an online editing project.</p>
      * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1771,7 +1825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除剪辑工程关联素材</p>
+     * <p>Deletes one or more materials from an online editing project.</p>
      * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @return DeleteEditingProjectMaterialsResponse
@@ -1783,7 +1837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除云剪辑工程</p>
+     * <p>Deletes one or more online editing project.</p>
      * 
      * @param request DeleteEditingProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1815,7 +1869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除云剪辑工程</p>
+     * <p>Deletes one or more online editing project.</p>
      * 
      * @param request DeleteEditingProjectsRequest
      * @return DeleteEditingProjectsResponse
@@ -2109,7 +2163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资从搜索</p>
+     * <p>Deletes a specific media asset from a search library.</p>
      * 
      * @param request DeleteMediaFromSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2149,7 +2203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资从搜索</p>
+     * <p>Deletes a specific media asset from a search library.</p>
      * 
      * @param request DeleteMediaFromSearchLibRequest
      * @return DeleteMediaFromSearchLibResponse
@@ -2161,7 +2215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes multiple media assets at a time. You can delete at most 20 media assets at a time. If MediaIds is specified, it is preferentially used. If MediaIds is empty, InputURLs must be specified.</p>
      * 
      * @param request DeleteMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2201,7 +2255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes multiple media assets at a time. You can delete at most 20 media assets at a time. If MediaIds is specified, it is preferentially used. If MediaIds is empty, InputURLs must be specified.</p>
      * 
      * @param request DeleteMediaInfosRequest
      * @return DeleteMediaInfosResponse
@@ -2213,7 +2267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资标注信息</p>
+     * <p>Deletes the marks of a media asset.</p>
      * 
      * @param request DeleteMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2249,7 +2303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资标注信息</p>
+     * <p>Deletes the marks of a media asset.</p>
      * 
      * @param request DeleteMediaMarksRequest
      * @return DeleteMediaMarksResponse
@@ -2304,8 +2358,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to delete multiple media streams at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除播放信息</p>
+     * <p>Deletes media streams such as video streams and audio streams.</p>
      * 
      * @param request DeletePlayInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2344,8 +2401,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to delete multiple media streams at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除播放信息</p>
+     * <p>Deletes media streams such as video streams and audio streams.</p>
      * 
      * @param request DeletePlayInfoRequest
      * @return DeletePlayInfoResponse
@@ -2437,6 +2497,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例</p>
+     * 
+     * @param request DescribeAIAgentInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAIAgentInstanceResponse
+     */
+    public DescribeAIAgentInstanceResponse describeAIAgentInstanceWithOptions(DescribeAIAgentInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAIAgentInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAIAgentInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例</p>
+     * 
+     * @param request DescribeAIAgentInstanceRequest
+     * @return DescribeAIAgentInstanceResponse
+     */
+    public DescribeAIAgentInstanceResponse describeAIAgentInstance(DescribeAIAgentInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAIAgentInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -2692,6 +2796,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>描述回调配置</p>
+     * 
+     * @param request DescribeNotifyConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNotifyConfigResponse
+     */
+    public DescribeNotifyConfigResponse describeNotifyConfigWithOptions(DescribeNotifyConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNotifyConfig"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNotifyConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>描述回调配置</p>
+     * 
+     * @param request DescribeNotifyConfigRequest
+     * @return DescribeNotifyConfigResponse
+     */
+    public DescribeNotifyConfigResponse describeNotifyConfig(DescribeNotifyConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNotifyConfigWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DescribePlayListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePlayListResponse
@@ -2859,7 +3007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除搜索索引</p>
+     * <p>Deletes a search index. After you delete a search index, the existing index data is cleared and index-based analysis, storage, and query are not supported for subsequent media assets.</p>
      * 
      * @param request DropSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2895,7 +3043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除搜索索引</p>
+     * <p>Deletes a search index. After you delete a search index, the existing index data is cleared and index-based analysis, storage, and query are not supported for subsequent media assets.</p>
      * 
      * @param request DropSearchIndexRequest
      * @return DropSearchIndexResponse
@@ -2907,7 +3055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除库</p>
+     * <p>Deletes a search library and all media assets in the library.</p>
      * 
      * @param request DropSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2939,7 +3087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除库</p>
+     * <p>Deletes a search library and all media assets in the library.</p>
      * 
      * @param request DropSearchLibRequest
      * @return DropSearchLibResponse
@@ -2947,6 +3095,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DropSearchLibResponse dropSearchLib(DropSearchLibRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dropSearchLibWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * 
+     * @param tmpReq GenerateAIAgentCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateAIAgentCallResponse
+     */
+    public GenerateAIAgentCallResponse generateAIAgentCallWithOptions(GenerateAIAgentCallRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GenerateAIAgentCallShrinkRequest request = new GenerateAIAgentCallShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
+            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expire)) {
+            query.put("Expire", request.expire);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateConfigShrink)) {
+            query.put("TemplateConfig", request.templateConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateAIAgentCall"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateAIAgentCallResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * 
+     * @param request GenerateAIAgentCallRequest
+     * @return GenerateAIAgentCallResponse
+     */
+    public GenerateAIAgentCallResponse generateAIAgentCall(GenerateAIAgentCallRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateAIAgentCallWithOptions(request, runtime);
     }
 
     /**
@@ -3116,8 +3326,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询媒资分类</p>
+     * <p>Queries the information about a category and its subcategories.</p>
      * 
      * @param request GetCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3164,8 +3377,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询媒资分类</p>
+     * <p>Queries the information about a category and its subcategories.</p>
      * 
      * @param request GetCategoriesRequest
      * @return GetCategoriesResponse
@@ -3473,7 +3689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个云剪辑工程</p>
+     * <p>Queries the information about an online editing project.</p>
      * 
      * @param request GetEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3509,7 +3725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个云剪辑工程</p>
+     * <p>Queries the information about an online editing project.</p>
      * 
      * @param request GetEditingProjectRequest
      * @return GetEditingProjectResponse
@@ -3521,7 +3737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取剪辑工程关联素材</p>
+     * <p>Queries all materials associated with an online editing project.</p>
      * 
      * @param request GetEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3553,7 +3769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取剪辑工程关联素材</p>
+     * <p>Queries all materials associated with an online editing project.</p>
      * 
      * @param request GetEditingProjectMaterialsRequest
      * @return GetEditingProjectMaterialsResponse
@@ -3599,7 +3815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取直播剪辑m3u8索引文件</p>
+     * <p>Queries the index file of a live stream. The index file is used to preview an editing project in the console.</p>
      * 
      * @param request GetLiveEditingIndexFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3643,7 +3859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取直播剪辑m3u8索引文件</p>
+     * <p>Queries the index file of a live stream. The index file is used to preview an editing project in the console.</p>
      * 
      * @param request GetLiveEditingIndexFileRequest
      * @return GetLiveEditingIndexFileResponse
@@ -3946,8 +4162,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒资内容信息</p>
+     * <p>Queries information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</p>
      * 
      * @param request GetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3990,8 +4209,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒资内容信息</p>
+     * <p>Queries information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</p>
      * 
      * @param request GetMediaInfoRequest
      * @return GetMediaInfoResponse
@@ -4041,7 +4263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取媒资标注信息</p>
+     * <p>Queries the information about marks based on mark IDs.</p>
      * 
      * @param request GetMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4077,7 +4299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取媒资标注信息</p>
+     * <p>Queries the information about marks based on mark IDs.</p>
      * 
      * @param request GetMediaMarksRequest
      * @return GetMediaMarksResponse
@@ -4216,8 +4438,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取播放信息</p>
+     * <p>Queries the playback URL of a video or audio file based on its ID.</p>
      * 
      * @param request GetPlayInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4252,8 +4477,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取播放信息</p>
+     * <p>Queries the playback URL of a video or audio file based on its ID.</p>
      * 
      * @param request GetPlayInfoRequest
      * @return GetPlayInfoResponse
@@ -4726,8 +4954,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+     * If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取URL上传信息</p>
+     * <p>Queries the information about URL-based upload jobs.</p>
      * 
      * @param request GetUrlUploadInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4762,8 +4994,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+     * If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取URL上传信息</p>
+     * <p>Queries the information about URL-based upload jobs.</p>
      * 
      * @param request GetUrlUploadInfosRequest
      * @return GetUrlUploadInfosResponse
@@ -4774,8 +5010,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒资新增列表</p>
+     * <p>Queries information about video and audio files.</p>
      * 
      * @param request GetVideoListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4830,8 +5069,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒资新增列表</p>
+     * <p>Queries information about video and audio files.</p>
      * 
      * @param request GetVideoListRequest
      * @return GetVideoListResponse
@@ -4887,7 +5129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>插入媒资到搜索</p>
+     * <p>Adds a media asset in a search library. Before you call this operation, you must create a search library.</p>
      * 
      * @param request InsertMediaToSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4935,7 +5177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>插入媒资到搜索</p>
+     * <p>Adds a media asset in a search library. Before you call this operation, you must create a search library.</p>
      * 
      * @param request InsertMediaToSearchLibRequest
      * @return InsertMediaToSearchLibResponse
@@ -4947,7 +5189,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出公共素材库所有标签</p>
+     * <p>列出实例</p>
+     * 
+     * @param request ListAIAgentInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAIAgentInstanceResponse
+     */
+    public ListAIAgentInstanceResponse listAIAgentInstanceWithOptions(ListAIAgentInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAIAgentInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAIAgentInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出实例</p>
+     * 
+     * @param request ListAIAgentInstanceRequest
+     * @return ListAIAgentInstanceResponse
+     */
+    public ListAIAgentInstanceResponse listAIAgentInstance(ListAIAgentInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAIAgentInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of tags of media assets in the public media library.</p>
      * 
      * @param request ListAllPublicMediaTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4983,7 +5285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出公共素材库所有标签</p>
+     * <p>Queries a list of tags of media assets in the public media library.</p>
      * 
      * @param request ListAllPublicMediaTagsRequest
      * @return ListAllPublicMediaTagsResponse
@@ -5539,7 +5841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取云剪辑工程列表</p>
+     * <p>Queries a list of projects that meet the specified conditions. You can filter projects by project creation time.</p>
      * 
      * @param request ListEditingProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5607,7 +5909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取云剪辑工程列表</p>
+     * <p>Queries a list of projects that meet the specified conditions. You can filter projects by project creation time.</p>
      * 
      * @param request ListEditingProjectsRequest
      * @return ListEditingProjectsResponse
@@ -5994,8 +6296,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出符合条件的媒资基础信息</p>
+     * <p>Queries the basic information of all media assets that meet the specified conditions.</p>
      * 
      * @param request ListMediaBasicInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6066,8 +6371,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出符合条件的媒资基础信息</p>
+     * <p>Queries the basic information of all media assets that meet the specified conditions.</p>
      * 
      * @param request ListMediaBasicInfosRequest
      * @return ListMediaBasicInfosResponse
@@ -6141,7 +6449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取媒资的标注信息</p>
+     * <p>Queries a list of marks of a media asset.</p>
      * 
      * @param request ListMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6177,7 +6485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取媒资的标注信息</p>
+     * <p>Queries a list of marks of a media asset.</p>
      * 
      * @param request ListMediaMarksRequest
      * @return ListMediaMarksResponse
@@ -6381,7 +6689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出公共素材库素材的基础信息</p>
+     * <p>Queries a list of media assets in the public media library that meet the specified conditions. A maximum of 100 media assets can be returned.</p>
      * 
      * @param request ListPublicMediaBasicInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6437,7 +6745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出公共素材库素材的基础信息</p>
+     * <p>Queries a list of media assets in the public media library that meet the specified conditions. A maximum of 100 media assets can be returned.</p>
      * 
      * @param request ListPublicMediaBasicInfosRequest
      * @return ListPublicMediaBasicInfosResponse
@@ -7137,7 +7445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询索引任务</p>
+     * <p>Queries the indexing jobs enabled for a media asset.</p>
      * 
      * @param request QueryMediaIndexJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7173,7 +7481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询索引任务</p>
+     * <p>Queries the indexing jobs enabled for a media asset.</p>
      * 
      * @param request QueryMediaIndexJobRequest
      * @return QueryMediaIndexJobResponse
@@ -7185,7 +7493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询搜索索引</p>
+     * <p>Queries the details of a search index.</p>
      * 
      * @param request QuerySearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7221,7 +7529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询搜索索引</p>
+     * <p>Queries the details of a search index.</p>
      * 
      * @param request QuerySearchIndexRequest
      * @return QuerySearchIndexResponse
@@ -7233,7 +7541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询库</p>
+     * <p>Queries the information about a search library.</p>
      * 
      * @param request QuerySearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7265,7 +7573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询库</p>
+     * <p>Queries the information about a search library.</p>
      * 
      * @param request QuerySearchLibRequest
      * @return QuerySearchLibResponse
@@ -7318,8 +7626,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>刷新媒资上传凭证</p>
+     * <p>Obtain a new upload credential for a media asset after its upload credential expires.</p>
      * 
      * @param request RefreshUploadMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7350,8 +7661,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>刷新媒资上传凭证</p>
+     * <p>Obtain a new upload credential for a media asset after its upload credential expires.</p>
      * 
      * @param request RefreshUploadMediaRequest
      * @return RefreshUploadMediaResponse
@@ -7362,8 +7676,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</p>
+     * 
      * <b>summary</b> : 
-     * <p>注册内容库资源</p>
+     * <p>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</p>
      * 
      * @param request RegisterMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7450,8 +7767,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</p>
+     * 
      * <b>summary</b> : 
-     * <p>注册内容库资源</p>
+     * <p>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</p>
      * 
      * @param request RegisterMediaInfoRequest
      * @return RegisterMediaInfoResponse
@@ -7462,8 +7782,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>注册媒体流</p>
+     * <p>Registers a media stream.</p>
      * 
      * @param request RegisterMediaStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7502,8 +7825,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>注册媒体流</p>
+     * <p>Registers a media stream.</p>
      * 
      * @param request RegisterMediaStreamRequest
      * @return RegisterMediaStreamResponse
@@ -7716,8 +8042,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</p>
+     * 
      * <b>summary</b> : 
-     * <p>智能标签搜索</p>
+     * <p>Queries media assets based on character names, subtitles, or AI categories.</p>
      * 
      * @param request SearchMediaByAILabelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7726,6 +8055,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaByAILabelResponse searchMediaByAILabelWithOptions(SearchMediaByAILabelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.matchingMode)) {
+            query.put("MatchingMode", request.matchingMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
             query.put("MediaId", request.mediaId);
         }
@@ -7780,8 +8113,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</p>
+     * 
      * <b>summary</b> : 
-     * <p>智能标签搜索</p>
+     * <p>Queries media assets based on character names, subtitles, or AI categories.</p>
      * 
      * @param request SearchMediaByAILabelRequest
      * @return SearchMediaByAILabelResponse
@@ -7792,8 +8128,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</p>
+     * <p>Queries the information about media assets that are related to a specific face.</p>
      * 
      * @param request SearchMediaByFaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7848,8 +8187,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</p>
+     * <p>Queries the information about media assets that are related to a specific face.</p>
      * 
      * @param request SearchMediaByFaceRequest
      * @return SearchMediaByFaceResponse
@@ -7861,7 +8203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>混合搜索</p>
+     * <p>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</p>
      * 
      * @param request SearchMediaByHybridRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7913,7 +8255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>混合搜索</p>
+     * <p>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</p>
      * 
      * @param request SearchMediaByHybridRequest
      * @return SearchMediaByHybridResponse
@@ -7924,8 +8266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>多模态搜索</p>
+     * <p>Queries media assets by using the large visual model. You can use natural language for the query.</p>
      * 
      * @param request SearchMediaByMultimodalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7972,8 +8317,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>多模态搜索</p>
+     * <p>Queries media assets by using the large visual model. You can use natural language for the query.</p>
      * 
      * @param request SearchMediaByMultimodalRequest
      * @return SearchMediaByMultimodalResponse
@@ -7984,8 +8332,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</p>
+     * <p>Queries the information about media asset clips that are related to a specific face based on the response to the SearchMediaByFace operation.</p>
      * 
      * @param request SearchMediaClipByFaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8036,8 +8387,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</p>
+     * <p>Queries the information about media asset clips that are related to a specific face based on the response to the SearchMediaByFace operation.</p>
      * 
      * @param request SearchMediaClipByFaceRequest
      * @return SearchMediaClipByFaceResponse
@@ -8117,6 +8471,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchPublicMediaInfoResponse searchPublicMediaInfo(SearchPublicMediaInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchPublicMediaInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用来立即让某个智能体实例播报指定的文本。</p>
+     * 
+     * @param request SendAIAgentSpeechRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendAIAgentSpeechResponse
+     */
+    public SendAIAgentSpeechResponse sendAIAgentSpeechWithOptions(SendAIAgentSpeechRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableInterrupt)) {
+            query.put("EnableInterrupt", request.enableInterrupt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendAIAgentSpeech"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendAIAgentSpeechResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用来立即让某个智能体实例播报指定的文本。</p>
+     * 
+     * @param request SendAIAgentSpeechRequest
+     * @return SendAIAgentSpeechResponse
+     */
+    public SendAIAgentSpeechResponse sendAIAgentSpeech(SendAIAgentSpeechRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendAIAgentSpeechWithOptions(request, runtime);
     }
 
     /**
@@ -8429,6 +8835,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新回调配置</p>
+     * 
+     * @param request SetNotifyConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetNotifyConfigResponse
+     */
+    public SetNotifyConfigResponse setNotifyConfigWithOptions(SetNotifyConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
+            query.put("CallbackUrl", request.callbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNotify)) {
+            query.put("EnableNotify", request.enableNotify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventTypes)) {
+            query.put("EventTypes", request.eventTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetNotifyConfig"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetNotifyConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新回调配置</p>
+     * 
+     * @param request SetNotifyConfigRequest
+     * @return SetNotifyConfigResponse
+     */
+    public SetNotifyConfigResponse setNotifyConfig(SetNotifyConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setNotifyConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动一个智能体实例，并加入通话。</p>
+     * 
+     * @param tmpReq StartAIAgentInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartAIAgentInstanceResponse
+     */
+    public StartAIAgentInstanceResponse startAIAgentInstanceWithOptions(StartAIAgentInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartAIAgentInstanceShrinkRequest request = new StartAIAgentInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.runtimeConfig)) {
+            request.runtimeConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.runtimeConfig, "RuntimeConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
+            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeConfigShrink)) {
+            query.put("RuntimeConfig", request.runtimeConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateConfigShrink)) {
+            query.put("TemplateConfig", request.templateConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartAIAgentInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAIAgentInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动一个智能体实例，并加入通话。</p>
+     * 
+     * @param request StartAIAgentInstanceRequest
+     * @return StartAIAgentInstanceResponse
+     */
+    public StartAIAgentInstanceResponse startAIAgentInstance(StartAIAgentInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startAIAgentInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>开启一个机器人实例</p>
      * 
      * @param tmpReq StartRtcRobotInstanceRequest
@@ -8547,6 +9079,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startWorkflowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止一个智能体实例。</p>
+     * 
+     * @param request StopAIAgentInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopAIAgentInstanceResponse
+     */
+    public StopAIAgentInstanceResponse stopAIAgentInstanceWithOptions(StopAIAgentInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopAIAgentInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAIAgentInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止一个智能体实例。</p>
+     * 
+     * @param request StopAIAgentInstanceRequest
+     * @return StopAIAgentInstanceResponse
+     */
+    public StopAIAgentInstanceResponse stopAIAgentInstance(StopAIAgentInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopAIAgentInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -9581,7 +10157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交媒资结构化分析任务</p>
+     * <p>Submits a structural analysis job for a media asset. For example, you can submit a job to analyze the speaker, translate the video, and obtain the paragraph summary.</p>
      * 
      * @param request SubmitMediaAiAnalysisJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9617,7 +10193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交媒资结构化分析任务</p>
+     * <p>Submits a structural analysis job for a media asset. For example, you can submit a job to analyze the speaker, translate the video, and obtain the paragraph summary.</p>
      * 
      * @param request SubmitMediaAiAnalysisJobRequest
      * @return SubmitMediaAiAnalysisJobResponse
@@ -10412,8 +10988,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频翻译任务</p>
+     * <p>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10468,8 +11047,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频翻译任务</p>
+     * <p>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse
@@ -10477,6 +11059,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitVideoTranslationJobResponse submitVideoTranslationJob(SubmitVideoTranslationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitVideoTranslationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例的配置</p>
+     * 
+     * @param tmpReq UpdateAIAgentInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAIAgentInstanceResponse
+     */
+    public UpdateAIAgentInstanceResponse updateAIAgentInstanceWithOptions(UpdateAIAgentInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAIAgentInstanceShrinkRequest request = new UpdateAIAgentInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
+            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateConfigShrink)) {
+            query.put("TemplateConfig", request.templateConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAIAgentInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAIAgentInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例的配置</p>
+     * 
+     * @param request UpdateAIAgentInstanceRequest
+     * @return UpdateAIAgentInstanceResponse
+     */
+    public UpdateAIAgentInstanceResponse updateAIAgentInstance(UpdateAIAgentInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAIAgentInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -10548,8 +11188,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新媒资分类</p>
+     * <p>Updates a category.</p>
      * 
      * @param request UpdateCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10584,8 +11227,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新媒资分类</p>
+     * <p>Updates a category.</p>
      * 
      * @param request UpdateCategoryRequest
      * @return UpdateCategoryResponse
@@ -10697,7 +11343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云剪辑工程</p>
+     * <p>Modifies an online editing project. You can call this operation to modify the configurations such as the title, timeline, and thumbnail of an online editing project.</p>
      * 
      * @param request UpdateEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10759,7 +11405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云剪辑工程</p>
+     * <p>Modifies an online editing project. You can call this operation to modify the configurations such as the title, timeline, and thumbnail of an online editing project.</p>
      * 
      * @param request UpdateEditingProjectRequest
      * @return UpdateEditingProjectResponse
@@ -11020,8 +11666,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</p>
+     * 
      * <b>summary</b> : 
-     * <p>UpdateMediaInfo</p>
+     * <p>Updates information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</p>
      * 
      * @param request UpdateMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11096,8 +11745,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</p>
+     * 
      * <b>summary</b> : 
-     * <p>UpdateMediaInfo</p>
+     * <p>Updates information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</p>
      * 
      * @param request UpdateMediaInfoRequest
      * @return UpdateMediaInfoResponse
@@ -11109,7 +11761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为媒资修改标注信息</p>
+     * <p>Modifies the marks of a media asset.</p>
      * 
      * @param request UpdateMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11145,7 +11797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为媒资修改标注信息</p>
+     * <p>Modifies the marks of a media asset.</p>
      * 
      * @param request UpdateMediaMarksRequest
      * @return UpdateMediaMarksResponse
@@ -11157,7 +11809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新媒资到搜索</p>
+     * <p>Updates the media asset information in a search library.</p>
      * 
      * @param request UpdateMediaToSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11197,7 +11849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新媒资到搜索</p>
+     * <p>Updates the media asset information in a search library.</p>
      * 
      * @param request UpdateMediaToSearchLibRequest
      * @return UpdateMediaToSearchLibResponse
@@ -11392,8 +12044,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</p>
+     * <ul>
+     * <li>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</li>
+     * <li>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</li>
+     * <li>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * <li>You can call this operation to upload only audio and video files.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>URL拉取上传</p>
+     * <p>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</p>
      * 
      * @param request UploadMediaByURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11448,8 +12110,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</p>
+     * <ul>
+     * <li>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</li>
+     * <li>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</li>
+     * <li>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * <li>You can call this operation to upload only audio and video files.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>URL拉取上传</p>
+     * <p>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</p>
      * 
      * @param request UploadMediaByURLRequest
      * @return UploadMediaByURLResponse
@@ -11460,8 +12132,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>URL拉取上传媒体流</p>
+     * <p>Uploads a media stream file based on the URL of the source file.</p>
      * 
      * @param request UploadStreamByURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11512,8 +12191,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>URL拉取上传媒体流</p>
+     * <p>Uploads a media stream file based on the URL of the source file.</p>
      * 
      * @param request UploadStreamByURLRequest
      * @return UploadStreamByURLResponse

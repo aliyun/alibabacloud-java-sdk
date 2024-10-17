@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByHybridRequest extends TeaModel {
     /**
+     * <p>The ID of the media asset. The details of the media asset are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
      */

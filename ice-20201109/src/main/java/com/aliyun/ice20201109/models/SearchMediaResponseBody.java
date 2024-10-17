@@ -683,7 +683,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiRoughData extends TeaModel {
         /**
-         * <p>The category of the AI job.</p>
+         * <p>TV Series</p>
          * 
          * <strong>example:</strong>
          * <p>TV series</p>
@@ -1026,9 +1026,17 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListIndexStatusList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("IndexStatus")
         public String indexStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mm</p>
+         */
         @NameInMap("IndexType")
         public String indexType;
 
@@ -1213,7 +1221,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String spriteImages;
 
         /**
-         * <p>The state of the resource.</p>
+         * <p>The state of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

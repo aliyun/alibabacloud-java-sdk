@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DropSearchLibRequest extends TeaModel {
     /**
+     * <p>The name of the search library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

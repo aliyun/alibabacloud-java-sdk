@@ -4,15 +4,32 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitVideoTranslationJobResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,6 +63,12 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     }
 
     public static class SubmitVideoTranslationJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the video translation job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 

@@ -4,24 +4,53 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QuerySearchIndexResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The state of the index. Valid values:</p>
+     * <ul>
+     * <li>active: the index is enabled.</li>
+     * <li>Deactive: the index is not enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
     @NameInMap("IndexStatus")
     public String indexStatus;
 
     /**
+     * <p>The category of the index. Valid values:</p>
+     * <ul>
+     * <li>mm: large visual model.</li>
+     * <li>face: face recognition.</li>
+     * <li>aiLabel: smart tagging.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>mm</p>
      */
     @NameInMap("IndexType")
     public String indexType;
 
+    /**
+     * <p>The total number of media assets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("MediaTotal")
     public String mediaTotal;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
@@ -30,12 +59,24 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the search library.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
     @NameInMap("SearchLibName")
     public String searchLibName;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

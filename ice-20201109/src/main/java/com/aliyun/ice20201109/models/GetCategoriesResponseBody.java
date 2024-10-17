@@ -4,20 +4,30 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the category.</p>
+     */
     @NameInMap("Category")
     public GetCategoriesResponseBodyCategory category;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The subcategories in the category.</p>
+     */
     @NameInMap("SubCategories")
     public GetCategoriesResponseBodySubCategories subCategories;
 
     /**
+     * <p>The total number of subcategories.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -63,16 +73,23 @@ public class GetCategoriesResponseBody extends TeaModel {
 
     public static class GetCategoriesResponseBodyCategory extends TeaModel {
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>46</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>The category name.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
         /**
+         * <p>The level of the category. A value of <strong>0</strong> indicates a level-1 category, a value of <strong>1</strong> indicates a level-2 category, and a value of <strong>2</strong> indicates a level-3 category.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -80,6 +97,8 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long level;
 
         /**
+         * <p>The ID of the parent category.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -87,6 +106,12 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long parentId;
 
         /**
+         * <p>The type of the category. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
+         * <li><strong>material</strong>: short video materials.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -142,16 +167,27 @@ public class GetCategoriesResponseBody extends TeaModel {
 
     public static class GetCategoriesResponseBodySubCategoriesCategory extends TeaModel {
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>129</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>The category name.</p>
+         * <ul>
+         * <li>The value can be up to 64 bytes in length.</li>
+         * <li>The value is encoded in UTF-8.</li>
+         * </ul>
+         */
         @NameInMap("CateName")
         public String cateName;
 
         /**
+         * <p>The level of the category. A value of <strong>0</strong> indicates a level-1 category, a value of <strong>1</strong> indicates a level-2 category, and a value of <strong>2</strong> indicates a level-3 category.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,6 +195,8 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long level;
 
         /**
+         * <p>The ID of the parent category.</p>
+         * 
          * <strong>example:</strong>
          * <p>46</p>
          */
@@ -166,6 +204,8 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long parentId;
 
         /**
+         * <p>The total number of subcategories.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -173,6 +213,12 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long subTotal;
 
         /**
+         * <p>The type of the category. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
+         * <li><strong>material</strong>: short video materials.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAllPublicMediaTagsResponseBody extends TeaModel {
+    /**
+     * <p>The tags of media assets in the public media library.</p>
+     */
     @NameInMap("MediaTagList")
     public java.util.List<ListAllPublicMediaTagsResponseBodyMediaTagList> mediaTagList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B45F83B7-7F87-4792-BFE9-63CD2137CAF0</p>
      */
@@ -36,10 +41,15 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     }
 
     public static class ListAllPublicMediaTagsResponseBodyMediaTagListOptions extends TeaModel {
+        /**
+         * <p>The option name in Chinese.</p>
+         */
         @NameInMap("OptionChineseName")
         public String optionChineseName;
 
         /**
+         * <p>The option name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Angry</p>
          */
@@ -47,6 +57,8 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         public String optionEnglishName;
 
         /**
+         * <p>The option ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Angry</p>
          */
@@ -86,6 +98,8 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
 
     public static class ListAllPublicMediaTagsResponseBodyMediaTagList extends TeaModel {
         /**
+         * <p>The ID of the media tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>sticker-gif</p>
          */
@@ -93,15 +107,23 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         public String mediaTagId;
 
         /**
+         * <p>The name of the media tag in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>Gif</p>
          */
         @NameInMap("MediaTagNameChinese")
         public String mediaTagNameChinese;
 
+        /**
+         * <p>The name of the material tag in English.</p>
+         */
         @NameInMap("MediaTagNameEnglish")
         public String mediaTagNameEnglish;
 
+        /**
+         * <p>The options.</p>
+         */
         @NameInMap("Options")
         public java.util.List<ListAllPublicMediaTagsResponseBodyMediaTagListOptions> options;
 

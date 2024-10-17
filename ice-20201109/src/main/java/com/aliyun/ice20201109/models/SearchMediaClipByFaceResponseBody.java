@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SearchMediaClipByFaceResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The media asset clips that meet the requirements.</p>
+     */
     @NameInMap("MediaClipList")
     public java.util.List<SearchMediaClipByFaceResponseBodyMediaClipList> mediaClipList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E44FFACD-9E90-555A-A09A-6FD3B7335E39</p>
      */
@@ -22,6 +29,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,6 +38,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>The total number of media asset clips that meet the conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,6 +93,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     public static class SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfosTrackDataBoxPosition extends TeaModel {
         /**
+         * <p>The height of the rectangle frame. Unit: pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>168</p>
          */
@@ -89,6 +102,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         public Integer h;
 
         /**
+         * <p>The width of the rectangle frame. Unit: pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>128</p>
          */
@@ -96,6 +111,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         public Integer w;
 
         /**
+         * <p>The x-axis coordinate of the upper-left corner. Unit: pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>517</p>
          */
@@ -103,6 +120,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>The y-axis coordinate of the upper-left corner. Unit: pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>409</p>
          */
@@ -149,10 +168,15 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     }
 
     public static class SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfosTrackData extends TeaModel {
+        /**
+         * <p>The coordinates of the face.</p>
+         */
         @NameInMap("BoxPosition")
         public SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfosTrackDataBoxPosition boxPosition;
 
         /**
+         * <p>The timestamp when the face appears in the clip. Unit: seconds. The value is of the Float type.</p>
+         * 
          * <strong>example:</strong>
          * <p>62.03302</p>
          */
@@ -184,6 +208,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     public static class SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfos extends TeaModel {
         /**
+         * <p>The end time of the clip. Unit: seconds. The value is of the Float type.</p>
+         * 
          * <strong>example:</strong>
          * <p>69.06635</p>
          */
@@ -191,12 +217,17 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         public Float endTime;
 
         /**
+         * <p>The start time of the clip. Unit: seconds. The value is of the Float type.</p>
+         * 
          * <strong>example:</strong>
          * <p>61.066353</p>
          */
         @NameInMap("StartTime")
         public Float startTime;
 
+        /**
+         * <p>The information about the face in the clip.</p>
+         */
         @NameInMap("TrackData")
         public java.util.List<SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfosTrackData> trackData;
 
@@ -233,6 +264,8 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     public static class SearchMediaClipByFaceResponseBodyMediaClipList extends TeaModel {
         /**
+         * <p>The type of the character. Valid values: celebrity sensitive politician custom unknown</p>
+         * 
          * <strong>example:</strong>
          * <p>celebrity</p>
          */
@@ -240,19 +273,29 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The ID of the entity, which is the same as the entity ID returned in tag analysis.</p>
+         * 
          * <strong>example:</strong>
          * <p>1031025****</p>
          */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>The name of the entity.</p>
+         */
         @NameInMap("LabelName")
         public String labelName;
 
+        /**
+         * <p>The information about clips related to the face.</p>
+         */
         @NameInMap("OccurrencesInfos")
         public java.util.List<SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfos> occurrencesInfos;
 
         /**
+         * <p>The score of the clip. The value is of the Float type. The value is in the range of [0,1].</p>
+         * 
          * <strong>example:</strong>
          * <p>0.99041677</p>
          */
