@@ -10769,6 +10769,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>终止数据导出任务</p>
+     * 
+     * @param request PauseDataExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PauseDataExportJobResponse
+     */
+    public PauseDataExportJobResponse pauseDataExportJobWithOptions(PauseDataExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PauseDataExportJob"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PauseDataExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>终止数据导出任务</p>
+     * 
+     * @param request PauseDataExportJobRequest
+     * @return PauseDataExportJobResponse
+     */
+    public PauseDataExportJobResponse pauseDataExportJob(PauseDataExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pauseDataExportJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建工单审批流</p>
      * 
      * @param request PreviewWorkflowRequest
@@ -11297,6 +11349,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除数据导出任务</p>
+     * 
+     * @param request RemoveDataExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveDataExportJobResponse
+     */
+    public RemoveDataExportJobResponse removeDataExportJobWithOptions(RemoveDataExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveDataExportJob"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDataExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除数据导出任务</p>
+     * 
+     * @param request RemoveDataExportJobRequest
+     * @return RemoveDataExportJobResponse
+     */
+    public RemoveDataExportJobResponse removeDataExportJob(RemoveDataExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeDataExportJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Reruns a failed SQL task for data change.</p>
      * 
      * @param request RestartDataCorrectSQLJobRequest
@@ -11349,6 +11453,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartDataCorrectSQLJobResponse restartDataCorrectSQLJob(RestartDataCorrectSQLJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restartDataCorrectSQLJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重启数据导出任务</p>
+     * 
+     * @param request RestartDataExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartDataExportJobResponse
+     */
+    public RestartDataExportJobResponse restartDataExportJobWithOptions(RestartDataExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartDataExportJob"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartDataExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重启数据导出任务</p>
+     * 
+     * @param request RestartDataExportJobRequest
+     * @return RestartDataExportJobResponse
+     */
+    public RestartDataExportJobResponse restartDataExportJob(RestartDataExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartDataExportJobWithOptions(request, runtime);
     }
 
     /**
@@ -11521,7 +11677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes a permission on a resource from a user.</p>
+     * <p>Revokes the permissions on instances, databases, and tables from a user.</p>
      * 
      * @param request RevokeUserPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11589,7 +11745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes a permission on a resource from a user.</p>
+     * <p>Revokes the permissions on instances, databases, and tables from a user.</p>
      * 
      * @param request RevokeUserPermissionRequest
      * @return RevokeUserPermissionResponse
@@ -12093,6 +12249,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitStructSyncOrderApprovalResponse submitStructSyncOrderApproval(SubmitStructSyncOrderApprovalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitStructSyncOrderApprovalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>中断数据导出任务</p>
+     * 
+     * @param request SuspendDataExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SuspendDataExportJobResponse
+     */
+    public SuspendDataExportJobResponse suspendDataExportJobWithOptions(SuspendDataExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SuspendDataExportJob"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SuspendDataExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>中断数据导出任务</p>
+     * 
+     * @param request SuspendDataExportJobRequest
+     * @return SuspendDataExportJobResponse
+     */
+    public SuspendDataExportJobResponse suspendDataExportJob(SuspendDataExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.suspendDataExportJobWithOptions(request, runtime);
     }
 
     /**

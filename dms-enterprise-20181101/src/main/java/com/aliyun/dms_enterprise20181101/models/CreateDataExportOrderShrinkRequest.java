@@ -39,6 +39,12 @@ public class CreateDataExportOrderShrinkRequest extends TeaModel {
     @NameInMap("PluginParam")
     public String pluginParamShrink;
 
+    /**
+     * <p>The UID of the Alibaba Cloud account that actually calls the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21400447956867****</p>
+     */
     @NameInMap("RealLoginUserUid")
     public String realLoginUserUid;
 

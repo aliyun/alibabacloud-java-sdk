@@ -14,7 +14,7 @@ public class ApproveOrderRequest extends TeaModel {
     public Long approvalNodeId;
 
     /**
-     * <p>If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The position of the new approval node. Valid values:</p>
+     * <p>The position of the new approval node. You must specify this parameter if ApprovalType is set to ADD_APPROVAL_NODE. Valid values:</p>
      * <ul>
      * <li><strong>PRE_ADD_APPROVAL_NODE</strong>: before the current approval node.</li>
      * <li><strong>POST_ADD_APPROVAL_NODE</strong>: after the current approval node.</li>
@@ -61,6 +61,15 @@ public class ApproveOrderRequest extends TeaModel {
     @NameInMap("NewApprover")
     public Long newApprover;
 
+    /**
+     * <blockquote>
+     * <p> You can specify this parameter if ApprovalType is set to TRANSFER. You need to only specify one of NewApproverList and NewApprover.</p>
+     * </blockquote>
+     * <p>The IDs of the users to whom the ticket is transferred. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>154***,155***,156***</p>
+     */
     @NameInMap("NewApproverList")
     public String newApproverList;
 
@@ -73,6 +82,12 @@ public class ApproveOrderRequest extends TeaModel {
     @NameInMap("OldApprover")
     public Long oldApprover;
 
+    /**
+     * <p>The UID of the Alibaba Cloud account that actually calls the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21400447956867****</p>
+     */
     @NameInMap("RealLoginUserUid")
     public String realLoginUserUid;
 

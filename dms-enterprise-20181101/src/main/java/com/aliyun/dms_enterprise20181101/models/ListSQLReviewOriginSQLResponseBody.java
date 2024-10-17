@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code that is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -14,7 +14,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message that is returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -29,7 +29,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     public java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> originSQLList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
@@ -38,7 +38,11 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,7 +51,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of the SQL statements.</p>
+     * <p>The number of SQL statements in the file.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -112,12 +116,12 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         /**
          * <p>The review status of the SQL statement. Valid values:</p>
          * <ul>
-         * <li><strong>new</strong>: The SQL statement is pending for analysis.</li>
-         * <li><strong>unknown</strong>: The SQL statement failed to be parsed.</li>
-         * <li><strong>check_not_pass</strong>: The SQL statement failed the review.</li>
+         * <li><strong>new</strong>: The SQL statement was waiting to be reviewed.</li>
+         * <li><strong>unknown</strong>: The SQL statement cannot be parsed.</li>
+         * <li><strong>check_not_pass</strong>: The SQL statement failed to pass the review.</li>
          * <li><strong>check_pass</strong>: The SQL statement passed the review.</li>
-         * <li><strong>force_pass</strong>: The SQL statement passed the review by manual effort.</li>
-         * <li><strong>force_not_pass</strong>: The SQL statement failed the review by manual effort.</li>
+         * <li><strong>force_pass</strong>: The SQL statement passed the manual review.</li>
+         * <li><strong>force_not_pass</strong>: The SQL statement failed to pass the manual review.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +131,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
-         * <p>The time when the SQL statement is reviewed.</p>
+         * <p>The time when the SQL statement was reviewed.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-09 21:07:00</p>
@@ -136,7 +140,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         public String checkedTime;
 
         /**
-         * <p>The ID of the file.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123321</p>
@@ -154,14 +158,14 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The statistics of optimization suggestions for SQL statements. The value is a JSON string. The following optimization suggestions are involved:</p>
+         * <p>The statistics on the optimization suggestions for SQL statements. The value is a JSON string. Valid values:</p>
          * <ul>
-         * <li><strong>MUST_IMPROVE</strong>: The SQL statement must be improved.</li>
-         * <li><strong>POTENTIAL_ISSUE</strong>: The SQL statement contains potential issues.</li>
-         * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you improve the SQL statement.</li>
+         * <li><strong>MUST_IMPROVE</strong>: The SQL statements must be optimized.</li>
+         * <li><strong>POTENTIAL_ISSUE</strong>: The SQL statements contain potential issues.</li>
+         * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you optimize the SQL statements.</li>
          * <li><strong>USEDMSTOOLKIT</strong>: We recommend that you change schemas without locking tables.</li>
          * <li><strong>USEDMSDML_UNLOCK</strong>: We recommend that you change data without locking tables.</li>
-         * <li><strong>TABLEINDEXSUGGEST</strong>: We recommend that you use SQL statements that use indexes.</li>
+         * <li><strong>TABLEINDEXSUGGEST</strong>: We recommend that you optimize indexes for the SQL statements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +175,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         public String reviewSummary;
 
         /**
-         * <p>The SQL statement.</p>
+         * <p>The SQL statement in the file.</p>
          * 
          * <strong>example:</strong>
          * <p>select id from table_name</p>
@@ -189,7 +193,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         public Long SQLId;
 
         /**
-         * <p>SQLName.</p>
+         * <p>The name of the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>getByPk</p>
@@ -198,7 +202,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         public String SQLName;
 
         /**
-         * <p>The key that is used to query the details of optimization suggestions. You can call the <a href="https://icms.alibaba-inc.com/content/dms/doc?l=1%5C&m=61777%5C&n=2712723%5C&spm">GetSQLReviewOptimizeDetail</a> operation to query the details of optimization suggestions based on the key.</p>
+         * <p>The key that is used to query the information about optimization suggestions. You can call the <a href="https://help.aliyun.com/document_detail/465919.html">GetSQLReviewOptimizeDetail</a> operation to query the details based on this key.</p>
          * 
          * <strong>example:</strong>
          * <p>a57e54ec5433475ea3082d882fdb89c5</p>
@@ -207,7 +211,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         public String SQLReviewQueryKey;
 
         /**
-         * <p>The MD5 hash value of the SQL statement.</p>
+         * <p>The MD5 hash value that is obtained after the SQL statement is calculated by using a hash algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>95adb6e77a0884d9e50232cb8c5c969d</p>

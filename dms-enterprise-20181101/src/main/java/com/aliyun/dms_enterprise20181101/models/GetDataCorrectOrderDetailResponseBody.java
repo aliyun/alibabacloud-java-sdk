@@ -38,10 +38,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request fails.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,9 +96,25 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig extends TeaModel {
+        /**
+         * <p>The number of times defragmentation is performed. This parameter is valid only if the value of OptimizeTableAfterEveryClearTimes is greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentClearTaskCount")
         public Integer currentClearTaskCount;
 
+        /**
+         * <p>Indicates whether the Periodically Optimize Table feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): The feature is disabled.</li>
+         * <li><strong>A value greater than 0</strong>: The feature is enabled. The value indicates the number of cleanups after which the system performs defragmentation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OptimizeTableAfterEveryClearTimes")
         public Integer optimizeTableAfterEveryClearTimes;
 
@@ -126,15 +142,62 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the first row of the CSV file contains field names. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The first row in the CSV file contains field names.</li>
+         * <li><strong>false</strong>: The first row in the CSV file contains data.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid if the value of <strong>FileType</strong> is <strong>CSV</strong> or <strong>EXCEL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CsvFirstRowIsColumnDef")
         public Boolean csvFirstRowIsColumnDef;
 
+        /**
+         * <p>Indicates whether an error that occurs is ignored. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: If an error occurs when SQL statements are being executed, DMS skips the current SQL statement and continues to execute subsequent SQL statements.</li>
+         * <li><strong>false</strong>: If an error occurs when SQL statements are being executed, DMS stops executing subsequent SQL statements.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IgnoreError")
         public Boolean ignoreError;
 
+        /**
+         * <p>The import mode. Valid values:</p>
+         * <ul>
+         * <li><strong>FAST_MODE</strong>: fast mode. In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.</li>
+         * <li><strong>SAFE_MODE</strong>: security mode. In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. Compared with the fast mode, this mode can be used to import data in a more secure but less efficient manner.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAST_MODE</p>
+         */
         @NameInMap("ImportMode")
         public String importMode;
 
+        /**
+         * <p>The mode in which data is to be imported to the destination table. Valid values:</p>
+         * <ul>
+         * <li><strong>INSERT</strong>: The database checks the primary key during data insertion. If the primary key is duplicated, an error is reported.</li>
+         * <li><strong>INSERT_IGNORE</strong>: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.</li>
+         * <li><strong>REPLACE_INTO</strong>: If the imported data contains a row that has the same value for the primary key or unique index as an existing row in the destination table, the system deletes the existing row and inserts the new row into the destination table.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid if the value of FileType is CSV or EXCEL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT</p>
+         */
         @NameInMap("InsertType")
         public String insertType;
 
@@ -178,45 +241,147 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail extends TeaModel {
+        /**
+         * <p>Indicates whether the task is a scheduled task for historical data cleanup. This parameter is a reserved parameter and is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Cron")
         public Boolean cron;
 
+        /**
+         * <p>The number of times the scheduled task is run. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CronCallTimes")
         public Integer cronCallTimes;
 
+        /**
+         * <p>The additional configuration information about historical data cleanup. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
+         */
         @NameInMap("CronExtConfig")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig cronExtConfig;
 
+        /**
+         * <p>The CRON expression of the scheduled task. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 2 * * ?</p>
+         */
         @NameInMap("CronFormat")
         public String cronFormat;
 
+        /**
+         * <p>The time when the task was last run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-19 02:00:00.0</p>
+         */
         @NameInMap("CronLastCallStartTime")
         public String cronLastCallStartTime;
 
+        /**
+         * <p>The time when the task is run next time. This parameter is returned only if the value of CronStatus is SUCCESS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-19 02:00:00</p>
+         */
         @NameInMap("CronNextCallTime")
         public String cronNextCallTime;
 
+        /**
+         * <p>The state of the scheduled task. If this parameter is empty, the task is not run. Valid values:</p>
+         * <ul>
+         * <li>PAUSE: The task is suspended.</li>
+         * <li>WAITING: The task is waiting to be run.</li>
+         * <li>SUCCESS: The task is run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("CronStatus")
         public String cronStatus;
 
+        /**
+         * <p>The name of the table to which data is to be imported. This parameter is valid only if the value of DetailType is BIG_FILE. If the value of FileType is SQL, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tb_import_tb_name</p>
+         */
         @NameInMap("CsvTableName")
         public String csvTableName;
 
+        /**
+         * <p>The ID of the current data change task. This is a reserved parameter and can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13***</p>
+         */
         @NameInMap("CurrentTaskId")
         public Long currentTaskId;
 
+        /**
+         * <p>The type of the ticket. Valid values:</p>
+         * <ul>
+         * <li>COMMON: regular data change.</li>
+         * <li>CHUNK_DML: lock-free data change.</li>
+         * <li>BIG_FILE: large data import.</li>
+         * <li>CRON_CLEAR_DATA: historical data cleanup.</li>
+         * <li>PROCEDURE: programmable object change.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BIG_FILE</p>
+         */
         @NameInMap("DetailType")
         public String detailType;
 
+        /**
+         * <p>The execution duration of the scheduled task. Unit: hour. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA. If the value is greater than 0, an execution duration is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The encoding method of the file. This parameter may be empty, which indicates the value of AUTO. Valid values:</p>
+         * <ul>
+         * <li><strong>AUTO</strong>: automatic identification.</li>
+         * <li><strong>UTF-8</strong>: UTF-8 encoding.</li>
+         * <li><strong>GBK</strong>: GBK encoding.</li>
+         * <li><strong>ISO-8859-1</strong>: ISO-8859-1 encoding.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UTF-8</p>
+         */
         @NameInMap("FileEncoding")
         public String fileEncoding;
 
+        /**
+         * <p>The type of the file to be imported. This parameter is valid if the value of DetailType is BIG_FILE. Valid values:</p>
+         * <ul>
+         * <li><strong>SQL</strong>: an SQL file.</li>
+         * <li><strong>CSV</strong>: a CSV file.</li>
+         * <li><strong>EXCEL</strong>: an Excel file.</li>
+         * <li><strong>JSON</strong>: a JSON file, which is supported only by MongoDB databases.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The additional configuration information about data import. This parameter is valid if the value of DetailType is BIG_FILE.</p>
+         */
         @NameInMap("ImportExtConfig")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig importExtConfig;
 
@@ -341,7 +506,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseListDatabase extends TeaModel {
         /**
-         * <p>The ID of the database.</p>
+         * <p>The database ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1860****</p>
@@ -361,14 +526,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the environment to which the database belongs. Valid values:</p>
          * <ul>
-         * <li>product: production environment</li>
-         * <li>dev: development environment</li>
-         * <li>pre: staging environment</li>
-         * <li>test: test environment</li>
+         * <li>product: production environment.</li>
+         * <li>dev: development environment.</li>
+         * <li>pre: pre-release environment.</li>
+         * <li>test: test environment.</li>
          * <li>sit: system integration testing (SIT) environment</li>
-         * <li>uat: user acceptance testing (UAT) environment</li>
-         * <li>pet: stress testing environment</li>
-         * <li>stag: STAG environment</li>
+         * <li>uat: user acceptance testing (UAT) environment.</li>
+         * <li>pet: stress testing environment.</li>
+         * <li>stag: staging environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,7 +545,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>true.</strong>: The database is a logical database.</li>
          * <li><strong>false</strong>: The database is a physical database.</li>
          * </ul>
          * 
@@ -674,7 +839,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetailTaskCheckDO extends TeaModel {
         /**
-         * <p>The status of the precheck. Valid values:</p>
+         * <p>The state of the precheck. Valid values:</p>
          * <ul>
          * <li><strong>WAITING</strong>: The ticket is pending precheck.</li>
          * <li><strong>RUNNING</strong>: The ticket is being prechecked.</li>
@@ -704,7 +869,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         public String checkStep;
 
         /**
-         * <p>The message that indicates a check step.</p>
+         * <p>The message that appears when a check step is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>tip messsage</p>
@@ -763,6 +928,9 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail extends TeaModel {
+        /**
+         * <p>The configurations of the ticket. This parameter is used to store the configuration information specific to a data change ticket type.</p>
+         */
         @NameInMap("ConfigDetail")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail configDetail;
 
@@ -799,19 +967,21 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetail preCheckDetail;
 
         /**
-         * <p>The status of the ticket. Valid values:</p>
+         * <p>The specific state of the data change ticket. Valid values:</p>
+         * <blockquote>
+         * <p> The state of the ticket is not exactly equivalent to the status code for the ticket. To query the status code of the ticket, you can call the <a href="https://help.aliyun.com/document_detail/465868.html">GetOrderBaseInfo</a> operation and check the value of StatusCode in the response.</p>
+         * </blockquote>
          * <ul>
          * <li><strong>new</strong>: The ticket is created.</li>
-         * <li><strong>precheck</strong>: The ticket is being prechecked.</li>
-         * <li><strong>precheck_fail</strong>: The ticket fails the precheck.</li>
+         * <li><strong>precheck</strong>: The ticket is in the pre-check phase.</li>
+         * <li><strong>precheckFailed</strong>: The ticket failed to pass the precheck.</li>
          * <li><strong>precheck_success</strong>: The ticket passes the precheck and waits to be submitted for approval.</li>
          * <li><strong>toaudit</strong>: The ticket is being reviewed.</li>
          * <li><strong>Approved</strong>: The ticket is approved.</li>
          * <li><strong>reject</strong>: The ticket is rejected.</li>
-         * <li><strong>waiting</strong>: The ticket is submitted and waits to be scheduled.</li>
-         * <li><strong>processing</strong>: The ticket is being executed.</li>
-         * <li><strong>success</strong>: The ticket is executed.</li>
-         * <li><strong>closed</strong>: The ticket is closed.</li>
+         * <li><strong>waiting</strong>: The task is submitted and waits to be scheduled.</li>
+         * <li><strong>processing</strong>: The task is being executed.</li>
+         * <li><strong>Success</strong>: The task is successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>

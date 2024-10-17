@@ -39,6 +39,12 @@ public class CreateDataExportOrderRequest extends TeaModel {
     @NameInMap("PluginParam")
     public CreateDataExportOrderRequestPluginParam pluginParam;
 
+    /**
+     * <p>The UID of the Alibaba Cloud account that actually calls the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21400447956867****</p>
+     */
     @NameInMap("RealLoginUserUid")
     public String realLoginUserUid;
 
