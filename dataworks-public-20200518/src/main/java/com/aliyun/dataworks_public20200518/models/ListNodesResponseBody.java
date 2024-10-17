@@ -271,6 +271,9 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
+        @NameInMap("RepeatMode")
+        public Integer repeatMode;
+
         /**
          * <p>The name of the node.</p>
          * 
@@ -480,6 +483,14 @@ public class ListNodesResponseBody extends TeaModel {
         }
         public Long getRepeatInterval() {
             return this.repeatInterval;
+        }
+
+        public ListNodesResponseBodyDataNodes setRepeatMode(Integer repeatMode) {
+            this.repeatMode = repeatMode;
+            return this;
+        }
+        public Integer getRepeatMode() {
+            return this.repeatMode;
         }
 
         public ListNodesResponseBodyDataNodes setRepeatability(Boolean repeatability) {

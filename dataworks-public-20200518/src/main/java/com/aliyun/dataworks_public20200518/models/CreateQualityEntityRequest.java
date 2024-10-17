@@ -8,8 +8,8 @@ public class CreateQualityEntityRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * <p>The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.</p>
      * <ul>
-     * <li></li>
-     * <li></li>
+     * <li>0</li>
+     * <li>1</li>
      * </ul>
      * 
      * <strong>example:</strong>
