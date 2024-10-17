@@ -24,10 +24,10 @@ public class CreateAppGroupRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>应用类型。</p>
+     * <p>The type of application. Valid values:</p>
      * <ul>
-     * <li>1、普通应用。</li>
-     * <li>2、k8s应用。</li>
+     * <li><code>TRACE</code>: Application Monitoring</li>
+     * <li><code>EBPF</code>: Application Monitoring eBPF Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,6 +37,8 @@ public class CreateAppGroupRequest extends TeaModel {
     public Integer appType;
 
     /**
+     * <p>The application version. 1: Basic version, 2: Professional version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -53,12 +55,10 @@ public class CreateAppGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>是否开启日志。</p>
+     * <p>Specifies whether to enable logging. Valid values:</p>
      * <ul>
-     * <li><p>true：开启</p>
-     * </li>
-     * <li><p>false：关闭</p>
-     * </li>
+     * <li><code>true</code>: enabled</li>
+     * <li><code>false</code>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class CreateAppGroupRequest extends TeaModel {
      * <p>The configuration of alert contacts. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756\<em>\</em>\<em>\</em>\<em>\</em>&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
+     * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
      */
     @NameInMap("MonitorContactsJson")
     public String monitorContactsJson;

@@ -15,9 +15,6 @@ public class UpdateWorkflowDagResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>workflowId=xxxx is not existed</p>
      */
     @NameInMap("Message")
     public String message;

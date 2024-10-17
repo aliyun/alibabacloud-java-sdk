@@ -568,9 +568,6 @@ public class GetJobInfoResponseBody extends TeaModel {
          * <li><strong>Broadcast run</strong></li>
          * <li><strong>Visual MapReduce</strong></li>
          * <li><strong>MapReduce</strong></li>
-         * </ul>
-         * <hr>
-         * <ul>
          * <li><strong>Shard run</strong></li>
          * </ul>
          * 

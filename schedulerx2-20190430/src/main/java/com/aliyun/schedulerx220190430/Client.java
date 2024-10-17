@@ -1292,7 +1292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table</strong>.</p>
+     * <p>The configuration of the alert. The value is a JSON string. For more information, see \<em>\<em>the additional information about response parameters below this table\</em>\</em>.</p>
      * 
      * @param request GetAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1332,7 +1332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table</strong>.</p>
+     * <p>The configuration of the alert. The value is a JSON string. For more information, see \<em>\<em>the additional information about response parameters below this table\</em>\</em>.</p>
      * 
      * @param request GetAppGroupRequest
      * @return GetAppGroupResponse

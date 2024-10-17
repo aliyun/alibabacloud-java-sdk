@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
     /**
-     * <p>The interval of retries after a job failure. Default value: 30. Unit: seconds.</p>
+     * <p>The time interval between retry attempts in case of a job failure. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +33,7 @@ public class CreateJobRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The number of threads that are triggered by a single worker at a time. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * <p>The number of threads that a single worker triggers simultaneously. You can specify this parameter for MapReduce jobs. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -75,7 +75,7 @@ public class CreateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The number of task distribution threads. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * <p>The number of task distribution threads. This parameter is an advanced configuration item of the MapReduce job. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -101,10 +101,10 @@ public class CreateJobRequest extends TeaModel {
     public String executeMode;
 
     /**
-     * <p>Specifies whether to turn on Failure alarm. If the switch is turned on, an alert will be generated upon a failure. Valid values:</p>
+     * <p>Specifies whether to trigger an alert when a job fails. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: triggers an alert when a job fails.</li>
+     * <li><strong>false</strong>: does not trigger an alert when a job fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean failEnable;
 
     /**
-     * <p>The number of consecutive failures. An alert will be received if the number of consecutive failures reaches the value of this parameter.</p>
+     * <p>The maximum number of consecutive failures before an alert is triggered. An alert will be triggered if the number of consecutive failures reaches the value of this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -154,7 +154,7 @@ public class CreateJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The maximum number of retries after a job failure. Specify this parameter based on your business requirements. Default value: 0.</p>
+     * <p>The maximum number of retry attempts in case of a job failure. Specify this parameter based on your business requirements. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -163,7 +163,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer maxAttempt;
 
     /**
-     * <p>The maximum number of concurrent instances. Default value: 1. The default value indicates that only one instance is allowed to run at a time. When an instance is running, another instance is not triggered even if the scheduled time for running the instance is reached.</p>
+     * <p>The maximum number of concurrent instances. By default, only one instance can run at a time. When an instance is running, the next instance is not triggered even if the scheduled start time arrives.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -172,10 +172,10 @@ public class CreateJobRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
-     * <p>Specifies whether to turn on No machine alarm available. If the switch is turned on, an alert will be generated when no machine is available for running the job. Valid values:</p>
+     * <p>Specifies whether to generate an alert if no machines are available to run the job. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: generates an alert if no machines are available to run the job.</li>
+     * <li><strong>false</strong>: does not generate an alert if no machines are available to run the job.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class CreateJobRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The namespace source. This parameter is required only for a special third party.</p>
+     * <p>The source of the namespace. You must specify this parameter only if the namespace is provided by a third party.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -214,7 +214,7 @@ public class CreateJobRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The number of tasks that can be pulled at a time. Default value: 100. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * <p>The number of entries per page. You can specify this parameter for MapReduce jobs. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -232,7 +232,7 @@ public class CreateJobRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The maximum number of tasks that can be queued. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * <p>The maximum capacity of the task queue. You can specify this parameter for MapReduce jobs. Default value: 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -251,7 +251,7 @@ public class CreateJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The method that is used to send alerts. Only Short Message Service (SMS) is supported. Default value: sms.</p>
+     * <p>The method that is used to send alerts. Set the value to sms. Default value: sms.</p>
      * 
      * <strong>example:</strong>
      * <p>sms</p>
@@ -269,7 +269,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Specifies whether to turn on Successful notice. If the switch is turned on, a notice will be sent when a job succeeds.</p>
+     * <p>Specifies whether to send notifications for successfully running the job.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -278,7 +278,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean successNoticeEnable;
 
     /**
-     * <p>The interval of retries after a task failure. Default value: 0. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * <p>The time interval between retry attempts in case of a job failure. This parameter is an advanced configuration item of the MapReduce job. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -287,7 +287,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer taskAttemptInterval;
 
     /**
-     * <p>The number of retries after a task failure. Default value: 0. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * <p>The maximum number of retry attempts in case of a job failure. This parameter is an advanced configuration item of the MapReduce job. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -329,7 +329,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer timeType;
 
     /**
-     * <p>The timeout threshold. Default value: 7200. Unit: seconds.</p>
+     * <p>The timeout threshold. Unit: seconds. Default value: 7200.</p>
      * 
      * <strong>example:</strong>
      * <p>7200</p>
@@ -338,10 +338,10 @@ public class CreateJobRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>Specifies whether to turn on Timeout alarm. If the switch is turned on, an alert will be generated upon a timeout. Valid values:</p>
+     * <p>Specifies whether to enable the timeout alert feature. If the feature is enabled, an alert will be triggered upon a timeout. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: enables the timeout alert feature.</li>
+     * <li><strong>false</strong>: disables the timeout alert feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -351,10 +351,10 @@ public class CreateJobRequest extends TeaModel {
     public Boolean timeoutEnable;
 
     /**
-     * <p>Specifies whether to turn on Timeout termination. If the switch is turned on, the job will be terminated upon a timeout. Valid values:</p>
+     * <p>Specifies whether to enable the timeout termination feature. If the feature is enabled, a job will automatically be terminated if it times out. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: enables the timeout termination feature.</li>
+     * <li><strong>false</strong>: disables the timeout termination feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class CreateJobRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>If you set JobType to k8s, this parameter is required. xxljob task: {&quot;resource&quot;:&quot;job&quot;} shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
+     * <p>The extended attributes. If you set JobType to k8s, this parameter is required. For a job whose resource type is Job-YAML, set this parameter to {&quot;resource&quot;:&quot;job&quot;}. For a job whose resource type is Shell-Script, set this parameter to {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;resource&quot;:&quot;job&quot;}</p>

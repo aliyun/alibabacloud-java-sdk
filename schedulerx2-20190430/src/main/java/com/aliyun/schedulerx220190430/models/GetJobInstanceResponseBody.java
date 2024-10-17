@@ -141,9 +141,21 @@ public class GetJobInstanceResponseBody extends TeaModel {
         @NameInMap("JobId")
         public Long jobId;
 
+        /**
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManualJob</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>The parameters of the job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;alertId\&quot;:11111}</p>
+         */
         @NameInMap("Parameters")
         public String parameters;
 
@@ -216,6 +228,12 @@ public class GetJobInstanceResponseBody extends TeaModel {
         @NameInMap("TimeType")
         public Integer timeType;
 
+        /**
+         * <p>The trace ID, which can be used to query trace details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e845016596663430048015d0a2c</p>
+         */
         @NameInMap("TraceId")
         public String traceId;
 

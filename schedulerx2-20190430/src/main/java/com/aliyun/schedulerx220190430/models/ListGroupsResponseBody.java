@@ -124,6 +124,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The application version. 1: Basic version, 2: Professional version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

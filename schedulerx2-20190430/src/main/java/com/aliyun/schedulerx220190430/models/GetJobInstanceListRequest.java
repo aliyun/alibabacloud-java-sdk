@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobInstanceListRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. Specify a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1684202400000</p>
@@ -52,6 +52,8 @@ public class GetJobInstanceListRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -59,6 +61,8 @@ public class GetJobInstanceListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -76,7 +80,7 @@ public class GetJobInstanceListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. Specify a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1684116000000</p>
@@ -85,8 +89,8 @@ public class GetJobInstanceListRequest extends TeaModel {
     public Long startTimestamp;
 
     /**
-     * <p>The state of the job instance. Valid values:</p>
-     * <p>1: The job instance is waiting for execution. 3: The job instance is running. 4: The job instance is successful. 5: The job instance fails. 9: The job instance is rejected. Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus</p>
+     * <p>The status of the job instance. Valid values:</p>
+     * <p>1: The job instance is pending. 3: The job instance is running. 4: The job instance is run. 5: The job instance fails. 9: The request for running the job instance is rejected. To specify this parameter, you must declare the following enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
