@@ -1,3 +1,11 @@
+2024-10-17 Version: 9.1.4
+- Update API GetRumExceptionStack: update response param.
+- Update API GetStack: add param SpanID.
+- Update API GetStack: update response param.
+- Update API SearchTraces: update response param.
+- Update API SearchTracesByPage: update response param.
+
+
 2024-10-08 Version: 9.1.3
 - Update API GetStack: add param SpanID.
 - Update API GetStack: update response param.

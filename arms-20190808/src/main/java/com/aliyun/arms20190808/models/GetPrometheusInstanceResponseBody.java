@@ -233,7 +233,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String enableAuthToken;
 
         /**
-         * <p>扩展信息（仅控制台请求才返回）</p>
+         * <p>The extra information.</p>
          */
         @NameInMap("ExtraInfo")
         public java.util.Map<String, String> extraInfo;
@@ -396,7 +396,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String subClustersJson;
 
         /**
-         * <p>Supported authentication types.</p>
+         * <p>The supported authentication types.</p>
          */
         @NameInMap("SupportAuthTypes")
         public java.util.List<String> supportAuthTypes;

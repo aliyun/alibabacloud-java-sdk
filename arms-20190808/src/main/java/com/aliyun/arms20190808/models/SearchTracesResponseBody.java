@@ -63,7 +63,7 @@ public class SearchTracesResponseBody extends TeaModel {
          * <p>The IP address of the host where the application resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.20.**.**</p>
+         * <p><code>172.20.**.**</code></p>
          */
         @NameInMap("ServiceIp")
         public String serviceIp;
