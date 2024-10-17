@@ -38,12 +38,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</p>
      * <ul>
-     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</li>
-     * <li>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/zh/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</li>
+     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</li>
+     * <li>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</li>
      * <li>In each request, you can send messages to up to 1,000 mobile phone numbers.</li>
      * </ul>
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.</p>
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</p>
@@ -55,6 +55,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchSendMessageToGlobeResponse batchSendMessageToGlobeWithOptions(BatchSendMessageToGlobeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             query.put("From", request.from);
         }
@@ -100,12 +104,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</p>
      * <ul>
-     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</li>
-     * <li>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/zh/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</li>
+     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</li>
+     * <li>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</li>
      * <li>In each request, you can send messages to up to 1,000 mobile phone numbers.</li>
      * </ul>
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.</p>
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</p>
