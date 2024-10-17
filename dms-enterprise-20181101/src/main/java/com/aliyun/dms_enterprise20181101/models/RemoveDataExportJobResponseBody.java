@@ -3,53 +3,41 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class RevokeUserPermissionResponseBody extends TeaModel {
+public class RemoveDataExportJobResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned.</p>
-     * 
      * <strong>example:</strong>
-     * <p>MissingUserId</p>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message that is returned.</p>
-     * 
      * <strong>example:</strong>
-     * <p>UserId is mandatory for this action.</p>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>A99CD576-1E18-4E86-931E-C3CCE56D****</p>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static RevokeUserPermissionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RevokeUserPermissionResponseBody self = new RevokeUserPermissionResponseBody();
+    public static RemoveDataExportJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RemoveDataExportJobResponseBody self = new RemoveDataExportJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RevokeUserPermissionResponseBody setErrorCode(String errorCode) {
+    public RemoveDataExportJobResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -57,7 +45,7 @@ public class RevokeUserPermissionResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public RevokeUserPermissionResponseBody setErrorMessage(String errorMessage) {
+    public RemoveDataExportJobResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -65,7 +53,7 @@ public class RevokeUserPermissionResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public RevokeUserPermissionResponseBody setRequestId(String requestId) {
+    public RemoveDataExportJobResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,7 +61,7 @@ public class RevokeUserPermissionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RevokeUserPermissionResponseBody setSuccess(Boolean success) {
+    public RemoveDataExportJobResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

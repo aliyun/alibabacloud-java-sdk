@@ -96,6 +96,9 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo extends TeaModel {
+        @NameInMap("JobId")
+        public Long jobId;
+
         /**
          * <p>The state of the data export ticket. Valid values:</p>
          * <ul>
@@ -129,6 +132,14 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         public static GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo build(java.util.Map<String, ?> map) throws Exception {
             GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo self = new GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo setJobId(Long jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public Long getJobId() {
+            return this.jobId;
         }
 
         public GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo setJobStatus(String jobStatus) {

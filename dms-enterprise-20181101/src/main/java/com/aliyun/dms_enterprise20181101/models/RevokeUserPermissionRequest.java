@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeUserPermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the database. The database can be a physical database or a logical database.</p>
+     * <p>The database ID. The database can be a physical database or a logical database.</p>
      * <ul>
      * <li>To query the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
      * <li>To query the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
@@ -18,13 +18,13 @@ public class RevokeUserPermissionRequest extends TeaModel {
     public String dbId;
 
     /**
-     * <p>The object type on which the permission you want to revoke from the user. Valid values:</p>
+     * <p>The type of the object on which you want to revoke permissions from a user. Valid values:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong>: database instances</li>
-     * <li><strong>DATABASE</strong>: physical databases</li>
-     * <li><strong>LOGIC_DATABASE</strong>: logical databases</li>
-     * <li><strong>TABLE</strong>: physical tables</li>
-     * <li><strong>LOGIC_TABLE</strong>: logical tables</li>
+     * <li><strong>INSTANCE</strong>: instances.</li>
+     * <li><strong>DATABASE</strong>: physical databases.</li>
+     * <li><strong>LOGIC_DATABASE</strong>: logical databases.</li>
+     * <li><strong>TABLE</strong>: physical tables.</li>
+     * <li><strong>LOGIC_TABLE</strong>: logical tables.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +35,7 @@ public class RevokeUserPermissionRequest extends TeaModel {
     public String dsType;
 
     /**
-     * <p>The ID of the database instance. You must specify this parameter when you revoke a permission from the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the database instance ID.</p>
+     * <p>The database instance ID. You must specify this parameter if you revoke a permission from the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the ID of the database instance.</p>
      * 
      * <strong>example:</strong>
      * <p>174****</p>
@@ -50,11 +50,13 @@ public class RevokeUserPermissionRequest extends TeaModel {
      * <li><strong>false</strong>: The database is a physical database.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>If the database is a logical database, set this parameter to <strong>true</strong>.</li>
-     * <li>If the database is a physical database, set this parameter to <strong>false</strong>.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If the database is a logical database, set this parameter to <strong>true</strong>.</p>
+     * </li>
+     * <li><p>If the database is a physical database, set this parameter to <strong>false</strong>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -63,11 +65,13 @@ public class RevokeUserPermissionRequest extends TeaModel {
     public Boolean logic;
 
     /**
-     * <p>The type of the permission. Valid values:</p>
+     * <p>The type of the permissions. Valid values:</p>
      * <ul>
-     * <li><strong>QUERY</strong>: the data query permission</li>
-     * <li><strong>EXPORT</strong>: the data export permission</li>
-     * <li><strong>CORRECT</strong>: the data change permission</li>
+     * <li><strong>QUERY</strong>: query permissions.</li>
+     * <li><strong>EXPORT</strong>: export permissions.</li>
+     * <li><strong>CORRECT</strong>: change permissions.</li>
+     * <li><strong>LOGIN</strong>: logon permissions.</li>
+     * <li><strong>PERF</strong>: query permissions on the performance details of an instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -78,7 +82,7 @@ public class RevokeUserPermissionRequest extends TeaModel {
     public String permTypes;
 
     /**
-     * <p>The ID of the table. You must specify this parameter when you revoke a permission from the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table ID.</p>
+     * <p>The table ID. You must specify this parameter if you revoke a permission from the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table ID.</p>
      * 
      * <strong>example:</strong>
      * <p>13****</p>
@@ -96,7 +100,7 @@ public class RevokeUserPermissionRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3***</p>
@@ -105,7 +109,7 @@ public class RevokeUserPermissionRequest extends TeaModel {
     public Long tid;
 
     /**
-     * <p>The ID of the permission. You can call the <a href="https://help.aliyun.com/document_detail/146957.html">ListUserPermission</a> operation to query the permission ID.</p>
+     * <p>The permission ID. You can call the <a href="https://help.aliyun.com/document_detail/146957.html">ListUserPermission</a> operation to query the permission ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,7 +119,7 @@ public class RevokeUserPermissionRequest extends TeaModel {
     public String userAccessId;
 
     /**
-     * <p>The ID of the user. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to query the user ID.</p>
+     * <p>The user ID. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to query the ID of the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

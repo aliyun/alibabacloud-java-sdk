@@ -11,7 +11,7 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
     public ListSQLReviewOriginSQLRequestOrderActionDetail orderActionDetail;
 
     /**
-     * <p>The ID of the ticket for the SQL review. You can call the <a href="https://help.aliyun.com/document_detail/257777.html">CreateSQLReviewOrder</a> operation to query the ID of the ticket.</p>
+     * <p>The ID of the SQL review ticket. You can call the <a href="https://help.aliyun.com/document_detail/257777.html">CreateSQLReviewOrder</a> operation to query the ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/465818.html">ListUserTenants</a> operation to query the ID of the tenant.</p>
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
 
     public static class ListSQLReviewOriginSQLRequestOrderActionDetailPage extends TeaModel {
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -104,12 +104,12 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
         /**
          * <p>The review status of the SQL statement. Valid values:</p>
          * <ul>
-         * <li><strong>new</strong>: The SQL statement is pending for analysis.</li>
-         * <li><strong>unknown</strong>: The SQL statement failed to be parsed.</li>
-         * <li><strong>check_not_pass</strong>: The SQL statement failed the review.</li>
+         * <li><strong>new</strong>: The SQL statement was waiting to be reviewed.</li>
+         * <li><strong>unknown</strong>: The SQL statement cannot be parsed.</li>
+         * <li><strong>check_not_pass</strong>: The SQL statement failed to pass the review.</li>
          * <li><strong>check_pass</strong>: The SQL statement passed the review.</li>
-         * <li><strong>force_pass</strong>: The SQL statement passed the review by manual effort.</li>
-         * <li><strong>force_not_pass</strong>: The SQL statement failed the review by manual effort.</li>
+         * <li><strong>force_pass</strong>: The SQL statement passed the manual review.</li>
+         * <li><strong>force_not_pass</strong>: The SQL statement failed to pass the manual review.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
         public String checkStatusResult;
 
         /**
-         * <p>The ID of the file.</p>
+         * <p>The ID of the file that contains the SQL statements to be reviewed.</p>
          * 
          * <strong>example:</strong>
          * <p>123345</p>
@@ -128,7 +128,7 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The paging settings.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("Page")
         public ListSQLReviewOriginSQLRequestOrderActionDetailPage page;
@@ -136,12 +136,12 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
         /**
          * <p>The optimization suggestion for the SQL statement. Valid values:</p>
          * <ul>
-         * <li><strong>MUST_IMPROVE</strong>: The SQL statement must be improved.</li>
+         * <li><strong>MUST_IMPROVE</strong>: The SQL statement must be optimized.</li>
          * <li><strong>POTENTIAL_ISSUE</strong>: The SQL statement contains potential issues.</li>
-         * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you improve the SQL statement.</li>
+         * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you optimize the SQL statement.</li>
          * <li><strong>USE_DMS_TOOLKIT</strong>: We recommend that you change schemas without locking tables.</li>
          * <li><strong>USE_DMS_DML_UNLOCK</strong>: We recommend that you change data without locking tables.</li>
-         * <li><strong>TABLE_INDEX_SUGGEST</strong>: We recommend that you use SQL statements that use indexes.</li>
+         * <li><strong>TABLE_INDEX_SUGGEST</strong>: We recommend that you optimize indexes for the SQL statement.</li>
          * </ul>
          * 
          * <strong>example:</strong>
