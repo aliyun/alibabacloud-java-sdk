@@ -65,6 +65,9 @@ public class ClusterSummary extends TeaModel {
     @NameInMap("CreateTime")
     public Long createTime;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>EMR服务角色。</p>
      */
@@ -184,6 +187,14 @@ public class ClusterSummary extends TeaModel {
     }
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    public ClusterSummary setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ClusterSummary setEmrDefaultRole(String emrDefaultRole) {

@@ -43,11 +43,26 @@ public class AckConfig extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    @NameInMap("NodeAffinity")
+    public String nodeAffinity;
+
     /**
      * <p>ack的节点标签限制</p>
      */
     @NameInMap("NodeSelectors")
     public java.util.List<Tag> nodeSelectors;
+
+    @NameInMap("PodAffinity")
+    public String podAffinity;
+
+    @NameInMap("PodAntiAffinity")
+    public String podAntiAffinity;
+
+    @NameInMap("PreStartCommand")
+    public java.util.List<String> preStartCommand;
+
+    @NameInMap("Pvcs")
+    public java.util.List<Pvcs> pvcs;
 
     /**
      * <p>Pod的CPU请求值</p>
@@ -66,6 +81,12 @@ public class AckConfig extends TeaModel {
      */
     @NameInMap("Tolerations")
     public java.util.List<Toleration> tolerations;
+
+    @NameInMap("VolumeMounts")
+    public java.util.List<VolumeMounts> volumeMounts;
+
+    @NameInMap("Volumes")
+    public java.util.List<Volumes> volumes;
 
     public static AckConfig build(java.util.Map<String, ?> map) throws Exception {
         AckConfig self = new AckConfig();
@@ -144,12 +165,52 @@ public class AckConfig extends TeaModel {
         return this.namespace;
     }
 
+    public AckConfig setNodeAffinity(String nodeAffinity) {
+        this.nodeAffinity = nodeAffinity;
+        return this;
+    }
+    public String getNodeAffinity() {
+        return this.nodeAffinity;
+    }
+
     public AckConfig setNodeSelectors(java.util.List<Tag> nodeSelectors) {
         this.nodeSelectors = nodeSelectors;
         return this;
     }
     public java.util.List<Tag> getNodeSelectors() {
         return this.nodeSelectors;
+    }
+
+    public AckConfig setPodAffinity(String podAffinity) {
+        this.podAffinity = podAffinity;
+        return this;
+    }
+    public String getPodAffinity() {
+        return this.podAffinity;
+    }
+
+    public AckConfig setPodAntiAffinity(String podAntiAffinity) {
+        this.podAntiAffinity = podAntiAffinity;
+        return this;
+    }
+    public String getPodAntiAffinity() {
+        return this.podAntiAffinity;
+    }
+
+    public AckConfig setPreStartCommand(java.util.List<String> preStartCommand) {
+        this.preStartCommand = preStartCommand;
+        return this;
+    }
+    public java.util.List<String> getPreStartCommand() {
+        return this.preStartCommand;
+    }
+
+    public AckConfig setPvcs(java.util.List<Pvcs> pvcs) {
+        this.pvcs = pvcs;
+        return this;
+    }
+    public java.util.List<Pvcs> getPvcs() {
+        return this.pvcs;
     }
 
     public AckConfig setRequestCpu(Float requestCpu) {
@@ -174,6 +235,145 @@ public class AckConfig extends TeaModel {
     }
     public java.util.List<Toleration> getTolerations() {
         return this.tolerations;
+    }
+
+    public AckConfig setVolumeMounts(java.util.List<VolumeMounts> volumeMounts) {
+        this.volumeMounts = volumeMounts;
+        return this;
+    }
+    public java.util.List<VolumeMounts> getVolumeMounts() {
+        return this.volumeMounts;
+    }
+
+    public AckConfig setVolumes(java.util.List<Volumes> volumes) {
+        this.volumes = volumes;
+        return this;
+    }
+    public java.util.List<Volumes> getVolumes() {
+        return this.volumes;
+    }
+
+    public static class Pvcs extends TeaModel {
+        @NameInMap("DataDiskSize")
+        public Long dataDiskSize;
+
+        @NameInMap("DataDiskStorageClass")
+        public String dataDiskStorageClass;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Path")
+        public String path;
+
+        public static Pvcs build(java.util.Map<String, ?> map) throws Exception {
+            Pvcs self = new Pvcs();
+            return TeaModel.build(map, self);
+        }
+
+        public Pvcs setDataDiskSize(Long dataDiskSize) {
+            this.dataDiskSize = dataDiskSize;
+            return this;
+        }
+        public Long getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+        public Pvcs setDataDiskStorageClass(String dataDiskStorageClass) {
+            this.dataDiskStorageClass = dataDiskStorageClass;
+            return this;
+        }
+        public String getDataDiskStorageClass() {
+            return this.dataDiskStorageClass;
+        }
+
+        public Pvcs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public Pvcs setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+    }
+
+    public static class VolumeMounts extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Path")
+        public String path;
+
+        public static VolumeMounts build(java.util.Map<String, ?> map) throws Exception {
+            VolumeMounts self = new VolumeMounts();
+            return TeaModel.build(map, self);
+        }
+
+        public VolumeMounts setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public VolumeMounts setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+    }
+
+    public static class Volumes extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static Volumes build(java.util.Map<String, ?> map) throws Exception {
+            Volumes self = new Volumes();
+            return TeaModel.build(map, self);
+        }
+
+        public Volumes setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public Volumes setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public Volumes setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
 }

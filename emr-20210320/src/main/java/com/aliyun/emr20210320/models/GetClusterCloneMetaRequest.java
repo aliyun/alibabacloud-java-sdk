@@ -3,9 +3,9 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class GetClusterRequest extends TeaModel {
+public class GetClusterCloneMetaRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,12 +24,12 @@ public class GetClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static GetClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetClusterRequest self = new GetClusterRequest();
+    public static GetClusterCloneMetaRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetClusterCloneMetaRequest self = new GetClusterCloneMetaRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetClusterRequest setClusterId(String clusterId) {
+    public GetClusterCloneMetaRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -37,7 +37,7 @@ public class GetClusterRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public GetClusterRequest setRegionId(String regionId) {
+    public GetClusterCloneMetaRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

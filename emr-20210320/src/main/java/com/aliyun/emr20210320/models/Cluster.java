@@ -58,6 +58,9 @@ public class Cluster extends TeaModel {
     @NameInMap("DeployMode")
     public String deployMode;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>EMR默认角色。</p>
      * 
@@ -211,6 +214,14 @@ public class Cluster extends TeaModel {
     }
     public String getDeployMode() {
         return this.deployMode;
+    }
+
+    public Cluster setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public Cluster setEmrDefaultRole(String emrDefaultRole) {

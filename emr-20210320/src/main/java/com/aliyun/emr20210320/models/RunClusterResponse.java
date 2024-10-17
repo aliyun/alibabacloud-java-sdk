@@ -3,7 +3,7 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class ListResourceHealthInspectionsResponse extends TeaModel {
+public class RunClusterResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListResourceHealthInspectionsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListResourceHealthInspectionsResponseBody body;
+    public RunClusterResponseBody body;
 
-    public static ListResourceHealthInspectionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListResourceHealthInspectionsResponse self = new ListResourceHealthInspectionsResponse();
+    public static RunClusterResponse build(java.util.Map<String, ?> map) throws Exception {
+        RunClusterResponse self = new RunClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListResourceHealthInspectionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public RunClusterResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListResourceHealthInspectionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListResourceHealthInspectionsResponse setStatusCode(Integer statusCode) {
+    public RunClusterResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListResourceHealthInspectionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListResourceHealthInspectionsResponse setBody(ListResourceHealthInspectionsResponseBody body) {
+    public RunClusterResponse setBody(RunClusterResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListResourceHealthInspectionsResponseBody getBody() {
+    public RunClusterResponseBody getBody() {
         return this.body;
     }
 
