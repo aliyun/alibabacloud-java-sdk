@@ -182,6 +182,15 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
+        @NameInMap("FileCategoryName")
+        public String fileCategoryName;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("ModelTagIds")
+        public String modelTagIds;
+
         /**
          * <strong>example:</strong>
          * <p>obj_id</p>
@@ -189,12 +198,18 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ObjectAcl")
+        public String objectAcl;
+
         /**
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RiskLevelId")
+        public Integer riskLevelId;
 
         /**
          * <strong>example:</strong>
@@ -205,6 +220,9 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
 
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleList> ruleList;
+
+        @NameInMap("Size")
+        public Long size;
 
         public static DescribeOssObjectDetailV2ResponseBodyOssObjectDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeOssObjectDetailV2ResponseBodyOssObjectDetail self = new DescribeOssObjectDetailV2ResponseBodyOssObjectDetail();
@@ -227,6 +245,30 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             return this.categoryName;
         }
 
+        public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setFileCategoryName(String fileCategoryName) {
+            this.fileCategoryName = fileCategoryName;
+            return this;
+        }
+        public String getFileCategoryName() {
+            return this.fileCategoryName;
+        }
+
+        public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setModelTagIds(String modelTagIds) {
+            this.modelTagIds = modelTagIds;
+            return this;
+        }
+        public String getModelTagIds() {
+            return this.modelTagIds;
+        }
+
         public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setName(String name) {
             this.name = name;
             return this;
@@ -235,12 +277,28 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setObjectAcl(String objectAcl) {
+            this.objectAcl = objectAcl;
+            return this;
+        }
+        public String getObjectAcl() {
+            return this.objectAcl;
+        }
+
         public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setRiskLevelId(Integer riskLevelId) {
+            this.riskLevelId = riskLevelId;
+            return this;
+        }
+        public Integer getRiskLevelId() {
+            return this.riskLevelId;
         }
 
         public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setRiskLevelName(String riskLevelName) {
@@ -257,6 +315,14 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         }
         public java.util.List<DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleList> getRuleList() {
             return this.ruleList;
+        }
+
+        public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
     }

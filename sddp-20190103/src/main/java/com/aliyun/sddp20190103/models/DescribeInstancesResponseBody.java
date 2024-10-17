@@ -202,6 +202,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("LastFinishTime")
         public Long lastFinishTime;
 
+        @NameInMap("MemberAliUid")
+        public String memberAliUid;
+
         /**
          * <p>A list of tags.</p>
          */
@@ -397,6 +400,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getLastFinishTime() {
             return this.lastFinishTime;
+        }
+
+        public DescribeInstancesResponseBodyItems setMemberAliUid(String memberAliUid) {
+            this.memberAliUid = memberAliUid;
+            return this;
+        }
+        public String getMemberAliUid() {
+            return this.memberAliUid;
         }
 
         public DescribeInstancesResponseBodyItems setModelTags(java.util.List<DescribeInstancesResponseBodyItemsModelTags> modelTags) {
