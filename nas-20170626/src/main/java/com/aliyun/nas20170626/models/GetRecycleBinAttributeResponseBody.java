@@ -41,6 +41,12 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
     }
 
     public static class GetRecycleBinAttributeResponseBodyRecycleBinAttribute extends TeaModel {
+        /**
+         * <p>The size of the archived data that is dumped to the recycle bin. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611661312</p>
+         */
         @NameInMap("ArchiveSize")
         public Long archiveSize;
 
@@ -64,7 +70,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         public Long reservedDays;
 
         /**
-         * <p>The size of the cold data that is dumped to the recycle bin. Unit: bytes.</p>
+         * <p>The size of the Infrequent Access (IA) data that is dumped to the recycle bin. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

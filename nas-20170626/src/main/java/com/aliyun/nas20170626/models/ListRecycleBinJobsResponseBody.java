@@ -104,6 +104,9 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         /**
          * <p>The error code returned.</p>
          * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidFileId.NotFound</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -111,6 +114,9 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         /**
          * <p>The error message.</p>
          * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Target File or Directory does not exist.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -164,7 +170,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Running</p>
+         * <p>Fail</p>
          */
         @NameInMap("Status")
         public String status;

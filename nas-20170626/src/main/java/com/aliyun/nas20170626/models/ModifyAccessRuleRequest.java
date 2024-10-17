@@ -85,7 +85,7 @@ public class ModifyAccessRuleRequest extends TeaModel {
      * <p>You must set this parameter to an IP address or CIDR block.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.0.**.**</p>
+     * <p><code>192.0.**.**</code></p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;

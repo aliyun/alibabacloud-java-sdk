@@ -705,6 +705,25 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds extends TeaModel {
+        @NameInMap("VswId")
+        public java.util.List<String> vswId;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds setVswId(java.util.List<String> vswId) {
+            this.vswId = vswId;
+            return this;
+        }
+        public java.util.List<String> getVswId() {
+            return this.vswId;
+        }
+
+    }
+
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystem extends TeaModel {
         /**
          * <p>Number of access points.</p>
@@ -714,6 +733,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
          */
         @NameInMap("AccessPointCount")
         public String accessPointCount;
+
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
 
         /**
          * <p>The bandwidth of the file system.</p>
@@ -901,6 +923,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("QuorumVswId")
+        public String quorumVswId;
+
         /**
          * <p>The region ID.</p>
          * 
@@ -977,6 +1002,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswIds")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds vswIds;
+
         /**
          * <p>The ID of the zone where the file system resides.</p>
          * 
@@ -997,6 +1028,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getAccessPointCount() {
             return this.accessPointCount;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setBandwidth(Long bandwidth) {
@@ -1143,6 +1182,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.protocolType;
         }
 
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setQuorumVswId(String quorumVswId) {
+            this.quorumVswId = quorumVswId;
+            return this;
+        }
+        public String getQuorumVswId() {
+            return this.quorumVswId;
+        }
+
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -1197,6 +1244,22 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setVswIds(DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds vswIds) {
+            this.vswIds = vswIds;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds getVswIds() {
+            return this.vswIds;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setZoneId(String zoneId) {
