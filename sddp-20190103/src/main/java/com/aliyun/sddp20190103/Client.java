@@ -1980,6 +1980,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询识别任务状态</p>
+     * 
+     * @param request DescribeIdentifyTaskStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeIdentifyTaskStatusResponse
+     */
+    public DescribeIdentifyTaskStatusResponse describeIdentifyTaskStatusWithOptions(DescribeIdentifyTaskStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeIdentifyTaskStatus"),
+            new TeaPair("version", "2019-01-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIdentifyTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询识别任务状态</p>
+     * 
+     * @param request DescribeIdentifyTaskStatusRequest
+     * @return DescribeIdentifyTaskStatusResponse
+     */
+    public DescribeIdentifyTaskStatusResponse describeIdentifyTaskStatus(DescribeIdentifyTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeIdentifyTaskStatusWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
      * This operation is no longer used for the KMS console of the new version.</p>
