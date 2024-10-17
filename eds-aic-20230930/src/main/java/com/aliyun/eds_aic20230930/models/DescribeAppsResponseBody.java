@@ -124,6 +124,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("InstanceGroupList")
         public java.util.List<String> instanceGroupList;
 
+        @NameInMap("PackageName")
+        public String packageName;
+
         /**
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -214,6 +217,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public java.util.List<String> getInstanceGroupList() {
             return this.instanceGroupList;
+        }
+
+        public DescribeAppsResponseBodyData setPackageName(String packageName) {
+            this.packageName = packageName;
+            return this;
+        }
+        public String getPackageName() {
+            return this.packageName;
         }
 
         public DescribeAppsResponseBodyData setStatus(String status) {

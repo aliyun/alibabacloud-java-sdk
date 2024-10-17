@@ -9,7 +9,7 @@ public class SendFileResponseBody extends TeaModel {
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
     @NameInMap("Data")
-    public String data;
+    public java.util.List<SendFileResponseBodyData> data;
 
     /**
      * <strong>example:</strong>
@@ -23,11 +23,11 @@ public class SendFileResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SendFileResponseBody setData(String data) {
+    public SendFileResponseBody setData(java.util.List<SendFileResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<SendFileResponseBodyData> getData() {
         return this.data;
     }
 
@@ -37,6 +37,36 @@ public class SendFileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class SendFileResponseBodyData extends TeaModel {
+        @NameInMap("AndroidInstanceId")
+        public String androidInstanceId;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        public static SendFileResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SendFileResponseBodyData self = new SendFileResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SendFileResponseBodyData setAndroidInstanceId(String androidInstanceId) {
+            this.androidInstanceId = androidInstanceId;
+            return this;
+        }
+        public String getAndroidInstanceId() {
+            return this.androidInstanceId;
+        }
+
+        public SendFileResponseBodyData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
     }
 
 }
