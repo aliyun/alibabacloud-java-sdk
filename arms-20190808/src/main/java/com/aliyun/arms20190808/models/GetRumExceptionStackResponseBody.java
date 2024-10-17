@@ -112,12 +112,51 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetRumExceptionStackResponseBodyDataThreadInfoList extends TeaModel {
+        @NameInMap("ThreadDetail")
+        public String threadDetail;
+
+        @NameInMap("ThreadTag")
+        public String threadTag;
+
+        public static GetRumExceptionStackResponseBodyDataThreadInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetRumExceptionStackResponseBodyDataThreadInfoList self = new GetRumExceptionStackResponseBodyDataThreadInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRumExceptionStackResponseBodyDataThreadInfoList setThreadDetail(String threadDetail) {
+            this.threadDetail = threadDetail;
+            return this;
+        }
+        public String getThreadDetail() {
+            return this.threadDetail;
+        }
+
+        public GetRumExceptionStackResponseBodyDataThreadInfoList setThreadTag(String threadTag) {
+            this.threadTag = threadTag;
+            return this;
+        }
+        public String getThreadTag() {
+            return this.threadTag;
+        }
+
+    }
+
     public static class GetRumExceptionStackResponseBodyData extends TeaModel {
+        @NameInMap("CrashAddress")
+        public String crashAddress;
+
+        @NameInMap("CrashReason")
+        public String crashReason;
+
         /**
          * <p>The list of stacks.</p>
          */
         @NameInMap("Lines")
         public java.util.List<String> lines;
+
+        @NameInMap("ModuleName")
+        public String moduleName;
 
         /**
          * <p>The thread ID.</p>
@@ -128,9 +167,31 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         @NameInMap("ThreadId")
         public String threadId;
 
+        @NameInMap("ThreadInfoList")
+        public java.util.List<GetRumExceptionStackResponseBodyDataThreadInfoList> threadInfoList;
+
+        @NameInMap("Uuid")
+        public String uuid;
+
         public static GetRumExceptionStackResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRumExceptionStackResponseBodyData self = new GetRumExceptionStackResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetRumExceptionStackResponseBodyData setCrashAddress(String crashAddress) {
+            this.crashAddress = crashAddress;
+            return this;
+        }
+        public String getCrashAddress() {
+            return this.crashAddress;
+        }
+
+        public GetRumExceptionStackResponseBodyData setCrashReason(String crashReason) {
+            this.crashReason = crashReason;
+            return this;
+        }
+        public String getCrashReason() {
+            return this.crashReason;
         }
 
         public GetRumExceptionStackResponseBodyData setLines(java.util.List<String> lines) {
@@ -141,12 +202,36 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             return this.lines;
         }
 
+        public GetRumExceptionStackResponseBodyData setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
         public GetRumExceptionStackResponseBodyData setThreadId(String threadId) {
             this.threadId = threadId;
             return this;
         }
         public String getThreadId() {
             return this.threadId;
+        }
+
+        public GetRumExceptionStackResponseBodyData setThreadInfoList(java.util.List<GetRumExceptionStackResponseBodyDataThreadInfoList> threadInfoList) {
+            this.threadInfoList = threadInfoList;
+            return this;
+        }
+        public java.util.List<GetRumExceptionStackResponseBodyDataThreadInfoList> getThreadInfoList() {
+            return this.threadInfoList;
+        }
+
+        public GetRumExceptionStackResponseBodyData setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }
