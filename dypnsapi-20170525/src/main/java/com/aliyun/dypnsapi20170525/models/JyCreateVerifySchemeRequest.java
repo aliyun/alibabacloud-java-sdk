@@ -4,21 +4,39 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class JyCreateVerifySchemeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("BundleId")
     public String bundleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CmApiCode")
     public Long cmApiCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("CtApiCode")
     public Long ctApiCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CuApiCode")
     public Long cuApiCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
@@ -37,6 +55,9 @@ public class JyCreateVerifySchemeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SchemeName")
     public String schemeName;
 

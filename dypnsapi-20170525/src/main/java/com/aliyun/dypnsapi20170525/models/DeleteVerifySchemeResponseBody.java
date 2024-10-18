@@ -5,28 +5,41 @@ import com.aliyun.tea.*;
 
 public class DeleteVerifySchemeResponseBody extends TeaModel {
     /**
-     * <p>The request is successful. For more information about other error codes, see [API response codes](~~85198~~).</p>
+     * <p>The request is successful. For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E3754956-D0B1-5947-962A-AE767D354F01</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the operation. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The verification service is deleted.</p>
-     * <p>*   **false**: The verification service failed to be deleted.</p>
+     * <ul>
+     * <li><strong>true</strong>: The verification service is deleted.</li>
+     * <li><strong>false</strong>: The verification service failed to be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

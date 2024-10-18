@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteVerifySchemeRequest extends TeaModel {
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
      */
     @NameInMap("CustomerId")
     public Long customerId;
@@ -21,6 +24,10 @@ public class DeleteVerifySchemeRequest extends TeaModel {
 
     /**
      * <p>The service code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC10000014164****</p>
      */
     @NameInMap("SchemeCode")
     public String schemeCode;

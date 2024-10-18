@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8906582E-6722</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,42 +81,63 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
     public static class QueryGateVerifyBillingPublicResponseBodyDataSceneBillingList extends TeaModel {
         /**
          * <p>The billable items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74</p>
          */
         @NameInMap("Add")
         public String add;
 
         /**
          * <p>The fees generated for the verification service. Unitrogen: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.48</p>
          */
         @NameInMap("Amount")
         public String amount;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The verification method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Verification of local phone number</p>
          */
         @NameInMap("ItemName")
         public String itemName;
 
         /**
          * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC100000038194004</p>
          */
         @NameInMap("SceneCode")
         public String sceneCode;
 
         /**
          * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Communications</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
          * <p>The unit price. Unit: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02</p>
          */
         @NameInMap("SinglePrice")
         public String singlePrice;
@@ -177,6 +208,9 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
     public static class QueryGateVerifyBillingPublicResponseBodyData extends TeaModel {
         /**
          * <p>The fees generated for all verification services. Unitrogen: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("AmountSum")
         public String amountSum;

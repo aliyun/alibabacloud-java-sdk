@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class QueryGateVerifyStatisticPublicRequest extends TeaModel {
     /**
      * <p>The verification method. Valid values:</p>
-     * <br>
-     * <p>*   **1**: one-click logon</p>
-     * <p>*   **2**: phone number verification, including the verification of the phone number used in HTML5 pages</p>
-     * <p>*   **3**: SMS verification</p>
-     * <p>*   **4**: facial recognition</p>
+     * <ul>
+     * <li><strong>1</strong>: one-click logon</li>
+     * <li><strong>2</strong>: phone number verification, including the verification of the phone number used in HTML5 pages</li>
+     * <li><strong>3</strong>: SMS verification</li>
+     * <li><strong>4</strong>: facial recognition</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AuthenticationType")
     public Integer authenticationType;
 
     /**
      * <p>The end date. Specify this parameter in the YYYYMMDD format. Example: 20220106.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20220106</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The type of the operating system. Valid values:</p>
-     * <br>
-     * <p>*   **Android**</p>
-     * <p>*   **iOS**</p>
+     * <ul>
+     * <li><strong>Android</strong></li>
+     * <li><strong>iOS</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Android</p>
      */
     @NameInMap("OsType")
     public String osType;
@@ -38,12 +51,19 @@ public class QueryGateVerifyStatisticPublicRequest extends TeaModel {
 
     /**
      * <p>The service code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC100000038194004</p>
      */
     @NameInMap("SceneCode")
     public String sceneCode;
 
     /**
      * <p>The start date. Specify this parameter in the YYYYMMDD format. Example: 20220101.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20220101</p>
      */
     @NameInMap("StartDate")
     public String startDate;

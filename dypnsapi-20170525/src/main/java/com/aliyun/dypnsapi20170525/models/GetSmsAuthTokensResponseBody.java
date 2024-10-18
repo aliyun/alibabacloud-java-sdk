@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class GetSmsAuthTokensResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8906582E-6722</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,30 +81,45 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
     public static class GetSmsAuthTokensResponseBodyData extends TeaModel {
         /**
          * <p>The business token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FZSMeRbLCiapIBo65NXNHvGbkGDmhs23XWTZDOtZN0g5n/kqSc2FU27Gc9YhGb6dNn9/L9ZXSYiIB6C6LMLQJjyXjRzt5v6pzZXqnjO4cSuPWYUxJvdc8l8OpucEYe8Mx17HxsHDzj0VC4D5+atcrTpJE6jQ7e2QVNjZIPMwsfxELjQS7c****</p>
          */
         @NameInMap("BizToken")
         public String bizToken;
 
         /**
          * <p>The time when the token expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631526326000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STS.NSqC****</p>
          */
         @NameInMap("StsAccessKeyId")
         public String stsAccessKeyId;
 
         /**
          * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VboZ4xbZ****</p>
          */
         @NameInMap("StsAccessKeySecret")
         public String stsAccessKeySecret;
 
         /**
          * <p>The security token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAISiQJ1q6Ft5B2yfSjIr5DEDP/BurtW9PemMEfBrEpsOr5K17XjuDz2IHtLfXFsBusYt/U2nWpX5v4clrxIToR7SFbFY9pb6ZhazBisebDGv8HtR3TcFEjiSwapEBfe8JL4QYeQFaHwGJqEb1TDiVUAo9/TfimjWFqIKICAjYUdAP0cQgi/a0gtZr4UXHwAzvUXLnzML/2gHwf3i27LdipStxF7lHl05NbUoKTeyGKH3AGqlLVF9tite8f9NpczBvolDYfpht4RX7HazStd5yJN8KpLl6Fe8V/FxIrGXAAJv0rdbbOFq4Q1c18hOLJHAKtfsvXmlPNpsevfmpnsx****</p>
          */
         @NameInMap("StsToken")
         public String stsToken;

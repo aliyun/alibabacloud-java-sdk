@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class VerifyMobileResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class VerifyMobileResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8906582E-6722</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,16 +81,23 @@ public class VerifyMobileResponseBody extends TeaModel {
     public static class VerifyMobileResponseBodyGateVerifyResultDTO extends TeaModel {
         /**
          * <p>The verification ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121343241</p>
          */
         @NameInMap("VerifyId")
         public String verifyId;
 
         /**
          * <p>The verification results. Valid values:</p>
-         * <br>
-         * <p>*   **PASS: The input phone number is consistent with the phone number that you use.**</p>
-         * <p>*   **REJECT: The input phone number is different from the phone number that you use.**</p>
-         * <p>*   **UNKNOWN: The system cannot judge whether the input phone number is consistent with the phone number that you use.</p>
+         * <ul>
+         * <li><strong>PASS: The input phone number is consistent with the phone number that you use.</strong></li>
+         * <li><strong>REJECT: The input phone number is different from the phone number that you use.</strong></li>
+         * <li>**UNKNOWN: The system cannot judge whether the input phone number is consistent with the phone number that you use.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PASS</p>
          */
         @NameInMap("VerifyResult")
         public String verifyResult;
