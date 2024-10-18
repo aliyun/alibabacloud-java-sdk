@@ -4,6 +4,19 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to upgrade the major engine version of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p>When you upgrade the major engine version of an ApsaraDB RDS for SQL Server instance, set this parameter to true. When you upgrade the major engine version, you must also specify required parameters such as DBInstanceId, EngineVersion, DBInstanceClass, and Category, and optional parameters such as ZoneId, ZoneIdSlave1, and VSwitchId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AllowMajorVersionUpgrade")
     public Boolean allowMajorVersionUpgrade;
 
@@ -46,10 +59,11 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <li><strong>serverless_standard</strong>: RDS High-availability Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</li>
      * <li><strong>serverless_ha</strong>: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</li>
      * </ul>
-     * <p>**</p>
-     * <p><strong>Note</strong> If you set the <strong>EngineVersion</strong> parameter to an SQL Server version number, you must also specify this parameter.</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>If you set the <strong>EngineVersion</strong> parameter to an SQL Server version number, you must also specify this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>HighAvailability</p>
@@ -139,10 +153,10 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <li><strong>Up</strong> (default): upgrades a subscription instance, or upgrades or downgrades a pay-as-you-go instance.</li>
      * <li><strong>Down</strong>: downgrades a subscription instance.</li>
      * <li><strong>TempUpgrade</strong>: performs auto scaling on a subscription instance that runs SQL Server. This value is required for auto scaling.</li>
-     * <li><strong>Serverless</strong>: modifies the auto scaling settings of a serverless instance. This value is required if you want to modify the auto scaling settings of a serverless instance.</li>
+     * <li><strong>Serverless</strong>: modifies the auto scaling settings of a serverless instance.</li>
      * </ul>
      * <blockquote>
-     * <p> If you specify only <strong>DBInstanceStorageType</strong>, you can leave Direction empty. For example, if you want to change only the storage type of the instance from standard SSD to ESSD, you do not need to specify Direction.</p>
+     * <p> If you specify only <strong>DBInstanceStorageType</strong>, you can leave Direction empty. For example, if you want to change only the storage type of the instance from standard SSD to Enterprise SSD (ESSD), you do not need to specify Direction.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,7 +170,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>Immediate</strong> (default): The effective time immediately takes effect.</li>
      * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>ScheduleTime</strong>: The effective time takes effect at the point in time that you specify. The schedule time must be a specific point in time that is 12 hours later than the current time. In this case, EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
+     * <li><strong>ScheduleTime</strong>: The effective time takes effect at the point in time that you specify. The value of ScheduleTime must be a specific point in time that is 12 hours later than the current time. In this case, The value of EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -285,6 +299,19 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("UsedTime")
     public Long usedTime;
 
+    /**
+     * <p>The vSwitch ID. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
+     * <ul>
+     * <li>If you set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>, you must also specify this parameter.</li>
+     * <li>If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</li>
+     * </ul>
+     * <blockquote>
+     * <p>When you upgrade the major engine version, if you want to specify a vSwitch or change the vSwitch for the RDS instance, you must also specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1oxflciovg9l7163lr7</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -306,6 +333,15 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
+    /**
+     * <p>The zone ID of the secondary instance. If you set this parameter to the same value as the <strong>ZoneId</strong> parameter, the single-zone deployment method is used. If you set this parameter to a different value from the <strong>ZoneId</strong> parameter, the multi-zone deployment method is used.</p>
+     * <blockquote>
+     * <p>If you must specify a secondary zone or change the secondary zone to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance, you must also specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-c</p>
+     */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 

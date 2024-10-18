@@ -31,7 +31,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>

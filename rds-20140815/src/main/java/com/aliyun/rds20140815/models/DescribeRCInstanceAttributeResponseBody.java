@@ -4,125 +4,368 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster to which the instance belongs.</p>
+     * <blockquote>
+     * <p> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The number of CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-04-22T06:52:23Z</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The performance mode of the burstable instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
+    /**
+     * <p>The details of the data disk.</p>
+     */
     @NameInMap("DataDisks")
     public DescribeRCInstanceAttributeResponseBodyDataDisks dataDisks;
 
     /**
+     * <p>The attributes of the dedicated hosts.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("DedicatedHostAttribute")
     public DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute;
 
+    /**
+     * <p>The ID of the deployment set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-uf6c8qerk019bj1l****</p>
+     */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
+    /**
+     * <p>The instance description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
+    /**
+     * <p>The Elastic Compute Service (ECS) instance family.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6.2xlarge</p>
+     */
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    /**
+     * <p>The elastic IP address (EIP) associated with the instance.</p>
+     */
     @NameInMap("EipAddress")
     public DescribeRCInstanceAttributeResponseBodyEipAddress eipAddress;
 
+    /**
+     * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
+    /**
+     * <p>The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-08-10T00:00:00Z</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The instance hostname.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iZ2zej1n3cin51rlmby****</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The storage type of the host. Valid values:</p>
+     * <ul>
+     * <li><strong>dhg_cloud_ssd</strong>: ESSD</li>
+     * <li><strong>dhg_local_ssd</strong>: local SSD</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg_cloud_ssd</p>
+     */
     @NameInMap("HostType")
     public String hostType;
 
+    /**
+     * <p>The image ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-2oqiu973jwcxe****</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The private IP addresses of the instance in the classic network.</p>
+     */
     @NameInMap("InnerIpAddress")
     public DescribeRCInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-dh2jf9n6j4s14926****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The network type. Valid values:</p>
+     * <ul>
+     * <li><strong>classic</strong></li>
+     * <li><strong>vpc</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>The instance type of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql.x4.xlarge.6cm</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The billing method for network usage. Valid values:</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The maximum inbound bandwidth from the Internet. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
 
+    /**
+     * <p>The maximum outbound bandwidth to the Internet. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
+    /**
+     * <p>Indicates whether the instance is I/O optimized.</p>
+     * <ul>
+     * <li><strong>optimized</strong>: The instance is I/O optimized.</li>
+     * <li><strong>none</strong>: The instance is not I/O optimized.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>optimized</p>
+     */
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    /**
+     * <p>The name of the key pair.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_01</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The memory capacity of the instance. Unit: MiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The reasons why the instance is locked.</p>
+     */
     @NameInMap("OperationLocks")
     public DescribeRCInstanceAttributeResponseBodyOperationLocks operationLocks;
 
+    /**
+     * <p>The public IP address of the instance.</p>
+     */
     @NameInMap("PublicIpAddress")
     public DescribeRCInstanceAttributeResponseBodyPublicIpAddress publicIpAddress;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA2D4F34-01A7-46EB-A339-D80882135206</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The security groups.</p>
+     */
     @NameInMap("SecurityGroupIds")
     public DescribeRCInstanceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
+    /**
+     * <p>The serial number of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b076f6ff-46d1-4234-a608-4e951ed6****</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>Pending</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Starting</strong></li>
+     * <li><strong>Stopping</strong></li>
+     * <li><strong>Stopped</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the billing of the instance continues after the instance is stopped. Valid values:</p>
+     * <ul>
+     * <li><strong>KeepCharging</strong>: The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</li>
+     * <li><strong>StopCharging</strong>: The billing of the instance stops after the instance is stopped. After the instance is stopped, resources such as CPU cores, memory resources, and public IP address are released. The instance may be unable to restart if some required resources are out of stock in the current region.</li>
+     * <li><strong>Not-applicable</strong>: The No Fees for Stopped Instances feature is not supported for the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Not-applicable</p>
+     */
     @NameInMap("StoppedMode")
     public String stoppedMode;
 
+    /**
+     * <p>The virtual LAN (VLAN) ID of the instance.</p>
+     * <blockquote>
+     * <p> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("VlanId")
     public String vlanId;
 
     /**
+     * <p>The virtual private cloud (VPC) attributes of the instance.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("VpcAttributes")
     public DescribeRCInstanceAttributeResponseBodyVpcAttributes vpcAttributes;
 
+    /**
+     * <p>The zone ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -436,18 +679,56 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk extends TeaModel {
+        /**
+         * <p>The category of the data disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>Indicates whether the data disk is released when the instance is released. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The data disk is released when the instance is released.</li>
+         * <li><strong>false</strong>: The data disk is reserved when the instance is released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
+        /**
+         * <p>Indicates whether the data disk is encrypted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Encrypted")
         public String encrypted;
 
+        /**
+         * <p>The performance level of data disk. This parameter is available when the data disk is an Enterprise SSD (ESSD).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The size of the data disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("Size")
         public Long size;
 
@@ -518,9 +799,21 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute extends TeaModel {
+        /**
+         * <p>The ID of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
+        /**
+         * <p>The name of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
@@ -548,15 +841,46 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodyEipAddress extends TeaModel {
+        /**
+         * <p>The EIP ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bp14k3rz6cbg6zxbe****</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The maximum Internet bandwidth of the EIP. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The billing method of the Internet-facing instance. Valid values:</p>
+         * <ul>
+         * <li><strong>paybytraffic:</strong> pay-by-data-transfer</li>
+         * <li><strong>paybybandwidth</strong>: pay-by-bandwidth</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>paybytraffic</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>The EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.147.XXX.XXX</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
@@ -619,6 +943,19 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodyOperationLocksLockReason extends TeaModel {
+        /**
+         * <p>The reason why the instance is locked. Valid values:</p>
+         * <ul>
+         * <li><strong>financial</strong>: The instance is locked due to overdue payments.</li>
+         * <li><strong>security</strong>: The instance is locked for security purposes.</li>
+         * <li><strong>recycling</strong>: The instance is locked because the instance is a preemptible instance and pending to be released.</li>
+         * <li><strong>dedicatedhostfinancial</strong>: The instance is locked due to overdue payments for the dedicated host.</li>
+         * <li><strong>refunded</strong>: The instance is locked because a refund was made for the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
@@ -714,15 +1051,36 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodyVpcAttributes extends TeaModel {
+        /**
+         * <p>The network address translation (NAT) IP address of the instance. The NAT IP address is used by instances in different VPCs for communication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("NatIpAddress")
         public String natIpAddress;
 
+        /**
+         * <p>The private IP addresses of the instance.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public DescribeRCInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress privateIpAddress;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1nt15muovrc5qdj****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zeu747v4765aw2id****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

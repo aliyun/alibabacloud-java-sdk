@@ -36,7 +36,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid value: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

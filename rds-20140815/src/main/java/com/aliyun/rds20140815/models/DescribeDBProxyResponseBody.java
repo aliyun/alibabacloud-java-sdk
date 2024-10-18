@@ -103,6 +103,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    @NameInMap("DBProxyKindCode")
+    public String DBProxyKindCode;
+
+    @NameInMap("DBProxyNodes")
+    public DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes;
+
     /**
      * <p>Connection Persistence State. </p>
      * <p>Valid values:</p>
@@ -238,6 +244,22 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
     public String getDBProxyInstanceType() {
         return this.DBProxyInstanceType;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyKindCode(String DBProxyKindCode) {
+        this.DBProxyKindCode = DBProxyKindCode;
+        return this;
+    }
+    public String getDBProxyKindCode() {
+        return this.DBProxyKindCode;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyNodes(DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes) {
+        this.DBProxyNodes = DBProxyNodes;
+        return this;
+    }
+    public DescribeDBProxyResponseBodyDBProxyNodes getDBProxyNodes() {
+        return this.DBProxyNodes;
     }
 
     public DescribeDBProxyResponseBody setDBProxyPersistentConnectionStatus(String DBProxyPersistentConnectionStatus) {
@@ -484,6 +506,70 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems> getDBProxyConnectStringItems() {
             return this.DBProxyConnectStringItems;
+        }
+
+    }
+
+    public static class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes extends TeaModel {
+        @NameInMap("cpuCores")
+        public String cpuCores;
+
+        /**
+         * <strong>example:</strong>
+         * <p>pn-xxxxxxx01</p>
+         */
+        @NameInMap("nodeId")
+        public String nodeId;
+
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes self = new DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes setCpuCores(String cpuCores) {
+            this.cpuCores = cpuCores;
+            return this;
+        }
+        public String getCpuCores() {
+            return this.cpuCores;
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeDBProxyResponseBodyDBProxyNodes extends TeaModel {
+        @NameInMap("DBProxyNodes")
+        public java.util.List<DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes;
+
+        public static DescribeDBProxyResponseBodyDBProxyNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBProxyResponseBodyDBProxyNodes self = new DescribeDBProxyResponseBodyDBProxyNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyNodes setDBProxyNodes(java.util.List<DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes) {
+            this.DBProxyNodes = DBProxyNodes;
+            return this;
+        }
+        public java.util.List<DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes> getDBProxyNodes() {
+            return this.DBProxyNodes;
         }
 
     }

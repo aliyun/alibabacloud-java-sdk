@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SyncRCKeyPairResponseBody extends TeaModel {
+    /**
+     * <p>The details of the result.</p>
+     */
     @NameInMap("Data")
     public SyncRCKeyPairResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60478CCB-95EA-5D06-8A51-CAC83A316E9A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +41,16 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
     }
 
     public static class SyncRCKeyPairResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the synchronization succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSyncInfo")
         public Boolean isSyncInfo;
 

@@ -3,7 +3,7 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDBProxyInstanceRequest extends TeaModel {
+public class ModifyDBProxyInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
@@ -51,7 +51,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public String DBProxyInstanceType;
 
     @NameInMap("DBProxyNodes")
-    public java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes;
+    public String DBProxyNodesShrink;
 
     /**
      * <p>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
@@ -81,7 +81,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public String effectiveTime;
 
     @NameInMap("MigrateAZ")
-    public java.util.List<ModifyDBProxyInstanceRequestMigrateAZ> migrateAZ;
+    public String migrateAZShrink;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -113,12 +113,12 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
-    public static ModifyDBProxyInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDBProxyInstanceRequest self = new ModifyDBProxyInstanceRequest();
+    public static ModifyDBProxyInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBProxyInstanceShrinkRequest self = new ModifyDBProxyInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBProxyInstanceRequest setDBInstanceId(String DBInstanceId) {
+    public ModifyDBProxyInstanceShrinkRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -126,7 +126,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public ModifyDBProxyInstanceRequest setDBProxyEngineType(String DBProxyEngineType) {
+    public ModifyDBProxyInstanceShrinkRequest setDBProxyEngineType(String DBProxyEngineType) {
         this.DBProxyEngineType = DBProxyEngineType;
         return this;
     }
@@ -134,7 +134,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.DBProxyEngineType;
     }
 
-    public ModifyDBProxyInstanceRequest setDBProxyInstanceNum(String DBProxyInstanceNum) {
+    public ModifyDBProxyInstanceShrinkRequest setDBProxyInstanceNum(String DBProxyInstanceNum) {
         this.DBProxyInstanceNum = DBProxyInstanceNum;
         return this;
     }
@@ -142,7 +142,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.DBProxyInstanceNum;
     }
 
-    public ModifyDBProxyInstanceRequest setDBProxyInstanceType(String DBProxyInstanceType) {
+    public ModifyDBProxyInstanceShrinkRequest setDBProxyInstanceType(String DBProxyInstanceType) {
         this.DBProxyInstanceType = DBProxyInstanceType;
         return this;
     }
@@ -150,15 +150,15 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.DBProxyInstanceType;
     }
 
-    public ModifyDBProxyInstanceRequest setDBProxyNodes(java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes) {
-        this.DBProxyNodes = DBProxyNodes;
+    public ModifyDBProxyInstanceShrinkRequest setDBProxyNodesShrink(String DBProxyNodesShrink) {
+        this.DBProxyNodesShrink = DBProxyNodesShrink;
         return this;
     }
-    public java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> getDBProxyNodes() {
-        return this.DBProxyNodes;
+    public String getDBProxyNodesShrink() {
+        return this.DBProxyNodesShrink;
     }
 
-    public ModifyDBProxyInstanceRequest setEffectiveSpecificTime(String effectiveSpecificTime) {
+    public ModifyDBProxyInstanceShrinkRequest setEffectiveSpecificTime(String effectiveSpecificTime) {
         this.effectiveSpecificTime = effectiveSpecificTime;
         return this;
     }
@@ -166,7 +166,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.effectiveSpecificTime;
     }
 
-    public ModifyDBProxyInstanceRequest setEffectiveTime(String effectiveTime) {
+    public ModifyDBProxyInstanceShrinkRequest setEffectiveTime(String effectiveTime) {
         this.effectiveTime = effectiveTime;
         return this;
     }
@@ -174,15 +174,15 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.effectiveTime;
     }
 
-    public ModifyDBProxyInstanceRequest setMigrateAZ(java.util.List<ModifyDBProxyInstanceRequestMigrateAZ> migrateAZ) {
-        this.migrateAZ = migrateAZ;
+    public ModifyDBProxyInstanceShrinkRequest setMigrateAZShrink(String migrateAZShrink) {
+        this.migrateAZShrink = migrateAZShrink;
         return this;
     }
-    public java.util.List<ModifyDBProxyInstanceRequestMigrateAZ> getMigrateAZ() {
-        return this.migrateAZ;
+    public String getMigrateAZShrink() {
+        return this.migrateAZShrink;
     }
 
-    public ModifyDBProxyInstanceRequest setOwnerId(Long ownerId) {
+    public ModifyDBProxyInstanceShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -190,7 +190,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyDBProxyInstanceRequest setRegionId(String regionId) {
+    public ModifyDBProxyInstanceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -198,7 +198,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyDBProxyInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyDBProxyInstanceShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -206,7 +206,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ModifyDBProxyInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyDBProxyInstanceShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -214,95 +214,12 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBProxyInstanceRequest setVSwitchIds(String vSwitchIds) {
+    public ModifyDBProxyInstanceShrinkRequest setVSwitchIds(String vSwitchIds) {
         this.vSwitchIds = vSwitchIds;
         return this;
     }
     public String getVSwitchIds() {
         return this.vSwitchIds;
-    }
-
-    public static class ModifyDBProxyInstanceRequestDBProxyNodes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("cpuCores")
-        public String cpuCores;
-
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
-        @NameInMap("nodeCounts")
-        public String nodeCounts;
-
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hagnzhou-c</p>
-         */
-        @NameInMap("zoneId")
-        public String zoneId;
-
-        public static ModifyDBProxyInstanceRequestDBProxyNodes build(java.util.Map<String, ?> map) throws Exception {
-            ModifyDBProxyInstanceRequestDBProxyNodes self = new ModifyDBProxyInstanceRequestDBProxyNodes();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyDBProxyInstanceRequestDBProxyNodes setCpuCores(String cpuCores) {
-            this.cpuCores = cpuCores;
-            return this;
-        }
-        public String getCpuCores() {
-            return this.cpuCores;
-        }
-
-        public ModifyDBProxyInstanceRequestDBProxyNodes setNodeCounts(String nodeCounts) {
-            this.nodeCounts = nodeCounts;
-            return this;
-        }
-        public String getNodeCounts() {
-            return this.nodeCounts;
-        }
-
-        public ModifyDBProxyInstanceRequestDBProxyNodes setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-    }
-
-    public static class ModifyDBProxyInstanceRequestMigrateAZ extends TeaModel {
-        @NameInMap("dbProxyEndpointId")
-        public String dbProxyEndpointId;
-
-        @NameInMap("destVSwitchId")
-        public String destVSwitchId;
-
-        public static ModifyDBProxyInstanceRequestMigrateAZ build(java.util.Map<String, ?> map) throws Exception {
-            ModifyDBProxyInstanceRequestMigrateAZ self = new ModifyDBProxyInstanceRequestMigrateAZ();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyDBProxyInstanceRequestMigrateAZ setDbProxyEndpointId(String dbProxyEndpointId) {
-            this.dbProxyEndpointId = dbProxyEndpointId;
-            return this;
-        }
-        public String getDbProxyEndpointId() {
-            return this.dbProxyEndpointId;
-        }
-
-        public ModifyDBProxyInstanceRequestMigrateAZ setDestVSwitchId(String destVSwitchId) {
-            this.destVSwitchId = destVSwitchId;
-            return this;
-        }
-        public String getDestVSwitchId() {
-            return this.destVSwitchId;
-        }
-
     }
 
 }

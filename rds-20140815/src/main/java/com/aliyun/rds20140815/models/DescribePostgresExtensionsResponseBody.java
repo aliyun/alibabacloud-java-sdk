@@ -162,9 +162,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         public String requires;
 
         /**
-         * <p>Alibaba Cloud account ID.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * <blockquote>
-         * <p>Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.</p>
+         * <p> This parameter is returned only for self-developed exclusive extensions. You can view exclusive extensions only within your Alibaba Cloud account.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -326,9 +326,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         public String requires;
 
         /**
-         * <p>Alibaba Cloud account ID.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * <blockquote>
-         * <p>Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.</p>
+         * <p> This parameter is returned only for self-developed exclusive extensions. You can view exclusive extensions only within your Alibaba Cloud account.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

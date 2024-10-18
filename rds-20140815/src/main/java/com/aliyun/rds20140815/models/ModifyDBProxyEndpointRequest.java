@@ -112,6 +112,12 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("DbEndpointType")
     public String dbEndpointType;
 
+    @NameInMap("EffectiveSpecificTime")
+    public String effectiveSpecificTime;
+
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -177,6 +183,13 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-uf6adz52c2p****</p>
+     */
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
     public static ModifyDBProxyEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBProxyEndpointRequest self = new ModifyDBProxyEndpointRequest();
@@ -247,6 +260,22 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
         return this.dbEndpointType;
     }
 
+    public ModifyDBProxyEndpointRequest setEffectiveSpecificTime(String effectiveSpecificTime) {
+        this.effectiveSpecificTime = effectiveSpecificTime;
+        return this;
+    }
+    public String getEffectiveSpecificTime() {
+        return this.effectiveSpecificTime;
+    }
+
+    public ModifyDBProxyEndpointRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
     public ModifyDBProxyEndpointRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -301,6 +330,14 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBProxyEndpointRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }

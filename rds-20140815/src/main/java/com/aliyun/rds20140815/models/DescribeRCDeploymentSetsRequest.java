@@ -4,24 +4,67 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCDeploymentSetsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, ... &quot;ds-zzzzzzzzz&quot;]</code>. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;ds-2zeeuw16zo2gr9e6****&quot;]</p>
+     */
     @NameInMap("DeploymentSetIds")
     public String deploymentSetIds;
 
+    /**
+     * <p>The deployment set name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>deployment_test</p>
+     */
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
 
+    /**
+     * <p>The page number.</p>
+     * <p>Pages start from page 1.</p>
+     * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <p>Maximum value: 50.</p>
+     * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The deployment strategy. Valid values:</p>
+     * <ul>
+     * <li><strong>Availability</strong>: high availability strategy</li>
+     * <li><strong>AvailabilityGroup</strong>: high availability group strategy</li>
+     * </ul>
+     * <p>Default value: Availability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Availability</p>
+     */
     @NameInMap("Strategy")
     public String strategy;
 

@@ -73,12 +73,12 @@ public class DescribeAvailableClassesRequest extends TeaModel {
      * <ul>
      * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
      * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</li>
-     * <li><strong>cloud_essd2</strong>: ESSDs of PL2</li>
-     * <li><strong>cloud_essd3</strong>: ESSD of PL3</li>
+     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) Enterprise SSD (ESSD)</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
      * <blockquote>
-     * <p>Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to <strong>cloud_essd</strong>.</p>
+     * <p> Serverless instances use only PL1 ESSDs. If you want to create a serverless instance, you must set this parameter to <strong>cloud_essd</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -152,7 +152,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The type of the order. Set the value to <strong>BUY</strong></p>
+     * <p>The type of order. Set the value to <strong>BUY</strong></p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>

@@ -81,6 +81,20 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>Specifies whether to use a password policy.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter is available only for ApsaraDB RDS for SQL Server instances that do not belong to the shared instance family and do not run SQL Server 2008 R2.</p>
+     * </li>
+     * <li><p>Before you call this operation, you must configure a password policy for the account of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/2848317.html">Configure a password policy for the account of an ApsaraDB RDS for SQL Server instance</a>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CheckPolicy")
     public Boolean checkPolicy;
 

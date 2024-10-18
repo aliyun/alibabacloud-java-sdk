@@ -90,17 +90,17 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Scheduled</li>
-     * <li>Running</li>
-     * <li>Succeed</li>
-     * <li>Failed</li>
-     * <li>Cancelling</li>
-     * <li>Canceled</li>
-     * <li>Waiting</li>
+     * <li><strong>Scheduled</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Succeed</strong></li>
+     * <li><strong>Failed</strong></li>
+     * <li><strong>Cancelling</strong></li>
+     * <li><strong>Canceled</strong></li>
+     * <li><strong>Waiting</strong></li>
      * </ul>
-     * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
+     * <p>Separate multiple values with commas (,). By default, this parameter is left empty, which indicates that tasks in all statuses are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Scheduled</p>
@@ -109,7 +109,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs.</p>
+     * <p>The task ID. You can call the DescribeTasks operation to query the task ID. If multiple task IDs exist, separate them with commas (,). You can specify up to 30 task IDs. By default, this parameter is left empty, which indicates that all tasks are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>t-83br18hloy3faf****</p>

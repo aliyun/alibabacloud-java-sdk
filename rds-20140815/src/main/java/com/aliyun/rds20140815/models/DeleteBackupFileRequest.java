@@ -7,13 +7,11 @@ public class DeleteBackupFileRequest extends TeaModel {
     /**
      * <p>The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.</p>
-     * </li>
-     * <li><p>You can call the DescribeBackups operation to query the backup set ID.</p>
-     * </li>
+     * <li>If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.</li>
+     * <li>You can call the DescribeBackups operation to query the backup set ID.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>29304****</p>

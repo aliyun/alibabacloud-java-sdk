@@ -42,6 +42,21 @@ public class ListClassesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The database engine of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>MariaDB</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
+     */
+    @NameInMap("Engine")
+    public String engine;
+
+    /**
      * <p>The type of order that you want to query. Valid values:</p>
      * <ul>
      * <li><strong>BUY</strong>: specifies the query orders that are used to purchase instances.</li>
@@ -105,6 +120,14 @@ public class ListClassesRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ListClassesRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
     }
 
     public ListClassesRequest setOrderType(String orderType) {

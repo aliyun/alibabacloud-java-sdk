@@ -71,6 +71,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyFeatures")
     public String DBProxyFeatures;
 
+    @NameInMap("DBProxyNodes")
+    public DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes;
+
     /**
      * <p>The description of the proxy terminal.</p>
      * 
@@ -92,6 +95,12 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      */
     @NameInMap("DbProxyEndpointReadWriteMode")
     public String dbProxyEndpointReadWriteMode;
+
+    @NameInMap("DbProxyEndpointVswitchId")
+    public String dbProxyEndpointVswitchId;
+
+    @NameInMap("DbProxyEndpointZoneId")
+    public String dbProxyEndpointZoneId;
 
     /**
      * <p>An array that consists of the information about the proxy endpoint.</p>
@@ -199,6 +208,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         return this.DBProxyFeatures;
     }
 
+    public DescribeDBProxyEndpointResponseBody setDBProxyNodes(DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes) {
+        this.DBProxyNodes = DBProxyNodes;
+        return this;
+    }
+    public DescribeDBProxyEndpointResponseBodyDBProxyNodes getDBProxyNodes() {
+        return this.DBProxyNodes;
+    }
+
     public DescribeDBProxyEndpointResponseBody setDbProxyEndpointAliases(String dbProxyEndpointAliases) {
         this.dbProxyEndpointAliases = dbProxyEndpointAliases;
         return this;
@@ -213,6 +230,22 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
     public String getDbProxyEndpointReadWriteMode() {
         return this.dbProxyEndpointReadWriteMode;
+    }
+
+    public DescribeDBProxyEndpointResponseBody setDbProxyEndpointVswitchId(String dbProxyEndpointVswitchId) {
+        this.dbProxyEndpointVswitchId = dbProxyEndpointVswitchId;
+        return this;
+    }
+    public String getDbProxyEndpointVswitchId() {
+        return this.dbProxyEndpointVswitchId;
+    }
+
+    public DescribeDBProxyEndpointResponseBody setDbProxyEndpointZoneId(String dbProxyEndpointZoneId) {
+        this.dbProxyEndpointZoneId = dbProxyEndpointZoneId;
+        return this;
+    }
+    public String getDbProxyEndpointZoneId() {
+        return this.dbProxyEndpointZoneId;
     }
 
     public DescribeDBProxyEndpointResponseBody setEndpointConnectItems(DescribeDBProxyEndpointResponseBodyEndpointConnectItems endpointConnectItems) {
@@ -253,6 +286,66 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes extends TeaModel {
+        @NameInMap("cpuCores")
+        public String cpuCores;
+
+        @NameInMap("nodeId")
+        public String nodeId;
+
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes self = new DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes setCpuCores(String cpuCores) {
+            this.cpuCores = cpuCores;
+            return this;
+        }
+        public String getCpuCores() {
+            return this.cpuCores;
+        }
+
+        public DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeDBProxyEndpointResponseBodyDBProxyNodes extends TeaModel {
+        @NameInMap("DBProxyNodes")
+        public java.util.List<DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes;
+
+        public static DescribeDBProxyEndpointResponseBodyDBProxyNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBProxyEndpointResponseBodyDBProxyNodes self = new DescribeDBProxyEndpointResponseBodyDBProxyNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBProxyEndpointResponseBodyDBProxyNodes setDBProxyNodes(java.util.List<DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes) {
+            this.DBProxyNodes = DBProxyNodes;
+            return this;
+        }
+        public java.util.List<DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes> getDBProxyNodes() {
+            return this.DBProxyNodes;
+        }
+
     }
 
     public static class DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems extends TeaModel {

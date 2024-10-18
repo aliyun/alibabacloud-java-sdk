@@ -4,12 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RunRCInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The instance IDs (InstanceIdSet).</p>
+     */
     @NameInMap("InstanceIdSets")
     public RunRCInstancesResponseBodyInstanceIdSets instanceIdSets;
 
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>237850846720798</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>535BD857-E88F-5B4F-A18C-FAF59A74741F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

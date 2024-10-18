@@ -58,8 +58,8 @@ public class DeleteSlotRequest extends TeaModel {
     /**
      * <p>The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:</p>
      * <ul>
-     * <li>ACTIVE</li>
-     * <li>INACTIVE</li>
+     * <li><strong>ACTIVE</strong></li>
+     * <li><strong>INACTIVE</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

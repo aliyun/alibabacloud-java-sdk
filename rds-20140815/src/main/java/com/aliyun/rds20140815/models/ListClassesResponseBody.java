@@ -161,6 +161,42 @@ public class ListClassesResponseBody extends TeaModel {
         @NameInMap("ReferencePrice")
         public String referencePrice;
 
+        /**
+         * <p>The RDS edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><p>Regular instance</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+         * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL or PostgreSQL</li>
+         * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</li>
+         * <li><strong>Finance</strong>: RDS Basic Edition for serverless instances</li>
+         * </ul>
+         * </li>
+         * <li><p>Serverless instance</p>
+         * <ul>
+         * <li><strong>serverless_basic</strong>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
+         * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
+         * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
+         */
+        @NameInMap("category")
+        public String category;
+
+        /**
+         * <p>The storage type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
+        @NameInMap("storageType")
+        public String storageType;
+
         public static ListClassesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListClassesResponseBodyItems self = new ListClassesResponseBodyItems();
             return TeaModel.build(map, self);
@@ -244,6 +280,22 @@ public class ListClassesResponseBody extends TeaModel {
         }
         public String getReferencePrice() {
             return this.referencePrice;
+        }
+
+        public ListClassesResponseBodyItems setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ListClassesResponseBodyItems setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }
