@@ -14,7 +14,7 @@ public class CopyDatabaseRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Destination database name.</p>
+     * <p>The destination database name.</p>
      * 
      * <strong>example:</strong>
      * <p>db2***</p>
@@ -26,7 +26,7 @@ public class CopyDatabaseRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Reserve account.</p>
+     * <p>The reserved account.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class CopyDatabaseRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Source database name.</p>
+     * <p>The source database name.</p>
      * 
      * <strong>example:</strong>
      * <p>db1***</p>

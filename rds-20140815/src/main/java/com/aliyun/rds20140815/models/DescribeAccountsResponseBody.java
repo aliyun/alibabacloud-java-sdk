@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>The details of the account.</p>
+     * <p>The information about the account.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
@@ -265,6 +265,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("BypassRLS")
         public String bypassRLS;
 
+        /**
+         * <p>Indicates whether the password policy is applied.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CheckPolicy")
         public Boolean checkPolicy;
 
@@ -315,6 +324,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges databasePrivileges;
 
+        /**
+         * <p>The expiration time of the password.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-21</p>
+         */
         @NameInMap("PasswordExpireTime")
         public String passwordExpireTime;
 

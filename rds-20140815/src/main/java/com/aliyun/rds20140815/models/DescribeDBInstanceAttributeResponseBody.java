@@ -308,10 +308,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra extends TeaModel {
         /**
-         * <p>Instance account group policy.</p>
+         * <p>The group policy of the instance account.</p>
          * <ul>
-         * <li>MaximumPasswordAge: Maximum usage time</li>
-         * <li>MinimumPasswordAge: Minimum usage time</li>
+         * <li>MaximumPasswordAge: maximum use time</li>
+         * <li>MinimumPasswordAge: minimum use time</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -768,7 +768,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The disk usage of the instance. Unit: MB.</p>
+         * <p>The disk usage of the instance. Unit: byte.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -887,7 +887,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Boolean deletionProtection;
 
         /**
-         * <p>Disaster recovery source instance information.</p>
+         * <p>Disaster Recovery Instance Information</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;replicatorAccount&quot;: &quot;<strong><strong><strong>&quot;,&quot;sourcePort&quot;:</strong></strong></strong>,&quot;sourceAddress&quot;: &quot;pgm-2ze******&quot;,&quot;sourceCategory&quot;: &quot;aliyunRDS&quot;,&quot;sourceInstanceRegionId&quot;: &quot;cn-<strong><strong><strong>&quot;,&quot;replicatorPassword&quot;: &quot;</strong></strong></strong>&quot;,&quot;sourceInstanceName&quot;: &quot;pgm-2ze******&quot;}</p>
@@ -941,7 +941,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The extended information of the instance.</p>
+         * <p>The extended information about the instance.</p>
          */
         @NameInMap("Extra")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra extra;
@@ -1108,6 +1108,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
+
+        @NameInMap("MultipleTempUpgrade")
+        public Boolean multipleTempUpgrade;
 
         /**
          * <p>Indicates whether PgBouncer is enabled.</p>
@@ -1786,6 +1789,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getMaxIOPS() {
             return this.maxIOPS;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMultipleTempUpgrade(Boolean multipleTempUpgrade) {
+            this.multipleTempUpgrade = multipleTempUpgrade;
+            return this;
+        }
+        public Boolean getMultipleTempUpgrade() {
+            return this.multipleTempUpgrade;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setPGBouncerEnabled(String PGBouncerEnabled) {

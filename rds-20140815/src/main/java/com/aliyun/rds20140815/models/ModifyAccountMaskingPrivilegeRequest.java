@@ -22,6 +22,9 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     @NameInMap("Privilege")
     public String privilege;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -69,6 +72,14 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     }
     public String getPrivilege() {
         return this.privilege;
+    }
+
+    public ModifyAccountMaskingPrivilegeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyAccountMaskingPrivilegeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

@@ -32,7 +32,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>An array that consists of parameter modification log entries.</p>
+     * <p>The log entries.</p>
      */
     @NameInMap("Items")
     public DescribeModifyParameterLogResponseBodyItems items;
@@ -180,7 +180,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The status of the new value specified for the parameter. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
          * <li><strong>Applied:</strong> The new value has taken effect.</li>
          * <li><strong>Syncing:</strong> The new value is being applied and has not taken effect.</li>

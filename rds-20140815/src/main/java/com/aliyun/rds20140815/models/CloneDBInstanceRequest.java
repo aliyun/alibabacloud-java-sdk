@@ -111,6 +111,18 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
+     * <p>The instance name. The value must be 2 to 255 characters in length The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
+     * <blockquote>
+     * <p> The value cannot start with http:// or https://.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testInstance</p>
+     */
+    @NameInMap("DBInstanceDescription")
+    public String DBInstanceDescription;
+
+    /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -437,6 +449,14 @@ public class CloneDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceClass() {
         return this.DBInstanceClass;
+    }
+
+    public CloneDBInstanceRequest setDBInstanceDescription(String DBInstanceDescription) {
+        this.DBInstanceDescription = DBInstanceDescription;
+        return this;
+    }
+    public String getDBInstanceDescription() {
+        return this.DBInstanceDescription;
     }
 
     public CloneDBInstanceRequest setDBInstanceId(String DBInstanceId) {

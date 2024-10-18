@@ -33,7 +33,7 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the task. You can call the <strong>CreateReplicationLink</strong> operation to create the task ID of the disaster recovery instance.</p>
+     * <p>The task ID. You must set this parameter to the ID of the task that you create by calling the <strong>CreateReplicationLink</strong> operation for the disaster recovery instance.</p>
      * 
      * <strong>example:</strong>
      * <p>8413252</p>
@@ -42,7 +42,7 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The name of the task. You can call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance. You can specify a task name in the request parameters of the call.</p>
+     * <p>The task name. You must set this parameter to the name of the task that you create by calling the <strong>CreateReplicationLink</strong> operation for the disaster recovery instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test01</p>

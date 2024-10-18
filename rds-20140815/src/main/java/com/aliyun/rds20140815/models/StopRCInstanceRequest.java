@@ -4,15 +4,35 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class StopRCInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcefully stop the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-m5sc1271fv344a1r****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

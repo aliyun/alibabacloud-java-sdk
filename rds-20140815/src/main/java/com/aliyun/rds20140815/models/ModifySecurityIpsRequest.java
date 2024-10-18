@@ -71,7 +71,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the IP addresses in the IP address whitelist. Set the value to IPv4. IPv6 is not supported.</p>
+     * <p>The IP address type. The value is fixed as IPv4.</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>

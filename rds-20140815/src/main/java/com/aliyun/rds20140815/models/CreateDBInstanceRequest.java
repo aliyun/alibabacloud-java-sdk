@@ -22,10 +22,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>Specifies whether to automatically create a proxy. Valid values:</p>
+     * <p>Specifies whether to automatically create a database proxy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatically creates a proxy. By default, general-purpose proxies are enabled.</li>
-     * <li><strong>false</strong>: does not automatically create a proxy.</li>
+     * <li><strong>true</strong>: automatically creates a database proxy. By default, a general-purpose database proxy is created.</li>
+     * <li><strong>false</strong>: does not automatically create a database proxy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,11 +37,11 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
+     * <li><strong>true</strong>: enables the feature. You must make sure that your account balance is sufficient.</li>
      * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
      * </ul>
      * <blockquote>
-     * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -466,12 +466,15 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <li><strong>Classic</strong>: the classic network</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</li>
-     * <li>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</li>
-     * <li>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</p>
+     * </li>
+     * <li><p>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</p>
+     * </li>
+     * <li><p>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Classic</p>
@@ -520,7 +523,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <li><strong>Month</strong></li>
      * </ul>
      * <blockquote>
-     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
+     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -606,7 +609,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public CreateDBInstanceRequestServerlessConfig serverlessConfig;
 
     /**
-     * <p>Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if the instance runs MySQL or PostgreSQL. Valid values:</p>
+     * <p>Specifies whether to enable the automatic storage expansion feature for the instance. If the instance runs MySQL or PostgreSQL, this feature is supported. Valid values:</p>
      * <ul>
      * <li><strong>Enable</strong></li>
      * <li><strong>Disable</strong> (default)</li>
@@ -631,7 +634,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <li><strong>50</strong></li>
      * </ul>
      * <blockquote>
-     * <p> If you set the <strong>StorageAutoScale</strong> parameter to <strong>Enable</strong>, you must specify this parameter.</p>
+     * <p> If you set the <strong>StorageAutoScale</strong> parameter to <strong>Enable</strong>, you must also specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -743,13 +746,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The subscription duration of the instance.</p>
+     * <p>The subscription duration of the instance. Valid values:</p>
      * <ul>
      * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1 to 5</strong>.</li>
      * <li>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1 to 11</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
+     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -1332,7 +1335,7 @@ public class CreateDBInstanceRequest extends TeaModel {
          * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>1 to 14</strong></li>
          * </ul>
          * <blockquote>
-         * <p> The value of this parameter must be greater than or equal to the value of <strong>MinCapacity</strong> and can be set only to an <strong>integer</strong>.</p>
+         * <p> The value of this parameter must be greater than or equal to the value of the <strong>MinCapacity</strong> parameter and can be set only to an <strong>integer</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1342,14 +1345,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         public Double maxCapacity;
 
         /**
-         * <p>The minimum value of RCUs. Valid values:</p>
+         * <p>The minimum number of RCUs. Valid values:</p>
          * <ul>
          * <li>Serverless ApsaraDB RDS for MySQL instances: <strong>0.5 to 32</strong>.</li>
          * <li>Serverless ApsaraDB RDS for SQL Server instances: <strong>2 to 8</strong>. Only integers are supported.</li>
          * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 14</strong>.</li>
          * </ul>
          * <blockquote>
-         * <p> The value of this parameter must be less than or equal to the value of <strong>MaxCapacity</strong>.</p>
+         * <p> The value of this parameter must be less than or equal to the value of the <strong>MaxCapacity</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

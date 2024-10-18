@@ -68,7 +68,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the VPC to which the VSwitch belongs.</p>
+     * <p>The ID of the VPC to which the vSwitch belongs.</p>
      * <blockquote>
      * <p>You must configure this parameter or <strong>DedicatedHostGroupId</strong>.</p>
      * </blockquote>
@@ -80,7 +80,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the VSwitch belongs. You can call the DescribeAvailableZones operation to query zone IDs. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the VSwitch that is deployed in the specified zone are returned.</p>
+     * <p>The ID of the zone to which the vSwitch belongs. You can call the DescribeAvailableZones operation to query zone IDs. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the VSwitch that is deployed in the specified zone are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
