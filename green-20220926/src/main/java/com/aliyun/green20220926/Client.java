@@ -960,6 +960,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>oss用量统计导出</p>
+     * 
+     * @param request ExportOssCheckStatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportOssCheckStatResponse
+     */
+    public ExportOssCheckStatResponse exportOssCheckStatWithOptions(ExportOssCheckStatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.byMonth)) {
+            body.put("ByMonth", request.byMonth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentTaskId)) {
+            body.put("ParentTaskId", request.parentTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportOssCheckStat"),
+            new TeaPair("version", "2022-09-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportOssCheckStatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>oss用量统计导出</p>
+     * 
+     * @param request ExportOssCheckStatRequest
+     * @return ExportOssCheckStatResponse
+     */
+    public ExportOssCheckStatResponse exportOssCheckStat(ExportOssCheckStatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportOssCheckStatWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>导出oss扫描结果</p>
      * 
      * @param tmpReq ExportResultRequest
@@ -1642,6 +1704,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetKeywordImportResultResponse getKeywordImportResult(GetKeywordImportResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getKeywordImportResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>oss用量统计</p>
+     * 
+     * @param request GetOssCheckStatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOssCheckStatResponse
+     */
+    public GetOssCheckStatResponse getOssCheckStatWithOptions(GetOssCheckStatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.byMonth)) {
+            body.put("ByMonth", request.byMonth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentTaskId)) {
+            body.put("ParentTaskId", request.parentTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOssCheckStat"),
+            new TeaPair("version", "2022-09-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOssCheckStatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>oss用量统计</p>
+     * 
+     * @param request GetOssCheckStatRequest
+     * @return GetOssCheckStatResponse
+     */
+    public GetOssCheckStatResponse getOssCheckStat(GetOssCheckStatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOssCheckStatWithOptions(request, runtime);
     }
 
     /**
