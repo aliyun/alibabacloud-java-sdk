@@ -18,7 +18,7 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>IP address or domain name.</p>
+     * <p>Modified IP address or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -77,7 +77,7 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String healthTasksShrink;
 
     /**
-     * <p>Address name.</p>
+     * <p>Modified address name.</p>
      * 
      * <strong>example:</strong>
      * <p>Address-1</p>

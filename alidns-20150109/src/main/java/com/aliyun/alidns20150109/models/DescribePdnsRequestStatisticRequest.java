@@ -19,6 +19,9 @@ public class DescribePdnsRequestStatisticRequest extends TeaModel {
     @NameInMap("SubDomain")
     public String subDomain;
 
+    @NameInMap("Type")
+    public String type;
+
     public static DescribePdnsRequestStatisticRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePdnsRequestStatisticRequest self = new DescribePdnsRequestStatisticRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribePdnsRequestStatisticRequest extends TeaModel {
     }
     public String getSubDomain() {
         return this.subDomain;
+    }
+
+    public DescribePdnsRequestStatisticRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
