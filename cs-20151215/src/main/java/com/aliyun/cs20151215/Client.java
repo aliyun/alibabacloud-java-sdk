@@ -379,61 +379,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the CancelWorkflow operation to cancel an ongoing workflow.</p>
-     * 
-     * @deprecated OpenAPI CancelWorkflow is deprecated
-     * 
-     * @param request CancelWorkflowRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CancelWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public CancelWorkflowResponse cancelWorkflowWithOptions(String workflowName, CancelWorkflowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
-            body.put("action", request.action);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CancelWorkflow"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflow/" + com.aliyun.openapiutil.Client.getEncodeParam(workflowName) + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelWorkflowResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>You can call the CancelWorkflow operation to cancel an ongoing workflow.</p>
-     * 
-     * @deprecated OpenAPI CancelWorkflow is deprecated
-     * 
-     * @param request CancelWorkflowRequest
-     * @return CancelWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public CancelWorkflowResponse cancelWorkflow(String workflowName, CancelWorkflowRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cancelWorkflowWithOptions(workflowName, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Queries the current log configuration of control plane components, including the log retention period and the log collection component. Container Service for Kubernetes (ACK) managed clusters can collect the logs of control plane components and deliver the logs to projects in Simple Log Service. These control plane components include Kube API Server, Kube Scheduler, Kube Controller Manager, and Cloud Controller Manager.</p>
      * 
      * @param headers map
@@ -2133,51 +2078,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deployPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>You can call the DescirbeWorkflow operation to query detailed information about a workflow.</p>
-     * 
-     * @deprecated OpenAPI DescirbeWorkflow is deprecated
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescirbeWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DescirbeWorkflowResponse descirbeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescirbeWorkflow"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflow/" + com.aliyun.openapiutil.Client.getEncodeParam(workflowName) + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescirbeWorkflowResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>You can call the DescirbeWorkflow operation to query detailed information about a workflow.</p>
-     * 
-     * @deprecated OpenAPI DescirbeWorkflow is deprecated
-     * @return DescirbeWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DescirbeWorkflowResponse descirbeWorkflow(String workflowName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.descirbeWorkflowWithOptions(workflowName, headers, runtime);
     }
 
     /**
@@ -4351,51 +4251,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeWorkflows operation to query all workflows.</p>
-     * 
-     * @deprecated OpenAPI DescribeWorkflows is deprecated
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeWorkflowsResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DescribeWorkflowsResponse describeWorkflowsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeWorkflows"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflows"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWorkflowsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>You can call the DescribeWorkflows operation to query all workflows.</p>
-     * 
-     * @deprecated OpenAPI DescribeWorkflows is deprecated
-     * @return DescribeWorkflowsResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DescribeWorkflowsResponse describeWorkflows() throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeWorkflowsWithOptions(headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.</p>
      * 
      * @param request EdgeClusterAddEdgeMachineRequest
@@ -5434,6 +5289,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("system_events_logging", request.systemEventsLogging);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vswitchIds)) {
+            body.put("vswitch_ids", request.vswitchIds);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -6176,51 +6035,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the RemoveWorkflow operation to delete a workflow.</p>
-     * 
-     * @deprecated OpenAPI RemoveWorkflow is deprecated
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return RemoveWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public RemoveWorkflowResponse removeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RemoveWorkflow"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflow/" + com.aliyun.openapiutil.Client.getEncodeParam(workflowName) + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveWorkflowResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>You can call the RemoveWorkflow operation to delete a workflow.</p>
-     * 
-     * @deprecated OpenAPI RemoveWorkflow is deprecated
-     * @return RemoveWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public RemoveWorkflowResponse removeWorkflow(String workflowName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeWorkflowWithOptions(workflowName, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Fixes issues on abnormal nodes in a node pool to ensure that the nodes can run as normal.</p>
      * 
      * @param request RepairClusterNodePoolRequest
@@ -6884,133 +6698,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startAlertWithOptions(ClusterId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>You can call the StartWorkflow operation to create a workflow.</p>
-     * 
-     * @deprecated OpenAPI StartWorkflow is deprecated
-     * 
-     * @param request StartWorkflowRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return StartWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public StartWorkflowResponse startWorkflowWithOptions(StartWorkflowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingBamOutFilename)) {
-            body.put("mapping_bam_out_filename", request.mappingBamOutFilename);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingBamOutPath)) {
-            body.put("mapping_bam_out_path", request.mappingBamOutPath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingBucketName)) {
-            body.put("mapping_bucket_name", request.mappingBucketName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingFastqFirstFilename)) {
-            body.put("mapping_fastq_first_filename", request.mappingFastqFirstFilename);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingFastqPath)) {
-            body.put("mapping_fastq_path", request.mappingFastqPath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingFastqSecondFilename)) {
-            body.put("mapping_fastq_second_filename", request.mappingFastqSecondFilename);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingIsMarkDup)) {
-            body.put("mapping_is_mark_dup", request.mappingIsMarkDup);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingOssRegion)) {
-            body.put("mapping_oss_region", request.mappingOssRegion);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mappingReferencePath)) {
-            body.put("mapping_reference_path", request.mappingReferencePath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
-            body.put("service", request.service);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsBucketName)) {
-            body.put("wgs_bucket_name", request.wgsBucketName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsFastqFirstFilename)) {
-            body.put("wgs_fastq_first_filename", request.wgsFastqFirstFilename);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsFastqPath)) {
-            body.put("wgs_fastq_path", request.wgsFastqPath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsFastqSecondFilename)) {
-            body.put("wgs_fastq_second_filename", request.wgsFastqSecondFilename);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsOssRegion)) {
-            body.put("wgs_oss_region", request.wgsOssRegion);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsReferencePath)) {
-            body.put("wgs_reference_path", request.wgsReferencePath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsVcfOutFilename)) {
-            body.put("wgs_vcf_out_filename", request.wgsVcfOutFilename);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.wgsVcfOutPath)) {
-            body.put("wgs_vcf_out_path", request.wgsVcfOutPath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workflowType)) {
-            body.put("workflow_type", request.workflowType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StartWorkflow"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflow"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartWorkflowResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>You can call the StartWorkflow operation to create a workflow.</p>
-     * 
-     * @deprecated OpenAPI StartWorkflow is deprecated
-     * 
-     * @param request StartWorkflowRequest
-     * @return StartWorkflowResponse
-     */
-    @Deprecated
-    // Deprecated
-    public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.startWorkflowWithOptions(request, headers, runtime);
     }
 
     /**

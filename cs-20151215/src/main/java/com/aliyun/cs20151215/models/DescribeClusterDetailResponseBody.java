@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>cluster.local</p>
+     */
+    @NameInMap("cluster_domain")
+    public String clusterDomain;
+
+    /**
      * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      */
     @NameInMap("cluster_type")
     public String clusterType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>172.20.0.0/16</p>
+     */
+    @NameInMap("container_cidr")
+    public String containerCidr;
 
     /**
      * <p>The time when the cluster was created.</p>
@@ -96,6 +110,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String initVersion;
 
     /**
+     * <strong>example:</strong>
+     * <p>ipv4</p>
+     */
+    @NameInMap("ip_stack")
+    public String ipStack;
+
+    /**
      * <p>The maintenance window of the cluster. This feature is available only in ACK Pro clusters.</p>
      */
     @NameInMap("maintenance_window")
@@ -143,6 +164,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("next_version")
     public String nextVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>26</p>
+     */
+    @NameInMap("node_cidr_mask")
+    public String nodeCidrMask;
+
     @NameInMap("operation_policy")
     public DescribeClusterDetailResponseBodyOperationPolicy operationPolicy;
 
@@ -175,6 +203,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String profile;
 
     /**
+     * <strong>example:</strong>
+     * <p>ipvs</p>
+     */
+    @NameInMap("proxy_mode")
+    public String proxyMode;
+
+    /**
      * <p>The region ID of the cluster.</p>
      * 
      * <strong>example:</strong>
@@ -200,6 +235,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      */
     @NameInMap("security_group_id")
     public String securityGroupId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.21.0.0/20</p>
+     */
+    @NameInMap("service_cidr")
+    public String serviceCidr;
 
     /**
      * <p>The number of nodes in the cluster. Master nodes and worker nodes are included.</p>
@@ -247,6 +291,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>172.20.0.0/16</p>
      */
     @NameInMap("subnet_cidr")
+    @Deprecated
     public String subnetCidr;
 
     /**
@@ -254,6 +299,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
+    @NameInMap("timezone")
+    public String timezone;
 
     /**
      * <p>The time when the cluster was updated.</p>
@@ -280,7 +332,11 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</p>
      */
     @NameInMap("vswitch_id")
+    @Deprecated
     public String vswitchId;
+
+    @NameInMap("vswitch_ids")
+    public java.util.List<String> vswitchIds;
 
     /**
      * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.</p>
@@ -301,6 +357,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public static DescribeClusterDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterDetailResponseBody self = new DescribeClusterDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeClusterDetailResponseBody setClusterDomain(String clusterDomain) {
+        this.clusterDomain = clusterDomain;
+        return this;
+    }
+    public String getClusterDomain() {
+        return this.clusterDomain;
     }
 
     public DescribeClusterDetailResponseBody setClusterId(String clusterId) {
@@ -325,6 +389,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public DescribeClusterDetailResponseBody setContainerCidr(String containerCidr) {
+        this.containerCidr = containerCidr;
+        return this;
+    }
+    public String getContainerCidr() {
+        return this.containerCidr;
     }
 
     public DescribeClusterDetailResponseBody setCreated(String created) {
@@ -375,6 +447,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.initVersion;
     }
 
+    public DescribeClusterDetailResponseBody setIpStack(String ipStack) {
+        this.ipStack = ipStack;
+        return this;
+    }
+    public String getIpStack() {
+        return this.ipStack;
+    }
+
     public DescribeClusterDetailResponseBody setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
         return this;
@@ -423,6 +503,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.nextVersion;
     }
 
+    public DescribeClusterDetailResponseBody setNodeCidrMask(String nodeCidrMask) {
+        this.nodeCidrMask = nodeCidrMask;
+        return this;
+    }
+    public String getNodeCidrMask() {
+        return this.nodeCidrMask;
+    }
+
     public DescribeClusterDetailResponseBody setOperationPolicy(DescribeClusterDetailResponseBodyOperationPolicy operationPolicy) {
         this.operationPolicy = operationPolicy;
         return this;
@@ -455,6 +543,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.profile;
     }
 
+    public DescribeClusterDetailResponseBody setProxyMode(String proxyMode) {
+        this.proxyMode = proxyMode;
+        return this;
+    }
+    public String getProxyMode() {
+        return this.proxyMode;
+    }
+
     public DescribeClusterDetailResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -477,6 +573,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public DescribeClusterDetailResponseBody setServiceCidr(String serviceCidr) {
+        this.serviceCidr = serviceCidr;
+        return this;
+    }
+    public String getServiceCidr() {
+        return this.serviceCidr;
     }
 
     public DescribeClusterDetailResponseBody setSize(Long size) {
@@ -511,6 +615,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.tags;
     }
 
+    public DescribeClusterDetailResponseBody setTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    public String getTimezone() {
+        return this.timezone;
+    }
+
     public DescribeClusterDetailResponseBody setUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -533,6 +645,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getVswitchId() {
         return this.vswitchId;
+    }
+
+    public DescribeClusterDetailResponseBody setVswitchIds(java.util.List<String> vswitchIds) {
+        this.vswitchIds = vswitchIds;
+        return this;
+    }
+    public java.util.List<String> getVswitchIds() {
+        return this.vswitchIds;
     }
 
     public DescribeClusterDetailResponseBody setWorkerRamRoleName(String workerRamRoleName) {

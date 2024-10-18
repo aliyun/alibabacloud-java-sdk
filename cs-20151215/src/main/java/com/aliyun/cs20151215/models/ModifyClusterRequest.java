@@ -139,6 +139,9 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("system_events_logging")
     public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
 
+    @NameInMap("vswitch_ids")
+    public java.util.List<String> vswitchIds;
+
     public static ModifyClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterRequest self = new ModifyClusterRequest();
         return TeaModel.build(map, self);
@@ -254,6 +257,14 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public ModifyClusterRequestSystemEventsLogging getSystemEventsLogging() {
         return this.systemEventsLogging;
+    }
+
+    public ModifyClusterRequest setVswitchIds(java.util.List<String> vswitchIds) {
+        this.vswitchIds = vswitchIds;
+        return this;
+    }
+    public java.util.List<String> getVswitchIds() {
+        return this.vswitchIds;
     }
 
     public static class ModifyClusterRequestApiServerCustomCertSans extends TeaModel {
