@@ -11,6 +11,12 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("DataCount")
+    public Long dataCount;
+
+    @NameInMap("DataSize")
+    public Long dataSize;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -70,6 +76,12 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("ProviderType")
     public String providerType;
 
+    @NameInMap("SourceDatasetId")
+    public String sourceDatasetId;
+
+    @NameInMap("SourceDatasetVersion")
+    public String sourceDatasetVersion;
+
     /**
      * <strong>example:</strong>
      * <p>jdnhf***fnrimv</p>
@@ -100,6 +112,12 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
+    @NameInMap("VersionDescription")
+    public String versionDescription;
+
+    @NameInMap("VersionLabels")
+    public java.util.List<Label> versionLabels;
+
     /**
      * <strong>example:</strong>
      * <p>478**</p>
@@ -118,6 +136,22 @@ public class CreateDatasetRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public CreateDatasetRequest setDataCount(Long dataCount) {
+        this.dataCount = dataCount;
+        return this;
+    }
+    public Long getDataCount() {
+        return this.dataCount;
+    }
+
+    public CreateDatasetRequest setDataSize(Long dataSize) {
+        this.dataSize = dataSize;
+        return this;
+    }
+    public Long getDataSize() {
+        return this.dataSize;
     }
 
     public CreateDatasetRequest setDataSourceType(String dataSourceType) {
@@ -192,6 +226,22 @@ public class CreateDatasetRequest extends TeaModel {
         return this.providerType;
     }
 
+    public CreateDatasetRequest setSourceDatasetId(String sourceDatasetId) {
+        this.sourceDatasetId = sourceDatasetId;
+        return this;
+    }
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    public CreateDatasetRequest setSourceDatasetVersion(String sourceDatasetVersion) {
+        this.sourceDatasetVersion = sourceDatasetVersion;
+        return this;
+    }
+    public String getSourceDatasetVersion() {
+        return this.sourceDatasetVersion;
+    }
+
     public CreateDatasetRequest setSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -222,6 +272,22 @@ public class CreateDatasetRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public CreateDatasetRequest setVersionDescription(String versionDescription) {
+        this.versionDescription = versionDescription;
+        return this;
+    }
+    public String getVersionDescription() {
+        return this.versionDescription;
+    }
+
+    public CreateDatasetRequest setVersionLabels(java.util.List<Label> versionLabels) {
+        this.versionLabels = versionLabels;
+        return this;
+    }
+    public java.util.List<Label> getVersionLabels() {
+        return this.versionLabels;
     }
 
     public CreateDatasetRequest setWorkspaceId(String workspaceId) {

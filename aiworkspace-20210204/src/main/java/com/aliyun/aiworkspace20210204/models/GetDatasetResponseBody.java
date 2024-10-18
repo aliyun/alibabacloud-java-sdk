@@ -52,6 +52,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    @NameInMap("LatestVersion")
+    public DatasetVersion latestVersion;
+
     /**
      * <strong>example:</strong>
      * <p>myName</p>
@@ -95,6 +98,12 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SourceDatasetId")
+    public String sourceDatasetId;
+
+    @NameInMap("SourceDatasetVersion")
+    public String sourceDatasetVersion;
+
     /**
      * <strong>example:</strong>
      * <p>jdnhf***fnrimv</p>
@@ -108,6 +117,9 @@ public class GetDatasetResponseBody extends TeaModel {
      */
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("TagTemplateType")
+    public String tagTemplateType;
 
     /**
      * <strong>example:</strong>
@@ -199,6 +211,14 @@ public class GetDatasetResponseBody extends TeaModel {
         return this.labels;
     }
 
+    public GetDatasetResponseBody setLatestVersion(DatasetVersion latestVersion) {
+        this.latestVersion = latestVersion;
+        return this;
+    }
+    public DatasetVersion getLatestVersion() {
+        return this.latestVersion;
+    }
+
     public GetDatasetResponseBody setName(String name) {
         this.name = name;
         return this;
@@ -255,6 +275,22 @@ public class GetDatasetResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetDatasetResponseBody setSourceDatasetId(String sourceDatasetId) {
+        this.sourceDatasetId = sourceDatasetId;
+        return this;
+    }
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    public GetDatasetResponseBody setSourceDatasetVersion(String sourceDatasetVersion) {
+        this.sourceDatasetVersion = sourceDatasetVersion;
+        return this;
+    }
+    public String getSourceDatasetVersion() {
+        return this.sourceDatasetVersion;
+    }
+
     public GetDatasetResponseBody setSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -269,6 +305,14 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public GetDatasetResponseBody setTagTemplateType(String tagTemplateType) {
+        this.tagTemplateType = tagTemplateType;
+        return this;
+    }
+    public String getTagTemplateType() {
+        return this.tagTemplateType;
     }
 
     public GetDatasetResponseBody setUri(String uri) {
