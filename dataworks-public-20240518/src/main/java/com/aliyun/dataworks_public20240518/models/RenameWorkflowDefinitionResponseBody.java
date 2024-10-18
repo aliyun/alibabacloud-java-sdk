@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenameWorkflowDefinitionResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>975BD43D-C421-595C-A29C-565A8AD5XXXX</p>
      */
@@ -12,6 +14,12 @@ public class RenameWorkflowDefinitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

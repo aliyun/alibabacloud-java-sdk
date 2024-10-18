@@ -19,6 +19,9 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     @NameInMap("ResourceSettings")
     public String resourceSettingsShrink;
 
@@ -55,6 +58,14 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     }
     public String getJobSettingsShrink() {
         return this.jobSettingsShrink;
+    }
+
+    public UpdateDIJobShrinkRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public UpdateDIJobShrinkRequest setResourceSettingsShrink(String resourceSettingsShrink) {

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDeploymentsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
      */
@@ -37,7 +42,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     public static class ListDeploymentsResponseBodyPagingInfoDeploymentsStages extends TeaModel {
         /**
-         * <p>阶段代号</p>
+         * <p>The code of the stage.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV_CHECK</p>
@@ -46,31 +51,40 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>阶段描述</p>
+         * <p>The description of the stage.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>阶段详细信息</p>
+         * <p>The additional information about the stage.</p>
          */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;
 
         /**
-         * <p>阶段信息</p>
+         * <p>The error message returned during the stage.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>阶段名称</p>
+         * <p>The name of the stage.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>阶段状态</p>
+         * <p>The status of the stage.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>FAIL</li>
+         * <li>TERMINATION</li>
+         * <li>CANCEL</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -79,7 +93,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>步骤</p>
+         * <p>The step number of the stage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -88,7 +102,15 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public Integer step;
 
         /**
-         * <p>阶段类型</p>
+         * <p>The type of the stage. This parameter indicates the operation type in the stage.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DEPLOY</li>
+         * <li>CHECK</li>
+         * <li>OFFLINE.</li>
+         * <li>BUILD</li>
+         * <li>DELETE</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CHECK</p>
@@ -169,7 +191,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     public static class ListDeploymentsResponseBodyPagingInfoDeployments extends TeaModel {
         /**
-         * <p>发布包创建时间戳</p>
+         * <p>The time when the process was created. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1702736654000</p>
@@ -178,7 +200,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>创建人</p>
+         * <p>The ID of the user who creates the process.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -187,7 +209,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>发布流程Id</p>
+         * <p>The process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ddf354a5-03df-48fc-94c1-cc973f79XXXX</p>
@@ -195,11 +217,14 @@ public class ListDeploymentsResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The error message returned if the process fails.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>修改时间</p>
+         * <p>The time when the process was last modified. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1702736654000</p>
@@ -208,7 +233,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>项目Id</p>
+         * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>44683</p>
@@ -217,13 +242,22 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>步骤详情</p>
+         * <p>The stages of the process.</p>
          */
         @NameInMap("Stages")
         public java.util.List<ListDeploymentsResponseBodyPagingInfoDeploymentsStages> stages;
 
         /**
-         * <p>发布流程状态</p>
+         * <p>The status of the process.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>RUNNING</li>
+         * <li>FAIL</li>
+         * <li>SUCCESS</li>
+         * <li>TERMINATION</li>
+         * <li>CANCEL</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -303,10 +337,15 @@ public class ListDeploymentsResponseBody extends TeaModel {
     }
 
     public static class ListDeploymentsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The processes.</p>
+         */
         @NameInMap("Deployments")
         public java.util.List<ListDeploymentsResponseBodyPagingInfoDeployments> deployments;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -314,6 +353,8 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -321,6 +362,8 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>2524</p>
          */

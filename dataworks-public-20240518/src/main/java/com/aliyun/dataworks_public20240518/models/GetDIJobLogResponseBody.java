@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDIJobLogResponseBody extends TeaModel {
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The log.</p>
      * 
      * <strong>example:</strong>
      * <blockquote>
@@ -30,6 +30,8 @@ public class GetDIJobLogResponseBody extends TeaModel {
     public String log;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9****</p>
      */

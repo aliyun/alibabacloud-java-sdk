@@ -19,6 +19,9 @@ public class UpdateDIJobRequest extends TeaModel {
     @NameInMap("JobSettings")
     public UpdateDIJobRequestJobSettings jobSettings;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     @NameInMap("ResourceSettings")
     public UpdateDIJobRequestResourceSettings resourceSettings;
 
@@ -55,6 +58,14 @@ public class UpdateDIJobRequest extends TeaModel {
     }
     public UpdateDIJobRequestJobSettings getJobSettings() {
         return this.jobSettings;
+    }
+
+    public UpdateDIJobRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public UpdateDIJobRequest setResourceSettings(UpdateDIJobRequestResourceSettings resourceSettings) {

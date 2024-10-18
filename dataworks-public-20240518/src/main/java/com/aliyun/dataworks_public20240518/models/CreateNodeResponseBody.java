@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNodeResponseBody extends TeaModel {
     /**
+     * <p>The ID of the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
      */
@@ -12,6 +14,8 @@ public class CreateNodeResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
      */

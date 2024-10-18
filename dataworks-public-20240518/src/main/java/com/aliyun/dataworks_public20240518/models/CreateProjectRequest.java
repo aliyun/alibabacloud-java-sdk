@@ -14,9 +14,6 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("AliyunResourceTags")
     public java.util.List<CreateProjectRequestAliyunResourceTags> aliyunResourceTags;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Description")
     public String description;
 

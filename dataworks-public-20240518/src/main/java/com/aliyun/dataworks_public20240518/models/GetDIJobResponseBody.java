@@ -760,6 +760,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @NameInMap("JobSettings")
         public GetDIJobResponseBodyPagingInfoJobSettings jobSettings;
 
+        @NameInMap("JobStatus")
+        public String jobStatus;
+
         /**
          * <strong>example:</strong>
          * <p>FullAndRealtimeIncremental</p>
@@ -844,6 +847,14 @@ public class GetDIJobResponseBody extends TeaModel {
         }
         public GetDIJobResponseBodyPagingInfoJobSettings getJobSettings() {
             return this.jobSettings;
+        }
+
+        public GetDIJobResponseBodyPagingInfo setJobStatus(String jobStatus) {
+            this.jobStatus = jobStatus;
+            return this;
+        }
+        public String getJobStatus() {
+            return this.jobStatus;
         }
 
         public GetDIJobResponseBodyPagingInfo setMigrationType(String migrationType) {

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E871F6C0-2EFF-5790-A00D-C57543EEXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the file resource.</p>
+     */
     @NameInMap("Resource")
     public GetResourceResponseBodyResource resource;
 
@@ -37,6 +42,8 @@ public class GetResourceResponseBody extends TeaModel {
 
     public static class GetResourceResponseBodyResource extends TeaModel {
         /**
+         * <p>The time when the file resource was created. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1700539206000</p>
          */
@@ -44,6 +51,8 @@ public class GetResourceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the file resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
@@ -51,16 +60,23 @@ public class GetResourceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The time when the file resource was last modified. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1700539206000</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The name of the file resource.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The owner of the file resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
          */
@@ -68,12 +84,17 @@ public class GetResourceResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The ID of the workspace to which the file resource belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 

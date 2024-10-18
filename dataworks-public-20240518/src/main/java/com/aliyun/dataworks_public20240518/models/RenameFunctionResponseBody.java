@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenameFunctionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ED4C97F-BA2A-57C5-BA7C-8853627EXXXX</p>
      */
@@ -12,6 +14,12 @@ public class RenameFunctionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartDIJobRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
     @NameInMap("DIJobId")
-    public String DIJobId;
+    public Long DIJobId;
 
     /**
      * <strong>example:</strong>
@@ -28,11 +28,11 @@ public class StartDIJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public StartDIJobRequest setDIJobId(String DIJobId) {
+    public StartDIJobRequest setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
     }
-    public String getDIJobId() {
+    public Long getDIJobId() {
         return this.DIJobId;
     }
 

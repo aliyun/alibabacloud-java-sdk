@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>88198F19-A36B-52A9-AE44-4518A688XXXX</p>
      */
@@ -12,6 +14,12 @@ public class DeleteResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

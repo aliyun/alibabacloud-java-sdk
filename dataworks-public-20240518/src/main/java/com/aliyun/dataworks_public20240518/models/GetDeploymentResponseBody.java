@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDeploymentResponseBody extends TeaModel {
+    /**
+     * <p>The information about the process.</p>
+     */
     @NameInMap("Pipeline")
     public GetDeploymentResponseBodyPipeline pipeline;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>08468352-032C-5262-AEDC-68C9FA05XXXX</p>
      */
@@ -37,7 +42,7 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     public static class GetDeploymentResponseBodyPipelineStages extends TeaModel {
         /**
-         * <p>阶段代号</p>
+         * <p>The code of the stage.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV_CHECK</p>
@@ -46,28 +51,40 @@ public class GetDeploymentResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>阶段描述</p>
+         * <p>The description of the stage.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The details of the stage.</p>
+         */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;
 
         /**
-         * <p>阶段信息</p>
+         * <p>The error message returned for the stage.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>阶段名称</p>
+         * <p>The name of the stage.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>阶段状态</p>
+         * <p>The status of the stage.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>FAIL</li>
+         * <li>TERMINATION</li>
+         * <li>CANCEL</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>INIT</p>
@@ -76,7 +93,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>步骤</p>
+         * <p>The step number of the stage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +102,15 @@ public class GetDeploymentResponseBody extends TeaModel {
         public Integer step;
 
         /**
-         * <p>阶段类型</p>
+         * <p>The type of the stage.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DELETE</li>
+         * <li>BUILD</li>
+         * <li>CHECK</li>
+         * <li>DEPLOY</li>
+         * <li>OFFLINE</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BUILD</p>
@@ -166,7 +191,7 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     public static class GetDeploymentResponseBodyPipeline extends TeaModel {
         /**
-         * <p>发布包创建时间戳</p>
+         * <p>The time when the process was created. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1724984066000</p>
@@ -175,7 +200,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>创建人</p>
+         * <p>The creator of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>137946317766XXXX</p>
@@ -184,7 +209,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>发布流程Id</p>
+         * <p>The ID of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
@@ -192,11 +217,14 @@ public class GetDeploymentResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The error message returned when the process fails.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>修改时间</p>
+         * <p>The time when the process was modified. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1724984066000</p>
@@ -205,6 +233,8 @@ public class GetDeploymentResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>56160</p>
          */
@@ -212,13 +242,22 @@ public class GetDeploymentResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>步骤详情</p>
+         * <p>The information about stages in the process.</p>
          */
         @NameInMap("Stages")
         public java.util.List<GetDeploymentResponseBodyPipelineStages> stages;
 
         /**
-         * <p>发布流程状态</p>
+         * <p>The status of the process.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>FAIL</li>
+         * <li>TERMINATION</li>
+         * <li>CANCEL</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>

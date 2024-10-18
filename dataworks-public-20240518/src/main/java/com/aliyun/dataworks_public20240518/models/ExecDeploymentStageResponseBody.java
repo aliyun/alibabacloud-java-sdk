@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecDeploymentStageResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
      */
@@ -12,6 +14,16 @@ public class ExecDeploymentStageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * <p>**</p>
+     * <p><strong>Note:</strong> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

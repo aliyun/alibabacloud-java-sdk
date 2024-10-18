@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateResourceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the file resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>631478864897630XXXX</p>
      */
@@ -12,6 +14,8 @@ public class CreateResourceResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A5B97987-66EA-5563-9599-A2752292XXXX</p>
      */
