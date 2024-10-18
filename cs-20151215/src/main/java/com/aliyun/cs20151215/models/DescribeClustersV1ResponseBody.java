@@ -88,6 +88,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
     public static class DescribeClustersV1ResponseBodyClusters extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>cluster.local</p>
+         */
+        @NameInMap("cluster_domain")
+        public String clusterDomain;
+
+        /**
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
@@ -121,6 +128,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         @NameInMap("cluster_type")
         public String clusterType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>172.20.0.0/16</p>
+         */
+        @NameInMap("container_cidr")
+        public String containerCidr;
 
         /**
          * <p>The time when the cluster was created.</p>
@@ -181,6 +195,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         @NameInMap("init_version")
         public String initVersion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ipv4</p>
+         */
+        @NameInMap("ip_stack")
+        public String ipStack;
 
         /**
          * <p>The maintenance window of the cluster. This feature is available only for ACK managed clusters and ACK Serverless clusters.</p>
@@ -272,6 +293,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <strong>example:</strong>
+         * <p>ipvs</p>
+         */
+        @NameInMap("proxy_mode")
+        public String proxyMode;
+
+        /**
          * <p>The region ID of the cluster.</p>
          * 
          * <strong>example:</strong>
@@ -297,6 +325,15 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         @NameInMap("security_group_id")
         public String securityGroupId;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.21.0.0/20</p>
+         */
+        @NameInMap("service_cidr")
+        public String serviceCidr;
 
         /**
          * <p>The number of nodes in the cluster, including master nodes and worker nodes.</p>
@@ -342,6 +379,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>172.21.0.0/16</p>
          */
         @NameInMap("subnet_cidr")
+        @Deprecated
         public String subnetCidr;
 
         /**
@@ -349,6 +387,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("timezone")
+        public String timezone;
 
         /**
          * <p>The time when the cluster was updated.</p>
@@ -375,7 +420,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</p>
          */
         @NameInMap("vswitch_id")
+        @Deprecated
         public String vswitchId;
+
+        @NameInMap("vswitch_ids")
+        public java.util.List<String> vswitchIds;
 
         /**
          * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</p>
@@ -400,6 +449,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeClustersV1ResponseBodyClusters setClusterDomain(String clusterDomain) {
+            this.clusterDomain = clusterDomain;
+            return this;
+        }
+        public String getClusterDomain() {
+            return this.clusterDomain;
+        }
+
         public DescribeClustersV1ResponseBodyClusters setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
@@ -422,6 +479,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setContainerCidr(String containerCidr) {
+            this.containerCidr = containerCidr;
+            return this;
+        }
+        public String getContainerCidr() {
+            return this.containerCidr;
         }
 
         public DescribeClustersV1ResponseBodyClusters setCreated(String created) {
@@ -470,6 +535,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getInitVersion() {
             return this.initVersion;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setIpStack(String ipStack) {
+            this.ipStack = ipStack;
+            return this;
+        }
+        public String getIpStack() {
+            return this.ipStack;
         }
 
         public DescribeClustersV1ResponseBodyClusters setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
@@ -544,6 +617,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.profile;
         }
 
+        public DescribeClustersV1ResponseBodyClusters setProxyMode(String proxyMode) {
+            this.proxyMode = proxyMode;
+            return this;
+        }
+        public String getProxyMode() {
+            return this.proxyMode;
+        }
+
         public DescribeClustersV1ResponseBodyClusters setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -566,6 +647,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setServiceCidr(String serviceCidr) {
+            this.serviceCidr = serviceCidr;
+            return this;
+        }
+        public String getServiceCidr() {
+            return this.serviceCidr;
         }
 
         public DescribeClustersV1ResponseBodyClusters setSize(Long size) {
@@ -600,6 +689,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.tags;
         }
 
+        public DescribeClustersV1ResponseBodyClusters setTimezone(String timezone) {
+            this.timezone = timezone;
+            return this;
+        }
+        public String getTimezone() {
+            return this.timezone;
+        }
+
         public DescribeClustersV1ResponseBodyClusters setUpdated(String updated) {
             this.updated = updated;
             return this;
@@ -622,6 +719,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getVswitchId() {
             return this.vswitchId;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setVswitchIds(java.util.List<String> vswitchIds) {
+            this.vswitchIds = vswitchIds;
+            return this;
+        }
+        public java.util.List<String> getVswitchIds() {
+            return this.vswitchIds;
         }
 
         public DescribeClustersV1ResponseBodyClusters setWorkerRamRoleName(String workerRamRoleName) {
