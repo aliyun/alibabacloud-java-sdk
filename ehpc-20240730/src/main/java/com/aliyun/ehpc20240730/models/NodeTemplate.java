@@ -220,6 +220,13 @@ public class NodeTemplate extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>/data1</p>
+         */
+        @NameInMap("MountDir")
+        public String mountDir;
+
+        /**
+         * <strong>example:</strong>
          * <p>40</p>
          */
         @NameInMap("Size")
@@ -252,6 +259,14 @@ public class NodeTemplate extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public NodeTemplateDataDisks setMountDir(String mountDir) {
+            this.mountDir = mountDir;
+            return this;
+        }
+        public String getMountDir() {
+            return this.mountDir;
         }
 
         public NodeTemplateDataDisks setSize(Integer size) {

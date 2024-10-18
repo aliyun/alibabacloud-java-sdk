@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachSharedStoragesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class AttachSharedStoragesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The information about the shared storage resources that you want to attach to the cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SharedStorages")
@@ -42,6 +45,7 @@ public class AttachSharedStoragesRequest extends TeaModel {
 
     public static class AttachSharedStoragesRequestSharedStorages extends TeaModel {
         /**
+         * <p>The ID of the file system to be attached.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +55,12 @@ public class AttachSharedStoragesRequest extends TeaModel {
         public String fileSystemId;
 
         /**
+         * <p>The storage location of the file system to be attached. Valid values:</p>
+         * <ul>
+         * <li>OnPremise: The file system is deployed on a hybrid cloud.</li>
+         * <li>PublicCloud: The file system is deployed on a public cloud.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PublicCloud</p>
          */
@@ -58,6 +68,7 @@ public class AttachSharedStoragesRequest extends TeaModel {
         public String location;
 
         /**
+         * <p>The local mount directory of the file system that you want to attach.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +78,16 @@ public class AttachSharedStoragesRequest extends TeaModel {
         public String mountDirectory;
 
         /**
+         * <p>The attaching options of the file system to be attached. Valid values:</p>
+         * <ul>
+         * <li>\-t nfs -o vers=3,nolock,proto=tcp,noresvport</li>
+         * <li>\-t nfs -o vers=4.0,noresvport</li>
+         * </ul>
+         * <p>Default value:-t nfs -o vers=3,nolock,proto=tcp,noresvport</p>
+         * <blockquote>
+         * <p> The v3 version is recommended for higher performance if multiple Elastic Compute Service (ECS) instances do not edit the same file at the same time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>-t nfs -o vers=3,nolock,proto=tcp,noresvport</p>
          */
@@ -74,6 +95,7 @@ public class AttachSharedStoragesRequest extends TeaModel {
         public String mountOptions;
 
         /**
+         * <p>The address of the mount point of the file system to be attached.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,6 +105,11 @@ public class AttachSharedStoragesRequest extends TeaModel {
         public String mountTarget;
 
         /**
+         * <p>The protocol type of the file system to be attached. Valid values:</p>
+         * <ul>
+         * <li>NFS</li>
+         * <li>SMB</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,6 +119,7 @@ public class AttachSharedStoragesRequest extends TeaModel {
         public String protocolType;
 
         /**
+         * <p>The storage directory of the file system. You can mount any directory in the file system to the specified cluster directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +129,11 @@ public class AttachSharedStoragesRequest extends TeaModel {
         public String storageDirectory;
 
         /**
+         * <p>The type of the file system to be attached. Valid values:</p>
+         * <ul>
+         * <li>nas</li>
+         * <li>cpfs</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

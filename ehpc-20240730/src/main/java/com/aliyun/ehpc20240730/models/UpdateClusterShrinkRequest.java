@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterShrinkRequest extends TeaModel {
     /**
+     * <p>The client version. By default, the latest version is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.1.0</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <p>The post-processing script of the cluster.</p>
+     */
     @NameInMap("ClusterCustomConfiguration")
     public String clusterCustomConfigurationShrink;
 
     /**
+     * <p>The cluster description. The description must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * 
      * <strong>example:</strong>
      * <p>slurm22.05.8-serverless-cluster-20240805</p>
      */
@@ -22,6 +29,9 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public String clusterDescription;
 
     /**
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
@@ -29,6 +39,8 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cluster name. The name must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * 
      * <strong>example:</strong>
      * <p>slurm22.05.8-serverless-cluster-20240805</p>
      */
@@ -36,6 +48,13 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>Specifies whether to enable deletion protection for the cluster. Deletion protection decides whether the cluster can be deleted in the console or by calling the DeleteCluster operation. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +62,12 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
+     * <p>Specifies whether to enable auto scale-in for the cluster. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +75,12 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public Boolean enableScaleIn;
 
     /**
+     * <p>Specifies whether to enable auto scale-out for the cluster. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +88,8 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public Boolean enableScaleOut;
 
     /**
+     * <p>The interval at which the cluster is automatically scaled out.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -64,6 +97,8 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public Integer growInterval;
 
     /**
+     * <p>The idle duration of the compute nodes allowed by the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -71,6 +106,8 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public Integer idleInterval;
 
     /**
+     * <p>The total maximum number of vCPUs for use by compute nodes in the cluster. Valid values: 0 to 100,000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -78,6 +115,8 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     public Integer maxCoreCount;
 
     /**
+     * <p>The maximum number of compute nodes that the cluster can manage. Valid values: 0 to 5,000.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */

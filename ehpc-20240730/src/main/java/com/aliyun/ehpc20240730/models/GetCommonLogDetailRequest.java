@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCommonLogDetailRequest extends TeaModel {
     /**
+     * <p>The start time of the time range within which the logs that you want to query were generated. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class GetCommonLogDetailRequest extends TeaModel {
     public Long from;
 
     /**
+     * <p>Specifies whether to hide the process of each step. Valid values:</p>
+     * <ul>
+     * <li>true: hides the process and returns only the result log of each step.</li>
+     * <li>false: does not hide the process and displays the start and result logs of each step.</li>
+     * </ul>
+     * <p>Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +29,7 @@ public class GetCommonLogDetailRequest extends TeaModel {
     public Boolean hiddenProcess;
 
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +39,7 @@ public class GetCommonLogDetailRequest extends TeaModel {
     public String logRequestId;
 
     /**
+     * <p>The end time of the time range within which the logs that you want to query were generated. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

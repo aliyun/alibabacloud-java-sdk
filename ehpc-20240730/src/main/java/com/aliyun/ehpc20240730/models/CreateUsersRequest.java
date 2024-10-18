@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUsersRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class CreateUsersRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The users that you want to add.</p>
+     */
     @NameInMap("User")
     public java.util.List<CreateUsersRequestUser> user;
 
@@ -39,6 +43,10 @@ public class CreateUsersRequest extends TeaModel {
 
     public static class CreateUsersRequestUser extends TeaModel {
         /**
+         * <p>The public key of the user.</p>
+         * <p>You can add up to 20 users in a call.</p>
+         * <p>Specify one of the Password and AuthKey parameters. The AuthKey parameter takes effect only when the cluster authentication method is set to Key. Key authentication is not recommended.</p>
+         * 
          * <strong>example:</strong>
          * <p>Abc****</p>
          */
@@ -46,6 +54,9 @@ public class CreateUsersRequest extends TeaModel {
         public String authKey;
 
         /**
+         * <p>The permission group to which the user belongs. Valid values:</p>
+         * <p>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs. wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes. You can add up to 20 users in a call.</p>
+         * 
          * <strong>example:</strong>
          * <p>users</p>
          */
@@ -53,6 +64,16 @@ public class CreateUsersRequest extends TeaModel {
         public String group;
 
         /**
+         * <p>The password of the user. The password must be 6 to 30 characters in length and must contain three of the following character types:</p>
+         * <ul>
+         * <li>Uppercase letters</li>
+         * <li>Lowercase letters</li>
+         * <li>Digits</li>
+         * <li>Special characters ()~!@#$%^&amp;\*-_+=|{}[]:;\&quot;/&lt;&gt;,.?/</li>
+         * </ul>
+         * <p>You can add up to 20 users in a call.</p>
+         * <p>Specify one of the Password and AuthKey parameters. The Password parameter takes effect only when the cluster authentication method is set to Password. Password authentication is recommended.</p>
+         * 
          * <strong>example:</strong>
          * <p>1@a2****</p>
          */
@@ -60,6 +81,9 @@ public class CreateUsersRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The username. The username must be 1 to 30 characters in length. It must start with a letter and can contain digits, letters, and periods (.).</p>
+         * <p>You can add up to 20 users in a call.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuser</p>
          */

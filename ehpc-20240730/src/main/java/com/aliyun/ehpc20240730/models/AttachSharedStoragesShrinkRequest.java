@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachSharedStoragesShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class AttachSharedStoragesShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The information about the shared storage resources that you want to attach to the cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SharedStorages")

@@ -3,21 +3,12 @@ package com.aliyun.ehpc20240730.models;
 
 import com.aliyun.tea.*;
 
-public class AttachSharedStoragesResponseBody extends TeaModel {
-    /**
-     * <p>The cluster ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ehpc-hz-FYUr32****</p>
-     */
-    @NameInMap("ClusterId")
-    public String clusterId;
-
+public class StopJobsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>F9B7BEF8-E42E-5090-9880-55FB7872****</p>
+     * <p>F8868A00-6757-5542-BDD6-E1040D94****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,20 +26,12 @@ public class AttachSharedStoragesResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    public static AttachSharedStoragesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AttachSharedStoragesResponseBody self = new AttachSharedStoragesResponseBody();
+    public static StopJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StopJobsResponseBody self = new StopJobsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AttachSharedStoragesResponseBody setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
-    public AttachSharedStoragesResponseBody setRequestId(String requestId) {
+    public StopJobsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +39,7 @@ public class AttachSharedStoragesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AttachSharedStoragesResponseBody setSuccess(String success) {
+    public StopJobsResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }

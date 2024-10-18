@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCommonLogDetailResponseBody extends TeaModel {
     /**
+     * <p>The action name.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateCluster</p>
      */
@@ -12,16 +14,23 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     public String action;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-abc***</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The information about the logs.</p>
+     */
     @NameInMap("LogDetail")
     public java.util.List<GetCommonLogDetailResponseBodyLogDetail> logDetail;
 
     /**
+     * <p>The log type.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation</p>
      */
@@ -29,6 +38,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     public String logType;
 
     /**
+     * <p>The ID of the user who performed the action.</p>
+     * 
      * <strong>example:</strong>
      * <p>239***</p>
      */
@@ -36,6 +47,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     public String operatorUid;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>464E9919-D04F-4D1D-B375-15989492****</p>
      */
@@ -43,6 +56,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>137***</p>
      */
@@ -112,6 +127,14 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
 
     public static class GetCommonLogDetailResponseBodyLogDetailStages extends TeaModel {
         /**
+         * <p>The log level.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ERROR</li>
+         * <li>INFO</li>
+         * <li>WARN</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INFO</p>
          */
@@ -119,6 +142,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         public String logLevel;
 
         /**
+         * <p>The output message of the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>Successfully created security group sg-bcd***</p>
          */
@@ -126,6 +151,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The method involved in the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>CreateSecurityGroup</p>
          */
@@ -133,6 +160,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The request ID associated with the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
@@ -140,6 +169,13 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The action state involved in the log. Valid values:</p>
+         * <ul>
+         * <li>InProgress: The action is being performed.</li>
+         * <li>Finished: The action is completed.</li>
+         * <li>Failed: The action failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
@@ -147,6 +183,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The resource involved in the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-bcd***</p>
          */
@@ -154,6 +192,8 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         public String target;
 
         /**
+         * <p>The time when the log was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-22 14:21:54</p>
          */
@@ -225,12 +265,17 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
 
     public static class GetCommonLogDetailResponseBodyLogDetail extends TeaModel {
         /**
+         * <p>The stage name of the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>ConfigNetwork</p>
          */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The information about the log stages.</p>
+         */
         @NameInMap("Stages")
         public java.util.List<GetCommonLogDetailResponseBodyLogDetailStages> stages;
 

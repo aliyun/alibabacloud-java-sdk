@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
+    /**
+     * <p>The list of clusters.</p>
+     */
     @NameInMap("Clusters")
     public java.util.List<ListClustersResponseBodyClusters> clusters;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListClustersResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListClustersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -29,6 +38,8 @@ public class ListClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersAdditionalPackages extends TeaModel {
         /**
+         * <p>The software name.</p>
+         * 
          * <strong>example:</strong>
          * <p>gromacs</p>
          */
@@ -89,6 +102,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The software version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024.1</p>
          */
@@ -120,6 +135,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersAddonsResourcesSpec extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp1bg85d2q6laic8****</p>
          */
@@ -127,6 +144,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String ecsInstanceId;
 
         /**
+         * <p>The Elastic IP Address (EIP) ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-bp1vi9124tbx1g3kr****</p>
          */
@@ -158,6 +177,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersAddonsServicesSpec extends TeaModel {
         /**
+         * <p>The service access type.</p>
+         * 
          * <strong>example:</strong>
          * <p>URL</p>
          */
@@ -165,6 +186,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String serviceAccessType;
 
         /**
+         * <p>The service access URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://47.96.xx.xx:12008">https://47.96.xx.xx:12008</a></p>
          */
@@ -172,6 +195,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String serviceAccessUrl;
 
         /**
+         * <p>The service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,19 +237,28 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersAddons extends TeaModel {
         /**
+         * <p>The addon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Login-1.0-W2g****</p>
          */
         @NameInMap("AddonId")
         public String addonId;
 
+        /**
+         * <p>The addon description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The addon label.</p>
+         */
         @NameInMap("Label")
         public String label;
 
         /**
+         * <p>The addon name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,13 +267,21 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The resource configurations of the addon.</p>
+         */
         @NameInMap("ResourcesSpec")
         public ListClustersResponseBodyClustersAddonsResourcesSpec resourcesSpec;
 
+        /**
+         * <p>The information about the addon services.</p>
+         */
         @NameInMap("ServicesSpec")
         public java.util.List<ListClustersResponseBodyClustersAddonsServicesSpec> servicesSpec;
 
         /**
+         * <p>The addon state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -248,6 +289,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The addon version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,6 +371,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersClusterCustomConfiguration extends TeaModel {
         /**
+         * <p>The parameters of the post-processing script.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -336,6 +380,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String args;
 
         /**
+         * <p>The link to the post-processing script.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx">https://xxxxx</a></p>
          */
@@ -367,6 +413,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersManagerDNS extends TeaModel {
         /**
+         * <p>The resolution type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NIS</p>
          */
@@ -374,6 +422,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the domain name resolution service.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.31</p>
          */
@@ -405,6 +455,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersManagerDirectoryService extends TeaModel {
         /**
+         * <p>The type of the domain account.</p>
+         * 
          * <strong>example:</strong>
          * <p>NIS</p>
          */
@@ -412,6 +464,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the domain account service.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.31</p>
          */
@@ -443,6 +497,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersManagerScheduler extends TeaModel {
         /**
+         * <p>The scheduler type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SLURM</p>
          */
@@ -450,6 +506,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The scheduler version.</p>
+         * 
          * <strong>example:</strong>
          * <p>22.05.8</p>
          */
@@ -480,12 +538,21 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClustersManager extends TeaModel {
+        /**
+         * <p>The configurations of the domain name resolution service.</p>
+         */
         @NameInMap("DNS")
         public ListClustersResponseBodyClustersManagerDNS DNS;
 
+        /**
+         * <p>The configurations of the directory service.</p>
+         */
         @NameInMap("DirectoryService")
         public ListClustersResponseBodyClustersManagerDirectoryService directoryService;
 
+        /**
+         * <p>The configurations of the scheduler service.</p>
+         */
         @NameInMap("Scheduler")
         public ListClustersResponseBodyClustersManagerScheduler scheduler;
 
@@ -522,6 +589,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersNodes extends TeaModel {
         /**
+         * <p>The number of malfunctioning compute nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -529,6 +598,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Integer abnormalCounts;
 
         /**
+         * <p>The number of compute nodes that are being created.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -536,6 +607,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Integer creatingCounts;
 
         /**
+         * <p>The number of running compute nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -575,6 +648,8 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersUsers extends TeaModel {
         /**
+         * <p>The number of ordinary users.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -582,6 +657,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Integer normalCounts;
 
         /**
+         * <p>The number of administrators.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -612,13 +689,25 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClusters extends TeaModel {
+        /**
+         * <p>The information about installed software in the cluster.</p>
+         */
         @NameInMap("AdditionalPackages")
         public java.util.List<ListClustersResponseBodyClustersAdditionalPackages> additionalPackages;
 
+        /**
+         * <p>The information about the addons in the cluster.</p>
+         */
         @NameInMap("Addons")
         public java.util.List<ListClustersResponseBodyClustersAddons> addons;
 
         /**
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li>Standard</li>
+         * <li>Serverless</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
@@ -626,19 +715,33 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterCategory;
 
         /**
+         * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-06T12:43:01.000Z</p>
          */
         @NameInMap("ClusterCreateTime")
         public String clusterCreateTime;
 
+        /**
+         * <p>The logon credential type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>password: requires passwords for logons.</li>
+         * <li>keypair: requires key pairs for logons.</li>
+         * </ul>
+         */
         @NameInMap("ClusterCredentials")
         public java.util.List<String> clusterCredentials;
 
+        /**
+         * <p>The post-processing script used by the cluster.</p>
+         */
         @NameInMap("ClusterCustomConfiguration")
         public ListClustersResponseBodyClustersClusterCustomConfiguration clusterCustomConfiguration;
 
         /**
+         * <p>The cluster description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Demo</p>
          */
@@ -646,6 +749,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterDescription;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ehpc-hz-VMKe******</p>
          */
@@ -653,6 +758,13 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The deployment type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>Integrated: public cloud</li>
+         * <li>Hybrid: hybrid cloud</li>
+         * <li>Custom: a custom cluster</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Integrated</p>
          */
@@ -660,6 +772,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterMode;
 
         /**
+         * <p>The time when the cluster was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-06T12:43:01.000Z</p>
          */
@@ -667,6 +781,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterModifyTime;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>slurm22.05.8-cluster-20240227</p>
          */
@@ -674,6 +790,19 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The cluster state. Valid values:</p>
+         * <ul>
+         * <li>uninit: The cluster is being installed.</li>
+         * <li>creating: The cluster is being created.</li>
+         * <li>initing: The cluster is being initialized.</li>
+         * <li>running: The cluster is running.</li>
+         * <li>Releasing: The cluster is being released.</li>
+         * <li>stopping: The cluster is being stopped.</li>
+         * <li>stopped: The cluster is stopped.</li>
+         * <li>exception: The cluster has run into an exception.</li>
+         * <li>pending: The cluster is waiting to be configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -681,6 +810,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterStatus;
 
         /**
+         * <p>The vCPU-hour usage of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -688,6 +819,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Float clusterUsedCoreTime;
 
         /**
+         * <p>The ID of the vSwitch used by the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-f8za5p0mwzgdu3wgx****</p>
          */
@@ -695,6 +828,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterVSwitchId;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC) used by the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-m5efjevmclc0xdmys****</p>
          */
@@ -702,6 +837,12 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterVpcId;
 
         /**
+         * <p>Indicates whether deletion protection is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -709,16 +850,23 @@ public class ListClustersResponseBody extends TeaModel {
         public Boolean deletionProtection;
 
         /**
+         * <p>The Elastic High Performance Computing (E-HPC) version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0.0</p>
          */
         @NameInMap("EhpcVersion")
         public String ehpcVersion;
 
+        /**
+         * <p>The configurations of the cluster management node.</p>
+         */
         @NameInMap("Manager")
         public ListClustersResponseBodyClustersManager manager;
 
         /**
+         * <p>The maximum total number of vCPUs used by the compute nodes that can be managed by the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -726,16 +874,23 @@ public class ListClustersResponseBody extends TeaModel {
         public Long maxCoreCount;
 
         /**
+         * <p>The maximum number of compute nodes that can be managed by the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
         @NameInMap("MaxCount")
         public Long maxCount;
 
+        /**
+         * <p>The node statistics of the cluster.</p>
+         */
         @NameInMap("Nodes")
         public ListClustersResponseBodyClustersNodes nodes;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph****</p>
          */
@@ -743,12 +898,17 @@ public class ListClustersResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The ID of the security group used by the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-bp13n61xsydodfyg****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The user attribute information of the cluster.</p>
+         */
         @NameInMap("Users")
         public ListClustersResponseBodyClustersUsers users;
 

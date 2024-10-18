@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUsersShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class CreateUsersShrinkRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The users that you want to add.</p>
+     */
     @NameInMap("User")
     public String userShrink;
 

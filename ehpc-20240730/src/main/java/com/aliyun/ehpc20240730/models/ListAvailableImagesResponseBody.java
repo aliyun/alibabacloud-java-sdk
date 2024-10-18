@@ -4,6 +4,9 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableImagesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<ListAvailableImagesResponseBodyImages> images;
 
@@ -26,6 +29,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -33,6 +38,12 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -103,6 +114,12 @@ public class ListAvailableImagesResponseBody extends TeaModel {
 
     public static class ListAvailableImagesResponseBodyImages extends TeaModel {
         /**
+         * <p>The OS architecture of the image. Valid values:</p>
+         * <ul>
+         * <li>x86_64</li>
+         * <li>arm64</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>x86_64</p>
          */
@@ -110,6 +127,15 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         public String architecture;
 
         /**
+         * <p>The boot mode of the image. Valid values:</p>
+         * <ul>
+         * <li>BIOS: Basic Input/Output System (BIOS)</li>
+         * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you change the OS boot mode of an instance, you must make sure that the boot mode matches the boot mode of the associated image. Otherwise, the instance fails to be booted.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>BIOS</p>
          */
@@ -117,6 +143,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         public String bootMode;
 
         /**
+         * <p>The image description.</p>
+         * 
          * <strong>example:</strong>
          * <p>ExampleDescription</p>
          */
@@ -124,6 +152,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>centos_7_06_64_20G_alibase_2019071****</p>
          */
@@ -131,6 +161,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHESS5V5.0.27</p>
          */
@@ -138,16 +170,28 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         public String imageName;
 
         /**
+         * <p>The image source. Valid values:</p>
+         * <ul>
+         * <li>system: system images</li>
+         * <li>self: custom images</li>
+         * <li>others: shared images</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>self</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        /**
+         * <p>The OS name in Chinese.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
         /**
+         * <p>The OS name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>CentOS  7.9 64 bit</p>
          */
@@ -155,6 +199,12 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         public String OSNameEn;
 
         /**
+         * <p>The OS. Valid values:</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>windows</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>windows</p>
          */
@@ -162,6 +212,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The image size. Unit: GiB</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */

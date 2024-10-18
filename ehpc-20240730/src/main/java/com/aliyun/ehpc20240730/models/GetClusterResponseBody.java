@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetClusterResponseBody extends TeaModel {
     /**
+     * <p>The E-HPC Util version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0.31</p>
      */
@@ -12,6 +14,12 @@ public class GetClusterResponseBody extends TeaModel {
     public String clientVersion;
 
     /**
+     * <p>The cluster type. Valid values:</p>
+     * <ul>
+     * <li>Standard</li>
+     * <li>Serverless</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Standard</p>
      */
@@ -19,16 +27,23 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterCategory;
 
     /**
+     * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-08-06T12:43:01.000Z</p>
      */
     @NameInMap("ClusterCreateTime")
     public String clusterCreateTime;
 
+    /**
+     * <p>The post-processing script of the cluster.</p>
+     */
     @NameInMap("ClusterCustomConfiguration")
     public GetClusterResponseBodyClusterCustomConfiguration clusterCustomConfiguration;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
@@ -36,6 +51,13 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The deployment type of the cluster. Valid values:</p>
+     * <ul>
+     * <li>Integrated: The cluster is deployed on a public cloud.</li>
+     * <li>Hybrid: The cluster is deployed on a hybrid cloud.</li>
+     * <li>Custom: The cluster is a custom cluster.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Integrated</p>
      */
@@ -43,6 +65,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterMode;
 
     /**
+     * <p>The time when the cluster was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-08-06T12:43:01.000Z</p>
      */
@@ -50,6 +74,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterModifyTime;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>slurm22.05.8-cluster-20240614</p>
      */
@@ -57,6 +83,19 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The cluster state. Valid values:</p>
+     * <ul>
+     * <li>uninit: The cluster is being installed.</li>
+     * <li>creating: The cluster is being created.</li>
+     * <li>initing: The cluster is being initialized.</li>
+     * <li>running: The cluster is running.</li>
+     * <li>exception: The cluster has run into an exception.</li>
+     * <li>raleasing: The cluster is being released.</li>
+     * <li>stopping: The cluster is being stopped.</li>
+     * <li>stopped: The cluster is stopped.</li>
+     * <li>pending: The cluster is waiting to be configured.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -64,6 +103,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterStatus;
 
     /**
+     * <p>The ID of the vSwitch used by the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1p2uugqsjppno******</p>
      */
@@ -71,6 +112,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterVSwitchId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) used by the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-uf6u3lk1pjy28eg*****</p>
      */
@@ -78,6 +121,12 @@ public class GetClusterResponseBody extends TeaModel {
     public String clusterVpcId;
 
     /**
+     * <p>Indicates whether deletion protection is enabled for the cluster. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,6 +134,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String deleteProtection;
 
     /**
+     * <p>The E-HPC version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0.0</p>
      */
@@ -92,6 +143,12 @@ public class GetClusterResponseBody extends TeaModel {
     public String ehpcVersion;
 
     /**
+     * <p>Indicates whether automatic scale-in is enabled for the cluster. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +156,12 @@ public class GetClusterResponseBody extends TeaModel {
     public Boolean enableScaleIn;
 
     /**
+     * <p>Indicates whether automatic scale-out is enabled for the cluster. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -106,6 +169,8 @@ public class GetClusterResponseBody extends TeaModel {
     public Boolean enableScaleOut;
 
     /**
+     * <p>The interval at which the cluster is automatically scaled out.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -113,16 +178,23 @@ public class GetClusterResponseBody extends TeaModel {
     public Integer growInterval;
 
     /**
+     * <p>The idle duration of the compute nodes allowed by the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("IdleInterval")
     public Integer idleInterval;
 
+    /**
+     * <p>The configurations of the cluster management node.</p>
+     */
     @NameInMap("Manager")
     public GetClusterResponseBodyManager manager;
 
     /**
+     * <p>The maximum total number of vCPUs that can be used by all compute nodes managed by the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -130,6 +202,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String maxCoreCount;
 
     /**
+     * <p>The maximum number of compute nodes that the cluster can manage.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -137,6 +211,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String maxCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -144,6 +220,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph****</p>
      */
@@ -151,6 +229,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-f8z9vb2zaezpkr69a21k</p>
      */
@@ -348,6 +428,8 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyClusterCustomConfiguration extends TeaModel {
         /**
+         * <p>The arguments that are used to run the script after the scrip is installed.</p>
+         * 
          * <strong>example:</strong>
          * <p>E-HPC cn-hangzhou</p>
          */
@@ -355,6 +437,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String args;
 
         /**
+         * <p>The URL that is used to download the post-processing script.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://*****</p>
          */
@@ -386,6 +470,17 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyManagerDNS extends TeaModel {
         /**
+         * <p>The state of the domain name resolution service. Valid values:</p>
+         * <ul>
+         * <li>uninit: The service is being installed.</li>
+         * <li>initing: The service is being initialized.</li>
+         * <li>running: The service is running.</li>
+         * <li>exception: The service has run into an exception.</li>
+         * <li>releasing: The service is being released.</li>
+         * <li>stopped: The service is stopped.</li>
+         * <li>pending: The service is waiting to be configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -393,6 +488,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The resolution type.</p>
+         * 
          * <strong>example:</strong>
          * <p>nis</p>
          */
@@ -400,6 +497,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the resolution service.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.31</p>
          */
@@ -439,6 +538,17 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyManagerDirectoryService extends TeaModel {
         /**
+         * <p>The state of the domain account service. Valid values:</p>
+         * <ul>
+         * <li>uninit: The service is being installed.</li>
+         * <li>initing: The service is being initialized.</li>
+         * <li>running: The service is running.</li>
+         * <li>exception: The service has run into an exception.</li>
+         * <li>releasing: The service is being released.</li>
+         * <li>stopped: The service is stopped.</li>
+         * <li>pending: The service is waiting to be configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -446,6 +556,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the domain account.</p>
+         * 
          * <strong>example:</strong>
          * <p>nis</p>
          */
@@ -453,6 +565,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the domain account service.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.31</p>
          */
@@ -492,6 +606,8 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyManagerManagerNode extends TeaModel {
         /**
+         * <p>The expiration time of the management node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2099-12-31T15:59Z</p>
          */
@@ -499,6 +615,12 @@ public class GetClusterResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>The instance billing method of the management node. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -506,6 +628,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
+         * <p>The instance ID of the management node.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp1a170jgea1vl******</p>
          */
@@ -513,6 +637,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance type of the management node.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.g6.4xlarge</p>
          */
@@ -560,6 +686,17 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyManagerScheduler extends TeaModel {
         /**
+         * <p>The scheduler state. Valid values:</p>
+         * <ul>
+         * <li>uninit: The scheduler is being installed.</li>
+         * <li>initing: The scheduler is being initialized.</li>
+         * <li>running: The scheduler is running.</li>
+         * <li>exception: The scheduler has run into an exception.</li>
+         * <li>releasing: The scheduler is being released.</li>
+         * <li>stopped: The scheduler is stopped.</li>
+         * <li>pending: The scheduler is waiting to be configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -567,6 +704,15 @@ public class GetClusterResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The scheduler type. Valid values:</p>
+         * <ul>
+         * <li>SLURM</li>
+         * <li>PBS</li>
+         * <li>OPENGRIDSCHEDULER</li>
+         * <li>LSF_PLUGIN</li>
+         * <li>PBS_PLUGIN</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SLURM</p>
          */
@@ -574,6 +720,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The scheduler version.</p>
+         * 
          * <strong>example:</strong>
          * <p>22.05.8</p>
          */
@@ -612,15 +760,27 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodyManager extends TeaModel {
+        /**
+         * <p>The configurations of the domain name resolution service.</p>
+         */
         @NameInMap("DNS")
         public GetClusterResponseBodyManagerDNS DNS;
 
+        /**
+         * <p>The information about the domain account service.</p>
+         */
         @NameInMap("DirectoryService")
         public GetClusterResponseBodyManagerDirectoryService directoryService;
 
+        /**
+         * <p>The configurations of the management node.</p>
+         */
         @NameInMap("ManagerNode")
         public GetClusterResponseBodyManagerManagerNode managerNode;
 
+        /**
+         * <p>The information about the scheduler.</p>
+         */
         @NameInMap("Scheduler")
         public GetClusterResponseBodyManagerScheduler scheduler;
 

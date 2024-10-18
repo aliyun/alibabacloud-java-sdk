@@ -4,10 +4,21 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListCommonLogsRequest extends TeaModel {
+    /**
+     * <p>The action types.</p>
+     */
     @NameInMap("ActionName")
     public java.util.List<String> actionName;
 
     /**
+     * <p>The action status. Logs associated with the specific action status are returned.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Finished: The action is completed.</li>
+     * <li>Failed: The action failed.</li>
+     * <li>InProgress: The action is being performed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Finished</p>
      */
@@ -15,6 +26,8 @@ public class ListCommonLogsRequest extends TeaModel {
     public String actionStatus;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
@@ -22,6 +35,7 @@ public class ListCommonLogsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The start time of the time range. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +45,9 @@ public class ListCommonLogsRequest extends TeaModel {
     public Long from;
 
     /**
+     * <p>Specifies whether to display results in reverse order.</p>
+     * <p>Default value: true</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +55,8 @@ public class ListCommonLogsRequest extends TeaModel {
     public Boolean isReverse;
 
     /**
+     * <p>The request ID of the action. Logs associated with the specific request ID are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
@@ -45,6 +64,8 @@ public class ListCommonLogsRequest extends TeaModel {
     public String logRequestId;
 
     /**
+     * <p>The log type. Logs of the specific type are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Operation</p>
      */
@@ -52,6 +73,8 @@ public class ListCommonLogsRequest extends TeaModel {
     public String logType;
 
     /**
+     * <p>The ID of the user who performed the action.</p>
+     * 
      * <strong>example:</strong>
      * <p>137***</p>
      */
@@ -59,6 +82,10 @@ public class ListCommonLogsRequest extends TeaModel {
     public String operatorUid;
 
     /**
+     * <p>The page number of the page to return.</p>
+     * <p>Pages start from page 1.</p>
+     * <p>Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -66,6 +93,9 @@ public class ListCommonLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -73,6 +103,8 @@ public class ListCommonLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the resource involved in the action. Logs associated with the specific resource are returned. This parameter is not recommended.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-abc***</p>
      */
@@ -80,6 +112,7 @@ public class ListCommonLogsRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>The end time of the time range. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

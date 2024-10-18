@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonTemplateRequest extends TeaModel {
     /**
+     * <p>The addon name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeAddonTemplateRequest extends TeaModel {
     public String addonName;
 
     /**
+     * <p>The addon version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DescribeAddonTemplateRequest extends TeaModel {
     public String addonVersion;
 
     /**
+     * <p>The page number of the page returned. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,8 @@ public class DescribeAddonTemplateRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -37,6 +43,8 @@ public class DescribeAddonTemplateRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -44,6 +52,8 @@ public class DescribeAddonTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>
      */

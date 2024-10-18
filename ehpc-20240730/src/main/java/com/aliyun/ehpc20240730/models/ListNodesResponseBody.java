@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the nodes.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<ListNodesResponseBodyNodes> nodes;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListNodesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListNodesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>89A1AC0F-4A6C-4F3D-98F9-BEF9A823****</p>
      */
@@ -29,6 +38,8 @@ public class ListNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyNodesTotalResources extends TeaModel {
         /**
+         * <p>The number of vCPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -96,6 +111,8 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer gpu;
 
         /**
+         * <p>The amount of memory. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -135,6 +152,8 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyNodes extends TeaModel {
         /**
+         * <p>The time when the node was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-06-09T06:22:02.000Z</p>
          */
@@ -142,6 +161,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String addTime;
 
         /**
+         * <p>The time when the node expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-06-09T06:22:02.000Z</p>
          */
@@ -149,6 +170,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>The hostname of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>edas.cn-shanghai.aliyuncs.com</p>
          */
@@ -156,6 +179,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Indicates whether hyper-threading is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -163,6 +188,8 @@ public class ListNodesResponseBody extends TeaModel {
         public Boolean htEnabled;
 
         /**
+         * <p>The instance ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp15707mys2rsy0j****</p>
          */
@@ -170,6 +197,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The image ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>centos_7_06_64_20G_alibase_20190711.vhd</p>
          */
@@ -177,6 +206,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The instance type of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.c5.large</p>
          */
@@ -184,13 +215,21 @@ public class ListNodesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The VPC IP address of the node.</p>
+         * 
          * <strong>example:</strong>
-         * <p>172.16.**.**</p>
+         * <p><code>172.16.**.**</code></p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
+         * <p>Indicates whether deletion protection is enabled for the node. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -198,13 +237,17 @@ public class ListNodesResponseBody extends TeaModel {
         public Boolean keepAlive;
 
         /**
+         * <p>The public IP address of the node.</p>
+         * 
          * <strong>example:</strong>
-         * <p>172.16.**.**</p>
+         * <p><code>172.16.**.**</code></p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
         /**
+         * <p>The name of the queue to which the node belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>autoque3</p>
          */
@@ -212,6 +255,13 @@ public class ListNodesResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The bidding policy of the node. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instances of the compute node are pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The node is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NoSpot</p>
          */
@@ -219,6 +269,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
+         * <p>The node state in the scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -226,16 +278,32 @@ public class ListNodesResponseBody extends TeaModel {
         public String stateInSched;
 
         /**
+         * <p>The node state. Valid values:</p>
+         * <ul>
+         * <li>uninit: The node is being installed.</li>
+         * <li>initing: The node is being initialized.</li>
+         * <li>running: The node is running.</li>
+         * <li>releasing: The node is being released.</li>
+         * <li>stopped: The node is stopped.</li>
+         * <li>exception: The node has run into an exception.</li>
+         * <li>untracking: The node is not added to the cluster.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The hardware configurations of the node.</p>
+         */
         @NameInMap("TotalResources")
         public ListNodesResponseBodyNodesTotalResources totalResources;
 
         /**
+         * <p>The vSwitch ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1e47optm9g58zcu****</p>
          */
@@ -243,6 +311,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1gnu8br4ay7beb2w****</p>
          */
@@ -250,6 +320,8 @@ public class ListNodesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
          */
