@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListNodesShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The hostnames of the compute nodes that you want to query.</p>
+     */
     @NameInMap("Hostnames")
     public String hostnamesShrink;
 
     /**
+     * <p>The page number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,19 +29,29 @@ public class ListNodesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IP addresses of the compute nodes that you want to query.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddressShrink;
 
+    /**
+     * <p>The queues to which the nodes belong.</p>
+     */
     @NameInMap("QueueNames")
     public String queueNamesShrink;
 
     /**
+     * <p>Specifies whether the results are sorted in ascending or descending order. Valid values: forward (ascending) and backward (descending).</p>
+     * 
      * <strong>example:</strong>
      * <p>Forward</p>
      */
@@ -42,12 +59,17 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String sequence;
 
     /**
+     * <p>The sorting method of the node list. Valid values: addedtime: sorted by the time when the node was added. hostname: sorted by hostname. Default value: addedtime.</p>
+     * 
      * <strong>example:</strong>
      * <p>AddedTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The states of the compute nodes to be queried.</p>
+     */
     @NameInMap("Status")
     public String statusShrink;
 

@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateNodesShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The hardware configurations of the compute nodes.</p>
+     */
     @NameInMap("ComputeNode")
     public String computeNodeShrink;
 
     /**
+     * <p>The number of compute nodes that you want to add. Valid values: 1 to 99. The MinCount value must be smaller than the Count value.</p>
+     * <ul>
+     * <li>If the number of available Elastic Compute Service (ECS) instances is smaller than the MinCount value, the nodes fail to be added.</li>
+     * <li>If the number of available ECS instances is larger than the MinCount value but smaller than the Count value, nodes are added based on the MinCount value.</li>
+     * <li>If the number of available ECS instances is larger than the Count value, nodes are added based on the Count value.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +35,12 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The type of the network between compute nodes. Valid values:</p>
+     * <ul>
+     * <li>vpc</li>
+     * <li>eRDMA</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -29,6 +48,8 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String HPCInterConnect;
 
     /**
+     * <p>The hostname prefix of the added compute nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>compute</p>
      */
@@ -36,6 +57,8 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String hostnamePrefix;
 
     /**
+     * <p>The hostname suffix of the added compute nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -43,6 +66,8 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String hostnameSuffix;
 
     /**
+     * <p>Specifies whether to enable deletion protection for the added compute nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -50,6 +75,8 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String keepAlive;
 
     /**
+     * <p>The name of the queue for which you want to create compute nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
@@ -57,6 +84,8 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String queueName;
 
     /**
+     * <p>The Resource Access Management (RAM) role to be assumed by the added nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForOOSBandwidthScheduler</p>
      */
@@ -64,6 +93,8 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String ramRole;
 
     /**
+     * <p>The ID of the vSwitch to be used by the added nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1lfcjbfb099rrjn****</p>
      */

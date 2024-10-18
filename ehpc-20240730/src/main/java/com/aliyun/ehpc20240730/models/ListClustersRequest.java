@@ -4,13 +4,21 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
+    /**
+     * <p>The cluster IDs. You can specify up to 20 IDs.</p>
+     */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
 
+    /**
+     * <p>The cluster names. You can specify up to 20 names.</p>
+     */
     @NameInMap("ClusterNames")
     public java.util.List<String> clusterNames;
 
     /**
+     * <p>The page number of the page to return. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +26,8 @@ public class ListClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class CreateNodesResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the compute nodes to be created.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -15,6 +20,12 @@ public class CreateNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class GetQueueResponseBody extends TeaModel {
+    /**
+     * <p>The information about the queue.</p>
+     */
     @NameInMap("Queue")
     public GetQueueResponseBodyQueue queue;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
@@ -37,16 +42,27 @@ public class GetQueueResponseBody extends TeaModel {
 
     public static class GetQueueResponseBodyQueue extends TeaModel {
         /**
+         * <p>The auto scale-out policy of the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>PriorityInstanceType</p>
          */
         @NameInMap("AllocationStrategy")
         public String allocationStrategy;
 
+        /**
+         * <p>The hardware configurations of the compute nodes in the queue.</p>
+         */
         @NameInMap("ComputeNodes")
         public java.util.List<NodeTemplate> computeNodes;
 
         /**
+         * <p>Indicates whether auto scale-in is enabled for the queue. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -54,6 +70,12 @@ public class GetQueueResponseBody extends TeaModel {
         public Boolean enableScaleIn;
 
         /**
+         * <p>Indicates whether auto scale-out is enabled for the queue. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -61,6 +83,8 @@ public class GetQueueResponseBody extends TeaModel {
         public Boolean enableScaleOut;
 
         /**
+         * <p>The hostname prefix of the compute nodes in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>compute</p>
          */
@@ -68,6 +92,8 @@ public class GetQueueResponseBody extends TeaModel {
         public String hostnamePrefix;
 
         /**
+         * <p>The hostname suffix of the compute nodes in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -75,6 +101,8 @@ public class GetQueueResponseBody extends TeaModel {
         public String hostnameSuffix;
 
         /**
+         * <p>The initial number of nodes in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -82,16 +110,27 @@ public class GetQueueResponseBody extends TeaModel {
         public Integer initialCount;
 
         /**
+         * <p>The type of the network between compute nodes in the queue. Valid values:</p>
+         * <ul>
+         * <li>vpc</li>
+         * <li>eRDMA</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>erdma</p>
          */
         @NameInMap("InterConnect")
         public String interConnect;
 
+        /**
+         * <p>The nodes for which deletion protection is enabled in the queue.</p>
+         */
         @NameInMap("KeepAliveNodes")
         public java.util.List<String> keepAliveNodes;
 
         /**
+         * <p>The maximum number of compute nodes that the queue can contain.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -99,6 +138,8 @@ public class GetQueueResponseBody extends TeaModel {
         public Integer maxCount;
 
         /**
+         * <p>The minimum number of nodes that are delivered to the queue in each scale-out cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -106,6 +147,8 @@ public class GetQueueResponseBody extends TeaModel {
         public Long maxCountPerCycle;
 
         /**
+         * <p>The minimum number of compute nodes that the queue must contain.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -113,6 +156,7 @@ public class GetQueueResponseBody extends TeaModel {
         public Integer minCount;
 
         /**
+         * <p>The queue name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,12 +166,17 @@ public class GetQueueResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The Resource Access Management (RAM) role that is assumed by compute nodes in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliyunECSInstanceForEHPCRole</p>
          */
         @NameInMap("RamRole")
         public String ramRole;
 
+        /**
+         * <p>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 

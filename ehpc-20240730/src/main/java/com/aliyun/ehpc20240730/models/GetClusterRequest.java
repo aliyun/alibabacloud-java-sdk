@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetClusterRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */

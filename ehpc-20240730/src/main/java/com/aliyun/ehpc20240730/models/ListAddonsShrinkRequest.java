@@ -4,10 +4,14 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListAddonsShrinkRequest extends TeaModel {
+    /**
+     * <p>The addon IDs.</p>
+     */
     @NameInMap("AddonIds")
     public String addonIdsShrink;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class ListAddonsShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The page number of the page to return. Default value: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +30,8 @@ public class ListAddonsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

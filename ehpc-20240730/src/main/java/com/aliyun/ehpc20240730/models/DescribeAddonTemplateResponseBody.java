@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddonTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The details of the addon template.</p>
+     */
     @NameInMap("Addon")
     public DescribeAddonTemplateResponseBodyAddon addon;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
 
     public static class DescribeAddonTemplateResponseBodyAddonResourcesSpecEipResource extends TeaModel {
         /**
+         * <p>Indicates whether the EIP is automatically created.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -89,6 +102,8 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public Boolean autoCreate;
 
         /**
+         * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -96,6 +111,8 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String bandwidth;
 
         /**
+         * <p>The EIP ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-bp1jwtsuoiif2qf90****</p>
          */
@@ -103,6 +120,13 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String eipInstanceId;
 
         /**
+         * <p>The billing method of the EIP. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
+         * <p>Default value: PostPaid</p>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -110,6 +134,13 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
+         * <p>The metering method of the EIP. Valid values:</p>
+         * <ul>
+         * <li>PayByBandwidth: pay by bandwidth.</li>
+         * <li>PayByTraffic: pay by data transfer.</li>
+         * </ul>
+         * <p>Valid values of N: 1 to 10.</p>
+         * 
          * <strong>example:</strong>
          * <p>PayByTraffic</p>
          */
@@ -164,9 +195,15 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonTemplateResponseBodyAddonResourcesSpec extends TeaModel {
+        /**
+         * <p>The Elastic Compute Service (ECS) resource configurations of the addon.</p>
+         */
         @NameInMap("EcsResources")
         public java.util.List<AddonNodeTemplate> ecsResources;
 
+        /**
+         * <p>The Elastic IP Address (EIP) configurations of the service.</p>
+         */
         @NameInMap("EipResource")
         public DescribeAddonTemplateResponseBodyAddonResourcesSpecEipResource eipResource;
 
@@ -194,13 +231,20 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonTemplateResponseBodyAddonServicesSpecInputParams extends TeaModel {
+        /**
+         * <p>The help information of the parameter.</p>
+         */
         @NameInMap("HelpText")
         public String helpText;
 
+        /**
+         * <p>The parameter label.</p>
+         */
         @NameInMap("Label")
         public String label;
 
         /**
+         * <p>The parameter name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +254,7 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,6 +264,7 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The parameter value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,6 +322,12 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
 
     public static class DescribeAddonTemplateResponseBodyAddonServicesSpecNetworkACL extends TeaModel {
         /**
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong>: forwards TCP packets.</li>
+         * <li><strong>UDP</strong>: forwards UDP packets.</li>
+         * <li><strong>Any</strong>: forwards all packets.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,6 +337,7 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String ipProtocol;
 
         /**
+         * <p>The port number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,6 +347,7 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public Float port;
 
         /**
+         * <p>The source CIDR block.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,13 +388,21 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonTemplateResponseBodyAddonServicesSpec extends TeaModel {
+        /**
+         * <p>The parameter configurations of the service.</p>
+         */
         @NameInMap("InputParams")
         public java.util.List<DescribeAddonTemplateResponseBodyAddonServicesSpecInputParams> inputParams;
 
+        /**
+         * <p>The security group configurations of the service.</p>
+         */
         @NameInMap("NetworkACL")
         public java.util.List<DescribeAddonTemplateResponseBodyAddonServicesSpecNetworkACL> networkACL;
 
         /**
+         * <p>The service access type.</p>
+         * 
          * <strong>example:</strong>
          * <p>URL</p>
          */
@@ -348,6 +410,8 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String serviceAccessType;
 
         /**
+         * <p>The service access URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://47.96.xx.xx:12008">https://47.96.xx.xx:12008</a></p>
          */
@@ -355,6 +419,7 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String serviceAccessUrl;
 
         /**
+         * <p>The service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -411,20 +476,30 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonTemplateResponseBodyAddon extends TeaModel {
+        /**
+         * <p>The addon description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The addon icon.</p>
+         * 
          * <strong>example:</strong>
          * <p>/assets/icons/your_icon.svg</p>
          */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <p>The addon label.</p>
+         */
         @NameInMap("Label")
         public String label;
 
         /**
+         * <p>The date when the addon template was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-22 18:11:17</p>
          */
@@ -432,6 +507,7 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         public String lastUpdate;
 
         /**
+         * <p>The addon name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,13 +516,20 @@ public class DescribeAddonTemplateResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The resource configurations of the addon.</p>
+         */
         @NameInMap("ResourcesSpec")
         public DescribeAddonTemplateResponseBodyAddonResourcesSpec resourcesSpec;
 
+        /**
+         * <p>The addon configurations.</p>
+         */
         @NameInMap("ServicesSpec")
         public java.util.List<DescribeAddonTemplateResponseBodyAddonServicesSpec> servicesSpec;
 
         /**
+         * <p>The addon version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

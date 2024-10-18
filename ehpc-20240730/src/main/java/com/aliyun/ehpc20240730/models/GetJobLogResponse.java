@@ -3,7 +3,7 @@ package com.aliyun.ehpc20240730.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteJobsResponse extends TeaModel {
+public class GetJobLogResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteJobsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteJobsResponseBody body;
+    public GetJobLogResponseBody body;
 
-    public static DeleteJobsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteJobsResponse self = new DeleteJobsResponse();
+    public static GetJobLogResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetJobLogResponse self = new GetJobLogResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteJobsResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetJobLogResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteJobsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteJobsResponse setStatusCode(Integer statusCode) {
+    public GetJobLogResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteJobsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteJobsResponse setBody(DeleteJobsResponseBody body) {
+    public GetJobLogResponse setBody(GetJobLogResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteJobsResponseBody getBody() {
+    public GetJobLogResponseBody getBody() {
         return this.body;
     }
 

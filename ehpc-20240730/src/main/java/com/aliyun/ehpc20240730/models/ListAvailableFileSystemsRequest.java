@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAvailableFileSystemsRequest extends TeaModel {
     /**
+     * <p>The page number of the page to return. Page starts from page 1. Default value: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAvailableFileSystemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

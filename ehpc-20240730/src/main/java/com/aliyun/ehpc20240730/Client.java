@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>挂载共享存储</p>
+     * <p>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq AttachSharedStoragesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>挂载共享存储</p>
+     * <p>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request AttachSharedStoragesRequest
      * @return AttachSharedStoragesResponse
@@ -239,8 +239,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of E-HPC.</p>
+     * 
      * <b>summary</b> : 
-     * <p>集群扩容节点</p>
+     * <p>Creates a job for a cluster.</p>
+     * 
+     * @param tmpReq CreateJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateJobResponse
+     */
+    public CreateJobResponse createJobWithOptions(CreateJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateJobShrinkRequest request = new CreateJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobSpec)) {
+            request.jobSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobSpec, "JobSpec", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            query.put("JobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobSpecShrink)) {
+            query.put("JobSpec", request.jobSpecShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateJob"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of E-HPC.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a job for a cluster.</p>
+     * 
+     * @param request CreateJobRequest
+     * @return CreateJobResponse
+     */
+    public CreateJobResponse createJob(CreateJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq CreateNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -313,8 +380,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * 
      * <b>summary</b> : 
-     * <p>集群扩容节点</p>
+     * <p>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request CreateNodesRequest
      * @return CreateNodesResponse
@@ -380,7 +450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建集群用户</p>
+     * <p>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq CreateUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -422,7 +492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建集群用户</p>
+     * <p>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request CreateUsersRequest
      * @return CreateUsersResponse
@@ -474,56 +544,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteClusterResponse deleteCluster(DeleteClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClusterWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>删除作业</p>
-     * 
-     * @param tmpReq DeleteJobsRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteJobsResponse
-     */
-    public DeleteJobsResponse deleteJobsWithOptions(DeleteJobsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        DeleteJobsShrinkRequest request = new DeleteJobsShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobSpec)) {
-            request.jobSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobSpec, "JobSpec", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.jobSpecShrink)) {
-            query.put("JobSpec", request.jobSpecShrink);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteJobs"),
-            new TeaPair("version", "2024-07-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteJobsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>删除作业</p>
-     * 
-     * @param request DeleteJobsRequest
-     * @return DeleteJobsResponse
-     */
-    public DeleteJobsResponse deleteJobs(DeleteJobsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteJobsWithOptions(request, runtime);
     }
 
     /**
@@ -698,7 +718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Add-on服务组件模板详情。</p>
+     * <p>Queries the details of an addon template.</p>
      * 
      * @param request DescribeAddonTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -750,7 +770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Add-on服务组件模板详情。</p>
+     * <p>Queries the details of an addon template.</p>
      * 
      * @param request DescribeAddonTemplateRequest
      * @return DescribeAddonTemplateResponse
@@ -816,7 +836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看已安装的Add-on服务组件详情。</p>
+     * <p>Queries the details of an installed addon.</p>
      * 
      * @param request GetAddonRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -852,7 +872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看已安装的Add-on服务组件详情。</p>
+     * <p>Queries the details of an installed addon.</p>
      * 
      * @param request GetAddonRequest
      * @return GetAddonResponse
@@ -864,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个E-HPC集群的详情信息。</p>
+     * <p>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request GetClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -896,7 +916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个E-HPC集群的详情信息。</p>
+     * <p>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request GetClusterRequest
      * @return GetClusterResponse
@@ -908,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群通用日志详细信息</p>
+     * <p>Query logs based on a request ID. Logs for specific actions can be queried thanks to an Action-Stage-Method three-layer log splitting structure.</p>
      * 
      * @param request GetCommonLogDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -952,7 +972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群通用日志详细信息</p>
+     * <p>Query logs based on a request ID. Logs for specific actions can be queried thanks to an Action-Stage-Method three-layer log splitting structure.</p>
      * 
      * @param request GetCommonLogDetailRequest
      * @return GetCommonLogDetailResponse
@@ -964,7 +984,123 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群的队列配置信息</p>
+     * <p>获取作业详情</p>
+     * 
+     * @param request GetJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobResponse
+     */
+    public GetJobResponse getJobWithOptions(GetJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetJob"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取作业详情</p>
+     * 
+     * @param request GetJobRequest
+     * @return GetJobResponse
+     */
+    public GetJobResponse getJob(GetJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Currently, only Slurm and PBS Pro schedulers for Standard Edition clusters are supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the output logs of a job, including standard output logs and error output logs.</p>
+     * 
+     * @param request GetJobLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobLogResponse
+     */
+    public GetJobLogResponse getJobLogWithOptions(GetJobLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logType)) {
+            query.put("LogType", request.logType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetJobLog"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobLogResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Currently, only Slurm and PBS Pro schedulers for Standard Edition clusters are supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the output logs of a job, including standard output logs and error output logs.</p>
+     * 
+     * @param request GetJobLogRequest
+     * @return GetJobLogResponse
+     */
+    public GetJobLogResponse getJobLog(GetJobLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getJobLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request GetQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1000,7 +1136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群的队列配置信息</p>
+     * <p>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request GetQueueRequest
      * @return GetQueueResponse
@@ -1118,7 +1254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支持的Add-on服务组件模板列表查询。</p>
+     * <p>Queries supported addon templates.</p>
      * 
      * @param request ListAddonTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1166,7 +1302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支持的Add-on服务组件模板列表查询。</p>
+     * <p>Queries supported addon templates.</p>
      * 
      * @param request ListAddonTemplatesRequest
      * @return ListAddonTemplatesResponse
@@ -1178,7 +1314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看已安装的Add-on服务组件列表。</p>
+     * <p>Queries installed addons of an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq ListAddonsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1228,7 +1364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看已安装的Add-on服务组件列表。</p>
+     * <p>Queries installed addons of an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request ListAddonsRequest
      * @return ListAddonsResponse
@@ -1240,7 +1376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用的共享存储</p>
+     * <p>Queries the file systems that can be attached in a region.</p>
      * 
      * @param request ListAvailableFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1276,7 +1412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用的共享存储</p>
+     * <p>Queries the file systems that can be attached in a region.</p>
      * 
      * @param request ListAvailableFileSystemsRequest
      * @return ListAvailableFileSystemsResponse
@@ -1288,7 +1424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取可用镜像列表</p>
+     * <p>Queries images that are available for Elastic High Performance Computing (E-HPC) clusters.</p>
      * 
      * @param tmpReq ListAvailableImagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1326,7 +1462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取可用镜像列表</p>
+     * <p>Queries images that are available for Elastic High Performance Computing (E-HPC) clusters.</p>
      * 
      * @param request ListAvailableImagesRequest
      * @return ListAvailableImagesResponse
@@ -1338,7 +1474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户账号中在每个地域拥有的所有集群的列表。</p>
+     * <p>Queries all clusters of a user in each region.</p>
      * 
      * @param tmpReq ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1392,7 +1528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户账号中在每个地域拥有的所有集群的列表。</p>
+     * <p>Queries all clusters of a user in each region.</p>
      * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
@@ -1404,7 +1540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群通用日志列表</p>
+     * <p>Queries the logs of a cluster that are generated within a time range.</p>
      * 
      * @param tmpReq ListCommonLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1486,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群通用日志列表</p>
+     * <p>Queries the logs of a cluster that are generated within a time range.</p>
      * 
      * @param request ListCommonLogsRequest
      * @return ListCommonLogsResponse
@@ -1538,7 +1674,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点列表</p>
+     * <p>Queries the jobs in a cluster.</p>
+     * 
+     * @param tmpReq ListJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobsResponse
+     */
+    public ListJobsResponse listJobsWithOptions(ListJobsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListJobsShrinkRequest request = new ListJobsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobFilter)) {
+            request.jobFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobFilter, "JobFilter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobFilterShrink)) {
+            query.put("JobFilter", request.jobFilterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListJobs"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the jobs in a cluster.</p>
+     * 
+     * @param request ListJobsRequest
+     * @return ListJobsResponse
+     */
+    public ListJobsResponse listJobs(ListJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the nodes of an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq ListNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1620,7 +1818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点列表</p>
+     * <p>Queries the nodes of an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -1632,7 +1830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群的队列信息。</p>
+     * <p>Queries queues in an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq ListQueuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1674,7 +1872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群的队列信息。</p>
+     * <p>Queries queues in an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request ListQueuesRequest
      * @return ListQueuesResponse
@@ -1818,6 +2016,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Stops uncompleted jobs in a batch in an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * 
+     * @param tmpReq StopJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopJobsResponse
+     */
+    public StopJobsResponse stopJobsWithOptions(StopJobsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StopJobsShrinkRequest request = new StopJobsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobIds)) {
+            request.jobIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobIds, "JobIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIdsShrink)) {
+            query.put("JobIds", request.jobIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopJobs"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopJobsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops uncompleted jobs in a batch in an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * 
+     * @param request StopJobsRequest
+     * @return StopJobsResponse
+     */
+    public StopJobsResponse stopJobs(StopJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Uninstalls an addon.</p>
      * 
      * @param request UnInstallAddonRequest
@@ -1912,7 +2164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定集群的基本信息。</p>
+     * <p>Modifies the configurations of an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq UpdateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1994,7 +2246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定集群的基本信息。</p>
+     * <p>Modifies the configurations of an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request UpdateClusterRequest
      * @return UpdateClusterResponse
@@ -2068,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群的队列配置信息</p>
+     * <p>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq UpdateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2110,7 +2362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群的队列配置信息</p>
+     * <p>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request UpdateQueueRequest
      * @return UpdateQueueResponse
@@ -2122,7 +2374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群单个用户属性</p>
+     * <p>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</p>
      * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2166,7 +2418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群单个用户属性</p>
+     * <p>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse

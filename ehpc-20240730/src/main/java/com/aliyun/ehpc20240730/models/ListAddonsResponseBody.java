@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListAddonsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the addons.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<ListAddonsResponseBodyAddons> addons;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListAddonsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page number of the returned page. Default value: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListAddonsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
@@ -29,6 +38,8 @@ public class ListAddonsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,7 @@ public class ListAddonsResponseBody extends TeaModel {
 
     public static class ListAddonsResponseBodyAddons extends TeaModel {
         /**
+         * <p>The addon ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,20 +102,29 @@ public class ListAddonsResponseBody extends TeaModel {
         @NameInMap("AddonId")
         public String addonId;
 
+        /**
+         * <p>The addon description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The time when the addon was installed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-22 18:11:17</p>
          */
         @NameInMap("InstallTime")
         public String installTime;
 
+        /**
+         * <p>The addon label.</p>
+         */
         @NameInMap("Label")
         public String label;
 
         /**
+         * <p>The addon name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +134,8 @@ public class ListAddonsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The addon state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -120,6 +143,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The addon version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

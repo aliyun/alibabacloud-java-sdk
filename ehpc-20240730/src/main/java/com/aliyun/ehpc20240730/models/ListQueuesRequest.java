@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListQueuesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The names of the queues that you want to query. You can specify up to eight names.</p>
+     */
     @NameInMap("QueueNames")
     public java.util.List<String> queueNames;
 

@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListQueuesResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
@@ -12,6 +15,8 @@ public class ListQueuesResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +24,23 @@ public class ListQueuesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The information about the queues.</p>
+     */
     @NameInMap("Queues")
     public java.util.List<ListQueuesResponseBodyQueues> queues;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C6E5005C-00B0-4F27-98BB-95AB88016C22</p>
      */
@@ -36,6 +48,8 @@ public class ListQueuesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,6 +111,8 @@ public class ListQueuesResponseBody extends TeaModel {
 
     public static class ListQueuesResponseBodyQueuesNodes extends TeaModel {
         /**
+         * <p>The number of compute nodes that are not ready.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -104,6 +120,8 @@ public class ListQueuesResponseBody extends TeaModel {
         public Integer creatingCounts;
 
         /**
+         * <p>The number of malfunctioning compute nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -111,6 +129,8 @@ public class ListQueuesResponseBody extends TeaModel {
         public Integer exceptionCounts;
 
         /**
+         * <p>The number of running compute nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -149,10 +169,15 @@ public class ListQueuesResponseBody extends TeaModel {
     }
 
     public static class ListQueuesResponseBodyQueues extends TeaModel {
+        /**
+         * <p>The hardware configurations of the compute nodes that are added in auto scale-outs. Up to five nodes are displayed.</p>
+         */
         @NameInMap("ComputeNodes")
         public java.util.List<NodeTemplate> computeNodes;
 
         /**
+         * <p>The time when the queue was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-11-10T02:04:00Z</p>
          */
@@ -160,6 +185,12 @@ public class ListQueuesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Indicates whether auto scale-in is enabled for the queue. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -167,6 +198,12 @@ public class ListQueuesResponseBody extends TeaModel {
         public Boolean enableScaleIn;
 
         /**
+         * <p>Indicates whether auto scale-out is enabled for the queue. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -174,6 +211,8 @@ public class ListQueuesResponseBody extends TeaModel {
         public Boolean enableScaleOut;
 
         /**
+         * <p>The maximum number of compute nodes that the queue can contain.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -181,6 +220,8 @@ public class ListQueuesResponseBody extends TeaModel {
         public Integer maxCount;
 
         /**
+         * <p>The minimum number of compute nodes that are added to the queue in each auto scale-out.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -188,16 +229,23 @@ public class ListQueuesResponseBody extends TeaModel {
         public Integer maxCountPerCycle;
 
         /**
+         * <p>The minimum number of compute nodes that the queue must contain.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("MinCount")
         public Integer minCount;
 
+        /**
+         * <p>The statistics about the compute nodes in the queue.</p>
+         */
         @NameInMap("Nodes")
         public ListQueuesResponseBodyQueuesNodes nodes;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>comp</p>
          */
@@ -205,6 +253,8 @@ public class ListQueuesResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The total number of vCPUs that are used by all compute nodes in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -212,12 +262,17 @@ public class ListQueuesResponseBody extends TeaModel {
         public Integer totalCores;
 
         /**
+         * <p>The time when the queue was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-25T02:02:32</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The vSwitches that can be used for added nodes during auto scale-outs. Up to three vSwitches are displayed.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 

@@ -4,10 +4,19 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListAddonTemplatesRequest extends TeaModel {
+    /**
+     * <p>The addon names.</p>
+     */
     @NameInMap("AddonNames")
     public java.util.List<String> addonNames;
 
     /**
+     * <p>The cluster type. Valid values:</p>
+     * <ul>
+     * <li>Standard</li>
+     * <li>Serverless</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Standard</p>
      */
@@ -15,6 +24,8 @@ public class ListAddonTemplatesRequest extends TeaModel {
     public String clusterCategory;
 
     /**
+     * <p>The page number of the page to return. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +33,8 @@ public class ListAddonTemplatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +42,8 @@ public class ListAddonTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

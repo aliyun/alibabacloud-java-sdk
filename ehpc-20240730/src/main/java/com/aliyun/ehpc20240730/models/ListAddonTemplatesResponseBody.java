@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListAddonTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the addon templates.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<ListAddonTemplatesResponseBodyAddons> addons;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
@@ -29,6 +38,8 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,13 +92,20 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListAddonTemplatesResponseBodyAddons extends TeaModel {
+        /**
+         * <p>The addon description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The addon label</p>
+         */
         @NameInMap("Label")
         public String label;
 
         /**
+         * <p>The addon name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +115,7 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The addon version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
