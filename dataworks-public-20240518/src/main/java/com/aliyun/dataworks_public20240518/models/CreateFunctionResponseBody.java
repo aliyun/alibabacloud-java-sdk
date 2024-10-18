@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFunctionResponseBody extends TeaModel {
     /**
+     * <p>The ID of the UDF.</p>
+     * 
      * <strong>example:</strong>
      * <p>580667964888595XXXX</p>
      */
@@ -12,6 +14,8 @@ public class CreateFunctionResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AE49C88D-5BEE-5ADD-8B8C-C4BBC0D7XXXX</p>
      */

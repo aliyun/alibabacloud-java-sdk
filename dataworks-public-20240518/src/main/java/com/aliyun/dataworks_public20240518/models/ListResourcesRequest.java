@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</p>
+     * 
      * <strong>example:</strong>
      * <p>110755000425XXXX</p>
      */
@@ -12,6 +14,8 @@ public class ListResourcesRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +43,15 @@ public class ListResourcesRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The resource type. This parameter specifies a filter condition.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>python</li>
+     * <li>jar</li>
+     * <li>archive</li>
+     * <li>file</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>python</p>
      */

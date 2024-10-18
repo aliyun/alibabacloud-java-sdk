@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDIJobsRequest extends TeaModel {
     /**
+     * <p>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>Hologres</p>
      */
@@ -12,6 +14,15 @@ public class ListDIJobsRequest extends TeaModel {
     public String destinationDataSourceType;
 
     /**
+     * <p>The synchronization type. Valid values:</p>
+     * <ul>
+     * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+     * <li>RealtimeIncremental: real-time incremental synchronization</li>
+     * <li>Full: full synchronization</li>
+     * <li>OfflineIncremental: batch incremental synchronization</li>
+     * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FullAndRealtimeIncremental</p>
      */
@@ -19,6 +30,9 @@ public class ListDIJobsRequest extends TeaModel {
     public String migrationType;
 
     /**
+     * <p>The name of the export task.</p>
+     * <p>The name of each export task must be unique. You must make sure that the names of the export tasks in the current workspace are unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_export_01</p>
      */
@@ -26,6 +40,8 @@ public class ListDIJobsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +49,8 @@ public class ListDIJobsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +58,7 @@ public class ListDIJobsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +68,8 @@ public class ListDIJobsRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */

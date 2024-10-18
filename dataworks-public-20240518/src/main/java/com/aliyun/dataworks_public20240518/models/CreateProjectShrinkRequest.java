@@ -14,9 +14,6 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("AliyunResourceTags")
     public String aliyunResourceTagsShrink;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Description")
     public String description;
 

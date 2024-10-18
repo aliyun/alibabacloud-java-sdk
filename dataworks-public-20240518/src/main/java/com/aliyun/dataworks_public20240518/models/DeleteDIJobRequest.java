@@ -13,6 +13,9 @@ public class DeleteDIJobRequest extends TeaModel {
     @NameInMap("DIJobId")
     public Long DIJobId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static DeleteDIJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDIJobRequest self = new DeleteDIJobRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class DeleteDIJobRequest extends TeaModel {
     }
     public Long getDIJobId() {
         return this.DIJobId;
+    }
+
+    public DeleteDIJobRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

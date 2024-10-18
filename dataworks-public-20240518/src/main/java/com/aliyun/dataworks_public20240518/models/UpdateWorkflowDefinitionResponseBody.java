@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowDefinitionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20BF7E80-668A-5620-8AD8-879B8FEAXXXX</p>
      */
@@ -12,6 +14,12 @@ public class UpdateWorkflowDefinitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

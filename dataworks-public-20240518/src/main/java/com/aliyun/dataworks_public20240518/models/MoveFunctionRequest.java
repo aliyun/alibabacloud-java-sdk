@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveFunctionRequest extends TeaModel {
     /**
+     * <p>The ID of the UDF.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class MoveFunctionRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The path to which you want to move the UDF. You do not need to specify a UDF name in the path.</p>
+     * <p>For example, if you want to move the test UDF to root/demo/test, you must set this parameter to root/demo.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,8 @@ public class MoveFunctionRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

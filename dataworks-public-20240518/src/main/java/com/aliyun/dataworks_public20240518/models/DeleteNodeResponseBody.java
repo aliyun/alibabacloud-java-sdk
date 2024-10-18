@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteNodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1E54497-5122-505E-91C6-BAC14980XXXX</p>
      */
@@ -12,6 +14,10 @@ public class DeleteNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>true\
+     * false</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

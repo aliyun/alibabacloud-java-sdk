@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
     /**
+     * <p>The container ID. This parameter specifies a filter condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
      */
@@ -12,6 +14,8 @@ public class ListNodesRequest extends TeaModel {
     public String containerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +41,17 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    @NameInMap("Recurrence")
+    public String recurrence;
+
     /**
+     * <p>The rerun mode. Valid values:</p>
+     * <ul>
+     * <li>Allowed: The nodes can be rerun regardless of whether they are successfully run or fail to run.</li>
+     * <li>FailureAllowed: The nodes can be rerun only after they fail to run.</li>
+     * <li>Denied: The nodes cannot be rerun regardless of whether they are successfully run or fail to run.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Allowed</p>
      */
@@ -42,13 +59,14 @@ public class ListNodesRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <strong>example:</strong>
-     * <p>Normal</p>
-     */
-    @NameInMap("Rerurrence")
-    public String rerurrence;
-
-    /**
+     * <p>The scene of nodes. This parameter specifies a filter condition.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DATAWORKS_PROJECT</li>
+     * <li>MANUAL_WORKFLOW</li>
+     * <li>MANUAL_NODE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DATAWORKS_PROJECT</p>
      */
@@ -92,20 +110,20 @@ public class ListNodesRequest extends TeaModel {
         return this.projectId;
     }
 
+    public ListNodesRequest setRecurrence(String recurrence) {
+        this.recurrence = recurrence;
+        return this;
+    }
+    public String getRecurrence() {
+        return this.recurrence;
+    }
+
     public ListNodesRequest setRerunMode(String rerunMode) {
         this.rerunMode = rerunMode;
         return this;
     }
     public String getRerunMode() {
         return this.rerunMode;
-    }
-
-    public ListNodesRequest setRerurrence(String rerurrence) {
-        this.rerurrence = rerurrence;
-        return this;
-    }
-    public String getRerurrence() {
-        return this.rerurrence;
     }
 
     public ListNodesRequest setScene(String scene) {

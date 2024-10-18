@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenameNodeRequest extends TeaModel {
     /**
+     * <p>The ID of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class RenameNodeRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The new name.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

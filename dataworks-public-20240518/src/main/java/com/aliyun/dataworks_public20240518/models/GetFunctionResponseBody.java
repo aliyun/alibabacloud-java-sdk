@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionResponseBody extends TeaModel {
+    /**
+     * <p>The information about the UDF.</p>
+     */
     @NameInMap("Function")
     public GetFunctionResponseBodyFunction function;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CF95929-6D12-5A88-8CC3-4B2F4C2EXXXX</p>
      */
@@ -37,6 +42,8 @@ public class GetFunctionResponseBody extends TeaModel {
 
     public static class GetFunctionResponseBodyFunction extends TeaModel {
         /**
+         * <p>The time when the UDF was created. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724505917000</p>
          */
@@ -44,6 +51,8 @@ public class GetFunctionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the UDF.</p>
+         * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
@@ -51,16 +60,23 @@ public class GetFunctionResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The time when the UDF was last modified. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724506661000</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The name of the UDF.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The owner of the UDF.</p>
+         * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
          */
@@ -68,12 +84,17 @@ public class GetFunctionResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The ID of the DataWorks workspace to which the UDF belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <p>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 

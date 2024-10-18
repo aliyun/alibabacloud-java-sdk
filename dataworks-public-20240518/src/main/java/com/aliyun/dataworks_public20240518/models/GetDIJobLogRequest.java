@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDIJobLogRequest extends TeaModel {
     /**
+     * <p>The ID of the synchronization task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetDIJobLogRequest extends TeaModel {
     public Long DIJobId;
 
     /**
+     * <p>The failover ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,8 @@ public class GetDIJobLogRequest extends TeaModel {
     public Long failoverId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6153616438</p>
      */

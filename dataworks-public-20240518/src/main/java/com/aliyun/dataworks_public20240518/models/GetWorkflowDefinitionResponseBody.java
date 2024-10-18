@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowDefinitionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2BDD628-8A21-5BD1-B930-1A2D5989XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the workflow.</p>
+     */
     @NameInMap("WorkflowDefinition")
     public GetWorkflowDefinitionResponseBodyWorkflowDefinition workflowDefinition;
 
@@ -37,6 +42,8 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
 
     public static class GetWorkflowDefinitionResponseBodyWorkflowDefinition extends TeaModel {
         /**
+         * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708481905000</p>
          */
@@ -44,6 +51,8 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
          */
@@ -51,16 +60,23 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The time when the workflow was last modified. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708481905000</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The name of the workflow.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The owner of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
          */
@@ -68,12 +84,17 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The ID of the workspace to which the workflow belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>307XXX</p>
          */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 

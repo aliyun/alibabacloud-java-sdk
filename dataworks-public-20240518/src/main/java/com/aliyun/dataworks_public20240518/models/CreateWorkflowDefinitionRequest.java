@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowDefinitionRequest extends TeaModel {
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateWorkflowDefinitionRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Spec")

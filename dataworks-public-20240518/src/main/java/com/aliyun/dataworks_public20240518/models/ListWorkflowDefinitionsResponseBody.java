@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListWorkflowDefinitionsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListWorkflowDefinitionsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8C3ED0C5-ABAB-55E1-854B-DAC02B11XXXX</p>
      */
@@ -37,7 +42,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
     public static class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime extends TeaModel {
         /**
-         * <p>脚本所属类型</p>
+         * <p>The command.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKFLOW</p>
@@ -62,7 +67,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
     public static class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript extends TeaModel {
         /**
-         * <p>工作流脚本的id</p>
+         * <p>The script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>698002781368644XXXX</p>
@@ -71,13 +76,13 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>工作流的脚本路径</p>
+         * <p>The script path.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>脚本的运行时信息</p>
+         * <p>The runtime.</p>
          */
         @NameInMap("Runtime")
         public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime runtime;
@@ -115,7 +120,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
     public static class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions extends TeaModel {
         /**
-         * <p>工作流的创建时间</p>
+         * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1698057323000</p>
@@ -124,13 +129,13 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>工作流的描述</p>
+         * <p>The description of the workflow.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>工作流定义的唯一ID</p>
+         * <p>The ID of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
@@ -139,7 +144,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>工作流的最近修改时间</p>
+         * <p>The times when the workflow was last modified. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1698057323000</p>
@@ -148,13 +153,13 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>工作流的名称</p>
+         * <p>The name of the workflow.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>工作流的责任人</p>
+         * <p>The owner.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -163,7 +168,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>工作流定义的所属项目空间</p>
+         * <p>The ID of the DataWorks workspace to which the workflow belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,13 +178,18 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>工作流的脚本信息</p>
+         * <p>The script information.</p>
          */
         @NameInMap("Script")
         public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript script;
 
         /**
-         * <p>工作流类型，可选值：CycleWorkflow、ManualWorkflow，分别表示周期工作流和手动工作流</p>
+         * <p>The type of the workflow.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CycleWorkflow</li>
+         * <li>ManualWorkflow</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CycleWorkflow</p>
@@ -268,6 +278,8 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
     public static class ListWorkflowDefinitionsResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -275,6 +287,8 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -282,12 +296,17 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>227</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The workflows.</p>
+         */
         @NameInMap("WorkflowDefinitions")
         public java.util.List<ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions> workflowDefinitions;
 

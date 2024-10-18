@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListNodeDependenciesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListNodeDependenciesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>204EAF68-CCE3-5112-8DA0-E7A60F02XXXX</p>
      */
@@ -37,7 +42,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesDataSource extends TeaModel {
         /**
-         * <p>数据源名称</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>odps_first</p>
@@ -46,7 +51,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>数据源类型</p>
+         * <p>The type of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>odps</p>
@@ -79,7 +84,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs extends TeaModel {
         /**
-         * <p>节点输出</p>
+         * <p>The node output.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
@@ -104,7 +109,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesInputsTables extends TeaModel {
         /**
-         * <p>表id</p>
+         * <p>The table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.autotest.test_output_table_1</p>
@@ -129,7 +134,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariablesNode extends TeaModel {
         /**
-         * <p>节点输出</p>
+         * <p>The output of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
@@ -154,7 +159,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables extends TeaModel {
         /**
-         * <p>制品类型</p>
+         * <p>The artifact type.</p>
          * 
          * <strong>example:</strong>
          * <p>Variable</p>
@@ -163,7 +168,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String artifactType;
 
         /**
-         * <p>变量id</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>543218872620113XXXX</p>
@@ -172,7 +177,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>变量名</p>
+         * <p>The name of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>input</p>
@@ -181,13 +186,20 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>变量所属节点</p>
+         * <p>The node to which the variable belongs.</p>
          */
         @NameInMap("Node")
         public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariablesNode node;
 
         /**
-         * <p>范围</p>
+         * <p>The scope of the variable.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NodeParameter</li>
+         * <li>NodeContext</li>
+         * <li>Workflow</li>
+         * <li>Workspace</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NodeParameter</p>
@@ -196,7 +208,15 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>类型</p>
+         * <p>The type of the variable.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NoKvVariableExpression</li>
+         * <li>Constant</li>
+         * <li>PassThrough</li>
+         * <li>System</li>
+         * <li>NodeOutput</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Constant</p>
@@ -205,7 +225,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>变量值</p>
+         * <p>The value of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -278,19 +298,19 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesInputs extends TeaModel {
         /**
-         * <p>节点输出列表</p>
+         * <p>The node outputs.</p>
          */
         @NameInMap("NodeOutputs")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs> nodeOutputs;
 
         /**
-         * <p>表列表</p>
+         * <p>The tables.</p>
          */
         @NameInMap("Tables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsTables> tables;
 
         /**
-         * <p>变量列表</p>
+         * <p>The variables.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables> variables;
@@ -328,7 +348,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs extends TeaModel {
         /**
-         * <p>节点输出</p>
+         * <p>The node output.</p>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
@@ -353,7 +373,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsTables extends TeaModel {
         /**
-         * <p>表id</p>
+         * <p>The table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.autotest.test_output_table_1</p>
@@ -378,7 +398,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode extends TeaModel {
         /**
-         * <p>节点输出</p>
+         * <p>The output of the node to which the variable belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
@@ -403,7 +423,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables extends TeaModel {
         /**
-         * <p>制品类型</p>
+         * <p>The artifact type.</p>
          * 
          * <strong>example:</strong>
          * <p>Variable</p>
@@ -412,7 +432,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String artifactType;
 
         /**
-         * <p>变量id</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>543217824470354XXXX</p>
@@ -421,7 +441,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>变量名</p>
+         * <p>The name of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>output</p>
@@ -430,13 +450,20 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>变量所属节点</p>
+         * <p>The node to which the variable belongs.</p>
          */
         @NameInMap("Node")
         public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode node;
 
         /**
-         * <p>范围</p>
+         * <p>The scope of the variable.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NodeParameter</li>
+         * <li>NodeContext</li>
+         * <li>Workflow</li>
+         * <li>Workspace</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NodeParameter</p>
@@ -445,7 +472,15 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>类型</p>
+         * <p>The type of the variable.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NoKvVariableExpression</li>
+         * <li>Constant</li>
+         * <li>PassThrough</li>
+         * <li>System</li>
+         * <li>NodeOutput</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Constant</p>
@@ -454,7 +489,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>变量值</p>
+         * <p>The value of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -527,19 +562,19 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputs extends TeaModel {
         /**
-         * <p>节点输出列表</p>
+         * <p>The node outputs.</p>
          */
         @NameInMap("NodeOutputs")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs> nodeOutputs;
 
         /**
-         * <p>表列表</p>
+         * <p>The tables.</p>
          */
         @NameInMap("Tables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsTables> tables;
 
         /**
-         * <p>变量列表</p>
+         * <p>The variables.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables> variables;
@@ -577,7 +612,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesRuntimeResource extends TeaModel {
         /**
-         * <p>资源组id</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_XXXX_XXXX</p>
@@ -602,7 +637,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesScriptRuntime extends TeaModel {
         /**
-         * <p>脚本所属类型</p>
+         * <p>The command used to distinguish node types.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -627,7 +662,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesScript extends TeaModel {
         /**
-         * <p>脚本的id</p>
+         * <p>The script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>853573334108680XXXX</p>
@@ -636,7 +671,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>脚本路径</p>
+         * <p>The script path.</p>
          * 
          * <strong>example:</strong>
          * <p>root/demo</p>
@@ -645,7 +680,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>脚本的运行时信息</p>
+         * <p>The runtime.</p>
          */
         @NameInMap("Runtime")
         public ListNodeDependenciesResponseBodyPagingInfoNodesScriptRuntime runtime;
@@ -683,7 +718,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesStrategy extends TeaModel {
         /**
-         * <p>生成实例的模式</p>
+         * <p>The instance generation mode.</p>
          * 
          * <strong>example:</strong>
          * <p>T+1</p>
@@ -692,7 +727,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String instanceMode;
 
         /**
-         * <p>重试时间间隔</p>
+         * <p>The rerun interval after a failure. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -701,7 +736,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Integer rerunInterval;
 
         /**
-         * <p>允许重跑的模式</p>
+         * <p>The rerun mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Allowed</p>
@@ -710,7 +745,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>重试次数</p>
+         * <p>The number of reruns after a failure.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -719,7 +754,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Integer rerunTimes;
 
         /**
-         * <p>超时时间</p>
+         * <p>The timeout period. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -776,7 +811,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesTags extends TeaModel {
         /**
-         * <p>标签键</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -785,7 +820,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值</p>
+         * <p>The tag value</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -818,7 +853,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesTrigger extends TeaModel {
         /**
-         * <p>触发器的cron表达式</p>
+         * <p>The CRON expression for scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -827,7 +862,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String cron;
 
         /**
-         * <p>结束时间，格式为yyyy-MM-dd HH:mm:ss</p>
+         * <p>The end time of the validity period of the scheduling. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
@@ -836,7 +871,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>触发器id</p>
+         * <p>The trigger ID.</p>
          * 
          * <strong>example:</strong>
          * <p>543680677872062XXXX</p>
@@ -845,7 +880,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>开始时间，格式为yyyy-MM-dd HH:mm:ss</p>
+         * <p>The start time of the validity period of the scheduling. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
@@ -854,7 +889,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>时区</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -863,7 +898,13 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>触发器类型</p>
+         * <p>The type of the trigger.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler</li>
+         * <li>Manual</li>
+         * <li>Streaming</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
@@ -928,7 +969,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodes extends TeaModel {
         /**
-         * <p>节点的创建时间</p>
+         * <p>The time when the node was created. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1724505917000</p>
@@ -937,18 +978,20 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>数据源信息</p>
+         * <p>The information about the data source.</p>
          */
         @NameInMap("DataSource")
         public ListNodeDependenciesResponseBodyPagingInfoNodesDataSource dataSource;
 
         /**
-         * <p>描述</p>
+         * <p>The description of the node.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>723932906364267XXXX</p>
          */
@@ -956,13 +999,13 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>节点输入</p>
+         * <p>The input of the node.</p>
          */
         @NameInMap("Inputs")
         public ListNodeDependenciesResponseBodyPagingInfoNodesInputs inputs;
 
         /**
-         * <p>属性修改时间</p>
+         * <p>The time when the node was last modified. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1724505917000</p>
@@ -971,19 +1014,19 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>节点名</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>节点输出</p>
+         * <p>The output of the node.</p>
          */
         @NameInMap("Outputs")
         public ListNodeDependenciesResponseBodyPagingInfoNodesOutputs outputs;
 
         /**
-         * <p>节点的责任人</p>
+         * <p>The owner of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -992,6 +1035,8 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>65133</p>
          */
@@ -999,6 +1044,14 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The scheduling type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Normal: The node is scheduled as expected.</li>
+         * <li>Pause: The node is paused, and the running of its descendant nodes is blocked.</li>
+         * <li>Skip: The node is dry run. The system does not actually run the node but directly prompts that the node is successfully run. The running duration of the node is 0 seconds. In addition, the node does not occupy resources or block the running of its descendant nodes.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -1006,31 +1059,31 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String recurrence;
 
         /**
-         * <p>资源组信息</p>
+         * <p>The information about the resource group.</p>
          */
         @NameInMap("RuntimeResource")
         public ListNodeDependenciesResponseBodyPagingInfoNodesRuntimeResource runtimeResource;
 
         /**
-         * <p>工作流的脚本信息</p>
+         * <p>The script information.</p>
          */
         @NameInMap("Script")
         public ListNodeDependenciesResponseBodyPagingInfoNodesScript script;
 
         /**
-         * <p>调度策略</p>
+         * <p>The scheduling policy.</p>
          */
         @NameInMap("Strategy")
         public ListNodeDependenciesResponseBodyPagingInfoNodesStrategy strategy;
 
         /**
-         * <p>标签信息</p>
+         * <p>The tags. This parameter is not in use.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesTags> tags;
 
         /**
-         * <p>调度任务Id</p>
+         * <p>The scheduling task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>580667964888595XXXX</p>
@@ -1039,7 +1092,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>触发器信息</p>
+         * <p>The trigger.</p>
          */
         @NameInMap("Trigger")
         public ListNodeDependenciesResponseBodyPagingInfoNodesTrigger trigger;
@@ -1188,10 +1241,15 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
     }
 
     public static class ListNodeDependenciesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The descendant nodes.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodes> nodes;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1199,6 +1257,8 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1206,6 +1266,8 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */

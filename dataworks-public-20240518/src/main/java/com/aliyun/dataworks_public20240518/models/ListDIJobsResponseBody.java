@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDIJobsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDIJobsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7263E4AC-9D2E-5B29-B8AF-7C5012E92A41</p>
@@ -39,6 +42,8 @@ public class ListDIJobsResponseBody extends TeaModel {
 
     public static class ListDIJobsResponseBodyPagingInfoDIJobs extends TeaModel {
         /**
+         * <p>The ID of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>32599</p>
          */
@@ -46,6 +51,8 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long DIJobId;
 
         /**
+         * <p>The destination type. Valid values: Hologres and Hive.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hologres</p>
          */
@@ -53,6 +60,8 @@ public class ListDIJobsResponseBody extends TeaModel {
         public String destinationDataSourceType;
 
         /**
+         * <p>The name of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_to_holo_sync_35197</p>
          */
@@ -60,6 +69,16 @@ public class ListDIJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The status of the synchronization task. Valid values:</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Initialized</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -67,6 +86,15 @@ public class ListDIJobsResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
+         * <p>The synchronization type. Valid values:</p>
+         * <ul>
+         * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+         * <li>RealtimeIncremental: real-time incremental synchronization</li>
+         * <li>Full: full synchronization</li>
+         * <li>OfflineIncremental: batch incremental synchronization</li>
+         * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FullAndRealtimeIncremental</p>
          */
@@ -74,6 +102,8 @@ public class ListDIJobsResponseBody extends TeaModel {
         public String migrationType;
 
         /**
+         * <p>The ID of the DataWorks workspace to which the synchronization task belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>26442</p>
          */
@@ -81,6 +111,8 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The source type. The value MySQL is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mysql</p>
          */
@@ -151,10 +183,15 @@ public class ListDIJobsResponseBody extends TeaModel {
     }
 
     public static class ListDIJobsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The synchronization tasks that are returned.</p>
+         */
         @NameInMap("DIJobs")
         public java.util.List<ListDIJobsResponseBodyPagingInfoDIJobs> DIJobs;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -162,6 +199,8 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -169,6 +208,8 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */

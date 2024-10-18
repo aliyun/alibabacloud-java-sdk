@@ -54,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>终止发布流程</p>
+     * <p>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</p>
      * 
      * @param request AbolishDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -90,7 +90,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>终止发布流程</p>
+     * <p>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</p>
      * 
      * @param request AbolishDeploymentRequest
      * @return AbolishDeploymentResponse
@@ -98,6 +98,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AbolishDeploymentResponse abolishDeployment(AbolishDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.abolishDeploymentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关联资源组到某个工作空间。</p>
+     * 
+     * @param request AssociateProjectToResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateProjectToResourceGroupResponse
+     */
+    public AssociateProjectToResourceGroupResponse associateProjectToResourceGroupWithOptions(AssociateProjectToResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateProjectToResourceGroup"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateProjectToResourceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关联资源组到某个工作空间。</p>
+     * 
+     * @param request AssociateProjectToResourceGroupRequest
+     * @return AssociateProjectToResourceGroupResponse
+     */
+    public AssociateProjectToResourceGroupResponse associateProjectToResourceGroup(AssociateProjectToResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateProjectToResourceGroupWithOptions(request, runtime);
     }
 
     /**
@@ -146,6 +194,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CloneDataSourceResponse cloneDataSource(CloneDataSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cloneDataSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据集成报警规则</p>
+     * 
+     * @param tmpReq CreateDIAlarmRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDIAlarmRuleResponse
+     */
+    public CreateDIAlarmRuleResponse createDIAlarmRuleWithOptions(CreateDIAlarmRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDIAlarmRuleShrinkRequest request = new CreateDIAlarmRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notificationSettings)) {
+            request.notificationSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notificationSettings, "NotificationSettings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.triggerConditions)) {
+            request.triggerConditionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.triggerConditions, "TriggerConditions", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDIAlarmRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDIAlarmRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据集成报警规则</p>
+     * 
+     * @param request CreateDIAlarmRuleRequest
+     * @return CreateDIAlarmRuleResponse
+     */
+    public CreateDIAlarmRuleResponse createDIAlarmRule(CreateDIAlarmRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDIAlarmRuleWithOptions(request, runtime);
     }
 
     /**
@@ -335,8 +433,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建发布流程</p>
+     * <p>Creates a process for deploying or undeploying an entity in DataStudio.</p>
      * 
      * @param tmpReq CreateDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -385,8 +488,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建发布流程</p>
+     * <p>Creates a process for deploying or undeploying an entity in DataStudio.</p>
      * 
      * @param request CreateDeploymentRequest
      * @return CreateDeploymentResponse
@@ -397,8 +505,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建udf函数</p>
+     * <p>Creates a user-defined function (UDF) in DataStudio. The information about the UDF is described by using FlowSpec.</p>
      * 
      * @param request CreateFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -433,8 +546,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建udf函数</p>
+     * <p>Creates a user-defined function (UDF) in DataStudio. The information about the UDF is described by using FlowSpec.</p>
      * 
      * @param request CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -446,7 +564,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建节点</p>
+     * <p>创建并绑定通用资源组网络资源。</p>
+     * 
+     * @param request CreateNetworkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNetworkResponse
+     */
+    public CreateNetworkResponse createNetworkWithOptions(CreateNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswitchId)) {
+            body.put("VswitchId", request.vswitchId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNetwork"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNetworkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建并绑定通用资源组网络资源。</p>
+     * 
+     * @param request CreateNetworkRequest
+     * @return CreateNetworkResponse
+     */
+    public CreateNetworkResponse createNetwork(CreateNetworkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNetworkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a node in DataStudio. The information about the node is described by using FlowSpec.</p>
      * 
      * @param request CreateNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -489,8 +668,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建节点</p>
+     * <p>Creates a node in DataStudio. The information about the node is described by using FlowSpec.</p>
      * 
      * @param request CreateNodeRequest
      * @return CreateNodeResponse
@@ -579,8 +763,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建资源文件</p>
+     * <p>Creates a file resource in DataStudio. The information about the file resource is described by using FlowSpec.</p>
      * 
      * @param request CreateResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -615,8 +804,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建资源文件</p>
+     * <p>Creates a file resource in DataStudio. The information about the file resource is described by using FlowSpec.</p>
      * 
      * @param request CreateResourceRequest
      * @return CreateResourceResponse
@@ -628,7 +822,140 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作流</p>
+     * <p>创建通用资源组。</p>
+     * 
+     * @param request CreateResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateResourceGroupResponse
+     */
+    public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            body.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentDuration)) {
+            body.put("PaymentDuration", request.paymentDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentDurationUnit)) {
+            body.put("PaymentDurationUnit", request.paymentDurationUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            body.put("PaymentType", request.paymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spec)) {
+            body.put("Spec", request.spec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswitchId)) {
+            body.put("VswitchId", request.vswitchId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateResourceGroup"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建通用资源组。</p>
+     * 
+     * @param request CreateResourceGroupRequest
+     * @return CreateResourceGroupResponse
+     */
+    public CreateResourceGroupResponse createResourceGroup(CreateResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建网络资源的路由。</p>
+     * 
+     * @param request CreateRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRouteResponse
+     */
+    public CreateRouteResponse createRouteWithOptions(CreateRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationCidr)) {
+            body.put("DestinationCidr", request.destinationCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkId)) {
+            body.put("NetworkId", request.networkId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRoute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建网络资源的路由。</p>
+     * 
+     * @param request CreateRouteRequest
+     * @return CreateRouteResponse
+     */
+    public CreateRouteResponse createRoute(CreateRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a workflow in a directory of DataStudio.</p>
      * 
      * @param request CreateWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -663,8 +990,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建工作流</p>
+     * <p>Creates a workflow in a directory of DataStudio.</p>
      * 
      * @param request CreateWorkflowDefinitionRequest
      * @return CreateWorkflowDefinitionResponse
@@ -672,6 +1004,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateWorkflowDefinitionResponse createWorkflowDefinition(CreateWorkflowDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an alert rule configured for a synchronization task.</p>
+     * 
+     * @param request DeleteDIAlarmRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDIAlarmRuleResponse
+     */
+    public DeleteDIAlarmRuleResponse deleteDIAlarmRuleWithOptions(DeleteDIAlarmRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDIAlarmRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDIAlarmRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an alert rule configured for a synchronization task.</p>
+     * 
+     * @param request DeleteDIAlarmRuleRequest
+     * @return DeleteDIAlarmRuleResponse
+     */
+    public DeleteDIAlarmRuleResponse deleteDIAlarmRule(DeleteDIAlarmRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDIAlarmRuleWithOptions(request, runtime);
     }
 
     /**
@@ -799,8 +1171,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除udf函数</p>
+     * <p>Deletes a user-defined function (UDF) in DataStudio.</p>
      * 
      * @param request DeleteFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -835,8 +1212,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除udf函数</p>
+     * <p>Deletes a user-defined function (UDF) in DataStudio.</p>
      * 
      * @param request DeleteFunctionRequest
      * @return DeleteFunctionResponse
@@ -848,7 +1230,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除节点</p>
+     * <p>解绑并删除通用资源组网络资源。</p>
+     * 
+     * @param request DeleteNetworkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNetworkResponse
+     */
+    public DeleteNetworkResponse deleteNetworkWithOptions(DeleteNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNetwork"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑并删除通用资源组网络资源。</p>
+     * 
+     * @param request DeleteNetworkRequest
+     * @return DeleteNetworkResponse
+     */
+    public DeleteNetworkResponse deleteNetwork(DeleteNetworkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNetworkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a node from DataStudio.</p>
      * 
      * @param request DeleteNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -883,8 +1314,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除节点</p>
+     * <p>Deletes a node from DataStudio.</p>
      * 
      * @param request DeleteNodeRequest
      * @return DeleteNodeResponse
@@ -939,8 +1375,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源文件</p>
+     * <p>Deletes a file resource from DataStudio.</p>
      * 
      * @param request DeleteResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -975,8 +1416,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源文件</p>
+     * <p>Deletes a file resource from DataStudio.</p>
      * 
      * @param request DeleteResourceRequest
      * @return DeleteResourceResponse
@@ -988,7 +1434,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除工作流</p>
+     * <p>删除通用资源组。</p>
+     * 
+     * @param request DeleteResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteResourceGroupResponse
+     */
+    public DeleteResourceGroupResponse deleteResourceGroupWithOptions(DeleteResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteResourceGroup"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteResourceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除通用资源组。</p>
+     * 
+     * @param request DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
+     */
+    public DeleteResourceGroupResponse deleteResourceGroup(DeleteResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除网络资源的路由。</p>
+     * 
+     * @param request DeleteRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRouteResponse
+     */
+    public DeleteRouteResponse deleteRouteWithOptions(DeleteRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRoute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除网络资源的路由。</p>
+     * 
+     * @param request DeleteRouteRequest
+     * @return DeleteRouteResponse
+     */
+    public DeleteRouteResponse deleteRoute(DeleteRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a workflow from DataStudio.</p>
      * 
      * @param request DeleteWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1023,8 +1562,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除工作流</p>
+     * <p>Deletes a workflow from DataStudio.</p>
      * 
      * @param request DeleteWorkflowDefinitionRequest
      * @return DeleteWorkflowDefinitionResponse
@@ -1036,7 +1580,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行Deployment一个阶段</p>
+     * <p>将资源组和某个工作空间解除关联。</p>
+     * 
+     * @param request DissociateProjectFromResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DissociateProjectFromResourceGroupResponse
+     */
+    public DissociateProjectFromResourceGroupResponse dissociateProjectFromResourceGroupWithOptions(DissociateProjectFromResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DissociateProjectFromResourceGroup"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DissociateProjectFromResourceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将资源组和某个工作空间解除关联。</p>
+     * 
+     * @param request DissociateProjectFromResourceGroupRequest
+     * @return DissociateProjectFromResourceGroupResponse
+     */
+    public DissociateProjectFromResourceGroupResponse dissociateProjectFromResourceGroup(DissociateProjectFromResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dissociateProjectFromResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+     *  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a stage in a process.</p>
      * 
      * @param request ExecDeploymentStageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1077,8 +1675,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+     *  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>执行Deployment一个阶段</p>
+     * <p>Executes a stage in a process.</p>
      * 
      * @param request ExecDeploymentStageRequest
      * @return ExecDeploymentStageResponse
@@ -1130,7 +1734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务日志</p>
+     * <p>Obtains logs generated for a synchronization task.</p>
      * 
      * @param request GetDIJobLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1158,7 +1762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务日志</p>
+     * <p>Obtains logs generated for a synchronization task.</p>
      * 
      * @param request GetDIJobLogRequest
      * @return GetDIJobLogResponse
@@ -1210,7 +1814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取发布流程详情</p>
+     * <p>Queries the information about a process for deploying or undeploying an entity.</p>
      * 
      * @param request GetDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1238,7 +1842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取发布流程详情</p>
+     * <p>Queries the information about a process for deploying or undeploying an entity.</p>
      * 
      * @param request GetDeploymentRequest
      * @return GetDeploymentResponse
@@ -1250,7 +1854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取函数信息</p>
+     * <p>Queries the information about a user-defined function (UDF) in DataStudio.</p>
      * 
      * @param request GetFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1278,7 +1882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取函数信息</p>
+     * <p>Queries the information about a user-defined function (UDF) in DataStudio.</p>
      * 
      * @param request GetFunctionRequest
      * @return GetFunctionResponse
@@ -1289,6 +1893,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>返回异步任务的状态信息</p>
+     * 
+     * @param request GetJobStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobStatusResponse
+     */
+    public GetJobStatusResponse getJobStatusWithOptions(GetJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetJobStatus"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>返回异步任务的状态信息</p>
+     * 
+     * @param request GetJobStatusRequest
+     * @return GetJobStatusResponse
+     */
+    public GetJobStatusResponse getJobStatus(GetJobStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getJobStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取某个网络资源详细信息。</p>
+     * 
+     * @param request GetNetworkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNetworkResponse
+     */
+    public GetNetworkResponse getNetworkWithOptions(GetNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNetwork"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取某个网络资源详细信息。</p>
+     * 
+     * @param request GetNetworkRequest
+     * @return GetNetworkResponse
+     */
+    public GetNetworkResponse getNetwork(GetNetworkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNetworkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a node in DataStudio.</p>
+     * 
      * @param request GetNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNodeResponse
@@ -1314,6 +2001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a node in DataStudio.</p>
+     * 
      * @param request GetNodeRequest
      * @return GetNodeResponse
      */
@@ -1364,7 +2054,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源文件</p>
+     * <p>查询工作空间角色详情</p>
+     * 
+     * @param request GetProjectRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProjectRoleResponse
+     */
+    public GetProjectRoleResponse getProjectRoleWithOptions(GetProjectRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProjectRole"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询工作空间角色详情</p>
+     * 
+     * @param request GetProjectRoleRequest
+     * @return GetProjectRoleResponse
+     */
+    public GetProjectRoleResponse getProjectRole(GetProjectRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProjectRoleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a file resource.</p>
      * 
      * @param request GetResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1392,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源文件</p>
+     * <p>Queries the information about a file resource.</p>
      * 
      * @param request GetResourceRequest
      * @return GetResourceResponse
@@ -1404,7 +2142,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流详情</p>
+     * <p>根据id获取指定资源组。</p>
+     * 
+     * @param request GetResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceGroupResponse
+     */
+    public GetResourceGroupResponse getResourceGroupWithOptions(GetResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceGroup"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据id获取指定资源组。</p>
+     * 
+     * @param request GetResourceGroupRequest
+     * @return GetResourceGroupResponse
+     */
+    public GetResourceGroupResponse getResourceGroup(GetResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据id获取指定路由。</p>
+     * 
+     * @param request GetRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRouteResponse
+     */
+    public GetRouteResponse getRouteWithOptions(GetRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRoute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRouteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据id获取指定路由。</p>
+     * 
+     * @param request GetRouteRequest
+     * @return GetRouteResponse
+     */
+    public GetRouteResponse getRoute(GetRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the infomation about a workflow.</p>
      * 
      * @param request GetWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1432,7 +2250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流详情</p>
+     * <p>Queries the infomation about a workflow.</p>
      * 
      * @param request GetWorkflowDefinitionRequest
      * @return GetWorkflowDefinitionResponse
@@ -1440,6 +2258,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkflowDefinitionResponse getWorkflowDefinition(GetWorkflowDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用此接口，可以将通过FlowSpec定义的工作流节点和其内部的子节点都导入到数据开发中</p>
+     * 
+     * @param request ImportWorkflowDefinitionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportWorkflowDefinitionResponse
+     */
+    public ImportWorkflowDefinitionResponse importWorkflowDefinitionWithOptions(ImportWorkflowDefinitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spec)) {
+            body.put("Spec", request.spec);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportWorkflowDefinition"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportWorkflowDefinitionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用此接口，可以将通过FlowSpec定义的工作流节点和其内部的子节点都导入到数据开发中</p>
+     * 
+     * @param request ImportWorkflowDefinitionRequest
+     * @return ImportWorkflowDefinitionResponse
+     */
+    public ImportWorkflowDefinitionResponse importWorkflowDefinition(ImportWorkflowDefinitionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看数据集成报警规则</p>
+     * 
+     * @param request ListDIAlarmRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDIAlarmRulesResponse
+     */
+    public ListDIAlarmRulesResponse listDIAlarmRulesWithOptions(ListDIAlarmRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDIAlarmRules"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDIAlarmRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看数据集成报警规则</p>
+     * 
+     * @param request ListDIAlarmRulesRequest
+     * @return ListDIAlarmRulesResponse
+     */
+    public ListDIAlarmRulesResponse listDIAlarmRules(ListDIAlarmRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDIAlarmRulesWithOptions(request, runtime);
     }
 
     /**
@@ -1530,7 +2436,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务</p>
+     * <p>获取数据集成运行信息</p>
+     * 
+     * @param request ListDIJobRunDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDIJobRunDetailsResponse
+     */
+    public ListDIJobRunDetailsResponse listDIJobRunDetailsWithOptions(ListDIJobRunDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDIJobRunDetails"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDIJobRunDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据集成运行信息</p>
+     * 
+     * @param request ListDIJobRunDetailsRequest
+     * @return ListDIJobRunDetailsResponse
+     */
+    public ListDIJobRunDetailsResponse listDIJobRunDetails(ListDIJobRunDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDIJobRunDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of synchronization tasks.</p>
      * 
      * @param request ListDIJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1558,7 +2504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务</p>
+     * <p>Queries a list of synchronization tasks.</p>
      * 
      * @param request ListDIJobsRequest
      * @return ListDIJobsResponse
@@ -1656,7 +2602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取发布流程</p>
+     * <p>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</p>
      * 
      * @param request ListDeploymentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1684,7 +2630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取发布流程</p>
+     * <p>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</p>
      * 
      * @param request ListDeploymentsRequest
      * @return ListDeploymentsResponse
@@ -1696,7 +2642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取udf函数列表</p>
+     * <p>Queries a list of user-defined functions (UDFs) in DataStudio. You can also specify filter conditions to query specific UDFs.</p>
      * 
      * @param request ListFunctionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1724,7 +2670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取udf函数列表</p>
+     * <p>Queries a list of user-defined functions (UDFs) in DataStudio. You can also specify filter conditions to query specific UDFs.</p>
      * 
      * @param request ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -1736,7 +2682,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点依赖列表</p>
+     * <p>获取通用资源组网络资源列表。</p>
+     * 
+     * @param request ListNetworksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNetworksResponse
+     */
+    public ListNetworksResponse listNetworksWithOptions(ListNetworksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNetworks"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNetworksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取通用资源组网络资源列表。</p>
+     * 
+     * @param request ListNetworksRequest
+     * @return ListNetworksResponse
+     */
+    public ListNetworksResponse listNetworks(ListNetworksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNetworksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of descendant nodes of a node in DataStudio.</p>
      * 
      * @param request ListNodeDependenciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1764,7 +2750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点依赖列表</p>
+     * <p>Queries a list of descendant nodes of a node in DataStudio.</p>
      * 
      * @param request ListNodeDependenciesRequest
      * @return ListNodeDependenciesResponse
@@ -1776,7 +2762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点列表</p>
+     * <p>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</p>
      * 
      * @param request ListNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1804,7 +2790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点列表</p>
+     * <p>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -1812,6 +2798,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNodesResponse listNodes(ListNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询工作空间角色详情</p>
+     * 
+     * @param tmpReq ListProjectRolesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectRolesResponse
+     */
+    public ListProjectRolesResponse listProjectRolesWithOptions(ListProjectRolesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListProjectRolesShrinkRequest request = new ListProjectRolesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.codes)) {
+            request.codesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.codes, "Codes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.names)) {
+            request.namesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.names, "Names", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codesShrink)) {
+            body.put("Codes", request.codesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namesShrink)) {
+            body.put("Names", request.namesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectRoles"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectRolesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询工作空间角色详情</p>
+     * 
+     * @param request ListProjectRolesRequest
+     * @return ListProjectRolesResponse
+     */
+    public ListProjectRolesResponse listProjectRoles(ListProjectRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectRolesWithOptions(request, runtime);
     }
 
     /**
@@ -1910,7 +2970,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取资源文件</p>
+     * <p>获取资源组列表。</p>
+     * 
+     * @param tmpReq ListResourceGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceGroupsResponse
+     */
+    public ListResourceGroupsResponse listResourceGroupsWithOptions(ListResourceGroupsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListResourceGroupsShrinkRequest request = new ListResourceGroupsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceGroupTypes)) {
+            request.resourceGroupTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceGroupTypes, "ResourceGroupTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statuses)) {
+            request.statusesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statuses, "Statuses", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceGroups"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取资源组列表。</p>
+     * 
+     * @param request ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
+     */
+    public ListResourceGroupsResponse listResourceGroups(ListResourceGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResourceGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of file resources in DataStudio. You can also specify filter conditions to query specific file resources.</p>
      * 
      * @param request ListResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1938,7 +3048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取资源文件</p>
+     * <p>Queries a list of file resources in DataStudio. You can also specify filter conditions to query specific file resources.</p>
      * 
      * @param request ListResourcesRequest
      * @return ListResourcesResponse
@@ -1950,7 +3060,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取workflowDefinition的列表</p>
+     * <p>获取网络资源的路由列表。</p>
+     * 
+     * @param request ListRoutesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRoutesResponse
+     */
+    public ListRoutesResponse listRoutesWithOptions(ListRoutesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRoutes"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoutesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取网络资源的路由列表。</p>
+     * 
+     * @param request ListRoutesRequest
+     * @return ListRoutesResponse
+     */
+    public ListRoutesResponse listRoutes(ListRoutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRoutesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of workflows in DataStudio. You can also specify filter conditions to query specific workflows.</p>
      * 
      * @param request ListWorkflowDefinitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1978,7 +3128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取workflowDefinition的列表</p>
+     * <p>Queries a list of workflows in DataStudio. You can also specify filter conditions to query specific workflows.</p>
      * 
      * @param request ListWorkflowDefinitionsRequest
      * @return ListWorkflowDefinitionsResponse
@@ -1990,7 +3140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动funciton的路径</p>
+     * <p>Moves a user-defined function (UDF) to a path in DataStudio.</p>
      * 
      * @param request MoveFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2030,7 +3180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动funciton的路径</p>
+     * <p>Moves a user-defined function (UDF) to a path in DataStudio.</p>
      * 
      * @param request MoveFunctionRequest
      * @return MoveFunctionResponse
@@ -2042,7 +3192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动节点路径</p>
+     * <p>Moves a node to a path in DataStudio.</p>
      * 
      * @param request MoveNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2082,7 +3232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动节点路径</p>
+     * <p>Moves a node to a path in DataStudio.</p>
      * 
      * @param request MoveNodeRequest
      * @return MoveNodeResponse
@@ -2094,7 +3244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动资源文件路径</p>
+     * <p>Moves a file resource to a path in DataStudio.</p>
      * 
      * @param request MoveResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2134,7 +3284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动资源文件路径</p>
+     * <p>Moves a file resource to a path in DataStudio.</p>
      * 
      * @param request MoveResourceRequest
      * @return MoveResourceResponse
@@ -2146,7 +3296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动工作流的路径</p>
+     * <p>Moves a workflow to a path in DataStudio.</p>
      * 
      * @param request MoveWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2186,7 +3336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动工作流的路径</p>
+     * <p>Moves a workflow to a path in DataStudio.</p>
      * 
      * @param request MoveWorkflowDefinitionRequest
      * @return MoveWorkflowDefinitionResponse
@@ -2198,7 +3348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对function重命名</p>
+     * <p>Renames a user-defined function (UDF) in DataStudio.</p>
      * 
      * @param request RenameFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2238,7 +3388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对function重命名</p>
+     * <p>Renames a user-defined function (UDF) in DataStudio.</p>
      * 
      * @param request RenameFunctionRequest
      * @return RenameFunctionResponse
@@ -2250,7 +3400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重命名节点</p>
+     * <p>Renames a node in DataStudio.</p>
      * 
      * @param request RenameNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2290,7 +3440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重命名节点</p>
+     * <p>Renames a node in DataStudio.</p>
      * 
      * @param request RenameNodeRequest
      * @return RenameNodeResponse
@@ -2302,7 +3452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对资源文件重命名</p>
+     * <p>Renames a file resource in DataStudio.</p>
      * 
      * @param request RenameResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2342,7 +3492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对资源文件重命名</p>
+     * <p>Renames a file resource in DataStudio.</p>
      * 
      * @param request RenameResourceRequest
      * @return RenameResourceResponse
@@ -2354,7 +3504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重命名工作流</p>
+     * <p>Renames a workflow in DataStudio.</p>
      * 
      * @param request RenameWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2394,7 +3544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重命名工作流</p>
+     * <p>Renames a workflow in DataStudio.</p>
      * 
      * @param request RenameWorkflowDefinitionRequest
      * @return RenameWorkflowDefinitionResponse
@@ -2448,6 +3598,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartDIJobResponse startDIJob(StartDIJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDIJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a synchronization task.</p>
+     * 
+     * @param request StopDIJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDIJobResponse
+     */
+    public StopDIJobResponse stopDIJobWithOptions(StopDIJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopDIJob"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopDIJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a synchronization task.</p>
+     * 
+     * @param request StopDIJobRequest
+     * @return StopDIJobResponse
+     */
+    public StopDIJobResponse stopDIJob(StopDIJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopDIJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新数据集成报警规则</p>
+     * 
+     * @param tmpReq UpdateDIAlarmRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDIAlarmRuleResponse
+     */
+    public UpdateDIAlarmRuleResponse updateDIAlarmRuleWithOptions(UpdateDIAlarmRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDIAlarmRuleShrinkRequest request = new UpdateDIAlarmRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notificationSettings)) {
+            request.notificationSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notificationSettings, "NotificationSettings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.triggerConditions)) {
+            request.triggerConditionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.triggerConditions, "TriggerConditions", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDIAlarmRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDIAlarmRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新数据集成报警规则</p>
+     * 
+     * @param request UpdateDIAlarmRuleRequest
+     * @return UpdateDIAlarmRuleResponse
+     */
+    public UpdateDIAlarmRuleResponse updateDIAlarmRule(UpdateDIAlarmRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDIAlarmRuleWithOptions(request, runtime);
     }
 
     /**
@@ -2570,7 +3810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新udf函数</p>
+     * <p>Updates the basic information about a user-defined function (UDF) in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2610,7 +3850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新udf函数</p>
+     * <p>Updates the basic information about a user-defined function (UDF) in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateFunctionRequest
      * @return UpdateFunctionResponse
@@ -2622,7 +3862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节点</p>
+     * <p>Updates the basic information about a node in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2662,7 +3902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节点</p>
+     * <p>Updates the basic information about a node in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateNodeRequest
      * @return UpdateNodeResponse
@@ -2742,7 +3982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源文件</p>
+     * <p>Updates the basic information about a file resource in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2782,7 +4022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源文件</p>
+     * <p>Updates the basic information about a file resource in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateResourceRequest
      * @return UpdateResourceResponse
@@ -2794,7 +4034,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作流</p>
+     * <p>更新通用资源组基本信息。</p>
+     * 
+     * @param request UpdateResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateResourceGroupResponse
+     */
+    public UpdateResourceGroupResponse updateResourceGroupWithOptions(UpdateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateResourceGroup"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateResourceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新通用资源组基本信息。</p>
+     * 
+     * @param request UpdateResourceGroupRequest
+     * @return UpdateResourceGroupResponse
+     */
+    public UpdateResourceGroupResponse updateResourceGroup(UpdateResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网络资源的路由。</p>
+     * 
+     * @param request UpdateRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRouteResponse
+     */
+    public UpdateRouteResponse updateRouteWithOptions(UpdateRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationCidr)) {
+            body.put("DestinationCidr", request.destinationCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRoute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRouteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网络资源的路由。</p>
+     * 
+     * @param request UpdateRouteRequest
+     * @return UpdateRouteResponse
+     */
+    public UpdateRouteResponse updateRoute(UpdateRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the basic information about a workflow in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2834,7 +4174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作流</p>
+     * <p>Updates the basic information about a workflow in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateWorkflowDefinitionRequest
      * @return UpdateWorkflowDefinitionResponse

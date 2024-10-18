@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDeploymentResponseBody extends TeaModel {
     /**
+     * <p>The ID of the process.</p>
+     * 
      * <strong>example:</strong>
      * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
      */
@@ -12,6 +14,8 @@ public class CreateDeploymentResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
      */
