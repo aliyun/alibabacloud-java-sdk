@@ -4,6 +4,9 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public ListGroupsResponseBodyAccessDeniedDetail accessDeniedDetail;
+
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -55,6 +58,14 @@ public class ListGroupsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListGroupsResponseBody setAccessDeniedDetail(ListGroupsResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public ListGroupsResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
     public ListGroupsResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -93,6 +104,91 @@ public class ListGroupsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class ListGroupsResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static ListGroupsResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsResponseBodyAccessDeniedDetail self = new ListGroupsResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupsResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public ListGroupsResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public ListGroupsResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public ListGroupsResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public ListGroupsResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public ListGroupsResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public ListGroupsResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
     }
 
     public static class ListGroupsResponseBodyDataAppGroups extends TeaModel {

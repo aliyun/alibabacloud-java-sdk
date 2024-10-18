@@ -4,6 +4,9 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class SetWfInstanceSuccessResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public SetWfInstanceSuccessResponseBodyAccessDeniedDetail accessDeniedDetail;
+
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -49,6 +52,14 @@ public class SetWfInstanceSuccessResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetWfInstanceSuccessResponseBody setAccessDeniedDetail(SetWfInstanceSuccessResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public SetWfInstanceSuccessResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
     public SetWfInstanceSuccessResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -79,6 +90,91 @@ public class SetWfInstanceSuccessResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class SetWfInstanceSuccessResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static SetWfInstanceSuccessResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            SetWfInstanceSuccessResponseBodyAccessDeniedDetail self = new SetWfInstanceSuccessResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public SetWfInstanceSuccessResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public SetWfInstanceSuccessResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public SetWfInstanceSuccessResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public SetWfInstanceSuccessResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public SetWfInstanceSuccessResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public SetWfInstanceSuccessResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public SetWfInstanceSuccessResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
     }
 
 }
