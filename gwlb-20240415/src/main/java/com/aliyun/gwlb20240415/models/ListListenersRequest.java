@@ -29,7 +29,7 @@ public class ListListenersRequest extends TeaModel {
      * <p>10</p>
      */
     @NameInMap("Skip")
-    public Long skip;
+    public Integer skip;
 
     @NameInMap("Tag")
     public java.util.List<ListListenersRequestTag> tag;
@@ -71,11 +71,11 @@ public class ListListenersRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListListenersRequest setSkip(Long skip) {
+    public ListListenersRequest setSkip(Integer skip) {
         this.skip = skip;
         return this;
     }
-    public Long getSkip() {
+    public Integer getSkip() {
         return this.skip;
     }
 
