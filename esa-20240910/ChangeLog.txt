@@ -1,3 +1,23 @@
+2024-10-18 Version: 2.4.0
+- Support API CommitRoutineStagingCode.
+- Support API CreateRoutine.
+- Support API CreateRoutineRelatedRecord.
+- Support API CreateRoutineRelatedRoute.
+- Support API DeleteRoutine.
+- Support API DeleteRoutineCodeVersion.
+- Support API DeleteRoutineRelatedRecord.
+- Support API DeleteRoutineRelatedRoute.
+- Support API GetRoutine.
+- Support API GetRoutineStagingCodeUploadInfo.
+- Support API GetRoutineStagingEnvIp.
+- Support API GetRoutineUserInfo.
+- Support API ListRoutineCanaryAreas.
+- Support API ListRoutineOptionalSpecs.
+- Support API PublishRoutineCodeVersion.
+- Update API CreateSiteDeliveryTask: update param DiscardRate.
+- Update API CreateSiteDeliveryTask: update param SiteId.
+
+
 2024-10-16 Version: 2.3.0
 - Support API GetErService.
 
