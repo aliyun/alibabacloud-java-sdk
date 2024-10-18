@@ -25,6 +25,12 @@ public class GetBackupConfigResponseBody extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("EnableBackup")
+    public Boolean enableBackup;
+
+    @NameInMap("EnableBackupVoice")
+    public Boolean enableBackupVoice;
+
     /**
      * <strong>example:</strong>
      * <p>300</p>
@@ -45,6 +51,9 @@ public class GetBackupConfigResponseBody extends TeaModel {
      */
     @NameInMap("Path")
     public String path;
+
+    @NameInMap("PathVoice")
+    public String pathVoice;
 
     /**
      * <strong>example:</strong>
@@ -112,6 +121,22 @@ public class GetBackupConfigResponseBody extends TeaModel {
         return this.enable;
     }
 
+    public GetBackupConfigResponseBody setEnableBackup(Boolean enableBackup) {
+        this.enableBackup = enableBackup;
+        return this;
+    }
+    public Boolean getEnableBackup() {
+        return this.enableBackup;
+    }
+
+    public GetBackupConfigResponseBody setEnableBackupVoice(Boolean enableBackupVoice) {
+        this.enableBackupVoice = enableBackupVoice;
+        return this;
+    }
+    public Boolean getEnableBackupVoice() {
+        return this.enableBackupVoice;
+    }
+
     public GetBackupConfigResponseBody setExpireSeconds(Integer expireSeconds) {
         this.expireSeconds = expireSeconds;
         return this;
@@ -134,6 +159,14 @@ public class GetBackupConfigResponseBody extends TeaModel {
     }
     public String getPath() {
         return this.path;
+    }
+
+    public GetBackupConfigResponseBody setPathVoice(String pathVoice) {
+        this.pathVoice = pathVoice;
+        return this;
+    }
+    public String getPathVoice() {
+        return this.pathVoice;
     }
 
     public GetBackupConfigResponseBody setRegion(String region) {
