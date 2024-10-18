@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CreateSchemeConfigResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [API response codes](https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11186623.0.0.5c3a662fbgeAuk).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11186623.0.0.5c3a662fbgeAuk">API response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -27,15 +34,22 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B95B36EC-8108-4479-D3AA-2BB27F9B155A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,6 +102,9 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
     public static class CreateSchemeConfigResponseBodyModel extends TeaModel {
         /**
          * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA100000168468035</p>
          */
         @NameInMap("SchemeCode")
         public String schemeCode;

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class CheckSmsVerifyCodeRequest extends TeaModel {
     /**
      * <p>The verification policy for uppercase and lowercase letters of the verification code. Valid values:</p>
-     * <br>
-     * <p>*   1: The verification policy does not distinguish uppercase and lowercase letters.</p>
-     * <p>*   2: The verification policy distinguishes uppercase and lowercase letters.</p>
+     * <ul>
+     * <li>1: The verification policy does not distinguish uppercase and lowercase letters.</li>
+     * <li>2: The verification policy distinguishes uppercase and lowercase letters.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CaseAuthPolicy")
     public Long caseAuthPolicy;
 
     /**
      * <p>The country code of the phone number. Default value: 86.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
      */
     @NameInMap("CountryCode")
     public String countryCode;
 
     /**
      * <p>The external ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12123231</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -30,6 +40,10 @@ public class CheckSmsVerifyCodeRequest extends TeaModel {
 
     /**
      * <p>The phone number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18653529399</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -42,12 +56,19 @@ public class CheckSmsVerifyCodeRequest extends TeaModel {
 
     /**
      * <p>The verification service name. If this parameter is not specified, the default service is used. The name can be up to 20 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("SchemeName")
     public String schemeName;
 
     /**
      * <p>The verification code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1231</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class VerifyMobileRequest extends TeaModel {
     /**
      * <p>The token obtained by the SDK for your app.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dfafdafad542****</p>
      */
     @NameInMap("AccessCode")
     public String accessCode;
 
     /**
      * <p>The external ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -21,6 +28,10 @@ public class VerifyMobileRequest extends TeaModel {
 
     /**
      * <p>The phone number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13800****00</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

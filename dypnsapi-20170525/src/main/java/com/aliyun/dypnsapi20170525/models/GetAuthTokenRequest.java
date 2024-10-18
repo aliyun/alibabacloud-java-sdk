@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetAuthTokenRequest extends TeaModel {
     /**
      * <p>The requested domain name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.aliyundoc.com">https://www.aliyundoc.com</a></p>
      */
     @NameInMap("Origin")
     public String origin;
@@ -24,6 +28,10 @@ public class GetAuthTokenRequest extends TeaModel {
 
     /**
      * <p>The URL of the requested web page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.aliyundoc.com/">https://www.aliyundoc.com/</a></p>
      */
     @NameInMap("Url")
     public String url;

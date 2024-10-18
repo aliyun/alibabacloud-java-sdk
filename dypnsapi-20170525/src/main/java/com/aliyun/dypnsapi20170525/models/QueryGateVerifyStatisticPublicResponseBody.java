@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8906582E-6722</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,24 +81,36 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
     public static class QueryGateVerifyStatisticPublicResponseBodyDataDayStatistic extends TeaModel {
         /**
          * <p>The date. This field is accurate to the day. The value of this field is in the YYYYMMDD format. Example: 20220103.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20220103</p>
          */
         @NameInMap("StatisticDateStr")
         public String statisticDateStr;
 
         /**
          * <p>The failed calls on the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalFail")
         public Long totalFail;
 
         /**
          * <p>The successful calls on the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalSuccess")
         public Long totalSuccess;
 
         /**
          * <p>The unknown calls on the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalUnknown")
         public Long totalUnknown;
@@ -141,24 +163,36 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
 
         /**
          * <p>The total calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Total")
         public Long total;
 
         /**
          * <p>The failed calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalFail")
         public Long totalFail;
 
         /**
          * <p>The successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalSuccess")
         public Long totalSuccess;
 
         /**
          * <p>The unknown calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalUnknown")
         public Long totalUnknown;

@@ -15,6 +15,10 @@ public class GetPhoneWithTokenRequest extends TeaModel {
 
     /**
      * <p>The token for phone number verification that is obtained by the JavaScript SDK. The validity period of the token is 10 minutes for China Telecom, 30 minutes for China Unicom, and 2 minutes for China Mobile. The token can be used only once.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dfafdafad542****</p>
      */
     @NameInMap("SpToken")
     public String spToken;

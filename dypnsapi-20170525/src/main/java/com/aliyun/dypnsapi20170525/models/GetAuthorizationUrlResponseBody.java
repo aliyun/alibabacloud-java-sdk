@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class GetAuthorizationUrlResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8906582E-6722</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,6 +81,9 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     public static class GetAuthorizationUrlResponseBodyData extends TeaModel {
         /**
          * <p>The authorization URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://render.****.com/p/s/web-call-minapp/auth-bao?page=commauth/index&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJiaXpUeXBlIjoiQ29tbUF1dGgiLCJiaXpJZCI6IjVmNWZjNjAzZDQzMTQ0MWZiYTZiNjYzM2QyMjIyNzU0IiwiZXhwIjoxNjA4MTkxODQxfQ.5IvBj2nKgr60APtotaIB13vtPVrdsPQ6avIfWxte1pA&_env=prod">https://render.****.com/p/s/web-call-minapp/auth-bao?page=commauth/index&amp;token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJiaXpUeXBlIjoiQ29tbUF1dGgiLCJiaXpJZCI6IjVmNWZjNjAzZDQzMTQ0MWZiYTZiNjYzM2QyMjIyNzU0IiwiZXhwIjoxNjA4MTkxODQxfQ.5IvBj2nKgr60APtotaIB13vtPVrdsPQ6avIfWxte1pA&amp;_env=prod</a></p>
          */
         @NameInMap("AuthorizationUrl")
         public String authorizationUrl;

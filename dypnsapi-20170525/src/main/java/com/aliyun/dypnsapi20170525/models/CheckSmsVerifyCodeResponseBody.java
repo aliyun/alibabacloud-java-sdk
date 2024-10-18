@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class CheckSmsVerifyCodeResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [Response codes](https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11174283.0.0.70c5616bkj38Wa).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11174283.0.0.70c5616bkj38Wa">Response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -33,9 +43,13 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,15 +102,22 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
     public static class CheckSmsVerifyCodeResponseBodyModel extends TeaModel {
         /**
          * <p>The external ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1212312</p>
          */
         @NameInMap("OutId")
         public String outId;
 
         /**
          * <p>The verification results. Valid values:</p>
-         * <br>
-         * <p>*   PASS: The verification is successful.</p>
-         * <p>*   UNKNOWN: The verification failed.</p>
+         * <ul>
+         * <li>PASS: The verification is successful.</li>
+         * <li>UNKNOWN: The verification failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PASS</p>
          */
         @NameInMap("VerifyResult")
         public String verifyResult;

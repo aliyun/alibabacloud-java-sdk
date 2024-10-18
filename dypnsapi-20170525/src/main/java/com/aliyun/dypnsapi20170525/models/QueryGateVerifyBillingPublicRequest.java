@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class QueryGateVerifyBillingPublicRequest extends TeaModel {
     /**
      * <p>The verification method. Valid values:</p>
-     * <br>
-     * <p>*   **0**: phone number verification</p>
-     * <p>*   **1**: one-click logon</p>
-     * <p>*   **2**: all</p>
-     * <p>*   **3**: facial recognition</p>
-     * <p>*   **4**: SMS verification</p>
+     * <ul>
+     * <li><strong>0</strong>: phone number verification</li>
+     * <li><strong>1</strong>: one-click logon</li>
+     * <li><strong>2</strong>: all</li>
+     * <li><strong>3</strong>: facial recognition</li>
+     * <li><strong>4</strong>: SMS verification</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AuthenticationType")
     public Integer authenticationType;
 
     /**
      * <p>The month in which the bill is generated. Specify this parameter in the YYYYMM format. Example: 202111.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202111</p>
      */
     @NameInMap("Month")
     public String month;

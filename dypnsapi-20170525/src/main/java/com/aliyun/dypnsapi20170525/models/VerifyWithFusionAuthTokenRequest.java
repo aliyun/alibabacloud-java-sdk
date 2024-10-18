@@ -15,6 +15,10 @@ public class VerifyWithFusionAuthTokenRequest extends TeaModel {
 
     /**
      * <p>The unified verification token that is returned by the client SDKs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LD108enNdlsl*******sFLKCks1==</p>
      */
     @NameInMap("VerifyToken")
     public String verifyToken;

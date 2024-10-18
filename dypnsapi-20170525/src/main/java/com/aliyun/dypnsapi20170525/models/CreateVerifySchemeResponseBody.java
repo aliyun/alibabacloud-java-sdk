@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class CreateVerifySchemeResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,27 +25,40 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1E75E69-3049-5FDB-A376-D745837CD2B1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -102,6 +119,9 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     public static class CreateVerifySchemeResponseBodyGateVerifySchemeDTO extends TeaModel {
         /**
          * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC10001287****</p>
          */
         @NameInMap("SchemeCode")
         public String schemeCode;

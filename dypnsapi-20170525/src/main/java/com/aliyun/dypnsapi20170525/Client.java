@@ -27,6 +27,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies SMS verification codes.</p>
+     * 
+     * @param request CheckSmsVerifyCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckSmsVerifyCodeResponse
+     */
     public CheckSmsVerifyCodeResponse checkSmsVerifyCodeWithOptions(CheckSmsVerifyCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -83,11 +91,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckSmsVerifyCodeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies SMS verification codes.</p>
+     * 
+     * @param request CheckSmsVerifyCodeRequest
+     * @return CheckSmsVerifyCodeResponse
+     */
     public CheckSmsVerifyCodeResponse checkSmsVerifyCode(CheckSmsVerifyCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkSmsVerifyCodeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a code for a converged communication authentication service.</p>
+     * 
+     * @param request CreateSchemeConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSchemeConfigResponse
+     */
     public CreateSchemeConfigResponse createSchemeConfigWithOptions(CreateSchemeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -152,18 +175,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSchemeConfigResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a code for a converged communication authentication service.</p>
+     * 
+     * @param request CreateSchemeConfigRequest
+     * @return CreateSchemeConfigResponse
+     */
     public CreateSchemeConfigResponse createSchemeConfig(CreateSchemeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSchemeConfigWithOptions(request, runtime);
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request CreateVerifySchemeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateVerifySchemeResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a verification service.</p>
+     * 
+     * @param request CreateVerifySchemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVerifySchemeResponse
      */
     public CreateVerifySchemeResponse createVerifySchemeWithOptions(CreateVerifySchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -194,6 +228,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.email)) {
             query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hmAppIdentifier)) {
+            query.put("HmAppIdentifier", request.hmAppIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hmPackageName)) {
+            query.put("HmPackageName", request.hmPackageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hmSignName)) {
+            query.put("HmSignName", request.hmSignName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipWhiteList)) {
@@ -262,11 +308,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request CreateVerifySchemeRequest
-      * @return CreateVerifySchemeResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a verification service.</p>
+     * 
+     * @param request CreateVerifySchemeRequest
+     * @return CreateVerifySchemeResponse
      */
     public CreateVerifySchemeResponse createVerifyScheme(CreateVerifySchemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -274,12 +324,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DeleteVerifySchemeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteVerifySchemeResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a verification service.</p>
+     * 
+     * @param request DeleteVerifySchemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVerifySchemeResponse
      */
     public DeleteVerifySchemeResponse deleteVerifySchemeWithOptions(DeleteVerifySchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -322,11 +376,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DeleteVerifySchemeRequest
-      * @return DeleteVerifySchemeResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a verification service.</p>
+     * 
+     * @param request DeleteVerifySchemeRequest
+     * @return DeleteVerifySchemeResponse
      */
     public DeleteVerifySchemeResponse deleteVerifyScheme(DeleteVerifySchemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -334,12 +392,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DescribeVerifySchemeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeVerifySchemeResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a verification service.</p>
+     * 
+     * @param request DescribeVerifySchemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifySchemeResponse
      */
     public DescribeVerifySchemeResponse describeVerifySchemeWithOptions(DescribeVerifySchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -382,11 +444,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DescribeVerifySchemeRequest
-      * @return DescribeVerifySchemeResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a verification service.</p>
+     * 
+     * @param request DescribeVerifySchemeRequest
+     * @return DescribeVerifySchemeResponse
      */
     public DescribeVerifySchemeResponse describeVerifyScheme(DescribeVerifySchemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -394,14 +460,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the phone number verification feature for HTML5 pages](~~169786~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetAuthTokenRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAuthTokenResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/169786.html">Use the phone number verification feature for HTML5 pages</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the authorization token used for the authentication of the phone number verification for HTML5 pages. You can obtain AccessToken and JwtToken after a successful call.</p>
+     * 
+     * @param request GetAuthTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAuthTokenResponse
      */
     public GetAuthTokenResponse getAuthTokenWithOptions(GetAuthTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -448,13 +518,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the phone number verification feature for HTML5 pages](~~169786~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetAuthTokenRequest
-      * @return GetAuthTokenResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/169786.html">Use the phone number verification feature for HTML5 pages</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the authorization token used for the authentication of the phone number verification for HTML5 pages. You can obtain AccessToken and JwtToken after a successful call.</p>
+     * 
+     * @param request GetAuthTokenRequest
+     * @return GetAuthTokenResponse
      */
     public GetAuthTokenResponse getAuthToken(GetAuthTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -462,14 +536,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account and obtain an Alibaba Cloud AccessKey pair. For more information, see [Process of communication authorization](~~196922~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetAuthorizationUrlRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAuthorizationUrlResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account and obtain an Alibaba Cloud AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/196922.html">Process of communication authorization</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the URL for the Alipay account authorization.</p>
+     * 
+     * @param request GetAuthorizationUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAuthorizationUrlResponse
      */
     public GetAuthorizationUrlResponse getAuthorizationUrlWithOptions(GetAuthorizationUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -516,19 +594,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account and obtain an Alibaba Cloud AccessKey pair. For more information, see [Process of communication authorization](~~196922~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetAuthorizationUrlRequest
-      * @return GetAuthorizationUrlResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account and obtain an Alibaba Cloud AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/196922.html">Process of communication authorization</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the URL for the Alipay account authorization.</p>
+     * 
+     * @param request GetAuthorizationUrlRequest
+     * @return GetAuthorizationUrlResponse
      */
     public GetAuthorizationUrlResponse getAuthorizationUrl(GetAuthorizationUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAuthorizationUrlWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification results by using the token that is obtained from the client SDKs.</p>
+     * 
+     * @param request GetFusionAuthTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFusionAuthTokenResponse
+     */
     public GetFusionAuthTokenResponse getFusionAuthTokenWithOptions(GetFusionAuthTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -585,21 +675,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFusionAuthTokenResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification results by using the token that is obtained from the client SDKs.</p>
+     * 
+     * @param request GetFusionAuthTokenRequest
+     * @return GetFusionAuthTokenResponse
+     */
     public GetFusionAuthTokenResponse getFusionAuthToken(GetFusionAuthTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getFusionAuthTokenWithOptions(request, runtime);
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Getting Started](~~84541~~).
-      * >  This operation is applicable only to one-click logon or registration. You can call this operation only after you confirm the authorization on the authorization page provided by the SDK for one-click logon. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetMobileRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetMobileResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/84541.html">Getting Started</a>.</p>
+     * <blockquote>
+     * <p> This operation is applicable only to one-click logon or registration. You can call this operation only after you confirm the authorization on the authorization page provided by the SDK for one-click logon. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.</p>
+     * </blockquote>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a phone number for one-click logon.</p>
+     * 
+     * @param request GetMobileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMobileResponse
      */
     public GetMobileResponse getMobileWithOptions(GetMobileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -642,14 +745,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Getting Started](~~84541~~).
-      * >  This operation is applicable only to one-click logon or registration. You can call this operation only after you confirm the authorization on the authorization page provided by the SDK for one-click logon. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetMobileRequest
-      * @return GetMobileResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/84541.html">Getting Started</a>.</p>
+     * <blockquote>
+     * <p> This operation is applicable only to one-click logon or registration. You can call this operation only after you confirm the authorization on the authorization page provided by the SDK for one-click logon. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.</p>
+     * </blockquote>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a phone number for one-click logon.</p>
+     * 
+     * @param request GetMobileRequest
+     * @return GetMobileResponse
      */
     public GetMobileResponse getMobile(GetMobileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -657,15 +766,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Getting Started](~~84541~~).
-      * >  This operation is applicable only to one-click logon or registration in HTML5 pages. You can call this operation only after you confirm the authorization on the authorization page provided by the JavaScript SDK. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetPhoneWithTokenRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetPhoneWithTokenResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/84541.html">Getting Started</a>.</p>
+     * <blockquote>
+     * <p> This operation is applicable only to one-click logon or registration in HTML5 pages. You can call this operation only after you confirm the authorization on the authorization page provided by the JavaScript SDK. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.</p>
+     * </blockquote>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a phone number for one-click logon. This operation is exclusive to HTML5 pages.</p>
+     * 
+     * @param request GetPhoneWithTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPhoneWithTokenResponse
      */
     public GetPhoneWithTokenResponse getPhoneWithTokenWithOptions(GetPhoneWithTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -704,14 +819,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Getting Started](~~84541~~).
-      * >  This operation is applicable only to one-click logon or registration in HTML5 pages. You can call this operation only after you confirm the authorization on the authorization page provided by the JavaScript SDK. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetPhoneWithTokenRequest
-      * @return GetPhoneWithTokenResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/84541.html">Getting Started</a>.</p>
+     * <blockquote>
+     * <p> This operation is applicable only to one-click logon or registration in HTML5 pages. You can call this operation only after you confirm the authorization on the authorization page provided by the JavaScript SDK. You are prohibited from simulating or bypassing the authorization process. Alibaba Cloud reserves the right to terminate our services and take legal actions against such violations.</p>
+     * </blockquote>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a phone number for one-click logon. This operation is exclusive to HTML5 pages.</p>
+     * 
+     * @param request GetPhoneWithTokenRequest
+     * @return GetPhoneWithTokenResponse
      */
     public GetPhoneWithTokenResponse getPhoneWithToken(GetPhoneWithTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -719,14 +840,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the SMS verification feature](~~313209~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetSmsAuthTokensRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetSmsAuthTokensResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/313209.html">Use the SMS verification feature</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the authorization token for an SMS verification code.</p>
+     * 
+     * @param request GetSmsAuthTokensRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSmsAuthTokensResponse
      */
     public GetSmsAuthTokensResponse getSmsAuthTokensWithOptions(GetSmsAuthTokensRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -793,13 +918,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the SMS verification feature](~~313209~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request GetSmsAuthTokensRequest
-      * @return GetSmsAuthTokensResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/313209.html">Use the SMS verification feature</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the authorization token for an SMS verification code.</p>
+     * 
+     * @param request GetSmsAuthTokensRequest
+     * @return GetSmsAuthTokensResponse
      */
     public GetSmsAuthTokensResponse getSmsAuthTokens(GetSmsAuthTokensRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -807,12 +936,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-      *
-      * @param request JyCreateVerifySchemeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return JyCreateVerifySchemeResponse
+     * <b>summary</b> : 
+     * <p>创建方案号（为极意临时定制）</p>
+     * 
+     * @deprecated OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
+     * 
+     * @param request JyCreateVerifySchemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return JyCreateVerifySchemeResponse
      */
+    @Deprecated
     // Deprecated
     public JyCreateVerifySchemeResponse jyCreateVerifySchemeWithOptions(JyCreateVerifySchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -883,11 +1016,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-      *
-      * @param request JyCreateVerifySchemeRequest
-      * @return JyCreateVerifySchemeResponse
+     * <b>summary</b> : 
+     * <p>创建方案号（为极意临时定制）</p>
+     * 
+     * @deprecated OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
+     * 
+     * @param request JyCreateVerifySchemeRequest
+     * @return JyCreateVerifySchemeResponse
      */
+    @Deprecated
     // Deprecated
     public JyCreateVerifySchemeResponse jyCreateVerifyScheme(JyCreateVerifySchemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -895,12 +1032,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-      *
-      * @param request JyQueryAppInfoBySceneCodeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return JyQueryAppInfoBySceneCodeResponse
+     * <b>summary</b> : 
+     * <p>根据方案号查询运营商APP信（为极意临时定制）</p>
+     * 
+     * @deprecated OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
+     * 
+     * @param request JyQueryAppInfoBySceneCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return JyQueryAppInfoBySceneCodeResponse
      */
+    @Deprecated
     // Deprecated
     public JyQueryAppInfoBySceneCodeResponse jyQueryAppInfoBySceneCodeWithOptions(JyQueryAppInfoBySceneCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -939,11 +1080,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-      *
-      * @param request JyQueryAppInfoBySceneCodeRequest
-      * @return JyQueryAppInfoBySceneCodeResponse
+     * <b>summary</b> : 
+     * <p>根据方案号查询运营商APP信（为极意临时定制）</p>
+     * 
+     * @deprecated OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
+     * 
+     * @param request JyQueryAppInfoBySceneCodeRequest
+     * @return JyQueryAppInfoBySceneCodeResponse
      */
+    @Deprecated
     // Deprecated
     public JyQueryAppInfoBySceneCodeResponse jyQueryAppInfoBySceneCode(JyQueryAppInfoBySceneCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -951,12 +1096,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request QueryGateVerifyBillingPublicRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryGateVerifyBillingPublicResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the fees generated by a verification service.</p>
+     * 
+     * @param request QueryGateVerifyBillingPublicRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryGateVerifyBillingPublicResponse
      */
     public QueryGateVerifyBillingPublicResponse queryGateVerifyBillingPublicWithOptions(QueryGateVerifyBillingPublicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -995,11 +1144,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request QueryGateVerifyBillingPublicRequest
-      * @return QueryGateVerifyBillingPublicResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the fees generated by a verification service.</p>
+     * 
+     * @param request QueryGateVerifyBillingPublicRequest
+     * @return QueryGateVerifyBillingPublicResponse
      */
     public QueryGateVerifyBillingPublicResponse queryGateVerifyBillingPublic(QueryGateVerifyBillingPublicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1007,12 +1160,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request QueryGateVerifyStatisticPublicRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryGateVerifyStatisticPublicResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the calls of Phone Number Verification Service.</p>
+     * 
+     * @param request QueryGateVerifyStatisticPublicRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryGateVerifyStatisticPublicResponse
      */
     public QueryGateVerifyStatisticPublicResponse queryGateVerifyStatisticPublicWithOptions(QueryGateVerifyStatisticPublicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1063,11 +1220,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request QueryGateVerifyStatisticPublicRequest
-      * @return QueryGateVerifyStatisticPublicResponse
+     * <b>description</b> :
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the calls of Phone Number Verification Service.</p>
+     * 
+     * @param request QueryGateVerifyStatisticPublicRequest
+     * @return QueryGateVerifyStatisticPublicResponse
      */
     public QueryGateVerifyStatisticPublicResponse queryGateVerifyStatisticPublic(QueryGateVerifyStatisticPublicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1075,12 +1236,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
-      *
-      * @param request QuerySendDetailsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QuerySendDetailsResponse
+     * <b>summary</b> : 
+     * <p>Queries the delivery status of the SMS verification code. You can query only the delivery status of the SMS verification code that is sent by calling corresponding API operations.</p>
+     * 
+     * @deprecated OpenAPI QuerySendDetails is deprecated
+     * 
+     * @param request QuerySendDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySendDetailsResponse
      */
+    @Deprecated
     // Deprecated
     public QuerySendDetailsResponse querySendDetailsWithOptions(QuerySendDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1135,17 +1300,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
-      *
-      * @param request QuerySendDetailsRequest
-      * @return QuerySendDetailsResponse
+     * <b>summary</b> : 
+     * <p>Queries the delivery status of the SMS verification code. You can query only the delivery status of the SMS verification code that is sent by calling corresponding API operations.</p>
+     * 
+     * @deprecated OpenAPI QuerySendDetails is deprecated
+     * 
+     * @param request QuerySendDetailsRequest
+     * @return QuerySendDetailsResponse
      */
+    @Deprecated
     // Deprecated
     public QuerySendDetailsResponse querySendDetails(QuerySendDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.querySendDetailsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Sends SMS verification codes.</p>
+     * 
+     * @param request SendSmsVerifyCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendSmsVerifyCodeResponse
+     */
     public SendSmsVerifyCodeResponse sendSmsVerifyCodeWithOptions(SendSmsVerifyCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1234,21 +1411,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendSmsVerifyCodeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Sends SMS verification codes.</p>
+     * 
+     * @param request SendSmsVerifyCodeRequest
+     * @return SendSmsVerifyCodeResponse
+     */
     public SendSmsVerifyCodeResponse sendSmsVerifyCode(SendSmsVerifyCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendSmsVerifyCodeWithOptions(request, runtime);
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Getting Started](~~84541~~).
-      * >  This operation is applicable to only the verification of thephone number that you use. To obtain a phone number for one-click logon, call [GetMobile](~~189865~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request VerifyMobileRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return VerifyMobileResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/84541.html">Getting Started</a>.</p>
+     * <blockquote>
+     * <p> This operation is applicable to only the verification of thephone number that you use. To obtain a phone number for one-click logon, call <a href="https://help.aliyun.com/document_detail/189865.html">GetMobile</a>.</p>
+     * </blockquote>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the phone number that you use.</p>
+     * 
+     * @param request VerifyMobileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyMobileResponse
      */
     public VerifyMobileResponse verifyMobileWithOptions(VerifyMobileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1295,14 +1485,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Getting Started](~~84541~~).
-      * >  This operation is applicable to only the verification of thephone number that you use. To obtain a phone number for one-click logon, call [GetMobile](~~189865~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request VerifyMobileRequest
-      * @return VerifyMobileResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/84541.html">Getting Started</a>.</p>
+     * <blockquote>
+     * <p> This operation is applicable to only the verification of thephone number that you use. To obtain a phone number for one-click logon, call <a href="https://help.aliyun.com/document_detail/189865.html">GetMobile</a>.</p>
+     * </blockquote>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the phone number that you use.</p>
+     * 
+     * @param request VerifyMobileRequest
+     * @return VerifyMobileResponse
      */
     public VerifyMobileResponse verifyMobile(VerifyMobileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1310,14 +1506,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the phone number verification feature for HTML5 pages](~~169786~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request VerifyPhoneWithTokenRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return VerifyPhoneWithTokenResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/169786.html">Use the phone number verification feature for HTML5 pages</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the phone number used in HTML5 pages.</p>
+     * 
+     * @param request VerifyPhoneWithTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyPhoneWithTokenResponse
      */
     public VerifyPhoneWithTokenResponse verifyPhoneWithTokenWithOptions(VerifyPhoneWithTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1360,13 +1560,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the phone number verification feature for HTML5 pages](~~169786~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request VerifyPhoneWithTokenRequest
-      * @return VerifyPhoneWithTokenResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/169786.html">Use the phone number verification feature for HTML5 pages</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the phone number used in HTML5 pages.</p>
+     * 
+     * @param request VerifyPhoneWithTokenRequest
+     * @return VerifyPhoneWithTokenResponse
      */
     public VerifyPhoneWithTokenResponse verifyPhoneWithToken(VerifyPhoneWithTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1374,14 +1578,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the SMS verification feature](~~313209~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request VerifySmsCodeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return VerifySmsCodeResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/313209.html">Use the SMS verification feature</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies SMS verification codes.</p>
+     * 
+     * @param request VerifySmsCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifySmsCodeResponse
      */
     public VerifySmsCodeResponse verifySmsCodeWithOptions(VerifySmsCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1416,19 +1624,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Preparations
-      * You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see [Use the SMS verification feature](~~313209~~).
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request VerifySmsCodeRequest
-      * @return VerifySmsCodeResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a>Preparations</h3>
+     * <p>You must register an Alibaba Cloud account, obtain an Alibaba Cloud AccessKey pair, and create a verification service. For more information, see <a href="https://help.aliyun.com/document_detail/313209.html">Use the SMS verification feature</a>.</p>
+     * <h3><a href="#qps"></a>QPS limits</h3>
+     * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies SMS verification codes.</p>
+     * 
+     * @param request VerifySmsCodeRequest
+     * @return VerifySmsCodeResponse
      */
     public VerifySmsCodeResponse verifySmsCode(VerifySmsCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.verifySmsCodeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification results by using the verification token that is obtained by using the authentication token.</p>
+     * 
+     * @param request VerifyWithFusionAuthTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyWithFusionAuthTokenResponse
+     */
     public VerifyWithFusionAuthTokenResponse verifyWithFusionAuthTokenWithOptions(VerifyWithFusionAuthTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1465,6 +1685,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyWithFusionAuthTokenResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification results by using the verification token that is obtained by using the authentication token.</p>
+     * 
+     * @param request VerifyWithFusionAuthTokenRequest
+     * @return VerifyWithFusionAuthTokenResponse
+     */
     public VerifyWithFusionAuthTokenResponse verifyWithFusionAuthToken(VerifyWithFusionAuthTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.verifyWithFusionAuthTokenWithOptions(request, runtime);

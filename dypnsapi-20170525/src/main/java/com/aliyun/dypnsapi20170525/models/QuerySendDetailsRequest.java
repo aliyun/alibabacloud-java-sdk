@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class QuerySendDetailsRequest extends TeaModel {
     /**
      * <p>The unique ID of the business, which is provided by Alibaba Cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1231891289318923^12</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
     /**
      * <p>The number of the page on which you are reading the text message. Pages start from page 1. The value of this parameter cannot exceed the maximum page number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
@@ -21,12 +28,20 @@ public class QuerySendDetailsRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The phone number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186****9399</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -39,8 +54,11 @@ public class QuerySendDetailsRequest extends TeaModel {
 
     /**
      * <p>The date when the text message was sent. You can query text messages that were sent within the last 30 days.</p>
-     * <br>
      * <p>Specify the date in the yyyyMMdd format. Example: 20181225.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20181225</p>
      */
     @NameInMap("SendDate")
     public String sendDate;

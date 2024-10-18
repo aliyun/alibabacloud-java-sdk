@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetMobileRequest extends TeaModel {
     /**
      * <p>The logon token obtained by the SDK for your app.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dfafdafad5422****</p>
      */
     @NameInMap("AccessToken")
     public String accessToken;
 
     /**
      * <p>The external ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22345****</p>
      */
     @NameInMap("OutId")
     public String outId;

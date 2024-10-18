@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAuthorizationUrlRequest extends TeaModel {
     /**
      * <p>The authorization end date, which is in the yyyy-MM-dd format. This parameter is required for services of contract type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020–12–28</p>
      */
     @NameInMap("EndDate")
     public String endDate;
@@ -15,6 +18,10 @@ public class GetAuthorizationUrlRequest extends TeaModel {
 
     /**
      * <p>The phone number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("PhoneNo")
     public String phoneNo;
@@ -26,7 +33,11 @@ public class GetAuthorizationUrlRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the authorization scenario. You can view the ID of the authorization scenario on the **Authorization Scenario Management** page in the **Phone Number Verification Service console**.</p>
+     * <p>The ID of the authorization scenario. You can view the ID of the authorization scenario on the <strong>Authorization Scenario Management</strong> page in the <strong>Phone Number Verification Service console</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>234****</p>
      */
     @NameInMap("SchemeId")
     public Long schemeId;

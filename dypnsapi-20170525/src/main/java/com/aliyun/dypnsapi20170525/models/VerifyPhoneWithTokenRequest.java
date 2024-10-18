@@ -9,6 +9,10 @@ public class VerifyPhoneWithTokenRequest extends TeaModel {
 
     /**
      * <p>The phone number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -21,6 +25,10 @@ public class VerifyPhoneWithTokenRequest extends TeaModel {
 
     /**
      * <p>The token for phone number verification that is obtained by the JavaScript SDK.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dfafdafad542****</p>
      */
     @NameInMap("SpToken")
     public String spToken;

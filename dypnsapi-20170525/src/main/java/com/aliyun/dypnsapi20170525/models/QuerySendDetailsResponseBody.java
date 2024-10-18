@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class QuerySendDetailsResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.419277.0.i11).</p>
+     * <p>If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.419277.0.i11">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -32,15 +40,22 @@ public class QuerySendDetailsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries in the list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -101,61 +116,86 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     public static class QuerySendDetailsResponseBodyModel extends TeaModel {
         /**
          * <p>The content of the text message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203160</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The status code returned by the carrier.</p>
-         * <br>
-         * <p>*   If the text message was delivered, "DELIVERED" is returned.</p>
-         * <p>*   If the text message failed to be sent, see [Error codes](https://help.aliyun.com/document_detail/101347.html?spm=a2c4g.419277.0.i8) for more information.</p>
+         * <ul>
+         * <li>If the text message was delivered, &quot;DELIVERED&quot; is returned.</li>
+         * <li>If the text message failed to be sent, see <a href="https://help.aliyun.com/document_detail/101347.html?spm=a2c4g.419277.0.i8">Error codes</a> for more information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DELIVERED</p>
          */
         @NameInMap("ErrCode")
         public String errCode;
 
         /**
          * <p>The extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12131231</p>
          */
         @NameInMap("OutId")
         public String outId;
 
         /**
          * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         @NameInMap("PhoneNum")
         public String phoneNum;
 
         /**
          * <p>The date and time when the text message was received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-08 16:44:13</p>
          */
         @NameInMap("ReceiveDate")
         public String receiveDate;
 
         /**
          * <p>The date when the text message was sent. You can query text messages that were sent within the last 30 days.</p>
-         * <br>
          * <p>The date is in the yyyyMMdd format. Example: 20181225.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-08 16:44:13</p>
          */
         @NameInMap("SendDate")
         public String sendDate;
 
         /**
          * <p>The delivery status of the text message.</p>
-         * <br>
-         * <p>*   1: A delivery receipt is to be sent.</p>
-         * <p>*   2: The text message failed to be sent.</p>
-         * <p>*   3: The text message was sent.</p>
+         * <ul>
+         * <li>1: A delivery receipt is to be sent.</li>
+         * <li>2: The text message failed to be sent.</li>
+         * <li>3: The text message was sent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("SendStatus")
         public Long sendStatus;
 
         /**
          * <p>The code of the text message template.</p>
-         * <br>
-         * <p>Log on to the SMS console. In the left-side navigation pane, click **Go China** or **Go Globe**. You can view the text message template code in the **Template Code** column on the **Message Templates** tab.</p>
-         * <br>
-         * <p>>  The text message templates must be created on the Go Globe page and approved.</p>
+         * <p>Log on to the SMS console. In the left-side navigation pane, click <strong>Go China</strong> or <strong>Go Globe</strong>. You can view the text message template code in the <strong>Template Code</strong> column on the <strong>Message Templates</strong> tab.</p>
+         * <blockquote>
+         * <p> The text message templates must be created on the Go Globe page and approved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_12231****</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;

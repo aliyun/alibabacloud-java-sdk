@@ -13,6 +13,9 @@ public class JyQueryAppInfoBySceneCodeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneCode")
     public String sceneCode;
 

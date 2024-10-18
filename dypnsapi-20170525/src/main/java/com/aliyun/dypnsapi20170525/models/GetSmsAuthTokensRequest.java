@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class GetSmsAuthTokensRequest extends TeaModel {
     /**
-     * <p>The ID of the iOS application. This parameter is required if OsType is set to **iOS**.</p>
+     * <p>The ID of the iOS application. This parameter is required if OsType is set to <strong>iOS</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345****</p>
      */
     @NameInMap("BundleId")
     public String bundleId;
 
     /**
      * <p>The validity period of the token. Unit: seconds. Valid values: 900 to 43200.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("Expire")
     public Long expire;
 
     /**
-     * <p>The type of the operating system. Valid values: **Android** and **iOS**.</p>
+     * <p>The type of the operating system. Valid values: <strong>Android</strong> and <strong>iOS</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Android</p>
      */
     @NameInMap("OsType")
     public String osType;
@@ -26,7 +37,10 @@ public class GetSmsAuthTokensRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The package name. This parameter is required if OsType is set to **Android**.</p>
+     * <p>The package name. This parameter is required if OsType is set to <strong>Android</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliqin.mytel.test</p>
      */
     @NameInMap("PackageName")
     public String packageName;
@@ -39,24 +53,38 @@ public class GetSmsAuthTokensRequest extends TeaModel {
 
     /**
      * <p>The service code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC100000134840112</p>
      */
     @NameInMap("SceneCode")
     public String sceneCode;
 
     /**
-     * <p>The signature. This parameter is required if OsType is set to **Android**.</p>
+     * <p>The signature. This parameter is required if OsType is set to <strong>Android</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47fcc6615485e83b4100433****</p>
      */
     @NameInMap("SignName")
     public String signName;
 
     /**
      * <p>The validity period of the SMS verification code. Unit: seconds. Default value: 180.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("SmsCodeExpire")
     public Integer smsCodeExpire;
 
     /**
      * <p>The code of the text message template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMS_13987****</p>
      */
     @NameInMap("SmsTemplateCode")
     public String smsTemplateCode;
