@@ -4,6 +4,9 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ExecuteWorkflowResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public ExecuteWorkflowResponseBodyAccessDeniedDetail accessDeniedDetail;
+
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -51,6 +54,14 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExecuteWorkflowResponseBody setAccessDeniedDetail(ExecuteWorkflowResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public ExecuteWorkflowResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
     public ExecuteWorkflowResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -89,6 +100,91 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class ExecuteWorkflowResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static ExecuteWorkflowResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            ExecuteWorkflowResponseBodyAccessDeniedDetail self = new ExecuteWorkflowResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public ExecuteWorkflowResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public ExecuteWorkflowResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public ExecuteWorkflowResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public ExecuteWorkflowResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public ExecuteWorkflowResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public ExecuteWorkflowResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public ExecuteWorkflowResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
     }
 
     public static class ExecuteWorkflowResponseBodyData extends TeaModel {
