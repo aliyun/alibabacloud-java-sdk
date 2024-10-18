@@ -32,18 +32,37 @@ public class Dataset extends TeaModel {
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Animal images.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    @NameInMap("LatestVersion")
+    public DatasetVersion latestVersion;
+
+    /**
+     * <strong>example:</strong>
+     * <p>AnimalDataset</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -54,6 +73,10 @@ public class Dataset extends TeaModel {
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004110000006048</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -73,6 +96,20 @@ public class Dataset extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>d-bvfasdf4wxxj8o411</p>
+     */
+    @NameInMap("SourceDatasetId")
+    public String sourceDatasetId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
+    @NameInMap("SourceDatasetVersion")
+    public String sourceDatasetVersion;
+
+    /**
+     * <strong>example:</strong>
      * <p>Source Id</p>
      */
     @NameInMap("SourceId")
@@ -87,11 +124,22 @@ public class Dataset extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>text-classification</p>
+     */
+    @NameInMap("TagTemplateType")
+    public String tagTemplateType;
+
+    /**
+     * <strong>example:</strong>
      * <p>oss://xxx</p>
      */
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2004110000006048</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -171,6 +219,14 @@ public class Dataset extends TeaModel {
         return this.labels;
     }
 
+    public Dataset setLatestVersion(DatasetVersion latestVersion) {
+        this.latestVersion = latestVersion;
+        return this;
+    }
+    public DatasetVersion getLatestVersion() {
+        return this.latestVersion;
+    }
+
     public Dataset setName(String name) {
         this.name = name;
         return this;
@@ -211,6 +267,22 @@ public class Dataset extends TeaModel {
         return this.providerType;
     }
 
+    public Dataset setSourceDatasetId(String sourceDatasetId) {
+        this.sourceDatasetId = sourceDatasetId;
+        return this;
+    }
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    public Dataset setSourceDatasetVersion(String sourceDatasetVersion) {
+        this.sourceDatasetVersion = sourceDatasetVersion;
+        return this;
+    }
+    public String getSourceDatasetVersion() {
+        return this.sourceDatasetVersion;
+    }
+
     public Dataset setSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -225,6 +297,14 @@ public class Dataset extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public Dataset setTagTemplateType(String tagTemplateType) {
+        this.tagTemplateType = tagTemplateType;
+        return this;
+    }
+    public String getTagTemplateType() {
+        return this.tagTemplateType;
     }
 
     public Dataset setUri(String uri) {

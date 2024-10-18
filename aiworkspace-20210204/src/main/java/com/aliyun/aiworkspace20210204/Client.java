@@ -280,6 +280,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Accessibility", request.accessibility);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCount)) {
+            body.put("DataCount", request.dataCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSize)) {
+            body.put("DataSize", request.dataSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
             body.put("DataSourceType", request.dataSourceType);
         }
@@ -316,6 +324,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProviderType", request.providerType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDatasetId)) {
+            body.put("SourceDatasetId", request.sourceDatasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDatasetVersion)) {
+            body.put("SourceDatasetVersion", request.sourceDatasetVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
             body.put("SourceId", request.sourceId);
         }
@@ -330,6 +346,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             body.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionDescription)) {
+            body.put("VersionDescription", request.versionDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionLabels)) {
+            body.put("VersionLabels", request.versionLabels);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -2238,6 +2262,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
             query.put("Provider", request.provider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDatasetId)) {
+            query.put("SourceDatasetId", request.sourceDatasetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
