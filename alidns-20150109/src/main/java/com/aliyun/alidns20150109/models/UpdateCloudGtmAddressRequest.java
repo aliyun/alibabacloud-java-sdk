@@ -18,7 +18,7 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>IP address or domain name.</p>
+     * <p>Modified IP address or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -77,7 +77,7 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
     public java.util.List<UpdateCloudGtmAddressRequestHealthTasks> healthTasks;
 
     /**
-     * <p>Address name.</p>
+     * <p>Modified address name.</p>
      * 
      * <strong>example:</strong>
      * <p>Address-1</p>
@@ -156,7 +156,11 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
 
     public static class UpdateCloudGtmAddressRequestHealthTasks extends TeaModel {
         /**
-         * <p>The service port of the address on which health check tasks are performed. If the ping protocol is used for health checks, the configuration of the service port is not supported.</p>
+         * <p>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</p>
+         * <ul>
+         * <li>If the input parameter is empty: Delete the currently configured port number;</li>
+         * <li>If the input parameter is not empty: Update the port number based on the input parameter;</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -165,7 +169,11 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the health check template associated with the address.</p>
+         * <p>ID of the health check template associated with the address. This parameter is required if a health check port is configured.</p>
+         * <ul>
+         * <li>If the input parameter is empty: Delete the currently configured detection template;</li>
+         * <li>If the input parameter is not empty: Update the detection template based on the input parameter;</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>mtp-89518052425100**80</p>
