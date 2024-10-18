@@ -60,6 +60,8 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     public String s3DeliveryShrink;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>12312312112***</p>
      */

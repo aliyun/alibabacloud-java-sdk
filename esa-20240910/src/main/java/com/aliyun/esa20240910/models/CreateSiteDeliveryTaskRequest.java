@@ -60,6 +60,8 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     public CreateSiteDeliveryTaskRequestS3Delivery s3Delivery;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>12312312112***</p>
      */
