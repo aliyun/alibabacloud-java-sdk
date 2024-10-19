@@ -1,0 +1,27 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudapi20160714.models;
+
+import com.aliyun.tea.*;
+
+public class DeletePrivateDNSResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static DeletePrivateDNSResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeletePrivateDNSResponseBody self = new DeletePrivateDNSResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DeletePrivateDNSResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

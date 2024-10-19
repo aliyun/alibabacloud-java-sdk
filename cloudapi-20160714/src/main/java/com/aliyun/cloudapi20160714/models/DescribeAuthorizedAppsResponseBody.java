@@ -92,9 +92,21 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
     }
 
     public static class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -244,6 +256,9 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Tag")
         public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag tag;
 
