@@ -422,6 +422,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
         @NameInMap("BodyFormat")
         public String bodyFormat;
 
+        /**
+         * <p>Whether to escape the Path parameter, if true, the [param] on the Path will be treated as a regular character.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EscapePathParam")
         public Boolean escapePathParam;
 

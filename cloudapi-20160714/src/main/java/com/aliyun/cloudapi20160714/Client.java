@@ -360,6 +360,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>专享实例关联内网域名解析记录</p>
+     * 
+     * @param tmpReq AssociateInstanceWithPrivateDNSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateInstanceWithPrivateDNSResponse
+     */
+    public AssociateInstanceWithPrivateDNSResponse associateInstanceWithPrivateDNSWithOptions(AssociateInstanceWithPrivateDNSRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AssociateInstanceWithPrivateDNSShrinkRequest request = new AssociateInstanceWithPrivateDNSShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.intranetDomains)) {
+            request.intranetDomainsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.intranetDomains, "IntranetDomains", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetDomainsShrink)) {
+            body.put("IntranetDomains", request.intranetDomainsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateInstanceWithPrivateDNS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateInstanceWithPrivateDNSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>专享实例关联内网域名解析记录</p>
+     * 
+     * @param request AssociateInstanceWithPrivateDNSRequest
+     * @return AssociateInstanceWithPrivateDNSResponse
+     */
+    public AssociateInstanceWithPrivateDNSResponse associateInstanceWithPrivateDNS(AssociateInstanceWithPrivateDNSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateInstanceWithPrivateDNSWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Attaches APIs to an API product. If the API product does not exist, the system automatically creates the API product.</p>
      * 
      * @param request AttachApiProductRequest
@@ -1861,6 +1921,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建内网域名解析</p>
+     * 
+     * @param tmpReq CreatePrivateDNSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePrivateDNSResponse
+     */
+    public CreatePrivateDNSResponse createPrivateDNSWithOptions(CreatePrivateDNSRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePrivateDNSShrinkRequest request = new CreatePrivateDNSShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.records)) {
+            request.recordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.records, "Records", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetDomain)) {
+            query.put("IntranetDomain", request.intranetDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordsShrink)) {
+            body.put("Records", request.recordsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePrivateDNS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrivateDNSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建内网域名解析</p>
+     * 
+     * @param request CreatePrivateDNSRequest
+     * @return CreatePrivateDNSResponse
+     */
+    public CreatePrivateDNSResponse createPrivateDNS(CreatePrivateDNSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPrivateDNSWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This API is intended for API providers.</p>
      * <ul>
@@ -3170,6 +3294,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePluginResponse deletePlugin(DeletePluginRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePluginWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除内网域名解析</p>
+     * 
+     * @param request DeletePrivateDNSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePrivateDNSResponse
+     */
+    public DeletePrivateDNSResponse deletePrivateDNSWithOptions(DeletePrivateDNSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetDomain)) {
+            query.put("IntranetDomain", request.intranetDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePrivateDNS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePrivateDNSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除内网域名解析</p>
+     * 
+     * @param request DeletePrivateDNSRequest
+     * @return DeletePrivateDNSResponse
+     */
+    public DeletePrivateDNSResponse deletePrivateDNS(DeletePrivateDNSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePrivateDNSWithOptions(request, runtime);
     }
 
     /**
@@ -9036,6 +9216,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>专享实例解除的关联内网域名解析记录</p>
+     * 
+     * @param tmpReq DissociateInstanceWithPrivateDNSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DissociateInstanceWithPrivateDNSResponse
+     */
+    public DissociateInstanceWithPrivateDNSResponse dissociateInstanceWithPrivateDNSWithOptions(DissociateInstanceWithPrivateDNSRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DissociateInstanceWithPrivateDNSShrinkRequest request = new DissociateInstanceWithPrivateDNSShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.intranetDomains)) {
+            request.intranetDomainsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.intranetDomains, "IntranetDomains", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetDomainsShrink)) {
+            body.put("IntranetDomains", request.intranetDomainsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DissociateInstanceWithPrivateDNS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DissociateInstanceWithPrivateDNSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>专享实例解除的关联内网域名解析记录</p>
+     * 
+     * @param request DissociateInstanceWithPrivateDNSRequest
+     * @return DissociateInstanceWithPrivateDNSResponse
+     */
+    public DissociateInstanceWithPrivateDNSResponse dissociateInstanceWithPrivateDNS(DissociateInstanceWithPrivateDNSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dissociateInstanceWithPrivateDNSWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Checks the syntax before Swagger-compliant data is imported.</p>
      * 
      * @param tmpReq DryRunSwaggerRequest
@@ -9412,6 +9652,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportSwaggerResponse importSwagger(ImportSwaggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importSwaggerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询内网域名解析</p>
+     * 
+     * @param request ListPrivateDNSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPrivateDNSResponse
+     */
+    public ListPrivateDNSResponse listPrivateDNSWithOptions(ListPrivateDNSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetDomain)) {
+            query.put("IntranetDomain", request.intranetDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrivateDNS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrivateDNSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询内网域名解析</p>
+     * 
+     * @param request ListPrivateDNSRequest
+     * @return ListPrivateDNSResponse
+     */
+    public ListPrivateDNSResponse listPrivateDNS(ListPrivateDNSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPrivateDNSWithOptions(request, runtime);
     }
 
     /**
@@ -13467,6 +13759,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新内网域名解析</p>
+     * 
+     * @param tmpReq UpdatePrivateDNSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePrivateDNSResponse
+     */
+    public UpdatePrivateDNSResponse updatePrivateDNSWithOptions(UpdatePrivateDNSRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdatePrivateDNSShrinkRequest request = new UpdatePrivateDNSShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.records)) {
+            request.recordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.records, "Records", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetDomain)) {
+            query.put("IntranetDomain", request.intranetDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordsShrink)) {
+            body.put("Records", request.recordsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrivateDNS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrivateDNSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新内网域名解析</p>
+     * 
+     * @param request UpdatePrivateDNSRequest
+     * @return UpdatePrivateDNSResponse
+     */
+    public UpdatePrivateDNSResponse updatePrivateDNS(UpdatePrivateDNSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePrivateDNSWithOptions(request, runtime);
     }
 
     /**
