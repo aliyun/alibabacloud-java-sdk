@@ -491,6 +491,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>校验在售国际一口价域名状态和询价</p>
+     * 
+     * @param request CheckIntlFixPriceDomainStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckIntlFixPriceDomainStatusResponse
+     */
+    public CheckIntlFixPriceDomainStatusResponse checkIntlFixPriceDomainStatusWithOptions(CheckIntlFixPriceDomainStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckIntlFixPriceDomainStatus"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckIntlFixPriceDomainStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验在售国际一口价域名状态和询价</p>
+     * 
+     * @param request CheckIntlFixPriceDomainStatusRequest
+     * @return CheckIntlFixPriceDomainStatusResponse
+     */
+    public CheckIntlFixPriceDomainStatusResponse checkIntlFixPriceDomainStatus(CheckIntlFixPriceDomainStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkIntlFixPriceDomainStatusWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CheckMaxYearOfServerLockRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckMaxYearOfServerLockResponse
@@ -688,6 +732,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ConfirmTransferInEmailResponse confirmTransferInEmail(ConfirmTransferInEmailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.confirmTransferInEmailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建国际一口价订单</p>
+     * 
+     * @param request CreateIntlFixedPriceDomainOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateIntlFixedPriceDomainOrderResponse
+     */
+    public CreateIntlFixedPriceDomainOrderResponse createIntlFixedPriceDomainOrderWithOptions(CreateIntlFixedPriceDomainOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            query.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedPrice)) {
+            query.put("ExpectedPrice", request.expectedPrice);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIntlFixedPriceDomainOrder"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIntlFixedPriceDomainOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建国际一口价订单</p>
+     * 
+     * @param request CreateIntlFixedPriceDomainOrderRequest
+     * @return CreateIntlFixedPriceDomainOrderResponse
+     */
+    public CreateIntlFixedPriceDomainOrderResponse createIntlFixedPriceDomainOrder(CreateIntlFixedPriceDomainOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createIntlFixedPriceDomainOrderWithOptions(request, runtime);
     }
 
     /**
@@ -1046,6 +1146,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FuzzyMatchDomainSensitiveWordResponse fuzzyMatchDomainSensitiveWord(FuzzyMatchDomainSensitiveWordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.fuzzyMatchDomainSensitiveWordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询国际一口价在售域名列表</p>
+     * 
+     * @param request GetIntlFixPriceDomainListUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIntlFixPriceDomainListUrlResponse
+     */
+    public GetIntlFixPriceDomainListUrlResponse getIntlFixPriceDomainListUrlWithOptions(GetIntlFixPriceDomainListUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listDate)) {
+            query.put("ListDate", request.listDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIntlFixPriceDomainListUrl"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIntlFixPriceDomainListUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询国际一口价在售域名列表</p>
+     * 
+     * @param request GetIntlFixPriceDomainListUrlRequest
+     * @return GetIntlFixPriceDomainListUrlResponse
+     */
+    public GetIntlFixPriceDomainListUrlResponse getIntlFixPriceDomainListUrl(GetIntlFixPriceDomainListUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getIntlFixPriceDomainListUrlWithOptions(request, runtime);
     }
 
     /**
@@ -2554,6 +2698,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryFailingReasonListForQualificationResponse queryFailingReasonListForQualification(QueryFailingReasonListForQualificationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryFailingReasonListForQualificationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询国际一口价订单列表</p>
+     * 
+     * @param request QueryIntlFixedPriceOrderListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryIntlFixedPriceOrderListResponse
+     */
+    public QueryIntlFixedPriceOrderListResponse queryIntlFixedPriceOrderListWithOptions(QueryIntlFixedPriceOrderListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryIntlFixedPriceOrderList"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryIntlFixedPriceOrderListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询国际一口价订单列表</p>
+     * 
+     * @param request QueryIntlFixedPriceOrderListRequest
+     * @return QueryIntlFixedPriceOrderListResponse
+     */
+    public QueryIntlFixedPriceOrderListResponse queryIntlFixedPriceOrderList(QueryIntlFixedPriceOrderListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryIntlFixedPriceOrderListWithOptions(request, runtime);
     }
 
     /**
@@ -4096,6 +4296,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveBatchTaskForReserveDropListDomainResponse saveBatchTaskForReserveDropListDomain(SaveBatchTaskForReserveDropListDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveBatchTaskForReserveDropListDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于转移码的批量转出任务提交</p>
+     * 
+     * @param request SaveBatchTaskForTransferOutByAuthorizationCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveBatchTaskForTransferOutByAuthorizationCodeResponse
+     */
+    public SaveBatchTaskForTransferOutByAuthorizationCodeResponse saveBatchTaskForTransferOutByAuthorizationCodeWithOptions(SaveBatchTaskForTransferOutByAuthorizationCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request._long)) {
+            query.put("Long", request._long);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferOutParamList)) {
+            query.put("TransferOutParamList", request.transferOutParamList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userClientIp)) {
+            query.put("UserClientIp", request.userClientIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveBatchTaskForTransferOutByAuthorizationCode"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveBatchTaskForTransferOutByAuthorizationCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于转移码的批量转出任务提交</p>
+     * 
+     * @param request SaveBatchTaskForTransferOutByAuthorizationCodeRequest
+     * @return SaveBatchTaskForTransferOutByAuthorizationCodeResponse
+     */
+    public SaveBatchTaskForTransferOutByAuthorizationCodeResponse saveBatchTaskForTransferOutByAuthorizationCode(SaveBatchTaskForTransferOutByAuthorizationCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveBatchTaskForTransferOutByAuthorizationCodeWithOptions(request, runtime);
     }
 
     /**
@@ -6176,6 +6428,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveSingleTaskForSynchronizingDnsHostResponse saveSingleTaskForSynchronizingDnsHost(SaveSingleTaskForSynchronizingDnsHostRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveSingleTaskForSynchronizingDnsHostWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于转移码的单个转出任务提交</p>
+     * 
+     * @param request SaveSingleTaskForTransferOutByAuthorizationCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveSingleTaskForTransferOutByAuthorizationCodeResponse
+     */
+    public SaveSingleTaskForTransferOutByAuthorizationCodeResponse saveSingleTaskForTransferOutByAuthorizationCodeWithOptions(SaveSingleTaskForTransferOutByAuthorizationCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationCode)) {
+            query.put("AuthorizationCode", request.authorizationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userClientIp)) {
+            query.put("UserClientIp", request.userClientIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveSingleTaskForTransferOutByAuthorizationCode"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveSingleTaskForTransferOutByAuthorizationCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于转移码的单个转出任务提交</p>
+     * 
+     * @param request SaveSingleTaskForTransferOutByAuthorizationCodeRequest
+     * @return SaveSingleTaskForTransferOutByAuthorizationCodeResponse
+     */
+    public SaveSingleTaskForTransferOutByAuthorizationCodeResponse saveSingleTaskForTransferOutByAuthorizationCode(SaveSingleTaskForTransferOutByAuthorizationCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveSingleTaskForTransferOutByAuthorizationCodeWithOptions(request, runtime);
     }
 
     /**
