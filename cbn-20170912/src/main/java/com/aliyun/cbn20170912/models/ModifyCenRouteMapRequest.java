@@ -158,6 +158,9 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     @NameInMap("DestinationInstanceIdsReverseMatch")
     public Boolean destinationInstanceIdsReverseMatch;
 
+    @NameInMap("DestinationRegionIds")
+    public java.util.List<String> destinationRegionIds;
+
     /**
      * <p>The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.</p>
      * <blockquote>
@@ -490,6 +493,14 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     }
     public Boolean getDestinationInstanceIdsReverseMatch() {
         return this.destinationInstanceIdsReverseMatch;
+    }
+
+    public ModifyCenRouteMapRequest setDestinationRegionIds(java.util.List<String> destinationRegionIds) {
+        this.destinationRegionIds = destinationRegionIds;
+        return this;
+    }
+    public java.util.List<String> getDestinationRegionIds() {
+        return this.destinationRegionIds;
     }
 
     public ModifyCenRouteMapRequest setDestinationRouteTableIds(java.util.List<String> destinationRouteTableIds) {

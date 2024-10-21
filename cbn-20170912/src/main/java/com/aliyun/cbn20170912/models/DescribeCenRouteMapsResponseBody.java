@@ -148,6 +148,25 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds extends TeaModel {
+        @NameInMap("DestinationRegionId")
+        public java.util.List<String> destinationRegionId;
+
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds setDestinationRegionId(java.util.List<String> destinationRegionId) {
+            this.destinationRegionId = destinationRegionId;
+            return this;
+        }
+        public java.util.List<String> getDestinationRegionId() {
+            return this.destinationRegionId;
+        }
+
+    }
+
     public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds extends TeaModel {
         @NameInMap("DestinationRouteTableId")
         public java.util.List<String> destinationRouteTableId;
@@ -466,6 +485,9 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         @NameInMap("DestinationInstanceIdsReverseMatch")
         public Boolean destinationInstanceIdsReverseMatch;
 
+        @NameInMap("DestinationRegionIds")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds destinationRegionIds;
+
         /**
          * <p>The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.</p>
          * <blockquote>
@@ -742,6 +764,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
         public Boolean getDestinationInstanceIdsReverseMatch() {
             return this.destinationInstanceIdsReverseMatch;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationRegionIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds destinationRegionIds) {
+            this.destinationRegionIds = destinationRegionIds;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds getDestinationRegionIds() {
+            return this.destinationRegionIds;
         }
 
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationRouteTableIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds destinationRouteTableIds) {
