@@ -766,6 +766,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>金融级服务敏感数据删除接口</p>
+     * 
+     * @param request DeleteFaceVerifyResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFaceVerifyResultResponse
+     */
+    public DeleteFaceVerifyResultResponse deleteFaceVerifyResultWithOptions(DeleteFaceVerifyResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteAfterQuery)) {
+            query.put("DeleteAfterQuery", request.deleteAfterQuery);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFaceVerifyResult"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFaceVerifyResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>金融级服务敏感数据删除接口</p>
+     * 
+     * @param request DeleteFaceVerifyResultRequest
+     * @return DeleteFaceVerifyResultResponse
+     */
+    public DeleteFaceVerifyResultResponse deleteFaceVerifyResult(DeleteFaceVerifyResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFaceVerifyResultWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DescribeDeviceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeviceInfoResponse
