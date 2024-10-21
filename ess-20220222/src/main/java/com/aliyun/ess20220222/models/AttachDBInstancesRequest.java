@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class AttachDBInstancesRequest extends TeaModel {
     /**
-     * <p>The mode in which you want to attach the ApsaraDB RDS instance to the scaling group. Valid values:</p>
+     * <p>The mode in which you want to attach the database to the scaling group. Valid values:</p>
      * <ul>
-     * <li>SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.</li>
-     * <li>SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.</li>
+     * <li>SecurityIp: adds the private IP addresses of scaled out ECS instances to the IP address whitelist of the database. Take note that you can choose this mode only when the database that you want to attach is an ApsaraDB RDS instance.</li>
+     * <li>SecurityGroup: adds the security group of the scaling configuration based on which ECS instances are created in the scaling group to the security group whitelist of the database for registration.</li>
      * </ul>
+     * <p>Default value: SecurityIp.</p>
      * 
      * <strong>example:</strong>
      * <p>SecurityIp</p>
@@ -28,14 +29,14 @@ public class AttachDBInstancesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the ApsaraDB RDS instance.</p>
+     * <p>The IDs of the ApsaraDB RDS instances that you want to attach to the scaling group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstances")
     public java.util.List<String> DBInstances;
 
     /**
-     * <p>Specifies whether to add the private IP addresses of all instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. Valid values:</p>
+     * <p>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of an ApsaraDB RDS instance when you attach the ApsaraDB RDS instance to the scaling group. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -76,9 +77,9 @@ public class AttachDBInstancesRequest extends TeaModel {
     /**
      * <p>The type of the database that you want to attach to the scaling group. Valid values:</p>
      * <ul>
-     * <li>ApsaraDB RDS</li>
-     * <li>ApsaraDB for Redis</li>
-     * <li>ApsaraDB for MongoDB</li>
+     * <li>RDS</li>
+     * <li>Redis</li>
+     * <li>MongoDB</li>
      * </ul>
      * <p>Default value: RDS.</p>
      * 

@@ -108,13 +108,12 @@ public class ModifyScalingGroupRequest extends TeaModel {
     /**
      * <p>The health check mode of the scaling group. Valid values:</p>
      * <ul>
-     * <li>NONE: Auto Scaling does not perform health checks.</li>
-     * <li>ECS: Auto Scaling checks the health status of ECS instances in the scaling group.</li>
-     * <li>ECI: Auto Scaling checks the health status of elastic container instances in the scaling group.</li>
-     * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.</li>
+     * <li>NONE: Auto Scaling does not check the health status of instances.</li>
+     * <li>ECS: Auto Scaling checks the health status of instances in the scaling group. If you want to enable instance health check, you can set the value to ECS, regardless of whether the scaling group is of ECS type or Elastic Container Instance type.</li>
+     * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group. Default value: ECS.</li>
      * </ul>
      * <blockquote>
-     * <p> HealthCheckType has the same effect as <code>HealthCheckTypes</code>. You can select one of them to specify based on your business requirements. If you specify <code>HealthCheckTypes</code>, <code>HealthCheckType</code> is ignored. HealthCheckType is optional.</p>
+     * <p> If you want to enable instance health check and load balancer health check at the same time, we recommend that you specify <code>HealthCheckTypes</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,13 +123,10 @@ public class ModifyScalingGroupRequest extends TeaModel {
     public String healthCheckType;
 
     /**
-     * <p>The health check modes of the scaling group. Valid values:</p>
-     * <ul>
-     * <li>NONE: Auto Scaling does not perform health checks.</li>
-     * <li>ECS: Auto Scaling checks the health status of ECS instances in the scaling group.</li>
-     * <li>ECI: Auto Scaling checks the health status of elastic container instances in the scaling group.</li>
-     * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.</li>
-     * </ul>
+     * <p>The health check mode of the scaling group.</p>
+     * <blockquote>
+     * <p> You can specify multiple values for this parameter to enable multiple health check options at the same time. If you specify HealthCheckType, this parameter is ignored.</p>
+     * </blockquote>
      */
     @NameInMap("HealthCheckTypes")
     public java.util.List<String> healthCheckTypes;
@@ -340,6 +336,10 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("SpotInstanceRemedy")
     public Boolean spotInstanceRemedy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("StopInstanceTimeout")
     public Integer stopInstanceTimeout;
 

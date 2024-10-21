@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeInstanceRefreshRequest extends TeaModel {
     /**
+     * <p>The ID of the instance refresh task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class ResumeInstanceRefreshRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +31,7 @@ public class ResumeInstanceRefreshRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
+     * <p>The ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

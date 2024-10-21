@@ -32,7 +32,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the scaling activities.</p>
+     * <p>The scaling activities.</p>
      */
     @NameInMap("ScalingActivities")
     public java.util.List<DescribeScalingActivitiesResponseBodyScalingActivities> scalingActivities;
@@ -93,7 +93,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
     public static class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext extends TeaModel {
         /**
-         * <p>Indicates whether all lifecycle hooks are disabled. Valid values:</p>
+         * <p>Indicates whether all lifecycle hooks are disabled when the scaling activity is triggered. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -145,7 +145,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String activityMetadata;
 
         /**
-         * <p>The total number of instances that are manually added to the scaling group after the scaling activity was complete.</p>
+         * <p>The total number of instances that are manually added to the scaling group after the scaling activity is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -246,6 +246,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ir-asdf12adsxg*****</p>
+         */
         @NameInMap("InstanceRefreshTaskId")
         public String instanceRefreshTaskId;
 
@@ -283,8 +287,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String scalingGroupId;
 
         /**
-         * <p>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.</p>
-         * <p>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.</p>
+         * <ul>
+         * <li>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from Economical Mode.</li>
+         * <li>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in Economical Mode.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -366,11 +372,11 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String totalCapacity;
 
         /**
-         * <p>The ID of the trigger source of the scaling activity.</p>
+         * <p>The ID of the trigger source of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.</li>
-         * <li>If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.</li>
-         * <li>If TriggerSourceType is set to Api, the ID of the trigger source is null.</li>
+         * <li>If the scaling activity is triggered by an event-triggered task, the ID of the trigger source is the ID of the event-triggered task.</li>
+         * <li>If the scaling activity is triggered by calling an API operation, the ID of the trigger source is the ID of the Alibaba Cloud account or Resource Access Management (RAM) user that you use to call the API operation.</li>
+         * <li>If the scaling activity is triggered by Auto Scaling, the ID of the trigger source is null.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,11 +386,11 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String triggerSourceId;
 
         /**
-         * <p>The type of the trigger source of the scaling activity.</p>
+         * <p>The type of the trigger source of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>Cms: triggered by an event-triggered task</li>
-         * <li>APIs: triggered by API calling</li>
-         * <li>Ess: triggered by a system task</li>
+         * <li>Cms: The scaling activity is triggered by an event-triggered task.</li>
+         * <li>APIs: The scaling activity is triggered by calling an API operation.</li>
+         * <li>Ess: The scaling activity is triggered by Auto Scaling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
