@@ -4,10 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRefreshesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the instance refresh tasks that you want to query.</p>
+     */
     @NameInMap("InstanceRefreshTaskIds")
     public java.util.List<String> instanceRefreshTaskIds;
 
     /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInstanceRefreshesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
@@ -28,6 +35,7 @@ public class DescribeInstanceRefreshesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the scaling group to which the instance refresh task belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +51,11 @@ public class DescribeInstanceRefreshesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the scaling group.</p>
+     * <blockquote>
+     * <p> When you call this operation, you must specify one of the following parameters: ScalingGroupId and InstanceRefreshTaskIds. You cannot specify both of them. If you specify neither of them, an error is reported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>asg-bp1ffogfdauy0jw0****</p>
      */

@@ -104,6 +104,10 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("StopInstanceTimeout")
     public Integer stopInstanceTimeout;
 

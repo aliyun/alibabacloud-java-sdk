@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RollbackInstanceRefreshResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B13527BF-1FBD-4334-A512-20F5E9D3****</p>
      */

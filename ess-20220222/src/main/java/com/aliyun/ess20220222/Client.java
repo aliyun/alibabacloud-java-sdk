@@ -532,12 +532,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you associate an ApsaraDB RDS instance with a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</p>
+     * <p>Before you attach an ApsaraDB RDS instance to a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</p>
      * <ul>
-     * <li>The ApsaraDB RDS instance and the scaling group must belong to the same Alibaba Cloud account.</li>
-     * <li>The ApsaraDB RDS instance must be unlocked. For more information about the lock policy, see <a href="https://help.aliyun.com/document_detail/41872.html">ApsaraDB RDS usage notes</a>.</li>
-     * <li>The ApsaraDB RDS instance must be in the Running state.
-     * After an ApsaraDB RDS instance is associated with the scaling group, the default IP address whitelist of the ApsaraDB RDS instance can contain no more than 1,000 IP addresses. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Set the whitelist</a>.</li>
+     * <li>The ApsaraDB RDS instance and the scaling group belong to the same Alibaba Cloud account.</li>
+     * <li>The ApsaraDB RDS instance is unlocked. For information about the lock policy, see <a href="https://help.aliyun.com/document_detail/41872.html">ApsaraDB RDS usage notes</a>.</li>
+     * <li>The ApsaraDB RDS instance is in the Running state.</li>
+     * <li>The ApsaraDB RDS instance exists in the Alibaba Cloud account.</li>
+     * <li>If you reattach an ApsaraDB RDS instance to a scaling group, the total number of attached ApsaraDB RDS instances of the scaling group remains unchanged. But Auto Scaling adds the private IP addresses of all Elastic Compute Service (ECS) instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance.<blockquote>
+     * <p> After you attach an ApsaraDB RDS instance to a scaling group, make sure that the number of IP addresses in the default whitelist of the ApsaraDB RDS instance is limited to 1,000. For information about IP address whitelists, see <a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist</a>.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -605,12 +609,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you associate an ApsaraDB RDS instance with a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</p>
+     * <p>Before you attach an ApsaraDB RDS instance to a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</p>
      * <ul>
-     * <li>The ApsaraDB RDS instance and the scaling group must belong to the same Alibaba Cloud account.</li>
-     * <li>The ApsaraDB RDS instance must be unlocked. For more information about the lock policy, see <a href="https://help.aliyun.com/document_detail/41872.html">ApsaraDB RDS usage notes</a>.</li>
-     * <li>The ApsaraDB RDS instance must be in the Running state.
-     * After an ApsaraDB RDS instance is associated with the scaling group, the default IP address whitelist of the ApsaraDB RDS instance can contain no more than 1,000 IP addresses. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Set the whitelist</a>.</li>
+     * <li>The ApsaraDB RDS instance and the scaling group belong to the same Alibaba Cloud account.</li>
+     * <li>The ApsaraDB RDS instance is unlocked. For information about the lock policy, see <a href="https://help.aliyun.com/document_detail/41872.html">ApsaraDB RDS usage notes</a>.</li>
+     * <li>The ApsaraDB RDS instance is in the Running state.</li>
+     * <li>The ApsaraDB RDS instance exists in the Alibaba Cloud account.</li>
+     * <li>If you reattach an ApsaraDB RDS instance to a scaling group, the total number of attached ApsaraDB RDS instances of the scaling group remains unchanged. But Auto Scaling adds the private IP addresses of all Elastic Compute Service (ECS) instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance.<blockquote>
+     * <p> After you attach an ApsaraDB RDS instance to a scaling group, make sure that the number of IP addresses in the default whitelist of the ApsaraDB RDS instance is limited to 1,000. For information about IP address whitelists, see <a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist</a>.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1017,6 +1025,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot call this operation to cancel instance refresh tasks that are being rolled back.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an instance refresh task. Take note that new instances that are used to replace old instances or that are scaled out still exist after you call this operation.</p>
+     * 
      * @param request CancelInstanceRefreshRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelInstanceRefreshResponse
@@ -1062,6 +1076,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot call this operation to cancel instance refresh tasks that are being rolled back.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an instance refresh task. Take note that new instances that are used to replace old instances or that are scaled out still exist after you call this operation.</p>
+     * 
      * @param request CancelInstanceRefreshRequest
      * @return CancelInstanceRefreshResponse
      */
@@ -3591,6 +3611,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeElasticStrength</p>
+     * 
+     * @param request DescribeElasticStrengthRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeElasticStrengthResponse
+     */
+    public DescribeElasticStrengthResponse describeElasticStrengthWithOptions(DescribeElasticStrengthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeElasticStrength"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeElasticStrengthResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeElasticStrength</p>
+     * 
+     * @param request DescribeElasticStrengthRequest
+     * @return DescribeElasticStrengthResponse
+     */
+    public DescribeElasticStrengthResponse describeElasticStrength(DescribeElasticStrengthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeElasticStrengthWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries instance refresh tasks. If you want to view the basic information and execution progress of an instance refresh task, you can call the DescribeInstanceRefreshes operation.</p>
+     * 
      * @param request DescribeInstanceRefreshesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceRefreshesResponse
@@ -3652,6 +3715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries instance refresh tasks. If you want to view the basic information and execution progress of an instance refresh task, you can call the DescribeInstanceRefreshes operation.</p>
+     * 
      * @param request DescribeInstanceRefreshesRequest
      * @return DescribeInstanceRefreshesResponse
      */
@@ -4088,12 +4154,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can specify a scaling group ID to query all scaling activities in the scaling group.
-     * You can filter query results based on the status of scaling activities.
-     * You can query scaling activities that are executed in the previous 30 days.</p>
+     * <p>  You can query all scaling activities in a scaling group by specifying ScalingGroupId.</p>
+     * <ul>
+     * <li>You can filter query results based on the status of scaling activities.</li>
+     * <li>You can query scaling activities within the last 30 days.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries scaling activities.</p>
+     * <p>Queries scaling activities. You can call the DescribeScalingActivities operation to query the results of scaling activities triggered by scheduled tasks, event-triggered tasks, or manual execution of scaling rules. For example, you can query the status and cause of a scaling activity. You can also query the total number of instances after a scaling activity is complete.</p>
      * 
      * @param request DescribeScalingActivitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4165,12 +4233,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can specify a scaling group ID to query all scaling activities in the scaling group.
-     * You can filter query results based on the status of scaling activities.
-     * You can query scaling activities that are executed in the previous 30 days.</p>
+     * <p>  You can query all scaling activities in a scaling group by specifying ScalingGroupId.</p>
+     * <ul>
+     * <li>You can filter query results based on the status of scaling activities.</li>
+     * <li>You can query scaling activities within the last 30 days.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries scaling activities.</p>
+     * <p>Queries scaling activities. You can call the DescribeScalingActivities operation to query the results of scaling activities triggered by scheduled tasks, event-triggered tasks, or manual execution of scaling rules. For example, you can query the status and cause of a scaling activity. You can also query the total number of instances after a scaling activity is complete.</p>
      * 
      * @param request DescribeScalingActivitiesRequest
      * @return DescribeScalingActivitiesResponse
@@ -4318,7 +4388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a scaling group. You can call the DescribeScalingGroupDetail operation to query the basic information, instances, and scaling configurations of a scaling group. If you set OutputFormat to yaml, the output is a Kubernetes Deployment file in the YAML format.</p>
+     * <p>Queries a scaling group. You can call the DescribeScalingGroupDetail operation to query the basic information, instances, and scaling configurations of a scaling group. If you set OutputFormat to YAML for a scaling group of the Elastic Container Instance type, the output is a Kubernetes Deployment file in the YAML format.</p>
      * 
      * @param request DescribeScalingGroupDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4362,7 +4432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a scaling group. You can call the DescribeScalingGroupDetail operation to query the basic information, instances, and scaling configurations of a scaling group. If you set OutputFormat to yaml, the output is a Kubernetes Deployment file in the YAML format.</p>
+     * <p>Queries a scaling group. You can call the DescribeScalingGroupDetail operation to query the basic information, instances, and scaling configurations of a scaling group. If you set OutputFormat to YAML for a scaling group of the Elastic Container Instance type, the output is a Kubernetes Deployment file in the YAML format.</p>
      * 
      * @param request DescribeScalingGroupDetailRequest
      * @return DescribeScalingGroupDetailResponse
@@ -7779,6 +7849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Resumes an instance refresh task.</p>
+     * 
      * @param request ResumeInstanceRefreshRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResumeInstanceRefreshResponse
@@ -7824,6 +7897,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Resumes an instance refresh task.</p>
+     * 
      * @param request ResumeInstanceRefreshRequest
      * @return ResumeInstanceRefreshResponse
      */
@@ -7897,6 +7973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Rolls back an instance refresh task. If the configurations of an instance refresh task cannot meet your business requirements, you can call this operation to roll back the task. During the rollback process, Auto Scaling creates instances based on the active scaling configuration to replace instances that are created based on the configurations of the instance refresh task.</p>
+     * 
      * @param request RollbackInstanceRefreshRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RollbackInstanceRefreshResponse
@@ -7942,6 +8021,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Rolls back an instance refresh task. If the configurations of an instance refresh task cannot meet your business requirements, you can call this operation to roll back the task. During the rollback process, Auto Scaling creates instances based on the active scaling configuration to replace instances that are created based on the configurations of the instance refresh task.</p>
+     * 
      * @param request RollbackInstanceRefreshRequest
      * @return RollbackInstanceRefreshResponse
      */
@@ -8193,12 +8275,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Once ECS instances enter the Protected state, they become subject to the following restrictions:</p>
      * <ul>
      * <li>ECS instances will persist in the Protected state, unless you deliberately remove them from this state.</li>
-     * <li>Even in scenarios where automatic scale-in actions are initiated due to fluctuations in the number of ECS instances or the execution of event-triggered tasks, Auto Scaling does not remove ECS instances that are in the Protected state from their respective scaling groups. Only after being manually removed from their respective scaling groups can ECS instances that are in the Protected state be released. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">Remove an ECS instance</a>.</li>
-     * <li>ECS instances in the Protected state maintain their existing health status even when they undergo stopping or restarting processes.</li>
+     * <li>Even in scenarios where automatic scale-in actions are initiated due to fluctuations in the number of ECS instances or the execution of event-triggered tasks, Auto Scaling does not remove ECS instances that are in the Protected state from their respective scaling groups. Only after being manually removed from their respective scaling groups can ECS instances that are in the Protected state be released. For more information, see <a href="https://help.aliyun.com/document_detail/459393.html">Remove an ECS instance</a>.</li>
+     * <li>ECS instances in the Protected state maintain their health status even when they undergo stopping or restarting processes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Puts Elastic Compute Service (ECS) instances into the Protected state. When ECS instances are put into the Protected state, they become immune to manual deletion attempts by using the Auto Scaling console or API operations. This operation serves as a robust safeguard, efficiently preventing any inadvertent instance release that could lead to irreversible consequences.</p>
+     * <p>Puts or removes Elastic Compute Service (ECS) instances into or from the Protected state. After you put an ECS instance into the Protected state, the ECS instance will not be stopped or released when a scale-in event is triggered. In this case, you can manually delete the ECS instance in the Auto Scaling console or by calling the RemoveInstances operation.</p>
      * 
      * @param request SetInstancesProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8249,12 +8331,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Once ECS instances enter the Protected state, they become subject to the following restrictions:</p>
      * <ul>
      * <li>ECS instances will persist in the Protected state, unless you deliberately remove them from this state.</li>
-     * <li>Even in scenarios where automatic scale-in actions are initiated due to fluctuations in the number of ECS instances or the execution of event-triggered tasks, Auto Scaling does not remove ECS instances that are in the Protected state from their respective scaling groups. Only after being manually removed from their respective scaling groups can ECS instances that are in the Protected state be released. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">Remove an ECS instance</a>.</li>
-     * <li>ECS instances in the Protected state maintain their existing health status even when they undergo stopping or restarting processes.</li>
+     * <li>Even in scenarios where automatic scale-in actions are initiated due to fluctuations in the number of ECS instances or the execution of event-triggered tasks, Auto Scaling does not remove ECS instances that are in the Protected state from their respective scaling groups. Only after being manually removed from their respective scaling groups can ECS instances that are in the Protected state be released. For more information, see <a href="https://help.aliyun.com/document_detail/459393.html">Remove an ECS instance</a>.</li>
+     * <li>ECS instances in the Protected state maintain their health status even when they undergo stopping or restarting processes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Puts Elastic Compute Service (ECS) instances into the Protected state. When ECS instances are put into the Protected state, they become immune to manual deletion attempts by using the Auto Scaling console or API operations. This operation serves as a robust safeguard, efficiently preventing any inadvertent instance release that could lead to irreversible consequences.</p>
+     * <p>Puts or removes Elastic Compute Service (ECS) instances into or from the Protected state. After you put an ECS instance into the Protected state, the ECS instance will not be stopped or released when a scale-in event is triggered. In this case, you can manually delete the ECS instance in the Auto Scaling console or by calling the RemoveInstances operation.</p>
      * 
      * @param request SetInstancesProtectionRequest
      * @return SetInstancesProtectionResponse
@@ -8265,6 +8347,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only one instance refresh task can be executed at a time in a scaling group.</p>
+     * <ul>
+     * <li>Instance refresh tasks are currently supported only by scaling groups of the Elastic Compute Service (ECS) type and using <strong>the priority policy</strong>. Scaling groups that use the number of vCPUs as the method to calculate the group capacity or scaling groups whose instance reclaim mode is <strong>Economical Mode</strong> or <strong>Forcibly Recycle</strong> do not support instance refresh tasks.</li>
+     * <li>During the execution of an instance refresh task, scaling events can be complete as expected. Take note that instances that are scaled out use the desired configurations provided by the instance refresh task.</li>
+     * <li>Instance refresh tasks does not take effect on instances that are manually added and instances that are in the Standby and Protected states.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts an instance refresh task. If you want to batch update instance images, modify information in scaling configurations, and scale out instances based on new configurations, you can call the StartInstanceRefresh.html operation. After you start an instance refresh task, Auto Scaling gradually creates new instances from the desired configurations provided by the task to replace old instances. When all replacements are complete, the configurations of instances in your scaling group perfectly match your expectations.</p>
+     * 
      * @param request StartInstanceRefreshRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartInstanceRefreshResponse
@@ -8322,6 +8415,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only one instance refresh task can be executed at a time in a scaling group.</p>
+     * <ul>
+     * <li>Instance refresh tasks are currently supported only by scaling groups of the Elastic Compute Service (ECS) type and using <strong>the priority policy</strong>. Scaling groups that use the number of vCPUs as the method to calculate the group capacity or scaling groups whose instance reclaim mode is <strong>Economical Mode</strong> or <strong>Forcibly Recycle</strong> do not support instance refresh tasks.</li>
+     * <li>During the execution of an instance refresh task, scaling events can be complete as expected. Take note that instances that are scaled out use the desired configurations provided by the instance refresh task.</li>
+     * <li>Instance refresh tasks does not take effect on instances that are manually added and instances that are in the Standby and Protected states.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts an instance refresh task. If you want to batch update instance images, modify information in scaling configurations, and scale out instances based on new configurations, you can call the StartInstanceRefresh.html operation. After you start an instance refresh task, Auto Scaling gradually creates new instances from the desired configurations provided by the task to replace old instances. When all replacements are complete, the configurations of instances in your scaling group perfectly match your expectations.</p>
+     * 
      * @param request StartInstanceRefreshRequest
      * @return StartInstanceRefreshResponse
      */
@@ -8331,6 +8435,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot call this operation to suspend an instance refresh task that is being rolled back.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Suspends an instance refresh task. You can call this operation to suspend an ongoing instance refresh task for observation.</p>
+     * 
      * @param request SuspendInstanceRefreshRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SuspendInstanceRefreshResponse
@@ -8376,6 +8486,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot call this operation to suspend an instance refresh task that is being rolled back.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Suspends an instance refresh task. You can call this operation to suspend an ongoing instance refresh task for observation.</p>
+     * 
      * @param request SuspendInstanceRefreshRequest
      * @return SuspendInstanceRefreshResponse
      */

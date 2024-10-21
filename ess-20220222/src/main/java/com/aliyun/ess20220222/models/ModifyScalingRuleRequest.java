@@ -89,20 +89,22 @@ public class ModifyScalingRuleRequest extends TeaModel {
      * <p>The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.</p>
      * <p>Valid values if you create a target tracking scaling rule:</p>
      * <ul>
+     * <li>CpuUtilizationAgent (recommended): the CPU utilization.</li>
+     * <li>MemoryUtilization (recommended): the memory usage.</li>
      * <li>CpuUtilization: the average CPU utilization.</li>
-     * <li>IntranetTx: the outbound traffic over an internal network.</li>
-     * <li>IntranetRx: the inbound traffic over an internal network.</li>
-     * <li>VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.</li>
-     * <li>VpcInternetRx: the inbound traffic from the Internet to a VPC.</li>
-     * <li>MemoryUtilization: the memory usage.</li>
+     * <li>IntranetTx: the average outbound traffic over an internal network.</li>
+     * <li>IntranetRx: the average inbound traffic over an internal network.</li>
+     * <li>VpcInternetTx: the average outbound traffic from a virtual private cloud (VPC) to the Internet.</li>
+     * <li>VpcInternetRx: the average inbound traffic from the Internet to a VPC.</li>
      * <li>LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.</li>
      * </ul>
      * <p>Valid values if you create a predictive scaling rule:</p>
      * <ul>
      * <li>CpuUtilization: the average CPU utilization.</li>
-     * <li>IntranetRx: the inbound traffic over an internal network.</li>
-     * <li>IntranetTx: the outbound traffic over an internal network.</li>
+     * <li>IntranetRx: the average inbound traffic over an internal network.</li>
+     * <li>IntranetTx: the average outbound traffic over an internal network.</li>
      * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CpuUtilization</p>

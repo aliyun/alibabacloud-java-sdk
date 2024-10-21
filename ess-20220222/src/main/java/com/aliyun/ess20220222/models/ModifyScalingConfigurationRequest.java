@@ -298,7 +298,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     public java.util.List<ModifyScalingConfigurationRequestNetworkInterfaces> networkInterfaces;
 
     /**
-     * <p>Specifies whether to overwrite existing data. Valid values:</p>
+     * <p>Specifies whether to override existing data. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -2222,6 +2222,16 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationRequestSecurityOptions extends TeaModel {
+        /**
+         * <p>The confidential computing mode. Valid values:</p>
+         * <ul>
+         * <li>Enclave: An enclave-based confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</li>
+         * <li>TDX: A Trust Domain Extensions (TDX) confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TDX</p>
+         */
         @NameInMap("ConfidentialComputingMode")
         public String confidentialComputingMode;
 
