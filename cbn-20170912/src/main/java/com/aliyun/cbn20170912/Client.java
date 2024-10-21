@@ -1405,6 +1405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationInstanceIdsReverseMatch", request.destinationInstanceIdsReverseMatch);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationRegionIds)) {
+            query.put("DestinationRegionIds", request.destinationRegionIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.destinationRouteTableIds)) {
             query.put("DestinationRouteTableIds", request.destinationRouteTableIds);
         }
@@ -10780,6 +10784,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationInstanceIdsReverseMatch", request.destinationInstanceIdsReverseMatch);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationRegionIds)) {
+            query.put("DestinationRegionIds", request.destinationRegionIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.destinationRouteTableIds)) {
             query.put("DestinationRouteTableIds", request.destinationRouteTableIds);
         }
@@ -10992,6 +11000,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyFlowLogAttributeResponse modifyFlowLogAttribute(ModifyFlowLogAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyFlowLogAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑流分类规则的名称和描述</p>
+     * 
+     * @param request ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTrafficMatchRuleToTrafficMarkingPolicyResponse
+     */
+    public ModifyTrafficMatchRuleToTrafficMarkingPolicyResponse modifyTrafficMatchRuleToTrafficMarkingPolicyWithOptions(ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficMarkingPolicyId)) {
+            query.put("TrafficMarkingPolicyId", request.trafficMarkingPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficMatchRuleDescription)) {
+            query.put("TrafficMatchRuleDescription", request.trafficMatchRuleDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficMatchRuleId)) {
+            query.put("TrafficMatchRuleId", request.trafficMatchRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficMatchRuleName)) {
+            query.put("TrafficMatchRuleName", request.trafficMatchRuleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTrafficMatchRuleToTrafficMarkingPolicy"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTrafficMatchRuleToTrafficMarkingPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑流分类规则的名称和描述</p>
+     * 
+     * @param request ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest
+     * @return ModifyTrafficMatchRuleToTrafficMarkingPolicyResponse
+     */
+    public ModifyTrafficMatchRuleToTrafficMarkingPolicyResponse modifyTrafficMatchRuleToTrafficMarkingPolicy(ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTrafficMatchRuleToTrafficMarkingPolicyWithOptions(request, runtime);
     }
 
     /**
