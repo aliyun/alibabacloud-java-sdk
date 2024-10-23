@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcBindingRequest extends TeaModel {
     /**
-     * <p>The configurations of the virtual private cloud (VPC) binding.</p>
+     * <p>The VPC binding configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

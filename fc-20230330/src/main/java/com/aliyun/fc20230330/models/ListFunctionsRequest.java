@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
     /**
+     * <p>The version of Function Compute to which the functions belong. Valid values: v3 and v2. v3: only lists functions of Function Compute 3.0. v2: only lists functions of Function Compute 2.0. By default, this parameter is left empty and functions in both Function Compute 2.0 and Function Compute 3.0 are listed.</p>
+     * 
      * <strong>example:</strong>
      * <p>v3</p>
      */

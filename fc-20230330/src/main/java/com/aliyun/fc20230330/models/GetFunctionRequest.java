@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFunctionRequest extends TeaModel {
     /**
-     * <p>The version or alias of the function.</p>
+     * <p>2023-03-10T10:10:10Z</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>
