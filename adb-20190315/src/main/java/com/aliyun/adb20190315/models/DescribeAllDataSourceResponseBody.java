@@ -12,6 +12,9 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,48 +71,71 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     public static class DescribeAllDataSourceResponseBodyColumnsColumn extends TeaModel {
         /**
          * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The data type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint</p>
          */
         @NameInMap("Type")
         public String type;
@@ -199,12 +225,18 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     public static class DescribeAllDataSourceResponseBodySchemasSchema extends TeaModel {
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
@@ -254,18 +286,27 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;

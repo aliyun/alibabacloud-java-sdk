@@ -12,6 +12,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class DescribeColumnsResponseBody extends TeaModel {
     public static class DescribeColumnsResponseBodyItemsColumn extends TeaModel {
         /**
          * <p>Indicates whether the columns are auto-incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>Indicates whether the column is a primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The data type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint</p>
          */
         @NameInMap("Type")
         public String type;

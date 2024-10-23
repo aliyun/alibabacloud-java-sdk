@@ -12,6 +12,9 @@ public class DescribeSchemasResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeSchemasResponseBody extends TeaModel {
     public static class DescribeSchemasResponseBodyItemsSchema extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;

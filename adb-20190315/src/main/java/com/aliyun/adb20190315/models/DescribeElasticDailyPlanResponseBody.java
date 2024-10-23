@@ -12,6 +12,9 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,86 +43,123 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
     public static class DescribeElasticDailyPlanResponseBodyElasticDailyPlanList extends TeaModel {
         /**
          * <p>The start date of the current-day scaling plan. The date is in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02</p>
          */
         @NameInMap("Day")
         public String day;
 
         /**
          * <p>The number of nodes involved in the scaling plan.</p>
-         * <br>
-         * <p>*   If ElasticPlanType is set to **worker**, a value of 0 or null is returned.</p>
-         * <p>*   If ElasticPlanType is set to **executorcombineworker** or **executor**, a value greater than 0 is returned.</p>
+         * <ul>
+         * <li>If ElasticPlanType is set to <strong>worker</strong>, a value of 0 or null is returned.</li>
+         * <li>If ElasticPlanType is set to <strong>executorcombineworker</strong> or <strong>executor</strong>, a value greater than 0 is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ElasticNodeNum")
         public Integer elasticNodeNum;
 
         /**
          * <p>The type of the scaling plan. Default value: executorcombineworker. Valid values:</p>
-         * <br>
-         * <p>*   **worker**: scales only elastic I/O resources.</p>
-         * <p>*   **executor**: scales only computing resources.</p>
-         * <p>*   **executorcombineworker**: scales both elastic I/O resources and computing resources by proportion.</p>
+         * <ul>
+         * <li><strong>worker</strong>: scales only elastic I/O resources.</li>
+         * <li><strong>executor</strong>: scales only computing resources.</li>
+         * <li><strong>executorcombineworker</strong>: scales both elastic I/O resources and computing resources by proportion.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>worker</p>
          */
         @NameInMap("ElasticPlanType")
         public String elasticPlanType;
 
         /**
          * <p>The resource specifications that can be scaled up by the scaling plan. Default value: 8 Core 64 GB. Valid values:</p>
-         * <br>
-         * <p>*   8 Core 64 GB</p>
-         * <p>*   16 Core 64 GB</p>
-         * <p>*   32 Core 64 GB</p>
-         * <p>*   64 Core 128 GB</p>
-         * <p>*   12 Core 96 GB</p>
-         * <p>*   24 Core 96 GB</p>
-         * <p>*   52 Core 86 GB</p>
+         * <ul>
+         * <li>8 Core 64 GB</li>
+         * <li>16 Core 64 GB</li>
+         * <li>32 Core 64 GB</li>
+         * <li>64 Core 128 GB</li>
+         * <li>12 Core 96 GB</li>
+         * <li>24 Core 96 GB</li>
+         * <li>52 Core 86 GB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>16 Core 64 GB</p>
          */
         @NameInMap("ElasticPlanWorkerSpec")
         public String elasticPlanWorkerSpec;
 
         /**
          * <p>The actual restoration time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02 16:00:00</p>
          */
         @NameInMap("EndTs")
         public String endTs;
 
         /**
          * <p>The scheduled restoration time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02 16:00:00</p>
          */
         @NameInMap("PlanEndTs")
         public String planEndTs;
 
         /**
          * <p>The name of the scaling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>realtimeplan</p>
          */
         @NameInMap("PlanName")
         public String planName;
 
         /**
          * <p>The scheduled scale-up time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02 15:00:00</p>
          */
         @NameInMap("PlanStartTs")
         public String planStartTs;
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ResourcePoolName")
         public String resourcePoolName;
 
         /**
          * <p>The actual scale-up time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02 16:00:00</p>
          */
         @NameInMap("StartTs")
         public String startTs;
 
         /**
          * <p>The execution state of the current-day scaling plan. Multiple values are separated by commas (,). Valid values:</p>
-         * <br>
-         * <p>*   **1**: The scaling plan is not executed.</p>
-         * <p>*   **2**: The scaling plan is being executed.</p>
-         * <p>*   **3**: The scaling plan is executed.</p>
-         * <p>*   **4**: The scaling plan fails to be executed.</p>
+         * <ul>
+         * <li><strong>1</strong>: The scaling plan is not executed.</li>
+         * <li><strong>2</strong>: The scaling plan is being executed.</li>
+         * <li><strong>3</strong>: The scaling plan is executed.</li>
+         * <li><strong>4</strong>: The scaling plan fails to be executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;

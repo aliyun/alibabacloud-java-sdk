@@ -6,20 +6,32 @@ import com.aliyun.tea.*;
 public class ModifyDBResourcePoolRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1ub9grke1****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The number of nodes.</p>
-     * <br>
-     * <p>*   Each node provides 16 cores and 64 GB memory.</p>
-     * <p>*   The amount of resources that you want to add to or remove from the cluster cannot exceed the total amount of resources in the cluster.</p>
-     * <br>
-     * <p>> - If you do not specify this parameter, the original value is retained.</p>
-     * <p>> - You must specify at least one of the QueryType and NodeNum parameters.</p>
+     * <ul>
+     * <li>Each node provides 16 cores and 64 GB memory.</li>
+     * <li>The amount of resources that you want to add to or remove from the cluster cannot exceed the total amount of resources in the cluster.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not specify this parameter, the original value is retained.</li>
+     * <li>You must specify at least one of the QueryType and NodeNum parameters.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("NodeNum")
     public Integer nodeNum;
@@ -32,17 +44,26 @@ public class ModifyDBResourcePoolRequest extends TeaModel {
 
     /**
      * <p>The name of the resource group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
      */
     @NameInMap("PoolName")
     public String poolName;
 
     /**
      * <p>The mode in which SQL statements are executed. Valid values:</p>
-     * <br>
-     * <p>*   **batch**</p>
-     * <p>*   **interactive**</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the original value is retained.</p>
+     * <ul>
+     * <li><strong>batch</strong></li>
+     * <li><strong>interactive</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the original value is retained.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>batch</p>
      */
     @NameInMap("QueryType")
     public String queryType;

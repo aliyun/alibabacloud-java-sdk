@@ -6,32 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeLoadTasksRecordsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp2590j****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The name of the database that is involved in the import or export task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adb_demo</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-18T06:30:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The order in which to sort the tasks by field. Specify the field and the sort order in the JSON format. Example: `[{"Field":"CreateTime", "Type":"desc"}]`.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   `Field` specifies the field that is used to sort the tasks. Valid values of Field: `State`, `CreateTime`, `DBName`, `ProcessID`, `UpdateTime`, `JobName`, and `ProcessRows`.</p>
-     * <br>
-     * <p>*   `Type` specifies the sort order. Valid values of Type: `Desc` and `Asc`. The values are case-insensitive.</p>
+     * <p>The order in which to sort the tasks by field. Specify the field and the sort order in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;CreateTime&quot;, &quot;Type&quot;:&quot;desc&quot;}]</code>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p><code>Field</code> specifies the field that is used to sort the tasks. Valid values of Field: <code>State</code>, <code>CreateTime</code>, <code>DBName</code>, <code>ProcessID</code>, <code>UpdateTime</code>, <code>JobName</code>, and <code>ProcessRows</code>.</p>
+     * </li>
+     * <li><p><code>Type</code> specifies the sort order. Valid values of Type: <code>Desc</code> and <code>Asc</code>. The values are case-insensitive.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Field&quot;:&quot;CreateTime&quot;, &quot;Type&quot;:&quot;desc&quot;}]</p>
      */
     @NameInMap("Order")
     public String order;
@@ -44,24 +61,35 @@ public class DescribeLoadTasksRecordsRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -73,20 +101,29 @@ public class DescribeLoadTasksRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.</p>
-     * <br>
-     * <p>> We recommend that you set the query start time to any point in time within 30 days.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>We recommend that you set the query start time to any point in time within 30 days.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-18T06:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The state of the asynchronous import or export task to be queried. Valid values:</p>
-     * <br>
-     * <p>*   **INIT**: The task is being initialized.</p>
-     * <p>*   **RUNNING**: The task is running.</p>
-     * <p>*   **FINISH**: The task is successful.</p>
-     * <p>*   **FAILED**: The task fails.</p>
+     * <ul>
+     * <li><strong>INIT</strong>: The task is being initialized.</li>
+     * <li><strong>RUNNING</strong>: The task is running.</li>
+     * <li><strong>FINISH</strong>: The task is successful.</li>
+     * <li><strong>FAILED</strong>: The task fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FINISH</p>
      */
     @NameInMap("State")
     public String state;

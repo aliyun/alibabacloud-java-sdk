@@ -6,62 +6,90 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterPerformanceRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time. The maximum time range that can be specified is two days.</p>
+     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time. The maximum time range that can be specified is two days.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-03T15:01Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The performance metrics to be queried. Separate multiple values with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   CPU</p>
-     * <br>
-     * <p>    *   **AnalyticDB_CPU**: the average CPU utilization.</p>
-     * <br>
-     * <p>*   Connections</p>
-     * <br>
-     * <p>    *   **AnalyticDB_Connections**: the number of database connections.</p>
-     * <br>
-     * <p>*   Writes</p>
-     * <br>
-     * <p>    *   **AnalyticDB_TPS**: the write transactions per second (TPS).</p>
-     * <p>    *   **AnalyticDB_InsertRT**: the write response time.</p>
-     * <p>    *   **AnalyticDB_InsertBytes**: the write throughput.</p>
-     * <br>
-     * <p>*   Updates</p>
-     * <br>
-     * <p>    *   **AnalyticDB_UpdateRT**: the update response time.</p>
-     * <br>
-     * <p>*   Deletion</p>
-     * <br>
-     * <p>    *   **AnalyticDB_DeleteRT**: the delete response time.</p>
-     * <br>
-     * <p>*   Queries</p>
-     * <br>
-     * <p>    *   **AnalyticDB_QPS**: the queries per second (QPS).</p>
-     * <p>    *   **AnalyticDB_QueryRT**: the query response time.</p>
-     * <p>    *   **AnalyticDB_QueryWaitTime**: the query wait time.</p>
-     * <br>
-     * <p>*   Disks</p>
-     * <br>
-     * <p>    *   **AnalyticDB_IO**: the disk I/O throughput.</p>
-     * <p>    *   **AnalyticDB_IO_UTIL**: the I/O utilization.</p>
-     * <p>    *   **AnalyticDB_IO_WAIT**: the I/O wait time.</p>
-     * <p>    *   **AnalyticDB_IOPS**: the disk input/output operations per second (IOPS).</p>
-     * <p>    *   **AnalyticDB_DiskUsage**: the disk space that is used.</p>
-     * <p>    *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.</p>
-     * <p>    *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by cold data.</p>
-     * <br>
-     * <p>>  If you leave this parameter empty, the values of all the preceding performance metrics are returned.</p>
+     * <ul>
+     * <li><p>CPU</p>
+     * <ul>
+     * <li><strong>AnalyticDB_CPU</strong>: the average CPU utilization.</li>
+     * </ul>
+     * </li>
+     * <li><p>Connections</p>
+     * <ul>
+     * <li><strong>AnalyticDB_Connections</strong>: the number of connections of the cluster.</li>
+     * </ul>
+     * </li>
+     * <li><p>Writes</p>
+     * <ul>
+     * <li><strong>AnalyticDB_TPS</strong>: the write transactions per second (TPS).</li>
+     * <li><strong>AnalyticDB_InsertRT</strong>: the write response time.</li>
+     * <li><strong>AnalyticDB_InsertBytes</strong>: the write throughput.</li>
+     * </ul>
+     * </li>
+     * <li><p>Updates</p>
+     * <ul>
+     * <li><strong>AnalyticDB_UpdateRT</strong>: the update response time.</li>
+     * </ul>
+     * </li>
+     * <li><p>Deletes</p>
+     * <ul>
+     * <li><strong>AnalyticDB_DeleteRT</strong>: the delete response time.</li>
+     * </ul>
+     * </li>
+     * <li><p>Queries</p>
+     * <ul>
+     * <li><strong>AnalyticDB_QPS</strong>: the queries per second (QPS).</li>
+     * <li><strong>AnalyticDB_QueryRT</strong>: the query response time.</li>
+     * <li><strong>AnalyticDB_QueryWaitTime</strong>: the query wait time.</li>
+     * </ul>
+     * </li>
+     * <li><p>Disks</p>
+     * <ul>
+     * <li><strong>AnalyticDB_IO</strong>: the disk I/O throughput.</li>
+     * <li><strong>AnalyticDB_IO_UTIL</strong>: the disk I/O usage.</li>
+     * <li><strong>AnalyticDB_IO_WAIT</strong>: the disk I/O wait time.</li>
+     * <li><strong>AnalyticDB_IOPS</strong>: the disk IOPS.</li>
+     * <li><strong>AnalyticDB_DiskUsage</strong>: the disk space that is used.</li>
+     * <li><strong>AnalyticDB_HotDataDiskUsage</strong>: the disk space that is used by hot data.</li>
+     * <li><strong>AnalyticDB_ColdDataDiskUsage</strong>: the disk space that is used by cold data.</li>
+     * </ul>
+     * </li>
+     * <li><p>Other</p>
+     * <ul>
+     * <li><strong>AnalyticDB_BuildTaskCount</strong>: the number of BUILD jobs.</li>
+     * <li><strong>AnalyticDB_ComputeMemoryUsedRatio</strong>: the compute memory usage.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the values of all the preceding performance metrics are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>AnalyticDB_CPU</p>
      */
     @NameInMap("Key")
     public String key;
@@ -74,6 +102,10 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -86,12 +118,18 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
 
     /**
      * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ResourcePools")
     public String resourcePools;
 
     /**
-     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-03T15:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterAccessWhiteListRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,6 +19,18 @@ public class DescribeDBClusterAccessWhiteListRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -49,6 +65,14 @@ public class DescribeDBClusterAccessWhiteListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBClusterAccessWhiteListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDBClusterAccessWhiteListRequest setResourceOwnerAccount(String resourceOwnerAccount) {

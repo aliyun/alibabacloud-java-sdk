@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditLogConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-t4nj8619bz2w3****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -17,7 +21,11 @@ public class DescribeAuditLogConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

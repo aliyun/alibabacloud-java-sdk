@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     /**
      * <p>The network type of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ClusterNetworkType")
     public String clusterNetworkType;
 
     /**
-     * <p>The network information of the cluster.</p>
+     * <p>The queried network information about the cluster.</p>
      */
     @NameInMap("Items")
     public DescribeDBClusterNetInfoResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,49 +60,73 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     public static class DescribeDBClusterNetInfoResponseBodyItemsAddress extends TeaModel {
         /**
          * <p>The endpoint of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bpxxxxxxxx.ads.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The prefix of the cluster endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bpxxxxxxxx89k51380</p>
          */
         @NameInMap("ConnectionStringPrefix")
         public String connectionStringPrefix;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.x.x</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: public endpoint</p>
-         * <p>*   **VPC**: Virtual Private Cloud (VPC) endpoint</p>
+         * <p>The network type of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong>: public endpoint.</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) endpoint.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The port number that is used to connect to the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the VPC.</p>
-         * <br>
-         * <p>>  This parameter is empty when Public is returned for NetType.</p>
+         * <p>The VPC ID.</p>
+         * <blockquote>
+         * <p> If NetType is set to Public, an empty string is returned for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxxxx</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
-         * <br>
-         * <p>>  This parameter is empty when Public is returned for NetType.</p>
+         * <p>The vSwitch ID.</p>
+         * <blockquote>
+         * <p> If NetType is set to Public, an empty string is returned for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

@@ -6,98 +6,143 @@ import com.aliyun.tea.*;
 public class DescribeSQLPatternsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1r053byu48p****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-30T00:15:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The keyword that is used for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language of file titles and error messages. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): simplified Chinese.</p>
-     * <p>*   **en**: English.</p>
-     * <p>*   **ja**: Japanese.</p>
-     * <p>*   **zh-tw**: traditional Chinese.</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): simplified Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The order by which to sort query results. Specify the parameter value in the JSON format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.</p>
-     * <br>
-     * <p>*   `Field` specifies the field by which to sort the query results. Valid values:</p>
-     * <br>
-     * <p>    *   `PatternCreationTime`: the earliest commit time of the SQL pattern within the time range to query.</p>
-     * <p>    *   `AverageQueryTime`: the average total amount of time consumed by the SQL pattern within the time range to query.</p>
-     * <p>    *   `MaxQueryTime`: the maximum total amount of time consumed by the SQL pattern within the time range to query.</p>
-     * <p>    *   `AverageExecutionTime`: the average execution duration of the SQL pattern within the time range to query.</p>
-     * <p>    *   `MaxExecutionTime`: the maximum execution duration of the SQL pattern within the time range to query.</p>
-     * <p>    *   `AveragePeakMemory`: the average peak memory usage of the SQL pattern within the time range to query.</p>
-     * <p>    *   `MaxPeakMemory`: the maximum peak memory usage of the SQL pattern within the time range to query.</p>
-     * <p>    *   `AverageScanSize`: the average amount of data scanned based on the SQL pattern within the time range to query.</p>
-     * <p>    *   `MaxScanSize`: the maximum amount of data scanned based on the SQL pattern within the time range to query.</p>
-     * <p>    *   `QueryCount`: the number of queries performed in association with the SQL pattern within the time range to query.</p>
-     * <p>    *   `FailedCount`: the number of failed queries performed in association with the SQL pattern within the time range to query.</p>
-     * <br>
-     * <p>*   `Type` specifies the sorting order. Valid values (case-insensitive):</p>
-     * <br>
-     * <p>    *   `Asc`: ascending order.</p>
-     * <p>    *   `Desc`: descending order.</p>
+     * <p>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+     * <ul>
+     * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+     * <ul>
+     * <li><code>PatternCreationTime</code>: the earliest commit time of the SQL pattern within the time range to query.</li>
+     * <li><code>AverageQueryTime</code>: the average total amount of time consumed by the SQL pattern within the time range to query.</li>
+     * <li><code>MaxQueryTime</code>: the maximum total amount of time consumed by the SQL pattern within the time range to query.</li>
+     * <li><code>AverageExecutionTime</code>: the average execution duration of the SQL pattern within the time range to query.</li>
+     * <li><code>MaxExecutionTime</code>: the maximum execution duration of the SQL pattern within the time range to query.</li>
+     * <li><code>AveragePeakMemory</code>: the average peak memory usage of the SQL pattern within the time range to query.</li>
+     * <li><code>MaxPeakMemory</code>: the maximum peak memory usage of the SQL pattern within the time range to query.</li>
+     * <li><code>AverageScanSize</code>: the average amount of data scanned based on the SQL pattern within the time range to query.</li>
+     * <li><code>MaxScanSize</code>: the maximum amount of data scanned based on the SQL pattern within the time range to query.</li>
+     * <li><code>QueryCount</code>: the number of queries performed in association with the SQL pattern within the time range to query.</li>
+     * <li><code>FailedCount</code>: the number of failed queries performed in association with the SQL pattern within the time range to query.</li>
+     * </ul>
+     * </li>
+     * <li><p><code>Type</code> specifies the sorting order. Valid values (case-insensitive):</p>
+     * <ul>
+     * <li><code>Asc</code>: ascending order.</li>
+     * <li><code>Desc</code>: descending order.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the value **1** is used.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the value <strong>1</strong> is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the value **30** is used.</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the value <strong>30</strong> is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Only data within the last 14 days can be queried. For example, if the current time is 2021-11-22T12:00:00Z, you can query SQL patterns at a point in time as early as 2021-11-09T12:00:00Z.</p>
-     * <br>
-     * <p>*   The maximum time range that can be specified is 24 hours.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Only data within the last 14 days can be queried. For example, if the current time is 2021-11-22T12:00:00Z, you can query SQL patterns at a point in time as early as 2021-11-09T12:00:00Z.</p>
+     * </li>
+     * <li><p>The maximum time range that can be specified is 24 hours.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-30T00:10:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

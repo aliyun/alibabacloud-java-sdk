@@ -6,27 +6,41 @@ import com.aliyun.tea.*;
 public class DescribeDownloadRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the detailed information of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the detailed information of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The languages available for file titles and some error messages. Default value: zh. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Simplified Chinese</p>
-     * <p>*   **en**: English</p>
-     * <p>*   **ja**: Japanese</p>
-     * <p>*   **zh-tw**: Traditional Chinese</p>
+     * <ul>
+     * <li><strong>zh</strong>: Simplified Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * <li><strong>ja</strong>: Japanese</li>
+     * <li><strong>zh-tw</strong>: Traditional Chinese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

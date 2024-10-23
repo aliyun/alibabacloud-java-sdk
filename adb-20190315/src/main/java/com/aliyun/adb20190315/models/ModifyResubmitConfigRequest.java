@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class ModifyResubmitConfigRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,6 +25,9 @@ public class ModifyResubmitConfigRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,6 +40,7 @@ public class ModifyResubmitConfigRequest extends TeaModel {
 
     /**
      * <p>The job resubmission rules.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ModifyResubmitConfigRequestRules> rules;
@@ -100,30 +109,45 @@ public class ModifyResubmitConfigRequest extends TeaModel {
     public static class ModifyResubmitConfigRequestRules extends TeaModel {
         /**
          * <p>Specifies whether to configure out-of-memory (OOM) check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ExceedMemoryException")
         public Boolean exceedMemoryException;
 
         /**
          * <p>The name of the source resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The peak memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("PeakMemory")
         public String peakMemory;
 
         /**
          * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("QueryTime")
         public String queryTime;
 
         /**
          * <p>The name of the destination resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_target_group</p>
          */
         @NameInMap("TargetGroupName")
         public String targetGroupName;

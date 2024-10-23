@@ -6,23 +6,36 @@ import com.aliyun.tea.*;
 public class ModifyLogBackupPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies whether to enable log backup. Valid values:</p>
-     * <br>
-     * <p>*   **Enable**</p>
-     * <p>*   **Disable**</p>
+     * <ul>
+     * <li><strong>Enable</strong></li>
+     * <li><strong>Disable</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
     /**
      * <p>The number of days for which to retain backup files. Valid values: 7 to 730.</p>
-     * <br>
-     * <p>> The default value is 7.</p>
+     * <blockquote>
+     * <p>The default value is 7.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("LogBackupRetentionPeriod")
     public String logBackupRetentionPeriod;
@@ -35,6 +48,9 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm4f7oger****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

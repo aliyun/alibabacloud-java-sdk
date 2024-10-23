@@ -5,15 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeResubmitConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>am-8vbyw9awuj141haf9</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D217417-BBA7-566C-9B9D-FFCBC86112B0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,30 +63,45 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
     public static class DescribeResubmitConfigResponseBodyRules extends TeaModel {
         /**
          * <p>Indicates whether out-of-memory (OOM) check is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ExceedMemoryException")
         public Boolean exceedMemoryException;
 
         /**
          * <p>The name of the source resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The peak memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("PeakMemory")
         public String peakMemory;
 
         /**
          * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("QueryTime")
         public String queryTime;
 
         /**
          * <p>The name of the destination resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_target_group</p>
          */
         @NameInMap("TargetGroupName")
         public String targetGroupName;

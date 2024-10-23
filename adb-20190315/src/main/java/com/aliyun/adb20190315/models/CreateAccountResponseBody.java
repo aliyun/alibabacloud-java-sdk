@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateAccountResponseBody extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1r053byu48p****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1564657730</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeTaskInfoRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,8 +25,12 @@ public class DescribeTaskInfoRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hongkong</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,6 +43,10 @@ public class DescribeTaskInfoRequest extends TeaModel {
 
     /**
      * <p>The task ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>225685759</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

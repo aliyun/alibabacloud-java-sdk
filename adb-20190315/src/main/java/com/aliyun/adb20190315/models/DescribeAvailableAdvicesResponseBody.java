@@ -12,28 +12,47 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96A55627-28E9-5E47-B8F6-D786BE551349</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The name of the table in the DatabaseName.TableName format.</p>
+     */
+    @NameInMap("SchemaTableNames")
+    public java.util.List<String> schemaTableNames;
+
+    /**
      * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -75,6 +94,14 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeAvailableAdvicesResponseBody setSchemaTableNames(java.util.List<String> schemaTableNames) {
+        this.schemaTableNames = schemaTableNames;
+        return this;
+    }
+    public java.util.List<String> getSchemaTableNames() {
+        return this.schemaTableNames;
+    }
+
     public DescribeAvailableAdvicesResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -86,61 +113,108 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
     public static class DescribeAvailableAdvicesResponseBodyItems extends TeaModel {
         /**
          * <p>The time when the suggestion was generated. The time follows the ISO 8601 standard in the yyyyMMdd format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20221124</p>
          */
         @NameInMap("AdviceDate")
         public String adviceDate;
 
         /**
          * <p>The suggestion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcd04135-0925-4aed-a5a7-e7d92cb1****</p>
          */
         @NameInMap("AdviceId")
         public String adviceId;
 
         /**
          * <p>The type of the suggestion. Valid values:</p>
-         * <br>
-         * <p>*   **Index**: index optimization.</p>
-         * <p>*   **Tiering**: hot and cold data optimization.</p>
+         * <ul>
+         * <li><strong>Index</strong>: index optimization.</li>
+         * <li><strong>Tiering</strong>: hot and cold data optimization.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Index</p>
          */
         @NameInMap("AdviceType")
         public String adviceType;
 
         /**
          * <p>The benefit of the suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4 GB of storage saved</p>
          */
         @NameInMap("Benefit")
         public String benefit;
 
         /**
          * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page. Valid values:</p>
-         * <br>
-         * <p>*   **30** (default)</p>
-         * <p>*   **50**</p>
-         * <p>*   **100**</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The reason why the suggestion was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unused for 15 days, historical usage less than 1%</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The SQL statement that is used to apply the suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alter table <code>schema1</code>.<code>table1</code> drop key col1_1_idx</p>
          */
         @NameInMap("SQL")
         public String SQL;
 
         /**
+         * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
+         */
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        /**
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
+         */
+        @NameInMap("TableName")
+        public String tableName;
+
+        /**
          * <p>The total number of entries returned. Minimum value: 0. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -212,6 +286,22 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         }
         public String getSQL() {
             return this.SQL;
+        }
+
+        public DescribeAvailableAdvicesResponseBodyItems setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        public DescribeAvailableAdvicesResponseBodyItems setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
         public DescribeAvailableAdvicesResponseBodyItems setTotalCount(Long totalCount) {

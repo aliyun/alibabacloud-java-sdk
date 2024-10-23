@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeAllAccountsResponseBody extends TeaModel {
     /**
-     * <p>The list of accounts.</p>
+     * <p>The queried database accounts.</p>
      */
     @NameInMap("AccountList")
     public java.util.List<DescribeAllAccountsResponseBodyAccountList> accountList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +42,10 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
 
     public static class DescribeAllAccountsResponseBodyAccountList extends TeaModel {
         /**
-         * <p>The name of the account.</p>
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rdsdt_dts_adb</p>
          */
         @NameInMap("User")
         public String user;

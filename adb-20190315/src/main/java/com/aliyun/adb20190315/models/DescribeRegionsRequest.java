@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>Th language of the `LocalName` response parameter. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese.</p>
-     * <p>*   **en-US**: English.</p>
-     * <p>*   **ja**: Japanese.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the Chinese language is used.</p>
+     * <p>Th language of the <code>LocalName</code> response parameter. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese.</li>
+     * <li><strong>en-US</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the Chinese language is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>en-US</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -21,6 +26,18 @@ public class DescribeRegionsRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -55,6 +72,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRegionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {

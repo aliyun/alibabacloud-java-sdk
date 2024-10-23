@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTableDetailResponseBody extends TeaModel {
     /**
      * <p>The average number of rows in partitions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AvgSize")
     public Long avgSize;
@@ -18,6 +21,9 @@ public class DescribeTableDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,15 +58,9 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTableDetailResponseBodyItemsShard extends TeaModel {
-        /**
-         * <p>The ID of the partition. Only the numeric part of the partition name is returned.</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The number of rows in the table.</p>
-         */
         @NameInMap("Size")
         public Long size;
 

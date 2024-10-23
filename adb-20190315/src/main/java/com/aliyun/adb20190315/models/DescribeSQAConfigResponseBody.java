@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class DescribeSQAConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>am-8vbyw9awuj141haf9</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBE843D8-964D-5EA3-9D31-822125611B6E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether short query acceleration (SQA) is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("SQAStatus")
     public String SQAStatus;

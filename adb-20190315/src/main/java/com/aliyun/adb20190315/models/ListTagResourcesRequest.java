@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707ec21345</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -17,15 +20,23 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The cluster ID. You can specify multiple cluster IDs. Valid values of N: 1 to 50.</p>
-     * <br>
-     * <p>> You must specify at least one of the following parameters: ResourceId.N and Tag.N.Key.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the following parameters: ResourceId.N and Tag.N.Key.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1l20nxxxxxxxxxx</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -37,7 +48,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **cluster**.</p>
+     * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -128,14 +143,21 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify multiple tag keys. The tag key cannot be an empty string. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>> You must specify at least one of the following parameters: ResourceId.N and Tag.N.Key.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the following parameters: ResourceId.N and Tag.N.Key.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. You can specify multiple tag values. The tag value can be an empty string. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDBResourcePoolResponseBody extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp11q28kvl688****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,6 +21,9 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,43 +60,64 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
     public static class DescribeDBResourcePoolResponseBodyPoolsInfo extends TeaModel {
         /**
          * <p>The time when the resource group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-09 16:57:35.241</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The number of nodes.</p>
-         * <br>
-         * <p>>  Each node consumes 16 cores and 64 GB memory.</p>
+         * <blockquote>
+         * <p> Each node consumes 16 cores and 64 GB memory.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_DEFAULT</p>
          */
         @NameInMap("PoolName")
         public String poolName;
 
         /**
          * <p>The database accounts that are associated with the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testb,testc</p>
          */
         @NameInMap("PoolUsers")
         public String poolUsers;
 
         /**
          * <p>The mode in which SQL statements are executed.</p>
-         * <br>
-         * <p>*   **batch**</p>
-         * <p>*   **interactive**</p>
-         * <br>
-         * <p>>  For more information, see [Query execution modes](~~189502~~).</p>
+         * <ul>
+         * <li><strong>batch</strong></li>
+         * <li><strong>interactive</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>default_type</p>
          */
         @NameInMap("QueryType")
         public String queryType;
 
         /**
          * <p>The time when the resource group was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-09 16:57:35.241</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

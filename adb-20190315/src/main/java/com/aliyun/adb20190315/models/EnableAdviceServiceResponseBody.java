@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class EnableAdviceServiceResponseBody extends TeaModel {
     /**
      * <p>The message returned for the operation. Valid values:</p>
-     * <br>
-     * <p>*   **Success** is returned if the operation is successful.</p>
-     * <p>*   An error message is returned if the operation fails.</p>
+     * <ul>
+     * <li><strong>Success</strong> is returned if the operation is successful.</li>
+     * <li>An error message is returned if the operation fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E1745C03-7CCE-55CF-932E-08121AAFA6AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

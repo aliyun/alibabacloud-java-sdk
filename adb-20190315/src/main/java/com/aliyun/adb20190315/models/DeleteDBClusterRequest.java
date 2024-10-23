@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDBClusterRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1u8c0mgfg58****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

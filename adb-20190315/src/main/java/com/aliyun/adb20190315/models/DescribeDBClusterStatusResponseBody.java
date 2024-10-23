@@ -5,24 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEAU</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The states of clusters. Valid values:</p>
-     * <br>
-     * <p>*   **Preparing**: The cluster is being prepared.</p>
-     * <p>*   **Creating**: The cluster is being created.</p>
-     * <p>*   **Restoring**: The cluster is being restored from a backup.</p>
-     * <p>*   **Running**: The cluster is running.</p>
-     * <p>*   **Deleting**: The cluster is being deleted.</p>
-     * <p>*   **ClassChanging**: The cluster configurations are being changed.</p>
-     * <p>*   **NetAddressCreating**: A network connection is being created.</p>
-     * <p>*   **NetAddressDeleting**: A network connection is being released.</p>
-     * <p>*   **NetAddressModifying**: A network connection is being modified.</p>
-     * <p>*   **EngineVersionUpgrading**: The engine version is being updated.</p>
+     * <p>The status of clusters.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;

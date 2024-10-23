@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class RevokeOperatorPermissionRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

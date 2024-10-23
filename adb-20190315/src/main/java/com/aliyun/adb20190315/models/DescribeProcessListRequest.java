@@ -6,21 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeProcessListRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp11q28kvl688****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The keyword in an SQL statement, which is used to filter queries. Set the value to **SELECT**.</p>
+     * <p>The keyword in an SQL statement, which is used to filter queries. Set the value to <strong>SELECT</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The order in which queries are sorted based on the specified fields. Specify this parameter as an ordered JSON array in the `[{"Field":"Time","Type":"Desc" },{ "Field":"User", "Type":"Asc" }]` format.</p>
-     * <br>
-     * <p>*   **Field** specifies the field used to sort queries. Valid values: Time, User, Host, and DB.</p>
-     * <p>*   **Type** specifies the sorting sequence. Valid values: **Desc** and **Asc**.</p>
+     * <p>The order in which queries are sorted based on the specified fields. Specify this parameter as an ordered JSON array in the <code>[{&quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },{ &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</code> format.</p>
+     * <ul>
+     * <li><strong>Field</strong> specifies the field used to sort queries. Valid values: Time, User, Host, and DB.</li>
+     * <li><strong>Type</strong> specifies the sorting sequence. Valid values: <strong>Desc</strong> and <strong>Asc</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[ { &quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },  { &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</p>
      */
     @NameInMap("Order")
     public String order;
@@ -33,16 +44,23 @@ public class DescribeProcessListRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -55,23 +73,34 @@ public class DescribeProcessListRequest extends TeaModel {
 
     /**
      * <p>The execution duration used to filter queries. Queries that take a longer time than the specified execution duration are displayed. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("RunningTime")
     public Integer runningTime;
 
     /**
      * <p>Specifies whether to show a complete SQL statement. Valid values:</p>
-     * <br>
-     * <p>*   **True**: shows a complete SQL statement.</p>
-     * <p>*   **False**: shows only the first 100 characters of an SQL statement.</p>
-     * <br>
-     * <p>>  The default value is False.</p>
+     * <ul>
+     * <li><strong>True</strong>: shows a complete SQL statement.</li>
+     * <li><strong>False</strong>: shows only the first 100 characters of an SQL statement.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The default value is False.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("ShowFull")
     public Boolean showFull;
 
     /**
      * <p>The name of the user used to filter queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("User")
     public String user;

@@ -12,6 +12,9 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEAW</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
     public static class DescribeComputeResourceResponseBodyComputeResource extends TeaModel {
         /**
          * <p>The specifications of computing resources displayed in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8 Core 32 GB（单机版）</p>
          */
         @NameInMap("DisplayValue")
         public String displayValue;
 
         /**
          * <p>The actual specifications of computing resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8 Core 32 GB</p>
          */
         @NameInMap("RealValue")
         public String realValue;

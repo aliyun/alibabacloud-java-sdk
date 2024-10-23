@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class ModifyResubmitConfigShrinkRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,6 +25,9 @@ public class ModifyResubmitConfigShrinkRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,6 +40,7 @@ public class ModifyResubmitConfigShrinkRequest extends TeaModel {
 
     /**
      * <p>The job resubmission rules.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;

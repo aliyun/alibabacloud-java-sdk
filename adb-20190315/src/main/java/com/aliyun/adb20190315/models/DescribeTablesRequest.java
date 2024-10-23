@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeTablesRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,8 +22,12 @@ public class DescribeTablesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,6 +40,10 @@ public class DescribeTablesRequest extends TeaModel {
 
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adb_demo</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;

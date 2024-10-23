@@ -12,24 +12,36 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -82,54 +94,81 @@ public class DescribeProcessListResponseBody extends TeaModel {
     public static class DescribeProcessListResponseBodyItemsProcess extends TeaModel {
         /**
          * <p>The type of the statement. Only SELECT can be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("DB")
         public String DB;
 
         /**
          * <p>The IP address from which the query was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX:12308</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The ID of the worker thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49104</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The SQL statement that is being executed. By default, the first 100 characters of the SQL statement are returned. If the ShowFull parameter is set to True, the complete SQL statement is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from sbtest1,sbtest2,sbtest3,sbtest4</p>
          */
         @NameInMap("Info")
         public String info;
 
         /**
          * <p>The unique ID of the query. You must specify this parameter when you use the KILL PROCESS statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202011191048151921681492420315100****</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
         /**
          * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-19T02:48:15Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The amount of time that has elapsed from the start time of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Time")
         public Integer time;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("User")
         public String user;

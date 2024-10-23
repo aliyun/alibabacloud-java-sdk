@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifySQAConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>494486CE-6F49-574E-B304-29127EA12E36</p>
      */
     @NameInMap("RequestId")
     public String requestId;

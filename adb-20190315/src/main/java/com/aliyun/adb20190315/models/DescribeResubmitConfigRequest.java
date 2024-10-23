@@ -5,17 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeResubmitConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-8vbyw9awuj141haf9</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The name of the resource group.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the resource group name of a cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name of a cluster.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -28,6 +38,9 @@ public class DescribeResubmitConfigRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929XXXX</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

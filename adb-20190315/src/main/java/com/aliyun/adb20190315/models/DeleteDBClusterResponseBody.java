@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteDBClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1u8c0mgfg58****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>421693038</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

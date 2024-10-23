@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-t4nj8619bz2w3****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,24 +21,36 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8A564B7F-8C00-43C0-8EC5-919FBB70573</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -96,63 +111,94 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     public static class DescribeAuditLogRecordsResponseBodyItems extends TeaModel {
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("ConnId")
         public String connId;
 
         /**
          * <p>The name of the database on which the SQL statement was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_test</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-23 16:05:08</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX:43908</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202106081752021720161662490345362390</p>
          */
         @NameInMap("ProcessID")
         public String processID;
 
         /**
          * <p>Details of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM tb_courses</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The type of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("SQLType")
         public String SQLType;
 
         /**
          * <p>Indicates whether the SQL statement was successfully executed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Succeed")
         public String succeed;
 
         /**
          * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>216</p>
          */
         @NameInMap("TotalTime")
         public String totalTime;
 
         /**
          * <p>The name of the user who executed the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         @NameInMap("User")
         public String user;

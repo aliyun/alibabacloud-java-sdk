@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class ModifyAuditLogConfigRequest extends TeaModel {
     /**
      * <p>The status of SQL audit. Valid values:</p>
-     * <br>
-     * <p>*   **on**: SQL audit is enabled.</p>
-     * <p>*   **off**: SQL audit is disabled.</p>
+     * <ul>
+     * <li><strong>on</strong>: SQL audit is enabled.</li>
+     * <li><strong>off</strong>: SQL audit is disabled.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("AuditLogStatus")
     public String auditLogStatus;
 
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-t4nj8619bz2w3****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -26,7 +35,11 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

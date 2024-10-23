@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   If the request was successful, **Success** is returned.</p>
-     * <p>*   If the request failed, an error message is returned.</p>
+     * <ul>
+     * <li>If the request was successful, <strong>Success</strong> is returned.</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[Advisor] Advisor feature is not available for instance: am-2ze0vp0j6t3to****</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E031AABF-BD56-5966-A063-4283EF18DB45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the suggestion feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **True**</p>
-     * <p>*   **False**</p>
+     * <ul>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("Result")
     public Boolean result;

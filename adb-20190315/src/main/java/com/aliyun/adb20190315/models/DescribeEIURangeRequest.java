@@ -6,35 +6,53 @@ import com.aliyun.tea.*;
 public class DescribeEIURangeRequest extends TeaModel {
     /**
      * <p>The specifications of computing resources.</p>
-     * <br>
-     * <p>>  You can call the [DescribeComputeResource](~~469002~~) operation to query the specifications of computing resources.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/469002.html">DescribeComputeResource</a> operation to query the specifications of computing resources.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;RealValue&quot;: &quot;32Core128GBNEW&quot;,
+     *       &quot;DisplayValue&quot;: &quot;32Core128GB&quot;
+     *     }</p>
      */
     @NameInMap("ComputeResource")
     public String computeResource;
 
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>*   This parameter can be left empty when **Operation** is set to **Buy**.</p>
-     * <p>*   This parameter must be specified when **Operation** is set to **Upgrade** or **Downgrade**.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <ul>
+     * <li>This parameter can be left empty when <strong>Operation</strong> is set to <strong>Buy</strong>.</li>
+     * <li>This parameter must be specified when <strong>Operation</strong> is set to <strong>Upgrade</strong> or <strong>Downgrade</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp16t5ci7r74s****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3.0**.</p>
+     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <strong>3.0</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3.0</p>
      */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
     /**
      * <p>The type of the operation. Valid values:</p>
-     * <br>
-     * <p>*   **Buy**: purchases a cluster.</p>
-     * <p>*   **Upgrade**: upgrades a cluster.</p>
-     * <p>*   **Downgrade**: downgrades a cluster.</p>
+     * <ul>
+     * <li><strong>Buy</strong>: purchases a cluster.</li>
+     * <li><strong>Modify</strong>: changes configurations of a cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Buy</p>
      */
     @NameInMap("Operation")
     public String operation;
@@ -47,14 +65,22 @@ public class DescribeEIURangeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -66,9 +92,40 @@ public class DescribeEIURangeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The specifications of storage resources. Default value: <strong>8ACU</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>8ACU</strong></li>
+     * <li><strong>12ACU</strong></li>
+     * <li><strong>16ACU</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8ACU</p>
+     */
+    @NameInMap("StorageSize")
+    public String storageSize;
+
+    /**
+     * <p>The type of the sub-operation. Valid values:</p>
+     * <ul>
+     * <li><strong>Upgrade</strong>: upgrades a cluster.</li>
+     * <li><strong>Downgrade</strong>: downgrades a cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Upgrade</p>
+     */
+    @NameInMap("SubOperation")
+    public String subOperation;
+
+    /**
      * <p>The zone ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~612293~~) operation to query the most recent zone list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -156,6 +213,22 @@ public class DescribeEIURangeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeEIURangeRequest setStorageSize(String storageSize) {
+        this.storageSize = storageSize;
+        return this;
+    }
+    public String getStorageSize() {
+        return this.storageSize;
+    }
+
+    public DescribeEIURangeRequest setSubOperation(String subOperation) {
+        this.subOperation = subOperation;
+        return this;
+    }
+    public String getSubOperation() {
+        return this.subOperation;
     }
 
     public DescribeEIURangeRequest setZoneId(String zoneId) {

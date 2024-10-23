@@ -12,6 +12,9 @@ public class DescribeEIURangeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeEIURangeResponseBody extends TeaModel {
     public static class DescribeEIURangeResponseBodyEIUInfo extends TeaModel {
         /**
          * <p>The suggested value for the number of EIUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
@@ -49,6 +55,33 @@ public class DescribeEIURangeResponseBody extends TeaModel {
          */
         @NameInMap("EIURange")
         public java.util.List<Long> EIURange;
+
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("MaxValue")
+        public String maxValue;
+
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("MinValue")
+        public String minValue;
+
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("Step")
+        public String step;
 
         /**
          * <p>A reserved parameter.</p>
@@ -75,6 +108,30 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
         public java.util.List<Long> getEIURange() {
             return this.EIURange;
+        }
+
+        public DescribeEIURangeResponseBodyEIUInfo setMaxValue(String maxValue) {
+            this.maxValue = maxValue;
+            return this;
+        }
+        public String getMaxValue() {
+            return this.maxValue;
+        }
+
+        public DescribeEIURangeResponseBodyEIUInfo setMinValue(String minValue) {
+            this.minValue = minValue;
+            return this;
+        }
+        public String getMinValue() {
+            return this.minValue;
+        }
+
+        public DescribeEIURangeResponseBodyEIUInfo setStep(String step) {
+            this.step = step;
+            return this;
+        }
+        public String getStep() {
+            return this.step;
         }
 
         public DescribeEIURangeResponseBodyEIUInfo setStorageResourceRange(java.util.List<String> storageResourceRange) {

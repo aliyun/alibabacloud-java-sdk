@@ -12,6 +12,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64E37E6F-C363-41F3-867A-70EF5DC60EA4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,31 +43,45 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountListDBAccount extends TeaModel {
         /**
          * <p>The description of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C@test</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
         /**
          * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The state of the database account. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
          * <p>The type of the database account. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: standard account.</p>
-         * <p>*   **Super**: privileged account.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: standard account.</li>
+         * <li><strong>Super</strong>: privileged account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("AccountType")
         public String accountType;

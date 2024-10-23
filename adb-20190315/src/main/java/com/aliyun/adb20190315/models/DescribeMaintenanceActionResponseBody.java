@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeMaintenanceActionResponseBody extends TeaModel {
     /**
-     * <p>The queried O\&M events.</p>
+     * <p>The queried O\&amp;M events.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeMaintenanceActionResponseBodyItems> items;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E774C8A9-8819-4A09-9E91-07C078******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -81,99 +93,146 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
 
     public static class DescribeMaintenanceActionResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the O\&M event was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the O\&amp;M event was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T02:44:27Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The ID of the cluster that is involved in the O\&M event.</p>
+         * <p>The ID of the cluster that is involved in the O\&amp;M event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-****************</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analyticdb</p>
          */
         @NameInMap("DBType")
         public String DBType;
 
         /**
          * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.0</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
         /**
-         * <p>The deadline before which the event can be executed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The deadline before which the event can be executed. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-04T15:59:59Z</p>
          */
         @NameInMap("Deadline")
         public String deadline;
 
         /**
-         * <p>The ID of the O\&M event.</p>
+         * <p>The ID of the O\&amp;M event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
-         * <p>The point in time at which the switchover time of the O\&M event was modified. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The point in time at which the switchover time of the O\&amp;M event was modified. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-03T06:33:00Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The preparation time that is required before the pending O\&M event can be switched. The time is in the `HH:mm:ss` format.</p>
+         * <p>The preparation time that is required before the pending O\&amp;M event can be switched. The time is in the <code>HH:mm:ss</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00</p>
          */
         @NameInMap("PrepareInterval")
         public String prepareInterval;
 
         /**
-         * <p>The ID of the region where the O\&M event occurs.</p>
+         * <p>The ID of the region where the O\&amp;M event occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The execution result of the O\&M event.</p>
-         * <br>
-         * <p>> This parameter is returned only when the value of `Status` is **FAILED** or **CANCEL**.</p>
+         * <p>The execution result of the O\&amp;M event.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the value of <code>Status</code> is <strong>FAILED</strong> or <strong>CANCEL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>autoCancel</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
         /**
-         * <p>The time when the task was executed in the backend. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the task was executed in the backend. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-03T04:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the event.</p>
-         * <br>
-         * <p>*   If you set `IsHistory` to **0**, the state of the pending O\&M event is returned. Valid values:</p>
-         * <br>
-         * <p>    *   **WAITING_MODIFY**: The start time of the O\&M event is waiting to be set.</p>
-         * <p>    *   **WAITING**: The O\&M event is waiting to be processed.</p>
-         * <p>    *   **PROCESSING**: The O\&M event is being processed. The switchover time of an event in this state cannot be changed.</p>
-         * <br>
-         * <p>*   If you set `IsHistory` to **1**, the state of the historical O\&M event is returned. Valid values:</p>
-         * <br>
-         * <p>    *   **SUCCESS**: The event ended and the execution succeeded.</p>
-         * <p>    *   **FAILED**: The event ended but the execution failed.</p>
-         * <p>    *   **CANCEL**: The event was canceled.</p>
+         * <ul>
+         * <li><p>If you set <code>IsHistory</code> to <strong>0</strong>, the state of the pending O\&amp;M event is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>WAITING_MODIFY</strong>: The start time of the O\&amp;M event is waiting to be set.</li>
+         * <li><strong>WAITING</strong>: The O\&amp;M event is waiting to be processed.</li>
+         * <li><strong>PROCESSING</strong>: The O\&amp;M event is being processed. The switchover time of an event in this state cannot be changed.</li>
+         * </ul>
+         * </li>
+         * <li><p>If you set <code>IsHistory</code> to <strong>1</strong>, the state of the historical O\&amp;M event is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong>: The event ended and the execution succeeded.</li>
+         * <li><strong>FAILED</strong>: The event ended but the execution failed.</li>
+         * <li><strong>CANCEL</strong>: The event was canceled.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The time when the pending O\&M event is switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the pending O\&amp;M event is switched. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-03T06:00:00Z</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;
 
         /**
-         * <p>The type of the O\&M event.</p>
+         * <p>The type of the O\&amp;M event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
          */
         @NameInMap("TaskType")
         public String taskType;

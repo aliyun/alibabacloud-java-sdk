@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The language of query results. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN** (default): Chinese.</p>
-     * <p>*   **en-US**: English.</p>
+     * <ul>
+     * <li><strong>zh-CN</strong> (default): Chinese.</li>
+     * <li><strong>en-US</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The resources available in the supported modes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3.0</p>
      */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
@@ -33,8 +43,13 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,8 +62,12 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The zone ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-k</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

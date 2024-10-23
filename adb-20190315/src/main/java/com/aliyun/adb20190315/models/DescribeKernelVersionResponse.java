@@ -3,7 +3,7 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSlowLogTrendResponse extends TeaModel {
+public class DescribeKernelVersionResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeSlowLogTrendResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeSlowLogTrendResponseBody body;
+    public DescribeKernelVersionResponseBody body;
 
-    public static DescribeSlowLogTrendResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSlowLogTrendResponse self = new DescribeSlowLogTrendResponse();
+    public static DescribeKernelVersionResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeKernelVersionResponse self = new DescribeKernelVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlowLogTrendResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeKernelVersionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeSlowLogTrendResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSlowLogTrendResponse setStatusCode(Integer statusCode) {
+    public DescribeKernelVersionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeSlowLogTrendResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeSlowLogTrendResponse setBody(DescribeSlowLogTrendResponseBody body) {
+    public DescribeKernelVersionResponse setBody(DescribeKernelVersionResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSlowLogTrendResponseBody getBody() {
+    public DescribeKernelVersionResponseBody getBody() {
         return this.body;
     }
 

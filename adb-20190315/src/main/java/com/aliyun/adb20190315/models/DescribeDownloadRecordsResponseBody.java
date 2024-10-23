@@ -12,6 +12,9 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>987F51BE-C4CB-332A-B159-63CE87******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,41 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     public static class DescribeDownloadRecordsResponseBodyRecords extends TeaModel {
         /**
          * <p>The ID of the download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("DownloadId")
         public Long downloadId;
 
         /**
          * <p>The error message returned when the download task has failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The query result is empty.</p>
          */
         @NameInMap("ExceptionMsg")
         public String exceptionMsg;
 
         /**
          * <p>The name of the downloaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20210806094635-20210806095135</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The status of the download task.</p>
-         * <br>
-         * <p>*   **running**: The download task is currently in progress.</p>
-         * <p>*   **finished**: The download task is complete.</p>
-         * <p>*   **failed**: The download task has failed.</p>
+         * <ul>
+         * <li><strong>running</strong>: The download task is currently in progress.</li>
+         * <li><strong>finished</strong>: The download task is complete.</li>
+         * <li><strong>failed</strong>: The download task has failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finished</p>
          */
         @NameInMap("Status")
         public String status;
