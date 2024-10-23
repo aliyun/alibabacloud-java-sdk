@@ -12384,7 +12384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播信息</p>
+     * <p>查询群直播详情</p>
      * 
      * @param tmpReq QueryGroupLiveInfoRequest
      * @param tmpHeader QueryGroupLiveInfoHeaders
@@ -12405,16 +12405,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
         }
 
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.anchorUnionId)) {
-            query.put("AnchorUnionId", request.anchorUnionId);
+            body.put("AnchorUnionId", request.anchorUnionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.liveUuid)) {
-            query.put("LiveUuid", request.liveUuid);
+            body.put("LiveUuid", request.liveUuid);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
             body.put("TenantContext", request.tenantContextShrink);
         }
@@ -12430,7 +12429,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -12438,7 +12436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2023-04-26"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/dingtalk/v1/ysp/queryGroupLiveInfo"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "formData"),
@@ -12449,7 +12447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播信息</p>
+     * <p>查询群直播详情</p>
      * 
      * @param request QueryGroupLiveInfoRequest
      * @return QueryGroupLiveInfoResponse

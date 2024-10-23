@@ -61,6 +61,9 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("staffId")
+    public String staffId;
+
     /**
      * <strong>example:</strong>
      * <p>1687924800000</p>
@@ -85,9 +88,17 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
     @NameInMap("uv")
     public Integer uv;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -166,6 +177,14 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryGroupLiveInfoResponseBody setStaffId(String staffId) {
+        this.staffId = staffId;
+        return this;
+    }
+    public String getStaffId() {
+        return this.staffId;
     }
 
     public QueryGroupLiveInfoResponseBody setStartTime(Long startTime) {
