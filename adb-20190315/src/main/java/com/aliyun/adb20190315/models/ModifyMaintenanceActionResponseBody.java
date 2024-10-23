@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyMaintenanceActionResponseBody extends TeaModel {
     /**
-     * <p>The O\&M event ID.</p>
+     * <p>The O\&amp;M event ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7856CBE7-5BD0-4EE1-AC62-749392******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

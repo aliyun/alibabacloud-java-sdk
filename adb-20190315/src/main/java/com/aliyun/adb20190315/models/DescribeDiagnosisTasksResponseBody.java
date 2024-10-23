@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDiagnosisTasksResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F0983B43-B2EC-536A-8791-142B5CF1E9B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
 
     /**
      * <p>The total number of tasks in the stage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,113 +60,168 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
     public static class DescribeDiagnosisTasksResponseBodyTaskList extends TeaModel {
         /**
          * <p>The compute time ratio, which can be used to determine whether the task is really time-consuming. This parameter can be calculated by using the following formula: OperatorCost/Drivers/ElapsedTime. A greater value indicates that the task was executed for computing for most of the task time. A less value indicates that the task was waiting for scheduling or blocked due to other reasons for most of the task time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.89</p>
          */
         @NameInMap("ComputeTimeRatio")
         public String computeTimeRatio;
 
         /**
          * <p>The number of tasks that can be executed concurrently.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("Drivers")
         public String drivers;
 
         /**
          * <p>The amount of time that elapsed from when the task was created to when the task was completed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456</p>
          */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
         /**
          * <p>The amount of input data in the task. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("InputDataSize")
         public Long inputDataSize;
 
         /**
          * <p>The number of input rows in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105</p>
          */
         @NameInMap("InputRows")
         public Long inputRows;
 
         /**
          * <p>The total amount of time that is consumed by all operators in the task on a node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("OperatorCost")
         public Long operatorCost;
 
         /**
          * <p>The amount of output data in the task. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("OutputDataSize")
         public Long outputDataSize;
 
         /**
          * <p>The number of output rows in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105</p>
          */
         @NameInMap("OutputRows")
         public Long outputRows;
 
         /**
          * <p>The peak memory of the task. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
         /**
          * <p>The queuing duration of the task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("QueuedTime")
         public String queuedTime;
 
         /**
          * <p>The amount of time that is consumed to scan data from a data source in the task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ScanCost")
         public Long scanCost;
 
         /**
          * <p>The amount of scanned data in the task. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ScanDataSize")
         public Long scanDataSize;
 
         /**
          * <p>The number of rows that are scanned from a data source in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ScanRows")
         public Long scanRows;
 
         /**
          * <p>The final execution state of the task. Valid values:</p>
-         * <br>
-         * <p>*   FINISHED</p>
-         * <p>*   CANCELED</p>
-         * <p>*   ABORTED</p>
-         * <p>*   FAILED</p>
+         * <ul>
+         * <li>FINISHED</li>
+         * <li>CANCELED</li>
+         * <li>ABORTED</li>
+         * <li>FAILED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The timestamp when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-12 00:00:12</p>
          */
         @NameInMap("TaskCreateTime")
         public Long taskCreateTime;
 
         /**
          * <p>The timestamp when the task ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-22 00:00:00</p>
          */
         @NameInMap("TaskEndTime")
         public Long taskEndTime;
 
         /**
          * <p>The IP address of the host where the task was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("TaskHost")
         public String taskHost;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22568****</p>
          */
         @NameInMap("TaskId")
         public String taskId;

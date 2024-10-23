@@ -12,6 +12,9 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,34 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
     public static class DescribeDBClusterAccessWhiteListResponseBodyItemsIPArray extends TeaModel {
         /**
          * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
-         * <br>
-         * <p>>  The IP address whitelists that have the **hidden** attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB-X.</p>
+         * <blockquote>
+         * <p> The IP address whitelists that have the <strong>hidden</strong> attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB-X.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         @NameInMap("DBClusterIPArrayAttribute")
         public String DBClusterIPArrayAttribute;
 
         /**
          * <p>The name of the IP address whitelist.</p>
-         * <br>
-         * <p>*   The name of an IP address whitelist must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a lowercase letter or digit.</p>
-         * <p>*   Each cluster supports up to 50 IP address whitelists.</p>
+         * <ul>
+         * <li>The name of an IP address whitelist must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (_). The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
+         * <li>Each cluster supports up to 50 IP address whitelists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DBClusterIPArrayName")
         public String DBClusterIPArrayName;
 
         /**
          * <p>The IP addresses in the IP address whitelist. Up to 1,000 IP addresses can be returned. Multiple IP addresses are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;

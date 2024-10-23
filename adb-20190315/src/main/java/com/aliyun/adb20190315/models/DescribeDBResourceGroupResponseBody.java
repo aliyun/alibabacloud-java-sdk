@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeDBResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1ub9grke1****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The queried resource group.</p>
+     * <p>The queried resource groups.</p>
      */
     @NameInMap("GroupsInfo")
     public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfo> groupsInfo;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,23 +60,34 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     public static class DescribeDBResourceGroupResponseBodyGroupsInfo extends TeaModel {
         /**
          * <p>The time when the resource group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-09 16:57:35.241</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_DEFAULT</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The query execution mode. Valid values:</p>
-         * <br>
-         * <p>*   **interactive**</p>
-         * <p>*   **batch** (default)</p>
-         * <br>
-         * <p>> For more information, see [Query execution modes](~~189502~~).</p>
+         * <ul>
+         * <li><strong>interactive</strong></li>
+         * <li><strong>batch</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>interactive</p>
          */
         @NameInMap("GroupType")
         public String groupType;
@@ -78,17 +95,32 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The database accounts that are associated with the resource group.</p>
          */
+        @NameInMap("GroupUserList")
+        public java.util.List<String> groupUserList;
+
+        /**
+         * <p>The database accounts that are associated with the resource group. Multiple database accounts are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testb,testc</p>
+         */
         @NameInMap("GroupUsers")
         public String groupUsers;
 
         /**
          * <p>The number of nodes. Each node provides 16 cores and 64 GB memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
         /**
          * <p>The time when the resource group was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-09 16:57:35.241</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -120,6 +152,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
         public String getGroupType() {
             return this.groupType;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setGroupUserList(java.util.List<String> groupUserList) {
+            this.groupUserList = groupUserList;
+            return this;
+        }
+        public java.util.List<String> getGroupUserList() {
+            return this.groupUserList;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setGroupUsers(String groupUsers) {

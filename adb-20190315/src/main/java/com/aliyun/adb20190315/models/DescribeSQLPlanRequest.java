@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeSQLPlanRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,8 +25,13 @@ public class DescribeSQLPlanRequest extends TeaModel {
 
     /**
      * <p>The query ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeProcessList](~~143382~~) operation to query the IDs of queries that are being executed.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612277.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202105271604431720161662490345*******</p>
      */
     @NameInMap("ProcessId")
     public String processId;

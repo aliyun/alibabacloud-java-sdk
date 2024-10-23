@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAutoRenewAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4CE6DF97-AEA4-484F-906F-C407EE3770EB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>109462AF-B5FA-3D5A-9377-B27E5B******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -79,154 +91,279 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties extends TeaModel {
+        /**
+         * <p>The name of the query property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ff</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The value of the query property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xian</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties self = new DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeDiagnosisRecordsResponseBodyQuerys extends TeaModel {
         /**
          * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.82.xx.xx</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The total execution duration. Unit: milliseconds.</p>
-         * <br>
-         * <p>>  This value is the cumulative value of the `QueuedTime`, `TotalPlanningTime`, and `ExecutionTime` parameters.</p>
+         * <blockquote>
+         * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Cost")
         public Long cost;
 
         /**
          * <p>The name of the database on which the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The number of rows written to the table by an extract, transform, and load (ETL) task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EtlWriteRows")
         public Long etlWriteRows;
 
         /**
          * <p>The execution duration. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("ExecutionTime")
         public Long executionTime;
 
         /**
          * <p>The amount of returned data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("OutputDataSize")
         public Long outputDataSize;
 
         /**
          * <p>The number of rows returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        @NameInMap("PatternId")
+        public String patternId;
+
         /**
          * <p>The peak memory. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16648</p>
          */
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
         /**
          * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021093000414401000000023503151******</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
         /**
+         * <p>The query properties.</p>
+         */
+        @NameInMap("QueryProperties")
+        public java.util.List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> queryProperties;
+
+        /**
          * <p>The amount of time that is consumed for queuing. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("QueueTime")
         public Long queueTime;
 
         /**
          * <p>The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.xx.xx:3004</p>
          */
         @NameInMap("RcHost")
         public String rcHost;
 
         /**
          * <p>The execution duration rank of operators that are used in the SQL statement.</p>
-         * <br>
-         * <p>> This field is returned only for SQL statements that have the `Status` parameter set to `running`.</p>
+         * <blockquote>
+         * <p>This field is returned only for SQL statements that have the <code>Status</code> parameter set to <code>running</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResourceCostRank")
         public Integer resourceCostRank;
 
         /**
          * <p>The resource group to which the SQL statement belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
         /**
          * <p>The SQL statement.</p>
-         * <br>
-         * <p>> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the [DownloadDiagnosisRecords](~~308212~~) operation to download the diagnostic information about SQL statements that meet a condition in an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+         * <blockquote>
+         * <p>For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the diagnostic information about SQL statements that meet a condition in an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT count(*)\nFROM nation</p>
          */
         @NameInMap("SQL")
         public String SQL;
 
         /**
          * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SQLTruncated")
         public Boolean SQLTruncated;
 
         /**
          * <p>The maximum length of the SQL statement. 5120 is returned. Unit: character. SQL statements that exceed this limit are truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5120</p>
          */
         @NameInMap("SQLTruncatedThreshold")
         public Long SQLTruncatedThreshold;
 
         /**
          * <p>The number of entries scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ScanRows")
         public Long scanRows;
 
         /**
          * <p>The amount of scanned data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("ScanSize")
         public Long scanSize;
 
         /**
          * <p>The beginning of the time range in which the SQL statement is executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632933704000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The state of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **running**</p>
-         * <p>*   **finished**</p>
-         * <p>*   **failed**</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finished</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The amount of time that is consumed to generate an execution plan. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TotalPlanningTime")
         public Long totalPlanningTime;
 
         /**
          * <p>The total number of stages generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalStages")
         public Integer totalStages;
 
         /**
          * <p>The username that is used to execute the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -292,6 +429,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             return this.outputRows;
         }
 
+        public DescribeDiagnosisRecordsResponseBodyQuerys setPatternId(String patternId) {
+            this.patternId = patternId;
+            return this;
+        }
+        public String getPatternId() {
+            return this.patternId;
+        }
+
         public DescribeDiagnosisRecordsResponseBodyQuerys setPeakMemory(Long peakMemory) {
             this.peakMemory = peakMemory;
             return this;
@@ -306,6 +451,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
         public String getProcessId() {
             return this.processId;
+        }
+
+        public DescribeDiagnosisRecordsResponseBodyQuerys setQueryProperties(java.util.List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> queryProperties) {
+            this.queryProperties = queryProperties;
+            return this;
+        }
+        public java.util.List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> getQueryProperties() {
+            return this.queryProperties;
         }
 
         public DescribeDiagnosisRecordsResponseBodyQuerys setQueueTime(Long queueTime) {

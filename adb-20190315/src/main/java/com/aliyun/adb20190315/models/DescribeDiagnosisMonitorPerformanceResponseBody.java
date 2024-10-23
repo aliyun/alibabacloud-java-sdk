@@ -5,30 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The monitoring information of queries displayed in Gantt charts.</p>
+     * <p>The monitoring information about queries displayed in Gantt charts.</p>
      */
     @NameInMap("Performances")
     public java.util.List<DescribeDiagnosisMonitorPerformanceResponseBodyPerformances> performances;
 
     /**
-     * <p>The threshold for the number of queries displayed in a Gantt chart. The default value is 10000.</p>
-     * <br>
-     * <p>>  A maximum of 10,000 queries can be displayed in a Gantt chart even if more queries exist.</p>
+     * <p>The threshold for the number of queries displayed in a Gantt chart. Default value: 10000.</p>
+     * <blockquote>
+     * <p> Up to 10,000 queries can be displayed in a Gantt chart even if more queries exist.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("PerformancesThreshold")
     public Integer performancesThreshold;
 
     /**
      * <p>Indicates whether all queries are returned. Valid values:</p>
-     * <br>
-     * <p>*   true: All queries are returned.</p>
-     * <p>*   false: Only a specified number of queries are returned.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PerformancesTruncated")
     public Boolean performancesTruncated;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0F1AC5FD-16E9-5399-B81F-5AC434B1D9F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -72,63 +83,90 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDiagnosisMonitorPerformanceResponseBodyPerformances extends TeaModel {
         /**
-         * <p>The total amount of time consumed by the query. Unit: milliseconds.</p>
-         * <br>
-         * <p>>  This parameter indicates the sum of `QueuedTime`, `TotalPlanningTime`, and `ExecutionTime`.</p>
+         * <p>The total execution duration. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>252</p>
          */
         @NameInMap("Cost")
         public Long cost;
 
         /**
          * <p>The peak memory of the query. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
         /**
-         * <p>The ID of the query.</p>
-         * <br>
-         * <p>>  You can call the [DescribeProcessList](~~143382~~) operation to query the IDs of queries that are being executed.</p>
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202210311015270330101470300315153****</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
         /**
          * <p>The IP address of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("RcHost")
         public String rcHost;
 
         /**
-         * <p>The number of entries scanned.</p>
+         * <p>The number of rows scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2345</p>
          */
         @NameInMap("ScanRows")
         public Long scanRows;
 
         /**
          * <p>The amount of scanned data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ScanSize")
         public Long scanSize;
 
         /**
-         * <p>The execution start time of the SQL statement. The time is in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The execution start time of the SQL statement. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669011260000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
-         * <p>The state of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **running**</p>
-         * <p>*   **finished**</p>
-         * <p>*   **failed**</p>
+         * <p>The status of the SQL statement. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The database account that is used to submit the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpt</p>
          */
         @NameInMap("UserName")
         public String userName;

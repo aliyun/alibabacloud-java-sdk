@@ -12,24 +12,36 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,46 +94,67 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
     public static class DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute extends TeaModel {
         /**
          * <p>Indicates whether auto-renewal is enabled for the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp11q28kvl688****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The renewal duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
          * <p>The unit of the renewal duration. Valid values:</p>
-         * <br>
-         * <p>*   **Year**</p>
-         * <p>*   **Month**</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
          * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The renewal status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **AutoRenewal**: The cluster is automatically renewed.</p>
-         * <p>*   **Normal**: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.</p>
-         * <p>*   **NotRenewal**: The cluster is not renewed. Three days before the cluster expires, the system sends you a reminder by SMS message to remind you that the cluster is not renewed. However, the system does not send you a reminder when the cluster expires.</p>
+         * <ul>
+         * <li><strong>AutoRenewal</strong>: The cluster is automatically renewed.</li>
+         * <li><strong>Normal</strong>: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.</li>
+         * <li><strong>NotRenewal</strong>: The cluster is not renewed. Three days before the cluster expires, the system sends you a reminder by SMS message to remind you that the cluster is not renewed. However, the system does not send you a reminder when the cluster expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         @NameInMap("RenewalStatus")
         public String renewalStatus;

@@ -4,23 +4,43 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class BatchApplyAdviceByIdListRequest extends TeaModel {
+    /**
+     * <p>The date when the suggestion is generated. Specify the date in the yyyyMMdd format. The date must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20221115</p>
+     */
     @NameInMap("AdviceDate")
     public Long adviceDate;
 
+    /**
+     * <p>The IDs of the suggestions to be applied. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c2589ff3-e86c-4f19-80c8-2aeb7dd9****,53414470-ebf4-4a53-a312-8a1ad8fd****,6e8dce84-fec8-4b0b-9c04-b0cea12c****,b3b9703d-55ca-47e0-96dd-6a4a9dbf****</p>
+     */
     @NameInMap("AdviceIdList")
     public String adviceIdList;
 
     /**
-     * <p>The message returned for the operation. Valid values:</p>
-     * <br>
-     * <p>*   **SUCCESS** is returned if the operation is successful.</p>
-     * <p>*   An error message is returned if the operation fails.</p>
+     * <p>The ID of the cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of Data Warehouse Edition (V3.0) clusters.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-uf6g8w25jacm7****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

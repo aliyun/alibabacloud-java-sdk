@@ -6,28 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeElasticPlanRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp278jg9****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies whether the scaling plan takes effect. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default)</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ElasticPlanEnable")
     public Boolean elasticPlanEnable;
 
     /**
      * <p>The name of the scaling plan.</p>
-     * <br>
-     * <p>*   The name must be 2 to 30 characters in length.</p>
-     * <p>*   The name can contain letters, digits, and underscores (\_).</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the information about all scaling plans for the specified cluster is returned.</p>
+     * <ul>
+     * <li>The name must be 2 to 30 characters in length.</li>
+     * <li>The name can contain letters, digits, and underscores (_).</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the information about all scaling plans for the specified cluster is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>realtime</p>
      */
     @NameInMap("ElasticPlanName")
     public String elasticPlanName;
@@ -46,8 +60,12 @@ public class DescribeElasticPlanRequest extends TeaModel {
 
     /**
      * <p>The name of the resource group.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>USER_DEFAULT</p>
      */
     @NameInMap("ResourcePoolName")
     public String resourcePoolName;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1rqvm70uh2****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,24 +21,36 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7559209-7EC3-41E1-8F78-156990******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -96,108 +111,162 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public static class DescribeSlowLogRecordsResponseBodyItemsSlowLogRecord extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The time when the execution started. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.</p>
+         * <p>The time when the execution started. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-27T08:04:43Z</p>
          */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
         /**
          * <p>The IP address of the client that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>172.16.**.**</code></p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The amount of output data in the task. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.009</p>
          */
         @NameInMap("OutputSize")
         public String outputSize;
 
         /**
          * <p>The number of rows parsed by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParseRowCounts")
         public Long parseRowCounts;
 
         /**
          * <p>The maximum memory usage when the SQL statement is executed. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>431.447</p>
          */
         @NameInMap("PeakMemoryUsage")
         public String peakMemoryUsage;
 
         /**
          * <p>The amount of time consumed to generate execution plans. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("PlanningTime")
         public Long planningTime;
 
         /**
          * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021052716044317201616624903453******</p>
          */
         @NameInMap("ProcessID")
         public String processID;
 
         /**
          * <p>The time consumed to execute the SQL statement. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2344</p>
          */
         @NameInMap("QueryTime")
         public Long queryTime;
 
         /**
          * <p>The queuing duration before the query is executed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("QueueTime")
         public Long queueTime;
 
         /**
          * <p>The number of rows returned by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
         /**
          * <p>Details of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT OVERWRITE INTO hdfs_import_external\nSELECT *\nFROM adb_hdfs_import_source</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The number of rows scanned from a data source in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ScanRows")
         public Long scanRows;
 
         /**
          * <p>The amount of scanned data. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.035</p>
          */
         @NameInMap("ScanSize")
         public String scanSize;
 
         /**
          * <p>The total amount of time consumed to scan data. It is an accumulated value collected from multiple TableScanNode nodes. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ScanTime")
         public Long scanTime;
 
         /**
          * <p>The execution state of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESSED</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The accumulated CPU Time value of all operators collected from all nodes. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6100</p>
          */
         @NameInMap("WallTime")
         public Long wallTime;

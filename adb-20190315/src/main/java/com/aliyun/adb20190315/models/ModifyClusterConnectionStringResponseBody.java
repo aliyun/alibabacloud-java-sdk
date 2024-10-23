@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterConnectionStringResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>370D09FD-442A-5225-AAD3-7362CAE39177</p>
      */
     @NameInMap("RequestId")
     public String requestId;

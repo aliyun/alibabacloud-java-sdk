@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1564657730</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

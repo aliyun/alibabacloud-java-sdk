@@ -12,16 +12,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>The resources available in the supported editions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The supported edition. Valid values:</p>
-     * <br>
-     * <p>*   **basic**: Basic Edition</p>
-     * <p>*   **cluster**: Cluster Edition</p>
-     * <p>*   **mixed_storage**: elastic mode for Cluster Edition</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -58,18 +60,27 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResourceSupportedElasticIOResource extends TeaModel {
         /**
          * <p>The maximum amount of elastic I/O resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MaxCount")
         public String maxCount;
 
         /**
          * <p>The minimum amount of elastic I/O resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MinCount")
         public String minCount;
 
         /**
          * <p>The step size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Step")
         public String step;
@@ -108,9 +119,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource extends TeaModel {
         /**
          * <p>The disk storage type. Valid values:</p>
-         * <br>
-         * <p>*   **hdd**</p>
-         * <p>*   **ssd**</p>
+         * <ul>
+         * <li><strong>hdd</strong></li>
+         * <li><strong>ssd</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hdd</p>
          */
         @NameInMap("StorageType")
         public String storageType;
@@ -175,18 +190,27 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorListNodeCount extends TeaModel {
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("MaxCount")
         public String maxCount;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("MinCount")
         public String minCount;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("Step")
         public String step;
@@ -247,18 +271,27 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountListNodeCount extends TeaModel {
         /**
          * <p>The maximum number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MaxCount")
         public String maxCount;
 
         /**
          * <p>The minimum number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinCount")
         public String minCount;
 
         /**
          * <p>The step size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Step")
         public String step;
@@ -333,6 +366,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassList extends TeaModel {
         /**
          * <p>The supported instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C32</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
@@ -351,6 +387,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The description of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C32</p>
          */
         @NameInMap("Tips")
         public String tips;
@@ -397,10 +436,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList extends TeaModel {
         /**
          * <p>The supported edition. Valid values:</p>
-         * <br>
-         * <p>*   **basic**: Basic Edition.</p>
-         * <p>*   **cluster**: Cluster Edition.</p>
-         * <p>*   **mixed_storage**: elastic mode for Cluster Edition.</p>
+         * <ul>
+         * <li><strong>basic</strong>: Basic Edition.</li>
+         * <li><strong>cluster</strong>: Cluster Edition.</li>
+         * <li><strong>mixed_storage</strong>: elastic mode for Cluster Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mixed_storage</p>
          */
         @NameInMap("Serial")
         public String serial;
@@ -451,9 +494,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode extends TeaModel {
         /**
          * <p>The supported mode. Valid values:</p>
-         * <br>
-         * <p>*   **flexible**: elastic mode.</p>
-         * <p>*   **reserver**: reserved mode.</p>
+         * <ul>
+         * <li><strong>flexible</strong>: elastic mode.</li>
+         * <li><strong>reserver</strong>: reserved mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>flexible</p>
          */
         @NameInMap("Mode")
         public String mode;
@@ -508,6 +555,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

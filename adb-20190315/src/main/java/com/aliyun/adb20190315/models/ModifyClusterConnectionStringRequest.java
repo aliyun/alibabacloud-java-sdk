@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterConnectionStringRequest extends TeaModel {
     /**
-     * <p>The prefix of public endpoints.</p>
-     * <br>
-     * <p>*   The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</p>
-     * <p>*   The prefix can be up to 30 characters in length.</p>
+     * <p>The prefix of the public endpoint.</p>
+     * <ul>
+     * <li>The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</li>
+     * <li>The prefix can be up to 30 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-123</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
      * <p>The current public endpoint of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusterNetInfo](~~143384~~) operation to query the public endpoint of the cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143384.html">DescribeDBClusterNetInfo</a> operation to query the public endpoint of the cluster.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp18934i73vb****.ads.aliyuncs.com</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp18934i73vb****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -36,7 +51,10 @@ public class ModifyClusterConnectionStringRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port number. Set the value to **3306**.</p>
+     * <p>The port number. Set the value to <strong>3306</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public Integer port;

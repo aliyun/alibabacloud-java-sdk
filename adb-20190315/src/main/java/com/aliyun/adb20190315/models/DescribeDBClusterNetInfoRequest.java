@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterNetInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,6 +19,15 @@ public class DescribeDBClusterNetInfoRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The region ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -49,6 +62,14 @@ public class DescribeDBClusterNetInfoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBClusterNetInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDBClusterNetInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {

@@ -12,12 +12,18 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1jj9xqft1po****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>562C7F89-FBE6-4A04-AAAA-7EBC25******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +74,18 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     public static class DescribeConnectionCountRecordsResponseBodyAccessIpRecords extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.XX.XX</p>
          */
         @NameInMap("AccessIp")
         public String accessIp;
 
         /**
          * <p>The number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Long count;
@@ -104,12 +116,18 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     public static class DescribeConnectionCountRecordsResponseBodyUserRecords extends TeaModel {
         /**
          * <p>The number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The username of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("User")
         public String user;

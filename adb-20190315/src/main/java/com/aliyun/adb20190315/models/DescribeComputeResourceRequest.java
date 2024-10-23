@@ -6,20 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeComputeResourceRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1r053byu48p****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3**.</p>
+     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <strong>3</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3.0</p>
      */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
     /**
      * <p>The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:</p>
-     * <p>- **true**</p>
-     * <p>- **false**(default value)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>(default value)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Migrate")
     public Boolean migrate;
@@ -32,8 +43,13 @@ public class DescribeComputeResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,8 +62,12 @@ public class DescribeComputeResourceRequest extends TeaModel {
 
     /**
      * <p>The zone ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](~~129857~~) operation to query the most recent zone list.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-f</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

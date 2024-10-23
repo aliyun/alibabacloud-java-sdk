@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The cluster ID. Separate multiple clusters with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp11q28kvl688****</p>
      */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
@@ -18,30 +22,43 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   30</p>
-     * <p>*   50</p>
-     * <p>*   100</p>
-     * <br>
+     * <ul>
+     * <li>30</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
      * <p>Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

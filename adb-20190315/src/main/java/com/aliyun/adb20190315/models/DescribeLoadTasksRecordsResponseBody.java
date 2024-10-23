@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp2590j****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,24 +21,36 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C60B05DB-2B77-421A-98E9-92C20E******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -95,49 +110,73 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
 
     public static class DescribeLoadTasksRecordsResponseBodyLoadTasksRecords extends TeaModel {
         /**
-         * <p>The start time of the task. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ss.SSSZ* format. The time is displayed in UTC.</p>
+         * <p>The start time of the task. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ss.SSSZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-18 18:47:27.0</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The name of the database that is involved in the import or export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021051818472717201616624903453******</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
         /**
          * <p>The process ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021051818472717201616624903453******</p>
          */
         @NameInMap("ProcessID")
         public String processID;
 
         /**
          * <p>The number of rows that are processed in the asynchronous import or export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("ProcessRows")
         public Long processRows;
 
         /**
          * <p>The SQL statement that is used in the asynchronous import or export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>insert overwrite into courses_external_table\nselect * from courses</p>
          */
         @NameInMap("Sql")
         public String sql;
 
         /**
          * <p>The state of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISH</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The time when the task state was updated. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ss.SSSZ* format. The time is displayed in UTC.</p>
+         * <p>The time when the task state was updated. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ss.SSSZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-18 18:47:31.0</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

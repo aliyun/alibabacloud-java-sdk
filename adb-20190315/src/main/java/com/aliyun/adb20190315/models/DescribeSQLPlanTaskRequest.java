@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeSQLPlanTaskRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,6 +22,10 @@ public class DescribeSQLPlanTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>201907241445301720211111570315107****</p>
      */
     @NameInMap("ProcessId")
     public String processId;
@@ -30,6 +38,10 @@ public class DescribeSQLPlanTaskRequest extends TeaModel {
 
     /**
      * <p>The stage of the task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1785135913****</p>
      */
     @NameInMap("StageId")
     public String stageId;

@@ -12,24 +12,36 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C242707A-01D1-54DA-A5F6-671557******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,30 +94,45 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
     public static class DescribeTableAccessCountResponseBodyItems extends TeaModel {
         /**
          * <p>The number of accesses to the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("AccessCount")
         public String accessCount;
 
         /**
          * <p>The ID of the cluster to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1r053byu48p****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The date when the table was used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-30</p>
          */
         @NameInMap("ReportDate")
         public String reportDate;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOMER</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpch</p>
          */
         @NameInMap("TableSchema")
         public String tableSchema;

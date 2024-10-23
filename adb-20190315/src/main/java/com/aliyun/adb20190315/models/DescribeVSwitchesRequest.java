@@ -12,8 +12,12 @@ public class DescribeVSwitchesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,22 +33,33 @@ public class DescribeVSwitchesRequest extends TeaModel {
 
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the VPC ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the VPC ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp13h7uzhulpuxvnp****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-8vbpu1teend1qcosfojlz</p>
      */
     @NameInMap("VswId")
     public String vswId;
 
     /**
      * <p>The zone ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](~~129857~~) operation to query the most recent zone list.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -6,19 +6,32 @@ import com.aliyun.tea.*;
 public class DeleteAccountRequest extends TeaModel {
     /**
      * <p>The account of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_accout</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>*   Normal: standard account</p>
-     * <p>*   Super: privileged account</p>
+     * <ul>
+     * <li>Normal: standard account</li>
+     * <li>Super: privileged account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -17,7 +21,10 @@ public class KillProcessRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unique ID of the process. You can call the [DescribeProcessList](~~190092~~) operation to obtain the ID.</p>
+     * <p>The unique ID of the query. You can call the <a href="https://help.aliyun.com/document_detail/190092.html">DescribeProcessList</a> operation to obtain the unique ID of a query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202011191048151921681492420315100****</p>
      */
     @NameInMap("ProcessId")
     public String processId;

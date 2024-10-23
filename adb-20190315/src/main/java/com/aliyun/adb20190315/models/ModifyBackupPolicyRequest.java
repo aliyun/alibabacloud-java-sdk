@@ -6,34 +6,52 @@ import com.aliyun.tea.*;
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
-     * <br>
-     * <p>>  If you leave this parameter empty, the default value 7 is used.</p>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the default value 7 is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies whether to enable real-time log backup. Valid values:</p>
-     * <br>
-     * <p>*   **Enable**</p>
-     * <br>
-     * <p>*   **Disable**</p>
-     * <br>
-     * <p>> If you leave this parameter empty, the default value Enable is used.</p>
+     * <ul>
+     * <li><p><strong>Enable</strong></p>
+     * </li>
+     * <li><p><strong>Disable</strong></p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If you leave this parameter empty, the default value Enable is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
     /**
      * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
-     * <br>
-     * <p>>  If you leave this parameter empty, the default value 7 is used.</p>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the default value 7 is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
@@ -46,24 +64,34 @@ public class ModifyBackupPolicyRequest extends TeaModel {
 
     /**
      * <p>The days of the week on which to perform full backup. Separate multiple values with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **Monday**</p>
-     * <p>*   **Tuesday**</p>
-     * <p>*   **Wednesday**</p>
-     * <p>*   **Thursday**</p>
-     * <p>*   **Friday**</p>
-     * <p>*   **Saturday**</p>
-     * <p>*   **Sunday**</p>
-     * <br>
-     * <p>>  To ensure data security, we recommend that you specify at least two values.</p>
+     * <ul>
+     * <li><strong>Monday</strong></li>
+     * <li><strong>Tuesday</strong></li>
+     * <li><strong>Wednesday</strong></li>
+     * <li><strong>Thursday</strong></li>
+     * <li><strong>Friday</strong></li>
+     * <li><strong>Saturday</strong></li>
+     * <li><strong>Sunday</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> To ensure data security, we recommend that you specify at least two values.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Monday,Wednesday,Friday,Sunday</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
     /**
      * <p>The start time of the full backup within a time range. Specify the time range in the HH:mmZ-HH:mmZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The time range is 1 hour.</p>
+     * <blockquote>
+     * <p> The time range is 1 hour.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:00Z-01:00Z</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;

@@ -5,31 +5,48 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The account of the database.</p>
+     * <p>The name of the database account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_accout</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The account and password of the database.</p>
-     * <br>
-     * <p>*   The password must contain uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   Special characters include ! @ # $ % ^ & \* () \_ + - and =</p>
-     * <p>*   A password must be 8 to 32 characters in length.</p>
+     * <p>The password of the database account.</p>
+     * <ul>
+     * <li>The password can contain uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Special characters include ! @ # $ % ^ &amp; \* ( ) _ + - =</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test_accout1</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
-     * <p>Normal: standard account</p>
-     * <br>
-     * <p>Super: privileged account</p>
+     * <ol>
+     * <li>Normal: the standard account.</li>
+     * <li>Super: the privileged account.</li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

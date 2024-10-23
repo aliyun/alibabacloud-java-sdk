@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.</p>
+     * <p>The end of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-10T07:01:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -24,12 +30,18 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7EDB8E4-9769-4233-88C7-DCA4C9******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-10T07:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -82,6 +94,9 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     public static class DescribeDBClusterResourcePoolPerformanceResponseBodyPerformancesResourcePoolPerformancesResourcePoolSeries extends TeaModel {
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         @NameInMap("Name")
         public String name;
@@ -118,6 +133,9 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     public static class DescribeDBClusterResourcePoolPerformanceResponseBodyPerformancesResourcePoolPerformances extends TeaModel {
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_pool</p>
          */
         @NameInMap("ResourcePoolName")
         public String resourcePoolName;
@@ -154,6 +172,9 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     public static class DescribeDBClusterResourcePoolPerformanceResponseBodyPerformances extends TeaModel {
         /**
          * <p>The metric of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AnalyticDB_RP_CPU</p>
          */
         @NameInMap("Key")
         public String key;
@@ -166,6 +187,9 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
 
         /**
          * <p>The unit of the metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
          */
         @NameInMap("Unit")
         public String unit;

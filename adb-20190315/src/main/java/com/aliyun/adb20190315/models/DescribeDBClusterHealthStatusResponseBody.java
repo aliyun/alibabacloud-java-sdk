@@ -18,20 +18,29 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     /**
      * <p>The health state of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   **RISK**: risky</p>
-     * <br>
-     * <p>*   **NORMAL**: healthy</p>
-     * <br>
-     * <p>*   **UNAVAILABLE**: unavailable</p>
-     * <br>
-     * <p>> If the health states of access nodes, compute node groups, and storage node groups are all **healthy** and the cluster is detected to be alive, the health state of the cluster is **healthy**. If the preceding three health states include **risky**, the health state of the cluster is **risky**. If the preceding three health states include **unavailable**, the health state of the cluster is **unavailable**.</p>
+     * <ul>
+     * <li><p><strong>RISK</strong>: risky</p>
+     * </li>
+     * <li><p><strong>NORMAL</strong>: healthy</p>
+     * </li>
+     * <li><p><strong>UNAVAILABLE</strong>: unavailable</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If the health states of access nodes, compute node groups, and storage node groups are all <strong>healthy</strong> and the cluster is detected to be alive, the health state of the cluster is <strong>healthy</strong>. If the preceding three health states include <strong>risky</strong>, the health state of the cluster is <strong>risky</strong>. If the preceding three health states include <strong>unavailable</strong>, the health state of the cluster is <strong>unavailable</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -90,34 +99,50 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     public static class DescribeDBClusterHealthStatusResponseBodyCS extends TeaModel {
         /**
          * <p>The number of healthy access nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
          * <p>The total number of access nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ExpectedCount")
         public Long expectedCount;
 
         /**
          * <p>The number of risky access nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskCount")
         public Long riskCount;
 
         /**
          * <p>The health state of access nodes. Valid values:</p>
-         * <br>
-         * <p>*   **RISK**: risky</p>
-         * <p>*   **NORMAL**: healthy</p>
-         * <p>*   **UNAVAILABLE**: unavailable</p>
+         * <ul>
+         * <li><strong>RISK</strong>: risky</li>
+         * <li><strong>NORMAL</strong>: healthy</li>
+         * <li><strong>UNAVAILABLE</strong>: unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The number of unavailable access nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UnavailableCount")
         public Long unavailableCount;
@@ -172,34 +197,50 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     public static class DescribeDBClusterHealthStatusResponseBodyExecutor extends TeaModel {
         /**
          * <p>The number of healthy compute node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
          * <p>The total number of compute node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ExpectedCount")
         public Long expectedCount;
 
         /**
          * <p>The number of risky compute node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskCount")
         public Long riskCount;
 
         /**
          * <p>The health state of compute node groups. Valid values:</p>
-         * <br>
-         * <p>*   **RISK**: risky</p>
-         * <p>*   **NORMAL**: healthy</p>
-         * <p>*   **UNAVAILABLE**: unavailable</p>
+         * <ul>
+         * <li><strong>RISK</strong>: risky</li>
+         * <li><strong>NORMAL</strong>: healthy</li>
+         * <li><strong>UNAVAILABLE</strong>: unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The number of unavailable compute node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UnavailableCount")
         public Long unavailableCount;
@@ -254,34 +295,50 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     public static class DescribeDBClusterHealthStatusResponseBodyWorker extends TeaModel {
         /**
          * <p>The number of healthy storage node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
          * <p>The total number of storage node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ExpectedCount")
         public Long expectedCount;
 
         /**
          * <p>The number of risky storage node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskCount")
         public Long riskCount;
 
         /**
          * <p>The health state of storage node groups. Valid values:</p>
-         * <br>
-         * <p>*   **RISK**: risky</p>
-         * <p>*   **NORMAL**: healthy</p>
-         * <p>*   **UNAVAILABLE**: unavailable</p>
+         * <ul>
+         * <li><strong>RISK</strong>: risky</li>
+         * <li><strong>NORMAL</strong>: healthy</li>
+         * <li><strong>UNAVAILABLE</strong>: unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The number of unavailable storage node groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UnavailableCount")
         public Long unavailableCount;

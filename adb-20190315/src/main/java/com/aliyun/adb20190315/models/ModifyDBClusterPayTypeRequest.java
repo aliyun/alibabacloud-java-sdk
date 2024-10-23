@@ -6,41 +6,64 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterPayTypeRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp11q28kvl688****</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   **Postpaid**: pay-as-you-go.</p>
-     * <p>*   **Prepaid**: subscription.</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The subscription type of the subscription cluster. Valid values:</p>
-     * <br>
-     * <p>*   **Year**: subscription on a yearly basis.</p>
-     * <p>*   **Month**: subscription on a monthly basis.</p>
-     * <br>
-     * <p>> This parameter must be specified when PayType is set to Prepaid.</p>
+     * <ul>
+     * <li><strong>Year</strong>: subscription on a yearly basis.</li>
+     * <li><strong>Month</strong>: subscription on a monthly basis.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be specified when PayType is set to Prepaid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("Period")
     public String period;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The subscription duration of the subscription cluster.</p>
-     * <br>
-     * <p>*   Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).</p>
-     * <p>*   Valid values when Period is set to Month: 1 to 11 (integer).</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter must be specified when PayType is set to Prepaid.</p>
-     * <br>
-     * <p>*   Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+     * <ul>
+     * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).</li>
+     * <li>Valid values when Period is set to Month: 1 to 11 (integer).</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter must be specified when PayType is set to Prepaid.</p>
+     * </li>
+     * <li><p>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;
@@ -72,6 +95,14 @@ public class ModifyDBClusterPayTypeRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public ModifyDBClusterPayTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyDBClusterPayTypeRequest setUsedTime(String usedTime) {

@@ -6,19 +6,29 @@ import com.aliyun.tea.*;
 public class ModifyAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1u389j9zjh5****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The renewal duration. Default value: **1**.</p>
-     * <br>
-     * <p>*   Valid values when PeriodUnit is set to **Month**: 1 to 11. Data type: INTEGER.</p>
-     * <p>*   Valid values when PeriodUnit is set to **Year**: 1, 2, 3, and 5. Data type: INTEGER.</p>
-     * <br>
-     * <p>> Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+     * <p>The renewal duration. Default value: <strong>1</strong>.</p>
+     * <ul>
+     * <li>Valid values when PeriodUnit is set to <strong>Month</strong>: 1 to 11. Data type: INTEGER.</li>
+     * <li>Valid values when PeriodUnit is set to <strong>Year</strong>: 1, 2, 3, and 5. Data type: INTEGER.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public String duration;
@@ -30,28 +40,41 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the renewal period. Default value: **Month**. Valid values:</p>
-     * <br>
-     * <p>*   **Year**</p>
-     * <p>*   **Month**</p>
+     * <p>The unit of the renewal period. Default value: <strong>Month</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The renewal status of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   **AutoRenewal**: The cluster is automatically renewed.</p>
-     * <p>*   **Normal**: The cluster is manually renewed.</p>
-     * <p>*   **NotRenewal**: The cluster is not renewed.</p>
+     * <ul>
+     * <li><strong>AutoRenewal</strong>: The cluster is automatically renewed.</li>
+     * <li><strong>Normal</strong>: The cluster is manually renewed.</li>
+     * <li><strong>NotRenewal</strong>: The cluster is not renewed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoRenewal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

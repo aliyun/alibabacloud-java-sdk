@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeTableDetailRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -16,6 +20,9 @@ public class DescribeTableDetailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -24,12 +31,20 @@ public class DescribeTableDetailRequest extends TeaModel {
 
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adb_demo</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
      * <p>The name of the table.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -61,6 +76,14 @@ public class DescribeTableDetailRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeTableDetailRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeTableDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {

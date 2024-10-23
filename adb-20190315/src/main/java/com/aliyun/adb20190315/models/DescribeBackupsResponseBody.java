@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    @NameInMap("FreeBackupSize")
+    public Long freeBackupSize;
+
     /**
      * <p>The queried backup sets.</p>
      */
@@ -12,24 +15,39 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalBackupSize")
+    public Long totalBackupSize;
+
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -37,6 +55,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public static DescribeBackupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupsResponseBody self = new DescribeBackupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupsResponseBody setFreeBackupSize(Long freeBackupSize) {
+        this.freeBackupSize = freeBackupSize;
+        return this;
+    }
+    public Long getFreeBackupSize() {
+        return this.freeBackupSize;
     }
 
     public DescribeBackupsResponseBody setItems(DescribeBackupsResponseBodyItems items) {
@@ -71,6 +97,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeBackupsResponseBody setTotalBackupSize(Long totalBackupSize) {
+        this.totalBackupSize = totalBackupSize;
+        return this;
+    }
+    public Long getTotalBackupSize() {
+        return this.totalBackupSize;
+    }
+
     public DescribeBackupsResponseBody setTotalCount(String totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -82,45 +116,70 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
         /**
          * <p>The end time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-02T16:00Z</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        @NameInMap("BackupExpiredTime")
+        public String backupExpiredTime;
+
         /**
          * <p>The backup set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32732****</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
          * <p>The backup method. Only Snapshot is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshot</p>
          */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
         /**
          * <p>The size of the backup set. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2167808</p>
          */
         @NameInMap("BackupSize")
         public Long backupSize;
 
         /**
          * <p>The start time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-01T16:00Z</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
          * <p>The backup type. Valid values:</p>
-         * <br>
-         * <p>*   **FullBackup**</p>
-         * <p>*   **IncrementalBackup**</p>
+         * <ul>
+         * <li><strong>FullBackup</strong></li>
+         * <li><strong>IncrementalBackup</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullBackup</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp18934i73vb5****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
@@ -136,6 +195,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupEndTime() {
             return this.backupEndTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupExpiredTime(String backupExpiredTime) {
+            this.backupExpiredTime = backupExpiredTime;
+            return this;
+        }
+        public String getBackupExpiredTime() {
+            return this.backupExpiredTime;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setBackupId(String backupId) {

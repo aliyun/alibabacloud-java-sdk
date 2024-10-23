@@ -6,35 +6,50 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterResourcePoolPerformanceRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to monitor the resource group. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
+     * <p>The end of the time range to monitor the resource group. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-10T07:01Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The metrics of the resource group. You can enter multiple metrics at the same time to query the monitoring information. Separate multiple metrics with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **AnalyticDB_RP_CPU**: the average CPU utilization. Unit: %.</p>
-     * <p>*   **AnalyticDB_RP_RT**: the query response time (RT). Unit: milliseconds.</p>
-     * <p>*   **AnalyticDB_RP_QPS**: the queries per second (QPS). The value of this parameter must be a numeric value.</p>
-     * <p>*   **AnalyticDB_RP_WaitTime**: the query waiting time. Unit: milliseconds.</p>
-     * <p>*   **AnalyticDB_RP_OriginalNode**: the number of basic nodes in the resource group.</p>
-     * <p>*   **AnalyticDB_RP_ActualNode**: the number of scheduled nodes that are scaled out in the resource group.</p>
-     * <p>*   **AnalyticDB_RP_PlanNode**: the number of scheduled nodes to be scaled out in the resource group.</p>
-     * <p>*   **AnalyticDB_RP_TotalNode**: the total number of nodes in the resource group. Total number of nodes = Number of basic nodes + Number of scheduled nodes that are scaled out.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you leave this parameter empty, the monitoring information about all metrics is returned.</p>
-     * <br>
-     * <p>*   For more information about scaling plans, see [Create a resource scaling plan](~~189507~~).</p>
+     * <ul>
+     * <li><strong>AnalyticDB_RP_CPU</strong>: the average CPU utilization. Unit: %.</li>
+     * <li><strong>AnalyticDB_RP_RT</strong>: the query response time (RT). Unit: milliseconds.</li>
+     * <li><strong>AnalyticDB_RP_QPS</strong>: the queries per second (QPS). The value of this parameter must be a numeric value.</li>
+     * <li><strong>AnalyticDB_RP_WaitTime</strong>: the query waiting time. Unit: milliseconds.</li>
+     * <li><strong>AnalyticDB_RP_OriginalNode</strong>: the number of basic nodes in the resource group.</li>
+     * <li><strong>AnalyticDB_RP_ActualNode</strong>: the number of scheduled nodes that are scaled out in the resource group.</li>
+     * <li><strong>AnalyticDB_RP_PlanNode</strong>: the number of scheduled nodes to be scaled out in the resource group.</li>
+     * <li><strong>AnalyticDB_RP_TotalNode</strong>: the total number of nodes in the resource group. Total number of nodes = Number of basic nodes + Number of scheduled nodes that are scaled out.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If you leave this parameter empty, the monitoring information about all metrics is returned.</p>
+     * </li>
+     * <li><p>For more information about scaling plans, see <a href="https://help.aliyun.com/document_detail/189507.html">Create a resource scaling plan</a>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AnalyticDB_RP_CPU</p>
      */
     @NameInMap("Key")
     public String key;
@@ -53,20 +68,30 @@ public class DescribeDBClusterResourcePoolPerformanceRequest extends TeaModel {
 
     /**
      * <p>The names of the resource groups that you want to query. You can enter multiple names of resource groups. Separate multiple names with commas (,).</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The value of this parameter is case-insensitive. For example, `USER_DEFAULT` and `user_default` specify the same resource group.</p>
-     * <br>
-     * <p>*   If you leave this parameter empty, the monitoring information about the `USER_DEFAULT` resource group is returned.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The value of this parameter is case-insensitive. For example, <code>USER_DEFAULT</code> and <code>user_default</code> specify the same resource group.</p>
+     * </li>
+     * <li><p>If you leave this parameter empty, the monitoring information about the <code>USER_DEFAULT</code> resource group is returned.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST_POOL</p>
      */
     @NameInMap("ResourcePools")
     public String resourcePools;
 
     /**
-     * <p>The beginning of the time range to monitor the resource group. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
-     * <br>
-     * <p>> You can view only the monitoring information about the resource groups within the last two days.</p>
+     * <p>The beginning of the time range to monitor the resource group. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>You can view only the monitoring information about the resource groups within the last two days.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-10T07:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

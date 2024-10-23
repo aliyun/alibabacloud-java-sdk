@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bpxxxxxxxx47</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -17,13 +24,21 @@ public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the resource pool. You cannot unbind users from the default resource pool named USER_DEFAULT.</p>
+     * <p>The name of the resource group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("PoolName")
     public String poolName;
 
     /**
-     * <p>The user bound to the resource pool.</p>
+     * <p>The database account with which the resource group is associated.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testb</p>
      */
     @NameInMap("PoolUser")
     public String poolUser;

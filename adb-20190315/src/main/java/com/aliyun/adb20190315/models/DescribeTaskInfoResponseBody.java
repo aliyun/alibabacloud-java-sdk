@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTaskInfoResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,40 +43,56 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public static class DescribeTaskInfoResponseBodyTaskInfo extends TeaModel {
         /**
          * <p>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-07T07:39:56Z</p>
          */
         @NameInMap("BeginTime")
         public String beginTime;
 
         /**
          * <p>The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-07T08:08:50Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The progress of the task. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The status. Valid values:</p>
-         * <br>
-         * <p>*   Waiting</p>
-         * <p>*   Running</p>
-         * <p>*   Finished</p>
-         * <p>*   Failed</p>
-         * <p>*   Closed</p>
-         * <p>*   Cancel</p>
-         * <p>*   Retry</p>
-         * <p>*   Pause</p>
-         * <p>*   Stop</p>
+         * <ul>
+         * <li>Waiting</li>
+         * <li>Running</li>
+         * <li>Finished</li>
+         * <li>Failed</li>
+         * <li>Closed</li>
+         * <li>Cancel</li>
+         * <li>Retry</li>
+         * <li>Pause</li>
+         * <li>Stop</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>225685759</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

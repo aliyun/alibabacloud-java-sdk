@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ModifyAuditLogConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the status of SQL audit is updated. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The status of SQL audit is updated.</p>
-     * <p>*   **false**: The status of SQL audit is not updated.</p>
+     * <ul>
+     * <li><strong>true</strong>: The status of SQL audit is updated.</li>
+     * <li><strong>false</strong>: The status of SQL audit is not updated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UpdateSucceed")
     public Boolean updateSucceed;

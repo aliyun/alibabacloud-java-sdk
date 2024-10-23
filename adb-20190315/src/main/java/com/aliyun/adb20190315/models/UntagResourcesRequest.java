@@ -6,11 +6,16 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from clusters. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>>  If you specify TagKey and this parameter, this parameter does not take effect.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If you specify TagKey and this parameter, this parameter does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -23,14 +28,23 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of cluster N. Valid values of N: 1 to 50.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxx.1</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -42,13 +56,20 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to **ALIYUN::ADB::CLUSTER**.</p>
+     * <p>The resource type. Set the value to <strong>ALIYUN::ADB::CLUSTER</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::ADB::CLUSTER</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
