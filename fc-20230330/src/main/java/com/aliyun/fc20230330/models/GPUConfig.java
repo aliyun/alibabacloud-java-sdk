@@ -13,7 +13,7 @@ public class GPUConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>fc.gpu.ampere.1</p>
+     * <p>fc.gpu.tesla.1</p>
      */
     @NameInMap("gpuType")
     public String gpuType;

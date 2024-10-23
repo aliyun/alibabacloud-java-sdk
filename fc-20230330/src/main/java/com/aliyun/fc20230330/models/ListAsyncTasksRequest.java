@@ -21,7 +21,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Boolean includePayload;
 
     /**
-     * <p>The number of asynchronous tasks to return. Valid values: [1,100]. Default value: 50.</p>
+     * <p>The number of asynchronous tasks to return. Valid values: [1,100]. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

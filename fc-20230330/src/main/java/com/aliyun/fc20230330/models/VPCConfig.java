@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class VPCConfig extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>acs:ram::188077086902****:role/fc-test</p>
+     */
+    @NameInMap("role")
+    public String role;
+
+    /**
+     * <strong>example:</strong>
      * <p>sg-bp18hj1wtxgy3b0***</p>
      */
     @NameInMap("securityGroupId")
@@ -24,6 +31,14 @@ public class VPCConfig extends TeaModel {
     public static VPCConfig build(java.util.Map<String, ?> map) throws Exception {
         VPCConfig self = new VPCConfig();
         return TeaModel.build(map, self);
+    }
+
+    public VPCConfig setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
     }
 
     public VPCConfig setSecurityGroupId(String securityGroupId) {
