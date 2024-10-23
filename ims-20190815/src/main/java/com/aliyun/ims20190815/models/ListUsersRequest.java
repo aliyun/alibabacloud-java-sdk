@@ -5,18 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
-     * <p>The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
-     * <p>The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.</p>
-     * <br>
+     * <p>The number of entries per page. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be true.</p>
      * <p>Valid values: 1 to 1000. Default value: 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("MaxItems")
     public Integer maxItems;
+
+    @NameInMap("Status")
+    public String status;
 
     /**
      * <p>The tags. A maximum number of 20 tags are supported.</p>
@@ -45,6 +53,14 @@ public class ListUsersRequest extends TeaModel {
         return this.maxItems;
     }
 
+    public ListUsersRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public ListUsersRequest setTag(java.util.List<ListUsersRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -56,16 +72,20 @@ public class ListUsersRequest extends TeaModel {
     public static class ListUsersRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
-         * <br>
          * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operator</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
-         * <br>
          * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("Value")
         public String value;

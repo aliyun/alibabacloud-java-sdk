@@ -12,6 +12,9 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7158A935-FB5E-49A7-8E52-FDA5B2B67247</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     public static class ListGroupsForUserResponseBodyGroupsGroup extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The display name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>740317625433843****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The time when the RAM user was added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-20T06:57:00Z</p>
          */
         @NameInMap("JoinDate")
         public String joinDate;

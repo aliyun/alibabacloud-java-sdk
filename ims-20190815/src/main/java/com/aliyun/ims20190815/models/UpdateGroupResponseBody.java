@@ -12,6 +12,9 @@ public class UpdateGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CDA656E3-3CE9-4A03-A8A3-B42A0C3C3287</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class UpdateGroupResponseBody extends TeaModel {
     public static class UpdateGroupResponseBodyGroup extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-19T16:15:17Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The display name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>740317625433843****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-20T03:44:27Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

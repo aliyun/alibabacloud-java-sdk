@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CreateAccessKeyRequest extends TeaModel {
     /**
      * <p>The logon name of the RAM user.</p>
-     * <br>
      * <p>If this parameter is empty, an AccessKey pair is created for the current user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSAMLProviderResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BAADB995-0C7A-476D-B293-7E94568EEDFB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetSAMLProviderResponseBody extends TeaModel {
     public static class GetSAMLProviderResponseBodySAMLProvider extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T02:37:05Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a provider.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The metadata file, which is Base64 encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVy****</p>
          */
         @NameInMap("EncodedSAMLMetadataDocument")
         public String encodedSAMLMetadataDocument;
 
         /**
          * <p>The name of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-provider</p>
          */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T02:51:20Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

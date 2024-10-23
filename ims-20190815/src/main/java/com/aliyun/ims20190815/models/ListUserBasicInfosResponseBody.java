@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListUserBasicInfosResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated. Valid value:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF2B25FD-CADE-445B-BE4D-E082E0FF1A0F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,18 +81,30 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo extends TeaModel {
         /**
          * <p>The display name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
+        @NameInMap("Status")
+        public String status;
+
         /**
          * <p>The ID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20732900249392****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The logon name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
@@ -98,6 +120,14 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo setUserId(String userId) {

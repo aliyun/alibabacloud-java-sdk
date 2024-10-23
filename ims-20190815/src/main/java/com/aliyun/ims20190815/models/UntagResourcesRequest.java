@@ -6,46 +6,57 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
-     * <br>
-     * <p>*   true: remove all tags from the resources.</p>
-     * <p>*   false (default): does not remove all tags from the resources.</p>
-     * <br>
-     * <p>> This parameter takes effect only when TagKey.N is not set in the request.</p>
+     * <ul>
+     * <li>true: remove all tags from the resources.</li>
+     * <li>false (default): does not remove all tags from the resources.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only when TagKey.N is not set in the request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The IDs of resources.</p>
-     * <br>
      * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.</p>
-     * <br>
-     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>UntagResources</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The names of resources.</p>
-     * <br>
      * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.</p>
-     * <br>
-     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * </blockquote>
      */
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
     /**
      * <p>The type of the resource. Valid value:</p>
-     * <br>
-     * <p>*   user: a RAM user</p>
+     * <ul>
+     * <li>user: a RAM user</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag keys of resources.</p>
-     * <br>
      * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
      */
     @NameInMap("TagKey")

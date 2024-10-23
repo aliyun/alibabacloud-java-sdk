@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateVirtualMFADeviceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C609CC97-10FE-43EB-BE32-BDC219D8F1E4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
     public static class CreateVirtualMFADeviceResponseBodyVirtualMFADevice extends TeaModel {
         /**
          * <p>The key of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LD3CJ23Z2VGEX6R7ZTQCOA4XL2KODS5PKH7442NLKYX2PVHSHYB7UT3TS5HA****</p>
          */
         @NameInMap("Base32StringSeed")
         public String base32StringSeed;
 
         /**
          * <p>The Base64-encoded QR code of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YXNkZmFzZDlmeW5hc2Q5OGZoODd4bXJmcThhaGU5aSBmYXNkZiBzYWRmIGFGIDRxd2VjIGEgdHEz****</p>
          */
         @NameInMap("QRCodePNG")
         public String QRCodePNG;
 
         /**
          * <p>The serial number of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:mfa/device001</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;

@@ -12,6 +12,9 @@ public class ListAccessKeysResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class ListAccessKeysResponseBody extends TeaModel {
     public static class ListAccessKeysResponseBodyAccessKeysAccessKey extends TeaModel {
         /**
          * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0wNEpMMlzy7s****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The time when the AccessKey pair was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-13T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The status of the AccessKey pair. Valid values:</p>
-         * <br>
-         * <p>*   Active</p>
-         * <p>*   Inactive</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Inactive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the AccessKey pair was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-13T12:33:18Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

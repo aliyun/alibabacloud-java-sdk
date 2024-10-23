@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class GenerateCredentialReportResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBCCA90A-A1F0-4B16-B355-692247197805</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The generation status of the user credential report. Valid values:</p>
-     * <br>
-     * <p>*   STARTED: The user credential report starts to generate.</p>
-     * <p>*   INPROGRESS: The user credential report is being generated.</p>
-     * <p>*   COMPLETED: The user credential report is generated.</p>
+     * <ul>
+     * <li>STARTED: The user credential report starts to generate.</li>
+     * <li>INPROGRESS: The user credential report is being generated.</li>
+     * <li>COMPLETED: The user credential report is generated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>STARTED</p>
      */
     @NameInMap("State")
     public String state;

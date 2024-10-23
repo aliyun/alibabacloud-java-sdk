@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class AddUserToGroupRequest extends TeaModel {
     /**
      * <p>The name of the RAM user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test-Team</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The logon name of the RAM user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteOIDCProviderRequest extends TeaModel {
     /**
      * <p>The name of the OIDC IdP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestOIDCProvider</p>
      */
     @NameInMap("OIDCProviderName")
     public String OIDCProviderName;

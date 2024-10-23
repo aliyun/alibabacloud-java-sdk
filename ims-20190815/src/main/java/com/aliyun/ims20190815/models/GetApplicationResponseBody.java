@@ -12,6 +12,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6616F09B-2768-4C11-8866-A8EE4C4A583E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,32 @@ public class GetApplicationResponseBody extends TeaModel {
     public static class GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope extends TeaModel {
         /**
          * <p>The description of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openid</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
-         * <p>`openid` is required by default.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p><code>openid</code> is required by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -155,40 +167,59 @@ public class GetApplicationResponseBody extends TeaModel {
     public static class GetApplicationResponseBodyApplication extends TeaModel {
         /**
          * <p>The validity period of the access token. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("AccessTokenValidity")
         public Integer accessTokenValidity;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177242285274****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>472457090344041****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   WebApp: a web application.</p>
-         * <p>*   NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
-         * <p>*   ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</p>
+         * <ul>
+         * <li>WebApp: a web application.</li>
+         * <li>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</li>
+         * <li>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WebApp</p>
          */
         @NameInMap("AppType")
         public String appType;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-23T08:06:57Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
@@ -201,12 +232,18 @@ public class GetApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The display name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
@@ -219,18 +256,27 @@ public class GetApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The validity period of the refresh token. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7776000</p>
          */
         @NameInMap("RefreshTokenValidity")
         public Integer refreshTokenValidity;
 
         /**
          * <p>Indicates whether a secret is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SecretRequired")
         public Boolean secretRequired;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-23T08:06:57Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

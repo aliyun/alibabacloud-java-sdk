@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetSecurityPreferenceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17494710-B4BA-4185-BBBB-C1A6ABDE1639</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their AccessKey pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
@@ -62,36 +68,54 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can change their passwords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
         /**
          * <p>Indicates whether RAM users can remember the MFA devices for seven days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
         /**
          * <p>The subnet mask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
         /**
          * <p>The validity period of the logon session of RAM users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
 
         /**
          * <p>Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adaptive</p>
          */
         @NameInMap("MFAOperationForLogin")
         public String MFAOperationForLogin;
 
         /**
          * <p>Indicates whether to enable MFA for RAM users who initiated unusual logons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autonomous</p>
          */
         @NameInMap("OperationForRiskLogin")
         public String operationForRiskLogin;
@@ -154,6 +178,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their MFA devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
@@ -176,6 +203,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     public static class SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowUserToManagePersonalDingTalk")
         public Boolean allowUserToManagePersonalDingTalk;

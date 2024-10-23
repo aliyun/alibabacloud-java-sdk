@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSAMLProviderResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A95A763D-F6B7-5242-83EB-AB45CE67F358</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
     public static class CreateSAMLProviderResponseBodySAMLProvider extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T02:37:05Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a provider.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-provider</p>
          */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T02:51:20Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

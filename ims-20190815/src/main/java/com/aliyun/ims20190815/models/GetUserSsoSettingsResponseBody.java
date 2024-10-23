@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserSsoSettingsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69FC3E5E-D3D9-434B-90CA-BBA8E0551A47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
     public static class GetUserSsoSettingsResponseBodyUserSsoSettings extends TeaModel {
         /**
          * <p>The auxiliary domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("AuxiliaryDomain")
         public String auxiliaryDomain;
 
         /**
          * <p>The metadata file, which is Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVy****</p>
          */
         @NameInMap("MetadataDocument")
         public String metadataDocument;
 
         /**
          * <p>Indicates whether user-based SSO is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;

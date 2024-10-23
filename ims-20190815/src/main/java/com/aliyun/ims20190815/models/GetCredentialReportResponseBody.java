@@ -6,35 +6,50 @@ import com.aliyun.tea.*;
 public class GetCredentialReportResponseBody extends TeaModel {
     /**
      * <p>The content of the user credential report.</p>
-     * <br>
      * <p>The report is Base64-encoded. After you decode the report, the credential report is in the CSV format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OVZWK4RMOVZW****</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The time when the user credential report was generated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-19T15:06:52Z</p>
      */
     @NameInMap("GeneratedTime")
     public String generatedTime;
 
     /**
      * <p>Indicates whether the response is truncated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public String isTruncated;
 
     /**
-     * <p>The parameter that is used to obtain the truncated part. This parameter takes effect only when `IsTruncated` is set to true.</p>
+     * <p>The parameter that is used to obtain the truncated part. This parameter takes effect only when <code>IsTruncated</code> is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7A01826E-7601-44B0-B4DF-2B0C509836DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

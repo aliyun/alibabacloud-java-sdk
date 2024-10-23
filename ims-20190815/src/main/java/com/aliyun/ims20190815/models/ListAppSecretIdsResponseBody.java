@@ -12,6 +12,9 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5F2FD500-7173-47D6-BD2F-EB60879B4F16</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
     public static class ListAppSecretIdsResponseBodyAppSecretsAppSecret extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>472457090344041****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the application secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
          */
         @NameInMap("AppSecretId")
         public String appSecretId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-26T03:18:39Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;

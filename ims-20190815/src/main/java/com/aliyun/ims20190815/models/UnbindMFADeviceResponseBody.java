@@ -12,6 +12,9 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A26CB3E9-1021-452A-AC57-3134B3BA0E4C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
     public static class UnbindMFADeviceResponseBodyMFADevice extends TeaModel {
         /**
          * <p>The serial number of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::151298381312****:mfa/device001</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;

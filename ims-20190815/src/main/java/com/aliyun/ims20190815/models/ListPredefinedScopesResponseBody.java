@@ -12,6 +12,9 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>955C096D-EC99-480B-AF37-3921109107D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
     public static class ListPredefinedScopesResponseBodyPredefinedScopesPredefinedScope extends TeaModel {
         /**
          * <p>The description of the permission scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openid</p>
          */
         @NameInMap("Name")
         public String name;

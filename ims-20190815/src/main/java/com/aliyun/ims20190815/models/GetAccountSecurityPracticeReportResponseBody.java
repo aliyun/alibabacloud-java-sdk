@@ -12,6 +12,9 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABA822EE-85C2-4418-9577-A1831FC8466D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,61 +43,90 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
     public static class GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfoAccountSecurityPracticeUserInfo extends TeaModel {
         /**
          * <p>Indicates whether MFA is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("BindMfa")
         public Boolean bindMfa;
 
         /**
          * <p>The number of old AccessKey pairs for the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OldAkNum")
         public Integer oldAkNum;
 
         /**
          * <p>The number of AccessKey pairs for the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RootWithAccessKey")
         public Integer rootWithAccessKey;
 
         /**
          * <p>The number of RAM users within the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("SubUser")
         public Integer subUser;
 
         /**
          * <p>The number of RAM users that have MFA devices bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SubUserBindMfa")
         public Integer subUserBindMfa;
 
         /**
          * <p>The complexity level of the password for the RAM user. Valid values:</p>
-         * <br>
-         * <p>*   low</p>
-         * <p>*   mid</p>
-         * <p>*   high</p>
+         * <ul>
+         * <li>low</li>
+         * <li>mid</li>
+         * <li>high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("SubUserPwdLevel")
         public String subUserPwdLevel;
 
         /**
          * <p>The number of RAM users that use the old AccessKey pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SubUserWithOldAccessKey")
         public Integer subUserWithOldAccessKey;
 
         /**
          * <p>The number of RAM users that have no AccessKey pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SubUserWithUnusedAccessKey")
         public Integer subUserWithUnusedAccessKey;
 
         /**
          * <p>The number of AccessKey pairs that are not used for the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UnusedAkNum")
         public Integer unusedAkNum;
@@ -187,6 +219,9 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
 
         /**
          * <p>The security score of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         @NameInMap("Score")
         public Integer score;

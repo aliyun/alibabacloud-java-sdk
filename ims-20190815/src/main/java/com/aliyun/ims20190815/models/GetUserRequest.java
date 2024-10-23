@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class GetUserRequest extends TeaModel {
     /**
      * <p>The AccessKey ID of the RAM user.</p>
-     * <br>
-     * <p>> You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI4GFTgcR8m8cZQDTH****</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
     /**
      * <p>The ID of the RAM user.</p>
-     * <br>
-     * <p>> You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20732900249392****</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The logon name of the RAM user.</p>
-     * <br>
-     * <p>The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name.</p>
-     * <br>
-     * <p>The value of `UserPrincipalName` must be `1 to 128` characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be `1 to 64` characters in length.</p>
-     * <br>
-     * <p>> You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
+     * <p>The name is in the format of <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>. <code>&lt;username&gt;</code> indicates the name of the RAM user. <code>&lt;AccountAlias&gt;.onaliyun.com</code> indicates the default domain name.</p>
+     * <p>The value of <code>UserPrincipalName</code> must be <code>1 to 128</code> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be <code>1 to 64</code> characters in length.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

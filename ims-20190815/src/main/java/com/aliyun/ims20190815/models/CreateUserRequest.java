@@ -6,52 +6,65 @@ import com.aliyun.tea.*;
 public class CreateUserRequest extends TeaModel {
     /**
      * <p>The description.</p>
-     * <br>
      * <p>The description must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a cloud computing engineer.</p>
      */
     @NameInMap("Comments")
     public String comments;
 
     /**
      * <p>The display name of the RAM user.</p>
-     * <br>
      * <p>The name must be 1 to 24 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
      * <p>The email address of the RAM user.</p>
-     * <br>
-     * <p>> This parameter is valid only on the China site (aliyun.com).</p>
+     * <blockquote>
+     * <p>This parameter is valid only on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The mobile number of the RAM user.</p>
-     * <br>
      * <p>Format: Country code-Mobile phone number.</p>
-     * <br>
-     * <p>> This parameter is valid only on the China site (aliyun.com).</p>
+     * <blockquote>
+     * <p>This parameter is valid only on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>86-1868888****</p>
      */
     @NameInMap("MobilePhone")
     public String mobilePhone;
 
     /**
      * <p>The tag value.</p>
-     * <br>
-     * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
+     * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateUserRequestTag> tag;
 
     /**
      * <p>The logon name of the RAM user.</p>
-     * <br>
-     * <p>The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name. For more information about how to obtain the default domain name, see [GetDefaultDomain](~~186720~~).</p>
-     * <br>
-     * <p>The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.</p>
+     * <p>The name is in the format of <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>. <code>&lt;username&gt;</code> indicates the name of the RAM user. <code>&lt;AccountAlias&gt;.onaliyun.com</code> indicates the default domain name. For more information about how to obtain the default domain name, see <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a>.</p>
+     * <p>The value of <code>UserPrincipalName</code> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be 1 to 64 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
@@ -112,16 +125,20 @@ public class CreateUserRequest extends TeaModel {
     public static class CreateUserRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operator</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("Value")
         public String value;

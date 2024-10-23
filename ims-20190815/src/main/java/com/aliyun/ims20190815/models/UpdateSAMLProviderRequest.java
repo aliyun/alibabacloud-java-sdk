@@ -6,22 +6,34 @@ import com.aliyun.tea.*;
 public class UpdateSAMLProviderRequest extends TeaModel {
     /**
      * <p>The new description.</p>
-     * <br>
-     * <p>>  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a new provider.</p>
      */
     @NameInMap("NewDescription")
     public String newDescription;
 
     /**
      * <p>The new metadata file.</p>
-     * <br>
-     * <p>>  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PD94bWwgdmVy****</p>
      */
     @NameInMap("NewEncodedSAMLMetadataDocument")
     public String newEncodedSAMLMetadataDocument;
 
     /**
      * <p>The name of the IdP whose information you want to modify.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-provider</p>
      */
     @NameInMap("SAMLProviderName")
     public String SAMLProviderName;

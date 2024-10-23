@@ -12,6 +12,9 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDAA8408-E67C-428B-BFF0-1B2AC05C9610</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,66 +43,99 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
     public static class GetPasswordPolicyResponseBodyPasswordPolicy extends TeaModel {
         /**
          * <p>Indicates whether to disable logon after the password expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HardExpire")
         public Boolean hardExpire;
 
         /**
          * <p>The maximum number of password retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MaxLoginAttemps")
         public Integer maxLoginAttemps;
 
         /**
          * <p>The validity period of the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MaxPasswordAge")
         public Integer maxPasswordAge;
 
         /**
          * <p>The minimum number of unique characters in the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MinimumPasswordDifferentCharacter")
         public Integer minimumPasswordDifferentCharacter;
 
         /**
          * <p>The minimum required number of characters in a password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("MinimumPasswordLength")
         public Integer minimumPasswordLength;
 
         /**
          * <p>Indicates whether to exclude the username from the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PasswordNotContainUserName")
         public Boolean passwordNotContainUserName;
 
         /**
          * <p>The policy for password history check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PasswordReusePrevention")
         public Integer passwordReusePrevention;
 
         /**
          * <p>Indicates whether the password must contain lowercase letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RequireLowercaseCharacters")
         public Boolean requireLowercaseCharacters;
 
         /**
          * <p>Indicates whether the password must contain digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RequireNumbers")
         public Boolean requireNumbers;
 
         /**
          * <p>Indicates whether the password must contain special characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RequireSymbols")
         public Boolean requireSymbols;
 
         /**
          * <p>Indicates whether the password must contain uppercase letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RequireUppercaseCharacters")
         public Boolean requireUppercaseCharacters;

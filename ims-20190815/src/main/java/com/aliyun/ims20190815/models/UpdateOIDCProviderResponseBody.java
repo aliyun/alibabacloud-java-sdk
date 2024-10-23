@@ -12,6 +12,9 @@ public class UpdateOIDCProviderResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4C4D1BD-2558-5BD1-8C26-A5D7FB174A55</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,66 +43,99 @@ public class UpdateOIDCProviderResponseBody extends TeaModel {
     public static class UpdateOIDCProviderResponseBodyOIDCProvider extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:oidc-provider/TestOIDCProvider</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>498469743454717****</p>
          */
         @NameInMap("ClientIds")
         public String clientIds;
 
         /**
          * <p>The time when the OIDC IdP was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-11T06:56:03Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a new OIDC Provider.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>
          */
         @NameInMap("Fingerprints")
         public String fingerprints;
 
         /**
          * <p>The timestamp when the OIDC IdP was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1636613763000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The timestamp when the OIDC IdP was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1636706309000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("IssuanceLimitTime")
         public Long issuanceLimitTime;
 
         /**
          * <p>The URL of the issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
          */
         @NameInMap("IssuerUrl")
         public String issuerUrl;
 
         /**
          * <p>The name of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOIDCProvider</p>
          */
         @NameInMap("OIDCProviderName")
         public String OIDCProviderName;
 
         /**
          * <p>The time when the OIDC IdP was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-12T08:38:29Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;
