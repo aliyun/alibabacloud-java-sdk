@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class CreateVirtualMFADeviceRequest extends TeaModel {
     /**
      * <p>The name of the MFA device.</p>
-     * <br>
      * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>device001</p>
      */
     @NameInMap("VirtualMFADeviceName")
     public String virtualMFADeviceName;

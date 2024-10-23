@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class UpdateGroupRequest extends TeaModel {
     /**
      * <p>The name of the RAM user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dev-Team</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The new description.</p>
-     * <br>
      * <p>The value can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test-Team</p>
      */
     @NameInMap("NewComments")
     public String newComments;
 
     /**
      * <p>The new display name of the RAM user group.</p>
-     * <br>
      * <p>The name can be up to 24 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test-Team</p>
      */
     @NameInMap("NewDisplayName")
     public String newDisplayName;
 
     /**
      * <p>The new name of the RAM user group.</p>
-     * <br>
-     * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test-Team</p>
      */
     @NameInMap("NewGroupName")
     public String newGroupName;

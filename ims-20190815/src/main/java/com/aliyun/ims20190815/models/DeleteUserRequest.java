@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteUserRequest extends TeaModel {
     /**
      * <p>The ID of the RAM user.</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20732900249392****</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The logon name of the RAM user.</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

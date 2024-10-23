@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteVirtualMFADeviceRequest extends TeaModel {
     /**
      * <p>The serial number of the MFA device.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789012****:mfa/device002</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;

@@ -12,6 +12,9 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E517F18B-632C-48FC-93F1-CDCBCC6F8444</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetLoginProfileResponseBody extends TeaModel {
     public static class GetLoginProfileResponseBodyLoginProfile extends TeaModel {
         /**
          * <p>The last time when the RAM user logged on to the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-14T07:25:25Z</p>
          */
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
 
         /**
          * <p>Indicates whether multi-factor authentication (MFA) must be enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("MFABindRequired")
         public Boolean MFABindRequired;
 
         /**
          * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PasswordResetRequired")
         public Boolean passwordResetRequired;
 
         /**
          * <p>The status of password-based logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-14T06:56:45Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;
 
         /**
          * <p>The logon name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;

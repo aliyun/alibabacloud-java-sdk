@@ -4,6 +4,10 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetVerificationInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 

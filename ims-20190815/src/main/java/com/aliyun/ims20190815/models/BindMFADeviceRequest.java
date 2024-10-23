@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class BindMFADeviceRequest extends TeaModel {
     /**
      * <p>The first verification code.</p>
-     * <br>
-     * <p>>  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/186179.html">CreateVirtualMFADevice</a> operation to create an MFA device and generate a key (value of <code>Base32StringSeed</code>). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("AuthenticationCode1")
     public String authenticationCode1;
 
     /**
      * <p>The second verification code.</p>
-     * <br>
-     * <p>>  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/186179.html">CreateVirtualMFADevice</a> operation to create an MFA device and generate a key (value of <code>Base32StringSeed</code>). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>654321</p>
      */
     @NameInMap("AuthenticationCode2")
     public String authenticationCode2;
 
     /**
      * <p>The serial number of the MFA device.</p>
-     * <br>
-     * <p>>  You can call the [CreateVirtualMFADevice](~~186179~~) operation to obtain the serial number of the MFA device.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/186179.html">CreateVirtualMFADevice</a> operation to obtain the serial number of the MFA device.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::177242285274****:mfa/device001</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
     /**
      * <p>The logon name of the RAM user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

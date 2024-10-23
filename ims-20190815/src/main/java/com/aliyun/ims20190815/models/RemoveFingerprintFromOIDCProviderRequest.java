@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RemoveFingerprintFromOIDCProviderRequest extends TeaModel {
     /**
      * <p>The fingerprint that you want to remove.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6938fd4d98bab03faadb97b34396831e3780****</p>
      */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
     /**
      * <p>The name of the OIDC IdP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestOIDCProvider</p>
      */
     @NameInMap("OIDCProviderName")
     public String OIDCProviderName;

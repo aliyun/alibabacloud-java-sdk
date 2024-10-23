@@ -4,6 +4,10 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetVerificationInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B182C041-8C64-5F2F-A07B-FC67FAF89CF9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +47,17 @@ public class GetVerificationInfoResponseBody extends TeaModel {
     }
 
     public static class GetVerificationInfoResponseBodySecurityEmailDevice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -73,12 +85,24 @@ public class GetVerificationInfoResponseBody extends TeaModel {
     }
 
     public static class GetVerificationInfoResponseBodySecurityPhoneDevice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("AreaCode")
         public String areaCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13900001234</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 

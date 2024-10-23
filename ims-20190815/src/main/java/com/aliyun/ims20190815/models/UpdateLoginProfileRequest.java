@@ -6,41 +6,59 @@ import com.aliyun.tea.*;
 public class UpdateLoginProfileRequest extends TeaModel {
     /**
      * <p>Specifies whether multi-factor authentication (MFA) must be enabled. Valid values:</p>
-     * <br>
-     * <p>*   true. The value true indicates that the RAM user must bind an MFA device at the next logon.</p>
-     * <p>*   false.</p>
+     * <ul>
+     * <li>true. The value true indicates that the RAM user must bind an MFA device at the next logon.</li>
+     * <li>false.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("MFABindRequired")
     public Boolean MFABindRequired;
 
     /**
      * <p>The new password that is used to log on to the console.</p>
-     * <br>
      * <p>The password must meet the complexity requirements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mypassword</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>Specifies whether the RAM user must reset the password at the next logon. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PasswordResetRequired")
     public Boolean passwordResetRequired;
 
     /**
      * <p>The status of password-based logon. Valid values:</p>
-     * <br>
-     * <p>*   Active</p>
-     * <p>*   Inactive</p>
+     * <ul>
+     * <li>Active</li>
+     * <li>Inactive</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The logon name of the RAM user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

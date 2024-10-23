@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAccountSummaryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>81313F5E-3C85-478F-BCC9-E1B70E4556DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,126 +43,189 @@ public class GetAccountSummaryResponseBody extends TeaModel {
     public static class GetAccountSummaryResponseBodySummaryMap extends TeaModel {
         /**
          * <p>The maximum number of AccessKey pairs that a RAM user can have.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AccessKeysPerUserQuota")
         public Integer accessKeysPerUserQuota;
 
         /**
          * <p>The maximum number of custom policies that can be added to a RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("AttachedPoliciesPerGroupQuota")
         public Integer attachedPoliciesPerGroupQuota;
 
         /**
          * <p>The maximum number of custom policies that can be added to a RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("AttachedPoliciesPerRoleQuota")
         public Integer attachedPoliciesPerRoleQuota;
 
         /**
          * <p>The maximum number of custom policies that can be added to a RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("AttachedPoliciesPerUserQuota")
         public Integer attachedPoliciesPerUserQuota;
 
         /**
          * <p>The maximum number of system policies that can be added to a RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("AttachedSystemPoliciesPerGroupQuota")
         public Integer attachedSystemPoliciesPerGroupQuota;
 
         /**
          * <p>The maximum number of system policies that can be added to a RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("AttachedSystemPoliciesPerRoleQuota")
         public Integer attachedSystemPoliciesPerRoleQuota;
 
         /**
          * <p>The maximum number of system policies that can be added to a RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("AttachedSystemPoliciesPerUserQuota")
         public Integer attachedSystemPoliciesPerUserQuota;
 
         /**
          * <p>The number of RAM user groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("Groups")
         public Integer groups;
 
         /**
          * <p>The maximum number of RAM user groups to which a RAM user can be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("GroupsPerUserQuota")
         public Integer groupsPerUserQuota;
 
         /**
          * <p>The maximum number of RAM user groups that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("GroupsQuota")
         public Integer groupsQuota;
 
         /**
          * <p>The number of virtual multi-factor authentication (MFA) devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("MFADevices")
         public Integer MFADevices;
 
         /**
          * <p>The number of virtual MFA devices in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MFADevicesInUse")
         public Integer MFADevicesInUse;
 
         /**
          * <p>The number of custom policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("Policies")
         public Integer policies;
 
         /**
          * <p>The maximum number of custom policies that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         @NameInMap("PoliciesQuota")
         public Integer policiesQuota;
 
         /**
          * <p>The maximum length of the policy content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         @NameInMap("PolicySizeQuota")
         public Integer policySizeQuota;
 
         /**
          * <p>The number of RAM roles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("Roles")
         public Integer roles;
 
         /**
          * <p>The maximum number of RAM roles that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("RolesQuota")
         public Integer rolesQuota;
 
         /**
          * <p>The number of RAM users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Users")
         public Integer users;
 
         /**
          * <p>The maximum number of RAM users that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("UsersQuota")
         public Integer usersQuota;
 
         /**
          * <p>The maximum number of policy versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("VersionsPerPolicyQuota")
         public Integer versionsPerPolicyQuota;
 
         /**
          * <p>The maximum number of virtual MFA devices that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("VirtualMFADevicesQuota")
         public Integer virtualMFADevicesQuota;

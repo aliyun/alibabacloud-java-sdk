@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class RemoveUserFromGroupRequest extends TeaModel {
     /**
      * <p>The name of the RAM user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test-Team</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The logon name of the RAM user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:alice@example.onaliyun.com">alice@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

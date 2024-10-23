@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSAMLProviderResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E5EDDFD2-3654-4F9F-9780-4AE7D81823EF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
     public static class UpdateSAMLProviderResponseBodySAMLProvider extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The point in time at which the IdP was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T02:37:05Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a new provider.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-provider</p>
          */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
         /**
          * <p>The point in time at which the information about the IdP was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T02:51:20Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

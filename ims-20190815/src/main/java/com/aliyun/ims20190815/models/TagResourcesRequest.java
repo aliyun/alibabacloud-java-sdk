@@ -6,28 +6,35 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of resource N.</p>
-     * <br>
      * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.</p>
-     * <br>
-     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * </blockquote>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The name of resource N.</p>
-     * <br>
      * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.</p>
-     * <br>
-     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>TagResources</p>
      */
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
     /**
      * <p>The type of the resource. Valid value:</p>
-     * <br>
-     * <p>*   user: a RAM user</p>
+     * <ul>
+     * <li>user: a RAM user</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -78,16 +85,20 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operator</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("Value")
         public String value;

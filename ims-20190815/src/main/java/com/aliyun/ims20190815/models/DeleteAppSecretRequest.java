@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteAppSecretRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>472457090344041****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the application secret.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
      */
     @NameInMap("AppSecretId")
     public String appSecretId;

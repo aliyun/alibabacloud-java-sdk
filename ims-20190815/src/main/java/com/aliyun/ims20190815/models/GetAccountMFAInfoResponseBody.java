@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class GetAccountMFAInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether MFA is enabled. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsMFAEnable")
     public Boolean isMFAEnable;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4BE83135-0B08-467C-B3A2-27B312FD0F57</p>
      */
     @NameInMap("RequestId")
     public String requestId;

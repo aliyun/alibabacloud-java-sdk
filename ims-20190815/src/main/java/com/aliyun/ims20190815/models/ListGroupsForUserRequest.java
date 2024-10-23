@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListGroupsForUserRequest extends TeaModel {
     /**
      * <p>The logon name of the RAM user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

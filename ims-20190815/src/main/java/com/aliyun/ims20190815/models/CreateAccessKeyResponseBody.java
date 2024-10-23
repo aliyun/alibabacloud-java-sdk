@@ -12,6 +12,9 @@ public class CreateAccessKeyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19DDD9F7-AFCC-4D72-8CBA-CCE5A142E7AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class CreateAccessKeyResponseBody extends TeaModel {
     public static class CreateAccessKeyResponseBodyAccessKey extends TeaModel {
         /**
          * <p>The AccessKey ID provided to you by Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4G3HaMmeHpay2gcq****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The AccessKey secret provided to you by Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y3MSLE6OgizS4qrz5LVFDoyZEL****</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
         /**
          * <p>The time when the AccessKey pair was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-15T08:08:54Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The status of the AccessKey pair. Valid values:</p>
-         * <br>
-         * <p>*   Active</p>
-         * <p>*   Inactive</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Inactive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;

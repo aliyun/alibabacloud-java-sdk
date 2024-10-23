@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSecurityPreferenceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30C9068D-FBAA-4998-9986-8A562FED0BC3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
@@ -65,49 +72,71 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
         /**
          * <p>Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
         /**
          * <p>The subnet mask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
         /**
          * <p>The validity period of the logon session of RAM users. Unit: hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
 
         /**
          * <p>Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:</p>
-         * <br>
-         * <p>*   mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.</p>
-         * <p>*   independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.</p>
-         * <p>*   adaptive: MFA is required only for RAM users who initiated unusual logons.</p>
+         * <ul>
+         * <li>mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.</li>
+         * <li>independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.</li>
+         * <li>adaptive: MFA is required only for RAM users who initiated unusual logons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>adaptive</p>
          */
         @NameInMap("MFAOperationForLogin")
         public String MFAOperationForLogin;
 
         /**
          * <p>Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:</p>
-         * <br>
-         * <p>*   autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.</p>
-         * <p>*   enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.</p>
+         * <ul>
+         * <li>autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.</li>
+         * <li>enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>autonomous</p>
          */
         @NameInMap("OperationForRiskLogin")
         public String operationForRiskLogin;
@@ -170,9 +199,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
@@ -195,9 +228,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public static class GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowUserToManagePersonalDingTalk")
         public Boolean allowUserToManagePersonalDingTalk;
