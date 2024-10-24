@@ -79,6 +79,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
         @NameInMap("id")
         public String id;
 
+        @NameInMap("speed")
+        public String speed;
+
         /**
          * <strong>example:</strong>
          * <p><a href="https://meeting.dingtalk.com/j/1COFppy0POR">https://meeting.dingtalk.com/j/1COFppy0POR</a></p>
@@ -108,6 +111,14 @@ public class SubmitProjectTaskRequest extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public SubmitProjectTaskRequestFramesLayersMaterial setSpeed(String speed) {
+            this.speed = speed;
+            return this;
+        }
+        public String getSpeed() {
+            return this.speed;
         }
 
         public SubmitProjectTaskRequestFramesLayersMaterial setUrl(String url) {

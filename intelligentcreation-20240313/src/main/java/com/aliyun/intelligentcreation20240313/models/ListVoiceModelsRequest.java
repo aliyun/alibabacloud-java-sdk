@@ -18,6 +18,9 @@ public class ListVoiceModelsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("resSpecType")
+    public String resSpecType;
+
     /**
      * <strong>example:</strong>
      * <p>offlineSynthesis</p>
@@ -51,6 +54,14 @@ public class ListVoiceModelsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListVoiceModelsRequest setResSpecType(String resSpecType) {
+        this.resSpecType = resSpecType;
+        return this;
+    }
+    public String getResSpecType() {
+        return this.resSpecType;
     }
 
     public ListVoiceModelsRequest setUseScene(String useScene) {
