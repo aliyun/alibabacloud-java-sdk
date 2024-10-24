@@ -101,6 +101,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterName")
         public String clusterName;
 
+        @NameInMap("CreateMode")
+        public String createMode;
+
         /**
          * <p>The database type.</p>
          * 
@@ -145,6 +148,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         @NameInMap("HostName")
         public String hostName;
+
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
 
         /**
          * <p>The instance ID.</p>
@@ -205,6 +211,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             return this.clusterName;
         }
 
+        public DescribeRCInstancesResponseBodyRCInstances setCreateMode(String createMode) {
+            this.createMode = createMode;
+            return this;
+        }
+        public String getCreateMode() {
+            return this.createMode;
+        }
+
         public DescribeRCInstancesResponseBodyRCInstances setDbType(String dbType) {
             this.dbType = dbType;
             return this;
@@ -243,6 +257,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public String getHostName() {
             return this.hostName;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setInstanceId(String instanceId) {

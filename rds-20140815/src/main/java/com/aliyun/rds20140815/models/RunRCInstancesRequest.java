@@ -53,6 +53,9 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CreateMode")
+    public String createMode;
+
     /**
      * <p>The information about the data disks.</p>
      */
@@ -89,6 +92,9 @@ public class RunRCInstancesRequest extends TeaModel {
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("HostName")
+    public String hostName;
 
     /**
      * <p>The ID of the image used by the instance.</p>
@@ -204,6 +210,9 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The reserved parameter. This parameter is not supported.</p>
      * 
@@ -230,6 +239,9 @@ public class RunRCInstancesRequest extends TeaModel {
      */
     @NameInMap("SystemDisk")
     public RunRCInstancesRequestSystemDisk systemDisk;
+
+    @NameInMap("Tag")
+    public java.util.List<RunRCInstancesRequestTag> tag;
 
     /**
      * <p>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</p>
@@ -293,6 +305,14 @@ public class RunRCInstancesRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public RunRCInstancesRequest setCreateMode(String createMode) {
+        this.createMode = createMode;
+        return this;
+    }
+    public String getCreateMode() {
+        return this.createMode;
+    }
+
     public RunRCInstancesRequest setDataDisk(java.util.List<RunRCInstancesRequestDataDisk> dataDisk) {
         this.dataDisk = dataDisk;
         return this;
@@ -323,6 +343,14 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public RunRCInstancesRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public RunRCInstancesRequest setImageId(String imageId) {
@@ -421,6 +449,14 @@ public class RunRCInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public RunRCInstancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public RunRCInstancesRequest setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
         this.securityEnhancementStrategy = securityEnhancementStrategy;
         return this;
@@ -443,6 +479,14 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public RunRCInstancesRequestSystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    public RunRCInstancesRequest setTag(java.util.List<RunRCInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunRCInstancesRequestTag> getTag() {
+        return this.tag;
     }
 
     public RunRCInstancesRequest setVSwitchId(String vSwitchId) {
@@ -596,6 +640,36 @@ public class RunRCInstancesRequest extends TeaModel {
         }
         public String getSize() {
             return this.size;
+        }
+
+    }
+
+    public static class RunRCInstancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RunRCInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunRCInstancesRequestTag self = new RunRCInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunRCInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunRCInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
