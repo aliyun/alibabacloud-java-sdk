@@ -4,15 +4,35 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class AttachEaisEiRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp14ws9hbt1oe0u9****</p>
+     */
     @NameInMap("ClientInstanceId")
     public String clientInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais-hzu00xufs1c8j5nn****</p>
+     */
     @NameInMap("EiInstanceId")
     public String eiInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais.ei-a6.2xlarge</p>
+     */
     @NameInMap("EiInstanceType")
     public String eiInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

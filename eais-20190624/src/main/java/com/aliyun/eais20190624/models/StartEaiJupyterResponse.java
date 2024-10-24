@@ -3,25 +3,22 @@ package com.aliyun.eais20190624.models;
 
 import com.aliyun.tea.*;
 
-public class CreateEaiAllResponse extends TeaModel {
+public class StartEaiJupyterResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public CreateEaiAllResponseBody body;
+    public StartEaiJupyterResponseBody body;
 
-    public static CreateEaiAllResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateEaiAllResponse self = new CreateEaiAllResponse();
+    public static StartEaiJupyterResponse build(java.util.Map<String, ?> map) throws Exception {
+        StartEaiJupyterResponse self = new StartEaiJupyterResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateEaiAllResponse setHeaders(java.util.Map<String, String> headers) {
+    public StartEaiJupyterResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class CreateEaiAllResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateEaiAllResponse setStatusCode(Integer statusCode) {
+    public StartEaiJupyterResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class CreateEaiAllResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateEaiAllResponse setBody(CreateEaiAllResponseBody body) {
+    public StartEaiJupyterResponse setBody(StartEaiJupyterResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateEaiAllResponseBody getBody() {
+    public StartEaiJupyterResponseBody getBody() {
         return this.body;
     }
 

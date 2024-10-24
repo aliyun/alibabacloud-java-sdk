@@ -3,20 +3,20 @@ package com.aliyun.eais20190624.models;
 
 import com.aliyun.tea.*;
 
-public class DetachEaisEiResponseBody extends TeaModel {
+public class UntagResourcesResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>04DEB304-2436-4CB9-BB63-468BCEA0****</p>
+     * <p>1E23D585-BBD8-436F-9615-54CACD67****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DetachEaisEiResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DetachEaisEiResponseBody self = new DetachEaisEiResponseBody();
+    public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DetachEaisEiResponseBody setRequestId(String requestId) {
+    public UntagResourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

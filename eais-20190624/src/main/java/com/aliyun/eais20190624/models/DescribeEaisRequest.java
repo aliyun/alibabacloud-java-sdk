@@ -7,27 +7,57 @@ public class DescribeEaisRequest extends TeaModel {
     @NameInMap("ClientInstanceId")
     public String clientInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;eais-id1&quot;, &quot;eais-id2&quot;]</p>
+     */
     @NameInMap("ElasticAcceleratedInstanceIds")
     public String elasticAcceleratedInstanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais*</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais.ei-a6.2xlarge</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InUse</p>
+     */
     @NameInMap("Status")
     public String status;
 

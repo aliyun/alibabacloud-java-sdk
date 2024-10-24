@@ -4,27 +4,63 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class CreateEaiEciRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais-test01</p>
+     */
     @NameInMap("EaisName")
     public String eaisName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais.ei-a6.2xlarge</p>
+     */
     @NameInMap("EaisType")
     public String eaisType;
 
     @NameInMap("Eci")
     public CreateEaiEciRequestEci eci;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmvpuy4a5****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf66jeqopgqa9hdn****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6h3rbwbm90urjwa****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -98,18 +134,38 @@ public class CreateEaiEciRequest extends TeaModel {
     }
 
     public static class CreateEaiEciRequestEciContainer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Arg")
         public String arg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sleep</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nginx</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/eais=eais,/models=eais/models</p>
+         */
         @NameInMap("Volumes")
         public String volumes;
 
@@ -164,15 +220,31 @@ public class CreateEaiEciRequest extends TeaModel {
         @NameInMap("Container")
         public CreateEaiEciRequestEciContainer container;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eip-uf66jeqopgqa9hdn****</p>
+         */
         @NameInMap("EipId")
         public String eipId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-nginx</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.c5.xlarge</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00c7****-rivj.cn-hangzhou.extreme.nas.aliyuncs.com:/share</p>
+         */
         @NameInMap("Volume")
         public String volume;
 

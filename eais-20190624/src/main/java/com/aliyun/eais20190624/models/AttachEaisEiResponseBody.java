@@ -4,12 +4,24 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class AttachEaisEiResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i-bp14ws9hbt1oe0u9****</p>
+     */
     @NameInMap("ClientInstanceId")
     public String clientInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais-hzu00xufs1c8j5nn****</p>
+     */
     @NameInMap("EiInstanceId")
     public String eiInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C3BCB7DA-BEB6-4982-A765-6EA61EC8****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C3BCB7DA-BEB6-4982-A765-6EA61EC8****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

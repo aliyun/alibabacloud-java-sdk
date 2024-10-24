@@ -4,12 +4,20 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceMetricsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>eais-bj8b53it29hfhj******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("PodMetrics")
     public java.util.List<GetInstanceMetricsResponseBodyPodMetrics> podMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +51,17 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceMetricsResponseBodyPodMetricsMetrics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1669107528450</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4.536552540058814</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -78,6 +94,9 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
 
         /**
          * <p>Pod ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eais-hznzre6ffmz9num4****-579b587ddf-9txr6</p>
          */
         @NameInMap("PodId")
         public String podId;
