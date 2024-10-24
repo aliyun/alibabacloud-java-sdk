@@ -58,6 +58,9 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         @NameInMap("PublishStatus")
         public String publishStatus;
 
+        @NameInMap("PublishTargetInstanceId")
+        public String publishTargetInstanceId;
+
         /**
          * <strong>example:</strong>
          * <p>ECR</p>
@@ -76,6 +79,14 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         }
         public String getPublishStatus() {
             return this.publishStatus;
+        }
+
+        public ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets setPublishTargetInstanceId(String publishTargetInstanceId) {
+            this.publishTargetInstanceId = publishTargetInstanceId;
+            return this;
+        }
+        public String getPublishTargetInstanceId() {
+            return this.publishTargetInstanceId;
         }
 
         public ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets setPublishTargetType(String publishTargetType) {

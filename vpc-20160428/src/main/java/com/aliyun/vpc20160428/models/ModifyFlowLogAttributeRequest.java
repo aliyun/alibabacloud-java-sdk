@@ -43,6 +43,9 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -101,6 +104,14 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     }
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    public ModifyFlowLogAttributeRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     public ModifyFlowLogAttributeRequest setOwnerAccount(String ownerAccount) {

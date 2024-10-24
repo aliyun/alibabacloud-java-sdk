@@ -98,7 +98,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public static class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4SetsIPv4Set extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>172.17.**.**</p>
+         * <p><code>172.17.**.**</code></p>
          */
         @NameInMap("IPv4Address")
         public String IPv4Address;
@@ -184,6 +184,9 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("TunnelIndex")
+        public String tunnelIndex;
+
         public static DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface self = new DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface();
             return TeaModel.build(map, self);
@@ -227,6 +230,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface setTunnelIndex(String tunnelIndex) {
+            this.tunnelIndex = tunnelIndex;
+            return this;
+        }
+        public String getTunnelIndex() {
+            return this.tunnelIndex;
         }
 
     }

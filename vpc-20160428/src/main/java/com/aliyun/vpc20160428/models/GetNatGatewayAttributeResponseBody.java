@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayAttributeResponseBody extends TeaModel {
+    @NameInMap("AccessMode")
+    public GetNatGatewayAttributeResponseBodyAccessMode accessMode;
+
     /**
      * <p>The billing information.</p>
      */
@@ -228,6 +231,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetNatGatewayAttributeResponseBody setAccessMode(GetNatGatewayAttributeResponseBodyAccessMode accessMode) {
+        this.accessMode = accessMode;
+        return this;
+    }
+    public GetNatGatewayAttributeResponseBodyAccessMode getAccessMode() {
+        return this.accessMode;
+    }
+
     public GetNatGatewayAttributeResponseBody setBillingConfig(GetNatGatewayAttributeResponseBodyBillingConfig billingConfig) {
         this.billingConfig = billingConfig;
         return this;
@@ -426,6 +437,36 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class GetNatGatewayAttributeResponseBodyAccessMode extends TeaModel {
+        @NameInMap("ModeValue")
+        public String modeValue;
+
+        @NameInMap("TunnelType")
+        public String tunnelType;
+
+        public static GetNatGatewayAttributeResponseBodyAccessMode build(java.util.Map<String, ?> map) throws Exception {
+            GetNatGatewayAttributeResponseBodyAccessMode self = new GetNatGatewayAttributeResponseBodyAccessMode();
+            return TeaModel.build(map, self);
+        }
+
+        public GetNatGatewayAttributeResponseBodyAccessMode setModeValue(String modeValue) {
+            this.modeValue = modeValue;
+            return this;
+        }
+        public String getModeValue() {
+            return this.modeValue;
+        }
+
+        public GetNatGatewayAttributeResponseBodyAccessMode setTunnelType(String tunnelType) {
+            this.tunnelType = tunnelType;
+            return this;
+        }
+        public String getTunnelType() {
+            return this.tunnelType;
+        }
+
     }
 
     public static class GetNatGatewayAttributeResponseBodyBillingConfig extends TeaModel {

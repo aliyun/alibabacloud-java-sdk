@@ -91,6 +91,36 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode extends TeaModel {
+        @NameInMap("ModeValue")
+        public String modeValue;
+
+        @NameInMap("TunnelType")
+        public String tunnelType;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode setModeValue(String modeValue) {
+            this.modeValue = modeValue;
+            return this;
+        }
+        public String getModeValue() {
+            return this.modeValue;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode setTunnelType(String tunnelType) {
+            this.tunnelType = tunnelType;
+            return this;
+        }
+        public String getTunnelType() {
+            return this.tunnelType;
+        }
+
+    }
+
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds extends TeaModel {
         @NameInMap("ForwardTableId")
         public java.util.List<String> forwardTableId;
@@ -480,6 +510,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway extends TeaModel {
+        @NameInMap("AccessMode")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode accessMode;
+
         /**
          * <p>Indicates whether automatic payment is enabled. Valid values:</p>
          * <ul>
@@ -787,6 +820,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static DescribeNatGatewaysResponseBodyNatGatewaysNatGateway build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatGatewaysResponseBodyNatGatewaysNatGateway self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGateway();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setAccessMode(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode getAccessMode() {
+            return this.accessMode;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setAutoPay(Boolean autoPay) {

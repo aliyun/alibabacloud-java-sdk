@@ -14,6 +14,12 @@ public class ModifyRouteEntryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination CIDR block of the route entry. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/24</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
@@ -77,6 +83,12 @@ public class ModifyRouteEntryRequest extends TeaModel {
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
+    /**
+     * <p>The ID of the route table to which the route entry belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1nk7zk65du3pni8z9td</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 

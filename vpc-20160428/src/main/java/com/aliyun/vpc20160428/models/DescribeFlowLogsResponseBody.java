@@ -278,6 +278,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("FlowLogName")
         public String flowLogName;
 
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
         /**
          * <p>The Logstore that stores the captured traffic data.</p>
          * 
@@ -467,6 +470,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
         public String getFlowLogName() {
             return this.flowLogName;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setLogStoreName(String logStoreName) {
