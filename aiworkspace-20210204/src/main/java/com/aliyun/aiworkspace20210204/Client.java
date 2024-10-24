@@ -440,6 +440,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建数据集版本</p>
+     * 
+     * @param request CreateDatasetVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDatasetVersionResponse
+     */
+    public CreateDatasetVersionResponse createDatasetVersionWithOptions(String DatasetId, CreateDatasetVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCount)) {
+            body.put("DataCount", request.dataCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSize)) {
+            body.put("DataSize", request.dataSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.options)) {
+            body.put("Options", request.options);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.property)) {
+            body.put("Property", request.property);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            body.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uri)) {
+            body.put("Uri", request.uri);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDatasetVersion"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/datasets/" + com.aliyun.openapiutil.Client.getEncodeParam(DatasetId) + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDatasetVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据集版本</p>
+     * 
+     * @param request CreateDatasetVersionRequest
+     * @return CreateDatasetVersionResponse
+     */
+    public CreateDatasetVersionResponse createDatasetVersion(String DatasetId, CreateDatasetVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDatasetVersionWithOptions(DatasetId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据集版本的标签</p>
+     * 
+     * @param request CreateDatasetVersionLabelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDatasetVersionLabelsResponse
+     */
+    public CreateDatasetVersionLabelsResponse createDatasetVersionLabelsWithOptions(String DatasetId, String VersionName, CreateDatasetVersionLabelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDatasetVersionLabels"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/datasets/" + com.aliyun.openapiutil.Client.getEncodeParam(DatasetId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(VersionName) + "/labels"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDatasetVersionLabelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据集版本的标签</p>
+     * 
+     * @param request CreateDatasetVersionLabelsRequest
+     * @return CreateDatasetVersionLabelsResponse
+     */
+    public CreateDatasetVersionLabelsResponse createDatasetVersionLabels(String DatasetId, String VersionName, CreateDatasetVersionLabelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDatasetVersionLabelsWithOptions(DatasetId, VersionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建实验</p>
      * 
      * @param request CreateExperimentRequest
@@ -1191,6 +1321,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除指定版本的数据集信息，如果删除的版本是该数据集的仅存版本，版本删除后会联动删除dataset 表中的数据集信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDatasetVersionResponse
+     */
+    public DeleteDatasetVersionResponse deleteDatasetVersionWithOptions(String DatasetId, String VersionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDatasetVersion"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/datasets/" + com.aliyun.openapiutil.Client.getEncodeParam(DatasetId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(VersionName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDatasetVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定版本的数据集信息，如果删除的版本是该数据集的仅存版本，版本删除后会联动删除dataset 表中的数据集信息</p>
+     * @return DeleteDatasetVersionResponse
+     */
+    public DeleteDatasetVersionResponse deleteDatasetVersion(String DatasetId, String VersionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDatasetVersionWithOptions(DatasetId, VersionName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除数据集版本的标签。</p>
+     * 
+     * @param request DeleteDatasetVersionLabelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDatasetVersionLabelsResponse
+     */
+    public DeleteDatasetVersionLabelsResponse deleteDatasetVersionLabelsWithOptions(String DatasetId, String VersionName, DeleteDatasetVersionLabelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keys)) {
+            query.put("Keys", request.keys);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDatasetVersionLabels"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/datasets/" + com.aliyun.openapiutil.Client.getEncodeParam(DatasetId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(VersionName) + "/labels"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDatasetVersionLabelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除数据集版本的标签。</p>
+     * 
+     * @param request DeleteDatasetVersionLabelsRequest
+     * @return DeleteDatasetVersionLabelsResponse
+     */
+    public DeleteDatasetVersionLabelsResponse deleteDatasetVersionLabels(String DatasetId, String VersionName, DeleteDatasetVersionLabelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDatasetVersionLabelsWithOptions(DatasetId, VersionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除实验</p>
      * 
      * @param headers map
@@ -1732,6 +1946,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取指定版本的数据集信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDatasetVersionResponse
+     */
+    public GetDatasetVersionResponse getDatasetVersionWithOptions(String DatasetId, String VersionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDatasetVersion"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/datasets/" + com.aliyun.openapiutil.Client.getEncodeParam(DatasetId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(VersionName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDatasetVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定版本的数据集信息</p>
+     * @return GetDatasetVersionResponse
+     */
+    public GetDatasetVersionResponse getDatasetVersion(String DatasetId, String VersionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDatasetVersionWithOptions(DatasetId, VersionName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取默认工作空间</p>
      * 
      * @param request GetDefaultWorkspaceRequest
@@ -2214,6 +2465,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listCodeSourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据集版本列表</p>
+     * 
+     * @param request ListDatasetVersionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDatasetVersionsResponse
+     */
+    public ListDatasetVersionsResponse listDatasetVersionsWithOptions(String DatasetId, ListDatasetVersionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourcesTypes)) {
+            query.put("DataSourcesTypes", request.dataSourcesTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelKeys)) {
+            query.put("LabelKeys", request.labelKeys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lableValues)) {
+            query.put("LableValues", request.lableValues);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.properties)) {
+            query.put("Properties", request.properties);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTypes)) {
+            query.put("SourceTypes", request.sourceTypes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDatasetVersions"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/datasets/" + com.aliyun.openapiutil.Client.getEncodeParam(DatasetId) + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDatasetVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据集版本列表</p>
+     * 
+     * @param request ListDatasetVersionsRequest
+     * @return ListDatasetVersionsResponse
+     */
+    public ListDatasetVersionsResponse listDatasetVersions(String DatasetId, ListDatasetVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDatasetVersionsWithOptions(DatasetId, request, headers, runtime);
     }
 
     /**
@@ -3702,6 +4036,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateDatasetWithOptions(DatasetId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新指定版本的数据集信息</p>
+     * 
+     * @param request UpdateDatasetVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDatasetVersionResponse
+     */
+    public UpdateDatasetVersionResponse updateDatasetVersionWithOptions(String DatasetId, String VersionName, UpdateDatasetVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCount)) {
+            body.put("DataCount", request.dataCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSize)) {
+            body.put("DataSize", request.dataSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.options)) {
+            body.put("Options", request.options);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDatasetVersion"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/datasets/" + com.aliyun.openapiutil.Client.getEncodeParam(DatasetId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(VersionName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDatasetVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新指定版本的数据集信息</p>
+     * 
+     * @param request UpdateDatasetVersionRequest
+     * @return UpdateDatasetVersionResponse
+     */
+    public UpdateDatasetVersionResponse updateDatasetVersion(String DatasetId, String VersionName, UpdateDatasetVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDatasetVersionWithOptions(DatasetId, VersionName, request, headers, runtime);
     }
 
     /**
