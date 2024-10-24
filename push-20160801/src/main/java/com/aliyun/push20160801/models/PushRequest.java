@@ -140,6 +140,9 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidNotificationNotifyId")
     public Integer androidNotificationNotifyId;
 
+    @NameInMap("AndroidNotificationThreadId")
+    public String androidNotificationThreadId;
+
     /**
      * <strong>example:</strong>
      * <p>classification</p>
@@ -740,6 +743,14 @@ public class PushRequest extends TeaModel {
     }
     public Integer getAndroidNotificationNotifyId() {
         return this.androidNotificationNotifyId;
+    }
+
+    public PushRequest setAndroidNotificationThreadId(String androidNotificationThreadId) {
+        this.androidNotificationThreadId = androidNotificationThreadId;
+        return this;
+    }
+    public String getAndroidNotificationThreadId() {
+        return this.androidNotificationThreadId;
     }
 
     public PushRequest setAndroidNotificationVivoChannel(String androidNotificationVivoChannel) {
