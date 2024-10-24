@@ -185,6 +185,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidNotificationNotifyId")
         public Integer androidNotificationNotifyId;
 
+        @NameInMap("AndroidNotificationThreadId")
+        public String androidNotificationThreadId;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -749,6 +752,14 @@ public class MassPushRequest extends TeaModel {
         }
         public Integer getAndroidNotificationNotifyId() {
             return this.androidNotificationNotifyId;
+        }
+
+        public MassPushRequestPushTask setAndroidNotificationThreadId(String androidNotificationThreadId) {
+            this.androidNotificationThreadId = androidNotificationThreadId;
+            return this;
+        }
+        public String getAndroidNotificationThreadId() {
+            return this.androidNotificationThreadId;
         }
 
         public MassPushRequestPushTask setAndroidNotificationVivoChannel(String androidNotificationVivoChannel) {

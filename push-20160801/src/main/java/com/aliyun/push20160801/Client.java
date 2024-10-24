@@ -83,6 +83,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定别名</p>
+     * 
      * @param request BindAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindAliasResponse
@@ -120,6 +123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定别名</p>
+     * 
      * @param request BindAliasRequest
      * @return BindAliasResponse
      */
@@ -129,6 +135,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定手机号码</p>
+     * 
      * @param request BindPhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindPhoneResponse
@@ -166,6 +175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定手机号码</p>
+     * 
      * @param request BindPhoneRequest
      * @return BindPhoneResponse
      */
@@ -175,6 +187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定标签</p>
+     * 
      * @param request BindTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindTagResponse
@@ -216,6 +231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定标签</p>
+     * 
      * @param request BindTagRequest
      * @return BindTagResponse
      */
@@ -225,6 +243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>取消定时推送任务</p>
+     * 
      * @param request CancelPushRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelPushResponse
@@ -258,6 +279,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>取消定时推送任务</p>
+     * 
      * @param request CancelPushRequest
      * @return CancelPushResponse
      */
@@ -305,6 +329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>【废弃】验证设备有效性</p>
+     * 
      * @deprecated OpenAPI CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
      * 
      * @param request CheckDeviceRequest
@@ -342,6 +369,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>【废弃】验证设备有效性</p>
+     * 
      * @deprecated OpenAPI CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
      * 
      * @param request CheckDeviceRequest
@@ -355,6 +385,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量检查设备有效性</p>
+     * 
      * @param request CheckDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckDevicesResponse
@@ -388,6 +421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量检查设备有效性</p>
+     * 
      * @param request CheckDevicesRequest
      * @return CheckDevicesResponse
      */
@@ -397,6 +433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>完成持续推送任务</p>
+     * 
      * @param request CompleteContinuouslyPushRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CompleteContinuouslyPushResponse
@@ -430,6 +469,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>完成持续推送任务</p>
+     * 
      * @param request CompleteContinuouslyPushRequest
      * @return CompleteContinuouslyPushResponse
      */
@@ -439,6 +481,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>持续推送</p>
+     * 
      * @param request ContinuouslyPushRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ContinuouslyPushResponse
@@ -480,6 +525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>持续推送</p>
+     * 
      * @param request ContinuouslyPushRequest
      * @return ContinuouslyPushResponse
      */
@@ -489,6 +537,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>【废弃】查询用户已创建的app列表</p>
+     * 
      * @deprecated OpenAPI ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
      * 
      * @param request ListSummaryAppsRequest
@@ -514,6 +565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>【废弃】查询用户已创建的app列表</p>
+     * 
      * @deprecated OpenAPI ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
      * @return ListSummaryAppsResponse
      */
@@ -525,6 +579,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取标签列表</p>
+     * 
      * @param request ListTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagsResponse
@@ -554,6 +611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取标签列表</p>
+     * 
      * @param request ListTagsRequest
      * @return ListTagsResponse
      */
@@ -563,6 +623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量推送</p>
+     * 
      * @param request MassPushRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MassPushResponse
@@ -598,6 +661,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量推送</p>
+     * 
      * @param request MassPushRequest
      * @return MassPushResponse
      */
@@ -607,6 +673,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>高级推送接口</p>
+     * 
      * @param request PushRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushResponse
@@ -708,6 +777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidNotificationNotifyId)) {
             query.put("AndroidNotificationNotifyId", request.androidNotificationNotifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidNotificationThreadId)) {
+            query.put("AndroidNotificationThreadId", request.androidNotificationThreadId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidNotificationVivoChannel)) {
@@ -1012,6 +1085,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>高级推送接口</p>
+     * 
      * @param request PushRequest
      * @return PushResponse
      */
@@ -1021,6 +1097,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送消息给Android设备</p>
+     * 
      * @param request PushMessageToAndroidRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushMessageToAndroidResponse
@@ -1074,6 +1153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送消息给Android设备</p>
+     * 
      * @param request PushMessageToAndroidRequest
      * @return PushMessageToAndroidResponse
      */
@@ -1083,6 +1165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送消息给iOS设备</p>
+     * 
      * @param request PushMessageToiOSRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushMessageToiOSResponse
@@ -1136,6 +1221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送消息给iOS设备</p>
+     * 
      * @param request PushMessageToiOSRequest
      * @return PushMessageToiOSResponse
      */
@@ -1145,6 +1233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送通知给Android设备</p>
+     * 
      * @param request PushNoticeToAndroidRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushNoticeToAndroidResponse
@@ -1202,6 +1293,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送通知给Android设备</p>
+     * 
      * @param request PushNoticeToAndroidRequest
      * @return PushNoticeToAndroidResponse
      */
@@ -1211,6 +1305,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送通知给iOS设备</p>
+     * 
      * @param request PushNoticeToiOSRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushNoticeToiOSResponse
@@ -1268,6 +1365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>推送通知给iOS设备</p>
+     * 
      * @param request PushNoticeToiOSRequest
      * @return PushNoticeToiOSResponse
      */
@@ -1277,6 +1377,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询别名</p>
+     * 
      * @param request QueryAliasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryAliasesResponse
@@ -1310,6 +1413,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询别名</p>
+     * 
      * @param request QueryAliasesRequest
      * @return QueryAliasesResponse
      */
@@ -1319,6 +1425,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询设备详情</p>
+     * 
      * @param request QueryDeviceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceInfoResponse
@@ -1352,6 +1461,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询设备详情</p>
+     * 
      * @param request QueryDeviceInfoRequest
      * @return QueryDeviceInfoResponse
      */
@@ -1361,6 +1473,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设备新增与留存</p>
+     * 
      * @param request QueryDeviceStatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceStatResponse
@@ -1406,6 +1521,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设备新增与留存</p>
+     * 
      * @param request QueryDeviceStatRequest
      * @return QueryDeviceStatResponse
      */
@@ -1415,6 +1533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通过账户查询设备列表</p>
+     * 
      * @param request QueryDevicesByAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDevicesByAccountResponse
@@ -1448,6 +1569,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通过账户查询设备列表</p>
+     * 
      * @param request QueryDevicesByAccountRequest
      * @return QueryDevicesByAccountResponse
      */
@@ -1457,6 +1581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通过别名查询设备列表</p>
+     * 
      * @param request QueryDevicesByAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDevicesByAliasResponse
@@ -1490,6 +1617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通过别名查询设备列表</p>
+     * 
      * @param request QueryDevicesByAliasRequest
      * @return QueryDevicesByAliasResponse
      */
@@ -1573,6 +1703,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>App维度推送统计</p>
+     * 
      * @param request QueryPushStatByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryPushStatByAppResponse
@@ -1614,6 +1747,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>App维度推送统计</p>
+     * 
      * @param request QueryPushStatByAppRequest
      * @return QueryPushStatByAppResponse
      */
@@ -1623,6 +1759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>任务维度推送统计</p>
+     * 
      * @param request QueryPushStatByMsgRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryPushStatByMsgResponse
@@ -1656,6 +1795,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>任务维度推送统计</p>
+     * 
      * @param request QueryPushStatByMsgRequest
      * @return QueryPushStatByMsgResponse
      */
@@ -1665,6 +1807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签列表</p>
+     * 
      * @param request QueryTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTagsResponse
@@ -1702,6 +1847,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签列表</p>
+     * 
      * @param request QueryTagsRequest
      * @return QueryTagsResponse
      */
@@ -1711,6 +1859,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>去重设备统计</p>
+     * 
      * @param request QueryUniqueDeviceStatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryUniqueDeviceStatResponse
@@ -1752,6 +1903,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>去重设备统计</p>
+     * 
      * @param request QueryUniqueDeviceStatRequest
      * @return QueryUniqueDeviceStatResponse
      */
@@ -1761,6 +1915,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除标签</p>
+     * 
      * @param request RemoveTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveTagResponse
@@ -1794,6 +1951,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除标签</p>
+     * 
      * @param request RemoveTagRequest
      * @return RemoveTagResponse
      */
@@ -1803,6 +1963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解绑别名</p>
+     * 
      * @param request UnbindAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnbindAliasResponse
@@ -1844,6 +2007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解绑别名</p>
+     * 
      * @param request UnbindAliasRequest
      * @return UnbindAliasResponse
      */
@@ -1853,6 +2019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解绑手机号码</p>
+     * 
      * @param request UnbindPhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnbindPhoneResponse
@@ -1886,6 +2055,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解绑手机号码</p>
+     * 
      * @param request UnbindPhoneRequest
      * @return UnbindPhoneResponse
      */
@@ -1895,6 +2067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定标签</p>
+     * 
      * @param request UnbindTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnbindTagResponse
@@ -1936,6 +2111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定标签</p>
+     * 
      * @param request UnbindTagRequest
      * @return UnbindTagResponse
      */
