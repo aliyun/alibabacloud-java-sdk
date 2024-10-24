@@ -4,6 +4,18 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenRequest extends TeaModel {
+    @NameInMap("BizType")
+    public Integer bizType;
+
+    @NameInMap("CmApiCode")
+    public Integer cmApiCode;
+
+    @NameInMap("CtApiCode")
+    public Integer ctApiCode;
+
+    @NameInMap("CuApiCode")
+    public Integer cuApiCode;
+
     /**
      * <p>The requested domain name.</p>
      * <p>This parameter is required.</p>
@@ -36,9 +48,44 @@ public class GetAuthTokenRequest extends TeaModel {
     @NameInMap("Url")
     public String url;
 
+    @NameInMap("Version")
+    public String version;
+
     public static GetAuthTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthTokenRequest self = new GetAuthTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthTokenRequest setBizType(Integer bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public Integer getBizType() {
+        return this.bizType;
+    }
+
+    public GetAuthTokenRequest setCmApiCode(Integer cmApiCode) {
+        this.cmApiCode = cmApiCode;
+        return this;
+    }
+    public Integer getCmApiCode() {
+        return this.cmApiCode;
+    }
+
+    public GetAuthTokenRequest setCtApiCode(Integer ctApiCode) {
+        this.ctApiCode = ctApiCode;
+        return this;
+    }
+    public Integer getCtApiCode() {
+        return this.ctApiCode;
+    }
+
+    public GetAuthTokenRequest setCuApiCode(Integer cuApiCode) {
+        this.cuApiCode = cuApiCode;
+        return this;
+    }
+    public Integer getCuApiCode() {
+        return this.cuApiCode;
     }
 
     public GetAuthTokenRequest setOrigin(String origin) {
@@ -87,6 +134,14 @@ public class GetAuthTokenRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public GetAuthTokenRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

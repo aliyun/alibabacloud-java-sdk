@@ -476,6 +476,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAuthTokenResponse getAuthTokenWithOptions(GetAuthTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cmApiCode)) {
+            query.put("CmApiCode", request.cmApiCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ctApiCode)) {
+            query.put("CtApiCode", request.ctApiCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cuApiCode)) {
+            query.put("CuApiCode", request.cuApiCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.origin)) {
             query.put("Origin", request.origin);
         }
@@ -498,6 +514,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
