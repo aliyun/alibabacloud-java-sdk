@@ -48,6 +48,9 @@ public class GetCardSmsLinkRequest extends TeaModel {
 
     /**
      * <p>The variables of the message template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{},{}]</p>
      */
     @NameInMap("CardTemplateParamJson")
     public String cardTemplateParamJson;
@@ -117,6 +120,9 @@ public class GetCardSmsLinkRequest extends TeaModel {
      * <p>The signatures must be approved and correspond to the mobile numbers in sequence.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;aliyun\&quot;, \&quot;aliyun2\&quot;]</p>
      */
     @NameInMap("SignNameJson")
     public String signNameJson;

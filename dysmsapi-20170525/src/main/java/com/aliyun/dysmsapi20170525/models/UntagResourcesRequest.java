@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to delete all tags from the message template. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -15,6 +21,8 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The name of the cloud service. Set the value to <strong>dysms</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>dysms</p>
      */
@@ -22,6 +30,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String prodCode;
 
     /**
+     * <p>The region. Set the value to cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +40,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The array of message template codes. You can specify 1 to 20 message templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>SMS_23423423</p>
      */
@@ -44,6 +55,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The type of the resource. Set the value to TEMPLATE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +65,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The array of tag keys. You can specify 1 to 20 tag keys.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestKey</p>
      */

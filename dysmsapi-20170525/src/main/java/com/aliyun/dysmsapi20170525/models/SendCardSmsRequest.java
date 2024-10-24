@@ -78,6 +78,9 @@ public class SendCardSmsRequest extends TeaModel {
      * <p>The signature must be approved.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("SignName")
     public String signName;
@@ -99,6 +102,9 @@ public class SendCardSmsRequest extends TeaModel {
      * <blockquote>
      * <p>If you need to add line breaks to the JSON template, make sure that the format is valid.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;uri\&quot;:\&quot;Zg11tZ\&quot;}</p>
      */
     @NameInMap("SmsTemplateParam")
     public String smsTemplateParam;
@@ -255,6 +261,9 @@ public class SendCardSmsRequest extends TeaModel {
 
         /**
          * <p>The variables. Special characters, such as $ and {}, do not need to be entered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;param3\&quot;:\&quot;three\&quot;,\&quot;param1\&quot;:\&quot;one\&quot;,\&quot;param2\&quot;:\&quot;two\&quot;}</p>
          */
         @NameInMap("dyncParams")
         public String dyncParams;

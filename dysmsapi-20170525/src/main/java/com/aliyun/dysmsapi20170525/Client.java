@@ -35,6 +35,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>添加验证码签名信息</p>
+     * 
+     * @param request AddExtCodeSignRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddExtCodeSignResponse
+     */
+    public AddExtCodeSignResponse addExtCodeSignWithOptions(AddExtCodeSignRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extCode)) {
+            query.put("ExtCode", request.extCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddExtCodeSign"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddExtCodeSignResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加验证码签名信息</p>
+     * 
+     * @param request AddExtCodeSignRequest
+     * @return AddExtCodeSignResponse
+     */
+    public AddExtCodeSignResponse addExtCodeSign(AddExtCodeSignRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addExtCodeSignWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, you must register the primary domain name of the source URL in the Short Message Service (SMS) console. After the domain name is registered, you can call this operation to create a short URL. For more information, see <a href="https://help.aliyun.com/document_detail/302325.html#title-mau-zdh-hd0">Domain name registration</a>.</p>
      * <ul>
@@ -577,8 +637,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
+     * <li>Individual authenticated users can apply for one formal signature per natural day under the same Alibaba Cloud account, while enterprise authenticated users have no current restrictions. For details on the differences in rights between individual and enterprise users, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm">User Guide</a>.</li>
+     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
+     * <li>After submitting the signature application, you can query the signature review status and details via the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-getsmssign?spm">GetSmsSign</a> interface. You can also <a href="https://help.aliyun.com/zh/sms/developer-reference/configure-delivery-receipts-1?spm">Configure Receipt Messages</a> and obtain signature review status messages through SignSmsReport.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建短信签名</p>
+     * <p>Create SMS Signature</p>
      * 
      * @param tmpReq CreateSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -655,8 +723,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
+     * <li>Individual authenticated users can apply for one formal signature per natural day under the same Alibaba Cloud account, while enterprise authenticated users have no current restrictions. For details on the differences in rights between individual and enterprise users, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm">User Guide</a>.</li>
+     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
+     * <li>After submitting the signature application, you can query the signature review status and details via the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-getsmssign?spm">GetSmsSign</a> interface. You can also <a href="https://help.aliyun.com/zh/sms/developer-reference/configure-delivery-receipts-1?spm">Configure Receipt Messages</a> and obtain signature review status messages through SignSmsReport.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建短信签名</p>
+     * <p>Create SMS Signature</p>
      * 
      * @param request CreateSmsSignRequest
      * @return CreateSmsSignResponse
@@ -667,8 +743,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Service Signature &amp; Template Interfaces</a>.</li>
+     * <li>It is recommended to apply for SMS templates via the API with at least a 30-second interval between each request.</li>
+     * <li>The template information applied through the API will be synchronized in the SMS service console. For operations related to templates in the console, please refer to SMS Templates.</li>
+     * <li>After submitting the template application, you can query the audit status and details using the GetSmsTemplate interface. You can also configure delivery receipts to obtain the audit status messages via TemplateSmsReport.</li>
+     * <li>Domestic SMS templates are not interchangeable with international/Hong Kong, Macao, and Taiwan SMS templates. Please apply for templates based on your business scenario.</li>
+     * <li>Only enterprise-verified users can apply for promotional messages and international/Hong Kong, Macao, and Taiwan messages. For differences in rights between personal and enterprise users, please refer to Usage Instructions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建短信模板</p>
+     * <p>Create SMS Template</p>
      * 
      * @param tmpReq CreateSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -749,8 +835,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Service Signature &amp; Template Interfaces</a>.</li>
+     * <li>It is recommended to apply for SMS templates via the API with at least a 30-second interval between each request.</li>
+     * <li>The template information applied through the API will be synchronized in the SMS service console. For operations related to templates in the console, please refer to SMS Templates.</li>
+     * <li>After submitting the template application, you can query the audit status and details using the GetSmsTemplate interface. You can also configure delivery receipts to obtain the audit status messages via TemplateSmsReport.</li>
+     * <li>Domestic SMS templates are not interchangeable with international/Hong Kong, Macao, and Taiwan SMS templates. Please apply for templates based on your business scenario.</li>
+     * <li>Only enterprise-verified users can apply for promotional messages and international/Hong Kong, Macao, and Taiwan messages. For differences in rights between personal and enterprise users, please refer to Usage Instructions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建短信模板</p>
+     * <p>Create SMS Template</p>
      * 
      * @param request CreateSmsTemplateRequest
      * @return CreateSmsTemplateResponse
@@ -758,6 +854,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSmsTemplateResponse createSmsTemplate(CreateSmsTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSmsTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除验证码签名</p>
+     * 
+     * @param request DeleteExtCodeSignRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteExtCodeSignResponse
+     */
+    public DeleteExtCodeSignResponse deleteExtCodeSignWithOptions(DeleteExtCodeSignRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extCode)) {
+            query.put("ExtCode", request.extCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExtCodeSign"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExtCodeSignResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除验证码签名</p>
+     * 
+     * @param request DeleteExtCodeSignRequest
+     * @return DeleteExtCodeSignResponse
+     */
+    public DeleteExtCodeSignResponse deleteExtCodeSign(DeleteExtCodeSignRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteExtCodeSignWithOptions(request, runtime);
     }
 
     /**
@@ -973,6 +1129,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询卡片发送详情</p>
+     * 
+     * @param request GetCardSmsDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCardSmsDetailsResponse
+     */
+    public GetCardSmsDetailsResponse getCardSmsDetailsWithOptions(GetCardSmsDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizCardId)) {
+            query.put("BizCardId", request.bizCardId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizDigitId)) {
+            query.put("BizDigitId", request.bizDigitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizSmsId)) {
+            query.put("BizSmsId", request.bizSmsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
+            query.put("PhoneNumber", request.phoneNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sendDate)) {
+            query.put("SendDate", request.sendDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCardSmsDetails"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCardSmsDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询卡片发送详情</p>
+     * 
+     * @param request GetCardSmsDetailsRequest
+     * @return GetCardSmsDetailsResponse
+     */
+    public GetCardSmsDetailsResponse getCardSmsDetails(GetCardSmsDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCardSmsDetailsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -1169,8 +1405,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When creating signatures or templates, you can upload materials such as login pages with links, backend page screenshots, software copyrights, supplementary agreements, etc. This helps the review personnel understand your business details. If there are multiple materials, they can be combined into one file, supporting png, jpg, jpeg, doc, docx, pdf formats.</li>
+     * <li>For additional materials needed when creating signatures or templates, you can upload them to the OSS file system for storage. For file upload operations, refer to <a href="https://help.aliyun.com/zh/sms/upload-files-through-oss">OSS File Upload</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>短信上传文件，获取授权信息</p>
+     * <p>SMS File Upload, Get Authorization Info</p>
      * 
      * @param request GetOSSInfoForUploadFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1213,8 +1455,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When creating signatures or templates, you can upload materials such as login pages with links, backend page screenshots, software copyrights, supplementary agreements, etc. This helps the review personnel understand your business details. If there are multiple materials, they can be combined into one file, supporting png, jpg, jpeg, doc, docx, pdf formats.</li>
+     * <li>For additional materials needed when creating signatures or templates, you can upload them to the OSS file system for storage. For file upload operations, refer to <a href="https://help.aliyun.com/zh/sms/upload-files-through-oss">OSS File Upload</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>短信上传文件，获取授权信息</p>
+     * <p>SMS File Upload, Get Authorization Info</p>
      * 
      * @param request GetOSSInfoForUploadFileRequest
      * @return GetOSSInfoForUploadFileResponse
@@ -1225,8 +1473,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
+     * <li>Review Time: Generally, after submitting the signature, Alibaba Cloud expects to complete the review within 2 hours (Review Business Hours: Monday to Sunday 9:00~21:00, with legal holidays postponed). It is recommended to submit your application before 18:00.</li>
+     * <li>If the signature fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-updatesmssign?spm">UpdateSmsSign</a> API, or modify the unapproved SMS signature on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signature Management</a> page.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询短信签名详情</p>
+     * <p>Query SMS Signature Details</p>
      * 
      * @param request GetSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1269,8 +1524,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
+     * <li>Review Time: Generally, after submitting the signature, Alibaba Cloud expects to complete the review within 2 hours (Review Business Hours: Monday to Sunday 9:00~21:00, with legal holidays postponed). It is recommended to submit your application before 18:00.</li>
+     * <li>If the signature fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-updatesmssign?spm">UpdateSmsSign</a> API, or modify the unapproved SMS signature on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signature Management</a> page.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询短信签名详情</p>
+     * <p>Query SMS Signature Details</p>
      * 
      * @param request GetSmsSignRequest
      * @return GetSmsSignResponse
@@ -1281,8 +1543,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
+     * <li>Review Time: Under normal circumstances, Alibaba Cloud expects to complete the review within 2 hours after template submission (review working hours: Monday to Sunday 9:00~21:00, with statutory holidays postponed). It is recommended to submit your application before 18:00.</li>
+     * <li>If the template fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.41fd339f3bPSCQ">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-modifysmstemplate?spm=a2c4g.11186623.0.0.5b1f6e8bQloFit">ModifySmsTemplate</a> API or modify the SMS template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+     * <li>The current QuerySmsTemplate interface queries the audit details of a single template by template code. The <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-querysmstemplatelist?spm=a2c4g.11186623.0.0.24086e8bO8cFn4">QuerySmsTemplateList</a> interface can query the template details of all templates under your current account.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询文本短信模板详情</p>
+     * <p>Query Text SMS Template Details</p>
      * 
      * @param request GetSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1325,8 +1595,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
+     * <li>Review Time: Under normal circumstances, Alibaba Cloud expects to complete the review within 2 hours after template submission (review working hours: Monday to Sunday 9:00~21:00, with statutory holidays postponed). It is recommended to submit your application before 18:00.</li>
+     * <li>If the template fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.41fd339f3bPSCQ">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-modifysmstemplate?spm=a2c4g.11186623.0.0.5b1f6e8bQloFit">ModifySmsTemplate</a> API or modify the SMS template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+     * <li>The current QuerySmsTemplate interface queries the audit details of a single template by template code. The <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-querysmstemplatelist?spm=a2c4g.11186623.0.0.24086e8bO8cFn4">QuerySmsTemplateList</a> interface can query the template details of all templates under your current account.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询文本短信模板详情</p>
+     * <p>Query Text SMS Template Details</p>
      * 
      * @param request GetSmsTemplateRequest
      * @return GetSmsTemplateResponse
@@ -1720,6 +1998,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryCardSmsTemplateReportResponse queryCardSmsTemplateReport(QueryCardSmsTemplateReportRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCardSmsTemplateReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询验证码签名</p>
+     * 
+     * @param request QueryExtCodeSignRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryExtCodeSignResponse
+     */
+    public QueryExtCodeSignResponse queryExtCodeSignWithOptions(QueryExtCodeSignRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extCode)) {
+            query.put("ExtCode", request.extCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryExtCodeSign"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryExtCodeSignResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询验证码签名</p>
+     * 
+     * @param request QueryExtCodeSignRequest
+     * @return QueryExtCodeSignResponse
+     */
+    public QueryExtCodeSignResponse queryExtCodeSign(QueryExtCodeSignRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryExtCodeSignWithOptions(request, runtime);
     }
 
     /**
@@ -2901,6 +3247,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes tags from a message template.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -2962,6 +3315,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes tags from a message template.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -2972,7 +3332,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改文本短信签名</p>
+     * <p>修改验证码签名</p>
+     * 
+     * @param request UpdateExtCodeSignRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateExtCodeSignResponse
+     */
+    public UpdateExtCodeSignResponse updateExtCodeSignWithOptions(UpdateExtCodeSignRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.existExtCode)) {
+            query.put("ExistExtCode", request.existExtCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newExtCode)) {
+            query.put("NewExtCode", request.newExtCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateExtCodeSign"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateExtCodeSignResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改验证码签名</p>
+     * 
+     * @param request UpdateExtCodeSignRequest
+     * @return UpdateExtCodeSignResponse
+     */
+    public UpdateExtCodeSignResponse updateExtCodeSign(UpdateExtCodeSignRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateExtCodeSignWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
+     * <li>Only signatures that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a> and call this interface to modify and resubmit for review after modification.</li>
+     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, please see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Text SMS Signature</p>
      * 
      * @param tmpReq UpdateSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3049,8 +3480,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
+     * <li>Only signatures that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a> and call this interface to modify and resubmit for review after modification.</li>
+     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, please see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改文本短信签名</p>
+     * <p>Update Text SMS Signature</p>
      * 
      * @param request UpdateSmsSignRequest
      * @return UpdateSmsSignResponse
@@ -3061,8 +3499,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on SMS Service Update: Signature &amp; Template Interfaces</a>.</li>
+     * <li>Only templates that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.4bf5561ajcFtMQ">Handling Suggestions for Failed SMS Template Reviews</a> and call this interface to modify and resubmit for review.</li>
+     * <li>Modifications made through the interface will be synchronized in the SMS service console. For related operations on templates in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/message-templates/?spm=a2c4g.11186623.0.0.35a947464Itaxp">SMS Templates</a>.</li>
+     * </ul>
+     * <h3>QPS Limit</h3>
+     * <p>The single-user QPS limit for this interface is 1000 times/second. Exceeding this limit will result in API throttling, which may impact your business. Please make calls reasonably.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改文本短信模板</p>
+     * <p>Update Text SMS Template</p>
      * 
      * @param tmpReq UpdateSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3147,8 +3594,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on SMS Service Update: Signature &amp; Template Interfaces</a>.</li>
+     * <li>Only templates that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.4bf5561ajcFtMQ">Handling Suggestions for Failed SMS Template Reviews</a> and call this interface to modify and resubmit for review.</li>
+     * <li>Modifications made through the interface will be synchronized in the SMS service console. For related operations on templates in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/message-templates/?spm=a2c4g.11186623.0.0.35a947464Itaxp">SMS Templates</a>.</li>
+     * </ul>
+     * <h3>QPS Limit</h3>
+     * <p>The single-user QPS limit for this interface is 1000 times/second. Exceeding this limit will result in API throttling, which may impact your business. Please make calls reasonably.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改文本短信模板</p>
+     * <p>Update Text SMS Template</p>
      * 
      * @param request UpdateSmsTemplateRequest
      * @return UpdateSmsTemplateResponse

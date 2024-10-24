@@ -14,6 +14,11 @@ public class GetSmsTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>SMS template code.</p>
+     * <ul>
+     * <li>Obtain the SMS template code from the return parameters of the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-createsmstemplate?spm">CreateSmsTemplate</a> API.</li>
+     * <li>View the SMS template code on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

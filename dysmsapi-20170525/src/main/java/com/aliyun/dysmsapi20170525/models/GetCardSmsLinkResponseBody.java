@@ -94,6 +94,9 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
 
         /**
          * <p>The signatures must correspond to the mobile numbers and short URLs in sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;aliyun&quot;,&quot;aliyun2&quot;]</p>
          */
         @NameInMap("CardSignNames")
         public String cardSignNames;
