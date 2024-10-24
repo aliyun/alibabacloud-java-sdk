@@ -4804,6 +4804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FlowLogName", request.flowLogName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logStoreName)) {
             query.put("LogStoreName", request.logStoreName);
         }
@@ -6181,13 +6185,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates an enhanced Internet NAT gateway or a Virtual Private Cloud (VPC) NAT gateway.</p>
      * 
-     * @param request CreateNatGatewayRequest
+     * @param tmpReq CreateNatGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNatGatewayResponse
      */
-    public CreateNatGatewayResponse createNatGatewayWithOptions(CreateNatGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateNatGatewayResponse createNatGatewayWithOptions(CreateNatGatewayRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateNatGatewayShrinkRequest request = new CreateNatGatewayShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.accessMode)) {
+            request.accessModeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accessMode, "AccessMode", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessModeShrink)) {
+            query.put("AccessMode", request.accessModeShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
         }
@@ -6242,6 +6256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pricingCycle)) {
             query.put("PricingCycle", request.pricingCycle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateLinkEnabled)) {
+            query.put("PrivateLinkEnabled", request.privateLinkEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -21333,10 +21351,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</p>
      * 
+     * @deprecated OpenAPI DisableNatGatewayEcsMetric is deprecated
+     * 
      * @param request DisableNatGatewayEcsMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableNatGatewayEcsMetricResponse
      */
+    @Deprecated
+    // Deprecated
     public DisableNatGatewayEcsMetricResponse disableNatGatewayEcsMetricWithOptions(DisableNatGatewayEcsMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21377,9 +21399,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</p>
      * 
+     * @deprecated OpenAPI DisableNatGatewayEcsMetric is deprecated
+     * 
      * @param request DisableNatGatewayEcsMetricRequest
      * @return DisableNatGatewayEcsMetricResponse
      */
+    @Deprecated
+    // Deprecated
     public DisableNatGatewayEcsMetricResponse disableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableNatGatewayEcsMetricWithOptions(request, runtime);
@@ -21761,10 +21787,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Enables Elastic Compute Service (ECS) traffic monitoring.</p>
      * 
+     * @deprecated OpenAPI EnableNatGatewayEcsMetric is deprecated
+     * 
      * @param request EnableNatGatewayEcsMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableNatGatewayEcsMetricResponse
      */
+    @Deprecated
+    // Deprecated
     public EnableNatGatewayEcsMetricResponse enableNatGatewayEcsMetricWithOptions(EnableNatGatewayEcsMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21805,9 +21835,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Enables Elastic Compute Service (ECS) traffic monitoring.</p>
      * 
+     * @deprecated OpenAPI EnableNatGatewayEcsMetric is deprecated
+     * 
      * @param request EnableNatGatewayEcsMetricRequest
      * @return EnableNatGatewayEcsMetricResponse
      */
+    @Deprecated
+    // Deprecated
     public EnableNatGatewayEcsMetricResponse enableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableNatGatewayEcsMetricWithOptions(request, runtime);
@@ -26236,6 +26270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FlowLogName", request.flowLogName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -28080,7 +28118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyRouteEntry</strong> operation to modify the name and description of a custom route within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改路由条目属性</p>
+     * <p>Modifies the name and description of a custom route entry.</p>
      * 
      * @param request ModifyRouteEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28159,7 +28197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyRouteEntry</strong> operation to modify the name and description of a custom route within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改路由条目属性</p>
+     * <p>Modifies the name and description of a custom route entry.</p>
      * 
      * @param request ModifyRouteEntryRequest
      * @return ModifyRouteEntryResponse
@@ -34049,10 +34087,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Upgrades a standard NAT gateway to an enhanced NAT gateway.</p>
      * 
+     * @deprecated OpenAPI UpdateNatGatewayNatType is deprecated
+     * 
      * @param request UpdateNatGatewayNatTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateNatGatewayNatTypeResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateNatGatewayNatTypeResponse updateNatGatewayNatTypeWithOptions(UpdateNatGatewayNatTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -34136,9 +34178,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Upgrades a standard NAT gateway to an enhanced NAT gateway.</p>
      * 
+     * @deprecated OpenAPI UpdateNatGatewayNatType is deprecated
+     * 
      * @param request UpdateNatGatewayNatTypeRequest
      * @return UpdateNatGatewayNatTypeResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateNatGatewayNatTypeResponse updateNatGatewayNatType(UpdateNatGatewayNatTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNatGatewayNatTypeWithOptions(request, runtime);

@@ -33,6 +33,9 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     /**
      * <p>The name of the Logstore that stores the captured traffic data.</p>
      * <ul>
@@ -177,6 +180,14 @@ public class CreateFlowLogRequest extends TeaModel {
     }
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    public CreateFlowLogRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     public CreateFlowLogRequest setLogStoreName(String logStoreName) {

@@ -3,9 +3,9 @@ package com.aliyun.vpc20160428.models;
 
 import com.aliyun.tea.*;
 
-public class CreateNatGatewayRequest extends TeaModel {
+public class CreateNatGatewayShrinkRequest extends TeaModel {
     @NameInMap("AccessMode")
-    public CreateNatGatewayRequestAccessMode accessMode;
+    public String accessModeShrink;
 
     /**
      * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
@@ -192,7 +192,7 @@ public class CreateNatGatewayRequest extends TeaModel {
      * <p>The tags.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateNatGatewayRequestTag> tag;
+    public java.util.List<CreateNatGatewayShrinkRequestTag> tag;
 
     /**
      * <p>The ID of the vSwitch to which the NAT gateway is attached.</p>
@@ -221,20 +221,20 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
-    public static CreateNatGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateNatGatewayRequest self = new CreateNatGatewayRequest();
+    public static CreateNatGatewayShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateNatGatewayShrinkRequest self = new CreateNatGatewayShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateNatGatewayRequest setAccessMode(CreateNatGatewayRequestAccessMode accessMode) {
-        this.accessMode = accessMode;
+    public CreateNatGatewayShrinkRequest setAccessModeShrink(String accessModeShrink) {
+        this.accessModeShrink = accessModeShrink;
         return this;
     }
-    public CreateNatGatewayRequestAccessMode getAccessMode() {
-        return this.accessMode;
+    public String getAccessModeShrink() {
+        return this.accessModeShrink;
     }
 
-    public CreateNatGatewayRequest setAutoPay(Boolean autoPay) {
+    public CreateNatGatewayShrinkRequest setAutoPay(Boolean autoPay) {
         this.autoPay = autoPay;
         return this;
     }
@@ -242,7 +242,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public CreateNatGatewayRequest setClientToken(String clientToken) {
+    public CreateNatGatewayShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -250,7 +250,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateNatGatewayRequest setDescription(String description) {
+    public CreateNatGatewayShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -258,7 +258,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateNatGatewayRequest setDuration(String duration) {
+    public CreateNatGatewayShrinkRequest setDuration(String duration) {
         this.duration = duration;
         return this;
     }
@@ -266,7 +266,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.duration;
     }
 
-    public CreateNatGatewayRequest setEipBindMode(String eipBindMode) {
+    public CreateNatGatewayShrinkRequest setEipBindMode(String eipBindMode) {
         this.eipBindMode = eipBindMode;
         return this;
     }
@@ -274,7 +274,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.eipBindMode;
     }
 
-    public CreateNatGatewayRequest setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
+    public CreateNatGatewayShrinkRequest setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
         this.icmpReplyEnabled = icmpReplyEnabled;
         return this;
     }
@@ -282,7 +282,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.icmpReplyEnabled;
     }
 
-    public CreateNatGatewayRequest setInstanceChargeType(String instanceChargeType) {
+    public CreateNatGatewayShrinkRequest setInstanceChargeType(String instanceChargeType) {
         this.instanceChargeType = instanceChargeType;
         return this;
     }
@@ -290,7 +290,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.instanceChargeType;
     }
 
-    public CreateNatGatewayRequest setInternetChargeType(String internetChargeType) {
+    public CreateNatGatewayShrinkRequest setInternetChargeType(String internetChargeType) {
         this.internetChargeType = internetChargeType;
         return this;
     }
@@ -298,7 +298,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.internetChargeType;
     }
 
-    public CreateNatGatewayRequest setName(String name) {
+    public CreateNatGatewayShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -306,7 +306,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateNatGatewayRequest setNatType(String natType) {
+    public CreateNatGatewayShrinkRequest setNatType(String natType) {
         this.natType = natType;
         return this;
     }
@@ -314,7 +314,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.natType;
     }
 
-    public CreateNatGatewayRequest setNetworkType(String networkType) {
+    public CreateNatGatewayShrinkRequest setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
     }
@@ -322,7 +322,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.networkType;
     }
 
-    public CreateNatGatewayRequest setOwnerAccount(String ownerAccount) {
+    public CreateNatGatewayShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -330,7 +330,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateNatGatewayRequest setOwnerId(Long ownerId) {
+    public CreateNatGatewayShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -338,7 +338,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateNatGatewayRequest setPricingCycle(String pricingCycle) {
+    public CreateNatGatewayShrinkRequest setPricingCycle(String pricingCycle) {
         this.pricingCycle = pricingCycle;
         return this;
     }
@@ -346,7 +346,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.pricingCycle;
     }
 
-    public CreateNatGatewayRequest setPrivateLinkEnabled(Boolean privateLinkEnabled) {
+    public CreateNatGatewayShrinkRequest setPrivateLinkEnabled(Boolean privateLinkEnabled) {
         this.privateLinkEnabled = privateLinkEnabled;
         return this;
     }
@@ -354,7 +354,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.privateLinkEnabled;
     }
 
-    public CreateNatGatewayRequest setRegionId(String regionId) {
+    public CreateNatGatewayShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -362,7 +362,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateNatGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateNatGatewayShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -370,7 +370,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateNatGatewayRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateNatGatewayShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -378,7 +378,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateNatGatewayRequest setSecurityProtectionEnabled(Boolean securityProtectionEnabled) {
+    public CreateNatGatewayShrinkRequest setSecurityProtectionEnabled(Boolean securityProtectionEnabled) {
         this.securityProtectionEnabled = securityProtectionEnabled;
         return this;
     }
@@ -386,7 +386,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.securityProtectionEnabled;
     }
 
-    public CreateNatGatewayRequest setSpec(String spec) {
+    public CreateNatGatewayShrinkRequest setSpec(String spec) {
         this.spec = spec;
         return this;
     }
@@ -394,15 +394,15 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.spec;
     }
 
-    public CreateNatGatewayRequest setTag(java.util.List<CreateNatGatewayRequestTag> tag) {
+    public CreateNatGatewayShrinkRequest setTag(java.util.List<CreateNatGatewayShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateNatGatewayRequestTag> getTag() {
+    public java.util.List<CreateNatGatewayShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public CreateNatGatewayRequest setVSwitchId(String vSwitchId) {
+    public CreateNatGatewayShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -410,7 +410,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateNatGatewayRequest setVpcId(String vpcId) {
+    public CreateNatGatewayShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -418,37 +418,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public static class CreateNatGatewayRequestAccessMode extends TeaModel {
-        @NameInMap("ModeValue")
-        public String modeValue;
-
-        @NameInMap("TunnelType")
-        public String tunnelType;
-
-        public static CreateNatGatewayRequestAccessMode build(java.util.Map<String, ?> map) throws Exception {
-            CreateNatGatewayRequestAccessMode self = new CreateNatGatewayRequestAccessMode();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateNatGatewayRequestAccessMode setModeValue(String modeValue) {
-            this.modeValue = modeValue;
-            return this;
-        }
-        public String getModeValue() {
-            return this.modeValue;
-        }
-
-        public CreateNatGatewayRequestAccessMode setTunnelType(String tunnelType) {
-            this.tunnelType = tunnelType;
-            return this;
-        }
-        public String getTunnelType() {
-            return this.tunnelType;
-        }
-
-    }
-
-    public static class CreateNatGatewayRequestTag extends TeaModel {
+    public static class CreateNatGatewayShrinkRequestTag extends TeaModel {
         /**
          * <p>The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
          * 
@@ -467,12 +437,12 @@ public class CreateNatGatewayRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateNatGatewayRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateNatGatewayRequestTag self = new CreateNatGatewayRequestTag();
+        public static CreateNatGatewayShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatGatewayShrinkRequestTag self = new CreateNatGatewayShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateNatGatewayRequestTag setKey(String key) {
+        public CreateNatGatewayShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -480,7 +450,7 @@ public class CreateNatGatewayRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateNatGatewayRequestTag setValue(String value) {
+        public CreateNatGatewayShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

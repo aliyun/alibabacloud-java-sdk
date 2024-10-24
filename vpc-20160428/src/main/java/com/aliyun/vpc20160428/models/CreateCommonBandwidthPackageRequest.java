@@ -19,8 +19,8 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * </blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-001****</p>
@@ -30,7 +30,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The description of the Internet Shared Bandwidth instance.</p>
-     * <p>The description must be 2 to 256 characters in length and start with a letter. The description cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -41,7 +41,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> All regions support BGP (Multi-ISP).</li>
+     * <li><strong>BGP</strong> (default) All regions support BGP (Multi-ISP).</li>
      * <li><strong>BGP_PRO</strong> BGP (Multi-ISP) Pro lines are available in the China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
      * </ul>
      * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
@@ -69,7 +69,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The name of the Internet Shared Bandwidth instance.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -86,8 +86,8 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The percentage of the minimum bandwidth commitment. Set the parameter to <strong>20</strong>.</p>
      * <blockquote>
-     * </blockquote>
      * <p>This parameter is available only on the Alibaba Cloud China site.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20</p>

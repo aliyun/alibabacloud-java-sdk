@@ -17,7 +17,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
      * <p>The peer IP address when the SAG device is connected to the cloud.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.16.**.**</p>
+     * <p><code>172.16.**.**</code></p>
      */
     @NameInMap("CeIp")
     public String ceIp;
@@ -60,7 +60,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
      * <p>The on-premises IP address when the SAG device is connected to the cloud.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.10.**.**</p>
+     * <p><code>10.10.**.**</code></p>
      */
     @NameInMap("PeIp")
     public String peIp;
