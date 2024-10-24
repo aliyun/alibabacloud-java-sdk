@@ -482,8 +482,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * <ul>
+     * <li>You can cancel a data streaming task only when the task is in the CREATED or RUNNING state.</li>
+     * <li>Data streaming tasks are executed asynchronously. You can call the DescribeDataFlowSubTasks operation to query the task execution status.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>取消数据流动任务队列中尚未执行的子任务</p>
+     * <p>Cancels a data streaming task.</p>
      * 
      * @param request CancelDataFlowSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -534,8 +541,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * <ul>
+     * <li>You can cancel a data streaming task only when the task is in the CREATED or RUNNING state.</li>
+     * <li>Data streaming tasks are executed asynchronously. You can call the DescribeDataFlowSubTasks operation to query the task execution status.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>取消数据流动任务队列中尚未执行的子任务</p>
+     * <p>Cancels a data streaming task.</p>
      * 
      * @param request CancelDataFlowSubTaskRequest
      * @return CancelDataFlowSubTaskResponse
@@ -547,11 +561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.</li>
-     * <li>You can cancel only the dataflow tasks that are in the <code>Pending</code> and <code>Executing</code> states.</li>
-     * <li>It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</li>
+     * <li>You can cancel only the data flow tasks that are in the <code>Pending</code> and <code>Executing</code> states.</li>
+     * <li>It generally takes 5 to 10 minutes to cancel a data flow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -603,11 +616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.</li>
-     * <li>You can cancel only the dataflow tasks that are in the <code>Pending</code> and <code>Executing</code> states.</li>
-     * <li>It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</li>
+     * <li>You can cancel only the data flow tasks that are in the <code>Pending</code> and <code>Executing</code> states.</li>
+     * <li>It generally takes 5 to 10 minutes to cancel a data flow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1166,66 +1178,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>  Basic operations
-     *     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
-     *     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
-     *     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
+     *     *   Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flows.
+     *     *   You can create a data flow only when a CPFS for LINGJUN file system is in the Running state.
+     *     *   A maximum of 10 data flows can be created for a CPFS for LINGJUN file system.
      *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.</p>
      * <ul>
      * <li>Permissions
-     * When you create a data flow, CPFS obtains the following two service-linked roles: <code>AliyunServiceRoleForNasOssDataflow</code> and <code>AliyunServiceRoleForNasEventNotification</code>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</li>
-     * <li>CPFS usage notes<ul>
-     * <li>Billing<ul>
-     * <li>If you create a data flow, you are charged for using the data flow throughput. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of CPFS</a>.</li>
-     * <li>When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</li>
-     * </ul>
-     * </li>
-     * <li>Data flow specifications<ul>
-     * <li>The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.</li>
-     * <li>When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.</li>
-     * <li>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.</li>
-     * </ul>
-     * </li>
-     * <li>Fileset<ul>
-     * <li>The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.</li>
-     * <li>When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.</li>
-     * <li>A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the <code>no space</code> error message is returned when you add new files.<blockquote>
-     * <p>  If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>AutoRefresh<ul>
-     * <li>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.</li>
-     * <li>AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</li>
-     * <li>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.</li>
-     * <li>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes <code>Misconfigured</code>. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.</li>
-     * <li>When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.<blockquote>
-     * <p>The event buses and event rules created for CPFS in the EventBridge console contain the <code>Create for cpfs auto refresh</code> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>Source storage<ul>
-     * <li>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</li>
-     * <li>CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</li>
-     * <li>If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.</li>
-     * <li>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<blockquote>
-     * <p> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
-     * </li>
+     * When you create a data flow, CPFS for LINGJUN obtains the following two service-linked roles: <code>AliyunServiceRoleForNasOssDataflow</code> and <code>AliyunServiceRoleForNasEventNotification</code>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</li>
      * <li>CPFS for LINGJUN usage notes<ul>
      * <li>Source storage<ul>
-     * <li>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</li>
+     * <li>The source storage is an Object Storage Service (OSS) bucket. SourceStorage for a data flow must be an OSS bucket.</li>
      * <li>CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</li>
      * <li>If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.</li>
-     * <li>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<blockquote>
-     * <p>Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</p>
-     * </blockquote>
-     * </li>
+     * <li>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.</li>
+     * <li>CPFS for LINGJUN V2.6.0 and later allows you to create data flows for OSS buckets across accounts.</li>
+     * <li>The account id parameter is required only when you use OSS buckets across accounts.</li>
+     * <li>To use OSS buckets across accounts, you must first grant permissions to the related accounts. For more information, see <a href="https://help.aliyun.com/document_detail/182246.html">Cross-account authorization on data flows</a>.
+     * **
+     * <strong>Note</strong> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</li>
      * </ul>
      * </li>
      * <li>Limits of data flows on file systems<ul>
@@ -1333,66 +1303,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>  Basic operations
-     *     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
-     *     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
-     *     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
+     *     *   Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flows.
+     *     *   You can create a data flow only when a CPFS for LINGJUN file system is in the Running state.
+     *     *   A maximum of 10 data flows can be created for a CPFS for LINGJUN file system.
      *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.</p>
      * <ul>
      * <li>Permissions
-     * When you create a data flow, CPFS obtains the following two service-linked roles: <code>AliyunServiceRoleForNasOssDataflow</code> and <code>AliyunServiceRoleForNasEventNotification</code>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</li>
-     * <li>CPFS usage notes<ul>
-     * <li>Billing<ul>
-     * <li>If you create a data flow, you are charged for using the data flow throughput. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of CPFS</a>.</li>
-     * <li>When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</li>
-     * </ul>
-     * </li>
-     * <li>Data flow specifications<ul>
-     * <li>The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.</li>
-     * <li>When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.</li>
-     * <li>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.</li>
-     * </ul>
-     * </li>
-     * <li>Fileset<ul>
-     * <li>The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.</li>
-     * <li>When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.</li>
-     * <li>A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the <code>no space</code> error message is returned when you add new files.<blockquote>
-     * <p>  If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>AutoRefresh<ul>
-     * <li>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.</li>
-     * <li>AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</li>
-     * <li>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.</li>
-     * <li>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes <code>Misconfigured</code>. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.</li>
-     * <li>When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.<blockquote>
-     * <p>The event buses and event rules created for CPFS in the EventBridge console contain the <code>Create for cpfs auto refresh</code> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>Source storage<ul>
-     * <li>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</li>
-     * <li>CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</li>
-     * <li>If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.</li>
-     * <li>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<blockquote>
-     * <p> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
-     * </li>
+     * When you create a data flow, CPFS for LINGJUN obtains the following two service-linked roles: <code>AliyunServiceRoleForNasOssDataflow</code> and <code>AliyunServiceRoleForNasEventNotification</code>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</li>
      * <li>CPFS for LINGJUN usage notes<ul>
      * <li>Source storage<ul>
-     * <li>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</li>
+     * <li>The source storage is an Object Storage Service (OSS) bucket. SourceStorage for a data flow must be an OSS bucket.</li>
      * <li>CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</li>
      * <li>If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.</li>
-     * <li>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<blockquote>
-     * <p>Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</p>
-     * </blockquote>
-     * </li>
+     * <li>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.</li>
+     * <li>CPFS for LINGJUN V2.6.0 and later allows you to create data flows for OSS buckets across accounts.</li>
+     * <li>The account id parameter is required only when you use OSS buckets across accounts.</li>
+     * <li>To use OSS buckets across accounts, you must first grant permissions to the related accounts. For more information, see <a href="https://help.aliyun.com/document_detail/182246.html">Cross-account authorization on data flows</a>.
+     * **
+     * <strong>Note</strong> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</li>
      * </ul>
      * </li>
      * <li>Limits of data flows on file systems<ul>
@@ -1914,6 +1842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemPath)) {
             query.put("FileSystemPath", request.fileSystemPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
+            query.put("Quota", request.quota);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2937,11 +2869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.</li>
-     * <li>You can delete the dataflows that are only in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.</li>
+     * <li>You can delete the data flows that are only in the <code>Running</code> or <code>Stopped</code> state.</li>
+     * <li>After a data flow is deleted, the resources related to the data flow are released and cannot be restored. You must create a data flow again if required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2989,11 +2920,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.</li>
-     * <li>You can delete the dataflows that are only in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.</li>
+     * <li>You can delete the data flows that are only in the <code>Running</code> or <code>Stopped</code> state.</li>
+     * <li>After a data flow is deleted, the resources related to the data flow are released and cannot be restored. You must create a data flow again if required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3960,8 +3890,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询数据流动子任务</p>
+     * <p>Queries data flow subtasks in batches.</p>
      * 
      * @param request DescribeDataFlowSubTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4004,8 +3937,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询数据流动子任务</p>
+     * <p>Queries data flow subtasks in batches.</p>
      * 
      * @param request DescribeDataFlowSubTasksRequest
      * @return DescribeDataFlowSubTasksResponse
@@ -6213,7 +6149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
      * <li>You can modify the AutoRefresh configurations only for the dataflows that are in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</li>
+     * <li>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6273,7 +6209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
      * <li>You can modify the AutoRefresh configurations only for the dataflows that are in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</li>
+     * <li>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7175,10 +7111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
-     * <li>You can enable the dataflows that are only in the <code>Stopped</code> state.</li>
-     * <li>If the value of DryRun is <code>true</code>, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.</li>
-     * <li>It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</li>
+     * <li>Only CPFS V2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>You can enable the data flows that are only in the <code>Stopped</code> state.</li>
+     * <li>If the value of DryRun is <code>true</code>, you can check whether sufficient resources are available to enable the specified data flow. If the resources are insufficient, the data flow cannot be enabled.</li>
+     * <li>It generally takes 2 to 5 minutes to enable a data flow. You can query the data flow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7228,10 +7164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
-     * <li>You can enable the dataflows that are only in the <code>Stopped</code> state.</li>
-     * <li>If the value of DryRun is <code>true</code>, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.</li>
-     * <li>It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</li>
+     * <li>Only CPFS V2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>You can enable the data flows that are only in the <code>Stopped</code> state.</li>
+     * <li>If the value of DryRun is <code>true</code>, you can check whether sufficient resources are available to enable the specified data flow. If the resources are insufficient, the data flow cannot be enabled.</li>
+     * <li>It generally takes 2 to 5 minutes to enable a data flow. You can query the data flow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 

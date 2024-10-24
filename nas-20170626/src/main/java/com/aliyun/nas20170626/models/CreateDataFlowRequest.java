@@ -95,7 +95,7 @@ public class CreateDataFlowRequest extends TeaModel {
      * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</li>
      * </ul>
      * <blockquote>
-     * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <p> CPFS is not supported on the international site.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -152,22 +152,31 @@ public class CreateDataFlowRequest extends TeaModel {
     public String sourceSecurityType;
 
     /**
-     * <p>The access path of the source storage. Format: <code>&lt;storage type&gt;://&lt;path&gt;</code>.</p>
+     * <p>The access path of the source storage. Format: <code>&lt;storage type&gt;://[&lt;account id&gt;:]&lt;path&gt;</code>.</p>
      * <p>Parameters:</p>
      * <ul>
      * <li><p>storage type: Only OSS is supported.</p>
      * </li>
+     * <li><p>account id (optional): the UID of the account of the source storage.</p>
+     * </li>
      * <li><p>path: the name of the OSS bucket. Limits:</p>
      * <ul>
-     * <li>The path can contain only lowercase letters, digits, and hyphens (-). The path must start and end with a lowercase letter or digit.</li>
-     * <li>The path can be up to 128 characters in length.</li>
-     * <li>The path must be encoded in UTF-8.</li>
+     * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.</li>
+     * <li>The name can be up to 128 characters in length.</li>
+     * <li>The name must be encoded in UTF-8.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p> The OSS bucket must be an existing bucket in the region.</p>
      * </blockquote>
+     * <ul>
+     * <li><p>The OSS bucket must be an existing bucket in the region.</p>
+     * </li>
+     * <li><p>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</p>
+     * </li>
+     * <li><p>The account id parameter is optional. This parameter is required when you use OSS buckets across accounts.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
