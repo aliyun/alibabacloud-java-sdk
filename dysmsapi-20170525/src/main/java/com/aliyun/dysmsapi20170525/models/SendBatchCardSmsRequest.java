@@ -87,6 +87,9 @@ public class SendBatchCardSmsRequest extends TeaModel {
      * <p>The signatures must be approved and correspond to the mobile numbers in sequence.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;aliyun\&quot;,\&quot;aliyuncode\&quot;]</p>
      */
     @NameInMap("SignNameJson")
     public String signNameJson;

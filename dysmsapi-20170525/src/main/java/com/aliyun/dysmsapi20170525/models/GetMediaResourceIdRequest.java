@@ -28,6 +28,9 @@ public class GetMediaResourceIdRequest extends TeaModel {
 
     /**
      * <p>The description of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remark</p>
      */
     @NameInMap("Memo")
     public String memo;
