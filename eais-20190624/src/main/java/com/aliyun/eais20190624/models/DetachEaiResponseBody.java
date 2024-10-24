@@ -4,6 +4,10 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class DetachEaiResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>04DEB304-2436-4CB9-BB63-468BCEA03D9D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

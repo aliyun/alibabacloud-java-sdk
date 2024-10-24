@@ -4,9 +4,21 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class StartEaisEiRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais-hzu00xufs1c8j5nn****</p>
+     */
     @NameInMap("EiInstanceId")
     public String eiInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

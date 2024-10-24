@@ -4,12 +4,30 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmvpuy4a5****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais-hzs4h26yyt5xkcke****</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 

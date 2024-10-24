@@ -4,27 +4,63 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class CreateEaiEcsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais-test01</p>
+     */
     @NameInMap("EaisName")
     public String eaisName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais.ei-a6.2xlarge</p>
+     */
     @NameInMap("EaisType")
     public String eaisType;
 
     @NameInMap("Ecs")
     public CreateEaiEcsRequestEcs ecs;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmvpuy4a5****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf66jeqopgqa9hdn****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6h3rbwbm90urjwa****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -98,30 +134,66 @@ public class CreateEaiEcsRequest extends TeaModel {
     }
 
     public static class CreateEaiEcsRequestEcs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200324.vhd</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("InternetMaxBandwidthIn")
         public String internetMaxBandwidthIn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("InternetMaxBandwidthOut")
         public String internetMaxBandwidthOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EcsV587!</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("SystemDiskSize")
         public Long systemDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.g7.4xlarge</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

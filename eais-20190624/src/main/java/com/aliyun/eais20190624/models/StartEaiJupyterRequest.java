@@ -3,15 +3,15 @@ package com.aliyun.eais20190624.models;
 
 import com.aliyun.tea.*;
 
-public class StopEaisEiRequest extends TeaModel {
+public class StartEaiJupyterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>eais-hzu00xufs1c8j5nn****</p>
+     * <p>eais-hze3x2gv9wimdj0k****</p>
      */
-    @NameInMap("EiInstanceId")
-    public String eiInstanceId;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
@@ -22,20 +22,20 @@ public class StopEaisEiRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static StopEaisEiRequest build(java.util.Map<String, ?> map) throws Exception {
-        StopEaisEiRequest self = new StopEaisEiRequest();
+    public static StartEaiJupyterRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartEaiJupyterRequest self = new StartEaiJupyterRequest();
         return TeaModel.build(map, self);
     }
 
-    public StopEaisEiRequest setEiInstanceId(String eiInstanceId) {
-        this.eiInstanceId = eiInstanceId;
+    public StartEaiJupyterRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getEiInstanceId() {
-        return this.eiInstanceId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
-    public StopEaisEiRequest setRegionId(String regionId) {
+    public StartEaiJupyterRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

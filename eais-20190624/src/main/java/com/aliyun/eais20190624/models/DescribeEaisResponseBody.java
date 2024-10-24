@@ -7,15 +7,31 @@ public class DescribeEaisResponseBody extends TeaModel {
     @NameInMap("Instances")
     public DescribeEaisResponseBodyInstances instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1E23D585-BBD8-436F-9615-54CACD6*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class DescribeEaisResponseBody extends TeaModel {
     }
 
     public static class DescribeEaisResponseBodyInstancesInstanceTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,57 +138,117 @@ public class DescribeEaisResponseBody extends TeaModel {
     }
 
     public static class DescribeEaisResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>jupyter</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-wz93g6pyat2g****</p>
+         */
         @NameInMap("ClientInstanceId")
         public String clientInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("ClientInstanceName")
         public String clientInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.g5ne.large</p>
+         */
         @NameInMap("ClientInstanceType")
         public String clientInstanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-11T03:11Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eais-sz8t15a7gt7****</p>
+         */
         @NameInMap("ElasticAcceleratedInstanceId")
         public String elasticAcceleratedInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testName</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eais.ei-a6.2xlarge</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://121.41.**.24:8888">http://121.41.**.24:8888</a></p>
+         */
         @NameInMap("JupyterUrl")
         public String jupyterUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-bp1gppir818lx4******</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InUse</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public DescribeEaisResponseBodyInstancesInstanceTags tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1sd131hfmd76r******</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

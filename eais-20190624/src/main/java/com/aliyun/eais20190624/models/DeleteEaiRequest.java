@@ -4,12 +4,28 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class DeleteEaiRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais-sz8t15a7gt7z7j7i****</p>
+     */
     @NameInMap("ElasticAcceleratedInstanceId")
     public String elasticAcceleratedInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,27 +4,55 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class CreateEaiRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais-test01</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais.ei-a6.2xlarge</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-uf66jeqopgqa9hdn****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-uf6h3rbwbm90urjwa****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

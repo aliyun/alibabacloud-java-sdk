@@ -3,7 +3,7 @@ package com.aliyun.eais20190624.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRegionsResponse extends TeaModel {
+public class ListTagResourcesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeRegionsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeRegionsResponseBody body;
+    public ListTagResourcesResponseBody body;
 
-    public static DescribeRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRegionsResponse self = new DescribeRegionsResponse();
+    public static ListTagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListTagResourcesResponse self = new ListTagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListTagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeRegionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeRegionsResponse setStatusCode(Integer statusCode) {
+    public ListTagResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeRegionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeRegionsResponse setBody(DescribeRegionsResponseBody body) {
+    public ListTagResourcesResponse setBody(ListTagResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeRegionsResponseBody getBody() {
+    public ListTagResourcesResponseBody getBody() {
         return this.body;
     }
 

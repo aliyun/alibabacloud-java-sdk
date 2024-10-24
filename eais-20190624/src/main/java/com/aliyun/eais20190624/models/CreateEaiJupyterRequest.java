@@ -4,27 +4,55 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class CreateEaiJupyterRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("EaisName")
     public String eaisName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais.ei-a6.2xlarge</p>
+     */
     @NameInMap("EaisType")
     public String eaisType;
 
     @NameInMap("EnvironmentVar")
     public java.util.List<CreateEaiJupyterRequestEnvironmentVar> environmentVar;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf66jeqopgqa9hdn****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6h3rbwbm90urjwa****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -98,9 +126,17 @@ public class CreateEaiJupyterRequest extends TeaModel {
     }
 
     public static class CreateEaiJupyterRequestEnvironmentVar extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MY_USER_NAME</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test123</p>
+         */
         @NameInMap("Value")
         public String value;
 

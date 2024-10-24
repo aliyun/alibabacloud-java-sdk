@@ -4,27 +4,63 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class CreateEaiEciShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eais-test01</p>
+     */
     @NameInMap("EaisName")
     public String eaisName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eais.ei-a6.2xlarge</p>
+     */
     @NameInMap("EaisType")
     public String eaisType;
 
     @NameInMap("Eci")
     public String eciShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmvpuy4a5****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf66jeqopgqa9hdn****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6h3rbwbm90urjwa****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

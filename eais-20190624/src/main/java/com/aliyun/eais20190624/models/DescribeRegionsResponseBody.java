@@ -7,6 +7,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5FEB9AA-C108-577C-AB3D-D13524AF1840</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eais.cn-shenzhen.aliyuncs.com</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
