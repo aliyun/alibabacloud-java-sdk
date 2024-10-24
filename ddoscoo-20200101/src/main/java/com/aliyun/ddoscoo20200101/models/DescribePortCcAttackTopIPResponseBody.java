@@ -14,7 +14,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the source IP address of the attack.</p>
+     * <p>The top IP addresses from which most attacks are initiated.</p>
      */
     @NameInMap("TopIp")
     public java.util.List<DescribePortCcAttackTopIPResponseBodyTopIp> topIp;

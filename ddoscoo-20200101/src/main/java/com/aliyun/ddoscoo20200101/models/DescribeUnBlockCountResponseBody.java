@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUnBlockCountResponseBody extends TeaModel {
     /**
-     * <p>The remaining quota that you can use the Diversion from Origin Server policy.</p>
+     * <p>The remaining number of times that you can enable the near-origin traffic diversion feature.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -14,7 +14,7 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
     public Integer remainCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
@@ -23,7 +23,7 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total quota that you can use the Diversion from Origin Server policy.</p>
+     * <p>The total number of times that you can enable the near-origin traffic diversion feature.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

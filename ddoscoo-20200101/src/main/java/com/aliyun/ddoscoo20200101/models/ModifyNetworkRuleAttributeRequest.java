@@ -27,12 +27,12 @@ public class ModifyNetworkRuleAttributeRequest extends TeaModel {
      * <li><strong>Maxconn</strong>: the source rate limit on concurrent connections in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 1 to 50000.</li>
      * <li><strong>CpsEnable</strong>: specifies whether to enable Cps. This field is required and of the integer type. Valid values: 0 and 1. Default value: 1. The value 0 indicates that Cps is disabled, and the value 1 indicates that Cps is enabled.</li>
      * <li><strong>MaxconnEnable</strong>: specifies whether to enable Maxconn. This field is required and of the integer type. Valid values: 0 and 1. Default value: 1. The value 0 indicates that Maxconn is disabled, and the value 1 indicates that Maxconn is enabled.</li>
-     * <li><strong>CpsMode</strong>: specifies whether to enable the source rate limit on new connections. This field is required and of the integer type. Valid values: 1 and 2. The value 1 indicates the source rate limit is enabled. The value 2 indicates that the system determines whether to enable the source rate limit.</li>
+     * <li><strong>CpsMode</strong>: specifies whether to enable the source rate limit on new connections. This field is required and of the integer type. Valid values: 1 and 2. The value 1 indicates that the source rate limit is disabled. The value 2 indicates that the system determines whether to enable the source rate limit.</li>
      * </ul>
      * <p>PayloadLen contains the following fields:</p>
      * <ul>
-     * <li><strong>Min</strong>: the minimum packet length in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 0 to 2000.</li>
-     * <li><strong>Max</strong>: the maximum packet length in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 0 to 6000.</li>
+     * <li><strong>Min</strong>: the minimum packet length in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 0 to 1500.</li>
+     * <li><strong>Max</strong>: the maximum packet length in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 0 to 1500.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

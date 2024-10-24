@@ -3462,6 +3462,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询域名业务带宽流量</p>
+     * 
+     * @param request DescribeDomainBpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDomainBpsResponse
+     */
+    public DescribeDomainBpsResponse describeDomainBpsWithOptions(DescribeDomainBpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainBps"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainBpsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名业务带宽流量</p>
+     * 
+     * @param request DescribeDomainBpsRequest
+     * @return DescribeDomainBpsResponse
+     */
+    public DescribeDomainBpsResponse describeDomainBps(DescribeDomainBpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainBpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP2指纹</p>
+     * 
+     * @param request DescribeDomainH2FingerprintRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDomainH2FingerprintResponse
+     */
+    public DescribeDomainH2FingerprintResponse describeDomainH2FingerprintWithOptions(DescribeDomainH2FingerprintRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainH2Fingerprint"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainH2FingerprintResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP2指纹</p>
+     * 
+     * @param request DescribeDomainH2FingerprintRequest
+     * @return DescribeDomainH2FingerprintResponse
+     */
+    public DescribeDomainH2FingerprintResponse describeDomainH2Fingerprint(DescribeDomainH2FingerprintRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainH2FingerprintWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.</p>
      * 
      * @param request DescribeDomainOverviewRequest
@@ -3866,6 +3982,250 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询域名 top fingerprint</p>
+     * 
+     * @param request DescribeDomainTopFingerprintRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDomainTopFingerprintResponse
+     */
+    public DescribeDomainTopFingerprintResponse describeDomainTopFingerprintWithOptions(DescribeDomainTopFingerprintRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainTopFingerprint"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainTopFingerprintResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名 top fingerprint</p>
+     * 
+     * @param request DescribeDomainTopFingerprintRequest
+     * @return DescribeDomainTopFingerprintResponse
+     */
+    public DescribeDomainTopFingerprintResponse describeDomainTopFingerprint(DescribeDomainTopFingerprintRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainTopFingerprintWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名 top HttpMethod</p>
+     * 
+     * @param request DescribeDomainTopHttpMethodRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDomainTopHttpMethodResponse
+     */
+    public DescribeDomainTopHttpMethodResponse describeDomainTopHttpMethodWithOptions(DescribeDomainTopHttpMethodRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainTopHttpMethod"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainTopHttpMethodResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名 top HttpMethod</p>
+     * 
+     * @param request DescribeDomainTopHttpMethodRequest
+     * @return DescribeDomainTopHttpMethodResponse
+     */
+    public DescribeDomainTopHttpMethodResponse describeDomainTopHttpMethod(DescribeDomainTopHttpMethodRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainTopHttpMethodWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名top referer</p>
+     * 
+     * @param request DescribeDomainTopRefererRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDomainTopRefererResponse
+     */
+    public DescribeDomainTopRefererResponse describeDomainTopRefererWithOptions(DescribeDomainTopRefererRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainTopReferer"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainTopRefererResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名top referer</p>
+     * 
+     * @param request DescribeDomainTopRefererRequest
+     * @return DescribeDomainTopRefererResponse
+     */
+    public DescribeDomainTopRefererResponse describeDomainTopReferer(DescribeDomainTopRefererRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainTopRefererWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询top user agent</p>
+     * 
+     * @param request DescribeDomainTopUserAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDomainTopUserAgentResponse
+     */
+    public DescribeDomainTopUserAgentResponse describeDomainTopUserAgentWithOptions(DescribeDomainTopUserAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainTopUserAgent"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainTopUserAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询top user agent</p>
+     * 
+     * @param request DescribeDomainTopUserAgentRequest
+     * @return DescribeDomainTopUserAgentResponse
+     */
+    public DescribeDomainTopUserAgentResponse describeDomainTopUserAgent(DescribeDomainTopUserAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainTopUserAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the areas and countries from which requests are sent to a website within a specified period of time.</p>
      * 
      * @param request DescribeDomainViewSourceCountriesRequest
@@ -4147,11 +4507,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for Anti-DDoS Pro.</p>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the available burstable protection bandwidths of an Anti-DDoS Pro instance.</p>
+     * <p>Queries the available burstable protection bandwidths of an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
      * 
      * @param request DescribeElasticBandwidthSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4184,11 +4544,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for Anti-DDoS Pro.</p>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the available burstable protection bandwidths of an Anti-DDoS Pro instance.</p>
+     * <p>Queries the available burstable protection bandwidths of an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
      * 
      * @param request DescribeElasticBandwidthSpecRequest
      * @return DescribeElasticBandwidthSpecResponse
@@ -6715,11 +7075,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for Anti-DDoS Pro.</p>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the remaining quota that allows you to use the Diversion from Origin Server policy.</p>
+     * <p>Queries the total number and the remaining number of times that you can enable the near-origin traffic diversion feature.</p>
      * 
      * @param request DescribeUnBlockCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6752,11 +7112,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for Anti-DDoS Pro.</p>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the remaining quota that allows you to use the Diversion from Origin Server policy.</p>
+     * <p>Queries the total number and the remaining number of times that you can enable the near-origin traffic diversion feature.</p>
      * 
      * @param request DescribeUnBlockCountRequest
      * @return DescribeUnBlockCountResponse
