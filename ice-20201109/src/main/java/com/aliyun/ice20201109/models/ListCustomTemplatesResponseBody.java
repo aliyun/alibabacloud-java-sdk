@@ -50,6 +50,44 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint extends TeaModel {
+        @NameInMap("BitrateControlType")
+        public String bitrateControlType;
+
+        public static ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint self = new ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint setBitrateControlType(String bitrateControlType) {
+            this.bitrateControlType = bitrateControlType;
+            return this;
+        }
+        public String getBitrateControlType() {
+            return this.bitrateControlType;
+        }
+
+    }
+
+    public static class ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint extends TeaModel {
+        @NameInMap("TranscodeTemplateHint")
+        public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint transcodeTemplateHint;
+
+        public static ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint self = new ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint setTranscodeTemplateHint(ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint transcodeTemplateHint) {
+            this.transcodeTemplateHint = transcodeTemplateHint;
+            return this;
+        }
+        public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint getTranscodeTemplateHint() {
+            return this.transcodeTemplateHint;
+        }
+
+    }
+
     public static class ListCustomTemplatesResponseBodyCustomTemplateList extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -57,6 +95,9 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("FrontendHint")
+        public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint frontendHint;
 
         /**
          * <strong>example:</strong>
@@ -139,6 +180,14 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListCustomTemplatesResponseBodyCustomTemplateList setFrontendHint(ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint frontendHint) {
+            this.frontendHint = frontendHint;
+            return this;
+        }
+        public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint getFrontendHint() {
+            return this.frontendHint;
         }
 
         public ListCustomTemplatesResponseBodyCustomTemplateList setIsDefault(Boolean isDefault) {
