@@ -4,6 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class StartAvatarSessionRequest extends TeaModel {
+    @NameInMap("customPushUrl")
+    public String customPushUrl;
+
     /**
      * <strong>example:</strong>
      * <p>13534711288320</p>
@@ -21,6 +24,14 @@ public class StartAvatarSessionRequest extends TeaModel {
     public static StartAvatarSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartAvatarSessionRequest self = new StartAvatarSessionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartAvatarSessionRequest setCustomPushUrl(String customPushUrl) {
+        this.customPushUrl = customPushUrl;
+        return this;
+    }
+    public String getCustomPushUrl() {
+        return this.customPushUrl;
     }
 
     public StartAvatarSessionRequest setProjectId(String projectId) {

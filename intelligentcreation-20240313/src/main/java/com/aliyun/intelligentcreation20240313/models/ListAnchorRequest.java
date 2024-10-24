@@ -39,6 +39,9 @@ public class ListAnchorRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("resSpecType")
+    public String resSpecType;
+
     /**
      * <strong>example:</strong>
      * <p>offlineSynthesis</p>
@@ -89,6 +92,14 @@ public class ListAnchorRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAnchorRequest setResSpecType(String resSpecType) {
+        this.resSpecType = resSpecType;
+        return this;
+    }
+    public String getResSpecType() {
+        return this.resSpecType;
     }
 
     public ListAnchorRequest setUseScene(String useScene) {
