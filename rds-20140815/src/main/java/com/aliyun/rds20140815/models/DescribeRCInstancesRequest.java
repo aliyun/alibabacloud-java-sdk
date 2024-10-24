@@ -44,6 +44,9 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tag")
+    public String tag;
+
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
      * 
@@ -88,6 +91,14 @@ public class DescribeRCInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeRCInstancesRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
     public DescribeRCInstancesRequest setVpcId(String vpcId) {

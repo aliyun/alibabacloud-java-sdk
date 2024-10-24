@@ -15864,6 +15864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -22609,6 +22613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PayType", request.payType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.readOnlyDBInstanceClass)) {
+            query.put("ReadOnlyDBInstanceClass", request.readOnlyDBInstanceClass);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -23678,7 +23686,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>SQL Server</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
-     * <p>You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.
+     * &lt;props=&quot;intl&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a>.</p>
      * <blockquote>
      * <p>: Before you call this operation, read the preceding topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
@@ -23749,7 +23758,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>SQL Server</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
-     * <p>You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.
+     * &lt;props=&quot;intl&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a>.</p>
      * <blockquote>
      * <p>: Before you call this operation, read the preceding topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
@@ -27849,6 +27859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createMode)) {
+            query.put("CreateMode", request.createMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataDiskShrink)) {
             query.put("DataDisk", request.dataDiskShrink);
         }
@@ -27863,6 +27877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
+            query.put("HostName", request.hostName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
@@ -27913,6 +27931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityEnhancementStrategy)) {
             query.put("SecurityEnhancementStrategy", request.securityEnhancementStrategy);
         }
@@ -27923,6 +27945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskShrink)) {
             query.put("SystemDisk", request.systemDiskShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {

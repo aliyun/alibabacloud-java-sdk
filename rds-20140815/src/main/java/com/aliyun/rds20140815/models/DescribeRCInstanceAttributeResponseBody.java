@@ -159,6 +159,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("InnerIpAddress")
     public DescribeRCInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
     /**
      * <p>The instance ID.</p>
      * 
@@ -293,6 +296,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The security groups.</p>
@@ -510,6 +516,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         return this.innerIpAddress;
     }
 
+    public DescribeRCInstanceAttributeResponseBody setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
     public DescribeRCInstanceAttributeResponseBody setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -620,6 +634,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeRCInstanceAttributeResponseBody setSecurityGroupIds(DescribeRCInstanceAttributeResponseBodySecurityGroupIds securityGroupIds) {

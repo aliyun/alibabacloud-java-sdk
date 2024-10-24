@@ -53,6 +53,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CreateMode")
+    public String createMode;
+
     /**
      * <p>The information about the data disks.</p>
      */
@@ -89,6 +92,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("HostName")
+    public String hostName;
 
     /**
      * <p>The ID of the image used by the instance.</p>
@@ -204,6 +210,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The reserved parameter. This parameter is not supported.</p>
      * 
@@ -230,6 +239,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      */
     @NameInMap("SystemDisk")
     public String systemDiskShrink;
+
+    @NameInMap("Tag")
+    public java.util.List<RunRCInstancesShrinkRequestTag> tag;
 
     /**
      * <p>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</p>
@@ -293,6 +305,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public RunRCInstancesShrinkRequest setCreateMode(String createMode) {
+        this.createMode = createMode;
+        return this;
+    }
+    public String getCreateMode() {
+        return this.createMode;
+    }
+
     public RunRCInstancesShrinkRequest setDataDiskShrink(String dataDiskShrink) {
         this.dataDiskShrink = dataDiskShrink;
         return this;
@@ -323,6 +343,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public RunRCInstancesShrinkRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public RunRCInstancesShrinkRequest setImageId(String imageId) {
@@ -421,6 +449,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
         return this.regionId;
     }
 
+    public RunRCInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public RunRCInstancesShrinkRequest setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
         this.securityEnhancementStrategy = securityEnhancementStrategy;
         return this;
@@ -445,6 +481,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
         return this.systemDiskShrink;
     }
 
+    public RunRCInstancesShrinkRequest setTag(java.util.List<RunRCInstancesShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunRCInstancesShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public RunRCInstancesShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -459,6 +503,36 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class RunRCInstancesShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RunRCInstancesShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunRCInstancesShrinkRequestTag self = new RunRCInstancesShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunRCInstancesShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunRCInstancesShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

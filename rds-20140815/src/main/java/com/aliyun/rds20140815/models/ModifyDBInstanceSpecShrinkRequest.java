@@ -237,6 +237,9 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("ReadOnlyDBInstanceClass")
+    public String readOnlyDBInstanceClass;
+
     /**
      * <p>The ID of the resource group.</p>
      * 
@@ -484,6 +487,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public ModifyDBInstanceSpecShrinkRequest setReadOnlyDBInstanceClass(String readOnlyDBInstanceClass) {
+        this.readOnlyDBInstanceClass = readOnlyDBInstanceClass;
+        return this;
+    }
+    public String getReadOnlyDBInstanceClass() {
+        return this.readOnlyDBInstanceClass;
     }
 
     public ModifyDBInstanceSpecShrinkRequest setResourceGroupId(String resourceGroupId) {
