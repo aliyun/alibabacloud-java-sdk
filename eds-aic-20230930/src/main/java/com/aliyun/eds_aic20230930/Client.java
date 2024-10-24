@@ -302,6 +302,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceGroupSpec", request.instanceGroupSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
+            query.put("KeyPairId", request.keyPairId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.numberOfInstances)) {
             query.put("NumberOfInstances", request.numberOfInstances);
         }
