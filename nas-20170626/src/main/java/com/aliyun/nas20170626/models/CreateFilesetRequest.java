@@ -87,6 +87,9 @@ public class CreateFilesetRequest extends TeaModel {
     @NameInMap("FileSystemPath")
     public String fileSystemPath;
 
+    @NameInMap("Quota")
+    public CreateFilesetRequestQuota quota;
+
     public static CreateFilesetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFilesetRequest self = new CreateFilesetRequest();
         return TeaModel.build(map, self);
@@ -138,6 +141,44 @@ public class CreateFilesetRequest extends TeaModel {
     }
     public String getFileSystemPath() {
         return this.fileSystemPath;
+    }
+
+    public CreateFilesetRequest setQuota(CreateFilesetRequestQuota quota) {
+        this.quota = quota;
+        return this;
+    }
+    public CreateFilesetRequestQuota getQuota() {
+        return this.quota;
+    }
+
+    public static class CreateFilesetRequestQuota extends TeaModel {
+        @NameInMap("FileCountLimit")
+        public Long fileCountLimit;
+
+        @NameInMap("SizeLimit")
+        public Long sizeLimit;
+
+        public static CreateFilesetRequestQuota build(java.util.Map<String, ?> map) throws Exception {
+            CreateFilesetRequestQuota self = new CreateFilesetRequestQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFilesetRequestQuota setFileCountLimit(Long fileCountLimit) {
+            this.fileCountLimit = fileCountLimit;
+            return this;
+        }
+        public Long getFileCountLimit() {
+            return this.fileCountLimit;
+        }
+
+        public CreateFilesetRequestQuota setSizeLimit(Long sizeLimit) {
+            this.sizeLimit = sizeLimit;
+            return this;
+        }
+        public Long getSizeLimit() {
+            return this.sizeLimit;
+        }
+
     }
 
 }

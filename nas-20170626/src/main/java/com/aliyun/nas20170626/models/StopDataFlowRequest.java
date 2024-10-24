@@ -22,7 +22,7 @@ public class StopDataFlowRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dfid-194433a5be31****</p>
+     * <p>df-194433a5be31****</p>
      */
     @NameInMap("DataFlowId")
     public String dataFlowId;

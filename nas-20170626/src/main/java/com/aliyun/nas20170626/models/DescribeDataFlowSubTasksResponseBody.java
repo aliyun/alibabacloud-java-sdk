@@ -4,10 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
+    /**
+     * <p>The details about data streaming tasks.</p>
+     */
     @NameInMap("DataFlowSubTask")
     public DescribeDataFlowSubTasksResponseBodyDataFlowSubTask dataFlowSubTask;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>pUJaUwAAAABhdGUyNTk1MQ==</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */
@@ -52,6 +59,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
 
     public static class DescribeDataFlowSubTasksResponseBodyDataFlowSubTaskDataFlowSubTaskFileDetail extends TeaModel {
         /**
+         * <p>The checksum. Format example: crc64:123456.</p>
+         * 
          * <strong>example:</strong>
          * <p>crc64:850309505450944****</p>
          */
@@ -59,6 +68,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public String checksum;
 
         /**
+         * <p>The time when the file was modified. The value is a UNIX timestamp. Unit: ns.</p>
+         * 
          * <strong>example:</strong>
          * <p>1721167603</p>
          */
@@ -66,6 +77,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The file size. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */
@@ -105,6 +118,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
 
     public static class DescribeDataFlowSubTasksResponseBodyDataFlowSubTaskDataFlowSubTaskProgressStats extends TeaModel {
         /**
+         * <p>The actual amount of data for which the data flow task is complete. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */
@@ -112,6 +127,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public Long actualBytes;
 
         /**
+         * <p>The average flow velocity. Unit: bytes/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -119,6 +136,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public Long averageSpeed;
 
         /**
+         * <p>The amount of data (including skipped data) for which the data flow task is complete. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */
@@ -126,6 +145,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public Long bytesDone;
 
         /**
+         * <p>The amount of data scanned on the source. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */
@@ -173,6 +194,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
 
     public static class DescribeDataFlowSubTasksResponseBodyDataFlowSubTaskDataFlowSubTask extends TeaModel {
         /**
+         * <p>The time when the data streaming task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-01 19:59:29</p>
          */
@@ -180,13 +203,17 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the data flow.</p>
+         * 
          * <strong>example:</strong>
-         * <p>dfid-194433a5be31****</p>
+         * <p>df-194433a5be31****</p>
          */
         @NameInMap("DataFlowId")
         public String dataFlowId;
 
         /**
+         * <p>The ID of the data streaming task.</p>
+         * 
          * <strong>example:</strong>
          * <p>subTaskId-370kyfmyknxcyzw****</p>
          */
@@ -194,13 +221,23 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public String dataFlowSubTaskId;
 
         /**
+         * <p>The ID of the data flow task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>taskId-12345678</p>
+         * <p>task-38aa8e890f45****</p>
          */
         @NameInMap("DataFlowTaskId")
         public String dataFlowTaskId;
 
         /**
+         * <p>The path of the destination file. Limits:</p>
+         * <ul>
+         * <li>The path must be 1 to 1,023 characters in length.</li>
+         * <li>The path must be encoded in UTF-8.</li>
+         * <li>The path must start with a forward slash (/).</li>
+         * <li>The path must end with the file name.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/file.png</p>
          */
@@ -208,19 +245,29 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public String dstFilePath;
 
         /**
+         * <p>The time when the data streaming task ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-04 11:14:22</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The error message returned when the task failed.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The file information.</p>
+         */
         @NameInMap("FileDetail")
         public DescribeDataFlowSubTasksResponseBodyDataFlowSubTaskDataFlowSubTaskFileDetail fileDetail;
 
         /**
+         * <p>The ID of the file system.</p>
+         * 
          * <strong>example:</strong>
          * <p>bmcpfs-370lx1ev9ss27o0****</p>
          */
@@ -228,16 +275,29 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
+         * <p>The progress of the data streaming task. Valid values: 0 to 10000.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The progress information about data streaming tasks.</p>
+         */
         @NameInMap("ProgressStats")
         public DescribeDataFlowSubTasksResponseBodyDataFlowSubTaskDataFlowSubTaskProgressStats progressStats;
 
         /**
+         * <p>The path of the source file. Limits:</p>
+         * <ul>
+         * <li>The path must be 1 to 1,023 characters in length.</li>
+         * <li>The path must be encoded in UTF-8.</li>
+         * <li>The path must start with a forward slash (/).</li>
+         * <li>The path must end with the file name.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>/test/file.png</p>
          */
@@ -245,6 +305,8 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public String srcFilePath;
 
         /**
+         * <p>The time when the data streaming task started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-03 10:43:16</p>
          */
@@ -252,6 +314,17 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the data streaming task. Valid values:</p>
+         * <ul>
+         * <li>EXPIRED: The task is terminated.</li>
+         * <li>CREATED: The task is created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>COMPLETE: The task is complete.</li>
+         * <li>CANCELING: The task is being canceled.</li>
+         * <li>FAILED: The task failed to be executed.</li>
+         * <li>CANCELED: The task is canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
          */

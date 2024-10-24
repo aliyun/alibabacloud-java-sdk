@@ -17,6 +17,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
      * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
+    @Deprecated
     public String fileSystemId;
 
     /**
@@ -74,6 +75,36 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeFilesetsResponseBodyEntriesEntrieQuota extends TeaModel {
+        @NameInMap("FileCountLimit")
+        public Long fileCountLimit;
+
+        @NameInMap("SizeLimit")
+        public Long sizeLimit;
+
+        public static DescribeFilesetsResponseBodyEntriesEntrieQuota build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFilesetsResponseBodyEntriesEntrieQuota self = new DescribeFilesetsResponseBodyEntriesEntrieQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFilesetsResponseBodyEntriesEntrieQuota setFileCountLimit(Long fileCountLimit) {
+            this.fileCountLimit = fileCountLimit;
+            return this;
+        }
+        public Long getFileCountLimit() {
+            return this.fileCountLimit;
+        }
+
+        public DescribeFilesetsResponseBodyEntriesEntrieQuota setSizeLimit(Long sizeLimit) {
+            this.sizeLimit = sizeLimit;
+            return this;
+        }
+        public Long getSizeLimit() {
+            return this.sizeLimit;
+        }
+
+    }
+
     public static class DescribeFilesetsResponseBodyEntriesEntrie extends TeaModel {
         /**
          * <p>The time when the fileset was created.</p>
@@ -110,6 +141,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("FileCountUsage")
+        public Long fileCountUsage;
+
+        @NameInMap("FileSystemId")
+        public String fileSystemId;
+
         /**
          * <p>The fileset path.</p>
          * 
@@ -127,6 +164,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
          */
         @NameInMap("FsetId")
         public String fsetId;
+
+        @NameInMap("Quota")
+        public DescribeFilesetsResponseBodyEntriesEntrieQuota quota;
+
+        @NameInMap("SpaceUsage")
+        public Long spaceUsage;
 
         /**
          * <p>The fileset status. Valid values:</p>
@@ -182,6 +225,22 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeFilesetsResponseBodyEntriesEntrie setFileCountUsage(Long fileCountUsage) {
+            this.fileCountUsage = fileCountUsage;
+            return this;
+        }
+        public Long getFileCountUsage() {
+            return this.fileCountUsage;
+        }
+
+        public DescribeFilesetsResponseBodyEntriesEntrie setFileSystemId(String fileSystemId) {
+            this.fileSystemId = fileSystemId;
+            return this;
+        }
+        public String getFileSystemId() {
+            return this.fileSystemId;
+        }
+
         public DescribeFilesetsResponseBodyEntriesEntrie setFileSystemPath(String fileSystemPath) {
             this.fileSystemPath = fileSystemPath;
             return this;
@@ -196,6 +255,22 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
         public String getFsetId() {
             return this.fsetId;
+        }
+
+        public DescribeFilesetsResponseBodyEntriesEntrie setQuota(DescribeFilesetsResponseBodyEntriesEntrieQuota quota) {
+            this.quota = quota;
+            return this;
+        }
+        public DescribeFilesetsResponseBodyEntriesEntrieQuota getQuota() {
+            return this.quota;
+        }
+
+        public DescribeFilesetsResponseBodyEntriesEntrie setSpaceUsage(Long spaceUsage) {
+            this.spaceUsage = spaceUsage;
+            return this;
+        }
+        public Long getSpaceUsage() {
+            return this.spaceUsage;
         }
 
         public DescribeFilesetsResponseBodyEntriesEntrie setStatus(String status) {
