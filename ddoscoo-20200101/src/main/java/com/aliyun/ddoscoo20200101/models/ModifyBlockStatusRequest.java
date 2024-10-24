@@ -17,9 +17,9 @@ public class ModifyBlockStatusRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The ID of the Anti-DDoS Pro instance to manage.</p>
+     * <p>The ID of the Anti-DDoS Proxy (Chinese Mainland) instance to manage.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

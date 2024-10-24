@@ -35,7 +35,7 @@ public class DescribeWebRulesRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>When paginating, set the page number of the current page. The default value is 1.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeWebRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>When paginating, set the number of forwarding rules per page. The range of values is: 1~10.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

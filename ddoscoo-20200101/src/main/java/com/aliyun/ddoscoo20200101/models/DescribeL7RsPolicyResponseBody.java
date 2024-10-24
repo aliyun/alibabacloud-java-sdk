@@ -33,6 +33,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("RsAttrRwTimeoutMax")
     public Long rsAttrRwTimeoutMax;
 
