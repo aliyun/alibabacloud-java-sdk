@@ -64,6 +64,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("InstanceGroupSpec")
     public String instanceGroupSpec;
 
+    @NameInMap("KeyPairId")
+    public String keyPairId;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -191,6 +194,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getInstanceGroupSpec() {
         return this.instanceGroupSpec;
+    }
+
+    public CreateAndroidInstanceGroupRequest setKeyPairId(String keyPairId) {
+        this.keyPairId = keyPairId;
+        return this;
+    }
+    public String getKeyPairId() {
+        return this.keyPairId;
     }
 
     public CreateAndroidInstanceGroupRequest setNumberOfInstances(Integer numberOfInstances) {
