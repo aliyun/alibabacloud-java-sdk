@@ -188,7 +188,7 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public Long internetMaxBandwidthOut;
 
     /**
-     * <p>The type of the IP address. Valid values:</p>
+     * <p>The type of the IP address. Examples:</p>
      * <ul>
      * <li><strong>ipv4</strong> (default).</li>
      * <li><strong>ipv6</strong>.</li>

@@ -432,6 +432,186 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set extends TeaModel {
+        @NameInMap("Ipv6Address")
+        public String ipv6Address;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set setIpv6Address(String ipv6Address) {
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets extends TeaModel {
+        @NameInMap("Ipv6Set")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set> ipv6Set;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets setIpv6Set(java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set> ipv6Set) {
+            this.ipv6Set = ipv6Set;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet extends TeaModel {
+        @NameInMap("Primary")
+        public Boolean primary;
+
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet> privateIpSet;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets setPrivateIpSet(java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces extends TeaModel {
+        @NameInMap("Ipv6Sets")
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets ipv6Sets;
+
+        @NameInMap("MacAddress")
+        public String macAddress;
+
+        @NameInMap("NetworkInterfaceId")
+        public String networkInterfaceId;
+
+        @NameInMap("PrimaryIpAddress")
+        public String primaryIpAddress;
+
+        @NameInMap("PrivateIpSets")
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets privateIpSets;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setIpv6Sets(DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets ipv6Sets) {
+            this.ipv6Sets = ipv6Sets;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets getIpv6Sets() {
+            return this.ipv6Sets;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setMacAddress(String macAddress) {
+            this.macAddress = macAddress;
+            return this;
+        }
+        public String getMacAddress() {
+            return this.macAddress;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setPrimaryIpAddress(String primaryIpAddress) {
+            this.primaryIpAddress = primaryIpAddress;
+            return this;
+        }
+        public String getPrimaryIpAddress() {
+            return this.primaryIpAddress;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setPrivateIpSets(DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets privateIpSets) {
+            this.privateIpSets = privateIpSets;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets getPrivateIpSets() {
+            return this.privateIpSets;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces extends TeaModel {
+        @NameInMap("NetworkInterfaces")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces> networkInterfaces;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces setNetworkInterfaces(java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces> networkInterfaces) {
+            this.networkInterfaces = networkInterfaces;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces> getNetworkInterfaces() {
+            return this.networkInterfaces;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress extends TeaModel {
         /**
          * <p>The gateway.</p>
@@ -1039,6 +1219,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes;
 
+        @NameInMap("NetworkInterfaces")
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces;
+
         /**
          * <p>The name of the image.</p>
          * 
@@ -1112,6 +1295,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The tags of the instance.</p>
+         * <blockquote>
+         * <p> This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
+         * </blockquote>
          */
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesInstanceTags tags;
@@ -1271,6 +1457,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes getNetworkAttributes() {
             return this.networkAttributes;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setNetworkInterfaces(DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces) {
+            this.networkInterfaces = networkInterfaces;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces getNetworkInterfaces() {
+            return this.networkInterfaces;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setOSName(String OSName) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateEnsEipAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP.</p>
+     * <p>The ID of the EIP that you want to associate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The ID of the cloud service with which you want to associate the EIP.</p>
+     * <p>The ID of the cloud service with which the EIP is associated.</p>
      * <blockquote>
-     * <p> IDs of Edge Load Balancer (ELB) are supported.</p>
+     * <p> You can specify the ID of an Edge Load Balancer (ELB) instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +32,7 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
      * <ul>
      * <li><strong>Nat</strong>: a NAT gateway.</li>
      * <li><strong>SlbInstance</strong>: an ELB instance.</li>
-     * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
+     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
      * <li><strong>NatSlbInstance</strong>: If you want to associate multiple EIPs to an ELB instance, you need to set the parameter to this value.</li>
      * <li><strong>EnsInstance</strong> (default): an ENS instance.</li>
      * </ul>

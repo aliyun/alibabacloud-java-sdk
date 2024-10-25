@@ -30,7 +30,7 @@ public class AddDeviceInternetPortRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The internal IP address of the instance.</p>
+     * <p>The private IP address of the simple application server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

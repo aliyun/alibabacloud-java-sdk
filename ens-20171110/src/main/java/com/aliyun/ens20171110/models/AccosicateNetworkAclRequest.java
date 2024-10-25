@@ -15,7 +15,7 @@ public class AccosicateNetworkAclRequest extends TeaModel {
     public String networkAclId;
 
     /**
-     * <p>The information about the resources with which you want to associate the network ACL.</p>
+     * <p>The type of resource with which you want to associate the network ACL.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")
@@ -44,7 +44,7 @@ public class AccosicateNetworkAclRequest extends TeaModel {
 
     public static class AccosicateNetworkAclRequestResource extends TeaModel {
         /**
-         * <p>The ID of the resource with which you want to associate the network ACL.</p>
+         * <p>The ID of the associated resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,8 +54,8 @@ public class AccosicateNetworkAclRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of resource with which you want to associate the network ACL. Set the value to <strong>Network</strong>.</p>
-         * <hr>
+         * <p>The type of the associated resource. Set the value to <strong>Network</strong>.</p>
+         * <p>Valid values of <strong>N</strong>: 0 to 29. You can associate a network ACL with at most 30 resources.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -16,12 +16,12 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String destCidrIp;
 
     /**
-     * <p>The transport layer protocol. The values of this parameter are case-sensitive. Valid values:</p>
+     * <p>The transport layer protocol. The value of this parameter is case-sensitive. Valid values:</p>
      * <ul>
-     * <li>tcp: TCP.</li>
-     * <li>udp: UDP.</li>
-     * <li>icmp: ICMP.</li>
-     * <li>gre: GRE.</li>
+     * <li>tcp</li>
+     * <li>udp</li>
+     * <li>icmp</li>
+     * <li>gre</li>
      * <li>all: All protocols are supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -33,10 +33,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The action of security group rule N that determines whether to allow inbound access. Valid values:</p>
+     * <p>The action of the security group rule. Valid values:</p>
      * <ul>
      * <li>accept: allows access. This is the default value.</li>
-     * <li>drop: denies access and returns no responses.</li>
+     * <li>drop: denies access and does not return responses.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String portRange;
 
     /**
-     * <p>The priority of the security group rule. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The priority of security group rule N. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

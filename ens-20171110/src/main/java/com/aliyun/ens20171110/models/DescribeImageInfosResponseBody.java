@@ -57,6 +57,77 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("Size")
+        public String size;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("imageId")
+        public String imageId;
+
+        public static DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping self = new DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setSize(String size) {
+            this.size = size;
+            return this;
+        }
+        public String getSize() {
+            return this.size;
+        }
+
+        public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+    }
+
+    public static class DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings extends TeaModel {
+        @NameInMap("DiskDeviceMapping")
+        public java.util.List<DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> diskDeviceMapping;
+
+        public static DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings self = new DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings setDiskDeviceMapping(java.util.List<DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> diskDeviceMapping) {
+            this.diskDeviceMapping = diskDeviceMapping;
+            return this;
+        }
+        public java.util.List<DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> getDiskDeviceMapping() {
+            return this.diskDeviceMapping;
+        }
+
+    }
+
     public static class DescribeImageInfosResponseBodyImagesImage extends TeaModel {
         /**
          * <p>The computing type of the image. Valid values:</p>
@@ -81,6 +152,9 @@ public class DescribeImageInfosResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DiskDeviceMappings")
+        public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
         /**
          * <p>The ID of the image.</p>
@@ -146,6 +220,14 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeImageInfosResponseBodyImagesImage setDiskDeviceMappings(DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
         }
 
         public DescribeImageInfosResponseBodyImagesImage setImageId(String imageId) {

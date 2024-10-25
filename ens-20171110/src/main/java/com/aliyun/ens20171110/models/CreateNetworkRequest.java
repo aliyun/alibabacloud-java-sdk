@@ -53,6 +53,9 @@ public class CreateNetworkRequest extends TeaModel {
     @NameInMap("NetworkName")
     public String networkName;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateNetworkRequestTag> tag;
+
     public static CreateNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkRequest self = new CreateNetworkRequest();
         return TeaModel.build(map, self);
@@ -88,6 +91,44 @@ public class CreateNetworkRequest extends TeaModel {
     }
     public String getNetworkName() {
         return this.networkName;
+    }
+
+    public CreateNetworkRequest setTag(java.util.List<CreateNetworkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateNetworkRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateNetworkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateNetworkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkRequestTag self = new CreateNetworkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateNetworkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

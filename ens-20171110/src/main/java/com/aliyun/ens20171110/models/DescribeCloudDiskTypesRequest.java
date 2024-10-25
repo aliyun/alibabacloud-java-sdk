@@ -13,6 +13,9 @@ public class DescribeCloudDiskTypesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
     public static DescribeCloudDiskTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudDiskTypesRequest self = new DescribeCloudDiskTypesRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class DescribeCloudDiskTypesRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeCloudDiskTypesRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
 }
