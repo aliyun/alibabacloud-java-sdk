@@ -30,6 +30,9 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The instance ID.</p>
      * <blockquote>
@@ -62,6 +65,14 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public ModifyAccountDescriptionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyAccountDescriptionRequest setDBInstanceId(String DBInstanceId) {
