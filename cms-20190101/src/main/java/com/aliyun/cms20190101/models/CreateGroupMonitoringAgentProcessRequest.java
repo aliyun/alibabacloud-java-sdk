@@ -113,14 +113,14 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
     public static class CreateGroupMonitoringAgentProcessRequestAlertConfigTargetList extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
-         * <p>For information about how to obtain the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * <p>For more information about how to query the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
          * <p>Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
          * <ul>
-         * <li><p>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
+         * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
          * </li>
          * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
          * </li>
-         * <li><p>{regionId}: the region ID of the message queue or topic.</p>
+         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
          * </li>
          * <li><p>{Resource type}: the type of the resource that triggers the alert. Valid values:</p>
          * <ul>
@@ -144,7 +144,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
 
         /**
          * <p>The ID of the resource for which alerts are triggered.</p>
-         * <p>For information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * <p>For more information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The parameters of the alert callback. Specify the parameters in the JSON format.</p>
+         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -228,7 +228,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
          * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
          * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
          * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</li>
          * </ul>
          * <p>Valid values of N: 1 to 3.</p>
          * <p>This parameter is required.</p>
@@ -240,7 +240,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The time period during which the alert rule is effective.</p>
+         * <p>The period of time during which the alert rule is effective.</p>
          * <p>Valid values of N: 1 to 3.</p>
          * 
          * <strong>example:</strong>
@@ -252,9 +252,9 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         /**
          * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li>critical (default): critical</li>
-         * <li>warn: warning</li>
-         * <li>info: information</li>
+         * <li>critical (default)</li>
+         * <li>warn</li>
+         * <li>info</li>
          * </ul>
          * <p>Valid values of N: 1 to 3.</p>
          * <p>This parameter is required.</p>
@@ -278,7 +278,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
          * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
          * <p>Valid values of N: 1 to 3.</p>
          * <blockquote>
-         * <p> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+         * <p> Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         public String silenceTime;
 
         /**
-         * <p>The statistical method for alerts.</p>
+         * <p>The statistical aggregation method that is used to calculate the metric values.</p>
          * <p>Valid values of N: 1 to 3.</p>
          * <blockquote>
          * <p> Set the value to Average.</p>
@@ -310,7 +310,6 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         /**
          * <p>The alert threshold.</p>
          * <p>Valid values of N: 1 to 3.</p>
-         * <p>Unit: cores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +322,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
          * <p>The number of times for which the threshold can be consecutively exceeded. Default value: 3.</p>
          * <p>Valid values of N: 1 to 3.</p>
          * <blockquote>
-         * <p> An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.</p>
+         * <p> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

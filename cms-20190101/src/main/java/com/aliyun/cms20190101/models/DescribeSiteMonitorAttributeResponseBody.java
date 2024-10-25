@@ -1290,6 +1290,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("screen_shot")
         public Boolean screenShot;
 
+        @NameInMap("scroll_end")
+        public Boolean scrollEnd;
+
         /**
          * <strong>example:</strong>
          * <p>false</p>
@@ -1666,6 +1669,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public Boolean getScreenShot() {
             return this.screenShot;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setScrollEnd(Boolean scrollEnd) {
+            this.scrollEnd = scrollEnd;
+            return this;
+        }
+        public Boolean getScrollEnd() {
+            return this.scrollEnd;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setStrictMode(Boolean strictMode) {

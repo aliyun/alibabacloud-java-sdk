@@ -148,7 +148,26 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861\<em>\</em>\<em>\</em>:/queues/test123/message. Fields:</p>
-         * <p>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns. {userId}: the ID of the Alibaba Cloud account. {regionId}: the region ID of the message queue or topic. {Resource type}: the type of the resource that triggers the alert. Valid values: - <strong>queues</strong> - <strong>topics</strong> - {Resource name}: the resource name. - If the resource type is set to <strong>queues</strong>, the resource name is the name of the message queue. - If the resource type is set to <strong>topics</strong>, the resource name is the name of the topic.</p>
+         * <ul>
+         * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
+         * </li>
+         * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+         * </li>
+         * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+         * <ul>
+         * <li><strong>queues</strong></li>
+         * <li><strong>topics</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>{Resource name}: the resource name.</p>
+         * <ul>
+         * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+         * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
@@ -175,8 +194,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         public String jsonParmas;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
-         * <p>INFO WARN CRITICAL</p>
+         * <p>The alert level. Valid values:</p>
+         * <ul>
+         * <li>INFO</li>
+         * <li>WARN</li>
+         * <li>CRITICAL</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CRITICAL</p>
@@ -319,7 +342,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The resource for which alerts are triggered.</p>
+         * <p>The resources for which alerts are triggered.</p>
          */
         @NameInMap("TargetList")
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList targetList;
