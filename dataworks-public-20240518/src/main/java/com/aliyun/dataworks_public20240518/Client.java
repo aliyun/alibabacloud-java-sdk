@@ -102,7 +102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关联资源组到某个工作空间。</p>
+     * <p>Associates a resource group with a workspace.</p>
      * 
      * @param request AssociateProjectToResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -138,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关联资源组到某个工作空间。</p>
+     * <p>Associates a resource group with a workspace.</p>
      * 
      * @param request AssociateProjectToResourceGroupRequest
      * @return AssociateProjectToResourceGroupResponse
@@ -763,6 +763,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>添加工作空间成员</p>
+     * 
+     * @param tmpReq CreateProjectMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProjectMemberResponse
+     */
+    public CreateProjectMemberResponse createProjectMemberWithOptions(CreateProjectMemberRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateProjectMemberShrinkRequest request = new CreateProjectMemberShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.roleCodes)) {
+            request.roleCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roleCodes, "RoleCodes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleCodesShrink)) {
+            body.put("RoleCodes", request.roleCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProjectMember"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProjectMemberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加工作空间成员</p>
+     * 
+     * @param request CreateProjectMemberRequest
+     * @return CreateProjectMemberResponse
+     */
+    public CreateProjectMemberResponse createProjectMember(CreateProjectMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProjectMemberWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
@@ -1375,6 +1433,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>移除工作空间成员</p>
+     * 
+     * @param request DeleteProjectMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProjectMemberResponse
+     */
+    public DeleteProjectMemberResponse deleteProjectMemberWithOptions(DeleteProjectMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProjectMember"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProjectMemberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移除工作空间成员</p>
+     * 
+     * @param request DeleteProjectMemberRequest
+     * @return DeleteProjectMemberResponse
+     */
+    public DeleteProjectMemberResponse deleteProjectMember(DeleteProjectMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProjectMemberWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</p>
@@ -1434,7 +1540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除通用资源组。</p>
+     * <p>Deletes a serverless resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1466,7 +1572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除通用资源组。</p>
+     * <p>Deletes a serverless resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
@@ -1580,7 +1686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将资源组和某个工作空间解除关联。</p>
+     * <p>Disassociates a resource group from a workspace.</p>
      * 
      * @param request DissociateProjectFromResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1616,7 +1722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将资源组和某个工作空间解除关联。</p>
+     * <p>Disassociates a resource group from a workspace.</p>
      * 
      * @param request DissociateProjectFromResourceGroupRequest
      * @return DissociateProjectFromResourceGroupResponse
@@ -1773,8 +1879,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries a data source by ID.</p>
      * 
      * @param request GetDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1801,8 +1913,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries a data source by ID.</p>
      * 
      * @param request GetDataSourceRequest
      * @return GetDataSourceResponse
@@ -2054,6 +2172,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询工作空间成员详情</p>
+     * 
+     * @param request GetProjectMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProjectMemberResponse
+     */
+    public GetProjectMemberResponse getProjectMemberWithOptions(GetProjectMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProjectMember"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectMemberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询工作空间成员详情</p>
+     * 
+     * @param request GetProjectMemberRequest
+     * @return GetProjectMemberResponse
+     */
+    public GetProjectMemberResponse getProjectMember(GetProjectMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProjectMemberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询工作空间角色详情</p>
      * 
      * @param request GetProjectRoleRequest
@@ -2258,6 +2424,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkflowDefinitionResponse getWorkflowDefinition(GetWorkflowDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>授予工作空间成员角色</p>
+     * 
+     * @param tmpReq GrantMemberProjectRolesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantMemberProjectRolesResponse
+     */
+    public GrantMemberProjectRolesResponse grantMemberProjectRolesWithOptions(GrantMemberProjectRolesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GrantMemberProjectRolesShrinkRequest request = new GrantMemberProjectRolesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.roleCodes)) {
+            request.roleCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roleCodes, "RoleCodes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleCodesShrink)) {
+            body.put("RoleCodes", request.roleCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantMemberProjectRoles"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantMemberProjectRolesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>授予工作空间成员角色</p>
+     * 
+     * @param request GrantMemberProjectRolesRequest
+     * @return GrantMemberProjectRolesResponse
+     */
+    public GrantMemberProjectRolesResponse grantMemberProjectRoles(GrantMemberProjectRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.grantMemberProjectRolesWithOptions(request, runtime);
     }
 
     /**
@@ -2512,6 +2736,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDIJobsResponse listDIJobs(ListDIJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDIJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListDataQualityEvaluationTaskInstances</p>
+     * 
+     * @param request ListDataQualityEvaluationTaskInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataQualityEvaluationTaskInstancesResponse
+     */
+    public ListDataQualityEvaluationTaskInstancesResponse listDataQualityEvaluationTaskInstancesWithOptions(ListDataQualityEvaluationTaskInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataQualityEvaluationTaskInstances"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataQualityEvaluationTaskInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListDataQualityEvaluationTaskInstances</p>
+     * 
+     * @param request ListDataQualityEvaluationTaskInstancesRequest
+     * @return ListDataQualityEvaluationTaskInstancesResponse
+     */
+    public ListDataQualityEvaluationTaskInstancesResponse listDataQualityEvaluationTaskInstances(ListDataQualityEvaluationTaskInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataQualityEvaluationTaskInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListDataQualityEvaluationTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataQualityEvaluationTasksResponse
+     */
+    public ListDataQualityEvaluationTasksResponse listDataQualityEvaluationTasksWithOptions(ListDataQualityEvaluationTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataQualityEvaluationTasks"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataQualityEvaluationTasksResponse());
+    }
+
+    /**
+     * @param request ListDataQualityEvaluationTasksRequest
+     * @return ListDataQualityEvaluationTasksResponse
+     */
+    public ListDataQualityEvaluationTasksResponse listDataQualityEvaluationTasks(ListDataQualityEvaluationTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataQualityEvaluationTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListDataQualityResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataQualityResultsResponse
+     */
+    public ListDataQualityResultsResponse listDataQualityResultsWithOptions(ListDataQualityResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataQualityResults"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataQualityResultsResponse());
+    }
+
+    /**
+     * @param request ListDataQualityResultsRequest
+     * @return ListDataQualityResultsResponse
+     */
+    public ListDataQualityResultsResponse listDataQualityResults(ListDataQualityResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataQualityResultsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>质量监控规则分页查询</p>
+     * 
+     * @param request ListDataQualityRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataQualityRulesResponse
+     */
+    public ListDataQualityRulesResponse listDataQualityRulesWithOptions(ListDataQualityRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataQualityRules"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataQualityRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>质量监控规则分页查询</p>
+     * 
+     * @param request ListDataQualityRulesRequest
+     * @return ListDataQualityRulesResponse
+     */
+    public ListDataQualityRulesResponse listDataQualityRules(ListDataQualityRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataQualityRulesWithOptions(request, runtime);
     }
 
     /**
@@ -2798,6 +3170,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNodesResponse listNodes(ListNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询工作空间成员详情</p>
+     * 
+     * @param tmpReq ListProjectMembersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectMembersResponse
+     */
+    public ListProjectMembersResponse listProjectMembersWithOptions(ListProjectMembersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListProjectMembersShrinkRequest request = new ListProjectMembersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.roleCodes)) {
+            request.roleCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roleCodes, "RoleCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userIds)) {
+            request.userIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userIds, "UserIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleCodesShrink)) {
+            body.put("RoleCodes", request.roleCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdsShrink)) {
+            body.put("UserIds", request.userIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectMembers"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectMembersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询工作空间成员详情</p>
+     * 
+     * @param request ListProjectMembersRequest
+     * @return ListProjectMembersResponse
+     */
+    public ListProjectMembersResponse listProjectMembers(ListProjectMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectMembersWithOptions(request, runtime);
     }
 
     /**
@@ -3556,6 +3998,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>撤销工作空间成员的角色</p>
+     * 
+     * @param tmpReq RevokeMemberProjectRolesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeMemberProjectRolesResponse
+     */
+    public RevokeMemberProjectRolesResponse revokeMemberProjectRolesWithOptions(RevokeMemberProjectRolesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RevokeMemberProjectRolesShrinkRequest request = new RevokeMemberProjectRolesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.roleCodes)) {
+            request.roleCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roleCodes, "RoleCodes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleCodesShrink)) {
+            body.put("RoleCodes", request.roleCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeMemberProjectRoles"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeMemberProjectRolesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤销工作空间成员的角色</p>
+     * 
+     * @param request RevokeMemberProjectRolesRequest
+     * @return RevokeMemberProjectRolesResponse
+     */
+    public RevokeMemberProjectRolesResponse revokeMemberProjectRoles(RevokeMemberProjectRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeMemberProjectRolesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>启动数据集成任务</p>
      * 
      * @param tmpReq StartDIJobRequest
@@ -4034,7 +4534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新通用资源组基本信息。</p>
+     * <p>Updates basic information about a resource group.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4074,7 +4574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新通用资源组基本信息。</p>
+     * <p>Updates basic information about a resource group.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @return UpdateResourceGroupResponse

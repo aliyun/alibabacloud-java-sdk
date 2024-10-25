@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -184,7 +184,7 @@ public class ListDIJobsResponseBody extends TeaModel {
 
     public static class ListDIJobsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The synchronization tasks that are returned.</p>
+         * <p>The synchronization tasks returned.</p>
          */
         @NameInMap("DIJobs")
         public java.util.List<ListDIJobsResponseBodyPagingInfoDIJobs> DIJobs;

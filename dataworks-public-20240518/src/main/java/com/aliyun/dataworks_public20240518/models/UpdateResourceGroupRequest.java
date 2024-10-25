@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateResourceGroupRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The new name that you want to change for the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>common_resource_group</p>
      */
@@ -21,6 +24,8 @@ public class UpdateResourceGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The new remarks that you want to modify for the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>创建用于普通任务的通用资源组</p>
      */
