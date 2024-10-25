@@ -1,3 +1,17 @@
+2024-10-25 Version: 7.1.0
+- Support API LaunchService.
+- Support API PreLaunchService.
+- Update API CreateService: add param ComplianceMetadata.
+- Update API CreateService: update param ServiceInfo.
+- Update API GetService: add param ServiceInstanceId.
+- Update API GetService: add param ServiceName.
+- Update API GetService: update param ServiceId.
+- Update API GetService: update response param.
+- Update API UpdateService: add param ComplianceMetadata.
+- Update API UpdateService: update param ServiceInfo.
+- Update API UpdateServiceInstanceAttribute: add param Reason.
+
+
 2024-08-26 Version: 7.0.0
 - Support API ApproveServiceUsage.
 - Support API CreateServiceUsage.

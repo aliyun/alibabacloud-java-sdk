@@ -75,6 +75,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("ComplianceMetadata")
+    public GetServiceResponseBodyComplianceMetadata complianceMetadata;
+
     /**
      * <p>The time when the service was created.</p>
      * 
@@ -636,6 +639,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public GetServiceResponseBody setComplianceMetadata(GetServiceResponseBodyComplianceMetadata complianceMetadata) {
+        this.complianceMetadata = complianceMetadata;
+        return this;
+    }
+    public GetServiceResponseBodyComplianceMetadata getComplianceMetadata() {
+        return this.complianceMetadata;
     }
 
     public GetServiceResponseBody setCreateTime(String createTime) {
@@ -1771,6 +1782,25 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
 
+    public static class GetServiceResponseBodyComplianceMetadata extends TeaModel {
+        @NameInMap("CompliancePacks")
+        public java.util.List<String> compliancePacks;
+
+        public static GetServiceResponseBodyComplianceMetadata build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyComplianceMetadata self = new GetServiceResponseBodyComplianceMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyComplianceMetadata setCompliancePacks(java.util.List<String> compliancePacks) {
+            this.compliancePacks = compliancePacks;
+            return this;
+        }
+        public java.util.List<String> getCompliancePacks() {
+            return this.compliancePacks;
+        }
+
+    }
+
     public static class GetServiceResponseBodyServiceInfosAgreements extends TeaModel {
         /**
          * <p>The agreement name.</p>
@@ -1809,6 +1839,36 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyServiceInfosSoftwares extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static GetServiceResponseBodyServiceInfosSoftwares build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyServiceInfosSoftwares self = new GetServiceResponseBodyServiceInfosSoftwares();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyServiceInfosSoftwares setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetServiceResponseBodyServiceInfosSoftwares setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -1869,6 +1929,9 @@ public class GetServiceResponseBody extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        @NameInMap("Softwares")
+        public java.util.List<GetServiceResponseBodyServiceInfosSoftwares> softwares;
+
         public static GetServiceResponseBodyServiceInfos build(java.util.Map<String, ?> map) throws Exception {
             GetServiceResponseBodyServiceInfos self = new GetServiceResponseBodyServiceInfos();
             return TeaModel.build(map, self);
@@ -1920,6 +1983,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getShortDescription() {
             return this.shortDescription;
+        }
+
+        public GetServiceResponseBodyServiceInfos setSoftwares(java.util.List<GetServiceResponseBodyServiceInfosSoftwares> softwares) {
+            this.softwares = softwares;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyServiceInfosSoftwares> getSoftwares() {
+            return this.softwares;
         }
 
     }

@@ -44,6 +44,9 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("Commodity")
     public UpdateServiceRequestCommodity commodity;
 
+    @NameInMap("ComplianceMetadata")
+    public UpdateServiceRequestComplianceMetadata complianceMetadata;
+
     /**
      * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
      * 
@@ -294,6 +297,14 @@ public class UpdateServiceRequest extends TeaModel {
     }
     public UpdateServiceRequestCommodity getCommodity() {
         return this.commodity;
+    }
+
+    public UpdateServiceRequest setComplianceMetadata(UpdateServiceRequestComplianceMetadata complianceMetadata) {
+        this.complianceMetadata = complianceMetadata;
+        return this;
+    }
+    public UpdateServiceRequestComplianceMetadata getComplianceMetadata() {
+        return this.complianceMetadata;
     }
 
     public UpdateServiceRequest setDeployMetadata(String deployMetadata) {
@@ -784,6 +795,25 @@ public class UpdateServiceRequest extends TeaModel {
 
     }
 
+    public static class UpdateServiceRequestComplianceMetadata extends TeaModel {
+        @NameInMap("CompliancePacks")
+        public java.util.List<String> compliancePacks;
+
+        public static UpdateServiceRequestComplianceMetadata build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceRequestComplianceMetadata self = new UpdateServiceRequestComplianceMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceRequestComplianceMetadata setCompliancePacks(java.util.List<String> compliancePacks) {
+            this.compliancePacks = compliancePacks;
+            return this;
+        }
+        public java.util.List<String> getCompliancePacks() {
+            return this.compliancePacks;
+        }
+
+    }
+
     public static class UpdateServiceRequestServiceInfoAgreements extends TeaModel {
         /**
          * <p>Protocol name.</p>
@@ -822,6 +852,36 @@ public class UpdateServiceRequest extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class UpdateServiceRequestServiceInfoSoftwares extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static UpdateServiceRequestServiceInfoSoftwares build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceRequestServiceInfoSoftwares self = new UpdateServiceRequestServiceInfoSoftwares();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceRequestServiceInfoSoftwares setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateServiceRequestServiceInfoSoftwares setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -882,6 +942,9 @@ public class UpdateServiceRequest extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        @NameInMap("Softwares")
+        public java.util.List<UpdateServiceRequestServiceInfoSoftwares> softwares;
+
         public static UpdateServiceRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceRequestServiceInfo self = new UpdateServiceRequestServiceInfo();
             return TeaModel.build(map, self);
@@ -933,6 +996,14 @@ public class UpdateServiceRequest extends TeaModel {
         }
         public String getShortDescription() {
             return this.shortDescription;
+        }
+
+        public UpdateServiceRequestServiceInfo setSoftwares(java.util.List<UpdateServiceRequestServiceInfoSoftwares> softwares) {
+            this.softwares = softwares;
+            return this;
+        }
+        public java.util.List<UpdateServiceRequestServiceInfoSoftwares> getSoftwares() {
+            return this.softwares;
         }
 
     }
