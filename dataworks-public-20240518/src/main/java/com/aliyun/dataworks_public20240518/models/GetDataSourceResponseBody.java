@@ -8,6 +8,8 @@ public class GetDataSourceResponseBody extends TeaModel {
     public GetDataSourceResponseBodyDataSource dataSource;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
@@ -37,6 +39,8 @@ public class GetDataSourceResponseBody extends TeaModel {
 
     public static class GetDataSourceResponseBodyDataSource extends TeaModel {
         /**
+         * <p>The connection properties of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;envType&quot;: &quot;Prod&quot;,
@@ -52,6 +56,13 @@ public class GetDataSourceResponseBody extends TeaModel {
         public Object connectionProperties;
 
         /**
+         * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</p>
+         * <ul>
+         * <li>InstanceMode: instance mode</li>
+         * <li>UrlMode: connection string mode</li>
+         * <li>CdhMode: CDH cluster mode</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UrlMode</p>
          */
@@ -59,6 +70,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public String connectionPropertiesMode;
 
         /**
+         * <p>The time when the data source was added. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1698286929333</p>
          */
@@ -66,6 +79,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the user who adds the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538</p>
          */
@@ -73,6 +88,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The description of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -80,6 +97,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>16738</p>
          */
@@ -87,6 +106,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The time when the data source was last modified. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1698286929333</p>
          */
@@ -94,6 +115,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The ID of the user who modifies the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538</p>
          */
@@ -101,6 +124,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -108,6 +133,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the workspace with which the data source is associated.</p>
+         * 
          * <strong>example:</strong>
          * <p>52660</p>
          */
@@ -115,6 +142,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database} format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</p>
          */
@@ -122,6 +151,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         public String qualifiedName;
 
         /**
+         * <p>The type of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>hologres</p>
          */

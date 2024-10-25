@@ -1,0 +1,177 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks_public20240518.models;
+
+import com.aliyun.tea.*;
+
+public class ListDataQualityEvaluationTaskInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-04-01</p>
+     */
+    @NameInMap("BizdateFrom")
+    public String bizdateFrom;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2024-05-01</p>
+     */
+    @NameInMap("BizdateTo")
+    public String bizdateTo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1710239005403</p>
+     */
+    @NameInMap("CreateTimeFrom")
+    public Long createTimeFrom;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1710239005403</p>
+     */
+    @NameInMap("CreateTimeTo")
+    public Long createTimeTo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
+    @NameInMap("DataQualityEvaluationTaskId")
+    public Long dataQualityEvaluationTaskId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>odps.unit_test.tb_unit_test</p>
+     */
+    @NameInMap("TableGuid")
+    public String tableGuid;
+
+    /**
+     * <strong>example:</strong>
+     * <p>CWF2</p>
+     */
+    @NameInMap("TriggerClient")
+    public String triggerClient;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
+    @NameInMap("TriggerClientId")
+    public String triggerClientId;
+
+    public static ListDataQualityEvaluationTaskInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDataQualityEvaluationTaskInstancesRequest self = new ListDataQualityEvaluationTaskInstancesRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setBizdateFrom(String bizdateFrom) {
+        this.bizdateFrom = bizdateFrom;
+        return this;
+    }
+    public String getBizdateFrom() {
+        return this.bizdateFrom;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setBizdateTo(String bizdateTo) {
+        this.bizdateTo = bizdateTo;
+        return this;
+    }
+    public String getBizdateTo() {
+        return this.bizdateTo;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setCreateTimeFrom(Long createTimeFrom) {
+        this.createTimeFrom = createTimeFrom;
+        return this;
+    }
+    public Long getCreateTimeFrom() {
+        return this.createTimeFrom;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setCreateTimeTo(Long createTimeTo) {
+        this.createTimeTo = createTimeTo;
+        return this;
+    }
+    public Long getCreateTimeTo() {
+        return this.createTimeTo;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setDataQualityEvaluationTaskId(Long dataQualityEvaluationTaskId) {
+        this.dataQualityEvaluationTaskId = dataQualityEvaluationTaskId;
+        return this;
+    }
+    public Long getDataQualityEvaluationTaskId() {
+        return this.dataQualityEvaluationTaskId;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setTriggerClient(String triggerClient) {
+        this.triggerClient = triggerClient;
+        return this;
+    }
+    public String getTriggerClient() {
+        return this.triggerClient;
+    }
+
+    public ListDataQualityEvaluationTaskInstancesRequest setTriggerClientId(String triggerClientId) {
+        this.triggerClientId = triggerClientId;
+        return this;
+    }
+    public String getTriggerClientId() {
+        return this.triggerClientId;
+    }
+
+}

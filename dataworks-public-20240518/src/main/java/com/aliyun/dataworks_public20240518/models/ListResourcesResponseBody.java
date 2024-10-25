@@ -231,7 +231,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public ListResourcesResponseBodyPagingInfoResourcesScript script;
 
         /**
-         * <p>The storage path of the source of the file resource. If the value of the SourecType parameter is local, this parameter is empty.</p>
+         * <p>The path of the source of the file resource. If the SourecType parameter is set to Local, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
@@ -241,6 +241,11 @@ public class ListResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The storage type of the source of the file resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Local</li>
+         * <li>Oss</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>local</p>
@@ -259,6 +264,12 @@ public class ListResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The storage type of the destination of the file resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Gateway</li>
+         * <li>Oss</li>
+         * <li>Hdfs</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -270,10 +281,10 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>The type of the file resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>jar</li>
-         * <li>python</li>
-         * <li>file</li>
-         * <li>archive</li>
+         * <li>Python</li>
+         * <li>Jar</li>
+         * <li>Archive</li>
+         * <li>File</li>
          * </ul>
          * 
          * <strong>example:</strong>
