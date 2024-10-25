@@ -56,6 +56,12 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The Query Type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>orca</p>
+     */
     @NameInMap("Type")
     public String type;
 

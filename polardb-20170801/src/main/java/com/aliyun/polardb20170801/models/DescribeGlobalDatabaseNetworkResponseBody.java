@@ -92,6 +92,12 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @NameInMap("GDNStatus")
     public String GDNStatus;
 
+    /**
+     * <p>The global domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[gdnid].gdn.rds.aliyuncs.com</p>
+     */
     @NameInMap("GlobalDomainName")
     public String globalDomainName;
 
@@ -452,6 +458,12 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDatabaseNetworkResponseBodyDBClusters extends TeaModel {
+        /**
+         * <p>The edition of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Category")
         public String category;
 

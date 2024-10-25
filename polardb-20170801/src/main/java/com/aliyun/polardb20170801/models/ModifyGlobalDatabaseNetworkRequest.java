@@ -4,16 +4,22 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
+    /**
+     * <p>Create a global domain</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableGlobalDomainName")
     public Boolean enableGlobalDomainName;
 
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
      * <ul>
-     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>It must start with a letter.</li>
-     * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>It must be 2 to 126 characters in length.</li>
+     * <li>The description cannot start with http:// or https://.</li>
+     * <li>The description must start with a letter.</li>
+     * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>The description must be 2 to 126 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +29,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
     public String GDNDescription;
 
     /**
-     * <p>The ID of the GDN.</p>
+     * <p>The GDN ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +45,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>

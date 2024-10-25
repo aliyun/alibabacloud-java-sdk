@@ -628,7 +628,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> addressItems;
 
         /**
-         * <p>The type of the source database.</p>
+         * <p>The role of the source database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnly
+         * Maxscale
+         * Primary</p>
          */
         @NameInMap("CustinsType")
         public String custinsType;

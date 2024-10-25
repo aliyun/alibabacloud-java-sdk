@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateDBClusterEndpointRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically associate newly added nodes with the cluster endpoint. Valid values:</p>
+     * <p>Specifies whether to enable automatic association of newly added nodes with the cluster endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong>: Newly added nodes are automatically associated with the cluster endpoint.</li>
-     * <li><strong>Disable</strong>: Newly added nodes are not automatically associated with the cluster endpoint.</li>
+     * <li><strong>Enable</strong>: enables automatic association of newly added nodes with the cluster endpoint.</li>
+     * <li><strong>Disable</strong> (default): disables automatic association of newly added nodes with the cluster endpoint.</li>
      * </ul>
-     * <p>Default value: <strong>Disable</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Disable</p>
@@ -127,9 +126,25 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Global consistency timeout strategy. The value range is as follows:</p>
+     * <ul>
+     * <li><strong>0</strong>: Send the request to the primary node</li>
+     * <li><strong>2</strong>: Timeout degradation, when a global consistency read times out, the query operation will automatically degrade to an inconsistent read, and the client will not receive an error message</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PolarSccTimeoutAction")
     public String polarSccTimeoutAction;
 
+    /**
+     * <p>Global consistency timeout</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PolarSccWaitTimeout")
     public String polarSccWaitTimeout;
 
@@ -153,6 +168,15 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Whether the node has enabled the global consistency (high-performance mode) feature. The value range is as follows:</p>
+     * <ul>
+     * <li><strong>ON</strong>: Enabled - <strong>OFF</strong>: Disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("SccMode")
     public String sccMode;
 

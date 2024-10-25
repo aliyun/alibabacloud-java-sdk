@@ -18,6 +18,15 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     public String allowShutDown;
 
     /**
+     * <p>Cycle policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>143f8e9f-2566-4dff-be47-bed79f28fc78</p>
+     */
+    @NameInMap("CrontabJobId")
+    public String crontabJobId;
+
+    /**
      * <p>The ID of the serverless cluster.</p>
      * <p>This parameter is required.</p>
      * 
@@ -145,14 +154,42 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;
 
+    /**
+     * <p>CPU burst threshold</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("ServerlessRuleCpuEnlargeThreshold")
     public String serverlessRuleCpuEnlargeThreshold;
 
+    /**
+     * <p>CPU downscale threshold</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("ServerlessRuleCpuShrinkThreshold")
     public String serverlessRuleCpuShrinkThreshold;
 
+    /**
+     * <p>Elastic sensitivity. Values: - normal: standard - flexible: sensitive</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal
+     * flexible</p>
+     */
     @NameInMap("ServerlessRuleMode")
     public String serverlessRuleMode;
+
+    /**
+     * <p>Asynchronous task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>143f8e9f-2566-4dff-be47-bed79f28fc78</p>
+     */
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static ModifyDBClusterServerlessConfRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterServerlessConfRequest self = new ModifyDBClusterServerlessConfRequest();
@@ -165,6 +202,14 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     }
     public String getAllowShutDown() {
         return this.allowShutDown;
+    }
+
+    public ModifyDBClusterServerlessConfRequest setCrontabJobId(String crontabJobId) {
+        this.crontabJobId = crontabJobId;
+        return this;
+    }
+    public String getCrontabJobId() {
+        return this.crontabJobId;
     }
 
     public ModifyDBClusterServerlessConfRequest setDBClusterId(String DBClusterId) {
@@ -309,6 +354,14 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     }
     public String getServerlessRuleMode() {
         return this.serverlessRuleMode;
+    }
+
+    public ModifyDBClusterServerlessConfRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

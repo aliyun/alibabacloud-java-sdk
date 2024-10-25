@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The ID of cluster.</p>
+     * <p>Cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-*****************</p>
@@ -14,7 +14,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The type of the database engine.</p>
+     * <p>Database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb_mysql</p>
@@ -23,13 +23,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>Details about slow query logs.</p>
+     * <p>List of slow log details.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>Page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>Number of records on this page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -56,7 +56,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of SQL statements.</p>
+     * <p>Total number of SQL statements.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -127,7 +127,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord extends TeaModel {
         /**
-         * <p>The name of the database.</p>
+         * <p>Database name.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb</p>
@@ -136,7 +136,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>Node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-*****************</p>
@@ -145,7 +145,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The time when the SQL statement was executed. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * <p>Time when the SQL starts execution. The format is <code>YYYY-MM-DDThh:mmZ</code> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-07T03:47Z</p>
@@ -154,7 +154,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String executionStartTime;
 
         /**
-         * <p>The IP address of the client that is used to connect to the database.</p>
+         * <p>Client address connecting to the database.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb[testdb] @  [100.<strong>.</strong>.242]</p>
@@ -163,7 +163,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String hostAddress;
 
         /**
-         * <p>The period of time during which the SQL statement was locked. Unit: seconds.</p>
+         * <p>SQL lock duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -172,7 +172,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long lockTimes;
 
         /**
-         * <p>The number of rows parsed by the SQL statement.</p>
+         * <p>Number of rows parsed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -181,7 +181,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long parseRowCounts;
 
         /**
-         * <p>The time range for the query. Unit: milliseconds.</p>
+         * <p>Query time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -190,7 +190,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long queryTimeMS;
 
         /**
-         * <p>The amount of time that was consumed to execute the SQL statement. Unit: seconds.</p>
+         * <p>SQL execution duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,7 +199,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long queryTimes;
 
         /**
-         * <p>The number of rows returned by the SQL statement.</p>
+         * <p>Number of rows returned.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -207,11 +207,17 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        /**
+         * <p>Unique identifier for the SQL statement in slow log statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U2FsdGVk****</p>
+         */
         @NameInMap("SQLHash")
         public String SQLHash;
 
         /**
-         * <p>The SQL statement that is executed in the query.</p>
+         * <p>Query statement.</p>
          */
         @NameInMap("SQLText")
         public String SQLText;

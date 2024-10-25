@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>The ID of cluster.</p>
+     * <p>Cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface to view all cluster information in the target region, including the Cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>Database name.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -27,9 +27,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The interval between the start time and end time must be within 24 hours. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>End time of the query, which must be later than the start time, and the time interval between the start and end times must not exceed 24 hours. The format is <code>YYYY-MM-DDThh:mmZ</code> (UTC time).</p>
      * <blockquote>
-     * <p>This parameter must be set to a time value in UTC (UTC+0 time zone). If your service resides in another time zone, convert the time value. For example, if the local time in the time zone where your service resides is 12:00 (UTC +8) and you want to query slow query logs at 08:00 (UTC +8) to 12:00, set this parameter to a time value that ranges from 00:00, set this parameter to 04:00.</p>
+     * <p>The input is UTC time (i.e., 0 timezone). If your service is currently in a different timezone, please perform a time conversion. For example, if the current timezone of your service is Beijing Time (UTC+8) at 12:00, and you need to query the slow logs between 08:00-12:00 Beijing Time, you should input 00:00-04:00.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,6 +39,12 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Node ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-**********</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -49,8 +55,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is larger than 0.</p>
-     * <p>Default value: <strong>1</strong>.</p>
+     * <p>Page number, with a range greater than 0 and not exceeding the maximum value of Integer.</p>
+     * <p>The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,13 +65,13 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>Number of records per page, with the following options:</p>
      * <ul>
      * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
      * </ul>
-     * <p>Default value: <strong>30</strong>.</p>
+     * <p>The default value is <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -74,9 +80,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>Region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available for your account, such as the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface to view the available regions under the target account, including the Region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -93,7 +99,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
+     * <p>Unique identifier of the SQL statement in the slow log statistics, which can be used to obtain the detailed slow logs for that SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>U2FsdGVk****</p>
@@ -102,15 +108,13 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String SQLHASH;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>Start time of the query. The format is <code>YYYY-MM-DDThh:mmZ</code> (UTC time).</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can specify a time range of up to 30 days.</p>
-     * </li>
-     * <li><p>This parameter must be set to a time value in UTC (UTC+0 time zone). If your service resides in another time zone, convert the time value. For example, if the local time in the time zone where your service resides is 12:00 (UTC +8) and you want to query slow query logs at 08:00 (UTC +8) to 12:00, set this parameter to a time value that ranges from 00:00, set this parameter to 04:00.</p>
-     * </li>
+     * <li>Supports viewing slow log information up to 30 days.</li>
+     * <li>The input is UTC time (i.e., 0 timezone). If your service is currently in a different timezone, please perform a time conversion. For example, if the current timezone of your service is Beijing Time (UTC+8) at 12:00, and you need to query the slow logs between 08:00-12:00 Beijing Time, you should input 00:00-04:00.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

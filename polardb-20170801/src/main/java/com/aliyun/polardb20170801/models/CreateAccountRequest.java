@@ -51,18 +51,18 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The permissions that are granted to the account. Valid values:</p>
      * <ul>
-     * <li><strong>ReadWrite</strong>: read and write permissions</li>
-     * <li><strong>ReadOnly</strong>: read-only permissions</li>
-     * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements</li>
-     * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements</li>
-     * <li><strong>ReadIndex</strong>: the read and index permissions</li>
+     * <li><strong>ReadWrite</strong>: read and write permissions.</li>
+     * <li><strong>ReadOnly</strong>: read-only permissions.</li>
+     * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements.</li>
+     * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements.</li>
+     * <li><strong>ReadIndex</strong>: the read-only and index permissions.</li>
      * </ul>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>The <code>AccountPrivilege</code> parameter is valid only after you specify the <code>DBName</code> parameter.</p>
+     * <li><p><code>AccountPrivilege</code> is valid only after you specify <code>DBName</code>.</p>
      * </li>
-     * <li><p>If multiple database names are specified by the <code>DBName</code> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <code>DBName</code> to <code>DB1,DB2</code>, and set <code>AccountPrivilege</code> to <code>ReadWrite,ReadOnly</code>.</p>
+     * <li><p>If multiple database names are specified by the <code>DBName</code> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,), and make sure that the length of the value of <code>AccountPrivilege</code> does not exceed 900. For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <code>DBName</code> to <code>DB1,DB2</code> and set <code>AccountPrivilege</code> to <code>ReadWrite,ReadOnly</code>.</p>
      * </li>
      * <li><p>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
      * </li>
@@ -119,7 +119,7 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).</p>
      * <blockquote>
-     * <p>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+     * <p> This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,6 +134,16 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to grant the specified account required permissions on all existing databases in the current cluster and databases that will be further created for the current cluster. Valid values:</p>
+     * <ul>
+     * <li><strong>0 or unspecified</strong>: does not grant required permissions.</li>
+     * <li><strong>1</strong>: grants required permissions.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PrivForAllDB")
     public String privForAllDB;
 

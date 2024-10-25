@@ -52,6 +52,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @NameInMap("DBRevisionVersion")
     public String DBRevisionVersion;
 
+    /**
+     * <p>The versions to which the cluster can be upgraded.</p>
+     */
     @NameInMap("DBRevisionVersionList")
     public java.util.List<DescribeDBClusterVersionResponseBodyDBRevisionVersionList> DBRevisionVersionList;
 

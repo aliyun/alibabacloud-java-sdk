@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateColdStorageInstanceRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
      */
@@ -12,6 +14,8 @@ public class CreateColdStorageInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the cluster. The description cannot exceed 256 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */
@@ -19,6 +23,7 @@ public class CreateColdStorageInstanceRequest extends TeaModel {
     public String coldStorageInstanceDescription;
 
     /**
+     * <p>The cluster ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters within your account, such as cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +39,8 @@ public class CreateColdStorageInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-************</p>
      */

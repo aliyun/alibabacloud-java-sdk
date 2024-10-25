@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of cluster.</p>
+     * <p>Cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>You can view detailed information about all clusters under your account, including the cluster ID, through the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeDBClusterAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to query information about AI-related nodes.</p>
+     * <p>Whether to obtain information about AI-related nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>

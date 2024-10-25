@@ -14,6 +14,8 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
      */
@@ -21,6 +23,8 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>
      */
