@@ -53,7 +53,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -106,10 +106,10 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the ENI. Valid values:</p>
+     * <p>The type of the ENI. Valid Values:</p>
      * <ul>
-     * <li>Primary</li>
-     * <li>Secondary</li>
+     * <li>Primary: primary ENI.</li>
+     * <li>Secondary: secondary ENI.</li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
      * 

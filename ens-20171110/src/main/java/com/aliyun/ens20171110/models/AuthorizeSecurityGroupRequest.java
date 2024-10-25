@@ -52,7 +52,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public String portRange;
 
     /**
-     * <p>The priority of the security group rule. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>The priority of security group rule N. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>

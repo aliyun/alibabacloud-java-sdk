@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateSnatEntryRequest extends TeaModel {
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
      * <p>This parameter is required.</p>
@@ -81,6 +84,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     public static CreateSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnatEntryRequest self = new CreateSnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSnatEntryRequest setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     public CreateSnatEntryRequest setNatGatewayId(String natGatewayId) {

@@ -42,6 +42,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateNatGatewayRequestTag> tag;
+
     /**
      * <p>The ID of the vSwitch.</p>
      * <p>This parameter is required.</p>
@@ -89,12 +92,50 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.networkId;
     }
 
+    public CreateNatGatewayRequest setTag(java.util.List<CreateNatGatewayRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateNatGatewayRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateNatGatewayRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateNatGatewayRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateNatGatewayRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatGatewayRequestTag self = new CreateNatGatewayRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateNatGatewayRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

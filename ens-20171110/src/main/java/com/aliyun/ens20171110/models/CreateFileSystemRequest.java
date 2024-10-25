@@ -90,7 +90,7 @@ public class CreateFileSystemRequest extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The storage protocol. Valid values: nsf and smb.</p>
+         * <p>The storage protocol. Set the value to nfs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

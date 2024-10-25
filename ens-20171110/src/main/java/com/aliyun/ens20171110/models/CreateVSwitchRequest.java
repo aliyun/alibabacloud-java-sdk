@@ -48,6 +48,9 @@ public class CreateVSwitchRequest extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateVSwitchRequestTag> tag;
+
     /**
      * <p>The name of the vSwitch. The name must meet the following requirements:</p>
      * <ul>
@@ -99,12 +102,50 @@ public class CreateVSwitchRequest extends TeaModel {
         return this.networkId;
     }
 
+    public CreateVSwitchRequest setTag(java.util.List<CreateVSwitchRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateVSwitchRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateVSwitchRequest setVSwitchName(String vSwitchName) {
         this.vSwitchName = vSwitchName;
         return this;
     }
     public String getVSwitchName() {
         return this.vSwitchName;
+    }
+
+    public static class CreateVSwitchRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateVSwitchRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateVSwitchRequestTag self = new CreateVSwitchRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVSwitchRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateVSwitchRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

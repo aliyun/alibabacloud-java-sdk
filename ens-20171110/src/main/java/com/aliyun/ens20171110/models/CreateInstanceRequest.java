@@ -101,11 +101,11 @@ public class CreateInstanceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The type of IP address. Valid values:</p>
+     * <p>The type of the IP address. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong>: IPv4. This is the default value.</li>
-     * <li><strong>ipv6</strong>: IPv6.</li>
-     * <li><strong>ipv4Andipv6</strong>: IPv4 and IPv6.</li>
+     * <li><strong>ipv4</strong> (default)</li>
+     * <li><strong>ipv6</strong></li>
+     * <li><strong>ipv4Andipv6</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean passwordInherit;
 
     /**
-     * <p>The billing method of the instance. The value is set to Subscription.</p>
+     * <p>The billing method of the instance. Set the value to Subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>Subscription</p>
@@ -203,7 +203,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String quantity;
 
     /**
-     * <p>Specifies whether to automatically append sequential suffixes to the hostnames specified by the <strong>HostName</strong> parameter and instance names specified by the <strong>InstanceName</strong> parameter. The sequential numbers in the suffix range from <strong>001</strong> to <strong>999</strong>.</p>
+     * <p>Specifies whether to automatically append sequential suffixes to the hostnames specified by the <strong>HostName</strong> parameter and instance names specified by the <strong>InstanceName</strong> parameter. The sequential suffixes range from <strong>001</strong> to <strong>999</strong>.</p>
      * <p>Examples: <strong>LocalHost001</strong> and <strong>LocalHost002</strong>, and <strong>MyInstance001</strong> and <strong>MyInstance002</strong>.</p>
      * <p>Default value: <strong>false</strong>.</p>
      * 

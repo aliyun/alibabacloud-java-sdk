@@ -47,7 +47,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The billing method of the instance. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</p>
+     * <p>The billing method of the cluster. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

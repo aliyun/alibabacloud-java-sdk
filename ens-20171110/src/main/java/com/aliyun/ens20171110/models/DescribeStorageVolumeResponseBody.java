@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageVolumeResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,16 +23,23 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of returned results.</p>
+     */
     @NameInMap("StorageVolumes")
     public java.util.List<DescribeStorageVolumeResponseBodyStorageVolumes> storageVolumes;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -82,6 +93,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
 
     public static class DescribeStorageVolumeResponseBodyStorageVolumes extends TeaModel {
         /**
+         * <p>The authentication protocol. The value is set to <strong>CHAP</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHAP</p>
          */
@@ -89,6 +102,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String authProtocol;
 
         /**
+         * <p>The time when the volume was created. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-14T09:35:32Z</p>
          */
@@ -96,6 +111,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The description of the volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>testDescription</p>
          */
@@ -103,6 +120,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-3</p>
          */
@@ -110,6 +129,12 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
+         * <p>Indicates whether authentication is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Authentication is enabled.</li>
+         * <li><strong>0</strong> (default): Authentication is disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -117,6 +142,12 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public Integer isAuth;
 
         /**
+         * <p>Indicates whether the volume is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): The volume is enabled.</li>
+         * <li><strong>0</strong>: The volume is disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +155,14 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public Integer isEnable;
 
         /**
+         * <p>The status of the volume. Valid values:</p>
+         * <ul>
+         * <li>creating</li>
+         * <li>available</li>
+         * <li>deleting</li>
+         * <li>deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>available</p>
          */
@@ -131,6 +170,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the storage gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>sgw-***</p>
          */
@@ -138,6 +179,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String storageGatewayId;
 
         /**
+         * <p>The ID of the storage medium.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-***</p>
          */
@@ -145,6 +188,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String storageId;
 
         /**
+         * <p>The ID of the volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>sv-***</p>
          */
@@ -152,6 +197,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String storageVolumeId;
 
         /**
+         * <p>The name of the volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>testVolumeName</p>
          */
@@ -159,6 +206,8 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         public String storageVolumeName;
 
         /**
+         * <p>The destination of the volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>iqn.<em>.</em>.<em>:</em></p>
          */

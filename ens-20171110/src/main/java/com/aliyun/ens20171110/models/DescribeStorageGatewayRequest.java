@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageGatewayRequest extends TeaModel {
     /**
+     * <p>The ID of the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-cmcc</p>
      */
@@ -12,6 +14,8 @@ public class DescribeStorageGatewayRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>sgw-****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeStorageGatewayRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The type of the gateway. Set this parameter to <strong>1</strong>. <strong>1</strong> indicates iSCSI.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeStorageGatewayRequest extends TeaModel {
     public String gatewayType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class DescribeStorageGatewayRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class DescribeStorageGatewayRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
      * <strong>example:</strong>
      * <p>n-***</p>
      */

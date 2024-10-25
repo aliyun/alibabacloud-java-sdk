@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployInstanceSDGRequest extends TeaModel {
     /**
-     * <p>The deployment type of the SDG. Valid values:</p>
-     * <ul>
-     * <li>shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.</li>
-     * </ul>
+     * <p>The deployment type of the SDG. shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>shared</p>

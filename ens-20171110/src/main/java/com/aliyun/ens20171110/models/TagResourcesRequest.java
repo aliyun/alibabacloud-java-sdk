@@ -5,18 +5,14 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The IDs of the resources. You can add up to 50 resource IDs in a call.</p>
+     * <p>The resource IDs. You can add up to 50 resource IDs in a call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of resource to query.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>instance</li>
-     * </ul>
+     * <p>The type of resource. Set the value to instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

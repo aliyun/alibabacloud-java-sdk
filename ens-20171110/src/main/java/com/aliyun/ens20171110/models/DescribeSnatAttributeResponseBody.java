@@ -23,7 +23,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     public String destCIDR;
 
     /**
-     * <p>Timeout period.</p>
+     * <p>The timeout period. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -130,12 +130,10 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the NAT. Valid values: </p>
+     * <p>The type of the NAT.</p>
      * <ul>
-     * <li><p>Empty: symmetric NAT.</p>
-     * </li>
-     * <li><p>FullCone: full cone NAT.</p>
-     * </li>
+     * <li>Empty: symmetric NAT.</li>
+     * <li>FullCone: full cone NAT.</li>
      * </ul>
      * 
      * <strong>example:</strong>

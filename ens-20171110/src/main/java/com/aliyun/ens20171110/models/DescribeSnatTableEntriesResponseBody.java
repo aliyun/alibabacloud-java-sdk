@@ -32,7 +32,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of SNAT entries.</p>
+     * <p>The details of the SNAT entries.</p>
      */
     @NameInMap("SnatTableEntries")
     public java.util.List<DescribeSnatTableEntriesResponseBodySnatTableEntries> snatTableEntries;
@@ -92,6 +92,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntries extends TeaModel {
+        @NameInMap("IdleTimeout")
+        public Integer idleTimeout;
+
         /**
          * <p>The ID of the NAT gateway.</p>
          * 
@@ -178,6 +181,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         public static DescribeSnatTableEntriesResponseBodySnatTableEntries build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnatTableEntriesResponseBodySnatTableEntries self = new DescribeSnatTableEntriesResponseBodySnatTableEntries();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntries setIdleTimeout(Integer idleTimeout) {
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
         }
 
         public DescribeSnatTableEntriesResponseBodySnatTableEntries setNatGatewayId(String natGatewayId) {

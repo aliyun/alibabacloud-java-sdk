@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageGatewayResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,9 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <p>Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -27,10 +32,15 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list information.</p>
+     */
     @NameInMap("StorageGateways")
     public java.util.List<DescribeStorageGatewayResponseBodyStorageGateways> storageGateways;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -84,6 +94,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
 
     public static class DescribeStorageGatewayResponseBodyStorageGateways extends TeaModel {
         /**
+         * <p>The internal CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.2.0/24</p>
          */
@@ -91,6 +103,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The time when the storage gateway was created. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-14T03:07:47Z</p>
          */
@@ -98,6 +112,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The description of the storage gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>testDescription</p>
          */
@@ -105,6 +121,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-cmcc</p>
          */
@@ -112,6 +130,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
+         * <p>The IP address of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p><em>.</em>.<em>.</em></p>
          */
@@ -119,6 +139,14 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String serviceIp;
 
         /**
+         * <p>The status of the storage gateway. Valid values:</p>
+         * <ul>
+         * <li>creating</li>
+         * <li>available</li>
+         * <li>deleting</li>
+         * <li>deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>available</p>
          */
@@ -126,6 +154,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the storage gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>sgw-***</p>
          */
@@ -133,6 +163,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String storageGatewayId;
 
         /**
+         * <p>The name of the storage gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>testGateway</p>
          */
@@ -140,6 +172,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public String storageGatewayName;
 
         /**
+         * <p>The type of the storage gateway. Default value: 1, which indicates iSCSI.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -147,6 +181,8 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         public Integer storageGatewayType;
 
         /**
+         * <p>The ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>n-***</p>
          */

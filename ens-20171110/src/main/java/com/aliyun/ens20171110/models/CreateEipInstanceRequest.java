@@ -75,6 +75,9 @@ public class CreateEipInstanceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateEipInstanceRequestTag> tag;
+
     public static CreateEipInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEipInstanceRequest self = new CreateEipInstanceRequest();
         return TeaModel.build(map, self);
@@ -134,6 +137,44 @@ public class CreateEipInstanceRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateEipInstanceRequest setTag(java.util.List<CreateEipInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateEipInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateEipInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEipInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEipInstanceRequestTag self = new CreateEipInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEipInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEipInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

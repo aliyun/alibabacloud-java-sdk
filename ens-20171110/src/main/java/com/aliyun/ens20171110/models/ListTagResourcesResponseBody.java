@@ -86,7 +86,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>CLUSTER</p>

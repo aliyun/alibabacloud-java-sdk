@@ -25,7 +25,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of the ENS node.</p>
+     * <p>The ID of the ENS node. You can query the node ID by calling the <a href="~~DescribeEnsRegions~~">DescribeEnsRegions</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

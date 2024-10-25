@@ -95,6 +95,9 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateDiskRequestTag> tag;
+
     public static CreateDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDiskRequest self = new CreateDiskRequest();
         return TeaModel.build(map, self);
@@ -162,6 +165,44 @@ public class CreateDiskRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    public CreateDiskRequest setTag(java.util.List<CreateDiskRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDiskRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateDiskRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDiskRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDiskRequestTag self = new CreateDiskRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDiskRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDiskRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

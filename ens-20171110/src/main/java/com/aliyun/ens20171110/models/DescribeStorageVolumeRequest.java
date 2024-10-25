@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageVolumeRequest extends TeaModel {
     /**
+     * <p>The ID of the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen-3</p>
      */
@@ -12,6 +14,8 @@ public class DescribeStorageVolumeRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>sgw-****</p>
      */
@@ -19,6 +23,12 @@ public class DescribeStorageVolumeRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>Specifies whether to enable the volume. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong> (default): enables the volume.</li>
+     * <li><strong>0</strong>: disables the volume.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,8 @@ public class DescribeStorageVolumeRequest extends TeaModel {
     public Integer isEnable;
 
     /**
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +45,8 @@ public class DescribeStorageVolumeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +54,8 @@ public class DescribeStorageVolumeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the storage medium.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-***</p>
      */
@@ -47,6 +63,8 @@ public class DescribeStorageVolumeRequest extends TeaModel {
     public String storageId;
 
     /**
+     * <p>The ID of the volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>sv-***</p>
      */

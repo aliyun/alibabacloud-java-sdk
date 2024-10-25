@@ -57,6 +57,77 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("Size")
+        public String size;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("imageId")
+        public String imageId;
+
+        public static DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping self = new DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setSize(String size) {
+            this.size = size;
+            return this;
+        }
+        public String getSize() {
+            return this.size;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+    }
+
+    public static class DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings extends TeaModel {
+        @NameInMap("DiskDeviceMapping")
+        public java.util.List<DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> diskDeviceMapping;
+
+        public static DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings self = new DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings setDiskDeviceMapping(java.util.List<DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> diskDeviceMapping) {
+            this.diskDeviceMapping = diskDeviceMapping;
+            return this;
+        }
+        public java.util.List<DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> getDiskDeviceMapping() {
+            return this.diskDeviceMapping;
+        }
+
+    }
+
     public static class DescribeSelfImagesResponseBodyImagesImage extends TeaModel {
         /**
          * <p>The image architecture. Valid values:</p>
@@ -88,6 +159,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
          */
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("DiskDeviceMappings")
+        public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
         /**
          * <p>The ID of the image.</p>
@@ -129,6 +203,12 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @NameInMap("ImageSize")
         public String imageSize;
 
+        /**
+         * <p>The size of the image storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("ImageStorageSize")
         public String imageStorageSize;
 
@@ -222,6 +302,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImage setDiskDeviceMappings(DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
         }
 
         public DescribeSelfImagesResponseBodyImagesImage setImageId(String imageId) {

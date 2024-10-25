@@ -53,7 +53,7 @@ public class RemoveBackendServersRequest extends TeaModel {
         public String ip;
 
         /**
-         * <p>The backend port that is used by the ELB instance.</p>
+         * <p>The backend port that is used by the Edge Load Balancer (ELB) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -72,10 +72,10 @@ public class RemoveBackendServersRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
+         * <p>The type of backend server. Valid values:</p>
          * <ul>
          * <li><strong>ens</strong>: an Edge Node Service (ENS) instance.</li>
-         * <li><strong>eni</strong>: an elastic network interface (ENI).</li>
+         * <li><strong>eni</strong>: an Elastic Network Interface (ENI).</li>
          * </ul>
          * 
          * <strong>example:</strong>

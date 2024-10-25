@@ -51,7 +51,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The secondary private IP addresses that are assigned to the ENI.</p>
+         * <p>The assigned private IP addresses.</p>
          */
         @NameInMap("PrivateIpSet")
         public java.util.List<String> privateIpSet;
