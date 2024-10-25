@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApiTemplateRequest extends TeaModel {
     /**
-     * <p>The name of the API. You can create only a cluster API operation template. Set the value to CreateCluster.</p>
+     * <p>The name of the API operation. You can create only a cluster API operation template. Set the value to CreateCluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateApiTemplateRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a> API for creating a cluster.</p>
+     * <p>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a> API operation for creating a cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>Returned data.</p>
      */
     @NameInMap("Data")
     public Data data;
 
     /**
-     * <p>请求ID。</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -42,6 +42,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     public static class DailyReadRequest extends TeaModel {
         /**
+         * <p>Description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of read requests per day</p>
          */
@@ -49,6 +51,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>dailyReadRequest</p>
          */
@@ -56,6 +60,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -63,6 +69,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -110,6 +118,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     public static class DailyWriteRequest extends TeaModel {
         /**
+         * <p>Description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of write requests per day</p>
          */
@@ -117,6 +127,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>dailyWriteRequest</p>
          */
@@ -124,6 +136,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -131,6 +145,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -178,6 +194,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     public static class StoreFileCount extends TeaModel {
         /**
+         * <p>Description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of store file</p>
          */
@@ -185,7 +203,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>Metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>storeFileCount</p>
@@ -194,6 +212,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -250,6 +270,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     public static class TotalReadRequest extends TeaModel {
         /**
+         * <p>Metric description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Total read request</p>
          */
@@ -257,6 +279,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalReadRequest</p>
          */
@@ -264,6 +288,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Metric unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -271,6 +297,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>Metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -318,6 +346,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     public static class TotalWriteRequest extends TeaModel {
         /**
+         * <p>Metric description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Total Write Request</p>
          */
@@ -325,6 +355,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalWriteRequest</p>
          */
@@ -332,6 +364,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Metric unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -339,6 +373,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>Metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -385,21 +421,33 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     }
 
     public static class Metrics extends TeaModel {
+        /**
+         * <p>Number of read requests in a single day.</p>
+         */
         @NameInMap("DailyReadRequest")
         public DailyReadRequest dailyReadRequest;
 
+        /**
+         * <p>Number of write requests in a single day.</p>
+         */
         @NameInMap("DailyWriteRequest")
         public DailyWriteRequest dailyWriteRequest;
 
         /**
-         * <p>The number of StoreFiles.</p>
+         * <p>Store file count.</p>
          */
         @NameInMap("StoreFileCount")
         public StoreFileCount storeFileCount;
 
+        /**
+         * <p>Total read request count</p>
+         */
         @NameInMap("TotalReadRequest")
         public TotalReadRequest totalReadRequest;
 
+        /**
+         * <p>Total write request count</p>
+         */
         @NameInMap("TotalWriteRequest")
         public TotalWriteRequest totalWriteRequest;
 
@@ -452,12 +500,14 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     public static class Data extends TeaModel {
         /**
-         * <p>The metric information.</p>
+         * <p>Metrics information.</p>
          */
         @NameInMap("Metrics")
         public Metrics metrics;
 
         /**
+         * <p>Host of the RegionServer.</p>
+         * 
          * <strong>example:</strong>
          * <p>emr-worker-2.cluster-20****</p>
          */
@@ -465,6 +515,8 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         public String regionServerHost;
 
         /**
+         * <p>Table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>tb_item</p>
          */

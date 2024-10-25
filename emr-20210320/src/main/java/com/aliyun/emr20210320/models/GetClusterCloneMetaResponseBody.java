@@ -387,7 +387,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public Boolean existCloneConfig;
 
         /**
-         * <p>The attributes of the node.</p>
+         * <p>The attributes of all ECS instances.</p>
          */
         @NameInMap("NodeAttributes")
         public NodeAttributes nodeAttributes;

@@ -11,7 +11,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public java.util.List<InstanceType> instanceTypes;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of records returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>Returns the position of the read data.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -29,7 +29,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -38,7 +38,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total amount of data under the conditions of this request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

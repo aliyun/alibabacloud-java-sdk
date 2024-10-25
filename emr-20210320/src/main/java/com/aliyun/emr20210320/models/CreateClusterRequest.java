@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
+     * <p>The service configurations. Number of elements in the array: 1 to 1000.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>The applications. You can specify a maximum of 100 items.</p>
+     * <p>The services. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Application> applications;
 
     /**
-     * <p>The bootstrap actions. You can specify a maximum of 10 items.</p>
+     * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
@@ -74,18 +74,22 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("DeployMode")
     public String deployMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Emr cluster for ETL</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The attributes of all ECS instances.</p>
+     * <p>The attributes of all ECS instances. The basic attributes of all ECS instances in the cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>The node groups. You can specify a maximum of 100 items.</p>
+     * <p>The node groups. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -157,7 +161,7 @@ public class CreateClusterRequest extends TeaModel {
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The tags. You can specify a maximum of 20 items.</p>
+     * <p>The list of tags. Number of elements in the array: 0 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
