@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The details of the endpoints.</p>
+     * <p>The information about the endpoints.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBClusterEndpointsResponseBodyItems> items;

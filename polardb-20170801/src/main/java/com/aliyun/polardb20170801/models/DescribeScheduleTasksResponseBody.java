@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScheduleTasksResponseBody extends TeaModel {
     /**
-     * <p>The result data that is returned.</p>
+     * <p>The result data.</p>
      */
     @NameInMap("Data")
     public DescribeScheduleTasksResponseBodyData data;
@@ -86,6 +86,15 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
          */
         @NameInMap("Action")
         public String action;
+
+        /**
+         * <p>The ID of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86293c29-a03d-4872-b625-***********</p>
+         */
+        @NameInMap("CrontabJobId")
+        public String crontabJobId;
 
         /**
          * <p>The cluster ID.</p>
@@ -209,6 +218,14 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             return this.action;
         }
 
+        public DescribeScheduleTasksResponseBodyDataTimerInfos setCrontabJobId(String crontabJobId) {
+            this.crontabJobId = crontabJobId;
+            return this;
+        }
+        public String getCrontabJobId() {
+            return this.crontabJobId;
+        }
+
         public DescribeScheduleTasksResponseBodyDataTimerInfos setDBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
             return this;
@@ -327,7 +344,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The details of the scheduled task.</p>
+         * <p>The details of the scheduled tasks.</p>
          */
         @NameInMap("TimerInfos")
         public java.util.List<DescribeScheduleTasksResponseBodyDataTimerInfos> timerInfos;

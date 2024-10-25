@@ -21,6 +21,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +47,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -122,9 +124,9 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag keys.</p>
+         * <p>The key of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag keys.</p>
          * <blockquote>
-         * <p> You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of <code>Tag.N.Key</code> is paired with a value of <code>Tag.N.Value</code>.</p>
+         * <p> You can create up to 20 tags for a cluster at a time. The value of <code>Tag.N.Key</code> is paired with the value of <code>Tag.N.Value</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,9 +136,9 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag values.</p>
+         * <p>The value of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag values.</p>
          * <blockquote>
-         * <p> You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of <code>Tag.N.Value</code> is paired with a value of <code>Tag.N.Key</code>.</p>
+         * <p> You can create up to 20 tags for a cluster at a time. The value of <code>Tag.N.Key</code> is paired with the value of <code>Tag.N.Value</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

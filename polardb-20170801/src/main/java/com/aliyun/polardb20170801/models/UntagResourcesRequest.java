@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to unbinds all tags from the cluster. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>false</strong>.</p>
+     * <p>Specifies whether to detach all tags from the cluster. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>false</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when the value of the <code>TagKey.n</code> parameter is empty.</p>
+     * <p> This parameter takes effect only if <code>TagKey.n</code> is empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

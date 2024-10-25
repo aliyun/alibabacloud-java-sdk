@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
     /**
-     * <p>Enable storage compression function. The value of this parameter is ON.</p>
+     * <p>Specifies whether to enable storage compression. Set the value to <strong>ON</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -26,6 +26,15 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The list of nodes for the drill.</p>
+     * <blockquote>
+     * <p> You can specify only one node for a node-level disaster recovery drill. For a primary zone-level disaster recovery drill, you can either choose not to specify this parameter or specify all nodes.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-rwxxx</p>
+     */
     @NameInMap("DBNodeCrashList")
     public String DBNodeCrashList;
 
@@ -42,20 +51,30 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("DataSyncMode")
     public String dataSyncMode;
 
+    /**
+     * <p>The fault injection method. Valid values:</p>
+     * <ul>
+     * <li>CrashSQLInjection: <code>Crash SQL</code>-based fault injection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FaultInjectionType")
     public String faultInjectionType;
 
     /**
-     * <p>The fault scenario that you want to simulate for the cluster.</p>
+     * <p>The level of the disaster recovery drill. Valid values:</p>
      * <ul>
-     * <li>Set the value to <strong>0</strong>. The value 0 indicates the scenario in which the primary zone of the cluster fails.</li>
+     * <li><code>0</code> or <code>FaultInjection</code>: The primary zone level.</li>
+     * <li><code>1</code>: The node level.</li>
      * </ul>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only when you set the <code>StandbyHAMode</code> parameter to 0.</p>
+     * <li><p>In <strong>primary zone-level disaster recovery drill</strong> scenarios, all compute nodes in the primary zone are unavailable. Data loss occurs during failovers in the scenarios.</p>
      * </li>
-     * <li><p>If you set this parameter to 0, all compute nodes deployed in the primary zone are unavailable. In this case, the switchover degrades the cluster performance.</p>
+     * <li><p>In <strong>node-level disaster recovery drill</strong> scenarios, you can specify only one compute node for the disaster recovery drill. You can use the <code>DBNodeCrashList</code> parameter to specify the name of the compute node that you want to use for the drill.</p>
      * </li>
      * </ul>
      * 
@@ -64,6 +83,9 @@ public class ModifyDBClusterRequest extends TeaModel {
      */
     @NameInMap("FaultSimulateMode")
     public String faultSimulateMode;
+
+    @NameInMap("ImciAutoIndex")
+    public String imciAutoIndex;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -78,11 +100,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to enable the cross-zone automatic switchover mode. Valid values:</p>
+     * <p>Specifies whether to enable cross-zone automatic switchover. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong>: Enable the cross-zone automatic switchover mode.</li>
-     * <li><strong>OFF</strong>: Disable the cross-zone automatic switchover mode.</li>
-     * <li><strong>0</strong>: Enable the customer drill mode.</li>
+     * <li><strong>ON</strong>: enables cross-zone automatic switchover.</li>
+     * <li><strong>OFF</strong>: disables cross-zone automatic switchover.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +113,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String standbyHAMode;
 
     /**
-     * <p>Specifies whether to enable automatic storage scaling for the cluster of Standard Edition. Valid values:</p>
+     * <p>Specifies whether to enable automatic storage scaling. This parameter is available only for Standard Edition clusters. Valid values:</p>
      * <ul>
      * <li>Enable</li>
      * <li>Disable</li>
@@ -167,6 +188,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getFaultSimulateMode() {
         return this.faultSimulateMode;
+    }
+
+    public ModifyDBClusterRequest setImciAutoIndex(String imciAutoIndex) {
+        this.imciAutoIndex = imciAutoIndex;
+        return this;
+    }
+    public String getImciAutoIndex() {
+        return this.imciAutoIndex;
     }
 
     public ModifyDBClusterRequest setOwnerAccount(String ownerAccount) {

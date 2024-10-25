@@ -30,7 +30,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The cluster ID. To query the tags of multiple clusters, click <strong>Add</strong> to add cluster IDs.</p>
+     * <p>The IDs of the clusters. To query the tags of multiple clusters, click <strong>Add</strong> to add cluster IDs.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
@@ -147,7 +147,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. To query the details of clusters to which multiple tags are bound, click <strong>Add</strong> to add tags.</p>
+         * <p>The tag key. To query the details of clusters to which multiple tags are added, click <strong>Add</strong> to add tags.</p>
          * <blockquote>
          * </blockquote>
          * <ul>

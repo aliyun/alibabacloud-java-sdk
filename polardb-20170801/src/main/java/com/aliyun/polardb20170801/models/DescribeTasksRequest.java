@@ -87,7 +87,7 @@ public class DescribeTasksRequest extends TeaModel {
      * <li><strong>Running</strong>: The task is running.</li>
      * <li><strong>Finished</strong>: The task is completed.</li>
      * <li><strong>Closed</strong>: The task is closed.</li>
-     * <li><strong>Pause</strong>: The task is suspended.</li>
+     * <li><strong>Pause</strong>: The task is paused.</li>
      * <li><strong>Stop</strong>: The task is interrupted.</li>
      * </ul>
      * <blockquote>

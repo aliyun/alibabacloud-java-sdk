@@ -15,6 +15,12 @@ public class OpenAITaskRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The node type. Valid values:</p>
+     * <ul>
+     * <li><strong>DLNode</strong>: This node is an AI node.</li>
+     * <li><strong>SearchNode</strong>: This node is a node for which the PolarDB for AI feature is enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DLNode</p>
      */

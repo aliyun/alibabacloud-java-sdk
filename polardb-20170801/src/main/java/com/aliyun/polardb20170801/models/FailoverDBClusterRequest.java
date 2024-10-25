@@ -36,7 +36,7 @@ public class FailoverDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to fail back to the original primary zone after a failover. Valid values:</p>
+     * <p>Specifies whether to switch back services to the original primary zone when the original primary zone recovers.</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -63,6 +63,14 @@ public class FailoverDBClusterRequest extends TeaModel {
     @NameInMap("TargetDBNodeId")
     public String targetDBNodeId;
 
+    /**
+     * <p>Whether it is a primary-standby switch within the primary availability zone, with the following values:</p>
+     * <p>Primary: Primary-standby switch within the primary availability zone.
+     * Standby: Switch to the storage hot backup cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Primary</p>
+     */
     @NameInMap("TargetZoneType")
     public String targetZoneType;
 

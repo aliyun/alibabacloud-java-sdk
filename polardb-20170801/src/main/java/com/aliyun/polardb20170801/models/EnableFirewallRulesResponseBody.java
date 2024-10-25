@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class EnableFirewallRulesResponseBody extends TeaModel {
     /**
+     * <p>The message that is returned for the request.</p>
+     * <blockquote>
+     * <p>If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Message</p>
      */
@@ -21,6 +26,12 @@ public class EnableFirewallRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

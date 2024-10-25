@@ -15,11 +15,30 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to allow the TDE key of the cluster to be automatically rotated within the next maintenance window after a lapse of the rotation period when a change in the KMS key version is detected. This parameter is supported only for custom keys. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is supported only for a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EnableAutomaticRotation")
+    public String enableAutomaticRotation;
+
+    /**
      * <p>Specifies whether to enable automatic encryption for new tables. Valid values:</p>
      * <ul>
      * <li><strong>ON</strong></li>
      * <li><strong>OFF</strong></li>
      * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only for a PolarDB for MySQL cluster.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -78,6 +97,14 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ModifyDBClusterTDERequest setEnableAutomaticRotation(String enableAutomaticRotation) {
+        this.enableAutomaticRotation = enableAutomaticRotation;
+        return this;
+    }
+    public String getEnableAutomaticRotation() {
+        return this.enableAutomaticRotation;
     }
 
     public ModifyDBClusterTDERequest setEncryptNewTables(String encryptNewTables) {

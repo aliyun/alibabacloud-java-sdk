@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterResourceGroupRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDBClusterResourceGroupRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the new resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +31,8 @@ public class ModifyDBClusterResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the original resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-**********</p>
      */

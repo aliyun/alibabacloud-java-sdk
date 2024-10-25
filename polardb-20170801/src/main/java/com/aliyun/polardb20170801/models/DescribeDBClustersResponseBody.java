@@ -517,6 +517,16 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("Expired")
         public String expired;
 
+        /**
+         * <p>Indicates whether the hot standby storage cluster feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>ON</li>
+         * <li>OFF</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
+         */
         @NameInMap("HotStandbyCluster")
         public String hotStandbyCluster;
 

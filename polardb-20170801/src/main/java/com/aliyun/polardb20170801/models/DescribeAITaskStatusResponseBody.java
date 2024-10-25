@@ -37,6 +37,9 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
 
     /**
      * <p>The state description of the PolarDB for AI feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Closed State</p>
      */
     @NameInMap("StatusName")
     public String statusName;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateColdStorageInstanceResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcs_2zeth2gf4i83e578t</p>
      */
@@ -12,6 +14,8 @@ public class CreateColdStorageInstanceResponseBody extends TeaModel {
     public String coldStorageInstanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F6EBB4ED-D12F-5F49-824C-9DD9C0EC4CF2</p>
      */

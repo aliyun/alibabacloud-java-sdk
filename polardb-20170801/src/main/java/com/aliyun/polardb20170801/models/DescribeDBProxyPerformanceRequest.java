@@ -23,6 +23,15 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
+    /**
+     * <p>Database instance node ID.</p>
+     * <blockquote>
+     * <p>It is used to query the metrics of Proxy on different DB nodes, supporting metrics such as PolarProxy_DBConns, PolarProxy_DBQps, and PolarProxy_DBActionOps.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-******************</p>
+     */
     @NameInMap("DBNodeId")
     public String DBNodeId;
 

@@ -27,14 +27,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupFrequency;
 
     /**
-     * <p>Specifies whether to retain backups when you delete a cluster. Valid values:</p>
+     * <p>Specifies whether to retain backups when a cluster is deleted. Valid values:</p>
      * <ul>
      * <li><strong>ALL</strong>: permanently retains all backups.</li>
-     * <li><strong>LATEST</strong>: permanently retains only the last backup.</li>
+     * <li><strong>LATEST</strong>: permanently retains the most recent backup.</li>
      * <li><strong>NONE</strong>: does not retain backups.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is NONE.</p>
+     * <p> The default value of the parameter is NONE.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <li><strong>1</strong>: Cross-region level-2 backups are permanently retained.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>0</strong>. By default, the cross-region level-2 backup feature is disabled when you create a cluster.</p>
+     * <p> The default value of the parameter is <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -181,11 +181,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>The retention period of level-2 backups. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: The level-2 backup feature is disabled.</li>
-     * <li><strong>30 to 7300</strong>: Cross-region level-2 backups are retained for 30 to 7,300 days.</li>
-     * <li><strong>1</strong>: Cross-region level-2 backups are permanently retained.</li>
+     * <li><strong>30 to 7300</strong>: Level-2 backups are retained for 30 to 7,300 days.</li>
+     * <li><strong>1</strong>: Level-2 backups are permanently retained.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>0</strong>. By default, the level-2 backup feature is disabled when you create a cluster.</p>
+     * <p> The default value of this parameter is <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -41,9 +41,9 @@ public class TempModifyDBNodeRequest extends TeaModel {
     public String modifyType;
 
     /**
-     * <p>The type of operation performed on the cluster. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><strong>Modify</strong>: temporarily upgrade the configuration of the cluster.</li>
+     * <li><strong>Modify</strong>: temporarily upgrades the configuration of the cluster.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
