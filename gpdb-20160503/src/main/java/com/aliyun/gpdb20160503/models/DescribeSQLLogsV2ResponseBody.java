@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogsV2ResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>Details of the SQL logs.</p>
      */
@@ -40,6 +43,14 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
     public static DescribeSQLLogsV2ResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLLogsV2ResponseBody self = new DescribeSQLLogsV2ResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSQLLogsV2ResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DescribeSQLLogsV2ResponseBody setItems(java.util.List<DescribeSQLLogsV2ResponseBodyItems> items) {
@@ -101,6 +112,12 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
          */
         @NameInMap("DBRole")
         public String DBRole;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
 
         /**
          * <p>The execution duration of the SQL statement.</p>
@@ -223,6 +240,22 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
         public String getDBRole() {
             return this.DBRole;
+        }
+
+        public DescribeSQLLogsV2ResponseBodyItems setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeSQLLogsV2ResponseBodyItems setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         public DescribeSQLLogsV2ResponseBodyItems setExecuteCost(Float executeCost) {

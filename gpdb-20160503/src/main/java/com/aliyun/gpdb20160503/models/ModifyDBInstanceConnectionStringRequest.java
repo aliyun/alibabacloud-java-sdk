@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The endpoint prefix of the instance.</p>
      * <p>This parameter is required.</p>
@@ -47,6 +50,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public static ModifyDBInstanceConnectionStringRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringRequest self = new ModifyDBInstanceConnectionStringRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyDBInstanceConnectionStringRequest setConnectionStringPrefix(String connectionStringPrefix) {
