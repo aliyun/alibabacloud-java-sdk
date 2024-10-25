@@ -24,13 +24,18 @@ public class GetServiceRequest extends TeaModel {
 
     /**
      * <p>The service ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>service-4ee86df83fd948******</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
+
+    @NameInMap("ServiceInstanceId")
+    public String serviceInstanceId;
+
+    @NameInMap("ServiceName")
+    public String serviceName;
 
     /**
      * <p>The service version.</p>
@@ -87,6 +92,22 @@ public class GetServiceRequest extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public GetServiceRequest setServiceInstanceId(String serviceInstanceId) {
+        this.serviceInstanceId = serviceInstanceId;
+        return this;
+    }
+    public String getServiceInstanceId() {
+        return this.serviceInstanceId;
+    }
+
+    public GetServiceRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
     }
 
     public GetServiceRequest setServiceVersion(String serviceVersion) {

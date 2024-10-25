@@ -20,6 +20,9 @@ public class UpdateServiceInstanceAttributeShrinkRequest extends TeaModel {
     @NameInMap("LicenseData")
     public String licenseDataShrink;
 
+    @NameInMap("Reason")
+    public String reason;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -59,6 +62,14 @@ public class UpdateServiceInstanceAttributeShrinkRequest extends TeaModel {
     }
     public String getLicenseDataShrink() {
         return this.licenseDataShrink;
+    }
+
+    public UpdateServiceInstanceAttributeShrinkRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
     public UpdateServiceInstanceAttributeShrinkRequest setRegionId(String regionId) {

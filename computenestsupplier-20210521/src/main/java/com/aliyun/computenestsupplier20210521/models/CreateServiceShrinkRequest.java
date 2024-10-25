@@ -3,7 +3,7 @@ package com.aliyun.computenestsupplier20210521.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateServiceShrinkRequest extends TeaModel {
+public class CreateServiceShrinkRequest extends TeaModel {
     /**
      * <p>The alert configurations of the service.</p>
      * <blockquote>
@@ -11,7 +11,20 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;CmsTemplateId\&quot;:1162921,\&quot;TemplateUrl\&quot;:\&quot;<a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json%5C%5C%22%7D">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json\\&quot;}</a></p>
+     * <p>{
+     *   &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;,
+     *   // 应用分组级别告警元数据
+     *   &quot;ApplicationGroups&quot;: [
+     *     {
+     *       &quot;Name&quot;: &quot;applicationGroup1&quot;,
+     *       &quot;TemplateUrl&quot;: &quot;url1&quot;
+     *     },
+     *     {
+     *       &quot;Name&quot;: &quot;applicationGroup2&quot;,
+     *       &quot;TemplateUrl&quot;: &quot;url2&quot;
+     *     }
+     *   ]
+     * }</p>
      */
     @NameInMap("AlarmMetadata")
     public String alarmMetadata;
@@ -30,19 +43,22 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String approvalType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The parameters for building the service</p>
      * 
      * <strong>example:</strong>
-     * <p>788E7CP0EN9D51P</p>
+     * <p>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</p>
+     */
+    @NameInMap("BuildParameters")
+    public String buildParameters;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
-
-    /**
-     * <p>Bind Commodity Information</p>
-     */
-    @NameInMap("Commodity")
-    public String commodityShrink;
 
     @NameInMap("ComplianceMetadata")
     public String complianceMetadataShrink;
@@ -51,7 +67,10 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;EstimateTime\&quot;:null,\&quot;SupplierDeployMetadata\&quot;:{\&quot;DeployTimeout\&quot;:7200},\&quot;EnableVnc\&quot;:false}</p>
+     * <p>{\&quot;TemplateConfigs\&quot;:[{\&quot;Name\&quot;:\&quot;模板1\&quot;,\&quot;Url\&quot;:\&quot;oss://computenest-test/template&quot; 
+     *             + &quot;.json?RegionId=cn-beijing\&quot;,\&quot;PredefinedParameters\&quot;:[{\&quot;Name\&quot;:\&quot;低配版\&quot;,&quot; 
+     *             + &quot;\&quot;Parameters\&quot;:{\&quot;InstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;DataDiskSize\&quot;:40}},{\&quot;Name\&quot;:\&quot;高配版\&quot;,&quot; 
+     *             + &quot;\&quot;Parameters\&quot;:{\&quot;InstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;DataDiskSize\&quot;:200}}]}]}</p>
      */
     @NameInMap("DeployMetadata")
     public String deployMetadata;
@@ -61,11 +80,11 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * <ul>
      * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
      * <li>terraform: The service is deployed by using Terraform.</li>
+     * <li>ack: The service is deployed by using Container Service for Kubernetes (ACK).</li>
      * <li>spi: The service is deployed by calling a service provider interface (SPI).</li>
      * <li>operation: The service is deployed by using a hosted O\&amp;M service.</li>
-     * <li>container: The service is deployed by using a container.</li>
-     * <li>pkg: The service is deployed by using a package.</li>
      * </ul>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ros</p>
@@ -80,7 +99,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>259200</p>
+     * <p>0</p>
      */
     @NameInMap("Duration")
     public Long duration;
@@ -123,7 +142,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * <p>The hosted O\&amp;M configurations.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;Custom_Image_Ecs\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</p>
+     * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;New_Vpc_Ack_And_Jumpserver\&quot;:{}}}</p>
      */
     @NameInMap("OperationMetadata")
     public String operationMetadata;
@@ -148,11 +167,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to support distribution. Valid values:</p>
-     * <ul>
-     * <li>false</li>
-     * <li>true</li>
-     * </ul>
+     * <p>Whether resell is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -161,11 +176,19 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public Boolean resellable;
 
     /**
-     * <p>The service ID.</p>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>service-1dda29c3eca648xxxxxx</p>
+     * <p>rg-aek25refu7r3opq</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The service ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-0e6fca6a51a544xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
@@ -174,7 +197,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * <p>The service details.</p>
      */
     @NameInMap("ServiceInfo")
-    public java.util.List<UpdateServiceShrinkRequestServiceInfo> serviceInfo;
+    public java.util.List<CreateServiceShrinkRequestServiceInfo> serviceInfo;
 
     /**
      * <p>The service type. Valid values:</p>
@@ -192,15 +215,6 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The service version.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("ServiceVersion")
-    public String serviceVersion;
-
-    /**
      * <p>The permission type of the deployment URL. Valid values:</p>
      * <ul>
      * <li>Public: All users can go to the URL to create a service instance or a trial service instance.</li>
@@ -215,6 +229,30 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      */
     @NameInMap("ShareType")
     public String shareType;
+
+    /**
+     * <p>The source service ID for resell。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-70a3b15bb62643xxxxxx</p>
+     */
+    @NameInMap("SourceServiceId")
+    public String sourceServiceId;
+
+    /**
+     * <p>The source service version for resell。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SourceServiceVersion")
+    public String sourceServiceVersion;
+
+    /**
+     * <p>The custom tags.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateServiceShrinkRequestTag> tag;
 
     /**
      * <p>The type of the tenant. Valid values:</p>
@@ -236,13 +274,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * <p>7</p>
      */
     @NameInMap("TrialDuration")
-    public Integer trialDuration;
-
-    /**
-     * <p>The options for update the service.</p>
-     */
-    @NameInMap("UpdateOption")
-    public String updateOptionShrink;
+    public Long trialDuration;
 
     /**
      * <p>The metadata about the upgrade.</p>
@@ -262,12 +294,12 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("VersionName")
     public String versionName;
 
-    public static UpdateServiceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateServiceShrinkRequest self = new UpdateServiceShrinkRequest();
+    public static CreateServiceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateServiceShrinkRequest self = new CreateServiceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateServiceShrinkRequest setAlarmMetadata(String alarmMetadata) {
+    public CreateServiceShrinkRequest setAlarmMetadata(String alarmMetadata) {
         this.alarmMetadata = alarmMetadata;
         return this;
     }
@@ -275,7 +307,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.alarmMetadata;
     }
 
-    public UpdateServiceShrinkRequest setApprovalType(String approvalType) {
+    public CreateServiceShrinkRequest setApprovalType(String approvalType) {
         this.approvalType = approvalType;
         return this;
     }
@@ -283,7 +315,15 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.approvalType;
     }
 
-    public UpdateServiceShrinkRequest setClientToken(String clientToken) {
+    public CreateServiceShrinkRequest setBuildParameters(String buildParameters) {
+        this.buildParameters = buildParameters;
+        return this;
+    }
+    public String getBuildParameters() {
+        return this.buildParameters;
+    }
+
+    public CreateServiceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -291,15 +331,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateServiceShrinkRequest setCommodityShrink(String commodityShrink) {
-        this.commodityShrink = commodityShrink;
-        return this;
-    }
-    public String getCommodityShrink() {
-        return this.commodityShrink;
-    }
-
-    public UpdateServiceShrinkRequest setComplianceMetadataShrink(String complianceMetadataShrink) {
+    public CreateServiceShrinkRequest setComplianceMetadataShrink(String complianceMetadataShrink) {
         this.complianceMetadataShrink = complianceMetadataShrink;
         return this;
     }
@@ -307,7 +339,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.complianceMetadataShrink;
     }
 
-    public UpdateServiceShrinkRequest setDeployMetadata(String deployMetadata) {
+    public CreateServiceShrinkRequest setDeployMetadata(String deployMetadata) {
         this.deployMetadata = deployMetadata;
         return this;
     }
@@ -315,7 +347,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.deployMetadata;
     }
 
-    public UpdateServiceShrinkRequest setDeployType(String deployType) {
+    public CreateServiceShrinkRequest setDeployType(String deployType) {
         this.deployType = deployType;
         return this;
     }
@@ -323,7 +355,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.deployType;
     }
 
-    public UpdateServiceShrinkRequest setDryRun(Boolean dryRun) {
+    public CreateServiceShrinkRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -331,7 +363,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public UpdateServiceShrinkRequest setDuration(Long duration) {
+    public CreateServiceShrinkRequest setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -339,7 +371,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.duration;
     }
 
-    public UpdateServiceShrinkRequest setIsSupportOperated(Boolean isSupportOperated) {
+    public CreateServiceShrinkRequest setIsSupportOperated(Boolean isSupportOperated) {
         this.isSupportOperated = isSupportOperated;
         return this;
     }
@@ -347,7 +379,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.isSupportOperated;
     }
 
-    public UpdateServiceShrinkRequest setLicenseMetadata(String licenseMetadata) {
+    public CreateServiceShrinkRequest setLicenseMetadata(String licenseMetadata) {
         this.licenseMetadata = licenseMetadata;
         return this;
     }
@@ -355,7 +387,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.licenseMetadata;
     }
 
-    public UpdateServiceShrinkRequest setLogMetadata(String logMetadata) {
+    public CreateServiceShrinkRequest setLogMetadata(String logMetadata) {
         this.logMetadata = logMetadata;
         return this;
     }
@@ -363,7 +395,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.logMetadata;
     }
 
-    public UpdateServiceShrinkRequest setOperationMetadata(String operationMetadata) {
+    public CreateServiceShrinkRequest setOperationMetadata(String operationMetadata) {
         this.operationMetadata = operationMetadata;
         return this;
     }
@@ -371,7 +403,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.operationMetadata;
     }
 
-    public UpdateServiceShrinkRequest setPolicyNames(String policyNames) {
+    public CreateServiceShrinkRequest setPolicyNames(String policyNames) {
         this.policyNames = policyNames;
         return this;
     }
@@ -379,7 +411,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.policyNames;
     }
 
-    public UpdateServiceShrinkRequest setRegionId(String regionId) {
+    public CreateServiceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -387,7 +419,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpdateServiceShrinkRequest setResellable(Boolean resellable) {
+    public CreateServiceShrinkRequest setResellable(Boolean resellable) {
         this.resellable = resellable;
         return this;
     }
@@ -395,7 +427,15 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.resellable;
     }
 
-    public UpdateServiceShrinkRequest setServiceId(String serviceId) {
+    public CreateServiceShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateServiceShrinkRequest setServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
@@ -403,15 +443,15 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.serviceId;
     }
 
-    public UpdateServiceShrinkRequest setServiceInfo(java.util.List<UpdateServiceShrinkRequestServiceInfo> serviceInfo) {
+    public CreateServiceShrinkRequest setServiceInfo(java.util.List<CreateServiceShrinkRequestServiceInfo> serviceInfo) {
         this.serviceInfo = serviceInfo;
         return this;
     }
-    public java.util.List<UpdateServiceShrinkRequestServiceInfo> getServiceInfo() {
+    public java.util.List<CreateServiceShrinkRequestServiceInfo> getServiceInfo() {
         return this.serviceInfo;
     }
 
-    public UpdateServiceShrinkRequest setServiceType(String serviceType) {
+    public CreateServiceShrinkRequest setServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
@@ -419,15 +459,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.serviceType;
     }
 
-    public UpdateServiceShrinkRequest setServiceVersion(String serviceVersion) {
-        this.serviceVersion = serviceVersion;
-        return this;
-    }
-    public String getServiceVersion() {
-        return this.serviceVersion;
-    }
-
-    public UpdateServiceShrinkRequest setShareType(String shareType) {
+    public CreateServiceShrinkRequest setShareType(String shareType) {
         this.shareType = shareType;
         return this;
     }
@@ -435,7 +467,31 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.shareType;
     }
 
-    public UpdateServiceShrinkRequest setTenantType(String tenantType) {
+    public CreateServiceShrinkRequest setSourceServiceId(String sourceServiceId) {
+        this.sourceServiceId = sourceServiceId;
+        return this;
+    }
+    public String getSourceServiceId() {
+        return this.sourceServiceId;
+    }
+
+    public CreateServiceShrinkRequest setSourceServiceVersion(String sourceServiceVersion) {
+        this.sourceServiceVersion = sourceServiceVersion;
+        return this;
+    }
+    public String getSourceServiceVersion() {
+        return this.sourceServiceVersion;
+    }
+
+    public CreateServiceShrinkRequest setTag(java.util.List<CreateServiceShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateServiceShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateServiceShrinkRequest setTenantType(String tenantType) {
         this.tenantType = tenantType;
         return this;
     }
@@ -443,23 +499,15 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.tenantType;
     }
 
-    public UpdateServiceShrinkRequest setTrialDuration(Integer trialDuration) {
+    public CreateServiceShrinkRequest setTrialDuration(Long trialDuration) {
         this.trialDuration = trialDuration;
         return this;
     }
-    public Integer getTrialDuration() {
+    public Long getTrialDuration() {
         return this.trialDuration;
     }
 
-    public UpdateServiceShrinkRequest setUpdateOptionShrink(String updateOptionShrink) {
-        this.updateOptionShrink = updateOptionShrink;
-        return this;
-    }
-    public String getUpdateOptionShrink() {
-        return this.updateOptionShrink;
-    }
-
-    public UpdateServiceShrinkRequest setUpgradeMetadata(String upgradeMetadata) {
+    public CreateServiceShrinkRequest setUpgradeMetadata(String upgradeMetadata) {
         this.upgradeMetadata = upgradeMetadata;
         return this;
     }
@@ -467,7 +515,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.upgradeMetadata;
     }
 
-    public UpdateServiceShrinkRequest setVersionName(String versionName) {
+    public CreateServiceShrinkRequest setVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
@@ -475,7 +523,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.versionName;
     }
 
-    public static class UpdateServiceShrinkRequestServiceInfoAgreements extends TeaModel {
+    public static class CreateServiceShrinkRequestServiceInfoAgreements extends TeaModel {
         /**
          * <p>Protocol name.</p>
          * 
@@ -494,12 +542,12 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         @NameInMap("Url")
         public String url;
 
-        public static UpdateServiceShrinkRequestServiceInfoAgreements build(java.util.Map<String, ?> map) throws Exception {
-            UpdateServiceShrinkRequestServiceInfoAgreements self = new UpdateServiceShrinkRequestServiceInfoAgreements();
+        public static CreateServiceShrinkRequestServiceInfoAgreements build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceShrinkRequestServiceInfoAgreements self = new CreateServiceShrinkRequestServiceInfoAgreements();
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceShrinkRequestServiceInfoAgreements setName(String name) {
+        public CreateServiceShrinkRequestServiceInfoAgreements setName(String name) {
             this.name = name;
             return this;
         }
@@ -507,7 +555,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
             return this.name;
         }
 
-        public UpdateServiceShrinkRequestServiceInfoAgreements setUrl(String url) {
+        public CreateServiceShrinkRequestServiceInfoAgreements setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -517,19 +565,19 @@ public class UpdateServiceShrinkRequest extends TeaModel {
 
     }
 
-    public static class UpdateServiceShrinkRequestServiceInfoSoftwares extends TeaModel {
+    public static class CreateServiceShrinkRequestServiceInfoSoftwares extends TeaModel {
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Version")
         public String version;
 
-        public static UpdateServiceShrinkRequestServiceInfoSoftwares build(java.util.Map<String, ?> map) throws Exception {
-            UpdateServiceShrinkRequestServiceInfoSoftwares self = new UpdateServiceShrinkRequestServiceInfoSoftwares();
+        public static CreateServiceShrinkRequestServiceInfoSoftwares build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceShrinkRequestServiceInfoSoftwares self = new CreateServiceShrinkRequestServiceInfoSoftwares();
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceShrinkRequestServiceInfoSoftwares setName(String name) {
+        public CreateServiceShrinkRequestServiceInfoSoftwares setName(String name) {
             this.name = name;
             return this;
         }
@@ -537,7 +585,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
             return this.name;
         }
 
-        public UpdateServiceShrinkRequestServiceInfoSoftwares setVersion(String version) {
+        public CreateServiceShrinkRequestServiceInfoSoftwares setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -547,12 +595,12 @@ public class UpdateServiceShrinkRequest extends TeaModel {
 
     }
 
-    public static class UpdateServiceShrinkRequestServiceInfo extends TeaModel {
+    public static class CreateServiceShrinkRequestServiceInfo extends TeaModel {
         /**
          * <p>Protocol document information about the service.</p>
          */
         @NameInMap("Agreements")
-        public java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> agreements;
+        public java.util.List<CreateServiceShrinkRequestServiceInfoAgreements> agreements;
 
         /**
          * <p>The URL of the service icon.</p>
@@ -569,6 +617,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
          * <li>zh-CN: Chinese</li>
          * <li>en-US: English</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -587,9 +636,10 @@ public class UpdateServiceShrinkRequest extends TeaModel {
 
         /**
          * <p>The service name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kodbox-fc</p>
+         * <p>TiDB Database</p>
          */
         @NameInMap("Name")
         public String name;
@@ -598,28 +648,28 @@ public class UpdateServiceShrinkRequest extends TeaModel {
          * <p>The description of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
+         * <p>TiDB是A公司自主设计、研发的开源分布式关系型数据库。</p>
          */
         @NameInMap("ShortDescription")
         public String shortDescription;
 
         @NameInMap("Softwares")
-        public java.util.List<UpdateServiceShrinkRequestServiceInfoSoftwares> softwares;
+        public java.util.List<CreateServiceShrinkRequestServiceInfoSoftwares> softwares;
 
-        public static UpdateServiceShrinkRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
-            UpdateServiceShrinkRequestServiceInfo self = new UpdateServiceShrinkRequestServiceInfo();
+        public static CreateServiceShrinkRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceShrinkRequestServiceInfo self = new CreateServiceShrinkRequestServiceInfo();
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceShrinkRequestServiceInfo setAgreements(java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> agreements) {
+        public CreateServiceShrinkRequestServiceInfo setAgreements(java.util.List<CreateServiceShrinkRequestServiceInfoAgreements> agreements) {
             this.agreements = agreements;
             return this;
         }
-        public java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> getAgreements() {
+        public java.util.List<CreateServiceShrinkRequestServiceInfoAgreements> getAgreements() {
             return this.agreements;
         }
 
-        public UpdateServiceShrinkRequestServiceInfo setImage(String image) {
+        public CreateServiceShrinkRequestServiceInfo setImage(String image) {
             this.image = image;
             return this;
         }
@@ -627,7 +677,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
             return this.image;
         }
 
-        public UpdateServiceShrinkRequestServiceInfo setLocale(String locale) {
+        public CreateServiceShrinkRequestServiceInfo setLocale(String locale) {
             this.locale = locale;
             return this;
         }
@@ -635,7 +685,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
             return this.locale;
         }
 
-        public UpdateServiceShrinkRequestServiceInfo setLongDescriptionUrl(String longDescriptionUrl) {
+        public CreateServiceShrinkRequestServiceInfo setLongDescriptionUrl(String longDescriptionUrl) {
             this.longDescriptionUrl = longDescriptionUrl;
             return this;
         }
@@ -643,7 +693,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
             return this.longDescriptionUrl;
         }
 
-        public UpdateServiceShrinkRequestServiceInfo setName(String name) {
+        public CreateServiceShrinkRequestServiceInfo setName(String name) {
             this.name = name;
             return this;
         }
@@ -651,7 +701,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
             return this.name;
         }
 
-        public UpdateServiceShrinkRequestServiceInfo setShortDescription(String shortDescription) {
+        public CreateServiceShrinkRequestServiceInfo setShortDescription(String shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
@@ -659,12 +709,54 @@ public class UpdateServiceShrinkRequest extends TeaModel {
             return this.shortDescription;
         }
 
-        public UpdateServiceShrinkRequestServiceInfo setSoftwares(java.util.List<UpdateServiceShrinkRequestServiceInfoSoftwares> softwares) {
+        public CreateServiceShrinkRequestServiceInfo setSoftwares(java.util.List<CreateServiceShrinkRequestServiceInfoSoftwares> softwares) {
             this.softwares = softwares;
             return this;
         }
-        public java.util.List<UpdateServiceShrinkRequestServiceInfoSoftwares> getSoftwares() {
+        public java.util.List<CreateServiceShrinkRequestServiceInfoSoftwares> getSoftwares() {
             return this.softwares;
+        }
+
+    }
+
+    public static class CreateServiceShrinkRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Usage</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Web</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServiceShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceShrinkRequestTag self = new CreateServiceShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServiceShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

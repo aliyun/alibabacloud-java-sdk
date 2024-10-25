@@ -60,6 +60,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ComplianceMetadata")
+    public CreateServiceRequestComplianceMetadata complianceMetadata;
+
     /**
      * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
      * 
@@ -328,6 +331,14 @@ public class CreateServiceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateServiceRequest setComplianceMetadata(CreateServiceRequestComplianceMetadata complianceMetadata) {
+        this.complianceMetadata = complianceMetadata;
+        return this;
+    }
+    public CreateServiceRequestComplianceMetadata getComplianceMetadata() {
+        return this.complianceMetadata;
+    }
+
     public CreateServiceRequest setDeployMetadata(String deployMetadata) {
         this.deployMetadata = deployMetadata;
         return this;
@@ -512,6 +523,25 @@ public class CreateServiceRequest extends TeaModel {
         return this.versionName;
     }
 
+    public static class CreateServiceRequestComplianceMetadata extends TeaModel {
+        @NameInMap("CompliancePacks")
+        public java.util.List<String> compliancePacks;
+
+        public static CreateServiceRequestComplianceMetadata build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceRequestComplianceMetadata self = new CreateServiceRequestComplianceMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceRequestComplianceMetadata setCompliancePacks(java.util.List<String> compliancePacks) {
+            this.compliancePacks = compliancePacks;
+            return this;
+        }
+        public java.util.List<String> getCompliancePacks() {
+            return this.compliancePacks;
+        }
+
+    }
+
     public static class CreateServiceRequestServiceInfoAgreements extends TeaModel {
         /**
          * <p>Protocol name.</p>
@@ -550,6 +580,36 @@ public class CreateServiceRequest extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class CreateServiceRequestServiceInfoSoftwares extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static CreateServiceRequestServiceInfoSoftwares build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceRequestServiceInfoSoftwares self = new CreateServiceRequestServiceInfoSoftwares();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceRequestServiceInfoSoftwares setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateServiceRequestServiceInfoSoftwares setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -612,6 +672,9 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        @NameInMap("Softwares")
+        public java.util.List<CreateServiceRequestServiceInfoSoftwares> softwares;
+
         public static CreateServiceRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceRequestServiceInfo self = new CreateServiceRequestServiceInfo();
             return TeaModel.build(map, self);
@@ -663,6 +726,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public String getShortDescription() {
             return this.shortDescription;
+        }
+
+        public CreateServiceRequestServiceInfo setSoftwares(java.util.List<CreateServiceRequestServiceInfoSoftwares> softwares) {
+            this.softwares = softwares;
+            return this;
+        }
+        public java.util.List<CreateServiceRequestServiceInfoSoftwares> getSoftwares() {
+            return this.softwares;
         }
 
     }

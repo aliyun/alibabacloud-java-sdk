@@ -20,6 +20,9 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     @NameInMap("LicenseData")
     public UpdateServiceInstanceAttributeRequestLicenseData licenseData;
 
+    @NameInMap("Reason")
+    public String reason;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -59,6 +62,14 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     }
     public UpdateServiceInstanceAttributeRequestLicenseData getLicenseData() {
         return this.licenseData;
+    }
+
+    public UpdateServiceInstanceAttributeRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
     public UpdateServiceInstanceAttributeRequest setRegionId(String regionId) {
