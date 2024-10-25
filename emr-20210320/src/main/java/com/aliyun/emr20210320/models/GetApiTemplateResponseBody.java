@@ -12,7 +12,7 @@ public class GetApiTemplateResponseBody extends TeaModel {
     public ApiTemplate data;
 
     /**
-     * <p>请求ID。</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>

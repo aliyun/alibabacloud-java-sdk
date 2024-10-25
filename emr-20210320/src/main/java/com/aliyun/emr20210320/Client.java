@@ -71,6 +71,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a predefined API operation template. The template contains information about an API operation, including the basic structure, request method, URL path, request parameters, and response format.</p>
+     * 
      * @param request CreateApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateApiTemplateResponse
@@ -116,6 +119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a predefined API operation template. The template contains information about an API operation, including the basic structure, request method, URL path, request parameters, and response format.</p>
+     * 
      * @param request CreateApiTemplateRequest
      * @return CreateApiTemplateResponse
      */
@@ -410,6 +416,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>创建集群模板</p>
      * 
+     * <b>summary</b> : 
+     * <p>Deletes an API operation template.</p>
+     * 
      * @param request DeleteApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiTemplateResponse
@@ -453,6 +462,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>创建集群模板</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an API operation template.</p>
      * 
      * @param request DeleteApiTemplateRequest
      * @return DeleteApiTemplateResponse
@@ -562,7 +574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取API模板详情</p>
+     * <p>Queries the detailed configuration information about an API operation template.</p>
      * 
      * @param request GetApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -598,7 +610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取API模板详情</p>
+     * <p>Queries the detailed configuration information about an API operation template.</p>
      * 
      * @param request GetApiTemplateRequest
      * @return GetApiTemplateResponse
@@ -661,7 +673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
+     * <b>summary</b> : 
      * <p>获取弹性伸缩活动详情。</p>
      * 
      * @param request GetAutoScalingActivityRequest
@@ -701,7 +713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
+     * <b>summary</b> : 
      * <p>获取弹性伸缩活动详情。</p>
      * 
      * @param request GetAutoScalingActivityRequest
@@ -1038,7 +1050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>list Doctor HBaseRegions</p>
+     * <p>List Doctor HBase Regions</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get HBase Region information.</p>
      * 
      * @param request GetDoctorHBaseRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1082,7 +1097,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>list Doctor HBaseRegions</p>
+     * <p>List Doctor HBase Regions</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get HBase Region information.</p>
      * 
      * @param request GetDoctorHBaseRegionRequest
      * @return GetDoctorHBaseRegionResponse
@@ -1158,6 +1176,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>get Doctor HBaseTable</p>
      * 
+     * <b>summary</b> : 
+     * <p>Get HBase Table information.</p>
+     * 
      * @param request GetDoctorHBaseTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHBaseTableResponse
@@ -1201,6 +1222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>get Doctor HBaseTable</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get HBase Table information.</p>
      * 
      * @param request GetDoctorHBaseTableRequest
      * @return GetDoctorHBaseTableResponse
@@ -1638,7 +1662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>get specify component&#39;s report analysis by emr doctor</p>
+     * <p>get specify component\&quot;s report analysis by EMR Doctor</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtain the analysis result report of a specified component from EMR Doctor.</p>
      * 
      * @param request GetDoctorReportComponentSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1682,7 +1709,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>get specify component&#39;s report analysis by emr doctor</p>
+     * <p>get specify component\&quot;s report analysis by EMR Doctor</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtain the analysis result report of a specified component from EMR Doctor.</p>
      * 
      * @param request GetDoctorReportComponentSummaryRequest
      * @return GetDoctorReportComponentSummaryResponse
@@ -2145,7 +2175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
+     * <b>summary</b> : 
      * <p>查询弹性伸缩活动列表。</p>
      * 
      * @param request ListAutoScalingActivitiesRequest
@@ -2187,6 +2217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScalingActivityType", request.scalingActivityType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingPolicyType)) {
+            query.put("ScalingPolicyType", request.scalingPolicyType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleName)) {
             query.put("ScalingRuleName", request.scalingRuleName);
         }
@@ -2213,7 +2247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
+     * <b>summary</b> : 
      * <p>查询弹性伸缩活动列表。</p>
      * 
      * @param request ListAutoScalingActivitiesRequest
@@ -3311,6 +3345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Lists instance types.</p>
+     * 
      * @param request ListInstanceTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstanceTypesResponse
@@ -3380,6 +3417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Lists instance types.</p>
+     * 
      * @param request ListInstanceTypesRequest
      * @return ListInstanceTypesResponse
      */
@@ -3603,6 +3643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request ListScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListScriptsResponse
@@ -3648,6 +3691,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request ListScriptsRequest
      * @return ListScriptsResponse
      */

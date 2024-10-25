@@ -165,6 +165,9 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("ExpectNum")
         public Integer expectNum;
 
+        @NameInMap("InstanceTypeToNum")
+        public java.util.Map<String, Integer> instanceTypeToNum;
+
         /**
          * <p>The ID of the node group.</p>
          * 
@@ -191,6 +194,9 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
          */
         @NameInMap("OperationId")
         public String operationId;
+
+        @NameInMap("PolicyType")
+        public String policyType;
 
         /**
          * <p>The name of the scaling rule.</p>
@@ -271,6 +277,14 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             return this.expectNum;
         }
 
+        public ScalingActivities setInstanceTypeToNum(java.util.Map<String, Integer> instanceTypeToNum) {
+            this.instanceTypeToNum = instanceTypeToNum;
+            return this;
+        }
+        public java.util.Map<String, Integer> getInstanceTypeToNum() {
+            return this.instanceTypeToNum;
+        }
+
         public ScalingActivities setNodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
             return this;
@@ -293,6 +307,14 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
         public String getOperationId() {
             return this.operationId;
+        }
+
+        public ScalingActivities setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
         }
 
         public ScalingActivities setRuleName(String ruleName) {

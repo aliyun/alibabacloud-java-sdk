@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDoctorHBaseTableRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class GetDoctorHBaseTableRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class GetDoctorHBaseTableRequest extends TeaModel {
     public String dateTime;
 
     /**
-     * <p>区域ID。</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +35,7 @@ public class GetDoctorHBaseTableRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Table name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

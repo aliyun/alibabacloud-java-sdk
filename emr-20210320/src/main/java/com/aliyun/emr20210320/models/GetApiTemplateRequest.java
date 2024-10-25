@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApiTemplateRequest extends TeaModel {
     /**
-     * <p>区域ID。</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetApiTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>集群模板id。</p>
+     * <p>Cluster template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

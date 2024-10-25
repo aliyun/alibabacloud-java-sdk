@@ -82,6 +82,9 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
 
+    @NameInMap("ScalingPolicyType")
+    public String scalingPolicyType;
+
     /**
      * <p>The name of the scaling rule.</p>
      * 
@@ -167,6 +170,14 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     }
     public String getScalingActivityType() {
         return this.scalingActivityType;
+    }
+
+    public ListAutoScalingActivitiesRequest setScalingPolicyType(String scalingPolicyType) {
+        this.scalingPolicyType = scalingPolicyType;
+        return this;
+    }
+    public String getScalingPolicyType() {
+        return this.scalingPolicyType;
     }
 
     public ListAutoScalingActivitiesRequest setScalingRuleName(String scalingRuleName) {

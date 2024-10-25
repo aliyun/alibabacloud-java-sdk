@@ -147,6 +147,9 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         @NameInMap("OperationId")
         public String operationId;
 
+        @NameInMap("PolicyType")
+        public String policyType;
+
         /**
          * <p>The description of the scaling rule.</p>
          */
@@ -262,6 +265,14 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         }
         public String getOperationId() {
             return this.operationId;
+        }
+
+        public ScalingActivity setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
         }
 
         public ScalingActivity setRuleDetail(ScalingRule ruleDetail) {
