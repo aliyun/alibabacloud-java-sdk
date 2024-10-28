@@ -696,6 +696,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>取消设置智能目录配额</p>
+     * 
+     * @param request CancelFilesetQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelFilesetQuotaResponse
+     */
+    public CancelFilesetQuotaResponse cancelFilesetQuotaWithOptions(CancelFilesetQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fsetId)) {
+            query.put("FsetId", request.fsetId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelFilesetQuota"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelFilesetQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消设置智能目录配额</p>
+     * 
+     * @param request CancelFilesetQuotaRequest
+     * @return CancelFilesetQuotaResponse
+     */
+    public CancelFilesetQuotaResponse cancelFilesetQuota(CancelFilesetQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelFilesetQuotaWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Only General-purpose NAS file systems support this operation.</p>
      * 
@@ -7105,6 +7161,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetDirQuotaResponse setDirQuota(SetDirQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDirQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置智能目录配额</p>
+     * 
+     * @param request SetFilesetQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetFilesetQuotaResponse
+     */
+    public SetFilesetQuotaResponse setFilesetQuotaWithOptions(SetFilesetQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileCountLimit)) {
+            query.put("FileCountLimit", request.fileCountLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fsetId)) {
+            query.put("FsetId", request.fsetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sizeLimit)) {
+            query.put("SizeLimit", request.sizeLimit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetFilesetQuota"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetFilesetQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置智能目录配额</p>
+     * 
+     * @param request SetFilesetQuotaRequest
+     * @return SetFilesetQuotaResponse
+     */
+    public SetFilesetQuotaResponse setFilesetQuota(SetFilesetQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setFilesetQuotaWithOptions(request, runtime);
     }
 
     /**
