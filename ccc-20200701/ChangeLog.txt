@@ -1,3 +1,11 @@
+2024-10-28 Version: 2.29.0
+- Support API GetIvrTrackingSummary.
+- Update API BlindTransfer: add param SkillGroupId.
+- Update API GetCallDetailRecord: update response param.
+- Update API ListCallDetailRecordsV2: add param AnalyticsReportReady.
+- Update API ListCallDetailRecordsV2: update response param.
+
+
 2024-10-11 Version: 2.28.1
 - Update API GetCallDetailRecord: update response param.
 - Update API ListCallDetailRecordsV2: add param AnalyticsReportReady.
