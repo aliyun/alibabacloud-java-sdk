@@ -1,3 +1,26 @@
+2024-10-28 Version: 2.2.0
+- Support API DeleteTask.
+- Support API GetTask.
+- Support API GetTaskInstance.
+- Support API GetTaskInstanceLog.
+- Support API ListDownstreamTaskInstances.
+- Support API ListDownstreamTasks.
+- Support API ListTaskInstanceOperationLogs.
+- Support API ListTaskInstances.
+- Support API ListTaskOperationLogs.
+- Support API ListTasks.
+- Support API ListUpstreamTaskInstances.
+- Support API ListUpstreamTasks.
+- Support API RemoveTaskInstanceDependencies.
+- Support API RerunTaskInstances.
+- Support API ResumeTaskInstances.
+- Support API SetSuccessTaskInstances.
+- Support API StopTaskInstances.
+- Support API SuspendTaskInstances.
+- Support API TriggerSchedulerTaskInstance.
+- Support API UpdateTaskInstances.
+
+
 2024-10-25 Version: 2.1.0
 - Support API CreateProjectMember.
 - Support API DeleteProjectMember.
