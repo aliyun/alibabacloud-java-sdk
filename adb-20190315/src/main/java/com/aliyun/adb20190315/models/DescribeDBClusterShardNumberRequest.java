@@ -3,16 +3,12 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDBClusterSSLRequest extends TeaModel {
+public class DescribeDBClusterShardNumberRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>am-bp1ub9grke1****</p>
+     * <p>am-uf6g8w25jacm7****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -23,6 +19,10 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,12 +32,12 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static DescribeDBClusterSSLRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDBClusterSSLRequest self = new DescribeDBClusterSSLRequest();
+    public static DescribeDBClusterShardNumberRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBClusterShardNumberRequest self = new DescribeDBClusterShardNumberRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBClusterSSLRequest setDBClusterId(String DBClusterId) {
+    public DescribeDBClusterShardNumberRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -45,7 +45,7 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeDBClusterSSLRequest setOwnerAccount(String ownerAccount) {
+    public DescribeDBClusterShardNumberRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -53,7 +53,7 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeDBClusterSSLRequest setOwnerId(Long ownerId) {
+    public DescribeDBClusterShardNumberRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -61,7 +61,7 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeDBClusterSSLRequest setRegionId(String regionId) {
+    public DescribeDBClusterShardNumberRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -69,7 +69,7 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeDBClusterSSLRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeDBClusterShardNumberRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -77,7 +77,7 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeDBClusterSSLRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeDBClusterShardNumberRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
