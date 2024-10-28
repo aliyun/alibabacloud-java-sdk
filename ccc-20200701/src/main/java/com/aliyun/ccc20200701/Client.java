@@ -972,6 +972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RoutingType", request.routingType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupId)) {
+            query.put("SkillGroupId", request.skillGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
             query.put("StrategyName", request.strategyName);
         }
@@ -3930,6 +3934,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInstanceTrendingReportResponse getInstanceTrendingReport(GetInstanceTrendingReportRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceTrendingReportWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request GetIvrTrackingSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIvrTrackingSummaryResponse
+     */
+    public GetIvrTrackingSummaryResponse getIvrTrackingSummaryWithOptions(GetIvrTrackingSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            query.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIvrTrackingSummary"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIvrTrackingSummaryResponse());
+    }
+
+    /**
+     * @param request GetIvrTrackingSummaryRequest
+     * @return GetIvrTrackingSummaryResponse
+     */
+    public GetIvrTrackingSummaryResponse getIvrTrackingSummary(GetIvrTrackingSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getIvrTrackingSummaryWithOptions(request, runtime);
     }
 
     /**

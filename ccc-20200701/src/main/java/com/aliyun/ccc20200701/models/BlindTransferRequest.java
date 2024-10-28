@@ -44,6 +44,9 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("RoutingType")
     public String routingType;
 
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
+
     @NameInMap("StrategyName")
     public String strategyName;
 
@@ -153,6 +156,14 @@ public class BlindTransferRequest extends TeaModel {
     }
     public String getRoutingType() {
         return this.routingType;
+    }
+
+    public BlindTransferRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
     public BlindTransferRequest setStrategyName(String strategyName) {
