@@ -183,6 +183,9 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     }
 
     public static class QueryResourceStaticsResponseBodyDataSummary extends TeaModel {
+        @NameInMap("ActiveCpu")
+        public Float activeCpu;
+
         /**
          * <p>The CPU usage. Unit: core per minute.</p>
          * 
@@ -191,6 +194,9 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
          */
         @NameInMap("Cpu")
         public Float cpu;
+
+        @NameInMap("IdleCpu")
+        public Float idleCpu;
 
         /**
          * <p>The memory usage. Unit: GiB per minute.</p>
@@ -206,12 +212,28 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public QueryResourceStaticsResponseBodyDataSummary setActiveCpu(Float activeCpu) {
+            this.activeCpu = activeCpu;
+            return this;
+        }
+        public Float getActiveCpu() {
+            return this.activeCpu;
+        }
+
         public QueryResourceStaticsResponseBodyDataSummary setCpu(Float cpu) {
             this.cpu = cpu;
             return this;
         }
         public Float getCpu() {
             return this.cpu;
+        }
+
+        public QueryResourceStaticsResponseBodyDataSummary setIdleCpu(Float idleCpu) {
+            this.idleCpu = idleCpu;
+            return this;
+        }
+        public Float getIdleCpu() {
+            return this.idleCpu;
         }
 
         public QueryResourceStaticsResponseBodyDataSummary setMemory(Float memory) {
