@@ -1042,6 +1042,216 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建边缘容器的应用</p>
+     * 
+     * @param request CreateEdgeContainerAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEdgeContainerAppResponse
+     */
+    public CreateEdgeContainerAppResponse createEdgeContainerAppWithOptions(CreateEdgeContainerAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckFailTimes)) {
+            body.put("HealthCheckFailTimes", request.healthCheckFailTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckHost)) {
+            body.put("HealthCheckHost", request.healthCheckHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckHttpCode)) {
+            body.put("HealthCheckHttpCode", request.healthCheckHttpCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckInterval)) {
+            body.put("HealthCheckInterval", request.healthCheckInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckMethod)) {
+            body.put("HealthCheckMethod", request.healthCheckMethod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckPort)) {
+            body.put("HealthCheckPort", request.healthCheckPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckSuccTimes)) {
+            body.put("HealthCheckSuccTimes", request.healthCheckSuccTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckTimeout)) {
+            body.put("HealthCheckTimeout", request.healthCheckTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckType)) {
+            body.put("HealthCheckType", request.healthCheckType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckURI)) {
+            body.put("HealthCheckURI", request.healthCheckURI);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            body.put("Remarks", request.remarks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicePort)) {
+            body.put("ServicePort", request.servicePort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPort)) {
+            body.put("TargetPort", request.targetPort);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEdgeContainerApp"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeContainerAppResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建边缘容器的应用</p>
+     * 
+     * @param request CreateEdgeContainerAppRequest
+     * @return CreateEdgeContainerAppResponse
+     */
+    public CreateEdgeContainerAppResponse createEdgeContainerApp(CreateEdgeContainerAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEdgeContainerAppWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个边缘容器应用的域名记录</p>
+     * 
+     * @param request CreateEdgeContainerAppRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEdgeContainerAppRecordResponse
+     */
+    public CreateEdgeContainerAppRecordResponse createEdgeContainerAppRecordWithOptions(CreateEdgeContainerAppRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordName)) {
+            body.put("RecordName", request.recordName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            body.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEdgeContainerAppRecord"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeContainerAppRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个边缘容器应用的域名记录</p>
+     * 
+     * @param request CreateEdgeContainerAppRecordRequest
+     * @return CreateEdgeContainerAppRecordResponse
+     */
+    public CreateEdgeContainerAppRecordResponse createEdgeContainerAppRecord(CreateEdgeContainerAppRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEdgeContainerAppRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建边缘容器应用的版本</p>
+     * 
+     * @param tmpReq CreateEdgeContainerAppVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEdgeContainerAppVersionResponse
+     */
+    public CreateEdgeContainerAppVersionResponse createEdgeContainerAppVersionWithOptions(CreateEdgeContainerAppVersionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateEdgeContainerAppVersionShrinkRequest request = new CreateEdgeContainerAppVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.containers)) {
+            request.containersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.containers, "Containers", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containersShrink)) {
+            body.put("Containers", request.containersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            body.put("Remarks", request.remarks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEdgeContainerAppVersion"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeContainerAppVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建边缘容器应用的版本</p>
+     * 
+     * @param request CreateEdgeContainerAppVersionRequest
+     * @return CreateEdgeContainerAppVersionResponse
+     */
+    public CreateEdgeContainerAppVersionResponse createEdgeContainerAppVersion(CreateEdgeContainerAppVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEdgeContainerAppVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>添加Namespace</p>
      * 
      * @param request CreateKvNamespaceRequest
@@ -2318,6 +2528,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCustomScenePolicyResponse deleteCustomScenePolicy(DeleteCustomScenePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCustomScenePolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘容器的应用</p>
+     * 
+     * @param request DeleteEdgeContainerAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEdgeContainerAppResponse
+     */
+    public DeleteEdgeContainerAppResponse deleteEdgeContainerAppWithOptions(DeleteEdgeContainerAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEdgeContainerApp"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeContainerAppResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘容器的应用</p>
+     * 
+     * @param request DeleteEdgeContainerAppRequest
+     * @return DeleteEdgeContainerAppResponse
+     */
+    public DeleteEdgeContainerAppResponse deleteEdgeContainerApp(DeleteEdgeContainerAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEdgeContainerAppWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除一个边缘容器应用的域名记录</p>
+     * 
+     * @param request DeleteEdgeContainerAppRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEdgeContainerAppRecordResponse
+     */
+    public DeleteEdgeContainerAppRecordResponse deleteEdgeContainerAppRecordWithOptions(DeleteEdgeContainerAppRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordName)) {
+            body.put("RecordName", request.recordName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            body.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEdgeContainerAppRecord"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeContainerAppRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除一个边缘容器应用的域名记录</p>
+     * 
+     * @param request DeleteEdgeContainerAppRecordRequest
+     * @return DeleteEdgeContainerAppRecordResponse
+     */
+    public DeleteEdgeContainerAppRecordResponse deleteEdgeContainerAppRecord(DeleteEdgeContainerAppRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEdgeContainerAppRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘容器应用的版本</p>
+     * 
+     * @param request DeleteEdgeContainerAppVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEdgeContainerAppVersionResponse
+     */
+    public DeleteEdgeContainerAppVersionResponse deleteEdgeContainerAppVersionWithOptions(DeleteEdgeContainerAppVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEdgeContainerAppVersion"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeContainerAppVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘容器应用的版本</p>
+     * 
+     * @param request DeleteEdgeContainerAppVersionRequest
+     * @return DeleteEdgeContainerAppVersionResponse
+     */
+    public DeleteEdgeContainerAppVersionResponse deleteEdgeContainerAppVersion(DeleteEdgeContainerAppVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEdgeContainerAppVersionWithOptions(request, runtime);
     }
 
     /**
@@ -3802,6 +4156,302 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取边缘容器应用信息</p>
+     * 
+     * @param request GetEdgeContainerAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerAppResponse
+     */
+    public GetEdgeContainerAppResponse getEdgeContainerAppWithOptions(GetEdgeContainerAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerApp"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerAppResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用信息</p>
+     * 
+     * @param request GetEdgeContainerAppRequest
+     * @return GetEdgeContainerAppResponse
+     */
+    public GetEdgeContainerAppResponse getEdgeContainerApp(GetEdgeContainerAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerAppWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的状态信息</p>
+     * 
+     * @param request GetEdgeContainerAppStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerAppStatusResponse
+     */
+    public GetEdgeContainerAppStatusResponse getEdgeContainerAppStatusWithOptions(GetEdgeContainerAppStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishEnv)) {
+            query.put("PublishEnv", request.publishEnv);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerAppStatus"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerAppStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的状态信息</p>
+     * 
+     * @param request GetEdgeContainerAppStatusRequest
+     * @return GetEdgeContainerAppStatusResponse
+     */
+    public GetEdgeContainerAppStatusResponse getEdgeContainerAppStatus(GetEdgeContainerAppStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerAppStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的某个版本信息</p>
+     * 
+     * @param request GetEdgeContainerAppVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerAppVersionResponse
+     */
+    public GetEdgeContainerAppVersionResponse getEdgeContainerAppVersionWithOptions(GetEdgeContainerAppVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerAppVersion"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerAppVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的某个版本信息</p>
+     * 
+     * @param request GetEdgeContainerAppVersionRequest
+     * @return GetEdgeContainerAppVersionResponse
+     */
+    public GetEdgeContainerAppVersionResponse getEdgeContainerAppVersion(GetEdgeContainerAppVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerAppVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用部署区域</p>
+     * 
+     * @param request GetEdgeContainerDeployRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerDeployRegionsResponse
+     */
+    public GetEdgeContainerDeployRegionsResponse getEdgeContainerDeployRegionsWithOptions(GetEdgeContainerDeployRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerDeployRegions"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerDeployRegionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用部署区域</p>
+     * 
+     * @param request GetEdgeContainerDeployRegionsRequest
+     * @return GetEdgeContainerDeployRegionsResponse
+     */
+    public GetEdgeContainerDeployRegionsResponse getEdgeContainerDeployRegions(GetEdgeContainerDeployRegionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerDeployRegionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器日志信息</p>
+     * 
+     * @param request GetEdgeContainerLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerLogsResponse
+     */
+    public GetEdgeContainerLogsResponse getEdgeContainerLogsWithOptions(GetEdgeContainerLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerLogs"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器日志信息</p>
+     * 
+     * @param request GetEdgeContainerLogsRequest
+     * @return GetEdgeContainerLogsResponse
+     */
+    public GetEdgeContainerLogsResponse getEdgeContainerLogs(GetEdgeContainerLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用测试环境部署状态</p>
+     * 
+     * @param request GetEdgeContainerStagingDeployStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerStagingDeployStatusResponse
+     */
+    public GetEdgeContainerStagingDeployStatusResponse getEdgeContainerStagingDeployStatusWithOptions(GetEdgeContainerStagingDeployStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerStagingDeployStatus"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerStagingDeployStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用测试环境部署状态</p>
+     * 
+     * @param request GetEdgeContainerStagingDeployStatusRequest
+     * @return GetEdgeContainerStagingDeployStatusResponse
+     */
+    public GetEdgeContainerStagingDeployStatusResponse getEdgeContainerStagingDeployStatus(GetEdgeContainerStagingDeployStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerStagingDeployStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用终端信息</p>
+     * 
+     * @param request GetEdgeContainerTerminalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerTerminalResponse
+     */
+    public GetEdgeContainerTerminalResponse getEdgeContainerTerminalWithOptions(GetEdgeContainerTerminalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerTerminal"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerTerminalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用终端信息</p>
+     * 
+     * @param request GetEdgeContainerTerminalRequest
+     * @return GetEdgeContainerTerminalResponse
+     */
+    public GetEdgeContainerTerminalResponse getEdgeContainerTerminal(GetEdgeContainerTerminalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerTerminalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>GetErService</p>
      * 
      * @param request GetErServiceRequest
@@ -5077,6 +5727,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListEdgeContainerAppRecordsResponse listEdgeContainerAppRecords(ListEdgeContainerAppRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEdgeContainerAppRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的全部版本信息</p>
+     * 
+     * @param request ListEdgeContainerAppVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEdgeContainerAppVersionsResponse
+     */
+    public ListEdgeContainerAppVersionsResponse listEdgeContainerAppVersionsWithOptions(ListEdgeContainerAppVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEdgeContainerAppVersions"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEdgeContainerAppVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的全部版本信息</p>
+     * 
+     * @param request ListEdgeContainerAppVersionsRequest
+     * @return ListEdgeContainerAppVersionsResponse
+     */
+    public ListEdgeContainerAppVersionsResponse listEdgeContainerAppVersions(ListEdgeContainerAppVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEdgeContainerAppVersionsWithOptions(request, runtime);
     }
 
     /**
@@ -6585,6 +7275,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>发布边缘容器应用的某个版本</p>
+     * 
+     * @param tmpReq PublishEdgeContainerAppVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishEdgeContainerAppVersionResponse
+     */
+    public PublishEdgeContainerAppVersionResponse publishEdgeContainerAppVersionWithOptions(PublishEdgeContainerAppVersionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PublishEdgeContainerAppVersionShrinkRequest request = new PublishEdgeContainerAppVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regions)) {
+            request.regionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regions, "Regions", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fullRelease)) {
+            query.put("FullRelease", request.fullRelease);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishType)) {
+            query.put("PublishType", request.publishType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionsShrink)) {
+            query.put("Regions", request.regionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.percentage)) {
+            body.put("Percentage", request.percentage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishEnv)) {
+            body.put("PublishEnv", request.publishEnv);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            body.put("Remarks", request.remarks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishEdgeContainerAppVersion"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishEdgeContainerAppVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布边缘容器应用的某个版本</p>
+     * 
+     * @param request PublishEdgeContainerAppVersionRequest
+     * @return PublishEdgeContainerAppVersionResponse
+     */
+    public PublishEdgeContainerAppVersionResponse publishEdgeContainerAppVersion(PublishEdgeContainerAppVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.publishEdgeContainerAppVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>发布Routine某版本代码</p>
      * 
      * @param tmpReq PublishRoutineCodeVersionRequest
@@ -6910,6 +7684,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>重建边缘容器应用的测试环境</p>
+     * 
+     * @param request RebuildEdgeContainerAppStagingEnvRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RebuildEdgeContainerAppStagingEnvResponse
+     */
+    public RebuildEdgeContainerAppStagingEnvResponse rebuildEdgeContainerAppStagingEnvWithOptions(RebuildEdgeContainerAppStagingEnvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RebuildEdgeContainerAppStagingEnv"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RebuildEdgeContainerAppStagingEnvResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重建边缘容器应用的测试环境</p>
+     * 
+     * @param request RebuildEdgeContainerAppStagingEnvRequest
+     * @return RebuildEdgeContainerAppStagingEnvResponse
+     */
+    public RebuildEdgeContainerAppStagingEnvResponse rebuildEdgeContainerAppStagingEnv(RebuildEdgeContainerAppStagingEnvRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rebuildEdgeContainerAppStagingEnvWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>重置定时预热任务的进度，从头开始预热</p>
      * 
      * @param request ResetScheduledPreloadJobRequest
@@ -6950,6 +7768,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetScheduledPreloadJobResponse resetScheduledPreloadJob(ResetScheduledPreloadJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetScheduledPreloadJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>回滚边缘容器应用的某个版本</p>
+     * 
+     * @param request RollbackEdgeContainerAppVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RollbackEdgeContainerAppVersionResponse
+     */
+    public RollbackEdgeContainerAppVersionResponse rollbackEdgeContainerAppVersionWithOptions(RollbackEdgeContainerAppVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            body.put("Remarks", request.remarks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RollbackEdgeContainerAppVersion"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackEdgeContainerAppVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>回滚边缘容器应用的某个版本</p>
+     * 
+     * @param request RollbackEdgeContainerAppVersionRequest
+     * @return RollbackEdgeContainerAppVersionResponse
+     */
+    public RollbackEdgeContainerAppVersionResponse rollbackEdgeContainerAppVersion(RollbackEdgeContainerAppVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rollbackEdgeContainerAppVersionWithOptions(request, runtime);
     }
 
     /**
