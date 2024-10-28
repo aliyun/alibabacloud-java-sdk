@@ -269,6 +269,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         /**
          * <strong>example:</strong>
          * <p>9957175DEDCF49C5ACF7A956B4FD67B2</p>
@@ -289,6 +292,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
          */
         @NameInMap("ImageUrls")
         public java.util.List<String> imageUrls;
+
+        @NameInMap("PubTime")
+        public String pubTime;
 
         @NameInMap("Source")
         public String source;
@@ -329,6 +335,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             return this.content;
         }
 
+        public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -351,6 +365,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
         public java.util.List<String> getImageUrls() {
             return this.imageUrls;
+        }
+
+        public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setPubTime(String pubTime) {
+            this.pubTime = pubTime;
+            return this;
+        }
+        public String getPubTime() {
+            return this.pubTime;
         }
 
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews setSource(String source) {
