@@ -23,6 +23,13 @@ public class JobSettings extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DisableEcsStockCheck")
+    public Boolean disableEcsStockCheck;
+
+    /**
+     * <strong>example:</strong>
      * <p>535.54.03</p>
      */
     @NameInMap("Driver")
@@ -135,6 +142,14 @@ public class JobSettings extends TeaModel {
     }
     public String getCaller() {
         return this.caller;
+    }
+
+    public JobSettings setDisableEcsStockCheck(Boolean disableEcsStockCheck) {
+        this.disableEcsStockCheck = disableEcsStockCheck;
+        return this;
+    }
+    public Boolean getDisableEcsStockCheck() {
+        return this.disableEcsStockCheck;
     }
 
     public JobSettings setDriver(String driver) {
