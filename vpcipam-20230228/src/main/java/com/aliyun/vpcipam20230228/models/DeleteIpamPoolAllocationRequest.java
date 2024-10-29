@@ -6,13 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteIpamPoolAllocationRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>192.168.1.0/32</p>
-     */
-    @NameInMap("Cidr")
-    public String cidr;
-
-    /**
-     * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
@@ -35,13 +28,6 @@ public class DeleteIpamPoolAllocationRequest extends TeaModel {
     public String ipamPoolAllocationId;
 
     /**
-     * <strong>example:</strong>
-     * <p>ipam-pool-6rcq3tobayc20t****</p>
-     */
-    @NameInMap("IpamPoolId")
-    public String ipamPoolId;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,14 +39,6 @@ public class DeleteIpamPoolAllocationRequest extends TeaModel {
     public static DeleteIpamPoolAllocationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteIpamPoolAllocationRequest self = new DeleteIpamPoolAllocationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteIpamPoolAllocationRequest setCidr(String cidr) {
-        this.cidr = cidr;
-        return this;
-    }
-    public String getCidr() {
-        return this.cidr;
     }
 
     public DeleteIpamPoolAllocationRequest setClientToken(String clientToken) {
@@ -85,14 +63,6 @@ public class DeleteIpamPoolAllocationRequest extends TeaModel {
     }
     public String getIpamPoolAllocationId() {
         return this.ipamPoolAllocationId;
-    }
-
-    public DeleteIpamPoolAllocationRequest setIpamPoolId(String ipamPoolId) {
-        this.ipamPoolId = ipamPoolId;
-        return this;
-    }
-    public String getIpamPoolId() {
-        return this.ipamPoolId;
     }
 
     public DeleteIpamPoolAllocationRequest setRegionId(String regionId) {

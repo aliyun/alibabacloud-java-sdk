@@ -364,6 +364,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationDescription)) {
+            query.put("IpamPoolAllocationDescription", request.ipamPoolAllocationDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationName)) {
+            query.put("IpamPoolAllocationName", request.ipamPoolAllocationName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolId)) {
             query.put("IpamPoolId", request.ipamPoolId);
         }
@@ -620,10 +628,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteIpamPoolAllocationResponse deleteIpamPoolAllocationWithOptions(DeleteIpamPoolAllocationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.cidr)) {
-            query.put("Cidr", request.cidr);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -634,10 +638,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationId)) {
             query.put("IpamPoolAllocationId", request.ipamPoolAllocationId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolId)) {
-            query.put("IpamPoolId", request.ipamPoolId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -855,6 +855,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ListIpamDiscoveredResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIpamDiscoveredResourceResponse
+     */
+    public ListIpamDiscoveredResourceResponse listIpamDiscoveredResourceWithOptions(ListIpamDiscoveredResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamResourceDiscoveryId)) {
+            query.put("IpamResourceDiscoveryId", request.ipamResourceDiscoveryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceRegionId)) {
+            query.put("ResourceRegionId", request.resourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIpamDiscoveredResource"),
+            new TeaPair("version", "2023-02-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamDiscoveredResourceResponse());
+    }
+
+    /**
+     * @param request ListIpamDiscoveredResourceRequest
+     * @return ListIpamDiscoveredResourceResponse
+     */
+    public ListIpamDiscoveredResourceResponse listIpamDiscoveredResource(ListIpamDiscoveredResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listIpamDiscoveredResourceWithOptions(request, runtime);
+    }
+
+    /**
      * @param request ListIpamPoolAllocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIpamPoolAllocationsResponse
@@ -868,6 +926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationIds)) {
             query.put("IpamPoolAllocationIds", request.ipamPoolAllocationIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationName)) {
+            query.put("IpamPoolAllocationName", request.ipamPoolAllocationName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolId)) {
@@ -1128,6 +1190,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListIpamResourceCidrsResponse listIpamResourceCidrs(ListIpamResourceCidrsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listIpamResourceCidrsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询ipam资源发现实例</p>
+     * 
+     * @param request ListIpamResourceDiscoveriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIpamResourceDiscoveriesResponse
+     */
+    public ListIpamResourceDiscoveriesResponse listIpamResourceDiscoveriesWithOptions(ListIpamResourceDiscoveriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamResourceDiscoveryIds)) {
+            query.put("IpamResourceDiscoveryIds", request.ipamResourceDiscoveryIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamResourceDiscoveryName)) {
+            query.put("IpamResourceDiscoveryName", request.ipamResourceDiscoveryName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIpamResourceDiscoveries"),
+            new TeaPair("version", "2023-02-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamResourceDiscoveriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询ipam资源发现实例</p>
+     * 
+     * @param request ListIpamResourceDiscoveriesRequest
+     * @return ListIpamResourceDiscoveriesResponse
+     */
+    public ListIpamResourceDiscoveriesResponse listIpamResourceDiscoveries(ListIpamResourceDiscoveriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listIpamResourceDiscoveriesWithOptions(request, runtime);
     }
 
     /**
@@ -1772,6 +1922,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIpamPoolResponse updateIpamPool(UpdateIpamPoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIpamPoolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新IPAM地址池分配信息</p>
+     * 
+     * @param request UpdateIpamPoolAllocationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateIpamPoolAllocationResponse
+     */
+    public UpdateIpamPoolAllocationResponse updateIpamPoolAllocationWithOptions(UpdateIpamPoolAllocationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationDescription)) {
+            query.put("IpamPoolAllocationDescription", request.ipamPoolAllocationDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationId)) {
+            query.put("IpamPoolAllocationId", request.ipamPoolAllocationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolAllocationName)) {
+            query.put("IpamPoolAllocationName", request.ipamPoolAllocationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIpamPoolAllocation"),
+            new TeaPair("version", "2023-02-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamPoolAllocationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新IPAM地址池分配信息</p>
+     * 
+     * @param request UpdateIpamPoolAllocationRequest
+     * @return UpdateIpamPoolAllocationResponse
+     */
+    public UpdateIpamPoolAllocationResponse updateIpamPoolAllocation(UpdateIpamPoolAllocationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateIpamPoolAllocationWithOptions(request, runtime);
     }
 
     /**

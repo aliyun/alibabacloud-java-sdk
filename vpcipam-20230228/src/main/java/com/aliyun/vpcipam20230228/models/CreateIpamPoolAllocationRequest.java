@@ -32,6 +32,12 @@ public class CreateIpamPoolAllocationRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("IpamPoolAllocationDescription")
+    public String ipamPoolAllocationDescription;
+
+    @NameInMap("IpamPoolAllocationName")
+    public String ipamPoolAllocationName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -85,6 +91,22 @@ public class CreateIpamPoolAllocationRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateIpamPoolAllocationRequest setIpamPoolAllocationDescription(String ipamPoolAllocationDescription) {
+        this.ipamPoolAllocationDescription = ipamPoolAllocationDescription;
+        return this;
+    }
+    public String getIpamPoolAllocationDescription() {
+        return this.ipamPoolAllocationDescription;
+    }
+
+    public CreateIpamPoolAllocationRequest setIpamPoolAllocationName(String ipamPoolAllocationName) {
+        this.ipamPoolAllocationName = ipamPoolAllocationName;
+        return this;
+    }
+    public String getIpamPoolAllocationName() {
+        return this.ipamPoolAllocationName;
     }
 
     public CreateIpamPoolAllocationRequest setIpamPoolId(String ipamPoolId) {
