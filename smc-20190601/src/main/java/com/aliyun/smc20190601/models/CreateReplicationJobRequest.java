@@ -774,12 +774,24 @@ public class CreateReplicationJobRequest extends TeaModel {
     }
 
     public static class CreateReplicationJobRequestDisksDataPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Block")
         public Boolean block;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/home/date</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21474836480</p>
+         */
         @NameInMap("SizeBytes")
         public Long sizeBytes;
 
@@ -815,6 +827,10 @@ public class CreateReplicationJobRequest extends TeaModel {
     }
 
     public static class CreateReplicationJobRequestDisksData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-2ze8hyowhdgd6ou2m5z6</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
@@ -824,6 +840,10 @@ public class CreateReplicationJobRequest extends TeaModel {
         @NameInMap("Part")
         public java.util.List<CreateReplicationJobRequestDisksDataPart> part;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -867,12 +887,24 @@ public class CreateReplicationJobRequest extends TeaModel {
     }
 
     public static class CreateReplicationJobRequestDisksSystemPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Block")
         public Boolean block;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/boot</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>254803968</p>
+         */
         @NameInMap("SizeBytes")
         public Long sizeBytes;
 
@@ -908,12 +940,20 @@ public class CreateReplicationJobRequest extends TeaModel {
     }
 
     public static class CreateReplicationJobRequestDisksSystem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("LVM")
         public Boolean LVM;
 
         @NameInMap("Part")
         public java.util.List<CreateReplicationJobRequestDisksSystemPart> part;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public Integer size;
 

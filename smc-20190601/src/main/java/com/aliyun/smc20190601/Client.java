@@ -8,9 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._productId = "smc";
-        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
-        this._spi = gatewayClient;
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("smc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -27,6 +24,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>A migration source can be associated with only one workgroup.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates multiple migration sources with a workgroup.</p>
+     * 
+     * @param request AssociateSourceServersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateSourceServersResponse
+     */
+    public AssociateSourceServersResponse associateSourceServersWithOptions(AssociateSourceServersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workgroupId)) {
+            query.put("WorkgroupId", request.workgroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateSourceServers"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateSourceServersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>A migration source can be associated with only one workgroup.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates multiple migration sources with a workgroup.</p>
+     * 
+     * @param request AssociateSourceServersRequest
+     * @return AssociateSourceServersResponse
+     */
+    public AssociateSourceServersResponse associateSourceServers(AssociateSourceServersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateSourceServersWithOptions(request, runtime);
     }
 
     /**
@@ -81,12 +140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccessTokenResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAccessTokenResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccessTokenResponse());
     }
 
     /**
@@ -106,7 +160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建跨可用区任务</p>
+     * <p>Creates a cross-zone migration job.</p>
      * 
      * @param request CreateCrossZoneMigrationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -173,17 +227,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCrossZoneMigrationJobResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateCrossZoneMigrationJobResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCrossZoneMigrationJobResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>创建跨可用区任务</p>
+     * <p>Creates a cross-zone migration job.</p>
      * 
      * @param request CreateCrossZoneMigrationJobRequest
      * @return CreateCrossZoneMigrationJobResponse
@@ -365,12 +414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReplicationJobResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateReplicationJobResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReplicationJobResponse());
     }
 
     /**
@@ -394,6 +438,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateReplicationJobResponse createReplicationJob(CreateReplicationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createReplicationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can create up to 50 workgroups within an Alibaba Cloud account.</p>
+     * <ul>
+     * <li>A workgroup can be associated with a maximum of 50 migration sources.</li>
+     * <li>A migration source can be associated with only one workgroup.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a workgroup. You can create a workgroup to manage the lifecycles of multiple migration tasks at a time. This is suitable for scenarios in which multiple servers are migrated.</p>
+     * 
+     * @param request CreateWorkgroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkgroupResponse
+     */
+    public CreateWorkgroupResponse createWorkgroupWithOptions(CreateWorkgroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkgroup"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkgroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can create up to 50 workgroups within an Alibaba Cloud account.</p>
+     * <ul>
+     * <li>A workgroup can be associated with a maximum of 50 migration sources.</li>
+     * <li>A migration source can be associated with only one workgroup.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a workgroup. You can create a workgroup to manage the lifecycles of multiple migration tasks at a time. This is suitable for scenarios in which multiple servers are migrated.</p>
+     * 
+     * @param request CreateWorkgroupRequest
+     * @return CreateWorkgroupResponse
+     */
+    public CreateWorkgroupResponse createWorkgroup(CreateWorkgroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWorkgroupWithOptions(request, runtime);
     }
 
     /**
@@ -444,12 +562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CutOverReplicationJobResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CutOverReplicationJobResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CutOverReplicationJobResponse());
     }
 
     /**
@@ -511,12 +624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccessTokenResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAccessTokenResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccessTokenResponse());
     }
 
     /**
@@ -578,12 +686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReplicationJobResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteReplicationJobResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReplicationJobResponse());
     }
 
     /**
@@ -653,12 +756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSourceServerResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSourceServerResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSourceServerResponse());
     }
 
     /**
@@ -678,6 +776,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSourceServerResponse deleteSourceServer(DeleteSourceServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSourceServerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>To delete a workgroup, you must delete or dissociate the migration source that is associated with the workgroup. For more information, see <a href="https://help.aliyun.com/document_detail/2402124.html">DeleteSourceServer</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a workgroup.</p>
+     * 
+     * @param request DeleteWorkgroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkgroupResponse
+     */
+    public DeleteWorkgroupResponse deleteWorkgroupWithOptions(DeleteWorkgroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workgroupId)) {
+            query.put("WorkgroupId", request.workgroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkgroup"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkgroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>To delete a workgroup, you must delete or dissociate the migration source that is associated with the workgroup. For more information, see <a href="https://help.aliyun.com/document_detail/2402124.html">DeleteSourceServer</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a workgroup.</p>
+     * 
+     * @param request DeleteWorkgroupRequest
+     * @return DeleteWorkgroupResponse
+     */
+    public DeleteWorkgroupResponse deleteWorkgroup(DeleteWorkgroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWorkgroupWithOptions(request, runtime);
     }
 
     /**
@@ -768,12 +924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeReplicationJobsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeReplicationJobsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeReplicationJobsResponse());
     }
 
     /**
@@ -872,12 +1023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSourceServersResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeSourceServersResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSourceServersResponse());
     }
 
     /**
@@ -894,6 +1040,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSourceServersResponse describeSourceServers(DescribeSourceServersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSourceServersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about workgroups. After you create a workgroup, you can query the information about the workgroup, such as the name, description, and alert information.</p>
+     * 
+     * @param request DescribeWorkgroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWorkgroupsResponse
+     */
+    public DescribeWorkgroupsResponse describeWorkgroupsWithOptions(DescribeWorkgroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workgroupId)) {
+            query.put("WorkgroupId", request.workgroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWorkgroups"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWorkgroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about workgroups. After you create a workgroup, you can query the information about the workgroup, such as the name, description, and alert information.</p>
+     * 
+     * @param request DescribeWorkgroupsRequest
+     * @return DescribeWorkgroupsResponse
+     */
+    public DescribeWorkgroupsResponse describeWorkgroups(DescribeWorkgroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeWorkgroupsWithOptions(request, runtime);
     }
 
     /**
@@ -936,12 +1150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAccessTokenResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DisableAccessTokenResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAccessTokenResponse());
     }
 
     /**
@@ -957,6 +1166,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableAccessTokenResponse disableAccessToken(DisableAccessTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableAccessTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates migration sources from a workgroup. If you do not need to use a workgroup to migrate migration sources, you can disassociate the migration sources from the workgroup.</p>
+     * 
+     * @param request DisassociateSourceServersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateSourceServersResponse
+     */
+    public DisassociateSourceServersResponse disassociateSourceServersWithOptions(DisassociateSourceServersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workgroupId)) {
+            query.put("WorkgroupId", request.workgroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisassociateSourceServers"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateSourceServersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates migration sources from a workgroup. If you do not need to use a workgroup to migrate migration sources, you can disassociate the migration sources from the workgroup.</p>
+     * 
+     * @param request DisassociateSourceServersRequest
+     * @return DisassociateSourceServersResponse
+     */
+    public DisassociateSourceServersResponse disassociateSourceServers(DisassociateSourceServersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disassociateSourceServersWithOptions(request, runtime);
     }
 
     /**
@@ -1007,12 +1272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccessTokensResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListAccessTokensResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccessTokensResponse());
     }
 
     /**
@@ -1079,12 +1339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
     /**
@@ -1237,12 +1492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyReplicationJobAttributeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyReplicationJobAttributeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyReplicationJobAttributeResponse());
     }
 
     /**
@@ -1315,12 +1565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySourceServerAttributeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ModifySourceServerAttributeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySourceServerAttributeResponse());
     }
 
     /**
@@ -1337,6 +1582,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySourceServerAttributeResponse modifySourceServerAttribute(ModifySourceServerAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySourceServerAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a workgroup.</p>
+     * 
+     * @param request ModifyWorkgroupAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyWorkgroupAttributeResponse
+     */
+    public ModifyWorkgroupAttributeResponse modifyWorkgroupAttributeWithOptions(ModifyWorkgroupAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workgroupId)) {
+            query.put("WorkgroupId", request.workgroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyWorkgroupAttribute"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyWorkgroupAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a workgroup.</p>
+     * 
+     * @param request ModifyWorkgroupAttributeRequest
+     * @return ModifyWorkgroupAttributeResponse
+     */
+    public ModifyWorkgroupAttributeResponse modifyWorkgroupAttribute(ModifyWorkgroupAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyWorkgroupAttributeWithOptions(request, runtime);
     }
 
     /**
@@ -1380,12 +1685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new StartReplicationJobResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new StartReplicationJobResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartReplicationJobResponse());
     }
 
     /**
@@ -1445,12 +1745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new StopReplicationJobResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new StopReplicationJobResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopReplicationJobResponse());
     }
 
     /**
@@ -1519,12 +1814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
     /**
@@ -1596,12 +1886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
     /**

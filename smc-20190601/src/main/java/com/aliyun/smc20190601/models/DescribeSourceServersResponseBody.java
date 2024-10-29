@@ -296,15 +296,48 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     }
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart extends TeaModel {
+        /**
+         * <p>数据盘分区是否开启块复制。可能值：</p>
+         * <ul>
+         * <li>true：数据盘分区开启块复制。</li>
+         * <li>false：数据盘分区不开启块复制。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanBlock")
         public Boolean canBlock;
 
+        /**
+         * <p>数据盘分区路径。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/data</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>数据盘分区大小。单位：Byte。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21474836480</p>
+         */
         @NameInMap("SizeBytes")
         public Long sizeBytes;
 
+        /**
+         * <p>数据盘分区类型。可能值：</p>
+         * <ul>
+         * <li>Normal：普通分区。</li>
+         * <li>System：系统分区。</li>
+         * <li>Boot：启动分区。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -367,12 +400,27 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     }
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData extends TeaModel {
+        /**
+         * <p>数据盘首个分区的起始偏移。单位：Byte。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Offset")
         public Long offset;
 
+        /**
+         * <p>数据盘分区信息。</p>
+         */
         @NameInMap("Parts")
         public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts parts;
 
+        /**
+         * <p>迁移源的数据磁盘大小。单位：GiB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -427,15 +475,48 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     }
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart extends TeaModel {
+        /**
+         * <p>系统盘分区是否支持块复制。可能值：</p>
+         * <ul>
+         * <li>true：系统盘分区支持块复制。</li>
+         * <li>false：系统盘分区不支持块复制。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanBlock")
         public Boolean canBlock;
 
+        /**
+         * <p>系统盘分区路径。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/data</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>系统盘分区大小。单位：Byte。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21474836480</p>
+         */
         @NameInMap("SizeBytes")
         public Long sizeBytes;
 
+        /**
+         * <p>系统盘分区类型。可能值：</p>
+         * <ul>
+         * <li>Normal：普通分区。</li>
+         * <li>System：系统分区。</li>
+         * <li>Boot：启动分区。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -498,12 +579,30 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     }
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem extends TeaModel {
+        /**
+         * <p>系统盘首个分区的起始偏移。单位：Byte。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Offset")
         public Long offset;
 
+        /**
+         * <p>系统盘分区信息。</p>
+         */
         @NameInMap("Parts")
         public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts parts;
 
+        /**
+         * <p>迁移源系统盘的大小，单位：GiB。取值范围为20~32768。</p>
+         * <blockquote>
+         * <p>参数取值需要大于源服务器数据盘实际占用大小。例如，源数据盘大小为500 GiB，实际占用100 GiB，则该参数取值需大于100 GiB。</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -539,10 +638,15 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     }
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisks extends TeaModel {
+        /**
+         * <p>数据盘信息列表。</p>
+         */
         @NameInMap("Data")
         public DescribeSourceServersResponseBodySourceServersSourceServerDisksData data;
 
         /**
+         * <p>系统盘信息。</p>
+         * 
          * <strong>if can be null:</strong>
          * <p>false</p>
          */
@@ -791,6 +895,8 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>磁盘信息。</p>
+         * 
          * <strong>if can be null:</strong>
          * <p>false</p>
          */
@@ -939,6 +1045,12 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeSourceServersResponseBodySourceServersSourceServerTags tags;
 
+        /**
+         * <p>工作组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-bp1ja22kdqphehlj****</p>
+         */
         @NameInMap("WorkgroupId")
         public String workgroupId;
 

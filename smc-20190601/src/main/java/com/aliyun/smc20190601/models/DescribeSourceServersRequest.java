@@ -28,7 +28,7 @@ public class DescribeSourceServersRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -94,6 +94,12 @@ public class DescribeSourceServersRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeSourceServersRequestTag> tag;
 
+    /**
+     * <p>工作组ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w-bp1ja22kdqphehlj****</p>
+     */
     @NameInMap("WorkgroupId")
     public String workgroupId;
 
