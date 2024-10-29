@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue extends TeaModel {
     /**
+     * <p>checked baggage quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
@@ -12,6 +14,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer baggageAmount;
 
     /**
+     * <p>checked baggage weight</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -19,6 +23,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer baggageWeight;
 
     /**
+     * <p>checked baggage weight unit</p>
+     * 
      * <strong>example:</strong>
      * <p>kg</p>
      */
@@ -26,6 +32,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public String baggageWeightUnit;
 
     /**
+     * <p>Whether the weight is for all baggages</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Boolean isAllWeight;
 
     /**
+     * <p>carry-on baggage quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryOnAmount;
 
     /**
+     * <p>carry-on baggage weight</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -47,6 +59,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryOnWeight;
 
     /**
+     * <p>carry-on baggage weight unit</p>
+     * 
      * <strong>example:</strong>
      * <p>kg</p>
      */
@@ -54,6 +68,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public String carryOnWeightUnit;
 
     /**
+     * <p>Whether the weight is for all baggages</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

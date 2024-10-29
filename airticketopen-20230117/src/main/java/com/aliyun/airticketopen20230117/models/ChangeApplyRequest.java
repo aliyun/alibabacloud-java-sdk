@@ -188,6 +188,9 @@ public class ChangeApplyRequest extends TeaModel {
         @NameInMap("arrive_time")
         public Long arriveTime;
 
+        @NameInMap("arrive_time_str")
+        public String arriveTimeStr;
+
         /**
          * <strong>example:</strong>
          * <p>false</p>
@@ -233,6 +236,9 @@ public class ChangeApplyRequest extends TeaModel {
          */
         @NameInMap("departure_time")
         public Long departureTime;
+
+        @NameInMap("departure_time_str")
+        public String departureTimeStr;
 
         /**
          * <p>This parameter is required.</p>
@@ -287,6 +293,14 @@ public class ChangeApplyRequest extends TeaModel {
             return this.arriveTime;
         }
 
+        public ChangeApplyRequestChangedJourneysSegmentList setArriveTimeStr(String arriveTimeStr) {
+            this.arriveTimeStr = arriveTimeStr;
+            return this;
+        }
+        public String getArriveTimeStr() {
+            return this.arriveTimeStr;
+        }
+
         public ChangeApplyRequestChangedJourneysSegmentList setCodeShare(Boolean codeShare) {
             this.codeShare = codeShare;
             return this;
@@ -333,6 +347,14 @@ public class ChangeApplyRequest extends TeaModel {
         }
         public Long getDepartureTime() {
             return this.departureTime;
+        }
+
+        public ChangeApplyRequestChangedJourneysSegmentList setDepartureTimeStr(String departureTimeStr) {
+            this.departureTimeStr = departureTimeStr;
+            return this;
+        }
+        public String getDepartureTimeStr() {
+            return this.departureTimeStr;
         }
 
         public ChangeApplyRequestChangedJourneysSegmentList setMarketingFlightNo(String marketingFlightNo) {

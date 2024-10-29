@@ -8,7 +8,7 @@ public class OrderListHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>access_token</p>
+     * <p>access token</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +18,8 @@ public class OrderListHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
+     * <p>language code(refer to ISO_639), defaults to the buyer\&quot;s account configuration</p>
+     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */

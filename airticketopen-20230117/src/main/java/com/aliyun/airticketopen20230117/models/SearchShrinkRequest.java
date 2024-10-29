@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchShrinkRequest extends TeaModel {
     /**
+     * <p>adult passenger amount 1-9</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,12 +14,23 @@ public class SearchShrinkRequest extends TeaModel {
     public Integer adults;
 
     /**
+     * <p>itinerary list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("air_legs")
     public String airLegsShrink;
 
     /**
+     * <p>cabin class</p>
+     * <ol>
+     * <li><strong>ALL_CABIN</strong> : all cabin class</li>
+     * <li><strong>Y</strong> : economy class</li>
+     * <li><strong>FC</strong> : first class and business class</li>
+     * <li><strong>S</strong> : premium economy class</li>
+     * <li><strong>YS</strong> : economy class and premium economy class</li>
+     * <li><strong>YSC</strong> : economy class, premium economy class and business class</li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>ALL_CABIN</p>
      */
@@ -25,6 +38,8 @@ public class SearchShrinkRequest extends TeaModel {
     public String cabinClass;
 
     /**
+     * <p>child passenger amount 0-9</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,12 +47,17 @@ public class SearchShrinkRequest extends TeaModel {
     public Integer children;
 
     /**
+     * <p>infant passenger amount 0-9</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("infants")
     public Integer infants;
 
+    /**
+     * <p>search controls</p>
+     */
     @NameInMap("search_control_options")
     public String searchControlOptionsShrink;
 

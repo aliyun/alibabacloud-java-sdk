@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class BookRequest extends TeaModel {
     /**
+     * <p>contact information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("contact")
     public BookRequestContact contact;
 
     /**
+     * <p>external order number(buyer customization)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,17 +21,21 @@ public class BookRequest extends TeaModel {
     @NameInMap("out_order_num")
     public String outOrderNum;
 
+    /**
+     * <p>passenger-ancillary purchase relationship</p>
+     */
     @NameInMap("passenger_ancillary_purchase_map_list")
     public java.util.List<BookRequestPassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList;
 
     /**
+     * <p>passenger list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("passenger_list")
     public java.util.List<BookRequestPassengerList> passengerList;
 
     /**
-     * <p>solution_id</p>
+     * <p>solution_id returned by Enrich</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,6 +91,8 @@ public class BookRequest extends TeaModel {
 
     public static class BookRequestContact extends TeaModel {
         /**
+         * <p>email address</p>
+         * 
          * <strong>example:</strong>
          * <p>gao******@gmail.com</p>
          */
@@ -92,6 +100,8 @@ public class BookRequest extends TeaModel {
         public String email;
 
         /**
+         * <p>first name</p>
+         * 
          * <strong>example:</strong>
          * <p>SAN</p>
          */
@@ -99,6 +109,8 @@ public class BookRequest extends TeaModel {
         public String firstName;
 
         /**
+         * <p>last name</p>
+         * 
          * <strong>example:</strong>
          * <p>ZHANG</p>
          */
@@ -106,6 +118,8 @@ public class BookRequest extends TeaModel {
         public String lastName;
 
         /**
+         * <p>country code</p>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
@@ -113,6 +127,8 @@ public class BookRequest extends TeaModel {
         public String mobileCountryCode;
 
         /**
+         * <p>mobile phone number</p>
+         * 
          * <strong>example:</strong>
          * <p>183******96</p>
          */
@@ -168,6 +184,8 @@ public class BookRequest extends TeaModel {
 
     public static class BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem extends TeaModel {
         /**
+         * <p>ancillary product ID, returned by AncillarySuggest.</p>
+         * 
          * <strong>example:</strong>
          * <p>MDY2NTAxLCJleHAiOjE2NxNzM3MDEsIm5ix</p>
          */
@@ -175,6 +193,8 @@ public class BookRequest extends TeaModel {
         public String ancillaryId;
 
         /**
+         * <p>type of ancillary product, only support &quot;4&quot;(4 means paid baggage) currently.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -206,6 +226,8 @@ public class BookRequest extends TeaModel {
 
     public static class BookRequestPassengerAncillaryPurchaseMapListPassengerListCredential extends TeaModel {
         /**
+         * <p>place of issue, two-letter code</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -213,6 +235,8 @@ public class BookRequest extends TeaModel {
         public String certIssuePlace;
 
         /**
+         * <p>travel document number</p>
+         * 
          * <strong>example:</strong>
          * <p>E1***5673</p>
          */
@@ -220,6 +244,7 @@ public class BookRequest extends TeaModel {
         public String credentialNum;
 
         /**
+         * <p>travel document type , only support &quot;1&quot;(1 means passport) currently</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +254,8 @@ public class BookRequest extends TeaModel {
         public Integer credentialType;
 
         /**
+         * <p>expiration date</p>
+         * 
          * <strong>example:</strong>
          * <p>20290102</p>
          */
@@ -276,16 +303,22 @@ public class BookRequest extends TeaModel {
 
     public static class BookRequestPassengerAncillaryPurchaseMapListPassengerList extends TeaModel {
         /**
+         * <p>date of birth (yyyyMMdd)</p>
+         * 
          * <strong>example:</strong>
          * <p>20020320</p>
          */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <p>travel document</p>
+         */
         @NameInMap("credential")
         public BookRequestPassengerAncillaryPurchaseMapListPassengerListCredential credential;
 
         /**
+         * <p>first name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,6 +328,8 @@ public class BookRequest extends TeaModel {
         public String firstName;
 
         /**
+         * <p>gender 0: male; 1: female</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -302,6 +337,7 @@ public class BookRequest extends TeaModel {
         public Integer gender;
 
         /**
+         * <p>last name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -311,6 +347,7 @@ public class BookRequest extends TeaModel {
         public String lastName;
 
         /**
+         * <p>country code for mobile phone number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,6 +357,7 @@ public class BookRequest extends TeaModel {
         public String mobileCountryCode;
 
         /**
+         * <p>mobile phone number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,6 +367,8 @@ public class BookRequest extends TeaModel {
         public String mobilePhoneNumber;
 
         /**
+         * <p>nationality</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -336,6 +376,7 @@ public class BookRequest extends TeaModel {
         public String nationality;
 
         /**
+         * <p>passenger type 0: adult; 1: child; 8: Infant</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,9 +465,15 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestPassengerAncillaryPurchaseMapList extends TeaModel {
+        /**
+         * <p>ancillary information</p>
+         */
         @NameInMap("book_ancillary_req_item")
         public BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem bookAncillaryReqItem;
 
+        /**
+         * <p>passenger list for unified ancillary purchases</p>
+         */
         @NameInMap("passenger_list")
         public java.util.List<BookRequestPassengerAncillaryPurchaseMapListPassengerList> passengerList;
 
@@ -455,6 +502,8 @@ public class BookRequest extends TeaModel {
 
     public static class BookRequestPassengerListCredential extends TeaModel {
         /**
+         * <p>place of issue, two-letter code</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -462,6 +511,8 @@ public class BookRequest extends TeaModel {
         public String certIssuePlace;
 
         /**
+         * <p>travel document number</p>
+         * 
          * <strong>example:</strong>
          * <p>E1***5674</p>
          */
@@ -469,6 +520,7 @@ public class BookRequest extends TeaModel {
         public String credentialNum;
 
         /**
+         * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -478,6 +530,8 @@ public class BookRequest extends TeaModel {
         public Integer credentialType;
 
         /**
+         * <p>expiration date</p>
+         * 
          * <strong>example:</strong>
          * <p>20290101</p>
          */
@@ -525,16 +579,22 @@ public class BookRequest extends TeaModel {
 
     public static class BookRequestPassengerList extends TeaModel {
         /**
+         * <p>date of birth (yyyyMMdd)</p>
+         * 
          * <strong>example:</strong>
          * <p>20200320</p>
          */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <p>travel document</p>
+         */
         @NameInMap("credential")
         public BookRequestPassengerListCredential credential;
 
         /**
+         * <p>first name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -544,6 +604,8 @@ public class BookRequest extends TeaModel {
         public String firstName;
 
         /**
+         * <p>gender 0: MALE; 1: FEMALE</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -551,6 +613,7 @@ public class BookRequest extends TeaModel {
         public Integer gender;
 
         /**
+         * <p>last name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -560,6 +623,7 @@ public class BookRequest extends TeaModel {
         public String lastName;
 
         /**
+         * <p>mobile country code</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -569,6 +633,7 @@ public class BookRequest extends TeaModel {
         public String mobileCountryCode;
 
         /**
+         * <p>mobile phone number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -578,6 +643,8 @@ public class BookRequest extends TeaModel {
         public String mobilePhoneNumber;
 
         /**
+         * <p>nationality (two-letter code)</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -585,6 +652,7 @@ public class BookRequest extends TeaModel {
         public String nationality;
 
         /**
+         * <p>passenger type 0: adult; 1: child; 8: infant</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

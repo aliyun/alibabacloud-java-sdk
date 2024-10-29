@@ -99,8 +99,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>search ancillary for selected solution, you should enter the solution_id returned by enrich.</p>
+     * 
      * <b>summary</b> : 
-     * <p>辅营-推荐</p>
+     * <p>Ancillary - Suggestion</p>
      * 
      * @param request AncillarySuggestRequest
      * @param headers AncillarySuggestHeaders
@@ -146,8 +149,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>search ancillary for selected solution, you should enter the solution_id returned by enrich.</p>
+     * 
      * <b>summary</b> : 
-     * <p>辅营-推荐</p>
+     * <p>Ancillary - Suggestion</p>
      * 
      * @param request AncillarySuggestRequest
      * @return AncillarySuggestResponse
@@ -159,8 +165,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
+     * There are two issues should be noticed:</p>
+     * <ol>
+     * <li>the solution_id must be processed by pricing.</li>
+     * <li>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>交易-预定</p>
+     * <p>Transaction-Reservation</p>
      * 
      * @param tmpReq BookRequest
      * @param headers BookHeaders
@@ -236,8 +250,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
+     * There are two issues should be noticed:</p>
+     * <ol>
+     * <li>the solution_id must be processed by pricing.</li>
+     * <li>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>交易-预定</p>
+     * <p>Transaction-Reservation</p>
      * 
      * @param request BookRequest
      * @return BookResponse
@@ -249,8 +271,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>close an unpaid order</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-未支付取消</p>
+     * <p>Transaction - Unpaid Cancellation</p>
      * 
      * @param request CancelRequest
      * @param headers CancelHeaders
@@ -296,8 +321,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>close an unpaid order</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-未支付取消</p>
+     * <p>Transaction - Unpaid Cancellation</p>
      * 
      * @param request CancelRequest
      * @return CancelResponse
@@ -723,8 +751,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enrich supports two modes:</p>
+     * <ol>
+     * <li>mode1: enter solution_id returned by Search.</li>
+     * <li>mode2: enter journeyParamList.
+     * If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>搜索-Enrich</p>
+     * <p>Search-Enrich</p>
      * 
      * @param tmpReq EnrichRequest
      * @param headers EnrichHeaders
@@ -796,8 +832,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enrich supports two modes:</p>
+     * <ol>
+     * <li>mode1: enter solution_id returned by Search.</li>
+     * <li>mode2: enter journeyParamList.
+     * If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>搜索-Enrich</p>
+     * <p>Search-Enrich</p>
      * 
      * @param request EnrichRequest
      * @return EnrichResponse
@@ -934,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取token</p>
+     * <p>Get Token</p>
      * 
      * @param request GetTokenRequest
      * @param headers map
@@ -972,7 +1016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取token</p>
+     * <p>Get Token</p>
      * 
      * @param request GetTokenRequest
      * @return GetTokenResponse
@@ -1050,8 +1094,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>query order detail</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-订单详情</p>
+     * <p>Trade-Order Details</p>
      * 
      * @param request OrderDetailRequest
      * @param headers OrderDetailHeaders
@@ -1101,8 +1148,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>query order detail</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-订单详情</p>
+     * <p>Trade-Order Details</p>
      * 
      * @param request OrderDetailRequest
      * @return OrderDetailResponse
@@ -1114,8 +1164,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>query order list</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-订单列表</p>
+     * <p>Trade - Order List</p>
      * 
      * @param request OrderListRequest
      * @param headers OrderListHeaders
@@ -1177,8 +1230,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>query order list</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-订单列表</p>
+     * <p>Trade - Order List</p>
      * 
      * @param request OrderListRequest
      * @return OrderListResponse
@@ -1190,8 +1246,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Pricing</p>
+     * <p>Trade - Seat and Price Verification</p>
      * 
      * @param request PricingRequest
      * @param headers PricingHeaders
@@ -1237,8 +1296,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Pricing</p>
+     * <p>Trade - Seat and Price Verification</p>
      * 
      * @param request PricingRequest
      * @return PricingResponse
@@ -1250,6 +1312,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Apply for a refund and generate a refund order.</p>
+     * 
      * <b>summary</b> : 
      * <p>退票-申请</p>
      * 
@@ -1323,6 +1388,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Apply for a refund and generate a refund order.</p>
+     * 
      * <b>summary</b> : 
      * <p>退票-申请</p>
      * 
@@ -1336,8 +1404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query refund order detail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>退票-Detail</p>
+     * <p>Refund - Detail</p>
      * 
      * @param request RefundDetailRequest
      * @param headers RefundDetailHeaders
@@ -1383,8 +1454,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query refund order detail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>退票-Detail</p>
+     * <p>Refund - Detail</p>
      * 
      * @param request RefundDetailRequest
      * @return RefundDetailResponse
@@ -1396,8 +1470,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query refund order detail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>退票-DetailList</p>
+     * <p>Refund - Detail List</p>
      * 
      * @param request RefundDetailListRequest
      * @param headers RefundDetailListHeaders
@@ -1459,8 +1536,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query refund order detail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>退票-DetailList</p>
+     * <p>Refund - Detail List</p>
      * 
      * @param request RefundDetailListRequest
      * @return RefundDetailListResponse
@@ -1472,8 +1552,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
+     * 
      * <b>summary</b> : 
-     * <p>搜索</p>
+     * <p>search</p>
      * 
      * @param tmpReq SearchRequest
      * @param headers SearchHeaders
@@ -1549,8 +1632,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
+     * 
      * <b>summary</b> : 
-     * <p>搜索</p>
+     * <p>search</p>
      * 
      * @param request SearchRequest
      * @return SearchResponse
@@ -1563,7 +1649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>交易-支付出票</p>
+     * <p>Transaction - Payment and Ticket Issuance</p>
      * 
      * @param request TicketingRequest
      * @param headers TicketingHeaders
@@ -1610,7 +1696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>交易-支付出票</p>
+     * <p>Transaction - Payment and Ticket Issuance</p>
      * 
      * @param request TicketingRequest
      * @return TicketingResponse
@@ -1622,8 +1708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pre-check for Ticketing, this interface is optional to use.</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-支付前校验</p>
+     * <p>Transaction - Pre-payment verification</p>
      * 
      * @param request TicketingCheckRequest
      * @param headers TicketingCheckHeaders
@@ -1669,8 +1758,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pre-check for Ticketing, this interface is optional to use.</p>
+     * 
      * <b>summary</b> : 
-     * <p>交易-支付前校验</p>
+     * <p>Transaction - Pre-payment verification</p>
      * 
      * @param request TicketingCheckRequest
      * @return TicketingCheckResponse
