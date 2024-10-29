@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobResponseBody extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     /**
      * <strong>example:</strong>
      * <p>a*****</p>
@@ -236,6 +239,14 @@ public class GetJobResponseBody extends TeaModel {
     public static GetJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJobResponseBody self = new GetJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetJobResponseBody setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public GetJobResponseBody setClusterId(String clusterId) {

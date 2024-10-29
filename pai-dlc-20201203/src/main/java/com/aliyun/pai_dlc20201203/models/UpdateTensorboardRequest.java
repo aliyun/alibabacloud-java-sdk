@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class UpdateTensorboardRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     /**
      * <strong>example:</strong>
      * <p>MaxRunningTimeMinutes</p>
@@ -21,6 +24,14 @@ public class UpdateTensorboardRequest extends TeaModel {
     public static UpdateTensorboardRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTensorboardRequest self = new UpdateTensorboardRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTensorboardRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public UpdateTensorboardRequest setMaxRunningTimeMinutes(Long maxRunningTimeMinutes) {

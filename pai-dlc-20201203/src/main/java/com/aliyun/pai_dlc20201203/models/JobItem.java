@@ -4,6 +4,16 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
+    @NameInMap("Accessibility")
+    public String accessibility;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("CodeSource")
     public JobItemCodeSource codeSource;
 
@@ -26,6 +36,16 @@ public class JobItem extends TeaModel {
      */
     @NameInMap("Duration")
     public Long duration;
+
+    @NameInMap("ElasticSpec")
+    public JobElasticSpec elasticSpec;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EnablePreemptibleJob")
+    public Boolean enablePreemptibleJob;
 
     /**
      * <strong>example:</strong>
@@ -60,6 +80,13 @@ public class JobItem extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>2021-01-12T15:36:08Z</p>
+     */
+    @NameInMap("GmtModifiedTime")
+    public String gmtModifiedTime;
+
+    /**
+     * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
     @NameInMap("GmtRunningTime")
@@ -88,10 +115,24 @@ public class JobItem extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("IsDeleted")
+    public Boolean isDeleted;
+
+    /**
+     * <strong>example:</strong>
      * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
      */
     @NameInMap("JobId")
     public String jobId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("JobMaxRunningTimeMinutes")
+    public Long jobMaxRunningTimeMinutes;
 
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
@@ -102,6 +143,19 @@ public class JobItem extends TeaModel {
      */
     @NameInMap("JobType")
     public String jobType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("NodeCount")
+    public String nodeCount;
+
+    @NameInMap("NodeNames")
+    public java.util.List<String> nodeNames;
+
+    @NameInMap("Pods")
+    public java.util.List<PodItem> pods;
 
     /**
      * <strong>example:</strong>
@@ -126,6 +180,27 @@ public class JobItem extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("RequestCPU")
+    public Long requestCPU;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("RequestGPU")
+    public String requestGPU;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1Gi</p>
+     */
+    @NameInMap("RequestMemory")
+    public String requestMemory;
+
+    /**
+     * <strong>example:</strong>
      * <p>dlc-quota</p>
      */
     @NameInMap("ResourceId")
@@ -147,10 +222,24 @@ public class JobItem extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("ResourceQuotaName")
+    public String resourceQuotaName;
+
+    /**
+     * <strong>example:</strong>
      * <p>ECS</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("RestartTimes")
+    public String restartTimes;
 
     @NameInMap("Settings")
     public JobSettings settings;
@@ -162,12 +251,21 @@ public class JobItem extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("StatusHistory")
+    public java.util.List<StatusTransitionItem> statusHistory;
+
     /**
      * <strong>example:</strong>
      * <p>Restarting</p>
      */
     @NameInMap("SubStatus")
     public String subStatus;
+
+    @NameInMap("SystemEnvs")
+    public java.util.Map<String, String> systemEnvs;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     /**
      * <strong>example:</strong>
@@ -202,10 +300,31 @@ public class JobItem extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>ls</p>
+     */
+    @NameInMap("UserScript")
+    public String userScript;
+
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-1</p>
+     */
+    @NameInMap("UserVpc")
+    public String userVpc;
+
+    /**
+     * <strong>example:</strong>
      * <p>pai-dlc-role</p>
      */
     @NameInMap("Username")
     public String username;
+
+    /**
+     * <strong>example:</strong>
+     * <p>/mnt/data</p>
+     */
+    @NameInMap("WorkingDir")
+    public String workingDir;
 
     /**
      * <strong>example:</strong>
@@ -224,6 +343,22 @@ public class JobItem extends TeaModel {
     public static JobItem build(java.util.Map<String, ?> map) throws Exception {
         JobItem self = new JobItem();
         return TeaModel.build(map, self);
+    }
+
+    public JobItem setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    public JobItem setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public JobItem setCodeSource(JobItemCodeSource codeSource) {
@@ -266,6 +401,22 @@ public class JobItem extends TeaModel {
         return this.duration;
     }
 
+    public JobItem setElasticSpec(JobElasticSpec elasticSpec) {
+        this.elasticSpec = elasticSpec;
+        return this;
+    }
+    public JobElasticSpec getElasticSpec() {
+        return this.elasticSpec;
+    }
+
+    public JobItem setEnablePreemptibleJob(Boolean enablePreemptibleJob) {
+        this.enablePreemptibleJob = enablePreemptibleJob;
+        return this;
+    }
+    public Boolean getEnablePreemptibleJob() {
+        return this.enablePreemptibleJob;
+    }
+
     public JobItem setEnabledDebugger(Boolean enabledDebugger) {
         this.enabledDebugger = enabledDebugger;
         return this;
@@ -306,6 +457,14 @@ public class JobItem extends TeaModel {
         return this.gmtFinishTime;
     }
 
+    public JobItem setGmtModifiedTime(String gmtModifiedTime) {
+        this.gmtModifiedTime = gmtModifiedTime;
+        return this;
+    }
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
+    }
+
     public JobItem setGmtRunningTime(String gmtRunningTime) {
         this.gmtRunningTime = gmtRunningTime;
         return this;
@@ -338,12 +497,28 @@ public class JobItem extends TeaModel {
         return this.gmtSuccessedTime;
     }
 
+    public JobItem setIsDeleted(Boolean isDeleted) {
+        this.isDeleted = isDeleted;
+        return this;
+    }
+    public Boolean getIsDeleted() {
+        return this.isDeleted;
+    }
+
     public JobItem setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public JobItem setJobMaxRunningTimeMinutes(Long jobMaxRunningTimeMinutes) {
+        this.jobMaxRunningTimeMinutes = jobMaxRunningTimeMinutes;
+        return this;
+    }
+    public Long getJobMaxRunningTimeMinutes() {
+        return this.jobMaxRunningTimeMinutes;
     }
 
     public JobItem setJobSpecs(java.util.List<JobSpec> jobSpecs) {
@@ -360,6 +535,30 @@ public class JobItem extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public JobItem setNodeCount(String nodeCount) {
+        this.nodeCount = nodeCount;
+        return this;
+    }
+    public String getNodeCount() {
+        return this.nodeCount;
+    }
+
+    public JobItem setNodeNames(java.util.List<String> nodeNames) {
+        this.nodeNames = nodeNames;
+        return this;
+    }
+    public java.util.List<String> getNodeNames() {
+        return this.nodeNames;
+    }
+
+    public JobItem setPods(java.util.List<PodItem> pods) {
+        this.pods = pods;
+        return this;
+    }
+    public java.util.List<PodItem> getPods() {
+        return this.pods;
     }
 
     public JobItem setPriority(Integer priority) {
@@ -386,6 +585,30 @@ public class JobItem extends TeaModel {
         return this.reasonMessage;
     }
 
+    public JobItem setRequestCPU(Long requestCPU) {
+        this.requestCPU = requestCPU;
+        return this;
+    }
+    public Long getRequestCPU() {
+        return this.requestCPU;
+    }
+
+    public JobItem setRequestGPU(String requestGPU) {
+        this.requestGPU = requestGPU;
+        return this;
+    }
+    public String getRequestGPU() {
+        return this.requestGPU;
+    }
+
+    public JobItem setRequestMemory(String requestMemory) {
+        this.requestMemory = requestMemory;
+        return this;
+    }
+    public String getRequestMemory() {
+        return this.requestMemory;
+    }
+
     public JobItem setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -410,12 +633,28 @@ public class JobItem extends TeaModel {
         return this.resourceName;
     }
 
+    public JobItem setResourceQuotaName(String resourceQuotaName) {
+        this.resourceQuotaName = resourceQuotaName;
+        return this;
+    }
+    public String getResourceQuotaName() {
+        return this.resourceQuotaName;
+    }
+
     public JobItem setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public JobItem setRestartTimes(String restartTimes) {
+        this.restartTimes = restartTimes;
+        return this;
+    }
+    public String getRestartTimes() {
+        return this.restartTimes;
     }
 
     public JobItem setSettings(JobSettings settings) {
@@ -434,12 +673,36 @@ public class JobItem extends TeaModel {
         return this.status;
     }
 
+    public JobItem setStatusHistory(java.util.List<StatusTransitionItem> statusHistory) {
+        this.statusHistory = statusHistory;
+        return this;
+    }
+    public java.util.List<StatusTransitionItem> getStatusHistory() {
+        return this.statusHistory;
+    }
+
     public JobItem setSubStatus(String subStatus) {
         this.subStatus = subStatus;
         return this;
     }
     public String getSubStatus() {
         return this.subStatus;
+    }
+
+    public JobItem setSystemEnvs(java.util.Map<String, String> systemEnvs) {
+        this.systemEnvs = systemEnvs;
+        return this;
+    }
+    public java.util.Map<String, String> getSystemEnvs() {
+        return this.systemEnvs;
+    }
+
+    public JobItem setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public JobItem setThirdpartyLibDir(String thirdpartyLibDir) {
@@ -482,12 +745,36 @@ public class JobItem extends TeaModel {
         return this.userId;
     }
 
+    public JobItem setUserScript(String userScript) {
+        this.userScript = userScript;
+        return this;
+    }
+    public String getUserScript() {
+        return this.userScript;
+    }
+
+    public JobItem setUserVpc(String userVpc) {
+        this.userVpc = userVpc;
+        return this;
+    }
+    public String getUserVpc() {
+        return this.userVpc;
+    }
+
     public JobItem setUsername(String username) {
         this.username = username;
         return this;
     }
     public String getUsername() {
         return this.username;
+    }
+
+    public JobItem setWorkingDir(String workingDir) {
+        this.workingDir = workingDir;
+        return this;
+    }
+    public String getWorkingDir() {
+        return this.workingDir;
     }
 
     public JobItem setWorkspaceId(String workspaceId) {
