@@ -14,6 +14,9 @@ public class ListIpamPoolAllocationsRequest extends TeaModel {
     @NameInMap("IpamPoolAllocationIds")
     public java.util.List<String> ipamPoolAllocationIds;
 
+    @NameInMap("IpamPoolAllocationName")
+    public String ipamPoolAllocationName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -65,6 +68,14 @@ public class ListIpamPoolAllocationsRequest extends TeaModel {
     }
     public java.util.List<String> getIpamPoolAllocationIds() {
         return this.ipamPoolAllocationIds;
+    }
+
+    public ListIpamPoolAllocationsRequest setIpamPoolAllocationName(String ipamPoolAllocationName) {
+        this.ipamPoolAllocationName = ipamPoolAllocationName;
+        return this;
+    }
+    public String getIpamPoolAllocationName() {
+        return this.ipamPoolAllocationName;
     }
 
     public ListIpamPoolAllocationsRequest setIpamPoolId(String ipamPoolId) {

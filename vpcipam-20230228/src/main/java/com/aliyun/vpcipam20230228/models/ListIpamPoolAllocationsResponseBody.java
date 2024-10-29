@@ -106,12 +106,18 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("IpamPoolAllocationDescription")
+        public String ipamPoolAllocationDescription;
+
         /**
          * <strong>example:</strong>
          * <p>ipam-pool-alloc-112za33e4****</p>
          */
         @NameInMap("IpamPoolAllocationId")
         public String ipamPoolAllocationId;
+
+        @NameInMap("IpamPoolAllocationName")
+        public String ipamPoolAllocationName;
 
         /**
          * <strong>example:</strong>
@@ -190,12 +196,28 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
+        public ListIpamPoolAllocationsResponseBodyIpamPoolAllocations setIpamPoolAllocationDescription(String ipamPoolAllocationDescription) {
+            this.ipamPoolAllocationDescription = ipamPoolAllocationDescription;
+            return this;
+        }
+        public String getIpamPoolAllocationDescription() {
+            return this.ipamPoolAllocationDescription;
+        }
+
         public ListIpamPoolAllocationsResponseBodyIpamPoolAllocations setIpamPoolAllocationId(String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
         public String getIpamPoolAllocationId() {
             return this.ipamPoolAllocationId;
+        }
+
+        public ListIpamPoolAllocationsResponseBodyIpamPoolAllocations setIpamPoolAllocationName(String ipamPoolAllocationName) {
+            this.ipamPoolAllocationName = ipamPoolAllocationName;
+            return this;
+        }
+        public String getIpamPoolAllocationName() {
+            return this.ipamPoolAllocationName;
         }
 
         public ListIpamPoolAllocationsResponseBodyIpamPoolAllocations setIpamPoolId(String ipamPoolId) {
