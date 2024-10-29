@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
+    @NameInMap("CsvControl")
+    public String csvControlShrink;
+
     @NameInMap("DocumentControl")
     public String documentControlShrink;
 
@@ -86,6 +89,14 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public static CreateWmEmbedTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWmEmbedTaskShrinkRequest self = new CreateWmEmbedTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWmEmbedTaskShrinkRequest setCsvControlShrink(String csvControlShrink) {
+        this.csvControlShrink = csvControlShrink;
+        return this;
+    }
+    public String getCsvControlShrink() {
+        return this.csvControlShrink;
     }
 
     public CreateWmEmbedTaskShrinkRequest setDocumentControlShrink(String documentControlShrink) {

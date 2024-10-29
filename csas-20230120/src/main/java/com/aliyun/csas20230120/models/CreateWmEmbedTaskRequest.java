@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmEmbedTaskRequest extends TeaModel {
+    @NameInMap("CsvControl")
+    public CreateWmEmbedTaskRequestCsvControl csvControl;
+
     @NameInMap("DocumentControl")
     public CreateWmEmbedTaskRequestDocumentControl documentControl;
 
@@ -86,6 +89,14 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     public static CreateWmEmbedTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWmEmbedTaskRequest self = new CreateWmEmbedTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWmEmbedTaskRequest setCsvControl(CreateWmEmbedTaskRequestCsvControl csvControl) {
+        this.csvControl = csvControl;
+        return this;
+    }
+    public CreateWmEmbedTaskRequestCsvControl getCsvControl() {
+        return this.csvControl;
     }
 
     public CreateWmEmbedTaskRequest setDocumentControl(CreateWmEmbedTaskRequestDocumentControl documentControl) {
@@ -174,6 +185,47 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     }
     public String getWmType() {
         return this.wmType;
+    }
+
+    public static class CreateWmEmbedTaskRequestCsvControl extends TeaModel {
+        @NameInMap("EmbedColumn")
+        public Long embedColumn;
+
+        @NameInMap("EmbedPrecision")
+        public Long embedPrecision;
+
+        @NameInMap("Method")
+        public String method;
+
+        public static CreateWmEmbedTaskRequestCsvControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestCsvControl self = new CreateWmEmbedTaskRequestCsvControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestCsvControl setEmbedColumn(Long embedColumn) {
+            this.embedColumn = embedColumn;
+            return this;
+        }
+        public Long getEmbedColumn() {
+            return this.embedColumn;
+        }
+
+        public CreateWmEmbedTaskRequestCsvControl setEmbedPrecision(Long embedPrecision) {
+            this.embedPrecision = embedPrecision;
+            return this;
+        }
+        public Long getEmbedPrecision() {
+            return this.embedPrecision;
+        }
+
+        public CreateWmEmbedTaskRequestCsvControl setMethod(String method) {
+            this.method = method;
+            return this;
+        }
+        public String getMethod() {
+            return this.method;
+        }
+
     }
 
     public static class CreateWmEmbedTaskRequestDocumentControlBackgroundControlBgInvisibleControl extends TeaModel {

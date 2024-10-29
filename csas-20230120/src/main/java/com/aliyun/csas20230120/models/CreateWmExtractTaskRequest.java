@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmExtractTaskRequest extends TeaModel {
+    @NameInMap("CsvControl")
+    public CreateWmExtractTaskRequestCsvControl csvControl;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -64,6 +67,14 @@ public class CreateWmExtractTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateWmExtractTaskRequest setCsvControl(CreateWmExtractTaskRequestCsvControl csvControl) {
+        this.csvControl = csvControl;
+        return this;
+    }
+    public CreateWmExtractTaskRequestCsvControl getCsvControl() {
+        return this.csvControl;
+    }
+
     public CreateWmExtractTaskRequest setDocumentIsCapture(Boolean documentIsCapture) {
         this.documentIsCapture = documentIsCapture;
         return this;
@@ -118,6 +129,47 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     }
     public String getWmType() {
         return this.wmType;
+    }
+
+    public static class CreateWmExtractTaskRequestCsvControl extends TeaModel {
+        @NameInMap("EmbedColumn")
+        public Long embedColumn;
+
+        @NameInMap("EmbedPrecision")
+        public Long embedPrecision;
+
+        @NameInMap("Method")
+        public String method;
+
+        public static CreateWmExtractTaskRequestCsvControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmExtractTaskRequestCsvControl self = new CreateWmExtractTaskRequestCsvControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmExtractTaskRequestCsvControl setEmbedColumn(Long embedColumn) {
+            this.embedColumn = embedColumn;
+            return this;
+        }
+        public Long getEmbedColumn() {
+            return this.embedColumn;
+        }
+
+        public CreateWmExtractTaskRequestCsvControl setEmbedPrecision(Long embedPrecision) {
+            this.embedPrecision = embedPrecision;
+            return this;
+        }
+        public Long getEmbedPrecision() {
+            return this.embedPrecision;
+        }
+
+        public CreateWmExtractTaskRequestCsvControl setMethod(String method) {
+            this.method = method;
+            return this;
+        }
+        public String getMethod() {
+            return this.method;
+        }
+
     }
 
 }

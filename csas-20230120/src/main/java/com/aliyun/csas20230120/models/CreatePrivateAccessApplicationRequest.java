@@ -10,8 +10,17 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
+    @NameInMap("BrowserAccessStatus")
+    public String browserAccessStatus;
+
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("L7ProxyDomainAutomaticPrefix")
+    public String l7ProxyDomainAutomaticPrefix;
+
+    @NameInMap("L7ProxyDomainCustom")
+    public String l7ProxyDomainCustom;
 
     /**
      * <p>This parameter is required.</p>
@@ -62,12 +71,36 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
         return this.addresses;
     }
 
+    public CreatePrivateAccessApplicationRequest setBrowserAccessStatus(String browserAccessStatus) {
+        this.browserAccessStatus = browserAccessStatus;
+        return this;
+    }
+    public String getBrowserAccessStatus() {
+        return this.browserAccessStatus;
+    }
+
     public CreatePrivateAccessApplicationRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreatePrivateAccessApplicationRequest setL7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {
+        this.l7ProxyDomainAutomaticPrefix = l7ProxyDomainAutomaticPrefix;
+        return this;
+    }
+    public String getL7ProxyDomainAutomaticPrefix() {
+        return this.l7ProxyDomainAutomaticPrefix;
+    }
+
+    public CreatePrivateAccessApplicationRequest setL7ProxyDomainCustom(String l7ProxyDomainCustom) {
+        this.l7ProxyDomainCustom = l7ProxyDomainCustom;
+        return this;
+    }
+    public String getL7ProxyDomainCustom() {
+        return this.l7ProxyDomainCustom;
     }
 
     public CreatePrivateAccessApplicationRequest setName(String name) {

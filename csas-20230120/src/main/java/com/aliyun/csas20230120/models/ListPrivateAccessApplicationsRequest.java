@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessApplicationsRequest extends TeaModel {
+    @NameInMap("AccessModes")
+    public String accessModes;
+
     /**
      * <strong>example:</strong>
      * <p>192.168.0.0/16</p>
@@ -66,6 +69,14 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     public static ListPrivateAccessApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPrivateAccessApplicationsRequest self = new ListPrivateAccessApplicationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPrivateAccessApplicationsRequest setAccessModes(String accessModes) {
+        this.accessModes = accessModes;
+        return this;
+    }
+    public String getAccessModes() {
+        return this.accessModes;
     }
 
     public ListPrivateAccessApplicationsRequest setAddress(String address) {
