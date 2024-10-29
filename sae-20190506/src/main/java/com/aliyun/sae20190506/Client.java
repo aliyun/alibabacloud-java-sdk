@@ -892,6 +892,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedFor)) {
+            query.put("EnableXForwardedFor", request.enableXForwardedFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForClientSrcPort)) {
+            query.put("EnableXForwardedForClientSrcPort", request.enableXForwardedForClientSrcPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForProto)) {
+            query.put("EnableXForwardedForProto", request.enableXForwardedForProto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForSlbId)) {
+            query.put("EnableXForwardedForSlbId", request.enableXForwardedForSlbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForSlbPort)) {
+            query.put("EnableXForwardedForSlbPort", request.enableXForwardedForSlbPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.idleTimeout)) {
             query.put("IdleTimeout", request.idleTimeout);
         }
@@ -7005,6 +7025,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedFor)) {
+            query.put("EnableXForwardedFor", request.enableXForwardedFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForClientSrcPort)) {
+            query.put("EnableXForwardedForClientSrcPort", request.enableXForwardedForClientSrcPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForProto)) {
+            query.put("EnableXForwardedForProto", request.enableXForwardedForProto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForSlbId)) {
+            query.put("EnableXForwardedForSlbId", request.enableXForwardedForSlbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedForSlbPort)) {
+            query.put("EnableXForwardedForSlbPort", request.enableXForwardedForSlbPort);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.idleTimeout)) {
