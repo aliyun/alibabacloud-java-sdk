@@ -245,12 +245,24 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksDataDataPartsPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Block")
         public Boolean block;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/home/data</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21474836480</p>
+         */
         @NameInMap("SizeBytes")
         public Long sizeBytes;
 
@@ -305,15 +317,27 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksDataData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-2zeh4twm100qskw7z41z</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("LVM")
         public Boolean LVM;
 
         @NameInMap("Parts")
         public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksDataDataParts parts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22548578304</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -376,12 +400,24 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksSystemPartsPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Block")
         public Boolean block;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/boot</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21474836480</p>
+         */
         @NameInMap("SizeBytes")
         public Long sizeBytes;
 
@@ -436,15 +472,27 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksSystem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-2zeh4twm100qskw7z41z</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("LVM")
         public Boolean LVM;
 
         @NameInMap("Parts")
         public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksSystemParts parts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public Integer size;
 

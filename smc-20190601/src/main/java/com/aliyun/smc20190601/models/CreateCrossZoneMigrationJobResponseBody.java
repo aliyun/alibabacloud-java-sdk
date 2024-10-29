@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCrossZoneMigrationJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the migration job.</p>
+     * 
      * <strong>example:</strong>
      * <p>j-bp17bclvg344jlyt****</p>
      */
@@ -12,6 +14,8 @@ public class CreateCrossZoneMigrationJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A9DBD2F8-DE5A-5844-BA6F-957A996CBD78</p>
      */
