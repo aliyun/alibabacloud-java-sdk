@@ -55,6 +55,21 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableXForwardedFor")
+    public Boolean enableXForwardedFor;
+
+    @NameInMap("EnableXForwardedForClientSrcPort")
+    public Boolean enableXForwardedForClientSrcPort;
+
+    @NameInMap("EnableXForwardedForProto")
+    public Boolean enableXForwardedForProto;
+
+    @NameInMap("EnableXForwardedForSlbId")
+    public Boolean enableXForwardedForSlbId;
+
+    @NameInMap("EnableXForwardedForSlbPort")
+    public Boolean enableXForwardedForSlbPort;
+
     /**
      * <p>The timeout period of an idle connection. Unit: seconds. Valid values: 1 to 60.</p>
      * <p>If no request is received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
@@ -199,6 +214,46 @@ public class CreateIngressRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateIngressRequest setEnableXForwardedFor(Boolean enableXForwardedFor) {
+        this.enableXForwardedFor = enableXForwardedFor;
+        return this;
+    }
+    public Boolean getEnableXForwardedFor() {
+        return this.enableXForwardedFor;
+    }
+
+    public CreateIngressRequest setEnableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
+        this.enableXForwardedForClientSrcPort = enableXForwardedForClientSrcPort;
+        return this;
+    }
+    public Boolean getEnableXForwardedForClientSrcPort() {
+        return this.enableXForwardedForClientSrcPort;
+    }
+
+    public CreateIngressRequest setEnableXForwardedForProto(Boolean enableXForwardedForProto) {
+        this.enableXForwardedForProto = enableXForwardedForProto;
+        return this;
+    }
+    public Boolean getEnableXForwardedForProto() {
+        return this.enableXForwardedForProto;
+    }
+
+    public CreateIngressRequest setEnableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
+        this.enableXForwardedForSlbId = enableXForwardedForSlbId;
+        return this;
+    }
+    public Boolean getEnableXForwardedForSlbId() {
+        return this.enableXForwardedForSlbId;
+    }
+
+    public CreateIngressRequest setEnableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
+        this.enableXForwardedForSlbPort = enableXForwardedForSlbPort;
+        return this;
+    }
+    public Boolean getEnableXForwardedForSlbPort() {
+        return this.enableXForwardedForSlbPort;
     }
 
     public CreateIngressRequest setIdleTimeout(Integer idleTimeout) {

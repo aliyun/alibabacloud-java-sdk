@@ -30,6 +30,9 @@ public class Container extends TeaModel {
     @NameInMap("Image")
     public String image;
 
+    @NameInMap("ImageRegistryConfig")
+    public ImageRegistryConfig imageRegistryConfig;
+
     @NameInMap("MetricsCollectConfig")
     public MetricsCollectConfig metricsCollectConfig;
 
@@ -107,6 +110,14 @@ public class Container extends TeaModel {
     }
     public String getImage() {
         return this.image;
+    }
+
+    public Container setImageRegistryConfig(ImageRegistryConfig imageRegistryConfig) {
+        this.imageRegistryConfig = imageRegistryConfig;
+        return this;
+    }
+    public ImageRegistryConfig getImageRegistryConfig() {
+        return this.imageRegistryConfig;
     }
 
     public Container setMetricsCollectConfig(MetricsCollectConfig metricsCollectConfig) {

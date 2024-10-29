@@ -352,6 +352,21 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableXForwardedFor")
+        public Boolean enableXForwardedFor;
+
+        @NameInMap("EnableXForwardedForClientSrcPort")
+        public Boolean enableXForwardedForClientSrcPort;
+
+        @NameInMap("EnableXForwardedForProto")
+        public Boolean enableXForwardedForProto;
+
+        @NameInMap("EnableXForwardedForSlbId")
+        public Boolean enableXForwardedForSlbId;
+
+        @NameInMap("EnableXForwardedForSlbPort")
+        public Boolean enableXForwardedForSlbPort;
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
@@ -367,6 +382,10 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
 
@@ -417,6 +436,10 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("RequestTimeout")
         public Integer requestTimeout;
 
@@ -426,6 +449,10 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Rules")
         public java.util.List<DescribeIngressResponseBodyDataRules> rules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sp-n0kn923****</p>
+         */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
@@ -486,6 +513,46 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeIngressResponseBodyData setEnableXForwardedFor(Boolean enableXForwardedFor) {
+            this.enableXForwardedFor = enableXForwardedFor;
+            return this;
+        }
+        public Boolean getEnableXForwardedFor() {
+            return this.enableXForwardedFor;
+        }
+
+        public DescribeIngressResponseBodyData setEnableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
+            this.enableXForwardedForClientSrcPort = enableXForwardedForClientSrcPort;
+            return this;
+        }
+        public Boolean getEnableXForwardedForClientSrcPort() {
+            return this.enableXForwardedForClientSrcPort;
+        }
+
+        public DescribeIngressResponseBodyData setEnableXForwardedForProto(Boolean enableXForwardedForProto) {
+            this.enableXForwardedForProto = enableXForwardedForProto;
+            return this;
+        }
+        public Boolean getEnableXForwardedForProto() {
+            return this.enableXForwardedForProto;
+        }
+
+        public DescribeIngressResponseBodyData setEnableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
+            this.enableXForwardedForSlbId = enableXForwardedForSlbId;
+            return this;
+        }
+        public Boolean getEnableXForwardedForSlbId() {
+            return this.enableXForwardedForSlbId;
+        }
+
+        public DescribeIngressResponseBodyData setEnableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
+            this.enableXForwardedForSlbPort = enableXForwardedForSlbPort;
+            return this;
+        }
+        public Boolean getEnableXForwardedForSlbPort() {
+            return this.enableXForwardedForSlbPort;
         }
 
         public DescribeIngressResponseBodyData setId(Long id) {

@@ -55,6 +55,25 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableXForwardedFor")
+    public Boolean enableXForwardedFor;
+
+    @NameInMap("EnableXForwardedForClientSrcPort")
+    public Boolean enableXForwardedForClientSrcPort;
+
+    @NameInMap("EnableXForwardedForProto")
+    public Boolean enableXForwardedForProto;
+
+    @NameInMap("EnableXForwardedForSlbId")
+    public Boolean enableXForwardedForSlbId;
+
+    @NameInMap("EnableXForwardedForSlbPort")
+    public Boolean enableXForwardedForSlbPort;
+
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
@@ -99,6 +118,10 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("LoadBalanceType")
     public String loadBalanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
@@ -117,6 +140,10 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("Rules")
     public String rules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tls_cipher_policy_1_0</p>
+     */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
@@ -155,6 +182,46 @@ public class UpdateIngressRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateIngressRequest setEnableXForwardedFor(Boolean enableXForwardedFor) {
+        this.enableXForwardedFor = enableXForwardedFor;
+        return this;
+    }
+    public Boolean getEnableXForwardedFor() {
+        return this.enableXForwardedFor;
+    }
+
+    public UpdateIngressRequest setEnableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
+        this.enableXForwardedForClientSrcPort = enableXForwardedForClientSrcPort;
+        return this;
+    }
+    public Boolean getEnableXForwardedForClientSrcPort() {
+        return this.enableXForwardedForClientSrcPort;
+    }
+
+    public UpdateIngressRequest setEnableXForwardedForProto(Boolean enableXForwardedForProto) {
+        this.enableXForwardedForProto = enableXForwardedForProto;
+        return this;
+    }
+    public Boolean getEnableXForwardedForProto() {
+        return this.enableXForwardedForProto;
+    }
+
+    public UpdateIngressRequest setEnableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
+        this.enableXForwardedForSlbId = enableXForwardedForSlbId;
+        return this;
+    }
+    public Boolean getEnableXForwardedForSlbId() {
+        return this.enableXForwardedForSlbId;
+    }
+
+    public UpdateIngressRequest setEnableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
+        this.enableXForwardedForSlbPort = enableXForwardedForSlbPort;
+        return this;
+    }
+    public Boolean getEnableXForwardedForSlbPort() {
+        return this.enableXForwardedForSlbPort;
     }
 
     public UpdateIngressRequest setIdleTimeout(Integer idleTimeout) {
