@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PricingRequest extends TeaModel {
     /**
-     * <p>solution_id</p>
+     * <p>solution_id returned by Enrich</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

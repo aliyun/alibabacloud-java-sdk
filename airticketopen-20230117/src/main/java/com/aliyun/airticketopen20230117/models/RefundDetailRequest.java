@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundDetailRequest extends TeaModel {
     /**
+     * <p>refund order number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

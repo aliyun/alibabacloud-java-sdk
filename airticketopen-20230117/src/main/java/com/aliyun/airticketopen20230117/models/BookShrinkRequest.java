@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class BookShrinkRequest extends TeaModel {
     /**
+     * <p>contact information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("contact")
     public String contactShrink;
 
     /**
+     * <p>external order number(buyer customization)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,17 +21,21 @@ public class BookShrinkRequest extends TeaModel {
     @NameInMap("out_order_num")
     public String outOrderNum;
 
+    /**
+     * <p>passenger-ancillary purchase relationship</p>
+     */
     @NameInMap("passenger_ancillary_purchase_map_list")
     public String passengerAncillaryPurchaseMapListShrink;
 
     /**
+     * <p>passenger list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("passenger_list")
     public String passengerListShrink;
 
     /**
-     * <p>solution_id</p>
+     * <p>solution_id returned by Enrich</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

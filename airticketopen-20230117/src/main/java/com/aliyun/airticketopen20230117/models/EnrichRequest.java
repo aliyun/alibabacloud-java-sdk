@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnrichRequest extends TeaModel {
     /**
+     * <p>adult passenger amount 1-9</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,16 @@ public class EnrichRequest extends TeaModel {
     public Integer adults;
 
     /**
+     * <p>cabin class</p>
+     * <ol>
+     * <li><strong>ALL_CABIN</strong> : all cabin class</li>
+     * <li><strong>Y</strong> : economy class</li>
+     * <li><strong>FC</strong> : first class and business class</li>
+     * <li><strong>S</strong> : premium economy class</li>
+     * <li><strong>YS</strong> : economy class and premium economy class</li>
+     * <li><strong>YSC</strong> : economy class, premium economy class and business class</li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>ALL_CABIN</p>
      */
@@ -19,6 +31,8 @@ public class EnrichRequest extends TeaModel {
     public String cabinClass;
 
     /**
+     * <p>child passenger amount 0-9</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,16 +40,23 @@ public class EnrichRequest extends TeaModel {
     public Integer children;
 
     /**
+     * <p>infant passenger amount 0-9</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("infants")
     public Integer infants;
 
+    /**
+     * <p>journey list</p>
+     */
     @NameInMap("journey_param_list")
     public java.util.List<EnrichRequestJourneyParamList> journeyParamList;
 
     /**
+     * <p>solution_id returned by Search</p>
+     * 
      * <strong>example:</strong>
      * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
      */
@@ -97,6 +118,7 @@ public class EnrichRequest extends TeaModel {
 
     public static class EnrichRequestJourneyParamListSegmentParamList extends TeaModel {
         /**
+         * <p>arrival airport code (capitalized)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +128,8 @@ public class EnrichRequest extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>arrival city code (capitalized)</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -113,6 +137,8 @@ public class EnrichRequest extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>RBD</p>
+         * 
          * <strong>example:</strong>
          * <p>V</p>
          */
@@ -120,6 +146,8 @@ public class EnrichRequest extends TeaModel {
         public String cabin;
 
         /**
+         * <p>child RBD</p>
+         * 
          * <strong>example:</strong>
          * <p>E</p>
          */
@@ -127,6 +155,7 @@ public class EnrichRequest extends TeaModel {
         public String childCabin;
 
         /**
+         * <p>departure airport code (capitalized)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,6 +165,8 @@ public class EnrichRequest extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>departure city code (capitalized)</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -143,6 +174,7 @@ public class EnrichRequest extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +184,7 @@ public class EnrichRequest extends TeaModel {
         public String departureTime;
 
         /**
+         * <p>marketing flight no. (eg: KA5809)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +266,7 @@ public class EnrichRequest extends TeaModel {
 
     public static class EnrichRequestJourneyParamList extends TeaModel {
         /**
+         * <p>arrival city code (capitalized)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +276,7 @@ public class EnrichRequest extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>departure city code (capitalized)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,6 +286,7 @@ public class EnrichRequest extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>departure date (eg: yyyyMMdd)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,6 +296,7 @@ public class EnrichRequest extends TeaModel {
         public String departureDate;
 
         /**
+         * <p>segement param list</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("segment_param_list")

@@ -5,24 +5,28 @@ import com.aliyun.tea.*;
 
 public class OrderListRequest extends TeaModel {
     /**
+     * <p>latest booking time (timestamp)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1677229006000</p>
+     * <p>2023-02-02 11:20:00</p>
      */
     @NameInMap("book_time_end")
     public Long bookTimeEnd;
 
     /**
+     * <p>earliest book time(timestamp)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1677229005000</p>
+     * <p>2023-02-01 11:20:00</p>
      */
     @NameInMap("book_time_start")
     public Long bookTimeStart;
 
     /**
+     * <p>pagination query parameters, from which page to start querying</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,8 @@ public class OrderListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>pagination query parameters, how many orders to return</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -37,6 +43,13 @@ public class OrderListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>which order status will be query</p>
+     * <p>1: order reservation in process</p>
+     * <p>2: order reservation successful</p>
+     * <p>3: order paid</p>
+     * <p>4: order successful</p>
+     * <p>5: order closed</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

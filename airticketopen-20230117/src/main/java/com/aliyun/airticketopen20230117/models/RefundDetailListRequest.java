@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefundDetailListRequest extends TeaModel {
     /**
+     * <p>order number returned by Book</p>
+     * 
      * <strong>example:</strong>
      * <p>49884*****950</p>
      */
@@ -12,6 +14,8 @@ public class RefundDetailListRequest extends TeaModel {
     public Long orderNum;
 
     /**
+     * <p>pagination query parameters, from which page to start querying</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class RefundDetailListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>pagination query parameters, how many orders to return</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,7 @@ public class RefundDetailListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>the earliest time(timestamp) of refund order creation</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,7 @@ public class RefundDetailListRequest extends TeaModel {
     public Long refundCreateBeginTime;
 
     /**
+     * <p>the latest time(timestamp) of refund order creation</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

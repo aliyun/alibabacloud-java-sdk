@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class OrderListResponseBody extends TeaModel {
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public OrderListResponseBodyData data;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class OrderListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error data</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +38,8 @@ public class OrderListResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class OrderListResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>http reqeust has been processed successfully，status code is 200</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class OrderListResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>true represents success, false represents failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class OrderListResponseBody extends TeaModel {
 
     public static class OrderListResponseBodyDataListPassengerListCredential extends TeaModel {
         /**
+         * <p>issuing place (two-letter code)</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -119,6 +136,8 @@ public class OrderListResponseBody extends TeaModel {
         public String certIssuePlace;
 
         /**
+         * <p>credential number</p>
+         * 
          * <strong>example:</strong>
          * <p>E1***5674</p>
          */
@@ -126,6 +145,8 @@ public class OrderListResponseBody extends TeaModel {
         public String credentialNum;
 
         /**
+         * <p>credential type , only support &quot;1&quot;(1 means passport) currently.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +154,8 @@ public class OrderListResponseBody extends TeaModel {
         public Integer credentialType;
 
         /**
+         * <p>credential expiration date</p>
+         * 
          * <strong>example:</strong>
          * <p>20290101</p>
          */
@@ -180,16 +203,23 @@ public class OrderListResponseBody extends TeaModel {
 
     public static class OrderListResponseBodyDataListPassengerList extends TeaModel {
         /**
+         * <p>date of birth (yyyyMMdd)</p>
+         * 
          * <strong>example:</strong>
          * <p>20020301</p>
          */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <p>credential</p>
+         */
         @NameInMap("credential")
         public OrderListResponseBodyDataListPassengerListCredential credential;
 
         /**
+         * <p>first name</p>
+         * 
          * <strong>example:</strong>
          * <p>SAN</p>
          */
@@ -197,6 +227,8 @@ public class OrderListResponseBody extends TeaModel {
         public String firstName;
 
         /**
+         * <p>gender 0: MALE; 1: FEMALE</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -204,6 +236,8 @@ public class OrderListResponseBody extends TeaModel {
         public Integer gender;
 
         /**
+         * <p>last name</p>
+         * 
          * <strong>example:</strong>
          * <p>ZHANG</p>
          */
@@ -211,6 +245,8 @@ public class OrderListResponseBody extends TeaModel {
         public String lastName;
 
         /**
+         * <p>mobile country code</p>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
@@ -218,6 +254,8 @@ public class OrderListResponseBody extends TeaModel {
         public String mobileCountryCode;
 
         /**
+         * <p>mobile phone number</p>
+         * 
          * <strong>example:</strong>
          * <p>183******96</p>
          */
@@ -225,6 +263,8 @@ public class OrderListResponseBody extends TeaModel {
         public String mobilePhoneNumber;
 
         /**
+         * <p>nationality (two-letter code)</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -232,6 +272,8 @@ public class OrderListResponseBody extends TeaModel {
         public String nationality;
 
         /**
+         * <p>passenger type 0: adult; 1: child; 8: infant</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -319,6 +361,8 @@ public class OrderListResponseBody extends TeaModel {
 
     public static class OrderListResponseBodyDataList extends TeaModel {
         /**
+         * <p>book time(timestamp)</p>
+         * 
          * <strong>example:</strong>
          * <p>1677210784000</p>
          */
@@ -326,6 +370,8 @@ public class OrderListResponseBody extends TeaModel {
         public Long bookTime;
 
         /**
+         * <p>order number created by book</p>
+         * 
          * <strong>example:</strong>
          * <p>4966***617111</p>
          */
@@ -333,6 +379,13 @@ public class OrderListResponseBody extends TeaModel {
         public Long orderNum;
 
         /**
+         * <p>order status</p>
+         * <p>1: order reservation in process</p>
+         * <p>2: order reservation successful</p>
+         * <p>3: order paid</p>
+         * <p>4: order successful</p>
+         * <p>5: order closed</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -340,16 +393,27 @@ public class OrderListResponseBody extends TeaModel {
         public String orderStatus;
 
         /**
+         * <p>external order number(customized by buyer when book)</p>
+         * 
          * <strong>example:</strong>
          * <p>x091-2023-0220-j-0001</p>
          */
         @NameInMap("out_order_num")
         public String outOrderNum;
 
+        /**
+         * <p>the information about all passenger of current order</p>
+         */
         @NameInMap("passenger_list")
         public java.util.List<OrderListResponseBodyDataListPassengerList> passengerList;
 
         /**
+         * <p>payment status</p>
+         * <p>1: payment in process</p>
+         * <p>2: deduction successful</p>
+         * <p>3: paid to the seller</p>
+         * <p>4: transaction closed</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -357,6 +421,8 @@ public class OrderListResponseBody extends TeaModel {
         public String payStatus;
 
         /**
+         * <p>pay time(timestamp)</p>
+         * 
          * <strong>example:</strong>
          * <p>1677210788000</p>
          */
@@ -364,6 +430,8 @@ public class OrderListResponseBody extends TeaModel {
         public Long payTime;
 
         /**
+         * <p>discount amount</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -371,6 +439,8 @@ public class OrderListResponseBody extends TeaModel {
         public Double promotionPrice;
 
         /**
+         * <p>actual payment amount</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
@@ -378,6 +448,8 @@ public class OrderListResponseBody extends TeaModel {
         public Double realPayPrice;
 
         /**
+         * <p>buyer nickname</p>
+         * 
          * <strong>example:</strong>
          * <p>nick</p>
          */
@@ -385,6 +457,8 @@ public class OrderListResponseBody extends TeaModel {
         public String sessionNick;
 
         /**
+         * <p>order success time(timestamp)</p>
+         * 
          * <strong>example:</strong>
          * <p>1677210786000</p>
          */
@@ -392,6 +466,8 @@ public class OrderListResponseBody extends TeaModel {
         public Long succeedTime;
 
         /**
+         * <p>total price of current order</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
@@ -399,6 +475,8 @@ public class OrderListResponseBody extends TeaModel {
         public Double totalPrice;
 
         /**
+         * <p>transaction number</p>
+         * 
          * <strong>example:</strong>
          * <p>hkduendkd-2023-dj0</p>
          */
@@ -518,6 +596,8 @@ public class OrderListResponseBody extends TeaModel {
 
     public static class OrderListResponseBodyDataPagination extends TeaModel {
         /**
+         * <p>current page index</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -525,6 +605,8 @@ public class OrderListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -532,6 +614,8 @@ public class OrderListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>the number of total orders</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -539,6 +623,8 @@ public class OrderListResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>the number of total pages</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -585,9 +671,15 @@ public class OrderListResponseBody extends TeaModel {
     }
 
     public static class OrderListResponseBodyData extends TeaModel {
+        /**
+         * <p>order list</p>
+         */
         @NameInMap("list")
         public java.util.List<OrderListResponseBodyDataList> list;
 
+        /**
+         * <p>information of pagination</p>
+         */
         @NameInMap("pagination")
         public OrderListResponseBodyDataPagination pagination;
 

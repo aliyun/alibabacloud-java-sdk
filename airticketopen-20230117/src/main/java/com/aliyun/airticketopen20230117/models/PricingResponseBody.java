@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class PricingResponseBody extends TeaModel {
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public PricingResponseBodyData data;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class PricingResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error data</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +38,8 @@ public class PricingResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class PricingResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>http reqeust has been processed successfully，status code is 200</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class PricingResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>true represents success, false represents failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class PricingResponseBody extends TeaModel {
 
     public static class PricingResponseBodyDataChangedPriceInfo extends TeaModel {
         /**
+         * <p>adult fare</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -119,6 +136,8 @@ public class PricingResponseBody extends TeaModel {
         public Double adultPrice;
 
         /**
+         * <p>adult tax</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -126,6 +145,8 @@ public class PricingResponseBody extends TeaModel {
         public Double adultTax;
 
         /**
+         * <p>child fare</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -133,6 +154,8 @@ public class PricingResponseBody extends TeaModel {
         public Double childPrice;
 
         /**
+         * <p>child tax</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -140,6 +163,8 @@ public class PricingResponseBody extends TeaModel {
         public Double childTax;
 
         /**
+         * <p>infant fare</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -147,6 +172,8 @@ public class PricingResponseBody extends TeaModel {
         public Double infantPrice;
 
         /**
+         * <p>infant tax</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -210,7 +237,7 @@ public class PricingResponseBody extends TeaModel {
 
     public static class PricingResponseBodyDataOriginalPriceInfo extends TeaModel {
         /**
-         * <p>成人单价</p>
+         * <p>adult fare</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -219,7 +246,7 @@ public class PricingResponseBody extends TeaModel {
         public Double adultPrice;
 
         /**
-         * <p>成人税</p>
+         * <p>adult tax</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -228,7 +255,7 @@ public class PricingResponseBody extends TeaModel {
         public Double adultTax;
 
         /**
-         * <p>儿童单价</p>
+         * <p>child fare</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -237,7 +264,7 @@ public class PricingResponseBody extends TeaModel {
         public Double childPrice;
 
         /**
-         * <p>儿童税</p>
+         * <p>child tax</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -246,7 +273,7 @@ public class PricingResponseBody extends TeaModel {
         public Double childTax;
 
         /**
-         * <p>婴儿单价</p>
+         * <p>infant fare</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -255,7 +282,7 @@ public class PricingResponseBody extends TeaModel {
         public Double infantPrice;
 
         /**
-         * <p>婴儿税</p>
+         * <p>infant tax</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -320,6 +347,8 @@ public class PricingResponseBody extends TeaModel {
 
     public static class PricingResponseBodyDataSolutionJourneyListSegmentList extends TeaModel {
         /**
+         * <p>arrival airport code (capitalized)</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -327,6 +356,8 @@ public class PricingResponseBody extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>arrival city code (capitalized)</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -334,6 +365,8 @@ public class PricingResponseBody extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>arrival terminal</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -341,6 +374,8 @@ public class PricingResponseBody extends TeaModel {
         public String arrivalTerminal;
 
         /**
+         * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 10:40:00</p>
          */
@@ -348,6 +383,8 @@ public class PricingResponseBody extends TeaModel {
         public String arrivalTime;
 
         /**
+         * <p>available seats (for reference only)</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -355,6 +392,8 @@ public class PricingResponseBody extends TeaModel {
         public String availability;
 
         /**
+         * <p>RBD</p>
+         * 
          * <strong>example:</strong>
          * <p>V</p>
          */
@@ -362,6 +401,8 @@ public class PricingResponseBody extends TeaModel {
         public String cabin;
 
         /**
+         * <p>cabin class</p>
+         * 
          * <strong>example:</strong>
          * <p>ALL_CABIN</p>
          */
@@ -369,6 +410,8 @@ public class PricingResponseBody extends TeaModel {
         public String cabinClass;
 
         /**
+         * <p>code share or not</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -376,6 +419,8 @@ public class PricingResponseBody extends TeaModel {
         public Boolean codeShare;
 
         /**
+         * <p>departure airport code (capitalized)</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -383,6 +428,8 @@ public class PricingResponseBody extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>departure city code (capitalized)</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -390,6 +437,8 @@ public class PricingResponseBody extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>departure terminal</p>
+         * 
          * <strong>example:</strong>
          * <p>T2</p>
          */
@@ -397,6 +446,8 @@ public class PricingResponseBody extends TeaModel {
         public String departureTerminal;
 
         /**
+         * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
          */
@@ -404,6 +455,8 @@ public class PricingResponseBody extends TeaModel {
         public String departureTime;
 
         /**
+         * <p>equipment type</p>
+         * 
          * <strong>example:</strong>
          * <p>32Q</p>
          */
@@ -411,6 +464,8 @@ public class PricingResponseBody extends TeaModel {
         public String equipType;
 
         /**
+         * <p>flight time, unit: minute</p>
+         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -418,6 +473,8 @@ public class PricingResponseBody extends TeaModel {
         public Integer flightDuration;
 
         /**
+         * <p>marketing airline code (eg: KA)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -425,6 +482,8 @@ public class PricingResponseBody extends TeaModel {
         public String marketingAirline;
 
         /**
+         * <p>marketing airline flight no. (eg: KA5809)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -432,6 +491,8 @@ public class PricingResponseBody extends TeaModel {
         public String marketingFlightNo;
 
         /**
+         * <p>marketing airline flight no. (eg: 5809)</p>
+         * 
          * <strong>example:</strong>
          * <p>1295</p>
          */
@@ -439,6 +500,8 @@ public class PricingResponseBody extends TeaModel {
         public Integer marketingFlightNoInt;
 
         /**
+         * <p>operating airline code (eg: CX)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -446,6 +509,8 @@ public class PricingResponseBody extends TeaModel {
         public String operatingAirline;
 
         /**
+         * <p>operating airline flight no. (eg: CX601)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -453,6 +518,8 @@ public class PricingResponseBody extends TeaModel {
         public String operatingFlightNo;
 
         /**
+         * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295-PVG-MFM-20230310</p>
          */
@@ -460,13 +527,17 @@ public class PricingResponseBody extends TeaModel {
         public String segmentId;
 
         /**
+         * <p>stop city list. when stop_quantity &gt; 1 , use “,” for seperation</p>
+         * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>MFM,PVG</p>
          */
         @NameInMap("stop_city_list")
         public String stopCityList;
 
         /**
+         * <p>number of stops</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -657,10 +728,15 @@ public class PricingResponseBody extends TeaModel {
     }
 
     public static class PricingResponseBodyDataSolutionJourneyList extends TeaModel {
+        /**
+         * <p>segment list</p>
+         */
         @NameInMap("segment_list")
         public java.util.List<PricingResponseBodyDataSolutionJourneyListSegmentList> segmentList;
 
         /**
+         * <p>number of transfers</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -692,12 +768,23 @@ public class PricingResponseBody extends TeaModel {
 
     public static class PricingResponseBodyDataSolutionSegmentBaggageCheckInInfoList extends TeaModel {
         /**
+         * <p>through check-in baggage policy type</p>
+         * <ol>
+         * <li>baggage through check-in between segments</li>
+         * <li>baggage re-check-in needed between segments</li>
+         * <li>baggage through check-in at stop city ( applies for stop flight )</li>
+         * <li>baggage re-checkin needed at stop city ( applies for stop flight )</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("luggage_direct_info_type")
         public Integer luggageDirectInfoType;
 
+        /**
+         * <p>segment id list. all the listed segment ids share the same baggage through check-in policy</p>
+         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
@@ -725,9 +812,15 @@ public class PricingResponseBody extends TeaModel {
     }
 
     public static class PricingResponseBodyDataSolutionSegmentBaggageMappingList extends TeaModel {
+        /**
+         * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
+         */
         @NameInMap("passenger_baggage_allowance_mapping")
         public java.util.Map<String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping;
 
+        /**
+         * <p>segment id list all the listed segment id share the same baggage rule</p>
+         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
@@ -755,9 +848,15 @@ public class PricingResponseBody extends TeaModel {
     }
 
     public static class PricingResponseBodyDataSolutionSegmentRefundChangeRuleMappingList extends TeaModel {
+        /**
+         * <p>change and refund policy mapping, key is passenger type, value is change and refund policy detail</p>
+         */
         @NameInMap("refund_change_rule_map")
         public java.util.Map<String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap;
 
+        /**
+         * <p>segment id list. all the listed segment ids share the same change and refund policy</p>
+         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
@@ -786,6 +885,8 @@ public class PricingResponseBody extends TeaModel {
 
     public static class PricingResponseBodyDataSolution extends TeaModel {
         /**
+         * <p>adult fare</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -793,6 +894,8 @@ public class PricingResponseBody extends TeaModel {
         public Double adultPrice;
 
         /**
+         * <p>adult tax</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -800,6 +903,8 @@ public class PricingResponseBody extends TeaModel {
         public Double adultTax;
 
         /**
+         * <p>child fare</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -807,6 +912,8 @@ public class PricingResponseBody extends TeaModel {
         public Double childPrice;
 
         /**
+         * <p>child tax</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -814,6 +921,8 @@ public class PricingResponseBody extends TeaModel {
         public Double childTax;
 
         /**
+         * <p>infant fare</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -821,16 +930,23 @@ public class PricingResponseBody extends TeaModel {
         public Double infantPrice;
 
         /**
+         * <p>infant tax</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("infant_tax")
         public Double infantTax;
 
+        /**
+         * <p>journey list</p>
+         */
         @NameInMap("journey_list")
         public java.util.List<PricingResponseBodyDataSolutionJourneyList> journeyList;
 
         /**
+         * <p>product type description</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -838,23 +954,34 @@ public class PricingResponseBody extends TeaModel {
         public String productTypeDescription;
 
         /**
+         * <p>refund coupon description</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
         @NameInMap("refund_ticket_coupon_description")
         public String refundTicketCouponDescription;
 
+        /**
+         * <p>through check-in baggage policy</p>
+         */
         @NameInMap("segment_baggage_check_in_info_list")
         public java.util.List<PricingResponseBodyDataSolutionSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
 
+        /**
+         * <p>baggage rule list</p>
+         */
         @NameInMap("segment_baggage_mapping_list")
         public java.util.List<PricingResponseBodyDataSolutionSegmentBaggageMappingList> segmentBaggageMappingList;
 
+        /**
+         * <p>change and refund policy</p>
+         */
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<PricingResponseBodyDataSolutionSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
         /**
-         * <p>solution_id</p>
+         * <p>solution_id, equals to solution_id in request</p>
          * 
          * <strong>example:</strong>
          * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
@@ -974,10 +1101,15 @@ public class PricingResponseBody extends TeaModel {
     }
 
     public static class PricingResponseBodyData extends TeaModel {
+        /**
+         * <p>price information after the price change</p>
+         */
         @NameInMap("changed_price_info")
         public PricingResponseBodyDataChangedPriceInfo changedPriceInfo;
 
         /**
+         * <p>whether the price has changed</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -985,16 +1117,22 @@ public class PricingResponseBody extends TeaModel {
         public Boolean isChanged;
 
         /**
-         * <p>变价之前价格信息 isChanged = true 时，才有值</p>
+         * <p>the price information before the change, only available when is_changed = true</p>
          */
         @NameInMap("original_price_info")
         public PricingResponseBodyDataOriginalPriceInfo originalPriceInfo;
 
+        /**
+         * <p>remaining seats: A indicates more than 9, 0-9 represents the specific number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
+         */
         @NameInMap("remain_seats")
         public String remainSeats;
 
         /**
-         * <p>solution</p>
+         * <p>the solution represented by the solution_id in request</p>
          */
         @NameInMap("solution")
         public PricingResponseBodyDataSolution solution;

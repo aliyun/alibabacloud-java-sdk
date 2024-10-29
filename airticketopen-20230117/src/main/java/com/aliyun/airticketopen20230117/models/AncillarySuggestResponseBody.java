@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AncillarySuggestResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Properly processed return data</p>
+     */
     @NameInMap("data")
     public AncillarySuggestResponseBodyData data;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Data carried in error handling</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +38,8 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>http request successful, status value is always 200</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>true represents success, false represents failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,7 +127,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary extends TeaModel {
         /**
-         * <p>行李件数 取值如：3、2、1、0、-2。 -2 表示计重</p>
+         * <p>baggage quantity, values such as: 3, 2, 1, 0, -2.     -2 indicates weight-based</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -121,7 +136,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Integer baggageAmount;
 
         /**
-         * <p>行李重量，0-50。isAllWeght=true 时，表示所有件数总重量。</p>
+         * <p>Baggage weight, 0-50. When isAllWeight=true, it represents the total weight of all baggages.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -130,7 +145,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Integer baggageWeight;
 
         /**
-         * <p>行李重量单位</p>
+         * <p>Unit of baggage weight</p>
          * 
          * <strong>example:</strong>
          * <p>KG</p>
@@ -139,7 +154,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public String baggageWeightUnit;
 
         /**
-         * <p>是否所有行李重量</p>
+         * <p>Whether the weight is for all baggages</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -148,7 +163,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Boolean isAllWeight;
 
         /**
-         * <p>总价</p>
+         * <p>Total price</p>
          * 
          * <strong>example:</strong>
          * <p>10.0</p>
@@ -205,6 +220,8 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary extends TeaModel {
         /**
+         * <p>Ancillary product ID</p>
+         * 
          * <strong>example:</strong>
          * <p>eJwz8DeySEo0NjQ01TU3TU</p>
          */
@@ -212,6 +229,8 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public String ancillaryId;
 
         /**
+         * <p>Ancillary product type. currently supports 4: paid luggage</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -219,7 +238,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Integer ancillaryType;
 
         /**
-         * <p>行李辅营详情</p>
+         * <p>Baggage details</p>
          */
         @NameInMap("baggage_ancillary")
         public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary baggageAncillary;
@@ -256,9 +275,15 @@ public class AncillarySuggestResponseBody extends TeaModel {
     }
 
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapList extends TeaModel {
+        /**
+         * <p>Ancillary product</p>
+         */
         @NameInMap("ancillary")
         public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary ancillary;
 
+        /**
+         * <p>Segment ID list, these segments share the same ancillary</p>
+         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
@@ -286,10 +311,15 @@ public class AncillarySuggestResponseBody extends TeaModel {
     }
 
     public static class AncillarySuggestResponseBodyData extends TeaModel {
+        /**
+         * <p>ancillary detail list</p>
+         */
         @NameInMap("seg_ancillary_map_list")
         public java.util.List<AncillarySuggestResponseBodyDataSegAncillaryMapList> segAncillaryMapList;
 
         /**
+         * <p>solution_id, equals to solution_id in request</p>
+         * 
          * <strong>example:</strong>
          * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
          */

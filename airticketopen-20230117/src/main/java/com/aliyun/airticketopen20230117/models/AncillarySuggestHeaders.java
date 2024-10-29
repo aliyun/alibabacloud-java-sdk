@@ -18,6 +18,8 @@ public class AncillarySuggestHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
+     * <p>Language Code(refer to ISO_639)</p>
+     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */

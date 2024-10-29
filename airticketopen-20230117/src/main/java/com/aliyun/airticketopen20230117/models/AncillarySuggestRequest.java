@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AncillarySuggestRequest extends TeaModel {
     /**
+     * <p>solution_id returned by enrich</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
