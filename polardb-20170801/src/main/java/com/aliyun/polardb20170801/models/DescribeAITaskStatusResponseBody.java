@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAITaskStatusResponseBody extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     /**
      * <p>The cluster ID.</p>
      * 
@@ -47,6 +50,14 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     public static DescribeAITaskStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAITaskStatusResponseBody self = new DescribeAITaskStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAITaskStatusResponseBody setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public DescribeAITaskStatusResponseBody setDBClusterId(String DBClusterId) {
