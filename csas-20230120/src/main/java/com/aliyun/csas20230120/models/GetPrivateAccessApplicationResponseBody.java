@@ -84,6 +84,9 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        @NameInMap("BrowserAccessStatus")
+        public String browserAccessStatus;
+
         @NameInMap("ConnectorIds")
         public java.util.List<String> connectorIds;
 
@@ -96,6 +99,12 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("L7ProxyDomainAutomatic")
+        public String l7ProxyDomainAutomatic;
+
+        @NameInMap("L7ProxyDomainCustom")
+        public String l7ProxyDomainCustom;
 
         /**
          * <strong>example:</strong>
@@ -148,6 +157,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             return this.applicationId;
         }
 
+        public GetPrivateAccessApplicationResponseBodyApplication setBrowserAccessStatus(String browserAccessStatus) {
+            this.browserAccessStatus = browserAccessStatus;
+            return this;
+        }
+        public String getBrowserAccessStatus() {
+            return this.browserAccessStatus;
+        }
+
         public GetPrivateAccessApplicationResponseBodyApplication setConnectorIds(java.util.List<String> connectorIds) {
             this.connectorIds = connectorIds;
             return this;
@@ -170,6 +187,22 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetPrivateAccessApplicationResponseBodyApplication setL7ProxyDomainAutomatic(String l7ProxyDomainAutomatic) {
+            this.l7ProxyDomainAutomatic = l7ProxyDomainAutomatic;
+            return this;
+        }
+        public String getL7ProxyDomainAutomatic() {
+            return this.l7ProxyDomainAutomatic;
+        }
+
+        public GetPrivateAccessApplicationResponseBodyApplication setL7ProxyDomainCustom(String l7ProxyDomainCustom) {
+            this.l7ProxyDomainCustom = l7ProxyDomainCustom;
+            return this;
+        }
+        public String getL7ProxyDomainCustom() {
+            return this.l7ProxyDomainCustom;
         }
 
         public GetPrivateAccessApplicationResponseBodyApplication setName(String name) {

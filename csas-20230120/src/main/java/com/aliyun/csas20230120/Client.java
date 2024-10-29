@@ -297,8 +297,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("Addresses", request.addresses);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.browserAccessStatus)) {
+            body.put("BrowserAccessStatus", request.browserAccessStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.l7ProxyDomainAutomaticPrefix)) {
+            body.put("L7ProxyDomainAutomaticPrefix", request.l7ProxyDomainAutomaticPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.l7ProxyDomainCustom)) {
+            body.put("L7ProxyDomainCustom", request.l7ProxyDomainCustom);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -739,8 +751,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateWmEmbedTaskShrinkRequest request = new CreateWmEmbedTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.csvControl)) {
+            request.csvControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.csvControl, "CsvControl", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.documentControl)) {
             request.documentControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documentControl, "DocumentControl", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.csvControlShrink)) {
+            query.put("CsvControl", request.csvControlShrink);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -789,6 +810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -821,12 +843,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>创建文件水印提取任务</p>
      * 
-     * @param request CreateWmExtractTaskRequest
+     * @param tmpReq CreateWmExtractTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWmExtractTaskResponse
      */
-    public CreateWmExtractTaskResponse createWmExtractTaskWithOptions(CreateWmExtractTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateWmExtractTaskResponse createWmExtractTaskWithOptions(CreateWmExtractTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateWmExtractTaskShrinkRequest request = new CreateWmExtractTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.csvControl)) {
+            request.csvControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.csvControl, "CsvControl", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.csvControlShrink)) {
+            query.put("CsvControl", request.csvControlShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.documentIsCapture)) {
             body.put("DocumentIsCapture", request.documentIsCapture);
@@ -857,6 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3647,6 +3681,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.l7ProxyDomainAutomaticPrefix)) {
+            body.put("L7ProxyDomainAutomaticPrefix", request.l7ProxyDomainAutomaticPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.l7ProxyDomainCustom)) {
+            body.put("L7ProxyDomainCustom", request.l7ProxyDomainCustom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.l7ProxyDomainPrivate)) {
+            body.put("L7ProxyDomainPrivate", request.l7ProxyDomainPrivate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {

@@ -23,6 +23,15 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("L7ProxyDomainAutomaticPrefix")
+    public String l7ProxyDomainAutomaticPrefix;
+
+    @NameInMap("L7ProxyDomainCustom")
+    public String l7ProxyDomainCustom;
+
+    @NameInMap("L7ProxyDomainPrivate")
+    public String l7ProxyDomainPrivate;
+
     /**
      * <strong>example:</strong>
      * <p>Cover</p>
@@ -81,6 +90,30 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdatePrivateAccessApplicationRequest setL7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {
+        this.l7ProxyDomainAutomaticPrefix = l7ProxyDomainAutomaticPrefix;
+        return this;
+    }
+    public String getL7ProxyDomainAutomaticPrefix() {
+        return this.l7ProxyDomainAutomaticPrefix;
+    }
+
+    public UpdatePrivateAccessApplicationRequest setL7ProxyDomainCustom(String l7ProxyDomainCustom) {
+        this.l7ProxyDomainCustom = l7ProxyDomainCustom;
+        return this;
+    }
+    public String getL7ProxyDomainCustom() {
+        return this.l7ProxyDomainCustom;
+    }
+
+    public UpdatePrivateAccessApplicationRequest setL7ProxyDomainPrivate(String l7ProxyDomainPrivate) {
+        this.l7ProxyDomainPrivate = l7ProxyDomainPrivate;
+        return this;
+    }
+    public String getL7ProxyDomainPrivate() {
+        return this.l7ProxyDomainPrivate;
     }
 
     public UpdatePrivateAccessApplicationRequest setModifyType(String modifyType) {
