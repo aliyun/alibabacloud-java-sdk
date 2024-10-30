@@ -48,6 +48,9 @@ public class SendByDeviceFileIdRequest extends TeaModel {
     @NameInMap("ThirdPartyId")
     public String thirdPartyId;
 
+    @NameInMap("callbackParams")
+    public String callbackParams;
+
     public static SendByDeviceFileIdRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByDeviceFileIdRequest self = new SendByDeviceFileIdRequest();
         return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class SendByDeviceFileIdRequest extends TeaModel {
     }
     public String getThirdPartyId() {
         return this.thirdPartyId;
+    }
+
+    public SendByDeviceFileIdRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
     }
 
 }

@@ -51,6 +51,9 @@ public class SendByAliasFileIdShrinkRequest extends TeaModel {
     @NameInMap("ThirdPartyId")
     public String thirdPartyId;
 
+    @NameInMap("callbackParams")
+    public String callbackParams;
+
     public static SendByAliasFileIdShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByAliasFileIdShrinkRequest self = new SendByAliasFileIdShrinkRequest();
         return TeaModel.build(map, self);
@@ -142,6 +145,14 @@ public class SendByAliasFileIdShrinkRequest extends TeaModel {
     }
     public String getThirdPartyId() {
         return this.thirdPartyId;
+    }
+
+    public SendByAliasFileIdShrinkRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
     }
 
 }

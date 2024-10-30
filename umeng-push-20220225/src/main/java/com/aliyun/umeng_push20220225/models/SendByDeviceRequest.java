@@ -48,6 +48,9 @@ public class SendByDeviceRequest extends TeaModel {
     @NameInMap("ThirdPartyId")
     public String thirdPartyId;
 
+    @NameInMap("callbackParams")
+    public String callbackParams;
+
     public static SendByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByDeviceRequest self = new SendByDeviceRequest();
         return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class SendByDeviceRequest extends TeaModel {
     }
     public String getThirdPartyId() {
         return this.thirdPartyId;
+    }
+
+    public SendByDeviceRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
     }
 
 }
