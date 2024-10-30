@@ -51,6 +51,9 @@ public class SendByAliasRequest extends TeaModel {
     @NameInMap("ThirdPartyId")
     public String thirdPartyId;
 
+    @NameInMap("callbackParams")
+    public String callbackParams;
+
     public static SendByAliasRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByAliasRequest self = new SendByAliasRequest();
         return TeaModel.build(map, self);
@@ -142,6 +145,14 @@ public class SendByAliasRequest extends TeaModel {
     }
     public String getThirdPartyId() {
         return this.thirdPartyId;
+    }
+
+    public SendByAliasRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
     }
 
 }

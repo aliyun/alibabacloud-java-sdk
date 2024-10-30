@@ -16,11 +16,25 @@ public class ChannelProperties extends TeaModel {
     @NameInMap("huaweiChannelImportance")
     public String huaweiChannelImportance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>取值为&quot;NORMAL&quot;和&quot;HIGH&quot;,默认为”NORMAL”</p>
+     */
+    @NameInMap("huaweiMessageUrgency")
+    public String huaweiMessageUrgency;
+
     @NameInMap("mainActivity")
     public String mainActivity;
 
     @NameInMap("oppoChannelId")
     public String oppoChannelId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;true&quot; ,默认为&quot;false&quot;，可不填</p>
+     */
+    @NameInMap("useHuaweiMessage")
+    public String useHuaweiMessage;
 
     /**
      * <strong>example:</strong>
@@ -72,6 +86,14 @@ public class ChannelProperties extends TeaModel {
         return this.huaweiChannelImportance;
     }
 
+    public ChannelProperties setHuaweiMessageUrgency(String huaweiMessageUrgency) {
+        this.huaweiMessageUrgency = huaweiMessageUrgency;
+        return this;
+    }
+    public String getHuaweiMessageUrgency() {
+        return this.huaweiMessageUrgency;
+    }
+
     public ChannelProperties setMainActivity(String mainActivity) {
         this.mainActivity = mainActivity;
         return this;
@@ -86,6 +108,14 @@ public class ChannelProperties extends TeaModel {
     }
     public String getOppoChannelId() {
         return this.oppoChannelId;
+    }
+
+    public ChannelProperties setUseHuaweiMessage(String useHuaweiMessage) {
+        this.useHuaweiMessage = useHuaweiMessage;
+        return this;
+    }
+    public String getUseHuaweiMessage() {
+        return this.useHuaweiMessage;
     }
 
     public ChannelProperties setVivoAddBadge(String vivoAddBadge) {

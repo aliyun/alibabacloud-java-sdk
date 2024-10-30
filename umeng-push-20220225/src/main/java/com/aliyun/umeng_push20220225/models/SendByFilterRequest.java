@@ -46,6 +46,9 @@ public class SendByFilterRequest extends TeaModel {
     @NameInMap("ThirdPartyId")
     public String thirdPartyId;
 
+    @NameInMap("callbackParams")
+    public String callbackParams;
+
     public static SendByFilterRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByFilterRequest self = new SendByFilterRequest();
         return TeaModel.build(map, self);
@@ -129,6 +132,14 @@ public class SendByFilterRequest extends TeaModel {
     }
     public String getThirdPartyId() {
         return this.thirdPartyId;
+    }
+
+    public SendByFilterRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
     }
 
 }
