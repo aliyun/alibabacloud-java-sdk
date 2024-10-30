@@ -21,19 +21,15 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     /**
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    /**
-     * <strong>example:</strong>
-     * <p>ADF6D849-*****-7E7030F0CE53</p>
-     */
-    @NameInMap("requestId")
-    public String requestId;
 
     public static ListDatasetVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDatasetVersionsResponseBody self = new ListDatasetVersionsResponseBody();
@@ -64,20 +60,20 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDatasetVersionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListDatasetVersionsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDatasetVersionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
 }

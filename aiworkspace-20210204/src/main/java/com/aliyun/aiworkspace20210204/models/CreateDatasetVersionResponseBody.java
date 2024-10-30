@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetVersionResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     /**
      * <strong>example:</strong>
      * <p>v1</p>
@@ -11,24 +14,9 @@ public class CreateDatasetVersionResponseBody extends TeaModel {
     @NameInMap("VersionName")
     public String versionName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ADF6D849-*****-7E7030F0CE53</p>
-     */
-    @NameInMap("requestId")
-    public String requestId;
-
     public static CreateDatasetVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDatasetVersionResponseBody self = new CreateDatasetVersionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDatasetVersionResponseBody setVersionName(String versionName) {
-        this.versionName = versionName;
-        return this;
-    }
-    public String getVersionName() {
-        return this.versionName;
     }
 
     public CreateDatasetVersionResponseBody setRequestId(String requestId) {
@@ -37,6 +25,14 @@ public class CreateDatasetVersionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateDatasetVersionResponseBody setVersionName(String versionName) {
+        this.versionName = versionName;
+        return this;
+    }
+    public String getVersionName() {
+        return this.versionName;
     }
 
 }
