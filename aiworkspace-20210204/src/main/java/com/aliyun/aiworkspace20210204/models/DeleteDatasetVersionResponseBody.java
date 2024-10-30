@@ -4,11 +4,7 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatasetVersionResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ADF6D849-*****-7E7030F0CE53</p>
-     */
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
     public static DeleteDatasetVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {

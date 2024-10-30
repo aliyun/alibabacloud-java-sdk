@@ -19,6 +19,8 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public Long dataSize;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -41,6 +43,8 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String options;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>DIRECTORY</p>
      */
@@ -62,6 +66,8 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</p>
      */
