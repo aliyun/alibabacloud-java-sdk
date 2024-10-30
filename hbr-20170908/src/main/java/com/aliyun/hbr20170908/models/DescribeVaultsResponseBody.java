@@ -141,6 +141,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("Archive")
         public Integer archive;
 
+        @NameInMap("CommonFileSystem")
+        public Integer commonFileSystem;
+
         /**
          * <p>The number of backup plans for General-purpose NAS file systems.</p>
          * 
@@ -269,6 +272,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
         public Integer getArchive() {
             return this.archive;
+        }
+
+        public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics setCommonFileSystem(Integer commonFileSystem) {
+            this.commonFileSystem = commonFileSystem;
+            return this;
+        }
+        public Integer getCommonFileSystem() {
+            return this.commonFileSystem;
         }
 
         public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics setCommonNas(Integer commonNas) {
