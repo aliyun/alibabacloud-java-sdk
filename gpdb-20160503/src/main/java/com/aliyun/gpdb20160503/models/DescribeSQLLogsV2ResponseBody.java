@@ -168,6 +168,9 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         @NameInMap("OperationType")
         public String operationType;
 
+        @NameInMap("QueryId")
+        public String queryId;
+
         /**
          * <p>The number of entries returned.</p>
          * 
@@ -194,6 +197,9 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
          */
         @NameInMap("ScanRowCounts")
         public Long scanRowCounts;
+
+        @NameInMap("SessionId")
+        public String sessionId;
 
         /**
          * <p>The source IP address.</p>
@@ -298,6 +304,14 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             return this.operationType;
         }
 
+        public DescribeSQLLogsV2ResponseBodyItems setQueryId(String queryId) {
+            this.queryId = queryId;
+            return this;
+        }
+        public String getQueryId() {
+            return this.queryId;
+        }
+
         public DescribeSQLLogsV2ResponseBodyItems setReturnRowCounts(Long returnRowCounts) {
             this.returnRowCounts = returnRowCounts;
             return this;
@@ -320,6 +334,14 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
         public Long getScanRowCounts() {
             return this.scanRowCounts;
+        }
+
+        public DescribeSQLLogsV2ResponseBodyItems setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
         }
 
         public DescribeSQLLogsV2ResponseBodyItems setSourceIP(String sourceIP) {
