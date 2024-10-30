@@ -536,7 +536,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>AllAllowed </p>
+         * <p>AllAllowed</p>
          */
         @NameInMap("RerunMode")
         public String rerunMode;

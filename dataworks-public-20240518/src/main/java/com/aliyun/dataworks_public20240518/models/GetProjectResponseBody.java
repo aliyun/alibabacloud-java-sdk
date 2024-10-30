@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
+    /**
+     * <p>The information about the workspace.</p>
+     */
     @NameInMap("Project")
     public GetProjectResponseBodyProject project;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
@@ -37,6 +42,8 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static class GetProjectResponseBodyProjectAliyunResourceTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>batch</p>
          */
@@ -44,6 +51,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>blue</p>
          */
@@ -75,19 +84,33 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static class GetProjectResponseBodyProject extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmzbn7pti3zfa</p>
          */
         @NameInMap("AliyunResourceGroupId")
         public String aliyunResourceGroupId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("AliyunResourceTags")
         public java.util.List<GetProjectResponseBodyProjectAliyunResourceTags> aliyunResourceTags;
 
+        /**
+         * <p>The description of the workspace.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the development environment is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</li>
+         * <li>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -95,16 +118,27 @@ public class GetProjectResponseBody extends TeaModel {
         public Boolean devEnvironmentEnabled;
 
         /**
+         * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("DevRoleDisabled")
         public Boolean devRoleDisabled;
 
+        /**
+         * <p>The display name of the workspace.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>28477242</p>
          */
@@ -112,6 +146,8 @@ public class GetProjectResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>sora_finance</p>
          */
@@ -119,6 +155,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the workspace belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>207947397706614299</p>
          */
@@ -126,6 +164,12 @@ public class GetProjectResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>Indicates whether scheduling of Platform for AI (PAI) tasks is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+         * <li>false: Scheduling of PAI tasks is disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -133,6 +177,32 @@ public class GetProjectResponseBody extends TeaModel {
         public Boolean paiTaskEnabled;
 
         /**
+         * <p>The status of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>Initializing</li>
+         * <li>InitFailed</li>
+         * <li>Forbidden</li>
+         * <li>Deleting</li>
+         * <li>DeleteFailed</li>
+         * <li>Frozen</li>
+         * <li>Updating</li>
+         * <li>UpdateFailed</li>
+         * </ul>
+         * <!---->
+         * 
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */

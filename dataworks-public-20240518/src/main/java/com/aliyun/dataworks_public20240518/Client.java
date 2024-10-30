@@ -2174,7 +2174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工作空间详情</p>
+     * <p>Queries the information about a DataWorks workspace.</p>
      * 
      * @param request GetProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2202,7 +2202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工作空间详情</p>
+     * <p>Queries the information about a DataWorks workspace.</p>
      * 
      * @param request GetProjectRequest
      * @return GetProjectResponse
