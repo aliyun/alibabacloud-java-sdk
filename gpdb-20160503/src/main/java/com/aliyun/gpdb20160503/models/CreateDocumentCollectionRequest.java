@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDocumentCollectionRequest extends TeaModel {
     /**
+     * <p>Name of the document library to be created.</p>
+     * <blockquote>
+     * <p>The name must comply with PostgreSQL object naming restrictions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String collection;
 
     /**
+     * <p>Instance ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,42 +31,26 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The vectorization algorithm.</p>
+     * <p>Vectorization algorithm.</p>
      * <blockquote>
-     * <p> Valid values:</p>
-     * </blockquote>
+     * <p>Supported algorithms:</p>
      * <ul>
-     * <li><p>text-embedding-v1: the algorithm that produces 1536-dimensional vectors.</p>
-     * </li>
-     * <li><p>text-embedding-v2: the algorithm that produces 1536-dimensional vectors.</p>
-     * </li>
-     * <li><p>text2vec: the algorithm that produces 1024-dimensional vectors.</p>
-     * </li>
-     * <li><p>m3e-base: the algorithm that produces 768-dimensional vectors.</p>
-     * </li>
-     * <li><p>m3e-small: the algorithm that produces 512-dimensional vectors.</p>
-     * </li>
-     * <li><p>multimodal-embedding-one-peace-v1: the image vectorization algorithm that produces 1536-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-vit-b-32: the image vectorization algorithm that uses the Contrastive Language-Image Pre-Training (CLIP) ViT-B/32 model and produces 512-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-vit-b-16: the image vectorization algorithm that uses the CLIP ViT-B/16 model and produces 512-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-vit-l-14: the image vectorization algorithm that uses the CLIP ViT-L/14 model and produces 768-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-vit-l-14-336px: the image vectorization algorithm that uses the CLIP ViT-L/14@336px model and produces 768-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-rn50: the image vectorization algorithm that uses the CLIP RN50 model and produces 1024-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-rn101: the image vectorization algorithm that uses the CLIP RN101 model and produces 512-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-rn50x4: the image vectorization algorithm that uses the CLIP RN50x4 model and produces 640-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-rn50x16: the image vectorization algorithm that uses the CLIP RN50x16 model and produces 768-dimensional vectors.</p>
-     * </li>
-     * <li><p>clip-rn50x64: the image vectorization algorithm that uses the CLIP RN50x64 model and produces 1024-dimensional vectors.</p>
-     * </li>
+     * <li>text-embedding-v1: 1536 dimensions</li>
+     * <li>text-embedding-v2: 1536 dimensions</li>
+     * <li>text2vec: 1024 dimensions</li>
+     * <li>m3e-base: 768 dimensions</li>
+     * <li>m3e-small: 512 dimensions</li>
+     * <li>clip-vit-b-32: CLIP ViT-B/32 model, 512 dimensions, image vectorization algorithm</li>
+     * <li>clip-vit-b-16: CLIP ViT-B/16 model, 512 dimensions, image vectorization algorithm</li>
+     * <li>clip-vit-l-14: CLIP ViT-L/14 model, 768 dimensions, image vectorization algorithm</li>
+     * <li>clip-vit-l-14-336px: CLIP ViT-L/14@336px model, 768 dimensions, image vectorization algorithm</li>
+     * <li>clip-rn50: CLIP RN50 model, 1024 dimensions, image vectorization algorithm</li>
+     * <li>clip-rn101: CLIP RN101 model, 512 dimensions, image vectorization algorithm</li>
+     * <li>clip-rn50x4: CLIP RN50x4 model, 640 dimensions, image vectorization algorithm</li>
+     * <li>clip-rn50x16: CLIP RN50x16 model, 768 dimensions, image vectorization algorithm</li>
+     * <li>clip-rn50x64: CLIP RN50x64 model, 1024 dimensions, image vectorization algorithm</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>text-embedding-v1</p>
@@ -67,15 +59,13 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String embeddingModel;
 
     /**
-     * <p>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</p>
+     * <p>Whether to use mmap to build HNSW index, default is 0. If the data does not need to be deleted and there are requirements for the speed of uploading data, it is recommended to set this to 1.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.</p>
-     * </li>
-     * <li><p>1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.</p>
-     * </li>
+     * <li>When set to 0, segment-page storage will be used by default to build the index. This mode can use PostgreSQL\&quot;s shared_buffer as a cache and supports operations such as deletion and updates.</li>
+     * <li>When set to 1, the index will be built using mmap. This mode does not support deletion or update operations.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -84,6 +74,8 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public Integer externalStorage;
 
     /**
+     * <p>Fields used for full-text search, separated by commas (,). These fields must be keys defined in Metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>title,page</p>
      */
@@ -91,20 +83,10 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String fullTextRetrievalFields;
 
     /**
-     * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
+     * <p>The maximum number of neighbors in the HNSW algorithm, ranging from 1 to 1000. The interface will automatically set this value based on the vector dimension, and it generally does not need to be manually configured.</p>
      * <blockquote>
-     * <p> We recommend that you configure this parameter based on the value of the Dimension parameter.</p>
+     * <p>It is recommended to set according to the vector dimension: &gt;- For dimensions less than or equal to 384: 16 &gt;- For dimensions greater than 384 but less than or equal to 768: 32 &gt;- For dimensions greater than 768 but less than or equal to 1024: 64 &gt;- For dimensions greater than 1024: 128</p>
      * </blockquote>
-     * <ul>
-     * <li><p>If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</p>
-     * </li>
-     * <li><p>If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</p>
-     * </li>
-     * <li><p>If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</p>
-     * </li>
-     * <li><p>If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -113,6 +95,10 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public Integer hnswM;
 
     /**
+     * <p>Name of the management account with rds_superuser permissions.</p>
+     * <blockquote>
+     * <p>You can create an account through the console -&gt; Account Management, or by using the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> API.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,6 +108,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String managerAccount;
 
     /**
+     * <p>Management account password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,15 +118,16 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String managerAccountPassword;
 
     /**
-     * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
+     * <p>Metadata of vector data, in the form of a MAP JSON string. The key represents the field name, and the value represents the data type.</p>
      * <blockquote>
+     * <p>Supported data types</p>
      * <ul>
-     * <li>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types?spm=a2c63.p38356.0.0.69b31bceLRFnrR">Data types</a>.</li>
-     * <li>The money data type is not supported.</li>
+     * <li>For a list of data types, see: <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types-1/">Data Types</a>.</li>
+     * <li>The money type is not supported at this time.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
-     * <p>Warning: Reserved fields such as id, vector, doc_name, content, loader_metadata, source, and to_tsvector cannot be used.</p>
+     * <p>Warning: The fields id, vector, doc_name, content, loader_metadata, source, and to_tsvector are reserved and should not be used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -149,6 +137,14 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String metadata;
 
     /**
+     * <p>Method used when building the vector index.</p>
+     * <p>Value description:</p>
+     * <ul>
+     * <li><strong>l2</strong>: Euclidean distance.</li>
+     * <li><strong>ip</strong>: Inner product (dot product) distance.</li>
+     * <li><strong>cosine</strong> (default): Cosine similarity.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cosine</p>
      */
@@ -156,6 +152,11 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String metrics;
 
     /**
+     * <p>Namespace, default is public.</p>
+     * <blockquote>
+     * <p>You can create a namespace using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
      */
@@ -166,6 +167,8 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Tokenizer used for full-text search, default is zh_cn.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh_cn</p>
      */
@@ -173,19 +176,20 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String parser;
 
     /**
-     * <p>Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:</p>
+     * <p>Whether to enable PQ (Product Quantization) algorithm for index acceleration. It is recommended to enable this when the data volume exceeds 500,000. Value description:</p>
      * <ul>
-     * <li>0: no.</li>
-     * <li>1 (default): yes.</li>
+     * <li>0: Disabled.</li>
+     * <li>1: Enabled (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("PqEnable")
     public Integer pqEnable;
 
     /**
+     * <p>ID of the region where the instance is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

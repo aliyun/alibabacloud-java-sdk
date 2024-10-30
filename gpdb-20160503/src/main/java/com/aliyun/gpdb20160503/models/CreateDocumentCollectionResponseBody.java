@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDocumentCollectionResponseBody extends TeaModel {
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -12,6 +14,8 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -19,6 +23,12 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>API execution status, with the following values:</p>
+     * <ul>
+     * <li><strong>success</strong>: Execution succeeded.</li>
+     * <li><strong>fail</strong>: Execution failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>successs</p>
      */

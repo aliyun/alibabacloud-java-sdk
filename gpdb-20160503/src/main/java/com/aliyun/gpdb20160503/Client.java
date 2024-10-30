@@ -407,7 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查hadoop集群网络连通性</p>
+     * <p>Check Hadoop Cluster Network Connectivity</p>
      * 
      * @param request CheckHadoopNetConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -451,7 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查hadoop集群网络连通性</p>
+     * <p>Check Hadoop Cluster Network Connectivity</p>
      * 
      * @param request CheckHadoopNetConnectionRequest
      * @return CheckHadoopNetConnectionResponse
@@ -463,7 +463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the network connectivity of a connection specified by a Java Database Connectivity (JDBC) connection string.</p>
+     * <p>Check the network connectivity of the JDBC connection string</p>
      * 
      * @param request CheckJDBCSourceNetConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -507,7 +507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the network connectivity of a connection specified by a Java Database Connectivity (JDBC) connection string.</p>
+     * <p>Check the network connectivity of the JDBC connection string</p>
      * 
      * @param request CheckJDBCSourceNetConnectionRequest
      * @return CheckJDBCSourceNetConnectionResponse
@@ -1121,7 +1121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge base.</p>
+     * <p>Create Knowledge Base</p>
      * 
      * @param request CreateDocumentCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1209,7 +1209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge base.</p>
+     * <p>Create Knowledge Base</p>
      * 
      * @param request CreateDocumentCollectionRequest
      * @return CreateDocumentCollectionResponse
