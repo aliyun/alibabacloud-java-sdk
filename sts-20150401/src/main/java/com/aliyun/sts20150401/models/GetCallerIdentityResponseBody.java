@@ -4,24 +4,52 @@ package com.aliyun.sts20150401.models;
 import com.aliyun.tea.*;
 
 public class GetCallerIdentityResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>196813200012****</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::196813200012****:user/admin</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RAMUser</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28877424437521****</p>
+     */
     @NameInMap("PrincipalId")
     public String principalId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3C87BF47-3724-5443-ADC1-5AEAD9A03EB1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>33537620082992****</p>
+     */
     @NameInMap("RoleId")
     public String roleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>216959339000****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

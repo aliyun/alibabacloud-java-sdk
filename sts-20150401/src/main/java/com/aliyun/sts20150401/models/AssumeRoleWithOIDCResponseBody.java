@@ -24,6 +24,9 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3D57EAD2-8723-1F26-B69C-F8707D8B565D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +71,18 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     public static class AssumeRoleWithOIDCResponseBodyAssumedRoleUser extends TeaModel {
         /**
          * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::113511544585****:role/testoidc/TestOidcAssumedRoleSession</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33157794895460****</p>
          */
         @NameInMap("AssumedRoleId")
         public String assumedRoleId;
@@ -104,26 +113,39 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     public static class AssumeRoleWithOIDCResponseBodyCredentials extends TeaModel {
         /**
          * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STS.NUgYrLnoC37mZZCNnAbez****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVwjCkNzTMupZ8NbTCxCBRq3K16jtcWFTJAyBEv2****</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
         /**
          * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-20T04:27:09Z</p>
          */
         @NameInMap("Expiration")
         public String expiration;
 
         /**
          * <p>The STS token.</p>
-         * <br>
-         * <p>> Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+         * <blockquote>
+         * <p>Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CAIShwJ1q6Ft5B2yfSjIr5bSEsj4g7BihPWGWHz****</p>
          */
         @NameInMap("SecurityToken")
         public String securityToken;
@@ -170,34 +192,58 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     public static class AssumeRoleWithOIDCResponseBodyOIDCTokenInfo extends TeaModel {
         /**
          * <p>The audience. If multiple audiences are returned, the audiences are separated by commas (,).</p>
-         * <br>
-         * <p>The audience is represented by the `aud` field in the OIDC Token.</p>
+         * <p>The audience is represented by the <code>aud</code> field in the OIDC Token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>496271242565057****</p>
          */
         @NameInMap("ClientIds")
         public String clientIds;
 
+        /**
+         * <p>The time when the OIDC token expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-20T04:27:09Z</p>
+         */
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
+        /**
+         * <p>The time when the OIDC token was issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-20T03:27:09Z</p>
+         */
         @NameInMap("IssuanceTime")
         public String issuanceTime;
 
         /**
          * <p>The URL of the issuer,</p>
-         * <br>
-         * <p>which is represented by the `iss` field in the OIDC Token.</p>
+         * <p>which is represented by the <code>iss</code> field in the OIDC Token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>The subject,</p>
-         * <br>
-         * <p>which is represented by the `sub` field in the OIDC Token.</p>
+         * <p>which is represented by the <code>sub</code> field in the OIDC Token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KryrkIdjylZb7agUgCEf****</p>
          */
         @NameInMap("Subject")
         public String subject;
 
+        /**
+         * <p>The verification information about the OIDC token. For more information, see <a href="https://help.aliyun.com/document_detail/327123.html">Manage an OIDC IdP</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("VerificationInfo")
         public String verificationInfo;
 
