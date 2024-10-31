@@ -18,6 +18,9 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6894B13B-6D71-4EF5-88FA-F32781734A7F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +71,18 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     public static class AssumeRoleWithSAMLResponseBodyAssumedRoleUser extends TeaModel {
         /**
          * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:sts::123456789012****:assumed-role/AdminRole/alice</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34458433936495****:alice</p>
          */
         @NameInMap("AssumedRoleId")
         public String assumedRoleId;
@@ -104,26 +113,39 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     public static class AssumeRoleWithSAMLResponseBodyCredentials extends TeaModel {
         /**
          * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STS.L4aBSCSJVMuKg5U1****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wyLTSmsyPGP1ohvvw8xYgB29dlGI8KMiH2pK****</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
         /**
          * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-04-09T11:52:19Z</p>
          */
         @NameInMap("Expiration")
         public String expiration;
 
         /**
          * <p>The STS token.</p>
-         * <br>
-         * <p>> Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+         * <blockquote>
+         * <p>Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("SecurityToken")
         public String securityToken;
@@ -169,25 +191,37 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
 
     public static class AssumeRoleWithSAMLResponseBodySAMLAssertionInfo extends TeaModel {
         /**
-         * <p>The value in the `Issuer` element in the SAML assertion.</p>
+         * <p>The value in the <code>Issuer</code> element in the SAML assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/adfs/services/trust">http://example.com/adfs/services/trust</a></p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
-         * <p>The `Recipient` attribute of the SubjectConfirmationData sub-element. SubjectConfirmationData is a sub-element of the `Subject` element in the SAML assertion.</p>
+         * <p>The <code>Recipient</code> attribute of the SubjectConfirmationData sub-element. SubjectConfirmationData is a sub-element of the <code>Subject</code> element in the SAML assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://signin.aliyun.com/saml-role/SSO">https://signin.aliyun.com/saml-role/SSO</a></p>
          */
         @NameInMap("Recipient")
         public String recipient;
 
         /**
-         * <p>The value in the NameID sub-element of the `Subject` element in the SAML assertion.</p>
+         * <p>The value in the NameID sub-element of the <code>Subject</code> element in the SAML assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
          */
         @NameInMap("Subject")
         public String subject;
 
         /**
-         * <p>The Format attribute of the `NameID` element in the SAML assertion. If the Format attribute is prefixed with `urn:oasis:names:tc:SAML:2.0:nameid-format:`, the prefix is not included in the value of this parameter. For example, if the value of the Format attribute is urn:oasis:names:tc:SAML:2.0:nameid-format:persistent/transient, the value of this parameter is `persistent/transient`.</p>
+         * <p>The Format attribute of the <code>NameID</code> element in the SAML assertion. If the Format attribute is prefixed with <code>urn:oasis:names:tc:SAML:2.0:nameid-format:</code>, the prefix is not included in the value of this parameter. For example, if the value of the Format attribute is urn:oasis:names:tc:SAML:2.0:nameid-format:persistent/transient, the value of this parameter is <code>persistent/transient</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>persistent</p>
          */
         @NameInMap("SubjectType")
         public String subjectType;

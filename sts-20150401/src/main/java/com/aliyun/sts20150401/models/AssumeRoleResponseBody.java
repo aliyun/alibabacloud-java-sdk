@@ -18,6 +18,9 @@ public class AssumeRoleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6894B13B-6D71-4EF5-88FA-F32781734A7F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +57,18 @@ public class AssumeRoleResponseBody extends TeaModel {
     public static class AssumeRoleResponseBodyAssumedRoleUser extends TeaModel {
         /**
          * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/adminrole/alice</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34458433936495****:alice</p>
          */
         @NameInMap("AssumedRoleId")
         public String assumedRoleId;
@@ -90,26 +99,39 @@ public class AssumeRoleResponseBody extends TeaModel {
     public static class AssumeRoleResponseBodyCredentials extends TeaModel {
         /**
          * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STS.L4aBSCSJVMuKg5U1****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wyLTSmsyPGP1ohvvw8xYgB29dlGI8KMiH2pK****</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
         /**
          * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-04-09T11:52:19Z</p>
          */
         @NameInMap("Expiration")
         public String expiration;
 
         /**
          * <p>The STS token.</p>
-         * <br>
-         * <p>> Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+         * <blockquote>
+         * <p>Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("SecurityToken")
         public String securityToken;
