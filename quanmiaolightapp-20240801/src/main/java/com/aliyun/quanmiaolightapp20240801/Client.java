@@ -197,6 +197,172 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>轻应用-热点播报-问答</p>
+     * 
+     * @param tmpReq RunHotTopicChatRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunHotTopicChatResponse
+     */
+    public RunHotTopicChatResponse runHotTopicChatWithOptions(String workspaceId, RunHotTopicChatRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunHotTopicChatShrinkRequest request = new RunHotTopicChatShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.generateOptions)) {
+            request.generateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.generateOptions, "generateOptions", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotTopics)) {
+            request.hotTopicsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotTopics, "hotTopics", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stepForBroadcastContentConfig)) {
+            request.stepForBroadcastContentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stepForBroadcastContentConfig, "stepForBroadcastContentConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            body.put("category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateOptionsShrink)) {
+            body.put("generateOptions", request.generateOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTopicVersion)) {
+            body.put("hotTopicVersion", request.hotTopicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTopicsShrink)) {
+            body.put("hotTopics", request.hotTopicsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageCount)) {
+            body.put("imageCount", request.imageCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCustomPromptTemplate)) {
+            body.put("modelCustomPromptTemplate", request.modelCustomPromptTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalSessionId)) {
+            body.put("originalSessionId", request.originalSessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stepForBroadcastContentConfigShrink)) {
+            body.put("stepForBroadcastContentConfig", request.stepForBroadcastContentConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunHotTopicChat"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/runHotTopicChat"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunHotTopicChatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-热点播报-问答</p>
+     * 
+     * @param request RunHotTopicChatRequest
+     * @return RunHotTopicChatResponse
+     */
+    public RunHotTopicChatResponse runHotTopicChat(String workspaceId, RunHotTopicChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runHotTopicChatWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-热点播报-热点摘要生成</p>
+     * 
+     * @param tmpReq RunHotTopicSummaryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunHotTopicSummaryResponse
+     */
+    public RunHotTopicSummaryResponse runHotTopicSummaryWithOptions(String workspaceId, RunHotTopicSummaryRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunHotTopicSummaryShrinkRequest request = new RunHotTopicSummaryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stepForCustomSummaryStyleConfig)) {
+            request.stepForCustomSummaryStyleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stepForCustomSummaryStyleConfig, "stepForCustomSummaryStyleConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.topicIds)) {
+            request.topicIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.topicIds, "topicIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTopicVersion)) {
+            body.put("hotTopicVersion", request.hotTopicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stepForCustomSummaryStyleConfigShrink)) {
+            body.put("stepForCustomSummaryStyleConfig", request.stepForCustomSummaryStyleConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicIdsShrink)) {
+            body.put("topicIds", request.topicIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunHotTopicSummary"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/runHotTopicSummary"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunHotTopicSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-热点播报-热点摘要生成</p>
+     * 
+     * @param request RunHotTopicSummaryRequest
+     * @return RunHotTopicSummaryResponse
+     */
+    public RunHotTopicSummaryResponse runHotTopicSummary(String workspaceId, RunHotTopicSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runHotTopicSummaryWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>营销信息抽取服务</p>
      * 
      * @param tmpReq RunMarketingInformationExtractRequest
