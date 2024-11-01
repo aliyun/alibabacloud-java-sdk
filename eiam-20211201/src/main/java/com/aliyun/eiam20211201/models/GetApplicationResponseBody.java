@@ -94,6 +94,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ApplicationTemplateId")
         public String applicationTemplateId;
 
+        @NameInMap("ApplicationVisibility")
+        public java.util.List<String> applicationVisibility;
+
         /**
          * <p>The authorization type of the EIAM application. Valid values:</p>
          * <ul>
@@ -262,6 +265,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getApplicationTemplateId() {
             return this.applicationTemplateId;
+        }
+
+        public GetApplicationResponseBodyApplication setApplicationVisibility(java.util.List<String> applicationVisibility) {
+            this.applicationVisibility = applicationVisibility;
+            return this;
+        }
+        public java.util.List<String> getApplicationVisibility() {
+            return this.applicationVisibility;
         }
 
         public GetApplicationResponseBodyApplication setAuthorizationType(String authorizationType) {

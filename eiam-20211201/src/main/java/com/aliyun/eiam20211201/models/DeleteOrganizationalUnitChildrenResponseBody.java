@@ -3,20 +3,22 @@ package com.aliyun.eiam20211201.models;
 
 import com.aliyun.tea.*;
 
-public class UnlockUserResponseBody extends TeaModel {
+public class DeleteOrganizationalUnitChildrenResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UnlockUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UnlockUserResponseBody self = new UnlockUserResponseBody();
+    public static DeleteOrganizationalUnitChildrenResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteOrganizationalUnitChildrenResponseBody self = new DeleteOrganizationalUnitChildrenResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UnlockUserResponseBody setRequestId(String requestId) {
+    public DeleteOrganizationalUnitChildrenResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

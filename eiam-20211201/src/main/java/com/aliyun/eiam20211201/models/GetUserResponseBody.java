@@ -342,6 +342,8 @@ public class GetUserResponseBody extends TeaModel {
         public String phoneRegion;
 
         /**
+         * <p>Preferred language</p>
+         * 
          * <strong>example:</strong>
          * <p>en-US</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetForgetPasswordConfigurationRequest extends TeaModel {
     /**
-     * <p>身份认证渠道。枚举取值:email(邮件)、sms(短信)</p>
+     * <p>The authentication channels. Valid values: email and sms.</p>
      * 
      * <strong>example:</strong>
      * <p>email</p>
@@ -14,7 +14,7 @@ public class SetForgetPasswordConfigurationRequest extends TeaModel {
     public java.util.List<String> authenticationChannels;
 
     /**
-     * <p>忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+     * <p>The status of the forgot password feature. Valid values: enabled and disabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

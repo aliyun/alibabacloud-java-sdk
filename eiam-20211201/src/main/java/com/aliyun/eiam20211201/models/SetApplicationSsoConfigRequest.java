@@ -37,7 +37,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     public String initLoginUrl;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     public SetApplicationSsoConfigRequestOidcSsoConfig oidcSsoConfig;
 
     /**
-     * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application.</p>
+     * <p>The Security Assertion Markup Language (SAML)-based single sign-on (SSO) configuration attributes of the application.</p>
      */
     @NameInMap("SamlSsoConfig")
     public SetApplicationSsoConfigRequestSamlSsoConfig samlSsoConfig;
@@ -451,7 +451,11 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
     public static class SetApplicationSsoConfigRequestSamlSsoConfig extends TeaModel {
         /**
-         * <p>assertion是否签名</p>
+         * <p>Specifies whether to calculate the signature for the assertion. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -473,6 +477,9 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
          */
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
+
+        @NameInMap("IdPEntityId")
+        public String idPEntityId;
 
         /**
          * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
@@ -499,7 +506,11 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public String nameIdValueExpression;
 
         /**
-         * <p>response是否签名</p>
+         * <p>Specifies whether to calculate the signature for the response. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -509,6 +520,20 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
         /**
          * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
+         * <p>Enumeration value:</p>
+         * <ul>
+         * <li><p>RSA-SHA256</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RSA-SHA256</p>
@@ -517,7 +542,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public String signatureAlgorithm;
 
         /**
-         * <p>The entity ID of the application in SAML. The application assumes the role of service provider.</p>
+         * <p>The entity ID of the application in SAML.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:cloudcomputing</p>
@@ -526,7 +551,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public String spEntityId;
 
         /**
-         * <p>The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.</p>
+         * <p>The Assertion Consumer Service (ACS) URL of the application in SAML.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></p>
@@ -561,6 +586,14 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         }
         public String getDefaultRelayState() {
             return this.defaultRelayState;
+        }
+
+        public SetApplicationSsoConfigRequestSamlSsoConfig setIdPEntityId(String idPEntityId) {
+            this.idPEntityId = idPEntityId;
+            return this;
+        }
+        public String getIdPEntityId() {
+            return this.idPEntityId;
         }
 
         public SetApplicationSsoConfigRequestSamlSsoConfig setNameIdFormat(String nameIdFormat) {

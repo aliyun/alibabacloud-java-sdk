@@ -42,13 +42,16 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
 
     public static class GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope extends TeaModel {
         /**
-         * <p>同步授权的组列表</p>
+         * <p>Synchronize the list of authorized groups</p>
          */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
 
         /**
-         * <p>租户最大授权主体quota数量</p>
+         * <p>Instance Indicates the maximum quota number of authorized agents</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxQuota")
         public Integer maxQuota;
@@ -60,7 +63,10 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         public java.util.List<String> organizationalUnitIds;
 
         /**
-         * <p>已使用授权主体quota数量</p>
+         * <p>Indicates the quota number of used authorized agents</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UsedQuota")
         public Integer usedQuota;

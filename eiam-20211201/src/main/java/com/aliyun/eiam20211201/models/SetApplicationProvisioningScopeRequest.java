@@ -15,7 +15,7 @@ public class SetApplicationProvisioningScopeRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>授权同步出的组列表</p>
+     * <p>List of groups that are authorized to be synchronized from</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;

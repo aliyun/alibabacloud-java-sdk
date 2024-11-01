@@ -1234,6 +1234,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Delete organizational unit information, forcibly deleting all accounts and sub-organizations beneath it</p>
+     * 
+     * @param request DeleteOrganizationalUnitChildrenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOrganizationalUnitChildrenResponse
+     */
+    public DeleteOrganizationalUnitChildrenResponse deleteOrganizationalUnitChildrenWithOptions(DeleteOrganizationalUnitChildrenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitId)) {
+            query.put("OrganizationalUnitId", request.organizationalUnitId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOrganizationalUnitChildren"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOrganizationalUnitChildrenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete organizational unit information, forcibly deleting all accounts and sub-organizations beneath it</p>
+     * 
+     * @param request DeleteOrganizationalUnitChildrenRequest
+     * @return DeleteOrganizationalUnitChildrenResponse
+     */
+    public DeleteOrganizationalUnitChildrenResponse deleteOrganizationalUnitChildren(DeleteOrganizationalUnitChildrenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOrganizationalUnitChildrenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS). The information related to the account is cleared.</p>
      * 
      * @param request DeleteUserRequest
@@ -5358,7 +5406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</p>
+     * <p>解锁账户</p>
      * 
      * @param request UnlockUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5394,7 +5442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</p>
+     * <p>解锁账户</p>
      * 
      * @param request UnlockUserRequest
      * @return UnlockUserResponse
