@@ -1160,6 +1160,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取自定义播报单任务结果</p>
+     * 
+     * @param request GetCustomHotTopicBroadcastJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomHotTopicBroadcastJobResponse
+     */
+    public GetCustomHotTopicBroadcastJobResponse getCustomHotTopicBroadcastJobWithOptions(GetCustomHotTopicBroadcastJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomHotTopicBroadcastJob"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomHotTopicBroadcastJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义播报单任务结果</p>
+     * 
+     * @param request GetCustomHotTopicBroadcastJobRequest
+     * @return GetCustomHotTopicBroadcastJobResponse
+     */
+    public GetCustomHotTopicBroadcastJobResponse getCustomHotTopicBroadcastJob(GetCustomHotTopicBroadcastJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomHotTopicBroadcastJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取自定义文本</p>
      * 
      * @param request GetCustomTextRequest
@@ -1410,6 +1458,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGeneratedContentResponse getGeneratedContent(GetGeneratedContentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getGeneratedContentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询新闻播报单</p>
+     * 
+     * @param tmpReq GetHotTopicBroadcastRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHotTopicBroadcastResponse
+     */
+    public GetHotTopicBroadcastResponse getHotTopicBroadcastWithOptions(GetHotTopicBroadcastRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetHotTopicBroadcastShrinkRequest request = new GetHotTopicBroadcastShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stepForCustomSummaryStyleConfig)) {
+            request.stepForCustomSummaryStyleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stepForCustomSummaryStyleConfig, "StepForCustomSummaryStyleConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stepForNewsBroadcastContentConfig)) {
+            request.stepForNewsBroadcastContentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stepForNewsBroadcastContentConfig, "StepForNewsBroadcastContentConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.topics)) {
+            request.topicsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.topics, "Topics", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.calcTotalToken)) {
+            body.put("CalcTotalToken", request.calcTotalToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            body.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            body.put("Current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTopicVersion)) {
+            body.put("HotTopicVersion", request.hotTopicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            body.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stepForCustomSummaryStyleConfigShrink)) {
+            body.put("StepForCustomSummaryStyleConfig", request.stepForCustomSummaryStyleConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stepForNewsBroadcastContentConfigShrink)) {
+            body.put("StepForNewsBroadcastContentConfig", request.stepForNewsBroadcastContentConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicsShrink)) {
+            body.put("Topics", request.topicsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHotTopicBroadcast"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotTopicBroadcastResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询新闻播报单</p>
+     * 
+     * @param request GetHotTopicBroadcastRequest
+     * @return GetHotTopicBroadcastResponse
+     */
+    public GetHotTopicBroadcastResponse getHotTopicBroadcast(GetHotTopicBroadcastRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getHotTopicBroadcastWithOptions(request, runtime);
     }
 
     /**
@@ -4766,6 +4904,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitAsyncTaskResponse submitAsyncTask(SubmitAsyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitAsyncTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交自定义播报单任务</p>
+     * 
+     * @param tmpReq SubmitCustomHotTopicBroadcastJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitCustomHotTopicBroadcastJobResponse
+     */
+    public SubmitCustomHotTopicBroadcastJobResponse submitCustomHotTopicBroadcastJobWithOptions(SubmitCustomHotTopicBroadcastJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitCustomHotTopicBroadcastJobShrinkRequest request = new SubmitCustomHotTopicBroadcastJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotTopicBroadcastConfig)) {
+            request.hotTopicBroadcastConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotTopicBroadcastConfig, "HotTopicBroadcastConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.topics)) {
+            request.topicsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.topics, "Topics", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTopicBroadcastConfigShrink)) {
+            body.put("HotTopicBroadcastConfig", request.hotTopicBroadcastConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTopicVersion)) {
+            body.put("HotTopicVersion", request.hotTopicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicsShrink)) {
+            body.put("Topics", request.topicsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitCustomHotTopicBroadcastJob"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCustomHotTopicBroadcastJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交自定义播报单任务</p>
+     * 
+     * @param request SubmitCustomHotTopicBroadcastJobRequest
+     * @return SubmitCustomHotTopicBroadcastJobResponse
+     */
+    public SubmitCustomHotTopicBroadcastJobResponse submitCustomHotTopicBroadcastJob(SubmitCustomHotTopicBroadcastJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitCustomHotTopicBroadcastJobWithOptions(request, runtime);
     }
 
     /**

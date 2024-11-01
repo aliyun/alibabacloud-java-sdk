@@ -1,3 +1,9 @@
+2024-11-01 Version: 1.8.0
+- Support API GetCustomHotTopicBroadcastJob.
+- Support API GetHotTopicBroadcast.
+- Support API SubmitCustomHotTopicBroadcastJob.
+
+
 2024-11-01 Version: 1.7.4
 - Generated java 2023-08-01 for AiMiaoBi.
 
