@@ -581,6 +581,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
+        @NameInMap("IdPEntityId")
+        public String idPEntityId;
+
         /**
          * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
          * <ul>
@@ -668,6 +671,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
         public String getDefaultRelayState() {
             return this.defaultRelayState;
+        }
+
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setIdPEntityId(String idPEntityId) {
+            this.idPEntityId = idPEntityId;
+            return this;
+        }
+        public String getIdPEntityId() {
+            return this.idPEntityId;
         }
 
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setNameIdFormat(String nameIdFormat) {

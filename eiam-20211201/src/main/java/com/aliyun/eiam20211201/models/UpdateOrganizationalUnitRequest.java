@@ -25,7 +25,7 @@ public class UpdateOrganizationalUnitRequest extends TeaModel {
     public String organizationalUnitId;
 
     /**
-     * <p>The name of the organization. The name can be up to 64 characters in length and must be unique in the same parent organization.</p>
+     * <p>The name of the organization. The name can be up to 128 characters in length and must be unique in the same parent organization.</p>
      * 
      * <strong>example:</strong>
      * <p>ou_name</p>

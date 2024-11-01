@@ -58,9 +58,21 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     }
 
     public static class ListUsersForGroupResponseBodyUsers extends TeaModel {
+        /**
+         * <p>Account membership source id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
+         */
         @NameInMap("GroupMemberRelationSourceId")
         public String groupMemberRelationSourceId;
 
+        /**
+         * <p>Account membership source type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>build_in</p>
+         */
         @NameInMap("GroupMemberRelationSourceType")
         public String groupMemberRelationSourceType;
 

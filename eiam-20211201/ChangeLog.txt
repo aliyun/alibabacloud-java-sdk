@@ -1,3 +1,12 @@
+2024-11-01 Version: 1.7.0
+- Support API DeleteOrganizationalUnitChildren.
+- Update API CreateOrganizationalUnit: update param OrganizationalUnitName.
+- Update API GetApplication: update response param.
+- Update API GetApplicationSsoConfig: update response param.
+- Update API SetApplicationSsoConfig: update param SamlSsoConfig.
+- Update API UpdateOrganizationalUnit: update param OrganizationalUnitName.
+
+
 2024-07-30 Version: 1.6.0
 - Support API GetSynchronizationJob.
 - Support API ListSynchronizationJobs.

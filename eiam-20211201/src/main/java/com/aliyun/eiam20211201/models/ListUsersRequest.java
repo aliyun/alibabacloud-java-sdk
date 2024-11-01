@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
-     * <p>账户展示名，模糊匹配</p>
+     * <p>Displayname</p>
      * 
      * <strong>example:</strong>
      * <p>name_001</p>
@@ -101,7 +101,7 @@ public class ListUsersRequest extends TeaModel {
     public String userExternalId;
 
     /**
-     * <p>账户的ID集合</p>
+     * <p>User ID set</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;
@@ -132,7 +132,7 @@ public class ListUsersRequest extends TeaModel {
     public String userSourceType;
 
     /**
-     * <p>账户名，左模糊匹配</p>
+     * <p>Username</p>
      * 
      * <strong>example:</strong>
      * <p>name_001</p>

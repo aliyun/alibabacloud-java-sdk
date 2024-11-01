@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGroupDescriptionRequest extends TeaModel {
     /**
-     * <p>The description of the account group. The value can be up to 256 characters in length.</p>
+     * <p>The description of the account group.</p>
      * 
      * <strong>example:</strong>
      * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>

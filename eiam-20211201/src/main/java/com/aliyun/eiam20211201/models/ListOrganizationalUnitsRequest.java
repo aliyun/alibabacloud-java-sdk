@@ -15,7 +15,7 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>组织ID列表。size限制最大100。</p>
+     * <p>The IDs of organizational units.</p>
      * 
      * <strong>example:</strong>
      * <p>[ou_wovwffm62xifdziem7an7xxxxx]</p>
@@ -33,7 +33,7 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public String organizationalUnitName;
 
     /**
-     * <p>组织名称，左匹配</p>
+     * <p>Organization name, matching left</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>

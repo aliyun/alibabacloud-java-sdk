@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnlockUserRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>IDaaS EIAM实例的ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class UnlockUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The account ID.</p>
+     * <p>账户ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
+     * <p>u_001</p>
      */
     @NameInMap("UserId")
     public String userId;
