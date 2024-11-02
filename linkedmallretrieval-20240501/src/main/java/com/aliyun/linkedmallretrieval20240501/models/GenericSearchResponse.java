@@ -3,7 +3,7 @@ package com.aliyun.linkedmallretrieval20240501.models;
 
 import com.aliyun.tea.*;
 
-public class AISearchResponse extends TeaModel {
+public class GenericSearchResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AISearchResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AISearchResponseBody body;
+    public GenericSearchResult body;
 
-    public static AISearchResponse build(java.util.Map<String, ?> map) throws Exception {
-        AISearchResponse self = new AISearchResponse();
+    public static GenericSearchResponse build(java.util.Map<String, ?> map) throws Exception {
+        GenericSearchResponse self = new GenericSearchResponse();
         return TeaModel.build(map, self);
     }
 
-    public AISearchResponse setHeaders(java.util.Map<String, String> headers) {
+    public GenericSearchResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AISearchResponse extends TeaModel {
         return this.headers;
     }
 
-    public AISearchResponse setStatusCode(Integer statusCode) {
+    public GenericSearchResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AISearchResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AISearchResponse setBody(AISearchResponseBody body) {
+    public GenericSearchResponse setBody(GenericSearchResult body) {
         this.body = body;
         return this;
     }
-    public AISearchResponseBody getBody() {
+    public GenericSearchResult getBody() {
         return this.body;
     }
 
