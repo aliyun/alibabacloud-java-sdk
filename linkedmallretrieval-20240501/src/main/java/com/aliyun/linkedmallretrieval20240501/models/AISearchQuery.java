@@ -4,19 +4,29 @@ package com.aliyun.linkedmallretrieval20240501.models;
 import com.aliyun.tea.*;
 
 public class AISearchQuery extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>active</p>
-     */
     @NameInMap("card")
     public String card;
 
-    /**
-     * <strong>example:</strong>
-     * <p>今年五一假期放假时间表</p>
-     */
+    @NameInMap("cardQuery")
+    public String cardQuery;
+
+    @NameInMap("page")
+    public Integer page;
+
     @NameInMap("query")
     public String query;
+
+    @NameInMap("searchEngine")
+    public String searchEngine;
+
+    @NameInMap("searchPlan")
+    public String searchPlan;
+
+    @NameInMap("sessionId")
+    public String sessionId;
+
+    @NameInMap("timeRange")
+    public String timeRange;
 
     public static AISearchQuery build(java.util.Map<String, ?> map) throws Exception {
         AISearchQuery self = new AISearchQuery();
@@ -31,12 +41,60 @@ public class AISearchQuery extends TeaModel {
         return this.card;
     }
 
+    public AISearchQuery setCardQuery(String cardQuery) {
+        this.cardQuery = cardQuery;
+        return this;
+    }
+    public String getCardQuery() {
+        return this.cardQuery;
+    }
+
+    public AISearchQuery setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
     public AISearchQuery setQuery(String query) {
         this.query = query;
         return this;
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public AISearchQuery setSearchEngine(String searchEngine) {
+        this.searchEngine = searchEngine;
+        return this;
+    }
+    public String getSearchEngine() {
+        return this.searchEngine;
+    }
+
+    public AISearchQuery setSearchPlan(String searchPlan) {
+        this.searchPlan = searchPlan;
+        return this;
+    }
+    public String getSearchPlan() {
+        return this.searchPlan;
+    }
+
+    public AISearchQuery setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    public AISearchQuery setTimeRange(String timeRange) {
+        this.timeRange = timeRange;
+        return this;
+    }
+    public String getTimeRange() {
+        return this.timeRange;
     }
 
 }
