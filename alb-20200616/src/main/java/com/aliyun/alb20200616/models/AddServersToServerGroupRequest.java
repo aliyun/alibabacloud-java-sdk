@@ -41,7 +41,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.</p>
+     * <p>The backend servers. You can specify at most 200 servers in each call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
@@ -86,7 +86,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
 
     public static class AddServersToServerGroupRequestServers extends TeaModel {
         /**
-         * <p>The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify up to 40 servers in each call.</p>
+         * <p>The description of the backend server. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -95,9 +95,9 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The port used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify up to 40 server IDs in each call.</p>
+         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
          * <blockquote>
-         * <p>This parameter is required if the <strong>ServerType</strong> parameter is set to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>. You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
+         * <p> This parameter is required if you set <strong>ServerType</strong> to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>. You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,13 +107,13 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Specifies whether to enable the remote IP address feature. You can specify up to 40 server IDs in each call. Valid values:</p>
+         * <p>Specifies whether to enable the remote IP feature. You can specify at most 200 servers in each call. Default values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong>: disables the feature.</li>
          * </ul>
          * <blockquote>
-         * <p>If <strong>ServerType</strong> is set to <strong>Ip</strong>, this parameter is available.</p>
+         * <p> This parameter takes effect only when <strong>ServerType</strong> is set to <strong>Ip</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -123,11 +123,11 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public Boolean remoteIpEnabled;
 
         /**
-         * <p>The backend server ID. You can specify up to 40 server IDs in each call.</p>
+         * <p>The ID of the server group. You can specify at most 200 servers in each call.</p>
          * <ul>
-         * <li>If ServerType is set to <strong>Instance</strong>, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. These backend servers are specified by <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
-         * <li>If ServerType is set to <strong>Ip</strong>, set the ServerId parameter to an IP address specified in the server group.</li>
-         * <li>If the backend server group is of the <strong>Fc</strong> type, set this parameter to the Alibaba Cloud Resource Name (ARN) of a function.</li>
+         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+         * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
+         * <li>If the server group is of the <strong>Fc</strong> type, set ServerId to an Alibaba Cloud Resource Name (ARN).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -138,9 +138,9 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address in inclusive ENI mode. You can specify up to 40 server IDs in each call.</p>
+         * <p>The IP address of the backend server. You can specify at most 200 servers in each call.</p>
          * <blockquote>
-         * <p>You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
+         * <p> You do not need to set this parameter if you set <strong>ServerType</strong> to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,13 +150,13 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server that you want to add to the server group. You can specify up to 40 server IDs in each call. Valid values:</p>
+         * <p>The type of the backend server. You can specify at most 200 servers in each call. Default values:</p>
          * <ul>
-         * <li><strong>Ecs</strong></li>
-         * <li><strong>Eni</strong></li>
-         * <li><strong>Eci</strong></li>
-         * <li><strong>Ip</strong></li>
-         * <li><strong>fc</strong></li>
+         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Eni</strong>: elastic network interface (ENI)</li>
+         * <li><strong>Eci</strong>: elastic container instance</li>
+         * <li><strong>Ip</strong>: IP address</li>
+         * <li><strong>Fc</strong>: Function Compute</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -167,9 +167,9 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverType;
 
         /**
-         * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the weight of a backend server is set to <strong>0</strong>, no requests are forwarded to the backend server. You can specify up to 40 server IDs in each call.</p>
+         * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server. You can specify at most 200 servers in each call.</p>
          * <blockquote>
-         * <p>You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
+         * <p> You do not need to set this parameter if you set <strong>ServerType</strong> to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

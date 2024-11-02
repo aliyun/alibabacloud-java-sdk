@@ -25,7 +25,7 @@ public class ListListenersRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the Application Load Balancer (ALB) instance. You can specify at most 20 IDs.</p>
+     * <p>The ALB instance ID. You can specify at most 20 instance IDs.</p>
      */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;

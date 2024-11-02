@@ -31,7 +31,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The HTTP status codes that indicate healthy backend servers.</p>
+     * <p>The HTTP status codes that indicate a healthy backend server.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -55,7 +55,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
      * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is supported only when you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+     * <p> This parameter is available only if <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,11 +65,11 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckHost;
 
     /**
-     * <p>The HTTP version for health checks.</p>
+     * <p>The HTTP version that is used for health checks.</p>
      * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
      * <p>Default value: <strong>HTTP1.1</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+     * <p> This parameter is available only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
      * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is supported only when you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+     * <p> This parameter is available only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
      * <p>The URL must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended character sets: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>.</p>
      * <p>The URL must start with a forward slash (/).</p>
      * <blockquote>
-     * <p> This parameter is supported only when you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+     * <p> This parameter is available only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,13 +122,10 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
      * <p>The protocol that is used for health checks. Valid values:</p>
      * <ul>
      * <li><strong>HTTP</strong> (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
-     * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS provides higher security than HTTP because HTTPS supports data encryption.</li>
+     * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS supports encryption and provides higher security than HTTP.</li>
      * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
      * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
      * </ul>
-     * <blockquote>
-     * <p> HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -157,11 +154,8 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckTemplateName;
 
     /**
-     * <p>The timeout period of a health check. If a backend server does not respond within the specified timeout period, the backend server fails the health check.</p>
+     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy.</p>
      * <p>Unit: seconds. Valid values: <strong>1 to 300</strong>. Default value: <strong>5</strong>.</p>
-     * <blockquote>
-     * <p>If the value of the <code>HealthCheckTimeout</code> parameter is smaller than that of the <code>HealthCheckInterval</code> parameter, the timeout period specified by the <code>HealthCheckTimeout</code> parameter is ignored and the value of the <code>HealthCheckInterval</code> parameter is used as the timeout period.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3</p>

@@ -17,6 +17,16 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The configurations of connection draining.</p>
+     * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</li>
+     * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
+     * </ul>
+     * </blockquote>
+     */
     @NameInMap("ConnectionDrainConfig")
     public CreateServerGroupRequestConnectionDrainConfig connectionDrainConfig;
 
@@ -43,12 +53,12 @@ public class CreateServerGroupRequest extends TeaModel {
     /**
      * <p>The backend protocol. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP</strong> (default): The server group can be associated with HTTPS, HTTP, and QUIC listeners.</li>
-     * <li><strong>HTTPS</strong>: The server group can be associated with HTTPS listeners.</li>
-     * <li><strong>gRPC</strong>: The server group can be associated with HTTPS and QUIC listeners.</li>
+     * <li><strong>HTTP</strong>: allows you to associate an HTTPS, HTTP, or QUIC listener with the server group. This is the default value.</li>
+     * <li><strong>HTTPS</strong>: allows you to associate HTTPS listeners with backend servers.</li>
+     * <li><strong>gRPC</strong>: allows you to associate an HTTPS or QUIC listener with the server group.</li>
      * </ul>
      * <blockquote>
-     * <p>If the <strong>ServerGroupType</strong> parameter is set to <strong>Fc</strong>, you can set Protocol only to <strong>HTTP</strong>.</p>
+     * <p> You do not need to specify a backend protocol if you set <strong>ServerGroupType</strong> to <strong>Fc</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,6 +126,19 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The configurations of slow starts.
+     * After slow starts are enabled, SLB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Basic SLB instances do not support slow starts. Standard and WAF-enabled SLB instances support slow starts.</li>
+     * </ul>
+     * <ul>
+     * <li>Server groups of the server and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
+     * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
+     * </ul>
+     * </blockquote>
+     */
     @NameInMap("SlowStartConfig")
     public CreateServerGroupRequestSlowStartConfig slowStartConfig;
 
@@ -296,6 +319,12 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestConnectionDrainConfig extends TeaModel {
         /**
+         * <p>Specifies whether to enable connection draining. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -303,6 +332,10 @@ public class CreateServerGroupRequest extends TeaModel {
         public Boolean connectionDrainEnabled;
 
         /**
+         * <p>The timeout period of connection draining.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>900</strong>.</p>
+         * <p>Default value: <strong>300</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -334,7 +367,7 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The HTTP status codes that indicate healthy backend servers.</p>
+         * <p>The HTTP status codes that are used to indicate whether the backend server passes the health check.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
@@ -372,7 +405,7 @@ public class CreateServerGroupRequest extends TeaModel {
          * <ul>
          * <li>The domain name must be 1 to 80 characters in length.</li>
          * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
-         * <li>The domain name can contain at least one period (.) but cannot start or end with a period (.).</li>
+         * <li>The domain name must contain at least one period (.) but cannot start or end with a period (.).</li>
          * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
          * <li>The domain name cannot start or end with a hyphen (-).</li>
          * </ul>
@@ -458,9 +491,6 @@ public class CreateServerGroupRequest extends TeaModel {
          * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
          * <p>Default value: <strong>5</strong>.</p>
-         * <blockquote>
-         * <p> If the value of <strong>HealthCHeckTimeout</strong> is smaller than the value of <strong>HealthCheckInterval</strong>, <strong>HealthCHeckTimeout</strong> does not take effect. The value of <strong>HealthCheckInterval</strong> specifies the timeout period.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -595,6 +625,10 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestSlowStartConfig extends TeaModel {
         /**
+         * <p>The duration of a slow start.
+         * Valid values: 30 to 900.
+         * Default value: 30.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -602,6 +636,14 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer slowStartDuration;
 
         /**
+         * <p>Specifies whether to enable slow starts. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false(default)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

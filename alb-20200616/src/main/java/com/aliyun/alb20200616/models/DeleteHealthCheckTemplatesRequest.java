@@ -27,7 +27,7 @@ public class DeleteHealthCheckTemplatesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the health check template.</p>
+     * <p>The IDs of health check templates. You can specify at most 10 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

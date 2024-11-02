@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class EnableLoadBalancerAccessLogResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ff7713ca-5818-4120-85e3-0bf9e27e9103</p>
+     */
+    @NameInMap("JobId")
+    public String jobId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +23,14 @@ public class EnableLoadBalancerAccessLogResponseBody extends TeaModel {
     public static EnableLoadBalancerAccessLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableLoadBalancerAccessLogResponseBody self = new EnableLoadBalancerAccessLogResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EnableLoadBalancerAccessLogResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public EnableLoadBalancerAccessLogResponseBody setRequestId(String requestId) {

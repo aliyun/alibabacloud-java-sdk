@@ -41,7 +41,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>The backend servers that you want to add to the server group. You can specify up to 40 servers in each call.</p>
+     * <p>The server groups. You can specify at most 40 server groups in each call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
@@ -86,7 +86,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
 
     public static class UpdateServerGroupServersAttributeRequestServers extends TeaModel {
         /**
-         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify up to 40 servers in each call.</p>
+         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -95,9 +95,9 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify up to 40 servers in each call.</p>
+         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <blockquote>
-         * <p> You do not need to set this parameter if ServerType is set to <strong>Fc</strong>.</p>
+         * <p>You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the backend server. You can specify up to 40 servers in each call.</p>
+         * <p>The ID of the backend server.</p>
          * <ul>
          * <li>Specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance if you set <strong>ServerType</strong> to <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
          * <li>Specify an IP address if you set <strong>ServerType</strong> to <strong>Ip</strong>.</li>
@@ -122,7 +122,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address of the backend server. You can specify up to 40 servers in each call.</p>
+         * <p>The IP address of the backend server.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -131,7 +131,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of backend server. You can specify up to 40 servers in each call. Valid values:</p>
+         * <p>The type of the backend server. Valid values:</p>
          * <ul>
          * <li><strong>Ecs</strong>: ECS instance</li>
          * <li><strong>Eni</strong>: ENI</li>
@@ -150,7 +150,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
         /**
          * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server. You can specify up to 40 servers in each call.</p>
          * <blockquote>
-         * <p> You do not need to set this parameter if ServerType is set to <strong>Fc</strong>.</p>
+         * <p>You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

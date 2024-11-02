@@ -41,7 +41,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>The backend servers that you want to remove from the server group. You can specify up to 40 backend servers in each call.</p>
+     * <p>The server group. You can add at most 200 backend servers to the server group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
@@ -86,9 +86,9 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
 
     public static class RemoveServersFromServerGroupRequestServers extends TeaModel {
         /**
-         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 40 servers in each call.</p>
+         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <blockquote>
-         * <p>This parameter is required if the <strong>ServerType</strong> parameter is set to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>.</p>
+         * <p> This parameter is required when you set <strong>ServerType</strong> to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -98,14 +98,14 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The backend server ID. You can specify up to 40 server IDs in each call.</p>
+         * <p>The ID of the server group.</p>
          * <ul>
-         * <li>If the server group type is <strong>Instance</strong>, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
-         * <li>If the server group type is <strong>Ip</strong>, set the ServerId parameter to an IP address specified in the server group.</li>
-         * <li>If the server group type is <strong>Fc</strong>, set the ServerId parameter to the ARN of a function specified in the server group.</li>
+         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+         * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
+         * <li>If the server group is of the <strong>Fc</strong>, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</li>
          * </ul>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <p> You can call the ListServerGroups operation to query information about the server group type so that you can set ServerId to a proper value.<a href="~~213627~~"></a></p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -116,7 +116,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.</p>
+         * <p>The IP address of the elastic network interface (ENI) in exclusive mode.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -125,13 +125,13 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server. You can specify at most 40 servers in each call. Valid values:</p>
+         * <p>The type of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong></li>
-         * <li><strong>Eni</strong></li>
-         * <li><strong>Eci</strong></li>
-         * <li><strong>Ip</strong></li>
-         * <li><strong>Fc</strong></li>
+         * <li><strong>Ecs</strong>: ECS instance</li>
+         * <li><strong>Eni</strong>: ENI</li>
+         * <li><strong>Eci</strong>: elastic container instance</li>
+         * <li><strong>Ip</strong>: IP address</li>
+         * <li><strong>Fc</strong>: Function Compute</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

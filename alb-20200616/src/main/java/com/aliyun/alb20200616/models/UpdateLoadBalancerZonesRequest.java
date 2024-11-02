@@ -41,7 +41,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The zones and the vSwitches. You must specify at least two zones. The specified zones and vSwitches overwrite the existing configurations.</p>
+     * <p>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service. The specified zones and vSwitches overwrite the existing configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
@@ -86,7 +86,23 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
 
     public static class UpdateLoadBalancerZonesRequestZoneMappings extends TeaModel {
         /**
-         * <p>The private IPv4 address. You must specify at least two zones. You can specify at most 10 zones.</p>
+         * <p>The type of EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Common</strong>: an EIP.</li>
+         * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
+        @NameInMap("EipType")
+        public String eipType;
+
+        /**
+         * <p>The private IPv4 address. You must specify at least two zones. You can specify a maximum of 10 zones.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.1</p>
@@ -95,7 +111,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public String intranetAddress;
 
         /**
-         * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet. You can specify at least 10 zones.</p>
+         * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,7 +121,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The zone name. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list. You can specify at least 10 zones.</p>
+         * <p>The zone name. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +133,14 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public static UpdateLoadBalancerZonesRequestZoneMappings build(java.util.Map<String, ?> map) throws Exception {
             UpdateLoadBalancerZonesRequestZoneMappings self = new UpdateLoadBalancerZonesRequestZoneMappings();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateLoadBalancerZonesRequestZoneMappings setEipType(String eipType) {
+            this.eipType = eipType;
+            return this;
+        }
+        public String getEipType() {
+            return this.eipType;
         }
 
         public UpdateLoadBalancerZonesRequestZoneMappings setIntranetAddress(String intranetAddress) {

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListAScriptsRequest extends TeaModel {
     /**
-     * <p>The AScript rule IDs.</p>
+     * <p>The AScript rule IDs. You can specify at most 20 IDs in each call.</p>
      */
     @NameInMap("AScriptIds")
     public java.util.List<String> AScriptIds;
 
     /**
-     * <p>The names of the AScript rules.</p>
+     * <p>The AScript rule names. You can specify at most 10 names in each call.</p>
      */
     @NameInMap("AScriptNames")
     public java.util.List<String> AScriptNames;
 
     /**
-     * <p>The listener IDs.</p>
+     * <p>The listener IDs. You can specify at most 20 listener IDs in each call.</p>
      */
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;

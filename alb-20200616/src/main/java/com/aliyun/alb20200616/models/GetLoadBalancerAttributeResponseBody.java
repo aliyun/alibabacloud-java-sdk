@@ -231,7 +231,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The mapping between zones and the vSwitches. You must specify at least two zones.</p>
+     * <p>The zone and the vSwitch in the zone. A maximum of 10 zones is returned. If the current region supports two or more zones, at least two zones are returned.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappings> zoneMappings;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The mode in which IP addresses are allocated. Valid values:</p>
+     * <p>The mode in which IP addresses are allocated. Default value: Dynamic. Valid values:</p>
      * <ul>
      * <li><strong>Fixed</strong>: The ALB instance uses a static IP address.</li>
-     * <li><strong>Dynamic</strong>: dynamically allocates an IP address to each zone of the ALB instance.</li>
+     * <li><strong>Dynamic</strong> (default): The system dynamically allocates an IP address to each zone of the ALB instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zones and the vSwitches in the zones. You must specify at least two zones.</p>
+     * <p>The mappings between zones an vSwitches. You can specify at most 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
@@ -320,6 +320,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
          * <blockquote>
          * <p>This parameter takes effect only if <code>Status</code> is set to <strong>ConsoleProtection</strong>.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -407,6 +410,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestZoneMappings extends TeaModel {
         /**
+         * <p>The ID of the EIP to be associated with the Internet-facing ALB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-bp1aedxso6u80u0qf****</p>
          */
@@ -414,7 +419,23 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The private IPv4 address. You must add at least two zones. You can add a maximum of 10 zones.</p>
+         * <p>The type of EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Common</strong>: an EIP.</li>
+         * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
+        @NameInMap("EipType")
+        public String eipType;
+
+        /**
+         * <p>The private IPv4 address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.1</p>
@@ -423,7 +444,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String intranetAddress;
 
         /**
-         * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 zones.</p>
+         * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -433,8 +454,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The zone ID of the ALB instance. You can specify up to 10 zones for an ALB instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID of the cluster. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -454,6 +474,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
         }
         public String getAllocationId() {
             return this.allocationId;
+        }
+
+        public CreateLoadBalancerRequestZoneMappings setEipType(String eipType) {
+            this.eipType = eipType;
+            return this;
+        }
+        public String getEipType() {
+            return this.eipType;
         }
 
         public CreateLoadBalancerRequestZoneMappings setIntranetAddress(String intranetAddress) {

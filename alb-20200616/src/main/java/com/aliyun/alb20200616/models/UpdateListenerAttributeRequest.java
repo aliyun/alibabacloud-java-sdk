@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The information about the CA certificate.</p>
+     * <p>The CA certificate. You can specify only one CA certificate.</p>
      */
     @NameInMap("CaCertificates")
     public java.util.List<UpdateListenerAttributeRequestCaCertificates> caCertificates;
@@ -24,7 +24,10 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     public Boolean caEnabled;
 
     /**
-     * <p>The details about the certificates.</p>
+     * <p>The certificates. You can add at most 20 certificates.</p>
+     * <blockquote>
+     * <p> Only server certificates are supported.</p>
+     * </blockquote>
      */
     @NameInMap("Certificates")
     public java.util.List<UpdateListenerAttributeRequestCertificates> certificates;
@@ -102,7 +105,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the listener.</p>
-     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.</p>
+     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP_80</p>
@@ -281,7 +284,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
 
     public static class UpdateListenerAttributeRequestCaCertificates extends TeaModel {
         /**
-         * <p>The ID of the CA certificate. You can specify only one CA certificate.</p>
+         * <p>The ID of the CA certificate.</p>
          * <blockquote>
          * <p> This parameter is required if <strong>CaEnabled</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
@@ -309,7 +312,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
 
     public static class UpdateListenerAttributeRequestCertificates extends TeaModel {
         /**
-         * <p>The ID of the certificate. Only server certificates are supported. You can specify at most 20 certificate IDs.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12315790212_166f8204689_1714763408_70998****</p>
@@ -598,7 +601,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only for HTTP and HTTPS listeners.</p>
+         * <p> HTTP and HTTPS listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -618,13 +621,13 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         public String XForwardedForClientSourceIpsTrusted;
 
         /**
-         * <p>Specifies whether to use the <code>X-Forwarded-Client-Port</code> header to retrieve the client port. Valid values:</p>
+         * <p>Specifies whether to use the <code>XForwardedFor_ClientSrcPort</code> header to retrieve the client port. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only for HTTP and HTTPS listeners.</p>
+         * <p> HTTP and HTTPS listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -640,7 +643,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only for HTTP and HTTPS listeners.</p>
+         * <p> HTTP and HTTPS listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -656,7 +659,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported by HTTP, HTTPS, and QUIC listeners.</p>
+         * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -672,7 +675,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported by HTTP, HTTPS, and QUIC listeners.</p>
+         * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -688,7 +691,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported by HTTP, HTTPS, and QUIC listeners.</p>
+         * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

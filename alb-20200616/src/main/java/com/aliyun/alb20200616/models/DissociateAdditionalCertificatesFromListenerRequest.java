@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateAdditionalCertificatesFromListenerRequest extends TeaModel {
     /**
-     * <p>The additional certificates.</p>
+     * <p>The additional certificates. Only server certificates are supported. You can specify at most 20 certificates.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Certificates")
@@ -86,7 +86,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends TeaMode
 
     public static class DissociateAdditionalCertificatesFromListenerRequestCertificates extends TeaModel {
         /**
-         * <p>The certificate ID. Only server certificates are supported. A maximum of 20 certificate IDs are supported.</p>
+         * <p>The certificate ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

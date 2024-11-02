@@ -148,12 +148,9 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     public String healthCheckTemplateName;
 
     /**
-     * <p>The timeout period of a health check. If a backend server does not respond within the specified timeout period, the backend server fails the health check.</p>
-     * <p>Valid values: <strong>1 to 300</strong>.</p>
+     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy.</p>
+     * <p>Valid values: <strong>1 to 300</strong>. Unit: seconds.</p>
      * <p>Default value: <strong>5</strong>.</p>
-     * <blockquote>
-     * <p>If the value of the <code>HealthCheckTimeout</code> parameter is smaller than that of the <code>HealthCheckInterval</code> parameter, the timeout period specified by the <code>HealthCheckTimeout</code> parameter is ignored and the value of the <code>HealthCheckInterval</code> parameter is used as the timeout period.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5</p>

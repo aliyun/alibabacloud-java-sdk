@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateListenerRequest extends TeaModel {
     /**
-     * <p>The certificate authority (CA) certificates.</p>
+     * <p>The certificate authority (CA) certificates. You can specify only one CA certificate.</p>
      */
     @NameInMap("CaCertificates")
     public java.util.List<CreateListenerRequestCaCertificates> caCertificates;
@@ -339,7 +339,7 @@ public class CreateListenerRequest extends TeaModel {
 
     public static class CreateListenerRequestCaCertificates extends TeaModel {
         /**
-         * <p>The ID of the CA certificate. You can specify only one CA certificate.</p>
+         * <p>The ID of the CA certificate.</p>
          * <blockquote>
          * <p> This parameter is required if you set <strong>CaEnabled</strong> to <strong>true</strong>.</p>
          * </blockquote>
@@ -581,9 +581,9 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestXForwardedForConfig extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when you set <strong>XForwardedForClientCertClientVerifyEnabled</strong> to <strong>true</strong>.</p>
-         * <p>The name must be 1 to 40 characters in length. The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
-         * <p> Only HTTPS listeners support this parameter.</p>
+         * <p>Only HTTPS listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -595,7 +595,7 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-clientverify</code> header to retrieve the verification result of the client certificate. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
@@ -610,7 +610,7 @@ public class CreateListenerRequest extends TeaModel {
 
         /**
          * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertFingerprintEnabled</strong> is set to <strong>true</strong>.</p>
-         * <p>The name must be 1 to 40 characters in length, The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
          * <p> Only HTTPS listeners support this parameter.</p>
          * </blockquote>
@@ -639,7 +639,7 @@ public class CreateListenerRequest extends TeaModel {
 
         /**
          * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertIssuerDNEnabled</strong> is set to <strong>true</strong>.</p>
-         * <p>The name must be 1 to 40 characters in length, The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
          * <p> Only HTTPS listeners support this parameter.</p>
          * </blockquote>
@@ -653,7 +653,7 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-issuerdn</code> header to retrieve information about the authority that issues the client certificate. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
@@ -668,7 +668,7 @@ public class CreateListenerRequest extends TeaModel {
 
         /**
          * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertSubjectDNEnabled</strong> is set to <strong>true</strong>.</p>
-         * <p>The name must be 1 to 40 characters in length, The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
          * <p> Only HTTPS listeners support this parameter.</p>
          * </blockquote>
@@ -682,7 +682,7 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-subjectdn</code> header to retrieve information about the owner of the client certificate. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
@@ -698,11 +698,11 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to allow the ALB instance to retrieve client IP addresses from the X-Forwarded-For header. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported only by HTTP and HTTPS listeners.</p>
+         * <p> HTTP and HTTPS listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -722,13 +722,13 @@ public class CreateListenerRequest extends TeaModel {
         public String XForwardedForClientSourceIpsTrusted;
 
         /**
-         * <p>Specifies whether to use the <code>X-Forwarded-Client-Port</code> header to retrieve the client port. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Client-srcport</code> header to retrieve the client port. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only for HTTP and HTTPS listeners.</p>
+         * <p> HTTP and HTTPS listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -744,7 +744,7 @@ public class CreateListenerRequest extends TeaModel {
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only for HTTP and HTTPS listeners.</p>
+         * <p> HTTP and HTTPS listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -756,11 +756,11 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported by HTTP, HTTPS, and QUIC listeners.</p>
+         * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -772,11 +772,11 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the ALB instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported by HTTP, HTTPS, and QUIC listeners.</p>
+         * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -788,11 +788,11 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>X-Forwarded-Port</code> header to retrieve the listener port of the ALB instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported by HTTP, HTTPS, and QUIC listeners.</p>
+         * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
