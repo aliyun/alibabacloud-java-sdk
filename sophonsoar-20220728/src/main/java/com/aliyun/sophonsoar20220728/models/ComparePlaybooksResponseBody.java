@@ -12,6 +12,9 @@ public class ComparePlaybooksResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2EC05B06-BF3C-5F3E-8FE8-3B1FAD76087A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class ComparePlaybooksResponseBody extends TeaModel {
     public static class ComparePlaybooksResponseBodyCompareResult extends TeaModel {
         /**
          * <p>The description of the comparison result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The first version adds one node compared to the second version</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the second version provides more information than the first version. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("New")
         public Boolean _new;
 
         /**
-         * <p>Indicates whether the configurations of the two versions are the same. Valid values: **true** and **false**.</p>
+         * <p>Indicates whether the configurations of the two versions are the same. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Same")
         public Boolean same;

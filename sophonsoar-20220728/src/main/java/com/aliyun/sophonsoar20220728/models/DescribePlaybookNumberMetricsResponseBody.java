@@ -12,6 +12,9 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4CC979E-3D5B-5A6A-BC87-C93C9E861C7B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
     public static class DescribePlaybookNumberMetricsResponseBodyMetrics extends TeaModel {
         /**
          * <p>The number of enabled playbooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("StartUpNum")
         public Integer startUpNum;
 
         /**
          * <p>The total number of playbooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalNum")
         public Integer totalNum;

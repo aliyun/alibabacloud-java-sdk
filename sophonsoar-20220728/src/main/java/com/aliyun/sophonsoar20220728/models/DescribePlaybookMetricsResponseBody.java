@@ -12,6 +12,9 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>567D3D0B-2153-5860-BF9A-F9DEED55FB73</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,66 +43,98 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
     public static class DescribePlaybookMetricsResponseBodyMetrics extends TeaModel {
         /**
          * <p>The status of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: disabled</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Active")
         public Integer active;
 
         /**
          * <p>The description of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a playbook for waf processing</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo name</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The number of the tasks that are created for the playbook and failed to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("FailNum")
         public Integer failNum;
 
         /**
          * <p>The time when the playbook was created. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655277397000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The number of historical versions of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("HistoryMd5")
         public Integer historyMd5;
 
         /**
          * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683526277415</p>
          */
         @NameInMap("LastRuntime")
         public Long lastRuntime;
 
         /**
          * <p>The type of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   **preset**: predefined playbook</p>
-         * <p>*   **user**: custom playbook</p>
+         * <ul>
+         * <li><strong>preset</strong>: predefined playbook</li>
+         * <li><strong>user</strong>: custom playbook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("OwnType")
         public String ownType;
 
         /**
          * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0fbc9bdb-9ae3-4ef4-a709-xxxxx</p>
          */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 
         /**
          * <p>The number of the tasks that are created for the playbook and were successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SuccNum")
         public Integer succNum;

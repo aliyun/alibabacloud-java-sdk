@@ -12,6 +12,9 @@ public class VerifyPlaybookResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DFC9403-54EB-5672-B690-9AA93C9EBB54</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     public static class VerifyPlaybookResponseBodyCheckTaskInfos extends TeaModel {
         /**
          * <p>The error message returned when the playbook does not pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node [python3_3] doesn\&quot;t have the asset information</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
          * <p>The name of the node in the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3_3</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The severity level of the verification information. Valid values:</p>
-         * <br>
-         * <p>*   warn: An issue may occur during playbook running.</p>
-         * <p>*   error: The playbook cannot be compiled.</p>
-         * <p>*   remind: The publishing and running of the playbook are not affected. We recommend that you optimize the playbook format.</p>
+         * <ul>
+         * <li>warn: An issue may occur during playbook running.</li>
+         * <li>error: The playbook cannot be compiled.</li>
+         * <li>remind: The publishing and running of the playbook are not affected. We recommend that you optimize the playbook format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RevertPlaybookReleaseResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B3FED5B9-190A-5952-93A4-24FBF0F0C573</p>
      */
     @NameInMap("RequestId")
     public String requestId;

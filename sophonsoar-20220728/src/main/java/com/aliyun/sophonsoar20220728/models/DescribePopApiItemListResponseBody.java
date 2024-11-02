@@ -12,24 +12,36 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
 
     /**
      * <p>The POP code of the Alibaba Cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sas</p>
      */
     @NameInMap("PopCode")
     public String popCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6336D603-7028-52DE-AD88-E34AA5248355</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Total")
     public Long total;
 
     /**
      * <p>The version number of the API for the Alibaba Cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-12-03</p>
      */
     @NameInMap("Version")
     public String version;

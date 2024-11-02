@@ -6,145 +6,212 @@ import com.aliyun.tea.*;
 public class DescribeProcessTasksRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
-     * <br>
-     * <p>*   **desc** (default)</p>
-     * <p>*   **asc**</p>
+     * <ul>
+     * <li><strong>desc</strong> (default)</li>
+     * <li><strong>asc</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The name of the handling entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
      */
     @NameInMap("EntityName")
     public String entityName;
 
     /**
      * <p>The type of the handling entity. Valid values:</p>
-     * <br>
-     * <p>*   **ip**</p>
-     * <p>*   **file**</p>
-     * <p>*   **process**</p>
+     * <ul>
+     * <li><strong>ip</strong></li>
+     * <li><strong>file</strong></li>
+     * <li><strong>process</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ip</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
+    @NameInMap("EntityUuid")
+    public String entityUuid;
+
     /**
      * <p>The field that you use to sort the result.</p>
-     * <br>
-     * <p>>  You can obtain the field from the response result.</p>
+     * <blockquote>
+     * <p> You can obtain the field from the response result.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gmtCreate</p>
      */
     @NameInMap("OrderField")
     public String orderField;
 
     /**
      * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The handling entity, handling scenario, or handling parameter that is used for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12.x.x.x</p>
      */
     @NameInMap("ParamContent")
     public String paramContent;
 
     /**
      * <p>The end of the time range for a handling task. The value is a 13-digit timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700031183572</p>
      */
     @NameInMap("ProcessActionEnd")
     public Long processActionEnd;
 
     /**
      * <p>The beginning of the time range for a handling task. The value is a 13-digit timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700031183572</p>
      */
     @NameInMap("ProcessActionStart")
     public Long processActionStart;
 
     /**
      * <p>The end of the time range for an unblocking task. The value is a 13-digit timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700031183572</p>
      */
     @NameInMap("ProcessRemoveEnd")
     public Long processRemoveEnd;
 
     /**
      * <p>The beginning of the time range for an unblocking task. The value is a 13-digit timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700031183572</p>
      */
     @NameInMap("ProcessRemoveStart")
     public Long processRemoveStart;
 
     /**
      * <p>The UUID of the handling policy.</p>
-     * <br>
-     * <p>>  You can call the [ListDisposeStrategy](~~2584440~~) operation to query the UUID of the handling policy.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2584440.html">ListDisposeStrategy</a> operation to query the UUID of the handling policy.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>92af3c79-1754-4646-9366-9ddbd1e45536_xxxx</p>
      */
     @NameInMap("ProcessStrategyUuid")
     public String processStrategyUuid;
 
     /**
      * <p>The scenario code of the handling task.</p>
-     * <br>
-     * <p>>  You can call the [DescribeEnumItems](~~DescribeEnumItems~~) operation to query the scenario code of the handling task. This parameter is available when you set **EnumType** to **process**.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeEnumItems~~">DescribeEnumItems</a> operation to query the scenario code of the handling task. This parameter is available when you set <strong>EnumType</strong> to <strong>process</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>event_xxx_whole_process</p>
      */
     @NameInMap("SceneCode")
     public String sceneCode;
 
     /**
      * <p>The ID of the Alibaba Cloud account that is specified in the handling task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>125xxxxx9870</p>
      */
     @NameInMap("Scope")
     public String scope;
 
     /**
      * <p>The triggering source of the handling task. The value is a string array. Valid values:</p>
-     * <br>
-     * <p>*   **system**: triggered when you manually handle an event</p>
-     * <p>*   **custom**: triggered by an event based on an automatic response rule</p>
-     * <p>*   **custom_alert**: triggered by an alert based on an automatic response rule</p>
-     * <p>*   **soar-manual**: triggered when you use SOAR to manually run a playbook</p>
-     * <p>*   **soar-mdr**: triggered by Managed Security Service</p>
+     * <ul>
+     * <li><strong>system</strong>: triggered when you manually handle an event</li>
+     * <li><strong>custom</strong>: triggered by an event based on an automatic response rule</li>
+     * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule</li>
+     * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook</li>
+     * <li><strong>soar-mdr</strong>: triggered by Managed Security Service</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;system&quot;]</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The unique identifier of the handling task.</p>
-     * <br>
-     * <p>>  This parameter is used to query a specific task. You can obtain the value from the response result.</p>
+     * <blockquote>
+     * <p> This parameter is used to query a specific task. You can obtain the value from the response result.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>150xxxxxxxxx95066</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The status of the handling task. The value is a string. Valid values:</p>
-     * <br>
-     * <p>*   **11**: being handled</p>
-     * <p>*   **21**: being blocked</p>
-     * <p>*   **22**: being quarantined</p>
-     * <p>*   **23**: completed</p>
-     * <p>*   **24**: added to the whitelist</p>
-     * <p>*   **20**: successful</p>
-     * <p>*   **90**: failed</p>
-     * <p>*   **91**: unblocking failed</p>
-     * <p>*   **92**: restoring quarantined files failed</p>
+     * <ul>
+     * <li><strong>11</strong>: being handled</li>
+     * <li><strong>21</strong>: being blocked</li>
+     * <li><strong>22</strong>: being quarantined</li>
+     * <li><strong>23</strong>: completed</li>
+     * <li><strong>24</strong>: added to the whitelist</li>
+     * <li><strong>20</strong>: successful</li>
+     * <li><strong>90</strong>: failed</li>
+     * <li><strong>91</strong>: unblocking failed</li>
+     * <li><strong>92</strong>: restoring quarantined files failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;11&quot;,&quot;21&quot;]</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
     /**
      * <p>The cloud service that is associated with the handling task. The value is a string. Valid values:</p>
-     * <br>
-     * <p>*   **WAF**: Web Application Firewall (WAF)</p>
-     * <p>*   **CFW**: Cloud Firewall</p>
-     * <p>*   **Aegis**: Security Center</p>
+     * <ul>
+     * <li><strong>WAF</strong>: Web Application Firewall (WAF)</li>
+     * <li><strong>CFW</strong>: Cloud Firewall</li>
+     * <li><strong>Aegis</strong>: Security Center</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;WAF&quot;]</p>
      */
     @NameInMap("YunCode")
     public String yunCode;
@@ -176,6 +243,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
     }
     public String getEntityType() {
         return this.entityType;
+    }
+
+    public DescribeProcessTasksRequest setEntityUuid(String entityUuid) {
+        this.entityUuid = entityUuid;
+        return this;
+    }
+    public String getEntityUuid() {
+        return this.entityUuid;
     }
 
     public DescribeProcessTasksRequest setOrderField(String orderField) {

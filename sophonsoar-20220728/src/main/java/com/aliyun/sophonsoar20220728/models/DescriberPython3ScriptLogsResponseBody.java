@@ -6,12 +6,24 @@ import com.aliyun.tea.*;
 public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D22D8A0C-6E86-57B2-A142-929184122AB1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The operational logs of the Python3 script.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;logs&quot;: [
+     *         {
+     *             &quot;message&quot;: &quot;function input is {}&quot;
+     *         }
+     *     ]
+     * }</p>
      */
     @NameInMap("RunResult")
     public String runResult;

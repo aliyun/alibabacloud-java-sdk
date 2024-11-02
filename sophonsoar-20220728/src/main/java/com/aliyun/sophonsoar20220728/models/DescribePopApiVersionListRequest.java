@@ -5,24 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribePopApiVersionListRequest extends TeaModel {
     /**
-     * <p>The environment in which the API operation parameters are used. Set the value to **online**.</p>
+     * <p>The environment in which the API operation parameters are used. Set the value to <strong>online</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The POP code of the Alibaba Cloud service.</p>
-     * <br>
-     * <p>>  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sas</p>
      */
     @NameInMap("PopCode")
     public String popCode;

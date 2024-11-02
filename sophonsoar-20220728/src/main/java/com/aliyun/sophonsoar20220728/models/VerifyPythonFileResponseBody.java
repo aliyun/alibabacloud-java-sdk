@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class VerifyPythonFileResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F72685FB-A6E6-5A9A-97F7-6DC1056E63CE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class VerifyPythonFileResponseBody extends TeaModel {
     public static class VerifyPythonFileResponseBodySyntax extends TeaModel {
         /**
          * <p>The number that indicates the end column of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("EndColumn")
         public Integer endColumn;
 
         /**
          * <p>The number that indicates the end line of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("EndLineNumber")
         public Integer endLineNumber;
 
         /**
          * <p>The error message for the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>undefined name \&quot;ab\&quot;</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The severity level of the error code. Valid values:</p>
-         * <br>
-         * <p>*   4: moderate</p>
-         * <p>*   8: serious</p>
+         * <ul>
+         * <li>4: moderate</li>
+         * <li>8: serious</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Severity")
         public Integer severity;
 
         /**
          * <p>The number that indicates the start column of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("StartColumn")
         public Integer startColumn;
 
         /**
          * <p>The number that indicates the start line of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("StartLineNumber")
         public Integer startLineNumber;

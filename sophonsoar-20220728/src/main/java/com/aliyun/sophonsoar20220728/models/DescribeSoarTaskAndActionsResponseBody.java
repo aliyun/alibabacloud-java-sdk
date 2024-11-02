@@ -12,6 +12,9 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18017A93-3D5D-503A-8308-914543F1CBA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,77 +43,115 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     public static class DescribeSoarTaskAndActionsResponseBodyDetailsActions extends TeaModel {
         /**
          * <p>The action name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>formatdata</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The UUID of the component execution record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>091be399-a937-4276-af78-xxxxxxxx</p>
          */
         @NameInMap("ActionUuid")
         public String actionUuid;
 
         /**
          * <p>The name of the asset that is used by the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS Asset</p>
          */
         @NameInMap("AssetName")
         public String assetName;
 
         /**
          * <p>The component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataFormat</p>
          */
         @NameInMap("Component")
         public String component;
 
         /**
          * <p>The end of the time range during which the component is run. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699868848766</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The custom name of the node in the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataFormat_1</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The request ID of the task. The value is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8dac16c6-7411-4116-8d70-xxxxxxx</p>
          */
         @NameInMap("RequestUuid")
         public String requestUuid;
 
         /**
          * <p>The beginning of the time range during which the component is run. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699868848731</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The running result of the component. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the task. The value is the same as the playbook UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed127287-6699-4e4d-b986-xxxxxxx</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The status of the triggered component action.</p>
-         * <br>
-         * <p>>  This parameter is disabled and left empty.</p>
+         * <blockquote>
+         * <p> This parameter is disabled and left empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to execute the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127xxxx4392</p>
          */
         @NameInMap("TriggerUser")
         public String triggerUser;
@@ -227,86 +268,130 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
         /**
          * <p>The end of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699868848767</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The error message of the task. If the task is successful, this field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stime not match</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The request parameters of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;input1&quot;: &quot;xx.xx.xx.xx&quot;,
+         *     &quot;input2&quot;: &quot;7d&quot;
+         * }</p>
          */
         @NameInMap("RawEventReq")
         public String rawEventReq;
 
         /**
          * <p>The request ID of the task. The value is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17f75844-75cc-4174-86da-cec07a690142</p>
          */
         @NameInMap("RequestUuid")
         public String requestUuid;
 
         /**
-         * <p>The flag of the task. For debugging tasks, the value is **DEBUG**. For other tasks, the parameter is left empty.</p>
+         * <p>The flag of the task. For debugging tasks, the value is <strong>DEBUG</strong>. For other tasks, the parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEBUG</p>
          */
         @NameInMap("ResultLevel")
         public String resultLevel;
 
         /**
          * <p>The returned information about the playbook. You can define the value in the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deubug playbook finished</p>
          */
         @NameInMap("ResultMessage")
         public String resultMessage;
 
         /**
          * <p>The beginning of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699868848645</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
-         * <p>*   **running**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * <li><strong>running</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The MD5 value of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed127287-6699-4e4d-b986-9f770879xxx</p>
          */
         @NameInMap("TaskFlowMd5")
         public String taskFlowMd5;
 
         /**
          * <p>The name of the task. The value is the same as the playbook UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92af3c79-1754-4646-9366-9ddbd1e45536</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the task belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127xxxx4392</p>
          */
         @NameInMap("TaskTenantId")
         public String taskTenantId;
 
         /**
          * <p>The task type. Valid values:</p>
-         * <br>
-         * <p>*   **debug**: a debugging task</p>
-         * <p>*   **manual**: a manual task</p>
-         * <p>*   **siem**: an event-triggered task</p>
+         * <ul>
+         * <li><strong>debug</strong>: a debugging task</li>
+         * <li><strong>manual</strong>: a manual task</li>
+         * <li><strong>siem</strong>: an event-triggered task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>siem</p>
          */
         @NameInMap("TriggerType")
         public String triggerType;
 
         /**
          * <p>The ID of the Alibaba Cloud account that triggers the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127xxxx4392</p>
          */
         @NameInMap("TriggerUser")
         public String triggerUser;

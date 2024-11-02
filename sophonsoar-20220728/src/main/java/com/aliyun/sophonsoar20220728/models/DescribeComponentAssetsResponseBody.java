@@ -12,6 +12,9 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BFEFB76D-DD0E-5529-BD57-0DAC10B9B30F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,44 +43,83 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
     public static class DescribeComponentAssetsResponseBodyComponentAssets extends TeaModel {
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ff6fe161-93e2-464c-a326-fxxxxxx</p>
          */
         @NameInMap("AssetUuid")
         public String assetUuid;
 
         /**
          * <p>The name of the component to which the asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pyhton3</p>
          */
         @NameInMap("Componentname")
         public String componentname;
 
         /**
          * <p>The time when the asset was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-23T14:38Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the asset was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-23T14:38Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7xx</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test asset</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The configurations of the asset in the JSON string format. DescribeComponentAssetForm</p>
-         * <br>
-         * <p>>  For more information, see [DescribeComponentAssetForm](~~DescribeComponentAssetForm~~).</p>
+         * <blockquote>
+         * <p> For more information, see <a href="~~DescribeComponentAssetForm~~">DescribeComponentAssetForm</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;name&quot;: &quot;authMethod&quot;,
+         *         &quot;value&quot;: &quot;ak&quot;
+         *     },
+         *     {
+         *         &quot;name&quot;: &quot;accessKeyId&quot;,
+         *         &quot;value&quot;: &quot;xxxxxxx&quot;
+         *     },
+         *     {
+         *         &quot;name&quot;: &quot;accessKeySecret&quot;,
+         *         &quot;value&quot;: &quot;xxxxx&quot;
+         *     },
+         *     {
+         *         &quot;name&quot;: &quot;roleArn&quot;,
+         *         &quot;value&quot;: &quot;&quot;
+         *     }
+         * ]</p>
          */
         @NameInMap("Params")
         public String params;

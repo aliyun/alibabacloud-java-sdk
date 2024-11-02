@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyComponentAssetResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C5F11E9-464E-51F0-9296-43BB312A0557</p>
      */
     @NameInMap("RequestId")
     public String requestId;

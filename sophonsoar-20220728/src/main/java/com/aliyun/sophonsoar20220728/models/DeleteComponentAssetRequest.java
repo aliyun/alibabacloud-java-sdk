@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class DeleteComponentAssetRequest extends TeaModel {
     /**
      * <p>The ID of the asset.</p>
-     * <br>
-     * <p>>  You can call the [DescribeComponentAssets](~~DescribeComponentAssets~~) operation to query the ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12x</p>
      */
     @NameInMap("AssetId")
     public Long assetId;
 
     /**
      * <p>The language of the content within the request and the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;

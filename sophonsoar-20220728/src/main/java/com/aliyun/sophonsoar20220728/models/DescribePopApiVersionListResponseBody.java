@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribePopApiVersionListResponseBody extends TeaModel {
     /**
      * <p>The POP code of the Alibaba Cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sas</p>
      */
     @NameInMap("PopCode")
     public String popCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBCDB0E1-4D0E-55A9-A44D-A62ADE7E2FDA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -68,18 +77,27 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
     public static class DescribePopApiVersionListResponseBodyVersionList extends TeaModel {
         /**
          * <p>The name of the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribePopApiVersionList</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The POP code of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         @NameInMap("PopCode")
         public String popCode;
 
         /**
          * <p>The version number of the API for the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03</p>
          */
         @NameInMap("Version")
         public String version;

@@ -12,6 +12,9 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5F5D6C9-DF1A-5381-92B1-39676F777D20</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,40 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
     public static class DescribeComponentPlaybookResponseBodyPlaybooks extends TeaModel {
         /**
          * <p>The description of the predefined component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aegis_kill_process</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the predefined component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AegisKillQuara</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
-         * <br>
-         * <p>>  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).</p>
+         * <blockquote>
+         * <p> For more information, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;typeName&quot;: &quot;String&quot;,
+         *         &quot;dataClass&quot;: &quot;normal&quot;,
+         *         &quot;dataType&quot;: &quot;String&quot;,
+         *         &quot;description&quot;: &quot;period&quot;,
+         *         &quot;example&quot;: &quot;&quot;,
+         *         &quot;name&quot;: &quot;period&quot;,
+         *         &quot;required&quot;: false
+         *     }
+         * ]</p>
          */
         @NameInMap("InputParams")
         public String inputParams;

@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class DescriberPython3ScriptLogsRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UUID that is returned when the Python3 script is run.</p>
-     * <br>
-     * <p>>  You can call the [RunPython3Script](~~RunPython3Script~~) operation to query the UUID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~RunPython3Script~~">RunPython3Script</a> operation to query the UUID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69edc2b4-c95c-424f-9114-xxxxxxx</p>
      */
     @NameInMap("RequestUuid")
     public String requestUuid;

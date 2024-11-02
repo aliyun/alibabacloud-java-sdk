@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeSoarTaskAndActionsRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response.</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The playbook UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1077f2f9-25e8-42d9-bfdf-1528e1313f6d</p>
      */
     @NameInMap("RequestUuid")
     public String requestUuid;

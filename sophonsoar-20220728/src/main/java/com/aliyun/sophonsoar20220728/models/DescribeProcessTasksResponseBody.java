@@ -18,6 +18,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7698CFB-4E1C-5840-8EC9-691B86729E94</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
     public static class DescribeProcessTasksResponseBodyPage extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -104,108 +116,177 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
     public static class DescribeProcessTasksResponseBodyProcessTasks extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that is used to submit the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxx355</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
          * <p>The name of the handling entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.x</p>
          */
         @NameInMap("EntityName")
         public String entityName;
 
         /**
          * <p>The type of the handling entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
+        @NameInMap("EntityUuid")
+        public String entityUuid;
+
+        /**
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sts_openapi.Info.DefenseSceneNotSupported</p>
+         */
+        @NameInMap("ErrCode")
+        public String errCode;
+
+        /**
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ParamError : The parameters of your request are invalid</p>
+         */
+        @NameInMap("ErrMsg")
+        public String errMsg;
+
+        /**
+         * <p>The error tip returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Verify that the input parameters of the components are correct</p>
+         */
+        @NameInMap("ErrTip")
+        public String errTip;
+
         /**
          * <p>The creation time of the handling task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         @NameInMap("GmtCreateMillis")
         public Long gmtCreateMillis;
 
         /**
          * <p>The modification time of the handling task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         @NameInMap("GmtModifiedMillis")
         public Long gmtModifiedMillis;
 
         /**
          * <p>The input parameter of the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;groupuuid&quot;:&quot;c6a9b1df-f4ac-4078-bef4-99xxxxxx&quot;}</p>
          */
         @NameInMap("InputParams")
         public String inputParams;
 
         /**
          * <p>The ID of the associated policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92af3c79-1754-4646-9366-9ddbd1e45536_xxxx</p>
          */
         @NameInMap("ProcessStrategyUuid")
         public String processStrategyUuid;
 
         /**
          * <p>The delivery time of the handling task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         @NameInMap("ProcessTime")
         public Long processTime;
 
         /**
          * <p>The unblocking time of the handling task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         @NameInMap("RemoveTime")
         public Long removeTime;
 
         /**
          * <p>The scenario code of the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event_xxx_whole_process</p>
          */
         @NameInMap("SceneCode")
         public String sceneCode;
 
         /**
          * <p>The scenario name of the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_whole_process</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is specified in the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxx234</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
          * <p>The submission source of the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The unique identifier of the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150xxxxxxxxx95066</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The status of the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
         /**
          * <p>The code of the cloud service that is associated with the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAF</p>
          */
         @NameInMap("YunCode")
         public String yunCode;
-
-        @NameInMap("errCode")
-        public String errCode;
-
-        @NameInMap("errMsg")
-        public String errMsg;
-
-        @NameInMap("errTip")
-        public String errTip;
 
         public static DescribeProcessTasksResponseBodyProcessTasks build(java.util.Map<String, ?> map) throws Exception {
             DescribeProcessTasksResponseBodyProcessTasks self = new DescribeProcessTasksResponseBodyProcessTasks();
@@ -234,6 +315,38 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setEntityUuid(String entityUuid) {
+            this.entityUuid = entityUuid;
+            return this;
+        }
+        public String getEntityUuid() {
+            return this.entityUuid;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setErrCode(String errCode) {
+            this.errCode = errCode;
+            return this;
+        }
+        public String getErrCode() {
+            return this.errCode;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setErrMsg(String errMsg) {
+            this.errMsg = errMsg;
+            return this;
+        }
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setErrTip(String errTip) {
+            this.errTip = errTip;
+            return this;
+        }
+        public String getErrTip() {
+            return this.errTip;
         }
 
         public DescribeProcessTasksResponseBodyProcessTasks setGmtCreateMillis(Long gmtCreateMillis) {
@@ -338,30 +451,6 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
         public String getYunCode() {
             return this.yunCode;
-        }
-
-        public DescribeProcessTasksResponseBodyProcessTasks setErrCode(String errCode) {
-            this.errCode = errCode;
-            return this;
-        }
-        public String getErrCode() {
-            return this.errCode;
-        }
-
-        public DescribeProcessTasksResponseBodyProcessTasks setErrMsg(String errMsg) {
-            this.errMsg = errMsg;
-            return this;
-        }
-        public String getErrMsg() {
-            return this.errMsg;
-        }
-
-        public DescribeProcessTasksResponseBodyProcessTasks setErrTip(String errTip) {
-            this.errTip = errTip;
-            return this;
-        }
-        public String getErrTip() {
-            return this.errTip;
         }
 
     }
