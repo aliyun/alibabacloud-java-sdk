@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateRulesAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
@@ -68,10 +68,10 @@ public class UpdateRulesAttributeRequest extends TeaModel {
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsCorsConfig extends TeaModel {
         /**
-         * <p>Specifies whether credentials can be carried in CORS requests. Valid values:</p>
+         * <p>Specifies whether to allow credentials to be carried in CORS requests. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><strong>on</strong>: allows credentials to be carried in CORS requests.</li>
+         * <li><strong>off</strong>: does not allow credentials to be carried in CORS requests.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,8 +237,8 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable session persistence. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: enables session persistence.</li>
+         * <li><strong>false</strong> (default): disables session persistence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The timeout period of sessions. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
+         * <p>The timeout period of sessions. Unit: seconds Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -365,8 +365,8 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         /**
          * <p>Specifies whether to overwrite the header in the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: overwrites the request header.</li>
+         * <li><strong>false</strong> (default): does not overwrite the request header.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,7 +378,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         /**
          * <p>The key of the header. The header key must be 1 to 40 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-). The key specified in <code>InsertHeader</code> must be unique.</p>
          * <blockquote>
-         * <p> The following header keys are not supported: <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te, host</code>, <code>cookie</code>, <code>remoteip</code>, and <code>authority</code>. Header keys are not case-sensitive.</p>
+         * <p>The following header keys are not supported: <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te, host</code>, <code>cookie</code>, <code>remoteip</code>, and <code>authority</code>. Header keys are not case-sensitive.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -472,7 +472,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
          * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following special characters: - . \* = ~ _ + \ ^ ! $ &amp; | ( ) [ ] ?.</li>
          * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
          * <li>The rightmost domain label can contain only letters, asterisks (<em>), and question marks (?), and cannot contain digits or hyphens (-). The leftmost <code>domain label</code> can contain asterisks (</em>).</li>
-         * <li>The domain labels cannot start or end with a hyphen (-). You can specify asterisks (∗) and question marks (?) anywhere in a domain label.</li>
+         * <li>The domain labels cannot start or end with hyphens (-). You can specify asterisks (∗) and question marks (?) anywhere in a domain label.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -491,11 +491,11 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         public String httpCode;
 
         /**
-         * <p>The path to which requests are redirected.</p>
+         * <p>The path of the destination to which requests are forwarded. Valid values:</p>
          * <ul>
          * <li><p><strong>${path}</strong> (default): You can reference \<em>\</em>${host}**, <strong>${protocol}</strong> and **${port}\<em>\</em>. Each variable can be used only once. The preceding variables can be used at the same time or combined with a custom value.</p>
          * </li>
-         * <li><p>The path must meet the following requirements:</p>
+         * <li><p>A custom value. You must ensure that the custom value meets the following requirements:</p>
          * <ul>
          * <li>The path must be 1 to 128 characters in length. You can use asterisks (\*) and question marks (?) as wildcard characters.</li>
          * <li>The path can contain letters, digits, and the following special characters: <code>$ - _ . + / &amp; ~ @ : \\&quot; * ?</code>. It must start with a forward slash (/) and cannot contain the following characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>.</li>
@@ -521,10 +521,8 @@ public class UpdateRulesAttributeRequest extends TeaModel {
 
         /**
          * <p>The protocol of the destination to which requests are forwarded. Valid values:</p>
-         * <p>Valid values: <strong>HTTP</strong> and <strong>HTTPS</strong>.</p>
-         * <blockquote>
-         * <p> HTTPS listeners supports only HTTPS redirects.</p>
-         * </blockquote>
+         * <p>Valid values for HTTP listeners: <strong>HTTP</strong> and <strong>HTTPS</strong>.</p>
+         * <p>Valid values for HTTPS listeners: <strong>HTTPS</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -635,7 +633,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
          * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following special characters: - . \* = ~ _ + \ ^ ! $ &amp; | ( ) [ ] ?.</li>
          * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
          * <li>The rightmost domain label can contain only letters, asterisks (<em>), and question marks (?), and cannot contain digits or hyphens (-). The leftmost <code>domain label</code> can contain asterisks (</em>).</li>
-         * <li>The domain labels cannot start or end with a hyphen (-). You can specify asterisks (∗) and question marks (?) anywhere in a domain label.</li>
+         * <li>The domain labels cannot start or end with hyphens (-). You can specify asterisks (∗) and question marks (?) anywhere in a domain label.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -649,7 +647,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
          * <ul>
          * <li><p><strong>${path}</strong> (default): You can reference \<em>\</em>${host}**, <strong>${protocol}</strong> and **${port}\<em>\</em>. Each variable can be used only once. The preceding variables can be used at the same time or combined with a custom value.</p>
          * </li>
-         * <li><p>The path must meet the following requirements:</p>
+         * <li><p>A custom value. You must ensure that the custom value meets the following requirements:</p>
          * <ul>
          * <li>The path must be 1 to 128 characters in length. You can use asterisks (\*) and question marks (?) as wildcard characters.</li>
          * <li>The custom value can contain letters, digits, and the following special characters: <code>$ - _ . + / &amp; ~ @ : \\&quot; * ?</code>. The custom value must start with a forward slash (/) and cannot contain the following characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>.</li>
@@ -708,7 +706,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         /**
          * <p>The number of requests per IP address. Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
          * <blockquote>
-         * <p> If both the QPS and PerIpQps properties are specified, make sure that the value of the QPS property is smaller than the value of the PerIpQps property.</p>
+         * <p>If both the QPS and PerIpQps properties are specified, make sure that the value of the QPS property is smaller than the value of the PerIpQps property.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -804,7 +802,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         public UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
 
         /**
-         * <p>The type of the destination to which network traffic is mirrored. Valid values:</p>
+         * <p>The type of target to which network traffic is mirrored. Valid values:</p>
          * <ul>
          * <li><strong>ForwardGroupMirror</strong>: a server group</li>
          * </ul>
@@ -1367,7 +1365,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         public UpdateRulesAttributeRequestRulesRuleConditionsHostConfig hostConfig;
 
         /**
-         * <p>The configuration of the HTTP request method. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The configuration of the HTTP request method. You can configure at most 20 HTTP request methods.</p>
          */
         @NameInMap("MethodConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsMethodConfig methodConfig;
@@ -1403,15 +1401,19 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         public UpdateRulesAttributeRequestRulesRuleConditionsSourceIpConfig sourceIpConfig;
 
         /**
-         * <p>The type of the forwarding rule. You can specify at most seven types of forwarding rule. Valid values:</p>
+         * <p>The condition type of the forwarding rule is invalid.</p>
+         * <p>You can specify at most seven condition types for inbound forwarding rules. Valid values:</p>
          * <ul>
-         * <li><strong>Host</strong>: Responses are forwarded based on hosts.</li>
-         * <li><strong>Path</strong>: Responses are forwarded based on URLs.</li>
-         * <li><strong>Header</strong>: Responses are forwarded based on HTTP headers.</li>
-         * <li><strong>QueryString</strong>: Responses are forwarded based on query strings.</li>
-         * <li><strong>Method</strong>: Responses are forwarded based on request methods.</li>
-         * <li><strong>Cookie</strong>: Responses are forwarded based on cookies.</li>
-         * <li><strong>SourceIp</strong>: Responses are forwarded based on source IP addresses.</li>
+         * <li><strong>Host</strong>: Requests are forwarded based on hosts.</li>
+         * <li><strong>Path</strong>: Requests are forwarded based on paths.</li>
+         * <li><strong>Header</strong>: Requests are forwarded based on HTTP headers.</li>
+         * <li><strong>QueryString</strong>: Requests are forwarded based on query strings.</li>
+         * <li><strong>Method</strong>: Requests are forwarded based on request methods.</li>
+         * <li><strong>Cookie</strong>: Requests are forwarded based on cookies.</li>
+         * <li><strong>SourceIp</strong>: Requests are forwarded based on source IP addresses.</li>
+         * </ul>
+         * <p>You can specify at most two condition types for outbound forwarding rules. Valid values:</p>
+         * <ul>
          * <li><strong>ResponseHeader</strong>: Responses are forwarded based on HTTP response headers.</li>
          * <li><strong>ResponseStatusCode</strong>: Response are forwarded based on response status codes.</li>
          * </ul>
@@ -1513,7 +1515,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         /**
          * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value specifies a higher priority. You can specify at most 20 rule priorities.</p>
          * <blockquote>
-         * <p> The priority of each forwarding rule within a listener must be unique.</p>
+         * <p>The priority of each forwarding rule within a listener must be unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1535,7 +1537,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         public java.util.List<UpdateRulesAttributeRequestRulesRuleConditions> ruleConditions;
 
         /**
-         * <p>The ID of the forwarding rule. You can specify at most 20 rule IDs.</p>
+         * <p>The IDs of the forwarding rules. You can specify at most 20 rule IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

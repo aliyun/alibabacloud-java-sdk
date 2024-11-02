@@ -36,7 +36,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of server groups.</p>
+     * <p>The server groups.</p>
      */
     @NameInMap("ServerGroups")
     public java.util.List<ListServerGroupsResponseBodyServerGroups> serverGroups;
@@ -174,14 +174,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The domain name that is used for health checks. The domain name meets the following requirements:</p>
          * <ul>
-         * <li>The domain name must be 1 to 80 characters in length.</li>
-         * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
-         * <li>The domain name can contain at least one period (.) but cannot start or end with a period (.).</li>
-         * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
-         * <li>The domain name cannot start or end with a hyphen (-).</li>
+         * <li>The domain name is 1 to 80 characters in length.</li>
+         * <li>The domain name contains lowercase letters, digits, hyphens (-), and periods (.).</li>
+         * <li>The domain name contains at least one period (.) but does not start or end with a period (.).</li>
+         * <li>The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).</li>
+         * <li>The domain name does not start or end with a hyphen (-).</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <p>The HTTP version that is used for health checks.</p>
          * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <li><strong>HEAD</strong>: HTTP and HTTPS health checks use the HEAD method by default.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The URL that is used for health checks.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -249,9 +249,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
          * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
          * </ul>
-         * <blockquote>
-         * <p> HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -624,15 +621,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <p>The configurations of connection draining.</p>
          * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>By default, connection draining is disabled. To enable connection draining, contact your account manager.</p>
-         * </li>
-         * <li><p>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</p>
-         * </li>
-         * <li><p>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</p>
-         * </li>
+         * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining. </li>
+         * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
          * </ul>
+         * </blockquote>
          */
         @NameInMap("ConnectionDrainConfig")
         public ListServerGroupsResponseBodyServerGroupsConnectionDrainConfig connectionDrainConfig;
@@ -776,15 +769,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <p>The configurations of slow starts.</p>
          * <p>After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</p>
-         * </li>
-         * <li><p>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</p>
-         * </li>
-         * <li><p>Slow start is supported only by the weighted round-robin scheduling algorithm.</p>
-         * </li>
+         * <li>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</li>
+         * <li>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
+         * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
          * </ul>
+         * </blockquote>
          */
         @NameInMap("SlowStartConfig")
         public ListServerGroupsResponseBodyServerGroupsSlowStartConfig slowStartConfig;

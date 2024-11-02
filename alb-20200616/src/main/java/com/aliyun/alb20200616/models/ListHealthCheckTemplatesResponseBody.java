@@ -162,7 +162,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
          * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only when <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPs.</p>
+         * <p> This parameter takes effect only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
          * <p>Valid values: <strong>HTTP 1.0</strong> and <strong>HTTP 1.1</strong>.</p>
          * <p>Default value: <strong>HTTP 1.1</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPs.</p>
+         * <p> This parameter takes effect only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -195,14 +195,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The HTTP method that is used for health checks. Valid value:</p>
+         * <p>The HTTP method that is used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS health checks use the HEAD method.</li>
          * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
          * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPs.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -222,16 +222,13 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that is used for health checks. Valid value:</p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>HTTP</strong> (default): The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy.</li>
-         * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS provides higher security because HTTPS supports data encryption.</li>
+         * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security because HTTPS supports data encryption.</li>
          * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
-         * <li><strong>gRPC</strong>: The ALB instance sends POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+         * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
          * </ul>
-         * <blockquote>
-         * <p> HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPs.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -262,9 +259,6 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
          * <p>The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not respond within the specified timeout period, the ECS instance fails to pass the health check.</p>
          * <p>Valid values: <strong>1 to 300</strong>. Unit: seconds.</p>
          * <p>Default value: <strong>5</strong>.</p>
-         * <blockquote>
-         * <p> If the value of <strong>HealthCHeckTimeout</strong> is smaller than the value of <strong>HealthCheckInterval</strong>, <strong>HealthCHeckTimeout</strong> does not take effect. The value of <strong>HealthCheckInterval</strong> specifies the timeout period.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceServersInServerGroupRequest extends TeaModel {
     /**
-     * <p>The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.</p>
+     * <p>The backend servers. You can specify at most 200 servers in each call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddedServers")
@@ -104,7 +104,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
 
     public static class ReplaceServersInServerGroupRequestAddedServers extends TeaModel {
         /**
-         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.</p>
+         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -113,7 +113,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The port used by the server group. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 40 servers in each call.</p>
+         * <p>The port used by the backend server in the server group. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -122,13 +122,13 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the backend server. You can specify up to 40 server IDs in each call.</p>
+         * <p>The ID of the backend server. You can specify at most 200 servers in each call.</p>
          * <ul>
-         * <li>If the server group type is <strong>Instance</strong>, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
-         * <li>If the server group type is <strong>Ip</strong>, set the ServerId parameter to an IP address specified in the server group.</li>
+         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+         * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
          * </ul>
          * <blockquote>
-         * <p>You cannot perform this operation on a server group of the Function type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <p> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -139,7 +139,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.</p>
+         * <p>The IP address of the elastic network interface (ENI) in exclusive mode.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -148,11 +148,11 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:</p>
+         * <p>The type of backend server. You can specify at most 200 servers in each call. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong></li>
-         * <li><strong>Eni</strong></li>
-         * <li><strong>Eci</strong></li>
+         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Eni</strong>: ENI</li>
+         * <li><strong>Eci</strong>: elastic container instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,8 +162,8 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverType;
 
         /**
-         * <p>The weight of the backend server that you want to add to the server group. You can specify up to 40 backend servers in each call.</p>
-         * <p>Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the weight of a backend server is set to <strong>0</strong>, no requests are forwarded to the backend server.</p>
+         * <p>The weight of the backend server. You can specify at most 200 servers in each call.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -228,7 +228,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
 
     public static class ReplaceServersInServerGroupRequestRemovedServers extends TeaModel {
         /**
-         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 40 servers in each call.</p>
+         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>81</p>
@@ -237,13 +237,13 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the backend server. You can specify up to 40 server IDs in each call.</p>
+         * <p>The ID of the backend server. You can specify at most 200 servers in each call.</p>
          * <ul>
-         * <li>If the server group type is <strong>Instance</strong>, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
-         * <li>If the server group type is <strong>Ip</strong>, set the ServerId parameter to an IP address specified in the server group.</li>
+         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+         * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
          * </ul>
          * <blockquote>
-         * <p>You cannot perform this operation on a server group of the Function type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <p> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -254,7 +254,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.</p>
+         * <p>The IP address of the ENI in exclusive mode.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.12</p>
@@ -263,11 +263,11 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:</p>
+         * <p>The type of backend server. You can specify at most 200 servers in each call. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong></li>
-         * <li><strong>Eni</strong></li>
-         * <li><strong>Eci</strong></li>
+         * <li><strong>Ecs</strong>: ECS instance</li>
+         * <li><strong>Eni</strong>: ENI</li>
+         * <li><strong>Eci</strong>: elastic container instance</li>
          * </ul>
          * 
          * <strong>example:</strong>

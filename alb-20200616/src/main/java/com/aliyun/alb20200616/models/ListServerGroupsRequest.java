@@ -48,6 +48,13 @@ public class ListServerGroupsRequest extends TeaModel {
     public java.util.List<String> serverGroupNames;
 
     /**
+     * <p>The server group type. Valid values:</p>
+     * <ul>
+     * <li><strong>Instance</strong>: instances, including ECS instances, ENIs, and elastic container instances.</li>
+     * <li><strong>Ip</strong>: IP addresses.</li>
+     * <li><strong>Fc</strong>: Function Compute</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Instance</p>
      */

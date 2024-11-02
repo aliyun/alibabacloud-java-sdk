@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateAclsFromListenerRequest extends TeaModel {
     /**
-     * <p>The access control list (ACL) IDs.</p>
+     * <p>The access control list (ACL) IDs. You can disassociate at most three ACLs from a listener in each call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclIds")

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAclsRequest extends TeaModel {
     /**
-     * <p>Filter access control lists (ACLs) by ACL ID.</p>
+     * <p>Filter access control lists (ACLs) by ACL ID. You can specify at most 20 ACL IDs in each call.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
     /**
-     * <p>The names of the network ACLs. You can specify at most 10 network ACL names in each request.</p>
+     * <p>The ACL names. You can specify up to 10 ACL names in each call.</p>
      */
     @NameInMap("AclNames")
     public java.util.List<String> aclNames;

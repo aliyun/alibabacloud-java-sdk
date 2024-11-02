@@ -55,7 +55,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The zones and the vSwitches. You must specify at least two zones.</p>
+     * <p>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<UpdateLoadBalancerAddressTypeConfigRequestZoneMappings> zoneMappings;
@@ -107,9 +107,9 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
 
     public static class UpdateLoadBalancerAddressTypeConfigRequestZoneMappings extends TeaModel {
         /**
-         * <p>The ID of an EIP instance. You can specify up to 10 zone IDs.</p>
+         * <p>The ID of the elastic IP address (EIP). You can specify a maximum of 10 zones.</p>
          * <blockquote>
-         * <p>This parameter is required if you want to change the network type from internal-facing to Internet-facing.</p>
+         * <p> This parameter is required if you want to change the network type from internal-facing to Internet-facing.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,23 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 vSwitch IDs.</p>
+         * <p>The type of EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Common</strong>: an EIP.</li>
+         * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
+        @NameInMap("EipType")
+        public String eipType;
+
+        /**
+         * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp10ttov87felojcn****</p>
@@ -128,8 +144,8 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone where the ALB instance is deployed. You can specify up to 10 zone IDs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID of the ALB instance. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the information about the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -148,6 +164,14 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         }
         public String getAllocationId() {
             return this.allocationId;
+        }
+
+        public UpdateLoadBalancerAddressTypeConfigRequestZoneMappings setEipType(String eipType) {
+            this.eipType = eipType;
+            return this;
+        }
+        public String getEipType() {
+            return this.eipType;
         }
 
         public UpdateLoadBalancerAddressTypeConfigRequestZoneMappings setVSwitchId(String vSwitchId) {

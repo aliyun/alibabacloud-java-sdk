@@ -72,7 +72,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public java.util.List<String> loadBalancerIds;
 
     /**
-     * <p>The names of the instances. You can specify at most 10 names.</p>
+     * <p>The instance names. You can specify at most 10 instance names.</p>
      */
     @NameInMap("LoadBalancerNames")
     public java.util.List<String> loadBalancerNames;
@@ -141,7 +141,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public java.util.List<ListLoadBalancersRequestTag> tag;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the ALB instance belongs. You can specify at most 10 IDs.</p>
+     * <p>The ID of the VPC to which the ALB instance belongs. You can specify at most 10 VPC IDs.</p>
      */
     @NameInMap("VpcIds")
     public java.util.List<String> vpcIds;

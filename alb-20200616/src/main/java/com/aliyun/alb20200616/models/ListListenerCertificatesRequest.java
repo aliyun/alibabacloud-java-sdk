@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
+    /**
+     * <p>The certificate IDs.</p>
+     */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 

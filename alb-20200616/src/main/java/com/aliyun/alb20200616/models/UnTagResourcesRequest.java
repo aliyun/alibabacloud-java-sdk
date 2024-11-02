@@ -105,7 +105,7 @@ public class UnTagResourcesRequest extends TeaModel {
 
     public static class UnTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that you want to remove. The key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag that you want to remove. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -114,7 +114,7 @@ public class UnTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that you want to remove. The value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag that you want to remove. The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

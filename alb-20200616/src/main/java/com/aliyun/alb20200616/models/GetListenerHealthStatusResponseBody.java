@@ -249,7 +249,11 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos extends TeaModel {
         /**
-         * <p>The action specified for the server group.</p>
+         * <p>The action specified for the server group. Valid values:</p>
+         * <ul>
+         * <li><strong>ForwardGroup</strong>: distributes requests to server groups.</li>
+         * <li><strong>TrafficMirror</strong>: mirrors requests to server groups.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TrafficMirror</p>
@@ -349,7 +353,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public String listenerProtocol;
 
         /**
-         * <p>The information about the server groups.</p>
+         * <p>The information about the server group.</p>
          */
         @NameInMap("ServerGroupInfos")
         public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos> serverGroupInfos;

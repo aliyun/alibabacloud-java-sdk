@@ -19,14 +19,15 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The configurations of connection draining.</p>
-     * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
+     * <p>After connection draining is enabled, SLB remains data transmission for a period of time after a backend server is removed or declared unhealthy.</p>
      * <blockquote>
-     * <ul>
-     * <li>By default, connection draining is disabled. To enable connection draining, contact your account manager.</li>
-     * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</li>
-     * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>Basic SLB instances do not support connection draining. Standard and WAF-enabled SLB instances support connection draining.</p>
+     * </li>
+     * <li><p>Server groups of the server and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</p>
+     * </li>
+     * </ul>
      */
     @NameInMap("ConnectionDrainConfig")
     public UpdateServerGroupAttributeRequestConnectionDrainConfig connectionDrainConfig;
@@ -228,7 +229,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     public static class UpdateServerGroupAttributeRequestConnectionDrainConfig extends TeaModel {
         /**
-         * <p>Indicates whether connection draining is enabled. Valid values:</p>
+         * <p>Specifies whether to enable connection draining. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -242,6 +243,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
         /**
          * <p>The timeout period of connection draining.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>900</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -326,7 +328,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckHost;
 
         /**
-         * <p>The HTTP version for health checks. Valid values:</p>
+         * <p>The HTTP version that is used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>HTTP1.0</strong></li>
          * <li><strong>HTTP1.1</strong></li>
@@ -385,7 +387,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <p>The protocol that you want to use for health checks. Valid values:</p>
          * <ul>
          * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
          * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</li>
@@ -403,13 +405,8 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
          * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
          * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
          * </blockquote>
-         * <ul>
-         * <li><p>If the value of <strong>HealthCHeckTimeout</strong> is smaller than the value of <strong>HealthCheckInterval</strong>, <strong>HealthCHeckTimeout</strong> becomes invalid. The timeout period is specified by the value of <strong>HealthCheckInterval</strong>.</p>
-         * </li>
-         * <li><p>This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>3</p>

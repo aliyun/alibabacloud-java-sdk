@@ -798,7 +798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an HTTP, HTTPS, or QUIC listener in a region.</p>
+     * <p>Creates a listener.</p>
      * 
      * @param request CreateListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -906,7 +906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an HTTP, HTTPS, or QUIC listener in a region.</p>
+     * <p>Creates a listener.</p>
      * 
      * @param request CreateListenerRequest
      * @return CreateListenerResponse
@@ -1140,22 +1140,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>When you configure the <strong>Redirect</strong> action, you can use the default value for the <strong>HttpCode</strong> parameter but you cannot use the default values for all of the other parameters.</li>
-     * <li>If you specify the <strong>Rewrite</strong> action and other actions in a forwarding rule, make sure that one of the actions is <strong>ForwardGroup</strong>.</li>
-     * <li><strong>CreateRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of forwarding rules.<ul>
-     * <li>If forwarding rules are in the <strong>Provisioning</strong> state, the forwarding rules are being created.</li>
-     * <li>If forwarding rules are in the <strong>Available</strong> state, the forwarding rules have been created.</li>
+     * <li>When you configure the <strong>Redirect</strong> action, do not use the default values for parameters other than <strong>HttpCode</strong>.</li>
+     * <li>If you specify multiple actions in a forward rule, you must specify the <strong>ForwardGroup</strong> parameter along with the <strong>Rewrite</strong> parameter.</li>
+     * <li><strong>CreateRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<ul>
+     * <li>If the forwarding rules are in the <strong>Provisioning</strong> state, the forwarding rules are being created.</li>
+     * <li>If the forwarding rules are in the <strong>Available</strong> state, the forwarding rules are created.</li>
      * </ul>
      * </li>
      * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<ul>
-     * <li>Limits on conditions: You can specify at most 5 conditions if you use a basic Application Load Balancer (ALB) instance, at most 10 conditions if you use a standard ALB instance, and at most 10 conditions if you use a WAF-enabled ALB instance.</li>
-     * <li>Limits on actions: You can specify at most 3 actions if you use a basic ALB instance, at most 5 actions if you use a standard ALB instance, and at most 10 actions if you use a WAF-enabled ALB instance.</li>
+     * <li>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</li>
+     * <li>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more forwarding rules at a time.</p>
+     * <p>Creates multiple forwarding rules at a time.</p>
      * 
      * @param request CreateRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1201,22 +1201,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>When you configure the <strong>Redirect</strong> action, you can use the default value for the <strong>HttpCode</strong> parameter but you cannot use the default values for all of the other parameters.</li>
-     * <li>If you specify the <strong>Rewrite</strong> action and other actions in a forwarding rule, make sure that one of the actions is <strong>ForwardGroup</strong>.</li>
-     * <li><strong>CreateRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of forwarding rules.<ul>
-     * <li>If forwarding rules are in the <strong>Provisioning</strong> state, the forwarding rules are being created.</li>
-     * <li>If forwarding rules are in the <strong>Available</strong> state, the forwarding rules have been created.</li>
+     * <li>When you configure the <strong>Redirect</strong> action, do not use the default values for parameters other than <strong>HttpCode</strong>.</li>
+     * <li>If you specify multiple actions in a forward rule, you must specify the <strong>ForwardGroup</strong> parameter along with the <strong>Rewrite</strong> parameter.</li>
+     * <li><strong>CreateRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<ul>
+     * <li>If the forwarding rules are in the <strong>Provisioning</strong> state, the forwarding rules are being created.</li>
+     * <li>If the forwarding rules are in the <strong>Available</strong> state, the forwarding rules are created.</li>
      * </ul>
      * </li>
      * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<ul>
-     * <li>Limits on conditions: You can specify at most 5 conditions if you use a basic Application Load Balancer (ALB) instance, at most 10 conditions if you use a standard ALB instance, and at most 10 conditions if you use a WAF-enabled ALB instance.</li>
-     * <li>Limits on actions: You can specify at most 3 actions if you use a basic ALB instance, at most 5 actions if you use a standard ALB instance, and at most 10 actions if you use a WAF-enabled ALB instance.</li>
+     * <li>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</li>
+     * <li>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more forwarding rules at a time.</p>
+     * <p>Creates multiple forwarding rules at a time.</p>
      * 
      * @param request CreateRulesRequest
      * @return CreateRulesResponse
@@ -3338,7 +3338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Application Load Balancer (ALB) instances in a region based on filter conditions.</p>
+     * <p>Queries the configurations of instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3426,7 +3426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Application Load Balancer (ALB) instances in a region based on filter conditions.</p>
+     * <p>Queries the configurations of instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -3674,7 +3674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries server groups in a region.</p>
+     * <p>Queries server groups.</p>
      * 
      * @param request ListServerGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3734,7 +3734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries server groups in a region.</p>
+     * <p>Queries server groups.</p>
      * 
      * @param request ListServerGroupsRequest
      * @return ListServerGroupsResponse
