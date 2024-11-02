@@ -6,26 +6,40 @@ import com.aliyun.tea.*;
 public class BatchModifyInstanceStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to start or stop the playbook.</p>
-     * <br>
-     * <p>*   **0**: stops the playbook.</p>
-     * <p>*   **1**: starts the playbook.</p>
+     * <ul>
+     * <li><strong>0</strong>: stops the playbook.</li>
+     * <li><strong>1</strong>: starts the playbook.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Active")
     public Integer active;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The playbook UUID. If you want to specify multiple playbooks, separate the playbook UUIDs with commas (,).</p>
-     * <br>
-     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8baa6cff-319e-4ede-97bc-1xxxxxx,s8df2e-s8dfs-xxxx</p>
      */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;

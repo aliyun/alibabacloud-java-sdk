@@ -12,6 +12,9 @@ public class CreatePlaybookResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B09B40B2-F11E-512C-B755-423F2056C17B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class CreatePlaybookResponseBody extends TeaModel {
     public static class CreatePlaybookResponseBodyData extends TeaModel {
         /**
          * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e38111e-9794-4784-9ca8-xxxxxxx</p>
          */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;

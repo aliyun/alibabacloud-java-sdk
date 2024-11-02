@@ -6,23 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeDistinctReleasesRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The playbook UUID.</p>
-     * <br>
-     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bc0b8424-535c-4ed5-bd94-xxxxxx</p>
      */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
     /**
      * <p>The MD5 value of the playbook XML configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>be0a4ef084dd174abe47xxxxx</p>
      */
     @NameInMap("TaskflowMd5")
     public String taskflowMd5;

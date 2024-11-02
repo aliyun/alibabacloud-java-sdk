@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteComponentAssetResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39C38A34-8532-5D44-B88A-7263B435C316</p>
      */
     @NameInMap("RequestId")
     public String requestId;

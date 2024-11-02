@@ -12,6 +12,9 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10B92EE1-4597-593B-A131-7A17D25EF5C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
     public static class DescribeLatestRecordSchemaResponseBodyPlaybookNodeSchemaNodeSchema extends TeaModel {
         /**
          * <p>The action name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>formatedata</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
         /**
          * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataFormat</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataFormat_1</p>
          */
         @NameInMap("NodeName")
         public String nodeName;

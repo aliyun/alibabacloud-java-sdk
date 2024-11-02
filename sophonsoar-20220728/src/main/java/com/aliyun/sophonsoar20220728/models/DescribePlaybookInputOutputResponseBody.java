@@ -12,6 +12,9 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>688B4CCD-5272-5DCF-9D76-FE5EFEF545F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,34 +41,60 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybookInputOutputResponseBodyConfig extends TeaModel {
+        /**
+         * <p>The execution method of the playbook is in JSONObject format.</p>
+         */
         @NameInMap("ExeConfig")
         public String exeConfig;
 
         /**
          * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;typeName&quot;: &quot;String&quot;,
+         *         &quot;dataClass&quot;: &quot;normal&quot;,
+         *         &quot;dataType&quot;: &quot;String&quot;,
+         *         &quot;description&quot;: &quot;period&quot;,
+         *         &quot;example&quot;: &quot;&quot;,
+         *         &quot;name&quot;: &quot;period&quot;,
+         *         &quot;required&quot;: false
+         *     }
+         * ]</p>
          */
         @NameInMap("InputParams")
         public String inputParams;
 
         /**
          * <p>The output parameter configuration. This parameter is unavailable and is always left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("OutputParams")
         public String outputParams;
 
         /**
          * <p>The input parameter type of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   **template-ip**</p>
-         * <p>*   **template-file**</p>
-         * <p>*   **template-process**</p>
-         * <p>*   **custom**</p>
+         * <ul>
+         * <li><strong>template-ip</strong></li>
+         * <li><strong>template-file</strong></li>
+         * <li><strong>template-process</strong></li>
+         * <li><strong>custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("ParamType")
         public String paramType;
 
         /**
          * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9030076b-6733-4842-b05a-xxxxxx</p>
          */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;

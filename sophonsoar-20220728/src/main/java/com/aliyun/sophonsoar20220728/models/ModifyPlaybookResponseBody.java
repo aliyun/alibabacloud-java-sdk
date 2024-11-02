@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyPlaybookResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B584F84-D66A-5525-8E7B-05612A903ABF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

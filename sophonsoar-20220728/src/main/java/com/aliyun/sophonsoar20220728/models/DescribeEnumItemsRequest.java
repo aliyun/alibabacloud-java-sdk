@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeEnumItemsRequest extends TeaModel {
     /**
      * <p>The type of the enumeration item. Valid values:</p>
-     * <br>
-     * <p>*   **process**: scenarios</p>
+     * <ul>
+     * <li><strong>process</strong>: scenarios</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>process</p>
      */
     @NameInMap("EnumType")
     public String enumType;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Simplified Chinese (default)</p>
-     * <p>*   **en_us**: English</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;

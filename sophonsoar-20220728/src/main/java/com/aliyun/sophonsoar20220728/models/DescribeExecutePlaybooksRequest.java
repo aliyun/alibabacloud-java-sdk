@@ -6,44 +6,64 @@ import com.aliyun.tea.*;
 public class DescribeExecutePlaybooksRequest extends TeaModel {
     /**
      * <p>The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.</p>
-     * <p>- **ip**: IP entity.</p>
-     * <p>- **file**: file entity.</p>
-     * <p>- **process**: process entity.</p>
-     * <p>- **incident**: incident entity.</p>
+     * <ul>
+     * <li><strong>ip</strong>: IP entity.</li>
+     * <li><strong>file</strong>: file entity.</li>
+     * <li><strong>process</strong>: process entity.</li>
+     * <li><strong>incident</strong>: incident entity.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ip,file,process,host</p>
      */
     @NameInMap("InputMode")
     public String inputMode;
 
     /**
      * <p>The language of the content within the request and the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The input parameter type of the playbook.</p>
-     * <br>
-     * <p>*   **template-ip**</p>
-     * <p>*   **template-file**</p>
-     * <p>*   **template-process**</p>
-     * <p>*   **custom**</p>
+     * <ul>
+     * <li><strong>template-ip</strong></li>
+     * <li><strong>template-file</strong></li>
+     * <li><strong>template-process</strong></li>
+     * <li><strong>custom</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
      */
     @NameInMap("ParamType")
     public String paramType;
 
     /**
      * <p>The playbook name. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo_test</p>
      */
     @NameInMap("PlaybookName")
     public String playbookName;
 
     /**
      * <p>The playbook UUID.</p>
-     * <br>
-     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>f916b93e-e814-459f-9662-xxxxxx</p>
      */
     @NameInMap("Uuid")
     public String uuid;

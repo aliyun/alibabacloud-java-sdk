@@ -6,12 +6,26 @@ import com.aliyun.tea.*;
 public class QueryTreeDataResponseBody extends TeaModel {
     /**
      * <p>The returned information about the playbook. The value is a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *     {
+     *         &quot;playbook&quot;: {
+     *             &quot;active&quot;: false,
+     *             &quot;displayName&quot;: &quot;test_playbook&quot;,
+     *             &quot;playbookUuid&quot;: &quot;09a20455-3d3a-424c-a1df-xxxxxx&quot;
+     *         }
+     *     }
+     * ]</p>
      */
     @NameInMap("Playbooks")
     public String playbooks;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF2ECA2D-D8E6-5021-BF5C-19DD6D52C5B2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

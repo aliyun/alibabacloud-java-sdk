@@ -12,6 +12,9 @@ public class DescribePlaybookResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2989BC59-E9F0-5C83-B453-B368857649C8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,102 +43,170 @@ public class DescribePlaybookResponseBody extends TeaModel {
     public static class DescribePlaybookResponseBodyPlaybook extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124xxxxx3435</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
          * <p>The description of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo playbook</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The number of times that the playbook failed to be run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FailExeNum")
         public Integer failExeNum;
 
         /**
          * <p>The creation time of the playbook. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665288858000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time of the playbook. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677482519000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
-         * <br>
-         * <p>>  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).</p>
+         * <blockquote>
+         * <p> For more information, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;typeName&quot;: &quot;String&quot;,
+         *         &quot;dataClass&quot;: &quot;normal&quot;,
+         *         &quot;dataType&quot;: &quot;String&quot;,
+         *         &quot;description&quot;: &quot;period&quot;,
+         *         &quot;example&quot;: &quot;&quot;,
+         *         &quot;name&quot;: &quot;period&quot;,
+         *         &quot;required&quot;: false
+         *     }
+         * ]</p>
          */
         @NameInMap("InputParams")
         public String inputParams;
 
         /**
          * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665288858000</p>
          */
         @NameInMap("LastExeTime")
         public Long lastExeTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to modify the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124xxxxx3435</p>
          */
         @NameInMap("Modifier")
         public String modifier;
 
         /**
          * <p>The status of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OnlineActive")
         public Boolean onlineActive;
 
         /**
          * <p>The MD5 hash value in the latest published version of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfsdfe232-e2b2-44fd-b2cc-xxxxx</p>
          */
         @NameInMap("OnlineReleaseTaskflowMd5")
         public String onlineReleaseTaskflowMd5;
 
         /**
          * <p>The type of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   **preset**: predefined playbook</p>
-         * <p>*   **user**: custom playbook</p>
+         * <ul>
+         * <li><strong>preset</strong>: predefined playbook</li>
+         * <li><strong>user</strong>: custom playbook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>preset</p>
          */
         @NameInMap("OwnType")
         public String ownType;
 
         /**
          * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8db257d3-e2b2-44fd-b2cc-xxxxx</p>
          */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 
         /**
          * <p>The number of times that the playbook was successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SuccessExeNum")
         public Integer successExeNum;
 
         /**
          * <p>The XML configuration of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <?xml version="1.0" encoding="UTF-8"?><p>&lt;bpmn:definitions xmlns:xsi=&quot;<a href="http://www.w3.org/2001/XMLSchema-instance">http://www.w3.org/2001/XMLSchema-instance</a>&quot; xmlns:bpmn=&quot;<a href="http://www.omg.org/spec/BPMN/20100524/MODEL">http://www.omg.org/spec/BPMN/20100524/MODEL</a>&quot; xmlns:bpmndi=&quot;<a href="http://www.omg.org/spec/BPMN/20100524/DI">http://www.omg.org/spec/BPMN/20100524/DI</a>&quot; xmlns:dc=&quot;<a href="http://www.omg.org/spec/DD/20100524/DC">http://www.omg.org/spec/DD/20100524/DC</a>&quot; targetNamespace=&quot;<a href="http://bpmn.io/schema/bpmn">http://bpmn.io/schema/bpmn</a>&quot; id=&quot;Definitions_1&quot;&gt;&lt;bpmn:process id=&quot;Process_1&quot; isExecutable=&quot;false&quot;&gt;&lt;bpmn:startEvent id=&quot;StartEvent_1&quot;/&gt;</bpmn:process>&lt;bpmndi:BPMNDiagram id=&quot;BPMNDiagram_1&quot;&gt;&lt;bpmndi:BPMNPlane id=&quot;BPMNPlane_1&quot; bpmnElement=&quot;Process_1&quot;&gt;&lt;bpmndi:BPMNShape id=&quot;_BPMNShape_StartEvent_2&quot; bpmnElement=&quot;StartEvent_1&quot;&gt;&lt;dc:Bounds height=&quot;36.0&quot; width=&quot;36.0&quot; x=&quot;173.0&quot; y=&quot;102.0&quot;/&gt;</bpmndi:BPMNShape></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn:definitions></p>
          */
         @NameInMap("Taskflow")
         public String taskflow;
 
+        /**
+         * <p>The playbook configuration type.</p>
+         * <ul>
+         * <li><strong>xml</strong>: XML format.</li>
+         * <li><strong>x6</strong>: JSON format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>xml</p>
+         */
         @NameInMap("TaskflowType")
         public String taskflowType;
 

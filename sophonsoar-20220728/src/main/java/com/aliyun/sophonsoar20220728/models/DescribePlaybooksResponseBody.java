@@ -11,13 +11,16 @@ public class DescribePlaybooksResponseBody extends TeaModel {
     public DescribePlaybooksResponseBodyPage page;
 
     /**
-     * <p>The list of playbooks.</p>
+     * <p>The playbooks.</p>
      */
     @NameInMap("Playbooks")
     public java.util.List<DescribePlaybooksResponseBodyPlaybooks> playbooks;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>138B5AB7-7F2B-5814-87A3-E3ECFE1F207E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class DescribePlaybooksResponseBody extends TeaModel {
     public static class DescribePlaybooksResponseBodyPage extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -104,42 +116,74 @@ public class DescribePlaybooksResponseBody extends TeaModel {
     public static class DescribePlaybooksResponseBodyPlaybooks extends TeaModel {
         /**
          * <p>The playbook status. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The playbook is started.</p>
-         * <p>*   **0**: The playbook is stopped.</p>
+         * <ul>
+         * <li><strong>1</strong>: The playbook is started.</li>
+         * <li><strong>0</strong>: The playbook is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Active")
         public Integer active;
 
         /**
          * <p>The display name of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_playbook</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The time when the playbook was created. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683526277415</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
+         * <p>The time when the playbook was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681396398000</p>
+         */
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        /**
          * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683526277415</p>
          */
         @NameInMap("LastRuntime")
         public Long lastRuntime;
 
         /**
          * <p>The type of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   **preset**: predefined playbook</p>
-         * <p>*   **user**: custom playbook</p>
+         * <ul>
+         * <li><strong>preset</strong>: predefined playbook</li>
+         * <li><strong>user</strong>: custom playbook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("OwnType")
         public String ownType;
 
+        @NameInMap("ParamType")
+        public String paramType;
+
         /**
          * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bb5a8640-a14f-44ef-8376-cxxxxx</p>
          */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
@@ -173,6 +217,14 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public DescribePlaybooksResponseBodyPlaybooks setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
         public DescribePlaybooksResponseBodyPlaybooks setLastRuntime(Long lastRuntime) {
             this.lastRuntime = lastRuntime;
             return this;
@@ -187,6 +239,14 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
         public String getOwnType() {
             return this.ownType;
+        }
+
+        public DescribePlaybooksResponseBodyPlaybooks setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
         }
 
         public DescribePlaybooksResponseBodyPlaybooks setPlaybookUuid(String playbookUuid) {

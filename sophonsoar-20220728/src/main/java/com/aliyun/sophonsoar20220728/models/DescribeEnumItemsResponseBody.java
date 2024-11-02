@@ -12,6 +12,9 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7698CFB-4E1C-5840-8EC9-691B86729E94</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
     public static class DescribeEnumItemsResponseBodyData extends TeaModel {
         /**
          * <p>The key of the enumeration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_xxxxx_process_book</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the enumeration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_xxxxx_process_book</p>
          */
         @NameInMap("Value")
         public String value;

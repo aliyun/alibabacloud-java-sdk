@@ -18,6 +18,9 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3DFBE11C-6EB6-5166-92D6-3397796AFE1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     public static class DescribePlaybookReleasesResponseBodyPage extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -104,36 +116,54 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     public static class DescribePlaybookReleasesResponseBodyRecords extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that is used to publish the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145xxxx985</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
          * <p>The description of the layer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a new version</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the version was created. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655277397000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the version was modified. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1691460804000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80xxx</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The MD5 value configured for the published version of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be0a4ef084dd174abe47xxxxx</p>
          */
         @NameInMap("TaskflowMd5")
         public String taskflowMd5;

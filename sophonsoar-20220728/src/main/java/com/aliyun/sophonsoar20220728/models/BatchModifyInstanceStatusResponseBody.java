@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BatchModifyInstanceStatusResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>358E012F-B516-599D-9ED0-A1A361CDE615</p>
      */
     @NameInMap("RequestId")
     public String requestId;

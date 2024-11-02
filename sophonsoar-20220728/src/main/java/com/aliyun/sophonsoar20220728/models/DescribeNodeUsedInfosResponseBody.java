@@ -6,17 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeNodeUsedInfosResponseBody extends TeaModel {
     /**
      * <p>The node reference information. The value is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **action**: the referencing action. This field contains the following information:</p>
-     * <br>
-     * <p>    *   **name**: the name of the referencing node.</p>
-     * <p>    *   **inputParams**: the parameter settings of the referencing node.</p>
+     * <ul>
+     * <li><p><strong>action</strong>: the referencing action. This field contains the following information:</p>
+     * <ul>
+     * <li><strong>name</strong>: the name of the referencing node.</li>
+     * <li><strong>inputParams</strong>: the parameter settings of the referencing node.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;action&quot;: [
+     *         {
+     *             &quot;name&quot;: &quot;query_books&quot;,
+     *             &quot;inputParams&quot;: [
+     *                 {
+     *                     &quot;referInfos&quot;: [
+     *                         &quot;${play_group.datalist.*.ids}&quot;
+     *                     ],
+     *                     &quot;name&quot;: &quot;querySql&quot;
+     *                 }
+     *             ]
+     *         }
+     *     ]
+     * }</p>
      */
     @NameInMap("NodeUsedInfos")
     public String nodeUsedInfos;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3B10F836-C2B1-54FA-AB59-7591B548FB59</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,32 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
     /**
      * <p>The data that is returned when the component action is performed. The value is a JSON array.</p>
-     * <br>
-     * <p>>  The format of the output data is determined by the component that is configured when the playbook is written.</p>
+     * <blockquote>
+     * <p> The format of the output data is determined by the component that is configured when the playbook is written.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *     {
+     *         &quot;a&quot;: &quot;a&quot;,
+     *         &quot;taskname&quot;: &quot;92af3c79-1754-4646-9366-9ddbd1e45536_xxxx&quot;,
+     *         &quot;log_time&quot;: 1699868849000
+     *     }
+     * ]</p>
      */
     @NameInMap("ActionOutputs")
     public String actionOutputs;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A2BF9CF-3E32-5E45-A79B-8F67E0A4FE90</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

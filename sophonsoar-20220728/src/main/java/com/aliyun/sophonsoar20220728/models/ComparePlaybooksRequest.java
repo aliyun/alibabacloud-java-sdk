@@ -6,33 +6,52 @@ import com.aliyun.tea.*;
 public class ComparePlaybooksRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UUID of the second version.</p>
-     * <br>
-     * <p>>  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sfdf2395-e814-459f-9662-xxxxx</p>
      */
     @NameInMap("NewPlaybookReleaseId")
     public Integer newPlaybookReleaseId;
 
     /**
      * <p>The UUID of the first version.</p>
-     * <br>
-     * <p>>  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sflk23423-e814-459f-9662-xxxxx</p>
      */
     @NameInMap("OldPlaybookReleaseId")
     public Integer oldPlaybookReleaseId;
 
     /**
      * <p>The UUID of the playbook.</p>
-     * <br>
-     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f916b93e-e814-459f-9662-xxxxx</p>
      */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;

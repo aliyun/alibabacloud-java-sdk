@@ -12,6 +12,9 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E1EC464-3BD7-518F-9937-BCC12E6855FE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
     public static class DescribeSophonCommandsResponseBodyDataParamConfig extends TeaModel {
         /**
          * <p>The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0-9]{4}\.[0-9]{4}\.[0-9]{4}\.[0-9]{4}</p>
          */
         @NameInMap("CheckField")
         public String checkField;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         @NameInMap("Field")
         public String field;
 
         /**
          * <p>Indicates whether the parameter is required. Valid values:</p>
-         * <br>
-         * <p>*   **true** (default)</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Necessary")
         public Boolean necessary;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.xx.xx.xx</p>
          */
         @NameInMap("Value")
         public String value;
@@ -107,18 +123,27 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
     public static class DescribeSophonCommandsResponseBodyData extends TeaModel {
         /**
          * <p>The description of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a action of processing for WAF</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAF Process IP</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The name of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_process_ip_v2</p>
          */
         @NameInMap("Name")
         public String name;

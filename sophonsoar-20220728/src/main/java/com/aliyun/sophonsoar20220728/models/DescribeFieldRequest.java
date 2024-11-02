@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeFieldRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The key of the global configuration. Valid values:</p>
-     * <br>
-     * <p>*   **soar_filed_tags**: queries the input template of the playbook.</p>
+     * <ul>
+     * <li><strong>soar_filed_tags</strong>: queries the input template of the playbook.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>soar_filed_tags</p>
      */
     @NameInMap("QueryKey")
     public String queryKey;

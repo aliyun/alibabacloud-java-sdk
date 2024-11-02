@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePopApiResponseBody extends TeaModel {
     /**
      * <p>The name of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AddAssetCleanConfig</p>
      */
     @NameInMap("ApiName")
     public String apiName;
@@ -18,18 +21,27 @@ public class DescribePopApiResponseBody extends TeaModel {
 
     /**
      * <p>The POP code of the Alibaba Cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sas</p>
      */
     @NameInMap("PopCode")
     public String popCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A01B0BA-CFC4-5813-9EB0-A5DA15FA95AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The version of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-10</p>
      */
     @NameInMap("Version")
     public String version;
@@ -82,38 +94,55 @@ public class DescribePopApiResponseBody extends TeaModel {
     public static class DescribePopApiResponseBodyOpenApiMetaList extends TeaModel {
         /**
          * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo parameter</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The example value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.xx.xx.xx</p>
          */
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         /**
          * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribePopApi</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the parameter is required.</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Required")
         public Boolean required;
 
         /**
          * <p>The data type of the parameter field. Valid values:</p>
-         * <br>
-         * <p>*   **string**</p>
-         * <p>*   **boolean**</p>
-         * <p>*   **integer**</p>
-         * <p>*   **long**</p>
+         * <ul>
+         * <li><strong>string</strong></li>
+         * <li><strong>boolean</strong></li>
+         * <li><strong>integer</strong></li>
+         * <li><strong>long</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("Type")
         public String type;

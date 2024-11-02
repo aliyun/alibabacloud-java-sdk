@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class TriggerProcessTaskResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58A518BC-E4A8-5BD7-AFEA-366046ED9073</p>
      */
     @NameInMap("RequestId")
     public String requestId;

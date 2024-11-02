@@ -12,6 +12,9 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6BE94351-712A-505D-A40A-BC77CC8254A9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
     public static class DescribeNodeParamTagsResponseBodyParamReferredPaths extends TeaModel {
         /**
          * <p>The name of the upstream node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataFormat_1</p>
          */
         @NameInMap("ParamName")
         public String paramName;
