@@ -3,7 +3,7 @@ package com.aliyun.appstream_center20210220.models;
 
 import com.aliyun.tea.*;
 
-public class GetLoginTokenRequest extends TeaModel {
+public class GetLoginTokenShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>182901</p>
@@ -12,7 +12,7 @@ public class GetLoginTokenRequest extends TeaModel {
     public String authenticationCode;
 
     @NameInMap("AvailableFeatures")
-    public java.util.Map<String, String> availableFeatures;
+    public String availableFeaturesShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -236,12 +236,12 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
-    public static GetLoginTokenRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetLoginTokenRequest self = new GetLoginTokenRequest();
+    public static GetLoginTokenShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetLoginTokenShrinkRequest self = new GetLoginTokenShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetLoginTokenRequest setAuthenticationCode(String authenticationCode) {
+    public GetLoginTokenShrinkRequest setAuthenticationCode(String authenticationCode) {
         this.authenticationCode = authenticationCode;
         return this;
     }
@@ -249,15 +249,15 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.authenticationCode;
     }
 
-    public GetLoginTokenRequest setAvailableFeatures(java.util.Map<String, String> availableFeatures) {
-        this.availableFeatures = availableFeatures;
+    public GetLoginTokenShrinkRequest setAvailableFeaturesShrink(String availableFeaturesShrink) {
+        this.availableFeaturesShrink = availableFeaturesShrink;
         return this;
     }
-    public java.util.Map<String, String> getAvailableFeatures() {
-        return this.availableFeatures;
+    public String getAvailableFeaturesShrink() {
+        return this.availableFeaturesShrink;
     }
 
-    public GetLoginTokenRequest setClientId(String clientId) {
+    public GetLoginTokenShrinkRequest setClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
@@ -265,7 +265,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.clientId;
     }
 
-    public GetLoginTokenRequest setClientOS(String clientOS) {
+    public GetLoginTokenShrinkRequest setClientOS(String clientOS) {
         this.clientOS = clientOS;
         return this;
     }
@@ -273,7 +273,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.clientOS;
     }
 
-    public GetLoginTokenRequest setClientType(String clientType) {
+    public GetLoginTokenShrinkRequest setClientType(String clientType) {
         this.clientType = clientType;
         return this;
     }
@@ -281,7 +281,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.clientType;
     }
 
-    public GetLoginTokenRequest setClientVersion(String clientVersion) {
+    public GetLoginTokenShrinkRequest setClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
     }
@@ -289,7 +289,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.clientVersion;
     }
 
-    public GetLoginTokenRequest setCurrentStage(String currentStage) {
+    public GetLoginTokenShrinkRequest setCurrentStage(String currentStage) {
         this.currentStage = currentStage;
         return this;
     }
@@ -297,7 +297,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.currentStage;
     }
 
-    public GetLoginTokenRequest setDirectoryId(String directoryId) {
+    public GetLoginTokenShrinkRequest setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
@@ -305,7 +305,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public GetLoginTokenRequest setEncryptedFingerPrintData(String encryptedFingerPrintData) {
+    public GetLoginTokenShrinkRequest setEncryptedFingerPrintData(String encryptedFingerPrintData) {
         this.encryptedFingerPrintData = encryptedFingerPrintData;
         return this;
     }
@@ -313,7 +313,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.encryptedFingerPrintData;
     }
 
-    public GetLoginTokenRequest setEncryptedKey(String encryptedKey) {
+    public GetLoginTokenShrinkRequest setEncryptedKey(String encryptedKey) {
         this.encryptedKey = encryptedKey;
         return this;
     }
@@ -321,7 +321,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.encryptedKey;
     }
 
-    public GetLoginTokenRequest setEncryptedPassword(String encryptedPassword) {
+    public GetLoginTokenShrinkRequest setEncryptedPassword(String encryptedPassword) {
         this.encryptedPassword = encryptedPassword;
         return this;
     }
@@ -329,7 +329,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.encryptedPassword;
     }
 
-    public GetLoginTokenRequest setEndUserId(String endUserId) {
+    public GetLoginTokenShrinkRequest setEndUserId(String endUserId) {
         this.endUserId = endUserId;
         return this;
     }
@@ -337,7 +337,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.endUserId;
     }
 
-    public GetLoginTokenRequest setFingerPrintData(String fingerPrintData) {
+    public GetLoginTokenShrinkRequest setFingerPrintData(String fingerPrintData) {
         this.fingerPrintData = fingerPrintData;
         return this;
     }
@@ -345,7 +345,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.fingerPrintData;
     }
 
-    public GetLoginTokenRequest setIdpId(String idpId) {
+    public GetLoginTokenShrinkRequest setIdpId(String idpId) {
         this.idpId = idpId;
         return this;
     }
@@ -353,7 +353,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.idpId;
     }
 
-    public GetLoginTokenRequest setImageUrl(String imageUrl) {
+    public GetLoginTokenShrinkRequest setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
@@ -361,7 +361,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.imageUrl;
     }
 
-    public GetLoginTokenRequest setKeepAlive(Boolean keepAlive) {
+    public GetLoginTokenShrinkRequest setKeepAlive(Boolean keepAlive) {
         this.keepAlive = keepAlive;
         return this;
     }
@@ -369,7 +369,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.keepAlive;
     }
 
-    public GetLoginTokenRequest setKeepAliveToken(String keepAliveToken) {
+    public GetLoginTokenShrinkRequest setKeepAliveToken(String keepAliveToken) {
         this.keepAliveToken = keepAliveToken;
         return this;
     }
@@ -377,7 +377,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.keepAliveToken;
     }
 
-    public GetLoginTokenRequest setLoginIdentifier(String loginIdentifier) {
+    public GetLoginTokenShrinkRequest setLoginIdentifier(String loginIdentifier) {
         this.loginIdentifier = loginIdentifier;
         return this;
     }
@@ -385,7 +385,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.loginIdentifier;
     }
 
-    public GetLoginTokenRequest setLoginName(String loginName) {
+    public GetLoginTokenShrinkRequest setLoginName(String loginName) {
         this.loginName = loginName;
         return this;
     }
@@ -393,7 +393,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.loginName;
     }
 
-    public GetLoginTokenRequest setMfaType(String mfaType) {
+    public GetLoginTokenShrinkRequest setMfaType(String mfaType) {
         this.mfaType = mfaType;
         return this;
     }
@@ -401,7 +401,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.mfaType;
     }
 
-    public GetLoginTokenRequest setNetworkType(String networkType) {
+    public GetLoginTokenShrinkRequest setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
     }
@@ -409,7 +409,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.networkType;
     }
 
-    public GetLoginTokenRequest setNewPassword(String newPassword) {
+    public GetLoginTokenShrinkRequest setNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
     }
@@ -417,7 +417,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.newPassword;
     }
 
-    public GetLoginTokenRequest setOfficeSiteId(String officeSiteId) {
+    public GetLoginTokenShrinkRequest setOfficeSiteId(String officeSiteId) {
         this.officeSiteId = officeSiteId;
         return this;
     }
@@ -425,7 +425,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.officeSiteId;
     }
 
-    public GetLoginTokenRequest setOldPassword(String oldPassword) {
+    public GetLoginTokenShrinkRequest setOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
     }
@@ -433,7 +433,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.oldPassword;
     }
 
-    public GetLoginTokenRequest setPassword(String password) {
+    public GetLoginTokenShrinkRequest setPassword(String password) {
         this.password = password;
         return this;
     }
@@ -441,7 +441,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.password;
     }
 
-    public GetLoginTokenRequest setPhone(String phone) {
+    public GetLoginTokenShrinkRequest setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -449,7 +449,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.phone;
     }
 
-    public GetLoginTokenRequest setPhoneVerifyCode(String phoneVerifyCode) {
+    public GetLoginTokenShrinkRequest setPhoneVerifyCode(String phoneVerifyCode) {
         this.phoneVerifyCode = phoneVerifyCode;
         return this;
     }
@@ -457,7 +457,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.phoneVerifyCode;
     }
 
-    public GetLoginTokenRequest setRegionId(String regionId) {
+    public GetLoginTokenShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -465,7 +465,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.regionId;
     }
 
-    public GetLoginTokenRequest setSessionId(String sessionId) {
+    public GetLoginTokenShrinkRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
@@ -473,7 +473,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.sessionId;
     }
 
-    public GetLoginTokenRequest setSsoExtendsCookies(String ssoExtendsCookies) {
+    public GetLoginTokenShrinkRequest setSsoExtendsCookies(String ssoExtendsCookies) {
         this.ssoExtendsCookies = ssoExtendsCookies;
         return this;
     }
@@ -481,7 +481,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.ssoExtendsCookies;
     }
 
-    public GetLoginTokenRequest setSsoSessionToken(String ssoSessionToken) {
+    public GetLoginTokenShrinkRequest setSsoSessionToken(String ssoSessionToken) {
         this.ssoSessionToken = ssoSessionToken;
         return this;
     }
@@ -489,7 +489,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.ssoSessionToken;
     }
 
-    public GetLoginTokenRequest setTokenCode(String tokenCode) {
+    public GetLoginTokenShrinkRequest setTokenCode(String tokenCode) {
         this.tokenCode = tokenCode;
         return this;
     }
@@ -497,7 +497,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.tokenCode;
     }
 
-    public GetLoginTokenRequest setUmidToken(String umidToken) {
+    public GetLoginTokenShrinkRequest setUmidToken(String umidToken) {
         this.umidToken = umidToken;
         return this;
     }
@@ -505,7 +505,7 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.umidToken;
     }
 
-    public GetLoginTokenRequest setUuid(String uuid) {
+    public GetLoginTokenShrinkRequest setUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }

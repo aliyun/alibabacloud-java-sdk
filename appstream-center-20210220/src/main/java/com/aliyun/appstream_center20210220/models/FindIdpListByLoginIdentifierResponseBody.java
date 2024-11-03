@@ -108,6 +108,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @NameInMap("IdpName")
         public String idpName;
 
+        @NameInMap("IdpNameEN")
+        public String idpNameEN;
+
         @NameInMap("IdpProvider")
         public String idpProvider;
 
@@ -163,6 +166,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         }
         public String getIdpName() {
             return this.idpName;
+        }
+
+        public FindIdpListByLoginIdentifierResponseBodyIdpInfos setIdpNameEN(String idpNameEN) {
+            this.idpNameEN = idpNameEN;
+            return this;
+        }
+        public String getIdpNameEN() {
+            return this.idpNameEN;
         }
 
         public FindIdpListByLoginIdentifierResponseBodyIdpInfos setIdpProvider(String idpProvider) {

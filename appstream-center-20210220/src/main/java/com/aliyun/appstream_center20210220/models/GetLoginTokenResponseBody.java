@@ -74,6 +74,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("LoginToken")
     public String loginToken;
 
+    @NameInMap("MfaTypeList")
+    public java.util.List<GetLoginTokenResponseBodyMfaTypeList> mfaTypeList;
+
     /**
      * <strong>example:</strong>
      * <p>MFABind</p>
@@ -258,6 +261,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         return this.loginToken;
     }
 
+    public GetLoginTokenResponseBody setMfaTypeList(java.util.List<GetLoginTokenResponseBodyMfaTypeList> mfaTypeList) {
+        this.mfaTypeList = mfaTypeList;
+        return this;
+    }
+    public java.util.List<GetLoginTokenResponseBodyMfaTypeList> getMfaTypeList() {
+        return this.mfaTypeList;
+    }
+
     public GetLoginTokenResponseBody setNextStage(String nextStage) {
         this.nextStage = nextStage;
         return this;
@@ -392,6 +403,36 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getWyId() {
         return this.wyId;
+    }
+
+    public static class GetLoginTokenResponseBodyMfaTypeList extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Stage")
+        public String stage;
+
+        public static GetLoginTokenResponseBodyMfaTypeList build(java.util.Map<String, ?> map) throws Exception {
+            GetLoginTokenResponseBodyMfaTypeList self = new GetLoginTokenResponseBodyMfaTypeList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLoginTokenResponseBodyMfaTypeList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetLoginTokenResponseBodyMfaTypeList setStage(String stage) {
+            this.stage = stage;
+            return this;
+        }
+        public String getStage() {
+            return this.stage;
+        }
+
     }
 
     public static class GetLoginTokenResponseBodyPasswordStrategy extends TeaModel {
