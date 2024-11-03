@@ -15,8 +15,7 @@ public class ChangeCdnDomainToDcdnRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The operation that you want to perform on the check items. Valid values:</p>
-     * <p><strong>preCheck</strong>: return the verification result.</p>
+     * <p>The operation to perform. Set the value to preCheck. Precheck is performed, and the result is returned. If the precheck passes, set the value to enforce to perform the transfer.</p>
      * 
      * <strong>example:</strong>
      * <p>preCheck</p>

@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class RefreshObjectCachesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to refresh resources in a directory if the resources are different from the resources in the same directory in the origin server. Default value: false.</p>
+     * <p>When the comparison between the source content and the source site resources is consistent, should the resources within the corresponding range be forcibly refreshed. The default is false.</p>
      * <ul>
-     * <li><strong>true</strong>: refresh all resources in the directory.</li>
-     * <li><strong>false</strong>: refresh the changed resources in the directory.</li>
+     * <li><strong>true</strong>: purges all resources in the range that corresponds to the type of the purge task. If you set this parameter to true, when the requested resource matches the resource in the range that corresponds to the type of the purge task, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
+     * <li><strong>false</strong>: purges the changed resources in the range that corresponds to the type of the purge task. If you set this parameter to false, when the requested resource matches the resource in the range that corresponds to the type of the purge task, the POP obtains the Last-Modified parameter of the resource from the origin server. If the obtained value of the Last-Modified parameter is the same as that of the cached resource, the cached resource is returned. Otherwise, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
      * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only when the ObjectType parameter is not set to File.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -18,6 +21,10 @@ public class RefreshObjectCachesRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <ul>
+     * <li>If you submit multiple URLs or directories at a time, separate them with line breaks (\n) or (\r\n).</li>
+     * <li>The total number of domain names contained all URLs in a submitted task cannot exceed 10.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
