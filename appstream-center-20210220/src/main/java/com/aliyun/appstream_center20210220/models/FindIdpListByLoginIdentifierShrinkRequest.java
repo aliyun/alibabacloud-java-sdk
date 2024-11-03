@@ -3,9 +3,9 @@ package com.aliyun.appstream_center20210220.models;
 
 import com.aliyun.tea.*;
 
-public class FindIdpListByLoginIdentifierRequest extends TeaModel {
+public class FindIdpListByLoginIdentifierShrinkRequest extends TeaModel {
     @NameInMap("AvailableFeatures")
-    public java.util.Map<String, String> availableFeatures;
+    public String availableFeaturesShrink;
 
     /**
      * <strong>example:</strong>
@@ -61,20 +61,20 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
-    public static FindIdpListByLoginIdentifierRequest build(java.util.Map<String, ?> map) throws Exception {
-        FindIdpListByLoginIdentifierRequest self = new FindIdpListByLoginIdentifierRequest();
+    public static FindIdpListByLoginIdentifierShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        FindIdpListByLoginIdentifierShrinkRequest self = new FindIdpListByLoginIdentifierShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public FindIdpListByLoginIdentifierRequest setAvailableFeatures(java.util.Map<String, String> availableFeatures) {
-        this.availableFeatures = availableFeatures;
+    public FindIdpListByLoginIdentifierShrinkRequest setAvailableFeaturesShrink(String availableFeaturesShrink) {
+        this.availableFeaturesShrink = availableFeaturesShrink;
         return this;
     }
-    public java.util.Map<String, String> getAvailableFeatures() {
-        return this.availableFeatures;
+    public String getAvailableFeaturesShrink() {
+        return this.availableFeaturesShrink;
     }
 
-    public FindIdpListByLoginIdentifierRequest setClientChannel(String clientChannel) {
+    public FindIdpListByLoginIdentifierShrinkRequest setClientChannel(String clientChannel) {
         this.clientChannel = clientChannel;
         return this;
     }
@@ -82,7 +82,7 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
         return this.clientChannel;
     }
 
-    public FindIdpListByLoginIdentifierRequest setClientId(String clientId) {
+    public FindIdpListByLoginIdentifierShrinkRequest setClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
@@ -90,7 +90,7 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
         return this.clientId;
     }
 
-    public FindIdpListByLoginIdentifierRequest setClientIp(String clientIp) {
+    public FindIdpListByLoginIdentifierShrinkRequest setClientIp(String clientIp) {
         this.clientIp = clientIp;
         return this;
     }
@@ -98,7 +98,7 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
         return this.clientIp;
     }
 
-    public FindIdpListByLoginIdentifierRequest setClientOS(String clientOS) {
+    public FindIdpListByLoginIdentifierShrinkRequest setClientOS(String clientOS) {
         this.clientOS = clientOS;
         return this;
     }
@@ -106,7 +106,7 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
         return this.clientOS;
     }
 
-    public FindIdpListByLoginIdentifierRequest setClientVersion(String clientVersion) {
+    public FindIdpListByLoginIdentifierShrinkRequest setClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
     }
@@ -114,7 +114,7 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
         return this.clientVersion;
     }
 
-    public FindIdpListByLoginIdentifierRequest setLoginIdentifier(String loginIdentifier) {
+    public FindIdpListByLoginIdentifierShrinkRequest setLoginIdentifier(String loginIdentifier) {
         this.loginIdentifier = loginIdentifier;
         return this;
     }
@@ -122,7 +122,7 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
         return this.loginIdentifier;
     }
 
-    public FindIdpListByLoginIdentifierRequest setSupportTypes(java.util.List<String> supportTypes) {
+    public FindIdpListByLoginIdentifierShrinkRequest setSupportTypes(java.util.List<String> supportTypes) {
         this.supportTypes = supportTypes;
         return this;
     }
@@ -130,7 +130,7 @@ public class FindIdpListByLoginIdentifierRequest extends TeaModel {
         return this.supportTypes;
     }
 
-    public FindIdpListByLoginIdentifierRequest setUuid(String uuid) {
+    public FindIdpListByLoginIdentifierShrinkRequest setUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }

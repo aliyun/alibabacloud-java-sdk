@@ -31,12 +31,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>身份认证查询接口</p>
      * 
-     * @param request FindIdpListByLoginIdentifierRequest
+     * @param tmpReq FindIdpListByLoginIdentifierRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FindIdpListByLoginIdentifierResponse
      */
-    public FindIdpListByLoginIdentifierResponse findIdpListByLoginIdentifierWithOptions(FindIdpListByLoginIdentifierRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public FindIdpListByLoginIdentifierResponse findIdpListByLoginIdentifierWithOptions(FindIdpListByLoginIdentifierRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        FindIdpListByLoginIdentifierShrinkRequest request = new FindIdpListByLoginIdentifierShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.availableFeatures)) {
+            request.availableFeaturesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.availableFeatures, "AvailableFeatures", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.availableFeaturesShrink)) {
+            query.put("AvailableFeatures", request.availableFeaturesShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientChannel)) {
             body.put("ClientChannel", request.clientChannel);
@@ -71,6 +82,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -103,15 +115,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>GetLoginToken</p>
      * 
-     * @param request GetLoginTokenRequest
+     * @param tmpReq GetLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLoginTokenResponse
      */
-    public GetLoginTokenResponse getLoginTokenWithOptions(GetLoginTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetLoginTokenResponse getLoginTokenWithOptions(GetLoginTokenRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetLoginTokenShrinkRequest request = new GetLoginTokenShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.availableFeatures)) {
+            request.availableFeaturesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.availableFeatures, "AvailableFeatures", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authenticationCode)) {
             query.put("AuthenticationCode", request.authenticationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableFeaturesShrink)) {
+            query.put("AvailableFeatures", request.availableFeaturesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
@@ -180,6 +202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.loginName)) {
             query.put("LoginName", request.loginName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mfaType)) {
+            query.put("MfaType", request.mfaType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
