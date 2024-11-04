@@ -24,7 +24,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p> This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -85,11 +85,19 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
     /**
-     * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
      * 
      * <strong>example:</strong>
@@ -119,9 +127,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <blockquote>
-     * <p>If you do not specify the <code>Name</code> parameter, the return value of <code>ImagePipelineId</code> is used.</p>
+     * <p> If you do not specify <code>Name</code>, the return value of <code>ImagePipelineId</code> is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,6 +154,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("RepairMode")
     public String repairMode;
 
@@ -180,6 +196,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateImagePipelineRequestTag> tag;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("TestContent")
     public String testContent;
 

@@ -123,10 +123,10 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
          * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <ul>
          * <li>true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</li>
-         * <li>false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</li>
+         * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

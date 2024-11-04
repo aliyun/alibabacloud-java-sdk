@@ -7,7 +7,7 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     /**
      * <p>The category of the snapshot. Valid values:</p>
      * <ul>
-     * <li>Standard: normal snapshot</li>
+     * <li>Standard: standard snapshot</li>
      * <li>Flash: local snapshot</li>
      * </ul>
      * <p>Default value: Standard.</p>

@@ -3,9 +3,9 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAutoProvisioningGroupRequest extends TeaModel {
+public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     @NameInMap("LaunchConfiguration")
-    public CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration;
+    public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration launchConfiguration;
 
     /**
      * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
@@ -44,7 +44,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>The information of data disks on the instance.</p>
      */
     @NameInMap("DataDiskConfig")
-    public java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> dataDiskConfig;
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestDataDiskConfig> dataDiskConfig;
 
     /**
      * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is smaller than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</p>
@@ -98,7 +98,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>The extended configurations of the launch template.</p>
      */
     @NameInMap("LaunchTemplateConfig")
-    public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig> launchTemplateConfig;
 
     /**
      * <p>The ID of the launch template associated with the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query available launch templates. When both LaunchTemplateId and <code>LaunchConfiguration.*</code> parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -207,7 +207,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * </ul>
      */
     @NameInMap("ResourcePoolOptions")
-    public CreateAutoProvisioningGroupRequestResourcePoolOptions resourcePoolOptions;
+    public String resourcePoolOptionsShrink;
 
     /**
      * <p>The policy for creating preemptible instances. Valid values:</p>
@@ -261,13 +261,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>The information of system disks on the instance.</p>
      */
     @NameInMap("SystemDiskConfig")
-    public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig;
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig> systemDiskConfig;
 
     /**
      * <p>The tags to add to the auto provisioning group.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateAutoProvisioningGroupRequestTag> tag;
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestTag> tag;
 
     /**
      * <p>Specifies whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:</p>
@@ -330,20 +330,20 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("ValidUntil")
     public String validUntil;
 
-    public static CreateAutoProvisioningGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAutoProvisioningGroupRequest self = new CreateAutoProvisioningGroupRequest();
+    public static CreateAutoProvisioningGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateAutoProvisioningGroupShrinkRequest self = new CreateAutoProvisioningGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAutoProvisioningGroupRequest setLaunchConfiguration(CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration) {
+    public CreateAutoProvisioningGroupShrinkRequest setLaunchConfiguration(CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration launchConfiguration) {
         this.launchConfiguration = launchConfiguration;
         return this;
     }
-    public CreateAutoProvisioningGroupRequestLaunchConfiguration getLaunchConfiguration() {
+    public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration getLaunchConfiguration() {
         return this.launchConfiguration;
     }
 
-    public CreateAutoProvisioningGroupRequest setAutoProvisioningGroupName(String autoProvisioningGroupName) {
+    public CreateAutoProvisioningGroupShrinkRequest setAutoProvisioningGroupName(String autoProvisioningGroupName) {
         this.autoProvisioningGroupName = autoProvisioningGroupName;
         return this;
     }
@@ -351,7 +351,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.autoProvisioningGroupName;
     }
 
-    public CreateAutoProvisioningGroupRequest setAutoProvisioningGroupType(String autoProvisioningGroupType) {
+    public CreateAutoProvisioningGroupShrinkRequest setAutoProvisioningGroupType(String autoProvisioningGroupType) {
         this.autoProvisioningGroupType = autoProvisioningGroupType;
         return this;
     }
@@ -359,7 +359,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.autoProvisioningGroupType;
     }
 
-    public CreateAutoProvisioningGroupRequest setClientToken(String clientToken) {
+    public CreateAutoProvisioningGroupShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -367,15 +367,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateAutoProvisioningGroupRequest setDataDiskConfig(java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> dataDiskConfig) {
+    public CreateAutoProvisioningGroupShrinkRequest setDataDiskConfig(java.util.List<CreateAutoProvisioningGroupShrinkRequestDataDiskConfig> dataDiskConfig) {
         this.dataDiskConfig = dataDiskConfig;
         return this;
     }
-    public java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> getDataDiskConfig() {
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestDataDiskConfig> getDataDiskConfig() {
         return this.dataDiskConfig;
     }
 
-    public CreateAutoProvisioningGroupRequest setDefaultTargetCapacityType(String defaultTargetCapacityType) {
+    public CreateAutoProvisioningGroupShrinkRequest setDefaultTargetCapacityType(String defaultTargetCapacityType) {
         this.defaultTargetCapacityType = defaultTargetCapacityType;
         return this;
     }
@@ -383,7 +383,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.defaultTargetCapacityType;
     }
 
-    public CreateAutoProvisioningGroupRequest setDescription(String description) {
+    public CreateAutoProvisioningGroupShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -391,7 +391,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateAutoProvisioningGroupRequest setExcessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
+    public CreateAutoProvisioningGroupShrinkRequest setExcessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         return this;
     }
@@ -399,7 +399,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.excessCapacityTerminationPolicy;
     }
 
-    public CreateAutoProvisioningGroupRequest setHibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
+    public CreateAutoProvisioningGroupShrinkRequest setHibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
         this.hibernationOptionsConfigured = hibernationOptionsConfigured;
         return this;
     }
@@ -407,15 +407,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.hibernationOptionsConfigured;
     }
 
-    public CreateAutoProvisioningGroupRequest setLaunchTemplateConfig(java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig) {
+    public CreateAutoProvisioningGroupShrinkRequest setLaunchTemplateConfig(java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig> launchTemplateConfig) {
         this.launchTemplateConfig = launchTemplateConfig;
         return this;
     }
-    public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> getLaunchTemplateConfig() {
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig> getLaunchTemplateConfig() {
         return this.launchTemplateConfig;
     }
 
-    public CreateAutoProvisioningGroupRequest setLaunchTemplateId(String launchTemplateId) {
+    public CreateAutoProvisioningGroupShrinkRequest setLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
     }
@@ -423,7 +423,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.launchTemplateId;
     }
 
-    public CreateAutoProvisioningGroupRequest setLaunchTemplateVersion(String launchTemplateVersion) {
+    public CreateAutoProvisioningGroupShrinkRequest setLaunchTemplateVersion(String launchTemplateVersion) {
         this.launchTemplateVersion = launchTemplateVersion;
         return this;
     }
@@ -431,7 +431,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.launchTemplateVersion;
     }
 
-    public CreateAutoProvisioningGroupRequest setMaxSpotPrice(Float maxSpotPrice) {
+    public CreateAutoProvisioningGroupShrinkRequest setMaxSpotPrice(Float maxSpotPrice) {
         this.maxSpotPrice = maxSpotPrice;
         return this;
     }
@@ -439,7 +439,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.maxSpotPrice;
     }
 
-    public CreateAutoProvisioningGroupRequest setMinTargetCapacity(String minTargetCapacity) {
+    public CreateAutoProvisioningGroupShrinkRequest setMinTargetCapacity(String minTargetCapacity) {
         this.minTargetCapacity = minTargetCapacity;
         return this;
     }
@@ -447,7 +447,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.minTargetCapacity;
     }
 
-    public CreateAutoProvisioningGroupRequest setOwnerAccount(String ownerAccount) {
+    public CreateAutoProvisioningGroupShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -455,7 +455,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateAutoProvisioningGroupRequest setOwnerId(Long ownerId) {
+    public CreateAutoProvisioningGroupShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -463,7 +463,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateAutoProvisioningGroupRequest setPayAsYouGoAllocationStrategy(String payAsYouGoAllocationStrategy) {
+    public CreateAutoProvisioningGroupShrinkRequest setPayAsYouGoAllocationStrategy(String payAsYouGoAllocationStrategy) {
         this.payAsYouGoAllocationStrategy = payAsYouGoAllocationStrategy;
         return this;
     }
@@ -471,7 +471,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.payAsYouGoAllocationStrategy;
     }
 
-    public CreateAutoProvisioningGroupRequest setPayAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
+    public CreateAutoProvisioningGroupShrinkRequest setPayAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
         this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
         return this;
     }
@@ -479,7 +479,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.payAsYouGoTargetCapacity;
     }
 
-    public CreateAutoProvisioningGroupRequest setRegionId(String regionId) {
+    public CreateAutoProvisioningGroupShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -487,7 +487,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateAutoProvisioningGroupRequest setResourceGroupId(String resourceGroupId) {
+    public CreateAutoProvisioningGroupShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -495,7 +495,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateAutoProvisioningGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateAutoProvisioningGroupShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -503,7 +503,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateAutoProvisioningGroupRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateAutoProvisioningGroupShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -511,15 +511,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateAutoProvisioningGroupRequest setResourcePoolOptions(CreateAutoProvisioningGroupRequestResourcePoolOptions resourcePoolOptions) {
-        this.resourcePoolOptions = resourcePoolOptions;
+    public CreateAutoProvisioningGroupShrinkRequest setResourcePoolOptionsShrink(String resourcePoolOptionsShrink) {
+        this.resourcePoolOptionsShrink = resourcePoolOptionsShrink;
         return this;
     }
-    public CreateAutoProvisioningGroupRequestResourcePoolOptions getResourcePoolOptions() {
-        return this.resourcePoolOptions;
+    public String getResourcePoolOptionsShrink() {
+        return this.resourcePoolOptionsShrink;
     }
 
-    public CreateAutoProvisioningGroupRequest setSpotAllocationStrategy(String spotAllocationStrategy) {
+    public CreateAutoProvisioningGroupShrinkRequest setSpotAllocationStrategy(String spotAllocationStrategy) {
         this.spotAllocationStrategy = spotAllocationStrategy;
         return this;
     }
@@ -527,7 +527,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.spotAllocationStrategy;
     }
 
-    public CreateAutoProvisioningGroupRequest setSpotInstanceInterruptionBehavior(String spotInstanceInterruptionBehavior) {
+    public CreateAutoProvisioningGroupShrinkRequest setSpotInstanceInterruptionBehavior(String spotInstanceInterruptionBehavior) {
         this.spotInstanceInterruptionBehavior = spotInstanceInterruptionBehavior;
         return this;
     }
@@ -535,7 +535,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.spotInstanceInterruptionBehavior;
     }
 
-    public CreateAutoProvisioningGroupRequest setSpotInstancePoolsToUseCount(Integer spotInstancePoolsToUseCount) {
+    public CreateAutoProvisioningGroupShrinkRequest setSpotInstancePoolsToUseCount(Integer spotInstancePoolsToUseCount) {
         this.spotInstancePoolsToUseCount = spotInstancePoolsToUseCount;
         return this;
     }
@@ -543,7 +543,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.spotInstancePoolsToUseCount;
     }
 
-    public CreateAutoProvisioningGroupRequest setSpotTargetCapacity(String spotTargetCapacity) {
+    public CreateAutoProvisioningGroupShrinkRequest setSpotTargetCapacity(String spotTargetCapacity) {
         this.spotTargetCapacity = spotTargetCapacity;
         return this;
     }
@@ -551,23 +551,23 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.spotTargetCapacity;
     }
 
-    public CreateAutoProvisioningGroupRequest setSystemDiskConfig(java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig) {
+    public CreateAutoProvisioningGroupShrinkRequest setSystemDiskConfig(java.util.List<CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig> systemDiskConfig) {
         this.systemDiskConfig = systemDiskConfig;
         return this;
     }
-    public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> getSystemDiskConfig() {
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig> getSystemDiskConfig() {
         return this.systemDiskConfig;
     }
 
-    public CreateAutoProvisioningGroupRequest setTag(java.util.List<CreateAutoProvisioningGroupRequestTag> tag) {
+    public CreateAutoProvisioningGroupShrinkRequest setTag(java.util.List<CreateAutoProvisioningGroupShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateAutoProvisioningGroupRequestTag> getTag() {
+    public java.util.List<CreateAutoProvisioningGroupShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public CreateAutoProvisioningGroupRequest setTerminateInstances(Boolean terminateInstances) {
+    public CreateAutoProvisioningGroupShrinkRequest setTerminateInstances(Boolean terminateInstances) {
         this.terminateInstances = terminateInstances;
         return this;
     }
@@ -575,7 +575,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.terminateInstances;
     }
 
-    public CreateAutoProvisioningGroupRequest setTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
+    public CreateAutoProvisioningGroupShrinkRequest setTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
         this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
         return this;
     }
@@ -583,7 +583,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.terminateInstancesWithExpiration;
     }
 
-    public CreateAutoProvisioningGroupRequest setTotalTargetCapacity(String totalTargetCapacity) {
+    public CreateAutoProvisioningGroupShrinkRequest setTotalTargetCapacity(String totalTargetCapacity) {
         this.totalTargetCapacity = totalTargetCapacity;
         return this;
     }
@@ -591,7 +591,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.totalTargetCapacity;
     }
 
-    public CreateAutoProvisioningGroupRequest setValidFrom(String validFrom) {
+    public CreateAutoProvisioningGroupShrinkRequest setValidFrom(String validFrom) {
         this.validFrom = validFrom;
         return this;
     }
@@ -599,7 +599,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.validFrom;
     }
 
-    public CreateAutoProvisioningGroupRequest setValidUntil(String validUntil) {
+    public CreateAutoProvisioningGroupShrinkRequest setValidUntil(String validUntil) {
         this.validUntil = validUntil;
         return this;
     }
@@ -607,7 +607,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.validUntil;
     }
 
-    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationArn extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn extends TeaModel {
         /**
          * <blockquote>
          * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -641,12 +641,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("Rolearn")
         public String rolearn;
 
-        public static CreateAutoProvisioningGroupRequestLaunchConfigurationArn build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestLaunchConfigurationArn self = new CreateAutoProvisioningGroupRequestLaunchConfigurationArn();
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationArn setAssumeRoleFor(Long assumeRoleFor) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn setAssumeRoleFor(Long assumeRoleFor) {
             this.assumeRoleFor = assumeRoleFor;
             return this;
         }
@@ -654,7 +654,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.assumeRoleFor;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationArn setRoleType(String roleType) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn setRoleType(String roleType) {
             this.roleType = roleType;
             return this;
         }
@@ -662,7 +662,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.roleType;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationArn setRolearn(String rolearn) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn setRolearn(String rolearn) {
             this.rolearn = rolearn;
             return this;
         }
@@ -672,7 +672,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk extends TeaModel {
         /**
          * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
          * <ul>
@@ -855,12 +855,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        public static CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk();
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setBurstingEnabled(Boolean burstingEnabled) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setBurstingEnabled(Boolean burstingEnabled) {
             this.burstingEnabled = burstingEnabled;
             return this;
         }
@@ -868,7 +868,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.burstingEnabled;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setCategory(String category) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -876,7 +876,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.category;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
             this.deleteWithInstance = deleteWithInstance;
             return this;
         }
@@ -884,7 +884,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.deleteWithInstance;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDescription(String description) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -892,7 +892,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.description;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDevice(String device) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setDevice(String device) {
             this.device = device;
             return this;
         }
@@ -900,7 +900,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.device;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDiskName(String diskName) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setDiskName(String diskName) {
             this.diskName = diskName;
             return this;
         }
@@ -908,7 +908,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.diskName;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setEncryptAlgorithm(String encryptAlgorithm) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setEncryptAlgorithm(String encryptAlgorithm) {
             this.encryptAlgorithm = encryptAlgorithm;
             return this;
         }
@@ -916,7 +916,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.encryptAlgorithm;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setEncrypted(Boolean encrypted) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setEncrypted(Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
@@ -924,7 +924,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.encrypted;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setKmsKeyId(String kmsKeyId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setKmsKeyId(String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
@@ -932,7 +932,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.kmsKeyId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setPerformanceLevel(String performanceLevel) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setPerformanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
             return this;
         }
@@ -940,7 +940,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.performanceLevel;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setProvisionedIops(Long provisionedIops) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setProvisionedIops(Long provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
@@ -948,7 +948,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.provisionedIops;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setSize(Integer size) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setSize(Integer size) {
             this.size = size;
             return this;
         }
@@ -956,7 +956,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.size;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setSnapshotId(String snapshotId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk setSnapshotId(String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
@@ -966,7 +966,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk extends TeaModel {
         /**
          * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
          * <ul>
@@ -1039,12 +1039,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
-        public static CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk();
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setBurstingEnabled(Boolean burstingEnabled) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk setBurstingEnabled(Boolean burstingEnabled) {
             this.burstingEnabled = burstingEnabled;
             return this;
         }
@@ -1052,7 +1052,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.burstingEnabled;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setEncryptAlgorithm(String encryptAlgorithm) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk setEncryptAlgorithm(String encryptAlgorithm) {
             this.encryptAlgorithm = encryptAlgorithm;
             return this;
         }
@@ -1060,7 +1060,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.encryptAlgorithm;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setEncrypted(String encrypted) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk setEncrypted(String encrypted) {
             this.encrypted = encrypted;
             return this;
         }
@@ -1068,7 +1068,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.encrypted;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setKMSKeyId(String KMSKeyId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk setKMSKeyId(String KMSKeyId) {
             this.KMSKeyId = KMSKeyId;
             return this;
         }
@@ -1076,7 +1076,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.KMSKeyId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setProvisionedIops(Long provisionedIops) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk setProvisionedIops(Long provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
@@ -1086,7 +1086,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationTag extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag extends TeaModel {
         /**
          * <p>The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
          * 
@@ -1105,12 +1105,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateAutoProvisioningGroupRequestLaunchConfigurationTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestLaunchConfigurationTag self = new CreateAutoProvisioningGroupRequestLaunchConfigurationTag();
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationTag setKey(String key) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -1118,7 +1118,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationTag setValue(String value) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -1128,14 +1128,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestLaunchConfiguration extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration extends TeaModel {
         /**
          * <blockquote>
          * <p> This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          */
         @NameInMap("Arn")
-        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn;
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn> arn;
 
         /**
          * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
@@ -1170,7 +1170,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>The cloud disks in the extended configurations of the launch template.</p>
          */
         @NameInMap("DataDisk")
-        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> dataDisk;
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk> dataDisk;
 
         /**
          * <p>The ID of the deployment set.</p>
@@ -1400,7 +1400,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>The system disk information of instances. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDisk")
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk systemDisk;
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk systemDisk;
 
         /**
          * <p>The category of the system disk. Valid values:</p>
@@ -1472,7 +1472,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>The tag in the extended configurations of the launch template.</p>
          */
         @NameInMap("Tag")
-        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> tag;
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag> tag;
 
         /**
          * <p>The instance user data. The user data must be encoded in Base64. The raw data can be up to 32 KB in size. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -1483,20 +1483,20 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
-        public static CreateAutoProvisioningGroupRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestLaunchConfiguration self = new CreateAutoProvisioningGroupRequestLaunchConfiguration();
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setArn(java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setArn(java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn> arn) {
             this.arn = arn;
             return this;
         }
-        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> getArn() {
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn> getArn() {
             return this.arn;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setAutoReleaseTime(String autoReleaseTime) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setAutoReleaseTime(String autoReleaseTime) {
             this.autoReleaseTime = autoReleaseTime;
             return this;
         }
@@ -1504,7 +1504,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.autoReleaseTime;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setCreditSpecification(String creditSpecification) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setCreditSpecification(String creditSpecification) {
             this.creditSpecification = creditSpecification;
             return this;
         }
@@ -1512,15 +1512,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.creditSpecification;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setDataDisk(java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> dataDisk) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setDataDisk(java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk> dataDisk) {
             this.dataDisk = dataDisk;
             return this;
         }
-        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> getDataDisk() {
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setDeploymentSetId(String deploymentSetId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setDeploymentSetId(String deploymentSetId) {
             this.deploymentSetId = deploymentSetId;
             return this;
         }
@@ -1528,7 +1528,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.deploymentSetId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setHostName(String hostName) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setHostName(String hostName) {
             this.hostName = hostName;
             return this;
         }
@@ -1536,7 +1536,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.hostName;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setHostNames(java.util.List<String> hostNames) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setHostNames(java.util.List<String> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
@@ -1544,7 +1544,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.hostNames;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setImageFamily(String imageFamily) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setImageFamily(String imageFamily) {
             this.imageFamily = imageFamily;
             return this;
         }
@@ -1552,7 +1552,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.imageFamily;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setImageId(String imageId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -1560,7 +1560,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.imageId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInstanceDescription(String instanceDescription) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setInstanceDescription(String instanceDescription) {
             this.instanceDescription = instanceDescription;
             return this;
         }
@@ -1568,7 +1568,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.instanceDescription;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInstanceName(String instanceName) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
@@ -1576,7 +1576,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.instanceName;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInternetChargeType(String internetChargeType) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setInternetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
             return this;
         }
@@ -1584,7 +1584,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.internetChargeType;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.internetMaxBandwidthIn = internetMaxBandwidthIn;
             return this;
         }
@@ -1592,7 +1592,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.internetMaxBandwidthIn;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.internetMaxBandwidthOut = internetMaxBandwidthOut;
             return this;
         }
@@ -1600,7 +1600,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.internetMaxBandwidthOut;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setIoOptimized(String ioOptimized) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setIoOptimized(String ioOptimized) {
             this.ioOptimized = ioOptimized;
             return this;
         }
@@ -1608,7 +1608,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.ioOptimized;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setKeyPairName(String keyPairName) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setKeyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
@@ -1616,7 +1616,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.keyPairName;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setPassword(String password) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setPassword(String password) {
             this.password = password;
             return this;
         }
@@ -1624,7 +1624,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.password;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setPasswordInherit(Boolean passwordInherit) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setPasswordInherit(Boolean passwordInherit) {
             this.passwordInherit = passwordInherit;
             return this;
         }
@@ -1632,7 +1632,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.passwordInherit;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setRamRoleName(String ramRoleName) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setRamRoleName(String ramRoleName) {
             this.ramRoleName = ramRoleName;
             return this;
         }
@@ -1640,7 +1640,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.ramRoleName;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setResourceGroupId(String resourceGroupId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -1648,7 +1648,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
             this.securityEnhancementStrategy = securityEnhancementStrategy;
             return this;
         }
@@ -1656,7 +1656,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.securityEnhancementStrategy;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSecurityGroupId(String securityGroupId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
@@ -1664,7 +1664,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.securityGroupId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSecurityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
@@ -1672,15 +1672,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.securityGroupIds;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDisk(CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk systemDisk) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSystemDisk(CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk systemDisk) {
             this.systemDisk = systemDisk;
             return this;
         }
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk getSystemDisk() {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk getSystemDisk() {
             return this.systemDisk;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskCategory(String systemDiskCategory) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
         }
@@ -1688,7 +1688,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.systemDiskCategory;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskDescription(String systemDiskDescription) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSystemDiskDescription(String systemDiskDescription) {
             this.systemDiskDescription = systemDiskDescription;
             return this;
         }
@@ -1696,7 +1696,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.systemDiskDescription;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskName(String systemDiskName) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSystemDiskName(String systemDiskName) {
             this.systemDiskName = systemDiskName;
             return this;
         }
@@ -1704,7 +1704,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.systemDiskName;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
             this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
             return this;
         }
@@ -1712,7 +1712,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.systemDiskPerformanceLevel;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskSize(Integer systemDiskSize) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSystemDiskSize(Integer systemDiskSize) {
             this.systemDiskSize = systemDiskSize;
             return this;
         }
@@ -1720,15 +1720,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.systemDiskSize;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setTag(java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> tag) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setTag(java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag> tag) {
             this.tag = tag;
             return this;
         }
-        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> getTag() {
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag> getTag() {
             return this.tag;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setUserData(String userData) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setUserData(String userData) {
             this.userData = userData;
             return this;
         }
@@ -1738,7 +1738,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestDataDiskConfig extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestDataDiskConfig extends TeaModel {
         /**
          * <p>The category of data disk N. You can use this parameter to specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</p>
          * <ul>
@@ -1754,12 +1754,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("DiskCategory")
         public String diskCategory;
 
-        public static CreateAutoProvisioningGroupRequestDataDiskConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestDataDiskConfig self = new CreateAutoProvisioningGroupRequestDataDiskConfig();
+        public static CreateAutoProvisioningGroupShrinkRequestDataDiskConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestDataDiskConfig self = new CreateAutoProvisioningGroupShrinkRequestDataDiskConfig();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestDataDiskConfig setDiskCategory(String diskCategory) {
+        public CreateAutoProvisioningGroupShrinkRequestDataDiskConfig setDiskCategory(String diskCategory) {
             this.diskCategory = diskCategory;
             return this;
         }
@@ -1769,7 +1769,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig extends TeaModel {
         /**
          * <p>The architectures of the instance types.</p>
          */
@@ -1891,12 +1891,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("WeightedCapacity")
         public Double weightedCapacity;
 
-        public static CreateAutoProvisioningGroupRequestLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestLaunchTemplateConfig self = new CreateAutoProvisioningGroupRequestLaunchTemplateConfig();
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig self = new CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setArchitectures(java.util.List<String> architectures) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setArchitectures(java.util.List<String> architectures) {
             this.architectures = architectures;
             return this;
         }
@@ -1904,7 +1904,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.architectures;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setBurstablePerformance(String burstablePerformance) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setBurstablePerformance(String burstablePerformance) {
             this.burstablePerformance = burstablePerformance;
             return this;
         }
@@ -1912,7 +1912,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.burstablePerformance;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setCores(java.util.List<Integer> cores) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setCores(java.util.List<Integer> cores) {
             this.cores = cores;
             return this;
         }
@@ -1920,7 +1920,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.cores;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setExcludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setExcludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
@@ -1928,7 +1928,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.excludedInstanceTypes;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceFamilyLevel(String instanceFamilyLevel) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setInstanceFamilyLevel(String instanceFamilyLevel) {
             this.instanceFamilyLevel = instanceFamilyLevel;
             return this;
         }
@@ -1936,7 +1936,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.instanceFamilyLevel;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -1944,7 +1944,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.instanceType;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setMaxPrice(Double maxPrice) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setMaxPrice(Double maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
@@ -1952,7 +1952,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.maxPrice;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setMaxQuantity(Integer maxQuantity) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setMaxQuantity(Integer maxQuantity) {
             this.maxQuantity = maxQuantity;
             return this;
         }
@@ -1960,7 +1960,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.maxQuantity;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setMemories(java.util.List<Float> memories) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setMemories(java.util.List<Float> memories) {
             this.memories = memories;
             return this;
         }
@@ -1968,7 +1968,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.memories;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setPriority(Integer priority) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setPriority(Integer priority) {
             this.priority = priority;
             return this;
         }
@@ -1976,7 +1976,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.priority;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setVSwitchId(String vSwitchId) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -1984,7 +1984,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.vSwitchId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
@@ -1994,52 +1994,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestResourcePoolOptions extends TeaModel {
-        /**
-         * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</p>
-         */
-        @NameInMap("PrivatePoolIds")
-        public java.util.List<String> privatePoolIds;
-
-        /**
-         * <p>Specifies which resource pools to use to create instances. Resource pools include the public pool and the private pools that are associated with elasticity assurance and capacity reservations in the Active state. Valid values:</p>
-         * <ul>
-         * <li>PrivatePoolFirst: uses private pools first. If you set this parameter to PrivatePoolFirst, you can specify ResourcePoolOptions.PrivatePoolIds or leave ResourcePoolOptions.PrivatePoolIds empty. If you specify ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, matching open private pools are used. If no matching open private pools exist, the public pool is used.</li>
-         * <li>PrivatePoolOnly: uses only private pools. If you set this parameter to PrivatePoolOnly, you must specify ResourcePoolOptions.PrivatePoolIds. If the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, instances cannot be created.</li>
-         * <li>PublicPoolOnly: uses the public pool.</li>
-         * </ul>
-         * <p>Default value: PublicPoolOnly.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PrivatePoolFirst</p>
-         */
-        @NameInMap("Strategy")
-        public String strategy;
-
-        public static CreateAutoProvisioningGroupRequestResourcePoolOptions build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestResourcePoolOptions self = new CreateAutoProvisioningGroupRequestResourcePoolOptions();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateAutoProvisioningGroupRequestResourcePoolOptions setPrivatePoolIds(java.util.List<String> privatePoolIds) {
-            this.privatePoolIds = privatePoolIds;
-            return this;
-        }
-        public java.util.List<String> getPrivatePoolIds() {
-            return this.privatePoolIds;
-        }
-
-        public CreateAutoProvisioningGroupRequestResourcePoolOptions setStrategy(String strategy) {
-            this.strategy = strategy;
-            return this;
-        }
-        public String getStrategy() {
-            return this.strategy;
-        }
-
-    }
-
-    public static class CreateAutoProvisioningGroupRequestSystemDiskConfig extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig extends TeaModel {
         /**
          * <p>The category of the system disk. You can specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</p>
          * <ul>
@@ -2055,12 +2010,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("DiskCategory")
         public String diskCategory;
 
-        public static CreateAutoProvisioningGroupRequestSystemDiskConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestSystemDiskConfig self = new CreateAutoProvisioningGroupRequestSystemDiskConfig();
+        public static CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig self = new CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestSystemDiskConfig setDiskCategory(String diskCategory) {
+        public CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig setDiskCategory(String diskCategory) {
             this.diskCategory = diskCategory;
             return this;
         }
@@ -2070,7 +2025,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateAutoProvisioningGroupRequestTag extends TeaModel {
+    public static class CreateAutoProvisioningGroupShrinkRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the auto provisioning group.</p>
          * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
@@ -2091,12 +2046,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateAutoProvisioningGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestTag self = new CreateAutoProvisioningGroupRequestTag();
+        public static CreateAutoProvisioningGroupShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestTag self = new CreateAutoProvisioningGroupShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestTag setKey(String key) {
+        public CreateAutoProvisioningGroupShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -2104,7 +2059,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateAutoProvisioningGroupRequestTag setValue(String value) {
+        public CreateAutoProvisioningGroupShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

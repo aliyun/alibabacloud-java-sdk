@@ -34,6 +34,9 @@ public class ModifyCommandRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Launcher")
+    public String launcher;
+
     /**
      * <p>The command name. The name supports all character sets and can be up to 128 characters in length.</p>
      * 
@@ -110,6 +113,14 @@ public class ModifyCommandRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyCommandRequest setLauncher(String launcher) {
+        this.launcher = launcher;
+        return this;
+    }
+    public String getLauncher() {
+        return this.launcher;
     }
 
     public ModifyCommandRequest setName(String name) {

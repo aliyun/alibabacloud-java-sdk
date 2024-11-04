@@ -851,12 +851,24 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("HttpEndpoint")
         public String httpEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("HttpPutResponseHopLimit")
         public Integer httpPutResponseHopLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>optional</p>
+         */
         @NameInMap("HttpTokens")
         public String httpTokens;
 
@@ -1525,7 +1537,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator of the launch template version.</p>
+         * <p>The ID of the Alibaba Cloud account that created the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>

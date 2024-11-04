@@ -26,7 +26,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the snapshot-consistent groups.</p>
+     * <p>The information about the snapshot-consistent groups.</p>
      */
     @NameInMap("SnapshotGroups")
     public DescribeSnapshotGroupsResponseBodySnapshotGroups snapshotGroups;
@@ -123,7 +123,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot extends TeaModel {
         /**
-         * <p>Indicates whether the snapshot can be used to create or roll back disks. Valid values:</p>
+         * <p>Indicates whether the snapshot can be shared and be used to create or roll back a disk. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -139,8 +139,11 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
          * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <ul>
          * <li>true: The instant access feature is enabled. By default, the instant access feature is enabled for ESSDs.</li>
-         * <li>false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</li>
+         * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
          * </ul>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -149,9 +152,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public Boolean instantAccess;
 
         /**
-         * <p>The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.</p>
+         * <p>The validity period of the instant access feature. When the validity period ends, the instant access snapshot is automatically released.</p>
          * <blockquote>
-         * <p> This parameter is deprecated. The normal snapshots of enhanced SSDs (ESSDs) are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -424,7 +427,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String snapshotGroupId;
 
         /**
-         * <p>Details of the snapshots in the snapshot-consistent group.</p>
+         * <p>The information about the snapshots in the snapshot-consistent group.</p>
          */
         @NameInMap("Snapshots")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots snapshots;

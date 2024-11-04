@@ -2141,23 +2141,23 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The category of data disk N. Valid values:</p>
          * <ul>
-         * <li><p>cloud_efficiency: ultra disk.</p>
+         * <li><p>cloud_efficiency: ultra disk</p>
          * </li>
-         * <li><p>cloud_ssd: standard SSD.</p>
+         * <li><p>cloud_ssd: standard SSD</p>
          * </li>
-         * <li><p>cloud_essd: ESSD.</p>
+         * <li><p>cloud_essd: ESSD</p>
          * </li>
-         * <li><p>cloud: basic disk.</p>
+         * <li><p>cloud: basic disk</p>
          * </li>
-         * <li><p>cloud_auto: ESSD AutoPL disk.</p>
+         * <li><p>cloud_auto: ESSD AutoPL disk</p>
          * </li>
-         * <li><p>cloud_essd_entry: ESSD Entry disk.</p>
+         * <li><p>cloud_essd_entry: ESSD Entry disk</p>
          * <p>**</p>
          * <p><strong>Note</strong> This parameter can be set to <code>cloud_essd_entry</code> only when <code>InstanceType</code> is set to <code>ecs.u1</code> or <code>ecs.e</code>.</p>
          * </li>
-         * <li><p>elastic_ephemeral_disk_standard: standard elastic ephemeral disk.</p>
+         * <li><p>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</p>
          * </li>
-         * <li><p>elastic_ephemeral_disk_premium: premium elastic ephemeral disk.</p>
+         * <li><p>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</p>
          * </li>
          * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
@@ -2198,7 +2198,7 @@ public class RunInstancesRequest extends TeaModel {
          * <li>From the 26th data disk on: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> to change the category and size of data disk N created based on the image.</p>
+         * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify the <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the category and size of data disk N created based on the image.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2254,11 +2254,11 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
          * <ul>
          * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</li>
          * </ul>
-         * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -2268,7 +2268,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
          * <blockquote>
          * <p> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
@@ -2288,15 +2288,15 @@ public class RunInstancesRequest extends TeaModel {
          * </li>
          * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of <code>DataDisk.N.PerformanceLevel</code>.</p>
          * <ul>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 65536.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 65536.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 65536.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 65536.</li>
          * </ul>
          * </li>
          * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
          * </li>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.</p>
+         * <li><p>Valid values when DiskCategory is set to cloud_auto: 1 to 65536.</p>
          * </li>
          * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.</p>
          * </li>
@@ -2313,7 +2313,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
-         * <p>If <code>DataDisk.N.SnapshotId</code> is specified, <code>DataDisk.N.Size</code> is ignored. The data disk is created based on the size of the specified snapshot. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         * <p>When the <code>DataDisk.N.SnapshotId</code> parameter is specified, the <code>DataDisk.N.Size</code> parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp17441ohwka0yuh****</p>
@@ -2322,7 +2322,7 @@ public class RunInstancesRequest extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>

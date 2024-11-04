@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageComponentsResponseBody extends TeaModel {
     /**
-     * <p>Details about the image components.</p>
+     * <p>The information about the image components.</p>
      */
     @NameInMap("ImageComponent")
     public DescribeImageComponentsResponseBodyImageComponent imageComponent;
@@ -92,12 +92,36 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -222,6 +246,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         @NameInMap("ComponentType")
         public String componentType;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ComponentVersion")
         public String componentVersion;
 
@@ -283,6 +315,11 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         */
         @NameInMap("Parameters")
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters parameters;
 

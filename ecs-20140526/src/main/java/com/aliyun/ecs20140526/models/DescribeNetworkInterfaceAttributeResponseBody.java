@@ -267,6 +267,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("SlaveInterfaceSpecification")
     public DescribeNetworkInterfaceAttributeResponseBodySlaveInterfaceSpecification slaveInterfaceSpecification;
 
+    /**
+     * <p>This parameter is not publicly available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SourceDestCheck")
     public Boolean sourceDestCheck;
 
@@ -995,6 +1001,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public static class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork extends TeaModel {
         /**
          * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableSriov")
         public Boolean enableSriov;

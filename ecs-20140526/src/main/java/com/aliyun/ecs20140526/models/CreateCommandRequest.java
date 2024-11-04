@@ -94,6 +94,9 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
+    @NameInMap("Launcher")
+    public String launcher;
+
     /**
      * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
@@ -218,6 +221,14 @@ public class CreateCommandRequest extends TeaModel {
     }
     public Boolean getEnableParameter() {
         return this.enableParameter;
+    }
+
+    public CreateCommandRequest setLauncher(String launcher) {
+        this.launcher = launcher;
+        return this;
+    }
+    public String getLauncher() {
+        return this.launcher;
     }
 
     public CreateCommandRequest setName(String name) {

@@ -7,12 +7,12 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <ul>
-     * <li>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled.</li>
+     * <li>true: The payment is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</li>
      * <li>false: An order is generated but no payment is made.</li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>
-     * <p>If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * <p> If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid Values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
      * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * <p>Default value: false.</p>
@@ -45,7 +45,11 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to change the billing method of all data disks attached to the instance from pay-as-you-go to subscription.</p>
+     * <p>Specifies whether to change the billing method of all data disks on the instance from pay-as-you-go to subscription. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
@@ -57,8 +61,8 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The new billing method. Valid values:</p>
      * <ul>
-     * <li>PrePaid</li>
-     * <li>PostPaid</li>
+     * <li>PrePaid: subscription</li>
+     * <li>PostPaid: pay-as-you-go</li>
      * </ul>
      * <p>Default value: PrePaid.</p>
      * 
@@ -79,7 +83,11 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go.</p>
+     * <p>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
