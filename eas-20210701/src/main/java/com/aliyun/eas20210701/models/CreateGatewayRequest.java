@@ -14,6 +14,29 @@ public class CreateGatewayRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     */
+    @NameInMap("AutoRenewal")
+    public Boolean autoRenewal;
+
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    /**
      * <p>Specifies whether to enable Internet access. Default value: false.</p>
      * <p>Valid values:</p>
      * <ul>
@@ -86,6 +109,22 @@ public class CreateGatewayRequest extends TeaModel {
     }
     public String getResourceName() {
         return this.resourceName;
+    }
+
+    public CreateGatewayRequest setAutoRenewal(Boolean autoRenewal) {
+        this.autoRenewal = autoRenewal;
+        return this;
+    }
+    public Boolean getAutoRenewal() {
+        return this.autoRenewal;
+    }
+
+    public CreateGatewayRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public CreateGatewayRequest setEnableInternet(Boolean enableInternet) {

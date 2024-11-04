@@ -14,7 +14,7 @@ public class ListServicesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The ID of the private gateway.</p>
+     * <p>The private gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -95,6 +95,24 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The server role.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DataLoader</li>
+     * <li>FrontEnd</li>
+     * <li>DataSet</li>
+     * <li>SDProxy</li>
+     * <li>LLMSscheduler</li>
+     * <li>ScalableJob</li>
+     * <li>LLMGateway</li>
+     * <li>Job</li>
+     * <li>Queue</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LLMGateway</p>
+     */
     @NameInMap("Role")
     public String role;
 

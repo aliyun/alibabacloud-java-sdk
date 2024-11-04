@@ -40,6 +40,15 @@ public class ListGatewayRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-4gt8twzwllfo******</p>
+     */
+    @NameInMap("ResourceName")
+    public String resourceName;
+
     public static ListGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayRequest self = new ListGatewayRequest();
         return TeaModel.build(map, self);
@@ -75,6 +84,14 @@ public class ListGatewayRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListGatewayRequest setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
 }
