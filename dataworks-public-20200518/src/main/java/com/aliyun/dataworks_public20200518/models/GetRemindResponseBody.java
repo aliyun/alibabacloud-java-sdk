@@ -149,7 +149,7 @@ public class GetRemindResponseBody extends TeaModel {
 
     public static class GetRemindResponseBodyDataBizProcesses extends TeaModel {
         /**
-         * <p>The workflow ID.</p>
+         * <p>The ID of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>9527</p>
@@ -288,6 +288,10 @@ public class GetRemindResponseBody extends TeaModel {
         @NameInMap("AlertTargets")
         public java.util.List<String> alertTargets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OWNER</p>
+         */
         @NameInMap("AlertUnit")
         public String alertUnit;
 
@@ -366,9 +370,15 @@ public class GetRemindResponseBody extends TeaModel {
         @NameInMap("AlertInterval")
         public Integer alertInterval;
 
+        /**
+         * <p>The alert notification method.</p>
+         */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
+        /**
+         * <p>The description of the alert recipient.</p>
+         */
         @NameInMap("AlertTargets")
         public java.util.List<String> alertTargets;
 
@@ -510,6 +520,9 @@ public class GetRemindResponseBody extends TeaModel {
         @NameInMap("Useflag")
         public Boolean useflag;
 
+        /**
+         * <p>The information about the webhook URL.</p>
+         */
         @NameInMap("Webhooks")
         public java.util.List<String> webhooks;
 
