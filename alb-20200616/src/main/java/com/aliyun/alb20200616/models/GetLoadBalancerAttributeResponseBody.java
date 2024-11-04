@@ -737,6 +737,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("IntranetAddressHcStatus")
         public String intranetAddressHcStatus;
 
+        @NameInMap("Ipv4LocalAddresses")
+        public java.util.List<String> ipv4LocalAddresses;
+
         /**
          * <p>An IPv6 address.</p>
          * <p>This parameter takes effect only when <strong>AddressIPVersion</strong> is set to <strong>DualStack</strong>. The network type is determined by the value of <strong>Ipv6AddressType</strong>.</p>
@@ -749,6 +752,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
         @NameInMap("Ipv6AddressHcStatus")
         public String ipv6AddressHcStatus;
+
+        @NameInMap("Ipv6LocalAddresses")
+        public java.util.List<String> ipv6LocalAddresses;
 
         public static GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses build(java.util.Map<String, ?> map) throws Exception {
             GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses self = new GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses();
@@ -795,6 +801,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             return this.intranetAddressHcStatus;
         }
 
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv4LocalAddresses(java.util.List<String> ipv4LocalAddresses) {
+            this.ipv4LocalAddresses = ipv4LocalAddresses;
+            return this;
+        }
+        public java.util.List<String> getIpv4LocalAddresses() {
+            return this.ipv4LocalAddresses;
+        }
+
         public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
@@ -809,6 +823,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public String getIpv6AddressHcStatus() {
             return this.ipv6AddressHcStatus;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6LocalAddresses(java.util.List<String> ipv6LocalAddresses) {
+            this.ipv6LocalAddresses = ipv6LocalAddresses;
+            return this;
+        }
+        public java.util.List<String> getIpv6LocalAddresses() {
+            return this.ipv6LocalAddresses;
         }
 
     }
