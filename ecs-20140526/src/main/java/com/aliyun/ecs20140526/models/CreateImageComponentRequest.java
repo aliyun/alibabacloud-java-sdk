@@ -23,6 +23,14 @@ public class CreateImageComponentRequest extends TeaModel {
     @NameInMap("ComponentType")
     public String componentType;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ComponentVersion")
     public String componentVersion;
 
@@ -45,9 +53,9 @@ public class CreateImageComponentRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The component name. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%E3%80%81%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%E3%80%81%EF%BC%88.%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> </a>The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the image component. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <blockquote>
-     * <p>If you do not configure <code>Name</code>, the return value of <code>ImageComponentId</code> is used.</p>
+     * <p> If you do not specify <code>Name</code>, the return value of <code>ImageComponentId</code> is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +96,7 @@ public class CreateImageComponentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The operating system type supported by the image component. Only Linux is supported. Set the value to Linux.</p>
+     * <p>The type of the operating system supported by the image component. Only Linux operating systems are supported. Set the value to Linux.</p>
      * <p>Default value: Linux.</p>
      * 
      * <strong>example:</strong>

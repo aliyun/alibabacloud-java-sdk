@@ -63,7 +63,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,9 +75,9 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     /**
      * <p>The number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.</p>
      * <p>This parameter takes effect only when <code>InstantAccess</code> is set to true. The instant access feature is automatically disabled when the specified duration ends.</p>
-     * <p>This parameter is left empty by default, which indicates that the instant access feature is automatically disabled for snapshots when the snapshots are released.</p>
+     * <p>This parameter is left empty by default, which indicates that the instant access feature is automatically disabled when the instant access snapshots are released.</p>
      * <blockquote>
-     * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -91,7 +91,73 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        @NameInMap("UsedAmount")
+        public Integer usedAmount;
+
+        public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage setUsedAmount(Integer usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+    }
+
+    public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages extends TeaModel {
+        @NameInMap("ElasticityAssuranceUsage")
+        public java.util.List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage> elasticityAssuranceUsage;
+
+        public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages setElasticityAssuranceUsage(java.util.List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage> elasticityAssuranceUsage) {
+            this.elasticityAssuranceUsage = elasticityAssuranceUsage;
+            return this;
+        }
+        public java.util.List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage> getElasticityAssuranceUsage() {
+            return this.elasticityAssuranceUsage;
+        }
+
+    }
+
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
+        @NameInMap("AvailableAmount")
+        public Integer availableAmount;
+
+        @NameInMap("ElasticityAssuranceUsages")
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages elasticityAssuranceUsages;
+
         /**
          * <p>The instance type.</p>
          * 
@@ -131,6 +197,22 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setAvailableAmount(Integer availableAmount) {
+            this.availableAmount = availableAmount;
+            return this;
+        }
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setElasticityAssuranceUsages(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages elasticityAssuranceUsages) {
+            this.elasticityAssuranceUsages = elasticityAssuranceUsages;
+            return this;
+        }
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages getElasticityAssuranceUsages() {
+            return this.elasticityAssuranceUsages;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
@@ -262,6 +344,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ElasticityAssuranceOwnerId")
+        public String elasticityAssuranceOwnerId;
 
         /**
          * <p>The time when the elasticity assurance expires.</p>
@@ -423,6 +508,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setElasticityAssuranceOwnerId(String elasticityAssuranceOwnerId) {
+            this.elasticityAssuranceOwnerId = elasticityAssuranceOwnerId;
+            return this;
+        }
+        public String getElasticityAssuranceOwnerId() {
+            return this.elasticityAssuranceOwnerId;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setEndTime(String endTime) {

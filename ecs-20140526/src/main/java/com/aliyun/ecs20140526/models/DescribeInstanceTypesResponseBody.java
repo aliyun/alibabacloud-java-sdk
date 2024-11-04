@@ -57,6 +57,44 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes extends TeaModel {
+        @NameInMap("SupportedTopologyType")
+        public java.util.List<String> supportedTopologyType;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes setSupportedTopologyType(java.util.List<String> supportedTopologyType) {
+            this.supportedTopologyType = supportedTopologyType;
+            return this;
+        }
+        public java.util.List<String> getSupportedTopologyType() {
+            return this.supportedTopologyType;
+        }
+
+    }
+
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions extends TeaModel {
+        @NameInMap("SupportedTopologyTypes")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setSupportedTopologyTypes(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes) {
+            this.supportedTopologyTypes = supportedTopologyTypes;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes getSupportedTopologyTypes() {
+            return this.supportedTopologyTypes;
+        }
+
+    }
+
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork extends TeaModel {
         /**
          * <blockquote>
@@ -197,6 +235,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
+
+        @NameInMap("CpuOptions")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions cpuOptions;
 
         /**
          * <p>The CPU base frequency. Unit: GHz.</p>
@@ -595,6 +636,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuOptions(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions cpuOptions) {
+            this.cpuOptions = cpuOptions;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions getCpuOptions() {
+            return this.cpuOptions;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuSpeedFrequency(Float cpuSpeedFrequency) {

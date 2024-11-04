@@ -7,11 +7,11 @@ public class CreateSnapshotRequest extends TeaModel {
     /**
      * <p>The category of the snapshot. Valid values:</p>
      * <ul>
-     * <li>Standard: normal snapshot</li>
+     * <li>Standard: standard snapshot</li>
      * <li>Flash: local snapshot</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,11 +53,11 @@ public class CreateSnapshotRequest extends TeaModel {
      * <p>Specifies whether to enable the instant access feature. Valid values:</p>
      * <ul>
      * <li>true: enables the instant access feature. This feature can be enabled only for ESSDs.</li>
-     * <li>false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.</li>
+     * <li>false: does not enable the instant access feature. If InstantAccess is set to false, a standard snapshot is created.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when <code>InstantAccess</code> is set to true. Unit: days. Valid values: 1 to 65535.</p>
      * <p>By default, the value of this parameter is the same as that of <code>RetentionDays</code>.</p>
      * <blockquote>
-     * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateSnapshotRequest extends TeaModel {
     /**
      * <p>The snapshot type. Valid values:</p>
      * <ul>
-     * <li>Standard: normal snapshot</li>
+     * <li>Standard: standard snapshot</li>
      * <li>Flash: local snapshot</li>
      * </ul>
      * <blockquote>
@@ -118,8 +118,8 @@ public class CreateSnapshotRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <p>It cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      * 
      * <strong>example:</strong>
      * <p>testSnapshotName</p>

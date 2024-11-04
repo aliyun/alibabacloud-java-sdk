@@ -398,6 +398,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Latest")
         public Boolean latest;
 
+        @NameInMap("Launcher")
+        public String launcher;
+
         /**
          * <p>The name of the command.</p>
          * 
@@ -546,6 +549,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
         public Boolean getLatest() {
             return this.latest;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommand setLauncher(String launcher) {
+            this.launcher = launcher;
+            return this;
+        }
+        public String getLauncher() {
+            return this.launcher;
         }
 
         public DescribeCommandsResponseBodyCommandsCommand setName(String name) {

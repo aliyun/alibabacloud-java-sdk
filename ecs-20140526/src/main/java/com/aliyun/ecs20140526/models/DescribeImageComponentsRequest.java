@@ -4,9 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsRequest extends TeaModel {
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ComponentType")
     public String componentType;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ComponentVersion")
     public String componentVersion;
 
@@ -94,6 +110,14 @@ public class DescribeImageComponentsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("SystemType")
     public String systemType;
 

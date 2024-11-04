@@ -470,6 +470,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceImageOptions extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("CurrentOSNVMeSupported")
+        public Boolean currentOSNVMeSupported;
+
+        /**
          * <p>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
          * <ul>
          * <li>true</li>
@@ -485,6 +492,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstancesInstanceImageOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceImageOptions self = new DescribeInstancesResponseBodyInstancesInstanceImageOptions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceImageOptions setCurrentOSNVMeSupported(Boolean currentOSNVMeSupported) {
+            this.currentOSNVMeSupported = currentOSNVMeSupported;
+            return this;
+        }
+        public Boolean getCurrentOSNVMeSupported() {
+            return this.currentOSNVMeSupported;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceImageOptions setLoginAsNonRoot(Boolean loginAsNonRoot) {
@@ -1547,7 +1562,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Details about the image options.</p>
+         * <p>The image options.</p>
          */
         @NameInMap("ImageOptions")
         public DescribeInstancesResponseBodyInstancesInstanceImageOptions imageOptions;

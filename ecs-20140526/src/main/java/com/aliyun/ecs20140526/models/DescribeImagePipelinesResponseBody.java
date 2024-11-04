@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
     /**
-     * <p>Details about the image templates.</p>
+     * <p>The information about the image templates.</p>
      */
     @NameInMap("ImagePipeline")
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
@@ -259,6 +259,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ImageFamily")
         public String imageFamily;
 
@@ -307,6 +315,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RepairMode")
         public String repairMode;
 
@@ -334,6 +350,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("TestContent")
         public String testContent;
 
