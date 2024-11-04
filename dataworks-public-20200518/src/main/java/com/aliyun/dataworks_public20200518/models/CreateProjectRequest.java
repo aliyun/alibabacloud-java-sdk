@@ -41,7 +41,6 @@ public class CreateProjectRequest extends TeaModel {
 
     /**
      * <p>The description of the workspace.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test_describe</p>

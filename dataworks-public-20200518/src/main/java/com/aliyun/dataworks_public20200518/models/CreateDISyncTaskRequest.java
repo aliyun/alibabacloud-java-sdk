@@ -39,10 +39,11 @@ public class CreateDISyncTaskRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The settings that specify the storage path of the data synchronization task and the resource group used by the task. The following parameters are supported:</p>
+     * <p>The configuration parameters of the data synchronization task. The following parameters are supported:</p>
      * <ul>
      * <li>FileFolderPath: the storage path of the data synchronization task.</li>
      * <li>ResourceGroup: the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</li>
+     * <li>Cu: the specifications occupied by the data synchronization task in the serverless resource group. The value of this parameter must be a multiple of 0.5.</li>
      * </ul>
      * 
      * <strong>example:</strong>

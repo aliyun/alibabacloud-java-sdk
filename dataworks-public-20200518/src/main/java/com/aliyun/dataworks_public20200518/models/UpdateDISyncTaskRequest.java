@@ -34,8 +34,11 @@ public class UpdateDISyncTaskRequest extends TeaModel {
     public String taskContent;
 
     /**
-     * <p>The setting based on which the resource group used by the data synchronization task is updated. You must configure this parameter in the JSON format.</p>
-     * <p>Only the ResourceGroup field is supported. This field specifies the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group. If you do not need to update the resource group for the data synchronization task, leave this parameter empty.</p>
+     * <p>The configuration parameters of the data synchronization task. You must configure this parameter in the JSON format.</p>
+     * <ul>
+     * <li>ResourceGroup: the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</li>
+     * <li>Cu: the specifications occupied by the data synchronization task in the serverless resource group. The value of this parameter must be a multiple of 0.5.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ResourceGroup&quot;:&quot;S_res_group_XXX_XXXX&quot;}</p>

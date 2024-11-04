@@ -9784,7 +9784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetRemind%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a custom alert rule.</p>
+     * <p>Queries the information about a custom alert rule.</p>
      * 
      * @param request GetRemindRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9820,7 +9820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetRemind%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a custom alert rule.</p>
+     * <p>Queries the information about a custom alert rule.</p>
      * 
      * @param request GetRemindRequest
      * @return GetRemindResponse
@@ -13902,7 +13902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取租户下面的数据源类型粒度的表名称</p>
+     * <p>Obtains tables of different data source types within a tenant by page.</p>
      * 
      * @param request ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13942,7 +13942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取租户下面的数据源类型粒度的表名称</p>
+     * <p>Obtains tables of different data source types within a tenant by page.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
@@ -17650,7 +17650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata information about a table.</p>
+     * <p>Updates the metadata information about a table. Only MaxCompute tables are supported.</p>
      * 
      * @param request UpdateMetaTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17724,7 +17724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata information about a table.</p>
+     * <p>Updates the metadata information about a table. Only MaxCompute tables are supported.</p>
      * 
      * @param request UpdateMetaTableRequest
      * @return UpdateMetaTableResponse
