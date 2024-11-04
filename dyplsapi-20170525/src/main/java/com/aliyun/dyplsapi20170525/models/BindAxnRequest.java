@@ -86,6 +86,9 @@ public class BindAxnRequest extends TeaModel {
     @NameInMap("Expiration")
     public String expiration;
 
+    @NameInMap("Extend")
+    public String extend;
+
     /**
      * <p>Specifies whether to record all calls made by the bound phone numbers. Valid values:</p>
      * <ul>
@@ -258,6 +261,14 @@ public class BindAxnRequest extends TeaModel {
     }
     public String getExpiration() {
         return this.expiration;
+    }
+
+    public BindAxnRequest setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public BindAxnRequest setIsRecordingEnabled(Boolean isRecordingEnabled) {
