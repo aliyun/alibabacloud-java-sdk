@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class CreateAclPolicyRequest extends TeaModel {
     /**
      * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclPolicyList")
     public java.util.List<CreateAclPolicyRequestAclPolicyList> aclPolicyList;
@@ -52,6 +53,7 @@ public class CreateAclPolicyRequest extends TeaModel {
 
         /**
          * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10.23.XX.XX/32</p>

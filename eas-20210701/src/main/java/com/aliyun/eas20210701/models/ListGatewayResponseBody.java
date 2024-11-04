@@ -93,6 +93,19 @@ public class ListGatewayResponseBody extends TeaModel {
 
     public static class ListGatewayResponseBodyGateways extends TeaModel {
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        /**
          * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +217,14 @@ public class ListGatewayResponseBody extends TeaModel {
         public static ListGatewayResponseBodyGateways build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayResponseBodyGateways self = new ListGatewayResponseBodyGateways();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewayResponseBodyGateways setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public ListGatewayResponseBodyGateways setCreateTime(String createTime) {
