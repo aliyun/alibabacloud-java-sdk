@@ -1266,6 +1266,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>根据实体uuid查询关联的处置任务数</p>
+     * 
+     * @param request DescribeProcessTaskCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeProcessTaskCountResponse
+     */
+    public DescribeProcessTaskCountResponse describeProcessTaskCountWithOptions(DescribeProcessTaskCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeProcessTaskCount"),
+            new TeaPair("version", "2022-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeProcessTaskCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据实体uuid查询关联的处置任务数</p>
+     * 
+     * @param request DescribeProcessTaskCountRequest
+     * @return DescribeProcessTaskCountResponse
+     */
+    public DescribeProcessTaskCountResponse describeProcessTaskCount(DescribeProcessTaskCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeProcessTaskCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</p>
      * 
      * @param request DescribeProcessTasksRequest
