@@ -11,6 +11,9 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    @NameInMap("ContentEncoding")
+    public String contentEncoding;
+
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
@@ -32,6 +35,14 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    public RunCommandRequest setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
+        return this;
+    }
+    public String getContentEncoding() {
+        return this.contentEncoding;
     }
 
     public RunCommandRequest setInstanceIds(java.util.List<String> instanceIds) {

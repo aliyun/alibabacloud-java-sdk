@@ -2374,6 +2374,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CommandContent", request.commandContent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.contentEncoding)) {
+            query.put("ContentEncoding", request.contentEncoding);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
         }
