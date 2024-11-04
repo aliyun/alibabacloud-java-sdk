@@ -1841,6 +1841,9 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Caller")
         public String caller;
 
+        @NameInMap("CustomerName")
+        public String customerName;
+
         /**
          * <strong>example:</strong>
          * <p>XXXX</p>
@@ -2038,6 +2041,14 @@ public class GetResultResponseBody extends TeaModel {
         }
         public String getCaller() {
             return this.caller;
+        }
+
+        public GetResultResponseBodyDataResultInfoRecording setCustomerName(String customerName) {
+            this.customerName = customerName;
+            return this;
+        }
+        public String getCustomerName() {
+            return this.customerName;
         }
 
         public GetResultResponseBodyDataResultInfoRecording setDataSetName(String dataSetName) {
