@@ -150,6 +150,9 @@ public class GetAccountInfoResponseBody extends TeaModel {
         @NameInMap("Cid")
         public Long cid;
 
+        @NameInMap("CustomerAccountType")
+        public Integer customerAccountType;
+
         /**
          * <p>customer manager</p>
          * 
@@ -158,6 +161,9 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         @NameInMap("CustomerBd")
         public String customerBd;
+
+        @NameInMap("CustomerEnterpriseCertified")
+        public Integer customerEnterpriseCertified;
 
         /**
          * <p>The account have Shutdown-delay Privilege, After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</p>
@@ -207,6 +213,9 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         @NameInMap("NewBuyStatus")
         public String newBuyStatus;
+
+        @NameInMap("RegisterCountryCode")
+        public String registerCountryCode;
 
         /**
          * <p>Valid mobile number of Distribution Customer.</p>
@@ -274,12 +283,28 @@ public class GetAccountInfoResponseBody extends TeaModel {
             return this.cid;
         }
 
+        public GetAccountInfoResponseBodyAccountInfoListAccountInfo setCustomerAccountType(Integer customerAccountType) {
+            this.customerAccountType = customerAccountType;
+            return this;
+        }
+        public Integer getCustomerAccountType() {
+            return this.customerAccountType;
+        }
+
         public GetAccountInfoResponseBodyAccountInfoListAccountInfo setCustomerBd(String customerBd) {
             this.customerBd = customerBd;
             return this;
         }
         public String getCustomerBd() {
             return this.customerBd;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfoListAccountInfo setCustomerEnterpriseCertified(Integer customerEnterpriseCertified) {
+            this.customerEnterpriseCertified = customerEnterpriseCertified;
+            return this;
+        }
+        public Integer getCustomerEnterpriseCertified() {
+            return this.customerEnterpriseCertified;
         }
 
         public GetAccountInfoResponseBodyAccountInfoListAccountInfo setDelayAmount(String delayAmount) {
@@ -320,6 +345,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
         public String getNewBuyStatus() {
             return this.newBuyStatus;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfoListAccountInfo setRegisterCountryCode(String registerCountryCode) {
+            this.registerCountryCode = registerCountryCode;
+            return this;
+        }
+        public String getRegisterCountryCode() {
+            return this.registerCountryCode;
         }
 
         public GetAccountInfoResponseBodyAccountInfoListAccountInfo setRemark(String remark) {
