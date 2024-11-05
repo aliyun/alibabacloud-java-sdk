@@ -34,24 +34,90 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
+    /**
+     * <p>The backup retention policy configured for the instance. Valid values:</p>
+     * <ol>
+     * <li>0: All backup sets are immediately deleted when the instance is released.</li>
+     * <li>1: Automatic backup is performed and the backup set is retained for a long period of time when the instance is released.</li>
+     * <li>2: Automatic backup is performed and all backup sets are retained for a long period of time when the instance is released.</li>
+     * </ol>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     public Integer backupRetentionPolicyOnClusterDeletion;
 
+    /**
+     * <p>The retention period of Cross-regional backup.
+     * Valid values:</p>
+     * <ul>
+     * <li><strong>Monday</strong></li>
+     * <li><strong>Tuesday</strong></li>
+     * <li><strong>Wednesday</strong></li>
+     * <li><strong>Thursday</strong></li>
+     * <li><strong>Friday</strong></li>
+     * <li><strong>Saturday</strong></li>
+     * <li><strong>Sunday</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Monday</p>
+     */
     @NameInMap("CrossBackupPeriod")
     public String crossBackupPeriod;
 
+    /**
+     * <p>The retention type of Cross-regional  log backup.</p>
+     * <ul>
+     * <li>delay : retain the backup for a period of time.</li>
+     * <li>never : retain the backup permanently.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>delay</p>
+     */
     @NameInMap("CrossLogRetentionType")
     public String crossLogRetentionType;
 
+    /**
+     * <p>The retention time of Cross-regional log backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("CrossLogRetentionValue")
     public Integer crossLogRetentionValue;
 
+    /**
+     * <p>The retention type of Cross-regional backup.</p>
+     * <ul>
+     * <li>delay : retain the backup for a period of time.</li>
+     * <li>never : retain the backup permanently.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>delay</p>
+     */
     @NameInMap("CrossRetentionType")
     public String crossRetentionType;
 
+    /**
+     * <p>The retention time of Cross-regional backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("CrossRetentionValue")
     public Integer crossRetentionValue;
 
+    /**
+     * <p>The region ID of the cross-regional backup..</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("DestRegion")
     public String destRegion;
 
@@ -68,6 +134,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    /**
+     * <p>Whether to turn on cross-regional log backup.</p>
+     * <ul>
+     * <li>1: turn on . Used for sharded cluster.</li>
+     * <li>0: turn off. Used for replicate set.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("EnableCrossLogBackup")
     public Integer enableCrossLogBackup;
 
@@ -116,6 +192,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
+    /**
+     * <p>The time of next standard backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-06-19T19:11Z</p>
+     */
     @NameInMap("PreferredNextBackupTime")
     public String preferredNextBackupTime;
 
@@ -141,6 +223,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("SnapshotBackupType")
     public String snapshotBackupType;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("SrcRegion")
     public String srcRegion;
 

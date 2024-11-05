@@ -14,6 +14,16 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The architecture of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>sharding</strong>: sharded cluster instance</li>
+     * <li><strong>replicate</strong>: replica set or standalone instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sharding</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -32,6 +42,12 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("SrcRegion")
     public String srcRegion;
 

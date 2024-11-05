@@ -168,7 +168,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The database engine of the instance. The value is fixed as <strong>MongoDB</strong>.</p>
+     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>
@@ -338,6 +338,18 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    /**
+     * <p>The backup restore type of the instance.</p>
+     * <ul>
+     * <li>0: restore an instance to the specified backup set.</li>
+     * <li>1:  restore an instance to the specified time.</li>
+     * <li>2: restore an  released instance to the specified backup set.</li>
+     * <li>3：restore an instance to the specified cross-regional backup set.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RestoreType")
     public String restoreType;
 
@@ -408,20 +420,26 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required when restore type is set to 2 or 3.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SrcRegion")
     public String srcRegion;
 
     /**
-     * <p>The storage engine of the instance. Default value: WiredTiger. Valid values:</p>
-     * <ul>
-     * <li><strong>WiredTiger</strong></li>
-     * <li><strong>RocksDB</strong></li>
-     * <li><strong>TerarkDB</strong></li>
-     * </ul>
+     * <p>The storage engine of the instance. Set the value to <strong>WiredTiger</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the storage engine of the source instance.</li>
-     * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
+     * <li>If you call this operation to clone an instance or restore an instance from the recycle bin, set this parameter to the storage engine of the source instance.</li>
+     * <li>For more information about the limits on database versions and storage engines of an instance, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
      * </ul>
      * </blockquote>
      * 

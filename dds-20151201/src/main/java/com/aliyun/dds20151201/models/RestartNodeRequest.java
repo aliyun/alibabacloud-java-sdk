@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class RestartNodeRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,11 @@ public class RestartNodeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The ID of the shard, mongos, or ConfigServer node in a child instance of the sharded cluster instance.</p>
+     * <blockquote>
+     * <p> If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, you must specify this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>d-bp128a003436****</p>
      */
@@ -33,6 +42,11 @@ public class RestartNodeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The role ID of the node.</p>
+     * <ol>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/468469.html">DescribeReplicaSetRole</a> operation to query the role ID of a node in a replica set instance.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/468472.html">DescribeRoleZoneInfo</a> operation to query the role ID of a node in a sharded cluster instance.</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

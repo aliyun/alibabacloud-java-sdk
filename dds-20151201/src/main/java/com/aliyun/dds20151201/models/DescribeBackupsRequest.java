@@ -27,6 +27,15 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The region ID of the Cross-regional backup.</p>
+     * <blockquote>
+     * <p> This parameter is required for the Cross-regional backup.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("DestRegion")
     public String destRegion;
 
@@ -58,7 +67,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,7 +76,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries to return per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
@@ -86,6 +95,18 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required if you want to query the backup sets of a released instance.</li>
+     * <li>This parameter is required if you want to query cross-region backups.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("SrcRegion")
     public String srcRegion;
 

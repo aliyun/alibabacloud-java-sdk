@@ -77,6 +77,15 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         public String connectionPort;
 
         /**
+         * <p>The connection type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SRV</p>
+         */
+        @NameInMap("ConnectionType")
+        public String connectionType;
+
+        /**
          * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +149,14 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
         public String getConnectionPort() {
             return this.connectionPort;
+        }
+
+        public DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet setConnectionType(String connectionType) {
+            this.connectionType = connectionType;
+            return this;
+        }
+        public String getConnectionType() {
+            return this.connectionType;
         }
 
         public DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet setExpiredTime(String expiredTime) {

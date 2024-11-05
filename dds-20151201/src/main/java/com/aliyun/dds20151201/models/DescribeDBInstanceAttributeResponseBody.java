@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The information of the instance.</p>
+     * <p>The instance details.</p>
      */
     @NameInMap("DBInstances")
     public DescribeDBInstanceAttributeResponseBodyDBInstances DBInstances;
@@ -50,6 +50,28 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectString")
         public String connectString;
 
+        /**
+         * <p>The minor version of the current MongoDB kernel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb_20230613_4.0.25</p>
+         */
+        @NameInMap("CurrentKernelVersion")
+        public String currentKernelVersion;
+
+        /**
+         * <p>The lock status of the Configserver node. Valid values:</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The instance is not locked.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
@@ -136,6 +158,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectString() {
             return this.connectString;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverListConfigserverAttribute setCurrentKernelVersion(String currentKernelVersion) {
+            this.currentKernelVersion = currentKernelVersion;
+            return this;
+        }
+        public String getCurrentKernelVersion() {
+            return this.currentKernelVersion;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverListConfigserverAttribute setLockMode(String lockMode) {
@@ -241,6 +271,28 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectSting")
         public String connectSting;
 
+        /**
+         * <p>The minor version of the current MongoDB kernel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb_20220518_4.0.21</p>
+         */
+        @NameInMap("CurrentKernelVersion")
+        public String currentKernelVersion;
+
+        /**
+         * <p>The lock status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The instance is not locked.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
@@ -351,6 +403,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectSting() {
             return this.connectSting;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosListMongosAttribute setCurrentKernelVersion(String currentKernelVersion) {
+            this.currentKernelVersion = currentKernelVersion;
+            return this;
+        }
+        public String getCurrentKernelVersion() {
+            return this.currentKernelVersion;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosListMongosAttribute setLockMode(String lockMode) {
@@ -635,6 +695,28 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectString")
         public String connectString;
 
+        /**
+         * <p>The minor version of the current MongoDB kernel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb_20230613_4.0.25</p>
+         */
+        @NameInMap("CurrentKernelVersion")
+        public String currentKernelVersion;
+
+        /**
+         * <p>The lock status of the shard node. Valid values:</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The instance is not locked.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
@@ -648,7 +730,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
-         * <p>shard节点的最大云盘吞吐量。</p>
+         * <p>The maximum MBPS of the shard node.</p>
          * 
          * <strong>example:</strong>
          * <p>350</p>
@@ -739,6 +821,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectString() {
             return this.connectString;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setCurrentKernelVersion(String currentKernelVersion) {
+            this.currentKernelVersion = currentKernelVersion;
+            return this;
+        }
+        public String getCurrentKernelVersion() {
+            return this.currentKernelVersion;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setLockMode(String lockMode) {
@@ -944,7 +1034,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The information of the Configserver nodes.</p>
+         * <p>The details of the ConfigServer node.</p>
          * <blockquote>
          * <p> This parameter is returned if the instance is a sharded cluster instance.</p>
          * </blockquote>
@@ -1241,7 +1331,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxIOPS;
 
         /**
-         * <p>实例的最大云盘吞吐量，单位MB/s。</p>
+         * <p>The maximum MBPS of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>350</p>
@@ -1250,7 +1340,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxMBPS;
 
         /**
-         * <p>The information of the mongos nodes.</p>
+         * <p>The details of the mongos node.</p>
          * <blockquote>
          * <p> This parameter is returned if the instance is a sharded cluster instance.</p>
          * </blockquote>
@@ -1409,7 +1499,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String secondaryZoneId;
 
         /**
-         * <p>The information of the shard nodes.</p>
+         * <p>The details of the shard node.</p>
          * <blockquote>
          * <p> This parameter is returned if the instance is a sharded cluster instance.</p>
          * </blockquote>

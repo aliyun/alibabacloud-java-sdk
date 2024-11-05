@@ -212,6 +212,9 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
+        @NameInMap("ConnectionType")
+        public String connectionType;
+
         /**
          * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
          * 
@@ -298,6 +301,9 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
+        @NameInMap("TxtRecord")
+        public String txtRecord;
+
         /**
          * <p>The VPC ID of the instance.</p>
          * <blockquote>
@@ -325,6 +331,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         public static DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress self = new DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setConnectionType(String connectionType) {
+            this.connectionType = connectionType;
+            return this;
+        }
+        public String getConnectionType() {
+            return this.connectionType;
         }
 
         public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setExpiredTime(String expiredTime) {
@@ -389,6 +403,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setTxtRecord(String txtRecord) {
+            this.txtRecord = txtRecord;
+            return this;
+        }
+        public String getTxtRecord() {
+            return this.txtRecord;
         }
 
         public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setVPCId(String VPCId) {
