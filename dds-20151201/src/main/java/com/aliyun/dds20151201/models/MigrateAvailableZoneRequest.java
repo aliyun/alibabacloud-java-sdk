@@ -31,6 +31,12 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>The ID of the destination hidden zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-n</p>
+     */
     @NameInMap("HiddenZoneId")
     public String hiddenZoneId;
 
@@ -46,6 +52,12 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the destination secondary zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
+     */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 

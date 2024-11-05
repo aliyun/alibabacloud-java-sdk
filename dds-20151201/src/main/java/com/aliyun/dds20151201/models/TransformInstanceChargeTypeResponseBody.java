@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21084641369****</p>
@@ -14,7 +14,7 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D8F1D721-6439-4257-A89C-F1E8E9C9****</p>

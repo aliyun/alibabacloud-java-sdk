@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The frequency at which high-frequency backup is created. Valid values:</p>
+     * <p>The frequency at which high-frequency backups are generated. Valid values:</p>
      * <ul>
      * <li><strong>-1</strong>: High-frequency backup is disabled.</li>
      * <li><strong>30</strong>: High-frequency backups are generated every 30 minutes.</li>
@@ -20,9 +20,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>If the <strong>SnapshotBackupType</strong> parameter is set to <strong>Standard</strong>, this parameter is set to -1 and cannot be changed.</p>
+     * <li><p>If you set the <strong>SnapshotBackupType</strong> parameter to <strong>Standard</strong>, you must fix the value of this parameter to -1.</p>
      * </li>
-     * <li><p>High-frequency backup takes effect only when the <strong>SnapshotBackupType</strong> parameter is set to <strong>Flash</strong> and the value of this parameter is greater than 0.</p>
+     * <li><p>High-frequency backup takes effect only when you set the <strong>SnapshotBackupType</strong> parameter to <strong>Flash</strong> and this parameter to a value greater than 0.</p>
      * </li>
      * </ul>
      * 
@@ -49,24 +49,106 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     public Long backupRetentionPeriod;
 
+    /**
+     * <p>The backup retention policy configured for the instance. Valid values:</p>
+     * <ol>
+     * <li>0: All backup sets are immediately deleted when the instance is released.</li>
+     * <li>1: Automatic backup is performed and the backup set is retained for a long period of time when the instance is released.</li>
+     * <li>2: Automatic backup is performed and all backup sets are retained for a long period of time when the instance is released.</li>
+     * </ol>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/4920562.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     public Integer backupRetentionPolicyOnClusterDeletion;
 
+    /**
+     * <p>The retention period of Cross-regional backup.
+     * Valid values:</p>
+     * <ul>
+     * <li><strong>Monday</strong></li>
+     * <li><strong>Tuesday</strong></li>
+     * <li><strong>Wednesday</strong></li>
+     * <li><strong>Thursday</strong></li>
+     * <li><strong>Friday</strong></li>
+     * <li><strong>Saturday</strong></li>
+     * <li><strong>Sunday</strong></li>
+     * </ul>
+     * <p>**</p>
+     * <blockquote>
+     * <ul>
+     * <li>Separate multiple values with commas (,).</li>
+     * <li>When SnapshotBackupType  is set to standard, this value needs to be a subset of the PreferredBackupPeriod.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</p>
+     */
     @NameInMap("CrossBackupPeriod")
     public String crossBackupPeriod;
 
+    /**
+     * <p>The operation strategy of Cross-regional backup.</p>
+     * <ul>
+     * <li>update</li>
+     * <li>delete</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
+     */
     @NameInMap("CrossBackupType")
     public String crossBackupType;
 
+    /**
+     * <p>The retention type of Cross-regional  log backup.</p>
+     * <ul>
+     * <li>delay : retain the backup for a period of time.</li>
+     * <li>never : retain the backup permanently.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>delay</p>
+     */
     @NameInMap("CrossLogRetentionType")
     public String crossLogRetentionType;
 
+    /**
+     * <p>The retention time of Cross-regional log backup, 3 - 1825 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("CrossLogRetentionValue")
     public Integer crossLogRetentionValue;
 
+    /**
+     * <p>The retention type of Cross-regional backup.</p>
+     * <ul>
+     * <li>delay : retain the backup for a period of time.</li>
+     * <li>never : retain the backup permanently.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>delay</p>
+     */
     @NameInMap("CrossRetentionType")
     public String crossRetentionType;
 
+    /**
+     * <p>The retention time of Cross-regional backup, 3 - 1825 days.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Used and must be used when CrossRetentionType is delay.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("CrossRetentionValue")
     public Integer crossRetentionValue;
 
@@ -80,6 +162,17 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The region id of Cross-regional backup.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Required for Cross-regional backup.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("DestRegion")
     public String destRegion;
 
@@ -96,15 +189,44 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("EnableBackupLog")
     public Long enableBackupLog;
 
+    /**
+     * <p>Whether to turn on cross-regional log backup.</p>
+     * <ul>
+     * <li>1：turn on . Used for sharded cluster.</li>
+     * <li>0: turn off. Used for replicate set.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("EnableCrossLogBackup")
     public Integer enableCrossLogBackup;
 
     /**
      * <p>The number of days for which high-frequency backups are retained. Before you use this parameter, make sure that you specify the BackupInterval parameter. By default, high-frequency backups are retained for one day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HighFrequencyBackupRetention")
     public Long highFrequencyBackupRetention;
 
+    /**
+     * <p>The instance architecture. Valid values:</p>
+     * <ul>
+     * <li>replicate</li>
+     * <li>sharding</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required  for Cross-regional backup.</li>
+     * <li>This parameter is required for backup recovery of deleted instances.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>replicate</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -135,6 +257,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <li><strong>Saturday</strong></li>
      * <li><strong>Sunday</strong></li>
      * </ul>
+     * <p>**</p>
+     * <p><strong>Notice</strong>: To ensure data security, make sure that the system backs up data at least twice a week.</p>
      * <blockquote>
      * <p> Separate multiple values with commas (,).</p>
      * </blockquote>
@@ -176,6 +300,18 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("SnapshotBackupType")
     public String snapshotBackupType;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Required for Cross-regional backup.</li>
+     * <li>Required for backup recovery of deleted instances.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("SrcRegion")
     public String srcRegion;
 

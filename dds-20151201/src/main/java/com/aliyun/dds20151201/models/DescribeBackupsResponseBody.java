@@ -133,7 +133,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The internal download URL of the backup set.</p>
          * <blockquote>
-         * <p> You can use the URL to download the specified backup set on an Elastic Compute Service (ECS) instance that is in the same Virtual Private Cloud (VPC) as the ApsaraDB for MongoDB instance.</p>
+         * <p> You can use the URL to download the specified backup set on an Elastic Compute Service (ECS) instance that is in the same virtual private cloud (VPC) as the ApsaraDB for MongoDB instance.</p>
          * </blockquote>
          */
         @NameInMap("BackupIntranetDownloadURL")
@@ -165,7 +165,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The backup mode of the backup set. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong>:</li>
+         * <li><strong>Automated</strong></li>
          * <li><strong>Manual</strong></li>
          * </ul>
          * 
@@ -175,9 +175,21 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The name of the backup set (invalid now).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678.tar.gz</p>
+         */
         @NameInMap("BackupName")
         public String backupName;
 
+        /**
+         * <p>The scale of the backup set (invalid now).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBInstance</p>
+         */
         @NameInMap("BackupScale")
         public String backupScale;
 
@@ -225,6 +237,19 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupType")
         public String backupType;
 
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        /**
+         * <p>Availability of the backup set.</p>
+         * <ul>
+         * <li>0: unavailable</li>
+         * <li>1: available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsAvail")
         public Boolean isAvail;
 
@@ -343,6 +368,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupType() {
             return this.backupType;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setIsAvail(Boolean isAvail) {

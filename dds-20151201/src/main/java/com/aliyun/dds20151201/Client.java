@@ -338,6 +338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestRegion", request.destRegion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
+            query.put("EngineVersion", request.engineVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             query.put("InstanceType", request.instanceType);
         }
@@ -569,7 +573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+     * <p>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
      * For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
      * To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</p>
      * 
@@ -766,7 +770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+     * <p>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
      * For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
      * To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</p>
      * 
@@ -1071,7 +1075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a> of ApsaraDB for MongoDB before you call this operation.</p>
+     * <p>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</p>
      * <ul>
      * <li>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</li>
      * <li>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</li>
@@ -1258,7 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a> of ApsaraDB for MongoDB before you call this operation.</p>
+     * <p>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</p>
      * <ul>
      * <li>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</li>
      * <li>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</li>
@@ -4878,6 +4882,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeRestoreDBInstanceListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRestoreDBInstanceListResponse
+     */
+    public DescribeRestoreDBInstanceListResponse describeRestoreDBInstanceListWithOptions(DescribeRestoreDBInstanceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creationTimeAfter)) {
+            query.put("CreationTimeAfter", request.creationTimeAfter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRestoreDBInstanceList"),
+            new TeaPair("version", "2015-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRestoreDBInstanceListResponse());
+    }
+
+    /**
+     * @param request DescribeRestoreDBInstanceListRequest
+     * @return DescribeRestoreDBInstanceListResponse
+     */
+    public DescribeRestoreDBInstanceListResponse describeRestoreDBInstanceList(DescribeRestoreDBInstanceListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRestoreDBInstanceListWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
@@ -6282,6 +6352,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cross-regional backup only supports  MongoDB sharded cluster instance and MongoDB replica set.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a backup policy for an ApsaraDB for MongoDB instance.</p>
      * 
@@ -6406,6 +6479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cross-regional backup only supports  MongoDB sharded cluster instance and MongoDB replica set.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a backup policy for an ApsaraDB for MongoDB instance.</p>
      * 
@@ -8668,8 +8744,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</p>
+     * <blockquote>
+     * <p> When you call this operation, the instance must meet the following requirements:</p>
+     * </blockquote>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>The instance is a replica set or sharded cluster instance of the standard edition.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>重启副本集单个节点</p>
+     * <p>Restarts a node in an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request RestartNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8724,8 +8810,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</p>
+     * <blockquote>
+     * <p> When you call this operation, the instance must meet the following requirements:</p>
+     * </blockquote>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>The instance is a replica set or sharded cluster instance of the standard edition.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>重启副本集单个节点</p>
+     * <p>Restarts a node in an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request RestartNodeRequest
      * @return RestartNodeResponse
@@ -8995,13 +9091,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a> of ApsaraDB for MongoDB.
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
      * <ul>
      * <li>The instance is in the Running state.</li>
      * <li>Your instance has no unpaid billing method change orders.</li>
      * <li>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<blockquote>
-     * <p>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</p>
+     * <p>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -9083,13 +9179,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a> of ApsaraDB for MongoDB.
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
      * <ul>
      * <li>The instance is in the Running state.</li>
      * <li>Your instance has no unpaid billing method change orders.</li>
      * <li>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<blockquote>
-     * <p>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</p>
+     * <p>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -9354,6 +9450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.switchMode)) {
+            query.put("SwitchMode", request.switchMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -9431,6 +9531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchMode)) {
+            query.put("SwitchMode", request.switchMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -44,6 +44,9 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     @NameInMap("DestRegion")
     public String destRegion;
 
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
     /**
      * <p>The instance architecture. Valid values:</p>
      * <ul>
@@ -167,6 +170,14 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     }
     public String getDestRegion() {
         return this.destRegion;
+    }
+
+    public CheckRecoveryConditionRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public CheckRecoveryConditionRequest setInstanceType(String instanceType) {

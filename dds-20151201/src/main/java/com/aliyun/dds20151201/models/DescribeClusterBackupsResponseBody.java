@@ -472,6 +472,9 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         @NameInMap("ClusterBackupStatus")
         public String clusterBackupStatus;
 
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
         /**
          * <p>The additional information in the JSON format.</p>
          */
@@ -567,6 +570,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
         public String getClusterBackupStatus() {
             return this.clusterBackupStatus;
+        }
+
+        public DescribeClusterBackupsResponseBodyClusterBackups setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         public DescribeClusterBackupsResponseBodyClusterBackups setExtraInfo(DescribeClusterBackupsResponseBodyClusterBackupsExtraInfo extraInfo) {

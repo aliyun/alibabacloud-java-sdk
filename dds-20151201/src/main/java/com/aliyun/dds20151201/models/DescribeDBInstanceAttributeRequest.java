@@ -15,7 +15,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * <p>The database engine. Set the value to <strong>MongoDB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>
@@ -24,10 +24,10 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>Specifies whether to delete the instance. Valid values:</p>
+     * <p>Specifies whether to query instances that are deleted. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: queries the details of running instances.</li>
-     * <li><strong>true</strong>: queries the details of deleted instances.</li>
+     * <li><strong>false</strong>: queries instances that are running.</li>
+     * <li><strong>true</strong>: queries instance that are deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
