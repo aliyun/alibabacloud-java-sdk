@@ -4882,6 +4882,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</p>
+     * 
      * @param request DescribeRestoreDBInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRestoreDBInstanceListResponse
@@ -4939,6 +4942,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</p>
+     * 
      * @param request DescribeRestoreDBInstanceListRequest
      * @return DescribeRestoreDBInstanceListResponse
      */

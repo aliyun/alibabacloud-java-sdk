@@ -11,7 +11,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
     /**
-     * <p>The endpoints of ApsaraDB for MongoDB instances.</p>
+     * <p>The endpoints of the ApsaraDB for MongoDB sharded cluster instance.</p>
      */
     @NameInMap("NetworkAddresses")
     public DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses;
@@ -212,6 +212,16 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
+        /**
+         * <p>The public endpoint type. Valid values:</p>
+         * <ul>
+         * <li><strong>SRV</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SRV</p>
+         */
         @NameInMap("ConnectionType")
         public String connectionType;
 
@@ -301,6 +311,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>Txt record which can be used to store MongoDB-related meta data, such as version, configuration parameters and etc. With the combination of txt record and other technology, for example SRV record, the MongoDB client can complete the complex service discovery and configuration passing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongo.example.com. IN TXT &quot;config=replicaSet=myReplicaSet&quot;</p>
+         */
         @NameInMap("TxtRecord")
         public String txtRecord;
 

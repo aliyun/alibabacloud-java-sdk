@@ -4,10 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
+    /**
+     * <p>DB instances list.</p>
+     */
     @NameInMap("DBInstances")
     public DescribeRestoreDBInstanceListResponseBodyDBInstances DBInstances;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AF0AD89-ED4F-44AD-B65F-BFC1D5Cxxxxx</p>
      */
@@ -29,6 +38,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of instances in the query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,16 +93,26 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
 
     public static class DescribeRestoreDBInstanceListResponseBodyDBInstancesDBInstance extends TeaModel {
         /**
+         * <p>The time of instance creation, formatted as <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z (UTC time).</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-02T07:43:59Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-database</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dds-bp12c5b040dc****</p>
          */
@@ -99,6 +120,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -106,6 +129,12 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String DBInstanceStatus;
 
         /**
+         * <p>The architecture of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>replicate</p>
          */
@@ -113,6 +142,17 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
+         * <p>The database engine version of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>7.0</strong></li>
+         * <li><strong>6.0</strong></li>
+         * <li><strong>5.0</strong></li>
+         * <li><strong>4.4</strong></li>
+         * <li><strong>4.2</strong></li>
+         * <li><strong>4.0</strong></li>
+         * <li><strong>3.4</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>4.2</p>
          */
@@ -120,6 +160,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The secondary availability zone 2 for the instance when implementing multi-AZ deployment.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */
@@ -127,6 +169,12 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String hiddenZoneId;
 
         /**
+         * <p>Specifies whether the instance is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not deleted</li>
+         * <li><strong>1</strong>: deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -134,6 +182,15 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public Integer isDeleted;
 
         /**
+         * <p>The locked state of the instance, value description:</p>
+         * <ul>
+         * <li>Unlock: Normal.</li>
+         * <li>ManualLock: Manually triggered lock.</li>
+         * <li>LockByExpiration: Automatically locked due to expiration.</li>
+         * <li>LockByRestoration: Automatically locked before restoration.</li>
+         * <li>LockByDiskQuota: Automatically locked due to disk quota exceeded.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Unlock</p>
          */
@@ -141,6 +198,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String lockMode;
 
         /**
+         * <p>The region ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -148,6 +207,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The secondary availability zone 1 for the instance when implementing multi-AZ deployment.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -155,6 +216,8 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         public String secondaryZoneId;
 
         /**
+         * <p>The zone ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
          */
