@@ -26,6 +26,9 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     @NameInMap("JobParams")
     public String jobParams;
 
+    @NameInMap("ModelId")
+    public String modelId;
+
     @NameInMap("Name")
     public String name;
 
@@ -79,6 +82,14 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     }
     public String getJobParams() {
         return this.jobParams;
+    }
+
+    public SubmitIProductionJobShrinkRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
     }
 
     public SubmitIProductionJobShrinkRequest setName(String name) {

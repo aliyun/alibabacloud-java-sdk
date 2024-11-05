@@ -104,6 +104,9 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
     }
 
     public static class StartRtcRobotInstanceRequestConfig extends TeaModel {
+        @NameInMap("AsrMaxSilence")
+        public Integer asrMaxSilence;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -114,6 +117,15 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("UseVoiceprint")
+        public Boolean useVoiceprint;
+
+        @NameInMap("UserOfflineTimeout")
+        public Integer userOfflineTimeout;
+
+        @NameInMap("UserOnlineTimeout")
+        public Integer userOnlineTimeout;
+
         /**
          * <strong>example:</strong>
          * <p>zhixiaoxia</p>
@@ -121,9 +133,20 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
         @NameInMap("VoiceId")
         public String voiceId;
 
+        @NameInMap("VoiceprintId")
+        public String voiceprintId;
+
         public static StartRtcRobotInstanceRequestConfig build(java.util.Map<String, ?> map) throws Exception {
             StartRtcRobotInstanceRequestConfig self = new StartRtcRobotInstanceRequestConfig();
             return TeaModel.build(map, self);
+        }
+
+        public StartRtcRobotInstanceRequestConfig setAsrMaxSilence(Integer asrMaxSilence) {
+            this.asrMaxSilence = asrMaxSilence;
+            return this;
+        }
+        public Integer getAsrMaxSilence() {
+            return this.asrMaxSilence;
         }
 
         public StartRtcRobotInstanceRequestConfig setEnableVoiceInterrupt(Boolean enableVoiceInterrupt) {
@@ -142,12 +165,44 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
             return this.greeting;
         }
 
+        public StartRtcRobotInstanceRequestConfig setUseVoiceprint(Boolean useVoiceprint) {
+            this.useVoiceprint = useVoiceprint;
+            return this;
+        }
+        public Boolean getUseVoiceprint() {
+            return this.useVoiceprint;
+        }
+
+        public StartRtcRobotInstanceRequestConfig setUserOfflineTimeout(Integer userOfflineTimeout) {
+            this.userOfflineTimeout = userOfflineTimeout;
+            return this;
+        }
+        public Integer getUserOfflineTimeout() {
+            return this.userOfflineTimeout;
+        }
+
+        public StartRtcRobotInstanceRequestConfig setUserOnlineTimeout(Integer userOnlineTimeout) {
+            this.userOnlineTimeout = userOnlineTimeout;
+            return this;
+        }
+        public Integer getUserOnlineTimeout() {
+            return this.userOnlineTimeout;
+        }
+
         public StartRtcRobotInstanceRequestConfig setVoiceId(String voiceId) {
             this.voiceId = voiceId;
             return this;
         }
         public String getVoiceId() {
             return this.voiceId;
+        }
+
+        public StartRtcRobotInstanceRequestConfig setVoiceprintId(String voiceprintId) {
+            this.voiceprintId = voiceprintId;
+            return this;
+        }
+        public String getVoiceprintId() {
+            return this.voiceprintId;
         }
 
     }

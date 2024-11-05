@@ -9820,6 +9820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobParams", request.jobParams);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("ModelId", request.modelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
