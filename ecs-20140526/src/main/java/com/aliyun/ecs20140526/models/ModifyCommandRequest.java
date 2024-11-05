@@ -34,6 +34,14 @@ public class ModifyCommandRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+     */
     @NameInMap("Launcher")
     public String launcher;
 

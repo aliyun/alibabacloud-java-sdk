@@ -398,6 +398,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Latest")
         public Boolean latest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+         */
         @NameInMap("Launcher")
         public String launcher;
 

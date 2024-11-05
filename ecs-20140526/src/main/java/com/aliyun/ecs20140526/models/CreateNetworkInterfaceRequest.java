@@ -299,6 +299,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("SourceDestCheck")
+    public Boolean sourceDestCheck;
+
     /**
      * <p>The tags to add to the ENI.</p>
      */
@@ -583,6 +586,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
+    }
+
+    public CreateNetworkInterfaceRequest setSourceDestCheck(Boolean sourceDestCheck) {
+        this.sourceDestCheck = sourceDestCheck;
+        return this;
+    }
+    public Boolean getSourceDestCheck() {
+        return this.sourceDestCheck;
     }
 
     public CreateNetworkInterfaceRequest setTag(java.util.List<CreateNetworkInterfaceRequestTag> tag) {

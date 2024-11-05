@@ -94,6 +94,15 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
+    /**
+     * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+     */
     @NameInMap("Launcher")
     public String launcher;
 

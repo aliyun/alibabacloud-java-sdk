@@ -237,6 +237,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
+        /**
+         * <p>The number of rules that reference security groups in the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("GroupToGroupRuleCount")
         public Integer groupToGroupRuleCount;
 
@@ -249,6 +255,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The number of rules in the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 

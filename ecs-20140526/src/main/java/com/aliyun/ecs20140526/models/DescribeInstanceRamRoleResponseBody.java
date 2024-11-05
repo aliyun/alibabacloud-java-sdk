@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     /**
-     * <p>Details about the instance RAM roles.</p>
+     * <p>The IDs of the ECS instances and the names of the corresponding instance RAM roles.</p>
      */
     @NameInMap("InstanceRamRoleSets")
     public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets;
 
     /**
-     * <p>The region ID of the instance RAM role.</p>
+     * <p>The region ID of the ECS instances.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -29,7 +29,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instance RAM roles returned.</p>
+     * <p>The number of ECS instances returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

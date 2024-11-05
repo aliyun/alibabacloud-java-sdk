@@ -1362,8 +1362,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679686.html">DescribeInstanceRamRole</a> operation to query the instance RAM roles that are attached to ECS instances.</p>
+     * <blockquote>
+     * <p> If an ECS instance already has an instance RAM role, an error is returned when you attach another instance RAM role to the instance.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Attaches an instance Resource Access Management (RAM) role to one or more Elastic Compute Service (ECS) instances. An instance can have only a single instance RAM role. If an instance already has an instance RAM role, an error is returned when you attach another instance RAM role to the instance.</p>
+     * <p>Attaches an instance Resource Access Management (RAM) role to Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request AttachInstanceRamRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1418,8 +1424,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679686.html">DescribeInstanceRamRole</a> operation to query the instance RAM roles that are attached to ECS instances.</p>
+     * <blockquote>
+     * <p> If an ECS instance already has an instance RAM role, an error is returned when you attach another instance RAM role to the instance.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Attaches an instance Resource Access Management (RAM) role to one or more Elastic Compute Service (ECS) instances. An instance can have only a single instance RAM role. If an instance already has an instance RAM role, an error is returned when you attach another instance RAM role to the instance.</p>
+     * <p>Attaches an instance Resource Access Management (RAM) role to Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request AttachInstanceRamRoleRequest
      * @return AttachInstanceRamRoleResponse
@@ -3539,7 +3551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Cloud Assistant command, which can be a Shell, PowerShell, or batch command. You can specify parameters, such as Name, Type, and CommandContent, in the request.</p>
+     * <p>Creates a Cloud Assistant command, which can be a Shell, PowerShell, or batch command.</p>
      * 
      * @param request CreateCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3659,7 +3671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Cloud Assistant command, which can be a Shell, PowerShell, or batch command. You can specify parameters, such as Name, Type, and CommandContent, in the request.</p>
+     * <p>Creates a Cloud Assistant command, which can be a Shell, PowerShell, or batch command.</p>
      * 
      * @param request CreateCommandRequest
      * @return CreateCommandResponse
@@ -5085,67 +5097,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query available resources in a specific region or zone. If you want to batch create instances that automatically enter the Running state after they are created, we recommend that you call the <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a> operation.
-     * Take note of the following items:</p>
+     * <p> This operation is no longer iterated or updated. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.
+     * <strong>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</strong>
+     * This operation is an asynchronous operation. After a request to create an ECS instance is sent, an ECS instance ID is immediately returned but the instance may be still being created. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. If the status of the instance is <code>Stopped</code> in the DescribeInstanceStatus response, the instance is created. In this case, you can call the <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> operation to start the instance.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>Billing</strong>:<ul>
-     * <li>You must familiarize yourself with ECS billing methods before you create an instance because you may be charged for the resources used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</li>
+     * <li><strong>Prerequisites</strong><ul>
+     * <li>Make sure that you are familiar with the ECS billing methods because you may be charged for the resources that are used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</li>
+     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Considerations</strong>:<ul>
      * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
+     * <li>If you want to create instances with 512 MiB of memory, you cannot use Windows Server images except for Windows Server Semi-Annual Channel images. If you want to create instances with 4 GiB or more of memory, you cannot use 32-bit OS image.</li>
+     * <li>If you call the CreateInstance operation to create an instance, no public IP address is automatically assigned to the instance. You can call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.
+     * **
+     * <strong>Note</strong> Starting November 27, 2020, when you create ECS instances or change ECS instance configurations, the maximum bandwidth value that you can specify is subject to the throttling policy of your account. To increase the maximum bandwidth value, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
      * </ul>
      * </li>
-     * <li><strong>Instance type</strong>:<ul>
-     * <li>You can use the <code>IoOptimized</code> parameter to specify whether to create an I/O optimized instance.</li>
+     * <li><strong>Suggestions</strong>:<ul>
      * <li>Instance type selection: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the performance data of instance types, or see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn about how to select instance types.</li>
-     * <li>Query of available resources: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.<blockquote>
-     * <p> If the <code>QuotaExceed.ElasticQuota</code> error is returned when you call this operation, it indicates that the maximum number of instances of the specified instance type in the region has been reached, or the maximum number of vCPUs for all instance types in a zone has been reached. You can go to the <a href="https://ecs.console.aliyun.com/?spm=a2c8b.12215451.favorites.decs.5e3a336aMGTtzy#/privileges/quota">ECS console</a> or <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to request a quota increase.</p>
-     * </blockquote>
-     * </li>
+     * <li>Query of available resources: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/49121.html">User data</a>: If the instance type supports user data, you can use the UserData parameter to pass in user data. User data is encoded in Base64. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then decode and decrypt the information in the same way within the instance.</li>
      * </ul>
      * </li>
-     * <li><strong>Image</strong>:<ul>
-     * <li>The image determines the system disk configurations of the new instance. The system disk of the new instance is a clone of the specified image.</li>
-     * <li>If you want to create instances with 512 MiB of memory, you cannot use Windows Server images except for Windows Server Semi-Annual Channel images.</li>
-     * <li>If you want to create instances with 4 GiB or more of memory, you cannot use 32-bit OS image.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Network type</strong>:<ul>
-     * <li>Each instance that resides in a virtual private cloud (VPC) must be connected to only a single vSwitch.</li>
-     * <li>If <code>VSwitchId</code> is specified, the security group specified by <code>SecurityGroupId</code> and the vSwitch specified by <code>VSwitchId</code> must belong to the same VPC.</li>
-     * <li>The value of <code>PrivateIpAddress</code> varies based on the value of <code>VSwitchId</code>. <code>PrivateIpAddress</code> cannot be separately specified. If <code>VSwitchId</code> and <code>PrivateIpAddress</code> are specified, the IP address specified by <code>PrivateIpAddress</code> must be an idle IP address in the CIDR block of the specified vSwitch.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Public bandwidth</strong>:<ul>
-     * <li>Starting November 27, 2020, the maximum bandwidth value that is available for you to create ECS instances or change ECS instance configurations is subject to the throttling policy of your account. To increase the bandwidth limit, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total maximum bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
-     * <li>If you call the <code>CreateInstance</code> operation to create an instance, no public IP addresses are assigned to the instance. You can call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to an instance.</li>
-     * <li>Network usage fees vary based on the settings of <code>InternetChargeType</code> and <code>InternetMaxBandwidthOut</code>.</li>
-     * <li>The value of <code>InternetMaxBandwidthIn</code> does not affect billing because inbound data traffic is free of charge.</li>
-     * <li>If <code>InternetChargeType</code> is set to PayByBandwidth, <code>InternetMaxBandwidthOut</code> specifies the fixed bandwidth. A fixed bandwidth is a specified amount of public bandwidth allocated to an instance that uses the pay-by-bandwidth billing method for network usage.</li>
-     * <li>If <code>InternetChargeType</code> is set to PayByTraffic, <code>InternetMaxBandwidthOut</code> specifies the peak bandwidth. A peak bandwidth is the maximum amount of public bandwidth that an instance can consume when the instance uses the pay-by-traffic billing method for network usage. Network usage costs are calculated based on the volume of network traffic.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Security group</strong>:<ul>
-     * <li>If no security groups are available in the region where you want to create an instance, you must call the <a href="https://help.aliyun.com/document_detail/25553.html">CreateSecurityGroup</a> operation to create a security group in that region first.</li>
-     * <li>The maximum number of instances that a security group can contain varies based on the security group type. For more information, see the &quot;Security group limits&quot; section in the <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a> topic.</li>
-     * <li>Instances in the same security group can communicate with each other over the internal network. By default, instances in different security groups cannot communicate with each other. You can allow communication between instances by allowing mutual access between the security groups to which the instances belong. For more information, see <a href="https://help.aliyun.com/document_detail/25554.html">AuthorizeSecurityGroup</a> and <a href="https://help.aliyun.com/document_detail/25560.html">AuthorizeSecurityGroupEgress</a>.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Storage</strong>:<ul>
-     * <li>The instance is assigned a system disk whose capacity varies based on the size of the specified image. The size of the system disk must be at least <code>20 GiB</code> and greater than or equal to the image size. For information about system disk categories, see the description of <code>SystemDisk.Category</code>.</li>
-     * <li>The system disk of an I/O optimized instance can only be an enhanced SSD (ESSD) (<code>cloud_essd</code>), a standard SSD (<code>cloud_ssd</code>), or an ultra disk (<code>cloud_efficiency</code>).</li>
-     * <li>The maximum size of a data disk varies based on the disk category. For more information, see the description of <code>DataDisk.N.Size</code>.</li>
-     * <li>Up to 16 data disks can be added to an instance. Mount points /dev/xvd[b-z] are automatically assigned to data disks in ascending alphanumeric order.<blockquote>
-     * <p> If the <code>QuotaExceed.DiskCapacity</code> error is returned when you call this operation, it indicates that the maximum capacity of the disks of the selected disk category in the specified zone has been reached. You can go to the <a href="https://quotas.console.aliyun.com/products/disk/quotas">Quota Center</a> to query and request a quota increase.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><strong>User data</strong>: If the instance type supports user data, you can use the UserData parameter to pass in user data.<a href="~~49121~~"></a> User data is encoded in Base64. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then decode and decrypt the information in the same way within the instance.</li>
-     * <li><strong>Others</strong>: When you call API operations by using Alibaba Cloud CLI or SDKs, you must delete periods (.) from some request parameters before you use the parameters. For example, use <code>SystemDiskCategory</code> instead of <code>SystemDisk.Category</code> as a request parameter.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.</p>
+     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify different parameters to create instances based on your business requirements.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5419,67 +5399,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query available resources in a specific region or zone. If you want to batch create instances that automatically enter the Running state after they are created, we recommend that you call the <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a> operation.
-     * Take note of the following items:</p>
+     * <p> This operation is no longer iterated or updated. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.
+     * <strong>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</strong>
+     * This operation is an asynchronous operation. After a request to create an ECS instance is sent, an ECS instance ID is immediately returned but the instance may be still being created. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. If the status of the instance is <code>Stopped</code> in the DescribeInstanceStatus response, the instance is created. In this case, you can call the <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> operation to start the instance.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>Billing</strong>:<ul>
-     * <li>You must familiarize yourself with ECS billing methods before you create an instance because you may be charged for the resources used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</li>
+     * <li><strong>Prerequisites</strong><ul>
+     * <li>Make sure that you are familiar with the ECS billing methods because you may be charged for the resources that are used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</li>
+     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Considerations</strong>:<ul>
      * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
+     * <li>If you want to create instances with 512 MiB of memory, you cannot use Windows Server images except for Windows Server Semi-Annual Channel images. If you want to create instances with 4 GiB or more of memory, you cannot use 32-bit OS image.</li>
+     * <li>If you call the CreateInstance operation to create an instance, no public IP address is automatically assigned to the instance. You can call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.
+     * **
+     * <strong>Note</strong> Starting November 27, 2020, when you create ECS instances or change ECS instance configurations, the maximum bandwidth value that you can specify is subject to the throttling policy of your account. To increase the maximum bandwidth value, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
      * </ul>
      * </li>
-     * <li><strong>Instance type</strong>:<ul>
-     * <li>You can use the <code>IoOptimized</code> parameter to specify whether to create an I/O optimized instance.</li>
+     * <li><strong>Suggestions</strong>:<ul>
      * <li>Instance type selection: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the performance data of instance types, or see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn about how to select instance types.</li>
-     * <li>Query of available resources: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.<blockquote>
-     * <p> If the <code>QuotaExceed.ElasticQuota</code> error is returned when you call this operation, it indicates that the maximum number of instances of the specified instance type in the region has been reached, or the maximum number of vCPUs for all instance types in a zone has been reached. You can go to the <a href="https://ecs.console.aliyun.com/?spm=a2c8b.12215451.favorites.decs.5e3a336aMGTtzy#/privileges/quota">ECS console</a> or <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to request a quota increase.</p>
-     * </blockquote>
-     * </li>
+     * <li>Query of available resources: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/49121.html">User data</a>: If the instance type supports user data, you can use the UserData parameter to pass in user data. User data is encoded in Base64. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then decode and decrypt the information in the same way within the instance.</li>
      * </ul>
      * </li>
-     * <li><strong>Image</strong>:<ul>
-     * <li>The image determines the system disk configurations of the new instance. The system disk of the new instance is a clone of the specified image.</li>
-     * <li>If you want to create instances with 512 MiB of memory, you cannot use Windows Server images except for Windows Server Semi-Annual Channel images.</li>
-     * <li>If you want to create instances with 4 GiB or more of memory, you cannot use 32-bit OS image.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Network type</strong>:<ul>
-     * <li>Each instance that resides in a virtual private cloud (VPC) must be connected to only a single vSwitch.</li>
-     * <li>If <code>VSwitchId</code> is specified, the security group specified by <code>SecurityGroupId</code> and the vSwitch specified by <code>VSwitchId</code> must belong to the same VPC.</li>
-     * <li>The value of <code>PrivateIpAddress</code> varies based on the value of <code>VSwitchId</code>. <code>PrivateIpAddress</code> cannot be separately specified. If <code>VSwitchId</code> and <code>PrivateIpAddress</code> are specified, the IP address specified by <code>PrivateIpAddress</code> must be an idle IP address in the CIDR block of the specified vSwitch.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Public bandwidth</strong>:<ul>
-     * <li>Starting November 27, 2020, the maximum bandwidth value that is available for you to create ECS instances or change ECS instance configurations is subject to the throttling policy of your account. To increase the bandwidth limit, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total maximum bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
-     * <li>If you call the <code>CreateInstance</code> operation to create an instance, no public IP addresses are assigned to the instance. You can call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to an instance.</li>
-     * <li>Network usage fees vary based on the settings of <code>InternetChargeType</code> and <code>InternetMaxBandwidthOut</code>.</li>
-     * <li>The value of <code>InternetMaxBandwidthIn</code> does not affect billing because inbound data traffic is free of charge.</li>
-     * <li>If <code>InternetChargeType</code> is set to PayByBandwidth, <code>InternetMaxBandwidthOut</code> specifies the fixed bandwidth. A fixed bandwidth is a specified amount of public bandwidth allocated to an instance that uses the pay-by-bandwidth billing method for network usage.</li>
-     * <li>If <code>InternetChargeType</code> is set to PayByTraffic, <code>InternetMaxBandwidthOut</code> specifies the peak bandwidth. A peak bandwidth is the maximum amount of public bandwidth that an instance can consume when the instance uses the pay-by-traffic billing method for network usage. Network usage costs are calculated based on the volume of network traffic.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Security group</strong>:<ul>
-     * <li>If no security groups are available in the region where you want to create an instance, you must call the <a href="https://help.aliyun.com/document_detail/25553.html">CreateSecurityGroup</a> operation to create a security group in that region first.</li>
-     * <li>The maximum number of instances that a security group can contain varies based on the security group type. For more information, see the &quot;Security group limits&quot; section in the <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a> topic.</li>
-     * <li>Instances in the same security group can communicate with each other over the internal network. By default, instances in different security groups cannot communicate with each other. You can allow communication between instances by allowing mutual access between the security groups to which the instances belong. For more information, see <a href="https://help.aliyun.com/document_detail/25554.html">AuthorizeSecurityGroup</a> and <a href="https://help.aliyun.com/document_detail/25560.html">AuthorizeSecurityGroupEgress</a>.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Storage</strong>:<ul>
-     * <li>The instance is assigned a system disk whose capacity varies based on the size of the specified image. The size of the system disk must be at least <code>20 GiB</code> and greater than or equal to the image size. For information about system disk categories, see the description of <code>SystemDisk.Category</code>.</li>
-     * <li>The system disk of an I/O optimized instance can only be an enhanced SSD (ESSD) (<code>cloud_essd</code>), a standard SSD (<code>cloud_ssd</code>), or an ultra disk (<code>cloud_efficiency</code>).</li>
-     * <li>The maximum size of a data disk varies based on the disk category. For more information, see the description of <code>DataDisk.N.Size</code>.</li>
-     * <li>Up to 16 data disks can be added to an instance. Mount points /dev/xvd[b-z] are automatically assigned to data disks in ascending alphanumeric order.<blockquote>
-     * <p> If the <code>QuotaExceed.DiskCapacity</code> error is returned when you call this operation, it indicates that the maximum capacity of the disks of the selected disk category in the specified zone has been reached. You can go to the <a href="https://quotas.console.aliyun.com/products/disk/quotas">Quota Center</a> to query and request a quota increase.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><strong>User data</strong>: If the instance type supports user data, you can use the UserData parameter to pass in user data.<a href="~~49121~~"></a> User data is encoded in Base64. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then decode and decrypt the information in the same way within the instance.</li>
-     * <li><strong>Others</strong>: When you call API operations by using Alibaba Cloud CLI or SDKs, you must delete periods (.) from some request parameters before you use the parameters. For example, use <code>SystemDiskCategory</code> instead of <code>SystemDisk.Category</code> as a request parameter.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.</p>
+     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify different parameters to create instances based on your business requirements.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -6330,6 +6278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIds)) {
             query.put("SecurityGroupIds", request.securityGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDestCheck)) {
+            query.put("SourceDestCheck", request.sourceDestCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -9122,7 +9074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance.</p>
+     * <p>Releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance. You can configure parameters to specify whether to release the disks attached to the instance or retain the disks as pay-as-you-go disks.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9197,7 +9149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance.</p>
+     * <p>Releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance. You can configure parameters to specify whether to release the disks attached to the instance or retain the disks as pay-as-you-go disks.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -9224,7 +9176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases one or more pay-as-you-go Elastic Compute Service (ECS) instances or expired subscription ECS instances.</p>
+     * <p>Releases multiple pay-as-you-go Elastic Compute Service (ECS) instances or expired subscription ECS instances at a time. You can configure parameters to specify whether to release the disks attached to the instances or retain the disks as pay-as-you-go disks.</p>
      * 
      * @param request DeleteInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9307,7 +9259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases one or more pay-as-you-go Elastic Compute Service (ECS) instances or expired subscription ECS instances.</p>
+     * <p>Releases multiple pay-as-you-go Elastic Compute Service (ECS) instances or expired subscription ECS instances at a time. You can configure parameters to specify whether to release the disks attached to the instances or retain the disks as pay-as-you-go disks.</p>
      * 
      * @param request DeleteInstancesRequest
      * @return DeleteInstancesResponse
@@ -15641,11 +15593,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance Resource Access Management (RAM) roles that are attached to one or more Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the instance Resource Access Management (RAM) roles that are attached to Elastic Compute Service (ECS) instances based on the instance IDs, or queries the ECS instances to which a specific instance RAM role is attached based on the name of the instance RAM role.</p>
      * 
      * @param request DescribeInstanceRamRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15705,11 +15657,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance Resource Access Management (RAM) roles that are attached to one or more Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the instance Resource Access Management (RAM) roles that are attached to Elastic Compute Service (ECS) instances based on the instance IDs, or queries the ECS instances to which a specific instance RAM role is attached based on the name of the instance RAM role.</p>
      * 
      * @param request DescribeInstanceRamRoleRequest
      * @return DescribeInstanceRamRoleResponse
@@ -15721,13 +15673,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  For information about the lifecycle states of an ECS instance, see <a href="https://help.aliyun.com/document_detail/25687.html">Instance states</a>.</p>
+     * <p>For information about the lifecycle states of an ECS instance, see <a href="https://help.aliyun.com/document_detail/25687.html">Instance lifecycle</a>.</p>
+     * <h2><a href="#"></a>Instructions</h2>
      * <ul>
-     * <li>You can also call this operation to query the list of ECS instances.</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>region</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: [&quot;cn-hangzhou&quot;]
+     * }</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>zone</strong> of a <strong>region</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;ZoneID&quot;: [&quot;cn-hangzhou-a&quot;]
+     * }</li>
+     * <li>Query the status of an ECS instance based on the <strong>instance ID</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;InstancesID&quot;: [&quot;i-bp1f7c1zqp999zvp****&quot;, &quot;i-bp1dqjv36biueg61****&quot;]
+     * }</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of one or more Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the status of one or more Elastic Compute Service (ECS) instances. You can also call this operation to query the list of ECS instances that match the specified filter conditions.</p>
      * 
      * @param request DescribeInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15795,13 +15761,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  For information about the lifecycle states of an ECS instance, see <a href="https://help.aliyun.com/document_detail/25687.html">Instance states</a>.</p>
+     * <p>For information about the lifecycle states of an ECS instance, see <a href="https://help.aliyun.com/document_detail/25687.html">Instance lifecycle</a>.</p>
+     * <h2><a href="#"></a>Instructions</h2>
      * <ul>
-     * <li>You can also call this operation to query the list of ECS instances.</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>region</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: [&quot;cn-hangzhou&quot;]
+     * }</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>zone</strong> of a <strong>region</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;ZoneID&quot;: [&quot;cn-hangzhou-a&quot;]
+     * }</li>
+     * <li>Query the status of an ECS instance based on the <strong>instance ID</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;InstancesID&quot;: [&quot;i-bp1f7c1zqp999zvp****&quot;, &quot;i-bp1dqjv36biueg61****&quot;]
+     * }</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of one or more Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the status of one or more Elastic Compute Service (ECS) instances. You can also call this operation to query the list of ECS instances that match the specified filter conditions.</p>
      * 
      * @param request DescribeInstanceStatusRequest
      * @return DescribeInstanceStatusResponse
@@ -15873,7 +15853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instance families provided by Elastic Compute Service (ECS).</p>
+     * <p>Queries the instance families provided by Elastic Compute Service (ECS).</p>
      * 
      * @param request DescribeInstanceTypeFamiliesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15925,7 +15905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instance families provided by Elastic Compute Service (ECS).</p>
+     * <p>Queries the instance families provided by Elastic Compute Service (ECS).</p>
      * 
      * @param request DescribeInstanceTypeFamiliesRequest
      * @return DescribeInstanceTypeFamiliesResponse
@@ -21275,10 +21255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The returned custom data is encoded in Base64.</p>
-     * <ul>
-     * <li>If no user data is configured for the ECS instance, an empty result is returned.</li>
-     * </ul>
+     * <p>  If no user data is configured for the ECS instance, an empty string is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the user data of an Elastic Compute Service (ECS) instance.</p>
@@ -21329,10 +21306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The returned custom data is encoded in Base64.</p>
-     * <ul>
-     * <li>If no user data is configured for the ECS instance, an empty result is returned.</li>
-     * </ul>
+     * <p>  If no user data is configured for the ECS instance, an empty string is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the user data of an Elastic Compute Service (ECS) instance.</p>
@@ -21971,7 +21945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches instance Resource Access Management (RAM) roles from ECS instances.</p>
+     * <p>Detaches instance Resource Access Management (RAM) roles from Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request DetachInstanceRamRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22023,7 +21997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches instance Resource Access Management (RAM) roles from ECS instances.</p>
+     * <p>Detaches instance Resource Access Management (RAM) roles from Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request DetachInstanceRamRoleRequest
      * @return DetachInstanceRamRoleResponse
@@ -30931,11 +30905,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only instances that are in the <code>Running</code> state can be restarted.****</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
      * <ul>
-     * <li>After an instance is restarted, the status of the instance changes to <code>Starting</code>.****</li>
-     * <li>An instance can be forcibly restarted. A forced restart (<code>ForceStop</code>) is equivalent to performing a hard restart. This operation can cause data loss if data in the instance is not written to the disk.</li>
-     * <li>If you call the DescribeInstances operation to query the details of an instance and <code>OperationLocks</code> in the response contains &quot;LockReason&quot;: &quot;security&quot;, the instance is locked for security reasons and cannot be restarted. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to restart an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instance that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -30995,11 +30971,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only instances that are in the <code>Running</code> state can be restarted.****</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
      * <ul>
-     * <li>After an instance is restarted, the status of the instance changes to <code>Starting</code>.****</li>
-     * <li>An instance can be forcibly restarted. A forced restart (<code>ForceStop</code>) is equivalent to performing a hard restart. This operation can cause data loss if data in the instance is not written to the disk.</li>
-     * <li>If you call the DescribeInstances operation to query the details of an instance and <code>OperationLocks</code> in the response contains &quot;LockReason&quot;: &quot;security&quot;, the instance is locked for security reasons and cannot be restarted. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to restart an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instance that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31015,12 +30993,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
      * <ul>
-     * <li>The ECS instances to be restarted must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * <li>You can use <code>BatchOptimization</code> to specify the batch operation mode and restart multiple instances at a time.</li>
-     * <li>Instances can be forcefully restarted. A forced restart (<code>ForceReboot</code>) is equivalent to powering off a traditional server and then starting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data is lost.</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.</li>
+     * <li><strong>Precautions</strong><ul>
+     * <li>You cannot call this operation to restart ECS instances that are locked due to security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instances that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31088,12 +31067,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
      * <ul>
-     * <li>The ECS instances to be restarted must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * <li>You can use <code>BatchOptimization</code> to specify the batch operation mode and restart multiple instances at a time.</li>
-     * <li>Instances can be forcefully restarted. A forced restart (<code>ForceReboot</code>) is equivalent to powering off a traditional server and then starting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data is lost.</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.</li>
+     * <li><strong>Precautions</strong><ul>
+     * <li>You cannot call this operation to restart ECS instances that are locked due to security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instances that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -34171,14 +34151,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
      * <ul>
-     * <li>The ECS instance must be in the <code>Stopped</code> state.</li>
-     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be started.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to start an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instance that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>If an ECS instance is stopped in economical mode, the instance may fail to be restarted due to insufficient resources.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Starts an Elastic Compute Service (ECS) instance. After the operation is called, the instance enters the Starting state.</p>
+     * <p>Starts an Elastic Compute Service (ECS) instance. You can specify the ID of an ECS instance and parameters, such as InitLocalDisk, in the request based on your business requirements to start the instance.</p>
      * 
      * @param request StartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34234,14 +34218,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
      * <ul>
-     * <li>The ECS instance must be in the <code>Stopped</code> state.</li>
-     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be started.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to start an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instance that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>If an ECS instance is stopped in economical mode, the instance may fail to be restarted due to insufficient resources.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Starts an Elastic Compute Service (ECS) instance. After the operation is called, the instance enters the Starting state.</p>
+     * <p>Starts an Elastic Compute Service (ECS) instance. You can specify the ID of an ECS instance and parameters, such as InitLocalDisk, in the request based on your business requirements to start the instance.</p>
      * 
      * @param request StartInstanceRequest
      * @return StartInstanceResponse
@@ -34253,11 +34241,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
      * <ul>
-     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> state.``</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code>, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.</li>
-     * <li>You can start multiple ECS instances at the same time and use the <code>BatchOptimization</code> parameter to specify the batch operation mode.</li>
+     * <li><strong>Precautions</strong><ul>
+     * <li>You cannot call this operation to start ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>ECS instances stopped in economical mode may fail to be started due to insufficient resources.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -34321,11 +34312,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
      * <ul>
-     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> state.``</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code>, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.</li>
-     * <li>You can start multiple ECS instances at the same time and use the <code>BatchOptimization</code> parameter to specify the batch operation mode.</li>
+     * <li><strong>Precautions</strong><ul>
+     * <li>You cannot call this operation to start ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>ECS instances stopped in economical mode may fail to be started due to insufficient resources.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -34461,9 +34455,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you call the DescribeInstances operation to query the details of an instance and <code>OperationLocks</code> in the response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code>, the instance is locked for security reasons and cannot be stopped. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to stop an ECS instance, the operation sets the status of the ECS instance to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Stopped</code>, the instance is stopped.</p>
      * <ul>
-     * <li>If the economical mode is enabled, you can set <code>StoppedMode</code> to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to stop an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>After you enable the default economical mode for all ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the ECS instance that you want to stop to enable standard mode. This way, the ECS instance continues to be billed after it is stopped. The instance type resources and public IP address of the instance are retained.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -34535,9 +34533,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you call the DescribeInstances operation to query the details of an instance and <code>OperationLocks</code> in the response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code>, the instance is locked for security reasons and cannot be stopped. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to stop an ECS instance, the operation sets the status of the ECS instance to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Stopped</code>, the instance is stopped.</p>
      * <ul>
-     * <li>If the economical mode is enabled, you can set <code>StoppedMode</code> to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to stop an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>After you enable the default economical mode for all ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the ECS instance that you want to stop to enable standard mode. This way, the ECS instance continues to be billed after it is stopped. The instance type resources and public IP address of the instance are retained.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -34553,15 +34555,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is an asynchronous operation. After you call this operation to stop ECS instances, the operation sets the status of the ECS instances to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instances. When the status of the ECS instances changes to <code>Stopped</code>, the instances are stopped.</p>
      * <ul>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.</li>
-     * <li>After you enable economical mode for a pay-as-you-go instance that resides in a virtual private cloud (VPC), you can set <code>StoppedMode</code> to KeepCharging. This way, the pay-as-you-go instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.</li>
-     * <li>Batch operations are supported. You can use <code>BatchOptimization</code> to specify the batch operation mode.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to stop ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the pay-as-you-go ECS instances that you want to stop. This way, the pay-as-you-go ECS instances continue to be billed after the instances are stopped. The instance type resources and public IP address of the instances are retained.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Stops one or more Elastic Compute Service (ECS) instances that are in the Running state. After the operation is called, the state of the instances changes to Stopping and then to Stopped.</p>
+     * <p>Stops Elastic Compute Service (ECS) instances. You can specify parameters to determine whether to forcefully stop the instances, the stop mode, and the batch operation mode.</p>
      * 
      * @param request StopInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34629,15 +34633,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is an asynchronous operation. After you call this operation to stop ECS instances, the operation sets the status of the ECS instances to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instances. When the status of the ECS instances changes to <code>Stopped</code>, the instances are stopped.</p>
      * <ul>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.</li>
-     * <li>After you enable economical mode for a pay-as-you-go instance that resides in a virtual private cloud (VPC), you can set <code>StoppedMode</code> to KeepCharging. This way, the pay-as-you-go instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.</li>
-     * <li>Batch operations are supported. You can use <code>BatchOptimization</code> to specify the batch operation mode.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to stop ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the pay-as-you-go ECS instances that you want to stop. This way, the pay-as-you-go ECS instances continue to be billed after the instances are stopped. The instance type resources and public IP address of the instances are retained.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Stops one or more Elastic Compute Service (ECS) instances that are in the Running state. After the operation is called, the state of the instances changes to Stopping and then to Stopped.</p>
+     * <p>Stops Elastic Compute Service (ECS) instances. You can specify parameters to determine whether to forcefully stop the instances, the stop mode, and the batch operation mode.</p>
      * 
      * @param request StopInstancesRequest
      * @return StopInstancesResponse

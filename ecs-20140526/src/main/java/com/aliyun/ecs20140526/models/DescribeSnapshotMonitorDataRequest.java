@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     /**
-     * <p>The category of the snapshot. Valid values:</p>
+     * <p>The type of the snapshot. Valid values:</p>
      * <ul>
      * <li>Standard: standard snapshot</li>
      * <li>Flash: local snapshot</li>
+     * <li>Archive: archive snapshot</li>
      * </ul>
      * <p>Default value: Standard.</p>
      * 

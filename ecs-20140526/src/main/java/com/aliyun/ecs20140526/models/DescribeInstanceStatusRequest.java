@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
     /**
-     * <p>The cluster ID of the instances.</p>
+     * <p>The ID of the cluster to which the ECS instances belong.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated. We recommend that you do not use this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cls-bp67acfmxazb4p****</p>
@@ -14,7 +17,8 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: <code>InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****</code>.</p>
+     * <p>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</p>
+     * <p>Example: [&quot;i-bp1j4i2jdf3owlhe\<em>\</em>\<em>\</em>&quot;, &quot;i-bp1j4i2jdf3o1234\<em>\</em>\<em>\</em>&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1j4i2jdf3owlhe****</p>

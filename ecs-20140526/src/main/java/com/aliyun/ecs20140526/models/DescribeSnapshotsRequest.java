@@ -10,17 +10,17 @@ public class DescribeSnapshotsRequest extends TeaModel {
     /**
      * <p>The category of the snapshot. Valid values:</p>
      * <ul>
-     * <li>Standard: standard snapshot</li>
-     * <li>Flash: local snapshot</li>
-     * </ul>
-     * <p>The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
+     * <li><p>Standard: standard snapshot.</p>
+     * </li>
+     * <li><p>Flash: local snapshot. This value will be deprecated. The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
      * <ul>
      * <li>If you have used local snapshots before December 14, 2020, you can use this parameter.</li>
      * <li>If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
-     * </blockquote>
+     * </li>
+     * <li><p>archive: archive snapshot.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>

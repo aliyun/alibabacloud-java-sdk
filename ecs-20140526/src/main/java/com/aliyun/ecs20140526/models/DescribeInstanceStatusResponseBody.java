@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
     /**
-     * <p>The status information of the instances.</p>
+     * <p>The IDs and status of the ECS instances.</p>
      */
     @NameInMap("InstanceStatuses")
     public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;

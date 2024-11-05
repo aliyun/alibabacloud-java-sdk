@@ -19,10 +19,14 @@ public class StartInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to restore the instance to its initial health state. This parameter is applicable to instances that are equipped with local disks, such as d1, i1, and i2 instances. If a local disk of a d1, i1, or i2 instance fails, you can use this parameter to specify whether to restore the instance to its initial health state on startup. Valid values:</p>
+     * <p>Specifies whether to restore the ECS instance to the initial health state on startup if a local disk fails. This parameter is applicable to ECS instances that are equipped with local disks, such as d1, i1, and i2 instances. Valid values:</p>
      * <ul>
-     * <li>true: restores the instance to its initial health state on startup. After the instance is restored to its initial health state, data stored on the local disks of the instance is lost.</li>
-     * <li>false: does not perform operations and keeps the instance in the current state.</li>
+     * <li><p>true: restores the ECS instance to the initial health state on startup.</p>
+     * <p>**</p>
+     * <p><strong>Warning</strong>: After the ECS instance is restored to the initial health state, data stored on the local disks of the instance is lost.</p>
+     * </li>
+     * <li><p>false: does not restore the ECS instance to the initial health state on startup. The instance remains in the current state.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
