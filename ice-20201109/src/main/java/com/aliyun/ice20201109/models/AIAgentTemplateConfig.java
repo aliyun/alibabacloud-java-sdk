@@ -49,6 +49,12 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("AvatarId")
         public String avatarId;
 
+        @NameInMap("BailianAppParams")
+        public String bailianAppParams;
+
+        @NameInMap("EnablePushToTalk")
+        public Boolean enablePushToTalk;
+
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
@@ -58,8 +64,20 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("UseVoiceprint")
+        public Boolean useVoiceprint;
+
+        @NameInMap("UserOfflineTimeout")
+        public Integer userOfflineTimeout;
+
+        @NameInMap("UserOnlineTimeout")
+        public Integer userOnlineTimeout;
+
         @NameInMap("VoiceId")
         public String voiceId;
+
+        @NameInMap("VoiceprintId")
+        public String voiceprintId;
 
         @NameInMap("Volume")
         public Long volume;
@@ -83,6 +101,22 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public String getAvatarId() {
             return this.avatarId;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setBailianAppParams(String bailianAppParams) {
+            this.bailianAppParams = bailianAppParams;
+            return this;
+        }
+        public String getBailianAppParams() {
+            return this.bailianAppParams;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setEnablePushToTalk(Boolean enablePushToTalk) {
+            this.enablePushToTalk = enablePushToTalk;
+            return this;
+        }
+        public Boolean getEnablePushToTalk() {
+            return this.enablePushToTalk;
         }
 
         public AIAgentTemplateConfigAvatarChat3D setEnableVoiceInterrupt(Boolean enableVoiceInterrupt) {
@@ -109,12 +143,44 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigAvatarChat3D setUseVoiceprint(Boolean useVoiceprint) {
+            this.useVoiceprint = useVoiceprint;
+            return this;
+        }
+        public Boolean getUseVoiceprint() {
+            return this.useVoiceprint;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setUserOfflineTimeout(Integer userOfflineTimeout) {
+            this.userOfflineTimeout = userOfflineTimeout;
+            return this;
+        }
+        public Integer getUserOfflineTimeout() {
+            return this.userOfflineTimeout;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setUserOnlineTimeout(Integer userOnlineTimeout) {
+            this.userOnlineTimeout = userOnlineTimeout;
+            return this;
+        }
+        public Integer getUserOnlineTimeout() {
+            return this.userOnlineTimeout;
+        }
+
         public AIAgentTemplateConfigAvatarChat3D setVoiceId(String voiceId) {
             this.voiceId = voiceId;
             return this;
         }
         public String getVoiceId() {
             return this.voiceId;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setVoiceprintId(String voiceprintId) {
+            this.voiceprintId = voiceprintId;
+            return this;
+        }
+        public String getVoiceprintId() {
+            return this.voiceprintId;
         }
 
         public AIAgentTemplateConfigAvatarChat3D setVolume(Long volume) {
@@ -131,8 +197,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        @NameInMap("BailianAppParams")
+        public String bailianAppParams;
+
         @NameInMap("EnableIntelligentSegment")
         public Boolean enableIntelligentSegment;
+
+        @NameInMap("EnablePushToTalk")
+        public Boolean enablePushToTalk;
 
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
@@ -143,8 +215,20 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("UseVoiceprint")
+        public Boolean useVoiceprint;
+
+        @NameInMap("UserOfflineTimeout")
+        public Integer userOfflineTimeout;
+
+        @NameInMap("UserOnlineTimeout")
+        public Integer userOnlineTimeout;
+
         @NameInMap("VoiceId")
         public String voiceId;
+
+        @NameInMap("VoiceprintId")
+        public String voiceprintId;
 
         @NameInMap("Volume")
         public Long volume;
@@ -162,12 +246,28 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.asrMaxSilence;
         }
 
+        public AIAgentTemplateConfigVisionChat setBailianAppParams(String bailianAppParams) {
+            this.bailianAppParams = bailianAppParams;
+            return this;
+        }
+        public String getBailianAppParams() {
+            return this.bailianAppParams;
+        }
+
         public AIAgentTemplateConfigVisionChat setEnableIntelligentSegment(Boolean enableIntelligentSegment) {
             this.enableIntelligentSegment = enableIntelligentSegment;
             return this;
         }
         public Boolean getEnableIntelligentSegment() {
             return this.enableIntelligentSegment;
+        }
+
+        public AIAgentTemplateConfigVisionChat setEnablePushToTalk(Boolean enablePushToTalk) {
+            this.enablePushToTalk = enablePushToTalk;
+            return this;
+        }
+        public Boolean getEnablePushToTalk() {
+            return this.enablePushToTalk;
         }
 
         public AIAgentTemplateConfigVisionChat setEnableVoiceInterrupt(Boolean enableVoiceInterrupt) {
@@ -194,12 +294,44 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigVisionChat setUseVoiceprint(Boolean useVoiceprint) {
+            this.useVoiceprint = useVoiceprint;
+            return this;
+        }
+        public Boolean getUseVoiceprint() {
+            return this.useVoiceprint;
+        }
+
+        public AIAgentTemplateConfigVisionChat setUserOfflineTimeout(Integer userOfflineTimeout) {
+            this.userOfflineTimeout = userOfflineTimeout;
+            return this;
+        }
+        public Integer getUserOfflineTimeout() {
+            return this.userOfflineTimeout;
+        }
+
+        public AIAgentTemplateConfigVisionChat setUserOnlineTimeout(Integer userOnlineTimeout) {
+            this.userOnlineTimeout = userOnlineTimeout;
+            return this;
+        }
+        public Integer getUserOnlineTimeout() {
+            return this.userOnlineTimeout;
+        }
+
         public AIAgentTemplateConfigVisionChat setVoiceId(String voiceId) {
             this.voiceId = voiceId;
             return this;
         }
         public String getVoiceId() {
             return this.voiceId;
+        }
+
+        public AIAgentTemplateConfigVisionChat setVoiceprintId(String voiceprintId) {
+            this.voiceprintId = voiceprintId;
+            return this;
+        }
+        public String getVoiceprintId() {
+            return this.voiceprintId;
         }
 
         public AIAgentTemplateConfigVisionChat setVolume(Long volume) {
@@ -216,6 +348,12 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        @NameInMap("BailianAppParams")
+        public String bailianAppParams;
+
+        @NameInMap("EnablePushToTalk")
+        public Boolean enablePushToTalk;
+
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
@@ -225,8 +363,20 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("UseVoiceprint")
+        public Boolean useVoiceprint;
+
+        @NameInMap("UserOfflineTimeout")
+        public Integer userOfflineTimeout;
+
+        @NameInMap("UserOnlineTimeout")
+        public Integer userOnlineTimeout;
+
         @NameInMap("VoiceId")
         public String voiceId;
+
+        @NameInMap("VoiceprintId")
+        public String voiceprintId;
 
         @NameInMap("Volume")
         public Long volume;
@@ -242,6 +392,22 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getAsrMaxSilence() {
             return this.asrMaxSilence;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setBailianAppParams(String bailianAppParams) {
+            this.bailianAppParams = bailianAppParams;
+            return this;
+        }
+        public String getBailianAppParams() {
+            return this.bailianAppParams;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setEnablePushToTalk(Boolean enablePushToTalk) {
+            this.enablePushToTalk = enablePushToTalk;
+            return this;
+        }
+        public Boolean getEnablePushToTalk() {
+            return this.enablePushToTalk;
         }
 
         public AIAgentTemplateConfigVoiceChat setEnableVoiceInterrupt(Boolean enableVoiceInterrupt) {
@@ -268,12 +434,44 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigVoiceChat setUseVoiceprint(Boolean useVoiceprint) {
+            this.useVoiceprint = useVoiceprint;
+            return this;
+        }
+        public Boolean getUseVoiceprint() {
+            return this.useVoiceprint;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setUserOfflineTimeout(Integer userOfflineTimeout) {
+            this.userOfflineTimeout = userOfflineTimeout;
+            return this;
+        }
+        public Integer getUserOfflineTimeout() {
+            return this.userOfflineTimeout;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setUserOnlineTimeout(Integer userOnlineTimeout) {
+            this.userOnlineTimeout = userOnlineTimeout;
+            return this;
+        }
+        public Integer getUserOnlineTimeout() {
+            return this.userOnlineTimeout;
+        }
+
         public AIAgentTemplateConfigVoiceChat setVoiceId(String voiceId) {
             this.voiceId = voiceId;
             return this;
         }
         public String getVoiceId() {
             return this.voiceId;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setVoiceprintId(String voiceprintId) {
+            this.voiceprintId = voiceprintId;
+            return this;
+        }
+        public String getVoiceprintId() {
+            return this.voiceprintId;
         }
 
         public AIAgentTemplateConfigVoiceChat setVolume(Long volume) {
