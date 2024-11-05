@@ -97,7 +97,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 50.</p>
-     * <p>Default value: 10.</p>
+     * <p>and the default value is 10.</p>
      * <blockquote>
      * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>

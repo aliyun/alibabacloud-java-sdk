@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleRequest extends TeaModel {
     /**
-     * <p>The IDs of instances. You can specify up to 100 instance IDs in a single request. You must specify at least one of the <code>InstanceIds</code> and <code>RamRoleName</code> parameters.</p>
+     * <p>The IDs of ECS instances. You can specify up to 100 instance IDs in a single request.</p>
+     * <blockquote>
+     * <p> You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp67acfmxazb1p****&quot;, &quot;i-bp67acfmxazb2p****&quot;, &quot;bp67acfmxazb3p****&quot;…]</p>
@@ -17,7 +20,7 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * 
@@ -28,8 +31,8 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 50.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +42,10 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the instance RAM role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created. You must specify at least one of the <code>InstanceIds</code> and <code>RamRoleName</code> parameters.</p>
+     * <p>The name of the instance RAM role. If you specify this parameter, all ECS instances to which the instance RAM role is attached are returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation of RAM to query the names of available instance RAM roles.</p>
+     * <blockquote>
+     * <p> You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>EcsServiceRole-EcsDocGuideTest</p>

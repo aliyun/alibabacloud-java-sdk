@@ -11,7 +11,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -42,7 +42,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
 
     public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily extends TeaModel {
         /**
-         * <p>The generation of the instance family.</p>
+         * <p>The series of the instance family.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs-5</p>

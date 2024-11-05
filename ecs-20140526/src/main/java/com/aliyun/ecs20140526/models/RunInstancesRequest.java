@@ -2717,6 +2717,9 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
+        @NameInMap("SourceDestCheck")
+        public Boolean sourceDestCheck;
+
         /**
          * <p>The Tx queue depth of ENI N.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
@@ -2869,6 +2872,14 @@ public class RunInstancesRequest extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public RunInstancesRequestNetworkInterface setSourceDestCheck(Boolean sourceDestCheck) {
+            this.sourceDestCheck = sourceDestCheck;
+            return this;
+        }
+        public Boolean getSourceDestCheck() {
+            return this.sourceDestCheck;
         }
 
         public RunInstancesRequestNetworkInterface setTxQueueSize(Integer txQueueSize) {

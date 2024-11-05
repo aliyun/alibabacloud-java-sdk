@@ -28,10 +28,10 @@ public class StopInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcibly stop the instance. Valid values:</p>
+     * <p>Specifies whether to forcefully stop the ECS instance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: forcefully stops the ECS instance. If you set ForceStop to true, this operation is equivalent to a power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
+     * <li>false: normally stops the ECS instance.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

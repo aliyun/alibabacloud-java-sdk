@@ -124,6 +124,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
+    @NameInMap("SourceDestCheck")
+    public Boolean sourceDestCheck;
+
     /**
      * <p>The state of the ENI.</p>
      * 
@@ -298,6 +301,14 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
     public Boolean getServiceManaged() {
         return this.serviceManaged;
+    }
+
+    public CreateNetworkInterfaceResponseBody setSourceDestCheck(Boolean sourceDestCheck) {
+        this.sourceDestCheck = sourceDestCheck;
+        return this;
+    }
+    public Boolean getSourceDestCheck() {
+        return this.sourceDestCheck;
     }
 
     public CreateNetworkInterfaceResponseBody setStatus(String status) {

@@ -27,10 +27,10 @@ public class DeleteInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release the instance that is in the <strong>Running</strong> (<code>Running</code>) state. Default value: false. Valid values:</p>
+     * <p>Specifies whether to forcefully release the ECS instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
      * <ul>
-     * <li>true: forcefully releases the instance that is in the <strong>Running</strong> (<code>Running</code>) state. When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</li>
-     * <li>false: normally releases the instance. This value is valid only for instances that are in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>true: forcefully releases the ECS instance in the <strong>Running</strong> (<code>Running</code>) state. When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</li>
+     * <li>false (default): normally releases the ECS instance. This value is valid only for instances that are in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release an expired subscription instance.</p>
+     * <p>Specifies whether to release the expired subscription instance.</p>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>

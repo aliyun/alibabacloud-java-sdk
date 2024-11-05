@@ -38,7 +38,7 @@ public class StartInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.</p>
+     * <p>The IDs of ECS instances. Valid values of N: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

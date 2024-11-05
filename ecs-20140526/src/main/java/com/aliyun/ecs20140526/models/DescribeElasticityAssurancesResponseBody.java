@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the elasticity assurances.</p>
+     * <p>The information about the elasticity assurances.</p>
      */
     @NameInMap("ElasticityAssuranceSet")
     public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
@@ -92,12 +92,24 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1144775968548340</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
@@ -152,6 +164,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
@@ -331,7 +347,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem extends TeaModel {
         /**
-         * <p>Details about the allocated resources.</p>
+         * <p>The information about the allocated resources.</p>
          */
         @NameInMap("AllocatedResources")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources;
@@ -345,6 +361,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e114477596854834</p>
+         */
         @NameInMap("ElasticityAssuranceOwnerId")
         public String elasticityAssuranceOwnerId;
 

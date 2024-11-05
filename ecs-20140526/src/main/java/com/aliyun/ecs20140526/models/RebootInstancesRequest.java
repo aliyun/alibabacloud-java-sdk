@@ -52,7 +52,7 @@ public class RebootInstancesRequest extends TeaModel {
     public Boolean forceReboot;
 
     /**
-     * <p>The instance IDs. You can specify up to 100 instance IDs.</p>
+     * <p>The IDs of ECS instances. Valid values of N: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
