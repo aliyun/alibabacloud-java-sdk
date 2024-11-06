@@ -23,7 +23,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends TeaModel {
      * <ul>
      * <li>cn: China</li>
      * <li>sg: Singapore</li>
-     * <li>in: India</li>
      * <li>eu: Europe</li>
      * <li>us: United States</li>
      * </ul>
