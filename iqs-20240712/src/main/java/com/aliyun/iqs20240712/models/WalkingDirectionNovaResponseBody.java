@@ -269,6 +269,9 @@ public class WalkingDirectionNovaResponseBody extends TeaModel {
         @NameInMap("orientation")
         public String orientation;
 
+        @NameInMap("polyline")
+        public String polyline;
+
         @NameInMap("roadName")
         public String roadName;
 
@@ -306,6 +309,14 @@ public class WalkingDirectionNovaResponseBody extends TeaModel {
         }
         public String getOrientation() {
             return this.orientation;
+        }
+
+        public WalkingDirectionNovaResponseBodyDataPathsSteps setPolyline(String polyline) {
+            this.polyline = polyline;
+            return this;
+        }
+        public String getPolyline() {
+            return this.polyline;
         }
 
         public WalkingDirectionNovaResponseBodyDataPathsSteps setRoadName(String roadName) {
@@ -398,6 +409,9 @@ public class WalkingDirectionNovaResponseBody extends TeaModel {
     }
 
     public static class WalkingDirectionNovaResponseBodyData extends TeaModel {
+        @NameInMap("count")
+        public String count;
+
         /**
          * <strong>example:</strong>
          * <p>40.020642</p>
@@ -439,6 +453,14 @@ public class WalkingDirectionNovaResponseBody extends TeaModel {
         public static WalkingDirectionNovaResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             WalkingDirectionNovaResponseBodyData self = new WalkingDirectionNovaResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public WalkingDirectionNovaResponseBodyData setCount(String count) {
+            this.count = count;
+            return this;
+        }
+        public String getCount() {
+            return this.count;
         }
 
         public WalkingDirectionNovaResponseBodyData setDestinationLatitude(String destinationLatitude) {
