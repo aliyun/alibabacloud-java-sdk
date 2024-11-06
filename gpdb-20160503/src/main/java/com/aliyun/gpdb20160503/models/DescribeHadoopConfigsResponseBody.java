@@ -21,6 +21,8 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
     public String configName;
 
     /**
+     * <p>The configuration value.</p>
+     * 
      * <strong>example:</strong>
      * <?xml version="1.0"?>
      * <configuration>

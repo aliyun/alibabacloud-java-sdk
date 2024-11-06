@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpsertChunksResponseBody extends TeaModel {
     /**
+     * <p>Number of tokens used during vectorization.</p>
+     * <blockquote>
+     * <p>A token refers to the smallest unit into which the input text is divided. A token can be a word, a phrase, a punctuation mark, a character, etc.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +17,8 @@ public class UpsertChunksResponseBody extends TeaModel {
     public String embeddingTokens;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -19,6 +26,8 @@ public class UpsertChunksResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -26,6 +35,12 @@ public class UpsertChunksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>API execution status, with the following values:</p>
+     * <ul>
+     * <li><strong>success</strong>: Execution succeeded.</li>
+     * <li><strong>fail</strong>: Execution failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

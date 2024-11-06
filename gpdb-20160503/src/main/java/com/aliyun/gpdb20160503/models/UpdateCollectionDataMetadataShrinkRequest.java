@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the collection.</p>
+     * <p>Collection name.</p>
+     * <blockquote>
+     * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API to view the list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,19 +18,19 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxx</p>
+     * <p>gp-j788ghhjjxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause. You cannot leave both this parameter and Ids empty.</p>
+     * <p>Filter condition for the data to be updated, in SQL WHERE format. This field cannot be empty at the same time as the Ids field.</p>
      * 
      * <strong>example:</strong>
      * <p>business_value = \&quot;chat_file_1\&quot;</p>
@@ -36,13 +39,13 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The row IDs of the data to be updated. You cannot leave both this parameter and Filter empty.</p>
+     * <p>ID list of the data to be updated, i.e., the Row.Id specified when uploading the data. This field cannot be empty at the same time as the Filter field.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
-     * <p>The data to be updated, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.</p>
+     * <p>Data to be updated, in a JSON string of MAP format. The key is the field name, and the value is the new data value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +58,10 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     public String metadataShrink;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>Namespace.</p>
+     * <blockquote>
+     * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API to view the list.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
@@ -64,7 +70,7 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The password of the namespace.</p>
+     * <p>Password corresponding to the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,10 +83,7 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
-     * </blockquote>
+     * <p>Region ID where the instance is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +92,12 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>ID of the Workspace composed of multiple database instances. This parameter and the DBInstanceId parameter cannot both be empty. When both are specified, this parameter takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-ws-*****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

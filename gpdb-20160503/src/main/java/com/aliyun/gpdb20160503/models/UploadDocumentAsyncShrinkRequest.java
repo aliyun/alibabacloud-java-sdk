@@ -17,6 +17,8 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public Integer chunkOverlap;
 
     /**
+     * <p>Strategy for processing large data: the size of each chunk when the data is split into smaller parts. Maximum value is 2048.</p>
+     * 
      * <strong>example:</strong>
      * <p>250</p>
      */
@@ -24,6 +26,10 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public Integer chunkSize;
 
     /**
+     * <p>The name of the document library. </p>
+     * <blockquote>
+     * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the document libraries that have already been created.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +39,7 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public String collection;
 
     /**
+     * <p>Instance ID with vector engine optimization acceleration enabled. You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,6 +102,14 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The URL of the publicly accessible document.</p>
+     * <blockquote>
+     * <blockquote>
+     * <ul>
+     * <li>It is recommended to call this interface using the SDK, which provides a method called UploadDocumentAsyncAdvance for directly uploading local files. &gt; - If the URL points to an image archive, the number of images in the archive should not exceed 100.</li>
+     * </ul>
+     * </blockquote>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,6 +125,8 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public String metadataShrink;
 
     /**
+     * <p>Namespace, default is public. You can create one through the CreateNamespace interface and view the list via the ListNamespaces interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
      */
@@ -117,6 +134,7 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The password corresponding to the namespace.  &gt; This value is specified by the CreateNamespace interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

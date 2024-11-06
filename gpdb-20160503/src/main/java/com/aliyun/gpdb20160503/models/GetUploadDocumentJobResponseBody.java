@@ -176,6 +176,12 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
@@ -296,6 +302,12 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
     }
 
     public static class GetUploadDocumentJobResponseBodyUsage extends TeaModel {
+        /**
+         * <p>The count of embedding entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("EmbeddingEntries")
         public Integer embeddingEntries;
 

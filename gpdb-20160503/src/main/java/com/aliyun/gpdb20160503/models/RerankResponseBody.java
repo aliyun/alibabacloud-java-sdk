@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RerankResponseBody extends TeaModel {
     /**
+     * <p>Detailed information returned by the interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,16 +14,27 @@ public class RerankResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Rerank results.</p>
+     */
     @NameInMap("Results")
     public RerankResponseBodyResults results;
 
     /**
+     * <p>API execution status, value description:</p>
+     * <ul>
+     * <li><strong>success</strong>: Execution succeeded.</li>
+     * <li><strong>fail</strong>: Execution failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +42,8 @@ public class RerankResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Number of consumed tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -81,10 +96,18 @@ public class RerankResponseBody extends TeaModel {
     }
 
     public static class RerankResponseBodyResultsResults extends TeaModel {
+        /**
+         * <p>Re-ordered document information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADBPG is the OLAP database of Alibaba Cloud.</p>
+         */
         @NameInMap("Document")
         public String document;
 
         /**
+         * <p>Index of this document in the request parameter Documents, starting from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -92,6 +115,8 @@ public class RerankResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>Rerank similarity score.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.31412</p>
          */

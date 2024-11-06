@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIMVInfosRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeIMVInfosRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DescribeIMVInfosRequest extends TeaModel {
     public String database;
 
     /**
+     * <p>The name of MV</p>
+     * 
      * <strong>example:</strong>
      * <p>public.&quot;mv1&quot;</p>
      */

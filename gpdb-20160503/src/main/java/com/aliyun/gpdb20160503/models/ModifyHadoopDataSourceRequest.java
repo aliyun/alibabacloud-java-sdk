@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHadoopDataSourceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyHadoopDataSourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Service description, with a maximum length of 256 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxf for hdfs data source</p>
      */
@@ -51,6 +54,8 @@ public class ModifyHadoopDataSourceRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>When HadoopCreateType is Emr, the value of this field is the EMR instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-1234567</p>
      */

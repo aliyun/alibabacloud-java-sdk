@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> interface to view the instance IDs of all AnalyticDB for PostgreSQL instances in the target region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,10 +21,10 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>This parameter is no longer used.</p>
+     * <p>This parameter is deprecated and should not be passed.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-bp67acfmxazb4p****</p>
+     * <p>null</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

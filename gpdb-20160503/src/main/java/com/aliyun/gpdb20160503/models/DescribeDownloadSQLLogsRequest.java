@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadSQLLogsRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

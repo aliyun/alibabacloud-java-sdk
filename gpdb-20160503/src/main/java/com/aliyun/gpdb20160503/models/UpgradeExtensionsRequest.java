@@ -17,6 +17,12 @@ public class UpgradeExtensionsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test01</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 

@@ -17,9 +17,21 @@ public class DescribeDBInstanceIndexUsageRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>order by search condition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{Field: TableName, Type: Desc}</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 

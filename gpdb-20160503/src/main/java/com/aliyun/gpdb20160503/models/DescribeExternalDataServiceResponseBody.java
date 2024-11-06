@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeExternalDataServiceResponseBody extends TeaModel {
     /**
+     * <p>The time when the service was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-09-08T16:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The time when the service was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-09-08T17:00:00Z</p>
      */
@@ -19,6 +23,8 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
@@ -35,6 +41,8 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
     public String serviceDescription;
 
     /**
+     * <p>The service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -60,6 +68,8 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
     public String serviceSpec;
 
     /**
+     * <p>The status of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExternalDataServiceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class CreateExternalDataServiceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Region ID, you can view available region IDs through the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -23,15 +24,16 @@ public class CreateExternalDataServiceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The description of the service.</p>
+     * <p>Service description.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-adbpgss</p>
+     * <p>pxf test</p>
      */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
     /**
+     * <p>Service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,14 +43,14 @@ public class CreateExternalDataServiceRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The specifications of the service. Unit: compute units (CUs). Valid values:</p>
+     * <p>Service specification (in CU), value:</p>
      * <ul>
      * <li>8</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>8</p>
      */
     @NameInMap("ServiceSpec")
     public String serviceSpec;

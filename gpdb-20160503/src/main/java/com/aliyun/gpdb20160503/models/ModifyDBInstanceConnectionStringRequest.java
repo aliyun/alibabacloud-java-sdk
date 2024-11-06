@@ -4,6 +4,12 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
+    /**
+     * <p>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 

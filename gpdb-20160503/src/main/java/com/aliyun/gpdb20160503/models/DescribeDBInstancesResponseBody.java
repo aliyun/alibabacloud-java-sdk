@@ -356,6 +356,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>product type</p>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */

@@ -4,11 +4,17 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogsV2ResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account name invalid</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>Details of the SQL logs.</p>
+     * <p>The queried SQL execution logs.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeSQLLogsV2ResponseBodyItems> items;
@@ -113,9 +119,21 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         @NameInMap("DBRole")
         public String DBRole;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
@@ -168,6 +186,12 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2548026401648157601713924318883</p>
+         */
         @NameInMap("QueryId")
         public String queryId;
 
@@ -198,6 +222,12 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         @NameInMap("ScanRowCounts")
         public Long scanRowCounts;
 
+        /**
+         * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efc33bd7-f1dc-4b24-b4fb-ab0d5329b7bb</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 

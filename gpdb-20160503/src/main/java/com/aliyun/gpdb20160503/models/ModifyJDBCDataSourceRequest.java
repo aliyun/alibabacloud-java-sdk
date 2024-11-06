@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyJDBCDataSourceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyJDBCDataSourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Data source description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,7 @@ public class ModifyJDBCDataSourceRequest extends TeaModel {
     public String dataSourceDescription;
 
     /**
+     * <p>Data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyJDBCDataSourceRequest extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>Database type: - mysql - postgresql - sqlserver</p>
+     * 
      * <strong>example:</strong>
      * <p>mysql</p>
      */

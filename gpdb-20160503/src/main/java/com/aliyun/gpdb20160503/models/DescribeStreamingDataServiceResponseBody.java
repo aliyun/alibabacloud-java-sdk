@@ -58,6 +58,12 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
     @NameInMap("ServiceIp")
     public String serviceIp;
 
+    /**
+     * <p>The service is managed by other aliyun product or not.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
@@ -70,6 +76,12 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service account uid of the aliyun product</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("ServiceOwnerId")
     public String serviceOwnerId;
 

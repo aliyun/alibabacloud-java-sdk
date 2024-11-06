@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceExtensionsResponseBody extends TeaModel {
+    /**
+     * <p>The queried extensions.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListInstanceExtensionsResponseBodyItems> items;
 

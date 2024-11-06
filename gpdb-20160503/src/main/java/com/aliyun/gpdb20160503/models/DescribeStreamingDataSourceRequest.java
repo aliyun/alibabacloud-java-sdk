@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamingDataSourceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeStreamingDataSourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class DescribeStreamingDataSourceRequest extends TeaModel {
     public Integer dataSourceId;
 
     /**
+     * <p>Region ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to view available region IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

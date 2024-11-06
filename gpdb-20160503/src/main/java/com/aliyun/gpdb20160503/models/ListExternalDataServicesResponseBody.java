@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListExternalDataServicesResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
@@ -25,6 +29,8 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
     public java.util.List<ListExternalDataServicesResponseBodyServiceItems> serviceItems;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStreamingDataSourceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateStreamingDataSourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Data source configuration information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateStreamingDataSourceRequest extends TeaModel {
     public String dataSourceConfig;
 
     /**
+     * <p>Data source description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-kafka</p>
      */
@@ -30,6 +34,7 @@ public class CreateStreamingDataSourceRequest extends TeaModel {
     public String dataSourceDescription;
 
     /**
+     * <p>Data source name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,10 @@ public class CreateStreamingDataSourceRequest extends TeaModel {
     public String dataSourceName;
 
     /**
+     * <p>Data source type. Values:</p>
+     * <ul>
+     * <li>kafka</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +57,11 @@ public class CreateStreamingDataSourceRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>Region ID.</p>
+     * <blockquote>
+     * <p>You can view available region IDs through the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -55,7 +69,7 @@ public class CreateStreamingDataSourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The real-time data service ID.</p>
+     * <p>Real-time data service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

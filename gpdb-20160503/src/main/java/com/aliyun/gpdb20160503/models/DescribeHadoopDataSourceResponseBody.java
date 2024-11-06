@@ -52,9 +52,9 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     /**
      * <p>The status of the service. Valid values:</p>
      * <ul>
-     * <li>init</li>
-     * <li>running</li>
-     * <li>exception</li>
+     * <li>Init</li>
+     * <li>Running</li>
+     * <li>Exception</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,6 +64,8 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     public String dataSourceStatus;
 
     /**
+     * <p>The type of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive</p>
      */
@@ -79,6 +81,12 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     @NameInMap("EmrInstanceId")
     public String emrInstanceId;
 
+    /**
+     * <p>The Id of External Data Service</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2988</p>
+     */
     @NameInMap("ExternalDataServiceId")
     public String externalDataServiceId;
 
@@ -103,8 +111,8 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     /**
      * <p>The type of the external service. Valid values:</p>
      * <ul>
-     * <li>HDFS</li>
-     * <li>HIVE</li>
+     * <li>emr</li>
+     * <li>selfCreate</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,10 +122,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     public String hadoopCreateType;
 
     /**
-     * <ul>
-     * <li>The address and hostname of the Hadoop cluster (data source) in the /etc/hosts directory.</li>
-     * <li></li>
-     * </ul>
+     * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1 localhost</p>
@@ -135,7 +140,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     public String hiveConf;
 
     /**
-     * <p>The content of the Hadoop MapReduceConf file.</p>
+     * <p>The content of the Hadoop mapred-site.xml file.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -143,6 +148,12 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     @NameInMap("MapReduceConf")
     public String mapReduceConf;
 
+    /**
+     * <p>The time when the service was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-08-23T02:11:47Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 

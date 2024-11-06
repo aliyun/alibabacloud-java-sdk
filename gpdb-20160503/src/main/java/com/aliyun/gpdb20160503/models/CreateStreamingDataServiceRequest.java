@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStreamingDataServiceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +17,7 @@ public class CreateStreamingDataServiceRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,6 +27,8 @@ public class CreateStreamingDataServiceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The description of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-adbpgss</p>
      */
@@ -33,6 +36,7 @@ public class CreateStreamingDataServiceRequest extends TeaModel {
     public String serviceDescription;
 
     /**
+     * <p>The name of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +46,7 @@ public class CreateStreamingDataServiceRequest extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>The specifications of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeIMVInfosResponseBody extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
      */
@@ -18,6 +23,8 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
     public java.util.List<DescribeIMVInfosResponseBodyImvInfos> imvInfos;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */

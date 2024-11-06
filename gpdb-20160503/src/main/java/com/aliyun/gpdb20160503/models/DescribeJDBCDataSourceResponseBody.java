@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     /**
+     * <p>The time when the service was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-09-08T16:00:00Z</p>
      */
@@ -21,6 +23,8 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     public String dataSourceDescription;
 
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -28,6 +32,8 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>The name of data soruce</p>
+     * 
      * <strong>example:</strong>
      * <p>hdfs_pxf</p>
      */
@@ -57,6 +63,12 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The id of the external data service</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2989</p>
+     */
     @NameInMap("ExternalDataServiceId")
     public String externalDataServiceId;
 
@@ -87,10 +99,18 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     @NameInMap("JDBCUserName")
     public String JDBCUserName;
 
+    /**
+     * <p>The time when the data source was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-08-27T02:01:10Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
@@ -98,6 +118,8 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The message of the status</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

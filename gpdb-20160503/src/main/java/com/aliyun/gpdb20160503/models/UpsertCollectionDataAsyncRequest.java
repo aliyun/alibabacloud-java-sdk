@@ -38,7 +38,7 @@ public class UpsertCollectionDataAsyncRequest extends TeaModel {
      * </li>
      * <li><p>Data format of each line: <code>{String Id; Map&lt;String, Object&gt; Metadata; List&lt;Double&gt; Vector}</code>. Example: <code>{&quot;Id&quot;:&quot;myid&quot;, &quot;Metadata&quot;: {&quot;my_meta_key&quot;: &quot;my_meta_value&quot;}, &quot;Vector&quot;: [1.234, -0.123]}</code>.</p>
      * </li>
-     * <li><p>We recommend that you SDKs to call this operation. SDKs encapsulate the UpsertCollectionDataAsyncAdvance method to upload on-premises files as data sources.</p>
+     * <li><p>We recommend that you use SDKs to call this operation. SDKs encapsulate the UpsertCollectionDataAsyncAdvance method to upload on-premises files as data sources.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -87,6 +87,12 @@ public class UpsertCollectionDataAsyncRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the Workspace composed of multiple database instances. This parameter and the DBInstanceId parameter cannot both be empty. When both are specified, this parameter takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-ws-*****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
