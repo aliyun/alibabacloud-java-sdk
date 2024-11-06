@@ -122,6 +122,10 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("ConfigMapMountDesc")
     public String configMapMountDesc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("Cpu")
     public Integer cpu;
 
@@ -317,6 +321,10 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Liveness")
     public String liveness;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
@@ -334,6 +342,10 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("MicroRegistration")
     public String microRegistration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</p>
+     */
     @NameInMap("MicroRegistrationConfig")
     public String microRegistrationConfig;
 
@@ -404,7 +416,7 @@ public class DeployApplicationRequest extends TeaModel {
     public String nasConfigs;
 
     /**
-     * <p>The ID of the Apsara File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <strong>NasId</strong> parameter in the requests. If you want to unmount the NAS file system, you must set the <strong>NasId</strong> values in the subsequent requests to an empty string (&quot;&quot;).</p>
+     * <p>The ID of the File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <strong>NasId</strong> parameter in the requests. If you want to unmount the NAS file system, you must set the <strong>NasId</strong> values in the subsequent requests to an empty string (&quot;&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>10d3b4****</p>
@@ -575,12 +587,24 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Readiness")
     public String readiness;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-wz969ngg2e49q5i4****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;alicloud.service.tag\&quot;:\&quot;g1\&quot;}</p>
+     */
     @NameInMap("ServiceTags")
     public String serviceTags;
 
@@ -671,6 +695,10 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("UpdateStrategy")
     public String updateStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp12mw1f8k3jgygk9****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

@@ -189,6 +189,36 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeIngressResponseBodyDataRulesRuleActions extends TeaModel {
+        @NameInMap("ActionConfig")
+        public String actionConfig;
+
+        @NameInMap("ActionType")
+        public String actionType;
+
+        public static DescribeIngressResponseBodyDataRulesRuleActions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIngressResponseBodyDataRulesRuleActions self = new DescribeIngressResponseBodyDataRulesRuleActions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIngressResponseBodyDataRulesRuleActions setActionConfig(String actionConfig) {
+            this.actionConfig = actionConfig;
+            return this;
+        }
+        public String getActionConfig() {
+            return this.actionConfig;
+        }
+
+        public DescribeIngressResponseBodyDataRulesRuleActions setActionType(String actionType) {
+            this.actionType = actionType;
+            return this;
+        }
+        public String getActionType() {
+            return this.actionType;
+        }
+
+    }
+
     public static class DescribeIngressResponseBodyDataRules extends TeaModel {
         /**
          * <p>The protocol used to forward requests. Valid values:</p>
@@ -257,6 +287,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("RewritePath")
         public String rewritePath;
 
+        @NameInMap("RuleActions")
+        public java.util.List<DescribeIngressResponseBodyDataRulesRuleActions> ruleActions;
+
         public static DescribeIngressResponseBodyDataRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeIngressResponseBodyDataRules self = new DescribeIngressResponseBodyDataRules();
             return TeaModel.build(map, self);
@@ -316,6 +349,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public String getRewritePath() {
             return this.rewritePath;
+        }
+
+        public DescribeIngressResponseBodyDataRules setRuleActions(java.util.List<DescribeIngressResponseBodyDataRulesRuleActions> ruleActions) {
+            this.ruleActions = ruleActions;
+            return this;
+        }
+        public java.util.List<DescribeIngressResponseBodyDataRulesRuleActions> getRuleActions() {
+            return this.ruleActions;
         }
 
     }
