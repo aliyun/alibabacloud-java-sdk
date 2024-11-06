@@ -132,7 +132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>使用session运行SQL</p>
+     * <p>Creates an SQL query task.</p>
      * 
      * @param request CreateSqlStatementRequest
      * @param headers map
@@ -188,7 +188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>使用session运行SQL</p>
+     * <p>Creates an SQL query task.</p>
      * 
      * @param request CreateSqlStatementRequest
      * @return CreateSqlStatementResponse
@@ -248,7 +248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Sql Statement状态</p>
+     * <p>Queries the status of an SQL query task.</p>
      * 
      * @param request GetSqlStatementRequest
      * @param headers map
@@ -282,7 +282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Sql Statement状态</p>
+     * <p>Queries the status of an SQL query task.</p>
      * 
      * @param request GetSqlStatementRequest
      * @return GetSqlStatementResponse
@@ -461,7 +461,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取发布版本列表</p>
+     * <p>获取日志内容</p>
+     * 
+     * @param request ListLogContentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLogContentsResponse
+     */
+    public ListLogContentsResponse listLogContentsWithOptions(String workspaceId, ListLogContentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
+            query.put("length", request.length);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLogContents"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/action/listLogContents"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLogContentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取日志内容</p>
+     * 
+     * @param request ListLogContentsRequest
+     * @return ListLogContentsResponse
+     */
+    public ListLogContentsResponse listLogContents(String workspaceId, ListLogContentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listLogContentsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</p>
      * 
      * @param request ListReleaseVersionsRequest
      * @param headers map
@@ -487,6 +546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("releaseVersionStatus", request.releaseVersionStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -507,7 +570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取发布版本列表</p>
+     * <p>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</p>
      * 
      * @param request ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
@@ -520,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询run列表</p>
+     * <p>Queries a list of sessions.</p>
      * 
      * @param request ListSessionClustersRequest
      * @param headers map
@@ -574,7 +637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询run列表</p>
+     * <p>Queries a list of sessions.</p>
      * 
      * @param request ListSessionClustersRequest
      * @return ListSessionClustersResponse
@@ -798,7 +861,121 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>终止 session statement</p>
+     * <p>Starts a session.</p>
+     * 
+     * @param request StartSessionClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartSessionClusterResponse
+     */
+    public StartSessionClusterResponse startSessionClusterWithOptions(String workspaceId, StartSessionClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
+            body.put("queueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionClusterId)) {
+            body.put("sessionClusterId", request.sessionClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartSessionCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/sessionClusters/action/startSessionCluster"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Starts a session.</p>
+     * 
+     * @param request StartSessionClusterRequest
+     * @return StartSessionClusterResponse
+     */
+    public StartSessionClusterResponse startSessionCluster(String workspaceId, StartSessionClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startSessionClusterWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a session.</p>
+     * 
+     * @param request StopSessionClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopSessionClusterResponse
+     */
+    public StopSessionClusterResponse stopSessionClusterWithOptions(String workspaceId, StopSessionClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
+            body.put("queueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionClusterId)) {
+            body.put("sessionClusterId", request.sessionClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopSessionCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/sessionClusters/action/stopSessionCluster"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a session.</p>
+     * 
+     * @param request StopSessionClusterRequest
+     * @return StopSessionClusterResponse
+     */
+    public StopSessionClusterResponse stopSessionCluster(String workspaceId, StopSessionClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopSessionClusterWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Terminates an SQL query task.</p>
      * 
      * @param request TerminateSqlStatementRequest
      * @param headers map
@@ -832,7 +1009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>终止 session statement</p>
+     * <p>Terminates an SQL query task.</p>
      * 
      * @param request TerminateSqlStatementRequest
      * @return TerminateSqlStatementResponse

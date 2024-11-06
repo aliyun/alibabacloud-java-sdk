@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobRunsShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the user who creates a Spark job.</p>
+     * <p>The ID of the user who created the job.</p>
      * 
      * <strong>example:</strong>
      * <p>1509789347011222</p>
