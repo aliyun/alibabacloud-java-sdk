@@ -17,9 +17,21 @@ public class DescribeDBInstanceDataSkewRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>order by condition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{Field: TableSkew, Type: Desc}</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 

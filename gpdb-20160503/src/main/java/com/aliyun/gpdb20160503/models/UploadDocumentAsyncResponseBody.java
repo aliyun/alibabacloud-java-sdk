@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadDocumentAsyncResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
      */
@@ -12,6 +14,8 @@ public class UploadDocumentAsyncResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class UploadDocumentAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -26,6 +32,12 @@ public class UploadDocumentAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>API execution status, with the following values:</p>
+     * <ul>
+     * <li><strong>success</strong>: Execution succeeded.</li>
+     * <li><strong>fail</strong>: Execution failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

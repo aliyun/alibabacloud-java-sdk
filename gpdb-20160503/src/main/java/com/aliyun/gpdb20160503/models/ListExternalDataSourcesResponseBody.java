@@ -144,6 +144,8 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
+         * <p>The Id of external data service</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

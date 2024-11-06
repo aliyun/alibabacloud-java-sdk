@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteExternalDataServiceRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-bp10g78o9807yv9h3</p>
+     * <p>gp-xxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to view available region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,7 @@ public class DeleteExternalDataServiceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

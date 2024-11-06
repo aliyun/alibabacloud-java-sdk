@@ -39,6 +39,8 @@ public class ListExternalDataSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStreamingDataSourceResponseBody extends TeaModel {
     /**
+     * <p>Data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateStreamingDataSourceResponseBody extends TeaModel {
     public Integer dataSourceId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */

@@ -11,6 +11,8 @@ public class ListStreamingJobsResponseBody extends TeaModel {
     public java.util.List<ListStreamingJobsResponseBodyJobItems> jobItems;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +20,8 @@ public class ListStreamingJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -25,6 +29,8 @@ public class ListStreamingJobsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
@@ -32,6 +38,8 @@ public class ListStreamingJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

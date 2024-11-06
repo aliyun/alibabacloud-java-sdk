@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListStreamingDataServicesResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns real-time data service items</p>
+     */
     @NameInMap("ServiceItems")
     public java.util.List<ListStreamingDataServicesResponseBodyServiceItems> serviceItems;
 
     /**
+     * <p>Total record count.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,8 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
 
     public static class ListStreamingDataServicesResponseBodyServiceItems extends TeaModel {
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-09-08T16:00:00Z</p>
          */
@@ -59,6 +68,8 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Last modified time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-09-08T17:00:00Z</p>
          */
@@ -66,6 +77,8 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>Service description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-adbpgss</p>
          */
@@ -73,6 +86,8 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         public String serviceDescription;
 
         /**
+         * <p>Service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -80,26 +95,44 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>Service IP.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
          */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        /**
+         * <p>Whether it is a managed service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-adbpgss</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>Service owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("ServiceOwnerId")
         public String serviceOwnerId;
 
         /**
+         * <p>Service port.</p>
+         * 
          * <strong>example:</strong>
          * <p>5432</p>
          */
@@ -107,13 +140,20 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         public String servicePort;
 
         /**
+         * <p>Service specification (in CU).</p>
+         * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>8</p>
          */
         @NameInMap("ServiceSpec")
         public String serviceSpec;
 
         /**
+         * <p>Service type, with the following value:</p>
+         * <ul>
+         * <li><strong>adbpgss</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>adbpgss</p>
          */
@@ -121,6 +161,18 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         public String serviceType;
 
         /**
+         * <p>Service status, with the following values:</p>
+         * <ul>
+         * <li><p>Init: Initializing</p>
+         * </li>
+         * <li><p>Running: In operation</p>
+         * </li>
+         * <li><p>Exception: Abnormal</p>
+         * </li>
+         * <li><p>Paused: Suspended</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

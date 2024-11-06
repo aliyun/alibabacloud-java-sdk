@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStreamingJobsRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListStreamingJobsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Page number, greater than 0 and not exceeding the maximum value of Integer. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,12 @@ public class ListStreamingJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of records per page, with the following options:</p>
+     * <ul>
+     * <li><strong>30</strong> - <strong>50</strong> - <strong>100</strong>
+     * Default value: 30.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>kafka</p>
      */

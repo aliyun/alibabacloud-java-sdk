@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     /**
+     * <p>Creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-09-08T16:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>Data source configuration information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;brokers&quot;:&quot;broker0:9091,broker1:9091&quot;,&quot;topic&quot;:&quot;topic&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String dataSourceConfig;
 
     /**
+     * <p>Data source description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-kafka</p>
      */
@@ -26,6 +32,8 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String dataSourceDescription;
 
     /**
+     * <p>Data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>Data source name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-kafka</p>
      */
@@ -40,6 +50,11 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String dataSourceName;
 
     /**
+     * <p>Data source type, values include:</p>
+     * <ul>
+     * <li>kafka</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>kafka</p>
      */
@@ -47,6 +62,8 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>Service status message, for example, in case of an exception, it will show the reason for the exception. In normal Running state, this value is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -54,6 +71,8 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
@@ -61,6 +80,8 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>External data service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,11 +89,14 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
     public Integer serviceId;
 
     /**
-     * <p>The status of the service. Valid values:</p>
+     * <p>Service status:</p>
      * <ul>
-     * <li>init</li>
-     * <li>running</li>
-     * <li>exception</li>
+     * <li><p>Initializing init</p>
+     * </li>
+     * <li><p>Running running</p>
+     * </li>
+     * <li><p>Exception exception</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

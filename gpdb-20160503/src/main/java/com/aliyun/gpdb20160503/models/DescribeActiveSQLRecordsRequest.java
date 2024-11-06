@@ -18,6 +18,8 @@ public class DescribeActiveSQLRecordsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>testdb</p>
      */
@@ -25,6 +27,8 @@ public class DescribeActiveSQLRecordsRequest extends TeaModel {
     public String database;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The end time must be later than the start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-07T07:59Z</p>
      */
@@ -32,6 +36,8 @@ public class DescribeActiveSQLRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The keyword used to filter queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>SELECT</p>
      */
@@ -39,6 +45,8 @@ public class DescribeActiveSQLRecordsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maxmum amount of time consumed by traces. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>600</p>
      */
@@ -46,6 +54,8 @@ public class DescribeActiveSQLRecordsRequest extends TeaModel {
     public String maxDuration;
 
     /**
+     * <p>The minimum amount of time consumed by traces. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -53,6 +63,9 @@ public class DescribeActiveSQLRecordsRequest extends TeaModel {
     public String minDuration;
 
     /**
+     * <p>The field used to sort lock diagnostics records and the sorting order.</p>
+     * <p>Default value: <code>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</code>, which indicates that lock diagnostics records are sorted by the start time in descending order. No other values are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
      */
@@ -60,6 +73,8 @@ public class DescribeActiveSQLRecordsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-08-03T09:30Z</p>
      */

@@ -59,6 +59,8 @@ public class CreateCollectionRequest extends TeaModel {
     public Integer externalStorage;
 
     /**
+     * <p>Fields used for full-text search, separated by commas (,). These fields must be keys defined in Metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>title,content</p>
      */
@@ -82,6 +84,10 @@ public class CreateCollectionRequest extends TeaModel {
     public Integer hnswM;
 
     /**
+     * <p>Name of the management account with rds_superuser permissions.</p>
+     * <blockquote>
+     * <p>You can create an account through the console -&gt; Account Management, or by using the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> API.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,6 +97,7 @@ public class CreateCollectionRequest extends TeaModel {
     public String managerAccount;
 
     /**
+     * <p>The password of the manager account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,16 +109,16 @@ public class CreateCollectionRequest extends TeaModel {
     /**
      * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
      * <blockquote>
+     * <p> Supported data types:</p>
      * </blockquote>
      * <ul>
-     * <li><p>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types?spm=a2c63.p38356.0.0.2b2c755axL2r4F">Data types</a>.</p>
+     * <li><p>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-postgresql/developer-reference/data-types-1/">Data types</a>.</p>
      * </li>
      * <li><p>The money data type is not supported.</p>
      * </li>
      * </ul>
      * <p>**</p>
-     * <p><strong>Warning</strong>
-     * Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
+     * <p><strong>Warning</strong> Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,6 +128,14 @@ public class CreateCollectionRequest extends TeaModel {
     public String metadata;
 
     /**
+     * <p>Method used when building the vector index.</p>
+     * <p>Value description:</p>
+     * <ul>
+     * <li><strong>l2</strong>: Euclidean distance.</li>
+     * <li><strong>ip</strong>: Inner product (dot product) distance.</li>
+     * <li><strong>cosine</strong> (default): Cosine similarity.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cosine</p>
      */
@@ -143,6 +158,8 @@ public class CreateCollectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The analyzer that is used for full-text search.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh_cn</p>
      */

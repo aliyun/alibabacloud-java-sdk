@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentCollectionResponseBody extends TeaModel {
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDocumentCollectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -19,10 +23,10 @@ public class DeleteDocumentCollectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Status, with the following possible values:</p>
      * <ul>
-     * <li><strong>success</strong></li>
-     * <li><strong>fail</strong></li>
+     * <li><strong>success</strong>: Success.</li>
+     * <li><strong>fail</strong>: Failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>

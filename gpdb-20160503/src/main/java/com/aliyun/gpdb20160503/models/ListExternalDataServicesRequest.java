@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListExternalDataServicesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,8 @@ public class ListExternalDataServicesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +27,8 @@ public class ListExternalDataServicesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

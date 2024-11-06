@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHadoopDataSourceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Service description.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxf for hdfs data source</p>
      */
@@ -21,6 +24,8 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String dataSourceDescription;
 
     /**
+     * <p>Service name.</p>
+     * 
      * <strong>example:</strong>
      * <p>hdfs_pxf</p>
      */
@@ -28,6 +33,14 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String dataSourceName;
 
     /**
+     * <p>Type of Hadoop external table to be enabled, with values:</p>
+     * <ul>
+     * <li><p>HDFS </p>
+     * </li>
+     * <li><p>Hive</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HDFS</p>
      */
@@ -35,6 +48,8 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>When HadoopCreateType=Emr, this field should contain the EMR instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-1234567</p>
      */
@@ -42,24 +57,58 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String emrInstanceId;
 
     /**
-     * <p>The string that specifies the content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+     * <p>Content string of the Hadoop hdfs-site.xml file. This field is required when enabling an HDFS external table.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <?xml version="1.0" ?>
+     * <!-- Created at 2023-08-15 13:52:43.945 -->
+     * <configuration>
+     *     <property>
+     *         <name>dfs.datanode.cache.revocation.timeout.ms</name>
+     *         <value>900000</value>
+     *     </property>
+     *     <property>
+     *         <name>dfs.namenode.resource.check.interval</name>
+     *         <value>5000</value>
+     *     </property>
+     * </configuration>
      */
     @NameInMap("HDFSConf")
     public String HDFSConf;
 
     /**
-     * <p>The string that specifies the content of the Hadoop core-site.xml file.</p>
+     * <p>Content string of the Hadoop core-site.xml file.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <?xml version="1.0" ?>
+     * <!-- Created at 2023-08-15 13:52:39.527 -->
+     * <configuration>
+     *     <property>
+     *         <name>hadoop.http.authentication.kerberos.keytab</name>
+     *         <value>/etc/emr/hadoop-conf/http.keytab</value>
+     *     </property>
+     *     <property>
+     *         <name>fs.oss.idle.timeout.millisecond</name>
+     *         <value>30000</value>
+     *     </property>
+     *     <property>
+     *         <name>fs.oss.download.thread.concurrency</name>
+     *         <value>32</value>
+     *     </property>
+     * </configuration>
      */
     @NameInMap("HadoopCoreConf")
     public String hadoopCoreConf;
 
     /**
+     * <p>External service type:</p>
+     * <ul>
+     * <li><p>emr</p>
+     * </li>
+     * <li><p>hadoop: Self-built Hadoop</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>emr</p>
      */
@@ -67,24 +116,39 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String hadoopCreateType;
 
     /**
-     * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
+     * <p>Address and hostname of the Hadoop cluster\&quot;s source node in the /etc/hosts file.</p>
      * 
      * <strong>example:</strong>
-     * <p>127.0.0.1 localhost</p>
+     * <p>192.168.220.128 master-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com
+     * 192.168.220.129 core-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com
+     * 192.168.220.130 core-1-2.c-xxx.cn-shanghai.emr.aliyuncs.com</p>
      */
     @NameInMap("HadoopHostsAddress")
     public String hadoopHostsAddress;
 
     /**
-     * <p>The string that specifies the content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.</p>
+     * <p>Content string of the Hadoop hive-site.xml file. This field is required when enabling a HIVE external table.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <?xml version="1.0" ?>
+     * <!-- Created at 2023-08-15 13:52:50.646 -->
+     * <configuration>
+     *     <property>
+     *         <name>hive.exec.reducers.bytes.per.reducer</name>
+     *         <value>256000000</value>
+     *     </property>
+     *     <property>
+     *         <name>hive.stats.column.autogather</name>
+     *         <value>false</value>
+     *     </property>
+     * </configuration>
      */
     @NameInMap("HiveConf")
     public String hiveConf;
 
     /**
+     * <p>Content string of the Hadoop mapred-site.xml file. This field is required when enabling an HDFS external table.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -92,9 +156,9 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String mapReduceConf;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,10 +168,21 @@ public class CreateHadoopDataSourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The string that specifies the content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+     * <p>Content string of the Hadoop yarn-site.xml file. This field is required when enabling an HDFS external table.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <?xml version="1.0" ?>
+     * <!-- Created at 2023-08-15 13:53:29.021 -->
+     * <configuration>
+     *     <property>
+     *         <name>yarn.nodemanager.linux-container-executor.nonsecure-mode.local-user</name>
+     *         <value>hadoop</value>
+     *     </property>
+     *     <property>
+     *         <name>yarn.scheduler.fair.dynamic.max.assign</name>
+     *         <value>true</value>
+     *     </property>
+     * </configuration>
      */
     @NameInMap("YarnConf")
     public String yarnConf;

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class QueryContentResponseBody extends TeaModel {
     /**
+     * <p>Number of tokens used for vectorization.</p>
+     * <blockquote>
+     * <p>A token refers to the smallest unit into which the input text is divided; a token can be a word, a phrase, a punctuation mark, or a character, etc.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
+    /**
+     * <p>The retrieved data.</p>
+     */
     @NameInMap("Matches")
     public QueryContentResponseBodyMatches matches;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +32,8 @@ public class QueryContentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -29,15 +41,27 @@ public class QueryContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The execution state of the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: The operation fails.</li>
+     * <li><strong>true</strong>: The operation is successful.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Resource usage for this query.</p>
+     */
     @NameInMap("Usage")
     public QueryContentResponseBodyUsage usage;
 
+    /**
+     * <p>List of windowed matches.</p>
+     */
     @NameInMap("WindowMatches")
     public QueryContentResponseBodyWindowMatches windowMatches;
 
@@ -122,10 +146,24 @@ public class QueryContentResponseBody extends TeaModel {
     }
 
     public static class QueryContentResponseBodyMatchesMatchList extends TeaModel {
+        /**
+         * <p>The content that is used for full-text search. If you leave this parameter empty, only vector search is used. If you do not leave this parameter empty, two-way retrieval based on vector search and full-text search is used.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the Content and Vector parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud-native data warehouse AnalyticDB PostgreSQL Edition provides a simple, fast, and cost-effective PB-level cloud data warehouse solution.</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The name of the document.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query a list of documents.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>my_doc.txt</p>
          */
@@ -133,6 +171,8 @@ public class QueryContentResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The public URL of the query result image, valid for 2 hours</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxx-cn-beijing.aliyuncs.com/image/test.png">https://xxx-cn-beijing.aliyuncs.com/image/test.png</a></p>
          */
@@ -140,6 +180,8 @@ public class QueryContentResponseBody extends TeaModel {
         public String fileURL;
 
         /**
+         * <p>The unique ID of the vector data.</p>
+         * 
          * <strong>example:</strong>
          * <p>doca-1234</p>
          */
@@ -147,16 +189,23 @@ public class QueryContentResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Metadata during document loader loading.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;page_pos&quot;: 1}</p>
          */
         @NameInMap("LoaderMetadata")
         public String loaderMetadata;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
         /**
+         * <p>Re-ranking score.</p>
+         * 
          * <strong>example:</strong>
          * <p>6.2345</p>
          */
@@ -164,6 +213,13 @@ public class QueryContentResponseBody extends TeaModel {
         public Double rerankScore;
 
         /**
+         * <p>Source of the retrieval results:</p>
+         * <ul>
+         * <li>1 indicates vector retrieval</li>
+         * <li>2 indicates full-text retrieval</li>
+         * <li>3 indicates dual-path recall</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -171,12 +227,20 @@ public class QueryContentResponseBody extends TeaModel {
         public Integer retrievalSource;
 
         /**
+         * <p>The similarity score of the data. It is related to the <code>l2, ip, or cosine</code> algorithm that is specified when you create an index.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.12345</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The vector data. The length of the value must be the same as that of the Dimension parameter in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, only full-text search results are returned.</p>
+         * </blockquote>
+         */
         @NameInMap("Vector")
         public QueryContentResponseBodyMatchesMatchListVector vector;
 
@@ -288,6 +352,11 @@ public class QueryContentResponseBody extends TeaModel {
 
     public static class QueryContentResponseBodyUsage extends TeaModel {
         /**
+         * <p>The number of entries used for vectorization.</p>
+         * <blockquote>
+         * <p>An entry refers to the number of processing items when performing vectorization on text or images. For example, processing one piece of text counts as 1 entry, while processing one image counts as 2 entries.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -295,6 +364,11 @@ public class QueryContentResponseBody extends TeaModel {
         public String embeddingEntries;
 
         /**
+         * <p>Number of tokens used for vectorization.</p>
+         * <blockquote>
+         * <p>A token refers to the smallest unit into which the input text is divided; a token can be a word, a phrase, a punctuation mark, or a character, etc.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -325,10 +399,18 @@ public class QueryContentResponseBody extends TeaModel {
     }
 
     public static class QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch extends TeaModel {
+        /**
+         * <p>Text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AnalyticDB for PostgreSQL is a cloud-native data warehouse service that provides large-scale parallel processing (MPP) capabilities for massive online data analysis.</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>File name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_doc.txt</p>
          */
@@ -336,6 +418,8 @@ public class QueryContentResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>Unique ID of the vector data.</p>
+         * 
          * <strong>example:</strong>
          * <p>doca-2345</p>
          */
@@ -343,12 +427,17 @@ public class QueryContentResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Metadata information when the document loader was loaded.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;page_pos&quot;: 2}</p>
          */
         @NameInMap("LoaderMetadata")
         public String loaderMetadata;
 
+        /**
+         * <p>Metadata map.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
@@ -419,6 +508,9 @@ public class QueryContentResponseBody extends TeaModel {
     }
 
     public static class QueryContentResponseBodyWindowMatchesWindowMatches extends TeaModel {
+        /**
+         * <p>List of individual top windowed matches.</p>
+         */
         @NameInMap("WindowMatch")
         public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch windowMatch;
 

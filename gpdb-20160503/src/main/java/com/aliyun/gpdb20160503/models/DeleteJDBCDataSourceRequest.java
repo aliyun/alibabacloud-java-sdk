@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteJDBCDataSourceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class DeleteJDBCDataSourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The data source ID.</p>
+     * <p>Data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,9 +25,9 @@ public class DeleteJDBCDataSourceRequest extends TeaModel {
     public String dataSourceId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

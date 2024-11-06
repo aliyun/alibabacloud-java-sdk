@@ -27,6 +27,7 @@ public class DescribeExternalDataServiceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

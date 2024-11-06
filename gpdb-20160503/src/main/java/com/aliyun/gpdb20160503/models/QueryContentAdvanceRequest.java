@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryContentAdvanceRequest extends TeaModel {
     /**
+     * <p>Document collection name.</p>
+     * <blockquote>
+     * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the list of created document collections.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +17,20 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("Collection")
     public String collection;
 
+    /**
+     * <p>Text content for retrieval.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>What is ADBPG?</p>
+     */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>Instance ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +40,11 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>In image search scenarios, the source file name of the image to be searched.</p>
+     * <blockquote>
+     * <p>The image file must have a file extension. Currently supported image extensions: bmp, jpg, jpeg, png, tiff.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>test.jpg</p>
      */
@@ -33,6 +52,11 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>In image search scenarios, the publicly accessible URL of the image file.</p>
+     * <blockquote>
+     * <p>The image file must have a file extension. Currently supported image extensions: bmp, jpg, jpeg, png, tiff.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xx/myImage.jpg">https://xx/myImage.jpg</a></p>
      */
@@ -40,26 +64,26 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public java.io.InputStream fileUrlObject;
 
     /**
-     * <p>The filter condition that is used to query data. Specify the parameter in the WHERE clause format. The parameter is an expression that returns a Boolean value of TRUE or FALSE. The parameter can contain comparison operators, such as Equal To (=), Not Equal To (&lt;&gt; or !=), Greater Than (&gt;), Less Than (&lt;), Greater Than or Equal To (&gt;=), and Less Than or Equal To (&lt;=), logical operators, such as AND, OR, and NOT, and keywords, such as IN, BETWEEN, and LIKE.</p>
+     * <p>Filter condition for the data to be queried, in SQL WHERE format. It is an expression that returns a boolean value (true or false). The conditions can be simple comparison operators such as equal (=), not equal (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), less than or equal to (&lt;=), or more complex expressions combined with logical operators (AND, OR, NOT), and conditions using keywords like IN, BETWEEN, LIKE, etc.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>For more information, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</li>
+     * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>title = \&quot;test\&quot;</p>
+     * <p>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
-     * <p>The two-way retrieval algorithm. This parameter is empty by default, which specifies that scores of vector search and full-text search are directly compared and sorted without additional weighting or adjustments.</p>
-     * <p>Valid values:</p>
+     * <p>Dual recall algorithm, default is empty (i.e., directly compare and sort the scores of vectors and full text).</p>
+     * <p>Available values:</p>
      * <ul>
-     * <li>RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.</li>
-     * <li>Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.</li>
-     * <li>Cascaded: This algorithm performs first full-text search and then vector search.</li>
+     * <li>RRF: Reciprocal rank fusion, with a parameter k controlling the fusion effect. See HybridSearchArgs configuration for details;</li>
+     * <li>Weight: Weighted ranking, using a parameter alpha to control the weight of vector and full-text scores, then sorting. See HybridSearchArgs configuration for details;</li>
+     * <li>Cascaded: Perform full-text retrieval first, then vector retrieval on top of it;</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,6 +139,14 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public String includeMetadataFields;
 
     /**
+     * <p>Whether to return vectors. Default is false.</p>
+     * <blockquote>
+     * <ul>
+     * <li><strong>false</strong>: Do not return vectors.</li>
+     * <li><strong>true</strong>: Return vectors.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -122,6 +154,16 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public Boolean includeVector;
 
     /**
+     * <p>Similarity algorithm used during retrieval. If this value is empty, the algorithm specified at the time of knowledge base creation is used. It is recommended not to set this unless there is a specific need.</p>
+     * <blockquote>
+     * <p>Value description:</p>
+     * <ul>
+     * <li><strong>l2</strong>: Euclidean distance.</li>
+     * <li><strong>ip</strong>: Inner product (dot product) distance.</li>
+     * <li><strong>cosine</strong>: Cosine similarity.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cosine</p>
      */
@@ -129,9 +171,9 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public String metrics;
 
     /**
-     * <p>The name of the namespace. Default value: public.</p>
+     * <p>Namespace, default is public.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * <p>You can create a namespace using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list of namespaces using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,6 +183,10 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>Password for the namespace.</p>
+     * <blockquote>
+     * <p>This value is specified in the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -153,20 +199,19 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The recall window. If you specify this parameter, the context of the search result is returned. Format: List\&lt;A, B&gt;. Valid values: -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</p>
+     * <p>Recall window. When this value is not empty, it adds context to the returned search results. The format is an array of 2 elements: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>We recommend that you specify this parameter if the source document is segmented into large numbers of pieces and you may fail to obtain the context.</p>
-     * </li>
-     * <li><p>The context of the search result is retrieved based on the recall window after the search result is reranked.</p>
-     * </li>
+     * <li>Recommended when documents are fragmented and retrieval may lose contextual information.</li>
+     * <li>Re-ranking takes precedence over windowing, i.e., re-rank first, then apply windowing.</li>
      * </ul>
+     * </blockquote>
      */
     @NameInMap("RecallWindow")
     public java.util.List<Integer> recallWindow;
 
     /**
+     * <p>The region ID where the instance is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -176,6 +221,14 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Re-ranking factor. When this value is not empty, it will re-rank the vector search results. The value range is 1 &lt; RerankFactor &lt;= 5.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Re-ranking is slower when documents are sparsely split.</li>
+     * <li>It is recommended that the re-ranked count (TopK * Factor, rounded up) does not exceed 50.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -183,6 +236,8 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public Double rerankFactor;
 
     /**
+     * <p>Set the number of top results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -190,7 +245,7 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public Integer topK;
 
     /**
-     * <p>Specifies whether to use full-text search to implement two-way retrieval. The default value is false, which specifies that only vector search is used.</p>
+     * <p>Whether to use full-text retrieval (dual recall). Default is false, which means only vector retrieval is used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

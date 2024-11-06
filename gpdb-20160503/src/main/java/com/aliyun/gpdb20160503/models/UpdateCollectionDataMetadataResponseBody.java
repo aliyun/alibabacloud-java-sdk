@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCollectionDataMetadataResponseBody extends TeaModel {
     /**
-     * <p>The number of effective rows.</p>
+     * <p>Number of effective entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class UpdateCollectionDataMetadataResponseBody extends TeaModel {
     public Long appliedRows;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>Detailed information when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>failed to connect database, detailMsg: getConnection fail::SQL State: 28P01, Error Code: 0, Error Message: FATAL: password</p>
@@ -23,7 +23,7 @@ public class UpdateCollectionDataMetadataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -32,10 +32,10 @@ public class UpdateCollectionDataMetadataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Status, with the following values:</p>
      * <ul>
-     * <li><strong>success</strong></li>
-     * <li><strong>fail</strong></li>
+     * <li><strong>success</strong>: Success.</li>
+     * <li><strong>fail</strong>: Failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>

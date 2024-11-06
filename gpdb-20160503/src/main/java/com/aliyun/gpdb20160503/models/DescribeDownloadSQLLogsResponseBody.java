@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
     /**
-     * <p>The URL that is used to download the file.</p>
+     * <p>List of download records.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeDownloadSQLLogsResponseBodyRecords> records;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FDE9942A-D919-527B-B559-5D0F6F20CCEC</p>
@@ -42,6 +42,8 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
 
     public static class DescribeDownloadSQLLogsResponseBodyRecords extends TeaModel {
         /**
+         * <p>Download record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1150</p>
          */
@@ -49,6 +51,8 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         public Long downloadId;
 
         /**
+         * <p>Download link.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</p>
          */
@@ -56,6 +60,8 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Error message</p>
          */
@@ -63,6 +69,8 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         public String exceptionMsg;
 
         /**
+         * <p>File name.</p>
+         * 
          * <strong>example:</strong>
          * <p>20220509113448-20220509173448.csv</p>
          */
@@ -70,6 +78,13 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>Task status, with possible values being:</p>
+         * <ul>
+         * <li><strong>running</strong>: Downloading.</li>
+         * <li><strong>finished</strong>: Completed.</li>
+         * <li><strong>failed</strong>: Download failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
