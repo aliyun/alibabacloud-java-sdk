@@ -43,6 +43,9 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("QueryHashkey")
+    public Boolean queryHashkey;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -94,6 +97,14 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public PreloadDcdnObjectCachesRequest setQueryHashkey(Boolean queryHashkey) {
+        this.queryHashkey = queryHashkey;
+        return this;
+    }
+    public Boolean getQueryHashkey() {
+        return this.queryHashkey;
     }
 
     public PreloadDcdnObjectCachesRequest setSecurityToken(String securityToken) {
