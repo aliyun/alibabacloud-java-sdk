@@ -161,6 +161,9 @@ public class Task extends TeaModel {
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
+    @NameInMap("timeout")
+    public Integer timeout;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -466,6 +469,14 @@ public class Task extends TeaModel {
     }
     public java.util.Map<String, String> getTags() {
         return this.tags;
+    }
+
+    public Task setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
     public Task setType(String type) {

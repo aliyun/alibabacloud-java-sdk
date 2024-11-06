@@ -18,7 +18,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li>stable</li>
-     * <li>beta</li>
+     * <li>Beta</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
     public String releaseType;
 
     /**
-     * <p>The version of Serverless Spark.</p>
+     * <p>The version of EMR Serverless Spark.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-2.1 (Spark 3.3.1, Scala 2.12, Java Runtime)</p>
@@ -37,7 +37,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>The status of the version. Valid values:</p>
+     * <p>The status of the version.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>ONLINE</li>
@@ -49,6 +49,15 @@ public class ListReleaseVersionsRequest extends TeaModel {
      */
     @NameInMap("releaseVersionStatus")
     public String releaseVersionStatus;
+
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w-d2d82aa09155****</p>
+     */
+    @NameInMap("workspaceId")
+    public String workspaceId;
 
     public static ListReleaseVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListReleaseVersionsRequest self = new ListReleaseVersionsRequest();
@@ -85,6 +94,14 @@ public class ListReleaseVersionsRequest extends TeaModel {
     }
     public String getReleaseVersionStatus() {
         return this.releaseVersionStatus;
+    }
+
+    public ListReleaseVersionsRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

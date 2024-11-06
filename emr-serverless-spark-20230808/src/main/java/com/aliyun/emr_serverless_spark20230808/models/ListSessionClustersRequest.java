@@ -4,6 +4,18 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListSessionClustersRequest extends TeaModel {
+    /**
+     * <p>The session type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>NOTEBOOK</li>
+     * <li>THRIFT</li>
+     * <li>SQL</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL</p>
+     */
     @NameInMap("kind")
     public String kind;
 

@@ -32,7 +32,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The SQL computes.</p>
+     * <p>The list of sessions.</p>
      */
     @NameInMap("sessionClusters")
     public java.util.List<ListSessionClustersResponseBodySessionClusters> sessionClusters;
@@ -186,7 +186,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.</p>
+         * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>45</p>
@@ -261,7 +261,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
     public static class ListSessionClustersResponseBodySessionClusters extends TeaModel {
         /**
-         * <p>The SQL Compute configurations, which are equivalent to the configurations of the Spark job.</p>
+         * <p>The session configurations, which are equivalent to the configurations of the Spark job.</p>
          */
         @NameInMap("applicationConfigs")
         public java.util.List<ListSessionClustersResponseBodySessionClustersApplicationConfigs> applicationConfigs;
@@ -273,28 +273,55 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public ListSessionClustersResponseBodySessionClustersAutoStartConfiguration autoStartConfiguration;
 
         /**
-         * <p>The automatic termination configurations.</p>
+         * <p>The configurations of automatic termination.</p>
          */
         @NameInMap("autoStopConfiguration")
         public ListSessionClustersResponseBodySessionClustersAutoStopConfiguration autoStopConfiguration;
 
+        /**
+         * <p>The version of the Spark engine.</p>
+         */
         @NameInMap("displayReleaseVersion")
         public String displayReleaseVersion;
 
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The ID of the job that is associated with the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TSK-xxxxxxxxx</p>
+         */
         @NameInMap("draftId")
         public String draftId;
 
+        /**
+         * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("fusion")
         public Boolean fusion;
 
+        /**
+         * <p>The session type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NOTEBOOK</li>
+         * <li>THRIFT</li>
+         * <li>SQL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
+         */
         @NameInMap("kind")
         public String kind;
 
         /**
-         * <p>The name of the SQL Compute.</p>
+         * <p>The name of the session.</p>
          * 
          * <strong>example:</strong>
          * <p>adhoc_query</p>
@@ -303,7 +330,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the queue on which the SQL Compute runs.</p>
+         * <p>The name of the queue that is used to run the session.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -311,11 +338,17 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("queueName")
         public String queueName;
 
+        /**
+         * <p>The version of EMR Serverless Spark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-2.1</p>
+         */
         @NameInMap("releaseVersion")
         public String releaseVersion;
 
         /**
-         * <p>The SQL Compute ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sc-123131</p>
@@ -324,7 +357,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String sessionClusterId;
 
         /**
-         * <p>The status of the SQL Compute.</p>
+         * <p>The status of the session.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -333,7 +366,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The details of the last status change of the SQL Compute.</p>
+         * <p>The details of the most recent status change of the session.</p>
          */
         @NameInMap("stateChangeReason")
         public ListSessionClustersResponseBodySessionClustersStateChangeReason stateChangeReason;
@@ -356,6 +389,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("userName")
         public String userName;
 
+        /**
+         * <p>The Spark UI of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://spark-ui-xxxx">http://spark-ui-xxxx</a></p>
+         */
         @NameInMap("webUI")
         public String webUI;
 

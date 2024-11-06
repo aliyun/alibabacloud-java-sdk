@@ -107,9 +107,21 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         @NameInMap("cpuArchitectures")
         public java.util.List<String> cpuArchitectures;
 
+        /**
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-2.1 (Spark 3.3.1, Scala 2.12)</p>
+         */
         @NameInMap("displayReleaseVersion")
         public String displayReleaseVersion;
 
+        /**
+         * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("fusion")
         public Boolean fusion;
 
@@ -132,7 +144,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String iaasType;
 
         /**
-         * <p>The version.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-2.1 (Spark 3.3.1, Scala 2.12, Java Runtime)</p>
