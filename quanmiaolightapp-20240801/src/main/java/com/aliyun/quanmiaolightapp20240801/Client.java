@@ -438,12 +438,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunMarketingInformationWritingResponse runMarketingInformationWritingWithOptions(String workspaceId, RunMarketingInformationWritingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customLimitation)) {
+            body.put("customLimitation", request.customLimitation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customPrompt)) {
             body.put("customPrompt", request.customPrompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.inputExample)) {
+            body.put("inputExample", request.inputExample);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
             body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputExample)) {
+            body.put("outputExample", request.outputExample);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceMaterial)) {
