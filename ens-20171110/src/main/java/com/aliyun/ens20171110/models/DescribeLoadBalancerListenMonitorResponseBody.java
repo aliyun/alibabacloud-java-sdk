@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The TCP/UDP monitoring data of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerMonitorListenData")
     public java.util.List<DescribeLoadBalancerListenMonitorResponseBodyLoadBalancerMonitorListenData> loadBalancerMonitorListenData;
 
@@ -39,6 +42,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
 
     public static class DescribeLoadBalancerListenMonitorResponseBodyLoadBalancerMonitorListenData extends TeaModel {
         /**
+         * <p>The number of active connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>80285</p>
          */
@@ -46,6 +51,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String actConns;
 
         /**
+         * <p>The business time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-15 16:03:00</p>
          */
@@ -53,6 +60,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String bizTime;
 
         /**
+         * <p>The number of new connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>37150</p>
          */
@@ -60,6 +69,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String conns;
 
         /**
+         * <p>The number of dropped connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -67,6 +78,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String dropConns;
 
         /**
+         * <p>The ID of the node to which the ELB instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-dongguan-9</p>
          */
@@ -74,6 +87,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
+         * <p>The number of inactive connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>16322</p>
          */
@@ -81,6 +96,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inActConns;
 
         /**
+         * <p>The inbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>67532</p>
          */
@@ -88,6 +105,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inBytes;
 
         /**
+         * <p>The dropped inbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>324</p>
          */
@@ -95,6 +114,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inDropBytes;
 
         /**
+         * <p>The number of dropped inbound packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -102,6 +123,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inDropPkts;
 
         /**
+         * <p>The number of inbound packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -109,6 +132,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inPkts;
 
         /**
+         * <p>The number of unavailable servers that are attached to the monitored ELB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -116,6 +141,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inValidRsNum;
 
         /**
+         * <p>The ID of the ELB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-5q73cv04zeyh43lh74lp4****</p>
          */
@@ -123,6 +150,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
+         * <p>The outbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>5155487</p>
          */
@@ -130,6 +159,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String outBytes;
 
         /**
+         * <p>The dropped outbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -137,6 +168,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String outDropBytes;
 
         /**
+         * <p>The number of dropped outbound packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>76</p>
          */
@@ -144,6 +177,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String outDropPkts;
 
         /**
+         * <p>The number of outbound packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -151,6 +186,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String outPkts;
 
         /**
+         * <p>The network protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -158,6 +195,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String proto;
 
         /**
+         * <p>The VIP port of the ELB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -165,6 +204,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String VPort;
 
         /**
+         * <p>The number of available servers that are attached to the monitored ELB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -172,6 +213,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String validRsNum;
 
         /**
+         * <p>The VIP of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.8.<em>.</em></p>
          */
@@ -179,6 +222,8 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String vip;
 
         /**
+         * <p>The ID of the tunnel.</p>
+         * 
          * <strong>example:</strong>
          * <p>53284</p>
          */

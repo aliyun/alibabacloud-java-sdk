@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddBackendServersShrinkRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+     * <p>The list of backend servers that you want to add to the Edge Load Balancer (ELB) instance. You can add up to 20 backend servers at a time.</p>
      * <blockquote>
-     * <p> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * <p> Only Edge Node Service (ENS) instances that are in the running state can be added to the ELB instance as backend servers.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */

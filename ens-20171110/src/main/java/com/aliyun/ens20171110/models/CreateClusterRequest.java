@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
+     * <p>The version of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.18.8</p>
      */
@@ -12,6 +14,8 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterVersion;
 
     /**
+     * <p>The name of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>mycluster-1</p>
      */

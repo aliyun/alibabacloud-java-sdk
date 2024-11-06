@@ -22,6 +22,9 @@ public class DescribeNetworkInterfacesShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("Ipv6Address")
     public String ipv6AddressShrink;
 
@@ -106,7 +109,7 @@ public class DescribeNetworkInterfacesShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the ENI. Valid Values:</p>
+     * <p>The type of the ENI. Valid values:</p>
      * <ul>
      * <li>Primary: primary ENI.</li>
      * <li>Secondary: secondary ENI.</li>

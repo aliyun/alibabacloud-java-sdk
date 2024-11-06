@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddBackendServersRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+     * <p>The list of backend servers that you want to add to the Edge Load Balancer (ELB) instance. You can add up to 20 backend servers at a time.</p>
      * <blockquote>
-     * <p> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * <p> Only Edge Node Service (ENS) instances that are in the running state can be added to the ELB instance as backend servers.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -50,7 +50,7 @@ public class AddBackendServersRequest extends TeaModel {
          * <p>The IP address of the backend server.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.0.1</p>
+         * <p>192.168.X.X</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -65,7 +65,7 @@ public class AddBackendServersRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the ENS instance.</p>
+         * <p>The ID of the backend server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -77,8 +77,8 @@ public class AddBackendServersRequest extends TeaModel {
         /**
          * <p>The type of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>ens</strong>: ENS instance.</li>
-         * <li><strong>eni</strong>: ENI.</li>
+         * <li><strong>ens</strong>: ENS instance</li>
+         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
          * </ul>
          * 
          * <strong>example:</strong>

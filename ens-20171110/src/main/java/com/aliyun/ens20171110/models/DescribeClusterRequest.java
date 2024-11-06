@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c8f0377146d104687ac562eef9403****</p>
      */
