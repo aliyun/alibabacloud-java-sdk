@@ -138,6 +138,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增app自定义布局</p>
+     * 
+     * @param tmpReq CreateAppLayoutRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppLayoutResponse
+     */
+    public CreateAppLayoutResponse createAppLayoutWithOptions(CreateAppLayoutRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAppLayoutShrinkRequest request = new CreateAppLayoutShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.layout)) {
+            request.layoutShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layout, "Layout", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutShrink)) {
+            query.put("Layout", request.layoutShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppLayout"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppLayoutResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增app自定义布局</p>
+     * 
+     * @param request CreateAppLayoutRequest
+     * @return CreateAppLayoutResponse
+     */
+    public CreateAppLayoutResponse createAppLayout(CreateAppLayoutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAppLayoutWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>增加应用录制模版</p>
      * 
      * @param tmpReq CreateAppRecordTemplateRequest
@@ -436,6 +494,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateMPULayoutResponse createMPULayout(CreateMPULayoutRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createMPULayoutWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除app自定义布局</p>
+     * 
+     * @param tmpReq DeleteAppLayoutRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppLayoutResponse
+     */
+    public DeleteAppLayoutResponse deleteAppLayoutWithOptions(DeleteAppLayoutRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteAppLayoutShrinkRequest request = new DeleteAppLayoutShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.layout)) {
+            request.layoutShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layout, "Layout", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutShrink)) {
+            query.put("Layout", request.layoutShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAppLayout"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppLayoutResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除app自定义布局</p>
+     * 
+     * @param request DeleteAppLayoutRequest
+     * @return DeleteAppLayoutResponse
+     */
+    public DeleteAppLayoutResponse deleteAppLayout(DeleteAppLayoutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAppLayoutWithOptions(request, runtime);
     }
 
     /**
@@ -3906,6 +4022,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改app自定义布局</p>
+     * 
+     * @param tmpReq ModifyAppLayoutRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAppLayoutResponse
+     */
+    public ModifyAppLayoutResponse modifyAppLayoutWithOptions(ModifyAppLayoutRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyAppLayoutShrinkRequest request = new ModifyAppLayoutShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.layout)) {
+            request.layoutShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layout, "Layout", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutShrink)) {
+            query.put("Layout", request.layoutShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAppLayout"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppLayoutResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改app自定义布局</p>
+     * 
+     * @param request ModifyAppLayoutRequest
+     * @return ModifyAppLayoutResponse
+     */
+    public ModifyAppLayoutResponse modifyAppLayout(ModifyAppLayoutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAppLayoutWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改应用旁路开关</p>
      * 
      * @param request ModifyAppLiveStreamStatusRequest
@@ -4399,6 +4573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backgrounds)) {
+            query.put("Backgrounds", request.backgrounds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
             query.put("ChannelId", request.channelId);
         }
@@ -4417,6 +4595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
             query.put("Panes", request.panes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionColor)) {
+            query.put("RegionColor", request.regionColor);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageConfig)) {
@@ -4754,6 +4936,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backgrounds)) {
+            query.put("Backgrounds", request.backgrounds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
             query.put("ChannelId", request.channelId);
         }
@@ -4772,6 +4958,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
             query.put("Panes", request.panes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionColor)) {
+            query.put("RegionColor", request.regionColor);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
@@ -5202,6 +5392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backgrounds)) {
+            query.put("Backgrounds", request.backgrounds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
             query.put("ChannelId", request.channelId);
         }
@@ -5606,6 +5800,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backgrounds)) {
+            query.put("Backgrounds", request.backgrounds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {

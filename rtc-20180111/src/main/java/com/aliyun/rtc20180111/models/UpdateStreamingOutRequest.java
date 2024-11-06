@@ -13,6 +13,9 @@ public class UpdateStreamingOutRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Backgrounds")
+    public java.util.List<UpdateStreamingOutRequestBackgrounds> backgrounds;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -63,6 +66,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UpdateStreamingOutRequest setBackgrounds(java.util.List<UpdateStreamingOutRequestBackgrounds> backgrounds) {
+        this.backgrounds = backgrounds;
+        return this;
+    }
+    public java.util.List<UpdateStreamingOutRequestBackgrounds> getBackgrounds() {
+        return this.backgrounds;
     }
 
     public UpdateStreamingOutRequest setChannelId(String channelId) {
@@ -119,6 +130,144 @@ public class UpdateStreamingOutRequest extends TeaModel {
     }
     public java.util.List<UpdateStreamingOutRequestTexts> getTexts() {
         return this.texts;
+    }
+
+    public static class UpdateStreamingOutRequestBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
+        @NameInMap("Alpha")
+        public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("BackgroundCropMode")
+        public Integer backgroundCropMode;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Height")
+        public Double height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Layer")
+        public Integer layer;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun.com/123.jpg">https://aliyun.com/123.jpg</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Width")
+        public Double width;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("X")
+        public Double x;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Y")
+        public Double y;
+
+        public static UpdateStreamingOutRequestBackgrounds build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestBackgrounds self = new UpdateStreamingOutRequestBackgrounds();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setAlpha(Double alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setBackgroundCropMode(Integer backgroundCropMode) {
+            this.backgroundCropMode = backgroundCropMode;
+            return this;
+        }
+        public Integer getBackgroundCropMode() {
+            return this.backgroundCropMode;
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setHeight(Double height) {
+            this.height = height;
+            return this;
+        }
+        public Double getHeight() {
+            return this.height;
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setLayer(Integer layer) {
+            this.layer = layer;
+            return this;
+        }
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setWidth(Double width) {
+            this.width = width;
+            return this;
+        }
+        public Double getWidth() {
+            return this.width;
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setX(Double x) {
+            this.x = x;
+            return this;
+        }
+        public Double getX() {
+            return this.x;
+        }
+
+        public UpdateStreamingOutRequestBackgrounds setY(Double y) {
+            this.y = y;
+            return this;
+        }
+        public Double getY() {
+            return this.y;
+        }
+
     }
 
     public static class UpdateStreamingOutRequestClockWidgetsBoxColor extends TeaModel {
