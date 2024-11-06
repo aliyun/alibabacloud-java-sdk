@@ -4,8 +4,14 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunMarketingInformationWritingRequest extends TeaModel {
+    @NameInMap("customLimitation")
+    public String customLimitation;
+
     @NameInMap("customPrompt")
     public String customPrompt;
+
+    @NameInMap("inputExample")
+    public String inputExample;
 
     /**
      * <strong>example:</strong>
@@ -14,6 +20,9 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
      */
     @NameInMap("modelId")
     public String modelId;
+
+    @NameInMap("outputExample")
+    public String outputExample;
 
     @NameInMap("sourceMaterial")
     public String sourceMaterial;
@@ -26,6 +35,14 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunMarketingInformationWritingRequest setCustomLimitation(String customLimitation) {
+        this.customLimitation = customLimitation;
+        return this;
+    }
+    public String getCustomLimitation() {
+        return this.customLimitation;
+    }
+
     public RunMarketingInformationWritingRequest setCustomPrompt(String customPrompt) {
         this.customPrompt = customPrompt;
         return this;
@@ -34,12 +51,28 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.customPrompt;
     }
 
+    public RunMarketingInformationWritingRequest setInputExample(String inputExample) {
+        this.inputExample = inputExample;
+        return this;
+    }
+    public String getInputExample() {
+        return this.inputExample;
+    }
+
     public RunMarketingInformationWritingRequest setModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
     public String getModelId() {
         return this.modelId;
+    }
+
+    public RunMarketingInformationWritingRequest setOutputExample(String outputExample) {
+        this.outputExample = outputExample;
+        return this;
+    }
+    public String getOutputExample() {
+        return this.outputExample;
     }
 
     public RunMarketingInformationWritingRequest setSourceMaterial(String sourceMaterial) {
