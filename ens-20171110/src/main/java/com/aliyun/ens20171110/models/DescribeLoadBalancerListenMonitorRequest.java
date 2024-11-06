@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenMonitorRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The ID of the ELB instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DescribeLoadBalancerListenMonitorRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
+     * <p>The network protocol, such as tcp or udp.</p>
+     * 
      * <strong>example:</strong>
      * <p>tcp</p>
      */
@@ -30,6 +34,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends TeaModel {
     public String proto;
 
     /**
+     * <p>The beginning of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The virtual IP address (VIP) port of the ELB instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

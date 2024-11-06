@@ -50,6 +50,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnvironmentVar")
+    public String environmentVar;
+
     /**
      * <p>The refresh rate. Unit: Hz. Valid values: 30 and 60.</p>
      * 
@@ -244,6 +247,14 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public CreateARMServerInstancesRequest setEnvironmentVar(String environmentVar) {
+        this.environmentVar = environmentVar;
+        return this;
+    }
+    public String getEnvironmentVar() {
+        return this.environmentVar;
     }
 
     public CreateARMServerInstancesRequest setFrequency(Integer frequency) {

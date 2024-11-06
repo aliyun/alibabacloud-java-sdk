@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
+    /**
+     * <p>The listeners of the ELB instance.</p>
+     */
     @NameInMap("Listeners")
     public DescribeLoadBalancerListenersResponseBodyListeners listeners;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
      */
@@ -29,6 +38,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>49</p>
      */
@@ -82,6 +93,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersListener extends TeaModel {
         /**
+         * <p>The timestamp when the listener was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-15T08:42:57Z</p>
          */
@@ -89,6 +102,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the listener.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -96,6 +111,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The listener port that is used for HTTP-to-HTTPS redirection.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
@@ -103,6 +120,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public String forwardPort;
 
         /**
+         * <p>Indicates whether HTTP-to-HTTPS redirection is enabled for the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -110,6 +133,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public String listenerForward;
 
         /**
+         * <p>The listening port.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -117,6 +142,8 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public String listenerPort;
 
         /**
+         * <p>The ID of the ELB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-51a5fhou****</p>
          */
@@ -124,6 +151,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
+         * <p>The network transmission protocol that is used by the listener.</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -131,6 +166,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The status of the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>stopped</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */

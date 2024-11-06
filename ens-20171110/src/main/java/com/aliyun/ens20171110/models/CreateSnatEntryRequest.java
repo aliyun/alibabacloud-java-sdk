@@ -4,6 +4,12 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateSnatEntryRequest extends TeaModel {
+    /**
+     * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 

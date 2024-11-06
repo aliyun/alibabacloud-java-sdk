@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHaVipsRequest extends TeaModel {
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-cmcc</p>
      */
@@ -12,6 +14,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The IP address of the HAVIP.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.5.XX.XX</p>
      */
@@ -19,6 +23,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String haVipAddress;
 
     /**
+     * <p>The ID of the HAVIP.</p>
+     * 
      * <strong>example:</strong>
      * <p>havip-5p14t****</p>
      */
@@ -26,6 +32,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String haVipId;
 
     /**
+     * <p>The name of the HAVIP.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -33,6 +41,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the network.</p>
+     * 
      * <strong>example:</strong>
      * <p>n-57gqcdfvx6n****</p>
      */
@@ -40,6 +50,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String networkId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +68,14 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The status of the HAVIP. Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Available</li>
+     * <li>InUse</li>
+     * <li>Deleting</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */
@@ -61,6 +83,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>
      */

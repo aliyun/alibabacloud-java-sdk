@@ -92,6 +92,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set extends TeaModel {
+        /**
+         * <p>The IPv6 address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2605:340:cdb1:XXXX:XXXX:XXXX:XXXX:e2d6</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -250,6 +256,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The IPv6 addresses of the ENIs.</p>
+         */
         @NameInMap("Ipv6Sets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets ipv6Sets;
 
