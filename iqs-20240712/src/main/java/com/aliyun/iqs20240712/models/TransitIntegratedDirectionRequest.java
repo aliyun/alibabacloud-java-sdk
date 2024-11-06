@@ -3,13 +3,13 @@ package com.aliyun.iqs20240712.models;
 
 import com.aliyun.tea.*;
 
-public class DrivingDirectionNovaRequest extends TeaModel {
-    @NameInMap("carType")
-    public String carType;
+public class TransitIntegratedDirectionRequest extends TeaModel {
+    @NameInMap("destinationCity")
+    public String destinationCity;
 
     /**
      * <strong>example:</strong>
-     * <p>43.345456</p>
+     * <p>40.345456</p>
      */
     @NameInMap("destinationLatitude")
     public String destinationLatitude;
@@ -20,6 +20,9 @@ public class DrivingDirectionNovaRequest extends TeaModel {
      */
     @NameInMap("destinationLongitude")
     public String destinationLongitude;
+
+    @NameInMap("originCity")
+    public String originCity;
 
     /**
      * <strong>example:</strong>
@@ -35,23 +38,20 @@ public class DrivingDirectionNovaRequest extends TeaModel {
     @NameInMap("originLongitude")
     public String originLongitude;
 
-    @NameInMap("plate")
-    public String plate;
-
-    public static DrivingDirectionNovaRequest build(java.util.Map<String, ?> map) throws Exception {
-        DrivingDirectionNovaRequest self = new DrivingDirectionNovaRequest();
+    public static TransitIntegratedDirectionRequest build(java.util.Map<String, ?> map) throws Exception {
+        TransitIntegratedDirectionRequest self = new TransitIntegratedDirectionRequest();
         return TeaModel.build(map, self);
     }
 
-    public DrivingDirectionNovaRequest setCarType(String carType) {
-        this.carType = carType;
+    public TransitIntegratedDirectionRequest setDestinationCity(String destinationCity) {
+        this.destinationCity = destinationCity;
         return this;
     }
-    public String getCarType() {
-        return this.carType;
+    public String getDestinationCity() {
+        return this.destinationCity;
     }
 
-    public DrivingDirectionNovaRequest setDestinationLatitude(String destinationLatitude) {
+    public TransitIntegratedDirectionRequest setDestinationLatitude(String destinationLatitude) {
         this.destinationLatitude = destinationLatitude;
         return this;
     }
@@ -59,7 +59,7 @@ public class DrivingDirectionNovaRequest extends TeaModel {
         return this.destinationLatitude;
     }
 
-    public DrivingDirectionNovaRequest setDestinationLongitude(String destinationLongitude) {
+    public TransitIntegratedDirectionRequest setDestinationLongitude(String destinationLongitude) {
         this.destinationLongitude = destinationLongitude;
         return this;
     }
@@ -67,7 +67,15 @@ public class DrivingDirectionNovaRequest extends TeaModel {
         return this.destinationLongitude;
     }
 
-    public DrivingDirectionNovaRequest setOriginLatitude(String originLatitude) {
+    public TransitIntegratedDirectionRequest setOriginCity(String originCity) {
+        this.originCity = originCity;
+        return this;
+    }
+    public String getOriginCity() {
+        return this.originCity;
+    }
+
+    public TransitIntegratedDirectionRequest setOriginLatitude(String originLatitude) {
         this.originLatitude = originLatitude;
         return this;
     }
@@ -75,20 +83,12 @@ public class DrivingDirectionNovaRequest extends TeaModel {
         return this.originLatitude;
     }
 
-    public DrivingDirectionNovaRequest setOriginLongitude(String originLongitude) {
+    public TransitIntegratedDirectionRequest setOriginLongitude(String originLongitude) {
         this.originLongitude = originLongitude;
         return this;
     }
     public String getOriginLongitude() {
         return this.originLongitude;
-    }
-
-    public DrivingDirectionNovaRequest setPlate(String plate) {
-        this.plate = plate;
-        return this;
-    }
-    public String getPlate() {
-        return this.plate;
     }
 
 }

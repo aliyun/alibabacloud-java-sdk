@@ -273,6 +273,9 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
         @NameInMap("orientation")
         public String orientation;
 
+        @NameInMap("polyline")
+        public String polyline;
+
         @NameInMap("roadName")
         public String roadName;
 
@@ -310,6 +313,14 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
         }
         public String getOrientation() {
             return this.orientation;
+        }
+
+        public ElectrobikeDirectionNovaResponseBodyDataPathsSteps setPolyline(String polyline) {
+            this.polyline = polyline;
+            return this;
+        }
+        public String getPolyline() {
+            return this.polyline;
         }
 
         public ElectrobikeDirectionNovaResponseBodyDataPathsSteps setRoadName(String roadName) {
@@ -402,6 +413,9 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
     }
 
     public static class ElectrobikeDirectionNovaResponseBodyData extends TeaModel {
+        @NameInMap("count")
+        public String count;
+
         /**
          * <strong>example:</strong>
          * <p>40.345456</p>
@@ -443,6 +457,14 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
         public static ElectrobikeDirectionNovaResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ElectrobikeDirectionNovaResponseBodyData self = new ElectrobikeDirectionNovaResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ElectrobikeDirectionNovaResponseBodyData setCount(String count) {
+            this.count = count;
+            return this;
+        }
+        public String getCount() {
+            return this.count;
         }
 
         public ElectrobikeDirectionNovaResponseBodyData setDestinationLatitude(String destinationLatitude) {
