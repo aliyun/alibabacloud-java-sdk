@@ -28,6 +28,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>根据起终点坐标检索符合条件的骑行路线规划方案</p>
+     * 
+     * @param request BicyclingDirectionNovaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BicyclingDirectionNovaResponse
+     */
+    public BicyclingDirectionNovaResponse bicyclingDirectionNovaWithOptions(BicyclingDirectionNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLatitude)) {
+            query.put("destinationLatitude", request.destinationLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLongitude)) {
+            query.put("destinationLongitude", request.destinationLongitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLatitude)) {
+            query.put("originLatitude", request.originLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLongitude)) {
+            query.put("originLongitude", request.originLongitude);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BicyclingDirectionNova"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v2/direction/bicycling"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BicyclingDirectionNovaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据起终点坐标检索符合条件的骑行路线规划方案</p>
+     * 
+     * @param request BicyclingDirectionNovaRequest
+     * @return BicyclingDirectionNovaResponse
+     */
+    public BicyclingDirectionNovaResponse bicyclingDirectionNova(BicyclingDirectionNovaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.bicyclingDirectionNovaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>自然语言通用查询</p>
      * 
      * @param request CommonQueryBySceneRequest
@@ -66,6 +125,443 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.commonQueryBySceneWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据起终点坐标检索符合条件的驾车路线规划方案</p>
+     * 
+     * @param request DrivingDirectionNovaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DrivingDirectionNovaResponse
+     */
+    public DrivingDirectionNovaResponse drivingDirectionNovaWithOptions(DrivingDirectionNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLatitude)) {
+            query.put("destinationLatitude", request.destinationLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLongitude)) {
+            query.put("destinationLongitude", request.destinationLongitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLatitude)) {
+            query.put("originLatitude", request.originLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLongitude)) {
+            query.put("originLongitude", request.originLongitude);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DrivingDirectionNova"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v2/direction/driving"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DrivingDirectionNovaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据起终点坐标检索符合条件的驾车路线规划方案</p>
+     * 
+     * @param request DrivingDirectionNovaRequest
+     * @return DrivingDirectionNovaResponse
+     */
+    public DrivingDirectionNovaResponse drivingDirectionNova(DrivingDirectionNovaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.drivingDirectionNovaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>电动车路线规划方案V2</p>
+     * 
+     * @param request ElectrobikeDirectionNovaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ElectrobikeDirectionNovaResponse
+     */
+    public ElectrobikeDirectionNovaResponse electrobikeDirectionNovaWithOptions(ElectrobikeDirectionNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLatitude)) {
+            query.put("destinationLatitude", request.destinationLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLongitude)) {
+            query.put("destinationLongitude", request.destinationLongitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLatitude)) {
+            query.put("originLatitude", request.originLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLongitude)) {
+            query.put("originLongitude", request.originLongitude);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ElectrobikeDirectionNova"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v2/direction/electrobike"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ElectrobikeDirectionNovaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>电动车路线规划方案V2</p>
+     * 
+     * @param request ElectrobikeDirectionNovaRequest
+     * @return ElectrobikeDirectionNovaResponse
+     */
+    public ElectrobikeDirectionNovaResponse electrobikeDirectionNova(ElectrobikeDirectionNovaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.electrobikeDirectionNovaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>地理编码，将详细的结构化地址转换为高德经纬度坐标</p>
+     * 
+     * @param request GeoCodeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GeoCodeResponse
+     */
+    public GeoCodeResponse geoCodeWithOptions(GeoCodeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("city", request.city);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GeoCode"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v1/geocode/geo"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GeoCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>地理编码，将详细的结构化地址转换为高德经纬度坐标</p>
+     * 
+     * @param request GeoCodeRequest
+     * @return GeoCodeResponse
+     */
+    public GeoCodeResponse geoCode(GeoCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.geoCodeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过经纬度查询附近的地点</p>
+     * 
+     * @param request NearbySearchRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return NearbySearchResponse
+     */
+    public NearbySearchResponse nearbySearchWithOptions(NearbySearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
+            query.put("keywords", request.keywords);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
+            query.put("latitude", request.latitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
+            query.put("longitude", request.longitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.radius)) {
+            query.put("radius", request.radius);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            query.put("types", request.types);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "NearbySearch"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v1/pois/nearby"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new NearbySearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过经纬度查询附近的地点</p>
+     * 
+     * @param request NearbySearchRequest
+     * @return NearbySearchResponse
+     */
+    public NearbySearchResponse nearbySearch(NearbySearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.nearbySearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过经纬度查询附近的地点</p>
+     * 
+     * @param request NearbySearchNovaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return NearbySearchNovaResponse
+     */
+    public NearbySearchNovaResponse nearbySearchNovaWithOptions(NearbySearchNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
+            query.put("keywords", request.keywords);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
+            query.put("latitude", request.latitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
+            query.put("longitude", request.longitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.radius)) {
+            query.put("radius", request.radius);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            query.put("types", request.types);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "NearbySearchNova"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v2/pois/nearby"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new NearbySearchNovaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过经纬度查询附近的地点</p>
+     * 
+     * @param request NearbySearchNovaRequest
+     * @return NearbySearchNovaResponse
+     */
+    public NearbySearchNovaResponse nearbySearchNova(NearbySearchNovaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.nearbySearchNovaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过关键词搜索地点</p>
+     * 
+     * @param request PlaceSearchRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PlaceSearchResponse
+     */
+    public PlaceSearchResponse placeSearchWithOptions(PlaceSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
+            query.put("keywords", request.keywords);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            query.put("types", request.types);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PlaceSearch"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v1/pois/place"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PlaceSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过关键词搜索地点</p>
+     * 
+     * @param request PlaceSearchRequest
+     * @return PlaceSearchResponse
+     */
+    public PlaceSearchResponse placeSearch(PlaceSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.placeSearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过关键词搜索地点</p>
+     * 
+     * @param request PlaceSearchNovaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PlaceSearchNovaResponse
+     */
+    public PlaceSearchNovaResponse placeSearchNovaWithOptions(PlaceSearchNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
+            query.put("keywords", request.keywords);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            query.put("types", request.types);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PlaceSearchNova"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v2/pois/place"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PlaceSearchNovaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过关键词搜索地点</p>
+     * 
+     * @param request PlaceSearchNovaRequest
+     * @return PlaceSearchNovaResponse
+     */
+    public PlaceSearchNovaResponse placeSearchNova(PlaceSearchNovaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.placeSearchNovaWithOptions(request, headers, runtime);
     }
 
     /**
@@ -192,5 +688,115 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryRestaurantsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>逆地理编码，将经纬度转换为详细结构化的地址信息</p>
+     * 
+     * @param request RgeoCodeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RgeoCodeResponse
+     */
+    public RgeoCodeResponse rgeoCodeWithOptions(RgeoCodeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
+            query.put("latitude", request.latitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
+            query.put("longitude", request.longitude);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RgeoCode"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v1/geocode/regeo"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RgeoCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>逆地理编码，将经纬度转换为详细结构化的地址信息</p>
+     * 
+     * @param request RgeoCodeRequest
+     * @return RgeoCodeResponse
+     */
+    public RgeoCodeResponse rgeoCode(RgeoCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.rgeoCodeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据起终点坐标检索符合条件的步行路线规划方案</p>
+     * 
+     * @param request WalkingDirectionNovaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WalkingDirectionNovaResponse
+     */
+    public WalkingDirectionNovaResponse walkingDirectionNovaWithOptions(WalkingDirectionNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLatitude)) {
+            query.put("destinationLatitude", request.destinationLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationLongitude)) {
+            query.put("destinationLongitude", request.destinationLongitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLatitude)) {
+            query.put("originLatitude", request.originLatitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originLongitude)) {
+            query.put("originLongitude", request.originLongitude);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WalkingDirectionNova"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ipaas/v2/direction/walking"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WalkingDirectionNovaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据起终点坐标检索符合条件的步行路线规划方案</p>
+     * 
+     * @param request WalkingDirectionNovaRequest
+     * @return WalkingDirectionNovaResponse
+     */
+    public WalkingDirectionNovaResponse walkingDirectionNova(WalkingDirectionNovaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.walkingDirectionNovaWithOptions(request, headers, runtime);
     }
 }
