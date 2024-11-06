@@ -3,7 +3,7 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class GetPermissionRequest extends TeaModel {
+public class GetPermissionShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>PUBLIC</p>
@@ -19,7 +19,7 @@ public class GetPermissionRequest extends TeaModel {
     public String creator;
 
     @NameInMap("Labels")
-    public java.util.Map<String, ?> labels;
+    public String labelsShrink;
 
     @NameInMap("Option")
     public String option;
@@ -27,12 +27,12 @@ public class GetPermissionRequest extends TeaModel {
     @NameInMap("Resource")
     public String resource;
 
-    public static GetPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetPermissionRequest self = new GetPermissionRequest();
+    public static GetPermissionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetPermissionShrinkRequest self = new GetPermissionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetPermissionRequest setAccessibility(String accessibility) {
+    public GetPermissionShrinkRequest setAccessibility(String accessibility) {
         this.accessibility = accessibility;
         return this;
     }
@@ -40,7 +40,7 @@ public class GetPermissionRequest extends TeaModel {
         return this.accessibility;
     }
 
-    public GetPermissionRequest setCreator(String creator) {
+    public GetPermissionShrinkRequest setCreator(String creator) {
         this.creator = creator;
         return this;
     }
@@ -48,15 +48,15 @@ public class GetPermissionRequest extends TeaModel {
         return this.creator;
     }
 
-    public GetPermissionRequest setLabels(java.util.Map<String, ?> labels) {
-        this.labels = labels;
+    public GetPermissionShrinkRequest setLabelsShrink(String labelsShrink) {
+        this.labelsShrink = labelsShrink;
         return this;
     }
-    public java.util.Map<String, ?> getLabels() {
-        return this.labels;
+    public String getLabelsShrink() {
+        return this.labelsShrink;
     }
 
-    public GetPermissionRequest setOption(String option) {
+    public GetPermissionShrinkRequest setOption(String option) {
         this.option = option;
         return this;
     }
@@ -64,7 +64,7 @@ public class GetPermissionRequest extends TeaModel {
         return this.option;
     }
 
-    public GetPermissionRequest setResource(String resource) {
+    public GetPermissionShrinkRequest setResource(String resource) {
         this.resource = resource;
         return this;
     }
