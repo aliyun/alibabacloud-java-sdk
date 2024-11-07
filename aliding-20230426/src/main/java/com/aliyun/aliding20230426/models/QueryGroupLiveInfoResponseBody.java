@@ -52,6 +52,9 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
     @NameInMap("playbackDuration")
     public Long playbackDuration;
 
+    @NameInMap("replayUrl")
+    public String replayUrl;
+
     /**
      * <p>requestId</p>
      * 
@@ -169,6 +172,14 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
     }
     public Long getPlaybackDuration() {
         return this.playbackDuration;
+    }
+
+    public QueryGroupLiveInfoResponseBody setReplayUrl(String replayUrl) {
+        this.replayUrl = replayUrl;
+        return this;
+    }
+    public String getReplayUrl() {
+        return this.replayUrl;
     }
 
     public QueryGroupLiveInfoResponseBody setRequestId(String requestId) {
