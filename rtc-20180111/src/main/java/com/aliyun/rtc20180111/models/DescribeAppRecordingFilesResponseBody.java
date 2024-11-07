@@ -137,7 +137,7 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
          * <p>1712376012000</p>
          */
         @NameInMap("StartTs")
-        public Integer startTs;
+        public Long startTs;
 
         /**
          * <strong>example:</strong>
@@ -214,11 +214,11 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             return this.region;
         }
 
-        public DescribeAppRecordingFilesResponseBodyItems setStartTs(Integer startTs) {
+        public DescribeAppRecordingFilesResponseBodyItems setStartTs(Long startTs) {
             this.startTs = startTs;
             return this;
         }
-        public Integer getStartTs() {
+        public Long getStartTs() {
             return this.startTs;
         }
 
