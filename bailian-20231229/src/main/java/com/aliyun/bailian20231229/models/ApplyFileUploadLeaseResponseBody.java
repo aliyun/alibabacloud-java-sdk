@@ -178,7 +178,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
 
     public static class ApplyFileUploadLeaseResponseBodyData extends TeaModel {
         /**
-         * <p>The unique ID of the lease. You need to specify this parameter when you call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</p>
+         * <p>The unique ID of the lease.</p>
          * 
          * <strong>example:</strong>
          * <p>1e6a159107384782be5e45ac4759b247.1719325231035</p>

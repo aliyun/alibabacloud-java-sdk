@@ -11,7 +11,7 @@ public class CreateIndexRequest extends TeaModel {
     public java.util.List<String> categoryIds;
 
     /**
-     * <p>The estimated length of chunks. The maximum number of characters for a chunk. Texts exceeding this limit are splited. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [1-2048].</p>
+     * <p>The estimated length of chunks. The maximum number of characters for a chunk. Texts exceeding this limit are splited. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [1-2048].</p>
      * <p>The default value is empty, which means using the intelligent splitting method.</p>
      * <blockquote>
      * <p> If you specify the <code>ChunkSize</code> parameter, you must also specify the <code>OverlapSize</code> and <code>Separator</code> parameters. If you do not specify these three parameters, the system uses the intelligent splitting method by default.</p>
@@ -47,7 +47,7 @@ public class CreateIndexRequest extends TeaModel {
     public java.util.List<String> documentIds;
 
     /**
-     * <p>The name of the embedding model. The embedding model converts the original input prompt and knowledge text into numerical vectors for similarity comparison. The default and only model available is DashScope text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the vector results. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
+     * <p>The name of the embedding model. The embedding model converts the original input prompt and knowledge text into numerical vectors for similarity comparison. The default and only model available is DashScope text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the vector results. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
      * <ul>
      * <li>text-embedding-v2</li>
      * </ul>
@@ -67,7 +67,7 @@ public class CreateIndexRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The overlap length. The number of overlapping characters between two consecutive chunks. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: 0 to 1024.</p>
+     * <p>The overlap length. The number of overlapping characters between two consecutive chunks. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: 0 to 1024.</p>
      * <p>The default value is empty, which means using the intelligent splitting method.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class CreateIndexRequest extends TeaModel {
     public Integer overlapSize;
 
     /**
-     * <p>Similarity Threshold. The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00].</p>
+     * <p>Similarity Threshold. The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00].</p>
      * <p>Default value: 0.20.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class CreateIndexRequest extends TeaModel {
     public Double rerankMinScore;
 
     /**
-     * <p>The name of the rank model. The rank model is a scoring system outside the knowledge base. It calculates the similarity score of each text chunk in the input question and knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+     * <p>The name of the rank model. The rank model is a scoring system outside the knowledge base. It calculates the similarity score of each text chunk in the input question and knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
      * <ul>
      * <li>gte-rerank-hybrid</li>
      * <li>gte-rerank</li>
@@ -104,7 +104,7 @@ public class CreateIndexRequest extends TeaModel {
     public String rerankModelName;
 
     /**
-     * <p>The clause identifier. The document is split into chunks based on this identifier. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. You can specify multiple identifiers and do not need to add any other characters to separate them. For example: !,\\\n. Valid values:</p>
+     * <p>The clause identifier. The document is split into chunks based on this identifier. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. You can specify multiple identifiers and do not need to add any other characters to separate them. For example: !,\\\n. Valid values:</p>
      * <ul>
      * <li>\n: line break</li>
      * <li>，: Chinese comma</li>
@@ -115,7 +115,7 @@ public class CreateIndexRequest extends TeaModel {
      * <li>! : English exclamation point</li>
      * <li>；: Chinese semicolon</li>
      * <li>;: English semicolon</li>
-     * <li>？ : Chinese question mark</li>
+     * <li>？: Chinese question mark</li>
      * <li>?: English question mark</li>
      * </ul>
      * <p>The default value is empty, which means using the intelligent splitting method.</p>
@@ -136,7 +136,7 @@ public class CreateIndexRequest extends TeaModel {
     public String sinkInstanceId;
 
     /**
-     * <p>The region of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can call the <a href="https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can call the <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -145,7 +145,7 @@ public class CreateIndexRequest extends TeaModel {
     public String sinkRegion;
 
     /**
-     * <p>The vector storage type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+     * <p>The vector storage type of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
      * <ul>
      * <li>DEFAULT: The built-in vector database.</li>
      * <li>ADB: AnalyticDB for PostgreSQL database. If you need advanced features, such as managing, auditing, and monitoring, we recommend that you specify ADB.</li>
@@ -162,7 +162,7 @@ public class CreateIndexRequest extends TeaModel {
     public String sinkType;
 
     /**
-     * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+     * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
      * <ul>
      * <li>DATA_CENTER_CATEGORY: The category type. Import all documents from one or more categories in Data Center.</li>
      * <li>DATA_CENTER_FILE: The document type. Import one or more documents from Data Center.</li>
@@ -185,7 +185,7 @@ public class CreateIndexRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The data type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
+     * <p>The data type of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
      * <ul>
      * <li>unstructured</li>
      * </ul>
@@ -199,6 +199,9 @@ public class CreateIndexRequest extends TeaModel {
      */
     @NameInMap("StructureType")
     public String structureType;
+
+    @NameInMap("metaExtractColumns")
+    public java.util.List<CreateIndexRequestMetaExtractColumns> metaExtractColumns;
 
     public static CreateIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIndexRequest self = new CreateIndexRequest();
@@ -339,6 +342,14 @@ public class CreateIndexRequest extends TeaModel {
     }
     public String getStructureType() {
         return this.structureType;
+    }
+
+    public CreateIndexRequest setMetaExtractColumns(java.util.List<CreateIndexRequestMetaExtractColumns> metaExtractColumns) {
+        this.metaExtractColumns = metaExtractColumns;
+        return this;
+    }
+    public java.util.List<CreateIndexRequestMetaExtractColumns> getMetaExtractColumns() {
+        return this.metaExtractColumns;
     }
 
     public static class CreateIndexRequestColumns extends TeaModel {
@@ -568,6 +579,80 @@ public class CreateIndexRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class CreateIndexRequestMetaExtractColumns extends TeaModel {
+        @NameInMap("Desc")
+        public String desc;
+
+        @NameInMap("EnableLlm")
+        public Boolean enableLlm;
+
+        @NameInMap("EnableSearch")
+        public Boolean enableSearch;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateIndexRequestMetaExtractColumns build(java.util.Map<String, ?> map) throws Exception {
+            CreateIndexRequestMetaExtractColumns self = new CreateIndexRequestMetaExtractColumns();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIndexRequestMetaExtractColumns setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public CreateIndexRequestMetaExtractColumns setEnableLlm(Boolean enableLlm) {
+            this.enableLlm = enableLlm;
+            return this;
+        }
+        public Boolean getEnableLlm() {
+            return this.enableLlm;
+        }
+
+        public CreateIndexRequestMetaExtractColumns setEnableSearch(Boolean enableSearch) {
+            this.enableSearch = enableSearch;
+            return this;
+        }
+        public Boolean getEnableSearch() {
+            return this.enableSearch;
+        }
+
+        public CreateIndexRequestMetaExtractColumns setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateIndexRequestMetaExtractColumns setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateIndexRequestMetaExtractColumns setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
