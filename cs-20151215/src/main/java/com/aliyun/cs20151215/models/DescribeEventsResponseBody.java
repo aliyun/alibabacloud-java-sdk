@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
     /**
-     * <p>The details of the event.</p>
+     * <p>The details of the events.</p>
      */
     @NameInMap("events")
     public java.util.List<DescribeEventsResponseBodyEvents> events;
@@ -39,7 +39,12 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static class DescribeEventsResponseBodyEventsData extends TeaModel {
         /**
-         * <p>The severity level of the event.</p>
+         * <p>The severity level of the event. Valid values:</p>
+         * <ul>
+         * <li>info</li>
+         * <li>warning</li>
+         * <li>error</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>info</p>

@@ -14,6 +14,8 @@ public class DeleteClusterNodepoolResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>task IDs</p>
+     * 
      * <strong>example:</strong>
      * <p>T-655ace947e0e6603af000004</p>
      */

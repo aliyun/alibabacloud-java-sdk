@@ -132,8 +132,8 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The cluster name.</p>
-         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+         * <p>The name of the cluster.</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter or number.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster-demo</p>
@@ -150,8 +150,6 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
          * <li><code>updating</code>: The cluster is being upgraded.</li>
          * <li><code>updating_failed</code>: The cluster failed to be updated.</li>
          * <li><code>scaling</code>: The cluster is being scaled.</li>
-         * <li><code>waiting</code>: The cluster is waiting for connection requests.</li>
-         * <li><code>disconnected</code>: The cluster is disconnected.</li>
          * <li><code>stopped</code>: The cluster is stopped.</li>
          * <li><code>deleting</code>: The cluster is being deleted.</li>
          * <li><code>deleted</code>: The cluster is deleted.</li>

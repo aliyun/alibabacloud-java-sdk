@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class CleanUserPermissionsShrinkRequest extends TeaModel {
     /**
-     * <p>The cluster IDs.</p>
-     * <ul>
-     * <li>If cluster IDs are specified, only the kubeconfig files of the specified clusters and the relevant RBAC permissions are deleted and revoked.</li>
-     * </ul>
+     * <p>The cluster IDs. If you specify a list of cluster IDs, only the kubeconfig files and RBAC permissions of the clusters that belong to the current user in the list are revoked.</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIdsShrink;
@@ -16,8 +13,8 @@ public class CleanUserPermissionsShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully delete the specified kubeconfig files. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.</li>
-     * <li><strong>true</strong>: forcefully deletes the kubeconfig files without checking cluster access records.</li>
+     * <li>false (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.</li>
+     * <li>true: forcefully deletes the kubeconfig files without checking the cluster access records.</li>
      * </ul>
      * 
      * <strong>example:</strong>

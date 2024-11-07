@@ -141,6 +141,26 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         @NameInMap("policy_action")
         public String policyAction;
 
+        @NameInMap("Created")
+        @Deprecated
+        public String created;
+
+        @NameInMap("Updated")
+        @Deprecated
+        public String updated;
+
+        @NameInMap("resource_id")
+        @Deprecated
+        public String resourceId;
+
+        @NameInMap("total_violations")
+        @Deprecated
+        public Long totalViolations;
+
+        @NameInMap("is_deleted")
+        @Deprecated
+        public Long isDeleted;
+
         public static DescribePolicyInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
             DescribePolicyInstancesResponseBody self = new DescribePolicyInstancesResponseBody();
             return TeaModel.build(map, self);
@@ -224,6 +244,46 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         }
         public String getPolicyAction() {
             return this.policyAction;
+        }
+
+        public DescribePolicyInstancesResponseBody setCreated(String created) {
+            this.created = created;
+            return this;
+        }
+        public String getCreated() {
+            return this.created;
+        }
+
+        public DescribePolicyInstancesResponseBody setUpdated(String updated) {
+            this.updated = updated;
+            return this;
+        }
+        public String getUpdated() {
+            return this.updated;
+        }
+
+        public DescribePolicyInstancesResponseBody setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribePolicyInstancesResponseBody setTotalViolations(Long totalViolations) {
+            this.totalViolations = totalViolations;
+            return this;
+        }
+        public Long getTotalViolations() {
+            return this.totalViolations;
+        }
+
+        public DescribePolicyInstancesResponseBody setIsDeleted(Long isDeleted) {
+            this.isDeleted = isDeleted;
+            return this;
+        }
+        public Long getIsDeleted() {
+            return this.isDeleted;
         }
 
     }

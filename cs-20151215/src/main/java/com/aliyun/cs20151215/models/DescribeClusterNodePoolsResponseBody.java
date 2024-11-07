@@ -294,7 +294,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String cpuPolicy;
 
         /**
-         * <p>The labels that you want to add to the nodes in the cluster. You must add labels based on the following rules:</p>
+         * <p>The labels that are added to the nodes in the cluster. You must add labels based on the following rules:</p>
          * <ul>
          * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
          * <li>The key must be unique and can be up to 64 characters in length. The value can be empty and can be up to 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
@@ -317,6 +317,12 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
+        /**
+         * <p>The user-defined script that is executed before nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFD</p>
+         */
         @NameInMap("pre_user_data")
         public String preUserData;
 
@@ -339,7 +345,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String runtimeVersion;
 
         /**
-         * <p>The taints of the nodes in the node pool. Taints can be used together with tolerations to prevent pods from being scheduled to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+         * <p>The taints of the nodes in the node pool. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         @NameInMap("taints")
         public java.util.List<Taint> taints;
@@ -354,7 +360,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Boolean unschedulable;
 
         /**
-         * <p>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+         * <p>The user-defined script that is executed after nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFD****</p>
@@ -765,7 +771,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig extends TeaModel {
         /**
-         * <p>The parameter settings of the kubelet.</p>
+         * <p>The configurations of the kubelet.</p>
          */
         @NameInMap("kubelet_configuration")
         public KubeletConfig kubeletConfiguration;
@@ -1131,7 +1137,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>Instance attributes</p>
+         * <p>The attributes of an instance.</p>
          */
         @NameInMap("instance_patterns")
         public java.util.List<InstancePatterns> instancePatterns;
@@ -1406,7 +1412,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The system disk types. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: utra disk cloud_ssd: standard SSD cloud_essd: Enterprise SSD (ESSD)</p>
+         * <p>The types of system disks. The system attempts to create system disks of a disk type with a lower priority if the disk type with a higher priority is unavailable. Valid values: Valid values: cloud (basic disk), cloud_efficiency (ultra disk), cloud_ssd (standard SSD), cloud_essd (Enterprise SSD).</p>
          */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
@@ -1425,7 +1431,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The algorithm that you want to use to encrypt the system disk. Set the value to aes-256.</p>
+         * <p>The encryption algorithm that is used to encrypt the system disk. The value is aes-256.</p>
          * 
          * <strong>example:</strong>
          * <p>aes-256</p>
@@ -1484,7 +1490,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Long systemDiskSize;
 
         /**
-         * <p>The tag that you want to add only to ECS instances.</p>
+         * <p>The labels that you want to add only to Elastic Compute Service (ECS) instances.</p>
          * <p>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value must not start with aliyun or acs: or contain https:// or http://.</p>
          */
         @NameInMap("tags")
@@ -2127,7 +2133,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo nodepoolInfo;
 
         /**
-         * <p>The configuration of the scaling group.</p>
+         * <p>The configurations of the scaling group.</p>
          */
         @NameInMap("scaling_group")
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup scalingGroup;

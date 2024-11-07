@@ -25,12 +25,12 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
     /**
      * <p>The status of the component. Valid values:</p>
      * <ul>
-     * <li>initial: the component is being installed.</li>
-     * <li>active: the component is installed.</li>
-     * <li>unhealthy: the component abnormal.</li>
-     * <li>upgrading: the component is being updated.</li>
-     * <li>updating: the component is being modified.</li>
-     * <li>deleting: the component is being uninstalled.</li>
+     * <li>initial: The component is being installed.</li>
+     * <li>active: The component is installed.</li>
+     * <li>unhealthy: The component is in an abnormal state.</li>
+     * <li>upgrading: The component is being updated.</li>
+     * <li>updating: The component is being modified.</li>
+     * <li>deleting: The component is being uninstalled.</li>
      * <li>deleted: The component is deleted.</li>
      * </ul>
      * 
