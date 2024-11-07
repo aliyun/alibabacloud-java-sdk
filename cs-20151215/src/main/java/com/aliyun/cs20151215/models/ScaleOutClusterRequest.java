@@ -84,17 +84,17 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Runtime runtime;
 
     /**
-     * <p>The labels that you want to add to nodes. You must add labels based on the following rules:</p>
+     * <p>The tags that you want to add to nodes. When you add labels to a node, the following rules apply:</p>
      * <ul>
      * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-     * <li>When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+     * <li>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
      * </ul>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+     * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
      */
     @NameInMap("taints")
     public java.util.List<Taint> taints;
@@ -119,7 +119,7 @@ public class ScaleOutClusterRequest extends TeaModel {
      * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables auto-renewal.</li>
-     * <li><code>false</code>: does not enable auto-renewal.</li>
+     * <li><code>false</code>: disables auto-renewal.</li>
      * </ul>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -152,7 +152,7 @@ public class ScaleOutClusterRequest extends TeaModel {
      * <li><code>PrePaid</code>: subscription.</li>
      * <li><code>PostPaid</code>: pay-as-you-go.</li>
      * </ul>
-     * <p>Default value: <code>PostPaid</code>.</p>
+     * <p>Default value: <code>PostPaid</code></p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -170,7 +170,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     /**
      * <p>The subscription duration of worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -401,7 +401,7 @@ public class ScaleOutClusterRequest extends TeaModel {
         public String autoSnapshotPolicyId;
 
         /**
-         * <p>The data disk type.</p>
+         * <p>The type of the data disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -410,7 +410,7 @@ public class ScaleOutClusterRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+         * <p>Specifies whether to encrypt the data disks. Valid values:</p>
          * <ul>
          * <li><code>true</code>: encrypts the data disk.</li>
          * <li><code>false</code>: does not encrypt the data disk.</li>
@@ -424,7 +424,7 @@ public class ScaleOutClusterRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The data disk size. Valid values: 40 to 32767.</p>
+         * <p>The size of the data disk. Valid values: 40 to 32767.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>

@@ -38,9 +38,27 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
     }
 
     public static class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade extends TeaModel {
+        /**
+         * <p>The frequency of auto cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>patch: the latest patch version.</li>
+         * <li>stables: the second-latest minor version.</li>
+         * <li>rapid: the latest minor version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>patch</p>
+         */
         @NameInMap("channel")
         public String channel;
 
+        /**
+         * <p>Specifies whether to enable auto cluster update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
@@ -68,6 +86,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
     }
 
     public static class DescribeClustersV1ResponseBodyClustersOperationPolicy extends TeaModel {
+        /**
+         * <p>The configurations of auto cluster update.</p>
+         */
         @NameInMap("cluster_auto_upgrade")
         public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
 
@@ -88,6 +109,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
     public static class DescribeClustersV1ResponseBodyClusters extends TeaModel {
         /**
+         * <p>The domain name of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>cluster.local</p>
          */
@@ -130,6 +153,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterType;
 
         /**
+         * <p>The pod CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.20.0.0/16</p>
          */
@@ -197,6 +222,12 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String initVersion;
 
         /**
+         * <p>The IP stack of the cluster. Valid values:</p>
+         * <ul>
+         * <li>ipv4: The cluster is an IPv4 cluster.</li>
+         * <li>dual: The cluster is a dual-stack cluster.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ipv4</p>
          */
@@ -261,6 +292,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         @NameInMap("next_version")
         public String nextVersion;
 
+        /**
+         * <p>The automatic O\&amp;M policy of the cluster.</p>
+         */
         @NameInMap("operation_policy")
         public DescribeClustersV1ResponseBodyClustersOperationPolicy operationPolicy;
 
@@ -293,6 +327,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <p>The kube-proxy mode. Valid values: ipvs and iptables.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipvs</p>
          */
@@ -327,6 +363,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The Service CIDR block.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +373,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String serviceCidr;
 
         /**
-         * <p>The number of nodes in the cluster, including master nodes and worker nodes.</p>
+         * <p>The number of nodes in the cluster, including control planes and worker nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -373,7 +410,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <li>192.168.0.0/16</li>
          * </ul>
          * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
-         * <p>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</p>
+         * <p>For more information about the network planning of Container Service for Kubernetes (ACK) clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.0.0/16</p>
@@ -389,6 +426,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public java.util.List<Tag> tags;
 
         /**
+         * <p>The time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
@@ -414,7 +453,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
+         * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</p>
@@ -423,6 +462,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         @Deprecated
         public String vswitchId;
 
+        /**
+         * <p>The vSwitches of the control planes.</p>
+         */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
 

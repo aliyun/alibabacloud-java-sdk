@@ -32,11 +32,11 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     /**
      * <p>The query mode. Valid values:</p>
      * <ul>
-     * <li><code>supported</code>: queries all supported versions.</li>
-     * <li><code>creatable</code>: queries only versions that allow you to create clusters.</li>
+     * <li><code>supported</code>: queries all supported Kubernetes versions.</li>
+     * <li><code>creatable</code>: queries only Kubernetes versions of clusters that you can create.</li>
      * </ul>
      * <p>If you specify <code>KubernetesVersion</code>, this parameter does not take effect.</p>
-     * <p>Default value: creatable.</p>
+     * <p>If you do not specify a query mode, Kubernetes versions of clusters that you can create are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>supported</p>

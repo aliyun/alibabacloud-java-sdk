@@ -10,6 +10,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("auto_scaling")
     public DescribeClusterNodePoolDetailResponseBodyAutoScaling autoScaling;
 
+    @NameInMap("host_network")
+    public Boolean hostNetwork;
+
     /**
      * <p>The network configuration of the edge node pool. This parameter takes effect only for edge node pools.</p>
      */
@@ -25,8 +28,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("interconnect_mode")
     public String interconnectMode;
 
+    @NameInMap("intranet")
+    public Boolean intranet;
+
     /**
-     * <p>The configuration of the cluster where the node pool is deployed.</p>
+     * <p>The configurations of the cluster in which the node pool is deployed.</p>
      */
     @NameInMap("kubernetes_config")
     public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig kubernetesConfig;
@@ -89,6 +95,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         return this.autoScaling;
     }
 
+    public DescribeClusterNodePoolDetailResponseBody setHostNetwork(Boolean hostNetwork) {
+        this.hostNetwork = hostNetwork;
+        return this;
+    }
+    public Boolean getHostNetwork() {
+        return this.hostNetwork;
+    }
+
     public DescribeClusterNodePoolDetailResponseBody setInterconnectConfig(DescribeClusterNodePoolDetailResponseBodyInterconnectConfig interconnectConfig) {
         this.interconnectConfig = interconnectConfig;
         return this;
@@ -103,6 +117,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
     public String getInterconnectMode() {
         return this.interconnectMode;
+    }
+
+    public DescribeClusterNodePoolDetailResponseBody setIntranet(Boolean intranet) {
+        this.intranet = intranet;
+        return this;
+    }
+    public Boolean getIntranet() {
+        return this.intranet;
     }
 
     public DescribeClusterNodePoolDetailResponseBody setKubernetesConfig(DescribeClusterNodePoolDetailResponseBodyKubernetesConfig kubernetesConfig) {
@@ -458,6 +480,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
+        /**
+         * <p>The custom script to be executed before nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+         */
         @NameInMap("pre_user_data")
         public String preUserData;
 
@@ -495,7 +520,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean unschedulable;
 
         /**
-         * <p>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user data</a>.</p>
+         * <p>The custom script to be executed after nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFDSyEi</p>

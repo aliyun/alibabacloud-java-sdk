@@ -82,6 +82,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether a restart is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("need_reboot")
         public Boolean needReboot;

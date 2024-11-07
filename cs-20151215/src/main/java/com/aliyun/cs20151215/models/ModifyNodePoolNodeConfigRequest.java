@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     /**
-     * <p>The parameter settings of the kubelet.</p>
+     * <p>The parameters of the kubelet.</p>
      */
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
 
+    /**
+     * <p>Operating system parameter configuration.</p>
+     */
     @NameInMap("os_config")
     public ModifyNodePoolNodeConfigRequestOsConfig osConfig;
 
@@ -49,6 +52,9 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     }
 
     public static class ModifyNodePoolNodeConfigRequestOsConfig extends TeaModel {
+        /**
+         * <p>sysctl parameter configuration</p>
+         */
         @NameInMap("sysctl")
         public java.util.Map<String, ?> sysctl;
 

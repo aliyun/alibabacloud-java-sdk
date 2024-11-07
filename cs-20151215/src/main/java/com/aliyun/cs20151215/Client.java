@@ -305,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the CancelOperationPlan operation to cancel a pending auto O\\\&amp;M plan.</p>
+     * <p>You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&amp;M plan.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -331,7 +331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the CancelOperationPlan operation to cancel a pending auto O\\\&amp;M plan.</p>
+     * <p>You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&amp;M plan.</p>
      * @return CancelOperationPlanResponse
      */
     public CancelOperationPlanResponse cancelOperationPlan(String planId) throws Exception {
@@ -530,7 +530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permission.</li>
      * <li>You cannot revoke the permissions of an Alibaba Cloud account.</li>
      * <li>You cannot revoke the permissions of the account that you use to call this operation.</li>
      * </ul>
@@ -583,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permission.</li>
      * <li>You cannot revoke the permissions of an Alibaba Cloud account.</li>
      * <li>You cannot revoke the permissions of the account that you use to call this operation.</li>
      * </ul>
@@ -1206,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\&amp;M workload.</p>
+     * <p>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\&amp;M workload.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1224,12 +1224,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("count", request.count);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hostNetwork)) {
+            body.put("host_network", request.hostNetwork);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.interconnectConfig)) {
             body.put("interconnect_config", request.interconnectConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.interconnectMode)) {
             body.put("interconnect_mode", request.interconnectMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intranet)) {
+            body.put("intranet", request.intranet);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.kubernetesConfig)) {
@@ -1280,7 +1288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\&amp;M workload.</p>
+     * <p>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\&amp;M workload.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -1704,7 +1712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.</p>
+     * <p>null</p>
      * 
      * @param request DeleteClusterNodepoolRequest
      * @param headers map
@@ -1738,7 +1746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.</p>
+     * <p>null</p>
      * 
      * @param request DeleteClusterNodepoolRequest
      * @return DeleteClusterNodepoolResponse
@@ -2708,7 +2716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries node pools in a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Queries the information about all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @param headers map
@@ -2742,7 +2750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries node pools in a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Queries the information about all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @return DescribeClusterNodePoolsResponse
@@ -2755,7 +2763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.</p>
+     * <p>null</p>
      * 
      * @param request DescribeClusterNodesRequest
      * @param headers map
@@ -2805,7 +2813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.</p>
+     * <p>null</p>
      * 
      * @param request DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse
@@ -3132,6 +3140,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询指定地域内全部集群列表</p>
+     * 
+     * @param request DescribeClustersForRegionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeClustersForRegionResponse
+     */
+    public DescribeClustersForRegionResponse describeClustersForRegionWithOptions(String regionId, DescribeClustersForRegionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("cluster_id", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterSpec)) {
+            query.put("cluster_spec", request.clusterSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
+            query.put("cluster_type", request.clusterType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("page_number", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("page_size", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
+            query.put("profile", request.profile);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeClustersForRegion"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/regions/" + com.aliyun.openapiutil.Client.getEncodeParam(regionId) + "/clusters"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClustersForRegionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定地域内全部集群列表</p>
+     * 
+     * @param request DescribeClustersForRegionRequest
+     * @return DescribeClustersForRegionResponse
+     */
+    public DescribeClustersForRegionResponse describeClustersForRegion(String regionId, DescribeClustersForRegionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeClustersForRegionWithOptions(regionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</p>
      * 
      * @param request DescribeClustersV1Request
@@ -3385,7 +3464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
+     * <p>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
      * 
      * @param request DescribeEventsRequest
      * @param headers map
@@ -3431,7 +3510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
+     * <p>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
      * 
      * @param request DescribeEventsRequest
      * @return DescribeEventsResponse
@@ -3440,6 +3519,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeEventsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定地域内全部事件列表</p>
+     * 
+     * @param request DescribeEventsForRegionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEventsForRegionResponse
+     */
+    public DescribeEventsForRegionResponse describeEventsForRegionWithOptions(String regionId, DescribeEventsForRegionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("cluster_id", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("page_number", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("page_size", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeEventsForRegion"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/regions/" + com.aliyun.openapiutil.Client.getEncodeParam(regionId) + "/events"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEventsForRegionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定地域内全部事件列表</p>
+     * 
+     * @param request DescribeEventsForRegionRequest
+     * @return DescribeEventsForRegionResponse
+     */
+    public DescribeEventsForRegionResponse describeEventsForRegion(String regionId, DescribeEventsForRegionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeEventsForRegionWithOptions(regionId, request, headers, runtime);
     }
 
     /**
@@ -3619,7 +3753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.</p>
+     * <p>Queries a list of security policies. Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3645,7 +3779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.</p>
+     * <p>Queries a list of security policies. Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment.</p>
      * @return DescribePoliciesResponse
      */
     public DescribePoliciesResponse describePolicies() throws Exception {
@@ -4417,6 +4551,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterAuditProjectResponse
@@ -4440,6 +4577,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</p>
      * @return GetClusterAuditProjectResponse
      */
     public GetClusterAuditProjectResponse getClusterAuditProject(String clusterid) throws Exception {
@@ -4667,8 +4806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Precautions</em>*:</p>
      * <ul>
-     * <li>Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the <code>ErrorRamPolicyConfig</code> error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see <a href="https://help.aliyun.com/document_detail/86485.html">Create a custom RAM policy</a>.</li>
-     * <li>If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned when you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
+     * <li>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
      * <li>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</li>
      * </ul>
      * 
@@ -4704,8 +4842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Precautions</em>*:</p>
      * <ul>
-     * <li>Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the <code>ErrorRamPolicyConfig</code> error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see <a href="https://help.aliyun.com/document_detail/86485.html">Create a custom RAM policy</a>.</li>
-     * <li>If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned when you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
+     * <li>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
      * <li>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</li>
      * </ul>
      * 
@@ -6035,7 +6172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Fixes issues on abnormal nodes in a node pool to ensure that the nodes can run as normal.</p>
+     * <p>Repairs a node pool.</p>
      * 
      * @param request RepairClusterNodePoolRequest
      * @param headers map
@@ -6077,7 +6214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Fixes issues on abnormal nodes in a node pool to ensure that the nodes can run as normal.</p>
+     * <p>Repairs a node pool.</p>
      * 
      * @param request RepairClusterNodePoolRequest
      * @return RepairClusterNodePoolResponse
@@ -6135,7 +6272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ResumeTask operation to resume a task.</p>
+     * <p>Resumes a task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6161,7 +6298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ResumeTask operation to resume a task.</p>
+     * <p>Resumes a task.</p>
      * @return ResumeTaskResponse
      */
     public ResumeTaskResponse resumeTask(String taskId) throws Exception {
@@ -6436,7 +6573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.</p>
+     * <p>Scales out a node pool.</p>
      * 
      * @param request ScaleClusterNodePoolRequest
      * @param headers map
@@ -6470,7 +6607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.</p>
+     * <p>Scales out a node pool.</p>
      * 
      * @param request ScaleClusterNodePoolRequest
      * @return ScaleClusterNodePoolResponse
