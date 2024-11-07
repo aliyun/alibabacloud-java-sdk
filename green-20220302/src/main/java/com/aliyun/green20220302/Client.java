@@ -838,7 +838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语音检测结果获取接口</p>
+     * <p>Obtains the moderation results of a Voice Moderation 2.0 task.</p>
      * 
      * @param request VoiceModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -874,7 +874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语音检测结果获取接口</p>
+     * <p>Obtains the moderation results of a Voice Moderation 2.0 task.</p>
      * 
      * @param request VoiceModerationResultRequest
      * @return VoiceModerationResultResponse

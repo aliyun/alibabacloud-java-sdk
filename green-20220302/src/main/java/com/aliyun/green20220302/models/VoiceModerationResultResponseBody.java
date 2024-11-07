@@ -29,7 +29,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
@@ -76,7 +76,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
     public static class VoiceModerationResultResponseBodyDataSliceDetails extends TeaModel {
         /**
-         * <p>The end time of the text after audio-to-text conversion. Unit: seconds.</p>
+         * <p>The end time of the audio segment in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -94,7 +94,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public Long endTimestamp;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>Extended fields.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;riskTips\&quot;:\&quot;sexuality_Suggestive\&quot;,\&quot;riskWords\&quot;:\&quot;pxxxxy\&quot;}</p>
@@ -112,7 +112,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public String labels;
 
         /**
-         * <p>Reserved field.</p>
+         * <p>Reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -120,11 +120,17 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("OriginAlgoResult")
         public java.util.Map<String, ?> originAlgoResult;
 
+        /**
+         * <p>Risk Level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
-         * <p>The risk details that are hit.</p>
+         * <p>The details of the risky content.</p>
          * 
          * <strong>example:</strong>
          * <p>sexuality_Suggestive</p>
@@ -133,7 +139,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public String riskTips;
 
         /**
-         * <p>The risk words that are hit.</p>
+         * <p>The term hit by the risky content.</p>
          * 
          * <strong>example:</strong>
          * <p>AAA,BBB,CCC</p>
@@ -142,7 +148,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public String riskWords;
 
         /**
-         * <p>Risk score, default range 0-99.</p>
+         * <p>The risk score. Default range: 0 to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>87.01</p>
@@ -151,7 +157,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public Float score;
 
         /**
-         * <p>The start time of the text after audio-to-text conversion. Unit: seconds.</p>
+         * <p>The start time of the audio segment in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -169,7 +175,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public Long startTimestamp;
 
         /**
-         * <p>The text converted from voice.</p>
+         * <p>The text converted from the audio segment.</p>
          * 
          * <strong>example:</strong>
          * <p>Disgusting</p>
@@ -178,7 +184,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public String text;
 
         /**
-         * <p>The temporary access address of the audio segment. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio segment at the earliest opportunity.</p>
+         * <p>The temporary URL of the audio segment.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
@@ -316,11 +322,17 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
+        /**
+         * <p>Risk Level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
-         * <p>The details about the audio segments.</p>
+         * <p>The moderation results of audio segments.</p>
          */
         @NameInMap("SliceDetails")
         public java.util.List<VoiceModerationResultResponseBodyDataSliceDetails> sliceDetails;
@@ -335,7 +347,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The URL of the moderation object.</p>
+         * <p>The URL of the moderated content.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
