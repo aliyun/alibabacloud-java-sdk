@@ -165,7 +165,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>For unstructured knowledge base, this parameter is the category ID, which is the <code>CategoryId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> interface. To view the category ID, you can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</p>
+         * <p>For unstructured knowledge base, this parameter is the category ID. To view the category ID, you can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</p>
          * <p>For structured knowledge base, this parameter is the data table ID. To view the table ID, you can click the ID icon next to the table name on the Structured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</p>
          * 
          * <strong>example:</strong>

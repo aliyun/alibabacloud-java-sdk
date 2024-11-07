@@ -114,7 +114,7 @@ public class SubmitIndexJobResponseBody extends TeaModel {
 
     public static class SubmitIndexJobResponseBodyData extends TeaModel {
         /**
-         * <p>The primary key ID of the job, which is the <code>JobId</code> parameter of the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</p>
+         * <p>The primary key ID of the job, which is the <code>JobId</code> parameter of the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>eFDr2fGRzP9gdDZWAdo3YQ==</p>
