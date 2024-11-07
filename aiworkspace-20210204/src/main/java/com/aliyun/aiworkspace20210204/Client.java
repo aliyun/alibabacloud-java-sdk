@@ -3995,6 +3995,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新代码配置</p>
+     * 
+     * @param request UpdateCodeSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCodeSourceResponse
+     */
+    public UpdateCodeSourceResponse updateCodeSourceWithOptions(String CodeSourceId, UpdateCodeSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codeBranch)) {
+            body.put("CodeBranch", request.codeBranch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeCommit)) {
+            body.put("CodeCommit", request.codeCommit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeRepo)) {
+            body.put("CodeRepo", request.codeRepo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeRepoAccessToken)) {
+            body.put("CodeRepoAccessToken", request.codeRepoAccessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeRepoUserName)) {
+            body.put("CodeRepoUserName", request.codeRepoUserName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mountPath)) {
+            body.put("MountPath", request.mountPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCodeSource"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/codesources/" + com.aliyun.openapiutil.Client.getEncodeParam(CodeSourceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCodeSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新代码配置</p>
+     * 
+     * @param request UpdateCodeSourceRequest
+     * @return UpdateCodeSourceResponse
+     */
+    public UpdateCodeSourceResponse updateCodeSource(String CodeSourceId, UpdateCodeSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateCodeSourceWithOptions(CodeSourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更新数据集</p>
      * 
      * @param request UpdateDatasetRequest
