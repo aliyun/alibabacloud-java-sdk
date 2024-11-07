@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactRequest extends TeaModel {
     /**
+     * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+     */
+    @NameInMap("ArtifactBuildProperty")
+    public CreateArtifactRequestArtifactBuildProperty artifactBuildProperty;
+
+    /**
      * <p>The ID of the deployment package.</p>
      * 
      * <strong>example:</strong>
@@ -90,6 +96,14 @@ public class CreateArtifactRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateArtifactRequest setArtifactBuildProperty(CreateArtifactRequestArtifactBuildProperty artifactBuildProperty) {
+        this.artifactBuildProperty = artifactBuildProperty;
+        return this;
+    }
+    public CreateArtifactRequestArtifactBuildProperty getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
+    }
+
     public CreateArtifactRequest setArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -160,6 +174,107 @@ public class CreateArtifactRequest extends TeaModel {
     }
     public String getVersionName() {
         return this.versionName;
+    }
+
+    public static class CreateArtifactRequestArtifactBuildProperty extends TeaModel {
+        /**
+         * <p>The command content.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>echo &quot;start run command&quot;</p>
+         */
+        @NameInMap("CommandContent")
+        public String commandContent;
+
+        /**
+         * <p>The command type. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript: batch command, applicable to Windows instances.</li>
+         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances.</li>
+         * <li>RunShellScript: shell command, applicable to Linux instances.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RunShellScript</p>
+         */
+        @NameInMap("CommandType")
+        public String commandType;
+
+        /**
+         * <p>The region ID where the source mirror image is located.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The source image id. Supported Types:</p>
+         * <ul>
+         * <li><p>Image ID: Pass the Image ID of the Ecs image directly.</p>
+         * </li>
+         * <li><p>OOS Common Parameter Name: Obtain the corresponding Image ID automatically by using the OOS common parameter name.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Image ID：m-t4nhenrdc38pe4*****
+         * ubuntu_22_04_x64_20G_alibase_20240926.vhd
+         * OOS Common Parameter Name：aliyun/services/computenest/images/aliyun_3_2104_python_3_11</p>
+         */
+        @NameInMap("SourceImageId")
+        public String sourceImageId;
+
+        public static CreateArtifactRequestArtifactBuildProperty build(java.util.Map<String, ?> map) throws Exception {
+            CreateArtifactRequestArtifactBuildProperty self = new CreateArtifactRequestArtifactBuildProperty();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setCommandContent(String commandContent) {
+            this.commandContent = commandContent;
+            return this;
+        }
+        public String getCommandContent() {
+            return this.commandContent;
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setCommandType(String commandType) {
+            this.commandType = commandType;
+            return this;
+        }
+        public String getCommandType() {
+            return this.commandType;
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setSourceImageId(String sourceImageId) {
+            this.sourceImageId = sourceImageId;
+            return this;
+        }
+        public String getSourceImageId() {
+            return this.sourceImageId;
+        }
+
     }
 
     public static class CreateArtifactRequestArtifactProperty extends TeaModel {
@@ -243,6 +358,9 @@ public class CreateArtifactRequest extends TeaModel {
          */
         @NameInMap("RepoName")
         public String repoName;
+
+        @NameInMap("RepoType")
+        public String repoType;
 
         /**
          * <p>The script content.</p>
@@ -336,6 +454,14 @@ public class CreateArtifactRequest extends TeaModel {
         }
         public String getRepoName() {
             return this.repoName;
+        }
+
+        public CreateArtifactRequestArtifactProperty setRepoType(String repoType) {
+            this.repoType = repoType;
+            return this;
+        }
+        public String getRepoType() {
+            return this.repoType;
         }
 
         public CreateArtifactRequestArtifactProperty setScriptMetadata(String scriptMetadata) {

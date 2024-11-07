@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateArtifactShrinkRequest extends TeaModel {
+    @NameInMap("ArtifactBuildProperty")
+    public String artifactBuildPropertyShrink;
+
     /**
      * <p>The ID of the deployment package.</p>
      * <p>This parameter is required.</p>
@@ -49,6 +52,14 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
     public static UpdateArtifactShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateArtifactShrinkRequest self = new UpdateArtifactShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateArtifactShrinkRequest setArtifactBuildPropertyShrink(String artifactBuildPropertyShrink) {
+        this.artifactBuildPropertyShrink = artifactBuildPropertyShrink;
+        return this;
+    }
+    public String getArtifactBuildPropertyShrink() {
+        return this.artifactBuildPropertyShrink;
     }
 
     public UpdateArtifactShrinkRequest setArtifactId(String artifactId) {

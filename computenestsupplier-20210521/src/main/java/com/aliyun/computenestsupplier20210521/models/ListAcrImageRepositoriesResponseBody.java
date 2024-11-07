@@ -128,6 +128,9 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         @NameInMap("RepoName")
         public String repoName;
 
+        @NameInMap("RepoType")
+        public String repoType;
+
         public static ListAcrImageRepositoriesResponseBodyRepositories build(java.util.Map<String, ?> map) throws Exception {
             ListAcrImageRepositoriesResponseBodyRepositories self = new ListAcrImageRepositoriesResponseBodyRepositories();
             return TeaModel.build(map, self);
@@ -163,6 +166,14 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
         public String getRepoName() {
             return this.repoName;
+        }
+
+        public ListAcrImageRepositoriesResponseBodyRepositories setRepoType(String repoType) {
+            this.repoType = repoType;
+            return this;
+        }
+        public String getRepoType() {
+            return this.repoType;
         }
 
     }
