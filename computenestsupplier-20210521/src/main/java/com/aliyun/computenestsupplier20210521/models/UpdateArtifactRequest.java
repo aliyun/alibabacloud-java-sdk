@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateArtifactRequest extends TeaModel {
+    @NameInMap("ArtifactBuildProperty")
+    public UpdateArtifactRequestArtifactBuildProperty artifactBuildProperty;
+
     /**
      * <p>The ID of the deployment package.</p>
      * <p>This parameter is required.</p>
@@ -51,6 +54,14 @@ public class UpdateArtifactRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateArtifactRequest setArtifactBuildProperty(UpdateArtifactRequestArtifactBuildProperty artifactBuildProperty) {
+        this.artifactBuildProperty = artifactBuildProperty;
+        return this;
+    }
+    public UpdateArtifactRequestArtifactBuildProperty getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
+    }
+
     public UpdateArtifactRequest setArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -89,6 +100,58 @@ public class UpdateArtifactRequest extends TeaModel {
     }
     public String getVersionName() {
         return this.versionName;
+    }
+
+    public static class UpdateArtifactRequestArtifactBuildProperty extends TeaModel {
+        @NameInMap("CommandContent")
+        public String commandContent;
+
+        @NameInMap("CommandType")
+        public String commandType;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SourceImageId")
+        public String sourceImageId;
+
+        public static UpdateArtifactRequestArtifactBuildProperty build(java.util.Map<String, ?> map) throws Exception {
+            UpdateArtifactRequestArtifactBuildProperty self = new UpdateArtifactRequestArtifactBuildProperty();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateArtifactRequestArtifactBuildProperty setCommandContent(String commandContent) {
+            this.commandContent = commandContent;
+            return this;
+        }
+        public String getCommandContent() {
+            return this.commandContent;
+        }
+
+        public UpdateArtifactRequestArtifactBuildProperty setCommandType(String commandType) {
+            this.commandType = commandType;
+            return this;
+        }
+        public String getCommandType() {
+            return this.commandType;
+        }
+
+        public UpdateArtifactRequestArtifactBuildProperty setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public UpdateArtifactRequestArtifactBuildProperty setSourceImageId(String sourceImageId) {
+            this.sourceImageId = sourceImageId;
+            return this;
+        }
+        public String getSourceImageId() {
+            return this.sourceImageId;
+        }
+
     }
 
     public static class UpdateArtifactRequestArtifactProperty extends TeaModel {
@@ -152,6 +215,15 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RepoId")
+        public String repoId;
+
+        @NameInMap("RepoName")
+        public String repoName;
+
+        @NameInMap("RepoType")
+        public String repoType;
+
         /**
          * <p>The script content of the deployment package.</p>
          * <blockquote>
@@ -163,6 +235,9 @@ public class UpdateArtifactRequest extends TeaModel {
          */
         @NameInMap("ScriptMetadata")
         public String scriptMetadata;
+
+        @NameInMap("Tag")
+        public String tag;
 
         /**
          * <p>The URL of the deployment package object.</p>
@@ -221,12 +296,44 @@ public class UpdateArtifactRequest extends TeaModel {
             return this.regionId;
         }
 
+        public UpdateArtifactRequestArtifactProperty setRepoId(String repoId) {
+            this.repoId = repoId;
+            return this;
+        }
+        public String getRepoId() {
+            return this.repoId;
+        }
+
+        public UpdateArtifactRequestArtifactProperty setRepoName(String repoName) {
+            this.repoName = repoName;
+            return this;
+        }
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        public UpdateArtifactRequestArtifactProperty setRepoType(String repoType) {
+            this.repoType = repoType;
+            return this;
+        }
+        public String getRepoType() {
+            return this.repoType;
+        }
+
         public UpdateArtifactRequestArtifactProperty setScriptMetadata(String scriptMetadata) {
             this.scriptMetadata = scriptMetadata;
             return this;
         }
         public String getScriptMetadata() {
             return this.scriptMetadata;
+        }
+
+        public UpdateArtifactRequestArtifactProperty setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
         public UpdateArtifactRequestArtifactProperty setUrl(String url) {

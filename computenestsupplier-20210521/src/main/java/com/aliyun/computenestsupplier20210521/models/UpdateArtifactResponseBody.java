@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateArtifactResponseBody extends TeaModel {
+    @NameInMap("ArtifactBuildProperty")
+    public String artifactBuildProperty;
+
     /**
      * <p>The ID of the deployment package.</p>
      * 
@@ -109,6 +112,14 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public static UpdateArtifactResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateArtifactResponseBody self = new UpdateArtifactResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateArtifactResponseBody setArtifactBuildProperty(String artifactBuildProperty) {
+        this.artifactBuildProperty = artifactBuildProperty;
+        return this;
+    }
+    public String getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
     }
 
     public UpdateArtifactResponseBody setArtifactId(String artifactId) {

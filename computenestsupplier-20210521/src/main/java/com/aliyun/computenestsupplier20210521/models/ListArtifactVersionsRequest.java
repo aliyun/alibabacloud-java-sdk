@@ -15,6 +15,12 @@ public class ListArtifactVersionsRequest extends TeaModel {
     public String artifactId;
 
     /**
+     * <p>The filter.</p>
+     */
+    @NameInMap("Filters")
+    public java.util.List<ListArtifactVersionsRequestFilters> filters;
+
+    /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +51,14 @@ public class ListArtifactVersionsRequest extends TeaModel {
         return this.artifactId;
     }
 
+    public ListArtifactVersionsRequest setFilters(java.util.List<ListArtifactVersionsRequestFilters> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.List<ListArtifactVersionsRequestFilters> getFilters() {
+        return this.filters;
+    }
+
     public ListArtifactVersionsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +73,46 @@ public class ListArtifactVersionsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public static class ListArtifactVersionsRequestFilters extends TeaModel {
+        /**
+         * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+         * <p><strong>Status</strong>：The artifact status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Status</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The parameter values of the filter.</p>
+         */
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static ListArtifactVersionsRequestFilters build(java.util.Map<String, ?> map) throws Exception {
+            ListArtifactVersionsRequestFilters self = new ListArtifactVersionsRequestFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListArtifactVersionsRequestFilters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListArtifactVersionsRequestFilters setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
 }

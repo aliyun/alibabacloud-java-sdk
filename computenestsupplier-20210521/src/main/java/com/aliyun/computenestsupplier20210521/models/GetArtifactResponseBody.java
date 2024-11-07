@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetArtifactResponseBody extends TeaModel {
     /**
+     * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;RegionId\&quot;:\&quot;xxx\&quot;, \&quot;SourceImageId\&quot;:\&quot;xxx\&quot;, \&quot;\&quot;:\&quot;xxx\&quot;, \&quot;CommandType\&quot;:\&quot;xxx\&quot;, \&quot;CommandContent\&quot;:\&quot;xxx\&quot;}&quot;</p>
+     */
+    @NameInMap("ArtifactBuildProperty")
+    public String artifactBuildProperty;
+
+    /**
      * <p>The ID of the deployment package.</p>
      * 
      * <strong>example:</strong>
@@ -113,6 +122,15 @@ public class GetArtifactResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The description of the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</p>
+     */
+    @NameInMap("StatusDetail")
+    public String statusDetail;
+
+    /**
      * <p>The ID of the region that supports the deployment package.</p>
      * 
      * <strong>example:</strong>
@@ -139,6 +157,14 @@ public class GetArtifactResponseBody extends TeaModel {
     public static GetArtifactResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetArtifactResponseBody self = new GetArtifactResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetArtifactResponseBody setArtifactBuildProperty(String artifactBuildProperty) {
+        this.artifactBuildProperty = artifactBuildProperty;
+        return this;
+    }
+    public String getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
     }
 
     public GetArtifactResponseBody setArtifactId(String artifactId) {
@@ -235,6 +261,14 @@ public class GetArtifactResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetArtifactResponseBody setStatusDetail(String statusDetail) {
+        this.statusDetail = statusDetail;
+        return this;
+    }
+    public String getStatusDetail() {
+        return this.statusDetail;
     }
 
     public GetArtifactResponseBody setSupportRegionIds(String supportRegionIds) {

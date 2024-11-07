@@ -222,11 +222,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateArtifactShrinkRequest request = new CreateArtifactShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.artifactBuildProperty)) {
+            request.artifactBuildPropertyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.artifactBuildProperty, "ArtifactBuildProperty", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.artifactProperty)) {
             request.artifactPropertyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.artifactProperty, "ArtifactProperty", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactBuildPropertyShrink)) {
+            query.put("ArtifactBuildProperty", request.artifactBuildPropertyShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.artifactId)) {
             query.put("ArtifactId", request.artifactId);
         }
@@ -1412,15 +1420,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the version information about a deployment package.</p>
      * 
-     * @param request ListArtifactVersionsRequest
+     * @param tmpReq ListArtifactVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListArtifactVersionsResponse
      */
-    public ListArtifactVersionsResponse listArtifactVersionsWithOptions(ListArtifactVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListArtifactVersionsResponse listArtifactVersionsWithOptions(ListArtifactVersionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListArtifactVersionsShrinkRequest request = new ListArtifactVersionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filters)) {
+            request.filtersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filters, "Filters", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.artifactId)) {
             query.put("ArtifactId", request.artifactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filtersShrink)) {
+            query.put("Filters", request.filtersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -1518,40 +1536,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListArtifactsResponse listArtifacts(ListArtifactsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listArtifactsWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询服务分类</p>
-     * 
-     * @param request ListServiceCategoriesRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListServiceCategoriesResponse
-     */
-    public ListServiceCategoriesResponse listServiceCategoriesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListServiceCategories"),
-            new TeaPair("version", "2021-05-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceCategoriesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询服务分类</p>
-     * @return ListServiceCategoriesResponse
-     */
-    public ListServiceCategoriesResponse listServiceCategories() throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listServiceCategoriesWithOptions(runtime);
     }
 
     /**
@@ -2010,7 +1994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>商家拒绝服务使用请求</p>
+     * <p>Reject service usage.</p>
      * 
      * @param request RejectServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2058,7 +2042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>商家拒绝服务使用请求</p>
+     * <p>Reject service usage.</p>
      * 
      * @param request RejectServiceUsageRequest
      * @return RejectServiceUsageResponse
@@ -2340,11 +2324,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateArtifactShrinkRequest request = new UpdateArtifactShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.artifactBuildProperty)) {
+            request.artifactBuildPropertyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.artifactBuildProperty, "ArtifactBuildProperty", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.artifactProperty)) {
             request.artifactPropertyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.artifactProperty, "ArtifactProperty", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactBuildPropertyShrink)) {
+            query.put("ArtifactBuildProperty", request.artifactBuildPropertyShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.artifactId)) {
             query.put("ArtifactId", request.artifactId);
         }

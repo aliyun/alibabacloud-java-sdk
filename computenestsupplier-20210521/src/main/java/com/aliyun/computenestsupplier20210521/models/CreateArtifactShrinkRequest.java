@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactShrinkRequest extends TeaModel {
     /**
+     * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+     */
+    @NameInMap("ArtifactBuildProperty")
+    public String artifactBuildPropertyShrink;
+
+    /**
      * <p>The ID of the deployment package.</p>
      * 
      * <strong>example:</strong>
@@ -88,6 +94,14 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     public static CreateArtifactShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateArtifactShrinkRequest self = new CreateArtifactShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateArtifactShrinkRequest setArtifactBuildPropertyShrink(String artifactBuildPropertyShrink) {
+        this.artifactBuildPropertyShrink = artifactBuildPropertyShrink;
+        return this;
+    }
+    public String getArtifactBuildPropertyShrink() {
+        return this.artifactBuildPropertyShrink;
     }
 
     public CreateArtifactShrinkRequest setArtifactId(String artifactId) {
