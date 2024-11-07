@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VoiceModerationResultRequest extends TeaModel {
     /**
-     * <p>The type of the moderation service.</p>
+     * <p>The type of the moderation service. Valid values: nickname_detection: user nickname</p>
      * 
      * <strong>example:</strong>
      * <p>nickname_detection</p>
@@ -14,7 +14,8 @@ public class VoiceModerationResultRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * <p>The parameters of API requests that are sent from API Gateway to the backend service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;taskId&quot;:&quot;xxxxx-xxxx&quot;}</p>

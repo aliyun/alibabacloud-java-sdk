@@ -1453,6 +1453,25 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
 
+    public static class ImageModerationResponseBodyDataExtVlContent extends TeaModel {
+        @NameInMap("OutputText")
+        public String outputText;
+
+        public static ImageModerationResponseBodyDataExtVlContent build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtVlContent self = new ImageModerationResponseBodyDataExtVlContent();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtVlContent setOutputText(String outputText) {
+            this.outputText = outputText;
+            return this;
+        }
+        public String getOutputText() {
+            return this.outputText;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExt extends TeaModel {
         /**
          * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
@@ -1495,6 +1514,9 @@ public class ImageModerationResponseBody extends TeaModel {
          */
         @NameInMap("TextInImage")
         public ImageModerationResponseBodyDataExtTextInImage textInImage;
+
+        @NameInMap("VlContent")
+        public ImageModerationResponseBodyDataExtVlContent vlContent;
 
         public static ImageModerationResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
             ImageModerationResponseBodyDataExt self = new ImageModerationResponseBodyDataExt();
@@ -1555,6 +1577,14 @@ public class ImageModerationResponseBody extends TeaModel {
         }
         public ImageModerationResponseBodyDataExtTextInImage getTextInImage() {
             return this.textInImage;
+        }
+
+        public ImageModerationResponseBodyDataExt setVlContent(ImageModerationResponseBodyDataExtVlContent vlContent) {
+            this.vlContent = vlContent;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtVlContent getVlContent() {
+            return this.vlContent;
         }
 
     }
