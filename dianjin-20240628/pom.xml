@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dianjin20240628</artifactId>
-  <version>1.5.0</version>
+  <version>1.6.0</version>
   <packaging>jar</packaging>
   <name>dianjin20240628</name>
   <description>Alibaba Cloud DianJin (20240628) SDK for Java
@@ -71,7 +71,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.1</version>
+      <version>0.2.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -81,7 +81,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.2.9</version>
+      <version>1.3.1</version>
     </dependency>
   </dependencies>
   <build>
@@ -178,6 +178,7 @@
               <artifactSet>
                 <excludes>
                   <exclude>org.jacoco:*</exclude>
+                  <exclude>org.bouncycastle:bcprov-jdk18on</exclude>
                 </excludes>
               </artifactSet>
               <filters>
