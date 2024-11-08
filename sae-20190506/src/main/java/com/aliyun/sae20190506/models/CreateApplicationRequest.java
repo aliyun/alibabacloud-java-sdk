@@ -270,6 +270,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("NasId")
     public String nasId;
 
+    @NameInMap("OidcRoleName")
+    public String oidcRoleName;
+
     /**
      * <p>xxxxxx</p>
      * 
@@ -794,6 +797,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getNasId() {
         return this.nasId;
+    }
+
+    public CreateApplicationRequest setOidcRoleName(String oidcRoleName) {
+        this.oidcRoleName = oidcRoleName;
+        return this;
+    }
+    public String getOidcRoleName() {
+        return this.oidcRoleName;
     }
 
     public CreateApplicationRequest setOssAkId(String ossAkId) {

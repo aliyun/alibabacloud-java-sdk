@@ -803,6 +803,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("NasId")
         public String nasId;
 
+        @NameInMap("OidcRoleName")
+        public String oidcRoleName;
+
         /**
          * <p>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS) buckets.</p>
          * 
@@ -1458,6 +1461,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getNasId() {
             return this.nasId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setOidcRoleName(String oidcRoleName) {
+            this.oidcRoleName = oidcRoleName;
+            return this;
+        }
+        public String getOidcRoleName() {
+            return this.oidcRoleName;
         }
 
         public DescribeApplicationConfigResponseBodyData setOssAkId(String ossAkId) {
