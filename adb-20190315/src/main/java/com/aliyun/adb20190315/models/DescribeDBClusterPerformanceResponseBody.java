@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The cluster ID.</p>
      * 
@@ -49,6 +52,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static DescribeDBClusterPerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterPerformanceResponseBody self = new DescribeDBClusterPerformanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterPerformanceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DescribeDBClusterPerformanceResponseBody setDBClusterId(String DBClusterId) {

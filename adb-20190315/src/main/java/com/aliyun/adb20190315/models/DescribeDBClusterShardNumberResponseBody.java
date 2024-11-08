@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterShardNumberResponseBody extends TeaModel {
+    @NameInMap("AvailableShardNumbers")
+    public java.util.List<Integer> availableShardNumbers;
+
     /**
      * <strong>example:</strong>
      * <p>CBE843D8-964D-5EA3-9D31-822125611B6E</p>
@@ -21,6 +24,14 @@ public class DescribeDBClusterShardNumberResponseBody extends TeaModel {
     public static DescribeDBClusterShardNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterShardNumberResponseBody self = new DescribeDBClusterShardNumberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterShardNumberResponseBody setAvailableShardNumbers(java.util.List<Integer> availableShardNumbers) {
+        this.availableShardNumbers = availableShardNumbers;
+        return this;
+    }
+    public java.util.List<Integer> getAvailableShardNumbers() {
+        return this.availableShardNumbers;
     }
 
     public DescribeDBClusterShardNumberResponseBody setRequestId(String requestId) {
