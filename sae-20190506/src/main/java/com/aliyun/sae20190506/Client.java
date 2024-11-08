@@ -463,6 +463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NasId", request.nasId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.oidcRoleName)) {
+            query.put("OidcRoleName", request.oidcRoleName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.packageType)) {
             query.put("PackageType", request.packageType);
         }
@@ -2160,6 +2164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {
             query.put("NasId", request.nasId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oidcRoleName)) {
+            query.put("OidcRoleName", request.oidcRoleName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.packageType)) {
