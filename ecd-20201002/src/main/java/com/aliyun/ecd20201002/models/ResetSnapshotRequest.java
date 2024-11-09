@@ -13,6 +13,9 @@ public class ResetSnapshotRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("DesktopId")
+    public String desktopId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -58,6 +61,14 @@ public class ResetSnapshotRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public ResetSnapshotRequest setDesktopId(String desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public String getDesktopId() {
+        return this.desktopId;
     }
 
     public ResetSnapshotRequest setLoginToken(String loginToken) {
