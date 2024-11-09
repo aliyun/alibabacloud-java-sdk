@@ -617,6 +617,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("Os")
         public String os;
 
+        @NameInMap("OsDescription")
+        public String osDescription;
+
         /**
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -905,6 +908,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
         public String getOs() {
             return this.os;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setOsDescription(String osDescription) {
+            this.osDescription = osDescription;
+            return this;
+        }
+        public String getOsDescription() {
+            return this.osDescription;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setOsType(String osType) {

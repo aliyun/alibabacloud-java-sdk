@@ -53,6 +53,9 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -198,6 +201,14 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public DescribeGlobalDesktopsRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribeGlobalDesktopsRequest setLoginRegionId(String loginRegionId) {
