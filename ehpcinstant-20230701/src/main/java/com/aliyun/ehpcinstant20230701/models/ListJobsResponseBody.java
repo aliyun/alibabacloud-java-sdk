@@ -80,6 +80,36 @@ public class ListJobsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListJobsResponseBodyJobListTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListJobsResponseBodyJobListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListJobsResponseBodyJobListTags self = new ListJobsResponseBodyJobListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobsResponseBodyJobListTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListJobsResponseBodyJobListTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListJobsResponseBodyJobList extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -143,6 +173,9 @@ public class ListJobsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListJobsResponseBodyJobListTags> tags;
 
         /**
          * <strong>example:</strong>
@@ -233,6 +266,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListJobsResponseBodyJobList setTags(java.util.List<ListJobsResponseBodyJobListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListJobsResponseBodyJobListTags> getTags() {
+            return this.tags;
         }
 
         public ListJobsResponseBodyJobList setTaskCount(Integer taskCount) {

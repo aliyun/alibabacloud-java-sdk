@@ -4,6 +4,9 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListJobExecutorsResponseBody extends TeaModel {
+    @NameInMap("ExecutorStatus")
+    public ListJobExecutorsResponseBodyExecutorStatus executorStatus;
+
     @NameInMap("Executors")
     public java.util.List<ListJobExecutorsResponseBodyExecutors> executors;
 
@@ -52,6 +55,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public static ListJobExecutorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobExecutorsResponseBody self = new ListJobExecutorsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobExecutorsResponseBody setExecutorStatus(ListJobExecutorsResponseBodyExecutorStatus executorStatus) {
+        this.executorStatus = executorStatus;
+        return this;
+    }
+    public ListJobExecutorsResponseBodyExecutorStatus getExecutorStatus() {
+        return this.executorStatus;
     }
 
     public ListJobExecutorsResponseBody setExecutors(java.util.List<ListJobExecutorsResponseBodyExecutors> executors) {
@@ -110,6 +121,121 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListJobExecutorsResponseBodyExecutorStatus extends TeaModel {
+        @NameInMap("Deleted")
+        public Integer deleted;
+
+        @NameInMap("Exception")
+        public Integer exception;
+
+        @NameInMap("Failed")
+        public Integer failed;
+
+        @NameInMap("Initing")
+        public Integer initing;
+
+        @NameInMap("Pending")
+        public Integer pending;
+
+        @NameInMap("Running")
+        public Integer running;
+
+        @NameInMap("Succeeded")
+        public Integer succeeded;
+
+        public static ListJobExecutorsResponseBodyExecutorStatus build(java.util.Map<String, ?> map) throws Exception {
+            ListJobExecutorsResponseBodyExecutorStatus self = new ListJobExecutorsResponseBodyExecutorStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setDeleted(Integer deleted) {
+            this.deleted = deleted;
+            return this;
+        }
+        public Integer getDeleted() {
+            return this.deleted;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setException(Integer exception) {
+            this.exception = exception;
+            return this;
+        }
+        public Integer getException() {
+            return this.exception;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setFailed(Integer failed) {
+            this.failed = failed;
+            return this;
+        }
+        public Integer getFailed() {
+            return this.failed;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setIniting(Integer initing) {
+            this.initing = initing;
+            return this;
+        }
+        public Integer getIniting() {
+            return this.initing;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setPending(Integer pending) {
+            this.pending = pending;
+            return this;
+        }
+        public Integer getPending() {
+            return this.pending;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setRunning(Integer running) {
+            this.running = running;
+            return this;
+        }
+        public Integer getRunning() {
+            return this.running;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setSucceeded(Integer succeeded) {
+            this.succeeded = succeeded;
+            return this;
+        }
+        public Integer getSucceeded() {
+            return this.succeeded;
+        }
+
+    }
+
+    public static class ListJobExecutorsResponseBodyExecutorsTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListJobExecutorsResponseBodyExecutorsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListJobExecutorsResponseBodyExecutorsTags self = new ListJobExecutorsResponseBodyExecutorsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobExecutorsResponseBodyExecutorsTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorsTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListJobExecutorsResponseBodyExecutors extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -132,11 +258,20 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("ExecutorId")
+        public String executorId;
+
+        @NameInMap("ExternalIpAddress")
+        public java.util.List<String> externalIpAddress;
+
         @NameInMap("HostName")
         public java.util.List<String> hostName;
 
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         /**
          * <strong>example:</strong>
@@ -151,6 +286,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
          */
         @NameInMap("StatusReason")
         public String statusReason;
+
+        @NameInMap("Tags")
+        public java.util.List<ListJobExecutorsResponseBodyExecutorsTags> tags;
 
         public static ListJobExecutorsResponseBodyExecutors build(java.util.Map<String, ?> map) throws Exception {
             ListJobExecutorsResponseBodyExecutors self = new ListJobExecutorsResponseBodyExecutors();
@@ -181,6 +319,22 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public ListJobExecutorsResponseBodyExecutors setExecutorId(String executorId) {
+            this.executorId = executorId;
+            return this;
+        }
+        public String getExecutorId() {
+            return this.executorId;
+        }
+
+        public ListJobExecutorsResponseBodyExecutors setExternalIpAddress(java.util.List<String> externalIpAddress) {
+            this.externalIpAddress = externalIpAddress;
+            return this;
+        }
+        public java.util.List<String> getExternalIpAddress() {
+            return this.externalIpAddress;
+        }
+
         public ListJobExecutorsResponseBodyExecutors setHostName(java.util.List<String> hostName) {
             this.hostName = hostName;
             return this;
@@ -197,6 +351,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
+        public ListJobExecutorsResponseBodyExecutors setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public ListJobExecutorsResponseBodyExecutors setStatus(String status) {
             this.status = status;
             return this;
@@ -211,6 +373,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
         public String getStatusReason() {
             return this.statusReason;
+        }
+
+        public ListJobExecutorsResponseBodyExecutors setTags(java.util.List<ListJobExecutorsResponseBodyExecutorsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListJobExecutorsResponseBodyExecutorsTags> getTags() {
+            return this.tags;
         }
 
     }

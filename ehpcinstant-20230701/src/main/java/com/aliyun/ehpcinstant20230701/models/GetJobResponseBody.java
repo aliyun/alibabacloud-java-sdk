@@ -36,12 +36,23 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoDeploymentPolicyNetwork extends TeaModel {
+        @NameInMap("EnableExternalIpAddress")
+        public Boolean enableExternalIpAddress;
+
         @NameInMap("Vswitch")
         public java.util.List<String> vswitch;
 
         public static GetJobResponseBodyJobInfoDeploymentPolicyNetwork build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfoDeploymentPolicyNetwork self = new GetJobResponseBodyJobInfoDeploymentPolicyNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicyNetwork setEnableExternalIpAddress(Boolean enableExternalIpAddress) {
+            this.enableExternalIpAddress = enableExternalIpAddress;
+            return this;
+        }
+        public Boolean getEnableExternalIpAddress() {
+            return this.enableExternalIpAddress;
         }
 
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork setVswitch(java.util.List<String> vswitch) {

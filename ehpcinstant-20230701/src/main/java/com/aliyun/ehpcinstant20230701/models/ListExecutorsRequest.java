@@ -64,6 +64,9 @@ public class ListExecutorsRequest extends TeaModel {
         @NameInMap("JobName")
         public String jobName;
 
+        @NameInMap("Status")
+        public java.util.List<String> status;
+
         /**
          * <strong>example:</strong>
          * <p>1703819914</p>
@@ -105,6 +108,14 @@ public class ListExecutorsRequest extends TeaModel {
         }
         public String getJobName() {
             return this.jobName;
+        }
+
+        public ListExecutorsRequestFilter setStatus(java.util.List<String> status) {
+            this.status = status;
+            return this;
+        }
+        public java.util.List<String> getStatus() {
+            return this.status;
         }
 
         public ListExecutorsRequestFilter setTimeCreatedAfter(Integer timeCreatedAfter) {
