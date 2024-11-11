@@ -42,6 +42,9 @@ public class CreateWorkgroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateWorkgroupRequestTag> tag;
+
     public static CreateWorkgroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkgroupRequest self = new CreateWorkgroupRequest();
         return TeaModel.build(map, self);
@@ -85,6 +88,44 @@ public class CreateWorkgroupRequest extends TeaModel {
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    public CreateWorkgroupRequest setTag(java.util.List<CreateWorkgroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateWorkgroupRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateWorkgroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateWorkgroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateWorkgroupRequestTag self = new CreateWorkgroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWorkgroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateWorkgroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
