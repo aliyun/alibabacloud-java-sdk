@@ -7,6 +7,9 @@ public class SendByFilterShrinkRequest extends TeaModel {
     @NameInMap("AndroidPayload")
     public String androidPayloadShrink;
 
+    @NameInMap("AndroidShortPayload")
+    public AndroidShortPayload androidShortPayload;
+
     @NameInMap("ChannelProperties")
     public String channelPropertiesShrink;
 
@@ -60,6 +63,14 @@ public class SendByFilterShrinkRequest extends TeaModel {
     }
     public String getAndroidPayloadShrink() {
         return this.androidPayloadShrink;
+    }
+
+    public SendByFilterShrinkRequest setAndroidShortPayload(AndroidShortPayload androidShortPayload) {
+        this.androidShortPayload = androidShortPayload;
+        return this;
+    }
+    public AndroidShortPayload getAndroidShortPayload() {
+        return this.androidShortPayload;
     }
 
     public SendByFilterShrinkRequest setChannelPropertiesShrink(String channelPropertiesShrink) {

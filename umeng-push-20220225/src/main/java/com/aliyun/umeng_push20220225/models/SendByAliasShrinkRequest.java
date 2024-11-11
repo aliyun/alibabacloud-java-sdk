@@ -19,6 +19,9 @@ public class SendByAliasShrinkRequest extends TeaModel {
     @NameInMap("AndroidPayload")
     public String androidPayloadShrink;
 
+    @NameInMap("AndroidShortPayload")
+    public String androidShortPayloadShrink;
+
     @NameInMap("ChannelProperties")
     public String channelPropertiesShrink;
 
@@ -81,6 +84,14 @@ public class SendByAliasShrinkRequest extends TeaModel {
     }
     public String getAndroidPayloadShrink() {
         return this.androidPayloadShrink;
+    }
+
+    public SendByAliasShrinkRequest setAndroidShortPayloadShrink(String androidShortPayloadShrink) {
+        this.androidShortPayloadShrink = androidShortPayloadShrink;
+        return this;
+    }
+    public String getAndroidShortPayloadShrink() {
+        return this.androidShortPayloadShrink;
     }
 
     public SendByAliasShrinkRequest setChannelPropertiesShrink(String channelPropertiesShrink) {
