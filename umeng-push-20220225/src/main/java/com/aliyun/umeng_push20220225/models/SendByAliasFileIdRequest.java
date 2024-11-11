@@ -10,6 +10,9 @@ public class SendByAliasFileIdRequest extends TeaModel {
     @NameInMap("AndroidPayload")
     public AndroidPayload androidPayload;
 
+    @NameInMap("AndroidShortPayload")
+    public AndroidShortPayload androidShortPayload;
+
     @NameInMap("ChannelProperties")
     public ChannelProperties channelProperties;
 
@@ -73,6 +76,14 @@ public class SendByAliasFileIdRequest extends TeaModel {
     }
     public AndroidPayload getAndroidPayload() {
         return this.androidPayload;
+    }
+
+    public SendByAliasFileIdRequest setAndroidShortPayload(AndroidShortPayload androidShortPayload) {
+        this.androidShortPayload = androidShortPayload;
+        return this;
+    }
+    public AndroidShortPayload getAndroidShortPayload() {
+        return this.androidShortPayload;
     }
 
     public SendByAliasFileIdRequest setChannelProperties(ChannelProperties channelProperties) {

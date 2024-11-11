@@ -7,6 +7,9 @@ public class SendByDeviceFileIdShrinkRequest extends TeaModel {
     @NameInMap("AndroidPayload")
     public String androidPayloadShrink;
 
+    @NameInMap("AndroidShortPayload")
+    public String androidShortPayloadShrink;
+
     @NameInMap("ChannelProperties")
     public String channelPropertiesShrink;
 
@@ -62,6 +65,14 @@ public class SendByDeviceFileIdShrinkRequest extends TeaModel {
     }
     public String getAndroidPayloadShrink() {
         return this.androidPayloadShrink;
+    }
+
+    public SendByDeviceFileIdShrinkRequest setAndroidShortPayloadShrink(String androidShortPayloadShrink) {
+        this.androidShortPayloadShrink = androidShortPayloadShrink;
+        return this;
+    }
+    public String getAndroidShortPayloadShrink() {
+        return this.androidShortPayloadShrink;
     }
 
     public SendByDeviceFileIdShrinkRequest setChannelPropertiesShrink(String channelPropertiesShrink) {

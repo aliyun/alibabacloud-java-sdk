@@ -7,6 +7,9 @@ public class SendByFilterRequest extends TeaModel {
     @NameInMap("AndroidPayload")
     public AndroidPayload androidPayload;
 
+    @NameInMap("AndroidShortPayload")
+    public AndroidShortPayload androidShortPayload;
+
     @NameInMap("ChannelProperties")
     public ChannelProperties channelProperties;
 
@@ -60,6 +63,14 @@ public class SendByFilterRequest extends TeaModel {
     }
     public AndroidPayload getAndroidPayload() {
         return this.androidPayload;
+    }
+
+    public SendByFilterRequest setAndroidShortPayload(AndroidShortPayload androidShortPayload) {
+        this.androidShortPayload = androidShortPayload;
+        return this;
+    }
+    public AndroidShortPayload getAndroidShortPayload() {
+        return this.androidShortPayload;
     }
 
     public SendByFilterRequest setChannelProperties(ChannelProperties channelProperties) {

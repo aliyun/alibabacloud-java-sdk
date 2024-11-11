@@ -46,6 +46,9 @@ public class ChannelProperties extends TeaModel {
     @NameInMap("vivoCategory")
     public String vivoCategory;
 
+    @NameInMap("vivoPushMode")
+    public String vivoPushMode;
+
     @NameInMap("xiaomiChannelId")
     public String xiaomiChannelId;
 
@@ -132,6 +135,14 @@ public class ChannelProperties extends TeaModel {
     }
     public String getVivoCategory() {
         return this.vivoCategory;
+    }
+
+    public ChannelProperties setVivoPushMode(String vivoPushMode) {
+        this.vivoPushMode = vivoPushMode;
+        return this;
+    }
+    public String getVivoPushMode() {
+        return this.vivoPushMode;
     }
 
     public ChannelProperties setXiaomiChannelId(String xiaomiChannelId) {

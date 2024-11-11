@@ -137,6 +137,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.androidPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidPayload, "AndroidPayload", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.androidShortPayload)) {
+            request.androidShortPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidShortPayload, "AndroidShortPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.channelProperties)) {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
@@ -160,6 +164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidPayloadShrink)) {
             body.put("AndroidPayload", request.androidPayloadShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidShortPayloadShrink)) {
+            body.put("AndroidShortPayload", request.androidShortPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelPropertiesShrink)) {
@@ -246,6 +254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.androidPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidPayload, "AndroidPayload", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.androidShortPayload)) {
+            request.androidShortPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidShortPayload, "AndroidShortPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.channelProperties)) {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
@@ -265,6 +277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidPayloadShrink)) {
             body.put("AndroidPayload", request.androidPayloadShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidShortPayloadShrink)) {
+            body.put("AndroidShortPayload", request.androidShortPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelPropertiesShrink)) {
@@ -355,6 +371,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.androidPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidPayload, "AndroidPayload", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.androidShortPayload)) {
+            request.androidShortPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidShortPayload, "AndroidShortPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.channelProperties)) {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
@@ -370,6 +390,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.androidPayloadShrink)) {
             body.put("AndroidPayload", request.androidPayloadShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidShortPayloadShrink)) {
+            body.put("AndroidShortPayload", request.androidShortPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelPropertiesShrink)) {
@@ -456,6 +480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.androidPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidPayload, "AndroidPayload", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.androidShortPayload)) {
+            request.androidShortPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidShortPayload, "AndroidShortPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.channelProperties)) {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
@@ -471,6 +499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.androidPayloadShrink)) {
             body.put("AndroidPayload", request.androidPayloadShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidShortPayloadShrink)) {
+            body.put("AndroidShortPayload", request.androidShortPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelPropertiesShrink)) {
@@ -561,6 +593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.androidPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidPayload, "AndroidPayload", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.androidShortPayload)) {
+            request.androidShortPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidShortPayload, "AndroidShortPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.channelProperties)) {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
@@ -576,6 +612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.androidPayloadShrink)) {
             body.put("AndroidPayload", request.androidPayloadShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidShortPayloadShrink)) {
+            body.put("AndroidShortPayload", request.androidShortPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelPropertiesShrink)) {
@@ -681,6 +721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.androidPayloadShrink)) {
             body.put("AndroidPayload", request.androidPayloadShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidShortPayload)) {
+            body.put("AndroidShortPayload", request.androidShortPayload);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelPropertiesShrink)) {

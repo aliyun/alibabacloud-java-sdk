@@ -7,6 +7,9 @@ public class SendByDeviceFileIdRequest extends TeaModel {
     @NameInMap("AndroidPayload")
     public AndroidPayload androidPayload;
 
+    @NameInMap("AndroidShortPayload")
+    public AndroidShortPayload androidShortPayload;
+
     @NameInMap("ChannelProperties")
     public ChannelProperties channelProperties;
 
@@ -62,6 +65,14 @@ public class SendByDeviceFileIdRequest extends TeaModel {
     }
     public AndroidPayload getAndroidPayload() {
         return this.androidPayload;
+    }
+
+    public SendByDeviceFileIdRequest setAndroidShortPayload(AndroidShortPayload androidShortPayload) {
+        this.androidShortPayload = androidShortPayload;
+        return this;
+    }
+    public AndroidShortPayload getAndroidShortPayload() {
+        return this.androidShortPayload;
     }
 
     public SendByDeviceFileIdRequest setChannelProperties(ChannelProperties channelProperties) {
