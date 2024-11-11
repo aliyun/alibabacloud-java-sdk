@@ -4,18 +4,38 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ScgSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,18 +96,38 @@ public class ScgSearchResponseBody extends TeaModel {
     }
 
     public static class ScgSearchResponseBodyResultCover extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg">http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg</a></p>
+         */
         @NameInMap("Img")
         public String img;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg">http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg</a></p>
+         */
         @NameInMap("Large")
         public String large;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg">http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg</a></p>
+         */
         @NameInMap("Medium")
         public String medium;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg">http://img.xiami.net/images/album/img59/56/58da2153e3133_2826959_1490690387.jpg</a></p>
+         */
         @NameInMap("Small")
         public String small;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("canResize")
         public Boolean canResize;
 
@@ -139,12 +179,24 @@ public class ScgSearchResponseBody extends TeaModel {
     }
 
     public static class ScgSearchResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Album")
         public Boolean album;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1795716629</p>
+         */
         @NameInMap("AlbumRawId")
         public String albumRawId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AlbumType")
         public Integer albumType;
 
@@ -157,39 +209,75 @@ public class ScgSearchResponseBody extends TeaModel {
         @NameInMap("AuthorNames")
         public java.util.List<String> authorNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>audio</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MUSIC_CONTENT</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
         @NameInMap("Cover")
         public ScgSearchResponseBodyResultCover cover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAudition")
         public Boolean isAudition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsCharge")
         public String isCharge;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NeedCharge")
         public Boolean needCharge;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1795716629</p>
+         */
         @NameInMap("RawId")
         public String rawId;
 
         @NameInMap("Singers")
         public String singers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiami</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SupportAudition")
         public Boolean supportAudition;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>music</p>
+         */
         @NameInMap("Type")
         public String type;
 

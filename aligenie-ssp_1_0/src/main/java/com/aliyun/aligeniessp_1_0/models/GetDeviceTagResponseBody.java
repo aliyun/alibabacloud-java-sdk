@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceTagResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class GetDeviceTagResponseBody extends TeaModel {
     }
 
     public static class GetDeviceTagResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{       &quot;antest1&quot;: &quot;antest1&quot;,       &quot;antest&quot;: &quot;a&quot;     }</p>
+         */
         @NameInMap("DeviceTags")
         public java.util.Map<String, ?> deviceTags;
 

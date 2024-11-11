@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,10 +66,17 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
     }
 
     public static class CheckAuthCodeBindForExtResponseBodyResultDeviceOpenInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>A963*0158</p>
+         */
         @NameInMap("Id")
         public String id;
 
         /**
+         * <p>DEVICE_ID</p>
+         * 
+         * <strong>example:</strong>
          * <p>DEVICE_ID</p>
          */
         @NameInMap("IdType")
@@ -87,10 +106,17 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
     }
 
     public static class CheckAuthCodeBindForExtResponseBodyResultUserOpenInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0963*0158</p>
+         */
         @NameInMap("Id")
         public String id;
 
         /**
+         * <p>USER_ID</p>
+         * 
+         * <strong>example:</strong>
          * <p>USER_ID</p>
          */
         @NameInMap("IdType")

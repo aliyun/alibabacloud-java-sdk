@@ -4,9 +4,21 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class AuthLoginWithTaobaoUserInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KsVgypxAipf+xNECMZV2ONMcheqiIoEGFvgx+T8s1oV6/euTK9+ImYvLVPsSqFDh</p>
+     */
     @NameInMap("EncryptedTaobaoUserIdentifier")
     public String encryptedTaobaoUserIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbe2eb4458302b9246c6da17fbc95f4b</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

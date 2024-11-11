@@ -4,6 +4,10 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListCommonCateSecondFloorRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>80010</p>
+     */
     @NameInMap("ParentCateId")
     public Long parentCateId;
 

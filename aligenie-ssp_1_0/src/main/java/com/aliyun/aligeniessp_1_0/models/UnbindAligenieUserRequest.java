@@ -4,6 +4,12 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class UnbindAligenieUserRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99ce8a70c23a94f8569e1a525bef6e85</p>
+     */
     @NameInMap("LoginStateAccessToken")
     public String loginStateAccessToken;
 

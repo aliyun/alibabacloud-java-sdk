@@ -4,21 +4,37 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("DataObj")
     public AuthLoginWithThirdUserInfoResponseBodyDataObj dataObj;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public AuthLoginWithThirdUserInfoResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +92,10 @@ public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
     }
 
     public static class AuthLoginWithThirdUserInfoResponseBodyDataObj extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dbe2eb4458302b9246c6da17fbc95f4b</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
@@ -95,9 +115,17 @@ public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
     }
 
     public static class AuthLoginWithThirdUserInfoResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1659428051452</p>
+         */
         @NameInMap("ExpiredTimeLong")
         public Long expiredTimeLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bd9ccdb121ee950ddead51e943e081fe</p>
+         */
         @NameInMap("LoginStateAccessToken")
         public String loginStateAccessToken;
 

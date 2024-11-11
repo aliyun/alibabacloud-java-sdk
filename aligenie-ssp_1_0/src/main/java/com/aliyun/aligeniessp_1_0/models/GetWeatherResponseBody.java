@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetWeatherResponseBody extends TeaModel {
     /**
      * <p>HttpCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -13,6 +16,10 @@ public class GetWeatherResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7E2****B7C94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,21 +64,37 @@ public class GetWeatherResponseBody extends TeaModel {
     }
 
     public static class GetWeatherResponseBodyResultCurrentMeteorologyTemperature extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>36</p>
+         */
         @NameInMap("Current")
         public String current;
 
         @NameInMap("CurrentDesc")
         public String currentDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37</p>
+         */
         @NameInMap("High")
         public String high;
 
         @NameInMap("HighDesc")
         public String highDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>41</p>
+         */
         @NameInMap("Logical")
         public String logical;
 
+        /**
+         * <strong>example:</strong>
+         * <p>28</p>
+         */
         @NameInMap("Low")
         public String low;
 
@@ -142,6 +165,10 @@ public class GetWeatherResponseBody extends TeaModel {
     }
 
     public static class GetWeatherResponseBodyResultCurrentMeteorologyWeather extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>000</p>
+         */
         @NameInMap("Code")
         public String code;
 

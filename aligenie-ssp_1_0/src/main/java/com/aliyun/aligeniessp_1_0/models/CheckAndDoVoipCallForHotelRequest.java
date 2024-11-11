@@ -13,9 +13,15 @@ public class CheckAndDoVoipCallForHotelRequest extends TeaModel {
     @NameInMap("CalleePhoneNum")
     public String calleePhoneNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public CheckAndDoVoipCallForHotelRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public CheckAndDoVoipCallForHotelRequestUserInfo userInfo;
 

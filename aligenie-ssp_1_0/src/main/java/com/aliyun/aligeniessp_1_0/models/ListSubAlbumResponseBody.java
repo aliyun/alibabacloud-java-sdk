@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListSubAlbumResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CB13B8D7-37FB-1B3E-8EB9-65BB413267E1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,9 +69,17 @@ public class ListSubAlbumResponseBody extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -106,15 +126,31 @@ public class ListSubAlbumResponseBody extends TeaModel {
     }
 
     public static class ListSubAlbumResponseBodyResultDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4476001</p>
+         */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80011</p>
+         */
         @NameInMap("CategoryId")
         public Integer categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabs.alibabausercontent.com/images/17825/jknoamc2.jpg">https://ailabs.alibabausercontent.com/images/17825/jknoamc2.jpg</a></p>
+         */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -124,12 +160,24 @@ public class ListSubAlbumResponseBody extends TeaModel {
         @NameInMap("ScheduleInfo")
         public ListSubAlbumResponseBodyResultDataListScheduleInfo scheduleInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Sequence")
         public Long sequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>睡前故事</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("TotalEpisode")
         public Integer totalEpisode;
 
@@ -219,9 +267,17 @@ public class ListSubAlbumResponseBody extends TeaModel {
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPageCount")
         public Integer totalPageCount;
 

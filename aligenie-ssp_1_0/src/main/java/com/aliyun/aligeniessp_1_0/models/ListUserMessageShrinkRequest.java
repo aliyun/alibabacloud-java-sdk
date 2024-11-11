@@ -4,12 +4,23 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListUserMessageShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-27 14:06:55.984</p>
+     */
     @NameInMap("BeforeTime")
     public String beforeTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 

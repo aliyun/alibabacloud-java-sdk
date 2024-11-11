@@ -13,9 +13,15 @@ public class CheckAndDoVoipCallForHotelShrinkRequest extends TeaModel {
     @NameInMap("CalleePhoneNum")
     public String calleePhoneNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

@@ -4,12 +4,21 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduleTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public CreateScheduleTaskRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Payload")
     public CreateScheduleTaskRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public CreateScheduleTaskRequestUserInfo userInfo;
 
@@ -43,18 +52,38 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -106,6 +135,10 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestPayloadActionDTOs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:{&quot;key&quot;:1}}</p>
+         */
         @NameInMap("customAction")
         public java.util.Map<String, ?> customAction;
 
@@ -125,18 +158,38 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestPayloadScheduleDTOOnce extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>26</p>
+         */
         @NameInMap("Day")
         public Integer day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("Month")
         public Integer month;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022</p>
+         */
         @NameInMap("Year")
         public Integer year;
 
@@ -262,12 +315,30 @@ public class CreateScheduleTaskRequest extends TeaModel {
         @NameInMap("Once")
         public CreateScheduleTaskRequestPayloadScheduleDTOOnce once;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661589255000</p>
+         */
         @NameInMap("ScheduleEndTime")
         public Long scheduleEndTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656318855000</p>
+         */
         @NameInMap("ScheduleStartTime")
         public Long scheduleStartTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONCE</p>
+         */
         @NameInMap("ScheduleType")
         public String scheduleType;
 
@@ -333,12 +404,22 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ActionDTOs")
         public java.util.List<CreateScheduleTaskRequestPayloadActionDTOs> actionDTOs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IdempotentId")
         public String idempotentId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ScheduleDTO")
         public CreateScheduleTaskRequestPayloadScheduleDTO scheduleDTO;
 
@@ -374,18 +455,38 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

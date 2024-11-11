@@ -4,9 +4,18 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ScgSearchRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScgFilter")
     public ScgSearchRequestScgFilter scgFilter;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MC201132</p>
+     */
     @NameInMap("TopicId")
     public String topicId;
 
@@ -32,9 +41,17 @@ public class ScgSearchRequest extends TeaModel {
     }
 
     public static class ScgSearchRequestScgFilterOffSetParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Limit")
         public Integer limit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Offset")
         public Integer offset;
 
@@ -62,9 +79,17 @@ public class ScgSearchRequest extends TeaModel {
     }
 
     public static class ScgSearchRequestScgFilterPageParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -92,12 +117,24 @@ public class ScgSearchRequest extends TeaModel {
     }
 
     public static class ScgSearchRequestScgFilterSortParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>internal_id</p>
+         */
         @NameInMap("SortKey")
         public String sortKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ASC</p>
+         */
         @NameInMap("SortOrder")
         public String sortOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("SortText")
         public String sortText;
 
@@ -139,9 +176,18 @@ public class ScgSearchRequest extends TeaModel {
         @NameInMap("PageParam")
         public ScgSearchRequestScgFilterPageParam pageParam;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SortParam")
         public ScgSearchRequestScgFilterSortParam sortParam;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UseOffSet")
         public Boolean useOffSet;
 

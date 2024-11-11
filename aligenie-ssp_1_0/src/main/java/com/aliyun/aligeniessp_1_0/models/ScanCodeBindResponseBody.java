@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ScanCodeBindResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>686DF82F-45C4-7DF7-8B67-27B91CFD63A9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,20 +66,34 @@ public class ScanCodeBindResponseBody extends TeaModel {
     }
 
     public static class ScanCodeBindResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>X1</p>
+         */
         @NameInMap("BizGroup")
         public String bizGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AILABS</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>A963*0158</p>
+         * 
+         * <strong>example:</strong>
+         * <p>设备OpenId</p>
          */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 
         /**
          * <p>DAFE****ce3ej=</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户opneId</p>
          */
         @NameInMap("UserOpenId")
         public String userOpenId;

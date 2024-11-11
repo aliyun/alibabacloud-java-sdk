@@ -4,18 +4,34 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>73*<em><strong>9-175A-1324-8202-9FAAB</strong></em>**A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public EcologyOpennessAuthenticateResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
     }
 
     public static class EcologyOpennessAuthenticateResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12****7</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("SceneCode")
         public String sceneCode;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ThirdUserIdentifier")
         public String thirdUserIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ThirdUserType")
         public String thirdUserType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>o****RnNAW/smBNX9By7Zlc3J7iQUXPiUj/6OizU+ifLSzn1vpQL9ZgSp22u7hsxj0UZ2i6urbv9HQ==</p>
+         */
         @NameInMap("UserOpenId")
         public String userOpenId;
 

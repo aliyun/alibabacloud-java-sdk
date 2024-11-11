@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListAlbumIsAddedResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BCC85E69-5DA6-197E-A8C1-8A1B19CF781B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class ListAlbumIsAddedResponseBody extends TeaModel {
     }
 
     public static class ListAlbumIsAddedResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>51999575</p>
+         */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAdded")
         public String isAdded;
 

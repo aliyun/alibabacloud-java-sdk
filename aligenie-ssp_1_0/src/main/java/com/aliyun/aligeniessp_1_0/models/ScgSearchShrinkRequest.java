@@ -4,9 +4,18 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ScgSearchShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScgFilter")
     public String scgFilterShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MC201132</p>
+     */
     @NameInMap("TopicId")
     public String topicId;
 

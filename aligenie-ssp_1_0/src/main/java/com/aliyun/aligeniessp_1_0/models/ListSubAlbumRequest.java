@@ -109,9 +109,17 @@ public class ListSubAlbumRequest extends TeaModel {
     }
 
     public static class ListSubAlbumRequestQuerySubscriptionAlbumRequestPage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -139,15 +147,32 @@ public class ListSubAlbumRequest extends TeaModel {
     }
 
     public static class ListSubAlbumRequestQuerySubscriptionAlbumRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4476001</p>
+         */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80011</p>
+         */
         @NameInMap("CategoryId")
         public Integer categoryId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Page")
         public ListSubAlbumRequestQuerySubscriptionAlbumRequestPage page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>睡前故事</p>
+         */
         @NameInMap("Title")
         public String title;
 

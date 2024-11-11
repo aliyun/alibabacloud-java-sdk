@@ -1,3 +1,7 @@
+2024-11-11 Version: 2.3.0
+- Support API GetJiangSuTelecomData.
+
+
 2024-01-04 Version: 2.2.0
 - Generated java ssp_1.0 for AliGenie.
 

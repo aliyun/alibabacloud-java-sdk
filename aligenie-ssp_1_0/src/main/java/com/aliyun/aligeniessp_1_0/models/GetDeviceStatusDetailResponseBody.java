@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceStatusDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,36 +69,76 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         @NameInMap("AudioAlbum")
         public String audioAlbum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>刘德华</p>
+         */
         @NameInMap("AudioAnchor")
         public String audioAnchor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("AudioExt")
         public String audioExt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("AudioId")
         public String audioId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>253</p>
+         */
         @NameInMap("AudioLength")
         public String audioLength;
 
         @NameInMap("AudioName")
         public String audioName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiami</p>
+         */
         @NameInMap("AudioSource")
         public String audioSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx">https://xxx</a></p>
+         */
         @NameInMap("AudioUrl")
         public String audioUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp3</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pause</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -205,6 +257,10 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
     }
 
     public static class GetDeviceStatusDetailResponseBodyResultPower extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
@@ -238,6 +294,10 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         @NameInMap("Muted")
         public Boolean muted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 

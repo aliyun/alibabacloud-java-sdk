@@ -7,6 +7,9 @@ public class DeviceControlShrinkRequest extends TeaModel {
     @NameInMap("ControlRequest")
     public String controlRequestShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 

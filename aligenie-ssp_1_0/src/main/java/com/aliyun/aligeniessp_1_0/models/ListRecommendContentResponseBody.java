@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListRecommendContentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F12B6147-5925-19E5-A3AD-E1EE1360F34E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,38 @@ public class ListRecommendContentResponseBody extends TeaModel {
     }
 
     public static class ListRecommendContentResponseBodyResultAuthorsCover extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanResize")
         public Boolean canResize;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://a.jpg">https://a.jpg</a></p>
+         */
         @NameInMap("Img")
         public String img;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://a.jpg">https://a.jpg</a></p>
+         */
         @NameInMap("Large")
         public String large;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://a.jpg">https://a.jpg</a></p>
+         */
         @NameInMap("Medium")
         public String medium;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://a.jpg">https://a.jpg</a></p>
+         */
         @NameInMap("Small")
         public String small;
 
@@ -126,18 +158,38 @@ public class ListRecommendContentResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MALE</p>
+         */
         @NameInMap("Gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13597709</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12311</p>
+         */
         @NameInMap("RawId")
         public String rawId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qingting</p>
+         */
         @NameInMap("Source")
         public String source;
 
@@ -224,21 +276,45 @@ public class ListRecommendContentResponseBody extends TeaModel {
     }
 
     public static class ListRecommendContentResponseBodyResultCover extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanResize")
         public Boolean canResize;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
+         */
         @NameInMap("Img")
         public String img;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
+         */
         @NameInMap("Large")
         public String large;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
+         */
         @NameInMap("Mediam")
         public String mediam;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
+         */
         @NameInMap("Medium")
         public String medium;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
+         */
         @NameInMap("Small")
         public String small;
 
@@ -301,18 +377,34 @@ public class ListRecommendContentResponseBody extends TeaModel {
         @NameInMap("Alias")
         public java.util.List<String> alias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Audition")
         public Boolean audition;
 
         @NameInMap("Authors")
         public java.util.List<ListRecommendContentResponseBodyResultAuthors> authors;
 
+        /**
+         * <strong>example:</strong>
+         * <p>audio</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Charge")
         public Boolean charge;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80012017</p>
+         */
         @NameInMap("CommCateId")
         public Long commCateId;
 
@@ -322,27 +414,55 @@ public class ListRecommendContentResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("HotScore")
         public Double hotScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13597709</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALBUM</p>
+         */
         @NameInMap("ItemType")
         public String itemType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("RawId")
         public String rawId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qingting</p>
+         */
         @NameInMap("Source")
         public String source;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>program</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VALID</p>
+         */
         @NameInMap("Valid")
         public String valid;
 

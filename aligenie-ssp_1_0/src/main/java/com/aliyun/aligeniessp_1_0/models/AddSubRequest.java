@@ -46,9 +46,17 @@ public class AddSubRequest extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -84,12 +92,24 @@ public class AddSubRequest extends TeaModel {
     }
 
     public static class AddSubRequestAddSubscriptionInfoRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>51999575</p>
+         */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DailyStudyCnt")
         public Integer dailyStudyCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sequence</p>
+         */
         @NameInMap("PlayMode")
         public String playMode;
 
@@ -136,15 +156,27 @@ public class AddSubRequest extends TeaModel {
     }
 
     public static class AddSubRequestDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
@@ -199,12 +231,24 @@ public class AddSubRequest extends TeaModel {
     }
 
     public static class AddSubRequestUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public String id;
 

@@ -7,9 +7,17 @@ public class AddSubResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B99D27ED-4E12-1414-9FDE-599C57C4B204</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,9 +65,17 @@ public class AddSubResponseBody extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -95,24 +111,48 @@ public class AddSubResponseBody extends TeaModel {
     }
 
     public static class AddSubResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>51999575</p>
+         */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DailyStudyCnt")
         public Integer dailyStudyCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5874DBCCA3038FAA1A70A8060F07F26D</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>81</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sequence</p>
+         */
         @NameInMap("PlayMode")
         public String playMode;
 
         @NameInMap("ScheduleInfo")
         public AddSubResponseBodyResultScheduleInfo scheduleInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1152893538998276761</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

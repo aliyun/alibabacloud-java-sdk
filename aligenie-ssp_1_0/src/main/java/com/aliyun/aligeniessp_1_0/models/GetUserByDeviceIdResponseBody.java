@@ -4,15 +4,31 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetUserByDeviceIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public GetUserByDeviceIdResponseBodyResult result;
 
@@ -54,9 +70,17 @@ public class GetUserByDeviceIdResponseBody extends TeaModel {
     }
 
     public static class GetUserByDeviceIdResponseBodyResultUserUnionIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1553*B0C3</p>
+         */
         @NameInMap("UserUnionId")
         public String userUnionId;
 
@@ -84,6 +108,10 @@ public class GetUserByDeviceIdResponseBody extends TeaModel {
     }
 
     public static class GetUserByDeviceIdResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0963*0158</p>
+         */
         @NameInMap("UserOpenId")
         public String userOpenId;
 

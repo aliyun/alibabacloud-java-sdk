@@ -68,6 +68,10 @@ public class QueryUserDeviceListByTmeUserIdResponseBody extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 

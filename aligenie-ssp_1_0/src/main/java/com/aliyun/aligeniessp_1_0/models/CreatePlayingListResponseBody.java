@@ -4,18 +4,34 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class CreatePlayingListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10002398812</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public CreatePlayingListResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,21 +81,45 @@ public class CreatePlayingListResponseBody extends TeaModel {
     }
 
     public static class CreatePlayingListResponseBodyResultCover extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanResize")
         public Boolean canResize;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
+         */
         @NameInMap("Img")
         public String img;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
+         */
         @NameInMap("Large")
         public String large;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
+         */
         @NameInMap("Mediam")
         public String mediam;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
+         */
         @NameInMap("Medium")
         public String medium;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
+         */
         @NameInMap("Small")
         public String small;
 
@@ -142,54 +182,110 @@ public class CreatePlayingListResponseBody extends TeaModel {
         @NameInMap("AlbumName")
         public String albumName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>260744</p>
+         */
         @NameInMap("AlbumRawId")
         public String albumRawId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>190</p>
+         */
         @NameInMap("AudioLength")
         public Integer audioLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Copyright")
         public Integer copyright;
 
         @NameInMap("Cover")
         public CreatePlayingListResponseBodyResultCover cover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DefaultPlayOrder")
         public Integer defaultPlayOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://openaudio.cos.tx.xmcdn.com/storages/587f-audiofreehighqps/15/CE/GKwRIJIGnb11ABc6SwF59DNb.mp3">https://openaudio.cos.tx.xmcdn.com/storages/587f-audiofreehighqps/15/CE/GKwRIJIGnb11ABc6SwF59DNb.mp3</a></p>
+         */
         @NameInMap("ItemUrl")
         public String itemUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Liked")
         public Boolean liked;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://aicontent.alibabausercontent.com/lyric/thirdsource/6f4c8408073db134b0d097c122b5a1a1.lrc">https://aicontent.alibabausercontent.com/lyric/thirdsource/6f4c8408073db134b0d097c122b5a1a1.lrc</a></p>
+         */
         @NameInMap("LyricUrl")
         public String lyricUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Repeat</p>
+         */
         @NameInMap("PlayMode")
         public String playMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Pos")
         public Integer pos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>550144364</p>
+         */
         @NameInMap("RawId")
         public String rawId;
 
         @NameInMap("Singer")
         public String singer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ximalayav2</p>
+         */
         @NameInMap("Source")
         public String source;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>story</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VALID</p>
+         */
         @NameInMap("Valid")
         public String valid;
 

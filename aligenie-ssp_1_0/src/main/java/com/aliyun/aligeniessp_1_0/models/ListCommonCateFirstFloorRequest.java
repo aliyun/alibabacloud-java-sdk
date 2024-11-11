@@ -4,6 +4,12 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListCommonCateFirstFloorRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>song</p>
+     */
     @NameInMap("Type")
     public String type;
 

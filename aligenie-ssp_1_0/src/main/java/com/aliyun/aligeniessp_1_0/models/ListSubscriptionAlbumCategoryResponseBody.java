@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionAlbumCategoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60E7A523-9766-1D07-87A2-6E587420C59B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class ListSubscriptionAlbumCategoryResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionAlbumCategoryResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80011</p>
+         */
         @NameInMap("CategoryId")
         public String categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>儿童</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 

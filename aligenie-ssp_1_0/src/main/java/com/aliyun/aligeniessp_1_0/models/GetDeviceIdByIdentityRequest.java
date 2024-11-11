@@ -4,18 +4,46 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceIdByIdentityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>129****0946</p>
+     */
     @NameInMap("EncodeKey")
     public String encodeKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROJECT_ID</p>
+     */
     @NameInMap("EncodeType")
     public String encodeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b4:xx:xx:xx:65:2b</p>
+     */
     @NameInMap("IdentityId")
     public String identityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MAC</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Mm*****XnZ8</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
