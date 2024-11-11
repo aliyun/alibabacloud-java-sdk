@@ -332,6 +332,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ServiceDocUrl")
     public String serviceDocUrl;
 
+    @NameInMap("ServiceDocumentInfos")
+    public java.util.List<GetServiceResponseBodyServiceDocumentInfos> serviceDocumentInfos;
+
     /**
      * <p>The service ID.</p>
      * 
@@ -839,6 +842,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getServiceDocUrl() {
         return this.serviceDocUrl;
+    }
+
+    public GetServiceResponseBody setServiceDocumentInfos(java.util.List<GetServiceResponseBodyServiceDocumentInfos> serviceDocumentInfos) {
+        this.serviceDocumentInfos = serviceDocumentInfos;
+        return this;
+    }
+    public java.util.List<GetServiceResponseBodyServiceDocumentInfos> getServiceDocumentInfos() {
+        return this.serviceDocumentInfos;
     }
 
     public GetServiceResponseBody setServiceId(String serviceId) {
@@ -1797,6 +1808,47 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public java.util.List<String> getCompliancePacks() {
             return this.compliancePacks;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyServiceDocumentInfos extends TeaModel {
+        @NameInMap("DocumentUrl")
+        public String documentUrl;
+
+        @NameInMap("Locale")
+        public String locale;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        public static GetServiceResponseBodyServiceDocumentInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyServiceDocumentInfos self = new GetServiceResponseBodyServiceDocumentInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyServiceDocumentInfos setDocumentUrl(String documentUrl) {
+            this.documentUrl = documentUrl;
+            return this;
+        }
+        public String getDocumentUrl() {
+            return this.documentUrl;
+        }
+
+        public GetServiceResponseBodyServiceDocumentInfos setLocale(String locale) {
+            this.locale = locale;
+            return this;
+        }
+        public String getLocale() {
+            return this.locale;
+        }
+
+        public GetServiceResponseBodyServiceDocumentInfos setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
         }
 
     }

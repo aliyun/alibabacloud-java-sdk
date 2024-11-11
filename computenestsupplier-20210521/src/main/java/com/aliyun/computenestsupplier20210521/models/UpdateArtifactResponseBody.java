@@ -4,6 +4,12 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateArtifactResponseBody extends TeaModel {
+    /**
+     * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;RegionId\&quot;:\&quot;xxx\&quot;, \&quot;SourceImageId\&quot;:\&quot;xxx\&quot;, \&quot;\&quot;:\&quot;xxx\&quot;, \&quot;CommandType\&quot;:\&quot;xxx\&quot;, \&quot;CommandContent\&quot;:\&quot;xxx\&quot;}&quot;</p>
+     */
     @NameInMap("ArtifactBuildProperty")
     public String artifactBuildProperty;
 
