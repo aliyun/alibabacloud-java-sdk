@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceShrinkRequest extends TeaModel {
     /**
-     * <p>The alert configurations of the service.</p>
-     * <blockquote>
-     * <p> This parameter takes effect only when you specify an alert policy for <strong>PolicyNames</strong>.</p>
-     * </blockquote>
+     * <p>Is need to update the artifacts</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;CmsTemplateId\&quot;:1162921,\&quot;TemplateUrl\&quot;:\&quot;<a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json%5C%5C%22%7D">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json\\&quot;}</a></p>
@@ -17,10 +14,12 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String alarmMetadata;
 
     /**
-     * <p>The approval type of the service usage application. Valid values:</p>
+     * <p>The service type. Valid values:</p>
      * <ul>
-     * <li>Manual: The application is manually approved.</li>
-     * <li>AutoPass: The application is automatically approved.</li>
+     * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+     * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+     * <li>operation: The service is a hosted O\&amp;M service.</li>
+     * <li>poc: The service is a trial service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +29,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String approvalType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The options for update the service.</p>
      * 
      * <strong>example:</strong>
      * <p>788E7CP0EN9D51P</p>
@@ -39,7 +38,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Bind Commodity Information</p>
+     * <p>This parameter is not publicly accessible.</p>
      */
     @NameInMap("Commodity")
     public String commodityShrink;
@@ -48,13 +47,25 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String complianceMetadataShrink;
 
     /**
-     * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
+     * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&amp;M policies are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;EstimateTime\&quot;:null,\&quot;SupplierDeployMetadata\&quot;:{\&quot;DeployTimeout\&quot;:7200},\&quot;EnableVnc\&quot;:false}</p>
      */
     @NameInMap("DeployMetadata")
     public String deployMetadata;
+
+    /**
+     * <p>WB01286039</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ros</p>
+     */
+    @NameInMap("DeployType")
+    public String deployType;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The deployment type of the service. Valid values:</p>
@@ -68,32 +79,13 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ros</p>
-     */
-    @NameInMap("DeployType")
-    public String deployType;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    /**
-     * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
-     * 
-     * <strong>example:</strong>
      * <p>259200</p>
      */
     @NameInMap("Duration")
     public Long duration;
 
     /**
-     * <p>Specifies whether to enable the hosted O\&amp;M feature for the service. Default value: false. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter is required if you set <strong>ServiceType</strong> to <strong>private</strong>.</p>
-     * </blockquote>
+     * <p>The version name.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -102,25 +94,29 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public Boolean isSupportOperated;
 
     /**
-     * <p>The license metadata.</p>
+     * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;RetentionDays\&quot;:3}</p>
+     * <p>Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)</p>
      */
     @NameInMap("LicenseMetadata")
     public String licenseMetadata;
 
     /**
-     * <p>The logging configurations.</p>
+     * <p>This parameter is not publicly accessible.</p>
      * 
      * <strong>example:</strong>
-     * <p>{ &quot;Logstores&quot;: [ { &quot;LogstoreName&quot;: &quot;access-log&quot;, &quot;LogPath&quot;: &quot;/home/admin/app/logs&quot;, # This parameter is not required for containers. Configure the parameter in the YAML file. &quot;FilePattern&quot;: &quot;access.log\*&quot; # This parameter is not required for containers. Configure the parameter in the YAML file. } ] }</p>
+     * <p>Specifies whether to support distribution. Valid values:</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
+     * </ul>
      */
     @NameInMap("LogMetadata")
     public String logMetadata;
 
     /**
-     * <p>The hosted O\&amp;M configurations.</p>
+     * <p>{\&quot;RetentionDays\&quot;:3}</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;Custom_Image_Ecs\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</p>
@@ -129,7 +125,7 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String operationMetadata;
 
     /**
-     * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&amp;M policies are supported.</p>
+     * <p>The package name.</p>
      * 
      * <strong>example:</strong>
      * <p>policyName1, policyName2</p>
@@ -138,127 +134,44 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     public String policyNames;
 
     /**
-     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>Specifies whether to support distribution. Valid values:</p>
-     * <ul>
-     * <li>false</li>
-     * <li>true</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("Resellable")
     public Boolean resellable;
 
     /**
-     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>service-1dda29c3eca648xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
-    /**
-     * <p>The service details.</p>
-     */
     @NameInMap("ServiceInfo")
     public java.util.List<UpdateServiceShrinkRequestServiceInfo> serviceInfo;
 
-    /**
-     * <p>The service type. Valid values:</p>
-     * <ul>
-     * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-     * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-     * <li>operation: The service is a hosted O\&amp;M service.</li>
-     * <li>poc: The service is a trial service.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>private</p>
-     */
     @NameInMap("ServiceType")
     public String serviceType;
 
-    /**
-     * <p>The service version.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
-    /**
-     * <p>The permission type of the deployment URL. Valid values:</p>
-     * <ul>
-     * <li>Public: All users can go to the URL to create a service instance or a trial service instance.</li>
-     * <li>Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.</li>
-     * <li>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.</li>
-     * <li>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</li>
-     * <li>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Public</p>
-     */
     @NameInMap("ShareType")
     public String shareType;
 
-    /**
-     * <p>The type of the tenant. Valid values:</p>
-     * <ul>
-     * <li>SingleTenant</li>
-     * <li>MultiTenant</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>SingleTenant</p>
-     */
     @NameInMap("TenantType")
     public String tenantType;
 
-    /**
-     * <p>The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>7</p>
-     */
     @NameInMap("TrialDuration")
     public Integer trialDuration;
 
-    /**
-     * <p>The options for update the service.</p>
-     */
     @NameInMap("UpdateOption")
     public String updateOptionShrink;
 
-    /**
-     * <p>The metadata about the upgrade.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{\&quot;Description\&quot;:\&quot;xxx\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</p>
-     */
     @NameInMap("UpgradeMetadata")
     public String upgradeMetadata;
 
-    /**
-     * <p>The version name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Draft</p>
-     */
     @NameInMap("VersionName")
     public String versionName;
 
@@ -476,21 +389,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     }
 
     public static class UpdateServiceShrinkRequestServiceInfoAgreements extends TeaModel {
-        /**
-         * <p>Protocol name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Protocol url.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://aliyun.com/xxxxxxxx.html">https://aliyun.com/xxxxxxxx.html</a></p>
-         */
         @NameInMap("Url")
         public String url;
 
@@ -548,58 +449,21 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     }
 
     public static class UpdateServiceShrinkRequestServiceInfo extends TeaModel {
-        /**
-         * <p>Protocol document information about the service.</p>
-         */
         @NameInMap("Agreements")
         public java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> agreements;
 
-        /**
-         * <p>The URL of the service icon.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
-         */
         @NameInMap("Image")
         public String image;
 
-        /**
-         * <p>The language of the service. Valid values:</p>
-         * <ul>
-         * <li>zh-CN: Chinese</li>
-         * <li>en-US: English</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh-CN</p>
-         */
         @NameInMap("Locale")
         public String locale;
 
-        /**
-         * <p>The URL of the detailed description of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://description.tidb.oss.url">http://description.tidb.oss.url</a></p>
-         */
         @NameInMap("LongDescriptionUrl")
         public String longDescriptionUrl;
 
-        /**
-         * <p>The service name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>kodbox-fc</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The description of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
-         */
         @NameInMap("ShortDescription")
         public String shortDescription;
 

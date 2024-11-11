@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateArtifactShrinkRequest extends TeaModel {
+    /**
+     * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+     */
     @NameInMap("ArtifactBuildProperty")
     public String artifactBuildPropertyShrink;
 
