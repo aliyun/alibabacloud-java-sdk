@@ -4,12 +4,21 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListRecommendContentShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Request")
     public String requestShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

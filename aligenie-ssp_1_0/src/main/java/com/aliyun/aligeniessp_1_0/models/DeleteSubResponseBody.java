@@ -4,15 +4,31 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class DeleteSubResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0AA6C15C-FD61-1E32-9881-480CC6F35A70</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

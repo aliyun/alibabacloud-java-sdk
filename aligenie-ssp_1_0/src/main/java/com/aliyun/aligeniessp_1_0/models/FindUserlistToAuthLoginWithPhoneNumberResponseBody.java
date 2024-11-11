@@ -4,15 +4,27 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("DataObj")
     public FindUserlistToAuthLoginWithPhoneNumberResponseBodyDataObj dataObj;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,6 +88,10 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
     }
 
     public static class FindUserlistToAuthLoginWithPhoneNumberResponseBodyDataObj extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dbe2eb4458302b9246c6da17fbc95f4b</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
@@ -95,18 +111,38 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
     }
 
     public static class FindUserlistToAuthLoginWithPhoneNumberResponseBodyResultUserListToAuthLogin extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx">https://xxx</a></p>
+         */
         @NameInMap("Avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KsVgypxAipf+xNECMZV2ONMcheqiIoEGFvgx+T8s1oV6/euTK9+ImYvLVPsSqFDh</p>
+         */
         @NameInMap("EncryptedUserIdentifier")
         public String encryptedUserIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PHONE_NUMBER_BINDING_WITH_ALIGENIE：phoneNumber</p>
+         */
         @NameInMap("FindingType")
         public String findingType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALIGENIE</p>
+         */
         @NameInMap("UserType")
         public String userType;
 

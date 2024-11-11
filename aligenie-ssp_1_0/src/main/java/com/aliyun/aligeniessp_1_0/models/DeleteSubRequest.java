@@ -4,6 +4,12 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class DeleteSubRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>81</p>
+     */
     @NameInMap("SubId")
     public Long subId;
 

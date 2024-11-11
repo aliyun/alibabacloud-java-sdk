@@ -4,6 +4,12 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class AuthLoginWithAligenieUserInfoGeneratedByPhoneNumberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbe2eb4458302b9246c6da17fbc95f4b</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

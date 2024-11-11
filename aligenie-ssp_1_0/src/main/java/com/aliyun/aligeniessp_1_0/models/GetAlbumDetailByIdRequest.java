@@ -4,6 +4,10 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetAlbumDetailByIdRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51999575</p>
+     */
     @NameInMap("AlbumId")
     public String albumId;
 

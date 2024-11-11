@@ -4,12 +4,21 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlarmRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public UpdateAlarmRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Payload")
     public UpdateAlarmRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public UpdateAlarmRequestUserInfo userInfo;
 
@@ -43,18 +52,46 @@ public class UpdateAlarmRequest extends TeaModel {
     }
 
     public static class UpdateAlarmRequestDeviceInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -106,18 +143,40 @@ public class UpdateAlarmRequest extends TeaModel {
     }
 
     public static class UpdateAlarmRequestPayloadMusicInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MusicId")
         public Long musicId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MusicName")
         public String musicName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("MusicType")
         public Long musicType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MusicTypeName")
         public String musicTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://music-url.mp3">http://music-url.mp3</a></p>
+         */
         @NameInMap("MusicUrl")
         public String musicUrl;
 
@@ -169,18 +228,38 @@ public class UpdateAlarmRequest extends TeaModel {
     }
 
     public static class UpdateAlarmRequestPayloadScheduleInfoOnce extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Day")
         public Integer day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Month")
         public Integer month;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022</p>
+         */
         @NameInMap("Year")
         public Integer year;
 
@@ -232,9 +311,17 @@ public class UpdateAlarmRequest extends TeaModel {
     }
 
     public static class UpdateAlarmRequestPayloadScheduleInfoStatutoryWorkingDay extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -265,9 +352,17 @@ public class UpdateAlarmRequest extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -309,6 +404,12 @@ public class UpdateAlarmRequest extends TeaModel {
         @NameInMap("StatutoryWorkingDay")
         public UpdateAlarmRequestPayloadScheduleInfoStatutoryWorkingDay statutoryWorkingDay;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEKLY</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -355,15 +456,31 @@ public class UpdateAlarmRequest extends TeaModel {
     }
 
     public static class UpdateAlarmRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
+         */
         @NameInMap("AlarmId")
         public Long alarmId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MusicInfo")
         public UpdateAlarmRequestPayloadMusicInfo musicInfo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ScheduleInfo")
         public UpdateAlarmRequestPayloadScheduleInfo scheduleInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -407,18 +524,46 @@ public class UpdateAlarmRequest extends TeaModel {
     }
 
     public static class UpdateAlarmRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

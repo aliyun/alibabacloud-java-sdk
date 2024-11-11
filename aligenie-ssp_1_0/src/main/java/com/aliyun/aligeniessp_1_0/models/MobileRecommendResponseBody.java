@@ -4,14 +4,25 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class MobileRecommendResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C5809B4-F465-52E0-9A8B-61396F9E593B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -60,12 +71,24 @@ public class MobileRecommendResponseBody extends TeaModel {
         @NameInMap("Authors")
         public java.util.List<String> authors;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img4.kuwo.cn/star/albumcover/120/78/77/1688821132.jpg">http://img4.kuwo.cn/star/albumcover/120/78/77/1688821132.jpg</a></p>
+         */
         @NameInMap("Cover")
         public String cover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>550144364</p>
+         */
         @NameInMap("RawId")
         public String rawId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KG</p>
+         */
         @NameInMap("Source")
         public String source;
 

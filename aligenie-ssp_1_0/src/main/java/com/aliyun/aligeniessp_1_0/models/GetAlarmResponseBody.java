@@ -4,12 +4,20 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetAlarmResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43<em><strong>28C-A810-5</strong></em>-8747-EC226A086881</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +62,30 @@ public class GetAlarmResponseBody extends TeaModel {
     }
 
     public static class GetAlarmResponseBodyResultMusicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MusicId")
         public Long musicId;
 
         @NameInMap("MusicName")
         public String musicName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MusicType")
         public Long musicType;
 
         @NameInMap("MusicTypeName")
         public String musicTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xx">http://xx</a></p>
+         */
         @NameInMap("MusicUrl")
         public String musicUrl;
 
@@ -117,18 +137,38 @@ public class GetAlarmResponseBody extends TeaModel {
     }
 
     public static class GetAlarmResponseBodyResultScheduleInfoOnce extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>29</p>
+         */
         @NameInMap("Day")
         public Integer day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("Month")
         public Integer month;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022</p>
+         */
         @NameInMap("Year")
         public Integer year;
 
@@ -180,9 +220,17 @@ public class GetAlarmResponseBody extends TeaModel {
     }
 
     public static class GetAlarmResponseBodyResultScheduleInfoStatutoryWorkingDay extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -213,9 +261,17 @@ public class GetAlarmResponseBody extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -257,6 +313,10 @@ public class GetAlarmResponseBody extends TeaModel {
         @NameInMap("StatutoryWorkingDay")
         public GetAlarmResponseBodyResultScheduleInfoStatutoryWorkingDay statutoryWorkingDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONCE</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -303,6 +363,10 @@ public class GetAlarmResponseBody extends TeaModel {
     }
 
     public static class GetAlarmResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234567</p>
+         */
         @NameInMap("AlarmId")
         public Long alarmId;
 
@@ -315,15 +379,31 @@ public class GetAlarmResponseBody extends TeaModel {
         @NameInMap("ScheduleTypeDesc")
         public String scheduleTypeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-29</p>
+         */
         @NameInMap("TriggerDateDesc")
         public String triggerDateDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10:00</p>
+         */
         @NameInMap("TriggerTimeDesc")
         public String triggerTimeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 

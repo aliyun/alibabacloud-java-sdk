@@ -4,6 +4,10 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListUserMessageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -49,27 +53,59 @@ public class ListUserMessageResponseBody extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-27 14:06:27.000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xx">http://xx</a></p>
+         */
         @NameInMap("Pic")
         public String pic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>app</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AF188<strong>065EE4B</strong>DD68CE**951D84D4</p>
+         */
         @NameInMap("SourceUuid")
         public String sourceUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>audio</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xx">http://xx</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

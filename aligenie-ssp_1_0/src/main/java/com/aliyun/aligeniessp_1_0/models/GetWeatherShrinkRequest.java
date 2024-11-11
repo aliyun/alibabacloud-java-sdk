@@ -4,12 +4,22 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetWeatherShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Payload")
     public String payloadShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

@@ -4,9 +4,16 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class SendMessageShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xx">http://xx</a></p>
+     */
     @NameInMap("Url")
     public String url;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

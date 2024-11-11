@@ -7,6 +7,9 @@ public class GetDeviceSettingRequest extends TeaModel {
     @NameInMap("DeviceInfo")
     public GetDeviceSettingRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
@@ -32,18 +35,46 @@ public class GetDeviceSettingRequest extends TeaModel {
     }
 
     public static class GetDeviceSettingRequestDeviceInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>122</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

@@ -4,18 +4,42 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceIdByIdentitiesShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>125****0946</p>
+     */
     @NameInMap("EncodeKey")
     public String encodeKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROJECT_ID</p>
+     */
     @NameInMap("EncodeType")
     public String encodeType;
 
     @NameInMap("IdentityIds")
     public String identityIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MAC</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Mm*****XnZ8</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

@@ -4,24 +4,55 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class CloudPlayerShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurPlayIndex")
     public Integer curPlayIndex;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("PlayMode")
     public String playMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("SongId")
     public String songId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SongIdList")
     public String songIdListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KG</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

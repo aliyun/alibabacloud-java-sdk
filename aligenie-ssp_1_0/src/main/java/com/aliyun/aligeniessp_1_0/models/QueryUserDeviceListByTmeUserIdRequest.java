@@ -4,9 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class QueryUserDeviceListByTmeUserIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Sp")
     public String sp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TmeUserId")
     public String tmeUserId;
 

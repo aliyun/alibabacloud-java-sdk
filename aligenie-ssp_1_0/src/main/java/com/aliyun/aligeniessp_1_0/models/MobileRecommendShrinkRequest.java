@@ -4,21 +4,39 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class MobileRecommendShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("BotId")
     public String botId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("Count")
     public String count;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     @NameInMap("Style")
     public String style;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAILY_REC</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

@@ -4,15 +4,36 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class CheckAuthCodeBindForExtShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aexfgc</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("EncodeKey")
     public String encodeKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROJECT_ID</p>
+     */
     @NameInMap("EncodeType")
     public String encodeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

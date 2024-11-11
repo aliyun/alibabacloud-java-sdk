@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceByUserIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class ListDeviceByUserIdResponseBody extends TeaModel {
     }
 
     public static class ListDeviceByUserIdResponseBodyResultDeviceUnionIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1553*B0C3</p>
+         */
         @NameInMap("DeviceUnionId")
         public String deviceUnionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -84,6 +104,10 @@ public class ListDeviceByUserIdResponseBody extends TeaModel {
     }
 
     public static class ListDeviceByUserIdResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>A963*0158</p>
+         */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 

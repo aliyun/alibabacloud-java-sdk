@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetAligenieUserInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +77,17 @@ public class GetAligenieUserInfoResponseBody extends TeaModel {
     }
 
     public static class GetAligenieUserInfoResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("AligenieNickname")
         public String aligenieNickname;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.alicdn.com/xxx.jpg">http://img.alicdn.com/xxx.jpg</a></p>
+         */
         @NameInMap("Avatar")
         public String avatar;
 

@@ -4,9 +4,16 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ReadMessageShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("MessageId")
     public Long messageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

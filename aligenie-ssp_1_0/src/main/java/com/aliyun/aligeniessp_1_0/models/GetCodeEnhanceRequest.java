@@ -4,9 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetCodeEnhanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChannelInfo")
     public GetCodeEnhanceRequestChannelInfo channelInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public GetCodeEnhanceRequestUserInfo userInfo;
 
@@ -32,9 +38,19 @@ public class GetCodeEnhanceRequest extends TeaModel {
     }
 
     public static class GetCodeEnhanceRequestChannelInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WeChat、ThirdApp</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtInfo")
         public String extInfo;
 
@@ -62,18 +78,46 @@ public class GetCodeEnhanceRequest extends TeaModel {
     }
 
     public static class GetCodeEnhanceRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

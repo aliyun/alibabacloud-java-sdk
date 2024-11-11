@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListSubResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0D0C09C2-ADC1-198B-964D-24F4FAD967DB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,9 +69,17 @@ public class ListSubResponseBody extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -95,30 +115,62 @@ public class ListSubResponseBody extends TeaModel {
     }
 
     public static class ListSubResponseBodyResultDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>51999575</p>
+         */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg">https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg</a></p>
+         */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DailyStudyCnt")
         public Integer dailyStudyCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5874DBCCA3038FAA1A70A8060F07F26D</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sequence</p>
+         */
         @NameInMap("PlayMode")
         public String playMode;
 
         @NameInMap("ScheduleInfo")
         public ListSubResponseBodyResultDataListScheduleInfo scheduleInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小科学家探索</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1152893538998276761</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
@@ -208,9 +260,17 @@ public class ListSubResponseBody extends TeaModel {
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPageCount")
         public Integer totalPageCount;
 

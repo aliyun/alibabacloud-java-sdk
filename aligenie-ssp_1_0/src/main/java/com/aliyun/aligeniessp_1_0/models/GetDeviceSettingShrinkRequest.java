@@ -7,6 +7,9 @@ public class GetDeviceSettingShrinkRequest extends TeaModel {
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Keys")
     public String keysShrink;
 

@@ -7,6 +7,9 @@ public class DeviceControlRequest extends TeaModel {
     @NameInMap("ControlRequest")
     public DeviceControlRequestControlRequest controlRequest;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public DeviceControlRequestDeviceInfo deviceInfo;
 
@@ -32,9 +35,17 @@ public class DeviceControlRequest extends TeaModel {
     }
 
     public static class DeviceControlRequestControlRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Muted")
         public Boolean muted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -62,18 +73,46 @@ public class DeviceControlRequest extends TeaModel {
     }
 
     public static class DeviceControlRequestDeviceInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1*****2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

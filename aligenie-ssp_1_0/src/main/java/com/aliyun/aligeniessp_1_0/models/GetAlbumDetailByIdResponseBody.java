@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetAlbumDetailByIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A0B7CACD-485B-14E2-854F-39EACB09E45B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,31 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
     }
 
     public static class GetAlbumDetailByIdResponseBodyResultAlbumContentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3分24秒</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>468009044</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("OrderIndex")
         public String orderIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>001为什么肚子饿时会咕咕叫</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -109,15 +137,31 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
         @NameInMap("AlbumContentList")
         public java.util.List<GetAlbumDetailByIdResponseBodyResultAlbumContentList> albumContentList;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg">https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg</a></p>
+         */
         @NameInMap("AlbumCoverUrl")
         public String albumCoverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>每次一个百科知识或者故事\n丰富孩子的视野，拓展眼界和知识面，培养和孩子的探究能力和好奇心\n\n</p>
+         */
         @NameInMap("AlbumDescription")
         public String albumDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>51999575</p>
+         */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小科学家探索</p>
+         */
         @NameInMap("AlbumTitle")
         public String albumTitle;
 

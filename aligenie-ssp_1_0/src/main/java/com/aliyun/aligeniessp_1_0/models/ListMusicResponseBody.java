@@ -4,12 +4,20 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListMusicResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43<em><strong>28C-A810-5</strong></em>-8747-EC226A086881</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +62,38 @@ public class ListMusicResponseBody extends TeaModel {
     }
 
     public static class ListMusicResponseBodyResultModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MusicId")
         public Long musicId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("MusicName")
         public String musicName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MusicType")
         public Long musicType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("MusicTypeName")
         public String musicTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xx">http://xx</a></p>
+         */
         @NameInMap("MusicUrl")
         public String musicUrl;
 
@@ -117,18 +145,34 @@ public class ListMusicResponseBody extends TeaModel {
     }
 
     public static class ListMusicResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("Model")
         public java.util.List<ListMusicResponseBodyResultModel> model;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageCount")
         public Integer pageCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

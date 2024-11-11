@@ -4,12 +4,20 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetScheduleTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7E21065-6C21-1158-A2F9-AEFE5CAB7C94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +62,10 @@ public class GetScheduleTaskResponseBody extends TeaModel {
     }
 
     public static class GetScheduleTaskResponseBodyResultActionTopicList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:{&quot;key&quot;:1}}</p>
+         */
         @NameInMap("CustomAction")
         public java.util.Map<String, ?> customAction;
 
@@ -76,18 +88,38 @@ public class GetScheduleTaskResponseBody extends TeaModel {
         @NameInMap("ActionTopicList")
         public java.util.List<GetScheduleTaskResponseBodyResultActionTopicList> actionTopicList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0 10 20 30 6 ? 2022</p>
+         */
         @NameInMap("Cron")
         public String cron;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659169473000</p>
+         */
         @NameInMap("ScheduleEndTime")
         public String scheduleEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567</p>
+         */
         @NameInMap("ScheduleId")
         public Long scheduleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1656577473000</p>
+         */
         @NameInMap("ScheduleStartTime")
         public String scheduleStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONCE</p>
+         */
         @NameInMap("ScheduleType")
         public String scheduleType;
 

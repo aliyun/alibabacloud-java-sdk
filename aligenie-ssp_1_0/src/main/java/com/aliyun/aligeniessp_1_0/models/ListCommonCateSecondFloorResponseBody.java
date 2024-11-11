@@ -4,12 +4,24 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListCommonCateSecondFloorResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F12B6147-5925-19E5-A3AD-E1EE1360F34E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,20 @@ public class ListCommonCateSecondFloorResponseBody extends TeaModel {
     }
 
     public static class ListCommonCateSecondFloorResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80018009</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80018</p>
+         */
         @NameInMap("ParentCateId")
         public Long parentCateId;
 

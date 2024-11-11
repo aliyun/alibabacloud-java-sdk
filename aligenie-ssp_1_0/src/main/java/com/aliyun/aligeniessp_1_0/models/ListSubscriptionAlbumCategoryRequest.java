@@ -4,6 +4,10 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionAlbumCategoryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>儿歌</p>
+     */
     @NameInMap("CategoryName")
     public String categoryName;
 
