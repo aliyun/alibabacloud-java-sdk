@@ -78,6 +78,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestDeploymentPolicyNetwork extends TeaModel {
+        @NameInMap("EnableExternalIpAddress")
+        public Boolean enableExternalIpAddress;
+
         @NameInMap("Vswitch")
         public java.util.List<String> vswitch;
 
@@ -86,12 +89,53 @@ public class CreateJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateJobRequestDeploymentPolicyNetwork setEnableExternalIpAddress(Boolean enableExternalIpAddress) {
+            this.enableExternalIpAddress = enableExternalIpAddress;
+            return this;
+        }
+        public Boolean getEnableExternalIpAddress() {
+            return this.enableExternalIpAddress;
+        }
+
         public CreateJobRequestDeploymentPolicyNetwork setVswitch(java.util.List<String> vswitch) {
             this.vswitch = vswitch;
             return this;
         }
         public java.util.List<String> getVswitch() {
             return this.vswitch;
+        }
+
+    }
+
+    public static class CreateJobRequestDeploymentPolicyTag extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateJobRequestDeploymentPolicyTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestDeploymentPolicyTag self = new CreateJobRequestDeploymentPolicyTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestDeploymentPolicyTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateJobRequestDeploymentPolicyTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -106,6 +150,9 @@ public class CreateJobRequest extends TeaModel {
 
         @NameInMap("Network")
         public CreateJobRequestDeploymentPolicyNetwork network;
+
+        @NameInMap("Tag")
+        public java.util.List<CreateJobRequestDeploymentPolicyTag> tag;
 
         public static CreateJobRequestDeploymentPolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestDeploymentPolicy self = new CreateJobRequestDeploymentPolicy();
@@ -126,6 +173,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public CreateJobRequestDeploymentPolicyNetwork getNetwork() {
             return this.network;
+        }
+
+        public CreateJobRequestDeploymentPolicy setTag(java.util.List<CreateJobRequestDeploymentPolicyTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<CreateJobRequestDeploymentPolicyTag> getTag() {
+            return this.tag;
         }
 
     }

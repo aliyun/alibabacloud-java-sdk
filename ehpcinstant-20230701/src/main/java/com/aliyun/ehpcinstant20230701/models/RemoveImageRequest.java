@@ -13,6 +13,9 @@ public class RemoveImageRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("ImageType")
+    public String imageType;
+
     public static RemoveImageRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveImageRequest self = new RemoveImageRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class RemoveImageRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public RemoveImageRequest setImageType(String imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public String getImageType() {
+        return this.imageType;
     }
 
 }

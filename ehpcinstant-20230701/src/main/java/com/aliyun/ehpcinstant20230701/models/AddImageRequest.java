@@ -10,6 +10,9 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImageType")
+    public String imageType;
+
     /**
      * <strong>example:</strong>
      * <p>V1.0</p>
@@ -48,6 +51,14 @@ public class AddImageRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public AddImageRequest setImageType(String imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public String getImageType() {
+        return this.imageType;
     }
 
     public AddImageRequest setImageVersion(String imageVersion) {

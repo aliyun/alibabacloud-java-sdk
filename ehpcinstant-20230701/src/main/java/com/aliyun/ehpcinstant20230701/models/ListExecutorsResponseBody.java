@@ -80,6 +80,107 @@ public class ListExecutorsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListExecutorsResponseBodyExecutorsResourceDisks extends TeaModel {
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListExecutorsResponseBodyExecutorsResourceDisks build(java.util.Map<String, ?> map) throws Exception {
+            ListExecutorsResponseBodyExecutorsResourceDisks self = new ListExecutorsResponseBodyExecutorsResourceDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public ListExecutorsResponseBodyExecutorsResourceDisks setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public ListExecutorsResponseBodyExecutorsResourceDisks setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListExecutorsResponseBodyExecutorsResource extends TeaModel {
+        @NameInMap("Cores")
+        public Float cores;
+
+        @NameInMap("Disks")
+        public java.util.List<ListExecutorsResponseBodyExecutorsResourceDisks> disks;
+
+        @NameInMap("Memory")
+        public Float memory;
+
+        public static ListExecutorsResponseBodyExecutorsResource build(java.util.Map<String, ?> map) throws Exception {
+            ListExecutorsResponseBodyExecutorsResource self = new ListExecutorsResponseBodyExecutorsResource();
+            return TeaModel.build(map, self);
+        }
+
+        public ListExecutorsResponseBodyExecutorsResource setCores(Float cores) {
+            this.cores = cores;
+            return this;
+        }
+        public Float getCores() {
+            return this.cores;
+        }
+
+        public ListExecutorsResponseBodyExecutorsResource setDisks(java.util.List<ListExecutorsResponseBodyExecutorsResourceDisks> disks) {
+            this.disks = disks;
+            return this;
+        }
+        public java.util.List<ListExecutorsResponseBodyExecutorsResourceDisks> getDisks() {
+            return this.disks;
+        }
+
+        public ListExecutorsResponseBodyExecutorsResource setMemory(Float memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Float getMemory() {
+            return this.memory;
+        }
+
+    }
+
+    public static class ListExecutorsResponseBodyExecutorsTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListExecutorsResponseBodyExecutorsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListExecutorsResponseBodyExecutorsTags self = new ListExecutorsResponseBodyExecutorsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListExecutorsResponseBodyExecutorsTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListExecutorsResponseBodyExecutorsTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListExecutorsResponseBodyExecutors extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -109,8 +210,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("ExecutorId")
         public String executorId;
 
+        @NameInMap("ExternalIpAddress")
+        public java.util.List<String> externalIpAddress;
+
         @NameInMap("HostName")
         public java.util.List<String> hostName;
+
+        @NameInMap("Image")
+        public String image;
 
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
@@ -129,6 +236,15 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("JobName")
         public String jobName;
 
+        @NameInMap("Resource")
+        public ListExecutorsResponseBodyExecutorsResource resource;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
         /**
          * <strong>example:</strong>
          * <p>Running</p>
@@ -143,12 +259,21 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("StatusReason")
         public String statusReason;
 
+        @NameInMap("Tags")
+        public java.util.List<ListExecutorsResponseBodyExecutorsTags> tags;
+
         /**
          * <strong>example:</strong>
          * <p>task0</p>
          */
         @NameInMap("TaskName")
         public String taskName;
+
+        @NameInMap("TaskSustainable")
+        public Boolean taskSustainable;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
 
         public static ListExecutorsResponseBodyExecutors build(java.util.Map<String, ?> map) throws Exception {
             ListExecutorsResponseBodyExecutors self = new ListExecutorsResponseBodyExecutors();
@@ -187,12 +312,28 @@ public class ListExecutorsResponseBody extends TeaModel {
             return this.executorId;
         }
 
+        public ListExecutorsResponseBodyExecutors setExternalIpAddress(java.util.List<String> externalIpAddress) {
+            this.externalIpAddress = externalIpAddress;
+            return this;
+        }
+        public java.util.List<String> getExternalIpAddress() {
+            return this.externalIpAddress;
+        }
+
         public ListExecutorsResponseBodyExecutors setHostName(java.util.List<String> hostName) {
             this.hostName = hostName;
             return this;
         }
         public java.util.List<String> getHostName() {
             return this.hostName;
+        }
+
+        public ListExecutorsResponseBodyExecutors setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
         }
 
         public ListExecutorsResponseBodyExecutors setIpAddress(java.util.List<String> ipAddress) {
@@ -219,6 +360,30 @@ public class ListExecutorsResponseBody extends TeaModel {
             return this.jobName;
         }
 
+        public ListExecutorsResponseBodyExecutors setResource(ListExecutorsResponseBodyExecutorsResource resource) {
+            this.resource = resource;
+            return this;
+        }
+        public ListExecutorsResponseBodyExecutorsResource getResource() {
+            return this.resource;
+        }
+
+        public ListExecutorsResponseBodyExecutors setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListExecutorsResponseBodyExecutors setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public ListExecutorsResponseBodyExecutors setStatus(String status) {
             this.status = status;
             return this;
@@ -235,12 +400,36 @@ public class ListExecutorsResponseBody extends TeaModel {
             return this.statusReason;
         }
 
+        public ListExecutorsResponseBodyExecutors setTags(java.util.List<ListExecutorsResponseBodyExecutorsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListExecutorsResponseBodyExecutorsTags> getTags() {
+            return this.tags;
+        }
+
         public ListExecutorsResponseBodyExecutors setTaskName(String taskName) {
             this.taskName = taskName;
             return this;
         }
         public String getTaskName() {
             return this.taskName;
+        }
+
+        public ListExecutorsResponseBodyExecutors setTaskSustainable(Boolean taskSustainable) {
+            this.taskSustainable = taskSustainable;
+            return this;
+        }
+        public Boolean getTaskSustainable() {
+            return this.taskSustainable;
+        }
+
+        public ListExecutorsResponseBodyExecutors setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
