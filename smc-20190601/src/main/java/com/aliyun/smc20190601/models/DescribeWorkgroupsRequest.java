@@ -52,6 +52,9 @@ public class DescribeWorkgroupsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeWorkgroupsRequestTag> tag;
+
     /**
      * <p>The workgroup IDs. You can specify up to 50 workgroup IDs.</p>
      */
@@ -111,12 +114,50 @@ public class DescribeWorkgroupsRequest extends TeaModel {
         return this.status;
     }
 
+    public DescribeWorkgroupsRequest setTag(java.util.List<DescribeWorkgroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeWorkgroupsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeWorkgroupsRequest setWorkgroupId(java.util.List<String> workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     public java.util.List<String> getWorkgroupId() {
         return this.workgroupId;
+    }
+
+    public static class DescribeWorkgroupsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeWorkgroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeWorkgroupsRequestTag self = new DescribeWorkgroupsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeWorkgroupsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeWorkgroupsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

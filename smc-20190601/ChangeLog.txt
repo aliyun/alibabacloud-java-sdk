@@ -1,3 +1,9 @@
+2024-11-11 Version: 1.1.1
+- Update API CreateWorkgroup: add param Tag.
+- Update API DescribeWorkgroups: add param Tag.
+- Update API DescribeWorkgroups: update response param.
+
+
 2024-10-29 Version: 1.1.0
 - Support API AssociateSourceServers.
 - Support API CreateWorkgroup.

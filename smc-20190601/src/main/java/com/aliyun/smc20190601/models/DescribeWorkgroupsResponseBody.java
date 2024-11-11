@@ -91,6 +91,55 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         return this.workgroups;
     }
 
+    public static class DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag self = new DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag> tag;
+
+        public static DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags self = new DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags setTag(java.util.List<DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupWarningsWarningSourceIds extends TeaModel {
         @NameInMap("SourceId")
         public java.util.List<String> sourceId;
@@ -207,6 +256,9 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags tags;
+
         /**
          * <p>The alert information of the workgroup, which can contain multiple types of alerts.</p>
          */
@@ -249,6 +301,14 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroup setTags(DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags getTags() {
+            return this.tags;
         }
 
         public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroup setWarnings(DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupWarnings warnings) {
