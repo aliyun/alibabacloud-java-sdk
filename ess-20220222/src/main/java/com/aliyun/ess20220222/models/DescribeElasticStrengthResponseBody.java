@@ -4,20 +4,30 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthResponseBody extends TeaModel {
+    /**
+     * <p>The scaling strength models.</p>
+     */
     @NameInMap("ElasticStrengthModels")
     public java.util.List<DescribeElasticStrengthResponseBodyElasticStrengthModels> elasticStrengthModels;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>73469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource pools.</p>
+     */
     @NameInMap("ResourcePools")
     public java.util.List<DescribeElasticStrengthResponseBodyResourcePools> resourcePools;
 
     /**
+     * <p>The scaling strength of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.5</p>
      */
@@ -63,6 +73,8 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     public static class DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools extends TeaModel {
         /**
+         * <p>The error code returned when the scaling strength is the weakest.</p>
+         * 
          * <strong>example:</strong>
          * <p>InstanceTypesOrDiskTypesNotSupported</p>
          */
@@ -70,6 +82,8 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The instance type of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.r7.large</p>
          */
@@ -77,6 +91,8 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The error message returned when the scaling strength is the weakest.</p>
+         * 
          * <strong>example:</strong>
          * <p>The instanceTypes or diskTypes are not supported.</p>
          */
@@ -84,16 +100,23 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>The scaling strength of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
         @NameInMap("Strength")
         public Double strength;
 
+        /**
+         * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
+         * <p>The zone ID of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
          */
@@ -156,13 +179,24 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticStrengthResponseBodyElasticStrengthModels extends TeaModel {
+        /**
+         * <p>The resource pools.</p>
+         */
         @NameInMap("ResourcePools")
         public java.util.List<DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools> resourcePools;
 
+        /**
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-wz98mnj7nblv9gc****</p>
+         */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
         /**
+         * <p>The scaling strength of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.5</p>
          */
@@ -202,6 +236,8 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     public static class DescribeElasticStrengthResponseBodyResourcePools extends TeaModel {
         /**
+         * <p>The error code returned when the scaling strength is the weakest.</p>
+         * 
          * <strong>example:</strong>
          * <p>IMG_NOT_SUPPORTED</p>
          */
@@ -209,6 +245,8 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The instance type of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.c7t.xlarge</p>
          */
@@ -216,6 +254,8 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The error message returned when the scaling strength is the weakest.</p>
+         * 
          * <strong>example:</strong>
          * <p>The instanceType does not support the image in the configuration.</p>
          */
@@ -223,16 +263,23 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>The scaling strength of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
         @NameInMap("Strength")
         public Double strength;
 
+        /**
+         * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
+         * <p>The zone ID of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
          */

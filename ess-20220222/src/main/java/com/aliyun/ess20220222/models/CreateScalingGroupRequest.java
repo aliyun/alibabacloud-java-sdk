@@ -436,6 +436,18 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Boolean spotInstanceRemedy;
 
     /**
+     * <p>The period of time required by the ECS instance to enter the Stopped state. Unit: seconds. Valid values: 30 to 240.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter takes effect only if you set ScalingPolicy to release.</p>
+     * </li>
+     * <li><p>If you specify this parameter, the system will wait for the ECS instance to enter the Stopped state for the specified period of time before continuing with the scale-in operation, regardless of the status of the ECS instance.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the system will wait for the ECS instance to stop before continuing with the scale-in operation. If the ECS instance is not successfully stopped, the scale-in process will be rolled back and considered failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -1078,7 +1090,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         /**
          * <p>The action that Auto Scaling performs when the lifecycle hook times out. Valid values:</p>
          * <ul>
-         * <li>CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.</li>
+         * <li>CONTINUE: Auto Scaling continues to respond to the scaling request.</li>
          * <li>ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.</li>
          * </ul>
          * <p>If multiple lifecycle hooks in the scaling group are triggered during scale-in events, and you set DefaultResult to ABANDON for one of the lifecycle hooks, Auto Scaling immediately performs the action after the lifecycle hook whose DefaultResult is set to ABANDON times out. In this case, other lifecycle hooks time out ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks time out. The action that Auto Scaling performs is determined by the value of DefaultResult that you specify for the lifecycle hook that most recently times out.</p>
@@ -1092,7 +1104,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
         /**
          * <p>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult. Valid values: 30 to 21600. Unit: seconds.</p>
-         * <p>After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to extend the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period of the lifecycle hook ahead of scheduled.</p>
+         * <p>After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to extend the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period of the lifecycle hook ahead of schedule.</p>
          * <p>Default value: 600.</p>
          * 
          * <strong>example:</strong>
@@ -1127,15 +1139,15 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String lifecycleTransition;
 
         /**
-         * <p>The identifier of the notification recipient party when the lifecycle hook takes effect. You can specify a Message Service (MNS) topic or queue as the notification recipient party. Specify the value in the acs:ess:{region}:{account-id}:{resource-relative-id} format.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient party. You can specify a Simple Message Queue (SMQ, formerly MNS) topic or queue as the recipient party. The value is in the acs:ess:{region}:{account-id}:{resource-relative-id} format.</p>
          * <ul>
          * <li>region: the region ID of the scaling group</li>
          * <li>account-id: the ID of your Alibaba Cloud account.</li>
          * </ul>
          * <p>Examples:</p>
          * <ul>
-         * <li>MNS queue: acs:ess:{region}:{account-id}:queue/{queuename}</li>
-         * <li>MNS topic: acs:ess:{region}:{account-id}:topic/{topicname}</li>
+         * <li>SMQ queue: acs:ess:{region}:{account-id}:queue/{queuename}</li>
+         * <li>SMQ topic: acs:ess:{region}:{account-id}:topic/{topicname}</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1145,7 +1157,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String notificationArn;
 
         /**
-         * <p>The fixed string that you want to include in a notification. When a lifecycle hook takes effect, Auto Scaling sends a notification. The fixed string can contain up to 4,096 characters in length. When Auto Scaling sends a notification to the recipient party, it includes predefined notification metadata into the notification. This helps in managing and labeling notifications of different categories. notificationmetadata takes effect only if you specify notificationarn.</p>
+         * <p>The fixed string that you want to include in notifications. When a lifecycle hook takes effect, Auto Scaling sends a notification. The fixed string can contain up to 4,096 characters in length. When Auto Scaling sends a notification to the recipient party, it includes predefined notification metadata into the notification. This helps in managing and labeling notifications of different categories. NotificationMetadata takes effect only if you specify NotificationArn.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>

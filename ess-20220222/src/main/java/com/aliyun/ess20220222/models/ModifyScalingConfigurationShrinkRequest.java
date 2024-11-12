@@ -140,6 +140,12 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
+    @NameInMap("HttpEndpoint")
+    public String httpEndpoint;
+
+    @NameInMap("HttpTokens")
+    public String httpTokens;
+
     /**
      * <p>The name of the image family. If you specify this parameter, the latest custom images that are available in the specified image family are returned. Then, you can use the images to create instances. If you specify ImageId, you cannot specify ImageFamily.</p>
      * 
@@ -220,6 +226,9 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
+
+    @NameInMap("InternetMaxBandwidthIn")
+    public Integer internetMaxBandwidthIn;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:</p>
@@ -643,6 +652,22 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         return this.hpcClusterId;
     }
 
+    public ModifyScalingConfigurationShrinkRequest setHttpEndpoint(String httpEndpoint) {
+        this.httpEndpoint = httpEndpoint;
+        return this;
+    }
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    public ModifyScalingConfigurationShrinkRequest setHttpTokens(String httpTokens) {
+        this.httpTokens = httpTokens;
+        return this;
+    }
+    public String getHttpTokens() {
+        return this.httpTokens;
+    }
+
     public ModifyScalingConfigurationShrinkRequest setImageFamily(String imageFamily) {
         this.imageFamily = imageFamily;
         return this;
@@ -713,6 +738,14 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    public ModifyScalingConfigurationShrinkRequest setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+        this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+        return this;
+    }
+    public Integer getInternetMaxBandwidthIn() {
+        return this.internetMaxBandwidthIn;
     }
 
     public ModifyScalingConfigurationShrinkRequest setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {

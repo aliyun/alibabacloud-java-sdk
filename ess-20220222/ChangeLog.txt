@@ -1,3 +1,16 @@
+2024-11-12 Version: 1.9.0
+- Support API CreateDiagnoseReport.
+- Support API DescribeDiagnoseReports.
+- Support API DescribeScalingGroupDiagnoseDetails.
+- Update API CreateScalingConfiguration: add param HttpEndpoint.
+- Update API CreateScalingConfiguration: add param HttpTokens.
+- Update API DescribePatternTypes: add param ZoneId.
+- Update API DescribeScalingConfigurations: update response param.
+- Update API ModifyScalingConfiguration: add param HttpEndpoint.
+- Update API ModifyScalingConfiguration: add param HttpTokens.
+- Update API ModifyScalingConfiguration: add param InternetMaxBandwidthIn.
+
+
 2024-10-21 Version: 1.8.0
 - Support API DescribeElasticStrength.
 

@@ -1064,6 +1064,8 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public Integer standbyCapacity;
 
         /**
+         * <p>The period of time that is required by the Elastic Compute Service (ECS) instance to enter the Stopped state during the scale-in process. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
