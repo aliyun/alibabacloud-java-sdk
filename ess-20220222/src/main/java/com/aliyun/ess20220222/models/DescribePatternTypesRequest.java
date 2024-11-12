@@ -283,6 +283,9 @@ public class DescribePatternTypesRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
 
+    @NameInMap("ZoneId")
+    public java.util.List<String> zoneId;
+
     public static DescribePatternTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePatternTypesRequest self = new DescribePatternTypesRequest();
         return TeaModel.build(map, self);
@@ -518,6 +521,14 @@ public class DescribePatternTypesRequest extends TeaModel {
     }
     public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public DescribePatternTypesRequest setZoneId(java.util.List<String> zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public java.util.List<String> getZoneId() {
+        return this.zoneId;
     }
 
 }

@@ -1387,6 +1387,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateDiagnoseReport</p>
+     * 
+     * @param request CreateDiagnoseReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDiagnoseReportResponse
+     */
+    public CreateDiagnoseReportResponse createDiagnoseReportWithOptions(CreateDiagnoseReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDiagnoseReport"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDiagnoseReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>CreateDiagnoseReport</p>
+     * 
+     * @param request CreateDiagnoseReportRequest
+     * @return CreateDiagnoseReportResponse
+     */
+    public CreateDiagnoseReportResponse createDiagnoseReport(CreateDiagnoseReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDiagnoseReportWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>A scaling configuration is a template that is used to create elastic container instances during scale-out events.
      * You can specify CPU and Memory to determine the range of instance types. Then, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Auto Scaling preferentially creates elastic container instances by using the lowest-priced instance type. This method applies only if you set Scaling Policy to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
@@ -1884,6 +1924,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hpcClusterId)) {
             query.put("HpcClusterId", request.hpcClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpEndpoint)) {
+            query.put("HttpEndpoint", request.httpEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpTokens)) {
+            query.put("HttpTokens", request.httpTokens);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageFamily)) {
@@ -3476,6 +3524,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>DescribeDiagnoseReports</p>
+     * 
+     * @param request DescribeDiagnoseReportsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiagnoseReportsResponse
+     */
+    public DescribeDiagnoseReportsResponse describeDiagnoseReportsWithOptions(DescribeDiagnoseReportsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDiagnoseReports"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiagnoseReportsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeDiagnoseReports</p>
+     * 
+     * @param request DescribeDiagnoseReportsRequest
+     * @return DescribeDiagnoseReportsResponse
+     */
+    public DescribeDiagnoseReportsResponse describeDiagnoseReports(DescribeDiagnoseReportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDiagnoseReportsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a scaling configuration. You can query a scaling configuration by its ID to learn about its details such as the temporary storage size, number of IPv6 addresses, and bandwidth of the elastic IP address (EIP). The scaling configuration details can be obtained as a YAML file.</p>
      * 
      * @param request DescribeEciScalingConfigurationDetailRequest
@@ -4440,6 +4528,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeScalingGroupDetailResponse describeScalingGroupDetail(DescribeScalingGroupDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeScalingGroupDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeScalingGroupDiagnoseDetails</p>
+     * 
+     * @param request DescribeScalingGroupDiagnoseDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeScalingGroupDiagnoseDetailsResponse
+     */
+    public DescribeScalingGroupDiagnoseDetailsResponse describeScalingGroupDiagnoseDetailsWithOptions(DescribeScalingGroupDiagnoseDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScalingGroupDiagnoseDetails"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScalingGroupDiagnoseDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeScalingGroupDiagnoseDetails</p>
+     * 
+     * @param request DescribeScalingGroupDiagnoseDetailsRequest
+     * @return DescribeScalingGroupDiagnoseDetailsResponse
+     */
+    public DescribeScalingGroupDiagnoseDetailsResponse describeScalingGroupDiagnoseDetails(DescribeScalingGroupDiagnoseDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeScalingGroupDiagnoseDetailsWithOptions(request, runtime);
     }
 
     /**
@@ -6873,6 +7001,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("HpcClusterId", request.hpcClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.httpEndpoint)) {
+            query.put("HttpEndpoint", request.httpEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpTokens)) {
+            query.put("HttpTokens", request.httpTokens);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageFamily)) {
             query.put("ImageFamily", request.imageFamily);
         }
@@ -6907,6 +7043,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
             query.put("InternetChargeType", request.internetChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internetMaxBandwidthIn)) {
+            query.put("InternetMaxBandwidthIn", request.internetMaxBandwidthIn);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.internetMaxBandwidthOut)) {

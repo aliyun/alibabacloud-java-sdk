@@ -956,10 +956,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions extends TeaModel {
         /**
-         * <p>The confidential computing mode. Valid values:</p>
+         * <p>机密计算模式。可能值：</p>
          * <ul>
-         * <li>Enclave: An enclave-based confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</li>
-         * <li>TDX: A Trust Domain Extensions (TDX) confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</li>
+         * <li>Enclave：表示ECS实例使用Enclave构建机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/203433.html">使用Enclave构建机密计算环境</a>。</li>
+         * <li>TDX：表示构建TDX机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/479090.html">构建TDX机密计算环境</a>。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1202,6 +1202,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
+        @NameInMap("HttpEndpoint")
+        public String httpEndpoint;
+
+        @NameInMap("HttpTokens")
+        public String httpTokens;
+
         /**
          * <p>The name of the image family. You can specify this parameter to obtain the latest available images in the current image family for instance creation. If you specify ImageId, you cannot specify <code>ImageFamily</code>.</p>
          * 
@@ -1285,7 +1291,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The information about the intelligent configuration settings, which determine the available instance types.</p>
+         * <p>The intelligent configuration settings, which determine the available instance types.</p>
          */
         @NameInMap("InstancePatternInfos")
         public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos> instancePatternInfos;
@@ -1518,7 +1524,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The security options.</p>
+         * <p>安全选项。</p>
          */
         @NameInMap("SecurityOptions")
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions securityOptions;
@@ -1859,6 +1865,22 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getHpcClusterId() {
             return this.hpcClusterId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setHttpEndpoint(String httpEndpoint) {
+            this.httpEndpoint = httpEndpoint;
+            return this;
+        }
+        public String getHttpEndpoint() {
+            return this.httpEndpoint;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setHttpTokens(String httpTokens) {
+            this.httpTokens = httpTokens;
+            return this;
+        }
+        public String getHttpTokens() {
+            return this.httpTokens;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setImageFamily(String imageFamily) {

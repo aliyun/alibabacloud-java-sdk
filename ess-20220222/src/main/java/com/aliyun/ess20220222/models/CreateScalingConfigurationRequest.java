@@ -142,6 +142,12 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
+    @NameInMap("HttpEndpoint")
+    public String httpEndpoint;
+
+    @NameInMap("HttpTokens")
+    public String httpTokens;
+
     /**
      * <p>The name of the image family. If you specify this parameter, the most recent custom images that are available in the specified image family are returned. You can use the images to create instances. If you specify ImageId, you cannot specify ImageFamily.</p>
      * 
@@ -670,6 +676,22 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     }
     public String getHpcClusterId() {
         return this.hpcClusterId;
+    }
+
+    public CreateScalingConfigurationRequest setHttpEndpoint(String httpEndpoint) {
+        this.httpEndpoint = httpEndpoint;
+        return this;
+    }
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    public CreateScalingConfigurationRequest setHttpTokens(String httpTokens) {
+        this.httpTokens = httpTokens;
+        return this;
+    }
+    public String getHttpTokens() {
+        return this.httpTokens;
     }
 
     public CreateScalingConfigurationRequest setImageFamily(String imageFamily) {
