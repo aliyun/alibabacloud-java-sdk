@@ -6,45 +6,61 @@ import com.aliyun.tea.*;
 public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
-     * <br>
-     * <p>*   **true**: removes all tags from the specified resource.</p>
-     * <p>*   **false**: does not remove all tags from the specified resource. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: removes all tags from the specified resource.</li>
+     * <li><strong>false</strong>: does not remove all tags from the specified resource. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The region ID of the tag.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of resources.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to **PeerConnection**, which specifies a VPC peering connection.</p>
+     * <p>The type of the resource. Set the value to <strong>PeerConnection</strong>, which specifies a VPC peering connection.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PeerConnection</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</p>
+     * <p>It can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
