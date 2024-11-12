@@ -312,6 +312,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("ApplicationPortList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> applicationPortList;
 
+        @NameInMap("AssetCount")
+        public Long assetCount;
+
         /**
          * <p>The type of the tag. Valid values:</p>
          * <ul>
@@ -418,6 +421,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
 
+        @NameInMap("LocationName")
+        public String locationName;
+
         /**
          * <p>The outbound traffic. Unit: bytes.</p>
          * 
@@ -426,6 +432,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
          */
         @NameInMap("OutBytes")
         public Long outBytes;
+
+        @NameInMap("PrivateAssetCount")
+        public Long privateAssetCount;
 
         /**
          * <p>The UUID of the access control policy.</p>
@@ -537,6 +546,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             return this.applicationPortList;
         }
 
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setAssetCount(Long assetCount) {
+            this.assetCount = assetCount;
+            return this;
+        }
+        public Long getAssetCount() {
+            return this.assetCount;
+        }
+
         public DescribeOutgoingDestinationIPResponseBodyDstIPList setCategoryClassId(String categoryClassId) {
             this.categoryClassId = categoryClassId;
             return this;
@@ -609,12 +626,28 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             return this.isMarkNormal;
         }
 
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setLocationName(String locationName) {
+            this.locationName = locationName;
+            return this;
+        }
+        public String getLocationName() {
+            return this.locationName;
+        }
+
         public DescribeOutgoingDestinationIPResponseBodyDstIPList setOutBytes(Long outBytes) {
             this.outBytes = outBytes;
             return this;
         }
         public Long getOutBytes() {
             return this.outBytes;
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setPrivateAssetCount(Long privateAssetCount) {
+            this.privateAssetCount = privateAssetCount;
+            return this;
+        }
+        public Long getPrivateAssetCount() {
+            return this.privateAssetCount;
         }
 
         public DescribeOutgoingDestinationIPResponseBodyDstIPList setRuleId(String ruleId) {

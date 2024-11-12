@@ -31,6 +31,15 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     @NameInMap("DstVpcId")
     public String dstVpcId;
 
+    @NameInMap("HitContentType")
+    public Integer hitContentType;
+
+    @NameInMap("HitTo")
+    public Integer hitTo;
+
+    @NameInMap("ParsedContent")
+    public String parsedContent;
+
     /**
      * <p>The attack payload of the intrusion event.</p>
      * 
@@ -143,6 +152,30 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     }
     public String getDstVpcId() {
         return this.dstVpcId;
+    }
+
+    public DescribeRiskEventPayloadResponseBody setHitContentType(Integer hitContentType) {
+        this.hitContentType = hitContentType;
+        return this;
+    }
+    public Integer getHitContentType() {
+        return this.hitContentType;
+    }
+
+    public DescribeRiskEventPayloadResponseBody setHitTo(Integer hitTo) {
+        this.hitTo = hitTo;
+        return this;
+    }
+    public Integer getHitTo() {
+        return this.hitTo;
+    }
+
+    public DescribeRiskEventPayloadResponseBody setParsedContent(String parsedContent) {
+        this.parsedContent = parsedContent;
+        return this;
+    }
+    public String getParsedContent() {
+        return this.parsedContent;
     }
 
     public DescribeRiskEventPayloadResponseBody setPayload(String payload) {

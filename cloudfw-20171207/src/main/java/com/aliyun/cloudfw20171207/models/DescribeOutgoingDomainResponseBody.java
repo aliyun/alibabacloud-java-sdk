@@ -214,6 +214,12 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @NameInMap("AddressGroupUUID")
         public String addressGroupUUID;
 
+        @NameInMap("ApplicationNameList")
+        public java.util.List<String> applicationNameList;
+
+        @NameInMap("AssetCount")
+        public Long assetCount;
+
         /**
          * <p>The website service.</p>
          * 
@@ -347,6 +353,9 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        @NameInMap("PrivateAssetCount")
+        public Long privateAssetCount;
+
         /**
          * <p>The ID of the access control policy.</p>
          * 
@@ -457,6 +466,22 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             return this.addressGroupUUID;
         }
 
+        public DescribeOutgoingDomainResponseBodyDomainList setApplicationNameList(java.util.List<String> applicationNameList) {
+            this.applicationNameList = applicationNameList;
+            return this;
+        }
+        public java.util.List<String> getApplicationNameList() {
+            return this.applicationNameList;
+        }
+
+        public DescribeOutgoingDomainResponseBodyDomainList setAssetCount(Long assetCount) {
+            this.assetCount = assetCount;
+            return this;
+        }
+        public Long getAssetCount() {
+            return this.assetCount;
+        }
+
         public DescribeOutgoingDomainResponseBodyDomainList setBusiness(String business) {
             this.business = business;
             return this;
@@ -551,6 +576,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         }
         public Long getOutBytes() {
             return this.outBytes;
+        }
+
+        public DescribeOutgoingDomainResponseBodyDomainList setPrivateAssetCount(Long privateAssetCount) {
+            this.privateAssetCount = privateAssetCount;
+            return this;
+        }
+        public Long getPrivateAssetCount() {
+            return this.privateAssetCount;
         }
 
         public DescribeOutgoingDomainResponseBodyDomainList setRuleId(String ruleId) {
