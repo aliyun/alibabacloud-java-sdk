@@ -231,8 +231,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实例-基于 openAPI 构建南天门购买工单信息数据</p>
+     * <p>Creates an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -297,6 +300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RenewalDurationUnit", request.renewalDurationUnit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serverlessChargeType)) {
             query.put("ServerlessChargeType", request.serverlessChargeType);
         }
@@ -335,8 +342,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实例-基于 openAPI 构建南天门购买工单信息数据</p>
+     * <p>Creates an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse

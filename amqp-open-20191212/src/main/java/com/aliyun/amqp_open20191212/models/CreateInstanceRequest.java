@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li>true: enables auto-renewal.</li>
+     * <li>false: disables auto-renewal. If you select this value, you must manually renew the instance.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AutoRenewal</p>
      */
@@ -12,6 +18,11 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>The auto-renewal duration. Unit: months.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set AutoRenew to true. Default value: 1.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +30,31 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
+     * <p>The client token.</p>
+     * 
      * <strong>example:</strong>
      * <p>c2c5d1274axxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The instance name. We recommend that you specify a name that does not exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amqp-xxxxx</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
+     * <p>The instance edition. Valid values:</p>
+     * <ul>
+     * <li>professional: Professional Edition</li>
+     * <li>enterprise: Enterprise Edition</li>
+     * <li>vip: Enterprise Platinum Edition</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>professional</p>
      */
@@ -36,6 +62,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The maximum number of connections that can be established to the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>50000</p>
      */
@@ -43,6 +71,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer maxConnections;
 
     /**
+     * <p>The maximum number of EIP-based TPS on the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>128</p>
      */
@@ -50,6 +80,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Long maxEipTps;
 
     /**
+     * <p>The maximum number of virtual private cloud (VPC)-based transactions per second (TPS) on the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -57,6 +89,13 @@ public class CreateInstanceRequest extends TeaModel {
     public Long maxPrivateTps;
 
     /**
+     * <p>The billing method. Valid value:</p>
+     * <ul>
+     * <li>Subscription</li>
+     * </ul>
+     * <blockquote>
+     * <p> API operations provided by ApsaraMQ for RabbitMQ are supported only by subscription instances. You can set this parameter only to Subscription.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +105,11 @@ public class CreateInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The subscription period. The unit of the subscription period is specified by periodCycle.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set PaymentType to Subscription. Default value: 1.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -73,6 +117,15 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set PaymentType to Subscription. Default value: Month.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -80,6 +133,13 @@ public class CreateInstanceRequest extends TeaModel {
     public String periodCycle;
 
     /**
+     * <p>The number of queues. Valid values:</p>
+     * <ul>
+     * <li>Professional Edition: 50 to 1000. The number of queues must increase in increments of 5.</li>
+     * <li>Enterprise Edition: 200 to 6000. The number of queues must increase in increments of 100.</li>
+     * <li>Enterprise Platinum Edition: 10000 to 80000. The number of queues must increase in increments of 100.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -87,15 +147,42 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer queueCapacity;
 
     /**
-     * <p>autoRenew和renewStatus都是续费方式，当两个同时填写时，以renewStatus为准</p>
+     * <p>The renewal status. This parameter is the same as AutoRenew. You can configure one of these parameters. Valid value:</p>
+     * <ul>
+     * <li>AutoRenewal</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you configure both this parameter and AutoRenew, the value of this parameter is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RenewStatus")
     public String renewStatus;
 
+    /**
+     * <p>The unit of the auto-renewal period. Valid values:</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("RenewalDurationUnit")
     public String renewalDurationUnit;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
+     * <p>The billing method of the pay-as-you-go instance. Valid values:</p>
+     * <ul>
+     * <li>onDemand: You are charged based on your actual usage</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>onDemand</p>
      */
@@ -103,6 +190,17 @@ public class CreateInstanceRequest extends TeaModel {
     public String serverlessChargeType;
 
     /**
+     * <p>The storage capacity. Unit: GB. Valid values:</p>
+     * <ul>
+     * <li>Professional Edition and Enterprise Edition instances: Set this parameter to 0.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The value 0 specifies that storage space is available for Professional Edition and Enterprise Edition instances, but no storage fees are generated.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Platinum Edition instances: Set the value to m × 100, where m ranges from 7 to 28.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -110,6 +208,12 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer storageSize;
 
     /**
+     * <p>Specifies whether elastic IP addresses (EIPs) are supported. Valid values:</p>
+     * <ul>
+     * <li>True</li>
+     * <li>False</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -117,6 +221,20 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean supportEip;
 
     /**
+     * <p>Specifies whether to enable the message trace feature. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Enterprise Platinum Edition instances allow you to retain message traces for 15 days free of charge. If you use an Enterprise Platinum Edition instance, you can set this parameter only to true and TracingStorageTime only to 15.</p>
+     * </li>
+     * <li><p>For instances of other editions, you can set this parameter to true or false.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -124,6 +242,16 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean supportTracing;
 
     /**
+     * <p>The retention period of messages. Unit: days. Valid values:</p>
+     * <ul>
+     * <li>3</li>
+     * <li>7</li>
+     * <li>15</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set SupportTracing to true.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -245,6 +373,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getRenewalDurationUnit() {
         return this.renewalDurationUnit;
+    }
+
+    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateInstanceRequest setServerlessChargeType(String serverlessChargeType) {

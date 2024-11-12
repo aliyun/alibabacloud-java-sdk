@@ -35,7 +35,6 @@ public class CreateBindingRequest extends TeaModel {
      * </ul>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>.test</p>

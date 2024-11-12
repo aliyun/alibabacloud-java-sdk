@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteBindingRequest extends TeaModel {
     /**
      * <p>The binding key.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>.test.</p>
