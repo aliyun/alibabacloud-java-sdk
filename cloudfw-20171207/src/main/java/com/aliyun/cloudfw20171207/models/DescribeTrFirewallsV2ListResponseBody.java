@@ -149,6 +149,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         @NameInMap("Count")
         public Integer count;
 
+        @NameInMap("EcrList")
+        public java.util.List<String> ecrList;
+
         /**
          * <p>The protected peer transit routers.</p>
          */
@@ -184,6 +187,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource setEcrList(java.util.List<String> ecrList) {
+            this.ecrList = ecrList;
+            return this;
+        }
+        public java.util.List<String> getEcrList() {
+            return this.ecrList;
         }
 
         public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource setPeerTrList(java.util.List<String> peerTrList) {
@@ -230,6 +241,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         @NameInMap("Count")
         public Integer count;
 
+        @NameInMap("EcrList")
+        public java.util.List<String> ecrList;
+
         /**
          * <p>The unprotected peer transit routers.</p>
          */
@@ -265,6 +279,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource setEcrList(java.util.List<String> ecrList) {
+            this.ecrList = ecrList;
+            return this;
+        }
+        public java.util.List<String> getEcrList() {
+            return this.ecrList;
         }
 
         public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource setPeerTrList(java.util.List<String> peerTrList) {
@@ -319,6 +341,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
          */
         @NameInMap("CenName")
         public String cenName;
+
+        @NameInMap("CloudFirewallVpcOrderType")
+        public String cloudFirewallVpcOrderType;
 
         /**
          * <p>The instance ID of the VPC firewall.</p>
@@ -476,6 +501,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
         public String getCenName() {
             return this.cenName;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls setCloudFirewallVpcOrderType(String cloudFirewallVpcOrderType) {
+            this.cloudFirewallVpcOrderType = cloudFirewallVpcOrderType;
+            return this;
+        }
+        public String getCloudFirewallVpcOrderType() {
+            return this.cloudFirewallVpcOrderType;
         }
 
         public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls setFirewallId(String firewallId) {
