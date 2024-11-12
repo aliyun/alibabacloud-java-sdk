@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,30 +81,45 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class TagResources extends TeaModel {
         /**
          * <p>The region of the requester VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcc-bp16qjewdsunr41m1****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The value is set to **PeerConnection**, which indicates a VPC peering connection.</p>
+         * <p>The type of the resource. The value is set to <strong>PeerConnection</strong>, which indicates a VPC peering connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PeerConnection</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

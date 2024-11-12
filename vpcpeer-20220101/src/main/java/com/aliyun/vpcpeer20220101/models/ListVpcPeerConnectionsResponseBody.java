@@ -5,28 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListVpcPeerConnectionsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+     * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED39DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -97,6 +110,9 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the accepter VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1vzjkp2q1xgnind****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -135,12 +151,18 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
     public static class Tags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -183,6 +205,9 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the requester VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1gsk7h12ew7oegk****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -221,12 +246,18 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
     public static class VpcPeerConnects extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the accepter VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         @NameInMap("AcceptingOwnerUid")
         public Long acceptingOwnerUid;
 
         /**
          * <p>The region ID of the accepter VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("AcceptingRegionId")
         public String acceptingRegionId;
@@ -239,95 +270,132 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value is an integer greater than 0.</p>
-         * <br>
-         * <p>>  If the value is set to -1, it indicates that no limit is imposed on the bandwidth.</p>
-         * <br>
+         * <blockquote>
+         * <p> If the value is set to -1, it indicates that no limit is imposed on the bandwidth.</p>
+         * </blockquote>
          * <p>Default value:</p>
-         * <br>
-         * <p>*   The default bandwidth of an inter-region VPC peering connection is **1024** Mbit/s.</p>
-         * <p>*   The default bandwidth of an intra-region VPC peering connection is **-1** Mbit/s.</p>
+         * <ul>
+         * <li>The default bandwidth of an inter-region VPC peering connection is <strong>1024</strong> Mbit/s.</li>
+         * <li>The default bandwidth of an intra-region VPC peering connection is <strong>-1</strong> Mbit/s.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The business status of the VPC peering connection. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BizStatus")
         public String bizStatus;
 
         /**
          * <p>The description of the VPC peering connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time when the VPC peering connection was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
+         * <p>The time when the VPC peering connection was created. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-24T09:02:36Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The expiration time of the VPC peering connection. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
-         * <br>
-         * <p>The expiration time is returned only when the **Status** of the VPC peering connection is **Accepting** or **Expired**. Otherwise, **null** is returned.</p>
+         * <p>The expiration time of the VPC peering connection. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
+         * <p>The expiration time is returned only when the <strong>Status</strong> of the VPC peering connection is <strong>Accepting</strong> or <strong>Expired</strong>. Otherwise, <strong>null</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-01T09:02:36Z</p>
          */
         @NameInMap("GmtExpired")
         public String gmtExpired;
 
         /**
-         * <p>The time when the VPC peering connection was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
+         * <p>The time when the VPC peering connection was modified. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-24T19:20:45Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the VPC peering connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcc-lnk0m24khwvtkm****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the VPC peering connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcpeer</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the requester VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
          * <p>The region ID of the requester VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2gvbs746gt4q</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the VPC peering connection. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Accepting**</p>
-         * <p>*   **Updating**</p>
-         * <p>*   **Rejected**</p>
-         * <p>*   **Expired**</p>
-         * <p>*   **Activated**</p>
-         * <p>*   **Deleting**</p>
-         * <p>*   **Deleted**</p>
-         * <br>
-         * <p>For more information about the status of VPC peering connections, see [Overview of VPC peering connections](~~418507~~).</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Accepting</strong></li>
+         * <li><strong>Updating</strong></li>
+         * <li><strong>Rejected</strong></li>
+         * <li><strong>Expired</strong></li>
+         * <li><strong>Activated</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * <p>For more information about the status of VPC peering connections, see <a href="https://help.aliyun.com/document_detail/418507.html">Overview of VPC peering connections</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Activated</p>
          */
         @NameInMap("Status")
         public String status;
