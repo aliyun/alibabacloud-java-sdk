@@ -1,3 +1,14 @@
+2024-11-12 Version: 1.2.1
+- Update API DescribePackageDeductions: add param EndTime.
+- Update API DescribePackageDeductions: add param StartTime.
+- Update API DescribePackageDeductions: update param InstanceIds.
+- Update API DescribePackageDeductions: update param PackageIds.
+- Update API DescribePackageDeductions: update param PageNum.
+- Update API DescribePackageDeductions: update param PageSize.
+- Update API DescribePackageDeductions: update param ResourceType.
+- Update API DescribePackageDeductions: update response param.
+
+
 2024-10-08 Version: 1.2.0
 - Support API DescribePackageDeductions.
 - Delete API CreateOrder.

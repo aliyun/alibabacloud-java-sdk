@@ -4,6 +4,9 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class DescribePackageDeductionsRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
@@ -33,9 +36,20 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
     public static DescribePackageDeductionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePackageDeductionsRequest self = new DescribePackageDeductionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePackageDeductionsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public DescribePackageDeductionsRequest setInstanceIds(java.util.List<String> instanceIds) {
@@ -76,6 +90,14 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public DescribePackageDeductionsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

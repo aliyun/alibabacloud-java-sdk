@@ -35,6 +35,12 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    @NameInMap("TotalUsedCoreTime")
+    public Float totalUsedCoreTime;
+
+    @NameInMap("TotalUsedTime")
+    public Long totalUsedTime;
+
     public static DescribePackageDeductionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePackageDeductionsResponseBody self = new DescribePackageDeductionsResponseBody();
         return TeaModel.build(map, self);
@@ -78,6 +84,22 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
+    }
+
+    public DescribePackageDeductionsResponseBody setTotalUsedCoreTime(Float totalUsedCoreTime) {
+        this.totalUsedCoreTime = totalUsedCoreTime;
+        return this;
+    }
+    public Float getTotalUsedCoreTime() {
+        return this.totalUsedCoreTime;
+    }
+
+    public DescribePackageDeductionsResponseBody setTotalUsedTime(Long totalUsedTime) {
+        this.totalUsedTime = totalUsedTime;
+        return this;
+    }
+    public Long getTotalUsedTime() {
+        return this.totalUsedTime;
     }
 
     public static class DescribePackageDeductionsResponseBodyDeductions extends TeaModel {
