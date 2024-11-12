@@ -218,6 +218,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("PublicEndpoint")
         public String publicEndpoint;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
@@ -375,6 +378,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getPublicEndpoint() {
             return this.publicEndpoint;
+        }
+
+        public ListInstancesResponseBodyDataInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListInstancesResponseBodyDataInstances setStatus(String status) {

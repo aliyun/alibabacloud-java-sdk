@@ -26,7 +26,6 @@ public class ListExchangeUpStreamBindingsRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries to return.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
