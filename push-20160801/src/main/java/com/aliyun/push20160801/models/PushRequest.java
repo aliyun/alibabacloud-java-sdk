@@ -81,6 +81,12 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidMessageHuaweiUrgency")
     public String androidMessageHuaweiUrgency;
 
+    @NameInMap("AndroidMessageOppoCategory")
+    public String androidMessageOppoCategory;
+
+    @NameInMap("AndroidMessageOppoNotifyLevel")
+    public Integer androidMessageOppoNotifyLevel;
+
     /**
      * <strong>example:</strong>
      * <p>TODO</p>
@@ -671,6 +677,22 @@ public class PushRequest extends TeaModel {
     }
     public String getAndroidMessageHuaweiUrgency() {
         return this.androidMessageHuaweiUrgency;
+    }
+
+    public PushRequest setAndroidMessageOppoCategory(String androidMessageOppoCategory) {
+        this.androidMessageOppoCategory = androidMessageOppoCategory;
+        return this;
+    }
+    public String getAndroidMessageOppoCategory() {
+        return this.androidMessageOppoCategory;
+    }
+
+    public PushRequest setAndroidMessageOppoNotifyLevel(Integer androidMessageOppoNotifyLevel) {
+        this.androidMessageOppoNotifyLevel = androidMessageOppoNotifyLevel;
+        return this;
+    }
+    public Integer getAndroidMessageOppoNotifyLevel() {
+        return this.androidMessageOppoNotifyLevel;
     }
 
     public PushRequest setAndroidMessageVivoCategory(String androidMessageVivoCategory) {

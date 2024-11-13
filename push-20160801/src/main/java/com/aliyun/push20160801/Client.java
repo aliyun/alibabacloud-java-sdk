@@ -743,6 +743,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidMessageHuaweiUrgency", request.androidMessageHuaweiUrgency);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidMessageOppoCategory)) {
+            query.put("AndroidMessageOppoCategory", request.androidMessageOppoCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidMessageOppoNotifyLevel)) {
+            query.put("AndroidMessageOppoNotifyLevel", request.androidMessageOppoNotifyLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidMessageVivoCategory)) {
             query.put("AndroidMessageVivoCategory", request.androidMessageVivoCategory);
         }
