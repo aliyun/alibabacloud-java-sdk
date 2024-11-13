@@ -1891,54 +1891,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-     * When you call this operation, take note of the following items:</p>
+     * <p>  <strong>Precautions</strong>
+     *     *   <strong>Quantity limit:</strong> The total number of outbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.
+     *     *   <strong>Rule type:</strong> For outbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.
+     *     *   <strong>Rule priority:</strong>: For outbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</p>
      * <ul>
-     * <li>The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota1~~"></a>.</li>
-     * <li>You can set Policy to accept or drop for each security group rule to allow or deny access.</li>
-     * <li>The valid value of Priority ranges from 1 to 100. A smaller value indicates a higher priority.</li>
-     * <li>When several security group rules have the same priority, drop rules take precedence.</li>
-     * <li>The destination can be a CIDR block specified by DestCidrIp, Ipv6DestCidrIp, or DestPrefixListId or can be Elastic Compute Service (ECS) instances in a security group specified by DestGroupId.</li>
-     * <li>For advanced security groups, security groups cannot be used as authorization objects.</li>
-     * <li>For each basic security group, a maximum of 20 security groups can be used as authorization objects.</li>
-     * <li>If the specified security group rule exists in the security group, the call is successful but no security group rule is created.</li>
-     * <li>The <code>Permissions.N</code> prefix is added to some parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be configured together. We recommend that you use parameters prefixed with <code>Permissions.N</code>.</li>
-     * <li>You can determine a security group rule by configuring one of the following groups of parameters. You cannot determine a security group rule by configuring only one parameter.<ul>
-     * <li>Parameters used to specify a security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestCidrIp. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.IpProtocol=ICMP
-     * &amp;Permissions.1.DestCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.PortRange=-1/-1
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to specify a security group rule that controls access to a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestGroupOwnerAccount, and DestGroupId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestGroupId=sg-bp67acfmxazb4pi***
-     * &amp;Permissions.1.DestGroupOwnerAccount=<a href="mailto:Test@aliyun.com">Test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to specify a security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestPrefixListId. In this case, prefix lists support only security groups in virtual private clouds (VPCs). NicType must be set to intranet. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.DestGroupOwnerAccount=<a href="mailto:Test@aliyun.com">Test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
+     * <li><strong>Considerations</strong><ul>
+     * <li>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</li>
+     * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified in the same request. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Parameters that define a security group rule</strong>
+     * Define a security group rule by configuring the following parameters together:<ul>
+     * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.
+     * **
+     * <strong>Note</strong> Advanced security groups do not support security group rules that reference security groups as authorization objects. Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Sample requests</strong>
+     * Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:<ul>
+     * <li>Sample request to create an outbound security group rule that controls access to a specified CIDR block:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,  //The region ID.
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, //The ID of the source security group.
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;DestCidrIp&quot;: &quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
+     *        &quot;PortRange&quot;: &quot;-1/-1&quot;, //The range of destination port numbers.
+     *        &quot;IpProtocol&quot;: &quot;ICMP&quot;, //The protocol.
+     *        &quot;Policy&quot;: &quot;Accept&quot; //The action.
+     *      }
+     * ]</li>
+     * <li>Sample request to create an outbound security group rule that controls access to a security group and an outbound security group rule that controls access to a prefix list:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;,
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;DestGroupId&quot;: &quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
+     *        &quot;PortRange&quot;: &quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
+     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *      },{
+     *        &quot;DestPrefixListId&quot;: &quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
+     *        &quot;PortRange&quot;: &quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
+     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *      }
+     * ]</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates outbound rules in a security group. You can use the created rules to allow or deny outbound traffic from instances in the security group to other objects.</p>
+     * <p>Creates outbound rules in a security group. You can use the created rules to allow or deny outbound traffic from Elastic Compute Service (ECS) instances in the security group to other objects for fine-grained network access control.</p>
      * 
      * @param request AuthorizeSecurityGroupEgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2074,54 +2081,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-     * When you call this operation, take note of the following items:</p>
+     * <p>  <strong>Precautions</strong>
+     *     *   <strong>Quantity limit:</strong> The total number of outbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.
+     *     *   <strong>Rule type:</strong> For outbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.
+     *     *   <strong>Rule priority:</strong>: For outbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</p>
      * <ul>
-     * <li>The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota1~~"></a>.</li>
-     * <li>You can set Policy to accept or drop for each security group rule to allow or deny access.</li>
-     * <li>The valid value of Priority ranges from 1 to 100. A smaller value indicates a higher priority.</li>
-     * <li>When several security group rules have the same priority, drop rules take precedence.</li>
-     * <li>The destination can be a CIDR block specified by DestCidrIp, Ipv6DestCidrIp, or DestPrefixListId or can be Elastic Compute Service (ECS) instances in a security group specified by DestGroupId.</li>
-     * <li>For advanced security groups, security groups cannot be used as authorization objects.</li>
-     * <li>For each basic security group, a maximum of 20 security groups can be used as authorization objects.</li>
-     * <li>If the specified security group rule exists in the security group, the call is successful but no security group rule is created.</li>
-     * <li>The <code>Permissions.N</code> prefix is added to some parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be configured together. We recommend that you use parameters prefixed with <code>Permissions.N</code>.</li>
-     * <li>You can determine a security group rule by configuring one of the following groups of parameters. You cannot determine a security group rule by configuring only one parameter.<ul>
-     * <li>Parameters used to specify a security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestCidrIp. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.IpProtocol=ICMP
-     * &amp;Permissions.1.DestCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.PortRange=-1/-1
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to specify a security group rule that controls access to a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestGroupOwnerAccount, and DestGroupId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestGroupId=sg-bp67acfmxazb4pi***
-     * &amp;Permissions.1.DestGroupOwnerAccount=<a href="mailto:Test@aliyun.com">Test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to specify a security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestPrefixListId. In this case, prefix lists support only security groups in virtual private clouds (VPCs). NicType must be set to intranet. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.DestGroupOwnerAccount=<a href="mailto:Test@aliyun.com">Test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
+     * <li><strong>Considerations</strong><ul>
+     * <li>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</li>
+     * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified in the same request. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Parameters that define a security group rule</strong>
+     * Define a security group rule by configuring the following parameters together:<ul>
+     * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.
+     * **
+     * <strong>Note</strong> Advanced security groups do not support security group rules that reference security groups as authorization objects. Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Sample requests</strong>
+     * Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:<ul>
+     * <li>Sample request to create an outbound security group rule that controls access to a specified CIDR block:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,  //The region ID.
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, //The ID of the source security group.
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;DestCidrIp&quot;: &quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
+     *        &quot;PortRange&quot;: &quot;-1/-1&quot;, //The range of destination port numbers.
+     *        &quot;IpProtocol&quot;: &quot;ICMP&quot;, //The protocol.
+     *        &quot;Policy&quot;: &quot;Accept&quot; //The action.
+     *      }
+     * ]</li>
+     * <li>Sample request to create an outbound security group rule that controls access to a security group and an outbound security group rule that controls access to a prefix list:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;,
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;DestGroupId&quot;: &quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
+     *        &quot;PortRange&quot;: &quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
+     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *      },{
+     *        &quot;DestPrefixListId&quot;: &quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
+     *        &quot;PortRange&quot;: &quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
+     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *      }
+     * ]</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates outbound rules in a security group. You can use the created rules to allow or deny outbound traffic from instances in the security group to other objects.</p>
+     * <p>Creates outbound rules in a security group. You can use the created rules to allow or deny outbound traffic from Elastic Compute Service (ECS) instances in the security group to other objects for fine-grained network access control.</p>
      * 
      * @param request AuthorizeSecurityGroupEgressRequest
      * @return AuthorizeSecurityGroupEgressResponse
@@ -15041,7 +15055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an instance by instance ID.</p>
+     * <p>Queries the attributes of an Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15089,7 +15103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an instance by instance ID.</p>
+     * <p>Queries the attributes of an Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @return DescribeInstanceAttributeResponse
@@ -15107,7 +15121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the auto-renewal status of subscription Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the auto-renewal attribute of subscription Elastic Compute Service (ECS) instances, including whether auto-renewal is enabled for the instances and the auto-renewal durations of the instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15177,7 +15191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the auto-renewal status of subscription Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the auto-renewal attribute of subscription Elastic Compute Service (ECS) instances, including whether auto-renewal is enabled for the instances and the auto-renewal durations of the instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewAttributeRequest
      * @return DescribeInstanceAutoRenewAttributeResponse
@@ -15230,6 +15244,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -16165,22 +16187,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
-     * <ul>
-     * <li>The <strong>keepalive</strong> time of a connection to a VNC management terminal is 300 seconds. If you do not interact with the VNC management terminal for 300 seconds, the VNC management terminal is automatically disconnected.</li>
-     * <li>If the connection is interrupted, you must recall this operation to obtain a new logon address that is specified by <code>VncUrl</code> and use the new logon address to construct a URL that can be used to reconnect to the VNC management terminal. You can reconnect to a VNC management terminal for a maximum of 30 times per minute.</li>
-     * <li>You need to add the <code>vncUrl=\\*\\*\\*\\*</code>, <code>instanceId=\\*\\*\\*\\*</code>, and <code>isWindows=true/false</code> parameters to the end of the link <code>https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?</code> and use an ampersand (<code>&amp;</code>) between the parameters.<ul>
-     * <li><code>vncUrl</code>: the value of <code>VncUrl</code> that is returned after a successful call of this operation.</li>
-     * <li><code>instanceId</code>: the ID of your instance.</li>
-     * <li><code>isWindows</code>: specifies whether the operating system of your instance is Windows. A value of <code>true</code> indicates that the operating system is Windows. A value of <code>false</code> indicates that the operating system is not Windows.<blockquote>
-     * <p> You can connect to an instance without a VNC logon password. Therefore, you do not need to configure the <code>password</code> parameter.
-     * Sample URL:
-     * <a href="https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true">https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&amp;instanceId=i-wz9hhwq5a6tm****&amp;isWindows=true</a></p>
+     * <p>  You cannot directly use the VNC logon address (VncUrl) in the response to log on to an ECS instance. To log on to the ECS instance, you can use the <strong>web management terminal URL</strong> that contains the VNC logon address.</p>
+     * <blockquote>
+     * <p> To construct a web management terminal URL, add the <code>vncUrl=\\*\\*\\*\\*</code>, <code>instanceId=****</code>, and <code>isWindows=true/false</code> parameters at the end of <code>https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?</code>. Separate each parameter with an ampersand (<code>&amp;</code>). Parameter description:</p>
      * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
+     * <ul>
+     * <li><code>vncUrl</code>: the VNC logon address.</li>
+     * <li><code>instanceId</code>: the instance ID.</li>
+     * <li><code>isWindows</code>: specifies whether the operating system of your ECS instance is Windows. A value of <code>true</code> specifies that the operating system is Windows. A value of <code>false</code> specifies that the operating system is not Windows.</li>
+     * <li>You can connect to an ECS instance without using a VNC logon password. Therefore, you do not need to specify the <code>password</code> parameter.</li>
+     * <li>The keepalive time of a connection to a VNC management terminal is 300 seconds. If you do not interact with the VNC management terminal within 300 seconds, the VNC management terminal is automatically disconnected.</li>
+     * <li>If the connection is interrupted, you must call the DescribeInstanceVncUrl operation to obtain a new VNC logon address (<code>VncUrl</code>) and use the new logon address to construct a new web management terminal URL that you can use to reconnect to the VNC management terminal. You can reconnect to a VNC management terminal up to 30 times per minute.
+     * Sample web management terminal URL:
+     * <a href="https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true">https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&amp;instanceId=i-wz9hhwq5a6tm****&amp;isWindows=true</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16236,22 +16255,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
-     * <ul>
-     * <li>The <strong>keepalive</strong> time of a connection to a VNC management terminal is 300 seconds. If you do not interact with the VNC management terminal for 300 seconds, the VNC management terminal is automatically disconnected.</li>
-     * <li>If the connection is interrupted, you must recall this operation to obtain a new logon address that is specified by <code>VncUrl</code> and use the new logon address to construct a URL that can be used to reconnect to the VNC management terminal. You can reconnect to a VNC management terminal for a maximum of 30 times per minute.</li>
-     * <li>You need to add the <code>vncUrl=\\*\\*\\*\\*</code>, <code>instanceId=\\*\\*\\*\\*</code>, and <code>isWindows=true/false</code> parameters to the end of the link <code>https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?</code> and use an ampersand (<code>&amp;</code>) between the parameters.<ul>
-     * <li><code>vncUrl</code>: the value of <code>VncUrl</code> that is returned after a successful call of this operation.</li>
-     * <li><code>instanceId</code>: the ID of your instance.</li>
-     * <li><code>isWindows</code>: specifies whether the operating system of your instance is Windows. A value of <code>true</code> indicates that the operating system is Windows. A value of <code>false</code> indicates that the operating system is not Windows.<blockquote>
-     * <p> You can connect to an instance without a VNC logon password. Therefore, you do not need to configure the <code>password</code> parameter.
-     * Sample URL:
-     * <a href="https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true">https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&amp;instanceId=i-wz9hhwq5a6tm****&amp;isWindows=true</a></p>
+     * <p>  You cannot directly use the VNC logon address (VncUrl) in the response to log on to an ECS instance. To log on to the ECS instance, you can use the <strong>web management terminal URL</strong> that contains the VNC logon address.</p>
+     * <blockquote>
+     * <p> To construct a web management terminal URL, add the <code>vncUrl=\\*\\*\\*\\*</code>, <code>instanceId=****</code>, and <code>isWindows=true/false</code> parameters at the end of <code>https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?</code>. Separate each parameter with an ampersand (<code>&amp;</code>). Parameter description:</p>
      * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
+     * <ul>
+     * <li><code>vncUrl</code>: the VNC logon address.</li>
+     * <li><code>instanceId</code>: the instance ID.</li>
+     * <li><code>isWindows</code>: specifies whether the operating system of your ECS instance is Windows. A value of <code>true</code> specifies that the operating system is Windows. A value of <code>false</code> specifies that the operating system is not Windows.</li>
+     * <li>You can connect to an ECS instance without using a VNC logon password. Therefore, you do not need to specify the <code>password</code> parameter.</li>
+     * <li>The keepalive time of a connection to a VNC management terminal is 300 seconds. If you do not interact with the VNC management terminal within 300 seconds, the VNC management terminal is automatically disconnected.</li>
+     * <li>If the connection is interrupted, you must call the DescribeInstanceVncUrl operation to obtain a new VNC logon address (<code>VncUrl</code>) and use the new logon address to construct a new web management terminal URL that you can use to reconnect to the VNC management terminal. You can reconnect to a VNC management terminal up to 30 times per minute.
+     * Sample web management terminal URL:
+     * <a href="https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true">https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&amp;instanceId=i-wz9hhwq5a6tm****&amp;isWindows=true</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -17505,7 +17521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeNetworkInterfaceAttribute%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an elastic network interface (ENI). When you call this operation, you can specify parameters, such as NetworkInterfaceId and Attribute, in the request.</p>
+     * <p>Queries the details of an elastic network interface (ENI). When you call this operation, you can set the NetworkInterfaceId parameter to specify an ENI.</p>
      * 
      * @param request DescribeNetworkInterfaceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17573,7 +17589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeNetworkInterfaceAttribute%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an elastic network interface (ENI). When you call this operation, you can specify parameters, such as NetworkInterfaceId and Attribute, in the request.</p>
+     * <p>Queries the details of an elastic network interface (ENI). When you call this operation, you can set the NetworkInterfaceId parameter to specify an ENI.</p>
      * 
      * @param request DescribeNetworkInterfaceAttributeRequest
      * @return DescribeNetworkInterfaceAttributeResponse
@@ -19519,12 +19535,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The basic information about security groups includes their IDs and descriptions. The response returns security groups in descending order of the IDs of the security groups.</li>
+     * <li>The basic information of security groups includes their IDs and descriptions. The response returns security groups in descending order of their IDs.</li>
      * <li>We recommend that you use <code>MaxResults</code> and <code>NextToken</code> for a paged query. We recommend that you use <code>MaxResults</code> to specify the maximum number of entries to return for each request. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value that is returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call. If the return value of <code>NextToken</code> is empty, the current page of results is the last page and no more results are to be returned.</li>
-     * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -19640,12 +19655,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The basic information about security groups includes their IDs and descriptions. The response returns security groups in descending order of the IDs of the security groups.</li>
+     * <li>The basic information of security groups includes their IDs and descriptions. The response returns security groups in descending order of their IDs.</li>
      * <li>We recommend that you use <code>MaxResults</code> and <code>NextToken</code> for a paged query. We recommend that you use <code>MaxResults</code> to specify the maximum number of entries to return for each request. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value that is returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call. If the return value of <code>NextToken</code> is empty, the current page of results is the last page and no more results are to be returned.</li>
-     * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -22525,7 +22539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you export images, take note of the following items:</p>
      * <ul>
      * <li>Make sure that you are familiar with the prerequisites and considerations. For more information, see <a href="https://help.aliyun.com/document_detail/58181.html">Export a custom image</a>.</li>
-     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney) Closing Down, Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
+     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
      * <li>Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:<ul>
      * <li>Create a role named <code>AliyunECSImageExportDefaultRole</code> and attach the following policy to the role:
      *    {
@@ -22637,7 +22651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you export images, take note of the following items:</p>
      * <ul>
      * <li>Make sure that you are familiar with the prerequisites and considerations. For more information, see <a href="https://help.aliyun.com/document_detail/58181.html">Export a custom image</a>.</li>
-     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney) Closing Down, Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
+     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
      * <li>Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:<ul>
      * <li>Create a role named <code>AliyunECSImageExportDefaultRole</code> and attach the following policy to the role:
      *    {
@@ -27785,17 +27799,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The password must be six characters in length and can contain only uppercase letters, lowercase letters, and digits.</p>
+     * <p>  The VNC password must be six characters in length and can contain uppercase letters, lowercase letters, and digits.</p>
      * <ul>
-     * <li>After you modify the VNC password of an instance, take note of the following items:<ul>
-     * <li>If the instance is I/O optimized, the new password takes effect immediately.</li>
-     * <li>If the instance is not I/O optimized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> by using the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect.</li>
+     * <li>After you modify the VNC password of an ECS instance, take note of the following items:<ul>
+     * <li>If the instance is I/O optimized, the new password takes effect immediately without the need to restart the instance.</li>
+     * <li>If the instance is not I/O optimized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the VNC password of an Elastic Compute Service (ECS) instance.</p>
+     * <p>Changes the Virtual Network Computing (VNC) password of an Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request ModifyInstanceVncPasswdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27851,17 +27865,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The password must be six characters in length and can contain only uppercase letters, lowercase letters, and digits.</p>
+     * <p>  The VNC password must be six characters in length and can contain uppercase letters, lowercase letters, and digits.</p>
      * <ul>
-     * <li>After you modify the VNC password of an instance, take note of the following items:<ul>
-     * <li>If the instance is I/O optimized, the new password takes effect immediately.</li>
-     * <li>If the instance is not I/O optimized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> by using the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect.</li>
+     * <li>After you modify the VNC password of an ECS instance, take note of the following items:<ul>
+     * <li>If the instance is I/O optimized, the new password takes effect immediately without the need to restart the instance.</li>
+     * <li>If the instance is not I/O optimized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the VNC password of an Elastic Compute Service (ECS) instance.</p>
+     * <p>Changes the Virtual Network Computing (VNC) password of an Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request ModifyInstanceVncPasswdRequest
      * @return ModifyInstanceVncPasswdResponse
@@ -34456,12 +34470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is an asynchronous operation. After you call this operation to stop an ECS instance, the operation sets the status of the ECS instance to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Stopped</code>, the instance is stopped.</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li><strong>Notes</strong><ul>
      * <li>You cannot call this operation to stop an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>After you enable the default economical mode for all ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the ECS instance that you want to stop to enable standard mode. This way, the ECS instance continues to be billed after it is stopped. The instance type resources and public IP address of the instance are retained.</li>
-     * </ul>
-     * </li>
+     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the ECS instance that you want to stop to enable standard mode. This way, the ECS instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -34534,12 +34546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is an asynchronous operation. After you call this operation to stop an ECS instance, the operation sets the status of the ECS instance to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Stopped</code>, the instance is stopped.</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li><strong>Notes</strong><ul>
      * <li>You cannot call this operation to stop an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>After you enable the default economical mode for all ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the ECS instance that you want to stop to enable standard mode. This way, the ECS instance continues to be billed after it is stopped. The instance type resources and public IP address of the instance are retained.</li>
-     * </ul>
-     * </li>
+     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the ECS instance that you want to stop to enable standard mode. This way, the ECS instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.</li>
      * </ul>
      * 
      * <b>summary</b> : 

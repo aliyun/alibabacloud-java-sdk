@@ -35,9 +35,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String description;
 
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
      * 
      * <strong>example:</strong>
      * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>

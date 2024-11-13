@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     /**
-     * <p>The information about the elasticity assurances.</p>
+     * <p>Details about the elasticity assurances.</p>
      */
     @NameInMap("ElasticityAssuranceSet")
     public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
@@ -93,6 +93,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage extends TeaModel {
         /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1144775968548340</p>
          */
@@ -100,6 +104,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -107,6 +115,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public String serviceName;
 
         /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -165,12 +177,21 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
         /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         */
         @NameInMap("ElasticityAssuranceUsages")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages elasticityAssuranceUsages;
 
@@ -347,7 +368,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem extends TeaModel {
         /**
-         * <p>The information about the allocated resources.</p>
+         * <p>Details of the allocated resources.</p>
          */
         @NameInMap("AllocatedResources")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources;
@@ -362,6 +383,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>e114477596854834</p>
          */
