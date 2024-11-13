@@ -65,6 +65,36 @@ public class GetJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetJobResponseBodyJobInfoDeploymentPolicyTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetJobResponseBodyJobInfoDeploymentPolicyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoDeploymentPolicyTags self = new GetJobResponseBodyJobInfoDeploymentPolicyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetJobResponseBodyJobInfoDeploymentPolicy extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -75,6 +105,9 @@ public class GetJobResponseBody extends TeaModel {
 
         @NameInMap("Network")
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork network;
+
+        @NameInMap("Tags")
+        public java.util.List<GetJobResponseBodyJobInfoDeploymentPolicyTags> tags;
 
         public static GetJobResponseBodyJobInfoDeploymentPolicy build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfoDeploymentPolicy self = new GetJobResponseBodyJobInfoDeploymentPolicy();
@@ -95,6 +128,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork getNetwork() {
             return this.network;
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicy setTags(java.util.List<GetJobResponseBodyJobInfoDeploymentPolicyTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetJobResponseBodyJobInfoDeploymentPolicyTags> getTags() {
+            return this.tags;
         }
 
     }

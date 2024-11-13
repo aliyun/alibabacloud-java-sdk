@@ -1,3 +1,7 @@
+2024-11-13 Version: 1.1.1
+- Update API GetJob: update response param.
+
+
 2024-11-11 Version: 1.1.0
 - Support API ListTagResources.
 - Support API TagResources.
