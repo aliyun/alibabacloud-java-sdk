@@ -158,6 +158,9 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @NameInMap("BillingMode")
         public String billingMode;
 
+        @NameInMap("BotInstanceLevel")
+        public String botInstanceLevel;
+
         /**
          * <strong>example:</strong>
          * <p>domestic,overseas</p>
@@ -172,12 +175,30 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("CrossborderTraffic")
+        public String crossborderTraffic;
+
+        @NameInMap("DdosBurstableDomesticProtection")
+        public String ddosBurstableDomesticProtection;
+
+        @NameInMap("DdosBurstableOverseasProtection")
+        public String ddosBurstableOverseasProtection;
+
+        @NameInMap("DdosInstanceLevel")
+        public String ddosInstanceLevel;
+
         /**
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("Duration")
         public Integer duration;
+
+        @NameInMap("EdgeRoutineRquest")
+        public String edgeRoutineRquest;
+
+        @NameInMap("EdgeWafRequest")
+        public String edgeWafRequest;
 
         /**
          * <strong>example:</strong>
@@ -193,12 +214,21 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("Layer4Traffic")
+        public String layer4Traffic;
+
+        @NameInMap("Layer4TrafficIntl")
+        public String layer4TrafficIntl;
+
         /**
          * <strong>example:</strong>
          * <p>basic</p>
          */
         @NameInMap("PlanName")
         public String planName;
+
+        @NameInMap("PlanTraffic")
+        public String planTraffic;
 
         /**
          * <strong>example:</strong>
@@ -216,6 +246,12 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
 
         @NameInMap("Sites")
         public java.util.List<ListUserRatePlanInstancesResponseBodyInstanceInfoSites> sites;
+
+        @NameInMap("SmartRoutingRequest")
+        public String smartRoutingRequest;
+
+        @NameInMap("StaticRequest")
+        public String staticRequest;
 
         /**
          * <strong>example:</strong>
@@ -237,6 +273,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             return this.billingMode;
         }
 
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setBotInstanceLevel(String botInstanceLevel) {
+            this.botInstanceLevel = botInstanceLevel;
+            return this;
+        }
+        public String getBotInstanceLevel() {
+            return this.botInstanceLevel;
+        }
+
         public ListUserRatePlanInstancesResponseBodyInstanceInfo setCoverages(String coverages) {
             this.coverages = coverages;
             return this;
@@ -253,12 +297,60 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setCrossborderTraffic(String crossborderTraffic) {
+            this.crossborderTraffic = crossborderTraffic;
+            return this;
+        }
+        public String getCrossborderTraffic() {
+            return this.crossborderTraffic;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setDdosBurstableDomesticProtection(String ddosBurstableDomesticProtection) {
+            this.ddosBurstableDomesticProtection = ddosBurstableDomesticProtection;
+            return this;
+        }
+        public String getDdosBurstableDomesticProtection() {
+            return this.ddosBurstableDomesticProtection;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setDdosBurstableOverseasProtection(String ddosBurstableOverseasProtection) {
+            this.ddosBurstableOverseasProtection = ddosBurstableOverseasProtection;
+            return this;
+        }
+        public String getDdosBurstableOverseasProtection() {
+            return this.ddosBurstableOverseasProtection;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setDdosInstanceLevel(String ddosInstanceLevel) {
+            this.ddosInstanceLevel = ddosInstanceLevel;
+            return this;
+        }
+        public String getDdosInstanceLevel() {
+            return this.ddosInstanceLevel;
+        }
+
         public ListUserRatePlanInstancesResponseBodyInstanceInfo setDuration(Integer duration) {
             this.duration = duration;
             return this;
         }
         public Integer getDuration() {
             return this.duration;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setEdgeRoutineRquest(String edgeRoutineRquest) {
+            this.edgeRoutineRquest = edgeRoutineRquest;
+            return this;
+        }
+        public String getEdgeRoutineRquest() {
+            return this.edgeRoutineRquest;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setEdgeWafRequest(String edgeWafRequest) {
+            this.edgeWafRequest = edgeWafRequest;
+            return this;
+        }
+        public String getEdgeWafRequest() {
+            return this.edgeWafRequest;
         }
 
         public ListUserRatePlanInstancesResponseBodyInstanceInfo setExpireTime(String expireTime) {
@@ -277,12 +369,36 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setLayer4Traffic(String layer4Traffic) {
+            this.layer4Traffic = layer4Traffic;
+            return this;
+        }
+        public String getLayer4Traffic() {
+            return this.layer4Traffic;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setLayer4TrafficIntl(String layer4TrafficIntl) {
+            this.layer4TrafficIntl = layer4TrafficIntl;
+            return this;
+        }
+        public String getLayer4TrafficIntl() {
+            return this.layer4TrafficIntl;
+        }
+
         public ListUserRatePlanInstancesResponseBodyInstanceInfo setPlanName(String planName) {
             this.planName = planName;
             return this;
         }
         public String getPlanName() {
             return this.planName;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setPlanTraffic(String planTraffic) {
+            this.planTraffic = planTraffic;
+            return this;
+        }
+        public String getPlanTraffic() {
+            return this.planTraffic;
         }
 
         public ListUserRatePlanInstancesResponseBodyInstanceInfo setPlanType(String planType) {
@@ -307,6 +423,22 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ListUserRatePlanInstancesResponseBodyInstanceInfoSites> getSites() {
             return this.sites;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setSmartRoutingRequest(String smartRoutingRequest) {
+            this.smartRoutingRequest = smartRoutingRequest;
+            return this;
+        }
+        public String getSmartRoutingRequest() {
+            return this.smartRoutingRequest;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setStaticRequest(String staticRequest) {
+            this.staticRequest = staticRequest;
+            return this;
+        }
+        public String getStaticRequest() {
+            return this.staticRequest;
         }
 
         public ListUserRatePlanInstancesResponseBodyInstanceInfo setStatus(String status) {

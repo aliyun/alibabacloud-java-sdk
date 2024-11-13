@@ -43,6 +43,9 @@ public class ListWafManagedRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProtectionLevel")
+    public Integer protectionLevel;
+
     @NameInMap("QueryArgs")
     public ListWafManagedRulesRequestQueryArgs queryArgs;
 
@@ -100,6 +103,14 @@ public class ListWafManagedRulesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListWafManagedRulesRequest setProtectionLevel(Integer protectionLevel) {
+        this.protectionLevel = protectionLevel;
+        return this;
+    }
+    public Integer getProtectionLevel() {
+        return this.protectionLevel;
+    }
+
     public ListWafManagedRulesRequest setQueryArgs(ListWafManagedRulesRequestQueryArgs queryArgs) {
         this.queryArgs = queryArgs;
         return this;
@@ -131,13 +142,6 @@ public class ListWafManagedRulesRequest extends TeaModel {
         @NameInMap("IdNameLike")
         public String idNameLike;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("ProtectionLevel")
-        public Integer protectionLevel;
-
         @NameInMap("ProtectionLevels")
         public java.util.List<Integer> protectionLevels;
 
@@ -167,14 +171,6 @@ public class ListWafManagedRulesRequest extends TeaModel {
         }
         public String getIdNameLike() {
             return this.idNameLike;
-        }
-
-        public ListWafManagedRulesRequestQueryArgs setProtectionLevel(Integer protectionLevel) {
-            this.protectionLevel = protectionLevel;
-            return this;
-        }
-        public Integer getProtectionLevel() {
-            return this.protectionLevel;
         }
 
         public ListWafManagedRulesRequestQueryArgs setProtectionLevels(java.util.List<Integer> protectionLevels) {

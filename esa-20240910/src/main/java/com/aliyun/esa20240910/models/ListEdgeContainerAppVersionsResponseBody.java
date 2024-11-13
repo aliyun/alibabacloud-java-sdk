@@ -298,13 +298,6 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>sh start.sh</p>
-         */
-        @NameInMap("PreStart")
-        public String preStart;
-
-        /**
-         * <strong>example:</strong>
          * <p>sh stop.sh</p>
          */
         @NameInMap("PreStop")
@@ -378,14 +371,6 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         }
         public String getPostStart() {
             return this.postStart;
-        }
-
-        public ListEdgeContainerAppVersionsResponseBodyVersionsContainers setPreStart(String preStart) {
-            this.preStart = preStart;
-            return this;
-        }
-        public String getPreStart() {
-            return this.preStart;
         }
 
         public ListEdgeContainerAppVersionsResponseBodyVersionsContainers setPreStop(String preStop) {

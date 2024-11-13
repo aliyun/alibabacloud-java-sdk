@@ -43,6 +43,9 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProtectionLevel")
+    public Integer protectionLevel;
+
     @NameInMap("QueryArgs")
     public String queryArgsShrink;
 
@@ -98,6 +101,14 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListWafManagedRulesShrinkRequest setProtectionLevel(Integer protectionLevel) {
+        this.protectionLevel = protectionLevel;
+        return this;
+    }
+    public Integer getProtectionLevel() {
+        return this.protectionLevel;
     }
 
     public ListWafManagedRulesShrinkRequest setQueryArgsShrink(String queryArgsShrink) {
