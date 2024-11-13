@@ -129,6 +129,9 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public Integer ipVersion;
 
+        @NameInMap("Last7DayOutTrafficBytes")
+        public Long last7DayOutTrafficBytes;
+
         /**
          * <p>The UID of the member.</p>
          * 
@@ -259,6 +262,9 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        @NameInMap("SensitiveDataStatus")
+        public String sensitiveDataStatus;
+
         /**
          * <p>The status of the security group policy. Valid values:</p>
          * <ul>
@@ -365,6 +371,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
             return this.ipVersion;
         }
 
+        public DescribeAssetListResponseBodyAssets setLast7DayOutTrafficBytes(Long last7DayOutTrafficBytes) {
+            this.last7DayOutTrafficBytes = last7DayOutTrafficBytes;
+            return this;
+        }
+        public Long getLast7DayOutTrafficBytes() {
+            return this.last7DayOutTrafficBytes;
+        }
+
         public DescribeAssetListResponseBodyAssets setMemberUid(Long memberUid) {
             this.memberUid = memberUid;
             return this;
@@ -443,6 +457,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
         }
         public String getRiskLevel() {
             return this.riskLevel;
+        }
+
+        public DescribeAssetListResponseBodyAssets setSensitiveDataStatus(String sensitiveDataStatus) {
+            this.sensitiveDataStatus = sensitiveDataStatus;
+            return this;
+        }
+        public String getSensitiveDataStatus() {
+            return this.sensitiveDataStatus;
         }
 
         public DescribeAssetListResponseBodyAssets setSgStatus(String sgStatus) {
