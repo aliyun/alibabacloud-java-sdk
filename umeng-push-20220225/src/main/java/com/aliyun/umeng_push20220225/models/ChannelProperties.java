@@ -26,8 +26,14 @@ public class ChannelProperties extends TeaModel {
     @NameInMap("mainActivity")
     public String mainActivity;
 
+    @NameInMap("oppoCategory")
+    public String oppoCategory;
+
     @NameInMap("oppoChannelId")
     public String oppoChannelId;
+
+    @NameInMap("oppoNotifyLevel")
+    public String oppoNotifyLevel;
 
     /**
      * <strong>example:</strong>
@@ -105,12 +111,28 @@ public class ChannelProperties extends TeaModel {
         return this.mainActivity;
     }
 
+    public ChannelProperties setOppoCategory(String oppoCategory) {
+        this.oppoCategory = oppoCategory;
+        return this;
+    }
+    public String getOppoCategory() {
+        return this.oppoCategory;
+    }
+
     public ChannelProperties setOppoChannelId(String oppoChannelId) {
         this.oppoChannelId = oppoChannelId;
         return this;
     }
     public String getOppoChannelId() {
         return this.oppoChannelId;
+    }
+
+    public ChannelProperties setOppoNotifyLevel(String oppoNotifyLevel) {
+        this.oppoNotifyLevel = oppoNotifyLevel;
+        return this;
+    }
+    public String getOppoNotifyLevel() {
+        return this.oppoNotifyLevel;
     }
 
     public ChannelProperties setUseHuaweiMessage(String useHuaweiMessage) {
