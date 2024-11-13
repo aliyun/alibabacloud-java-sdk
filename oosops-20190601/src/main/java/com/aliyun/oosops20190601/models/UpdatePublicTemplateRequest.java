@@ -28,6 +28,9 @@ public class UpdatePublicTemplateRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("VersionName")
+    public String versionName;
+
     public static UpdatePublicTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePublicTemplateRequest self = new UpdatePublicTemplateRequest();
         return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class UpdatePublicTemplateRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public UpdatePublicTemplateRequest setVersionName(String versionName) {
+        this.versionName = versionName;
+        return this;
+    }
+    public String getVersionName() {
+        return this.versionName;
     }
 
 }
