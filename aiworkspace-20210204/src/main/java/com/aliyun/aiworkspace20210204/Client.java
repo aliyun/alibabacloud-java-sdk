@@ -205,6 +205,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CodeBranch", request.codeBranch);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.codeCommit)) {
+            body.put("CodeCommit", request.codeCommit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.codeRepo)) {
             body.put("CodeRepo", request.codeRepo);
         }

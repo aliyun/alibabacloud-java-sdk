@@ -18,6 +18,9 @@ public class CreateCodeSourceRequest extends TeaModel {
     @NameInMap("CodeBranch")
     public String codeBranch;
 
+    @NameInMap("CodeCommit")
+    public String codeCommit;
+
     /**
      * <strong>example:</strong>
      * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>******</p>
@@ -90,6 +93,14 @@ public class CreateCodeSourceRequest extends TeaModel {
     }
     public String getCodeBranch() {
         return this.codeBranch;
+    }
+
+    public CreateCodeSourceRequest setCodeCommit(String codeCommit) {
+        this.codeCommit = codeCommit;
+        return this;
+    }
+    public String getCodeCommit() {
+        return this.codeCommit;
     }
 
     public CreateCodeSourceRequest setCodeRepo(String codeRepo) {
