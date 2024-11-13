@@ -2962,6 +2962,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列表查询用户应用权限</p>
+     * 
+     * @param request ListUserApplicationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserApplicationsResponse
+     */
+    public ListUserApplicationsResponse listUserApplicationsWithOptions(ListUserApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserApplications"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserApplicationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列表查询用户应用权限</p>
+     * 
+     * @param request ListUserApplicationsRequest
+     * @return ListUserApplicationsResponse
+     */
+    public ListUserApplicationsResponse listUserApplications(ListUserApplicationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserApplicationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量查询用户设备列表</p>
      * 
      * @param request ListUserDevicesRequest
@@ -3118,6 +3158,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserGroupsForRegistrationPolicyResponse listUserGroupsForRegistrationPolicy(ListUserGroupsForRegistrationPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserGroupsForRegistrationPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列表查询用户零信任策略</p>
+     * 
+     * @param request ListUserPrivateAccessPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserPrivateAccessPoliciesResponse
+     */
+    public ListUserPrivateAccessPoliciesResponse listUserPrivateAccessPoliciesWithOptions(ListUserPrivateAccessPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserPrivateAccessPolicies"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserPrivateAccessPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列表查询用户零信任策略</p>
+     * 
+     * @param request ListUserPrivateAccessPoliciesRequest
+     * @return ListUserPrivateAccessPoliciesResponse
+     */
+    public ListUserPrivateAccessPoliciesResponse listUserPrivateAccessPolicies(ListUserPrivateAccessPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserPrivateAccessPoliciesWithOptions(request, runtime);
     }
 
     /**
