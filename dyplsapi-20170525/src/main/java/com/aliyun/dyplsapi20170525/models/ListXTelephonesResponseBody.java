@@ -20,11 +20,8 @@ public class ListXTelephonesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>数据集合</p>
-     */
     @NameInMap("Data")
-    public java.util.List<ListXTelephonesResponseBodyData> data;
+    public ListXTelephonesResponseBodyData data;
 
     /**
      * <p>返回信息</p>
@@ -36,24 +33,6 @@ public class ListXTelephonesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>页码</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6</p>
-     */
-    @NameInMap("PageNo")
-    public Long pageNo;
-
-    /**
-     * <p>每页条数</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    /**
      * <p>返回是否成功 true  表示成功 false表示失败</p>
      * 
      * <strong>example:</strong>
@@ -61,15 +40,6 @@ public class ListXTelephonesResponseBody extends TeaModel {
      */
     @NameInMap("Success")
     public Boolean success;
-
-    /**
-     * <p>符合查询条件的总数量</p>
-     * 
-     * <strong>example:</strong>
-     * <p>60</p>
-     */
-    @NameInMap("TotalCount")
-    public Long totalCount;
 
     public static ListXTelephonesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListXTelephonesResponseBody self = new ListXTelephonesResponseBody();
@@ -92,11 +62,11 @@ public class ListXTelephonesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListXTelephonesResponseBody setData(java.util.List<ListXTelephonesResponseBodyData> data) {
+    public ListXTelephonesResponseBody setData(ListXTelephonesResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ListXTelephonesResponseBodyData> getData() {
+    public ListXTelephonesResponseBodyData getData() {
         return this.data;
     }
 
@@ -108,22 +78,6 @@ public class ListXTelephonesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListXTelephonesResponseBody setPageNo(Long pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Long getPageNo() {
-        return this.pageNo;
-    }
-
-    public ListXTelephonesResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
     public ListXTelephonesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -132,15 +86,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListXTelephonesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public static class ListXTelephonesResponseBodyData extends TeaModel {
+    public static class ListXTelephonesResponseBodyDataList extends TeaModel {
         /**
          * <p>绑定失败原因</p>
          * 
@@ -172,7 +118,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
          * <p>客户号码池key</p>
          * 
          * <strong>example:</strong>
-         * <p>FC5***********************a1a</p>
+         * <p>FC533e6eeb81f4400c87ef3745a21a1a</p>
          */
         @NameInMap("CustomerPoolKey")
         public String customerPoolKey;
@@ -208,7 +154,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
          * <p>X号码</p>
          * 
          * <strong>example:</strong>
-         * <p>17*******46</p>
+         * <p>17816876546</p>
          */
         @NameInMap("Telephone")
         public String telephone;
@@ -231,12 +177,12 @@ public class ListXTelephonesResponseBody extends TeaModel {
         @NameInMap("UnbindTime")
         public String unbindTime;
 
-        public static ListXTelephonesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ListXTelephonesResponseBodyData self = new ListXTelephonesResponseBodyData();
+        public static ListXTelephonesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
+            ListXTelephonesResponseBodyDataList self = new ListXTelephonesResponseBodyDataList();
             return TeaModel.build(map, self);
         }
 
-        public ListXTelephonesResponseBodyData setAuthMsg(String authMsg) {
+        public ListXTelephonesResponseBodyDataList setAuthMsg(String authMsg) {
             this.authMsg = authMsg;
             return this;
         }
@@ -244,7 +190,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.authMsg;
         }
 
-        public ListXTelephonesResponseBodyData setBindTime(String bindTime) {
+        public ListXTelephonesResponseBodyDataList setBindTime(String bindTime) {
             this.bindTime = bindTime;
             return this;
         }
@@ -252,7 +198,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.bindTime;
         }
 
-        public ListXTelephonesResponseBodyData setBuyTime(String buyTime) {
+        public ListXTelephonesResponseBodyDataList setBuyTime(String buyTime) {
             this.buyTime = buyTime;
             return this;
         }
@@ -260,7 +206,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.buyTime;
         }
 
-        public ListXTelephonesResponseBodyData setCustomerPoolKey(String customerPoolKey) {
+        public ListXTelephonesResponseBodyDataList setCustomerPoolKey(String customerPoolKey) {
             this.customerPoolKey = customerPoolKey;
             return this;
         }
@@ -268,7 +214,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.customerPoolKey;
         }
 
-        public ListXTelephonesResponseBodyData setCustomerPoolName(String customerPoolName) {
+        public ListXTelephonesResponseBodyDataList setCustomerPoolName(String customerPoolName) {
             this.customerPoolName = customerPoolName;
             return this;
         }
@@ -276,7 +222,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.customerPoolName;
         }
 
-        public ListXTelephonesResponseBodyData setReleaseTime(String releaseTime) {
+        public ListXTelephonesResponseBodyDataList setReleaseTime(String releaseTime) {
             this.releaseTime = releaseTime;
             return this;
         }
@@ -284,7 +230,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.releaseTime;
         }
 
-        public ListXTelephonesResponseBodyData setSmsStatus(String smsStatus) {
+        public ListXTelephonesResponseBodyDataList setSmsStatus(String smsStatus) {
             this.smsStatus = smsStatus;
             return this;
         }
@@ -292,7 +238,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.smsStatus;
         }
 
-        public ListXTelephonesResponseBodyData setTelephone(String telephone) {
+        public ListXTelephonesResponseBodyDataList setTelephone(String telephone) {
             this.telephone = telephone;
             return this;
         }
@@ -300,7 +246,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.telephone;
         }
 
-        public ListXTelephonesResponseBodyData setTelephoneStatus(String telephoneStatus) {
+        public ListXTelephonesResponseBodyDataList setTelephoneStatus(String telephoneStatus) {
             this.telephoneStatus = telephoneStatus;
             return this;
         }
@@ -308,12 +254,85 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return this.telephoneStatus;
         }
 
-        public ListXTelephonesResponseBodyData setUnbindTime(String unbindTime) {
+        public ListXTelephonesResponseBodyDataList setUnbindTime(String unbindTime) {
             this.unbindTime = unbindTime;
             return this;
         }
         public String getUnbindTime() {
             return this.unbindTime;
+        }
+
+    }
+
+    public static class ListXTelephonesResponseBodyData extends TeaModel {
+        /**
+         * <p>数据集合</p>
+         */
+        @NameInMap("List")
+        public java.util.List<ListXTelephonesResponseBodyDataList> list;
+
+        /**
+         * <p>页码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("PageNo")
+        public Long pageNo;
+
+        /**
+         * <p>每页条数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("PageSize")
+        public Long pageSize;
+
+        /**
+         * <p>符合查询条件的总数量</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
+        @NameInMap("Total")
+        public Long total;
+
+        public static ListXTelephonesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListXTelephonesResponseBodyData self = new ListXTelephonesResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListXTelephonesResponseBodyData setList(java.util.List<ListXTelephonesResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListXTelephonesResponseBodyDataList> getList() {
+            return this.list;
+        }
+
+        public ListXTelephonesResponseBodyData setPageNo(Long pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+        public Long getPageNo() {
+            return this.pageNo;
+        }
+
+        public ListXTelephonesResponseBodyData setPageSize(Long pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Long getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListXTelephonesResponseBodyData setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }

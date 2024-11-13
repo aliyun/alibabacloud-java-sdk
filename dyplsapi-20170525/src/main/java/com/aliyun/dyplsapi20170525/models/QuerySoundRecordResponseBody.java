@@ -20,14 +20,8 @@ public class QuerySoundRecordResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>通话录音url路径，最大长度1000，有效期1小时</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="http://www.***.com/temepl/a.mp3">http://www.***.com/temepl/a.mp3</a></p>
-     */
-    @NameInMap("FileUrl")
-    public String fileUrl;
+    @NameInMap("Data")
+    public QuerySoundRecordResponseBodyData data;
 
     /**
      * <p>返回信息</p>
@@ -68,12 +62,12 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QuerySoundRecordResponseBody setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
+    public QuerySoundRecordResponseBody setData(QuerySoundRecordResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getFileUrl() {
-        return this.fileUrl;
+    public QuerySoundRecordResponseBodyData getData() {
+        return this.data;
     }
 
     public QuerySoundRecordResponseBody setMessage(String message) {
@@ -90,6 +84,31 @@ public class QuerySoundRecordResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class QuerySoundRecordResponseBodyData extends TeaModel {
+        /**
+         * <p>通话录音url路径，最大长度1000，有效期1小时</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.oss.com/temepl/a.mp3">http://www.oss.com/temepl/a.mp3</a></p>
+         */
+        @NameInMap("FileUrl")
+        public String fileUrl;
+
+        public static QuerySoundRecordResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QuerySoundRecordResponseBodyData self = new QuerySoundRecordResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySoundRecordResponseBodyData setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
     }
 
 }

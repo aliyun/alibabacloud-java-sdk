@@ -12,15 +12,6 @@ public class CreateSmsSignResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sign*****466</p>
-     */
-    @NameInMap("CalledNoSign")
-    public String calledNoSign;
-
-    /**
      * <p>返回状态码 0000表示成功 其他表示失败</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +19,9 @@ public class CreateSmsSignResponseBody extends TeaModel {
      */
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public CreateSmsSignResponseBodyData data;
 
     /**
      * <p>返回信息</p>
@@ -60,20 +54,20 @@ public class CreateSmsSignResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public CreateSmsSignResponseBody setCalledNoSign(String calledNoSign) {
-        this.calledNoSign = calledNoSign;
-        return this;
-    }
-    public String getCalledNoSign() {
-        return this.calledNoSign;
-    }
-
     public CreateSmsSignResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateSmsSignResponseBody setData(CreateSmsSignResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateSmsSignResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateSmsSignResponseBody setMessage(String message) {
@@ -90,6 +84,31 @@ public class CreateSmsSignResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class CreateSmsSignResponseBodyData extends TeaModel {
+        /**
+         * <p>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sign23343466</p>
+         */
+        @NameInMap("CalledNoSign")
+        public String calledNoSign;
+
+        public static CreateSmsSignResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CreateSmsSignResponseBodyData self = new CreateSmsSignResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateSmsSignResponseBodyData setCalledNoSign(String calledNoSign) {
+            this.calledNoSign = calledNoSign;
+            return this;
+        }
+        public String getCalledNoSign() {
+            return this.calledNoSign;
+        }
+
     }
 
 }
