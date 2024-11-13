@@ -1,3 +1,10 @@
+2024-11-13 Version: 4.2.1
+- Update API DescribeAssetList: add param OutStatistic.
+- Update API DescribeAssetList: add param SensitiveStatus.
+- Update API DescribeAssetList: update response param.
+- Update API DescribeAssetStatistic: update response param.
+
+
 2024-11-12 Version: 4.2.0
 - Support API DescribeAssetStatistic.
 - Support API DescribeUserBuyVersion.

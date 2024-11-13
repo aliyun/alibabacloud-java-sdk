@@ -63,6 +63,9 @@ public class DescribeAssetListRequest extends TeaModel {
     @NameInMap("NewResourceTag")
     public String newResourceTag;
 
+    @NameInMap("OutStatistic")
+    public String outStatistic;
+
     /**
      * <p>The number of entries per page. Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
@@ -115,6 +118,9 @@ public class DescribeAssetListRequest extends TeaModel {
      */
     @NameInMap("SearchItem")
     public String searchItem;
+
+    @NameInMap("SensitiveStatus")
+    public String sensitiveStatus;
 
     /**
      * <p>The status of the security group policy. Valid values:</p>
@@ -218,6 +224,14 @@ public class DescribeAssetListRequest extends TeaModel {
         return this.newResourceTag;
     }
 
+    public DescribeAssetListRequest setOutStatistic(String outStatistic) {
+        this.outStatistic = outStatistic;
+        return this;
+    }
+    public String getOutStatistic() {
+        return this.outStatistic;
+    }
+
     public DescribeAssetListRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -248,6 +262,14 @@ public class DescribeAssetListRequest extends TeaModel {
     }
     public String getSearchItem() {
         return this.searchItem;
+    }
+
+    public DescribeAssetListRequest setSensitiveStatus(String sensitiveStatus) {
+        this.sensitiveStatus = sensitiveStatus;
+        return this;
+    }
+    public String getSensitiveStatus() {
+        return this.sensitiveStatus;
     }
 
     public DescribeAssetListRequest setSgStatus(String sgStatus) {

@@ -2186,6 +2186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NewResourceTag", request.newResourceTag);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outStatistic)) {
+            query.put("OutStatistic", request.outStatistic);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -2200,6 +2204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchItem)) {
             query.put("SearchItem", request.searchItem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sensitiveStatus)) {
+            query.put("SensitiveStatus", request.sensitiveStatus);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sgStatus)) {

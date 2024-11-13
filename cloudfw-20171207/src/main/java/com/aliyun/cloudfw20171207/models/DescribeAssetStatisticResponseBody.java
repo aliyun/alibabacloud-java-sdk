@@ -50,6 +50,27 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         @NameInMap("IpNumUsed")
         public Integer ipNumUsed;
 
+        @NameInMap("IsIpNumEnough")
+        public Integer isIpNumEnough;
+
+        @NameInMap("IsRegionNumEnough")
+        public Integer isRegionNumEnough;
+
+        @NameInMap("IsSuggestUpdate")
+        public Integer isSuggestUpdate;
+
+        @NameInMap("RegionNumSpec")
+        public Integer regionNumSpec;
+
+        @NameInMap("RegionNumUsed")
+        public Integer regionNumUsed;
+
+        @NameInMap("SensitiveDataIpNumSpec")
+        public Long sensitiveDataIpNumSpec;
+
+        @NameInMap("SensitiveDataIpNumUsed")
+        public Long sensitiveDataIpNumUsed;
+
         public static DescribeAssetStatisticResponseBodyResourceSpecStatistic build(java.util.Map<String, ?> map) throws Exception {
             DescribeAssetStatisticResponseBodyResourceSpecStatistic self = new DescribeAssetStatisticResponseBodyResourceSpecStatistic();
             return TeaModel.build(map, self);
@@ -69,6 +90,62 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         }
         public Integer getIpNumUsed() {
             return this.ipNumUsed;
+        }
+
+        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setIsIpNumEnough(Integer isIpNumEnough) {
+            this.isIpNumEnough = isIpNumEnough;
+            return this;
+        }
+        public Integer getIsIpNumEnough() {
+            return this.isIpNumEnough;
+        }
+
+        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setIsRegionNumEnough(Integer isRegionNumEnough) {
+            this.isRegionNumEnough = isRegionNumEnough;
+            return this;
+        }
+        public Integer getIsRegionNumEnough() {
+            return this.isRegionNumEnough;
+        }
+
+        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setIsSuggestUpdate(Integer isSuggestUpdate) {
+            this.isSuggestUpdate = isSuggestUpdate;
+            return this;
+        }
+        public Integer getIsSuggestUpdate() {
+            return this.isSuggestUpdate;
+        }
+
+        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setRegionNumSpec(Integer regionNumSpec) {
+            this.regionNumSpec = regionNumSpec;
+            return this;
+        }
+        public Integer getRegionNumSpec() {
+            return this.regionNumSpec;
+        }
+
+        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setRegionNumUsed(Integer regionNumUsed) {
+            this.regionNumUsed = regionNumUsed;
+            return this;
+        }
+        public Integer getRegionNumUsed() {
+            return this.regionNumUsed;
+        }
+
+        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setSensitiveDataIpNumSpec(Long sensitiveDataIpNumSpec) {
+            this.sensitiveDataIpNumSpec = sensitiveDataIpNumSpec;
+            return this;
+        }
+        public Long getSensitiveDataIpNumSpec() {
+            return this.sensitiveDataIpNumSpec;
+        }
+
+        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setSensitiveDataIpNumUsed(Long sensitiveDataIpNumUsed) {
+            this.sensitiveDataIpNumUsed = sensitiveDataIpNumUsed;
+            return this;
+        }
+        public Long getSensitiveDataIpNumUsed() {
+            return this.sensitiveDataIpNumUsed;
         }
 
     }
