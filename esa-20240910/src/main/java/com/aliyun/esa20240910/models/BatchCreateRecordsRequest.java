@@ -40,6 +40,69 @@ public class BatchCreateRecordsRequest extends TeaModel {
         return this.siteId;
     }
 
+    public static class BatchCreateRecordsRequestRecordListAuthConf extends TeaModel {
+        @NameInMap("AccessKey")
+        public String accessKey;
+
+        @NameInMap("AuthType")
+        public String authType;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SecretKey")
+        public String secretKey;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static BatchCreateRecordsRequestRecordListAuthConf build(java.util.Map<String, ?> map) throws Exception {
+            BatchCreateRecordsRequestRecordListAuthConf self = new BatchCreateRecordsRequestRecordListAuthConf();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchCreateRecordsRequestRecordListAuthConf setAccessKey(String accessKey) {
+            this.accessKey = accessKey;
+            return this;
+        }
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
+        public BatchCreateRecordsRequestRecordListAuthConf setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        public BatchCreateRecordsRequestRecordListAuthConf setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public BatchCreateRecordsRequestRecordListAuthConf setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
+            return this;
+        }
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
+        public BatchCreateRecordsRequestRecordListAuthConf setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class BatchCreateRecordsRequestRecordListData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -259,6 +322,9 @@ public class BatchCreateRecordsRequest extends TeaModel {
     }
 
     public static class BatchCreateRecordsRequestRecordList extends TeaModel {
+        @NameInMap("AuthConf")
+        public BatchCreateRecordsRequestRecordListAuthConf authConf;
+
         /**
          * <strong>example:</strong>
          * <p>web</p>
@@ -323,6 +389,14 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public static BatchCreateRecordsRequestRecordList build(java.util.Map<String, ?> map) throws Exception {
             BatchCreateRecordsRequestRecordList self = new BatchCreateRecordsRequestRecordList();
             return TeaModel.build(map, self);
+        }
+
+        public BatchCreateRecordsRequestRecordList setAuthConf(BatchCreateRecordsRequestRecordListAuthConf authConf) {
+            this.authConf = authConf;
+            return this;
+        }
+        public BatchCreateRecordsRequestRecordListAuthConf getAuthConf() {
+            return this.authConf;
         }
 
         public BatchCreateRecordsRequestRecordList setBizName(String bizName) {

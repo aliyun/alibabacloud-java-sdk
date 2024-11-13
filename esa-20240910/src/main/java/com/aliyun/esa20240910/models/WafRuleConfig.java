@@ -186,6 +186,9 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigActionsBypass extends TeaModel {
+        @NameInMap("CustomRules")
+        public java.util.List<Long> customRules;
+
         @NameInMap("RegularRules")
         public java.util.List<Long> regularRules;
 
@@ -201,6 +204,14 @@ public class WafRuleConfig extends TeaModel {
         public static WafRuleConfigActionsBypass build(java.util.Map<String, ?> map) throws Exception {
             WafRuleConfigActionsBypass self = new WafRuleConfigActionsBypass();
             return TeaModel.build(map, self);
+        }
+
+        public WafRuleConfigActionsBypass setCustomRules(java.util.List<Long> customRules) {
+            this.customRules = customRules;
+            return this;
+        }
+        public java.util.List<Long> getCustomRules() {
+            return this.customRules;
         }
 
         public WafRuleConfigActionsBypass setRegularRules(java.util.List<Long> regularRules) {

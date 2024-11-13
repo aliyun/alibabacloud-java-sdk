@@ -6764,6 +6764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.protectionLevel)) {
+            query.put("ProtectionLevel", request.protectionLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queryArgsShrink)) {
             query.put("QueryArgs", request.queryArgsShrink);
         }
@@ -7012,6 +7016,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.queryArgsShrink)) {
             query.put("QueryArgs", request.queryArgsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8096,120 +8104,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopScheduledPreloadExecutionResponse stopScheduledPreloadExecution(StopScheduledPreloadExecutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopScheduledPreloadExecutionWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>将表达式转换为匹配项</p>
-     * 
-     * @param request TransformExpressionToMatchRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return TransformExpressionToMatchResponse
-     */
-    public TransformExpressionToMatchResponse transformExpressionToMatchWithOptions(TransformExpressionToMatchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.expression)) {
-            body.put("Expression", request.expression);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            body.put("Phase", request.phase);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "TransformExpressionToMatch"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TransformExpressionToMatchResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>将表达式转换为匹配项</p>
-     * 
-     * @param request TransformExpressionToMatchRequest
-     * @return TransformExpressionToMatchResponse
-     */
-    public TransformExpressionToMatchResponse transformExpressionToMatch(TransformExpressionToMatchRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.transformExpressionToMatchWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>将匹配项转换为表达式</p>
-     * 
-     * @param tmpReq TransformMatchToExpressionRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return TransformMatchToExpressionResponse
-     */
-    public TransformMatchToExpressionResponse transformMatchToExpressionWithOptions(TransformMatchToExpressionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        TransformMatchToExpressionShrinkRequest request = new TransformMatchToExpressionShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.match)) {
-            request.matchShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.match, "Match", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.matchShrink)) {
-            body.put("Match", request.matchShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            body.put("Phase", request.phase);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "TransformMatchToExpression"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TransformMatchToExpressionResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>将匹配项转换为表达式</p>
-     * 
-     * @param request TransformMatchToExpressionRequest
-     * @return TransformMatchToExpressionResponse
-     */
-    public TransformMatchToExpressionResponse transformMatchToExpression(TransformMatchToExpressionRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.transformMatchToExpressionWithOptions(request, runtime);
     }
 
     /**

@@ -6,21 +6,35 @@ import com.aliyun.tea.*;
 public class CreateWaitingRoomShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>__aliwaitingroom_example</p>
      */
     @NameInMap("CookieName")
     public String cookieName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hello%20world!</p>
+     */
     @NameInMap("CustomPageHtml")
     public String customPageHtml;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("DisableSessionRenewalEnable")
     public String disableSessionRenewalEnable;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Enable")
     public String enable;
@@ -31,59 +45,95 @@ public class CreateWaitingRoomShrinkRequest extends TeaModel {
     @NameInMap("HostNameAndPath")
     public String hostNameAndPathShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("JsonResponseEnable")
     public String jsonResponseEnable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enus</p>
+     */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waitingroom_example</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("NewUsersPerMinute")
     public String newUsersPerMinute;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("QueueAllEnable")
     public String queueAllEnable;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fifo</p>
      */
     @NameInMap("QueuingMethod")
     public String queuingMethod;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("QueuingStatusCode")
     public String queuingStatusCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("SessionDuration")
     public String sessionDuration;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("TotalActiveUsers")
     public String totalActiveUsers;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("WaitingRoomType")
     public String waitingRoomType;

@@ -14,6 +14,9 @@ public class ListWafTemplateRulesShrinkRequest extends TeaModel {
     @NameInMap("QueryArgs")
     public String queryArgsShrink;
 
+    @NameInMap("SiteId")
+    public Long siteId;
+
     public static ListWafTemplateRulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWafTemplateRulesShrinkRequest self = new ListWafTemplateRulesShrinkRequest();
         return TeaModel.build(map, self);
@@ -33,6 +36,14 @@ public class ListWafTemplateRulesShrinkRequest extends TeaModel {
     }
     public String getQueryArgsShrink() {
         return this.queryArgsShrink;
+    }
+
+    public ListWafTemplateRulesShrinkRequest setSiteId(Long siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    public Long getSiteId() {
+        return this.siteId;
     }
 
 }

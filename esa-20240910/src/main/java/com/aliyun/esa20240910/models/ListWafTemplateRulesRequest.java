@@ -14,6 +14,9 @@ public class ListWafTemplateRulesRequest extends TeaModel {
     @NameInMap("QueryArgs")
     public ListWafTemplateRulesRequestQueryArgs queryArgs;
 
+    @NameInMap("SiteId")
+    public Long siteId;
+
     public static ListWafTemplateRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWafTemplateRulesRequest self = new ListWafTemplateRulesRequest();
         return TeaModel.build(map, self);
@@ -33,6 +36,14 @@ public class ListWafTemplateRulesRequest extends TeaModel {
     }
     public ListWafTemplateRulesRequestQueryArgs getQueryArgs() {
         return this.queryArgs;
+    }
+
+    public ListWafTemplateRulesRequest setSiteId(Long siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    public Long getSiteId() {
+        return this.siteId;
     }
 
     public static class ListWafTemplateRulesRequestQueryArgs extends TeaModel {
