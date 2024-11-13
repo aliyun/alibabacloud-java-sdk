@@ -12,15 +12,6 @@ public class BindXBResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>工作号关系绑定的唯一标识</p>
-     * 
-     * <strong>example:</strong>
-     * <p>435****456</p>
-     */
-    @NameInMap("AuthId")
-    public String authId;
-
-    /**
      * <p>返回状态码 0000表示成功 其他表示失败</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +19,9 @@ public class BindXBResponseBody extends TeaModel {
      */
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public BindXBResponseBodyData data;
 
     /**
      * <p>返回信息</p>
@@ -47,15 +41,6 @@ public class BindXBResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>工作号号码</p>
-     * 
-     * <strong>example:</strong>
-     * <p>18*******22</p>
-     */
-    @NameInMap("TelX")
-    public String telX;
-
     public static BindXBResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindXBResponseBody self = new BindXBResponseBody();
         return TeaModel.build(map, self);
@@ -69,20 +54,20 @@ public class BindXBResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public BindXBResponseBody setAuthId(String authId) {
-        this.authId = authId;
-        return this;
-    }
-    public String getAuthId() {
-        return this.authId;
-    }
-
     public BindXBResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public BindXBResponseBody setData(BindXBResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BindXBResponseBodyData getData() {
+        return this.data;
     }
 
     public BindXBResponseBody setMessage(String message) {
@@ -101,12 +86,46 @@ public class BindXBResponseBody extends TeaModel {
         return this.success;
     }
 
-    public BindXBResponseBody setTelX(String telX) {
-        this.telX = telX;
-        return this;
-    }
-    public String getTelX() {
-        return this.telX;
+    public static class BindXBResponseBodyData extends TeaModel {
+        /**
+         * <p>工作号关系绑定的唯一标识</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4353453456</p>
+         */
+        @NameInMap("AuthId")
+        public String authId;
+
+        /**
+         * <p>X号码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18640577897</p>
+         */
+        @NameInMap("TelX")
+        public String telX;
+
+        public static BindXBResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            BindXBResponseBodyData self = new BindXBResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public BindXBResponseBodyData setAuthId(String authId) {
+            this.authId = authId;
+            return this;
+        }
+        public String getAuthId() {
+            return this.authId;
+        }
+
+        public BindXBResponseBodyData setTelX(String telX) {
+            this.telX = telX;
+            return this;
+        }
+        public String getTelX() {
+            return this.telX;
+        }
+
     }
 
 }

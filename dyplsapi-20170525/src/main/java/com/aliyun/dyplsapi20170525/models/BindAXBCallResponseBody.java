@@ -12,15 +12,6 @@ public class BindAXBCallResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>绑定关系ID</p>
-     * 
-     * <strong>example:</strong>
-     * <p>476567566</p>
-     */
-    @NameInMap("BindId")
-    public String bindId;
-
-    /**
      * <p>返回状态码 0000表示成功 其他表示失败</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +19,9 @@ public class BindAXBCallResponseBody extends TeaModel {
      */
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public BindAXBCallResponseBodyData data;
 
     /**
      * <p>返回信息</p>
@@ -60,20 +54,20 @@ public class BindAXBCallResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public BindAXBCallResponseBody setBindId(String bindId) {
-        this.bindId = bindId;
-        return this;
-    }
-    public String getBindId() {
-        return this.bindId;
-    }
-
     public BindAXBCallResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public BindAXBCallResponseBody setData(BindAXBCallResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BindAXBCallResponseBodyData getData() {
+        return this.data;
     }
 
     public BindAXBCallResponseBody setMessage(String message) {
@@ -90,6 +84,31 @@ public class BindAXBCallResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class BindAXBCallResponseBodyData extends TeaModel {
+        /**
+         * <p>绑定关系ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>476567566</p>
+         */
+        @NameInMap("BindId")
+        public String bindId;
+
+        public static BindAXBCallResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            BindAXBCallResponseBodyData self = new BindAXBCallResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public BindAXBCallResponseBodyData setBindId(String bindId) {
+            this.bindId = bindId;
+            return this;
+        }
+        public String getBindId() {
+            return this.bindId;
+        }
+
     }
 
 }
