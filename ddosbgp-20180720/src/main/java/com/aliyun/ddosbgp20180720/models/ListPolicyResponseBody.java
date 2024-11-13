@@ -1066,12 +1066,19 @@ public class ListPolicyResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The remarks of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The type of the policy. Valid values:</p>
          * <ul>
+         * <li><strong>default</strong>: the default mitigation policy.</li>
          * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
          * <li><strong>l4</strong>: port-specific mitigation policies.</li>
          * </ul>

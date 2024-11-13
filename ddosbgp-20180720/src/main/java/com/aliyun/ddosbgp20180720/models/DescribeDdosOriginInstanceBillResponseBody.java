@@ -4,6 +4,16 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
+    /**
+     * <p>The asset status.</p>
+     * <ul>
+     * <li><strong>0</strong>: No asset is added to the instance for protection.</li>
+     * <li><strong>1</strong>: Assets are added to the instance for protection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AssetStatus")
     public Integer assetStatus;
 
@@ -62,10 +72,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     /**
      * <p>The IP address distribution. The JSON struct contains the following fields:</p>
      * <ul>
-     * <li><strong>eipCnIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland</li>
-     * <li><strong>eipOvIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland</li>
-     * <li><strong>standardAssetsCnIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland</li>
-     * <li><strong>standardAssetsOvIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland</li>
+     * <li><strong>eipCnIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland.</li>
+     * <li><strong>eipOvIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland.</li>
+     * <li><strong>standardAssetsCnIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland.</li>
+     * <li><strong>standardAssetsOvIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,6 +83,9 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
      */
     @NameInMap("IpInfo")
     public String ipInfo;
+
+    @NameInMap("MonthlySummaryList")
+    public java.util.List<DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList> monthlySummaryList;
 
     /**
      * <p>The request ID.</p>
@@ -215,6 +228,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     }
     public String getIpInfo() {
         return this.ipInfo;
+    }
+
+    public DescribeDdosOriginInstanceBillResponseBody setMonthlySummaryList(java.util.List<DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList> monthlySummaryList) {
+        this.monthlySummaryList = monthlySummaryList;
+        return this;
+    }
+    public java.util.List<DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList> getMonthlySummaryList() {
+        return this.monthlySummaryList;
     }
 
     public DescribeDdosOriginInstanceBillResponseBody setRequestId(String requestId) {
@@ -377,9 +398,9 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         /**
          * <p>The application scope of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>only_mainland_china</strong>: regions in the Chinese mainland</li>
-         * <li><strong>global</strong>: all regions</li>
-         * <li><strong>international_and_hmt</strong>: regions outside the Chinese mainland</li>
+         * <li><strong>only_mainland_china</strong>: regions in the Chinese mainland.</li>
+         * <li><strong>global</strong>: all regions.</li>
+         * <li><strong>international_and_hmt</strong>: regions outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -409,11 +430,11 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         /**
          * <p>The bill distribution by account. The JSON struct contains the following fields:</p>
          * <ul>
-         * <li><strong>eipCnIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland</li>
-         * <li><strong>eipOvIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland</li>
-         * <li><strong>memberUid</strong>: the owner account</li>
-         * <li><strong>standardAssetsCnIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland</li>
-         * <li><strong>standardAssetsOvIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland</li>
+         * <li><strong>eipCnIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland.</li>
+         * <li><strong>eipOvIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland.</li>
+         * <li><strong>memberUid</strong>: the owner account.</li>
+         * <li><strong>standardAssetsCnIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland.</li>
+         * <li><strong>standardAssetsOvIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland.</li>
          * </ul>
          * <blockquote>
          * <p> If the memberUid field in the JSON struct is empty, the information about the current account is returned.</p>
@@ -477,6 +498,113 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         }
         public Long getTime() {
             return this.time;
+        }
+
+    }
+
+    public static class DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList extends TeaModel {
+        @NameInMap("EnableDays")
+        public Integer enableDays;
+
+        @NameInMap("FlowCn")
+        public Long flowCn;
+
+        @NameInMap("FlowIntl")
+        public Long flowIntl;
+
+        @NameInMap("IpCountCn")
+        public Integer ipCountCn;
+
+        @NameInMap("IpCountIntl")
+        public Integer ipCountIntl;
+
+        @NameInMap("MemberUid")
+        public String memberUid;
+
+        @NameInMap("StandardAssetsFlowCn")
+        public Long standardAssetsFlowCn;
+
+        @NameInMap("StandardAssetsFlowIntl")
+        public Long standardAssetsFlowIntl;
+
+        @NameInMap("Uid")
+        public String uid;
+
+        public static DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList self = new DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setEnableDays(Integer enableDays) {
+            this.enableDays = enableDays;
+            return this;
+        }
+        public Integer getEnableDays() {
+            return this.enableDays;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setFlowCn(Long flowCn) {
+            this.flowCn = flowCn;
+            return this;
+        }
+        public Long getFlowCn() {
+            return this.flowCn;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setFlowIntl(Long flowIntl) {
+            this.flowIntl = flowIntl;
+            return this;
+        }
+        public Long getFlowIntl() {
+            return this.flowIntl;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setIpCountCn(Integer ipCountCn) {
+            this.ipCountCn = ipCountCn;
+            return this;
+        }
+        public Integer getIpCountCn() {
+            return this.ipCountCn;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setIpCountIntl(Integer ipCountIntl) {
+            this.ipCountIntl = ipCountIntl;
+            return this;
+        }
+        public Integer getIpCountIntl() {
+            return this.ipCountIntl;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setMemberUid(String memberUid) {
+            this.memberUid = memberUid;
+            return this;
+        }
+        public String getMemberUid() {
+            return this.memberUid;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setStandardAssetsFlowCn(Long standardAssetsFlowCn) {
+            this.standardAssetsFlowCn = standardAssetsFlowCn;
+            return this;
+        }
+        public Long getStandardAssetsFlowCn() {
+            return this.standardAssetsFlowCn;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setStandardAssetsFlowIntl(Long standardAssetsFlowIntl) {
+            this.standardAssetsFlowIntl = standardAssetsFlowIntl;
+            return this;
+        }
+        public Long getStandardAssetsFlowIntl() {
+            return this.standardAssetsFlowIntl;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList setUid(String uid) {
+            this.uid = uid;
+            return this;
+        }
+        public String getUid() {
+            return this.uid;
         }
 
     }

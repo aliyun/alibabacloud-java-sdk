@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyContentRequest extends TeaModel {
     /**
-     * <p>The content of the policy.</p>
+     * <p>The policy content.</p>
      */
     @NameInMap("Content")
     public ModifyPolicyContentRequestContent content;
@@ -553,7 +553,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The action triggered if the rule is matched. Valid value:</p>
+         * <p>The action triggered if the rule is matched. Valid values:</p>
          * <ul>
          * <li><strong>drop</strong>: The traffic is discarded.</li>
          * </ul>
@@ -717,9 +717,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
         /**
          * <p>The type of the source rate limit. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: the PPS limit on source IP addresses.</li>
+         * <li><strong>3</strong>: the pps limit on source IP addresses.</li>
          * <li><strong>4</strong>: the bandwidth limit on source IP addresses.</li>
-         * <li><strong>5</strong>: the PPS limit on source SYN packets.</li>
+         * <li><strong>5</strong>: the pps limit on source SYN packets.</li>
          * <li><strong>6</strong>: the bandwidth limit on source SYN packets.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -780,7 +780,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer bps;
 
         /**
-         * <p>The packets per second (PPS) limit on source IP addresses.</p>
+         * <p>The packets per second (pps) limit on source IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -798,7 +798,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer synBps;
 
         /**
-         * <p>The PPS limit on source SYN packets.</p>
+         * <p>The pps limit on source SYN packets.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>

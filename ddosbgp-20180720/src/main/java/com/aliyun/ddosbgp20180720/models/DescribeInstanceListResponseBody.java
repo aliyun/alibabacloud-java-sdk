@@ -58,6 +58,9 @@ public class DescribeInstanceListResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceListResponseBodyInstanceListAutoProtectCondition extends TeaModel {
+        /**
+         * <p>The events that trigger automatic association.</p>
+         */
         @NameInMap("Events")
         public java.util.List<String> events;
 
@@ -111,9 +114,12 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The type of the instance.</p>
          * <ul>
-         * <li><strong>ddos_ddosorigin_public_cn</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com)</li>
-         * <li><strong>ddos_ddosorigin_public_intl</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com)</li>
+         * <li><strong>ddos_ddosorigin_public_cn</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com).</li>
+         * <li><strong>ddos_ddosorigin_public_intl</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com).</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ddos_ddosorigin_public_cn</p>
          */
         @NameInMap("CommodityType")
         public String commodityType;
@@ -126,6 +132,9 @@ public class DescribeInstanceListResponseBody extends TeaModel {
          * <li><strong>3</strong>: The instance supports public IP addresses in regions outside the Chinese mainland.</li>
          * <li><strong>4</strong>: The instance supports public IP addresses in a region in or outside the Chinese mainland.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CoverageType")
         public Integer coverageType;

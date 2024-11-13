@@ -39,7 +39,7 @@ public class ModifyPolicyShrinkRequest extends TeaModel {
     public Integer actionType;
 
     /**
-     * <p>The content of the policy.</p>
+     * <p>The policy content.</p>
      */
     @NameInMap("Content")
     public String contentShrink;

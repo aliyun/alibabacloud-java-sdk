@@ -50,7 +50,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds IP addresses to an Anti-DDoS Origin Enterprise instance.</p>
+     * <p>Adds IP addresses to an Anti-DDoS Origin instance.</p>
      * 
      * @param request AddIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -94,7 +94,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds IP addresses to an Anti-DDoS Origin Enterprise instance.</p>
+     * <p>Adds IP addresses to an Anti-DDoS Origin instance.</p>
      * 
      * @param request AddIpRequest
      * @return AddIpResponse
@@ -667,7 +667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes specific IP addresses from an Anti-DDoS Origin Enterprise instance.</p>
+     * <p>Removes specific IP addresses from an Anti-DDoS Origin instance.</p>
      * 
      * @param request DeleteIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -714,7 +714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes specific IP addresses from an Anti-DDoS Origin Enterprise instance.</p>
+     * <p>Removes specific IP addresses from an Anti-DDoS Origin instance.</p>
      * 
      * @param request DeleteIpRequest
      * @return DeleteIpResponse
@@ -1299,6 +1299,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the specifications of a specific Anti-DDoS Origin instance.</p>
+     * 
      * @param request DescribeInstanceSpecsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceSpecsResponse
@@ -1336,6 +1339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the specifications of a specific Anti-DDoS Origin instance.</p>
+     * 
      * @param request DescribeInstanceSpecsRequest
      * @return DescribeInstanceSpecsResponse
      */
@@ -1730,7 +1736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the regions of cloud assets that are supported by an Anti-DDoS Origin instance.</p>
+     * <p>Queries the regions of assets that can be protected by Anti-DDoS Origin Enterprise in a specific region.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1766,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the regions of cloud assets that are supported by an Anti-DDoS Origin instance.</p>
+     * <p>Queries the regions of assets that can be protected by Anti-DDoS Origin Enterprise in a specific region.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
