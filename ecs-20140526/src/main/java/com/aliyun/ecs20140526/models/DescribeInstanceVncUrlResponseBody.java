@@ -16,7 +16,7 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
     /**
      * <p>The VNC logon address.</p>
      * <blockquote>
-     * <p> **The address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the address expires and you must recall the operation to obtain a new address.</p>
+     * <p> The VNC logon address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the VNC logon address expires and you must call the DescribeInstanceVncUrl operation to obtain a new logon address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

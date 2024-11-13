@@ -123,6 +123,12 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaxResults")
+    public Long maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -288,6 +294,22 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeInstanceHistoryEventsRequest setOwnerAccount(String ownerAccount) {

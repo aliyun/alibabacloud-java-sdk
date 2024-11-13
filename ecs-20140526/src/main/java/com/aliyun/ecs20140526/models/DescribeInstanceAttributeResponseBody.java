@@ -203,7 +203,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Indicates whether the instance is I/O optimized.</p>
+     * <p>Indicates whether the ECS instance is I/O optimized. Valid values:</p>
+     * <ul>
+     * <li>optimized: The ECS instance is I/O optimized.</li>
+     * <li>none: The ECS instance is not I/O optimized.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

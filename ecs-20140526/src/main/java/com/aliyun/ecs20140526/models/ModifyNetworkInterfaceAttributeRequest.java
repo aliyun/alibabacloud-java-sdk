@@ -127,6 +127,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SourceDestCheck")
     public Boolean sourceDestCheck;
 

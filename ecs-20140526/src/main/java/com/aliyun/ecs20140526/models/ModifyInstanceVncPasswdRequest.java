@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVncPasswdRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the ECS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyInstanceVncPasswdRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new VNC password of the instance.</p>
+     * <p>The new VNC password of the ECS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

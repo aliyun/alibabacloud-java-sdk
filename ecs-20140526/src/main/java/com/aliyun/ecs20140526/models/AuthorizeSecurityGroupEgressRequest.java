@@ -120,7 +120,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Security group rule N. Valid values of N: 1 to 100.</p>
+     * <p>The security group rules. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<AuthorizeSecurityGroupEgressRequestPermissions> permissions;
@@ -393,7 +393,6 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public static class AuthorizeSecurityGroupEgressRequestPermissions extends TeaModel {
         /**
          * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -403,7 +402,6 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
 
         /**
          * <p>The destination IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -412,17 +410,16 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String destCidrIp;
 
         /**
-         * <p>The ID of the destination security group that is specified in the security group rule.</p>
+         * <p>The ID of the destination security group.</p>
          * <ul>
          * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
          * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
          * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
          * </ul>
-         * <p>Valid values of N: 1 to 100.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>In advanced security groups, security groups cannot be used as authorization objects in security group rules.</li>
-         * <li>In each basic security group, up to 20 security groups can be used as authorization objects.</li>
+         * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
+         * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,12 +429,11 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String destGroupId;
 
         /**
-         * <p>The Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
+         * <p>The Alibaba Cloud account that manages the destination security group.</p>
          * <ul>
          * <li>If both <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</li>
-         * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerAccount</code> is ignored.</li>
+         * <li>If <code>DestCidrIp</code> is configured, <code>DestGroupOwnerAccount</code> is ignored.</li>
          * </ul>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
@@ -446,12 +442,11 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String destGroupOwnerAccount;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
+         * <p>The ID of the Alibaba Cloud account that manages the destination security group.</p>
          * <ul>
          * <li>If both <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</li>
          * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is ignored.</li>
          * </ul>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678910</p>
@@ -460,13 +455,12 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public Long destGroupOwnerId;
 
         /**
-         * <p>The ID of the destination prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
+         * <p>The ID of the destination prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
          * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
          * </ul>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -484,7 +478,6 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <li>GRE.</li>
          * <li>ALL: All protocols are supported.</li>
          * </ul>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -494,9 +487,8 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
 
         /**
          * <p>The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * <blockquote>
-         * <p> This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -508,9 +500,8 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * <blockquote>
-         * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -526,13 +517,12 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * </li>
          * <li><p>intranet: internal NIC.</p>
          * <ul>
-         * <li>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.</li>
-         * <li>If you specify only DestGroupId when you configure access permissions between security groups, you must set this parameter to intranet.</li>
+         * <li>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be changed.</li>
+         * <li>If you specify only DestGroupId to create a rule that controls access to the specified security group, you must set this parameter to intranet.</li>
          * </ul>
          * </li>
          * </ul>
          * <p>Default value: internet.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>intranet</p>
@@ -543,11 +533,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The action of the security group rule. Valid values:</p>
          * <ul>
-         * <li>accept: allows outbound traffic.</li>
-         * <li>drop: denies outbound traffic and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+         * <li>accept: allows outbound access.</li>
+         * <li>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
          * </ul>
          * <p>Default value: accept.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -560,10 +549,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <ul>
          * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
          * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-         * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+         * <li>If the IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.</li>
+         * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
          * </ul>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>
@@ -574,7 +562,6 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
          * <p>Default value: 1.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -585,7 +572,6 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -599,10 +585,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
          * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
          * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+         * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
          * </ul>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
-         * <p>Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>

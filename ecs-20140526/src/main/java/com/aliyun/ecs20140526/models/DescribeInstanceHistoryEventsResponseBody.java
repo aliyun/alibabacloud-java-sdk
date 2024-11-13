@@ -10,6 +10,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     @NameInMap("InstanceSystemEventSet")
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The page number.</p>
      * 
@@ -57,6 +60,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet getInstanceSystemEventSet() {
         return this.instanceSystemEventSet;
+    }
+
+    public DescribeInstanceHistoryEventsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeInstanceHistoryEventsResponseBody setPageNumber(Integer pageNumber) {
