@@ -94,6 +94,12 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("PolicyRemark")
         public String policyRemark;
 

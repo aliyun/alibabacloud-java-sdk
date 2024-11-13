@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
     /**
-     * <p>The specifications of the Anti-DDoS Origin Enterprise instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.</p>
+     * <p>The specifications of the Anti-DDoS Origin instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.</p>
      */
     @NameInMap("InstanceSpecs")
     public java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs;
@@ -60,6 +60,28 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer bindIpCount;
 
         /**
+         * <p>The burstable clean bandwidth. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("ElasticBwMbps")
+        public Integer elasticBwMbps;
+
+        /**
+         * <p>The metering method of burstable clean bandwidth. Valid values:</p>
+         * <ul>
+         * <li><strong>month</strong>: the monthly 95th percentile metering method.</li>
+         * <li><strong>day</strong>: the daily 95th percentile metering method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
+        @NameInMap("ElasticBwMode")
+        public String elasticBwMode;
+
+        /**
          * <p>The burstable protection bandwidth of each protected IP address. Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
@@ -96,7 +118,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer normalBandwidth;
 
         /**
-         * <p>The burstable protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.</p>
+         * <p>The burstable protection bandwidth of the Anti-DDoS Origin instance. Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -105,7 +127,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer packAdvThre;
 
         /**
-         * <p>The basic protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.</p>
+         * <p>The basic protection bandwidth of the Anti-DDoS Origin instance. Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -132,6 +154,22 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
         public Integer getBindIpCount() {
             return this.bindIpCount;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecsPackConfig setElasticBwMbps(Integer elasticBwMbps) {
+            this.elasticBwMbps = elasticBwMbps;
+            return this;
+        }
+        public Integer getElasticBwMbps() {
+            return this.elasticBwMbps;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecsPackConfig setElasticBwMode(String elasticBwMode) {
+            this.elasticBwMode = elasticBwMode;
+            return this;
+        }
+        public String getElasticBwMode() {
+            return this.elasticBwMode;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecsPackConfig setIpAdvanceThre(Integer ipAdvanceThre) {
@@ -213,7 +251,19 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer defenseTimesPercent;
 
         /**
-         * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
+         * <p>Indicates whether the instance is downgraded. Valid value:</p>
+         * <ul>
+         * <li><strong>8</strong>: The instance is downgraded due to excessive bandwidth usage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("DowngradeStatus")
+        public Integer downgradeStatus;
+
+        /**
+         * <p>The ID of the Anti-DDoS Origin instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ddosbgp-cn-n6w1r7nz****</p>
@@ -235,15 +285,15 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer isFullDefenseMode;
 
         /**
-         * <p>The configurations of the Anti-DDoS Origin Enterprise instance, including the number of protected IP addresses and protection bandwidth.</p>
+         * <p>The configurations of the Anti-DDoS Origin instance, including the number of protected IP addresses and protection bandwidth.</p>
          */
         @NameInMap("PackConfig")
         public DescribeInstanceSpecsResponseBodyInstanceSpecsPackConfig packConfig;
 
         /**
-         * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
+         * <p>The region ID of the Anti-DDoS Origin instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the name of the region.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the name of the region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,6 +338,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
         public Integer getDefenseTimesPercent() {
             return this.defenseTimesPercent;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setDowngradeStatus(Integer downgradeStatus) {
+            this.downgradeStatus = downgradeStatus;
+            return this;
+        }
+        public Integer getDowngradeStatus() {
+            return this.downgradeStatus;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setInstanceId(String instanceId) {

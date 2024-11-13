@@ -31,12 +31,28 @@ public class ListPolicyRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The service type. Valid values:</p>
+     * <ul>
+     * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+     * <li><strong>slb</strong>: Server Load Balancer (SLB).</li>
+     * <li><strong>eip</strong>: Elastic IP Address (EIP).</li>
+     * <li><strong>gf-eip</strong>: EIP with Anti-DDoS (Enhanced) enabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only if Type is set to <code>default</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The type of the policy. Valid values:</p>
      * <ul>
+     * <li><strong>default</strong>: the default mitigation policy.</li>
      * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
      * <li><strong>l4</strong>: port-specific mitigation policies.</li>
      * </ul>

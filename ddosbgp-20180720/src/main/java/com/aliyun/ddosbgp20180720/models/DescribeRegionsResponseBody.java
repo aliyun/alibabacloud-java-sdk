@@ -14,13 +14,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about regions of the cloud assets that are supported by the Anti-DDoS Origin instance. The information includes region IDs and names.</p>
+     * <p>The information about the regions of cloud assets that can be protected by Anti-DDoS Origin. The information includes region IDs and names.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F7CA8B4E-FB15-4336-A351-8DC29D66EA82</p>
@@ -29,10 +29,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The English name of the region where the cloud assets reside.</p>
+         * <p>The English name of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>China (Hangzhou)</p>
@@ -98,7 +98,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the region where the cloud assets reside.</p>
+         * <p>The Chinese name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东1（杭州）</p>
          */
         @NameInMap("RegionName")
         public String regionName;

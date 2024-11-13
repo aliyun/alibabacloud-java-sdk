@@ -26,6 +26,9 @@ public class DescribeInstanceListRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The mitigation plan of the Anti-DDoS Origin instance.</p>
+     */
     @NameInMap("InstanceTypeList")
     public java.util.List<String> instanceTypeList;
 
@@ -125,6 +128,9 @@ public class DescribeInstanceListRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags that are added to the Anti-DDoS Origin instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeInstanceListRequestTag> tag;
 
@@ -239,7 +245,7 @@ public class DescribeInstanceListRequest extends TeaModel {
 
     public static class DescribeInstanceListRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the Anti-DDoS Origin instance to query.</p>
+         * <p>The key of the tag that is added to the Anti-DDoS Origin instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -248,7 +254,7 @@ public class DescribeInstanceListRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the Anti-DDoS Origin instance to query.</p>
+         * <p>The value of the tag that is added to the Anti-DDoS Origin instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test-value</p>

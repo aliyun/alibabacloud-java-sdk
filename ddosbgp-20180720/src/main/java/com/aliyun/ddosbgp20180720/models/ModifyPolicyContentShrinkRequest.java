@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyContentShrinkRequest extends TeaModel {
     /**
-     * <p>The content of the policy.</p>
+     * <p>The policy content.</p>
      */
     @NameInMap("Content")
     public String contentShrink;
