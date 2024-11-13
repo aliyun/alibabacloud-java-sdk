@@ -751,6 +751,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>数据收集-低价航班信息</p>
+     * 
+     * @param tmpReq CollectFlightLowestPriceRequest
+     * @param headers CollectFlightLowestPriceHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CollectFlightLowestPriceResponse
+     */
+    public CollectFlightLowestPriceResponse collectFlightLowestPriceWithOptions(CollectFlightLowestPriceRequest tmpReq, CollectFlightLowestPriceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CollectFlightLowestPriceShrinkRequest request = new CollectFlightLowestPriceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lowestPriceFlightList)) {
+            request.lowestPriceFlightListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lowestPriceFlightList, "lowestPriceFlightList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lowestPriceFlightListShrink)) {
+            body.put("lowestPriceFlightList", request.lowestPriceFlightListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketAccessToken)) {
+            realHeaders.put("x-acs-airticket-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketLanguage)) {
+            realHeaders.put("x-acs-airticket-language", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CollectFlightLowestPrice"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/airticket/v1/data-collect/flight-lowest-price"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CollectFlightLowestPriceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>数据收集-低价航班信息</p>
+     * 
+     * @param request CollectFlightLowestPriceRequest
+     * @return CollectFlightLowestPriceResponse
+     */
+    public CollectFlightLowestPriceResponse collectFlightLowestPrice(CollectFlightLowestPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CollectFlightLowestPriceHeaders headers = new CollectFlightLowestPriceHeaders();
+        return this.collectFlightLowestPriceWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Enrich supports two modes:</p>
      * <ol>
