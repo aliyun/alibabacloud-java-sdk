@@ -6,57 +6,82 @@ import com.aliyun.tea.*;
 public class DescribeDiskEventsRequest extends TeaModel {
     /**
      * <p>The type of the disk. Valid values:</p>
-     * <br>
-     * <p>*   cloud_efficiency: ultra disk.</p>
-     * <p>*   cloud_ssd: standard SSD.</p>
-     * <p>*   cloud_essd: enhanced SSD (ESSD).</p>
+     * <ul>
+     * <li>cloud_efficiency: ultra disk.</li>
+     * <li>cloud_ssd: standard SSD.</li>
+     * <li>cloud_essd: enhanced SSD (ESSD).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("DiskCategory")
     public String diskCategory;
 
     /**
      * <p>The ID of the disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp67acfmxazb4p****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-01T05:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default values:</p>
-     * <br>
-     * <p>*   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.</p>
-     * <p>*   If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * <ul>
+     * <li>If this parameter is not specified or is set to a value smaller than 10, the default value is 10.</li>
+     * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in this request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in this request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID of the disk. You can call the [DescribeRegions](~~354276~~) operation to query the list of regions that support CloudLens for EBS.</p>
+     * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the list of regions that support CloudLens for EBS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-01T03:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The event type. Set the value to DataNeedProtect, which indicates that the disk data needs to be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DataNeedProtect</p>
      */
     @NameInMap("Type")
     public String type;

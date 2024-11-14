@@ -6,44 +6,67 @@ import com.aliyun.tea.*;
 public class DescribeDiskMonitorDataRequest extends TeaModel {
     /**
      * <p>The ID of the disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp67acfmxazb4p****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+     * <p>The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-01T05:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The interval at which the near real-time monitoring data is collected. Unit: seconds. Valid values:</p>
-     * <br>
-     * <p>*   5</p>
-     * <p>*   60</p>
-     * <br>
+     * <ul>
+     * <li>5</li>
+     * <li>60</li>
+     * </ul>
      * <p>Default value: 5.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Period")
     public Long period;
 
     /**
      * <p>The region ID of the disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+     * <p>The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-01T03:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The type of the monitoring data. Valid values:</p>
-     * <br>
-     * <p>*   basic: baseline performance data.</p>
-     * <p>*   pro: burst performance data, such as burst I/O operations.</p>
+     * <ul>
+     * <li>basic: baseline performance data.</li>
+     * <li>pro: burst performance data, such as burst I/O operations.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>basic</p>
      */
     @NameInMap("Type")
     public String type;

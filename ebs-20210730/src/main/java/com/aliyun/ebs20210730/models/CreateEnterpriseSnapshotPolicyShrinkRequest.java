@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -18,36 +21,52 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("Desc")
     public String desc;
 
     /**
      * <p>The name of the policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The snapshot retention rule.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RetainRule")
     public String retainRuleShrink;
 
     /**
      * <p>The rule for scheduling.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Schedule")
     public String scheduleShrink;
@@ -60,10 +79,15 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>The status of the policy. Valid values:</p>
-     * <br>
-     * <p>- ENABLED: Enable snapshot policy execution.</p>
-     * <br>
-     * <p>- DISABLED: Disable snapshot policy execution.</p>
+     * <ul>
+     * <li><p>ENABLED: Enable snapshot policy execution.</p>
+     * </li>
+     * <li><p>DISABLED: Disable snapshot policy execution.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ENABLED</p>
      */
     @NameInMap("State")
     public String state;
@@ -82,8 +106,13 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>Binding target type, valid value:</p>
-     * <br>
-     * <p>- DISK</p>
+     * <ul>
+     * <li>DISK</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DISK</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -200,16 +229,22 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyShrinkRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

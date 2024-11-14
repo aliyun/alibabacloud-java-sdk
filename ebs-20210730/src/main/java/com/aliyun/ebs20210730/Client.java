@@ -27,16 +27,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added only to a replication pair-consistent group that replicates in the same direction as the replication pair.
-      * *   Before you can add a replication pair to a replication pair-consistent group, make sure that the pair and the group are in the **Created** (`created`) or **Stopped** (`stopped`) state.
-      * *   Up to 17 replication pairs can be added to a single replication pair-consistent group.
-      * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
-      *
-      * @param request AddDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AddDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added only to a replication pair-consistent group that replicates in the same direction as the replication pair.</li>
+     * <li>Before you can add a replication pair to a replication pair-consistent group, make sure that the pair and the group are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * <li>Up to 17 replication pairs can be added to a single replication pair-consistent group.</li>
+     * <li>After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a replication pair to a replication pair-consistent group. You can use a replication pair-consistent group to batch manage replication pairs. When you call this operation, you can specify parameters, such as ReplicaGroupId, ReplicaPairId, and ClientToken, in the request.</p>
+     * 
+     * @param request AddDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDiskReplicaPairResponse
      */
     public AddDiskReplicaPairResponse addDiskReplicaPairWithOptions(AddDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -75,15 +81,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added only to a replication pair-consistent group that replicates in the same direction as the replication pair.
-      * *   Before you can add a replication pair to a replication pair-consistent group, make sure that the pair and the group are in the **Created** (`created`) or **Stopped** (`stopped`) state.
-      * *   Up to 17 replication pairs can be added to a single replication pair-consistent group.
-      * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
-      *
-      * @param request AddDiskReplicaPairRequest
-      * @return AddDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added only to a replication pair-consistent group that replicates in the same direction as the replication pair.</li>
+     * <li>Before you can add a replication pair to a replication pair-consistent group, make sure that the pair and the group are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * <li>Up to 17 replication pairs can be added to a single replication pair-consistent group.</li>
+     * <li>After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a replication pair to a replication pair-consistent group. You can use a replication pair-consistent group to batch manage replication pairs. When you call this operation, you can specify parameters, such as ReplicaGroupId, ReplicaPairId, and ClientToken, in the request.</p>
+     * 
+     * @param request AddDiskReplicaPairRequest
+     * @return AddDiskReplicaPairResponse
      */
     public AddDiskReplicaPairResponse addDiskReplicaPair(AddDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -91,12 +103,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @param request ApplyLensServiceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ApplyLensServiceResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables CloudLens for EBS.</p>
+     * 
+     * @param request ApplyLensServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyLensServiceResponse
      */
     public ApplyLensServiceResponse applyLensServiceWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -115,16 +131,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @return ApplyLensServiceResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables CloudLens for EBS.</p>
+     * @return ApplyLensServiceResponse
      */
     public ApplyLensServiceResponse applyLensService() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.applyLensServiceWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Bind disks into a enterprise-level snapshot policy.</p>
+     * 
+     * @param request BindEnterpriseSnapshotPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindEnterpriseSnapshotPolicyResponse
+     */
     public BindEnterpriseSnapshotPolicyResponse bindEnterpriseSnapshotPolicyWithOptions(BindEnterpriseSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -161,18 +188,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindEnterpriseSnapshotPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Bind disks into a enterprise-level snapshot policy.</p>
+     * 
+     * @param request BindEnterpriseSnapshotPolicyRequest
+     * @return BindEnterpriseSnapshotPolicyResponse
+     */
     public BindEnterpriseSnapshotPolicyResponse bindEnterpriseSnapshotPolicy(BindEnterpriseSnapshotPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindEnterpriseSnapshotPolicyWithOptions(request, runtime);
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @param request CancelLensServiceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CancelLensServiceResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables CloudLens for EBS.</p>
+     * 
+     * @param request CancelLensServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelLensServiceResponse
      */
     public CancelLensServiceResponse cancelLensServiceWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -191,16 +229,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @return CancelLensServiceResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables CloudLens for EBS.</p>
+     * @return CancelLensServiceResponse
      */
     public CancelLensServiceResponse cancelLensService() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelLensServiceWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which an Elastic Block Storage (EBS) resource belongs.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -241,11 +290,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which an Elastic Block Storage (EBS) resource belongs.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Clears the disaster recovery drills that were initiated from the secondary disk of a replication pair and deletes the auto-created drill disks.</p>
+     * 
+     * @param request ClearPairDrillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClearPairDrillResponse
+     */
     public ClearPairDrillResponse clearPairDrillWithOptions(ClearPairDrillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -278,11 +342,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ClearPairDrillResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Clears the disaster recovery drills that were initiated from the secondary disk of a replication pair and deletes the auto-created drill disks.</p>
+     * 
+     * @param request ClearPairDrillRequest
+     * @return ClearPairDrillResponse
+     */
     public ClearPairDrillResponse clearPairDrill(ClearPairDrillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.clearPairDrillWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Clears the disaster recovery drills that were initiated from the secondary disks of a replication pair-consistent group and deletes the auto-created drill disks.</p>
+     * 
+     * @param request ClearReplicaGroupDrillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClearReplicaGroupDrillResponse
+     */
     public ClearReplicaGroupDrillResponse clearReplicaGroupDrillWithOptions(ClearReplicaGroupDrillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -315,20 +394,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ClearReplicaGroupDrillResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Clears the disaster recovery drills that were initiated from the secondary disks of a replication pair-consistent group and deletes the auto-created drill disks.</p>
+     * 
+     * @param request ClearReplicaGroupDrillRequest
+     * @return ClearReplicaGroupDrillResponse
+     */
     public ClearReplicaGroupDrillResponse clearReplicaGroupDrill(ClearReplicaGroupDrillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.clearReplicaGroupDrillWithOptions(request, runtime);
     }
 
     /**
-      * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.
-      * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
-      * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
-      * You are charged for creating dedicated block storage clusters.
-      *
-      * @param request CreateDedicatedBlockStorageClusterRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateDedicatedBlockStorageClusterResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.</li>
+     * <li>Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.</li>
+     * <li>Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.</li>
+     * <li>You are charged for creating dedicated block storage clusters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a dedicated block storage cluster. When you call this operation, you can specify parameters, such as Azone, Capacity, Type, and PeriodUnit, in the request.</p>
+     * 
+     * @param request CreateDedicatedBlockStorageClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDedicatedBlockStorageClusterResponse
      */
     public CreateDedicatedBlockStorageClusterResponse createDedicatedBlockStorageClusterWithOptions(CreateDedicatedBlockStorageClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -391,13 +484,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.
-      * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
-      * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
-      * You are charged for creating dedicated block storage clusters.
-      *
-      * @param request CreateDedicatedBlockStorageClusterRequest
-      * @return CreateDedicatedBlockStorageClusterResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.</li>
+     * <li>Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.</li>
+     * <li>Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.</li>
+     * <li>You are charged for creating dedicated block storage clusters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a dedicated block storage cluster. When you call this operation, you can specify parameters, such as Azone, Capacity, Type, and PeriodUnit, in the request.</p>
+     * 
+     * @param request CreateDedicatedBlockStorageClusterRequest
+     * @return CreateDedicatedBlockStorageClusterResponse
      */
     public CreateDedicatedBlockStorageClusterResponse createDedicatedBlockStorageCluster(CreateDedicatedBlockStorageClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -405,17 +505,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
-      * Take note of the following items:
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   Replication pair-consistent groups can be used to implement disaster recovery across zones within the same region and disaster recovery across regions.
-      * *   A replication pair and a replication pair-consistent group can replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added to only a replication pair-consistent group that replicates in the same direction as the replication pair.
-      * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs instead of their original RPOs.
-      *
-      * @param request CreateDiskReplicaGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
+     * Take note of the following items:</p>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Replication pair-consistent groups can be used to implement disaster recovery across zones within the same region and disaster recovery across regions.</li>
+     * <li>A replication pair and a replication pair-consistent group can replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added to only a replication pair-consistent group that replicates in the same direction as the replication pair.</li>
+     * <li>After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs instead of their original RPOs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a replication pair-consistent group.</p>
+     * 
+     * @param request CreateDiskReplicaGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDiskReplicaGroupResponse
      */
     public CreateDiskReplicaGroupResponse createDiskReplicaGroupWithOptions(CreateDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -482,16 +588,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
-      * Take note of the following items:
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   Replication pair-consistent groups can be used to implement disaster recovery across zones within the same region and disaster recovery across regions.
-      * *   A replication pair and a replication pair-consistent group can replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added to only a replication pair-consistent group that replicates in the same direction as the replication pair.
-      * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs instead of their original RPOs.
-      *
-      * @param request CreateDiskReplicaGroupRequest
-      * @return CreateDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
+     * Take note of the following items:</p>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Replication pair-consistent groups can be used to implement disaster recovery across zones within the same region and disaster recovery across regions.</li>
+     * <li>A replication pair and a replication pair-consistent group can replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added to only a replication pair-consistent group that replicates in the same direction as the replication pair.</li>
+     * <li>After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs instead of their original RPOs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a replication pair-consistent group.</p>
+     * 
+     * @param request CreateDiskReplicaGroupRequest
+     * @return CreateDiskReplicaGroupResponse
      */
     public CreateDiskReplicaGroupResponse createDiskReplicaGroup(CreateDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -499,16 +611,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
-      * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
-      * Before you call this operation, take note of the following items:
-      * *   Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the [CreateDisk](~~25513~~) operation to create disks.
-      * *   The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
-      * *   After you call this operation to create a replication pair, you must call the [StartDiskReplicaPair](~~354205~~) operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.
-      *
-      * @param request CreateDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateDiskReplicaPairResponse
+     * <b>description</b> :
+     * <p>Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
+     * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
+     * Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the <a href="https://help.aliyun.com/document_detail/25513.html">CreateDisk</a> operation to create disks.</li>
+     * <li>The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.</li>
+     * <li>After you call this operation to create a replication pair, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a replication pair to asynchronously replicate data between disks.</p>
+     * 
+     * @param request CreateDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDiskReplicaPairResponse
      */
     public CreateDiskReplicaPairResponse createDiskReplicaPairWithOptions(CreateDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -595,21 +713,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
-      * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
-      * Before you call this operation, take note of the following items:
-      * *   Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the [CreateDisk](~~25513~~) operation to create disks.
-      * *   The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
-      * *   After you call this operation to create a replication pair, you must call the [StartDiskReplicaPair](~~354205~~) operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.
-      *
-      * @param request CreateDiskReplicaPairRequest
-      * @return CreateDiskReplicaPairResponse
+     * <b>description</b> :
+     * <p>Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
+     * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
+     * Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the <a href="https://help.aliyun.com/document_detail/25513.html">CreateDisk</a> operation to create disks.</li>
+     * <li>The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.</li>
+     * <li>After you call this operation to create a replication pair, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a replication pair to asynchronously replicate data between disks.</p>
+     * 
+     * @param request CreateDiskReplicaPairRequest
+     * @return CreateDiskReplicaPairResponse
      */
     public CreateDiskReplicaPairResponse createDiskReplicaPair(CreateDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Create an enterprise-level snapshot policy</p>
+     * 
+     * @param tmpReq CreateEnterpriseSnapshotPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEnterpriseSnapshotPolicyResponse
+     */
     public CreateEnterpriseSnapshotPolicyResponse createEnterpriseSnapshotPolicyWithOptions(CreateEnterpriseSnapshotPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateEnterpriseSnapshotPolicyShrinkRequest request = new CreateEnterpriseSnapshotPolicyShrinkRequest();
@@ -704,66 +836,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEnterpriseSnapshotPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Create an enterprise-level snapshot policy</p>
+     * 
+     * @param request CreateEnterpriseSnapshotPolicyRequest
+     * @return CreateEnterpriseSnapshotPolicyResponse
+     */
     public CreateEnterpriseSnapshotPolicyResponse createEnterpriseSnapshotPolicy(CreateEnterpriseSnapshotPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEnterpriseSnapshotPolicyWithOptions(request, runtime);
     }
 
     /**
-      * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
-      *
-      * @param request DeleteDiskRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteDiskResponse
-     */
-    public DeleteDiskResponse deleteDiskWithOptions(DeleteDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
-            query.put("DiskId", request.diskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteDisk"),
-            new TeaPair("version", "2021-07-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDiskResponse());
-    }
-
-    /**
-      * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
-      *
-      * @param request DeleteDiskRequest
-      * @return DeleteDiskResponse
-     */
-    public DeleteDiskResponse deleteDisk(DeleteDiskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteDiskWithOptions(request, runtime);
-    }
-
-    /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.
-      * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failovered** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
-      *
-      * @param request DeleteDiskReplicaGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.</li>
+     * <li>The replication pair-consistent group that you want to delete must be in the <strong>Created</strong> (<code>created</code>), <strong>Creation Failed</strong> (<code>create_failed</code>), <strong>Stopped</strong> (<code>stopped</code>), <strong>Failovered</strong> (<code>failovered</code>), <strong>Deleting</strong> (<code>deleting</code>), <strong>Deletion Failed</strong> (<code>delete_failed</code>), or <strong>Invalid</strong> (<code>invalid</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a replication pair-consistent group.</p>
+     * 
+     * @param request DeleteDiskReplicaGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDiskReplicaGroupResponse
      */
     public DeleteDiskReplicaGroupResponse deleteDiskReplicaGroupWithOptions(DeleteDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -798,13 +897,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.
-      * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failovered** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
-      *
-      * @param request DeleteDiskReplicaGroupRequest
-      * @return DeleteDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.</li>
+     * <li>The replication pair-consistent group that you want to delete must be in the <strong>Created</strong> (<code>created</code>), <strong>Creation Failed</strong> (<code>create_failed</code>), <strong>Stopped</strong> (<code>stopped</code>), <strong>Failovered</strong> (<code>failovered</code>), <strong>Deleting</strong> (<code>deleting</code>), <strong>Deletion Failed</strong> (<code>delete_failed</code>), or <strong>Invalid</strong> (<code>invalid</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a replication pair-consistent group.</p>
+     * 
+     * @param request DeleteDiskReplicaGroupRequest
+     * @return DeleteDiskReplicaGroupResponse
      */
     public DeleteDiskReplicaGroupResponse deleteDiskReplicaGroup(DeleteDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -812,14 +917,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failovered** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
-      * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
-      *
-      * @param request DeleteDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Stopped</strong> (<code>stopped</code>), <strong>Invalid</strong> (<code>invalid</code>), or <strong>Failovered</strong> (<code>failovered</code>) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.</li>
+     * <li>To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes replication pairs.</p>
+     * 
+     * @param request DeleteDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDiskReplicaPairResponse
      */
     public DeleteDiskReplicaPairResponse deleteDiskReplicaPairWithOptions(DeleteDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -854,19 +965,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failovered** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
-      * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
-      *
-      * @param request DeleteDiskReplicaPairRequest
-      * @return DeleteDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Stopped</strong> (<code>stopped</code>), <strong>Invalid</strong> (<code>invalid</code>), or <strong>Failovered</strong> (<code>failovered</code>) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.</li>
+     * <li>To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes replication pairs.</p>
+     * 
+     * @param request DeleteDiskReplicaPairRequest
+     * @return DeleteDiskReplicaPairResponse
      */
     public DeleteDiskReplicaPairResponse deleteDiskReplicaPair(DeleteDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Delete a enterprise-level snapshot policy.</p>
+     * 
+     * @param request DeleteEnterpriseSnapshotPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEnterpriseSnapshotPolicyResponse
+     */
     public DeleteEnterpriseSnapshotPolicyResponse deleteEnterpriseSnapshotPolicyWithOptions(DeleteEnterpriseSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -899,22 +1024,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEnterpriseSnapshotPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Delete a enterprise-level snapshot policy.</p>
+     * 
+     * @param request DeleteEnterpriseSnapshotPolicyRequest
+     * @return DeleteEnterpriseSnapshotPolicyResponse
+     */
     public DeleteEnterpriseSnapshotPolicyResponse deleteEnterpriseSnapshotPolicy(DeleteEnterpriseSnapshotPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEnterpriseSnapshotPolicyWithOptions(request, runtime);
     }
 
     /**
-      * *   You can use one of the following methods to check the responses:
-      *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
-      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
-      *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
-      * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
-      * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
-      *
-      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDedicatedBlockStorageClusterDisksResponse
+     * <b>description</b> :
+     * <p>  You can use one of the following methods to check the responses:
+     *     *   Method 1: Use <code>NextToken</code> to configure the query token. Set the value to the <code>NextToken</code> value that is returned in the last call to the DescribeDisks operation. Then, use <code>MaxResults</code> to specify the maximum number of entries to return on each page.
+     *     *   Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return.
+     *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When <code>NextToken</code> is specified, <code>PageSize</code> and <code>PageNumber</code> do not take effect and <code>TotalCount</code> in the response is invalid.</p>
+     * <ul>
+     * <li>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the <code>Attachment</code> values in the response.
+     * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of one or more disks in a dedicated block storage cluster.</p>
+     * 
+     * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDedicatedBlockStorageClusterDisksResponse
      */
     public DescribeDedicatedBlockStorageClusterDisksResponse describeDedicatedBlockStorageClusterDisksWithOptions(DescribeDedicatedBlockStorageClusterDisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -953,15 +1091,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can use one of the following methods to check the responses:
-      *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
-      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
-      *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
-      * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
-      * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
-      *
-      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
-      * @return DescribeDedicatedBlockStorageClusterDisksResponse
+     * <b>description</b> :
+     * <p>  You can use one of the following methods to check the responses:
+     *     *   Method 1: Use <code>NextToken</code> to configure the query token. Set the value to the <code>NextToken</code> value that is returned in the last call to the DescribeDisks operation. Then, use <code>MaxResults</code> to specify the maximum number of entries to return on each page.
+     *     *   Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return.
+     *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When <code>NextToken</code> is specified, <code>PageSize</code> and <code>PageNumber</code> do not take effect and <code>TotalCount</code> in the response is invalid.</p>
+     * <ul>
+     * <li>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the <code>Attachment</code> values in the response.
+     * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of one or more disks in a dedicated block storage cluster.</p>
+     * 
+     * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+     * @return DescribeDedicatedBlockStorageClusterDisksResponse
      */
     public DescribeDedicatedBlockStorageClusterDisksResponse describeDedicatedBlockStorageClusterDisks(DescribeDedicatedBlockStorageClusterDisksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -969,14 +1113,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * >  The Dedicated Block Storage Cluster feature is available only in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
-      * *   You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions.
-      * *   We recommend that you use NextToken and MaxResults to perform paged queries. We recommend that you use MaxResults to specify the maximum number of entries to return in each request. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value that is returned in the previous call and specify MaxResults to limit the number of entries returned.
-      *
-      * @param request DescribeDedicatedBlockStorageClustersRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDedicatedBlockStorageClustersResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <blockquote>
+     * <p> The Dedicated Block Storage Cluster feature is available only in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.</p>
+     * </blockquote>
+     * <ul>
+     * <li>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions.</li>
+     * <li>We recommend that you use NextToken and MaxResults to perform paged queries. We recommend that you use MaxResults to specify the maximum number of entries to return in each request. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value that is returned in the previous call and specify MaxResults to limit the number of entries returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the dedicated block storage clusters that are created.</p>
+     * 
+     * @param request DescribeDedicatedBlockStorageClustersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDedicatedBlockStorageClustersResponse
      */
     public DescribeDedicatedBlockStorageClustersResponse describeDedicatedBlockStorageClustersWithOptions(DescribeDedicatedBlockStorageClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1049,13 +1201,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * >  The Dedicated Block Storage Cluster feature is available only in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
-      * *   You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions.
-      * *   We recommend that you use NextToken and MaxResults to perform paged queries. We recommend that you use MaxResults to specify the maximum number of entries to return in each request. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value that is returned in the previous call and specify MaxResults to limit the number of entries returned.
-      *
-      * @param request DescribeDedicatedBlockStorageClustersRequest
-      * @return DescribeDedicatedBlockStorageClustersResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <blockquote>
+     * <p> The Dedicated Block Storage Cluster feature is available only in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.</p>
+     * </blockquote>
+     * <ul>
+     * <li>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions.</li>
+     * <li>We recommend that you use NextToken and MaxResults to perform paged queries. We recommend that you use MaxResults to specify the maximum number of entries to return in each request. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value that is returned in the previous call and specify MaxResults to limit the number of entries returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the dedicated block storage clusters that are created.</p>
+     * 
+     * @param request DescribeDedicatedBlockStorageClustersRequest
+     * @return DescribeDedicatedBlockStorageClustersResponse
      */
     public DescribeDedicatedBlockStorageClustersResponse describeDedicatedBlockStorageClusters(DescribeDedicatedBlockStorageClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1063,12 +1223,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @param request DescribeDiskEventsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDiskEventsResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the risk events of a disk.</p>
+     * 
+     * @param request DescribeDiskEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskEventsResponse
      */
     public DescribeDiskEventsResponse describeDiskEventsWithOptions(DescribeDiskEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1123,11 +1287,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @param request DescribeDiskEventsRequest
-      * @return DescribeDiskEventsResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the risk events of a disk.</p>
+     * 
+     * @param request DescribeDiskEventsRequest
+     * @return DescribeDiskEventsResponse
      */
     public DescribeDiskEventsResponse describeDiskEvents(DescribeDiskEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1135,14 +1303,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: `(EndTime - StartTime)/Period`.
-      * *   You can query the monitoring data collected in the last three days. An error is returned if the time specified by `StartTime` is more than three days prior to the current time.
-      *
-      * @param request DescribeDiskMonitorDataRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDiskMonitorDataResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: <code>(EndTime - StartTime)/Period</code>.</li>
+     * <li>You can query the monitoring data collected in the last three days. An error is returned if the time specified by <code>StartTime</code> is more than three days prior to the current time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the near real-time monitoring data of a disk.</p>
+     * 
+     * @param request DescribeDiskMonitorDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskMonitorDataResponse
      */
     public DescribeDiskMonitorDataResponse describeDiskMonitorDataWithOptions(DescribeDiskMonitorDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1189,13 +1363,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: `(EndTime - StartTime)/Period`.
-      * *   You can query the monitoring data collected in the last three days. An error is returned if the time specified by `StartTime` is more than three days prior to the current time.
-      *
-      * @param request DescribeDiskMonitorDataRequest
-      * @return DescribeDiskMonitorDataResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: <code>(EndTime - StartTime)/Period</code>.</li>
+     * <li>You can query the monitoring data collected in the last three days. An error is returned if the time specified by <code>StartTime</code> is more than three days prior to the current time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the near real-time monitoring data of a disk.</p>
+     * 
+     * @param request DescribeDiskMonitorDataRequest
+     * @return DescribeDiskMonitorDataResponse
      */
     public DescribeDiskMonitorDataResponse describeDiskMonitorData(DescribeDiskMonitorDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1203,12 +1383,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @param request DescribeDiskMonitorDataListRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDiskMonitorDataListResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</p>
+     * 
+     * @param request DescribeDiskMonitorDataListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskMonitorDataListResponse
      */
     public DescribeDiskMonitorDataListResponse describeDiskMonitorDataListWithOptions(DescribeDiskMonitorDataListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1259,11 +1443,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @param request DescribeDiskMonitorDataListRequest
-      * @return DescribeDiskMonitorDataListResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</p>
+     * 
+     * @param request DescribeDiskMonitorDataListRequest
+     * @return DescribeDiskMonitorDataListResponse
      */
     public DescribeDiskMonitorDataListResponse describeDiskMonitorDataList(DescribeDiskMonitorDataListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1271,12 +1459,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To perform a paged query, set the MaxResults and NextToken parameters.
-      * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
-      *
-      * @param request DescribeDiskReplicaGroupsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDiskReplicaGroupsResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>To perform a paged query, specify the MaxResults and NextToken parameters.
+     * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of replication pair-consistent groups in a specific region.</p>
+     * 
+     * @param request DescribeDiskReplicaGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskReplicaGroupsResponse
      */
     public DescribeDiskReplicaGroupsResponse describeDiskReplicaGroupsWithOptions(DescribeDiskReplicaGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1287,6 +1480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
@@ -1335,17 +1532,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To perform a paged query, set the MaxResults and NextToken parameters.
-      * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
-      *
-      * @param request DescribeDiskReplicaGroupsRequest
-      * @return DescribeDiskReplicaGroupsResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>To perform a paged query, specify the MaxResults and NextToken parameters.
+     * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of replication pair-consistent groups in a specific region.</p>
+     * 
+     * @param request DescribeDiskReplicaGroupsRequest
+     * @return DescribeDiskReplicaGroupsResponse
      */
     public DescribeDiskReplicaGroupsResponse describeDiskReplicaGroups(DescribeDiskReplicaGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDiskReplicaGroupsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the replication progress of a replication pair.</p>
+     * 
+     * @param request DescribeDiskReplicaPairProgressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskReplicaPairProgressResponse
+     */
     public DescribeDiskReplicaPairProgressResponse describeDiskReplicaPairProgressWithOptions(DescribeDiskReplicaPairProgressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1374,26 +1584,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiskReplicaPairProgressResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the replication progress of a replication pair.</p>
+     * 
+     * @param request DescribeDiskReplicaPairProgressRequest
+     * @return DescribeDiskReplicaPairProgressResponse
+     */
     public DescribeDiskReplicaPairProgressResponse describeDiskReplicaPairProgress(DescribeDiskReplicaPairProgressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDiskReplicaPairProgressWithOptions(request, runtime);
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides in the region, information about the replication pair is displayed in the response.
-      * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
-      *
-      * @param request DescribeDiskReplicaPairsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDiskReplicaPairsResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides in the region, information about the replication pair is displayed in the response.</li>
+     * <li>If you want to perform a paged query, configure the <code>NextToken</code> and <code>MaxResults</code> parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set <code>MaxResults</code> to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about replication pairs in a specific region.</p>
+     * 
+     * @param request DescribeDiskReplicaPairsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskReplicaPairsResponse
      */
     public DescribeDiskReplicaPairsResponse describeDiskReplicaPairsWithOptions(DescribeDiskReplicaPairsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
@@ -1450,92 +1677,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides in the region, information about the replication pair is displayed in the response.
-      * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
-      *
-      * @param request DescribeDiskReplicaPairsRequest
-      * @return DescribeDiskReplicaPairsResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides in the region, information about the replication pair is displayed in the response.</li>
+     * <li>If you want to perform a paged query, configure the <code>NextToken</code> and <code>MaxResults</code> parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set <code>MaxResults</code> to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about replication pairs in a specific region.</p>
+     * 
+     * @param request DescribeDiskReplicaPairsRequest
+     * @return DescribeDiskReplicaPairsResponse
      */
     public DescribeDiskReplicaPairsResponse describeDiskReplicaPairs(DescribeDiskReplicaPairsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDiskReplicaPairsWithOptions(request, runtime);
     }
 
-    public DescribeDisksResponse describeDisksWithOptions(DescribeDisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
-            query.put("Category", request.category);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.diskIds)) {
-            query.put("DiskIds", request.diskIds);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.diskName)) {
-            query.put("DiskName", request.diskName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
-            query.put("Tag", request.tag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
-            query.put("ZoneId", request.zoneId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDisks"),
-            new TeaPair("version", "2021-07-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDisksResponse());
-    }
-
-    public DescribeDisksResponse describeDisks(DescribeDisksRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDisksWithOptions(request, runtime);
-    }
-
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about enterprise-level snapshot policies. When you call this operation, you can specify parameters, such as PolicyIds, ResourceGroupId, and Tag, in the request.</p>
+     * 
+     * @param request DescribeEnterpriseSnapshotPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEnterpriseSnapshotPolicyResponse
+     */
     public DescribeEnterpriseSnapshotPolicyResponse describeEnterpriseSnapshotPolicyWithOptions(DescribeEnterpriseSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1596,11 +1764,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEnterpriseSnapshotPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about enterprise-level snapshot policies. When you call this operation, you can specify parameters, such as PolicyIds, ResourceGroupId, and Tag, in the request.</p>
+     * 
+     * @param request DescribeEnterpriseSnapshotPolicyRequest
+     * @return DescribeEnterpriseSnapshotPolicyResponse
+     */
     public DescribeEnterpriseSnapshotPolicyResponse describeEnterpriseSnapshotPolicy(DescribeEnterpriseSnapshotPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEnterpriseSnapshotPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the risk events of a disk.</p>
+     * 
+     * @param request DescribeEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEventsResponse
+     */
     public DescribeEventsResponse describeEventsWithOptions(DescribeEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1657,11 +1840,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEventsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the risk events of a disk.</p>
+     * 
+     * @param request DescribeEventsRequest
+     * @return DescribeEventsResponse
+     */
     public DescribeEventsResponse describeEvents(DescribeEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEventsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more Elastic Block Storage (EBS) devices that you created.</p>
+     * 
+     * @param request DescribeLensMonitorDisksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLensMonitorDisksResponse
+     */
     public DescribeLensMonitorDisksResponse describeLensMonitorDisksWithOptions(DescribeLensMonitorDisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1706,18 +1904,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLensMonitorDisksResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries one or more Elastic Block Storage (EBS) devices that you created.</p>
+     * 
+     * @param request DescribeLensMonitorDisksRequest
+     * @return DescribeLensMonitorDisksResponse
+     */
     public DescribeLensMonitorDisksResponse describeLensMonitorDisks(DescribeLensMonitorDisksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLensMonitorDisksWithOptions(request, runtime);
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @param request DescribeLensServiceStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeLensServiceStatusResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询用户开通ebs数据洞察服务状态</p>
+     * 
+     * @param request DescribeLensServiceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLensServiceStatusResponse
      */
     public DescribeLensServiceStatusResponse describeLensServiceStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -1736,19 +1945,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-      *
-      * @return DescribeLensServiceStatusResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询用户开通ebs数据洞察服务状态</p>
+     * @return DescribeLensServiceStatusResponse
      */
     public DescribeLensServiceStatusResponse describeLensServiceStatus() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLensServiceStatusWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</p>
+     * 
+     * @param request DescribeMetricDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetricDataResponse
+     */
     public DescribeMetricDataResponse describeMetricDataWithOptions(DescribeMetricDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggreOps)) {
+            query.put("AggreOps", request.aggreOps);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dimensions)) {
             query.put("Dimensions", request.dimensions);
         }
@@ -1790,11 +2014,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetricDataResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</p>
+     * 
+     * @param request DescribeMetricDataRequest
+     * @return DescribeMetricDataResponse
+     */
     public DescribeMetricDataResponse describeMetricData(DescribeMetricDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMetricDataWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the disaster recovery drills that were performed on the replication pair whose secondary disk resides in a specific region.</p>
+     * 
+     * @param request DescribePairDrillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePairDrillsResponse
+     */
     public DescribePairDrillsResponse describePairDrillsWithOptions(DescribePairDrillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1843,11 +2082,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePairDrillsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the disaster recovery drills that were performed on the replication pair whose secondary disk resides in a specific region.</p>
+     * 
+     * @param request DescribePairDrillsRequest
+     * @return DescribePairDrillsResponse
+     */
     public DescribePairDrillsResponse describePairDrills(DescribePairDrillsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePairDrillsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of regions in which Elastic Block Storage (EBS) features (such as async replication, CloudLens for EBS, and Dedicated Block Storage Cluster) are supported.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1880,11 +2134,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of regions in which Elastic Block Storage (EBS) features (such as async replication, CloudLens for EBS, and Dedicated Block Storage Cluster) are supported.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the disaster recovery drills that were performed on the replication pair-consistent group whose secondary disk resides in a specific region.</p>
+     * 
+     * @param request DescribeReplicaGroupDrillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeReplicaGroupDrillsResponse
+     */
     public DescribeReplicaGroupDrillsResponse describeReplicaGroupDrillsWithOptions(DescribeReplicaGroupDrillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1933,11 +2202,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeReplicaGroupDrillsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the disaster recovery drills that were performed on the replication pair-consistent group whose secondary disk resides in a specific region.</p>
+     * 
+     * @param request DescribeReplicaGroupDrillsRequest
+     * @return DescribeReplicaGroupDrillsResponse
+     */
     public DescribeReplicaGroupDrillsResponse describeReplicaGroupDrills(DescribeReplicaGroupDrillsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeReplicaGroupDrillsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询解决方案实例默认配置</p>
+     * 
+     * @param request DescribeSolutionInstanceConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSolutionInstanceConfigurationResponse
+     */
     public DescribeSolutionInstanceConfigurationResponse describeSolutionInstanceConfigurationWithOptions(DescribeSolutionInstanceConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1974,21 +2258,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSolutionInstanceConfigurationResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询解决方案实例默认配置</p>
+     * 
+     * @param request DescribeSolutionInstanceConfigurationRequest
+     * @return DescribeSolutionInstanceConfigurationResponse
+     */
     public DescribeSolutionInstanceConfigurationResponse describeSolutionInstanceConfiguration(DescribeSolutionInstanceConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSolutionInstanceConfigurationWithOptions(request, runtime);
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), **Stopped** (`stopped`), **In Failover** (`failovering`), **Failover Failed** (`failover_failed`), or **Failovered** (`failovered`) state.
-      * *   After a failover is performed, the replication pair-consistent group enters the **Failovered** (`failovered`) state.
-      * *   Before you perform a failover, make sure that the first full data synchronization is completed between the primary site and secondary site.
-      *
-      * @param request FailoverDiskReplicaGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return FailoverDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group must be in the <strong>One-time Syncing</strong> (<code>manual_syncing</code>), <strong>Syncing</strong> (<code>syncing</code>), <strong>Normal</strong> (<code>normal</code>), <strong>Stopping</strong> (<code>stopping</code>), <strong>Stop Failed</strong> (<code>stop_failed</code>), <strong>Stopped</strong> (<code>stopped</code>), <strong>In Failover</strong> (<code>failovering</code>), <strong>Failover Failed</strong> (<code>failover_failed</code>), or <strong>Failovered</strong> (<code>failovered</code>) state.</li>
+     * <li>After a failover is performed, the replication pair-consistent group enters the <strong>Failovered</strong> (<code>failovered</code>) state.</li>
+     * <li>Before you perform a failover, make sure that the first full data synchronization is completed between the primary site and secondary site.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the failover feature for replication pairs in a replication pair-consistent group. When the primary disks of specific replication pairs in a replication pair-consistent group fail, you can call this operation to enable the read and write permissions on the secondary disks.</p>
+     * 
+     * @param request FailoverDiskReplicaGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FailoverDiskReplicaGroupResponse
      */
     public FailoverDiskReplicaGroupResponse failoverDiskReplicaGroupWithOptions(FailoverDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2023,14 +2320,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), **Stopped** (`stopped`), **In Failover** (`failovering`), **Failover Failed** (`failover_failed`), or **Failovered** (`failovered`) state.
-      * *   After a failover is performed, the replication pair-consistent group enters the **Failovered** (`failovered`) state.
-      * *   Before you perform a failover, make sure that the first full data synchronization is completed between the primary site and secondary site.
-      *
-      * @param request FailoverDiskReplicaGroupRequest
-      * @return FailoverDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group must be in the <strong>One-time Syncing</strong> (<code>manual_syncing</code>), <strong>Syncing</strong> (<code>syncing</code>), <strong>Normal</strong> (<code>normal</code>), <strong>Stopping</strong> (<code>stopping</code>), <strong>Stop Failed</strong> (<code>stop_failed</code>), <strong>Stopped</strong> (<code>stopped</code>), <strong>In Failover</strong> (<code>failovering</code>), <strong>Failover Failed</strong> (<code>failover_failed</code>), or <strong>Failovered</strong> (<code>failovered</code>) state.</li>
+     * <li>After a failover is performed, the replication pair-consistent group enters the <strong>Failovered</strong> (<code>failovered</code>) state.</li>
+     * <li>Before you perform a failover, make sure that the first full data synchronization is completed between the primary site and secondary site.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the failover feature for replication pairs in a replication pair-consistent group. When the primary disks of specific replication pairs in a replication pair-consistent group fail, you can call this operation to enable the read and write permissions on the secondary disks.</p>
+     * 
+     * @param request FailoverDiskReplicaGroupRequest
+     * @return FailoverDiskReplicaGroupResponse
      */
     public FailoverDiskReplicaGroupResponse failoverDiskReplicaGroup(FailoverDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2038,14 +2341,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   The replication pair for which you want to enable failover cannot be in the **Invalid** (`invalid`) or **Deleted** (`deleted`) state.
-      * *   After a failover is performed, the replication pair enters the **Failovered** (`failovered`) state.
-      *
-      * @param request FailoverDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return FailoverDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair for which you want to enable failover cannot be in the <strong>Invalid</strong> (<code>invalid</code>) or <strong>Deleted</strong> (<code>deleted</code>) state.</li>
+     * <li>After a failover is performed, the replication pair enters the <strong>Failovered</strong> (<code>failovered</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the failover feature for replication pairs.</p>
+     * 
+     * @param request FailoverDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FailoverDiskReplicaPairResponse
      */
     public FailoverDiskReplicaPairResponse failoverDiskReplicaPairWithOptions(FailoverDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2080,35 +2389,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   The replication pair for which you want to enable failover cannot be in the **Invalid** (`invalid`) or **Deleted** (`deleted`) state.
-      * *   After a failover is performed, the replication pair enters the **Failovered** (`failovered`) state.
-      *
-      * @param request FailoverDiskReplicaPairRequest
-      * @return FailoverDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair for which you want to enable failover cannot be in the <strong>Invalid</strong> (<code>invalid</code>) or <strong>Deleted</strong> (<code>deleted</code>) state.</li>
+     * <li>After a failover is performed, the replication pair enters the <strong>Failovered</strong> (<code>failovered</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the failover feature for replication pairs.</p>
+     * 
+     * @param request FailoverDiskReplicaPairRequest
+     * @return FailoverDiskReplicaPairResponse
      */
     public FailoverDiskReplicaPairResponse failoverDiskReplicaPair(FailoverDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.failoverDiskReplicaPairWithOptions(request, runtime);
     }
 
-    public GetDiskResponse getDiskWithOptions(GetDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Centralized Role: Obtain User Usage Report with reportId</p>
+     * 
+     * @param request GetReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetReportResponse
+     */
+    public GetReportResponse getReportWithOptions(GetReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
-            query.put("DiskId", request.diskId);
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
+            query.put("ReportType", request.reportType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
+            body.put("ReportId", request.reportId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetDisk"),
+            new TeaPair("action", "GetReport"),
             new TeaPair("version", "2021-07-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
@@ -2118,23 +2451,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDiskResponse());
-    }
-
-    public GetDiskResponse getDisk(GetDiskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDiskWithOptions(request, runtime);
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetReportResponse());
     }
 
     /**
-      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
-      * *   `ResourceId.N`
-      * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-      * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
-      *
-      * @param request ListTagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTagResourcesResponse
+     * <b>summary</b> : 
+     * <p>Centralized Role: Obtain User Usage Report with reportId</p>
+     * 
+     * @param request GetReportRequest
+     * @return GetReportResponse
+     */
+    public GetReportResponse getReport(GetReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Centralized Role: Query Historical Reports</p>
+     * 
+     * @param request ListReportsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListReportsResponse
+     */
+    public ListReportsResponse listReportsWithOptions(ListReportsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReports"),
+            new TeaPair("version", "2021-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReportsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Centralized Role: Query Historical Reports</p>
+     * 
+     * @param request ListReportsRequest
+     * @return ListReportsResponse
+     */
+    public ListReportsResponse listReports(ListReportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listReportsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Specify at least one of the following parameters or parameter pairs in a request to determine a query object:</p>
+     * <ul>
+     * <li><code>ResourceId.N</code></li>
+     * <li><code>Tag.N</code> parameter pair (<code>Tag.N.Key</code> and <code>Tag.N.Value</code>)
+     * If you set <code>Tag.N</code> and <code>ResourceId.N</code> at the same time, the EBS resources that match both the parameters are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
      */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2181,13 +2593,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
-      * *   `ResourceId.N`
-      * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-      * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
-      *
-      * @param request ListTagResourcesRequest
-      * @return ListTagResourcesResponse
+     * <b>description</b> :
+     * <p>Specify at least one of the following parameters or parameter pairs in a request to determine a query object:</p>
+     * <ul>
+     * <li><code>ResourceId.N</code></li>
+     * <li><code>Tag.N</code> parameter pair (<code>Tag.N.Key</code> and <code>Tag.N.Value</code>)
+     * If you set <code>Tag.N</code> and <code>ResourceId.N</code> at the same time, the EBS resources that match both the parameters are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
      */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2195,11 +2613,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
-      *
-      * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+     * <b>description</b> :
+     * <p>You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改专属集群属性OpenApi</p>
+     * 
+     * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDedicatedBlockStorageClusterAttributeResponse
      */
     public ModifyDedicatedBlockStorageClusterAttributeResponse modifyDedicatedBlockStorageClusterAttributeWithOptions(ModifyDedicatedBlockStorageClusterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2242,10 +2664,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
-      *
-      * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
-      * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+     * <b>description</b> :
+     * <p>You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改专属集群属性OpenApi</p>
+     * 
+     * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+     * @return ModifyDedicatedBlockStorageClusterAttributeResponse
      */
     public ModifyDedicatedBlockStorageClusterAttributeResponse modifyDedicatedBlockStorageClusterAttribute(ModifyDedicatedBlockStorageClusterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2253,13 +2679,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
-      *
-      * @param request ModifyDiskReplicaGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, or recovery point objective (RPO) of a replication pair-consistent group.</p>
+     * 
+     * @param request ModifyDiskReplicaGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDiskReplicaGroupResponse
      */
     public ModifyDiskReplicaGroupResponse modifyDiskReplicaGroupWithOptions(ModifyDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2310,12 +2742,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
-      *
-      * @param request ModifyDiskReplicaGroupRequest
-      * @return ModifyDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, or recovery point objective (RPO) of a replication pair-consistent group.</p>
+     * 
+     * @param request ModifyDiskReplicaGroupRequest
+     * @return ModifyDiskReplicaGroupResponse
      */
     public ModifyDiskReplicaGroupResponse modifyDiskReplicaGroup(ModifyDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2323,13 +2761,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Created** (`created`) or **Stopped** (`stopped`) state can have their names or descriptions modified.
-      *
-      * @param request ModifyDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state can have their names or descriptions modified.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a replication pair.</p>
+     * 
+     * @param request ModifyDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDiskReplicaPairResponse
      */
     public ModifyDiskReplicaPairResponse modifyDiskReplicaPairWithOptions(ModifyDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2380,18 +2824,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Created** (`created`) or **Stopped** (`stopped`) state can have their names or descriptions modified.
-      *
-      * @param request ModifyDiskReplicaPairRequest
-      * @return ModifyDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state can have their names or descriptions modified.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a replication pair.</p>
+     * 
+     * @param request ModifyDiskReplicaPairRequest
+     * @return ModifyDiskReplicaPairResponse
      */
     public ModifyDiskReplicaPairResponse modifyDiskReplicaPair(ModifyDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query the throughput status of a dedicated block storage cluster disk which has been set through the SetDedicatedBlockStorageClusterDiskThroughput API.</p>
+     * 
+     * @param request QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDedicatedBlockStorageClusterDiskThroughputStatusResponse
+     */
     public QueryDedicatedBlockStorageClusterDiskThroughputStatusResponse queryDedicatedBlockStorageClusterDiskThroughputStatusWithOptions(QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2426,17 +2884,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDedicatedBlockStorageClusterDiskThroughputStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query the throughput status of a dedicated block storage cluster disk which has been set through the SetDedicatedBlockStorageClusterDiskThroughput API.</p>
+     * 
+     * @param request QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest
+     * @return QueryDedicatedBlockStorageClusterDiskThroughputStatusResponse
+     */
     public QueryDedicatedBlockStorageClusterDiskThroughputStatusResponse queryDedicatedBlockStorageClusterDiskThroughputStatus(QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDedicatedBlockStorageClusterDiskThroughputStatusWithOptions(request, runtime);
     }
 
     /**
-      * Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.
-      *
-      * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
+     * <b>description</b> :
+     * <p>Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</p>
+     * 
+     * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
      */
     public QueryDedicatedBlockStorageClusterInventoryDataResponse queryDedicatedBlockStorageClusterInventoryDataWithOptions(QueryDedicatedBlockStorageClusterInventoryDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2485,10 +2954,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.
-      *
-      * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
-      * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
+     * <b>description</b> :
+     * <p>Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</p>
+     * 
+     * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
+     * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
      */
     public QueryDedicatedBlockStorageClusterInventoryDataResponse queryDedicatedBlockStorageClusterInventoryData(QueryDedicatedBlockStorageClusterInventoryDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2496,13 +2969,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
-      *
-      * @param request RemoveDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RemoveDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group from which you want to remove a replication pair must be in the <strong>Created</strong> (<code>created</code>), <strong>Stopped</strong> (<code>stopped</code>), or <strong>Invalid</strong> (<code>invalid</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a replication pair from a replication pair-consistent group. After a replication pair is removed from a replication pair-consistent group, the pair is disassociated from the group but is not deleted.</p>
+     * 
+     * @param request RemoveDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveDiskReplicaPairResponse
      */
     public RemoveDiskReplicaPairResponse removeDiskReplicaPairWithOptions(RemoveDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2541,12 +3020,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
-      *
-      * @param request RemoveDiskReplicaPairRequest
-      * @return RemoveDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group from which you want to remove a replication pair must be in the <strong>Created</strong> (<code>created</code>), <strong>Stopped</strong> (<code>stopped</code>), or <strong>Invalid</strong> (<code>invalid</code>) state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a replication pair from a replication pair-consistent group. After a replication pair is removed from a replication pair-consistent group, the pair is disassociated from the group but is not deleted.</p>
+     * 
+     * @param request RemoveDiskReplicaPairRequest
+     * @return RemoveDiskReplicaPairResponse
      */
     public RemoveDiskReplicaPairResponse removeDiskReplicaPair(RemoveDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2554,16 +3039,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group for which you want to enable reverse replication must be in the **Failovered** (`failovered`) state. You can call the `FailoverDiskReplicaPair` operation to enable failover.
-      * *   Before a reverse replication is performed, the primary disks must be detached from its associated Elastic Compute Service (ECS) instance and must be in the Unattached state. You can call the [DetachDisk](~~25516~~) operation to detach the disks.
-      * *   After you enable reverse replication, you must call the `StartDiskReplicaPair` operation again to enable the async replication feature before data can be replicated from the original secondary disks to the original primary disks.
-      * *   You can set the ReverseReplicate parameter to false to cancel the **Failovered** (`failovered`) state and restore the original replication direction.
-      *
-      * @param request ReprotectDiskReplicaGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ReprotectDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group for which you want to enable reverse replication must be in the <strong>Failovered</strong> (<code>failovered</code>) state. You can call the <code>FailoverDiskReplicaPair</code> operation to enable failover.</li>
+     * <li>Before a reverse replication is performed, the primary disks must be detached from its associated Elastic Compute Service (ECS) instance and must be in the Unattached state. You can call the <a href="https://help.aliyun.com/document_detail/25516.html">DetachDisk</a> operation to detach the disks.</li>
+     * <li>After you enable reverse replication, you must call the <code>StartDiskReplicaPair</code> operation again to enable the async replication feature before data can be replicated from the original secondary disks to the original primary disks.</li>
+     * <li>You can set the ReverseReplicate parameter to false to cancel the <strong>Failovered</strong> (<code>failovered</code>) state and restore the original replication direction.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the reverse replication feature for replication pairs that belong to a replication pair-consistent group. After reverse replication is enabled, data stored on the original secondary disks is replicated to the original primary disks. When a reverse replication is being performed, the primary and secondary sites of the replication pair-consistent group remain unchanged, but data is replicated from the secondary site to the primary site.</p>
+     * 
+     * @param request ReprotectDiskReplicaGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReprotectDiskReplicaGroupResponse
      */
     public ReprotectDiskReplicaGroupResponse reprotectDiskReplicaGroupWithOptions(ReprotectDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2602,15 +3093,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group for which you want to enable reverse replication must be in the **Failovered** (`failovered`) state. You can call the `FailoverDiskReplicaPair` operation to enable failover.
-      * *   Before a reverse replication is performed, the primary disks must be detached from its associated Elastic Compute Service (ECS) instance and must be in the Unattached state. You can call the [DetachDisk](~~25516~~) operation to detach the disks.
-      * *   After you enable reverse replication, you must call the `StartDiskReplicaPair` operation again to enable the async replication feature before data can be replicated from the original secondary disks to the original primary disks.
-      * *   You can set the ReverseReplicate parameter to false to cancel the **Failovered** (`failovered`) state and restore the original replication direction.
-      *
-      * @param request ReprotectDiskReplicaGroupRequest
-      * @return ReprotectDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group for which you want to enable reverse replication must be in the <strong>Failovered</strong> (<code>failovered</code>) state. You can call the <code>FailoverDiskReplicaPair</code> operation to enable failover.</li>
+     * <li>Before a reverse replication is performed, the primary disks must be detached from its associated Elastic Compute Service (ECS) instance and must be in the Unattached state. You can call the <a href="https://help.aliyun.com/document_detail/25516.html">DetachDisk</a> operation to detach the disks.</li>
+     * <li>After you enable reverse replication, you must call the <code>StartDiskReplicaPair</code> operation again to enable the async replication feature before data can be replicated from the original secondary disks to the original primary disks.</li>
+     * <li>You can set the ReverseReplicate parameter to false to cancel the <strong>Failovered</strong> (<code>failovered</code>) state and restore the original replication direction.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the reverse replication feature for replication pairs that belong to a replication pair-consistent group. After reverse replication is enabled, data stored on the original secondary disks is replicated to the original primary disks. When a reverse replication is being performed, the primary and secondary sites of the replication pair-consistent group remain unchanged, but data is replicated from the secondary site to the primary site.</p>
+     * 
+     * @param request ReprotectDiskReplicaGroupRequest
+     * @return ReprotectDiskReplicaGroupResponse
      */
     public ReprotectDiskReplicaGroupResponse reprotectDiskReplicaGroup(ReprotectDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2618,16 +3115,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   The replication pair for which you want to enable reverse replication must be in the **Failovered** (`failovered`) state. You can call the [FailoverDiskReplicaPair](~~354358~~) operation to enable failover.
-      * *   The primary disk must be detached from its associated Elastic Compute Service (ECS) instance and is in the Unattached state. You can call the [DetachDisk](~~25516~~) operation to detach the disk.
-      * *   After you enable reverse replication, you must call the [StartDiskReplicaPair](~~354205~~) operation again to activate the replication pair before data can be replicated from the original secondary disk to the original primary disk.
-      * *   You can set the ReverseReplicate parameter to false to cancel the **Failovered** (`failovered`) state and restore the original replication direction.
-      *
-      * @param request ReprotectDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ReprotectDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair for which you want to enable reverse replication must be in the <strong>Failovered</strong> (<code>failovered</code>) state. You can call the <a href="https://help.aliyun.com/document_detail/354358.html">FailoverDiskReplicaPair</a> operation to enable failover.</li>
+     * <li>The primary disk must be detached from its associated Elastic Compute Service (ECS) instance and is in the Unattached state. You can call the <a href="https://help.aliyun.com/document_detail/25516.html">DetachDisk</a> operation to detach the disk.</li>
+     * <li>After you enable reverse replication, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation again to activate the replication pair before data can be replicated from the original secondary disk to the original primary disk.</li>
+     * <li>You can set the ReverseReplicate parameter to false to cancel the <strong>Failovered</strong> (<code>failovered</code>) state and restore the original replication direction.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the reverse replication feature for a replication pair.</p>
+     * 
+     * @param request ReprotectDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReprotectDiskReplicaPairResponse
      */
     public ReprotectDiskReplicaPairResponse reprotectDiskReplicaPairWithOptions(ReprotectDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2666,21 +3169,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   The replication pair for which you want to enable reverse replication must be in the **Failovered** (`failovered`) state. You can call the [FailoverDiskReplicaPair](~~354358~~) operation to enable failover.
-      * *   The primary disk must be detached from its associated Elastic Compute Service (ECS) instance and is in the Unattached state. You can call the [DetachDisk](~~25516~~) operation to detach the disk.
-      * *   After you enable reverse replication, you must call the [StartDiskReplicaPair](~~354205~~) operation again to activate the replication pair before data can be replicated from the original secondary disk to the original primary disk.
-      * *   You can set the ReverseReplicate parameter to false to cancel the **Failovered** (`failovered`) state and restore the original replication direction.
-      *
-      * @param request ReprotectDiskReplicaPairRequest
-      * @return ReprotectDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair for which you want to enable reverse replication must be in the <strong>Failovered</strong> (<code>failovered</code>) state. You can call the <a href="https://help.aliyun.com/document_detail/354358.html">FailoverDiskReplicaPair</a> operation to enable failover.</li>
+     * <li>The primary disk must be detached from its associated Elastic Compute Service (ECS) instance and is in the Unattached state. You can call the <a href="https://help.aliyun.com/document_detail/25516.html">DetachDisk</a> operation to detach the disk.</li>
+     * <li>After you enable reverse replication, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation again to activate the replication pair before data can be replicated from the original secondary disk to the original primary disk.</li>
+     * <li>You can set the ReverseReplicate parameter to false to cancel the <strong>Failovered</strong> (<code>failovered</code>) state and restore the original replication direction.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the reverse replication feature for a replication pair.</p>
+     * 
+     * @param request ReprotectDiskReplicaPairRequest
+     * @return ReprotectDiskReplicaPairResponse
      */
     public ReprotectDiskReplicaPairResponse reprotectDiskReplicaPair(ReprotectDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reprotectDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>In the elastic type dedicated block storage cluster, you can easily achieve the specified throughput (Bps) for the target disk. You only need to set the cloud disk ID and the target throughput, simplifying the process of configuring.</p>
+     * 
+     * @param request SetDedicatedBlockStorageClusterDiskThroughputRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetDedicatedBlockStorageClusterDiskThroughputResponse
+     */
     public SetDedicatedBlockStorageClusterDiskThroughputResponse setDedicatedBlockStorageClusterDiskThroughputWithOptions(SetDedicatedBlockStorageClusterDiskThroughputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2719,21 +3236,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDedicatedBlockStorageClusterDiskThroughputResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>In the elastic type dedicated block storage cluster, you can easily achieve the specified throughput (Bps) for the target disk. You only need to set the cloud disk ID and the target throughput, simplifying the process of configuring.</p>
+     * 
+     * @param request SetDedicatedBlockStorageClusterDiskThroughputRequest
+     * @return SetDedicatedBlockStorageClusterDiskThroughputResponse
+     */
     public SetDedicatedBlockStorageClusterDiskThroughputResponse setDedicatedBlockStorageClusterDiskThroughput(SetDedicatedBlockStorageClusterDiskThroughputRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDedicatedBlockStorageClusterDiskThroughputWithOptions(request, runtime);
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   If you set the `OneShot` to `false`, the replication pair-consistent group must be in the **Created** (`created` ), **Synchronizing** (`syncing` ), **Normal** (`normal` ), or **Stopped** (`stopped`) state.
-      * *   If you set `OneShot` to `true`, the replication pair-consistent group must be in the **Created** (`created` ), **One-time Syncing** (`manual_syncing` ), or **Stopped** (`stopped`) state. The time interval between two consecutive one-time synchronizations must be longer than one half of the recovery point objective (RPO).
-      * *   After a replication pair-consistent group is activated, the group enters the **Initial Syncing** (`initial_syncing`) state and the system performs the first async replication to replicate all data from the primary disks to secondary disks.
-      *
-      * @param request StartDiskReplicaGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>If you set the <code>OneShot</code> to <code>false</code>, the replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code> ), <strong>Synchronizing</strong> (<code>syncing</code> ), <strong>Normal</strong> (<code>normal</code> ), or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * <li>If you set <code>OneShot</code> to <code>true</code>, the replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code> ), <strong>One-time Syncing</strong> (<code>manual_syncing</code> ), or <strong>Stopped</strong> (<code>stopped</code>) state. The time interval between two consecutive one-time synchronizations must be longer than one half of the recovery point objective (RPO).</li>
+     * <li>After a replication pair-consistent group is activated, the group enters the <strong>Initial Syncing</strong> (<code>initial_syncing</code>) state and the system performs the first async replication to replicate all data from the primary disks to secondary disks.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</p>
+     * 
+     * @param request StartDiskReplicaGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDiskReplicaGroupResponse
      */
     public StartDiskReplicaGroupResponse startDiskReplicaGroupWithOptions(StartDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2772,14 +3302,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   If you set the `OneShot` to `false`, the replication pair-consistent group must be in the **Created** (`created` ), **Synchronizing** (`syncing` ), **Normal** (`normal` ), or **Stopped** (`stopped`) state.
-      * *   If you set `OneShot` to `true`, the replication pair-consistent group must be in the **Created** (`created` ), **One-time Syncing** (`manual_syncing` ), or **Stopped** (`stopped`) state. The time interval between two consecutive one-time synchronizations must be longer than one half of the recovery point objective (RPO).
-      * *   After a replication pair-consistent group is activated, the group enters the **Initial Syncing** (`initial_syncing`) state and the system performs the first async replication to replicate all data from the primary disks to secondary disks.
-      *
-      * @param request StartDiskReplicaGroupRequest
-      * @return StartDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>If you set the <code>OneShot</code> to <code>false</code>, the replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code> ), <strong>Synchronizing</strong> (<code>syncing</code> ), <strong>Normal</strong> (<code>normal</code> ), or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * <li>If you set <code>OneShot</code> to <code>true</code>, the replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code> ), <strong>One-time Syncing</strong> (<code>manual_syncing</code> ), or <strong>Stopped</strong> (<code>stopped</code>) state. The time interval between two consecutive one-time synchronizations must be longer than one half of the recovery point objective (RPO).</li>
+     * <li>After a replication pair-consistent group is activated, the group enters the <strong>Initial Syncing</strong> (<code>initial_syncing</code>) state and the system performs the first async replication to replicate all data from the primary disks to secondary disks.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</p>
+     * 
+     * @param request StartDiskReplicaGroupRequest
+     * @return StartDiskReplicaGroupResponse
      */
     public StartDiskReplicaGroupResponse startDiskReplicaGroup(StartDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2787,14 +3323,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Created** (`created`) or **Stopped** (`stopped`) state can be activated.
-      * *   After a replication pair is activated, it enters the **Initial Syncing** (`initial_syncing`) state and the system performs the first asynchronous replication to replicate all data from the primary disk to the secondary disk.
-      *
-      * @param request StartDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state can be activated.</li>
+     * <li>After a replication pair is activated, it enters the <strong>Initial Syncing</strong> (<code>initial_syncing</code>) state and the system performs the first asynchronous replication to replicate all data from the primary disk to the secondary disk.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Activates a replication pair.</p>
+     * 
+     * @param request StartDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDiskReplicaPairResponse
      */
     public StartDiskReplicaPairResponse startDiskReplicaPairWithOptions(StartDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2833,13 +3375,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Created** (`created`) or **Stopped** (`stopped`) state can be activated.
-      * *   After a replication pair is activated, it enters the **Initial Syncing** (`initial_syncing`) state and the system performs the first asynchronous replication to replicate all data from the primary disk to the secondary disk.
-      *
-      * @param request StartDiskReplicaPairRequest
-      * @return StartDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state can be activated.</li>
+     * <li>After a replication pair is activated, it enters the <strong>Initial Syncing</strong> (<code>initial_syncing</code>) state and the system performs the first asynchronous replication to replicate all data from the primary disk to the secondary disk.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Activates a replication pair.</p>
+     * 
+     * @param request StartDiskReplicaPairRequest
+     * @return StartDiskReplicaPairResponse
      */
     public StartDiskReplicaPairResponse startDiskReplicaPair(StartDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2847,11 +3395,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the disaster recovery drill is complete on the secondary disk, a pay-as-you-go drill disk that has the same capacity and category as the secondary disk is created in the zone where the secondary disk resides. The drill disk contains last-recovery-point data that can be used to test the completeness and correctness of applications.
-      *
-      * @param request StartPairDrillRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartPairDrillResponse
+     * <b>description</b> :
+     * <p>After the disaster recovery drill is complete on the secondary disk, a pay-as-you-go drill disk that has the same capacity and category as the secondary disk is created in the zone where the secondary disk resides. The drill disk contains last-recovery-point data that can be used to test the completeness and correctness of applications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a disaster recovery drill to ensure the continued replication and clone the data from the last recovery point of the secondary disk to a new disk. This helps you test the completeness and correctness of applications that are deployed on the disaster recovery site on a regular basis.</p>
+     * 
+     * @param request StartPairDrillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartPairDrillResponse
      */
     public StartPairDrillResponse startPairDrillWithOptions(StartPairDrillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2886,10 +3438,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the disaster recovery drill is complete on the secondary disk, a pay-as-you-go drill disk that has the same capacity and category as the secondary disk is created in the zone where the secondary disk resides. The drill disk contains last-recovery-point data that can be used to test the completeness and correctness of applications.
-      *
-      * @param request StartPairDrillRequest
-      * @return StartPairDrillResponse
+     * <b>description</b> :
+     * <p>After the disaster recovery drill is complete on the secondary disk, a pay-as-you-go drill disk that has the same capacity and category as the secondary disk is created in the zone where the secondary disk resides. The drill disk contains last-recovery-point data that can be used to test the completeness and correctness of applications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a disaster recovery drill to ensure the continued replication and clone the data from the last recovery point of the secondary disk to a new disk. This helps you test the completeness and correctness of applications that are deployed on the disaster recovery site on a regular basis.</p>
+     * 
+     * @param request StartPairDrillRequest
+     * @return StartPairDrillResponse
      */
     public StartPairDrillResponse startPairDrill(StartPairDrillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2897,11 +3453,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the disaster recovery drill is complete on secondary disks, a pay-as-you-go drill disk is created in the zone where the secondary disk of each replication pair resides. The latest-recovery-point data is restored to the drill disks to test the completeness and correctness of applications.
-      *
-      * @param request StartReplicaGroupDrillRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartReplicaGroupDrillResponse
+     * <b>description</b> :
+     * <p>After the disaster recovery drill is complete on secondary disks, a pay-as-you-go drill disk is created in the zone where the secondary disk of each replication pair resides. The latest-recovery-point data is restored to the drill disks to test the completeness and correctness of applications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a disaster recovery drill in a replication pair-consistent group to ensure the continued replication and restores data from the latest recovery point of secondary disks to new disks. This helps test the completeness and correctness of applications that are deployed on the disaster recovery site on a regular basis.</p>
+     * 
+     * @param request StartReplicaGroupDrillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartReplicaGroupDrillResponse
      */
     public StartReplicaGroupDrillResponse startReplicaGroupDrillWithOptions(StartReplicaGroupDrillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2936,10 +3496,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the disaster recovery drill is complete on secondary disks, a pay-as-you-go drill disk is created in the zone where the secondary disk of each replication pair resides. The latest-recovery-point data is restored to the drill disks to test the completeness and correctness of applications.
-      *
-      * @param request StartReplicaGroupDrillRequest
-      * @return StartReplicaGroupDrillResponse
+     * <b>description</b> :
+     * <p>After the disaster recovery drill is complete on secondary disks, a pay-as-you-go drill disk is created in the zone where the secondary disk of each replication pair resides. The latest-recovery-point data is restored to the drill disks to test the completeness and correctness of applications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a disaster recovery drill in a replication pair-consistent group to ensure the continued replication and restores data from the latest recovery point of secondary disks to new disks. This helps test the completeness and correctness of applications that are deployed on the disaster recovery site on a regular basis.</p>
+     * 
+     * @param request StartReplicaGroupDrillRequest
+     * @return StartReplicaGroupDrillResponse
      */
     public StartReplicaGroupDrillResponse startReplicaGroupDrill(StartReplicaGroupDrillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2947,14 +3511,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
-      * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
-      *
-      * @param request StopDiskReplicaGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StopDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group that you want to stop must be in the <strong>One-time Syncing</strong> (<code>manual_syncing</code>), <strong>Syncing</strong> (<code>syncing</code>), <strong>Normal</strong> (<code>normal</code>), <strong>Stopping</strong> (<code>stopping</code>), <strong>Stop Failed</strong> (<code>stop_failed</code>), or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * <li>When a replication pair-consistent group is stopped, it enters the <strong>Stopped</strong> (<code>stopped</code>) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to <strong>Stop Failed</strong> (<code>stop_failed</code>). In this case, try again later.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a replication pair-consistent group. This operation stops all replication pairs in the replication pair-consistent group.</p>
+     * 
+     * @param request StopDiskReplicaGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDiskReplicaGroupResponse
      */
     public StopDiskReplicaGroupResponse stopDiskReplicaGroupWithOptions(StopDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2989,13 +3559,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
-      * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
-      * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
-      *
-      * @param request StopDiskReplicaGroupRequest
-      * @return StopDiskReplicaGroupResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>The replication pair-consistent group that you want to stop must be in the <strong>One-time Syncing</strong> (<code>manual_syncing</code>), <strong>Syncing</strong> (<code>syncing</code>), <strong>Normal</strong> (<code>normal</code>), <strong>Stopping</strong> (<code>stopping</code>), <strong>Stop Failed</strong> (<code>stop_failed</code>), or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
+     * <li>When a replication pair-consistent group is stopped, it enters the <strong>Stopped</strong> (<code>stopped</code>) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to <strong>Stop Failed</strong> (<code>stop_failed</code>). In this case, try again later.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a replication pair-consistent group. This operation stops all replication pairs in the replication pair-consistent group.</p>
+     * 
+     * @param request StopDiskReplicaGroupRequest
+     * @return StopDiskReplicaGroupResponse
      */
     public StopDiskReplicaGroupResponse stopDiskReplicaGroup(StopDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3003,13 +3579,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last async replication was complete and drops all the data that is being replicated from the primary disk.
-      *
-      * @param request StopDiskReplicaPairRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StopDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Initial Syncing</strong> (<code>initial_syncing</code>), <strong>Syncing</strong> (<code>syncing</code>), <strong>One-time Syncing</strong> (<code>manual_syncing</code>), or <strong>Normal</strong> (<code>normal</code>) state can be stopped. When a replication pair is stopped, it enters the Stopped (<code>stopped</code>) state. The secondary disk rolls back to the point in time when the last async replication was complete and drops all the data that is being replicated from the primary disk.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a replication pair.</p>
+     * 
+     * @param request StopDiskReplicaPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDiskReplicaPairResponse
      */
     public StopDiskReplicaPairResponse stopDiskReplicaPairWithOptions(StopDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3044,12 +3626,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   For information about the regions in which async replication is available, see [Overview](~~314563~~).
-      * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last async replication was complete and drops all the data that is being replicated from the primary disk.
-      *
-      * @param request StopDiskReplicaPairRequest
-      * @return StopDiskReplicaPairResponse
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>Only replication pairs that are in the <strong>Initial Syncing</strong> (<code>initial_syncing</code>), <strong>Syncing</strong> (<code>syncing</code>), <strong>One-time Syncing</strong> (<code>manual_syncing</code>), or <strong>Normal</strong> (<code>normal</code>) state can be stopped. When a replication pair is stopped, it enters the Stopped (<code>stopped</code>) state. The secondary disk rolls back to the point in time when the last async replication was complete and drops all the data that is being replicated from the primary disk.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a replication pair.</p>
+     * 
+     * @param request StopDiskReplicaPairRequest
+     * @return StopDiskReplicaPairResponse
      */
     public StopDiskReplicaPairResponse stopDiskReplicaPair(StopDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3057,11 +3645,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
-      *
-      * @param request TagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return TagResourcesResponse
+     * <b>description</b> :
+     * <p>Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the &quot;Tag limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates tags and adds the tags to Elastic Block Storage (EBS) resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
      */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3104,16 +3696,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
-      *
-      * @param request TagResourcesRequest
-      * @return TagResourcesResponse
+     * <b>description</b> :
+     * <p>Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the &quot;Tag limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates tags and adds the tags to Elastic Block Storage (EBS) resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
      */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Unbind disks from a enterprise-level snapshot policy.</p>
+     * 
+     * @param request UnbindEnterpriseSnapshotPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindEnterpriseSnapshotPolicyResponse
+     */
     public UnbindEnterpriseSnapshotPolicyResponse unbindEnterpriseSnapshotPolicyWithOptions(UnbindEnterpriseSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3150,18 +3754,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindEnterpriseSnapshotPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Unbind disks from a enterprise-level snapshot policy.</p>
+     * 
+     * @param request UnbindEnterpriseSnapshotPolicyRequest
+     * @return UnbindEnterpriseSnapshotPolicyResponse
+     */
     public UnbindEnterpriseSnapshotPolicyResponse unbindEnterpriseSnapshotPolicy(UnbindEnterpriseSnapshotPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unbindEnterpriseSnapshotPolicyWithOptions(request, runtime);
     }
 
     /**
-      * *   You can remove up to 20 tags at a time.
-      * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
-      *
-      * @param request UntagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UntagResourcesResponse
+     * <b>description</b> :
+     * <p>  You can remove up to 20 tags at a time.</p>
+     * <ul>
+     * <li>After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from specified Elastic Block Storage (EBS) resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
      */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3208,17 +3825,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can remove up to 20 tags at a time.
-      * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
-      *
-      * @param request UntagResourcesRequest
-      * @return UntagResourcesResponse
+     * <b>description</b> :
+     * <p>  You can remove up to 20 tags at a time.</p>
+     * <ul>
+     * <li>After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from specified Elastic Block Storage (EBS) resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
      */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Search for a enterprise-level snapshot policy.</p>
+     * 
+     * @param tmpReq UpdateEnterpriseSnapshotPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEnterpriseSnapshotPolicyResponse
+     */
     public UpdateEnterpriseSnapshotPolicyResponse updateEnterpriseSnapshotPolicyWithOptions(UpdateEnterpriseSnapshotPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateEnterpriseSnapshotPolicyShrinkRequest request = new UpdateEnterpriseSnapshotPolicyShrinkRequest();
@@ -3305,11 +3936,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEnterpriseSnapshotPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Search for a enterprise-level snapshot policy.</p>
+     * 
+     * @param request UpdateEnterpriseSnapshotPolicyRequest
+     * @return UpdateEnterpriseSnapshotPolicyResponse
+     */
     public UpdateEnterpriseSnapshotPolicyResponse updateEnterpriseSnapshotPolicy(UpdateEnterpriseSnapshotPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEnterpriseSnapshotPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>更新解决方案实例属性</p>
+     * 
+     * @param request UpdateSolutionInstanceAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSolutionInstanceAttributeResponse
+     */
     public UpdateSolutionInstanceAttributeResponse updateSolutionInstanceAttributeWithOptions(UpdateSolutionInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3350,6 +3996,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSolutionInstanceAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>更新解决方案实例属性</p>
+     * 
+     * @param request UpdateSolutionInstanceAttributeRequest
+     * @return UpdateSolutionInstanceAttributeResponse
+     */
     public UpdateSolutionInstanceAttributeResponse updateSolutionInstanceAttribute(UpdateSolutionInstanceAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSolutionInstanceAttributeWithOptions(request, runtime);

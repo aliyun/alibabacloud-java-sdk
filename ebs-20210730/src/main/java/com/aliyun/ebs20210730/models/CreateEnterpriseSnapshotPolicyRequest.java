@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -18,36 +21,52 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("Desc")
     public String desc;
 
     /**
      * <p>The name of the policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The snapshot retention rule.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RetainRule")
     public CreateEnterpriseSnapshotPolicyRequestRetainRule retainRule;
 
     /**
      * <p>The rule for scheduling.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Schedule")
     public CreateEnterpriseSnapshotPolicyRequestSchedule schedule;
@@ -60,10 +79,15 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The status of the policy. Valid values:</p>
-     * <br>
-     * <p>- ENABLED: Enable snapshot policy execution.</p>
-     * <br>
-     * <p>- DISABLED: Disable snapshot policy execution.</p>
+     * <ul>
+     * <li><p>ENABLED: Enable snapshot policy execution.</p>
+     * </li>
+     * <li><p>DISABLED: Disable snapshot policy execution.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ENABLED</p>
      */
     @NameInMap("State")
     public String state;
@@ -82,8 +106,13 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>Binding target type, valid value:</p>
-     * <br>
-     * <p>- DISK</p>
+     * <ul>
+     * <li>DISK</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DISK</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -199,13 +228,19 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
 
     public static class CreateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfoRegions extends TeaModel {
         /**
-         * <p>The region ID of the destination. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+         * <p>The region ID of the destination. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Number of days to retain the destination snapshot. The range of values is greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("RetainDays")
         public Integer retainDays;
@@ -236,10 +271,15 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfo extends TeaModel {
         /**
          * <p>Whether cross-region replication is enabled. The range of values:</p>
-         * <br>
-         * <p>- true</p>
-         * <br>
-         * <p>- false</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -276,22 +316,33 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyRequestRetainRule extends TeaModel {
         /**
          * <p>Maximum number of retained snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Number")
         public Integer number;
 
         /**
          * <p>The time interval , valid value greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("TimeInterval")
         public Integer timeInterval;
 
         /**
          * <p>The unit of time, valid values:</p>
-         * <br>
-         * <p>- DAYS</p>
-         * <br>
-         * <p>- WEEKS</p>
+         * <ul>
+         * <li><p>DAYS</p>
+         * </li>
+         * <li><p>WEEKS</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DAYS</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;
@@ -330,8 +381,8 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyRequestSchedule extends TeaModel {
         /**
          * <p>The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.</p>
-         * <br>
          * <p>For example, you can use 0 0 4 1/1 * ? to specify 04:00:00 (UTC+8) on the first day of each month.</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
@@ -354,25 +405,38 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyRequestSpecialRetainRulesRules extends TeaModel {
         /**
          * <p>The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:</p>
-         * <p>- WEEKS</p>
-         * <p>- MONTHS</p>
-         * <p>- YEARS</p>
+         * <ul>
+         * <li>WEEKS</li>
+         * <li>MONTHS</li>
+         * <li>YEARS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEKS</p>
          */
         @NameInMap("SpecialPeriodUnit")
         public String specialPeriodUnit;
 
         /**
          * <p>Retention Time Value. The range of values is greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("TimeInterval")
         public Integer timeInterval;
 
         /**
          * <p>Retention time unit for special snapshots. The range of values:</p>
-         * <br>
-         * <p>- DAYS</p>
-         * <br>
-         * <p>- WEEKS</p>
+         * <ul>
+         * <li><p>DAYS</p>
+         * </li>
+         * <li><p>WEEKS</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEKS</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;
@@ -411,9 +475,13 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyRequestSpecialRetainRules extends TeaModel {
         /**
          * <p>Indicates whether the special retention is enabled.</p>
-         * <br>
-         * <p>*   true: enable</p>
-         * <p>*   false: disable</p>
+         * <ul>
+         * <li>true: enable</li>
+         * <li>false: disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -450,10 +518,15 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyRequestStorageRule extends TeaModel {
         /**
          * <p>Whether to enable the rapid availability of snapshots. The range of values:</p>
-         * <br>
-         * <p>- true</p>
-         * <br>
-         * <p>- false</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableImmediateAccess")
         public Boolean enableImmediateAccess;
@@ -476,16 +549,22 @@ public class CreateEnterpriseSnapshotPolicyRequest extends TeaModel {
     public static class CreateEnterpriseSnapshotPolicyRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

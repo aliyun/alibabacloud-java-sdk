@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSolutionInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

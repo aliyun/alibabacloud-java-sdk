@@ -12,30 +12,45 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -96,25 +111,36 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
     public static class DescribeReplicaGroupDrillsResponseBodyDrillsPairsInfo extends TeaModel {
         /**
          * <p>The ID of the drill disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-xxx</p>
          */
         @NameInMap("DrillDiskId")
         public String drillDiskId;
 
         /**
          * <p>The status of the drill disk. Valid values:</p>
-         * <br>
-         * <p>*   created</p>
-         * <p>*   deleted</p>
-         * <p>*   creating</p>
-         * <p>*   deleting</p>
-         * <br>
-         * <p>>  This parameter can also display error code details if your drill disk fails to be created or deleted.</p>
+         * <ul>
+         * <li>created</li>
+         * <li>deleted</li>
+         * <li>creating</li>
+         * <li>deleting</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter can also display error code details if your drill disk fails to be created or deleted.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         @NameInMap("DrillDiskStatus")
         public String drillDiskStatus;
 
         /**
          * <p>The ID of the replication pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pair-xxx</p>
          */
         @NameInMap("PairId")
         public String pairId;
@@ -153,12 +179,18 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
     public static class DescribeReplicaGroupDrillsResponseBodyDrills extends TeaModel {
         /**
          * <p>The ID of the drill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-drill-xxx</p>
          */
         @NameInMap("DrillId")
         public String drillId;
 
         /**
          * <p>The ID of the replication pair-consistent group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-xxx</p>
          */
         @NameInMap("GroupId")
         public String groupId;
@@ -171,30 +203,43 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
 
         /**
          * <p>The recovery point of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1691114995</p>
          */
         @NameInMap("RecoverPoint")
         public Long recoverPoint;
 
         /**
          * <p>The beginning time of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649750977</p>
          */
         @NameInMap("StartAt")
         public Long startAt;
 
         /**
          * <p>The status of the drill. Valid values:</p>
-         * <br>
-         * <p>*   execute_failed</p>
-         * <p>*   executed</p>
-         * <p>*   executing</p>
-         * <p>*   clear_failed</p>
-         * <p>*   clearing</p>
+         * <ul>
+         * <li>execute_failed</li>
+         * <li>executed</li>
+         * <li>executing</li>
+         * <li>clear_failed</li>
+         * <li>clearing</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>executed</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The error message that appears if the drill fails to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GROUP_SYNCPOINT_NOT_FOUND</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetDedicatedBlockStorageClusterDiskThroughputResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17EE62D8-064E-5404-8B0D-72122478****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

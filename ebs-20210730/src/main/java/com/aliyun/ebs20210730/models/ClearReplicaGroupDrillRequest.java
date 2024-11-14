@@ -5,19 +5,31 @@ import com.aliyun.tea.*;
 
 public class ClearReplicaGroupDrillRequest extends TeaModel {
     /**
-     * <p>The ID of the drill. You can call the [DescribeReplicaGroupDrills](~~2584481~~) operation to query disaster recovery drills that were performed on replication pairs in a specific region.</p>
+     * <p>The ID of the drill. You can call the <a href="https://help.aliyun.com/document_detail/2584481.html">DescribeReplicaGroupDrills</a> operation to query disaster recovery drills that were performed on replication pairs in a specific region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-drill-xxxx</p>
      */
     @NameInMap("DrillId")
     public String drillId;
 
     /**
-     * <p>The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query the most recent list of replication pair-consistent groups, including group IDs.</p>
+     * <p>The ID of the replication pair-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/426614.html">DescribeDiskReplicaGroups</a> operation to query the most recent list of replication pair-consistent groups, including group IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-xxxx</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

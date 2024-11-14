@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDiskReplicaPairProgressRequest extends TeaModel {
     /**
      * <p>The region ID of the replication pair.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~)operation to query the IDs of existing replication pairs.</p>
+     * <p>The ID of the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a>operation to query the IDs of existing replication pairs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pair-cn-tl32ribst0z</p>
      */
     @NameInMap("ReplicaPairId")
     public String replicaPairId;
