@@ -4,6 +4,10 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class StopBEClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

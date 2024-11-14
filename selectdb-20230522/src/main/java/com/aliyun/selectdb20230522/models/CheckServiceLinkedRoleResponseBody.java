@@ -4,9 +4,17 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("HasServiceLinkedRole")
     public Boolean hasServiceLinkedRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1F455133-981E-5AD0-80EB-26EA1EF3C65F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

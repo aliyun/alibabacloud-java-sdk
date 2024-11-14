@@ -4,18 +4,45 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) authentication failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>failed</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The information returned.</p>
+     */
     @NameInMap("Data")
     public DescribeDBClusterConfigResponseBodyData data;
 
+    /**
+     * <p>The dynamic code. This parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic message. This parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>An error occurred while processing your request.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADF42B18-43FD-5100-83A9-BE81AB70C863</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,27 +92,69 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterConfigResponseBodyDataParams extends TeaModel {
+        /**
+         * <p>The comments on the parameter.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>Indicates whether the parameter immediately takes effect without requiring a restart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDynamic")
         public Integer isDynamic;
 
+        /**
+         * <p>Indicates whether the parameter is modifiable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsUserModifiable")
         public Integer isUserModifiable;
 
+        /**
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doris_scanner_thread_pool_thread_num</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value range of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0-20000]</p>
+         */
         @NameInMap("Optional")
         public String optional;
 
+        /**
+         * <p>The category of the parameter.</p>
+         */
         @NameInMap("ParamCategory")
         public String paramCategory;
 
+        /**
+         * <p>The current value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -161,18 +230,45 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-wny3li00g02-be</p>
+         */
         @NameInMap("DbClusterId")
         public String dbClusterId;
 
+        /**
+         * <p>The numeric ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6585</p>
+         */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-wny3li00g02</p>
+         */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
 
+        /**
+         * <p>The details about each parameter returned.</p>
+         */
         @NameInMap("Params")
         public java.util.List<DescribeDBClusterConfigResponseBodyDataParams> params;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107841167</p>
+         */
         @NameInMap("TaskId")
         public Integer taskId;
 

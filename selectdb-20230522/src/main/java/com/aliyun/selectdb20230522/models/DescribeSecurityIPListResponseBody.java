@@ -4,12 +4,27 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIPListResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The details about each IP address whitelist returned.</p>
+     */
     @NameInMap("GroupItems")
     public java.util.List<DescribeSecurityIPListResponseBodyGroupItems> groupItems;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5CBE044D-4594-525D-AC65-E988553D853E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +58,52 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIPListResponseBodyGroupItems extends TeaModel {
+        /**
+         * <p>The IP address type. Valid values:</p>
+         * <ul>
+         * <li>ipv4</li>
+         * <li>ipv6 (not supported)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
+         */
         @NameInMap("AecurityIPType")
         public String aecurityIPType;
 
+        /**
+         * <p>The name of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The tag of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("GroupTag")
         public String groupTag;
 
+        /**
+         * <p>The IP addresses in the whitelist. Multiple IP addresses are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
+         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
+        /**
+         * <p>The network type of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mix</p>
+         */
         @NameInMap("WhitelistNetType")
         public String whitelistNetType;
 

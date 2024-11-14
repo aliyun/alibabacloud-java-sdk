@@ -4,9 +4,18 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
+    /**
+     * <p>The information returned.</p>
+     */
     @NameInMap("Data")
     public GetCreateBEClusterInquiryResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06758CAB-1204-5852-A471-29C87D5C1D0F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
     }
 
     public static class GetCreateBEClusterInquiryResponseBodyData extends TeaModel {
+        /**
+         * <p>The currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The amount of money.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.76</p>
+         */
         @NameInMap("TradeAmount")
         public String tradeAmount;
 

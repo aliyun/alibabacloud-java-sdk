@@ -4,9 +4,18 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class RestartDBClusterResponseBody extends TeaModel {
+    /**
+     * <p>The information returned.</p>
+     */
     @NameInMap("Data")
     public RestartDBClusterResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD0D0B17-C145-5B91-BFC2-6791927EE973</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class RestartDBClusterResponseBody extends TeaModel {
     }
 
     public static class RestartDBClusterResponseBodyData extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8y****-be</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 

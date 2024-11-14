@@ -6,31 +6,51 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>be.conf</p>
      */
     @NameInMap("ConfigKey")
     public String configKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213c8yvv09-be</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-xxxd8a5h60y</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;name\&quot;:\&quot;param1\&quot;,\&quot;value\&quot;:\&quot;1234577777\&quot;},{\&quot;name\&quot;:\&quot;param2\&quot;,\&quot;value\&quot;:\&quot;${yyyyMMdd}\&quot;}]</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 

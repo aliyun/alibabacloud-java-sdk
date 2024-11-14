@@ -7,6 +7,10 @@ public class DeleteDBClusterResponseBody extends TeaModel {
     @NameInMap("Data")
     public DeleteDBClusterResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F203FA74-3041-589F-BE66-E570793A0C91</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DeleteDBClusterResponseBody extends TeaModel {
     }
 
     public static class DeleteDBClusterResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>220088764060782</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
