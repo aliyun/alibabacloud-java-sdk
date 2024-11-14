@@ -4,18 +4,38 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>failed</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     @NameInMap("Data")
     public ModifyDBClusterConfigResponseBodyData data;
 
+    /**
+     * <p>The dynamic code. This parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic message. This parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>An error occurred while processing your request.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,15 +85,31 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
     }
 
     public static class ModifyDBClusterConfigResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-wny3li00g02-be</p>
+         */
         @NameInMap("DbClusterId")
         public String dbClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6585</p>
+         */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-wny3li00g02</p>
+         */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>107878719</p>
+         */
         @NameInMap("TaskId")
         public Integer taskId;
 

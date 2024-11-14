@@ -4,18 +4,50 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The details about each instance returned.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstancesResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -65,150 +97,363 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
+        /**
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
 
-        @NameInMap("Value")
-        public String value;
+        /**
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeDBInstancesResponseBodyItemsTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesResponseBodyItemsTags self = new DescribeDBInstancesResponseBodyItemsTags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstancesResponseBodyItemsTags setKey(String key) {
-            this.key = key;
+        public DescribeDBInstancesResponseBodyItemsTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
             return this;
         }
-        public String getKey() {
-            return this.key;
+        public String getTagKey() {
+            return this.tagKey;
         }
 
-        public DescribeDBInstancesResponseBodyItemsTags setValue(String value) {
-            this.value = value;
+        public DescribeDBInstancesResponseBodyItemsTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
 
     public static class DescribeDBInstancesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The edition of the instance. Default value: basic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The total number of clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The time when the cluster expires.</p>
+         * <blockquote>
+         * <p> A specific value is returned only for subscription clusters whose billing method is <strong>Prepaid</strong>. For pay-as-you-go clusters whose billing method is <strong>Postpaid</strong>, no value is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-29T03:47:05Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The time when the task was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-12T04:14Z</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the task was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-12T19:05Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
+         */
         @NameInMap("InstanceUsedType")
         public String instanceUsedType;
 
+        /**
+         * <p>Indicates whether the instance is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDeleted")
         public Boolean isDeleted;
 
+        /**
+         * <p>The lock mode of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LockMode")
         public Long lockMode;
 
+        /**
+         * <p>The reason why the instance is locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nolock</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The end timestamp of the maintenance window.</p>
+         */
         @NameInMap("MaintainEndTimeStr")
         public String maintainEndTimeStr;
 
+        /**
+         * <p>The end time of the instance maintenance window.</p>
+         */
         @NameInMap("MaintainEndtime")
         public String maintainEndtime;
 
+        /**
+         * <p>The start timestamp of the maintenance window.</p>
+         */
         @NameInMap("MaintainStartTimeStr")
         public String maintainStartTimeStr;
 
+        /**
+         * <p>The start time of the instance maintenance window.</p>
+         */
         @NameInMap("MaintainStarttime")
         public String maintainStarttime;
 
+        /**
+         * <p>The storage capacity of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ObjectStoreSize")
         public Long objectStoreSize;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("ParentInstance")
         public String parentInstance;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of CPU cores of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("ResourceCpu")
         public Long resourceCpu;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The memory capacity of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("ResourceMemory")
         public Long resourceMemory;
 
+        /**
+         * <p>The maximum number of RCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScaleMax")
         public Long scaleMax;
 
+        /**
+         * <p>The minimum number of RDS capacity units (RCUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScaleMin")
         public Long scaleMin;
 
+        /**
+         * <p>This parameter is not returned.</p>
+         */
         @NameInMap("ScaleReplica")
         public Long scaleReplica;
 
+        /**
+         * <p>The state of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>CREATING</strong>: The instance is being created.</li>
+         * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+         * <li><strong>RESOURCE_CHANGING</strong>: The resource configuration of the instance is being changed.</li>
+         * <li><strong>ORDER_PREPARING</strong>: The order is being confirmed.</li>
+         * <li><strong>READONLY_RESOURCE_CHANGING</strong>: The resource configuration of the instance is being changed and the instance is write-locked.</li>
+         * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The cache size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("StorageSize")
         public Long storageSize;
 
+        /**
+         * <p>The storage type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>The details about each tag returned.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDBInstancesResponseBodyItemsTags> tags;
 
+        /**
+         * <p>The ID of the cluster that is monitored by Managed Service for Prometheus.</p>
+         */
         @NameInMap("TenantClusterId")
         public String tenantClusterId;
 
+        /**
+         * <p>The token that is used to access Managed Service for Prometheus.</p>
+         */
         @NameInMap("TenantToken")
         public String tenantToken;
 
+        /**
+         * <p>The ID of the account that uses Managed Service for Prometheus.</p>
+         */
         @NameInMap("TenantUserId")
         public String tenantUserId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The connection string of the instance.</p>
+         */
         @NameInMap("connectionString")
         public String connectionString;
 

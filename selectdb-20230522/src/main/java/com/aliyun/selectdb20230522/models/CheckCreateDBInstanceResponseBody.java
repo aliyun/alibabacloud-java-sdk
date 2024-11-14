@@ -4,6 +4,10 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class CheckCreateDBInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ADF42B18-43FD-5100-83A9-BE81AB70C863</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

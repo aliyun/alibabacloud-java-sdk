@@ -5,19 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The database engine version of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.4</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,6 +37,12 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The update mode. If you do not specify this parameter, the system immediately updates the database engine version. If you set this parameter to 1, the system updates the database engine version during the maintenance window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 

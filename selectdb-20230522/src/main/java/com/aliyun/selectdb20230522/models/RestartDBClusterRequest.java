@@ -5,29 +5,40 @@ import com.aliyun.tea.*;
 
 public class RestartDBClusterRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213c8yvv09-be</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
-     * <br>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>地域</p>
-     * <br>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>资源组id</p>
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

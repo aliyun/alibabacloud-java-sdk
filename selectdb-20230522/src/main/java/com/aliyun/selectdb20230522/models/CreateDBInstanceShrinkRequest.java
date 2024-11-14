@@ -3,7 +3,7 @@ package com.aliyun.selectdb20230522.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDBInstanceRequest extends TeaModel {
+public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -102,7 +102,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     @NameInMap("Tag")
-    public java.util.List<CreateDBInstanceRequestTag> tag;
+    public String tagShrink;
 
     /**
      * <strong>example:</strong>
@@ -139,12 +139,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDBInstanceRequest self = new CreateDBInstanceRequest();
+    public static CreateDBInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDBInstanceShrinkRequest self = new CreateDBInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBInstanceRequest setCacheSize(Integer cacheSize) {
+    public CreateDBInstanceShrinkRequest setCacheSize(Integer cacheSize) {
         this.cacheSize = cacheSize;
         return this;
     }
@@ -152,7 +152,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.cacheSize;
     }
 
-    public CreateDBInstanceRequest setChargeType(String chargeType) {
+    public CreateDBInstanceShrinkRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
@@ -160,7 +160,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public CreateDBInstanceRequest setClientToken(String clientToken) {
+    public CreateDBInstanceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -168,7 +168,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateDBInstanceRequest setConnectionString(String connectionString) {
+    public CreateDBInstanceShrinkRequest setConnectionString(String connectionString) {
         this.connectionString = connectionString;
         return this;
     }
@@ -176,7 +176,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.connectionString;
     }
 
-    public CreateDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
+    public CreateDBInstanceShrinkRequest setDBInstanceClass(String DBInstanceClass) {
         this.DBInstanceClass = DBInstanceClass;
         return this;
     }
@@ -184,7 +184,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBInstanceClass;
     }
 
-    public CreateDBInstanceRequest setDBInstanceDescription(String DBInstanceDescription) {
+    public CreateDBInstanceShrinkRequest setDBInstanceDescription(String DBInstanceDescription) {
         this.DBInstanceDescription = DBInstanceDescription;
         return this;
     }
@@ -192,7 +192,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBInstanceDescription;
     }
 
-    public CreateDBInstanceRequest setEngine(String engine) {
+    public CreateDBInstanceShrinkRequest setEngine(String engine) {
         this.engine = engine;
         return this;
     }
@@ -200,7 +200,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.engine;
     }
 
-    public CreateDBInstanceRequest setEngineVersion(String engineVersion) {
+    public CreateDBInstanceShrinkRequest setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
     }
@@ -208,7 +208,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.engineVersion;
     }
 
-    public CreateDBInstanceRequest setPeriod(String period) {
+    public CreateDBInstanceShrinkRequest setPeriod(String period) {
         this.period = period;
         return this;
     }
@@ -216,7 +216,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.period;
     }
 
-    public CreateDBInstanceRequest setRegionId(String regionId) {
+    public CreateDBInstanceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -224,7 +224,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateDBInstanceRequest setResourceGroupId(String resourceGroupId) {
+    public CreateDBInstanceShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -232,7 +232,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateDBInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateDBInstanceShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -240,7 +240,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateDBInstanceRequest setSecurityIPList(String securityIPList) {
+    public CreateDBInstanceShrinkRequest setSecurityIPList(String securityIPList) {
         this.securityIPList = securityIPList;
         return this;
     }
@@ -248,15 +248,15 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.securityIPList;
     }
 
-    public CreateDBInstanceRequest setTag(java.util.List<CreateDBInstanceRequestTag> tag) {
-        this.tag = tag;
+    public CreateDBInstanceShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<CreateDBInstanceRequestTag> getTag() {
-        return this.tag;
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
-    public CreateDBInstanceRequest setUsedTime(Integer usedTime) {
+    public CreateDBInstanceShrinkRequest setUsedTime(Integer usedTime) {
         this.usedTime = usedTime;
         return this;
     }
@@ -264,7 +264,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.usedTime;
     }
 
-    public CreateDBInstanceRequest setVSwitchId(String vSwitchId) {
+    public CreateDBInstanceShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -272,7 +272,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateDBInstanceRequest setVpcId(String vpcId) {
+    public CreateDBInstanceShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -280,50 +280,12 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public CreateDBInstanceRequest setZoneId(String zoneId) {
+    public CreateDBInstanceShrinkRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public static class CreateDBInstanceRequestTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>testKey</p>
-         */
-        @NameInMap("Key")
-        public String key;
-
-        /**
-         * <strong>example:</strong>
-         * <p>testValue</p>
-         */
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateDBInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateDBInstanceRequestTag self = new CreateDBInstanceRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateDBInstanceRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateDBInstanceRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterResponseBody extends TeaModel {
     /**
      * <p>代表资源一级ID的资源属性字段</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -13,6 +16,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     @NameInMap("Data")
     public ModifyDBClusterResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0BF61F90-ACED-55DF-A6FE-56714B2BFCF6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,12 +53,24 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     }
 
     public static class ModifyDBClusterResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>219396937240838</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 

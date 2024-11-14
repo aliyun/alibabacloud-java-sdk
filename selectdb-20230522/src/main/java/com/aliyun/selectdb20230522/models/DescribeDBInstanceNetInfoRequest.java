@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

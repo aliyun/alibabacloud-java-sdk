@@ -7,6 +7,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateDBClusterResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F8900A96-67F7-5274-A41B-7722E1ECF8C9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,38 @@ public class CreateDBClusterResponseBody extends TeaModel {
     }
 
     public static class CreateDBClusterResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-1ls3sg0po0****</p>
+         */
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>219543646290345</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
         public static CreateDBClusterResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateDBClusterResponseBodyData self = new CreateDBClusterResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDBClusterResponseBodyData setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public CreateDBClusterResponseBodyData setDBInstanceId(String DBInstanceId) {

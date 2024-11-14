@@ -5,25 +5,41 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
+     * <p>The prefix of the endpoint. Set the parameter to the prefix of the value of <strong>ConnectionString</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-h033cn****-pub-i3</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The network type of the endpoint to be applied for. Set the value to Public.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
      */
     @NameInMap("NetType")
     public String netType;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

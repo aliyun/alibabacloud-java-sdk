@@ -6,24 +6,46 @@ import com.aliyun.tea.*;
 public class ModifyBEClusterAttributeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-xxxb9f2w-be</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The cluster parameter to be modified.</p>
+     * <ul>
+     * <li>Valid values:****</li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li>MaintainTime</li>
+     * <li>DBInstanceDescription</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBInstanceDescription</p>
      */
     @NameInMap("InstanceAttributeType")
     public String instanceAttributeType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,7 +54,11 @@ public class ModifyBEClusterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The modfied cluster name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("Value")
     public String value;

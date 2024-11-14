@@ -4,12 +4,27 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ED62C81-9948-5612-81E1-EA3853752306</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>498115273</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

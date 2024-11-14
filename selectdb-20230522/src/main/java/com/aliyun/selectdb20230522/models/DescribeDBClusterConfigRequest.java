@@ -5,23 +5,45 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigRequest extends TeaModel {
     /**
+     * <p>The configuration file to be modified.</p>
+     * <ul>
+     * <li>For a compute cluster, set the value to be.conf.</li>
+     * <li>For a frontend (FE) cluster, set the value to fe.conf.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>be.conf</p>
      */
     @NameInMap("ConfigKey")
     public String configKey;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213c8yvv09-be</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

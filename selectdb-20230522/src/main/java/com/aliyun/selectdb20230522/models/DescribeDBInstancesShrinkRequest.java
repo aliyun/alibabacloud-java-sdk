@@ -3,7 +3,7 @@ package com.aliyun.selectdb20230522.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDBInstancesRequest extends TeaModel {
+public class DescribeDBInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The description of the instance.</p>
      */
@@ -82,14 +82,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("Tag")
-    public java.util.List<DescribeDBInstancesRequestTag> tag;
+    public String tagShrink;
 
-    public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
+    public static DescribeDBInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBInstancesShrinkRequest self = new DescribeDBInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancesRequest setDBInstanceDescription(String DBInstanceDescription) {
+    public DescribeDBInstancesShrinkRequest setDBInstanceDescription(String DBInstanceDescription) {
         this.DBInstanceDescription = DBInstanceDescription;
         return this;
     }
@@ -97,7 +97,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.DBInstanceDescription;
     }
 
-    public DescribeDBInstancesRequest setDBInstanceIds(String DBInstanceIds) {
+    public DescribeDBInstancesShrinkRequest setDBInstanceIds(String DBInstanceIds) {
         this.DBInstanceIds = DBInstanceIds;
         return this;
     }
@@ -105,7 +105,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.DBInstanceIds;
     }
 
-    public DescribeDBInstancesRequest setDBInstanceStatus(String DBInstanceStatus) {
+    public DescribeDBInstancesShrinkRequest setDBInstanceStatus(String DBInstanceStatus) {
         this.DBInstanceStatus = DBInstanceStatus;
         return this;
     }
@@ -113,7 +113,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.DBInstanceStatus;
     }
 
-    public DescribeDBInstancesRequest setPageNumber(Long pageNumber) {
+    public DescribeDBInstancesShrinkRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -121,7 +121,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDBInstancesRequest setPageSize(Long pageSize) {
+    public DescribeDBInstancesShrinkRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -129,7 +129,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDBInstancesRequest setRegionId(String regionId) {
+    public DescribeDBInstancesShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -137,7 +137,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeDBInstancesRequest setResourceGroupId(String resourceGroupId) {
+    public DescribeDBInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -145,7 +145,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeDBInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeDBInstancesShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -153,50 +153,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDBInstancesRequest setTag(java.util.List<DescribeDBInstancesRequestTag> tag) {
-        this.tag = tag;
+    public DescribeDBInstancesShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<DescribeDBInstancesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class DescribeDBInstancesRequestTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>testKey</p>
-         */
-        @NameInMap("Key")
-        public String key;
-
-        /**
-         * <strong>example:</strong>
-         * <p>testValue</p>
-         */
-        @NameInMap("Value")
-        public String value;
-
-        public static DescribeDBInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBInstancesRequestTag self = new DescribeDBInstancesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeDBInstancesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

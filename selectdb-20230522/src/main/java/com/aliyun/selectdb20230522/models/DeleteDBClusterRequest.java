@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DeleteDBClusterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-xxxb9f2w-be</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>代表资源一级ID的资源属性字段</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>代表资源组的资源属性字段</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
