@@ -39,6 +39,9 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    @NameInMap("ResourceProduct")
+    public String resourceProduct;
+
     public static DescribeResourceSupportRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceSupportRegionsRequest self = new DescribeResourceSupportRegionsRequest();
         return TeaModel.build(map, self);
@@ -66,6 +69,14 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
+    }
+
+    public DescribeResourceSupportRegionsRequest setResourceProduct(String resourceProduct) {
+        this.resourceProduct = resourceProduct;
+        return this;
+    }
+    public String getResourceProduct() {
+        return this.resourceProduct;
     }
 
 }

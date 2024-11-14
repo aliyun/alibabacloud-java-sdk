@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteApisecAbnormalResponse extends TeaModel {
+public class DescribeApisecSuggestionsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteApisecAbnormalResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteApisecAbnormalResponseBody body;
+    public DescribeApisecSuggestionsResponseBody body;
 
-    public static DeleteApisecAbnormalResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteApisecAbnormalResponse self = new DeleteApisecAbnormalResponse();
+    public static DescribeApisecSuggestionsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeApisecSuggestionsResponse self = new DescribeApisecSuggestionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteApisecAbnormalResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeApisecSuggestionsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteApisecAbnormalResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteApisecAbnormalResponse setStatusCode(Integer statusCode) {
+    public DescribeApisecSuggestionsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteApisecAbnormalResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteApisecAbnormalResponse setBody(DeleteApisecAbnormalResponseBody body) {
+    public DescribeApisecSuggestionsResponse setBody(DescribeApisecSuggestionsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteApisecAbnormalResponseBody getBody() {
+    public DescribeApisecSuggestionsResponseBody getBody() {
         return this.body;
     }
 

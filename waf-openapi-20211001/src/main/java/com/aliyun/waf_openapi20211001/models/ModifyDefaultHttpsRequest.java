@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefaultHttpsRequest extends TeaModel {
     /**
+     * <p>The ID of the certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,32 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public String certId;
 
     /**
+     * <p>The type of the cipher suites. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: all cipher suites.</li>
+     * <li><strong>2</strong>: strong cipher suites.</li>
+     * <li><strong>99</strong>: custom cipher suites.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("CipherSuite")
     public Integer cipherSuite;
 
+    /**
+     * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
+     */
     @NameInMap("CustomCiphers")
     public java.util.List<String> customCiphers;
 
     /**
+     * <p>Specifies whether to support TLS 1.3. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -31,6 +48,10 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public Boolean enableTLSv3;
 
     /**
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +61,12 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -47,6 +74,8 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -54,6 +83,12 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
+     * <p>The version of the TLS protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>tlsv1</strong></li>
+     * <li><strong>tlsv1.1</strong></li>
+     * <li><strong>tlsv1.2</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

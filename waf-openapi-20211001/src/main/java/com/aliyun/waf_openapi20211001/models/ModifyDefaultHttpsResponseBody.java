@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDefaultHttpsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>276D7566-31C9-4192-9DD1-***</p>
      */

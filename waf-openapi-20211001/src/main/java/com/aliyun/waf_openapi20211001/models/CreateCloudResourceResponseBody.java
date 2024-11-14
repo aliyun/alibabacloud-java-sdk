@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCloudResourceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the resource that is added to WAF. The ID is automatically generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>lb-***</p>
      */
@@ -12,6 +14,8 @@ public class CreateCloudResourceResponseBody extends TeaModel {
     public String cloudResourceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>66A98669-ER12-WE34-23PO-301469*****E</p>
      */

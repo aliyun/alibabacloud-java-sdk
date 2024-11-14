@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2mcq***</p>
      */
@@ -12,6 +15,12 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +28,9 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the protected object in Web Application Firewall (WAF) that you want to manage.</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo.aliyun.com-waf</p>
      */
@@ -26,6 +38,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -33,6 +47,9 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
+     * <p>The resource type. The value is fixed as defenseresource.</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>defenseresource</p>
      */

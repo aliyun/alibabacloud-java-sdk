@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
      * <p>The tag key.</p>
      * <p>This parameter is required.</p>
      * 
@@ -37,6 +43,9 @@ public class ListTagValuesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
+
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
      * <p>This parameter is required.</p>
@@ -50,6 +59,14 @@ public class ListTagValuesRequest extends TeaModel {
     public static ListTagValuesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagValuesRequest self = new ListTagValuesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagValuesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListTagValuesRequest setKey(String key) {
@@ -74,6 +91,14 @@ public class ListTagValuesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListTagValuesRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
     public ListTagValuesRequest setResourceType(String resourceType) {

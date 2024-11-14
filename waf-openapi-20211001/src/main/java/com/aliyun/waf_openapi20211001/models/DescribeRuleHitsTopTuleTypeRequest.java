@@ -49,6 +49,15 @@ public class DescribeRuleHitsTopTuleTypeRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzwwkpn****5i</p>
+     */
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
+
+    /**
      * <p>The start point of the time period for which to query. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
@@ -93,6 +102,14 @@ public class DescribeRuleHitsTopTuleTypeRequest extends TeaModel {
     }
     public String getResource() {
         return this.resource;
+    }
+
+    public DescribeRuleHitsTopTuleTypeRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
     public DescribeRuleHitsTopTuleTypeRequest setStartTimestamp(String startTimestamp) {

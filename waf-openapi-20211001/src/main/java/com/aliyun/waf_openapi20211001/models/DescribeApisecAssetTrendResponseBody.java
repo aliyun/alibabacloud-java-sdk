@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisecAssetTrendResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeApisecAssetTrendResponseBodyData> data;
 
@@ -39,6 +42,8 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
 
     public static class DescribeApisecAssetTrendResponseBodyData extends TeaModel {
         /**
+         * <p>The number of active assets.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -46,6 +51,8 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         public Long assetActive;
 
         /**
+         * <p>The total number of assets.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -53,6 +60,8 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         public Long assetCount;
 
         /**
+         * <p>The number of deactivated assets.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -60,6 +69,8 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         public Long assetOffline;
 
         /**
+         * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1683600042</p>
          */

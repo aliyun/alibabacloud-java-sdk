@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteApisecEventResponse extends TeaModel {
+public class DescribeApisecEventsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteApisecEventResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteApisecEventResponseBody body;
+    public DescribeApisecEventsResponseBody body;
 
-    public static DeleteApisecEventResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteApisecEventResponse self = new DeleteApisecEventResponse();
+    public static DescribeApisecEventsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeApisecEventsResponse self = new DescribeApisecEventsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteApisecEventResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeApisecEventsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteApisecEventResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteApisecEventResponse setStatusCode(Integer statusCode) {
+    public DescribeApisecEventsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteApisecEventResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteApisecEventResponse setBody(DeleteApisecEventResponseBody body) {
+    public DescribeApisecEventsResponse setBody(DescribeApisecEventsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteApisecEventResponseBody getBody() {
+    public DescribeApisecEventsResponseBody getBody() {
         return this.body;
     }
 

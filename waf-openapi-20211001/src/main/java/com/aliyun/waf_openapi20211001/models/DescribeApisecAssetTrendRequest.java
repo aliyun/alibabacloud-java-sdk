@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecAssetTrendRequest extends TeaModel {
     /**
+     * <p>The ID of the hybrid cloud cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>590</p>
      */
@@ -12,6 +14,8 @@ public class DescribeApisecAssetTrendRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1683183599</p>
      */
@@ -19,6 +23,10 @@ public class DescribeApisecAssetTrendRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,13 +36,12 @@ public class DescribeApisecAssetTrendRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <strong>example:</strong>
-     * <p>cn</p>
-     */
-    @NameInMap("Region")
-    public String region;
-
-    /**
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -42,6 +49,8 @@ public class DescribeApisecAssetTrendRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek**7uq</p>
      */
@@ -49,6 +58,8 @@ public class DescribeApisecAssetTrendRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
+     * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1668496310</p>
      */
@@ -82,14 +93,6 @@ public class DescribeApisecAssetTrendRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DescribeApisecAssetTrendRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
     }
 
     public DescribeApisecAssetTrendRequest setRegionId(String regionId) {

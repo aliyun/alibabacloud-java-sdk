@@ -29,7 +29,7 @@ public class DescribeVisitUasRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland</li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
      * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
@@ -47,6 +47,9 @@ public class DescribeVisitUasRequest extends TeaModel {
      */
     @NameInMap("Resource")
     public String resource;
+
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
 
     /**
      * <p>The beginning of the time range to query. Unit: seconds.</p>
@@ -93,6 +96,14 @@ public class DescribeVisitUasRequest extends TeaModel {
     }
     public String getResource() {
         return this.resource;
+    }
+
+    public DescribeVisitUasRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
     public DescribeVisitUasRequest setStartTimestamp(String startTimestamp) {
