@@ -225,6 +225,9 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("InitScore")
+        public String initScore;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -332,6 +335,14 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetQualityCheckSchemeResponseBodyData setInitScore(String initScore) {
+            this.initScore = initScore;
+            return this;
+        }
+        public String getInitScore() {
+            return this.initScore;
         }
 
         public GetQualityCheckSchemeResponseBodyData setName(String name) {
