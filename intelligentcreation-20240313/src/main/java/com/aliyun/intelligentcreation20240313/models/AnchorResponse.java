@@ -40,6 +40,9 @@ public class AnchorResponse extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("supportBgChange")
+    public Integer supportBgChange;
+
     @NameInMap("useScene")
     public String useScene;
 
@@ -142,6 +145,14 @@ public class AnchorResponse extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public AnchorResponse setSupportBgChange(Integer supportBgChange) {
+        this.supportBgChange = supportBgChange;
+        return this;
+    }
+    public Integer getSupportBgChange() {
+        return this.supportBgChange;
     }
 
     public AnchorResponse setUseScene(String useScene) {
