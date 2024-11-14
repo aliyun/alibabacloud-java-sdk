@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeApisecAbnormalDomainStatisticResponseBodyData> data;
 
@@ -17,6 +20,8 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +59,8 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
 
     public static class DescribeApisecAbnormalDomainStatisticResponseBodyData extends TeaModel {
         /**
+         * <p>The number of APIs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -61,6 +68,8 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public Long apiCount;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ba.aliyun.com</p>
          */
@@ -68,6 +77,8 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public String domain;
 
         /**
+         * <p>The number of high-level risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -75,6 +86,8 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public Long high;
 
         /**
+         * <p>The number of low-level risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -82,6 +95,8 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public Long low;
 
         /**
+         * <p>The number of medium-level risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */

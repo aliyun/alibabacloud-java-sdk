@@ -50,15 +50,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The details of the protection rule. Specify a string that contains multiple parameters in the JSON format. You must specify the ID and the new configurations of the protection rule.</p>
-     * <ul>
-     * <li><strong>id:</strong> The ID of the protection rule. Data type: long. You must specify this parameter.</li>
-     * <li>The protection rule configurations: The role of this parameter is the same as that of the <strong>Rules</strong> parameter in the <strong>CreateDefenseRule</strong> topic. For more information, see the &quot;<strong>Protection rule parameters</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[{&quot;id&quot;:2344,&quot;policyId&quot;:1012,&quot;action&quot;:&quot;block&quot;}]</p>
      */
     @NameInMap("Rules")
     public String rules;

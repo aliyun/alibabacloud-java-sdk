@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeApisecSensitiveDomainStatisticResponseBodyData> data;
 
@@ -17,6 +20,8 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>27</p>
      */
@@ -54,6 +59,8 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
 
     public static class DescribeApisecSensitiveDomainStatisticResponseBodyData extends TeaModel {
         /**
+         * <p>The number of APIs that are involved.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -61,6 +68,8 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public Long apiCount;
 
         /**
+         * <p>The number of sites that are involved.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -68,6 +77,8 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public Long domainCount;
 
         /**
+         * <p>The code of the sensitive data.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -75,12 +86,20 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public String sensitiveCode;
 
         /**
+         * <p>The sensitivity level of the sensitive data.</p>
+         * 
          * <strong>example:</strong>
          * <p>L3</p>
          */
         @NameInMap("SensitiveLevel")
         public String sensitiveLevel;
 
+        /**
+         * <p>The name of the sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002</p>
+         */
         @NameInMap("SensitiveName")
         public String sensitiveName;
 

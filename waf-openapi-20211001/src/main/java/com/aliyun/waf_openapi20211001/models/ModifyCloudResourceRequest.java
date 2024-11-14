@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudResourceRequest extends TeaModel {
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +18,24 @@ public class ModifyCloudResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The configurations of the listeners.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public ModifyCloudResourceRequestListen listen;
 
+    /**
+     * <p>The configurations of the forwarding rule.</p>
+     */
     @NameInMap("Redirect")
     public ModifyCloudResourceRequestRedirect redirect;
 
     /**
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +45,8 @@ public class ModifyCloudResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -85,6 +100,12 @@ public class ModifyCloudResourceRequest extends TeaModel {
 
     public static class ModifyCloudResourceRequestListenCertificates extends TeaModel {
         /**
+         * <p>The type of the HTTPS certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: default certificate.</li>
+         * <li><strong>extension</strong>: additional certificate.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -92,6 +113,8 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public String appliedType;
 
         /**
+         * <p>The ID of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>123-cn-hangzhou</p>
          */
@@ -122,20 +145,39 @@ public class ModifyCloudResourceRequest extends TeaModel {
     }
 
     public static class ModifyCloudResourceRequestListen extends TeaModel {
+        /**
+         * <p>An array of certificates.</p>
+         */
         @NameInMap("Certificates")
         public java.util.List<ModifyCloudResourceRequestListenCertificates> certificates;
 
         /**
+         * <p>The type of the cipher suites that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: all cipher suites.</li>
+         * <li><strong>2</strong>: strong cipher suites. You can set the parameter to this value only if you set <strong>TLSVersion</strong> to <strong>tlsv1.2</strong>.</li>
+         * <li><strong>99</strong>: custom cipher suites.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CipherSuite")
         public Integer cipherSuite;
 
+        /**
+         * <p>An array of custom cipher suites.</p>
+         */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
         /**
+         * <p>Specifies whether to support TLS 1.3. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          * 
@@ -146,6 +188,12 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Boolean enableTLSv3;
 
         /**
+         * <p>Specifies whether to enable HTTP/2. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -153,6 +201,7 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Boolean http2Enabled;
 
         /**
+         * <p>The port of the resource that you want to add to WAF.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +211,11 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +225,7 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +235,12 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public String resourceInstanceId;
 
         /**
+         * <p>The cloud service. Valid values:</p>
+         * <ul>
+         * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
+         * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+         * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +250,13 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public String resourceProduct;
 
         /**
+         * <p>The Transport Layer Security (TLS) version. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>tlsv1</strong></li>
+         * <li><strong>tlsv1.1</strong></li>
+         * <li><strong>tlsv1.2</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tlsv1.2</p>
          */
@@ -284,6 +352,8 @@ public class ModifyCloudResourceRequest extends TeaModel {
 
     public static class ModifyCloudResourceRequestRedirectRequestHeaders extends TeaModel {
         /**
+         * <p>The key of the custom header field.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -291,6 +361,8 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the custom header field.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -322,6 +394,12 @@ public class ModifyCloudResourceRequest extends TeaModel {
 
     public static class ModifyCloudResourceRequestRedirect extends TeaModel {
         /**
+         * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false:</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -329,6 +407,11 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Boolean keepalive;
 
         /**
+         * <p>The number of requests that reuse persistent connections. Valid values: 60 to 1000.</p>
+         * <blockquote>
+         * <p> This parameter specifies the number of requests that can reuse persistent connections after you enable the persistent connection feature.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -336,6 +419,11 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Integer keepaliveRequests;
 
         /**
+         * <p>The timeout period for idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
+         * <blockquote>
+         * <p> If no new requests are initiated over the idle persistent connection within the specified timeout period, the connection is closed.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -343,16 +431,23 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Integer keepaliveTimeout;
 
         /**
+         * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ReadTimeout")
         public Integer readTimeout;
 
+        /**
+         * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
+         */
         @NameInMap("RequestHeaders")
         public java.util.List<ModifyCloudResourceRequestRedirectRequestHeaders> requestHeaders;
 
         /**
+         * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -360,16 +455,35 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Integer writeTimeout;
 
         /**
+         * <p>The method that WAF uses to obtain the originating IP address of a client. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: No Layer 7 proxies are deployed in front of WAF.</li>
+         * <li><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the originating IP address of the client.</li>
+         * <li><strong>2</strong>: WAF reads the value of a custom header field as the originating IP address of the client.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("XffHeaderMode")
         public Integer xffHeaderMode;
 
+        /**
+         * <p>The custom header field that is used to obtain the originating IP address of a client. Specify the value in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set <strong>XffHeaderMode</strong> to 2.</p>
+         * </blockquote>
+         */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
 
         /**
+         * <p>Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -178,9 +178,21 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
+        /**
+         * <p>The IP address of the instance that is added to WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.X.X.1</p>
+         */
         @NameInMap("ResourceInstanceIp")
         public String resourceInstanceIp;
 
+        /**
+         * <p>The name of the instance that is added to WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoInstanceName</p>
+         */
         @NameInMap("ResourceInstanceName")
         public String resourceInstanceName;
 
