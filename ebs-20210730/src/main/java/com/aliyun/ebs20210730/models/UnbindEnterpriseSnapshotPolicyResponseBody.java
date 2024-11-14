@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UnbindEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>061DE1AB-08BA-5ACD-A03A-440117C6939A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

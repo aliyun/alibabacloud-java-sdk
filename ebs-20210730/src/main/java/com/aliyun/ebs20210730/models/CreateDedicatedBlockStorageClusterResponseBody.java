@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of the dedicated block storage cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbsc-f8z4d3k4nsgg9okb****</p>
      */
     @NameInMap("DbscId")
     public String dbscId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50155660025****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

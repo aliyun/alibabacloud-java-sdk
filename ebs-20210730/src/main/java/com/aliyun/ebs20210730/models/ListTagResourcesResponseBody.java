@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request. The request ID is returned regardless of whether the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>484256DA-D816-44D2-9D86-B6EE4D5B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,28 +60,41 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pair-cn-c4d2t7f****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>*   dedicatedblockstoragecluster: dedicated block storage cluster</p>
-         * <p>*   diskreplicapair: replication pair</p>
-         * <p>*   diskreplicagroup: replication pair-consistent group</p>
+         * <ul>
+         * <li>dedicatedblockstoragecluster: dedicated block storage cluster</li>
+         * <li>diskreplicapair: replication pair</li>
+         * <li>diskreplicagroup: replication pair-consistent group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pair</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

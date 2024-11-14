@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B9F716DF-FAFD-50FD-B962-BCE0C837639A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

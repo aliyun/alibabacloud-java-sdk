@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateDiskReplicaPairResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the replication pair.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pair-cn-dsa****</p>
      */
     @NameInMap("ReplicaPairId")
     public String replicaPairId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

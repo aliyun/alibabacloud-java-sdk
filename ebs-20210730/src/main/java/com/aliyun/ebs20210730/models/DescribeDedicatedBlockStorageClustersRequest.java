@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     /**
-     * <p>The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-heyuan-b</p>
      */
     @NameInMap("AzoneId")
     public String azoneId;
 
     /**
      * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
-     * <br>
      * <p>Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("Category")
     public String category;
@@ -32,36 +37,49 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-heyuan</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the dedicated block storage cluster belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmvs4****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The states of dedicated block storage clusters. Valid values:</p>
-     * <br>
-     * <p>*   Preparing</p>
-     * <p>*   Running</p>
-     * <p>*   Expired</p>
-     * <p>*   Offline</p>
-     * <br>
+     * <ul>
+     * <li>Preparing</li>
+     * <li>Running</li>
+     * <li>Expired</li>
+     * <li>Offline</li>
+     * </ul>
      * <p>Multiple states can be specified. Valid values of N: 1, 2, 3, and 4.</p>
      */
     @NameInMap("Status")
@@ -177,12 +195,18 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     public static class DescribeDedicatedBlockStorageClustersRequestTag extends TeaModel {
         /**
          * <p>The tag key of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

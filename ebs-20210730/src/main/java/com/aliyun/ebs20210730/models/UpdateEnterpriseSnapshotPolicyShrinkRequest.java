@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -18,24 +21,38 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("Desc")
     public String desc;
 
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The id of the policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp-xxx</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
-     * <p>The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -60,9 +77,13 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>The status of the policy. Valid values:</p>
-     * <br>
-     * <p>*   **ENABLED**: Enable snapshot policy execution.</p>
-     * <p>*   **DISABLED**: Disable snapshot policy execution.</p>
+     * <ul>
+     * <li><strong>ENABLED</strong>: Enable snapshot policy execution.</li>
+     * <li><strong>DISABLED</strong>: Disable snapshot policy execution.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ENABLED</p>
      */
     @NameInMap("State")
     public String state;

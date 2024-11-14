@@ -3,7 +3,7 @@ package com.aliyun.ebs20210730.models;
 
 import com.aliyun.tea.*;
 
-public class GetDiskResponse extends TeaModel {
+public class GetReportResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetDiskResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetDiskResponseBody body;
+    public GetReportResponseBody body;
 
-    public static GetDiskResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDiskResponse self = new GetDiskResponse();
+    public static GetReportResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetReportResponse self = new GetReportResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDiskResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetReportResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetDiskResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDiskResponse setStatusCode(Integer statusCode) {
+    public GetReportResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetDiskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDiskResponse setBody(GetDiskResponseBody body) {
+    public GetReportResponse setBody(GetReportResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDiskResponseBody getBody() {
+    public GetReportResponseBody getBody() {
         return this.body;
     }
 

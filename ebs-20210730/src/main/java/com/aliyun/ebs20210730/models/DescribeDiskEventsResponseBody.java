@@ -12,18 +12,27 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -68,49 +77,72 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
     public static class DescribeDiskEventsResponseBodyDiskEvents extends TeaModel {
         /**
          * <p>The description of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1bq5g3dxxo1x4o****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The recommended action after the event occurred. Valid values:</p>
-         * <br>
-         * <p>*   Resize: resizes the disk.</p>
-         * <p>*   ModifyDiskSpec: changes the category of the disk.</p>
-         * <p>*   NoAction: performs no operation.</p>
+         * <ul>
+         * <li>Resize: resizes the disk.</li>
+         * <li>ModifyDiskSpec: changes the category of the disk.</li>
+         * <li>NoAction: performs no operation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoAction</p>
          */
         @NameInMap("RecommendAction")
         public String recommendAction;
 
         /**
          * <p>The region ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The state of the event. Valid values:</p>
-         * <br>
-         * <p>*   Solved</p>
-         * <p>*   UnSolved</p>
+         * <ul>
+         * <li>Solved</li>
+         * <li>UnSolved</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Solved</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The time when the event occurred. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the event occurred. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-01T08:00:00Z</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
 
         /**
          * <p>The type of the event. Only DataNeedProtect can be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataNeedProtect</p>
          */
         @NameInMap("Type")
         public String type;

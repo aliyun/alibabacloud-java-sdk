@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSolutionInstanceConfigurationRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -18,12 +21,20 @@ public class DescribeSolutionInstanceConfigurationRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the solution.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sln-xxxxx</p>
      */
     @NameInMap("SolutionId")
     public String solutionId;
@@ -68,14 +79,23 @@ public class DescribeSolutionInstanceConfigurationRequest extends TeaModel {
     public static class DescribeSolutionInstanceConfigurationRequestParameters extends TeaModel {
         /**
          * <p>The key of the parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the parameter.</p>
-         * <br>
-         * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
+         * <blockquote>
+         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

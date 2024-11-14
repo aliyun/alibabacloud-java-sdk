@@ -12,32 +12,48 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
 
     /**
      * <p>The ID of the dedicated block storage cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbsc-xxx</p>
      */
     @NameInMap("DbscId")
     public String dbscId;
 
     /**
      * <p>The name of the dedicated block storage cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myDBSCCluster</p>
      */
     @NameInMap("DbscName")
     public String dbscName;
 
     /**
      * <p>The type of the disk. Valid values:</p>
-     * <br>
-     * <p>*   cloud_essd: enhanced SSD (ESSD).</p>
+     * <ul>
+     * <li>cloud_essd: enhanced SSD (ESSD).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("DiskCategory")
     public String diskCategory;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F1A4258A-0C8C-5329-B495-BC5AD7AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -98,12 +114,18 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
     public static class QueryDedicatedBlockStorageClusterInventoryDataResponseBodyDataMonitorItems extends TeaModel {
         /**
          * <p>Available capacity size of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61360</p>
          */
         @NameInMap("AvailableSize")
         public Long availableSize;
 
         /**
          * <p>Total capacity size of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61440</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;
@@ -140,12 +162,18 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
 
         /**
          * <p>The ID list of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsc-xxx</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The timestamp when the data is collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1606403800</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;

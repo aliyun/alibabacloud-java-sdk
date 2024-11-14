@@ -6,112 +6,163 @@ import com.aliyun.tea.*;
 public class CreateDiskReplicaPairRequest extends TeaModel {
     /**
      * <p>The bandwidth to use to asynchronously replicate data between the primary disk and secondary disk. Unit: Kbit/s. Valid values:</p>
-     * <br>
-     * <p>*   10240 : equal to 10 Mbit/s</p>
-     * <p>*   20480 : equal to 20 Mbit/s</p>
-     * <p>*   51200 : equal to 50 Mbit/s</p>
-     * <p>*   102400 : equal to 100 Mbit/s</p>
-     * <br>
+     * <ul>
+     * <li>10240 : equal to 10 Mbit/s</li>
+     * <li>20480 : equal to 20 Mbit/s</li>
+     * <li>51200 : equal to 50 Mbit/s</li>
+     * <li>102400 : equal to 100 Mbit/s</li>
+     * </ul>
      * <p>Default value: 10240.</p>
-     * <br>
      * <p>When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
      * <p>The billing method of the replication pair. Valid values:</p>
-     * <br>
-     * <p>*   PREPAY: subscription</p>
-     * <p>*   POSTPAY: pay-as-you-go</p>
-     * <br>
+     * <ul>
+     * <li>PREPAY: subscription</li>
+     * <li>POSTPAY: pay-as-you-go</li>
+     * </ul>
      * <p>Default value: POSTPAY.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the secondary disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-sa1f82p58p1tdw9g****</p>
      */
     @NameInMap("DestinationDiskId")
     public String destinationDiskId;
 
     /**
-     * <p>The region ID of the secondary disk. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.</p>
+     * <p>The region ID of the secondary disk. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
     /**
      * <p>The zone ID of the secondary disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-e</p>
      */
     @NameInMap("DestinationZoneId")
     public String destinationZoneId;
 
     /**
      * <p>The ID of the primary disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-iq80sgp4d0xbk24q****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestReplicaPair</p>
      */
     @NameInMap("PairName")
     public String pairName;
 
     /**
-     * <p>The subscription duration of the replication pair. This parameter is required when the `ChargeType` parameter is set to PREPAY. The unit of the subscription duration is specified by the `PeriodUnit` parameter.</p>
-     * <br>
-     * <p>*   Valid values when the `PeriodUnit` parameter is set to Week: 1, 2, 3, and 4.</p>
-     * <p>*   Valid values when the `PeriodUnit` parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>The subscription duration of the replication pair. This parameter is required when the <code>ChargeType</code> parameter is set to PREPAY. The unit of the subscription duration is specified by the <code>PeriodUnit</code> parameter.</p>
+     * <ul>
+     * <li>Valid values when the <code>PeriodUnit</code> parameter is set to Week: 1, 2, 3, and 4.</li>
+     * <li>Valid values when the <code>PeriodUnit</code> parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Long period;
 
     /**
      * <p>The unit of the subscription duration of the replication pair. Valid values:</p>
-     * <br>
-     * <p>*   Week.</p>
-     * <p>*   Month</p>
-     * <br>
+     * <ul>
+     * <li>Week.</li>
+     * <li>Month</li>
+     * </ul>
      * <p>Default value: Month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("RPO")
     public Long RPO;
 
     /**
      * <p>The ID of the region in which to create the replication pair.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the replication group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmvs****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The zone ID of the primary disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-f</p>
      */
     @NameInMap("SourceZoneId")
     public String sourceZoneId;
@@ -257,13 +308,19 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
 
     public static class CreateDiskReplicaPairRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

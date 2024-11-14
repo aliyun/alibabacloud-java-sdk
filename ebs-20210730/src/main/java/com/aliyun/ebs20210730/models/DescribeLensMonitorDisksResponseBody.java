@@ -12,18 +12,27 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -68,12 +77,18 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     public static class DescribeLensMonitorDisksResponseBodyDiskInfosTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -104,103 +119,145 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     public static class DescribeLensMonitorDisksResponseBodyDiskInfos extends TeaModel {
         /**
          * <p>The BPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("Bps")
         public Integer bps;
 
         /**
          * <p>Indicates whether the performance burst feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
-         * <p>This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
          * <p>The type of the disk. Valid values:</p>
-         * <p>- cloud</p>
-         * <p>- cloud_efficiency</p>
-         * <p>- cloud_ssd</p>
-         * <p>- cloud_essd</p>
-         * <p>- cloud_auto</p>
-         * <p>- cloud_essd_entry</p>
+         * <ul>
+         * <li>cloud</li>
+         * <li>cloud_efficiency</li>
+         * <li>cloud_ssd</li>
+         * <li>cloud_essd</li>
+         * <li>cloud_auto</li>
+         * <li>cloud_essd_entry</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         @NameInMap("DiskCategory")
         public String diskCategory;
 
         /**
          * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cd401****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk-28c6b****</p>
          */
         @NameInMap("DiskName")
         public String diskName;
 
         /**
          * <p>The disk status. Valid values:</p>
-         * <br>
-         * <p>- Available</p>
-         * <p>- Deleted</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>Deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("DiskStatus")
         public String diskStatus;
 
         /**
          * <p>The disk type. Valid values:</p>
-         * <p>*   system: system disk</p>
-         * <p>*   data: data disk</p>
+         * <ul>
+         * <li>system: system disk</li>
+         * <li>data: data disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The IOPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000</p>
          */
         @NameInMap("Iops")
         public Integer iops;
 
         /**
-         * <p>Lens tags of the disk.</p>
+         * <p>Event tags of the disk.</p>
          */
         @NameInMap("LensTags")
         public java.util.List<String> lensTags;
 
         /**
          * <p>The new performance level of the ESSD. Valid values:</p>
-         * <br>
-         * <p>*   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
-         * <p>*   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</p>
+         * <ul>
+         * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
-         * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
-         * <br>
-         * <p>>  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks)</p>
+         * <blockquote>
+         * <p> This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4000</p>
          */
         @NameInMap("ProvisionedIops")
         public Integer provisionedIops;
 
         /**
          * <p>The region ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -213,6 +270,9 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BindEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF4CA176-3358-5B74-B317-B1908B4B1F7D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

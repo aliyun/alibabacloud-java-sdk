@@ -3,7 +3,7 @@ package com.aliyun.ebs20210730.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDisksResponse extends TeaModel {
+public class ListReportsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeDisksResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeDisksResponseBody body;
+    public ListReportsResponseBody body;
 
-    public static DescribeDisksResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDisksResponse self = new DescribeDisksResponse();
+    public static ListReportsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListReportsResponse self = new ListReportsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDisksResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListReportsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeDisksResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDisksResponse setStatusCode(Integer statusCode) {
+    public ListReportsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeDisksResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDisksResponse setBody(DescribeDisksResponseBody body) {
+    public ListReportsResponse setBody(ListReportsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDisksResponseBody getBody() {
+    public ListReportsResponseBody getBody() {
         return this.body;
     }
 

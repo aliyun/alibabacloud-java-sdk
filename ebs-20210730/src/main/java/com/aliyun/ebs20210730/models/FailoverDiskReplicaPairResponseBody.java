@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class FailoverDiskReplicaPairResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

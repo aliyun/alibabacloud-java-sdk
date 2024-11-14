@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel {
     /**
-     * <p>The queried dedicated block storage clusters.</p>
+     * <p>Details about the dedicated block storage clusters.</p>
      */
     @NameInMap("DedicatedBlockStorageClusters")
     public java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters> dedicatedBlockStorageClusters;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11B55F58-D3A4-4A9B-9596-342420D0****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -96,72 +111,108 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity extends TeaModel {
         /**
          * <p>The available capacity of the dedicated block storage cluster. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61440</p>
          */
         @NameInMap("AvailableCapacity")
         public Long availableCapacity;
 
         /**
          * <p>The total capacity of the dedicated block storage cluster that was delivered in disk creation orders. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61440</p>
          */
         @NameInMap("AvailableDeviceCapacity")
         public Long availableDeviceCapacity;
 
         /**
          * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40000.3</p>
          */
         @NameInMap("AvailableSpaceCapacity")
         public Double availableSpaceCapacity;
 
         /**
          * <p>The capacity of the dedicated block storage cluster that was delivered in orders. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61440</p>
          */
         @NameInMap("ClusterAvailableCapacity")
         public Long clusterAvailableCapacity;
 
         /**
          * <p>The capacity of the dedicated block storage cluster that is to be delivered in orders. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ClusterDeliveryCapacity")
         public Long clusterDeliveryCapacity;
 
         /**
-         * <p>The to-be-delivered capacity of the dedicated block storage cluster. Unit: GB.</p>
+         * <p>The capacity to be delivered for the dedicated block storage cluster. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeliveryCapacity")
         public Long deliveryCapacity;
 
         /**
          * <p>The total capacity of the dedicated block storage cluster. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61440</p>
          */
         @NameInMap("TotalCapacity")
         public Long totalCapacity;
 
         /**
          * <p>The total capacity of the dedicated block storage cluster that is to be delivered in disk creation orders. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61440</p>
          */
         @NameInMap("TotalDeviceCapacity")
         public Long totalDeviceCapacity;
 
         /**
          * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73728</p>
          */
         @NameInMap("TotalSpaceCapacity")
         public Long totalSpaceCapacity;
 
         /**
-         * <p>The used capacity of the dedicated block storage cluster. Unit: GB.</p>
+         * <p>The used capacity of the dedicated block storage cluster. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1440</p>
          */
         @NameInMap("UsedCapacity")
         public Long usedCapacity;
 
         /**
          * <p>The capacity of the dedicated block storage cluster that was used to create disks. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32000</p>
          */
         @NameInMap("UsedDeviceCapacity")
         public Long usedDeviceCapacity;
 
         /**
          * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33727.7</p>
          */
         @NameInMap("UsedSpaceCapacity")
         public Double usedSpaceCapacity;
@@ -272,12 +323,18 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags extends TeaModel {
         /**
          * <p>The tag key of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -307,109 +364,157 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters extends TeaModel {
         /**
-         * <p>The unique ID (UID) of the Alibaba Cloud account.</p>
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345601234560***</p>
          */
         @NameInMap("AliUid")
         public String aliUid;
 
         /**
          * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The time when the dedicated block storage cluster was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657113211</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The storage capacity of the dedicated block storage cluster.</p>
+         * <p>Details about the storage capacity of the dedicated block storage cluster.</p>
          */
         @NameInMap("DedicatedBlockStorageClusterCapacity")
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity dedicatedBlockStorageClusterCapacity;
 
         /**
          * <p>The ID of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsc-f8z4d3k4nsgg9okb****</p>
          */
         @NameInMap("DedicatedBlockStorageClusterId")
         public String dedicatedBlockStorageClusterId;
 
         /**
          * <p>The name of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDBSCCluster</p>
          */
         @NameInMap("DedicatedBlockStorageClusterName")
         public String dedicatedBlockStorageClusterName;
 
         /**
          * <p>The description of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The dedicated block storage cluster enable thin provison.</p>
+         * <p>Indicates whether Thin Provision is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableThinProvision")
         public Boolean enableThinProvision;
 
         /**
          * <p>The time when the dedicated block storage cluster expires. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1673020800</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The performance level of disks. Valid values:</p>
-         * <br>
-         * <p>*   PL0</p>
-         * <p>*   PL1</p>
-         * <p>*   PL2</p>
-         * <p>*   PL3</p>
-         * <br>
-         * <p>>  This parameter takes effect only if Category is set to cloud_essd.</p>
+         * <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only when the SupportedCategory value is cloud_essd.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
          * <p>The region ID of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the dedicated block storage cluster belongs.</p>
+         * <p>The ID of the resource group to which the dedicated block storage cluster belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzsoux****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Oversold ratio of cluster space capacity for creating disk.</p>
+         * <p>The capacity oversold ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         @NameInMap("SizeOverSoldRatio")
         public Double sizeOverSoldRatio;
 
         /**
          * <p>The state of the dedicated block storage cluster. Valid values:</p>
-         * <br>
-         * <p>*   Preparing</p>
-         * <p>*   Running</p>
-         * <p>*   Expired</p>
-         * <p>*   Offline</p>
+         * <ul>
+         * <li>Preparing</li>
+         * <li>Running</li>
+         * <li>Expired</li>
+         * <li>Offline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>StorageDomain.</p>
+         * <p>StorageDomain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StorageDomain</p>
          */
         @NameInMap("StorageDomain")
         public String storageDomain;
 
         /**
          * <p>This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         @NameInMap("SupportedCategory")
         public String supportedCategory;
@@ -422,15 +527,22 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
 
         /**
          * <p>The type of the dedicated block storage cluster. Valid values:</p>
-         * <br>
-         * <p>*   Standard: basic dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.</p>
-         * <p>*   Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</p>
+         * <ul>
+         * <li>Standard: basic dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.</li>
+         * <li>Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The zone ID of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

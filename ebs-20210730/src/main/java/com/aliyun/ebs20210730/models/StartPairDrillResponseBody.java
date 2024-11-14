@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartPairDrillResponseBody extends TeaModel {
     /**
      * <p>The drill ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drill-xxx</p>
      */
     @NameInMap("DrillId")
     public String drillId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
