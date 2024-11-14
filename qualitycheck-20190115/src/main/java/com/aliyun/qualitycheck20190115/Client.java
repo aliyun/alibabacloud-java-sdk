@@ -210,10 +210,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>会话组批量分配</p>
      * 
+     * @deprecated OpenAPI AssignReviewerBySessionGroup is deprecated
+     * 
      * @param request AssignReviewerBySessionGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AssignReviewerBySessionGroupResponse
      */
+    @Deprecated
+    // Deprecated
     public AssignReviewerBySessionGroupResponse assignReviewerBySessionGroupWithOptions(AssignReviewerBySessionGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -246,9 +250,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>会话组批量分配</p>
      * 
+     * @deprecated OpenAPI AssignReviewerBySessionGroup is deprecated
+     * 
      * @param request AssignReviewerBySessionGroupRequest
      * @return AssignReviewerBySessionGroupResponse
      */
+    @Deprecated
+    // Deprecated
     public AssignReviewerBySessionGroupResponse assignReviewerBySessionGroup(AssignReviewerBySessionGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.assignReviewerBySessionGroupWithOptions(request, runtime);
@@ -573,56 +581,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateUser is deprecated
-     * 
-     * @param request CreateUserRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateUserResponse
-     */
-    @Deprecated
-    // Deprecated
-    public CreateUserResponse createUserWithOptions(CreateUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateUser"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI CreateUser is deprecated
-     * 
-     * @param request CreateUserRequest
-     * @return CreateUserResponse
-     */
-    @Deprecated
-    // Deprecated
-    public CreateUserResponse createUser(CreateUserRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createUserWithOptions(request, runtime);
-    }
-
-    /**
      * @param request CreateWarningConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWarningConfigResponse
@@ -839,6 +797,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除质检唯独</p>
+     * 
+     * @param request DeleteCheckTypeToSchemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCheckTypeToSchemeResponse
+     */
+    public DeleteCheckTypeToSchemeResponse deleteCheckTypeToSchemeWithOptions(DeleteCheckTypeToSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            query.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCheckTypeToScheme"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCheckTypeToSchemeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除质检唯独</p>
+     * 
+     * @param request DeleteCheckTypeToSchemeRequest
+     * @return DeleteCheckTypeToSchemeResponse
+     */
+    public DeleteCheckTypeToSchemeResponse deleteCheckTypeToScheme(DeleteCheckTypeToSchemeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCheckTypeToSchemeWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DeleteCustomizationConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCustomizationConfigResponse
@@ -881,10 +887,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DeleteDataSet is deprecated
+     * 
      * @param request DeleteDataSetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDataSetResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteDataSetResponse deleteDataSetWithOptions(DeleteDataSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -914,9 +924,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DeleteDataSet is deprecated
+     * 
      * @param request DeleteDataSetRequest
      * @return DeleteDataSetResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteDataSetResponse deleteDataSet(DeleteDataSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDataSetWithOptions(request, runtime);
@@ -1181,56 +1195,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteScoreForApi is deprecated
-     * 
-     * @param request DeleteScoreForApiRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DeleteScoreForApiResponse deleteScoreForApiWithOptions(DeleteScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteScoreForApi"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScoreForApiResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI DeleteScoreForApi is deprecated
-     * 
-     * @param request DeleteScoreForApiRequest
-     * @return DeleteScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DeleteScoreForApiResponse deleteScoreForApi(DeleteScoreForApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteScoreForApiWithOptions(request, runtime);
-    }
-
-    /**
      * @param request DeleteSkillGroupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSkillGroupConfigResponse
@@ -1270,56 +1234,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSkillGroupConfigResponse deleteSkillGroupConfig(DeleteSkillGroupConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSkillGroupConfigWithOptions(request, runtime);
-    }
-
-    /**
-     * @deprecated OpenAPI DeleteSubScoreForApi is deprecated
-     * 
-     * @param request DeleteSubScoreForApiRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteSubScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DeleteSubScoreForApiResponse deleteSubScoreForApiWithOptions(DeleteSubScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteSubScoreForApi"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSubScoreForApiResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI DeleteSubScoreForApi is deprecated
-     * 
-     * @param request DeleteSubScoreForApiRequest
-     * @return DeleteSubScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DeleteSubScoreForApiResponse deleteSubScoreForApi(DeleteSubScoreForApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteSubScoreForApiWithOptions(request, runtime);
     }
 
     /**
@@ -2425,106 +2339,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI InsertScoreForApi is deprecated
-     * 
-     * @param request InsertScoreForApiRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return InsertScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public InsertScoreForApiResponse insertScoreForApiWithOptions(InsertScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "InsertScoreForApi"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InsertScoreForApiResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI InsertScoreForApi is deprecated
-     * 
-     * @param request InsertScoreForApiRequest
-     * @return InsertScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public InsertScoreForApiResponse insertScoreForApi(InsertScoreForApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.insertScoreForApiWithOptions(request, runtime);
-    }
-
-    /**
-     * @deprecated OpenAPI InsertSubScoreForApi is deprecated
-     * 
-     * @param request InsertSubScoreForApiRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return InsertSubScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public InsertSubScoreForApiResponse insertSubScoreForApiWithOptions(InsertSubScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "InsertSubScoreForApi"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InsertSubScoreForApiResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI InsertSubScoreForApi is deprecated
-     * 
-     * @param request InsertSubScoreForApiRequest
-     * @return InsertSubScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public InsertSubScoreForApiResponse insertSubScoreForApi(InsertSubScoreForApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.insertSubScoreForApiWithOptions(request, runtime);
-    }
-
-    /**
      * @deprecated OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.
      * 
      * @param request InvalidRuleRequest
@@ -2620,10 +2434,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取数据集列表</p>
      * 
+     * @deprecated OpenAPI ListDataSet is deprecated
+     * 
      * @param request ListDataSetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataSetResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataSetResponse listDataSetWithOptions(ListDataSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2656,9 +2474,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取数据集列表</p>
      * 
+     * @deprecated OpenAPI ListDataSet is deprecated
+     * 
      * @param request ListDataSetRequest
      * @return ListDataSetResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataSetResponse listDataSet(ListDataSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataSetWithOptions(request, runtime);
@@ -3002,10 +2824,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取会话组列表</p>
      * 
+     * @deprecated OpenAPI ListSessionGroup is deprecated
+     * 
      * @param request ListSessionGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSessionGroupResponse
      */
+    @Deprecated
+    // Deprecated
     public ListSessionGroupResponse listSessionGroupWithOptions(ListSessionGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3038,9 +2864,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取会话组列表</p>
      * 
+     * @deprecated OpenAPI ListSessionGroup is deprecated
+     * 
      * @param request ListSessionGroupRequest
      * @return ListSessionGroupResponse
      */
+    @Deprecated
+    // Deprecated
     public ListSessionGroupResponse listSessionGroup(ListSessionGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSessionGroupWithOptions(request, runtime);
@@ -3314,10 +3144,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>会话组批量回收</p>
      * 
+     * @deprecated OpenAPI RevertAssignedSessionGroup is deprecated
+     * 
      * @param request RevertAssignedSessionGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevertAssignedSessionGroupResponse
      */
+    @Deprecated
+    // Deprecated
     public RevertAssignedSessionGroupResponse revertAssignedSessionGroupWithOptions(RevertAssignedSessionGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3350,19 +3184,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>会话组批量回收</p>
      * 
+     * @deprecated OpenAPI RevertAssignedSessionGroup is deprecated
+     * 
      * @param request RevertAssignedSessionGroupRequest
      * @return RevertAssignedSessionGroupResponse
      */
+    @Deprecated
+    // Deprecated
     public RevertAssignedSessionGroupResponse revertAssignedSessionGroup(RevertAssignedSessionGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revertAssignedSessionGroupWithOptions(request, runtime);
     }
 
     /**
+     * @deprecated OpenAPI SaveConfigDataSet is deprecated
+     * 
      * @param request SaveConfigDataSetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveConfigDataSetResponse
      */
+    @Deprecated
+    // Deprecated
     public SaveConfigDataSetResponse saveConfigDataSetWithOptions(SaveConfigDataSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3392,9 +3234,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI SaveConfigDataSet is deprecated
+     * 
      * @param request SaveConfigDataSetRequest
      * @return SaveConfigDataSetResponse
      */
+    @Deprecated
+    // Deprecated
     public SaveConfigDataSetResponse saveConfigDataSet(SaveConfigDataSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveConfigDataSetWithOptions(request, runtime);
@@ -4115,56 +3961,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI UpdateScoreForApi is deprecated
-     * 
-     * @param request UpdateScoreForApiRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public UpdateScoreForApiResponse updateScoreForApiWithOptions(UpdateScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateScoreForApi"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateScoreForApiResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI UpdateScoreForApi is deprecated
-     * 
-     * @param request UpdateScoreForApiRequest
-     * @return UpdateScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public UpdateScoreForApiResponse updateScoreForApi(UpdateScoreForApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateScoreForApiWithOptions(request, runtime);
-    }
-
-    /**
      * @param request UpdateSkillGroupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateSkillGroupConfigResponse
@@ -4204,56 +4000,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSkillGroupConfigResponse updateSkillGroupConfig(UpdateSkillGroupConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSkillGroupConfigWithOptions(request, runtime);
-    }
-
-    /**
-     * @deprecated OpenAPI UpdateSubScoreForApi is deprecated
-     * 
-     * @param request UpdateSubScoreForApiRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateSubScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public UpdateSubScoreForApiResponse updateSubScoreForApiWithOptions(UpdateSubScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateSubScoreForApi"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSubScoreForApiResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI UpdateSubScoreForApi is deprecated
-     * 
-     * @param request UpdateSubScoreForApiRequest
-     * @return UpdateSubScoreForApiResponse
-     */
-    @Deprecated
-    // Deprecated
-    public UpdateSubScoreForApiResponse updateSubScoreForApi(UpdateSubScoreForApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateSubScoreForApiWithOptions(request, runtime);
     }
 
     /**
