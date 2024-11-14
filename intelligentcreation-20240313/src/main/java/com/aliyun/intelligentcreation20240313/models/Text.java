@@ -19,6 +19,9 @@ public class Text extends TeaModel {
     @NameInMap("desc")
     public String desc;
 
+    @NameInMap("errMsg")
+    public String errMsg;
+
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
@@ -129,6 +132,14 @@ public class Text extends TeaModel {
     }
     public String getDesc() {
         return this.desc;
+    }
+
+    public Text setErrMsg(String errMsg) {
+        this.errMsg = errMsg;
+        return this;
+    }
+    public String getErrMsg() {
+        return this.errMsg;
     }
 
     public Text setGmtCreate(String gmtCreate) {
