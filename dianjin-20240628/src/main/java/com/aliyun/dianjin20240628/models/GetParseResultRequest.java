@@ -22,6 +22,9 @@ public class GetParseResultRequest extends TeaModel {
     @NameInMap("libraryId")
     public String libraryId;
 
+    @NameInMap("useUrlResult")
+    public Boolean useUrlResult;
+
     public static GetParseResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetParseResultRequest self = new GetParseResultRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class GetParseResultRequest extends TeaModel {
     }
     public String getLibraryId() {
         return this.libraryId;
+    }
+
+    public GetParseResultRequest setUseUrlResult(Boolean useUrlResult) {
+        this.useUrlResult = useUrlResult;
+        return this;
+    }
+    public Boolean getUseUrlResult() {
+        return this.useUrlResult;
     }
 
 }

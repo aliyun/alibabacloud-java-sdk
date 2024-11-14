@@ -32,6 +32,9 @@ public class RecognizeIntentionRequest extends TeaModel {
     @NameInMap("hierarchicalIntentionList")
     public java.util.List<RecognizeIntentionRequestHierarchicalIntentionList> hierarchicalIntentionList;
 
+    @NameInMap("intentionDomainCode")
+    public String intentionDomainCode;
+
     @NameInMap("intentionList")
     public java.util.List<RecognizeIntentionRequestIntentionList> intentionList;
 
@@ -94,6 +97,14 @@ public class RecognizeIntentionRequest extends TeaModel {
         return this.hierarchicalIntentionList;
     }
 
+    public RecognizeIntentionRequest setIntentionDomainCode(String intentionDomainCode) {
+        this.intentionDomainCode = intentionDomainCode;
+        return this;
+    }
+    public String getIntentionDomainCode() {
+        return this.intentionDomainCode;
+    }
+
     public RecognizeIntentionRequest setIntentionList(java.util.List<RecognizeIntentionRequestIntentionList> intentionList) {
         this.intentionList = intentionList;
         return this;
@@ -132,6 +143,9 @@ public class RecognizeIntentionRequest extends TeaModel {
         @NameInMap("intentionCode")
         public String intentionCode;
 
+        @NameInMap("intentionScript")
+        public String intentionScript;
+
         public static RecognizeIntentionRequestGlobalIntentionList build(java.util.Map<String, ?> map) throws Exception {
             RecognizeIntentionRequestGlobalIntentionList self = new RecognizeIntentionRequestGlobalIntentionList();
             return TeaModel.build(map, self);
@@ -161,6 +175,14 @@ public class RecognizeIntentionRequest extends TeaModel {
             return this.intentionCode;
         }
 
+        public RecognizeIntentionRequestGlobalIntentionList setIntentionScript(String intentionScript) {
+            this.intentionScript = intentionScript;
+            return this;
+        }
+        public String getIntentionScript() {
+            return this.intentionScript;
+        }
+
     }
 
     public static class RecognizeIntentionRequestHierarchicalIntentionList extends TeaModel {
@@ -176,6 +198,9 @@ public class RecognizeIntentionRequest extends TeaModel {
          */
         @NameInMap("intentionCode")
         public String intentionCode;
+
+        @NameInMap("intentionScript")
+        public String intentionScript;
 
         public static RecognizeIntentionRequestHierarchicalIntentionList build(java.util.Map<String, ?> map) throws Exception {
             RecognizeIntentionRequestHierarchicalIntentionList self = new RecognizeIntentionRequestHierarchicalIntentionList();
@@ -206,6 +231,14 @@ public class RecognizeIntentionRequest extends TeaModel {
             return this.intentionCode;
         }
 
+        public RecognizeIntentionRequestHierarchicalIntentionList setIntentionScript(String intentionScript) {
+            this.intentionScript = intentionScript;
+            return this;
+        }
+        public String getIntentionScript() {
+            return this.intentionScript;
+        }
+
     }
 
     public static class RecognizeIntentionRequestIntentionList extends TeaModel {
@@ -221,6 +254,9 @@ public class RecognizeIntentionRequest extends TeaModel {
          */
         @NameInMap("intentionCode")
         public String intentionCode;
+
+        @NameInMap("intentionScript")
+        public String intentionScript;
 
         public static RecognizeIntentionRequestIntentionList build(java.util.Map<String, ?> map) throws Exception {
             RecognizeIntentionRequestIntentionList self = new RecognizeIntentionRequestIntentionList();
@@ -249,6 +285,14 @@ public class RecognizeIntentionRequest extends TeaModel {
         }
         public String getIntentionCode() {
             return this.intentionCode;
+        }
+
+        public RecognizeIntentionRequestIntentionList setIntentionScript(String intentionScript) {
+            this.intentionScript = intentionScript;
+            return this;
+        }
+        public String getIntentionScript() {
+            return this.intentionScript;
         }
 
     }
