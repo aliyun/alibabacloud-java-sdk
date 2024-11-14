@@ -139,6 +139,9 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         @NameInMap("intentionName")
         public String intentionName;
 
+        @NameInMap("intentionScript")
+        public String intentionScript;
+
         @NameInMap("recommendIntention")
         public String recommendIntention;
 
@@ -172,6 +175,14 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
         public String getIntentionName() {
             return this.intentionName;
+        }
+
+        public RecognizeIntentionResponseBodyData setIntentionScript(String intentionScript) {
+            this.intentionScript = intentionScript;
+            return this;
+        }
+        public String getIntentionScript() {
+            return this.intentionScript;
         }
 
         public RecognizeIntentionResponseBodyData setRecommendIntention(String recommendIntention) {

@@ -159,6 +159,9 @@ public class GetParseResultResponseBody extends TeaModel {
         @NameInMap("result")
         public java.util.Map<String, ?> result;
 
+        @NameInMap("resultUrl")
+        public String resultUrl;
+
         /**
          * <strong>example:</strong>
          * <p>WaitRefresh</p>
@@ -201,6 +204,14 @@ public class GetParseResultResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getResult() {
             return this.result;
+        }
+
+        public GetParseResultResponseBodyData setResultUrl(String resultUrl) {
+            this.resultUrl = resultUrl;
+            return this;
+        }
+        public String getResultUrl() {
+            return this.resultUrl;
         }
 
         public GetParseResultResponseBodyData setStatus(String status) {
