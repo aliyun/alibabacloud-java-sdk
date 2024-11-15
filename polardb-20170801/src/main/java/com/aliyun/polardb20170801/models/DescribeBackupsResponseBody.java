@@ -37,6 +37,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalLevel2BackupSize")
+    public String totalLevel2BackupSize;
+
     /**
      * <p>The total number of returned entries.</p>
      * 
@@ -81,6 +84,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeBackupsResponseBody setTotalLevel2BackupSize(String totalLevel2BackupSize) {
+        this.totalLevel2BackupSize = totalLevel2BackupSize;
+        return this;
+    }
+    public String getTotalLevel2BackupSize() {
+        return this.totalLevel2BackupSize;
     }
 
     public DescribeBackupsResponseBody setTotalRecordCount(String totalRecordCount) {

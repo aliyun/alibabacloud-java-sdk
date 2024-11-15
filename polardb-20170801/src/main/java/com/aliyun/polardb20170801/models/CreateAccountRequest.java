@@ -140,6 +140,14 @@ public class CreateAccountRequest extends TeaModel {
      * <li><strong>0 or unspecified</strong>: does not grant required permissions.</li>
      * <li><strong>1</strong>: grants required permissions.</li>
      * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The parameter is valid only after you configure the <code>AccountPrivilege</code> parameter.</p>
+     * </li>
+     * <li><p>If you set the parameter to <code>1</code>, the current account is granted to the required permissions on all databases in the current cluster that are specified by the <code>AccountPrivilege</code> parameter.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>

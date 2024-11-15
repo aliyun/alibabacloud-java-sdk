@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLicenseOrdersRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud order. The value can be the ID of a virtual order.</p>
+     * 
      * <strong>example:</strong>
      * <p>239618016570503</p>
      */
@@ -18,6 +20,15 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The type of the package. Valid values:</p>
+     * <ul>
+     * <li>single_node_subscribe: Single-node Edition (Subscription).</li>
+     * <li>single_node_long_term: Single-node Edition (Long-term).</li>
+     * <li>primary_backup_subscribe: HA Edition (Subscription).</li>
+     * <li>primary_backup_long_term: HA Edition (Long-term).</li>
+     * <li>pre_generation_long_term: Pre-generated (Long-term).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>single_node_subscribe</p>
      */
@@ -25,6 +36,8 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public String packageType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +45,8 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -39,6 +54,8 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The purchase channel. Valid values: aliyun_market and aliyun_public. aliyun_market specifies Alibaba Cloud Marketplace. aliyun_public specifies the PolarDB buy page.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun_market</p>
      */
@@ -51,6 +68,9 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to query only virtual orders.</p>
+     */
     @NameInMap("VirtualOrder")
     public Boolean virtualOrder;
 

@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeActivationCodesResponseBody extends TeaModel {
+    /**
+     * <p>The queried activation codes.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeActivationCodesResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,7 +29,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65D7ACE6-4A61-4B6E-B357-8CB24A******</p>
@@ -31,6 +38,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +93,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
 
     public static class DescribeActivationCodesResponseBodyItems extends TeaModel {
         /**
+         * <p>The time when the activation code takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
          */
@@ -91,6 +102,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String activateAt;
 
         /**
+         * <p>The description of the activation code.</p>
+         * 
          * <strong>example:</strong>
          * <p>testCode</p>
          */
@@ -98,6 +111,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The time when the activation code expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2054-10-16 16:46:20</p>
          */
@@ -105,6 +120,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String expireAt;
 
         /**
+         * <p>The time when the activation code was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
          */
@@ -112,6 +129,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the activation code was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
          */
@@ -119,6 +138,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The activation code ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -126,6 +147,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public Integer id;
 
         /**
+         * <p>The media access control (MAC) address used in the generation of the activation code.</p>
+         * 
          * <strong>example:</strong>
          * <p>12:34:56:78:98:00</p>
          */
@@ -133,6 +156,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String macAddress;
 
         /**
+         * <p>The name of the activation code.</p>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */
@@ -140,6 +165,8 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unique identifier of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
          */

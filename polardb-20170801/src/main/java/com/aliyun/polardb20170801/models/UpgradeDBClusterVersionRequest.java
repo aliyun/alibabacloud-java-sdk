@@ -54,11 +54,13 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     /**
      * <p>The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <blockquote>
-     * <ul>
-     * <li>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time between <code>2021-01-14T09:00:00Z</code> and <code>2021-01-15T09:00:00Z</code>.</li>
-     * <li>If you do not specify this parameter, the kernel update task runs immediately after you submit the request.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>The earliest start time of the task can be a point in time within the next 72 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-17T09:00:00Z</code>.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the kernel update task runs immediately after you submit the request.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2021-01-14T09:00:00Z</p>

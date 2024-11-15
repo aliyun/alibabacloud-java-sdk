@@ -100,6 +100,9 @@ public class DescribeClassListResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public String cpu;
 
+        @NameInMap("EssdMaxStorageCapacity")
+        public String essdMaxStorageCapacity;
+
         /**
          * <p>The maximum number of concurrent connections in the cluster.</p>
          * 
@@ -162,6 +165,9 @@ public class DescribeClassListResponseBody extends TeaModel {
          */
         @NameInMap("Pl3MaxIOPS")
         public String pl3MaxIOPS;
+
+        @NameInMap("PolarStoreMaxStorageCapacity")
+        public String polarStoreMaxStorageCapacity;
 
         /**
          * <p>The maximum Input/output operations per second (IOPS) for PolarStore Level 4 (PSL4). Unit: operations per second.</p>
@@ -250,6 +256,14 @@ public class DescribeClassListResponseBody extends TeaModel {
             return this.cpu;
         }
 
+        public DescribeClassListResponseBodyItems setEssdMaxStorageCapacity(String essdMaxStorageCapacity) {
+            this.essdMaxStorageCapacity = essdMaxStorageCapacity;
+            return this;
+        }
+        public String getEssdMaxStorageCapacity() {
+            return this.essdMaxStorageCapacity;
+        }
+
         public DescribeClassListResponseBodyItems setMaxConnections(String maxConnections) {
             this.maxConnections = maxConnections;
             return this;
@@ -304,6 +318,14 @@ public class DescribeClassListResponseBody extends TeaModel {
         }
         public String getPl3MaxIOPS() {
             return this.pl3MaxIOPS;
+        }
+
+        public DescribeClassListResponseBodyItems setPolarStoreMaxStorageCapacity(String polarStoreMaxStorageCapacity) {
+            this.polarStoreMaxStorageCapacity = polarStoreMaxStorageCapacity;
+            return this;
+        }
+        public String getPolarStoreMaxStorageCapacity() {
+            return this.polarStoreMaxStorageCapacity;
         }
 
         public DescribeClassListResponseBodyItems setPsl4MaxIOPS(String psl4MaxIOPS) {

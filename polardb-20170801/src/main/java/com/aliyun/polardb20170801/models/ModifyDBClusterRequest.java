@@ -84,6 +84,24 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("FaultSimulateMode")
     public String faultSimulateMode;
 
+    /**
+     * <p>Specifies whether to enable automatic IMCI-based query acceleration. IMCI is short for In-Memory Column Index. Valid values:</p>
+     * <ul>
+     * <li><code>ON</code>: enables automatic IMCI-based query acceleration.</li>
+     * <li><code>OFF</code>: disables automatic IMCI-based query acceleration.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter is supported only for PolarDB for MySQL clusters.</p>
+     * </li>
+     * <li><p>For information about the cluster version limits, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic IMCI-based query acceleration</a>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OFF</p>
+     */
     @NameInMap("ImciAutoIndex")
     public String imciAutoIndex;
 
