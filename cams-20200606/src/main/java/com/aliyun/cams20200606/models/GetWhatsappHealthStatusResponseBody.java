@@ -4,34 +4,59 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetWhatsappHealthStatusResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetWhatsappHealthStatusResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +118,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
 
     public static class GetWhatsappHealthStatusResponseBodyDataEntitiesErrors extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>141006</p>
          */
@@ -100,6 +127,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The description of the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>There is an error with the payment method.</p>
          */
@@ -107,6 +136,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         public String errorDescription;
 
         /**
+         * <p>The possible solution to the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>There was an error with your payment method. Please add a new payment method to the account.</p>
          */
@@ -146,6 +177,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
 
     public static class GetWhatsappHealthStatusResponseBodyDataEntities extends TeaModel {
         /**
+         * <p>The Business Manager ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3992****</p>
          */
@@ -153,6 +186,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         public String businessId;
 
         /**
+         * <p>Indicates whether the messages can be sent.</p>
+         * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */
@@ -160,16 +195,23 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         public String canSendMessage;
 
         /**
+         * <p>The entity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PHONE_NUMBER</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The reasons why the messages failed to be sent.</p>
+         */
         @NameInMap("Errors")
         public java.util.List<GetWhatsappHealthStatusResponseBodyDataEntitiesErrors> errors;
 
         /**
+         * <p>The template language.</p>
+         * 
          * <strong>example:</strong>
          * <p>en</p>
          */
@@ -177,6 +219,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <p>The phone number to which the messages are sent.</p>
+         * 
          * <strong>example:</strong>
          * <p>86138****</p>
          */
@@ -184,6 +228,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
+         * <p>The template code. This parameter is returned when the NodeType parameter is set to <strong>template</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>939928****</p>
          */
@@ -191,6 +237,8 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         public String templateCode;
 
         /**
+         * <p>The WABA ID. You can view the WABA ID in the Chat App Message Service console after you create the WABA.</p>
+         * 
          * <strong>example:</strong>
          * <p>39939***</p>
          */
@@ -270,12 +318,17 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
 
     public static class GetWhatsappHealthStatusResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the messages can be sent.</p>
+         * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */
         @NameInMap("CanSendMessage")
         public String canSendMessage;
 
+        /**
+         * <p>The queried entities.</p>
+         */
         @NameInMap("Entities")
         public java.util.List<GetWhatsappHealthStatusResponseBodyDataEntities> entities;
 

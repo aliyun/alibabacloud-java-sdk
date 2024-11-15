@@ -51,6 +51,12 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -133,10 +139,15 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
 
+        /**
+         * <p>WABA related information.</p>
+         */
         @NameInMap("AuthInternationalRateEligibility")
         public java.util.Map<String, ?> authInternationalRateEligibility;
 
         /**
+         * <p>The ID of the business platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>19293988***</p>
          */
@@ -144,6 +155,8 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String businessId;
 
         /**
+         * <p>The name of the business platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
          */
@@ -187,8 +200,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The start time when the authentication-international rate applies.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>&quot;start_time&quot;:1721952000</p>
          */
         @NameInMap("PrimaryBusinessLocation")
         public String primaryBusinessLocation;

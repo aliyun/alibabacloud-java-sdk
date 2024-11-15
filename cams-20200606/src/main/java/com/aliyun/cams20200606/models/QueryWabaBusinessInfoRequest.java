@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryWabaBusinessInfoRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class QueryWabaBusinessInfoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the WABA.</p>
+     * <p>The ID of the WhatsApp Business Account (WABA).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetCommerceSettingResponseBody extends TeaModel {
+    /**
+     * <p>Access denied for detailed information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -30,7 +36,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
@@ -45,6 +51,12 @@ public class GetCommerceSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -106,7 +118,11 @@ public class GetCommerceSettingResponseBody extends TeaModel {
 
     public static class GetCommerceSettingResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the shopping cart button is displayed.</p>
+         * <p>Indicates whether the shopping cart button is displayed. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -115,7 +131,11 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         public Boolean cartEnable;
 
         /**
-         * <p>Indicates whether the catalog button is displayed.</p>
+         * <p>Indicates whether the catalog button is displayed. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>

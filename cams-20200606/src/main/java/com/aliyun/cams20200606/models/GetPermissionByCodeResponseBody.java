@@ -18,6 +18,8 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error description information.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */

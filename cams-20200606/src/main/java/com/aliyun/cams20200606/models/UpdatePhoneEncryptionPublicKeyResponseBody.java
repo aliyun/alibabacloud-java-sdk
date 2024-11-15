@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneEncryptionPublicKeyResponseBody extends TeaModel {
     /**
+     * <p>The result returns OK as normal.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Error description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("Message")
     public String message;
 

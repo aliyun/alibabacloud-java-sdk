@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeprecateFlowResponseBody extends TeaModel {
     /**
+     * <p>The result returns OK as normal.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeprecateFlowResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error description information.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */

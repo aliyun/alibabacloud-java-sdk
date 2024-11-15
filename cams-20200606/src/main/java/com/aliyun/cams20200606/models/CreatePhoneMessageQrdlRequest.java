@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePhoneMessageQrdlRequest extends TeaModel {
     /**
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
      * <p>838833</p>
      */
@@ -12,6 +14,7 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>Produce QR code image format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,7 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
     public String phoneNumber;
 
     /**
+     * <p>Message content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

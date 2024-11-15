@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryWabaBusinessInfoResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -45,6 +51,12 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -106,7 +118,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
 
     public static class QueryWabaBusinessInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the business platform.</p>
+         * <p>The Business Manager ID.</p>
          * 
          * <strong>example:</strong>
          * <p>192882828733</p>
@@ -115,7 +127,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         public String businessId;
 
         /**
-         * <p>The name of the business platform.</p>
+         * <p>The Business Manager name.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>

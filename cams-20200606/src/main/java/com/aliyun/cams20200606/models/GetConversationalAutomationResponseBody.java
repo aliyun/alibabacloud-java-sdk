@@ -4,34 +4,59 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetConversationalAutomationResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetConversationalAutomationResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +118,8 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
 
     public static class GetConversationalAutomationResponseBodyDataCommands extends TeaModel {
         /**
+         * <p>The description of the command.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -100,6 +127,8 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         public String commandDescription;
 
         /**
+         * <p>The name of the command.</p>
+         * 
          * <strong>example:</strong>
          * <p>common1</p>
          */
@@ -130,10 +159,15 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
     }
 
     public static class GetConversationalAutomationResponseBodyData extends TeaModel {
+        /**
+         * <p>The commands.</p>
+         */
         @NameInMap("Commands")
         public java.util.List<GetConversationalAutomationResponseBodyDataCommands> commands;
 
         /**
+         * <p>Indicates whether the welcoming message is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -141,12 +175,17 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         public Boolean enableWelcomeMessage;
 
         /**
+         * <p>The phone number of the enterprise.</p>
+         * 
          * <strong>example:</strong>
          * <p>86138****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The opening remarks.</p>
+         */
         @NameInMap("Prompts")
         public java.util.List<String> prompts;
 

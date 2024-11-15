@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     /**
+     * <p>SpaceId/instanceId of ISV sub clients.</p>
+     * 
      * <strong>example:</strong>
      * <p>399382882</p>
      */
@@ -12,6 +14,7 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>Encrypt the public key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

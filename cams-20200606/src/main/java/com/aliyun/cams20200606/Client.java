@@ -27,9 +27,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * <b>summary</b> : 
      * <p>Adds a phone number for a WhatsApp Business account (WABA).</p>
      * 
@@ -90,9 +87,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * <b>summary</b> : 
      * <p>Adds a phone number for a WhatsApp Business account (WABA).</p>
      * 
@@ -186,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The ID of the session.</p>
      * 
      * <b>summary</b> : 
      * <p>Conducts sessions with the bot based on its unique identifier (ID).</p>
@@ -271,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The ID of the session.</p>
      * 
      * <b>summary</b> : 
      * <p>Conducts sessions with the bot based on its unique identifier (ID).</p>
@@ -398,7 +392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * 
      * <b>summary</b> : 
      * <p>Registers a phone number for migration.</p>
@@ -437,7 +431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * 
      * <b>summary</b> : 
      * <p>Registers a phone number for migration.</p>
@@ -820,12 +814,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The error message.</p>
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>The HTTP status code.
-     * \\*   Example: OK. This parameter indicates that the request is successful.
-     * \\*   Other values indicate that the request fails. For more information, see \[Error codes]\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</p>
+     * \\\\*   Example: OK. This parameter indicates that the request is successful.
+     * \\\\*   Other values indicate that the request fails. For more information, see \\\[Error codes]\\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</p>
      * 
      * @param tmpReq CreateChatappTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -907,12 +902,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The error message.</p>
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>The HTTP status code.
-     * \\*   Example: OK. This parameter indicates that the request is successful.
-     * \\*   Other values indicate that the request fails. For more information, see \[Error codes]\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</p>
+     * \\\\*   Example: OK. This parameter indicates that the request is successful.
+     * \\\\*   Other values indicate that the request fails. For more information, see \\\[Error codes]\\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</p>
      * 
      * @param request CreateChatappTemplateRequest
      * @return CreateChatappTemplateResponse
@@ -988,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建消息发送二维码</p>
+     * <p>Creates a quick-response (QR) code that contains a message.</p>
      * 
      * @param request CreatePhoneMessageQrdlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1032,7 +1028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建消息发送二维码</p>
+     * <p>Creates a quick-response (QR) code that contains a message.</p>
      * 
      * @param request CreatePhoneMessageQrdlRequest
      * @return CreatePhoneMessageQrdlResponse
@@ -1186,7 +1182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除消息发送二维码</p>
+     * <p>Deletes a quick-response (QR) code that contains a message.</p>
      * 
      * @param request DeletePhoneMessageQrdlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1226,7 +1222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除消息发送二维码</p>
+     * <p>Deletes a quick-response (QR) code that contains a message.</p>
      * 
      * @param request DeletePhoneMessageQrdlRequest
      * @return DeletePhoneMessageQrdlResponse
@@ -1238,7 +1234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>弃用Flow</p>
+     * <p>Deprecates a Flow.</p>
      * 
      * @param request DeprecateFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1274,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>弃用Flow</p>
+     * <p>Deprecates a Flow.</p>
      * 
      * @param request DeprecateFlowRequest
      * @return DeprecateFlowResponse
@@ -1753,8 +1749,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取号码欢迎消息设置信息</p>
+     * <p>Configures welcoming messages, opening remarks, and commands.</p>
      * 
      * @param request GetConversationalAutomationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1801,8 +1802,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取号码欢迎消息设置信息</p>
+     * <p>Configures welcoming messages, opening remarks, and commands.</p>
      * 
      * @param request GetConversationalAutomationRequest
      * @return GetConversationalAutomationResponse
@@ -1868,7 +1874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取flow的JSON文件</p>
+     * <p>Queries the JSON content of a Flow.</p>
      * 
      * @param request GetFlowJSONAssestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1904,7 +1910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取flow的JSON文件</p>
+     * <p>Queries the JSON content of a Flow.</p>
      * 
      * @param request GetFlowJSONAssestRequest
      * @return GetFlowJSONAssestResponse
@@ -1970,10 +1976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the phone number.</p>
+     * <p>The single user QPS limit for this interface is 10 times per second. Exceeding the limit may result in restricted API calls, which may affect your business. Please make reasonable calls.</p>
      * 
      * <b>summary</b> : 
-     * <p>The phone number.</p>
+     * <p>Obtain the verification code for the migration number.</p>
      * 
      * @param request GetMigrationVerifyCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2017,10 +2023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the phone number.</p>
+     * <p>The single user QPS limit for this interface is 10 times per second. Exceeding the limit may result in restricted API calls, which may affect your business. Please make reasonable calls.</p>
      * 
      * <b>summary</b> : 
-     * <p>The phone number.</p>
+     * <p>Obtain the verification code for the migration number.</p>
      * 
      * @param request GetMigrationVerifyCodeRequest
      * @return GetMigrationVerifyCodeResponse
@@ -2032,7 +2038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据Code获取权限</p>
+     * <p>Obtains permissions based on the authorization code obtained from embedded signup.</p>
      * 
      * @param tmpReq GetPermissionByCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2078,7 +2084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据Code获取权限</p>
+     * <p>Obtains permissions based on the authorization code obtained from embedded signup.</p>
      * 
      * @param request GetPermissionByCodeRequest
      * @return GetPermissionByCodeResponse
@@ -2090,7 +2096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取号码的公钥</p>
+     * <p>Queries the encryption public key of a phone number.</p>
      * 
      * @param request GetPhoneEncryptionPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2126,7 +2132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取号码的公钥</p>
+     * <p>Queries the encryption public key of a phone number.</p>
      * 
      * @param request GetPhoneEncryptionPublicKeyRequest
      * @return GetPhoneEncryptionPublicKeyResponse
@@ -2311,8 +2317,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取whatsapp节点信息发送消息健康度</p>
+     * <p>Queries the messaging health status of different types of nodes.</p>
      * 
      * @param request GetWhatsappHealthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2375,8 +2386,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取whatsapp节点信息发送消息健康度</p>
+     * <p>Queries the messaging health status of different types of nodes.</p>
      * 
      * @param request GetWhatsappHealthStatusRequest
      * @return GetWhatsappHealthStatusResponse
@@ -2596,7 +2612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消息发送二维码</p>
+     * <p>Queries the information about a list of quick-response (QR) codes that contain messages.</p>
      * 
      * @param request ListPhoneMessageQrdlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2632,7 +2648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消息发送二维码</p>
+     * <p>Queries the information about a list of quick-response (QR) codes that contain messages.</p>
      * 
      * @param request ListPhoneMessageQrdlRequest
      * @return ListPhoneMessageQrdlResponse
@@ -3682,7 +3698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>  You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>After you call the <a href="~~GetChatappUploadAuthorization~~">GetChatappUploadAuthorization</a> operation to obtain the authentication information for uploading the file to Object Storage Service (OSS), you can use the authentication information to upload the file to the OSS server. To upload the file, you can call the SDK provided by OSS. When you upload the file, set the value of the key to the value of <code>Dir + &quot;/&quot; + file name</code>, such as C200293990209/isvTerms.pdf. The value of Dir is obtained from the <a href="~~GetChatappUploadAuthorization~~">GetChatappUploadAuthorization</a> operation. The value of IsvTerms is obtained from the PutObject operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Submits the agreement information for independent software vendor (ISV) customers.</p>
@@ -3741,7 +3760,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>  You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>After you call the <a href="~~GetChatappUploadAuthorization~~">GetChatappUploadAuthorization</a> operation to obtain the authentication information for uploading the file to Object Storage Service (OSS), you can use the authentication information to upload the file to the OSS server. To upload the file, you can call the SDK provided by OSS. When you upload the file, set the value of the key to the value of <code>Dir + &quot;/&quot; + file name</code>, such as C200293990209/isvTerms.pdf. The value of Dir is obtained from the <a href="~~GetChatappUploadAuthorization~~">GetChatappUploadAuthorization</a> operation. The value of IsvTerms is obtained from the PutObject operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Submits the agreement information for independent software vendor (ISV) customers.</p>
@@ -3752,6 +3774,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitIsvCustomerTermsResponse submitIsvCustomerTerms(SubmitIsvCustomerTermsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitIsvCustomerTermsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After triggering an online flow, if your flow contains components that incur costs for cloud products, such as message sending or function calls, please ensure you fully understand the billing methods and prices of the related products before using this interface.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Trigger an Online ChatFlow</p>
+     * 
+     * @param tmpReq TriggerChatFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TriggerChatFlowResponse
+     */
+    public TriggerChatFlowResponse triggerChatFlowWithOptions(TriggerChatFlowRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TriggerChatFlowShrinkRequest request = new TriggerChatFlowShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.data)) {
+            request.dataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.data, "Data", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.claimTimeMillis)) {
+            query.put("ClaimTimeMillis", request.claimTimeMillis);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataShrink)) {
+            query.put("Data", request.dataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.discardTimeMillis)) {
+            query.put("DiscardTimeMillis", request.discardTimeMillis);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowCode)) {
+            query.put("FlowCode", request.flowCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TriggerChatFlow"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TriggerChatFlowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After triggering an online flow, if your flow contains components that incur costs for cloud products, such as message sending or function calls, please ensure you fully understand the billing methods and prices of the related products before using this interface.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Trigger an Online ChatFlow</p>
+     * 
+     * @param request TriggerChatFlowRequest
+     * @return TriggerChatFlowResponse
+     */
+    public TriggerChatFlowResponse triggerChatFlow(TriggerChatFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.triggerChatFlowWithOptions(request, runtime);
     }
 
     /**
@@ -3891,8 +4001,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新号码欢迎消息、命令等属性</p>
+     * <p>Modifies welcoming messages, opening remarks, and commands for a phone number.</p>
      * 
      * @param tmpReq UpdateConversationalAutomationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3961,8 +4076,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新号码欢迎消息、命令等属性</p>
+     * <p>Modifies welcoming messages, opening remarks, and commands for a phone number.</p>
      * 
      * @param request UpdateConversationalAutomationRequest
      * @return UpdateConversationalAutomationResponse
@@ -3974,7 +4094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新flow的表单内容</p>
+     * <p>Updates a Flow by using JSON content.</p>
      * 
      * @param request UpdateFlowJSONAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4014,7 +4134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新flow的表单内容</p>
+     * <p>Updates a Flow by using JSON content.</p>
      * 
      * @param request UpdateFlowJSONAssetRequest
      * @return UpdateFlowJSONAssetResponse
@@ -4026,7 +4146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新号码的公钥</p>
+     * <p>Updates the encryption public key of a phone number.</p>
      * 
      * @param request UpdatePhoneEncryptionPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4066,7 +4186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新号码的公钥</p>
+     * <p>Updates the encryption public key of a phone number.</p>
      * 
      * @param request UpdatePhoneEncryptionPublicKeyRequest
      * @return UpdatePhoneEncryptionPublicKeyResponse
@@ -4078,7 +4198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改消息发送二维码</p>
+     * <p>Modifies a quick-response (QR) code that contains a message.</p>
      * 
      * @param request UpdatePhoneMessageQrdlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4126,7 +4246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改消息发送二维码</p>
+     * <p>Modifies a quick-response (QR) code that contains a message.</p>
      * 
      * @param request UpdatePhoneMessageQrdlRequest
      * @return UpdatePhoneMessageQrdlResponse
@@ -4141,11 +4261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The error message returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>The HTTP status code returned.</p>
-     * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-     * </ul>
+     * <p>The HTTP status code returned.
+     * \*   A value of OK indicates that the call is successful.
+     * \*   Other values indicate that the call fails. For more information, see [Error codes]\(<del>196974</del>).</p>
      * 
      * @param request UpdatePhoneWebhookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4200,11 +4318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The error message returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>The HTTP status code returned.</p>
-     * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-     * </ul>
+     * <p>The HTTP status code returned.
+     * \*   A value of OK indicates that the call is successful.
+     * \*   Other values indicate that the call fails. For more information, see [Error codes]\(<del>196974</del>).</p>
      * 
      * @param request UpdatePhoneWebhookRequest
      * @return UpdatePhoneWebhookResponse

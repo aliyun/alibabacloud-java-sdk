@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateCommerceSettingRequest extends TeaModel {
     /**
-     * <p>Specifies whether to display the shopping cart button.</p>
+     * <p>Specifies whether to display the shopping cart button. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +19,11 @@ public class UpdateCommerceSettingRequest extends TeaModel {
     public Boolean cartEnable;
 
     /**
-     * <p>Specifies whether to display the catalog button.</p>
+     * <p>Specifies whether to display the catalog button. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
+    /**
+     * <p>Access denied for detailed information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -21,7 +27,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetChatappUploadAuthorizationResponseBodyData data;
@@ -118,7 +124,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The directory to which a file is uploaded in OSS.</p>
+         * <p>The directory to which the file is uploaded in Object Storage Service (OSS).</p>
          * 
          * <strong>example:</strong>
          * <p>1000102939</p>

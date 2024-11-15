@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePhoneMessageQrdlRequest extends TeaModel {
     /**
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
      * <p>883873773</p>
      */
@@ -22,6 +24,7 @@ public class DeletePhoneMessageQrdlRequest extends TeaModel {
     public String phoneNumber;
 
     /**
+     * <p>QR code encoding.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

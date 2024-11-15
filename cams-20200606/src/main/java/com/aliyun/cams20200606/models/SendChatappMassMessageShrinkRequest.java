@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class SendChatappMassMessageShrinkRequest extends TeaModel {
     /**
-     * <p>The channel type. Valid values: whatsapp, viber, and line.</p>
+     * <p>The type of the channel. Valid values:</p>
+     * <ul>
+     * <li><strong>whatsapp</strong></li>
+     * <li><strong>viber</strong></li>
+     * <li><strong>line</strong> (under development)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +29,10 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp Business account under the ISV account.</p>
+     * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <blockquote>
+     * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>65921621816****</p>
@@ -34,7 +42,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The fallback content.</p>
+     * <p>The content of the fallback message.</p>
      * 
      * <strong>example:</strong>
      * <p>Fallback message</p>
@@ -43,6 +51,8 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String fallBackContent;
 
     /**
+     * <p>Specifies the period of time after which the fallback message is sent if the message receipt that indicates the message is delivered to clients is not received. If this parameter is left empty, the fallback message is sent only when the message fails to be sent or the message receipt that indicates the message is not delivered to clients is received. Unit: seconds. Valid values: 60 to 43200.</p>
+     * 
      * <strong>example:</strong>
      * <p>120</p>
      */
@@ -50,7 +60,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public Integer fallBackDuration;
 
     /**
-     * <p>The ID of the fallback strategy.</p>
+     * <p>The ID of the fallback policy.</p>
      * 
      * <strong>example:</strong>
      * <p>S00001</p>
@@ -59,15 +69,10 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String fallBackId;
 
     /**
-     * <p>The fallback rule.</p>
-     * <blockquote>
-     * <p> Valid values:</p>
-     * </blockquote>
+     * <p>The fallback rule. Valid values:</p>
      * <ul>
-     * <li><p>undelivered: A fallback is triggered if the WhatsApp message is not delivered to clients. When the WhatsApp message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</p>
-     * </li>
-     * <li><p>sentfailed: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</p>
-     * </li>
+     * <li><strong>undelivered</strong>: A fallback is triggered if the message is not delivered to clients. When the message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</li>
+     * <li><strong>sentFailed</strong>: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +82,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String fallBackRule;
 
     /**
-     * <p>The phone number of the message sender.</p>
+     * <p>The mobile phone number of the message sender.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +92,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -96,7 +101,11 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.</p>
+     * <p>The type of the Viber message. Valid values:</p>
+     * <ul>
+     * <li><strong>promotion</strong></li>
+     * <li><strong>transaction</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>promotion</p>
@@ -115,7 +124,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The phone numbers to which the message is sent.</p>
+     * <p>The mobile phone numbers of the message receivers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SenderList")
@@ -131,7 +140,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100000001</p>
@@ -140,7 +149,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The encoding of the message template.</p>
+     * <p>The template code.</p>
      * 
      * <strong>example:</strong>
      * <p>744c4b5c79c9432497a075bdfca36bf5</p>
@@ -149,6 +158,8 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     public String templateCode;
 
     /**
+     * <p>The name of the message template.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_name</p>
      */

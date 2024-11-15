@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneWebhookRequest extends TeaModel {
     /**
+     * <p>SpaceId for ISV sub clients.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>Whether to use HTTP to receive receipts. Value:</p>
+     * <ul>
+     * <li>Y: Yes.</li>
+     * <li>N: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Y</p>
      */
@@ -21,6 +28,7 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     public String httpFlag;
 
     /**
+     * <p>phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,12 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     public String phoneNumber;
 
     /**
+     * <p>Whether to use queue method to receive receipts. Value:</p>
+     * <ul>
+     * <li>Y: Yes.</li>
+     * <li>N: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>N</p>
      */
@@ -37,6 +51,8 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     public String queueFlag;
 
     /**
+     * <p>HTTP status report interface callback address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
      */
@@ -44,6 +60,8 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     public String statusCallbackUrl;
 
     /**
+     * <p>HTTP upstream message interface callback address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://aliyun.com">http://aliyun.com</a></p>
      */

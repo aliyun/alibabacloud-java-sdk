@@ -20,6 +20,8 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String auditStatus;
 
     /**
+     * <p>Template encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>838888822*****</p>
      */

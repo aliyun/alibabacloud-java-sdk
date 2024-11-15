@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMigrationVerifyCodeRequest extends TeaModel {
     /**
+     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetMigrationVerifyCodeRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetMigrationVerifyCodeRequest extends TeaModel {
     public String locale;
 
     /**
+     * <p>The method to obtain the verification code. Valid values: SMS and VOICE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetMigrationVerifyCodeRequest extends TeaModel {
     public String method;
 
     /**
+     * <p>Phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ChatappBindWabaResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -21,7 +27,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ChatappBindWabaResponseBodyData data;
@@ -45,6 +51,12 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -106,7 +118,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
 
     public static class ChatappBindWabaResponseBodyData extends TeaModel {
         /**
-         * <p>The space ID of the user.</p>
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
          * 
          * <strong>example:</strong>
          * <p>C02029392939939</p>
@@ -115,7 +127,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         public String custSpaceId;
 
         /**
-         * <p>The ID of the WhatsApp Business account.</p>
+         * <p>The ID of the WhatsApp Business Account (WABA).</p>
          * 
          * <strong>example:</strong>
          * <p>2939828282</p>

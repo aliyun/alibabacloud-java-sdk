@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     /**
+     * <p>The result returns OK as normal.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -17,6 +19,12 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     @NameInMap("Data")
     public UpdateFlowJSONAssetResponseBodyData data;
 
+    /**
+     * <p>Error description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("Message")
     public String message;
 

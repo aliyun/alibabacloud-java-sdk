@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BeeBotChatRequest extends TeaModel {
     /**
-     * <p>The ID of the bot instance.</p>
+     * <p>Indicates whether the answer is in plain text or rich text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class BeeBotChatRequest extends TeaModel {
     public String chatBotInstanceId;
 
     /**
+     * <p>The metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>293483938849493</p>
      */
@@ -22,7 +24,7 @@ public class BeeBotChatRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&amp;A based on the intent.</p>
+     * <p>The source of the answer.</p>
      * 
      * <strong>example:</strong>
      * <p>intent</p>
@@ -31,7 +33,7 @@ public class BeeBotChatRequest extends TeaModel {
     public String intentName;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The source of the answer.</p>
      * 
      * <strong>example:</strong>
      * <p>ksiekdki39ksks93939</p>
@@ -40,7 +42,7 @@ public class BeeBotChatRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The ID of the knowledge title in the knowledge base.</p>
+     * <p>The hit statement.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,13 +51,13 @@ public class BeeBotChatRequest extends TeaModel {
     public String knowledgeId;
 
     /**
-     * <p>The list of codes for answers from different perspectives.</p>
+     * <p>Beijing</p>
      */
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
 
     /**
-     * <p>The ID of the visitor, which is used to identify users in the current session.</p>
+     * <p>The information about the slot.</p>
      * 
      * <strong>example:</strong>
      * <p>861500000000</p>
@@ -64,7 +66,7 @@ public class BeeBotChatRequest extends TeaModel {
     public String senderId;
 
     /**
-     * <p>The nickname of the visitor in the current session.</p>
+     * <p>Beijing</p>
      * 
      * <strong>example:</strong>
      * <p>nick</p>
@@ -73,7 +75,7 @@ public class BeeBotChatRequest extends TeaModel {
     public String senderNick;
 
     /**
-     * <p>The ID of the session, which is used to identify the session and store context information of the session.</p>
+     * <p>The title of the related knowledge.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -82,7 +84,7 @@ public class BeeBotChatRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The input of the visitor.</p>
+     * <p>The title of the hit question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +94,10 @@ public class BeeBotChatRequest extends TeaModel {
     public String utterance;
 
     /**
-     * <p>The user-defined parameter set in JSON format. You can specify user-defined parameters for conversation engines.</p>
+     * <p>The node name. When AnswerSource is set to BotFramework, a value is returned for this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;skills\&quot;:\&quot;chat_search\&quot;,\&quot;accessToken\&quot;:\&quot;73f4d5c8e8c334d9b538890bca68ac9a\&quot;,\&quot;senderStaffId\&quot;:\&quot;1697204021326\&quot;,\&quot;senderCorpId\&quot;:\&quot;dingee291fb2828058b9\&quot;}</p>
      */
     @NameInMap("VendorParam")
     public java.util.Map<String, ?> vendorParam;

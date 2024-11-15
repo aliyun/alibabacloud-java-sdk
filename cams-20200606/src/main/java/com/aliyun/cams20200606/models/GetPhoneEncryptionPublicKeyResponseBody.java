@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -17,6 +23,12 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetPhoneEncryptionPublicKeyResponseBodyData data;
 
+    /**
+     * <p>Error description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("Message")
     public String message;
 

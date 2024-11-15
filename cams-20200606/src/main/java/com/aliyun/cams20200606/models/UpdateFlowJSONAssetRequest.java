@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowJSONAssetRequest extends TeaModel {
     /**
+     * <p>SpaceId/instance ID of ISV sub customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>9399393</p>
      */
@@ -12,6 +14,7 @@ public class UpdateFlowJSONAssetRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>JSON file generated according to Facebook flow rules.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

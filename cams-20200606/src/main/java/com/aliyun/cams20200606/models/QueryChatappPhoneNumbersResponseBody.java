@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -30,7 +36,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The list of phone numbers.</p>
+     * <p>The phone numbers.</p>
      */
     @NameInMap("PhoneNumbers")
     public java.util.List<QueryChatappPhoneNumbersResponseBodyPhoneNumbers> phoneNumbers;
@@ -100,7 +106,16 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
-         * <p>The maximum number of messages that can be sent to users by using the phone number.</p>
+         * <p>The number of phone numbers to which messages can be sent in a day.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TIER_100K: 100,000</li>
+         * <li>TIER_UNLIMITED: unlimited</li>
+         * <li>TIER_250: 250</li>
+         * <li>TIER_1K: 1,000</li>
+         * <li>TIER_50: 50</li>
+         * <li>TIER_10K: 10,000</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TIER_10</p>
@@ -136,12 +151,13 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The quality rating of the phone number. Valid values:</p>
+         * <p>The quality rating of the phone number.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><strong>GREEN</strong></li>
-         * <li><strong>YELLOW</strong></li>
-         * <li><strong>RED</strong></li>
-         * <li><strong>UNKNOWN</strong></li>
+         * <li>RED</li>
+         * <li>YELLOW</li>
+         * <li>UNKNOWN</li>
+         * <li>GREEN</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,19 +167,20 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String qualityRating;
 
         /**
-         * <p>The status of the phone number.</p>
+         * <p>The state of the phone number.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>PENDING</li>
-         * <li>DELETED</li>
          * <li>MIGRATED</li>
-         * <li>BANNED</li>
-         * <li>RESTRICTED</li>
-         * <li>RATE_LIMITED</li>
          * <li>FLAGGED</li>
-         * <li>CONNECTED</li>
          * <li>DISCONNECTED</li>
-         * <li>UNKNOWN</li>
          * <li>UNVERIFIED</li>
+         * <li>BANNED</li>
+         * <li>RATE_LIMITED</li>
+         * <li>PENDING</li>
+         * <li>CONNECTED</li>
+         * <li>UNKNOWN</li>
+         * <li>DELETED</li>
+         * <li>RESTRICTED</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +199,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String statusCallbackUrl;
 
         /**
-         * <p>The status report notification queue.</p>
+         * <p>The status report queue.</p>
          * 
          * <strong>example:</strong>
          * <p>Alicom-Queue-****-ChatAppStatus</p>

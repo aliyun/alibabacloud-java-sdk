@@ -4,20 +4,37 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetMigrationVerifyCodeResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetMigrationVerifyCodeResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -25,6 +42,8 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
@@ -78,6 +97,8 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
 
     public static class GetMigrationVerifyCodeResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>82828893332</p>
          */
@@ -85,6 +106,8 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8613800001234</p>
          */

@@ -30,7 +30,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The components of the message template.</p>
      * <blockquote>
-     * <p> If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter is empty and text in the body or footer is automatically generated.</p>
+     * <p> If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, you do not need to set the Text sub-parameter of the Components parameter because the value is automatically generated.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -106,6 +106,8 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String templateCode;
 
     /**
+     * <p>Template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_name</p>
      */

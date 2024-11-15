@@ -5,14 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     /**
+     * <p>The business information.</p>
+     * 
      * <strong>example:</strong>
-     * <p>关于</p>
+     * <p>business profile</p>
      */
     @NameInMap("About")
     public String about;
 
     /**
-     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+     * <p>The address.</p>
      * 
      * <strong>example:</strong>
      * <p>The phone number.</p>
@@ -21,7 +23,7 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>Modifies the business information of the account to which a specified phone number is bound.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The address.</p>
+     * <p>The description of the phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -40,7 +42,7 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The description.</p>
+     * <p>The email address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></p>
@@ -52,7 +54,7 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The mobile phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,10 +64,7 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>The industry.</p>
-     * <blockquote>
-     * <p>Enum: {OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, RESTAURANT}</p>
-     * </blockquote>
+     * <p>The URL of the profile picture.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://a.img">http://a.img</a></p>
@@ -80,7 +79,10 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Sichuan</p>
+     * <p>The industry.</p>
+     * <blockquote>
+     * <p> Valid values: OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, and RESTAURANT.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>OTHER</p>
@@ -89,7 +91,7 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public String vertical;
 
     /**
-     * <p>The email address.</p>
+     * <p>The URLs of the websites.</p>
      */
     @NameInMap("Websites")
     public java.util.List<String> websites;

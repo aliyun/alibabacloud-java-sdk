@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappUploadAuthorizationRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

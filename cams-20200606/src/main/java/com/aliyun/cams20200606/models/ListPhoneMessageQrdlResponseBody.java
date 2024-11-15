@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     /**
+     * <p>If OK is returned, the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -17,6 +19,12 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListPhoneMessageQrdlResponseBodyData> data;
 
+    /**
+     * <p>Error description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("Message")
     public String message;
 

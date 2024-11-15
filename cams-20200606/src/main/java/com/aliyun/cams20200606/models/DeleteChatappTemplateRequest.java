@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatappTemplateRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the ISV account.</p>
+     * <p>The space ID of the RAM user within the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -14,7 +14,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
      * <blockquote>
      * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
      * </blockquote>
@@ -26,7 +26,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -35,6 +35,8 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String isvCode;
 
     /**
+     * <p>The template language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh_CN</p>
      */
@@ -51,7 +53,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The template code.</p>
      * 
      * <strong>example:</strong>
      * <p>744c4b5c79c9432497a075bdfca3****</p>
@@ -60,13 +62,17 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String templateCode;
 
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>test_name</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The template type. This parameter is required if you delete a template in a language.</p>
+     * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
      */

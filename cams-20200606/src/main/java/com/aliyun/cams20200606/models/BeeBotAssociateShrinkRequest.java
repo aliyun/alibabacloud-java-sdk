@@ -15,6 +15,8 @@ public class BeeBotAssociateShrinkRequest extends TeaModel {
     public String chatBotInstanceId;
 
     /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
      * <p>293483938849493</p>
      */
@@ -58,7 +60,7 @@ public class BeeBotAssociateShrinkRequest extends TeaModel {
      * <p>The input of the visitor.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好</p>
+     * <p>hello</p>
      */
     @NameInMap("Utterance")
     public String utterance;

@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMassMessageResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -21,7 +27,7 @@ public class SendChatappMassMessageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the group of messages.</p>
+     * <p>The ID of the message group.</p>
      * 
      * <strong>example:</strong>
      * <p>890000010002****</p>
