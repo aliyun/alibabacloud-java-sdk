@@ -11,6 +11,9 @@ public class RecognizeEduPaperStructedRequest extends TeaModel {
     @NameInMap("NeedRotate")
     public Boolean needRotate;
 
+    @NameInMap("OutputOricoord")
+    public Boolean outputOricoord;
+
     /**
      * <strong>example:</strong>
      * <p>default:默认, Math:数学, PrimarySchool_Math:小学数学, JHighSchool_Math: 初中数学, Chinese:语文, PrimarySchool_Chinese:小学语文, //JHighSchool_Chinese:初中语文, English:英语, PrimarySchool_English:小学英语, JHighSchool_English:初中英语, Physics:物理, JHighSchool_Physics:初中物理   //Chemistry: 化学, JHighSchool_Chemistry:初中化学, Biology:生物, JHighSchool_Biology:初中生物, History:历史, JHighSchool_History:初中历史, Geography:地理,   //JHighSchool_Geography:初中地理, Politics:政治, JHighSchool_Politics:初中政治   &quot;templateType&quot;: &quot;Math&quot;</p>
@@ -39,6 +42,14 @@ public class RecognizeEduPaperStructedRequest extends TeaModel {
     }
     public Boolean getNeedRotate() {
         return this.needRotate;
+    }
+
+    public RecognizeEduPaperStructedRequest setOutputOricoord(Boolean outputOricoord) {
+        this.outputOricoord = outputOricoord;
+        return this;
+    }
+    public Boolean getOutputOricoord() {
+        return this.outputOricoord;
     }
 
     public RecognizeEduPaperStructedRequest setSubject(String subject) {
