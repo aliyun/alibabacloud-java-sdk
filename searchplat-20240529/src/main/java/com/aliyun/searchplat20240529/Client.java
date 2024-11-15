@@ -263,6 +263,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>向量微调</p>
+     * 
+     * @param request GetEmbeddingTuningRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEmbeddingTuningResponse
+     */
+    public GetEmbeddingTuningResponse getEmbeddingTuningWithOptions(String workspaceName, String serviceId, GetEmbeddingTuningRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEmbeddingTuning"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/embedding-tuning/" + serviceId + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetEmbeddingTuningResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>向量微调</p>
+     * 
+     * @param request GetEmbeddingTuningRequest
+     * @return GetEmbeddingTuningResponse
+     */
+    public GetEmbeddingTuningResponse getEmbeddingTuning(String workspaceName, String serviceId, GetEmbeddingTuningRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getEmbeddingTuningWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取图片解析异步提取任务状态</p>
      * 
      * @param request GetImageAnalyzeTaskStatusRequest
