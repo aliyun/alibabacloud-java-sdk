@@ -48,7 +48,7 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The filter conditions for route CIDR blocks.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("RouteFilter")
     public java.util.List<ListTransitRouterRouteEntriesRequestRouteFilter> routeFilter;
@@ -362,9 +362,9 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
          * <p>The match pattern for filtering CIDR blocks. Valid values:</p>
          * <ul>
          * <li><strong>PrefixExactMatchCidrs</strong>: exact matching.</li>
-         * <li><strong>LongestPrefixMatchCidrs</strong>: longest prefix matching. The specified IP address and CIDR block are considered a match.</li>
-         * <li><strong>SubnetOfMatchCidrs</strong>: subnet matching. The specified CIDR block is considered a match.</li>
-         * <li><strong>SupernetOfMatchCidrs</strong>: supernet matching. The specified CIDR block is considered a match.</li>
+         * <li><strong>LongestPrefixMatchCidrs</strong>: longest prefix matching. You can specify IP addresses and CIDR blocks.</li>
+         * <li><strong>SubnetOfMatchCidrs</strong>: subnet matching. The subnets of the specified CIDR blocks, including the CIDR block, are matches against the match conditions.</li>
+         * <li><strong>SupernetOfMatchCidrs</strong>: supernet matching. The supernets of the CIDR block, including the CIDR block, are matched against the match conditions.</li>
          * </ul>
          * <p>By default, the logical operator among filter conditions is <strong>AND</strong>. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</p>
          * 

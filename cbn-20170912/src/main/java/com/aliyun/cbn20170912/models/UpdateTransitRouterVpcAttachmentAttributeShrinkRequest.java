@@ -85,6 +85,12 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
 
+    /**
+     * <p>Feature configurations of the VPC connection.</p>
+     * <ul>
+     * <li>ipv6Support: specifies whether to enable IPv6. Valid values: true and false. The default value is the status of the VPC connection.</li>
+     * </ul>
+     */
     @NameInMap("TransitRouterVPCAttachmentOptions")
     public String transitRouterVPCAttachmentOptionsShrink;
 

@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
+    /**
+     * <p>按照实际的生效带宽值进行过滤，只允许输入正整数，单位Mbps。</p>
+     */
     @NameInMap("EffectiveBandwidthFilter")
     public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter effectiveBandwidthFilter;
 
@@ -207,9 +210,21 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter extends TeaModel {
+        /**
+         * <p>实际生效带宽大于或等于指定带宽值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Gte")
         public Long gte;
 
+        /**
+         * <p>实际生效带宽小于或等于指定带宽值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Lte")
         public Long lte;
 

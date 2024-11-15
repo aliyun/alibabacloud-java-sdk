@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,14 @@ public class CreateTransitRouterPrefixListAssociationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
      * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
      * </ul>
+     * <blockquote>
+     * <p> This parameter is not in use.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -31,10 +34,8 @@ public class CreateTransitRouterPrefixListAssociationRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the next hop.</p>
-     * <blockquote>
-     * <p>If <strong>NextHopType</strong> is set to <strong>BlackHole</strong>, you must set this parameter to <strong>BlackHole</strong>.</p>
-     * </blockquote>
+     * <p>The ID of the next hop connection.</p>
+     * <p>To specify all CIDR blocks in the prefix list as blackhole routes, set this parameter to <strong>BlackHole</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,9 +48,10 @@ public class CreateTransitRouterPrefixListAssociationRequest extends TeaModel {
      * <p>The type of the next hop. Valid values:</p>
      * <ul>
      * <li><strong>BlackHole</strong>: specifies that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</li>
-     * <li><strong>VPC</strong>: specifies that the next hop of the CIDR blocks in the prefix list is a virtual private cloud (VPC) connection.</li>
-     * <li><strong>VBR</strong>: specifies that the next hop of the CIDR blocks in the prefix list is a virtual border router (VBR) connection.</li>
-     * <li><strong>TR</strong>: specifies that the next hop of the CIDR blocks in the prefix list is an inter-region connection.</li>
+     * <li><strong>VPC</strong>: specifies a virtual private cloud (VPC) connection as the next hop.</li>
+     * <li><strong>VBR</strong>: specifies a virtual border router (VBR) connection as the next hop.</li>
+     * <li><strong>TR</strong>: specifies an inter-region connection as the next hop.</li>
+     * <li><strong>ECR</strong>: specifies an Express Connect Router (ECR) connection as the next hop.</li>
      * </ul>
      * 
      * <strong>example:</strong>

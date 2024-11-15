@@ -35,11 +35,12 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the network instance. Default values:</p>
+     * <p>The type of the network instance. Valid values:</p>
      * <ul>
      * <li><strong>VPC</strong>: VPC</li>
      * <li><strong>ExpressConnect</strong>: VBR</li>
-     * <li><strong>VPN</strong>: IPsec connection</li>
+     * <li><strong>VPN</strong>: IPsec-VPN connection</li>
+     * <li><strong>ECR</strong>: ECR</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
