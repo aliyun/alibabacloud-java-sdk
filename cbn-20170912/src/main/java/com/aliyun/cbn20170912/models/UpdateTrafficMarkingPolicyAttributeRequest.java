@@ -179,11 +179,17 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     }
 
     public static class UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules extends TeaModel {
+        /**
+         * <p>The address family. Valid values: You can set the value to IPv4 or IPv6, or leave the value empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
         /**
-         * <p>The destination CIDR block that is used to match packets.</p>
+         * <p>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</p>
          * <p>Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.</p>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a destination CIDR block for each traffic classification rule.</p>
          * 
@@ -248,7 +254,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block that is used to match packets.</p>
+         * <p>The source CIDR block of packets. IPv4 and IPv6 addresses are supported.</p>
          * <p>Packets whose source IP addresses fall into the specified source CIDR block meet the traffic classification rule. If you do not specify a source CIDR block, all packets meet the traffic classification rule.</p>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.</p>
          * 
@@ -374,11 +380,17 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     }
 
     public static class UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules extends TeaModel {
+        /**
+         * <p>The address family. Valid values: You can set the value to IPv4 or IPv6, or leave the value empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv6</p>
+         */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
         /**
-         * <p>The destination CIDR block that is used to match packets.</p>
+         * <p>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.200.3/32</p>
@@ -412,7 +424,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block that is used to match packets.</p>
+         * <p>The source CIDR block of packets. IPv4 and IPv6 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>10.72.0.0/16</p>
@@ -428,7 +440,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
 
         /**
          * <p>The description of the traffic classification rule.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou-to-Qingdao CAT</p>

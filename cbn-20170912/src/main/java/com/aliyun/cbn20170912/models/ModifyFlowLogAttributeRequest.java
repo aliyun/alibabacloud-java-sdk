@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>
@@ -56,6 +55,9 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
      */
     @NameInMap("FlowLogName")
     public String flowLogName;
+
+    @NameInMap("Interval")
+    public Long interval;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -123,6 +125,14 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     }
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    public ModifyFlowLogAttributeRequest setInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Long getInterval() {
+        return this.interval;
     }
 
     public ModifyFlowLogAttributeRequest setOwnerAccount(String ownerAccount) {

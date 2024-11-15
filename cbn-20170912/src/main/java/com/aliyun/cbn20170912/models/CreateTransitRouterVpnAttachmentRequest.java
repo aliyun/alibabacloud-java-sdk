@@ -146,7 +146,6 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the zone in the current region.</p>
      * <p>Resources are deployed in the specified zone.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Zone")
     public java.util.List<CreateTransitRouterVpnAttachmentRequestZone> zone;
@@ -342,7 +341,6 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
         /**
          * <p>The zone ID of the read-only instance.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the most recent zone list.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

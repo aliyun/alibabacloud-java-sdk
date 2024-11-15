@@ -31,7 +31,10 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
     public Boolean dryRun;
 
     /**
-     * <p>The IP address of the multicast group to which the multicast source belongs. Valid values: <strong>224.0.0.1</strong> to <strong>239.255.255.254</strong>.</p>
+     * <p>The IP address of the multicast group to which the multicast source belongs. Valid values: <strong>224.0.1.0</strong> to <strong>239.255.255.254</strong>.</p>
+     * <blockquote>
+     * <p>224.0.0.0 to 224.0.0.255 are reserved by the system and cannot be used by multicast groups.</p>
+     * </blockquote>
      * <p>If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.</p>
      * <p>This parameter is required.</p>
      * 

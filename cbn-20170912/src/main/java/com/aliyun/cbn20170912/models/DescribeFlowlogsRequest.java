@@ -55,6 +55,12 @@ public class DescribeFlowlogsRequest extends TeaModel {
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    @NameInMap("FlowLogVersion")
+    public String flowLogVersion;
+
+    @NameInMap("Interval")
+    public Integer interval;
+
     /**
      * <p>The name of the Logstore where the flow log is stored.</p>
      * <p>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-). It must start or end with a lowercase letter or a digit.</p>
@@ -144,6 +150,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    @NameInMap("TransitRouterId")
+    public String transitRouterId;
+
     public static DescribeFlowlogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowlogsRequest self = new DescribeFlowlogsRequest();
         return TeaModel.build(map, self);
@@ -187,6 +196,22 @@ public class DescribeFlowlogsRequest extends TeaModel {
     }
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    public DescribeFlowlogsRequest setFlowLogVersion(String flowLogVersion) {
+        this.flowLogVersion = flowLogVersion;
+        return this;
+    }
+    public String getFlowLogVersion() {
+        return this.flowLogVersion;
+    }
+
+    public DescribeFlowlogsRequest setInterval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Integer getInterval() {
+        return this.interval;
     }
 
     public DescribeFlowlogsRequest setLogStoreName(String logStoreName) {
@@ -283,6 +308,14 @@ public class DescribeFlowlogsRequest extends TeaModel {
     }
     public String getTransitRouterAttachmentId() {
         return this.transitRouterAttachmentId;
+    }
+
+    public DescribeFlowlogsRequest setTransitRouterId(String transitRouterId) {
+        this.transitRouterId = transitRouterId;
+        return this;
+    }
+    public String getTransitRouterId() {
+        return this.transitRouterId;
     }
 
     public static class DescribeFlowlogsRequestTag extends TeaModel {

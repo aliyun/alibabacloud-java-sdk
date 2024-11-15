@@ -458,7 +458,8 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes destinationChildInstanceTypes;
 
         /**
-         * <p>The prefixes of the routes.</p>
+         * <p>The prefix list against which routes are matched.</p>
+         * <p>IPv4 and IPv6 addresses are supported.</p>
          */
         @NameInMap("DestinationCidrBlocks")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks destinationCidrBlocks;
@@ -485,6 +486,9 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         @NameInMap("DestinationInstanceIdsReverseMatch")
         public Boolean destinationInstanceIdsReverseMatch;
 
+        /**
+         * <p>The IDs of the destination regions for the routing policy.</p>
+         */
         @NameInMap("DestinationRegionIds")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds destinationRegionIds;
 

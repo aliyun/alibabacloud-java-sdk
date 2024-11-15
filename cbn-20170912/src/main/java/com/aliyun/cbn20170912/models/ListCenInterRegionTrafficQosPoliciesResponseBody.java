@@ -96,6 +96,12 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues extends TeaModel {
+        /**
+         * <p>带宽保障类型为按绝对值模式时，当前队列分配的跨地域带宽的值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
@@ -105,6 +111,12 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
 
+        /**
+         * <p>当前队列实际生效的带宽值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.35</p>
+         */
         @NameInMap("EffectiveBandwidth")
         public String effectiveBandwidth;
 
@@ -208,6 +220,16 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies extends TeaModel {
+        /**
+         * <p>带宽保障类型。</p>
+         * <ul>
+         * <li><strong>byBandwidth</strong>：按带宽绝对值模式配置QoS队列。</li>
+         * <li><strong>byBandwidthPercent</strong>：按带宽百分比模式配置QoS队列。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>byBandwidthPercent</p>
+         */
         @NameInMap("BandwidthGuaranteeMode")
         public String bandwidthGuaranteeMode;
 

@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteFlowlogRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>

@@ -204,11 +204,17 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     }
 
     public static class CreateTrafficMarkingPolicyRequestTrafficMatchRules extends TeaModel {
+        /**
+         * <p>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
         /**
-         * <p>The destination CIDR block that is used to match packets.</p>
+         * <p>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</p>
          * <p>Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.</p>
          * <p>You can create up to 50 traffic classification rules in each call You can specify a destination CIDR block for each traffic classification rule.</p>
          * 
@@ -223,7 +229,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
          * <p>Packets whose destination ports fall within the destination port range meet the traffic classification rule. If you do not specify destination port range, all packets meet the traffic classification rule.</p>
          * <p>You can enter up to two port numbers. Take note of the following rules:</p>
          * <ul>
-         * <li>If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule.</li>
+         * <li>If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule. A value of -1 specifies all destination ports.</li>
          * <li>If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 meet the traffic classification rule.</li>
          * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</li>
          * </ul>
@@ -233,7 +239,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         public java.util.List<Integer> dstPortRange;
 
         /**
-         * <p>The DSCP value that is used to match packets. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
+         * <p>The Differentiated Service Code Point (DSCP) value that is used to match packets. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
          * <p>Packets that carry the specified DSCP value meet the traffic classification rule. If you do not specify a DSCP value, all packets meet the traffic classification rule.</p>
          * <blockquote>
          * <p> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
@@ -249,7 +255,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The protocol that is used to match packets.</p>
          * <p>Traffic classification rules support the following protocols: <strong>HTTP</strong>, <strong>HTTPS</strong>, <strong>TCP</strong>, <strong>UDP</strong>, <strong>SSH</strong>, and <strong>Telnet</strong>. For more information, log on to the <a href="https://cen.console.aliyun.com/cen/list">CEN console</a>.</p>
-         * <p><strong>Some protocols use a fixed port. Click to view protocols and ports.</strong></p>
+         * <p><strong>Some protocols use a fixed port. Click to view the protocols and ports.</strong></p>
          * <ul>
          * <li>If the protocol is <strong>ICMP</strong>, the destination port must be <strong>-1</strong>.</li>
          * <li>If the protocol is <strong>GRE</strong>, the destination port must be <strong>1</strong>.</li>
@@ -273,7 +279,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block that is used to match packets.</p>
+         * <p>The source CIDR block of packets. IPv6 and IPv4 addresses are supported.</p>
          * <p>Packets whose source IP addresses fall into the specified source CIDR block meet the traffic classification rule. If you do not specify a source CIDR block, all packets meet the traffic classification rule.</p>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.</p>
          * 
@@ -285,10 +291,10 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
 
         /**
          * <p>The source port range that is used to match packets. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
-         * <p>Packets whose source ports fall into the source port range meet the traffic classification rule. If you do not specify a source port range, all packets meet the traffic classification rule.</p>
+         * <p>Packets whose source ports fall within the source port range meet the traffic classification rule. If you do not specify a source port range, all packets meet the traffic classification rule.</p>
          * <p>You can enter up to two port numbers. Take note of the following rules:</p>
          * <ul>
-         * <li>If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule.</li>
+         * <li>If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule. A value of -1 specifies all source ports.</li>
          * <li>If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 meet the traffic classification rule.</li>
          * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</li>
          * </ul>
@@ -300,7 +306,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The description of the traffic classification rule.</p>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a description for each traffic classification rule.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>

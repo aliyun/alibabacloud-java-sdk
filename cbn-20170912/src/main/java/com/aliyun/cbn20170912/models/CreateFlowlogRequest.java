@@ -56,6 +56,9 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("Interval")
     public Long interval;
 
+    @NameInMap("LogFormatString")
+    public String logFormatString;
+
     /**
      * <p>The Logstore where the flow log is stored.</p>
      * <ul>
@@ -143,6 +146,9 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    @NameInMap("TransitRouterId")
+    public String transitRouterId;
+
     public static CreateFlowlogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowlogRequest self = new CreateFlowlogRequest();
         return TeaModel.build(map, self);
@@ -186,6 +192,14 @@ public class CreateFlowlogRequest extends TeaModel {
     }
     public Long getInterval() {
         return this.interval;
+    }
+
+    public CreateFlowlogRequest setLogFormatString(String logFormatString) {
+        this.logFormatString = logFormatString;
+        return this;
+    }
+    public String getLogFormatString() {
+        return this.logFormatString;
     }
 
     public CreateFlowlogRequest setLogStoreName(String logStoreName) {
@@ -258,6 +272,14 @@ public class CreateFlowlogRequest extends TeaModel {
     }
     public String getTransitRouterAttachmentId() {
         return this.transitRouterAttachmentId;
+    }
+
+    public CreateFlowlogRequest setTransitRouterId(String transitRouterId) {
+        this.transitRouterId = transitRouterId;
+        return this;
+    }
+    public String getTransitRouterId() {
+        return this.transitRouterId;
     }
 
     public static class CreateFlowlogRequestTag extends TeaModel {

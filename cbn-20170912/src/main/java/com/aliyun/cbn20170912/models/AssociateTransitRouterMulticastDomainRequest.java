@@ -15,10 +15,10 @@ public class AssociateTransitRouterMulticastDomainRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the API request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.</li>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +60,7 @@ public class AssociateTransitRouterMulticastDomainRequest extends TeaModel {
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The vSwitch IDs.</p>
-     * <p>You can specify at most five vSwitch IDs in each call.</p>
+     * <p>The IDs of vSwitches.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;

@@ -14,6 +14,12 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>Specifies whether to enable IPv6. true: enables IPv6. false: disables IPv6. If you do not specify a value, vSwitches are not filtered based on this attribute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnabledIpv6")
     public Boolean enabledIpv6;
 
