@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class ChangeVisibilityRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>szpczf</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Invisible")
     public Boolean invisible;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sam@szpczf</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
