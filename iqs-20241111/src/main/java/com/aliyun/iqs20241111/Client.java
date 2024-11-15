@@ -28,6 +28,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>AI搜索流式接口</p>
+     * 
+     * @param request AiSearchRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AiSearchResponse
+     */
+    public AiSearchResponse aiSearchWithOptions(AiSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
+            query.put("industry", request.industry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("timeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AiSearch"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v3/linkedRetrieval/commands/aiSearch"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AiSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AI搜索流式接口</p>
+     * 
+     * @param request AiSearchRequest
+     * @return AiSearchResponse
+     */
+    public AiSearchResponse aiSearch(AiSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aiSearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>增强版通用搜索</p>
+     * 
+     * @param request GenericAdvancedSearchRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenericAdvancedSearchResponse
+     */
+    public GenericAdvancedSearchResponse genericAdvancedSearchWithOptions(GenericAdvancedSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("timeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenericAdvancedSearch"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v2/linkedRetrieval/commands/genericAdvancedSearch"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenericAdvancedSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>增强版通用搜索</p>
+     * 
+     * @param request GenericAdvancedSearchRequest
+     * @return GenericAdvancedSearchResponse
+     */
+    public GenericAdvancedSearchResponse genericAdvancedSearch(GenericAdvancedSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.genericAdvancedSearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>通用搜索</p>
      * 
      * @param request GenericSearchRequest
@@ -38,8 +156,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenericSearchResponse genericSearchWithOptions(GenericSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
+            query.put("industry", request.industry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
