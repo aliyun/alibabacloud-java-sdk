@@ -4,6 +4,9 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class DeleteKeywordRequest extends TeaModel {
+    @NameInMap("KeywordIdList")
+    public String keywordIdList;
+
     /**
      * <strong>example:</strong>
      * <p>[16754493]</p>
@@ -28,6 +31,14 @@ public class DeleteKeywordRequest extends TeaModel {
     public static DeleteKeywordRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteKeywordRequest self = new DeleteKeywordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteKeywordRequest setKeywordIdList(String keywordIdList) {
+        this.keywordIdList = keywordIdList;
+        return this;
+    }
+    public String getKeywordIdList() {
+        return this.keywordIdList;
     }
 
     public DeleteKeywordRequest setKeywordIds(String keywordIds) {
