@@ -111,6 +111,9 @@ public class EnrollAccountRequest extends TeaModel {
     @NameInMap("ResellAccountType")
     public String resellAccountType;
 
+    /**
+     * <p>The tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<EnrollAccountRequestTag> tag;
 
@@ -280,9 +283,21 @@ public class EnrollAccountRequest extends TeaModel {
     }
 
     public static class EnrollAccountRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -15,7 +15,8 @@ public class ListAccountFactoryBaselinesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>You do not need to specify this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>
@@ -24,7 +25,7 @@ public class ListAccountFactoryBaselinesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AC9BD94C-D20C-4D27-88D4-89E8D75C051B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The historical scores.</p>
+     */
     @NameInMap("ScoreHistory")
     public ListEvaluationScoreHistoryResponseBodyScoreHistory scoreHistory;
 
@@ -37,6 +42,8 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
 
     public static class ListEvaluationScoreHistoryResponseBodyScoreHistoryTotalScoreHistory extends TeaModel {
         /**
+         * <p>The time when the score was generated. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-30T03:34:02Z</p>
          */
@@ -44,6 +51,9 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
         public String evaluationTime;
 
         /**
+         * <p>The score.</p>
+         * <p>Valid values: 0 to 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6753</p>
          */
@@ -74,6 +84,9 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationScoreHistoryResponseBodyScoreHistory extends TeaModel {
+        /**
+         * <p>The historical scores.</p>
+         */
         @NameInMap("TotalScoreHistory")
         public java.util.List<ListEvaluationScoreHistoryResponseBodyScoreHistoryTotalScoreHistory> totalScoreHistory;
 

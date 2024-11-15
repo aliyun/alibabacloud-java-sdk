@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of baselines.</p>
+     * <p>The baselines.</p>
      */
     @NameInMap("Baselines")
     public java.util.List<ListAccountFactoryBaselinesResponseBodyBaselines> baselines;
@@ -97,8 +97,8 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         /**
          * <p>The type of the baseline. Valid values:</p>
          * <ul>
-         * <li>System: default baseline</li>
-         * <li>Custom: custom baseline</li>
+         * <li>System: default baseline.</li>
+         * <li>Custom: custom baseline.</li>
          * </ul>
          * 
          * <strong>example:</strong>

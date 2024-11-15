@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountFactoryBaselineRequest extends TeaModel {
     /**
+     * <p>The baseline ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>afb-bp1durvn3lgqe28v****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAccountFactoryBaselineRequest extends TeaModel {
     public String baselineId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

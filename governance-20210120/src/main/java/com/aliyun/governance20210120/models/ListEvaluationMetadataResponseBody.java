@@ -4,10 +4,15 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListEvaluationMetadataResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of a governance maturity check.</p>
+     */
     @NameInMap("EvaluationMetadata")
     public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadata> evaluationMetadata;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16B208DD-86BD-5E7D-AC93-FFD44B6FBDF1</p>
      */
@@ -36,19 +41,30 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActionsGuidance extends TeaModel {
+        /**
+         * <p>The display name of the fixing button.</p>
+         */
         @NameInMap("ButtonName")
         public String buttonName;
 
         /**
+         * <p>The navigation URL of the fixing button.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
          */
         @NameInMap("ButtonRef")
         public String buttonRef;
 
+        /**
+         * <p>The fixing procedure.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The title of the fixing procedure.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -93,24 +109,50 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions extends TeaModel {
         /**
+         * <p>The fixing method.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>UnusedAccessKeyInRamUser</p>
          */
         @NameInMap("Classification")
         public String classification;
 
+        /**
+         * <p>The fixing cost.</p>
+         */
         @NameInMap("CostDescription")
         public String costDescription;
 
+        /**
+         * <p>The description of the fixing item.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+         * </blockquote>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The content of the fixing items.</p>
+         */
         @NameInMap("Guidance")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActionsGuidance> guidance;
 
+        /**
+         * <p>The usage notes of the fixing item.</p>
+         */
         @NameInMap("Notice")
         public String notice;
 
+        /**
+         * <p>The fixing suggestion.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+         * </blockquote>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -170,10 +212,20 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediation extends TeaModel {
+        /**
+         * <p>The fixing operations.</p>
+         */
         @NameInMap("Actions")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions> actions;
 
         /**
+         * <p>The type of the fixing method. Valid values:</p>
+         * <ul>
+         * <li>Manual: manual fixing</li>
+         * <li>QuickFix: quick fixing</li>
+         * <li>Analysis: auxiliary decision-making</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Manual</p>
          */
@@ -204,6 +256,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadata extends TeaModel {
+        /**
+         * <p>The fixing items.</p>
+         */
         @NameInMap("Remediation")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediation> remediation;
 
@@ -223,10 +278,15 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadataResourcePropertyMetadata extends TeaModel {
+        /**
+         * <p>The display name of the resource property.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The name of the resource property.</p>
+         * 
          * <strong>example:</strong>
          * <p>AkLastUsedTime</p>
          */
@@ -234,6 +294,8 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String propertyName;
 
         /**
+         * <p>The type of the resource property.</p>
+         * 
          * <strong>example:</strong>
          * <p>String</p>
          */
@@ -272,6 +334,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadata extends TeaModel {
+        /**
+         * <p>The metadata of the resource properties.</p>
+         */
         @NameInMap("ResourcePropertyMetadata")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadataResourcePropertyMetadata> resourcePropertyMetadata;
 
@@ -292,19 +357,29 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata extends TeaModel {
         /**
+         * <p>The category of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>Security</p>
          */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The description of the check item.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the check item.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The ID of the metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxgtda****</p>
          */
@@ -312,19 +387,33 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The governance level of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>High</p>
          */
         @NameInMap("RecommendationLevel")
         public String recommendationLevel;
 
+        /**
+         * <p>The metadata of the fixing task.</p>
+         */
         @NameInMap("RemediationMetadata")
         public ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadata remediationMetadata;
 
+        /**
+         * <p>The metadata of the checked resources.</p>
+         */
         @NameInMap("ResourceMetadata")
         public ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadata resourceMetadata;
 
         /**
+         * <p>The scope of the check item. Valid values:</p>
+         * <ul>
+         * <li>Account: the check item in a single-account governance maturity check</li>
+         * <li>ResourceDirectory: the check item in a multi-account governance maturity check</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Account</p>
          */
@@ -332,6 +421,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>The status of the check item. Valid values:</p>
+         * <ul>
+         * <li>Released: The check item is released.</li>
+         * <li>Beta: The check item is pre-released.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Released</p>
          */
@@ -418,10 +513,18 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadata extends TeaModel {
+        /**
+         * <p>The metadata objects of a specific metadata type.</p>
+         */
         @NameInMap("Metadata")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata> metadata;
 
         /**
+         * <p>The type of the metadata. Valid values:</p>
+         * <ul>
+         * <li>Metric: the check item</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Metric</p>
          */

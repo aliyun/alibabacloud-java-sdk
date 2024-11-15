@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunEvaluationResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D3E2A3A-F2B8-578D-9659-3195F94A****</p>
      */

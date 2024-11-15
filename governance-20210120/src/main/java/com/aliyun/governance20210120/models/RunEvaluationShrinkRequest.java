@@ -3,7 +3,7 @@ package com.aliyun.governance20210120.models;
 
 import com.aliyun.tea.*;
 
-public class RunEvaluationRequest extends TeaModel {
+public class RunEvaluationShrinkRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
      * 
@@ -14,7 +14,7 @@ public class RunEvaluationRequest extends TeaModel {
     public Long accountId;
 
     @NameInMap("MetricIds")
-    public java.util.List<String> metricIds;
+    public String metricIdsShrink;
 
     /**
      * <p>The region ID.</p>
@@ -38,12 +38,12 @@ public class RunEvaluationRequest extends TeaModel {
     @NameInMap("Scope")
     public String scope;
 
-    public static RunEvaluationRequest build(java.util.Map<String, ?> map) throws Exception {
-        RunEvaluationRequest self = new RunEvaluationRequest();
+    public static RunEvaluationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RunEvaluationShrinkRequest self = new RunEvaluationShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RunEvaluationRequest setAccountId(Long accountId) {
+    public RunEvaluationShrinkRequest setAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
     }
@@ -51,15 +51,15 @@ public class RunEvaluationRequest extends TeaModel {
         return this.accountId;
     }
 
-    public RunEvaluationRequest setMetricIds(java.util.List<String> metricIds) {
-        this.metricIds = metricIds;
+    public RunEvaluationShrinkRequest setMetricIdsShrink(String metricIdsShrink) {
+        this.metricIdsShrink = metricIdsShrink;
         return this;
     }
-    public java.util.List<String> getMetricIds() {
-        return this.metricIds;
+    public String getMetricIdsShrink() {
+        return this.metricIdsShrink;
     }
 
-    public RunEvaluationRequest setRegionId(String regionId) {
+    public RunEvaluationShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -67,7 +67,7 @@ public class RunEvaluationRequest extends TeaModel {
         return this.regionId;
     }
 
-    public RunEvaluationRequest setScope(String scope) {
+    public RunEvaluationShrinkRequest setScope(String scope) {
         this.scope = scope;
         return this;
     }

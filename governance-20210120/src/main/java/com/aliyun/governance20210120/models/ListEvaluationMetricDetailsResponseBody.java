@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</p>
      */
@@ -12,12 +14,17 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AC9BD94C-D20C-4D27-88D4-89E8D75C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the non-compliant resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<ListEvaluationMetricDetailsResponseBodyResources> resources;
 
@@ -52,12 +59,17 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
     public static class ListEvaluationMetricDetailsResponseBodyResourcesResourceProperties extends TeaModel {
         /**
+         * <p>The name of the resource attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>DisplayName</p>
          */
         @NameInMap("PropertyName")
         public String propertyName;
 
+        /**
+         * <p>The value of the resource attribute.</p>
+         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
@@ -85,10 +97,24 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationMetricDetailsResponseBodyResources extends TeaModel {
+        /**
+         * <p>合规状态。取值：</p>
+         * <ul>
+         * <li>NonCompliant：不合规。</li>
+         * <li>Excluded：已忽略。</li>
+         * <li>PendingExclusion：已忽略未生效。</li>
+         * <li>PendingInclusion：已取消忽略未生效。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NonCompliant</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -96,6 +122,11 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The check results further analyzed by auxiliary decision-making.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the check item supports the auxiliary decision-making feature.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>RecentUnloginRamUser</p>
          */
@@ -103,26 +134,38 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         public String resourceClassification;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>26435103783237****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>176618589410****</p>
          */
         @NameInMap("ResourceOwnerId")
         public Long resourceOwnerId;
 
+        /**
+         * <p>The attributes of the resource.</p>
+         */
         @NameInMap("ResourceProperties")
         public java.util.List<ListEvaluationMetricDetailsResponseBodyResourcesResourceProperties> resourceProperties;
 
         /**
+         * <p>The type of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS::RAM::User</p>
          */

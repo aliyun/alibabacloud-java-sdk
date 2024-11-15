@@ -28,8 +28,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to apply an account baseline to existing resource accounts.
+     * Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>账号工厂批量注册账号</p>
+     * <p>Applies an account baseline to multiple existing resource accounts at a time.</p>
      * 
      * @param request BatchEnrollAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,8 +76,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to apply an account baseline to existing resource accounts.
+     * Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>账号工厂批量注册账号</p>
+     * <p>Applies an account baseline to multiple existing resource accounts at a time.</p>
      * 
      * @param request BatchEnrollAccountsRequest
      * @return BatchEnrollAccountsResponse
@@ -85,7 +93,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建账号工厂基线</p>
+     * <p>Creates a baseline of the account factory.</p>
      * 
      * @param request CreateAccountFactoryBaselineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -129,7 +137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建账号工厂基线</p>
+     * <p>Creates a baseline of the account factory.</p>
      * 
      * @param request CreateAccountFactoryBaselineRequest
      * @return CreateAccountFactoryBaselineResponse
@@ -141,7 +149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除账号工厂基线</p>
+     * <p>Deletes an account factory baseline.</p>
      * 
      * @param request DeleteAccountFactoryBaselineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -177,7 +185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除账号工厂基线</p>
+     * <p>Deletes an account factory baseline.</p>
      * 
      * @param request DeleteAccountFactoryBaselineRequest
      * @return DeleteAccountFactoryBaselineResponse
@@ -379,7 +387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账号工厂基线元素列表</p>
+     * <p>Queries a list of baseline items that are supported by the account factory of Cloud Governance Center (CGC).</p>
      * 
      * @param request ListAccountFactoryBaselineItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -431,7 +439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账号工厂基线元素列表</p>
+     * <p>Queries a list of baseline items that are supported by the account factory of Cloud Governance Center (CGC).</p>
      * 
      * @param request ListAccountFactoryBaselineItemsRequest
      * @return ListAccountFactoryBaselineItemsResponse
@@ -547,7 +555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看治理检测定义</p>
+     * <p>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</p>
      * 
      * @param request ListEvaluationMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -583,7 +591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看治理检测定义</p>
+     * <p>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</p>
      * 
      * @param request ListEvaluationMetadataRequest
      * @return ListEvaluationMetadataResponse
@@ -595,7 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取云治理中心治理检测项结果详情</p>
+     * <p>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</p>
      * 
      * @param request ListEvaluationMetricDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -643,7 +651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取云治理中心治理检测项结果详情</p>
+     * <p>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</p>
      * 
      * @param request ListEvaluationMetricDetailsRequest
      * @return ListEvaluationMetricDetailsResponse
@@ -703,7 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看治理检测定义</p>
+     * <p>Queries the historical scores of a governance maturity check.</p>
      * 
      * @param request ListEvaluationScoreHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -747,7 +755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看治理检测定义</p>
+     * <p>Queries the historical scores of a governance maturity check.</p>
      * 
      * @param request ListEvaluationScoreHistoryRequest
      * @return ListEvaluationScoreHistoryResponse
@@ -759,17 +767,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行云治理中心治理检测</p>
+     * <p>Performs a governance maturity check.</p>
      * 
-     * @param request RunEvaluationRequest
+     * @param tmpReq RunEvaluationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunEvaluationResponse
      */
-    public RunEvaluationResponse runEvaluationWithOptions(RunEvaluationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RunEvaluationResponse runEvaluationWithOptions(RunEvaluationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunEvaluationShrinkRequest request = new RunEvaluationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metricIds)) {
+            request.metricIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metricIds, "MetricIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
             query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricIdsShrink)) {
+            query.put("MetricIds", request.metricIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -799,7 +817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行云治理中心治理检测</p>
+     * <p>Performs a governance maturity check.</p>
      * 
      * @param request RunEvaluationRequest
      * @return RunEvaluationResponse
@@ -811,7 +829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新账号工厂基线</p>
+     * <p>Updates a baseline of the account factory.</p>
      * 
      * @param request UpdateAccountFactoryBaselineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -859,7 +877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新账号工厂基线</p>
+     * <p>Updates a baseline of the account factory.</p>
      * 
      * @param request UpdateAccountFactoryBaselineRequest
      * @return UpdateAccountFactoryBaselineResponse

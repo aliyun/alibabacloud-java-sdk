@@ -4,10 +4,15 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
+    /**
+     * <p>The baseline items.</p>
+     */
     @NameInMap("BaselineItems")
     public java.util.List<ListAccountFactoryBaselineItemsResponseBodyBaselineItems> baselineItems;
 
     /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAACDGQdAEX3m42z3sQ+f3VTK2Xr2DzYbz/SAfc/zJRqod</p>
      */
@@ -15,6 +20,8 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B40D73D8-76AC-5D3C-AC63-4FC8AFCE6671</p>
      */
@@ -52,6 +59,8 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
 
     public static class ListAccountFactoryBaselineItemsResponseBodyBaselineItemsDependsOn extends TeaModel {
         /**
+         * <p>The name of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
          */
@@ -59,6 +68,8 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccountFactory</p>
          */
@@ -66,6 +77,8 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -104,10 +117,15 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
     }
 
     public static class ListAccountFactoryBaselineItemsResponseBodyBaselineItems extends TeaModel {
+        /**
+         * <p>The dependency of the baseline item.</p>
+         */
         @NameInMap("DependsOn")
         public java.util.List<ListAccountFactoryBaselineItemsResponseBodyBaselineItemsDependsOn> dependsOn;
 
         /**
+         * <p>The description of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>Notification.</p>
          */
@@ -115,6 +133,8 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS-BP_ACCOUNT_FACTORY_ACCOUNT_NOTIFICATION</p>
          */
@@ -122,6 +142,8 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccountFactory</p>
          */
@@ -129,6 +151,8 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */

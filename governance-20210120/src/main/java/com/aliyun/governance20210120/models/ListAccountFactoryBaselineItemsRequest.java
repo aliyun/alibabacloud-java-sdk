@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListAccountFactoryBaselineItemsRequest extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The names of the baseline items.</p>
+     */
     @NameInMap("Names")
     public java.util.List<String> names;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAACDGQdAEX3m42z3sQ+f3VTK2Xr2DzYbz/SAfc/zJRqod</p>
      */
@@ -22,7 +30,7 @@ public class ListAccountFactoryBaselineItemsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -31,12 +39,17 @@ public class ListAccountFactoryBaselineItemsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The type of the baseline items.</p>
+     * 
      * <strong>example:</strong>
      * <p>AccountFactory</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The versions of the baseline items.</p>
+     */
     @NameInMap("Versions")
     public java.util.List<String> versions;
 
