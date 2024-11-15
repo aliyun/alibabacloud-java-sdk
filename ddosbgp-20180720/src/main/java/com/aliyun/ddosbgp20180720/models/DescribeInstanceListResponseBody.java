@@ -139,6 +139,9 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         @NameInMap("CoverageType")
         public Integer coverageType;
 
+        @NameInMap("DebtStatus")
+        public Long debtStatus;
+
         /**
          * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
@@ -272,6 +275,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
         public Integer getCoverageType() {
             return this.coverageType;
+        }
+
+        public DescribeInstanceListResponseBodyInstanceList setDebtStatus(Long debtStatus) {
+            this.debtStatus = debtStatus;
+            return this;
+        }
+        public Long getDebtStatus() {
+            return this.debtStatus;
         }
 
         public DescribeInstanceListResponseBodyInstanceList setExpireTime(Long expireTime) {

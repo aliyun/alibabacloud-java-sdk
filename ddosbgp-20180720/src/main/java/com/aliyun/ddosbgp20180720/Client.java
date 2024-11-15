@@ -1508,6 +1508,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.opAction)) {
+            query.put("OpAction", request.opAction);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
             query.put("OrderBy", request.orderBy);
         }
