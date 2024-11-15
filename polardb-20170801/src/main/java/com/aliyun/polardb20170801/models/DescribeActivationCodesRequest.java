@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationCodesRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud order. The value can be the ID of a virtual order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class DescribeActivationCodesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -27,6 +30,8 @@ public class DescribeActivationCodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

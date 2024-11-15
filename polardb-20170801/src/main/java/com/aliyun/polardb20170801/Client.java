@@ -632,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成轻量化版本激活码</p>
+     * <p>Generates a lightweight license activation code.</p>
      * 
      * @param request CreateActivationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -696,7 +696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成轻量化版本激活码</p>
+     * <p>Generates a lightweight license activation code.</p>
      * 
      * @param request CreateActivationCodeRequest
      * @return CreateActivationCodeResponse
@@ -885,6 +885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.backupRetentionPolicyOnClusterDeletion)) {
             query.put("BackupRetentionPolicyOnClusterDeletion", request.backupRetentionPolicyOnClusterDeletion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.burstingEnabled)) {
+            query.put("BurstingEnabled", request.burstingEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1796,7 +1800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或获取虚拟证书订单</p>
+     * <p>Creates or obtains a virtual license order.</p>
      * 
      * @param request CreateOrGetVirtualLicenseOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1844,7 +1848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或获取虚拟证书订单</p>
+     * <p>Creates or obtains a virtual license order.</p>
      * 
      * @param request CreateOrGetVirtualLicenseOrderRequest
      * @return CreateOrGetVirtualLicenseOrderResponse
@@ -3134,7 +3138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询激活码列表</p>
+     * <p>Queries a list of activation codes.</p>
      * 
      * @param request DescribeActivationCodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3190,7 +3194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询激活码列表</p>
+     * <p>Queries a list of activation codes.</p>
      * 
      * @param request DescribeActivationCodesRequest
      * @return DescribeActivationCodesResponse
@@ -4122,13 +4126,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</p>
-     * <ul>
-     * <li>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>.</li>
-     * </ul>
+     * <p>The ID of the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the migration status of PolarDB clusters.</p>
+     * <p>The ID of the synchronous task.</p>
      * 
      * @param request DescribeDBClusterMigrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4176,13 +4177,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</p>
-     * <ul>
-     * <li>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>.</li>
-     * </ul>
+     * <p>The ID of the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the migration status of PolarDB clusters.</p>
+     * <p>The ID of the synchronous task.</p>
      * 
      * @param request DescribeDBClusterMigrationRequest
      * @return DescribeDBClusterMigrationResponse
@@ -5866,7 +5864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询License订单列表</p>
+     * <p>Queries a list of license orders.</p>
      * 
      * @param request DescribeLicenseOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5934,7 +5932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询License订单列表</p>
+     * <p>Queries a list of license orders.</p>
      * 
      * @param request DescribeLicenseOrdersRequest
      * @return DescribeLicenseOrdersResponse
@@ -11380,7 +11378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Temporarily changes the node configurations of a cluster.</p>
+     * <p>Temporarily changes the node configurations.</p>
      * 
      * @param request TempModifyDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11448,7 +11446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Temporarily changes the node configurations of a cluster.</p>
+     * <p>Temporarily changes the node configurations.</p>
      * 
      * @param request TempModifyDBNodeRequest
      * @return TempModifyDBNodeResponse

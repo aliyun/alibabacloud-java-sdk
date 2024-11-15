@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAITaskStatusResponseBody extends TeaModel {
+    /**
+     * <p>The name of the database account that is used to connect to the AI nodes in the cluster.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
@@ -26,10 +29,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the PolarDB for AI feature. Valid values:</p>
+     * <p>The status of the PolarDB for AI feature. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The feature is enabled.</li>
-     * <li><strong>2</strong>: The feature is disabled.</li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>2</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +42,7 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The state description of the PolarDB for AI feature.</p>
+     * <p>The description of the status of the PolarDB for AI feature.</p>
      * 
      * <strong>example:</strong>
      * <p>Closed State</p>

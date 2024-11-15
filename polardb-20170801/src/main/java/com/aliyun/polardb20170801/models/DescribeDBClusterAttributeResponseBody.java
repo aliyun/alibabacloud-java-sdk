@@ -57,6 +57,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("BlktagUsed")
     public Long blktagUsed;
 
+    @NameInMap("BurstingEnabled")
+    public String burstingEnabled;
+
     /**
      * <p><a href="https://help.aliyun.com/document_detail/183258.html">Product Series</a>, with values as follows:</p>
      * <ul>
@@ -727,6 +730,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.blktagUsed;
     }
 
+    public DescribeDBClusterAttributeResponseBody setBurstingEnabled(String burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
+        return this;
+    }
+    public String getBurstingEnabled() {
+        return this.burstingEnabled;
+    }
+
     public DescribeDBClusterAttributeResponseBody setCategory(String category) {
         this.category = category;
         return this;
@@ -1220,6 +1231,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
+        @NameInMap("DBNodeDescription")
+        public String DBNodeDescription;
+
         /**
          * <p>Node ID.</p>
          * 
@@ -1475,6 +1489,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getDBNodeClass() {
             return this.DBNodeClass;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setDBNodeDescription(String DBNodeDescription) {
+            this.DBNodeDescription = DBNodeDescription;
+            return this;
+        }
+        public String getDBNodeDescription() {
+            return this.DBNodeDescription;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setDBNodeId(String DBNodeId) {

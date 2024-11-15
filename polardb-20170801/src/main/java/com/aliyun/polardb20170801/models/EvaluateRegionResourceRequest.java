@@ -7,9 +7,9 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>The cluster link type. The backend randomly selects the default value. Valid values:</p>
      * <ul>
-     * <li><strong>lvs</strong> :Linux virtual server</li>
-     * <li><strong>proxy</strong>: proxy server</li>
-     * <li><strong>dns</strong>: domain name system</li>
+     * <li><strong>lvs</strong>: Linux virtual server.</li>
+     * <li><strong>proxy</strong>: proxy server.</li>
+     * <li><strong>dns</strong>: domain name system.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,9 +89,9 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     public String dispenseMode;
 
     /**
-     * <p>Specifies whether Maxscale is created. Default value: true. Valid values:</p>
+     * <p>Specifies whether to create Maxscale. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
+     * <li><strong>true</strong> (default)</li>
      * <li><strong>false</strong></li>
      * </ul>
      * <p>This parameter is required.</p>

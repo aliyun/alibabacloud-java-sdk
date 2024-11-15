@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterEndpointRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically associate newly added nodes with the cluster endpoint. Default value: Disable. Valid values:</p>
+     * <p>Specifies whether to enable automatic association of newly added nodes with the cluster endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong></li>
+     * <li><strong>Enable</strong>: enables automatic association of newly added nodes with the cluster endpoint.</li>
+     * <li><strong>Disable</strong> (default): disables automatic association of newly added nodes with the cluster endpoint.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,75 +47,85 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>The advanced configurations of the cluster endpoint, which are in the JSON format. You can specify the configurations of the following attributes: consistency level, transaction splitting, connection pool, and primary node accepts read requests.</p>
+     * <p>The advanced configurations of the cluster endpoint, which are in the JSON format. You can configure the consistency level, transaction splitting, and connection pool settings, and specify whether the primary node accepts read requests.</p>
      * <ul>
-     * <li><p>Specifies the load balancing policy in the format of <code>{\\&quot;LoadBalancePolicy\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: 0. Valid values:</p>
+     * <li><p>The load balancing policy. Format: <code>{\\&quot;LoadBalancePolicy\\&quot;:\\&quot;Load balancing policy\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: connections-based load balancing</li>
+     * <li><strong>0</strong> (default): connections-based load balancing</li>
      * <li><strong>1</strong>: active requests-based load balancing</li>
      * </ul>
      * </li>
-     * <li><p>Specifies whether to enable the primary node accepts read requests feature in the format of <code>{\\&quot;MasterAcceptReads\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: on. Valid values:</p>
+     * <li><p>Specifies whether to allow the primary node to accept read requests. Format: <code>{\\&quot;MasterAcceptReads\\&quot;:\\&quot;Specification about whether to allow the primary node to accept read requests\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong> (default): allows the primary node to accept read requests.</li>
+     * <li><strong>off</strong>: does not allow the primary node to accept read requests.</li>
      * </ul>
      * </li>
-     * <li><p>Specifies whether to enable the transaction splitting feature in the format of <code>{\\&quot;DistributedTransaction\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: on. Valid values:</p>
+     * <li><p>Specifies whether to enable the transaction splitting feature. Format: <code>{\\&quot;DistributedTransaction\\&quot;:\\&quot;Specification about whether to enable the transaction splitting feature\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong> (default): enables the transaction splitting feature.</li>
+     * <li><strong>off</strong>: disables the transaction splitting feature.</li>
      * </ul>
      * </li>
-     * <li><p>Specifies the consistency level in the format of <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: 1. Valid values:</p>
+     * <li><p>The consistency level. Format: <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;Consistency level\\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: eventual consistency (weak)</li>
-     * <li><strong>1</strong>: session consistency (medium)</li>
+     * <li><strong>1</strong> (default): session consistency (medium)</li>
      * <li><strong>2</strong>: global consistency (strong)</li>
      * </ul>
      * </li>
-     * <li><p>Specifies the connection pool in the format of <code>{\\&quot;ConnectionPersist\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: off. Valid values:</p>
+     * <li><p>The global consistency timeout. Format: <code>{\\&quot;ConsistTimeout\\&quot;:\\&quot;Global consistency timeout\\&quot;}</code>. Valid values: 0 to 60,000. Default value: 20. Unit: ms.</p>
+     * </li>
+     * <li><p>The session consistency timeout. Format: <code>{\\&quot;ConsistSessionTimeout\\&quot;:\\&quot;Session consistency timeout\\&quot;}</code>. Valid values: 0 to 60,000. Default value: 0. Unit: ms.</p>
+     * </li>
+     * <li><p>The global (or session) consistency timeout policy. Format: <code>{\\&quot;ConsistTimeoutAction\\&quot;:\\&quot;Consistency timeout policy\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>off</strong>: disables the connection pool.</li>
+     * <li><strong>0</strong> (default): PolarProxy sends read requests to the primary node.</li>
+     * <li><strong>1</strong>: PolarProxy returns the &quot;wait replication complete timeout, please retry&quot; error message to the application.</li>
+     * </ul>
+     * </li>
+     * <li><p>Specifies whether to enable the connection pool feature. Format: <code>{\\&quot;ConnectionPersist\\&quot;:\\&quot;Specification about whether to enable the connection pool feature\\&quot;}</code>. Valid values:</p>
+     * <ul>
+     * <li><strong>off</strong> (default): disables the connection pool feature.</li>
      * <li><strong>Session</strong>: enables the session-level connection pool.</li>
      * <li><strong>Transaction</strong>: enables the transaction-level connection pool.</li>
      * </ul>
      * </li>
-     * <li><p>Specifies whether to enable the parallel query feature in the format of <code>{\\&quot;MaxParallelDegree\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: off. Valid values:</p>
+     * <li><p>Specifies whether to enable the parallel query feature. Format: <code>{\\&quot;MaxParallelDegree\\&quot;:\\&quot;Specification about whether to enable the parallel query feature\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: enables the parallel query feature.</li>
+     * <li><strong>off</strong> (default): disables the parallel query feature.</li>
      * </ul>
      * </li>
-     * <li><p>Specifies whether to enable the automatic request distribution between row store and column store nodes feature in the format of <code>{\\&quot;EnableHtapImci\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: off. Valid values:</p>
+     * <li><p>Specifies whether to enable the automatic request distribution among row store and column store nodes feature. Format: <code>{\\&quot;EnableHtapImci\\&quot;:\\&quot;Specification about whether to enable automatic request distribution among row store and column store nodes feature\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: enables the automatic request distribution among row store and column store nodes feature.</li>
+     * <li><strong>off</strong> (default): disables the automatic request distribution among row store and column store nodes feature.</li>
      * </ul>
      * </li>
-     * <li><p>Specifies whether to enable the overload protection feature in the format of <code>{\\&quot;EnableOverloadThrottle\\&quot;:\\&quot;Selected value\\&quot;}</code>. Default value: off. Valid values:</p>
+     * <li><p>Specifies whether to enable the overload protection feature. Format: <code>{\\&quot;EnableOverloadThrottle\\&quot;:\\&quot;Specification about whether to enable the overload protection feature\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: enables the overload protection feature.</li>
+     * <li><strong>off</strong> (default): disables the overload protection feature.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>You can specify the transaction splitting, primary node accepts read requests, connection pool, and overload protection features for a PolarDB for MySQL cluster only if ReadWriteMode is set to ReadWrite for the cluster endpoint.</p>
+     * <li><p>You can configure the transaction splitting, connection pool, and overload protection settings, and specify whether the primary node accepts read requests settings for the cluster endpoint of a PolarDB for MySQL cluster only if ReadWriteMode of the cluster endpoint is set to Read and Write (Automatic Read/Write Splitting).</p>
      * </li>
-     * <li><p>If the read /write mode of a PolarDB for MySQL cluster is set to <strong>Read-only</strong>, the <strong>Connection-based SLB</strong> and <strong>Active Request-based SLB</strong> SLB policies are supported. The <strong>Read-write (Automatic read /write splitting) <strong>mode of the cluster supports</strong> Active Request-based SLB</strong> policy.</p>
+     * <li><p>If ReadWriteMode of the cluster endpoint of a PolarDB for MySQL cluster is set to <strong>Read-only</strong>, you can specify the <strong>Connections-based Load Balancing</strong> or <strong>Active Request-based Load Balancing</strong> policy for the cluster endpoint. If ReadWriteMode of the cluster endpoint of a PolarDB for MySQL cluster is set to <strong>Read/Write (Automatic Read/Write Splitting)</strong>, you can specify only the <strong>Active Request-based Load Balancing</strong> policy for the cluster endpoint.</p>
      * </li>
-     * <li><p>If ReadWriteMode is set to <strong>ReadWrite</strong> for the cluster endpoint of a PolarDB for MySQL cluster or if ReadWriteMode is set to <strong>ReadOnly</strong> and the load balancing policy is set to <strong>active requests-based load balancing</strong>, the automatic request distribution between row store and column store nodes feature is supported.</p>
+     * <li><p>You can enable automatic request distribution among column store and row store nodes for the cluster endpoint of a PolarDB for MySQL cluster if ReadWriteMode of the cluster endpoint is set to <strong>Read and Write (Automatic Read/Write Splitting)</strong>, or if the ReadWriteMode of the cluster endpoint is set to <strong>Read-only</strong> and the load balancing policy is set to <strong>Active requests-based load balancing</strong>.</p>
      * </li>
      * <li><p>Only PolarDB for MySQL supports global consistency.</p>
      * </li>
-     * <li><p>If the <strong>ReadWriteMode</strong> parameter is set to <strong>ReadOnly</strong>, the consistency level must be <strong>0</strong>.</p>
+     * <li><p>You can set the consistency level of the cluster endpoint of a PolarDB for MySQL cluster only to <strong>0</strong> if <strong>ReadWriteMode</strong> of the cluster endpoint is set to <strong>ReadOnly</strong>.</p>
      * </li>
-     * <li><p>You can specify the consistency level, transaction splitting, connection pool, and primary node accepts read requests features at a time, such as <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;1\\&quot;,\\&quot;DistributedTransaction\\&quot;:\\&quot;on\\&quot;,\\&quot;ConnectionPersist\\&quot;:\\&quot;Session\\&quot;,\\&quot;MasterAcceptReads\\&quot;:\\&quot;on\\&quot;}</code>.</p>
+     * <li><p>You can configure the settings for the consistency level, transaction splitting, and connection pool features, and specify whether the primary node accepts read requests settings at a time. Example: <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;1\\&quot;,\\&quot;DistributedTransaction\\&quot;:\\&quot;on\\&quot;,\\&quot;ConnectionPersist\\&quot;:\\&quot;Session\\&quot;,\\&quot;MasterAcceptReads\\&quot;:\\&quot;on\\&quot;}</code>.</p>
      * </li>
-     * <li><p>The transaction splitting settings are restricted by the consistency level settings. For example, if you set the consistency level to <strong>0</strong>, transaction splitting cannot be enabled. If you set the consistency level to <strong>1</strong> or <strong>2</strong>, transaction splitting can be enabled.</p>
+     * <li><p>The configuration for transaction splitting is limited by the configuration for the consistency level. For example, if you set the consistency level to <strong>0</strong>, you cannot enable transaction splitting. If you set the consistency level to <strong>1</strong> or <strong>2</strong>, you can enable transaction splitting.</p>
      * </li>
      * </ul>
      * 
@@ -156,9 +166,25 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Global consistency timeout policy. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: sends the request to the primary node.</li>
+     * <li><strong>2</strong>: downgrades the consistency level of a query to inconsistent read when a global consistent read in the query times out. No error message is returned to the client.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PolarSccTimeoutAction")
     public String polarSccTimeoutAction;
 
+    /**
+     * <p>Global consistency timeout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PolarSccWaitTimeout")
     public String polarSccWaitTimeout;
 
@@ -181,6 +207,21 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to enable the global consistency (high-performance mode) feature for the nodes. Valid values:</p>
+     * <ul>
+     * <li><strong>ON</strong></li>
+     * <li><strong>OFF</strong></li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("SccMode")
     public String sccMode;
 

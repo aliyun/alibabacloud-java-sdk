@@ -14,6 +14,12 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specifies whether to create a global domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableGlobalDomainName")
     public Boolean enableGlobalDomainName;
 
