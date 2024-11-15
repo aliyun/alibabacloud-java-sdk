@@ -44,6 +44,13 @@ public class ChannelProperties extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("useHuaweiPlainMessage")
+    public String useHuaweiPlainMessage;
+
+    /**
+     * <strong>example:</strong>
      * <p>&quot;true&quot;,默认&quot;false&quot;</p>
      */
     @NameInMap("vivoAddBadge")
@@ -141,6 +148,14 @@ public class ChannelProperties extends TeaModel {
     }
     public String getUseHuaweiMessage() {
         return this.useHuaweiMessage;
+    }
+
+    public ChannelProperties setUseHuaweiPlainMessage(String useHuaweiPlainMessage) {
+        this.useHuaweiPlainMessage = useHuaweiPlainMessage;
+        return this;
+    }
+    public String getUseHuaweiPlainMessage() {
+        return this.useHuaweiPlainMessage;
     }
 
     public ChannelProperties setVivoAddBadge(String vivoAddBadge) {
