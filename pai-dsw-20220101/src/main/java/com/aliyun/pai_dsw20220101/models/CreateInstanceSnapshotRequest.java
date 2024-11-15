@@ -8,6 +8,8 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     public java.util.List<String> excludePaths;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
      */
@@ -32,6 +34,8 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     public String snapshotDescription;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>training_data_env</p>
      */

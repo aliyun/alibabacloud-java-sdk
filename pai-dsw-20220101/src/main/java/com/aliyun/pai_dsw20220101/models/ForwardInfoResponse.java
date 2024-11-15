@@ -4,6 +4,9 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ForwardInfoResponse extends TeaModel {
+    @NameInMap("AccessType")
+    public java.util.List<String> accessType;
+
     @NameInMap("ConnectInfo")
     public ForwardInfoResponseConnectInfo connectInfo;
 
@@ -30,17 +33,31 @@ public class ForwardInfoResponse extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>ngw-bp1uewa15k4iy5770****</p>
+     * <p>1024</p>
      */
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
+    @NameInMap("ExternalPort")
+    public String externalPort;
 
     /**
      * <strong>example:</strong>
      * <p>22</p>
      */
-    @NameInMap("Port")
-    public String port;
+    @NameInMap("ForwardPort")
+    public String forwardPort;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ssh</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ngw-bp1uewa15k4iy5770****</p>
+     */
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
 
     @NameInMap("SSHPublicKey")
     public String SSHPublicKey;
@@ -48,6 +65,14 @@ public class ForwardInfoResponse extends TeaModel {
     public static ForwardInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         ForwardInfoResponse self = new ForwardInfoResponse();
         return TeaModel.build(map, self);
+    }
+
+    public ForwardInfoResponse setAccessType(java.util.List<String> accessType) {
+        this.accessType = accessType;
+        return this;
+    }
+    public java.util.List<String> getAccessType() {
+        return this.accessType;
     }
 
     public ForwardInfoResponse setConnectInfo(ForwardInfoResponseConnectInfo connectInfo) {
@@ -82,20 +107,36 @@ public class ForwardInfoResponse extends TeaModel {
         return this.enable;
     }
 
+    public ForwardInfoResponse setExternalPort(String externalPort) {
+        this.externalPort = externalPort;
+        return this;
+    }
+    public String getExternalPort() {
+        return this.externalPort;
+    }
+
+    public ForwardInfoResponse setForwardPort(String forwardPort) {
+        this.forwardPort = forwardPort;
+        return this;
+    }
+    public String getForwardPort() {
+        return this.forwardPort;
+    }
+
+    public ForwardInfoResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public ForwardInfoResponse setNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
-    }
-
-    public ForwardInfoResponse setPort(String port) {
-        this.port = port;
-        return this;
-    }
-    public String getPort() {
-        return this.port;
     }
 
     public ForwardInfoResponse setSSHPublicKey(String SSHPublicKey) {
