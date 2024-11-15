@@ -876,6 +876,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>金融级人脸保镖服务</p>
+     * 
+     * @param request DescribeFaceGuardRiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFaceGuardRiskResponse
+     */
+    public DescribeFaceGuardRiskResponse describeFaceGuardRiskWithOptions(DescribeFaceGuardRiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceToken)) {
+            query.put("DeviceToken", request.deviceToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerOrderNo)) {
+            query.put("OuterOrderNo", request.outerOrderNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFaceGuardRisk"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFaceGuardRiskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>金融级人脸保镖服务</p>
+     * 
+     * @param request DescribeFaceGuardRiskRequest
+     * @return DescribeFaceGuardRiskResponse
+     */
+    public DescribeFaceGuardRiskResponse describeFaceGuardRisk(DescribeFaceGuardRiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFaceGuardRiskWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DescribeFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFaceVerifyResponse
