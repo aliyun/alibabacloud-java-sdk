@@ -10,11 +10,11 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</p>
      * <ul>
-     * <li><p>true: enables automatic payment.</p>
+     * <li><p>true: The payment is automatically completed.</p>
      * <p>**</p>
      * <p><strong>Note</strong> Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
      * </li>
-     * <li><p>false: disables automatic payment. An order is generated but no payment is made.</p>
+     * <li><p>false: An order is generated but no payment is made.</p>
      * </li>
      * </ul>
      * <p>Default value: true.</p>
@@ -73,7 +73,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+     * <p>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -83,7 +83,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <p>Instance that resides in the classic network:</p>
      * <ul>
      * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</li>
-     * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, the private IP address of the instance changes.</li>
+     * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
      * </ul>
      * <p>Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
      * 
@@ -97,6 +97,11 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Online</li>
+     * <li>Offline</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>null</p>

@@ -36,6 +36,9 @@ public class ImportImageRequest extends TeaModel {
     @NameInMap("BootMode")
     public String bootMode;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The image description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
@@ -220,6 +223,14 @@ public class ImportImageRequest extends TeaModel {
     }
     public String getBootMode() {
         return this.bootMode;
+    }
+
+    public ImportImageRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ImportImageRequest setDescription(String description) {

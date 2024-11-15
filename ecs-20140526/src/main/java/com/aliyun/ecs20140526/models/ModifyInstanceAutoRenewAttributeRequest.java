@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance.</p>
+     * <p>Specifies whether to enable auto-renewal.</p>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>

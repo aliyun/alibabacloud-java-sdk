@@ -14,8 +14,16 @@ public class CreateImageComponentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The type of the image component. Only image build components are supported. Set the value to Build.</p>
+     * <p>The type of the image component. Only image building components and image test components are supported.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Build</li>
+     * <li>Test</li>
+     * </ul>
      * <p>Default value: Build.</p>
+     * <blockquote>
+     * <p> Image building components can be used only in image building templates. Image test components can be used only in image test templates.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Build</p>
@@ -24,9 +32,8 @@ public class CreateImageComponentRequest extends TeaModel {
     public String componentType;
 
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The version number of the image component, which is used together with the name of the image component. The version number is in the \<major>.\<minor>.\<patch> format. Set \<major>, \<minor>, and \<patch> to non-negative integers.</p>
+     * <p>Default value: (x + 1).0.0, in which x is the maximum major version number of the image component.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -96,7 +103,12 @@ public class CreateImageComponentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the operating system supported by the image component. Only Linux operating systems are supported. Set the value to Linux.</p>
+     * <p>The type of the operating system supported by the image component.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Linux</li>
+     * <li>Windows</li>
+     * </ul>
      * <p>Default value: Linux.</p>
      * 
      * <strong>example:</strong>
