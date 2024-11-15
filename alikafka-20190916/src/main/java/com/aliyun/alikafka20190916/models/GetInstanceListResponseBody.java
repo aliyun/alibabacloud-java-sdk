@@ -491,6 +491,25 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds extends TeaModel {
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
+        public static GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds self = new GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+    }
+
     public static class GetInstanceListResponseBodyInstanceListInstanceVO extends TeaModel {
         /**
          * <p>The configurations of the deployed ApsaraMQ for Kafka instance.</p>
@@ -500,6 +519,12 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         @NameInMap("AllConfig")
         public String allConfig;
+
+        @NameInMap("AutoCreateGroupEnable")
+        public Boolean autoCreateGroupEnable;
+
+        @NameInMap("AutoCreateTopicEnable")
+        public Boolean autoCreateTopicEnable;
 
         /**
          * <p>The parameters that are returned for the ApsaraMQ for Confluent instance.</p>
@@ -515,6 +540,9 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("DefaultPartitionNum")
+        public Integer defaultPartitionNum;
 
         /**
          * <p>The type of the network in which the instance is deployed. Valid values:</p>
@@ -892,6 +920,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("VSwitchIds")
+        public GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds vSwitchIds;
+
         /**
          * <p>The instance status. The valid values are consistent with the values displayed in the ApsaraMQ for Kafka console. This parameter is used in the new version of ApsaraMQ for Kafka.</p>
          * <p>Valid values:</p>
@@ -951,6 +982,22 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.allConfig;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setAutoCreateGroupEnable(Boolean autoCreateGroupEnable) {
+            this.autoCreateGroupEnable = autoCreateGroupEnable;
+            return this;
+        }
+        public Boolean getAutoCreateGroupEnable() {
+            return this.autoCreateGroupEnable;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setAutoCreateTopicEnable(Boolean autoCreateTopicEnable) {
+            this.autoCreateTopicEnable = autoCreateTopicEnable;
+            return this;
+        }
+        public Boolean getAutoCreateTopicEnable() {
+            return this.autoCreateTopicEnable;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setConfluentConfig(GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig confluentConfig) {
             this.confluentConfig = confluentConfig;
             return this;
@@ -965,6 +1012,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setDefaultPartitionNum(Integer defaultPartitionNum) {
+            this.defaultPartitionNum = defaultPartitionNum;
+            return this;
+        }
+        public Integer getDefaultPartitionNum() {
+            return this.defaultPartitionNum;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setDeployType(Integer deployType) {
@@ -1245,6 +1300,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setVSwitchIds(GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setViewInstanceStatusCode(Integer viewInstanceStatusCode) {
