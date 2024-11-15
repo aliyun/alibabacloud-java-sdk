@@ -5,9 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeImageComponentsRequest extends TeaModel {
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The type of the image component.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Build</li>
+     * <li>Test</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -16,8 +19,9 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String componentType;
 
     /**
+     * <p>The version number of the image component in the \<major>.\<minor>.\<patch> format. You can set \<major>, \<minor>, and \<patch> to non-negative integers, or set one of \<major>, \<minor>, and \<patch> to the wildcard (\*) and the other two to non-negative integers.</p>
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p> This parameter takes effect only if you specify Name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -111,9 +115,12 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The type of the operating system supported by the image component.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Linux</li>
+     * <li>Windows</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>null</p>

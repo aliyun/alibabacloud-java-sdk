@@ -286,8 +286,9 @@ public class RunInstancesRequest extends TeaModel {
     public String httpEndpoint;
 
     /**
-     * <p>The HTTP PUT response hop limit for accessing instance metadata. Valid values: 1 to 64.</p>
-     * <p>Default value: 1.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -363,7 +364,7 @@ public class RunInstancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <code>InstanceId</code> value.</p>
+     * <p>The name of the ECS instance. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <code>InstanceId</code> value.</p>
      * <p>When you batch create instances, you can batch configure sequential names for the instances. The sequential names can contain brackets ([ ]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
      * 
      * <strong>example:</strong>
@@ -2490,8 +2491,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to release ENI N when the associated instance is released. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: releases the ENI when the associated instance is released.</li>
+         * <li>false: retains the ENI when the associated instance is released.</li>
          * </ul>
          * <p>Default value: true.</p>
          * <blockquote>
@@ -2523,8 +2524,8 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Primary: primary ENI.</li>
-         * <li>Secondary: secondary ENI.</li>
+         * <li>Primary: the primary ENI</li>
+         * <li>Secondary: the secondary ENI</li>
          * </ul>
          * <p>Default value: Secondary.</p>
          * 
@@ -2564,9 +2565,9 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The index of the network card for ENI N.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>You can specify network card indexes only for instances of specific instance types.</li>
+         * <li>You can specify NIC indexes only for instances of specific instance types.</li>
          * <li>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</li>
-         * <li>If you set NetworkInterface.N.InstanceType to Secondary or do not specify the parameter, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2651,7 +2652,7 @@ public class RunInstancesRequest extends TeaModel {
          * <ul>
          * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
          * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</li>
-         * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
+         * <li>The total number of queues for all ENIs on an instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
          * <li>If you specify this parameter and set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you cannot specify <code>NetworkInterfaceQueueNumber</code>.</li>
          * </ul>
          * 

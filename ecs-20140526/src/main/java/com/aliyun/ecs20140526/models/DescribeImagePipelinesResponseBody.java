@@ -260,9 +260,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The image family.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -316,9 +314,11 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The repair mode of the image template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Standard: the standard mode</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -351,9 +351,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The content of the image test template.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

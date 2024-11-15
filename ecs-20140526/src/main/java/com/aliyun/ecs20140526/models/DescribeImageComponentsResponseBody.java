@@ -93,9 +93,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter extends TeaModel {
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The default value of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -104,9 +102,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The name of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -115,9 +111,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The type of the parameter.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>String</li>
+         * <li>Number</li>
+         * <li>Boolean</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -247,9 +247,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         public String componentType;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The version number of the image component.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -316,9 +314,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The parameters contained in the image component.</p>
          */
         @NameInMap("Parameters")
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters parameters;
