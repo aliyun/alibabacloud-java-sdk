@@ -36,6 +36,9 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OpAction")
+    public Integer opAction;
+
     /**
      * <p>The sorting method of operation logs. Set the value to <strong>opdate</strong>, which indicates sorting based on the operation time.</p>
      * 
@@ -128,6 +131,14 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeOpEntitiesRequest setOpAction(Integer opAction) {
+        this.opAction = opAction;
+        return this;
+    }
+    public Integer getOpAction() {
+        return this.opAction;
     }
 
     public DescribeOpEntitiesRequest setOrderBy(String orderBy) {
