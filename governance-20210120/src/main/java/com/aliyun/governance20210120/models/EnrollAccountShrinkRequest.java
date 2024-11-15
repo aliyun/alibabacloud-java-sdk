@@ -111,6 +111,9 @@ public class EnrollAccountShrinkRequest extends TeaModel {
     @NameInMap("ResellAccountType")
     public String resellAccountType;
 
+    /**
+     * <p>The tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

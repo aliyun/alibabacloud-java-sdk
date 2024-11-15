@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationMetadataRequest extends TeaModel {
     /**
+     * <p>The language. The information is returned in the specified language. Valid values:</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh: Chinese</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class ListEvaluationMetadataRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

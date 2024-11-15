@@ -4,17 +4,33 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountFactoryBaselineRequest extends TeaModel {
+    /**
+     * <p>The baseline items.</p>
+     * <p>You can call the <a href="~~ListAccountFactoryBaselineItems~~">ListAccountFactoryBaselineItems</a> operation to query a list of baseline items supported by the account factory in Cloud Governance Center.</p>
+     */
     @NameInMap("BaselineItems")
     public java.util.List<CreateAccountFactoryBaselineRequestBaselineItems> baselineItems;
 
+    /**
+     * <p>The name of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("BaselineName")
     public String baselineName;
 
+    /**
+     * <p>The description of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default Baseline.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -61,6 +77,8 @@ public class CreateAccountFactoryBaselineRequest extends TeaModel {
 
     public static class CreateAccountFactoryBaselineRequestBaselineItems extends TeaModel {
         /**
+         * <p>The configurations of the baseline item. The value of this parameter is a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;EnabledServices\&quot;:[\&quot;CEN_TR\&quot;,\&quot;CDT\&quot;,\&quot;CMS\&quot;,\&quot;KMS\&quot;]}</p>
          */
@@ -68,6 +86,8 @@ public class CreateAccountFactoryBaselineRequest extends TeaModel {
         public String config;
 
         /**
+         * <p>The name of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
          */
@@ -75,6 +95,8 @@ public class CreateAccountFactoryBaselineRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The version of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */

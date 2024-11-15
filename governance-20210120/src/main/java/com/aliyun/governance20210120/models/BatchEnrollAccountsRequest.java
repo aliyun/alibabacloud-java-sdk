@@ -4,20 +4,32 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class BatchEnrollAccountsRequest extends TeaModel {
+    /**
+     * <p>The resource accounts.</p>
+     */
     @NameInMap("Accounts")
     public java.util.List<BatchEnrollAccountsRequestAccounts> accounts;
 
     /**
+     * <p>The baseline ID.</p>
+     * <p>If this parameter is left empty, the default baseline is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>afb-bp1durvn3lgqe28v****</p>
      */
     @NameInMap("BaselineId")
     public String baselineId;
 
+    /**
+     * <p>The baseline items.</p>
+     * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</p>
+     */
     @NameInMap("BaselineItems")
     public java.util.List<BatchEnrollAccountsRequestBaselineItems> baselineItems;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -63,6 +75,8 @@ public class BatchEnrollAccountsRequest extends TeaModel {
 
     public static class BatchEnrollAccountsRequestAccounts extends TeaModel {
         /**
+         * <p>The account ID. This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>12868156179****</p>
          */
@@ -86,6 +100,8 @@ public class BatchEnrollAccountsRequest extends TeaModel {
 
     public static class BatchEnrollAccountsRequestBaselineItems extends TeaModel {
         /**
+         * <p>The configurations of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</p>
          */
@@ -93,6 +109,8 @@ public class BatchEnrollAccountsRequest extends TeaModel {
         public String config;
 
         /**
+         * <p>The name of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
          */
@@ -100,6 +118,12 @@ public class BatchEnrollAccountsRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Specifies whether to skip the baseline item. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -107,6 +131,8 @@ public class BatchEnrollAccountsRequest extends TeaModel {
         public Boolean skip;
 
         /**
+         * <p>The version of the baseline item.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */

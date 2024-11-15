@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationMetricDetailsRequest extends TeaModel {
     /**
+     * <p>The account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+     * 
      * <strong>example:</strong>
      * <p>103144549568****</p>
      */
@@ -12,6 +14,9 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     public Long accountId;
 
     /**
+     * <p>The ID of the check item.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2841889.html">ListEvaluationMetadata</a> operation to query the ID of the check item.</p>
+     * 
      * <strong>example:</strong>
      * <p>xfyve5****</p>
      */
@@ -19,6 +24,8 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The maximum number of entries to return for a single request. Default value: 5.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -26,6 +33,8 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</p>
      */
@@ -33,6 +42,8 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
