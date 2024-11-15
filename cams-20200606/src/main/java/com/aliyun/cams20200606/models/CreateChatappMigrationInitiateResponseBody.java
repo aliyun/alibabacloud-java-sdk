@@ -4,20 +4,37 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
+    /**
+     * <p>The information about the request denial..</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li>A value of OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public CreateChatappMigrationInitiateResponseBodyData data;
 
     /**
+     * <p>The error message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -25,6 +42,8 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
@@ -78,6 +97,8 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
 
     public static class CreateChatappMigrationInitiateResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the mobile number.</p>
+         * 
          * <strong>example:</strong>
          * <p>82828893332</p>
          */
@@ -85,6 +106,8 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The mobile number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8613900001234</p>
          */
@@ -92,6 +115,8 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
+         * <p>The state of the mobile number. Only MIGRATING may be returned, which indicates that the mobile number is being migrated.</p>
+         * 
          * <strong>example:</strong>
          * <p>MIGRATING</p>
          */

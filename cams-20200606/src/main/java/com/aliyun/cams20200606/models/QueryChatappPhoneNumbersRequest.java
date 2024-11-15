@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryChatappPhoneNumbersRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the ISV account.</p>
+     * <p>The space ID of the RAM user within the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>293483938849493</p>
@@ -14,7 +14,7 @@ public class QueryChatappPhoneNumbersRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>aksik93kdkkxmwol93939</p>
@@ -23,6 +23,8 @@ public class QueryChatappPhoneNumbersRequest extends TeaModel {
     public String isvCode;
 
     /**
+     * <p>The state of the phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>VERIFIED</p>
      */

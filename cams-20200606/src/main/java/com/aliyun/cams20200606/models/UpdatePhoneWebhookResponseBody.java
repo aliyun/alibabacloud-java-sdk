@@ -4,10 +4,22 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdatePhoneWebhookResponseBody extends TeaModel {
+    /**
+     * <p>Access denied for detailed information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +27,8 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Prompt message, there is a value when an exception is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +36,8 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */

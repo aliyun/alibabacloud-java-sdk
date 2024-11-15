@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class IsvGetAppIdRequest extends TeaModel {
     /**
-     * <p>权限</p>
+     * <p>The permission.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>whatsapp_business_messaging: sending permission on WhatsApp messages</li>
+     * <li>ads_management: management permission on advertisements</li>
+     * <li>catalog_management: management permission on catalogs</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>catalog_management</p>
      */
     @NameInMap("Permissions")
     public String permissions;
 
     /**
-     * <p>The type of the application. Set the value to WHATSAPP.</p>
+     * <p>The type of the app. Valid value: WHATSAPP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -21,7 +27,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryPhoneBusinessProfileResponseBodyData data;
@@ -45,6 +51,12 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -106,8 +118,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
 
     public static class QueryPhoneBusinessProfileResponseBodyData extends TeaModel {
         /**
+         * <p>Regarding.</p>
+         * 
          * <strong>example:</strong>
-         * <p>关于</p>
+         * <p>business profile</p>
          */
         @NameInMap("About")
         public String about;
@@ -140,7 +154,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The URL of the profile picture.</p>
+         * <p>The profile picture.</p>
          * 
          * <strong>example:</strong>
          * <p>https://....img</p>
@@ -158,7 +172,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         public String vertical;
 
         /**
-         * <p>The websites.</p>
+         * <p>The website.</p>
          */
         @NameInMap("Websites")
         public java.util.List<String> websites;

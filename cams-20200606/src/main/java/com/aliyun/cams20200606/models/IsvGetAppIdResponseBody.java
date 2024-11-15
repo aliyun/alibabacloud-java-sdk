@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class IsvGetAppIdResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -29,6 +35,12 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the configuration item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28972951817****</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 

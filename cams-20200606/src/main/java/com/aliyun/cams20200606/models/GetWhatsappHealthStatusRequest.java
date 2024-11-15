@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWhatsappHealthStatusRequest extends TeaModel {
     /**
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetWhatsappHealthStatusRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The template language.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +24,13 @@ public class GetWhatsappHealthStatusRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The node type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>template: message template</li>
+     * <li>phone: phone number</li>
+     * <li>waba: WhatsApp Business Account (WABA)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,8 @@ public class GetWhatsappHealthStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number of the enterprise.</p>
+     * 
      * <strong>example:</strong>
      * <p>86138***</p>
      */
@@ -46,6 +58,8 @@ public class GetWhatsappHealthStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The template code.</p>
+     * 
      * <strong>example:</strong>
      * <p>399299***</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConversationalAutomationRequest extends TeaModel {
     /**
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,10 +18,11 @@ public class GetConversationalAutomationRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number of the enterprise.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>86130000***</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

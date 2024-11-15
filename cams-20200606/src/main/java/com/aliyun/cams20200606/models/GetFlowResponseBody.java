@@ -21,6 +21,9 @@ public class GetFlowResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;

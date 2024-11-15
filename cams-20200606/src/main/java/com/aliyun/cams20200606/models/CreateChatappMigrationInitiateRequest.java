@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatappMigrationInitiateRequest extends TeaModel {
     /**
+     * <p>The code of the country or region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateChatappMigrationInitiateRequest extends TeaModel {
     public String countryCode;
 
     /**
+     * <p>The space ID of the user within the ISV account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateChatappMigrationInitiateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The mobile number without the country code or region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

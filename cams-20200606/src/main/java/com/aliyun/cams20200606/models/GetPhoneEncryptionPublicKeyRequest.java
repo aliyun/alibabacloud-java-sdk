@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPhoneEncryptionPublicKeyRequest extends TeaModel {
     /**
+     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
      * <p>393838848</p>
      */

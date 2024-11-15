@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
     /**
+     * <p>The result returns OK as normal.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdatePhoneMessageQrdlResponseBodyData data;
 
+    /**
+     * <p>Error description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -65,6 +76,8 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
 
     public static class UpdatePhoneMessageQrdlResponseBodyData extends TeaModel {
         /**
+         * <p>Deep link address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
          */
@@ -72,6 +85,8 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String deepLinkUrl;
 
         /**
+         * <p>Generate image types.</p>
+         * 
          * <strong>example:</strong>
          * <p>PNG</p>
          */
@@ -79,6 +94,8 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String generateQrImage;
 
         /**
+         * <p>Number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8613800</p>
          */
@@ -86,6 +103,8 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
+         * <p>Message content.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hello</p>
          */
@@ -93,6 +112,8 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String prefilledMessage;
 
         /**
+         * <p>QR code address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://img.png">https://img.png</a></p>
          */
@@ -100,6 +121,8 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String qrImageUrl;
 
         /**
+         * <p>QR code encoding.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEDEE998</p>
          */

@@ -3,58 +3,71 @@ package com.aliyun.cams20200606.models;
 
 import com.aliyun.tea.*;
 
-public class AddChatappPhoneNumberResponseBody extends TeaModel {
+public class TriggerChatFlowResponseBody extends TeaModel {
     /**
-     * <p>com.alicom.access.oxs.client.channel.aliyun.flow.AyFlowExecuteService</p>
+     * <p>Details of access denial</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="http://pop_access_slb_sgvpc/#vpc">http://pop_access_slb_sgvpc/#vpc</a></p>
+     * <p>无</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The phone number.</p>
+     * <p>Status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>无</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>com.alicom.access.oxs.client.channel.aliyun.flow.dto.AyCommonApiRequest</p>
+     * <p>Returned data.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>{}</p>
+     */
+    @NameInMap("Data")
+    public java.util.Map<String, ?> data;
+
+    /**
+     * <p>Error description message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>formData</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     * <p>无</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>13800000000</p>
+     * <p>Whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static AddChatappPhoneNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AddChatappPhoneNumberResponseBody self = new AddChatappPhoneNumberResponseBody();
+    public static TriggerChatFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        TriggerChatFlowResponseBody self = new TriggerChatFlowResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddChatappPhoneNumberResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public TriggerChatFlowResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -62,7 +75,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public AddChatappPhoneNumberResponseBody setCode(String code) {
+    public TriggerChatFlowResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -70,7 +83,15 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AddChatappPhoneNumberResponseBody setMessage(String message) {
+    public TriggerChatFlowResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
+    }
+
+    public TriggerChatFlowResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -78,7 +99,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         return this.message;
     }
 
-    public AddChatappPhoneNumberResponseBody setRequestId(String requestId) {
+    public TriggerChatFlowResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -86,7 +107,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddChatappPhoneNumberResponseBody setSuccess(Boolean success) {
+    public TriggerChatFlowResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

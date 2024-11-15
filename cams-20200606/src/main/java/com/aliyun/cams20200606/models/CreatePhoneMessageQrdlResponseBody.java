@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
     /**
+     * <p>If OK is returned, the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -18,6 +20,8 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
     public CreatePhoneMessageQrdlResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>none</p>
      */
@@ -72,6 +76,8 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
 
     public static class CreatePhoneMessageQrdlResponseBodyData extends TeaModel {
         /**
+         * <p>The URL of the deep link.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://wa.qrdl/">https://wa.qrdl/</a></p>
          */
@@ -79,6 +85,8 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         public String deepLinkUrl;
 
         /**
+         * <p>The format of the generated image.</p>
+         * 
          * <strong>example:</strong>
          * <p>PNG</p>
          */
@@ -95,6 +103,8 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
+         * <p>The message content.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hello</p>
          */
@@ -102,6 +112,8 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         public String prefilledMessage;
 
         /**
+         * <p>The URL of the QR code.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://img.png">http://img.png</a></p>
          */
@@ -109,6 +121,8 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         public String qrImageUrl;
 
         /**
+         * <p>The mode of the quick-response (QR) code.</p>
+         * 
          * <strong>example:</strong>
          * <p>D9II3***</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPermissionByCodeShrinkRequest extends TeaModel {
     /**
+     * <p>Authorize code information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

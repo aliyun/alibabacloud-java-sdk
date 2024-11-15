@@ -55,6 +55,8 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String templateCode;
 
     /**
+     * <p>Name of a template.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_name</p>
      */

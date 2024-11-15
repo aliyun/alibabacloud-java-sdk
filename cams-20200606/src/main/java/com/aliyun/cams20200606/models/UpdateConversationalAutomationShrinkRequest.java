@@ -4,19 +4,25 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdateConversationalAutomationShrinkRequest extends TeaModel {
+    /**
+     * <p>The commands.</p>
+     */
     @NameInMap("Commands")
     public String commandsShrink;
 
     /**
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>2993****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>Specifies whether to enable the welcoming message.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -27,6 +33,7 @@ public class UpdateConversationalAutomationShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number of the enterprise.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,9 @@ public class UpdateConversationalAutomationShrinkRequest extends TeaModel {
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>The opening remarks.</p>
+     */
     @NameInMap("Prompts")
     public String promptsShrink;
 

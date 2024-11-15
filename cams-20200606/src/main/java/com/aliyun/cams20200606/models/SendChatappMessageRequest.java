@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class SendChatappMessageRequest extends TeaModel {
     /**
-     * <p>The type of the message channel. Valid values:</p>
+     * <p>The channel type. Valid values:</p>
      * <ul>
      * <li><strong>whatsapp</strong></li>
      * <li><strong>viber</strong></li>
-     * <li>line. The feature that ChatAPP sends messages by using Line is under development.</li>
+     * <li><strong>line</strong> (under development)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,30 +20,30 @@ public class SendChatappMessageRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The content of the message.</p>
-     * <p><strong>Usage notes when you set the ChannelType parameter to whatsapp:</strong></p>
+     * <p>The message content.</p>
+     * <p><strong>Notes on WhatsApp messages:</strong></p>
      * <ul>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>text</strong>, the <strong>text</strong> parameter is required and the <strong>caption</strong> parameter cannot be specified.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>image</strong>, the <strong>link</strong> parameter is required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>video</strong>, the <strong>link</strong> parameter is required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>audio</strong>, the <strong>link</strong> parameter is required and the <strong>caption</strong> parameter is invalid.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>document</strong>, the <strong>link</strong> and <strong>fileName</strong> parameters are required and the <strong>caption</strong> parameter is invalid.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>interactive</strong>, the <strong>type</strong> and <strong>action</strong> parameters are required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>contacts</strong>, the <strong>name</strong> parameter is required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>location</strong>, the <strong>longitude</strong> and <strong>latitude</strong> parameters are required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>sticker</strong>, the <strong>link</strong> parameter is required, and the <strong>caption</strong> and <strong>fileName</strong> parameters are invalid.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>reaction</strong>, the <strong>messageId</strong> and <strong>emoji</strong> parameters are required.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>text</strong>, you must specify <strong>text</strong> and must not specify <strong>Caption</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>image</strong>, you must specify <strong>Link</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>video</strong>, you must specify <strong>Link</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>audio</strong>, <strong>Link</strong> is required and <strong>Caption</strong> is invalid.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>document</strong>, <strong>Link</strong> and <strong>FileName</strong> are required and <strong>Caption</strong> is invalid.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>interactive</strong>, you must specify <strong>type</strong> and <strong>action</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>contacts</strong>, you must specify <strong>name</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>location</strong>, you must specify <strong>longitude</strong> and <strong>latitude</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>sticker</strong>, you must specify <strong>Link</strong>, and <strong>Caption</strong> and <strong>FileName</strong> are invalid.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>reaction</strong>, you must specify <strong>messageId</strong> and <strong>emoji</strong>.</li>
      * </ul>
-     * <p><strong>Usage notes when you set the ChannelType parameter to viber:</strong></p>
+     * <p><strong>Notes on Viber messages:</strong></p>
      * <ul>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>text</strong>, the <strong>text</strong> parameter is required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>image</strong>, the <strong>link</strong> parameter is required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>video</strong>, the <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> parameters are required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>document</strong>, the <strong>link</strong>, <strong>fileName</strong>, and <strong>fileType</strong> parameters are required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>text_button</strong>, the <strong>text</strong>, <strong>caption</strong>, and <strong>action</strong> parameters are required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>text_image_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>caption</strong>, and <strong>action</strong> parameters are required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>text_video</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> parameters are required.</li>
-     * <li>When you set the <strong>MessageType</strong> parameter to <strong>text_video_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, <strong>duration</strong>, and <strong>caption</strong> parameters are required. The <strong>action</strong> parameter is invalid.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>text</strong>, you must specify <strong>text</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>image</strong>, you must specify <strong>link</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>video</strong>, you must specify <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>document</strong>, you must specify <strong>link</strong>, <strong>fileName</strong>, and <strong>fileType</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>text_button</strong>, you must specify <strong>text</strong>, <strong>caption</strong>, and <strong>action</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>text_image_button</strong>, you must specify <strong>text</strong>, <strong>link</strong>, <strong>caption</strong>, and <strong>action</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>text_video</strong>, you must specify <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong>.</li>
+     * <li>If you set <strong>messageType</strong> to <strong>text_video_button</strong>, you must specify <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, <strong>duration</strong>, and <strong>caption</strong>. In addition, you must not specify <strong>action</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The ID of the message to reply to.</p>
+     * <p>The ID of the reply message.</p>
      * 
      * <strong>example:</strong>
      * <p>61851ccb2f1365b16aee****</p>
@@ -71,7 +71,10 @@ public class SendChatappMessageRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp account that you register.</p>
+     * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <blockquote>
+     * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>65921621816****</p>
@@ -90,7 +93,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String fallBackContent;
 
     /**
-     * <p>Specifies the period of time after which the fallback Short Message Service (SMS) message is sent if the message receipt that indicates the message is delivered to customers is not received. If this parameter is left empty, the fallback SMS message is sent only when the <strong>message fails to be sent</strong> or <strong>the message receipt that indicates the message is not delivered to customers</strong> is received. Valid values: 60 to 43200. Unit: seconds.</p>
+     * <p>Specifies the period of time after which the fallback message is sent if the message receipt that indicates the message is delivered to clients is not received. If this parameter is left empty, the fallback message is sent only when the <strong>message fails to be sent</strong> or <strong>the message receipt that indicates the message is not delivered to clients</strong> is received. Unit: seconds. Valid values: 60 to 43200.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -99,7 +102,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public Integer fallBackDuration;
 
     /**
-     * <p>The ID of the fallback strategy. You can create a fallback strategy and view the information in the console.</p>
+     * <p>The ID of the fallback policy. You can create a fallback policy and view the information in the Chat App Message Service console.</p>
      * 
      * <strong>example:</strong>
      * <p>S_000001</p>
@@ -108,18 +111,11 @@ public class SendChatappMessageRequest extends TeaModel {
     public String fallBackId;
 
     /**
-     * <p>回落规则。</p>
-     * <blockquote>
-     * <p>取值范围</p>
+     * <p>The fallback rule. Valid values:</p>
      * <ul>
-     * <li>undelivered  消息不能发送到端时回落（在发送状态时模板、参数需要校验通过，模板被封、号码被封等不做校验）。参数值为空时默认使用此规则</li>
-     * <li>sentFailed  消息在校验模板、模板变量等参数时，校验不通过也会回落。只会强校验channelType, type, messageType, to, from(是否存在) 几个参数。</li>
+     * <li><strong>undelivered</strong>: A fallback is triggered if the message is not delivered to clients. When the message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</li>
+     * <li><strong>sentFailed</strong>: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</li>
      * </ul>
-     * </blockquote>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <blockquote>
-     * <p>中国站此字段无效</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>undelivered</p>
@@ -128,15 +124,15 @@ public class SendChatappMessageRequest extends TeaModel {
     public String fallBackRule;
 
     /**
-     * <p>Flow发送数据</p>
+     * <p>The Flow action.</p>
      */
     @NameInMap("FlowAction")
     public SendChatappMessageRequestFlowAction flowAction;
 
     /**
-     * <p>The phone number of the message sender.</p>
+     * <p>The mobile phone number of the message sender.</p>
      * <blockquote>
-     * <p>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.</p>
+     * <p> You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the Chat App Message Service console.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -147,7 +143,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -156,7 +152,11 @@ public class SendChatappMessageRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The type of the Viber message. This parameter is required if you set the ChannelType parameter to viber. Valid values: promotion and transaction.</p>
+     * <p>The type of the Viber message. This parameter is required if ChannelType is set to viber. Valid values:</p>
+     * <ul>
+     * <li><strong>promotion</strong></li>
+     * <li><strong>transaction</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>promotion</p>
@@ -235,7 +235,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100000001</p>
@@ -253,6 +253,8 @@ public class SendChatappMessageRequest extends TeaModel {
     public String templateCode;
 
     /**
+     * <p>The name of the message template.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_name</p>
      */
@@ -266,7 +268,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public java.util.Map<String, String> templateParams;
 
     /**
-     * <p>The phone number that receives the message.</p>
+     * <p>The mobile phone number of the message receiver.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -276,7 +278,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String to;
 
     /**
-     * <p>The tracking ID of the Viber message.</p>
+     * <p>The tracking data of the Viber message.</p>
      * 
      * <strong>example:</strong>
      * <p>tracking_id:123456</p>
@@ -294,10 +296,10 @@ public class SendChatappMessageRequest extends TeaModel {
     public Integer ttl;
 
     /**
-     * <p>The type of the message. Valid values:</p>
+     * <p>The message type. Valid values:</p>
      * <ul>
-     * <li><strong>template</strong>: a template message. A template message is sent based on a template that is created in the ChatAPP console and is approved. You can send template messages at any time based on your business requirements.</li>
-     * <li><strong>message</strong>: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.</li>
+     * <li><strong>template</strong>: the template message. A template message is sent based on a template that is created and approved in the Chat App Message Service console. You can send template messages based on your business requirements.</li>
+     * <li><strong>message</strong>: the custom message. You can send a custom WhatsApp message to a user only within 24 hours after you receive the last message from the user. This limit does not apply to custom Viber messages.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -522,13 +524,13 @@ public class SendChatappMessageRequest extends TeaModel {
 
     public static class SendChatappMessageRequestFlowAction extends TeaModel {
         /**
-         * <p>flow默认参数</p>
+         * <p>The default parameter of the Flow.</p>
          */
         @NameInMap("FlowActionData")
         public java.util.Map<String, String> flowActionData;
 
         /**
-         * <p>flow token信息</p>
+         * <p>The Flow token.</p>
          * 
          * <strong>example:</strong>
          * <p>1122***</p>
@@ -625,7 +627,7 @@ public class SendChatappMessageRequest extends TeaModel {
 
     public static class SendChatappMessageRequestProductAction extends TeaModel {
         /**
-         * <p>The products. Up to 30 products can be added. The products can be divided into up to 10 categories.</p>
+         * <p>The products. Up to 30 products and 10 categories can be added.</p>
          */
         @NameInMap("Sections")
         public java.util.List<SendChatappMessageRequestProductActionSections> sections;

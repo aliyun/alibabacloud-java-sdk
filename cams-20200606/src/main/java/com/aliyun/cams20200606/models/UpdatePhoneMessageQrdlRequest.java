@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneMessageQrdlRequest extends TeaModel {
     /**
+     * <p>SpaceId/instance ID of ISV sub customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>9383884</p>
      */
@@ -12,6 +14,7 @@ public class UpdatePhoneMessageQrdlRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>Produce QR code image format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdatePhoneMessageQrdlRequest extends TeaModel {
     public String generateQrImage;
 
     /**
+     * <p>Number, enter the country/region code+number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class UpdatePhoneMessageQrdlRequest extends TeaModel {
     public String phoneNumber;
 
     /**
+     * <p>Message content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class UpdatePhoneMessageQrdlRequest extends TeaModel {
     public String prefilledMessage;
 
     /**
+     * <p>QR code encoding.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

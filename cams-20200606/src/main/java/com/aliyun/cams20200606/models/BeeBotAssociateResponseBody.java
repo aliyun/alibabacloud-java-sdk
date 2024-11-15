@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotAssociateResponseBody extends TeaModel {
+    /**
+     * <p>The access denied for detailed information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -87,7 +93,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
 
     public static class BeeBotAssociateResponseBodyDataAssociate extends TeaModel {
         /**
-         * <p>The additional information.</p>
+         * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -96,7 +102,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         public String meta;
 
         /**
-         * <p>The title of the associated question.</p>
+         * <p>The title of the related question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Policy on Withdrawal of Housing Provident Fund</p>
          */
         @NameInMap("Title")
         public String title;

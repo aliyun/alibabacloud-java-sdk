@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -21,7 +27,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message templates.</p>
+     * <p>The list of the templates.</p>
      */
     @NameInMap("ListTemplate")
     public java.util.List<ListChatappTemplateResponseBodyListTemplate> listTemplate;
@@ -158,6 +164,8 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <p>The time when the template was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1711006633000</p>
          */
