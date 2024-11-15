@@ -12328,7 +12328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DataWorks计量数据</p>
+     * <p>Queries the statistics on the number of phone call-based alerts or text message-based alerts reported within the tenant to which your account belongs during the previous 30 days.</p>
      * 
      * @param request ListMeasureDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12372,7 +12372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DataWorks计量数据</p>
+     * <p>Queries the statistics on the number of phone call-based alerts or text message-based alerts reported within the tenant to which your account belongs during the previous 30 days.</p>
      * 
      * @param request ListMeasureDataRequest
      * @return ListMeasureDataResponse

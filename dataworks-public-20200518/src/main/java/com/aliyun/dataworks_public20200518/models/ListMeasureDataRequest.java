@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListMeasureDataRequest extends TeaModel {
     /**
-     * <p>The measurement component.</p>
+     * <p>The measurement component. Valid values:</p>
      * <ul>
-     * <li>This parameter is set to Count if the DomainCode parameter is set to DideAlarmPhone or DideAlarmSms. In this case, statistics on the number of phone calls or text messages that are used to send alert notifications are collected.</li>
+     * <li>Count: phone call-based alerts and text message-based alerts</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListMeasureDataRequest extends TeaModel {
     public String componentCode;
 
     /**
-     * <p>The item to be measured. Valid values:</p>
+     * <p>The measurement item. Valid values:</p>
      * <ul>
      * <li>DideAlarmPhone: phone call-based alerts</li>
      * <li>DideAlarmSms: text message-based alerts</li>
@@ -32,7 +32,7 @@ public class ListMeasureDataRequest extends TeaModel {
     public String domainCode;
 
     /**
-     * <p>The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</p>
+     * <p>The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the previous 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListMeasureDataRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</p>
+     * <p>The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the previous 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
