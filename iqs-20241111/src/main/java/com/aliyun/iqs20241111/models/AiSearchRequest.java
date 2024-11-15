@@ -3,13 +3,17 @@ package com.aliyun.iqs20241111.models;
 
 import com.aliyun.tea.*;
 
-public class GenericSearchRequest extends TeaModel {
+public class AiSearchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>finance</p>
+     */
     @NameInMap("industry")
     public String industry;
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>{\&quot;total_count\&quot;: 6851, \&quot;page_number\&quot;: 54, \&quot;page_size\&quot;: 100}</p>
      */
     @NameInMap("page")
     public Integer page;
@@ -20,6 +24,10 @@ public class GenericSearchRequest extends TeaModel {
     @NameInMap("query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17dc8bcd-f34a-46d1-a7a3-0fa3d1ce3824</p>
+     */
     @NameInMap("sessionId")
     public String sessionId;
 
@@ -30,12 +38,12 @@ public class GenericSearchRequest extends TeaModel {
     @NameInMap("timeRange")
     public String timeRange;
 
-    public static GenericSearchRequest build(java.util.Map<String, ?> map) throws Exception {
-        GenericSearchRequest self = new GenericSearchRequest();
+    public static AiSearchRequest build(java.util.Map<String, ?> map) throws Exception {
+        AiSearchRequest self = new AiSearchRequest();
         return TeaModel.build(map, self);
     }
 
-    public GenericSearchRequest setIndustry(String industry) {
+    public AiSearchRequest setIndustry(String industry) {
         this.industry = industry;
         return this;
     }
@@ -43,7 +51,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.industry;
     }
 
-    public GenericSearchRequest setPage(Integer page) {
+    public AiSearchRequest setPage(Integer page) {
         this.page = page;
         return this;
     }
@@ -51,7 +59,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.page;
     }
 
-    public GenericSearchRequest setQuery(String query) {
+    public AiSearchRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -59,7 +67,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.query;
     }
 
-    public GenericSearchRequest setSessionId(String sessionId) {
+    public AiSearchRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
@@ -67,7 +75,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.sessionId;
     }
 
-    public GenericSearchRequest setTimeRange(String timeRange) {
+    public AiSearchRequest setTimeRange(String timeRange) {
         this.timeRange = timeRange;
         return this;
     }
