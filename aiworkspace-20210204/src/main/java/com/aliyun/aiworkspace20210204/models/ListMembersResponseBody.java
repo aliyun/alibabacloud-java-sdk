@@ -51,6 +51,9 @@ public class ListMembersResponseBody extends TeaModel {
     }
 
     public static class ListMembersResponseBodyMembers extends TeaModel {
+        @NameInMap("AccountName")
+        public String accountName;
+
         /**
          * <strong>example:</strong>
          * <p>myDisplayName</p>
@@ -92,6 +95,14 @@ public class ListMembersResponseBody extends TeaModel {
         public static ListMembersResponseBodyMembers build(java.util.Map<String, ?> map) throws Exception {
             ListMembersResponseBodyMembers self = new ListMembersResponseBodyMembers();
             return TeaModel.build(map, self);
+        }
+
+        public ListMembersResponseBodyMembers setAccountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public ListMembersResponseBodyMembers setDisplayName(String displayName) {
