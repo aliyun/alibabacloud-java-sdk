@@ -12,6 +12,9 @@ public class GetPermissionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F23CFB6-A721-4E90-AC1E-0E30FA8B45DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,56 +43,81 @@ public class GetPermissionResponseBody extends TeaModel {
     public static class GetPermissionResponseBodyPermission extends TeaModel {
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-07T07:39:01.818Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Indicates whether the permission is the default permission. Valid values:</p>
-         * <br>
-         * <p>*   false: The permission is not the default permission.</p>
-         * <p>*   true: The permission is the default permission.</p>
+         * <ul>
+         * <li>false: The permission is not the default permission.</li>
+         * <li>true: The permission is the default permission.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DefaultPermission")
         public Boolean defaultPermission;
 
         /**
          * <p>Indicates whether the version is the default version. Valid values:</p>
-         * <br>
-         * <p>*   false: The version is not the default version.</p>
-         * <p>*   true: The version is the default version.</p>
+         * <ul>
+         * <li>false: The version is not the default version.</li>
+         * <li>true: The version is the default version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DefaultVersion")
         public Boolean defaultVersion;
 
         /**
          * <p>The document of the policy related to the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Effect&quot;:&quot;Allow&quot;,&quot;Action&quot;:[&quot;vpc:DescribeVSwitches&quot;,&quot;vpc:DescribeVSwitchAttributes&quot;]}</p>
          */
         @NameInMap("Permission")
         public String permission;
 
         /**
          * <p>The name of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunRSDefaultPermissionVSwitch</p>
          */
         @NameInMap("PermissionName")
         public String permissionName;
 
         /**
          * <p>The version of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("PermissionVersion")
         public String permissionVersion;
 
         /**
          * <p>The type of the shared resources.</p>
-         * <br>
-         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+         * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-07T07:39:01.818Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DisassociateResourceSharePermissionRequest extends TeaModel {
     /**
-     * <p>The name of the permission. For more information, see [Permission library](~~465474~~).</p>
+     * <p>The name of the permission. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunRSDefaultPermissionVSwitch</p>
      */
     @NameInMap("PermissionName")
     public String permissionName;
 
     /**
      * <p>The ID of the resource share.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rs-6GRmdD3X****</p>
      */
     @NameInMap("ResourceShareId")
     public String resourceShareId;

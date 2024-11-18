@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteResourceShareRequest extends TeaModel {
     /**
      * <p>The ID of the resource share.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rs-qSkW1HBY****</p>
      */
     @NameInMap("ResourceShareId")
     public String resourceShareId;

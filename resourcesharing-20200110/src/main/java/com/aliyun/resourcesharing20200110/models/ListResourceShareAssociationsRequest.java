@@ -6,59 +6,85 @@ import com.aliyun.tea.*;
 public class ListResourceShareAssociationsRequest extends TeaModel {
     /**
      * <p>The association status. Valid values:</p>
-     * <br>
-     * <p>*   Associating: The entity is being associated.</p>
-     * <p>*   Associated: The entity is associated.</p>
-     * <p>*   Failed: The entity fails to be associated.</p>
-     * <p>*   Disassociating: The entity is being disassociated.</p>
-     * <p>*   Disassociated: The entity is disassociated.</p>
-     * <br>
-     * <p>>  The system deletes the records of entities in the `Failed` or `Disassociated` state within 48 hours to 96 hours.</p>
+     * <ul>
+     * <li>Associating: The entity is being associated.</li>
+     * <li>Associated: The entity is associated.</li>
+     * <li>Failed: The entity fails to be associated.</li>
+     * <li>Disassociating: The entity is being disassociated.</li>
+     * <li>Disassociated: The entity is disassociated.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The system deletes the records of entities in the <code>Failed</code> or <code>Disassociated</code> state within 48 hours to 96 hours.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Associated</p>
      */
     @NameInMap("AssociationStatus")
     public String associationStatus;
 
     /**
      * <p>The association type. Valid values:</p>
-     * <br>
-     * <p>*   Resource</p>
-     * <p>*   Target</p>
+     * <ul>
+     * <li>Resource</li>
+     * <li>Target</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Resource</p>
      */
     @NameInMap("AssociationType")
     public String associationType;
 
     /**
      * <p>The maximum number of entries to return for a single request.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
-     * <p>>  This parameter is unavailable if you set the `AssociationType` parameter to `Target`.</p>
+     * <blockquote>
+     * <p> This parameter is unavailable if you set the <code>AssociationType</code> parameter to <code>Target</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp183p93qs667muql****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The IDs of the resource shares.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rs-6GRmdD3X****</p>
      */
     @NameInMap("ResourceShareIds")
     public java.util.List<String> resourceShareIds;
 
     /**
      * <p>The ID of the principal.</p>
-     * <br>
-     * <p>>  This parameter is unavailable if you set the `AssociationType` parameter to `Resource`.</p>
+     * <blockquote>
+     * <p> This parameter is unavailable if you set the <code>AssociationType</code> parameter to <code>Resource</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>172050525300****</p>
      */
     @NameInMap("Target")
     public String target;

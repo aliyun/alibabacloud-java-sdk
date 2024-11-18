@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AssociateResourceSharePermissionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111FB84A-60A9-403E-9067-E55D7EE95BD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

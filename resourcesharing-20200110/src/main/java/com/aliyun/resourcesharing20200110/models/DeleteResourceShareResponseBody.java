@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteResourceShareResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A627EE2A-223D-4E1F-A954-394686AEA916</p>
      */
     @NameInMap("RequestId")
     public String requestId;

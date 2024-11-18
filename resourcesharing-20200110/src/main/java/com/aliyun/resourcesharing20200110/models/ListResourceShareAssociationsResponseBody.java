@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListResourceShareAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11BA57B5-7301-4E2F-BBA5-2AE4C2F4FCDB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -153,77 +159,111 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
 
         /**
          * <p>The association status. Valid values:</p>
-         * <br>
-         * <p>*   Associating: The entity is being associated.</p>
-         * <p>*   Associated: The entity is associated.</p>
-         * <p>*   Failed: The entity fails to be associated.</p>
-         * <p>*   Disassociating: The entity is being disassociated.</p>
-         * <p>*   Disassociated: The entity is disassociated.</p>
-         * <br>
-         * <p>>  The system deletes the records of entities in the `Failed` or `Disassociated` state within 48 hours to 96 hours.</p>
+         * <ul>
+         * <li>Associating: The entity is being associated.</li>
+         * <li>Associated: The entity is associated.</li>
+         * <li>Failed: The entity fails to be associated.</li>
+         * <li>Disassociating: The entity is being disassociated.</li>
+         * <li>Disassociated: The entity is disassociated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The system deletes the records of entities in the <code>Failed</code> or <code>Disassociated</code> state within 48 hours to 96 hours.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Associated</p>
          */
         @NameInMap("AssociationStatus")
         public String associationStatus;
 
         /**
          * <p>The cause of the association failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The reason for the association failure.</p>
          */
         @NameInMap("AssociationStatusMessage")
         public String associationStatusMessage;
 
         /**
          * <p>The association type. Valid values:</p>
-         * <br>
-         * <p>*   Resource</p>
-         * <p>*   Target</p>
+         * <ul>
+         * <li>Resource</li>
+         * <li>Target</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource</p>
          */
         @NameInMap("AssociationType")
         public String associationType;
 
         /**
          * <p>The time when the association of the entity was created. The value of this parameter depends on the value of the AssociationType parameter:</p>
-         * <br>
-         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the shared resource was associated with or disassociated from the resource share.</p>
-         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the principal was associated with or disassociated from the resource share.</p>
+         * <ul>
+         * <li>If the value of <code>AssociationType</code> is <code>Resource</code>, the value of this parameter is the time when the shared resource was associated with or disassociated from the resource share.</li>
+         * <li>If the value of <code>AssociationType</code> is <code>Target</code>, the value of this parameter is the time when the principal was associated with or disassociated from the resource share.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-07T07:39:01.818Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
-         * <br>
-         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the ID of the shared resource.</p>
-         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the ID of the principal.</p>
+         * <ul>
+         * <li>If the value of <code>AssociationType</code> is <code>Resource</code>, the value of this parameter is the ID of the shared resource.</li>
+         * <li>If the value of <code>AssociationType</code> is <code>Target</code>, the value of this parameter is the ID of the principal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1upw03qyz8n7us9****</p>
          */
         @NameInMap("EntityId")
         public String entityId;
 
         /**
          * <p>The type of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
-         * <br>
-         * <p>*   If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
-         * <p>*   If the value of AssociationType is Target, the value of this parameter is `Account`.</p>
+         * <ul>
+         * <li>If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</li>
+         * <li>If the value of AssociationType is Target, the value of this parameter is <code>Account</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
         /**
          * <p>Indicates whether the principal is outside the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   true: The principal is outside the resource directory.</p>
-         * <p>*   false: The principal is in the resource directory.</p>
+         * <ul>
+         * <li>true: The principal is outside the resource directory.</li>
+         * <li>false: The principal is in the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("External")
         public Boolean external;
 
         /**
          * <p>The ID of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-6GRmdD3X****</p>
          */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
         /**
          * <p>The name of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
@@ -233,9 +273,13 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the association of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:</p>
-         * <br>
-         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the association of the shared resource was updated.</p>
-         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the association of the principal was updated.</p>
+         * <ul>
+         * <li>If the value of <code>AssociationType</code> is <code>Resource</code>, the value of this parameter is the time when the association of the shared resource was updated.</li>
+         * <li>If the value of <code>AssociationType</code> is <code>Target</code>, the value of this parameter is the time when the association of the principal was updated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-07T07:39:02.920Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

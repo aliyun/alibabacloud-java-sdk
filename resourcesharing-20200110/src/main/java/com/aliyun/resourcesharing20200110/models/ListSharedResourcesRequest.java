@@ -6,52 +6,74 @@ import com.aliyun.tea.*;
 public class ListSharedResourcesRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return for a single request.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of a shared resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1upw03qyz8n7us9****</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
      * <p>The owner of the resource shares. Valid values:</p>
-     * <br>
-     * <p>*   Self: your account. If you set the value to Self, the resources you share with other accounts are queried.</p>
-     * <p>*   OtherAccounts: another account. If you set the value to OtherAccounts, the resources other accounts share with you are queried.</p>
+     * <ul>
+     * <li>Self: your account. If you set the value to Self, the resources you share with other accounts are queried.</li>
+     * <li>OtherAccounts: another account. If you set the value to OtherAccounts, the resources other accounts share with you are queried.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Self</p>
      */
     @NameInMap("ResourceOwner")
     public String resourceOwner;
 
     /**
      * <p>The ID of a resource share.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rs-6GRmdD3X****</p>
      */
     @NameInMap("ResourceShareIds")
     public java.util.List<String> resourceShareIds;
 
     /**
      * <p>The type of the shared resources.</p>
-     * <br>
-     * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+     * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VSwitch</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The ID of the principal or resource owner.</p>
-     * <br>
-     * <p>*   If the value of `ResourceOwner` is `Self`, set this parameter to the ID of a principal.</p>
-     * <p>*   If the value of `ResourceOwner` is `OtherAccounts`, set this parameter to the ID of a resource owner.</p>
+     * <ul>
+     * <li>If the value of <code>ResourceOwner</code> is <code>Self</code>, set this parameter to the ID of a principal.</li>
+     * <li>If the value of <code>ResourceOwner</code> is <code>OtherAccounts</code>, set this parameter to the ID of a resource owner.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>172050525300****</p>
      */
     @NameInMap("Target")
     public String target;
