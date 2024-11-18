@@ -1,3 +1,7 @@
+2024-11-18 Version: 1.1.2
+- Update API ListImages: update response param.
+
+
 2024-11-13 Version: 1.1.1
 - Update API GetJob: update response param.
 
