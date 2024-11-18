@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether resource sharing within a resource directory is enabled. Valid values:</p>
-     * <br>
-     * <p>*   false</p>
-     * <p>*   true</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableSharingWithRd")
     public Boolean enableSharingWithRd;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>819545D0-C97A-5DB3-BD73-A1B17E9A4BC1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetPermissionRequest extends TeaModel {
     /**
      * <p>The name of the permission.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunRSDefaultPermissionVSwitch</p>
      */
     @NameInMap("PermissionName")
     public String permissionName;
 
     /**
      * <p>The version of the permission.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("PermissionVersion")
     public String permissionVersion;

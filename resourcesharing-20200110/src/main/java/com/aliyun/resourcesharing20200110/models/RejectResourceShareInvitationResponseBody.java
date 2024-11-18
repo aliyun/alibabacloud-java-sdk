@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RejectResourceShareInvitationResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E446D6DE-BFC8-5F37-A494-33D7B118147D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,77 @@ public class RejectResourceShareInvitationResponseBody extends TeaModel {
     public static class RejectResourceShareInvitationResponseBodyResourceShareInvitation extends TeaModel {
         /**
          * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-02T07:07:30.809Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The Alibaba Cloud account ID of the invitee.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134254031178****</p>
          */
         @NameInMap("ReceiverAccountId")
         public String receiverAccountId;
 
         /**
          * <p>The ID of the resource share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-JoA1Ayjm****</p>
          */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
         /**
          * <p>The ID of the invitation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-yyTWbkjHArYh****</p>
          */
         @NameInMap("ResourceShareInvitationId")
         public String resourceShareInvitationId;
 
         /**
          * <p>The name of the resource share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
         /**
          * <p>The Alibaba Cloud account ID of the inviter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("SenderAccountId")
         public String senderAccountId;
 
         /**
          * <p>The status of the invitation. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The invitation is waiting for confirmation.</p>
-         * <p>*   Accepted: The invitation is accepted.</p>
-         * <p>*   Cancelled: The invitation is canceled.</p>
-         * <p>*   Rejected: The invitation is rejected.</p>
-         * <p>*   Expired: The invitation has expired.</p>
+         * <ul>
+         * <li>Pending: The invitation is waiting for confirmation.</li>
+         * <li>Accepted: The invitation is accepted.</li>
+         * <li>Cancelled: The invitation is canceled.</li>
+         * <li>Rejected: The invitation is rejected.</li>
+         * <li>Expired: The invitation has expired.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rejected</p>
          */
         @NameInMap("Status")
         public String status;

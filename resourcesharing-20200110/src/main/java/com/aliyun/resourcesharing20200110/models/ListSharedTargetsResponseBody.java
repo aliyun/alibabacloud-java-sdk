@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListSharedTargetsResponseBody extends TeaModel {
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04677DCA-7C33-464B-8811-1B1DA3C3D197</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,39 +60,72 @@ public class ListSharedTargetsResponseBody extends TeaModel {
     public static class ListSharedTargetsResponseBodySharedTargets extends TeaModel {
         /**
          * <p>The time when the principal was associated with the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-07T09:16:59.905Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Indicates whether the principal is outside the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   true: The principal is outside the resource directory.</p>
-         * <p>*   false: The principal is in the resource directory.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("External")
         public Boolean external;
 
         /**
          * <p>The ID of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-6GRmdD3X****</p>
          */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
         /**
          * <p>The ID of the principal or resource owner.</p>
-         * <br>
-         * <p>*   If the value of `ResourceOwner` is `Self`, the value of this parameter is the ID of a principal.</p>
-         * <p>*   If the value of `ResourceOwner` is `OtherAccounts`, the value of this parameter is the ID of a resource owner.</p>
+         * <ul>
+         * <li>If the value of <code>ResourceOwner</code> is <code>Self</code>, the value of this parameter is the ID of a principal.</li>
+         * <li>If the value of <code>ResourceOwner</code> is <code>OtherAccounts</code>, the value of this parameter is the ID of a resource owner.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The properties of the principal, such as the time range within which the resource is shared.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the principal is an Alibaba Cloud service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;timeRange&quot;:{
+         *         &quot;timeRangeType&quot;:&quot;timeRange&quot;,
+         *         &quot;beginAtTime&quot;:&quot;00:00&quot;,
+         *         &quot;timezone&quot;:&quot;UTC+8&quot;,
+         *         &quot;endAtTime&quot;:&quot;19:59&quot;
+         *     }
+         * }</p>
+         */
         @NameInMap("TargetProperty")
         public String targetProperty;
 
         /**
          * <p>The time when the association of the principal was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-07T09:16:59.905Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

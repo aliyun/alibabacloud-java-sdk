@@ -6,25 +6,34 @@ import com.aliyun.tea.*;
 public class CreateResourceShareRequest extends TeaModel {
     /**
      * <p>Specifies whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
-     * <br>
-     * <p>*   false (default): Resources in the resource share can be shared only with accounts in the resource directory.</p>
-     * <p>*   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</p>
+     * <ul>
+     * <li>false (default): Resources in the resource share can be shared only with accounts in the resource directory.</li>
+     * <li>true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AllowExternalTargets")
     public Boolean allowExternalTargets;
 
     /**
-     * <p>The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).</p>
+     * <p>The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
      */
     @NameInMap("PermissionNames")
     public java.util.List<String> permissionNames;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the resource share.</p>
-     * <br>
      * <p>The name must be 1 to 50 characters in length.</p>
-     * <br>
-     * <p>The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ResourceShareName")
     public String resourceShareName;
@@ -35,11 +44,23 @@ public class CreateResourceShareRequest extends TeaModel {
     @NameInMap("Resources")
     public java.util.List<CreateResourceShareRequestResources> resources;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateResourceShareRequestTag> tag;
+
+    /**
+     * <p>The properties of the principal.</p>
+     * <blockquote>
+     * <p> This parameter is available only when you specify an Alibaba Cloud service as a principal.</p>
+     * </blockquote>
+     */
     @NameInMap("TargetProperties")
     public java.util.List<CreateResourceShareRequestTargetProperties> targetProperties;
 
     /**
      * <p>The information about the principals.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172050525300****</p>
      */
     @NameInMap("Targets")
     public java.util.List<String> targets;
@@ -65,6 +86,14 @@ public class CreateResourceShareRequest extends TeaModel {
         return this.permissionNames;
     }
 
+    public CreateResourceShareRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateResourceShareRequest setResourceShareName(String resourceShareName) {
         this.resourceShareName = resourceShareName;
         return this;
@@ -79,6 +108,14 @@ public class CreateResourceShareRequest extends TeaModel {
     }
     public java.util.List<CreateResourceShareRequestResources> getResources() {
         return this.resources;
+    }
+
+    public CreateResourceShareRequest setTag(java.util.List<CreateResourceShareRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateResourceShareRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateResourceShareRequest setTargetProperties(java.util.List<CreateResourceShareRequestTargetProperties> targetProperties) {
@@ -100,22 +137,27 @@ public class CreateResourceShareRequest extends TeaModel {
     public static class CreateResourceShareRequestResources extends TeaModel {
         /**
          * <p>The ID of a shared resource.</p>
-         * <br>
          * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
-         * <br>
-         * <p>>  `Resources.N.ResourceId` and `Resources.N.ResourceType` must be used in pairs.</p>
+         * <blockquote>
+         * <p> <code>Resources.N.ResourceId</code> and <code>Resources.N.ResourceType</code> must be used in pairs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp183p93qs667muql****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of a shared resource.</p>
-         * <br>
          * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
-         * <br>
-         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
-         * <br>
-         * <p>>  `Resources.N.ResourceId` and `Resources.N.ResourceType` must be used in pairs.</p>
+         * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
+         * <blockquote>
+         * <p> <code>Resources.N.ResourceId</code> and <code>Resources.N.ResourceType</code> must be used in pairs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -143,10 +185,69 @@ public class CreateResourceShareRequest extends TeaModel {
 
     }
 
+    public static class CreateResourceShareRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateResourceShareRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceShareRequestTag self = new CreateResourceShareRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateResourceShareRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateResourceShareRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateResourceShareRequestTargetProperties extends TeaModel {
+        /**
+         * <p>The property parameter of the principal. For example, you can specify a parameter that indicates the time range for resource sharing. Valid values of <code>timeRangeType</code>:</p>
+         * <ul>
+         * <li>timeRange: a specific time range</li>
+         * <li>day: all day</li>
+         * </ul>
+         * <blockquote>
+         * <p> <code>TargetProperties.N.TargetId</code> and <code>TargetProperties.N.Property</code> must be used in pairs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;timeRange&quot;:{
+         *         &quot;timeRangeType&quot;:&quot;timeRange&quot;,
+         *         &quot;beginAtTime&quot;:&quot;00:00&quot;,
+         *         &quot;timezone&quot;:&quot;UTC+8&quot;,
+         *         &quot;endAtTime&quot;:&quot;19:59&quot;
+         *     }
+         * }</p>
+         */
         @NameInMap("Property")
         public String property;
 
+        /**
+         * <p>The ID of the principal.</p>
+         * <blockquote>
+         * <p> <code>TargetProperties.N.TargetId</code> and <code>TargetProperties.N.Property</code> must be used in pairs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172050525300****</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 

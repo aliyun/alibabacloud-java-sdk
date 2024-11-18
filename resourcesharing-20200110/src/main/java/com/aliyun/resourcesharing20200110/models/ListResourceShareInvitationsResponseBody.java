@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListResourceShareInvitationsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30EC8328-1BDE-51D5-BFAB-039508BD91A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,9 +60,13 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
     public static class ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails extends TeaModel {
         /**
          * <p>The type of the sharing operation. Valid values:</p>
-         * <br>
-         * <p>*   Associate</p>
-         * <p>*   Disassociate</p>
+         * <ul>
+         * <li>Associate</li>
+         * <li>Disassociate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Associate</p>
          */
         @NameInMap("AssociateType")
         public String associateType;
@@ -72,32 +82,44 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the shared resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-7xvh46nx5oqlre0wv***</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the shared resource.</p>
-         * <br>
-         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+         * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshot</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The failure status. Valid values:</p>
-         * <br>
-         * <p>*   Unavailable: The resource cannot be shared.</p>
-         * <p>*   LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</p>
-         * <p>*   ZonalResourceInaccessible: The resource is unavailable in this region.</p>
-         * <p>*   UnsupportedOperation: The operation is not allowed because another association exists.</p>
-         * <p>*   InternalError: An internal error occurred during the check.</p>
+         * <ul>
+         * <li>Unavailable: The resource cannot be shared.</li>
+         * <li>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</li>
+         * <li>ZonalResourceInaccessible: The resource is unavailable in this region.</li>
+         * <li>UnsupportedOperation: The operation is not allowed because another association exists.</li>
+         * <li>InternalError: An internal error occurred during the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unavailable</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The failure cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You cannot access the specified resource at this time.</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
@@ -176,6 +198,9 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
     public static class ListResourceShareInvitationsResponseBodyResourceShareInvitations extends TeaModel {
         /**
          * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-18T05:36:45.024Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -188,43 +213,62 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
 
         /**
          * <p>The Alibaba Cloud account ID of the invitee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134254031178****</p>
          */
         @NameInMap("ReceiverAccountId")
         public String receiverAccountId;
 
         /**
          * <p>The ID of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-ysGRci9z****</p>
          */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
         /**
          * <p>The ID of the invitation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-p6eRytrkjVvM****</p>
          */
         @NameInMap("ResourceShareInvitationId")
         public String resourceShareInvitationId;
 
         /**
          * <p>The name of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
         /**
          * <p>The Alibaba Cloud account ID of the inviter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("SenderAccountId")
         public String senderAccountId;
 
         /**
          * <p>The status of the invitation. Valid values:</p>
-         * <br>
-         * <p>*   Pending</p>
-         * <p>*   Accepted</p>
-         * <p>*   Cancelled</p>
-         * <p>*   Rejected</p>
-         * <p>*   Expired</p>
-         * <p>*   AcceptFailed</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Accepted</li>
+         * <li>Cancelled</li>
+         * <li>Rejected</li>
+         * <li>Expired</li>
+         * <li>AcceptFailed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         @NameInMap("Status")
         public String status;

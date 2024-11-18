@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class ListResourceSharePermissionsRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return for a single request.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The owner of the resource share. Valid values:</p>
-     * <br>
-     * <p>*   Self: the current account</p>
-     * <p>*   OtherAccounts: an account other than the current account</p>
+     * <ul>
+     * <li>Self: the current account</li>
+     * <li>OtherAccounts: an account other than the current account</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Self</p>
      */
     @NameInMap("ResourceOwner")
     public String resourceOwner;
 
     /**
      * <p>The ID of the resource share.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rs-6GRmdD3X****</p>
      */
     @NameInMap("ResourceShareId")
     public String resourceShareId;

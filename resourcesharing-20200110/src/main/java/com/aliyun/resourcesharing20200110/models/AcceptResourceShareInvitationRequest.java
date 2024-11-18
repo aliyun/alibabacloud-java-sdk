@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class AcceptResourceShareInvitationRequest extends TeaModel {
     /**
      * <p>The ID of the resource sharing invitation.</p>
-     * <br>
-     * <p>You can call the [ListResourceShareInvitations](~~450564~~) operation to obtain the ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/450564.html">ListResourceShareInvitations</a> operation to obtain the ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-pMnItMX19fBJ****</p>
      */
     @NameInMap("ResourceShareInvitationId")
     public String resourceShareInvitationId;

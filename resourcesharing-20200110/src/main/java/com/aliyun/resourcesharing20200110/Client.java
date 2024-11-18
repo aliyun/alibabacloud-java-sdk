@@ -27,14 +27,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)
-      * *   A principal needs to accept or reject a resource sharing invitation only if the principal is not the management account or a member of a resource directory. If you share resources with an object in a resource directory, the system automatically accepts the resource sharing invitation for the object.
-      * *   A resource sharing invitation is valid for seven days. A principal must accept or reject the invitation within the validity period.
-      * This topic provides an example on how to call the API operation to accept the resource sharing invitation whose ID is `i-pMnItMX19fBJ****` in the `cn-hangzhou` region.
-      *
-      * @param request AcceptResourceShareInvitationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AcceptResourceShareInvitationResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <ul>
+     * <li>A principal needs to accept or reject a resource sharing invitation only if the principal is not the management account or a member of a resource directory. If you share resources with an object in a resource directory, the system automatically accepts the resource sharing invitation for the object.</li>
+     * <li>A resource sharing invitation is valid for seven days. A principal must accept or reject the invitation within the validity period.
+     * This topic provides an example on how to call the API operation to accept the resource sharing invitation whose ID is <code>i-pMnItMX19fBJ****</code> in the <code>cn-hangzhou</code> region.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Accepts a resource sharing invitation.</p>
+     * 
+     * @param request AcceptResourceShareInvitationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AcceptResourceShareInvitationResponse
      */
     public AcceptResourceShareInvitationResponse acceptResourceShareInvitationWithOptions(AcceptResourceShareInvitationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -61,13 +67,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)
-      * *   A principal needs to accept or reject a resource sharing invitation only if the principal is not the management account or a member of a resource directory. If you share resources with an object in a resource directory, the system automatically accepts the resource sharing invitation for the object.
-      * *   A resource sharing invitation is valid for seven days. A principal must accept or reject the invitation within the validity period.
-      * This topic provides an example on how to call the API operation to accept the resource sharing invitation whose ID is `i-pMnItMX19fBJ****` in the `cn-hangzhou` region.
-      *
-      * @param request AcceptResourceShareInvitationRequest
-      * @return AcceptResourceShareInvitationResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <ul>
+     * <li>A principal needs to accept or reject a resource sharing invitation only if the principal is not the management account or a member of a resource directory. If you share resources with an object in a resource directory, the system automatically accepts the resource sharing invitation for the object.</li>
+     * <li>A resource sharing invitation is valid for seven days. A principal must accept or reject the invitation within the validity period.
+     * This topic provides an example on how to call the API operation to accept the resource sharing invitation whose ID is <code>i-pMnItMX19fBJ****</code> in the <code>cn-hangzhou</code> region.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Accepts a resource sharing invitation.</p>
+     * 
+     * @param request AcceptResourceShareInvitationRequest
+     * @return AcceptResourceShareInvitationResponse
      */
     public AcceptResourceShareInvitationResponse acceptResourceShareInvitation(AcceptResourceShareInvitationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -75,11 +87,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to associate the vSwitch `vsw-bp183p93qs667muql****` and the member `172050525300****` with the resource share `rs-6GRmdD3X****` in the `cn-hangzhou` region. After the association, the vSwitch is shared with the member.
-      *
-      * @param request AssociateResourceShareRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AssociateResourceShareResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to associate the vSwitch <code>vsw-bp183p93qs667muql****</code> and the member <code>172050525300****</code> with the resource share <code>rs-6GRmdD3X****</code> in the <code>cn-hangzhou</code> region. After the association, the vSwitch is shared with the member.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates resources or principals with a resource share.</p>
+     * 
+     * @param request AssociateResourceShareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateResourceShareResponse
      */
     public AssociateResourceShareResponse associateResourceShareWithOptions(AssociateResourceShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -122,10 +138,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to associate the vSwitch `vsw-bp183p93qs667muql****` and the member `172050525300****` with the resource share `rs-6GRmdD3X****` in the `cn-hangzhou` region. After the association, the vSwitch is shared with the member.
-      *
-      * @param request AssociateResourceShareRequest
-      * @return AssociateResourceShareResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to associate the vSwitch <code>vsw-bp183p93qs667muql****</code> and the member <code>172050525300****</code> with the resource share <code>rs-6GRmdD3X****</code> in the <code>cn-hangzhou</code> region. After the association, the vSwitch is shared with the member.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates resources or principals with a resource share.</p>
+     * 
+     * @param request AssociateResourceShareRequest
+     * @return AssociateResourceShareResponse
      */
     public AssociateResourceShareResponse associateResourceShare(AssociateResourceShareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -133,11 +153,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to associate the `AliyunRSDefaultPermissionVSwitch` permission with the `rs-6GRmdD3X****` resource share in the `cn-hangzhou` region.
-      *
-      * @param request AssociateResourceSharePermissionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AssociateResourceSharePermissionResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to associate the <code>AliyunRSDefaultPermissionVSwitch</code> permission with the <code>rs-6GRmdD3X****</code> resource share in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates permissions with a resource share.</p>
+     * 
+     * @param request AssociateResourceSharePermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateResourceSharePermissionResponse
      */
     public AssociateResourceSharePermissionResponse associateResourceSharePermissionWithOptions(AssociateResourceSharePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -172,16 +196,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to associate the `AliyunRSDefaultPermissionVSwitch` permission with the `rs-6GRmdD3X****` resource share in the `cn-hangzhou` region.
-      *
-      * @param request AssociateResourceSharePermissionRequest
-      * @return AssociateResourceSharePermissionResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to associate the <code>AliyunRSDefaultPermissionVSwitch</code> permission with the <code>rs-6GRmdD3X****</code> resource share in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates permissions with a resource share.</p>
+     * 
+     * @param request AssociateResourceSharePermissionRequest
+     * @return AssociateResourceSharePermissionResponse
      */
     public AssociateResourceSharePermissionResponse associateResourceSharePermission(AssociateResourceSharePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateResourceSharePermissionWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Transfers a resource share from one resource group to another.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -214,11 +250,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Transfers a resource share from one resource group to another.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Checks the status of resource sharing within a resource directory.</p>
+     * 
+     * @param request CheckSharingWithResourceDirectoryStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckSharingWithResourceDirectoryStatusResponse
+     */
     public CheckSharingWithResourceDirectoryStatusResponse checkSharingWithResourceDirectoryStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -235,18 +286,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckSharingWithResourceDirectoryStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Checks the status of resource sharing within a resource directory.</p>
+     * @return CheckSharingWithResourceDirectoryStatusResponse
+     */
     public CheckSharingWithResourceDirectoryStatusResponse checkSharingWithResourceDirectoryStatus() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkSharingWithResourceDirectoryStatusWithOptions(runtime);
     }
 
     /**
-      * Resource Sharing allows you to share your resources with one or more accounts and access the resources shared by other accounts. For more information, see [Resource Sharing overview](~~160622~~).
-      * This topic provides an example on how to call the API operation to create a resource share named `test` in the `cn-hangzhou` region to share the vSwitch `vsw-bp183p93qs667muql****` with the member `172050525300****`. In this example, the management account of a resource directory is used to call this API operation.
-      *
-      * @param request CreateResourceShareRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateResourceShareResponse
+     * <b>description</b> :
+     * <p>Resource Sharing allows you to share your resources with one or more accounts and access the resources shared by other accounts. For more information, see <a href="https://help.aliyun.com/document_detail/160622.html">Resource Sharing overview</a>.
+     * This topic provides an example on how to call the API operation to create a resource share named <code>test</code> in the <code>cn-hangzhou</code> region to share the vSwitch <code>vsw-bp183p93qs667muql****</code> with the member <code>172050525300****</code> in a resource directory. In this example, the management account of the resource directory is used to call this API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a resource share.</p>
+     * 
+     * @param request CreateResourceShareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateResourceShareResponse
      */
     public CreateResourceShareResponse createResourceShareWithOptions(CreateResourceShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -259,12 +319,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PermissionNames", request.permissionNames);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceShareName)) {
             query.put("ResourceShareName", request.resourceShareName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resources)) {
             query.put("Resources", request.resources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetProperties)) {
@@ -293,11 +361,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Resource Sharing allows you to share your resources with one or more accounts and access the resources shared by other accounts. For more information, see [Resource Sharing overview](~~160622~~).
-      * This topic provides an example on how to call the API operation to create a resource share named `test` in the `cn-hangzhou` region to share the vSwitch `vsw-bp183p93qs667muql****` with the member `172050525300****`. In this example, the management account of a resource directory is used to call this API operation.
-      *
-      * @param request CreateResourceShareRequest
-      * @return CreateResourceShareResponse
+     * <b>description</b> :
+     * <p>Resource Sharing allows you to share your resources with one or more accounts and access the resources shared by other accounts. For more information, see <a href="https://help.aliyun.com/document_detail/160622.html">Resource Sharing overview</a>.
+     * This topic provides an example on how to call the API operation to create a resource share named <code>test</code> in the <code>cn-hangzhou</code> region to share the vSwitch <code>vsw-bp183p93qs667muql****</code> with the member <code>172050525300****</code> in a resource directory. In this example, the management account of the resource directory is used to call this API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a resource share.</p>
+     * 
+     * @param request CreateResourceShareRequest
+     * @return CreateResourceShareResponse
      */
     public CreateResourceShareResponse createResourceShare(CreateResourceShareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -305,13 +377,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a resource share is deleted, all principals in the resource share can no longer access the resources in the resource share. However, the resources are not deleted with the resource share.
-      * A resource share that is deleted is in the `Deleted` state. The system deletes the record of the resource share within 48 hours to 96 hours.
-      * This topic provides an example on how to call the API operation to delete the resource share `rs-qSkW1HBY****` in the `cn-hangzhou` region.
-      *
-      * @param request DeleteResourceShareRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteResourceShareResponse
+     * <b>description</b> :
+     * <p>After a resource share is deleted, all principals in the resource share can no longer access the resources in the resource share. However, the resources are not deleted with the resource share.
+     * A resource share that is deleted is in the <code>Deleted</code> state. The system deletes the record of the resource share within 48 hours to 96 hours.
+     * This topic provides an example on how to call the API operation to delete the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>调用DeleteResourceShare删除共享单元。</p>
+     * 
+     * @param request DeleteResourceShareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteResourceShareResponse
      */
     public DeleteResourceShareResponse deleteResourceShareWithOptions(DeleteResourceShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -338,18 +414,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a resource share is deleted, all principals in the resource share can no longer access the resources in the resource share. However, the resources are not deleted with the resource share.
-      * A resource share that is deleted is in the `Deleted` state. The system deletes the record of the resource share within 48 hours to 96 hours.
-      * This topic provides an example on how to call the API operation to delete the resource share `rs-qSkW1HBY****` in the `cn-hangzhou` region.
-      *
-      * @param request DeleteResourceShareRequest
-      * @return DeleteResourceShareResponse
+     * <b>description</b> :
+     * <p>After a resource share is deleted, all principals in the resource share can no longer access the resources in the resource share. However, the resources are not deleted with the resource share.
+     * A resource share that is deleted is in the <code>Deleted</code> state. The system deletes the record of the resource share within 48 hours to 96 hours.
+     * This topic provides an example on how to call the API operation to delete the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>调用DeleteResourceShare删除共享单元。</p>
+     * 
+     * @param request DeleteResourceShareRequest
+     * @return DeleteResourceShareResponse
      */
     public DeleteResourceShareResponse deleteResourceShare(DeleteResourceShareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteResourceShareWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the regions where the Resource Sharing service is available.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -374,19 +462,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the regions where the Resource Sharing service is available.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(request, runtime);
     }
 
     /**
-      * *   A resource owner can call this API operation to remove shared resources or principals from a resource share.
-      * *   If an Alibaba Cloud account that is not the management account or a member of a resource directory is added to a resource share as a principal, you can use the Alibaba Cloud account to call this API operation to exit the resource share. For more information, see [Exit a resource share](~~440614~~).
-      * This topic provides an example on how to use the management account of a resource directory to call the API operation to remove the member `172050525300****` from the resource share `rs-6GRmdD3X****` in the `cn-hangzhou` region. After the member is removed from the resource share, the member cannot share the resources in the resource share.
-      *
-      * @param request DisassociateResourceShareRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisassociateResourceShareResponse
+     * <b>description</b> :
+     * <p>  A resource owner can call this API operation to disassociate shared resources or principals from a resource share.</p>
+     * <ul>
+     * <li>If a principal does not belong to a resource directory, the principal can call this API operation to exit the resource share. For more information, see <a href="https://help.aliyun.com/document_detail/440614.html">Exit a resource share</a>.
+     * This topic provides an example on how to use the management account of a resource directory to call the API operation to disassociate the member <code>172050525300****</code> from the resource share <code>rs-6GRmdD3X****</code> in the <code>cn-hangzhou</code> region. After the member is disassociated from the resource share, the member cannot share the resources in the resource share.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates resources or principals from a resource share.</p>
+     * 
+     * @param request DisassociateResourceShareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateResourceShareResponse
      */
     public DisassociateResourceShareResponse disassociateResourceShareWithOptions(DisassociateResourceShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -425,12 +526,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   A resource owner can call this API operation to remove shared resources or principals from a resource share.
-      * *   If an Alibaba Cloud account that is not the management account or a member of a resource directory is added to a resource share as a principal, you can use the Alibaba Cloud account to call this API operation to exit the resource share. For more information, see [Exit a resource share](~~440614~~).
-      * This topic provides an example on how to use the management account of a resource directory to call the API operation to remove the member `172050525300****` from the resource share `rs-6GRmdD3X****` in the `cn-hangzhou` region. After the member is removed from the resource share, the member cannot share the resources in the resource share.
-      *
-      * @param request DisassociateResourceShareRequest
-      * @return DisassociateResourceShareResponse
+     * <b>description</b> :
+     * <p>  A resource owner can call this API operation to disassociate shared resources or principals from a resource share.</p>
+     * <ul>
+     * <li>If a principal does not belong to a resource directory, the principal can call this API operation to exit the resource share. For more information, see <a href="https://help.aliyun.com/document_detail/440614.html">Exit a resource share</a>.
+     * This topic provides an example on how to use the management account of a resource directory to call the API operation to disassociate the member <code>172050525300****</code> from the resource share <code>rs-6GRmdD3X****</code> in the <code>cn-hangzhou</code> region. After the member is disassociated from the resource share, the member cannot share the resources in the resource share.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates resources or principals from a resource share.</p>
+     * 
+     * @param request DisassociateResourceShareRequest
+     * @return DisassociateResourceShareResponse
      */
     public DisassociateResourceShareResponse disassociateResourceShare(DisassociateResourceShareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -438,11 +545,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to disassociate the `AliyunRSDefaultPermissionVSwitch` permission from the `rs-6GRmdD3X****` resource share in the `cn-hangzhou` region.
-      *
-      * @param request DisassociateResourceSharePermissionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisassociateResourceSharePermissionResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to disassociate the <code>AliyunRSDefaultPermissionVSwitch</code> permission from the <code>rs-6GRmdD3X****</code> resource share in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a permission from a resource share. You can disassociate a permission from a resource share only if the resource share does not contain resources of the type indicated by the permission.</p>
+     * 
+     * @param request DisassociateResourceSharePermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateResourceSharePermissionResponse
      */
     public DisassociateResourceSharePermissionResponse disassociateResourceSharePermissionWithOptions(DisassociateResourceSharePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -473,10 +584,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to disassociate the `AliyunRSDefaultPermissionVSwitch` permission from the `rs-6GRmdD3X****` resource share in the `cn-hangzhou` region.
-      *
-      * @param request DisassociateResourceSharePermissionRequest
-      * @return DisassociateResourceSharePermissionResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to disassociate the <code>AliyunRSDefaultPermissionVSwitch</code> permission from the <code>rs-6GRmdD3X****</code> resource share in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a permission from a resource share. You can disassociate a permission from a resource share only if the resource share does not contain resources of the type indicated by the permission.</p>
+     * 
+     * @param request DisassociateResourceSharePermissionRequest
+     * @return DisassociateResourceSharePermissionResponse
      */
     public DisassociateResourceSharePermissionResponse disassociateResourceSharePermission(DisassociateResourceSharePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -484,12 +599,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can share your resources with all members in your resource directory, all members in a specific folder in your resource directory, or a specific member in your resource directory as a resource owner only after you enable resource sharing for your resource directory.
-      * You can call this API operation only by using the management account of your resource directory or a RAM user or RAM role to which the required permissions are granted within the management account.
-      *
-      * @param request EnableSharingWithResourceDirectoryRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnableSharingWithResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>You can share your resources with all members in your resource directory, all members in a specific folder in your resource directory, or a specific member in your resource directory as a resource owner only after you enable resource sharing for your resource directory.
+     * You can call this API operation only by using the management account of your resource directory or a RAM user or RAM role to which the required permissions are granted within the management account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables resource sharing for a resource directory.</p>
+     * 
+     * @param request EnableSharingWithResourceDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableSharingWithResourceDirectoryResponse
      */
     public EnableSharingWithResourceDirectoryResponse enableSharingWithResourceDirectoryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -508,10 +627,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can share your resources with all members in your resource directory, all members in a specific folder in your resource directory, or a specific member in your resource directory as a resource owner only after you enable resource sharing for your resource directory.
-      * You can call this API operation only by using the management account of your resource directory or a RAM user or RAM role to which the required permissions are granted within the management account.
-      *
-      * @return EnableSharingWithResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>You can share your resources with all members in your resource directory, all members in a specific folder in your resource directory, or a specific member in your resource directory as a resource owner only after you enable resource sharing for your resource directory.
+     * You can call this API operation only by using the management account of your resource directory or a RAM user or RAM role to which the required permissions are granted within the management account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables resource sharing for a resource directory.</p>
+     * @return EnableSharingWithResourceDirectoryResponse
      */
     public EnableSharingWithResourceDirectoryResponse enableSharingWithResourceDirectory() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -519,11 +641,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information about the `AliyunRSDefaultPermissionVSwitch` permission whose version is `v1` in the `cn-hangzhou` region.
-      *
-      * @param request GetPermissionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetPermissionResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information about the <code>AliyunRSDefaultPermissionVSwitch</code> permission whose version is <code>v1</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a permission.</p>
+     * 
+     * @param request GetPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPermissionResponse
      */
     public GetPermissionResponse getPermissionWithOptions(GetPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -554,10 +680,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information about the `AliyunRSDefaultPermissionVSwitch` permission whose version is `v1` in the `cn-hangzhou` region.
-      *
-      * @param request GetPermissionRequest
-      * @return GetPermissionResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information about the <code>AliyunRSDefaultPermissionVSwitch</code> permission whose version is <code>v1</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a permission.</p>
+     * 
+     * @param request GetPermissionRequest
+     * @return GetPermissionResponse
      */
     public GetPermissionResponse getPermission(GetPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -565,11 +695,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the versions of the `AliyunRSDefaultPermissionVSwitch` permission in the `cn-hangzhou` region.
-      *
-      * @param request ListPermissionVersionsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListPermissionVersionsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the versions of the <code>AliyunRSDefaultPermissionVSwitch</code> permission in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the versions of a permission.</p>
+     * 
+     * @param request ListPermissionVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPermissionVersionsResponse
      */
     public ListPermissionVersionsResponse listPermissionVersionsWithOptions(ListPermissionVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -604,10 +738,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the versions of the `AliyunRSDefaultPermissionVSwitch` permission in the `cn-hangzhou` region.
-      *
-      * @param request ListPermissionVersionsRequest
-      * @return ListPermissionVersionsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the versions of the <code>AliyunRSDefaultPermissionVSwitch</code> permission in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the versions of a permission.</p>
+     * 
+     * @param request ListPermissionVersionsRequest
+     * @return ListPermissionVersionsResponse
      */
     public ListPermissionVersionsResponse listPermissionVersions(ListPermissionVersionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -615,11 +753,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information about the default permission for the `VSwitch` resource type in the `cn-hangzhou` region.
-      *
-      * @param request ListPermissionsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListPermissionsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information about the default permission for the <code>VSwitch</code> resource type in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the default permission.</p>
+     * 
+     * @param request ListPermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPermissionsResponse
      */
     public ListPermissionsResponse listPermissionsWithOptions(ListPermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -654,10 +796,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information about the default permission for the `VSwitch` resource type in the `cn-hangzhou` region.
-      *
-      * @param request ListPermissionsRequest
-      * @return ListPermissionsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information about the default permission for the <code>VSwitch</code> resource type in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the default permission.</p>
+     * 
+     * @param request ListPermissionsRequest
+     * @return ListPermissionsResponse
      */
     public ListPermissionsResponse listPermissions(ListPermissionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -665,13 +811,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the association records of the resource shares that are created by using the current Alibaba Cloud account in the `cn-hangzhou` region. The response shows the following records:
-      * *   The resource `vsw-bp1upw03qyz8n7us9****` of the `VSwitch` type has been associated with the resource share `rs-6GRmdD3X****`. The resource is in the `Associated` state. This indicates that the resource is being shared.
-      * *   The resource `vsw-bp183p93qs667muql****` of the `VSwitch` type has been disassociated from the resource share `rs-6GRmdD3X****`. The resource is in the `Disassociated` state. This indicates that the sharing of the resource is stopped.
-      *
-      * @param request ListResourceShareAssociationsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListResourceShareAssociationsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the association records of the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows the following records:</p>
+     * <ul>
+     * <li>The resource <code>vsw-bp1upw03qyz8n7us9****</code> of the <code>VSwitch</code> type has been associated with the resource share <code>rs-6GRmdD3X****</code>. The resource is in the <code>Associated</code> state. This indicates that the resource is being shared.</li>
+     * <li>The resource <code>vsw-bp183p93qs667muql****</code> of the <code>VSwitch</code> type has been disassociated from the resource share <code>rs-6GRmdD3X****</code>. The resource is in the <code>Disassociated</code> state. This indicates that the sharing of the resource is stopped.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the association records of resource shares.</p>
+     * 
+     * @param request ListResourceShareAssociationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceShareAssociationsResponse
      */
     public ListResourceShareAssociationsResponse listResourceShareAssociationsWithOptions(ListResourceShareAssociationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -722,12 +874,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the association records of the resource shares that are created by using the current Alibaba Cloud account in the `cn-hangzhou` region. The response shows the following records:
-      * *   The resource `vsw-bp1upw03qyz8n7us9****` of the `VSwitch` type has been associated with the resource share `rs-6GRmdD3X****`. The resource is in the `Associated` state. This indicates that the resource is being shared.
-      * *   The resource `vsw-bp183p93qs667muql****` of the `VSwitch` type has been disassociated from the resource share `rs-6GRmdD3X****`. The resource is in the `Disassociated` state. This indicates that the sharing of the resource is stopped.
-      *
-      * @param request ListResourceShareAssociationsRequest
-      * @return ListResourceShareAssociationsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the association records of the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows the following records:</p>
+     * <ul>
+     * <li>The resource <code>vsw-bp1upw03qyz8n7us9****</code> of the <code>VSwitch</code> type has been associated with the resource share <code>rs-6GRmdD3X****</code>. The resource is in the <code>Associated</code> state. This indicates that the resource is being shared.</li>
+     * <li>The resource <code>vsw-bp183p93qs667muql****</code> of the <code>VSwitch</code> type has been disassociated from the resource share <code>rs-6GRmdD3X****</code>. The resource is in the <code>Disassociated</code> state. This indicates that the sharing of the resource is stopped.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the association records of resource shares.</p>
+     * 
+     * @param request ListResourceShareAssociationsRequest
+     * @return ListResourceShareAssociationsResponse
      */
     public ListResourceShareAssociationsResponse listResourceShareAssociations(ListResourceShareAssociationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -735,12 +893,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)
-      * This topic provides an example on how to call the API operation to query the resource sharing invitations that are received by the current account in the `cn-hangzhou` region. The response shows that one invitation is received by the current account and is waiting for confirmation.
-      *
-      * @param request ListResourceShareInvitationsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListResourceShareInvitationsResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>This topic provides an example on how to call the API operation to query the resource sharing invitations that are received by the current account in the <code>cn-hangzhou</code> region. The response shows that one invitation is received by the current account and is waiting for confirmation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource sharing invitations that are received.</p>
+     * 
+     * @param request ListResourceShareInvitationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceShareInvitationsResponse
      */
     public ListResourceShareInvitationsResponse listResourceShareInvitationsWithOptions(ListResourceShareInvitationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -779,11 +941,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)
-      * This topic provides an example on how to call the API operation to query the resource sharing invitations that are received by the current account in the `cn-hangzhou` region. The response shows that one invitation is received by the current account and is waiting for confirmation.
-      *
-      * @param request ListResourceShareInvitationsRequest
-      * @return ListResourceShareInvitationsResponse
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>This topic provides an example on how to call the API operation to query the resource sharing invitations that are received by the current account in the <code>cn-hangzhou</code> region. The response shows that one invitation is received by the current account and is waiting for confirmation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource sharing invitations that are received.</p>
+     * 
+     * @param request ListResourceShareInvitationsRequest
+     * @return ListResourceShareInvitationsResponse
      */
     public ListResourceShareInvitationsResponse listResourceShareInvitations(ListResourceShareInvitationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -791,11 +957,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the permissions that are associated with the resource share created by using the current Alibaba Cloud account in the `cn-hangzhou` region.
-      *
-      * @param request ListResourceSharePermissionsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListResourceSharePermissionsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the permissions that are associated with the resource share created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the permissions that are associated with a resource share.</p>
+     * 
+     * @param request ListResourceSharePermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceSharePermissionsResponse
      */
     public ListResourceSharePermissionsResponse listResourceSharePermissionsWithOptions(ListResourceSharePermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -834,10 +1004,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the permissions that are associated with the resource share created by using the current Alibaba Cloud account in the `cn-hangzhou` region.
-      *
-      * @param request ListResourceSharePermissionsRequest
-      * @return ListResourceSharePermissionsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the permissions that are associated with the resource share created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the permissions that are associated with a resource share.</p>
+     * 
+     * @param request ListResourceSharePermissionsRequest
+     * @return ListResourceSharePermissionsResponse
      */
     public ListResourceSharePermissionsResponse listResourceSharePermissions(ListResourceSharePermissionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -845,13 +1019,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the `cn-hangzhou` region. The response shows that the following resource shares are created by using the account whose ID is `151266687691****`:
-      * *   `rs-hX9wC5jO****`, which is in the `Deleted` state
-      * *   `rs-PqysnzIj****`, which is in the `Active` state
-      *
-      * @param request ListResourceSharesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListResourceSharesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created by using the account whose ID is <code>151266687691****</code>:</p>
+     * <ul>
+     * <li><code>rs-hX9wC5jO****</code>, which is in the <code>Deleted</code> state</li>
+     * <li><code>rs-PqysnzIj****</code>, which is in the <code>Active</code> state</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resource shares.</p>
+     * 
+     * @param request ListResourceSharesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceSharesResponse
      */
     public ListResourceSharesResponse listResourceSharesWithOptions(ListResourceSharesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -868,6 +1048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PermissionName", request.permissionName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwner)) {
             query.put("ResourceOwner", request.resourceOwner);
         }
@@ -882,6 +1066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceShareStatus)) {
             query.put("ResourceShareStatus", request.resourceShareStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -902,12 +1090,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the `cn-hangzhou` region. The response shows that the following resource shares are created by using the account whose ID is `151266687691****`:
-      * *   `rs-hX9wC5jO****`, which is in the `Deleted` state
-      * *   `rs-PqysnzIj****`, which is in the `Active` state
-      *
-      * @param request ListResourceSharesRequest
-      * @return ListResourceSharesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created by using the account whose ID is <code>151266687691****</code>:</p>
+     * <ul>
+     * <li><code>rs-hX9wC5jO****</code>, which is in the <code>Deleted</code> state</li>
+     * <li><code>rs-PqysnzIj****</code>, which is in the <code>Active</code> state</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resource shares.</p>
+     * 
+     * @param request ListResourceSharesRequest
+     * @return ListResourceSharesResponse
      */
     public ListResourceSharesResponse listResourceShares(ListResourceSharesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -915,11 +1109,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the resources that you share with other accounts in the `cn-hangzhou` region. The response shows that in the resource share `rs-6GRmdD3X****`, you share the `vsw-bp1upw03qyz8n7us9****` resource of the `VSwitch` type with other accounts.
-      *
-      * @param request ListSharedResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListSharedResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the resources that you share with other accounts in the <code>cn-hangzhou</code> region. The response shows that in the resource share <code>rs-6GRmdD3X****</code>, you share the <code>vsw-bp1upw03qyz8n7us9****</code> resource of the <code>VSwitch</code> type with other accounts.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resources you share with other accounts or the resources other accounts share with you.</p>
+     * 
+     * @param request ListSharedResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSharedResourcesResponse
      */
     public ListSharedResourcesResponse listSharedResourcesWithOptions(ListSharedResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -970,10 +1168,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the resources that you share with other accounts in the `cn-hangzhou` region. The response shows that in the resource share `rs-6GRmdD3X****`, you share the `vsw-bp1upw03qyz8n7us9****` resource of the `VSwitch` type with other accounts.
-      *
-      * @param request ListSharedResourcesRequest
-      * @return ListSharedResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the resources that you share with other accounts in the <code>cn-hangzhou</code> region. The response shows that in the resource share <code>rs-6GRmdD3X****</code>, you share the <code>vsw-bp1upw03qyz8n7us9****</code> resource of the <code>VSwitch</code> type with other accounts.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resources you share with other accounts or the resources other accounts share with you.</p>
+     * 
+     * @param request ListSharedResourcesRequest
+     * @return ListSharedResourcesResponse
      */
     public ListSharedResourcesResponse listSharedResources(ListSharedResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -981,13 +1183,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you are a resource owner, you can query the principals with which you share your resources.
-      * If you are a principal, you can query the resources that are shared with you.
-      * This topic provides an example on how to call the API operation to query the principals with which you share your resources in the `cn-hangzhou` region. The response shows that you share your resources with the principals `114240524784****` and `172050525300****`.
-      *
-      * @param request ListSharedTargetsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListSharedTargetsResponse
+     * <b>description</b> :
+     * <p>If you are a resource owner, you can query the principals with which you share your resources. If you are a principal, you can query the resources that are shared with you.
+     * This topic provides an example on how to call the API operation to query the principals with which you share your resources in the <code>cn-hangzhou</code> region. The response shows that you share your resources with the principals <code>114240524784****</code> and <code>172050525300****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries principals.</p>
+     * 
+     * @param request ListSharedTargetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSharedTargetsResponse
      */
     public ListSharedTargetsResponse listSharedTargetsWithOptions(ListSharedTargetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1038,12 +1243,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you are a resource owner, you can query the principals with which you share your resources.
-      * If you are a principal, you can query the resources that are shared with you.
-      * This topic provides an example on how to call the API operation to query the principals with which you share your resources in the `cn-hangzhou` region. The response shows that you share your resources with the principals `114240524784****` and `172050525300****`.
-      *
-      * @param request ListSharedTargetsRequest
-      * @return ListSharedTargetsResponse
+     * <b>description</b> :
+     * <p>If you are a resource owner, you can query the principals with which you share your resources. If you are a principal, you can query the resources that are shared with you.
+     * This topic provides an example on how to call the API operation to query the principals with which you share your resources in the <code>cn-hangzhou</code> region. The response shows that you share your resources with the principals <code>114240524784****</code> and <code>172050525300****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries principals.</p>
+     * 
+     * @param request ListSharedTargetsRequest
+     * @return ListSharedTargetsResponse
      */
     public ListSharedTargetsResponse listSharedTargets(ListSharedTargetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1051,11 +1259,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to reject the resource sharing invitation `i-yyTWbkjHArYh****` in the `cn-hangzhou` region.
-      *
-      * @param request RejectResourceShareInvitationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RejectResourceShareInvitationResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to reject the resource sharing invitation <code>i-yyTWbkjHArYh****</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>拒绝组织外共享邀请</p>
+     * 
+     * @param request RejectResourceShareInvitationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RejectResourceShareInvitationResponse
      */
     public RejectResourceShareInvitationResponse rejectResourceShareInvitationWithOptions(RejectResourceShareInvitationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1082,10 +1294,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to reject the resource sharing invitation `i-yyTWbkjHArYh****` in the `cn-hangzhou` region.
-      *
-      * @param request RejectResourceShareInvitationRequest
-      * @return RejectResourceShareInvitationResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to reject the resource sharing invitation <code>i-yyTWbkjHArYh****</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>拒绝组织外共享邀请</p>
+     * 
+     * @param request RejectResourceShareInvitationRequest
+     * @return RejectResourceShareInvitationResponse
      */
     public RejectResourceShareInvitationResponse rejectResourceShareInvitation(RejectResourceShareInvitationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1093,12 +1309,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to change the name or resource sharing scope of a resource share.
-      * This topic provides an example on how to call the API operation to change the name of the resource share `rs-qSkW1HBY****` in the `cn-hangzhou` region from `test` to `new`.
-      *
-      * @param request UpdateResourceShareRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateResourceShareResponse
+     * <b>description</b> :
+     * <p>You can call this API operation to change the name or resource sharing scope of a resource share.
+     * This topic provides an example on how to call the API operation to change the name of the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region from <code>test</code> to <code>new</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>调用UpdateResourceShare修改共享单元基本信息。</p>
+     * 
+     * @param request UpdateResourceShareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateResourceShareResponse
      */
     public UpdateResourceShareResponse updateResourceShareWithOptions(UpdateResourceShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1133,11 +1353,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to change the name or resource sharing scope of a resource share.
-      * This topic provides an example on how to call the API operation to change the name of the resource share `rs-qSkW1HBY****` in the `cn-hangzhou` region from `test` to `new`.
-      *
-      * @param request UpdateResourceShareRequest
-      * @return UpdateResourceShareResponse
+     * <b>description</b> :
+     * <p>You can call this API operation to change the name or resource sharing scope of a resource share.
+     * This topic provides an example on how to call the API operation to change the name of the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region from <code>test</code> to <code>new</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>调用UpdateResourceShare修改共享单元基本信息。</p>
+     * 
+     * @param request UpdateResourceShareRequest
+     * @return UpdateResourceShareResponse
      */
     public UpdateResourceShareResponse updateResourceShare(UpdateResourceShareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

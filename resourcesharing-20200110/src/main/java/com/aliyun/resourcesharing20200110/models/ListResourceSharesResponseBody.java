@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListResourceSharesResponseBody extends TeaModel {
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F23CFB6-A721-4E90-AC1E-0E30FA8B45DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,55 +57,115 @@ public class ListResourceSharesResponseBody extends TeaModel {
         return this.resourceShares;
     }
 
+    public static class ListResourceSharesResponseBodyResourceSharesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListResourceSharesResponseBodyResourceSharesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceSharesResponseBodyResourceSharesTags self = new ListResourceSharesResponseBodyResourceSharesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceSharesResponseBodyResourceSharesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListResourceSharesResponseBodyResourceSharesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListResourceSharesResponseBodyResourceShares extends TeaModel {
         /**
          * <p>Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   false: Resources in the resource share can be shared only with accounts in the resource directory.</p>
-         * <p>*   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</p>
+         * <ul>
+         * <li>false: Resources in the resource share can be shared only with accounts in the resource directory.</li>
+         * <li>true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowExternalTargets")
         public Boolean allowExternalTargets;
 
         /**
          * <p>The time when the resource share was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-03T02:20:31.292Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The ID of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-PqysnzIj****</p>
          */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
         /**
          * <p>The name of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
         /**
          * <p>The owner of the resource share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("ResourceShareOwner")
         public String resourceShareOwner;
 
         /**
          * <p>The status of the resource share. Valid values:</p>
-         * <br>
-         * <p>*   Active: The resource share is enabled.</p>
-         * <p>*   Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</p>
-         * <p>*   Deleting: The resource share is being deleted.</p>
-         * <p>*   Deleted: The resource share is deleted.</p>
-         * <br>
-         * <p>>  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+         * <ul>
+         * <li>Active: The resource share is enabled.</li>
+         * <li>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</li>
+         * <li>Deleting: The resource share is being deleted.</li>
+         * <li>Deleted: The resource share is deleted.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("ResourceShareStatus")
         public String resourceShareStatus;
 
+        @NameInMap("Tags")
+        public java.util.List<ListResourceSharesResponseBodyResourceSharesTags> tags;
+
         /**
          * <p>The time when the resource share was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-03T08:01:43.638Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -123,6 +189,14 @@ public class ListResourceSharesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListResourceSharesResponseBodyResourceShares setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListResourceSharesResponseBodyResourceShares setResourceShareId(String resourceShareId) {
@@ -155,6 +229,14 @@ public class ListResourceSharesResponseBody extends TeaModel {
         }
         public String getResourceShareStatus() {
             return this.resourceShareStatus;
+        }
+
+        public ListResourceSharesResponseBodyResourceShares setTags(java.util.List<ListResourceSharesResponseBodyResourceSharesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListResourceSharesResponseBodyResourceSharesTags> getTags() {
+            return this.tags;
         }
 
         public ListResourceSharesResponseBodyResourceShares setUpdateTime(String updateTime) {
