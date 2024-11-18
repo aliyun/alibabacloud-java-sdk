@@ -137,6 +137,9 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OsTag")
+        public String osTag;
+
         /**
          * <strong>example:</strong>
          * <p>v1.0</p>
@@ -195,6 +198,14 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListImagesResponseBodyImages setOsTag(String osTag) {
+            this.osTag = osTag;
+            return this;
+        }
+        public String getOsTag() {
+            return this.osTag;
         }
 
         public ListImagesResponseBodyImages setVersion(String version) {
