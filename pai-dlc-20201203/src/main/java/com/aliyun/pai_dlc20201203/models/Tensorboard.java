@@ -7,12 +7,18 @@ public class Tensorboard extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("Cpu")
+    public Long cpu;
+
     /**
      * <strong>example:</strong>
      * <p>datasource-test</p>
      */
     @NameInMap("DataSourceId")
     public String dataSourceId;
+
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
 
     /**
      * <strong>example:</strong>
@@ -55,6 +61,15 @@ public class Tensorboard extends TeaModel {
      */
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("MaxRunningTimeMinutes")
+    public Long maxRunningTimeMinutes;
+
+    @NameInMap("Memory")
+    public Long memory;
+
+    @NameInMap("Options")
+    public String options;
 
     @NameInMap("Priority")
     public String priority;
@@ -100,6 +115,9 @@ public class Tensorboard extends TeaModel {
     @NameInMap("SummaryPath")
     public String summaryPath;
 
+    @NameInMap("SummaryRelativePath")
+    public String summaryRelativePath;
+
     @NameInMap("TensorboardDataSources")
     public java.util.List<TensorboardDataSourceSpec> tensorboardDataSources;
 
@@ -120,6 +138,9 @@ public class Tensorboard extends TeaModel {
     @NameInMap("TensorboardUrl")
     public String tensorboardUrl;
 
+    @NameInMap("Token")
+    public String token;
+
     /**
      * <strong>example:</strong>
      * <p>lycxxxxx</p>
@@ -134,6 +155,9 @@ public class Tensorboard extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    @NameInMap("Workspaceid")
+    public String workspaceid;
+
     public static Tensorboard build(java.util.Map<String, ?> map) throws Exception {
         Tensorboard self = new Tensorboard();
         return TeaModel.build(map, self);
@@ -147,12 +171,28 @@ public class Tensorboard extends TeaModel {
         return this.accessibility;
     }
 
+    public Tensorboard setCpu(Long cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Long getCpu() {
+        return this.cpu;
+    }
+
     public Tensorboard setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     public String getDataSourceId() {
         return this.dataSourceId;
+    }
+
+    public Tensorboard setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
     public Tensorboard setDisplayName(String displayName) {
@@ -201,6 +241,30 @@ public class Tensorboard extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public Tensorboard setMaxRunningTimeMinutes(Long maxRunningTimeMinutes) {
+        this.maxRunningTimeMinutes = maxRunningTimeMinutes;
+        return this;
+    }
+    public Long getMaxRunningTimeMinutes() {
+        return this.maxRunningTimeMinutes;
+    }
+
+    public Tensorboard setMemory(Long memory) {
+        this.memory = memory;
+        return this;
+    }
+    public Long getMemory() {
+        return this.memory;
+    }
+
+    public Tensorboard setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
     }
 
     public Tensorboard setPriority(String priority) {
@@ -267,6 +331,14 @@ public class Tensorboard extends TeaModel {
         return this.summaryPath;
     }
 
+    public Tensorboard setSummaryRelativePath(String summaryRelativePath) {
+        this.summaryRelativePath = summaryRelativePath;
+        return this;
+    }
+    public String getSummaryRelativePath() {
+        return this.summaryRelativePath;
+    }
+
     public Tensorboard setTensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
         this.tensorboardDataSources = tensorboardDataSources;
         return this;
@@ -299,6 +371,14 @@ public class Tensorboard extends TeaModel {
         return this.tensorboardUrl;
     }
 
+    public Tensorboard setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
+    }
+
     public Tensorboard setUserId(String userId) {
         this.userId = userId;
         return this;
@@ -313,6 +393,14 @@ public class Tensorboard extends TeaModel {
     }
     public String getUsername() {
         return this.username;
+    }
+
+    public Tensorboard setWorkspaceid(String workspaceid) {
+        this.workspaceid = workspaceid;
+        return this;
+    }
+    public String getWorkspaceid() {
+        return this.workspaceid;
     }
 
 }

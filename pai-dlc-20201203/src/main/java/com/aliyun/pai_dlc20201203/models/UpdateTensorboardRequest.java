@@ -14,6 +14,9 @@ public class UpdateTensorboardRequest extends TeaModel {
     @NameInMap("MaxRunningTimeMinutes")
     public Long maxRunningTimeMinutes;
 
+    @NameInMap("Priority")
+    public String priority;
+
     /**
      * <strong>example:</strong>
      * <p>380</p>
@@ -40,6 +43,14 @@ public class UpdateTensorboardRequest extends TeaModel {
     }
     public Long getMaxRunningTimeMinutes() {
         return this.maxRunningTimeMinutes;
+    }
+
+    public UpdateTensorboardRequest setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+    public String getPriority() {
+        return this.priority;
     }
 
     public UpdateTensorboardRequest setWorkspaceId(String workspaceId) {
