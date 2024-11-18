@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleHoloWarehouseRequest extends TeaModel {
     /**
+     * <p>The specifications of the virtual warehouse. The number of vCPUs must be an integer multiple of 16.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ScaleHoloWarehouseRequest extends TeaModel {
     public Long cpu;
 
     /**
+     * <p>The name of the virtual warehouse.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

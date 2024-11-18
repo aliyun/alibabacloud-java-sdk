@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScaleHoloWarehouseResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
