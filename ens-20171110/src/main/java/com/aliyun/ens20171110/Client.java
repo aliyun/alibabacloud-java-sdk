@@ -3021,6 +3021,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建弹性网卡</p>
+     * 
+     * @param tmpReq CreateNetworkInterfaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNetworkInterfaceResponse
+     */
+    public CreateNetworkInterfaceResponse createNetworkInterfaceWithOptions(CreateNetworkInterfaceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateNetworkInterfaceShrinkRequest request = new CreateNetworkInterfaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.securityGroupIds)) {
+            request.securityGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.securityGroupIds, "SecurityGroupIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIdsShrink)) {
+            query.put("SecurityGroupIds", request.securityGroupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNetworkInterface"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNetworkInterfaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建弹性网卡</p>
+     * 
+     * @param request CreateNetworkInterfaceRequest
+     * @return CreateNetworkInterfaceResponse
+     */
+    public CreateNetworkInterfaceResponse createNetworkInterface(CreateNetworkInterfaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNetworkInterfaceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</p>
      * <ul>
@@ -4442,6 +4504,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteNetworkAclEntryResponse deleteNetworkAclEntry(DeleteNetworkAclEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNetworkAclEntryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除弹性网卡</p>
+     * 
+     * @param tmpReq DeleteNetworkInterfacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNetworkInterfacesResponse
+     */
+    public DeleteNetworkInterfacesResponse deleteNetworkInterfacesWithOptions(DeleteNetworkInterfacesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteNetworkInterfacesShrinkRequest request = new DeleteNetworkInterfacesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.networkInterfaceIds)) {
+            request.networkInterfaceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.networkInterfaceIds, "NetworkInterfaceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceIdsShrink)) {
+            query.put("NetworkInterfaceIds", request.networkInterfaceIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNetworkInterfaces"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkInterfacesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除弹性网卡</p>
+     * 
+     * @param request DeleteNetworkInterfacesRequest
+     * @return DeleteNetworkInterfacesResponse
+     */
+    public DeleteNetworkInterfacesResponse deleteNetworkInterfaces(DeleteNetworkInterfacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNetworkInterfacesWithOptions(request, runtime);
     }
 
     /**
