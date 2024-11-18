@@ -1542,6 +1542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MaxRunningTimeMinutes", request.maxRunningTimeMinutes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
