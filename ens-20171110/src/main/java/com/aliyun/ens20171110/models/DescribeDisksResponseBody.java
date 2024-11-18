@@ -133,6 +133,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The billing method of the cloud disk or local disk. Valid values:</p>
          * <ul>
@@ -308,6 +314,22 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeDisksResponseBodyDisksDisks setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public DescribeDisksResponseBodyDisksDisks setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeDisksResponseBodyDisksDisks setDiskChargeType(String diskChargeType) {
