@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartHoloWarehouseRequest extends TeaModel {
     /**
+     * <p>The name of the virtual warehouse.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

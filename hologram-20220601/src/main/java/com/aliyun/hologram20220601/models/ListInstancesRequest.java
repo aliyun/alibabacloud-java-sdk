@@ -4,6 +4,10 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("cmsInstanceType")
     public String cmsInstanceType;
 

@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class DisableHiveAccessResponseBody extends TeaModel {
     /**
+     * <p>The returned result.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +30,8 @@ public class DisableHiveAccessResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
@@ -19,6 +39,8 @@ public class DisableHiveAccessResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
      */
@@ -26,6 +48,8 @@ public class DisableHiveAccessResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,7 +57,7 @@ public class DisableHiveAccessResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>82B7A554-4D00-50DF-95D9-B59E7B4D5489</p>
@@ -42,6 +66,24 @@ public class DisableHiveAccessResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

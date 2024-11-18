@@ -513,6 +513,10 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("LeaderInstanceId")
         public String leaderInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -549,6 +553,10 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

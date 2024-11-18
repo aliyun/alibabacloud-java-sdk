@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改资源组</p>
+     * <p>Updates a resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -66,7 +66,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改资源组</p>
+     * <p>Updates a resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -79,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建计算组</p>
+     * <p>Creates a virtual warehouse.</p>
      * 
      * @param request CreateHoloWarehouseRequest
      * @param headers map
@@ -117,7 +117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建计算组</p>
+     * <p>Creates a virtual warehouse.</p>
      * 
      * @param request CreateHoloWarehouseRequest
      * @return CreateHoloWarehouseResponse
@@ -297,7 +297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除计算组</p>
+     * <p>Deletes a virtual warehouse.</p>
      * 
      * @param request DeleteHoloWarehouseRequest
      * @param headers map
@@ -331,7 +331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除计算组</p>
+     * <p>Deletes a virtual warehouse.</p>
      * 
      * @param request DeleteHoloWarehouseRequest
      * @return DeleteHoloWarehouseResponse
@@ -411,7 +411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭数据湖加速</p>
+     * <p>Disables data lake acceleration.</p>
      * 
      * @param request DisableHiveAccessRequest
      * @param headers map
@@ -445,7 +445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭数据湖加速</p>
+     * <p>Disables data lake acceleration.</p>
      * 
      * @param request DisableHiveAccessRequest
      * @return DisableHiveAccessResponse
@@ -458,7 +458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打开数据湖加速</p>
+     * <p>Enables data lake acceleration.</p>
      * 
      * @param request EnableHiveAccessRequest
      * @param headers map
@@ -492,7 +492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打开数据湖加速</p>
+     * <p>Enables data lake acceleration.</p>
      * 
      * @param request EnableHiveAccessRequest
      * @return EnableHiveAccessResponse
@@ -575,6 +575,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getWarehouseDetailWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取备份列表</p>
+     * 
+     * @param request ListBackupDataRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBackupDataResponse
+     */
+    public ListBackupDataResponse listBackupDataWithOptions(ListBackupDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupType)) {
+            query.put("backupType", request.backupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBackupData"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/backups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBackupDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取备份列表</p>
+     * 
+     * @param request ListBackupDataRequest
+     * @return ListBackupDataResponse
+     */
+    public ListBackupDataResponse listBackupData(ListBackupDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listBackupDataWithOptions(request, headers, runtime);
     }
 
     /**
@@ -671,7 +722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Triggers shard rebalancing for a virtual warehouse.</p>
      * 
      * @param request RebalanceHoloWarehouseRequest
      * @param headers map
@@ -705,7 +756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Triggers shard rebalancing for a virtual warehouse.</p>
      * 
      * @param request RebalanceHoloWarehouseRequest
      * @return RebalanceHoloWarehouseResponse
@@ -718,7 +769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Renames a virtual warehouse.</p>
      * 
      * @param request RenameHoloWarehouseRequest
      * @param headers map
@@ -756,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Renames a virtual warehouse.</p>
      * 
      * @param request RenameHoloWarehouseRequest
      * @return RenameHoloWarehouseResponse
@@ -840,7 +891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Restarts a virtual warehouse.</p>
      * 
      * @param request RestartHoloWarehouseRequest
      * @param headers map
@@ -874,7 +925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Restarts a virtual warehouse.</p>
      * 
      * @param request RestartHoloWarehouseRequest
      * @return RestartHoloWarehouseResponse
@@ -924,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Resumes a virtual warehouse.</p>
      * 
      * @param request ResumeHoloWarehouseRequest
      * @param headers map
@@ -958,7 +1009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Resumes a virtual warehouse.</p>
      * 
      * @param request ResumeHoloWarehouseRequest
      * @return ResumeHoloWarehouseResponse
@@ -1008,7 +1059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Scales in or out a virtual warehouse.</p>
      * 
      * @param request ScaleHoloWarehouseRequest
      * @param headers map
@@ -1046,7 +1097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Scales in or out a virtual warehouse.</p>
      * 
      * @param request ScaleHoloWarehouseRequest
      * @return ScaleHoloWarehouseResponse
@@ -1181,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Suspends a virtual warehouse.</p>
      * 
      * @param request SuspendHoloWarehouseRequest
      * @param headers map
@@ -1215,7 +1266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止计算组</p>
+     * <p>Suspends a virtual warehouse.</p>
      * 
      * @param request SuspendHoloWarehouseRequest
      * @return SuspendHoloWarehouseResponse
