@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class ListLdpsComputeGroupsResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("GroupList")
     public java.util.List<ListLdpsComputeGroupsResponseBodyGroupList> groupList;
 
@@ -13,6 +16,14 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
     public static ListLdpsComputeGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLdpsComputeGroupsResponseBody self = new ListLdpsComputeGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListLdpsComputeGroupsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListLdpsComputeGroupsResponseBody setGroupList(java.util.List<ListLdpsComputeGroupsResponseBodyGroupList> groupList) {
@@ -35,6 +46,9 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
@@ -49,6 +63,14 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public ListLdpsComputeGroupsResponseBodyGroupList setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
         public ListLdpsComputeGroupsResponseBodyGroupList setProperties(java.util.Map<String, ?> properties) {

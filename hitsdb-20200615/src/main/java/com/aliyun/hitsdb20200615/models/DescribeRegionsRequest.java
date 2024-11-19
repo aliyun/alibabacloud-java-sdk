@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The display language of the regions in the returned results. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN** (default): Chinese.</p>
-     * <p>*   **en-US**: English.</p>
+     * <ul>
+     * <li><strong>zh-CN</strong> (default): Chinese.</li>
+     * <li><strong>en-US</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

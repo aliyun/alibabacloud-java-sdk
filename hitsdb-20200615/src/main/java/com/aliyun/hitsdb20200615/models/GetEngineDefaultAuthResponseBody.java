@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetEngineDefaultAuthResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("AuthInfos")
     public java.util.List<GetEngineDefaultAuthResponseBodyAuthInfos> authInfos;
 
@@ -16,6 +19,14 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
     public static GetEngineDefaultAuthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEngineDefaultAuthResponseBody self = new GetEngineDefaultAuthResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetEngineDefaultAuthResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetEngineDefaultAuthResponseBody setAuthInfos(java.util.List<GetEngineDefaultAuthResponseBodyAuthInfos> authInfos) {

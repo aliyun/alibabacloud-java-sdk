@@ -11,13 +11,18 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which the instances you want to associate tags with are located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.</p>
+     * <p>The ID of the region in which the instances you want to associate tags with are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The list of resource IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -29,7 +34,11 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -39,6 +48,7 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The tags that you want to associate with the resource.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -123,16 +133,25 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag that you want to associate with the resource.</p>
-         * <br>
-         * <p>> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         * <blockquote>
+         * <p>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag that you want to associate with the resource.</p>
-         * <br>
-         * <p>> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         * <blockquote>
+         * <p>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.8</p>
          */
         @NameInMap("Value")
         public String value;

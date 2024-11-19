@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class RenewLindormInstanceRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</p>
-     * <br>
-     * <p>*   If PricingCycle is set to **Month**, set this parameter to an integer that ranges from **1** to **9**.</p>
-     * <p>*   If PricingCycle is set to **Year**, set this parameter to an integer that ranges from **1** to **3**.</p>
+     * <ul>
+     * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>9</strong>.</li>
+     * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>3</strong>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The ID of the instance that you want to renew. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the instance ID.</p>
+     * <p>The ID of the instance that you want to renew. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp1z3506imz2f****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -27,15 +36,24 @@ public class RenewLindormInstanceRequest extends TeaModel {
 
     /**
      * <p>The period based on which you are charged for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Month**: You are charged for the instance based on months.</p>
-     * <p>*   **Year**: You are charged for the instance based on years.</p>
+     * <ul>
+     * <li><strong>Month</strong>: You are charged for the instance based on months.</li>
+     * <li><strong>Year</strong>: You are charged for the instance based on years.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
-     * <p>The ID of the region in which the instance that you want to renew is located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.</p>
+     * <p>The ID of the region in which the instance that you want to renew is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

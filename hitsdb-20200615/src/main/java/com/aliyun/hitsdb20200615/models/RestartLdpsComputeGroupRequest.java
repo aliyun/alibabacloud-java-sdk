@@ -4,9 +4,15 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class RestartLdpsComputeGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

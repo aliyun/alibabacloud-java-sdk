@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
     /**
      * <p>The type of the operation. Valid value:</p>
-     * <br>
-     * <p>*   1: enables the MySQL compatibility feature.</p>
-     * <p>*   0: disables the MySQL compatibility feature.</p>
+     * <ul>
+     * <li>1: enables the MySQL compatibility feature.</li>
+     * <li>0: disables the MySQL compatibility feature.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ActionType")
     public Integer actionType;
 
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp1o3y0yme2i2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

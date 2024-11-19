@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
-     * <br>
-     * <p>> If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</p>
+     * <blockquote>
+     * <p>If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05CB115C-91CB-529F-9098-50C1F6CB3BD3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,24 +63,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The ID of the resource, which is the ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp17j28j2y7pm****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resources. The returned value is fixed to **ALIYUN::HITSDB::INSTANCE**.</p>
+         * <p>The type of the resources. The returned value is fixed to <strong>ALIYUN::HITSDB::INSTANCE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::HITSDB::INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of the tag associated with the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag associated with the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.8</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetInstanceIpWhiteListRequest extends TeaModel {
     /**
-     * <p>The ID of the instance whose whitelists you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to obtain the instance ID.</p>
+     * <p>The ID of the instance whose whitelists you want to query. You can call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp1z3506imz2f****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

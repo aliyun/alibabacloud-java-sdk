@@ -7,6 +7,9 @@ public class GetLdpsComputeGroupRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -3,16 +3,16 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class CreateLdpsNamespaceResponseBody extends TeaModel {
+public class DeleteCustomResourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateLdpsNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateLdpsNamespaceResponseBody self = new CreateLdpsNamespaceResponseBody();
+    public static DeleteCustomResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCustomResourceResponseBody self = new DeleteCustomResourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateLdpsNamespaceResponseBody setRequestId(String requestId) {
+    public DeleteCustomResourceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

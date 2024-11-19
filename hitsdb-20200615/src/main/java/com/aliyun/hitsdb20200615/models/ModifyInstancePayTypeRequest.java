@@ -6,15 +6,23 @@ import com.aliyun.tea.*;
 public class ModifyInstancePayTypeRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance. The parameter is required if the instance is an subscription instance.</p>
-     * <br>
-     * <p>*   If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.</p>
-     * <p>*   If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.</p>
+     * <ul>
+     * <li>If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.</li>
+     * <li>If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp1z3506imz2f****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -27,18 +35,27 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PREPAY**: subscription.</p>
-     * <p>*   **POSTPAY**: pay-as-you-go.</p>
+     * <ul>
+     * <li><strong>PREPAY</strong>: subscription.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POSTPAY</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The unit of the subscription duration for the instance. Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;

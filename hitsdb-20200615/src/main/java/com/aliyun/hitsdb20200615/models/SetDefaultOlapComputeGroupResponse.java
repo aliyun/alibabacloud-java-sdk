@@ -3,7 +3,7 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class CreateLdpsNamespaceResponse extends TeaModel {
+public class SetDefaultOlapComputeGroupResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateLdpsNamespaceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateLdpsNamespaceResponseBody body;
+    public SetDefaultOlapComputeGroupResponseBody body;
 
-    public static CreateLdpsNamespaceResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateLdpsNamespaceResponse self = new CreateLdpsNamespaceResponse();
+    public static SetDefaultOlapComputeGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        SetDefaultOlapComputeGroupResponse self = new SetDefaultOlapComputeGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateLdpsNamespaceResponse setHeaders(java.util.Map<String, String> headers) {
+    public SetDefaultOlapComputeGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateLdpsNamespaceResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateLdpsNamespaceResponse setStatusCode(Integer statusCode) {
+    public SetDefaultOlapComputeGroupResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateLdpsNamespaceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateLdpsNamespaceResponse setBody(CreateLdpsNamespaceResponseBody body) {
+    public SetDefaultOlapComputeGroupResponse setBody(SetDefaultOlapComputeGroupResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateLdpsNamespaceResponseBody getBody() {
+    public SetDefaultOlapComputeGroupResponseBody getBody() {
         return this.body;
     }
 

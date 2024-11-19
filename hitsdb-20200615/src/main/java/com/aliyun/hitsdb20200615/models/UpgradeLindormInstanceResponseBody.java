@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpgradeLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111111111111111</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2A7D4F9D-AA26-4E15-A2B1-3E4792C6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

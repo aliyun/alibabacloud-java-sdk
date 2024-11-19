@@ -4,6 +4,13 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetLindormInstanceEngineListRequest extends TeaModel {
+    /**
+     * <p>Instance ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> interface.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp1nq34mv3smk****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +20,12 @@ public class GetLindormInstanceEngineListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
