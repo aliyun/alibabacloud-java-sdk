@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetCdnFullDomainsBlockIPResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 0 indicates that the call is successful. If another status code is returned, the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class SetCdnFullDomainsBlockIPResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The additional information returned. If the request was successful, OK is returned. If the request failed, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class SetCdnFullDomainsBlockIPResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23ACE7E2-2302-42E3-98F8-E5E697FD86C3</p>
      */

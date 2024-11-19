@@ -2832,8 +2832,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</li>
+     * <li>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</li>
+     * <li>You can share OSS URLs with others. The shared URLs are valid for three days.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取海量封禁全量配置</p>
+     * <p>You can call the DescribeCdnFullDomainsBlockIPConfig operation to query the configurations of full blocking.</p>
      * 
      * @param request DescribeCdnFullDomainsBlockIPConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2864,8 +2874,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</li>
+     * <li>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</li>
+     * <li>You can share OSS URLs with others. The shared URLs are valid for three days.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取海量封禁全量配置</p>
+     * <p>You can call the DescribeCdnFullDomainsBlockIPConfig operation to query the configurations of full blocking.</p>
      * 
      * @param request DescribeCdnFullDomainsBlockIPConfigRequest
      * @return DescribeCdnFullDomainsBlockIPConfigResponse
@@ -2876,8 +2896,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</li>
+     * <li>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</li>
+     * <li>The maximum time range to query is 90 days.</li>
+     * <li>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户海量封禁历史</p>
+     * <p>Queries the blocking history.</p>
      * 
      * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2916,8 +2947,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</li>
+     * <li>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</li>
+     * <li>The maximum time range to query is 90 days.</li>
+     * <li>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户海量封禁历史</p>
+     * <p>Queries the blocking history.</p>
      * 
      * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
      * @return DescribeCdnFullDomainsBlockIPHistoryResponse
@@ -3630,6 +3672,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the types of domain names.</p>
+     * 
      * @param request DescribeCdnTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnTypesResponse
@@ -3667,6 +3712,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the types of domain names.</p>
+     * 
      * @param request DescribeCdnTypesRequest
      * @return DescribeCdnTypesResponse
      */
@@ -4223,6 +4271,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCertificateInfoByIDResponse describeCertificateInfoByID(DescribeCertificateInfoByIDRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCertificateInfoByIDWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>A客户定制查询域名采样率</p>
+     * 
+     * @param request DescribeCustomDomainSampleRateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCustomDomainSampleRateResponse
+     */
+    public DescribeCustomDomainSampleRateResponse describeCustomDomainSampleRateWithOptions(DescribeCustomDomainSampleRateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCustomDomainSampleRate"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCustomDomainSampleRateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>A客户定制查询域名采样率</p>
+     * 
+     * @param request DescribeCustomDomainSampleRateRequest
+     * @return DescribeCustomDomainSampleRateResponse
+     */
+    public DescribeCustomDomainSampleRateResponse describeCustomDomainSampleRate(DescribeCustomDomainSampleRateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCustomDomainSampleRateWithOptions(request, runtime);
     }
 
     /**
@@ -9700,6 +9788,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the status of a user.</p>
+     * 
      * @param request DescribeUserCdnStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserCdnStatusResponse
@@ -9733,6 +9824,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the status of a user.</p>
+     * 
      * @param request DescribeUserCdnStatusRequest
      * @return DescribeUserCdnStatusResponse
      */
@@ -10415,6 +10509,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>\<em>\</em> \<em>\</em></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all real-time log delivery tasks within your Alibaba Cloud account.</p>
+     * 
+     * @param request ListRealtimeLogDeliveryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRealtimeLogDeliveryResponse
+     */
+    public ListRealtimeLogDeliveryResponse listRealtimeLogDeliveryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRealtimeLogDelivery"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRealtimeLogDeliveryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>\<em>\</em> \<em>\</em></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all real-time log delivery tasks within your Alibaba Cloud account.</p>
+     * @return ListRealtimeLogDeliveryResponse
+     */
+    public ListRealtimeLogDeliveryResponse listRealtimeLogDelivery() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRealtimeLogDeliveryWithOptions(runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
      * </blockquote>
@@ -10870,6 +11004,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>A客户定制修改域名采样率接口</p>
+     * 
+     * @param request ModifyCustomDomainSampleRateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCustomDomainSampleRateResponse
+     */
+    public ModifyCustomDomainSampleRateResponse modifyCustomDomainSampleRateWithOptions(ModifyCustomDomainSampleRateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseConfigID)) {
+            body.put("BaseConfigID", request.baseConfigID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            body.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleRate)) {
+            body.put("SampleRate", request.sampleRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sinkID)) {
+            body.put("SinkID", request.sinkID);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCustomDomainSampleRate"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCustomDomainSampleRateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>A客户定制修改域名采样率接口</p>
+     * 
+     * @param request ModifyCustomDomainSampleRateRequest
+     * @return ModifyCustomDomainSampleRateResponse
+     */
+    public ModifyCustomDomainSampleRateResponse modifyCustomDomainSampleRate(ModifyCustomDomainSampleRateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCustomDomainSampleRateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -11141,7 +11331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>指定缓存tag刷新节点上的文件内容</p>
+     * <p>Refreshes the cache based on cache tags that you configured.</p>
      * 
      * @param request RefreshObjectCacheByCacheTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11181,7 +11371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>指定缓存tag刷新节点上的文件内容</p>
+     * <p>Refreshes the cache based on cache tags that you configured.</p>
      * 
      * @param request RefreshObjectCacheByCacheTagRequest
      * @return RefreshObjectCacheByCacheTagResponse
@@ -11223,18 +11413,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RefreshObjectCachesResponse refreshObjectCachesWithOptions(RefreshObjectCachesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
-            query.put("Force", request.force);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {
-            query.put("ObjectPath", request.objectPath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
-            query.put("ObjectType", request.objectType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -11243,8 +11421,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityToken", request.securityToken);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            body.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {
+            body.put("ObjectPath", request.objectPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("ObjectType", request.objectType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RefreshObjectCaches"),
@@ -11630,8 +11822,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>配置CDN上的海量封禁功能</p>
+     * <p>Blocks or unblocks IP addresses from accessing domain names.</p>
      * 
      * @param request SetCdnFullDomainsBlockIPRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11674,8 +11874,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>配置CDN上的海量封禁功能</p>
+     * <p>Blocks or unblocks IP addresses from accessing domain names.</p>
      * 
      * @param request SetCdnFullDomainsBlockIPRequest
      * @return SetCdnFullDomainsBlockIPResponse

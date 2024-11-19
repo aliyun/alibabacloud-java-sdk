@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * <p>The value of Code is not 0 in the following scenarios:</p>
+     * <ul>
+     * <li>The format of the IP address is invalid.</li>
+     * <li>The format of the time is invalid.</li>
+     * <li>Other abnormal scenarios.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,16 +20,23 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The description of the status returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("IPBlockInfo")
     public java.util.List<DescribeCdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo> IPBlockInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BCD7D917-76F1-442F-BB75-C810DE34C761</p>
      */
@@ -67,6 +82,8 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
 
     public static class DescribeCdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo extends TeaModel {
         /**
+         * <p>The blocked IP address or CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.XXX.XXX.0~1.XXX.XXX.255</p>
          */
@@ -74,6 +91,8 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
         public String blockIP;
 
         /**
+         * <p>The delivery time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-24 18:49:37</p>
          */
@@ -81,6 +100,12 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
         public String deliverTime;
 
         /**
+         * <p>The delivery status.</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnFullDomainsBlockIPConfigRequest extends TeaModel {
     /**
+     * <p>The IP address or CIDR block to query. Separate multiple values with commas (,). You can specify up to 50 IP addresses or CIDR blocks.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.XXX.XXX.1,2.XXX.XXX.2</p>
      */
