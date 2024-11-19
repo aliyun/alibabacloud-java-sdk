@@ -531,6 +531,9 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetQualityCheckTaskResultResponseBodyDataQualityCheckList extends TeaModel {
+        @NameInMap("bizType")
+        public String bizType;
+
         @NameInMap("checkExplanation")
         public String checkExplanation;
 
@@ -592,9 +595,20 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         @NameInMap("ruleId")
         public String ruleId;
 
+        @NameInMap("ruleType")
+        public String ruleType;
+
         public static GetQualityCheckTaskResultResponseBodyDataQualityCheckList build(java.util.Map<String, ?> map) throws Exception {
             GetQualityCheckTaskResultResponseBodyDataQualityCheckList self = new GetQualityCheckTaskResultResponseBodyDataQualityCheckList();
             return TeaModel.build(map, self);
+        }
+
+        public GetQualityCheckTaskResultResponseBodyDataQualityCheckList setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
         }
 
         public GetQualityCheckTaskResultResponseBodyDataQualityCheckList setCheckExplanation(String checkExplanation) {
@@ -683,6 +697,14 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
         public String getRuleId() {
             return this.ruleId;
+        }
+
+        public GetQualityCheckTaskResultResponseBodyDataQualityCheckList setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
         }
 
     }
