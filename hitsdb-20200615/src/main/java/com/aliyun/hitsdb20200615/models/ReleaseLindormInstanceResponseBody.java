@@ -4,6 +4,12 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class ReleaseLindormInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F67BFFF3-F5C2-45B5-9C28-6E4A1E51****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

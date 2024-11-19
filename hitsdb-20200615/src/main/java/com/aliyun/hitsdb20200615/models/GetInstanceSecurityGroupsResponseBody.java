@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceSecurityGroupsResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +19,14 @@ public class GetInstanceSecurityGroupsResponseBody extends TeaModel {
     public static GetInstanceSecurityGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceSecurityGroupsResponseBody self = new GetInstanceSecurityGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceSecurityGroupsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetInstanceSecurityGroupsResponseBody setInstanceId(String instanceId) {

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class TagResourcesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F23D50C-400C-592C-9486-9D1E10179065</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,10 +6,20 @@ import com.aliyun.tea.*;
 public class ReleaseLindormInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the instance immediately. If you set this parameter to false, data in the released instance is retained for seven days before it is completely deleted. If you set this parameter to true, data in the released instance is immediately deleted. The default value is false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Immediately")
     public Boolean immediately;
 
+    /**
+     * <p>Instance ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> interface.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp1z3506imz2f****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

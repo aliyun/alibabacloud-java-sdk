@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetEngineDefaultAuthRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

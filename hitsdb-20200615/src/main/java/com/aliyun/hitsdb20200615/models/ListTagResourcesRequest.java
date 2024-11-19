@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token used to start the next query to retrieve more results.</p>
-     * <br>
-     * <p>> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the **NextToken** value returned for the query to perform the next query.</p>
+     * <blockquote>
+     * <p>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned for the query to perform the next query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -19,7 +23,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which the instances whose tags you want to query are located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.</p>
+     * <p>The ID of the region in which the instances whose tags you want to query are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,7 +45,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -139,16 +151,24 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The keys of the tags associated with the instances you want to query.</p>
-         * <br>
-         * <p>> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         * <blockquote>
+         * <p>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The values of the tags associated with the instances you want to query.</p>
-         * <br>
-         * <p>> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         * <blockquote>
+         * <p>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.8</p>
          */
         @NameInMap("Value")
         public String value;

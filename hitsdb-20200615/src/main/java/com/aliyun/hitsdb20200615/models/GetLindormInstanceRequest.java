@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class GetLindormInstanceRequest extends TeaModel {
     /**
      * <p>The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:</p>
-     * <br>
-     * <p>*   **cloud_efficiency**: The nodes use the Standard type of storage.</p>
-     * <p>*   **cloud_ssd**: The nodes use the Performance type of storage.</p>
+     * <ul>
+     * <li><strong>cloud_efficiency</strong>: The nodes use the Standard type of storage.</li>
+     * <li><strong>cloud_ssd</strong>: The nodes use the Performance type of storage.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp1o3y0yme2i2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

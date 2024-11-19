@@ -7,6 +7,9 @@ public class OpenComputeEngineRequest extends TeaModel {
     @NameInMap("CpuLimit")
     public String cpuLimit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetClientSourceIpResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("ClientIp")
     public String clientIp;
 
@@ -13,6 +16,14 @@ public class GetClientSourceIpResponseBody extends TeaModel {
     public static GetClientSourceIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetClientSourceIpResponseBody self = new GetClientSourceIpResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetClientSourceIpResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetClientSourceIpResponseBody setClientIp(String clientIp) {
