@@ -205,6 +205,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("unionEmpExt")
     public GetUserResponseBodyUnionEmpExt unionEmpExt;
 
+    @NameInMap("unionid")
+    public String unionid;
+
     /**
      * <strong>example:</strong>
      * <p>zhangsan</p>
@@ -470,6 +473,14 @@ public class GetUserResponseBody extends TeaModel {
     }
     public GetUserResponseBodyUnionEmpExt getUnionEmpExt() {
         return this.unionEmpExt;
+    }
+
+    public GetUserResponseBody setUnionid(String unionid) {
+        this.unionid = unionid;
+        return this;
+    }
+    public String getUnionid() {
+        return this.unionid;
     }
 
     public GetUserResponseBody setUserid(String userid) {
