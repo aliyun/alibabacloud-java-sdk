@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeContainerAppVersionShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateEdgeContainerAppVersionShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The container group to be deployed for this version, which contains information about images.\
+     * The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +43,7 @@ public class CreateEdgeContainerAppVersionShrinkRequest extends TeaModel {
     public String containersShrink;
 
     /**
+     * <p>The version name, which must be 6 to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +53,8 @@ public class CreateEdgeContainerAppVersionShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The description of the version.</p>
+     * 
      * <strong>example:</strong>
      * <p>test app</p>
      */

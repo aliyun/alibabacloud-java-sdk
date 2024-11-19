@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListClientCertificatesRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListClientCertificatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,7 @@ public class ListClientCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The website ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

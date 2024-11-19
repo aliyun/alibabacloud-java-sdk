@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     /**
+     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The container group to be deployed for this version, which contains information about images.\
+     * The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +43,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     public java.util.List<CreateEdgeContainerAppVersionRequestContainers> containers;
 
     /**
+     * <p>The version name, which must be 6 to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +53,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The description of the version.</p>
+     * 
      * <strong>example:</strong>
      * <p>test app</p>
      */
@@ -94,6 +100,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
 
     public static class CreateEdgeContainerAppVersionRequestContainersACRImageInfo extends TeaModel {
         /**
+         * <p>The domain name of the Container Registry image.</p>
+         * 
          * <strong>example:</strong>
          * <p>1500.***.net</p>
          */
@@ -101,6 +109,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String domain;
 
         /**
+         * <p>The ID of the Container Registry instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>xcdn-9axbo****</p>
          */
@@ -108,6 +118,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Specifies whether the image is an enterprise-level Container Registry image.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -115,6 +127,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Boolean isEnterpriseRegistry;
 
         /**
+         * <p>The regions in which the Container Registry instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -122,6 +136,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>crr-h1ghghu60ct****</p>
          */
@@ -129,6 +145,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String repoId;
 
         /**
+         * <p>The name of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_71</p>
          */
@@ -136,6 +154,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String repoName;
 
         /**
+         * <p>The namespace to which the image repository belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>safeline</p>
          */
@@ -143,12 +163,17 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String repoNamespace;
 
         /**
+         * <p>The tag of the Container Registry image.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.40.2</p>
          */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The URL of the Container Registry image tag.</p>
+         */
         @NameInMap("TagUrl")
         public String tagUrl;
 
@@ -233,6 +258,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
 
     public static class CreateEdgeContainerAppVersionRequestContainersProbeContent extends TeaModel {
         /**
+         * <p>The command of the exec type probe.</p>
+         * 
          * <strong>example:</strong>
          * <p>echo ok</p>
          */
@@ -240,6 +267,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String command;
 
         /**
+         * <p>The number of consecutive failed health checks required for a container to be considered as unhealthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -247,6 +276,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Integer failureThreshold;
 
         /**
+         * <p>The domain name that is used for health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.rewrite.com">www.rewrite.com</a></p>
          */
@@ -254,6 +285,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String host;
 
         /**
+         * <p>The request headers that are included in the container health check request.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;Content-Type\&quot;:\&quot;application/json\&quot;}]</p>
          */
@@ -261,6 +294,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String httpHeaders;
 
         /**
+         * <p>The latency for container probe initialization.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -268,6 +303,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Integer initialDelaySeconds;
 
         /**
+         * <p>The health check path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -275,6 +312,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The interval between container health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -282,6 +321,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Integer periodSeconds;
 
         /**
+         * <p>The health check port.</p>
+         * 
          * <strong>example:</strong>
          * <p>9991</p>
          */
@@ -289,6 +330,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol that the container health check request uses.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -296,6 +339,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String scheme;
 
         /**
+         * <p>The number of consecutive successful health checks required for a container to be considered as healthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -303,6 +348,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Integer successThreshold;
 
         /**
+         * <p>The timeout period of the container health check.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -405,19 +452,41 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     }
 
     public static class CreateEdgeContainerAppVersionRequestContainers extends TeaModel {
+        /**
+         * <p>The information about the Container Registry image.</p>
+         */
         @NameInMap("ACRImageInfo")
         public CreateEdgeContainerAppVersionRequestContainersACRImageInfo ACRImageInfo;
 
+        /**
+         * <p>The arguments that are passed to the container startup command. Separate the parameters with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-a</p>
+         */
         @NameInMap("Args")
         public String args;
 
+        /**
+         * <p>The command that is used to start the container. Separate the arguments with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <p>The environment variables. Separate the environment variables with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VITE_APP_TITLE=My App</p>
+         */
         @NameInMap("EnvVariables")
         public String envVariables;
 
         /**
+         * <p>The address of the image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -427,6 +496,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String image;
 
         /**
+         * <p>Specifies whether the image is a Container Registry image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -436,6 +506,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Boolean isACRImage;
 
         /**
+         * <p>The name of the container. The name must be unique in the same container group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -444,32 +515,62 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The command that is run before the container is started. Separate the arguments with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sh poststart.sh &quot;echo hello world&quot;</p>
+         */
         @NameInMap("PostStart")
         public String postStart;
 
+        /**
+         * <p>The command that is run before the container is stopped. Separate the arguments with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sh prestop.sh &quot;echo hello world&quot;</p>
+         */
         @NameInMap("PreStop")
         public String preStop;
 
         /**
+         * <p>The content of the container health probe.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ProbeContent")
         public CreateEdgeContainerAppVersionRequestContainersProbeContent probeContent;
 
         /**
+         * <p>The type of the probe. Valid values:</p>
+         * <ul>
+         * <li>exec: the command type.</li>
+         * <li>tcpSocket: the TCP probe type.</li>
+         * <li>httpGet: the HTTP access type.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec</p>
          */
         @NameInMap("ProbeType")
         public String probeType;
 
         /**
+         * <p>The compute specification of the container. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C2G</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
+         * <p>The storage capacity. Valid values: 0.5G, 10G, 20G, and 30G.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5G</p>
          */
         @NameInMap("Storage")
         public String storage;
