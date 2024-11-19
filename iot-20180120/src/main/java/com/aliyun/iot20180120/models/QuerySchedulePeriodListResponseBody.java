@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySchedulePeriodListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.soundcodeservice.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySchedulePeriodListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sound code service has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +81,38 @@ public class QuerySchedulePeriodListResponseBody extends TeaModel {
     }
 
     public static class QuerySchedulePeriodListResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:10</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
+         */
         @NameInMap("PeriodCode")
         public String periodCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
+         */
         @NameInMap("SoundCodeContent")
         public String soundCodeContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -150,12 +186,24 @@ public class QuerySchedulePeriodListResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySchedulePeriodListResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

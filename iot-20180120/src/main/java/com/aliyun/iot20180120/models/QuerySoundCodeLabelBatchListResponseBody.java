@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySoundCodeLabelBatchListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.soundcodeservice.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySoundCodeLabelBatchListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sound code service has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class QuerySoundCodeLabelBatchListResponseBody extends TeaModel {
     }
 
     public static class QuerySoundCodeLabelBatchListResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
+         */
         @NameInMap("BatchCode")
         public String batchCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620634297000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessNum")
         public Integer successNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -161,12 +201,24 @@ public class QuerySoundCodeLabelBatchListResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySoundCodeLabelBatchListResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

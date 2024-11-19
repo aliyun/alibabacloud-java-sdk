@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryLicenseDeviceListResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see the **"Error codes"** section in this topic.</p>
+     * <p>The error code returned if the request fails. For more information, see the <strong>&quot;Error codes&quot;</strong> section in this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291438BA-6E10-4C4C-B761-243B9A0D324F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,36 +95,54 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
     public static class QueryLicenseDeviceListResponseBodyDataDeviceListItem extends TeaModel {
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The expiration time of the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1690934297000</p>
          */
         @NameInMap("ExpiryTime")
         public Long expiryTime;
 
         /**
          * <p>The time when the license was bound to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620634297000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
-         * <p>The license type that indicates the audio and video specifications. Valid values: **480P** and **720P**.</p>
+         * <p>The license type that indicates the audio and video specifications. Valid values: <strong>480P</strong> and <strong>720P</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720P</p>
          */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
@@ -216,18 +244,27 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageId")
         public Integer pageId;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Total")
         public Integer total;

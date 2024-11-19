@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchGetDeviceStateResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,43 +95,63 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
     public static class BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus extends TeaModel {
         /**
          * <p>The IP address of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.1</p>
          */
         @NameInMap("AsAddress")
         public String asAddress;
 
         /**
          * <p>The ID of the device (expired).</p>
-         * <br>
-         * <p>>  This parameter is no longer supported. Do not use this parameter to identify a device. You can use the value of the **IotId**** parameter or a combination of the values of the ****ProductKey** and DeviceName parameters to identify a device.</p>
+         * <blockquote>
+         * <p> This parameter is no longer supported. Do not use this parameter to identify a device. You can use the value of the <strong>IotId</strong>** parameter or a combination of the values of the **<strong>ProductKey</strong> and DeviceName parameters to identify a device.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dwnS41bhNxjslDAI****</p>
          */
         @NameInMap("DeviceId")
         public String deviceId;
 
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dwnS41bhNxjslDAI****000100</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The last time when the device was online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-17 16:19:11</p>
          */
         @NameInMap("LastOnlineTime")
         public String lastOnlineTime;
 
         /**
          * <p>The status of the device. Valid values: Valid values:</p>
-         * <br>
-         * <p>*   **ONLINE**: The device is online.</p>
-         * <p>*   **OFFLINE**: The device is offline.</p>
-         * <p>*   **UNACTIVE**: The device is not activated.</p>
-         * <p>*   **DISABLE**: The device is disabled.</p>
+         * <ul>
+         * <li><strong>ONLINE</strong>: The device is online.</li>
+         * <li><strong>OFFLINE</strong>: The device is offline.</li>
+         * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+         * <li><strong>DISABLE</strong>: The device is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
          */
         @NameInMap("Status")
         public String status;

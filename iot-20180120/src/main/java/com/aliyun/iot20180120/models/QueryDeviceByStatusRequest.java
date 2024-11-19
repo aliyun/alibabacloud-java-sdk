@@ -6,51 +6,70 @@ import com.aliyun.tea.*;
 public class QueryDeviceByStatusRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <br>
-     * <p>**Important**</p>
-     * <br>
-     * <p>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
-     * <p>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <p><strong>Important</strong></p>
+     * <ul>
+     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ProductKey of the product to which the device belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The ID of the resource group to which the product belongs. You can view the resource group ID in the IoT Platform console.</p>
-     * <br>
-     * <p>>  If you specify this parameter, the system returns devices of the specified status in the resource group. If you do not specify this parameter, the system returns all devices of the specified status in the current account.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, the system returns devices of the specified status in the resource group. If you do not specify this parameter, the system returns all devices of the specified status in the current account.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm4l5tcwd***</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The status of the devices. Valid values:</p>
-     * <br>
-     * <p>*   **0**: inactive</p>
-     * <p>*   **1**: online</p>
-     * <p>*   **3**: offline</p>
-     * <p>*   **8**: disabled</p>
+     * <ul>
+     * <li><strong>0</strong>: inactive</li>
+     * <li><strong>1</strong>: online</li>
+     * <li><strong>3</strong>: offline</li>
+     * <li><strong>8</strong>: disabled</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

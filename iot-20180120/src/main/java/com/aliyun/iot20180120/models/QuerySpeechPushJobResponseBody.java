@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechPushJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speechsolution.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySpeechPushJobResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>speech solution has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AF71BF1D-B552-47CD-B34B-352557627992</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,51 +81,111 @@ public class QuerySpeechPushJobResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechPushJobResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tBUm***********************QPGT</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620634297000</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620634297000</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FailDeviceNum")
         public Integer failDeviceNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_group</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0iOf*****************n001</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>den0ZLt****</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
         @NameInMap("PushMode")
         public String pushMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RunningDeviceNum")
         public Integer runningDeviceNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SpeechNum")
         public Integer speechNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SpeechStatus")
         public Boolean speechStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessDeviceNum")
         public Integer successDeviceNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalDeviceNum")
         public Integer totalDeviceNum;
 
@@ -271,12 +347,24 @@ public class QuerySpeechPushJobResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySpeechPushJobResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

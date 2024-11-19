@@ -5,18 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetRuleActionRequest extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100001</p>
      */
     @NameInMap("ActionId")
     public Long actionId;
 
     /**
      * <p>The rule action ID that you want to query.</p>
-     * <br>
      * <p>You can query the rule action ID by using the following methods:</p>
-     * <br>
-     * <p>*   Call the [CreateRuleAction](~~69586~~) operation and view the **ActionId** parameter in the response.</p>
-     * <p>*   Call the [ListRuleActions](~~69517~~) operation and view the **Id** parameter in the response.</p>
+     * <ul>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/69586.html">CreateRuleAction</a> operation and view the <strong>ActionId</strong> parameter in the response.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/69517.html">ListRuleActions</a> operation and view the <strong>Id</strong> parameter in the response.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BatchCheckDeviceNamesResponseBody extends TeaModel {
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -14,19 +17,25 @@ public class BatchCheckDeviceNamesResponseBody extends TeaModel {
     public BatchCheckDeviceNamesResponseBodyData data;
 
     /**
-     * <p>The application ID (ApplyId) returned if the call is successful. When you call the [BatchRegisterDeviceWithApplyId](~~69514~~) operation to register the devices, this parameter is required.</p>
+     * <p>The application ID (ApplyId) returned if the call is successful. When you call the <a href="https://help.aliyun.com/document_detail/69514.html">BatchRegisterDeviceWithApplyId</a> operation to register the devices, this parameter is required.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The list of invalid device aliases returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The list of invalid DeviceNames returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -194,6 +203,10 @@ public class BatchCheckDeviceNamesResponseBody extends TeaModel {
     }
 
     public static class BatchCheckDeviceNamesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1295006</p>
+         */
         @NameInMap("ApplyId")
         public Long applyId;
 

@@ -1,3 +1,11 @@
+2024-11-19 Version: 6.0.0
+- Support API PublishThingModelAsyncInner.
+- Delete API RecognizeCarNum.
+- Delete API RecognizePictureGeneral.
+- Update API BatchPub: update param MessageContent.
+- Update API QueryDeviceDetail: update response param.
+
+
 2024-02-02 Version: 5.1.0
 - Support API UnsubscribeTopic.
 

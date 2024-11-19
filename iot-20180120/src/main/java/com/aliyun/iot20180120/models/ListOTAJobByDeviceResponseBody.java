@@ -5,58 +5,83 @@ import com.aliyun.tea.*;
 
 public class ListOTAJobByDeviceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingFirmwareId</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The update batch information returned if the call is successful. For more information, see the following **SimpleOTAJobInfo** parameter.</p>
+     * <p>The update batch information returned if the call is successful. For more information, see the following <strong>SimpleOTAJobInfo</strong> parameter.</p>
      */
     @NameInMap("Data")
     public ListOTAJobByDeviceResponseBodyData data;
 
     /**
      * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FirmwareId is mandatory for this action</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A01829CE-75A1-4920-B775-921146A1AB79</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of update packages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -141,12 +166,18 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
     public static class ListOTAJobByDeviceResponseBodyDataSimpleOTAJobInfoTagsOtaTagDTO extends TeaModel {
         /**
          * <p>The key of each tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -196,46 +227,67 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
     public static class ListOTAJobByDeviceResponseBodyDataSimpleOTAJobInfo extends TeaModel {
         /**
          * <p>The ID of the update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FJFx8JzpnhpIsKftRjjm03****</p>
          */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
         /**
          * <p>The ID of the update batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HvKuBpuk3rdk6E92CP****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The status of the update batch. Valid values:</p>
-         * <br>
-         * <p>*   **IN_PROGRESS**: The update batch is running.</p>
-         * <p>*   **COMPLETE**: The update batch is completed.</p>
-         * <p>*   **CANCELED**: The update batch is canceled.</p>
+         * <ul>
+         * <li><strong>IN_PROGRESS</strong>: The update batch is running.</li>
+         * <li><strong>COMPLETE</strong>: The update batch is completed.</li>
+         * <li><strong>CANCELED</strong>: The update batch is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         @NameInMap("JobStatus")
         public String jobStatus;
 
         /**
          * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   **VERFIY_FIRMWARE**: update package verification.</p>
-         * <p>*   **UPGRADE_FIRMWARE**: batch update.</p>
+         * <ul>
+         * <li><strong>VERFIY_FIRMWARE</strong>: update package verification.</li>
+         * <li><strong>UPGRADE_FIRMWARE</strong>: batch update.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UPGRADE_FIRMWARE</p>
          */
         @NameInMap("JobType")
         public String jobType;
 
         /**
          * <p>The ProductKey of the product to which the update package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a19mzPZ****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The update policy of the update batch. Valid values:</p>
-         * <br>
-         * <p>*   DYNAMIC: dynamic update. This value is returned if you call the [CreateOTADynamicUpgradeJob](~~147887~~) API operation to create an update batch.</p>
-         * <p>*   STATIC: static update. This value is returned if you call the [CreateOTAStaticUpgradeJob](~~147496~~) API operation to create an update batch.</p>
+         * <ul>
+         * <li>DYNAMIC: dynamic update. This value is returned if you call the <a href="https://help.aliyun.com/document_detail/147887.html">CreateOTADynamicUpgradeJob</a> API operation to create an update batch.</li>
+         * <li>STATIC: static update. This value is returned if you call the <a href="https://help.aliyun.com/document_detail/147496.html">CreateOTAStaticUpgradeJob</a> API operation to create an update batch.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STATIC</p>
          */
         @NameInMap("SelectionType")
         public String selectionType;
@@ -248,38 +300,56 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
 
         /**
          * <p>The scope of the update. Valid values: </p>
-         * <br>
-         * <p>- **ALL**: updates all devices.</p>
-         * <p>- **SPECIFIC**: updates specified devices.</p>
-         * <p>- **GRAY**: performs a phased update.</p>
-         * <br>
-         * <p>>  The value ALL is returned if you call the [CreateOTADynamicUpgradeJob](/help/en/iot-platform/latest/av6dui) API operation to create an update batch.</p>
+         * <ul>
+         * <li><strong>ALL</strong>: updates all devices.</li>
+         * <li><strong>SPECIFIC</strong>: updates specified devices.</li>
+         * <li><strong>GRAY</strong>: performs a phased update.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value ALL is returned if you call the <a href="/help/en/iot-platform/latest/av6dui">CreateOTADynamicUpgradeJob</a> API operation to create an update batch.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("TargetSelection")
         public String targetSelection;
 
         /**
          * <p>The time when the update batch was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-28T02:43:10.000Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The end time of the update batch. The time is displayed in UTC.</p>
-         * <br>
-         * <p>>  This parameter is returned only after the update batch is completed.</p>
+         * <blockquote>
+         * <p> This parameter is returned only after the update batch is completed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-29T02:43:10.000Z</p>
          */
         @NameInMap("UtcEndTime")
         public String utcEndTime;
 
         /**
          * <p>The time when the task was last modified. The time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-29T02:43:10.000Z</p>
          */
         @NameInMap("UtcModified")
         public String utcModified;
 
         /**
          * <p>The start time of the update batch. The time is in the UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-29T02:43:10.000Z</p>
          */
         @NameInMap("UtcStartTime")
         public String utcStartTime;

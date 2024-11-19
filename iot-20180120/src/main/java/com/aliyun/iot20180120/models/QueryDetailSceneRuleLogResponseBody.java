@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryDetailSceneRuleLogResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ED2DF141-B09A-4C8A-BAA5-30CCEE63036C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
     }
 
     public static class QueryDetailSceneRuleLogResponseBodyDataLogList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9201</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>device offline, productKey: a1c3t****, deviceName: my_device1</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -106,15 +130,27 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
     }
 
     public static class QueryDetailSceneRuleLogResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("LogList")
         public java.util.List<QueryDetailSceneRuleLogResponseBodyDataLogList> logList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

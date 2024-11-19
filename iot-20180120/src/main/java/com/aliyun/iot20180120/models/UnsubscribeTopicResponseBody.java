@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UnsubscribeTopicResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The unsub topic list is empty.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("FailureTopics")
     public UnsubscribeTopicResponseBodyFailureTopics failureTopics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55<em><strong>B7-4</strong></em>-4***-8***-D3******F565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

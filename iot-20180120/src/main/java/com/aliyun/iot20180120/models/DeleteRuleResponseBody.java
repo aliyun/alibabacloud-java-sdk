@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteRuleResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,15 +21,22 @@ public class DeleteRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8F48485-44B9-40D8-A56D-F716F384F387</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,46 +6,66 @@ import com.aliyun.tea.*;
 public class QueryDevicePropertyStatusRequest extends TeaModel {
     /**
      * <p>The DeviceName of the device.</p>
-     * <br>
-     * <p>>If you specify this parameter, you must also specify the **ProductKey** parameter.</p>
+     * <blockquote>
+     * <p>If you specify this parameter, you must also specify the <strong>ProductKey</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>light</p>
      */
     @NameInMap("DeviceName")
     public String deviceName;
 
     /**
      * <p>The identifier of the custom TSL module. Each identifier is unique in a product.</p>
-     * <br>
      * <p>If you do not specify this parameter, the system queries the data of the default module.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BatteryModule</p>
      */
     @NameInMap("FunctionBlockId")
     public String functionBlockId;
 
     /**
      * <p>The ID of the device or digital twin node whose property data you want to query.</p>
-     * <br>
-     * <p>*   You can call the [QueryDeviceInfo](~~257184~~) operation to query the **ID** of the device.</p>
-     * <p>*   Log on to the IoT Platform console. On the **Twin Details** page, click the digital twin node to view its **ID**.</p>
-     * <br>
-     * <p>>If you specify this parameter, you do not need to specify the **ProductKey** and **DeviceName** parameters. The **IotId** parameter specifies a globally unique identifier (GUID) for the device. The value of the IotId parameter corresponds to a combination of the values of the **ProductKey** and **DeviceName** parameters. If you specify the **IotId**, **ProductKey**, and **DeviceName** parameters, the value of the **IotId** parameter takes precedence.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/257184.html">QueryDeviceInfo</a> operation to query the <strong>ID</strong> of the device.</li>
+     * <li>Log on to the IoT Platform console. On the <strong>Twin Details</strong> page, click the digital twin node to view its <strong>ID</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you specify this parameter, you do not need to specify the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters. The <strong>IotId</strong> parameter specifies a globally unique identifier (GUID) for the device. The value of the IotId parameter corresponds to a combination of the values of the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters. If you specify the <strong>IotId</strong>, <strong>ProductKey</strong>, and <strong>DeviceName</strong> parameters, the value of the <strong>IotId</strong> parameter takes precedence.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Q7uOhVRdZRRlDnTLv****00100</p>
      */
     @NameInMap("IotId")
     public String iotId;
 
     /**
-     * <p>The ID of the instance. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</p>
-     * <p>>*   If no **Overview** page or instance ID appears in the console, you do not need to configure this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</li>
+     * <li>If no <strong>Overview</strong> page or instance ID appears in the console, you do not need to configure this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The ProductKey of the product to which the device belongs.</p>
-     * <br>
-     * <p>>If you specify this parameter, you must also specify the **DeviceName** parameter.</p>
+     * <blockquote>
+     * <p>If you specify this parameter, you must also specify the <strong>DeviceName</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

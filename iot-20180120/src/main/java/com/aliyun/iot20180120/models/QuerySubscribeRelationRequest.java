@@ -5,27 +5,41 @@ import com.aliyun.tea.*;
 
 public class QuerySubscribeRelationRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
-     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The ProductKey of the product that is specified for the subscription.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1fyXVF****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The type of the subscription. Valid values:</p>
-     * <br>
-     * <p>*   **MNS**</p>
-     * <p>*   **AMQP**</p>
+     * <ul>
+     * <li><strong>MNS</strong></li>
+     * <li><strong>AMQP</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AMQP</p>
      */
     @NameInMap("Type")
     public String type;

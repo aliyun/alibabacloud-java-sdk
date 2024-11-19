@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListRuleResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code that is returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The rules returned if the call is successful. For more information, see the "**RuleInfo**" section of this topic.</p>
-     * <br>
-     * <p>>  The returned rules are sorted in reverse-chronological order based on the time when the rules were created.</p>
+     * <p>The rules returned if the call is successful. For more information, see the &quot;<strong>RuleInfo</strong>&quot; section of this topic.</p>
+     * <blockquote>
+     * <p> The returned rules are sorted in reverse-chronological order based on the time when the rules were created.</p>
+     * </blockquote>
      */
     @NameInMap("Data")
     public ListRuleResponseBodyData data;
@@ -26,33 +30,49 @@ public class ListRuleResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1564B626-DE97-452D-9E9B-305888AC6105</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -129,97 +149,142 @@ public class ListRuleResponseBody extends TeaModel {
     public static class ListRuleResponseBodyDataRuleInfo extends TeaModel {
         /**
          * <p>The ID of the user who created the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231579085000000</p>
          */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
         /**
          * <p>The time when the rule was created. The time is displayed in UTC-6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wed Feb 27 20:45:43 CST 2019</p>
          */
         @NameInMap("Created")
         public String created;
 
         /**
-         * <p>The data type of the rule. Valid values: **JSON** and **BINARY**.</p>
+         * <p>The data type of the rule. Valid values: <strong>JSON</strong> and <strong>BINARY</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151454</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The time when the rule was last modified. The time is displayed in UTC-6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wed Feb 27 20:45:43 CST 2019</p>
          */
         @NameInMap("Modified")
         public String modified;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The **ProductKey** of the product to which the rule applies.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1KiV******</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule1Desc</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
-         * <p>The content that follows the **Select** keyword in the SQL statement of the rule.</p>
+         * <p>The content that follows the <strong>Select</strong> keyword in the SQL statement of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deviceName() as deviceName</p>
          */
         @NameInMap("Select")
         public String select;
 
         /**
-         * <p>The topic to which the rule applies. The topic does not include the ProductKey level. Format: `${deviceName}/topicShortName`. ${deviceName} indicates the name of the device, and topicShortName indicates the custom name of the topic.</p>
-         * <br>
-         * <p>>  For information about how to use a plus sign (`+`) or a number sign (`#`) as a wildcard character in a topic, see [Topic wildcards](~~73731~~).</p>
+         * <p>The topic to which the rule applies. The topic does not include the ProductKey level. Format: <code>${deviceName}/topicShortName</code>. ${deviceName} indicates the name of the device, and topicShortName indicates the custom name of the topic.</p>
+         * <blockquote>
+         * <p> For information about how to use a plus sign (<code>+</code>) or a number sign (<code>#</code>) as a wildcard character in a topic, see <a href="https://help.aliyun.com/document_detail/73731.html">Topic wildcards</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>+/thing/event/property/post</p>
          */
         @NameInMap("ShortTopic")
         public String shortTopic;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **RUNNING**: The rule is running.</p>
-         * <p>*   **STOP**: The rule is disabled.</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: The rule is running.</li>
+         * <li><strong>STOP</strong>: The rule is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The topic to which the rule applies. Format: `${productKey}/${deviceName}/topicShortName`.</p>
-         * <br>
-         * <p>>  For information about how to use a plus sign (`+`) or a number sign (`#`) as a wildcard character in a topic, see [Topic wildcards](~~73731~~).</p>
+         * <p>The topic to which the rule applies. Format: <code>${productKey}/${deviceName}/topicShortName</code>.</p>
+         * <blockquote>
+         * <p> For information about how to use a plus sign (<code>+</code>) or a number sign (<code>#</code>) as a wildcard character in a topic, see <a href="https://help.aliyun.com/document_detail/73731.html">Topic wildcards</a>.</p>
+         * </blockquote>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
          * <p>The time when the device was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-27T12:40:43.000Z</p>
          */
         @NameInMap("UtcCreated")
         public String utcCreated;
 
         /**
          * <p>The time when the rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-27T12:45:43.000Z</p>
          */
         @NameInMap("UtcModified")
         public String utcModified;
 
         /**
-         * <p>The **Where** query condition in the SQL statement of the rule.</p>
+         * <p>The <strong>Where</strong> query condition in the SQL statement of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Temperature&gt;35</p>
          */
         @NameInMap("Where")
         public String where;

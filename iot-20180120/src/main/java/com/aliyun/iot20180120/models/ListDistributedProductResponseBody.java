@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDistributedProductResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The products returned if the call is successful. For more information, see the "**Info**" section of this topic.</p>
+     * <p>The products returned if the call is successful. For more information, see the &quot;<strong>Info</strong>&quot; section of this topic.</p>
      */
     @NameInMap("Data")
     public ListDistributedProductResponseBodyData data;
@@ -24,15 +27,22 @@ public class ListDistributedProductResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,68 +95,100 @@ public class ListDistributedProductResponseBody extends TeaModel {
     public static class ListDistributedProductResponseBodyDataInfoItems extends TeaModel {
         /**
          * <p>The time when the distribution task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581595942</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>The **ProductKey** of the product.</p>
+         * <p>The <strong>ProductKey</strong> of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The ID of the source instance to which the product belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-6ja***</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
         /**
          * <p>The name of the source instance to which the product belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myproInstance</p>
          */
         @NameInMap("SourceInstanceName")
         public String sourceInstanceName;
 
         /**
          * <p>The source region to which the product belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("SourceRegion")
         public String sourceRegion;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to distribute the product. You can distribute products across regions and instances only within the same Alibaba cloud account. The value of this parameter is the same as the value of the **TargetUid** parameter.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to distribute the product. You can distribute products across regions and instances only within the same Alibaba cloud account. The value of this parameter is the same as the value of the <strong>TargetUid</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198***</p>
          */
         @NameInMap("SourceUid")
         public String sourceUid;
 
         /**
          * <p>The name of the Alibaba Cloud account to which the product is distributed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>io****@example.com</p>
          */
         @NameInMap("TargetAliyunId")
         public String targetAliyunId;
 
         /**
          * <p>The ID of the destination instance to which the product is distributed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-09k***</p>
          */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
         /**
          * <p>The name of the destination instance to which the product is distributed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newinstance</p>
          */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
         /**
          * <p>The destination region to which the product is distributed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("TargetRegion")
         public String targetRegion;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the product is distributed.</p>
-         * <br>
-         * <p>You can distribute devices across regions and instances only within the same Alibaba cloud account. The value of this parameter is the same as the value of the **TargetUid** parameter.</p>
+         * <p>You can distribute devices across regions and instances only within the same Alibaba cloud account. The value of this parameter is the same as the value of the <strong>TargetUid</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198***</p>
          */
         @NameInMap("TargetUid")
         public String targetUid;
@@ -274,6 +316,9 @@ public class ListDistributedProductResponseBody extends TeaModel {
 
         /**
          * <p>The total number of returned products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Total")
         public Integer total;

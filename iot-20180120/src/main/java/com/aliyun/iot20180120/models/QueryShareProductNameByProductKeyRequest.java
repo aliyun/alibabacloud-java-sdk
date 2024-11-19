@@ -4,9 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryShareProductNameByProductKeyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2YwD2****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52******_7<strong>e_4</strong>3_9<strong>e_61</strong>********</p>
+     */
     @NameInMap("ShareTaskCode")
     public String shareTaskCode;
 

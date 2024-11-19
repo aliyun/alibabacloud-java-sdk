@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.common.InvalidPageParams</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call succeeds.</p>
-     * <br>
-     * <p>*   true: The call succeeded.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call succeeded.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +95,27 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
     public static class QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo extends TeaModel {
         /**
          * <p>The identifier of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Temperture</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The time when the property was modified, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1517553572362</p>
          */
         @NameInMap("Time")
         public Long time;
 
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         @NameInMap("Value")
         public String value;
@@ -153,24 +172,30 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
 
     public static class QueryDeviceOriginalPropertyStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The array of property information. The information about each property is indicated by the **PropertyStatusInfo** parameter.</p>
+         * <p>The array of property information. The information about each property is indicated by the <strong>PropertyStatusInfo</strong> parameter.</p>
          */
         @NameInMap("List")
         public QueryDeviceOriginalPropertyStatusResponseBodyDataList list;
 
         /**
          * <p>The identifier of the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bo***x44Qx</p>
          */
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
         /**
          * <p>Indicates whether the next page exists.</p>
-         * <br>
-         * <p>*   **true**: The next page exists.</p>
-         * <p>*   **false**: The next page does not exist.</p>
-         * <br>
-         * <p>If the value ******true** is returned, you can add the value of the **NextPageToken** parameter**** to the next query. This allows you to query the data that is not returned by the current query.</p>
+         * <ul>
+         * <li><strong>true</strong>: The next page exists.</li>
+         * <li><strong>false</strong>: The next page does not exist.</li>
+         * </ul>
+         * <p>If the value <strong><strong><strong>true</strong> is returned, you can add the value of the <strong>NextPageToken</strong> parameter</strong></strong> to the next query. This allows you to query the data that is not returned by the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NextValid")
         public Boolean nextValid;

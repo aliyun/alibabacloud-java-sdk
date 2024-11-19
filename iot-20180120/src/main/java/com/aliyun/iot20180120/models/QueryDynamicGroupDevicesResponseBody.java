@@ -5,66 +5,93 @@ import com.aliyun.tea.*;
 
 public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The devices returned after the request succeeds. The information is included in the **SimpleDeviceInfo** field.</p>
+     * <p>The devices returned after the request succeeds. The information is included in the <strong>SimpleDeviceInfo</strong> field.</p>
      */
     @NameInMap("Data")
     public QueryDynamicGroupDevicesResponseBodyData data;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A system exception occurred.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
-     * <br>
      * <p>If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291***</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of devices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -157,82 +184,119 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
     public static class QueryDynamicGroupDevicesResponseBodyDataSimpleDeviceInfo extends TeaModel {
         /**
          * <p>The time when the device was activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-06 10:48:41</p>
          */
         @NameInMap("ActiveTime")
         public String activeTime;
 
         /**
          * <p>The identifier of the category to which the product belongs.</p>
-         * <br>
          * <p>This parameter is returned if the product uses the Thing Specification Language (TSL) model of a standard category that is pre-defined by IoT Platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lighting</p>
          */
         @NameInMap("CategoryKey")
         public String categoryKey;
 
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The last time when the device went online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-06 13:43:12</p>
          */
         @NameInMap("LastOnlineTime")
         public String lastOnlineTime;
 
         /**
          * <p>The alias of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>detectors_in_beijing</p>
          */
         @NameInMap("Nickname")
         public String nickname;
 
         /**
          * <p>The node type of the product. Valid values:</p>
-         * <br>
-         * <p>*   **0**: device. A device can connect to IoT Platform directly, or be attached to a gateway as a sub-device and then connect to IoT Platform. Sub-devices cannot be attached to a device.</p>
-         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain topological relationships with sub-devices, and synchronize topological relationships to IoT Platform.</p>
+         * <ul>
+         * <li><strong>0</strong>: device. A device can connect to IoT Platform directly, or be attached to a gateway as a sub-device and then connect to IoT Platform. Sub-devices cannot be attached to a device.</li>
+         * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain topological relationships with sub-devices, and synchronize topological relationships to IoT Platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NodeType")
         public Integer nodeType;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1rYuVF***</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The ProductName of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The device status. Valid values:</p>
-         * <br>
-         * <p>*   **ONLINE**: The device is online.</p>
-         * <p>*   **OFFLINE**: The device is offline.</p>
-         * <p>*   **UNACTIVE**: The device is not activated.</p>
-         * <p>*   **DISABLE**: The device is deactivated.</p>
+         * <ul>
+         * <li><strong>ONLINE</strong>: The device is online.</li>
+         * <li><strong>OFFLINE</strong>: The device is offline.</li>
+         * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+         * <li><strong>DISABLE</strong>: The device is deactivated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the device was activated. The time is in the UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-06T02:48:41.000Z</p>
          */
         @NameInMap("UtcActiveTime")
         public String utcActiveTime;
 
         /**
          * <p>The last time when the device went online. The time is in the UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-06T05:43:12.000Z</p>
          */
         @NameInMap("UtcLastOnlineTime")
         public String utcLastOnlineTime;

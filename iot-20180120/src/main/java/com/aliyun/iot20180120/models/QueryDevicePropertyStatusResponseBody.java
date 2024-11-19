@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryDevicePropertyStatusResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The data returned if the call succeeds. For more information, see **List**.</p>
+     * <p>The data returned if the call succeeds. For more information, see <strong>List</strong>.</p>
      */
     @NameInMap("Data")
     public QueryDevicePropertyStatusResponseBodyData data;
@@ -24,15 +27,22 @@ public class QueryDevicePropertyStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,46 +95,65 @@ public class QueryDevicePropertyStatusResponseBody extends TeaModel {
     public static class QueryDevicePropertyStatusResponseBodyDataListPropertyStatusInfo extends TeaModel {
         /**
          * <p>The data type of the property. Valid values:</p>
-         * <br>
-         * <p>*   **int**: integer</p>
-         * <p>*   **float**: single-precision floating-point number</p>
-         * <p>*   **double**: double-precision floating-point number</p>
-         * <p>*   **enum**: enumeration</p>
-         * <p>*   **bool**: Boolean</p>
-         * <p>*   **text**: character</p>
-         * <p>*   **date**: time (string-type UTC timestamp in milliseconds)</p>
-         * <p>*   **array**: array</p>
-         * <p>*   **struct**: structure</p>
+         * <ul>
+         * <li><strong>int</strong>: integer</li>
+         * <li><strong>float</strong>: single-precision floating-point number</li>
+         * <li><strong>double</strong>: double-precision floating-point number</li>
+         * <li><strong>enum</strong>: enumeration</li>
+         * <li><strong>bool</strong>: Boolean</li>
+         * <li><strong>text</strong>: character</li>
+         * <li><strong>date</strong>: time (string-type UTC timestamp in milliseconds)</li>
+         * <li><strong>array</strong>: array</li>
+         * <li><strong>struct</strong>: structure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>int</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The identifier of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Temperature</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The name of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temperature</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the property was modified, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1517553572362</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The unit of the property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>°C</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Value")
         public String value;
@@ -205,7 +234,7 @@ public class QueryDevicePropertyStatusResponseBody extends TeaModel {
 
     public static class QueryDevicePropertyStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The array of property information. The information about each property is indicated by the **PropertyStatusInfo** parameter.</p>
+         * <p>The array of property information. The information about each property is indicated by the <strong>PropertyStatusInfo</strong> parameter.</p>
          */
         @NameInMap("List")
         public QueryDevicePropertyStatusResponseBodyDataList list;

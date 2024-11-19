@@ -4,18 +4,30 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class AddPowerStationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlgorithmInstanceUid")
     public String algorithmInstanceUid;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PowerStationName")
     public String powerStationName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RatedPower")
     public Integer ratedPower;
 

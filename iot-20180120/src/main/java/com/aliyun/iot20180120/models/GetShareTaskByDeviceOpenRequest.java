@@ -4,15 +4,31 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetShareTaskByDeviceOpenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>device1</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>y4u2weAIrpp****WHMle1234</p>
+     */
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a2Yw*****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

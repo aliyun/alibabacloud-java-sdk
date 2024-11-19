@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetSceneRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetSceneRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B6D50A7-F160-4D47-863C-EDEE25E26495</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,41 @@ public class GetSceneRuleResponseBody extends TeaModel {
     }
 
     public static class GetSceneRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1584085921000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579493552000</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;action\&quot;:[{\&quot;params\&quot;:{\&quot;productKey\&quot;:\&quot;a19luLB****\&quot;,\&quot;propertyItems\&quot;:{\&quot;LightAdjustLevel\&quot;:10},\&quot;deviceName\&quot;:\&quot;test01\&quot;},\&quot;uri\&quot;:\&quot;action/device/setProperty\&quot;}],\&quot;trigger\&quot;:{\&quot;params\&quot;:{\&quot;cron\&quot;:\&quot;22 13 20 1 <em>\&quot;,\&quot;cronType\&quot;:\&quot;linux\&quot;},\&quot;uri\&quot;:\&quot;trigger/timer\&quot;},\&quot;type\&quot;:\&quot;IFTTT\&quot;,\&quot;sid\&quot;:\&quot;9df954b33c854d469a507ef8d6</em>*****\&quot;}</p>
+         */
         @NameInMap("RuleContent")
         public String ruleContent;
 
         @NameInMap("RuleDescription")
         public String ruleDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RuleStatus")
         public Integer ruleStatus;
 

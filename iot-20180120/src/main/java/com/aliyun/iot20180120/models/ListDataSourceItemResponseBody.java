@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceItemResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,33 +27,49 @@ public class ListDataSourceItemResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -127,21 +146,39 @@ public class ListDataSourceItemResponseBody extends TeaModel {
     public static class ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem extends TeaModel {
         /**
          * <p>The ID of the topic of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129322</p>
          */
         @NameInMap("DataSourceItemId")
         public Long dataSourceItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lightDevice</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aw3****</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRODUCT</p>
+         */
         @NameInMap("ScopeType")
         public String scopeType;
 
         /**
          * <p>The name of the topic of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/gyh***z/+/thing/event/property/post</p>
          */
         @NameInMap("Topic")
         public String topic;

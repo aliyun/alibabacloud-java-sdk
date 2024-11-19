@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListOTAFirmwareResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -30,33 +36,49 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A01829CE-75A1-4920-B775-921146A1AB79</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of OTA update packages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -141,100 +163,148 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
     public static class ListOTAFirmwareResponseBodyFirmwareInfoSimpleFirmwareInfo extends TeaModel {
         /**
          * <p>The version number of the OTA update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0.0</p>
          */
         @NameInMap("DestVersion")
         public String destVersion;
 
         /**
          * <p>The description of the OTA update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>firmwareDesc</p>
          */
         @NameInMap("FirmwareDesc")
         public String firmwareDesc;
 
         /**
          * <p>The unique ID of the OTA update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UfuxnwygsuSkVE0VCN****0100</p>
          */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
         /**
          * <p>The name of the OTA update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t3q5rkNm</p>
          */
         @NameInMap("FirmwareName")
         public String firmwareName;
 
         /**
          * <p>The signature of the OTA update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d04ab6462633508606e5f3daac8****</p>
          */
         @NameInMap("FirmwareSign")
         public String firmwareSign;
 
         /**
          * <p>The size of the update package. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>924</p>
          */
         @NameInMap("FirmwareSize")
         public Integer firmwareSize;
 
         /**
          * <p>The name of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>module1234</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The ProductKey of the product to which the OTA update package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a19mzPZ****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The name of the product to which the OTA update package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyProduct</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The signature method of the OTA update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         @NameInMap("SignMethod")
         public String signMethod;
 
         /**
          * <p>The version number of the original update package to be updated.</p>
-         * <br>
-         * <p>>  The return value is null if you perform a full update.</p>
+         * <blockquote>
+         * <p> The return value is null if you perform a full update.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>V1.0.0</p>
          */
         @NameInMap("SrcVersion")
         public String srcVersion;
 
         /**
          * <p>The status of the OTA update package. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unverified</p>
-         * <p>*   **1**: verified</p>
-         * <p>*   **2**: verifying</p>
-         * <p>*   **3**: failed to be verified</p>
+         * <ul>
+         * <li><strong>0</strong>: unverified</li>
+         * <li><strong>1</strong>: verified</li>
+         * <li><strong>2</strong>: verifying</li>
+         * <li><strong>3</strong>: failed to be verified</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The type of the OTA update package. Valid values:</p>
-         * <br>
-         * <p>*   **0**: complete firmware</p>
-         * <p>*   **1**: differential firmware</p>
+         * <ul>
+         * <li><strong>0</strong>: complete firmware</li>
+         * <li><strong>1</strong>: differential firmware</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Type")
         public Integer type;
 
         /**
          * <p>The time when the update package was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-28T02:42:22.000Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The time when the update task was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-28T02:42:22.000Z</p>
          */
         @NameInMap("UtcModified")
         public String utcModified;

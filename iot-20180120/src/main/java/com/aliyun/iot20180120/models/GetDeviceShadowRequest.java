@@ -6,23 +6,36 @@ import com.aliyun.tea.*;
 public class GetDeviceShadowRequest extends TeaModel {
     /**
      * <p>The DeviceName of the device.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>device1</p>
      */
     @NameInMap("DeviceName")
     public String deviceName;
 
     /**
-     * <p>The ID of the instance. You can view the ID of the instance on the **Overview** page in the IoT Platform console.****</p>
-     * <br>
-     * <p>>*   If the instance has an ID, you must specify the **IotInstanceId** parameter. If you do not specify this parameter, the call fails.</p>
-     * <p>>*   If the instance does not have an **ID** or the **Overview** page is not displayed, you do not need to specify this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.****</p>
+     * <blockquote>
+     * <ul>
+     * <li>If the instance has an ID, you must specify the <strong>IotInstanceId</strong> parameter. If you do not specify this parameter, the call fails.</li>
+     * <li>If the instance does not have an <strong>ID</strong> or the <strong>Overview</strong> page is not displayed, you do not need to specify this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The **ProductKey** of the product to which the device belongs.</p>
+     * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1T27vz****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

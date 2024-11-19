@@ -4,9 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UnbindRoleFromEdgeInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BlYJyXZpLBtkmR******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

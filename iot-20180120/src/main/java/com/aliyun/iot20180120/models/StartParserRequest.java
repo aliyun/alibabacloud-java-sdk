@@ -4,9 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class StartParserRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot-n8t***</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("ParserId")
     public Long parserId;
 

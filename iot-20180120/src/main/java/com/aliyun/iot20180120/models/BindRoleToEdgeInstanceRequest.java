@@ -4,15 +4,37 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BindRoleToEdgeInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3APY0tPLhmgGtx0****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::176********:role/iotedgerole</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IoTEdgeRole</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

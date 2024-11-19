@@ -4,33 +4,79 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SpeechBySynthesisRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wav</p>
+     */
     @NameInMap("AudioFormat")
     public String audioFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Q7uOhVRdZRRlDnTLv****00100</p>
+     */
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42000011392021112380********</p>
+     */
     @NameInMap("SpeechId")
     public String speechId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SpeechRate")
     public Integer speechRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Text")
     public String text;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Siyue</p>
+     */
     @NameInMap("Voice")
     public String voice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Volume")
     public Integer volume;
 

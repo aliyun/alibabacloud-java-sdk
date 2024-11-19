@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryMessageInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryMessageInfoResponseBody extends TeaModel {
     @NameInMap("Message")
     public QueryMessageInfoResponseBodyMessage message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BB71E443-4447-4024-A000-EDE09922891E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,9 +107,17 @@ public class QueryMessageInfoResponseBody extends TeaModel {
     }
 
     public static class QueryMessageInfoResponseBodyMessageUserProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -125,9 +145,17 @@ public class QueryMessageInfoResponseBody extends TeaModel {
     }
 
     public static class QueryMessageInfoResponseBodyMessage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1624419431000</p>
+         */
         @NameInMap("GenerateTime")
         public Long generateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eyJsYXN0VGltZSI6IjIwMjEtMDYtMjQgMTY6Mj**</p>
+         */
         @NameInMap("MessageContent")
         public String messageContent;
 
@@ -143,6 +171,10 @@ public class QueryMessageInfoResponseBody extends TeaModel {
         @NameInMap("TransformedTopicFullName")
         public String transformedTopicFullName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323455***</p>
+         */
         @NameInMap("UniMsgId")
         public String uniMsgId;
 

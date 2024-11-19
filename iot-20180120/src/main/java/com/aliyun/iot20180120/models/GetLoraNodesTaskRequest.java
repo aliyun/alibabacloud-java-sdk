@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class GetLoraNodesTaskRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>You can obtain the **ID** of the instance on the **Overview** page in the IoT Platform console. If your instance has an ID, you must specify this parameter. Otherwise, the request fails.</p>
-     * <br>
-     * <p>> The ID of a public instance may not be displayed on the Overview page. For more information about how to obtain the instance ID, see [How do I obtain an instance ID?](~~267533~~)</p>
+     * <p>You can obtain the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console. If your instance has an ID, you must specify this parameter. Otherwise, the request fails.</p>
+     * <blockquote>
+     * <p>The ID of a public instance may not be displayed on the Overview page. For more information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/267533.html">How do I obtain an instance ID?</a></p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The ID of the task for creating the LoRaWAN devices. You can call the [CreateLoRaNodesTask](~~109299~~) operation and obtain the task ID from the value of the **TaskId** response parameter.</p>
+     * <p>The ID of the task for creating the LoRaWAN devices. You can call the <a href="https://help.aliyun.com/document_detail/109299.html">CreateLoRaNodesTask</a> operation and obtain the task ID from the value of the <strong>TaskId</strong> response parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>623***</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CountSpeechBroadcastHourResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>String	iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of shared speeches that were broadcasted in the specific hour.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Data")
     public Integer data;
@@ -24,15 +30,22 @@ public class CountSpeechBroadcastHourResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

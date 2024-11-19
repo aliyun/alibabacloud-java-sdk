@@ -4,24 +4,64 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySummarySceneRuleLogRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582373873</p>
+     */
     @NameInMap("EndTime")
     public Integer endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fec565038d7544978d9aed5c1a******</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582372973</p>
+     */
     @NameInMap("StartTime")
     public Integer startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Status")
     public String status;
 

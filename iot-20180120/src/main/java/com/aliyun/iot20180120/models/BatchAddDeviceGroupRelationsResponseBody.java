@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class BatchAddDeviceGroupRelationsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AlreadyRelatedGroupDeviceCount")
     public Integer alreadyRelatedGroupDeviceCount;
 
     /**
      * <p>The number of valid devices that you specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -27,27 +34,43 @@ public class BatchAddDeviceGroupRelationsResponseBody extends TeaModel {
 
     /**
      * <p>The number of devices that exist in the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ExceedTenGroupDeviceCount")
     public Integer exceedTenGroupDeviceCount;
 
     /**
      * <p>The number of the specified devices that are added to 10 or more groups. You can add a device to a maximum of 10 groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>671D0F8F-FDC7-4B12-93FA-336C079C965A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SuccessAddedDeviceCount")
     public Integer successAddedDeviceCount;
 
     /**
      * <p>The number of devices that are added to the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ValidDeviceCount")
     public Integer validDeviceCount;

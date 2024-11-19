@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +77,66 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
     }
 
     public static class QueryStudioAppPageListOpenResponseBodyDataListPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-25T16:21Z</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-08T17:18Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49739</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsHidden")
         public Integer isHidden;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsHome")
         public Integer isHome;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsLoginPage")
         public Integer isLoginPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44920</p>
+         */
         @NameInMap("PageId")
         public String pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/page/44920</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -194,15 +242,31 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
         @NameInMap("List")
         public QueryStudioAppPageListOpenResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 

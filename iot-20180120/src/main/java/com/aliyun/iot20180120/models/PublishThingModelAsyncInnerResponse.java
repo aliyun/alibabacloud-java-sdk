@@ -3,7 +3,7 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeCarNumResponse extends TeaModel {
+public class PublishThingModelAsyncInnerResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RecognizeCarNumResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RecognizeCarNumResponseBody body;
+    public PublishThingModelAsyncInnerResponseBody body;
 
-    public static RecognizeCarNumResponse build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeCarNumResponse self = new RecognizeCarNumResponse();
+    public static PublishThingModelAsyncInnerResponse build(java.util.Map<String, ?> map) throws Exception {
+        PublishThingModelAsyncInnerResponse self = new PublishThingModelAsyncInnerResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeCarNumResponse setHeaders(java.util.Map<String, String> headers) {
+    public PublishThingModelAsyncInnerResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RecognizeCarNumResponse extends TeaModel {
         return this.headers;
     }
 
-    public RecognizeCarNumResponse setStatusCode(Integer statusCode) {
+    public PublishThingModelAsyncInnerResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RecognizeCarNumResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RecognizeCarNumResponse setBody(RecognizeCarNumResponseBody body) {
+    public PublishThingModelAsyncInnerResponse setBody(PublishThingModelAsyncInnerResponseBody body) {
         this.body = body;
         return this;
     }
-    public RecognizeCarNumResponseBody getBody() {
+    public PublishThingModelAsyncInnerResponseBody getBody() {
         return this.body;
     }
 

@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryJobStatisticsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryJobStatisticsResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512FF8FD-A97F-4AAF-B0A2-7BE3D3A19BB3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +77,66 @@ public class QueryJobStatisticsResponseBody extends TeaModel {
     }
 
     public static class QueryJobStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Cancelled")
         public Integer cancelled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Failed")
         public Integer failed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13</p>
+         */
         @NameInMap("InProgress")
         public Integer inProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Queued")
         public Integer queued;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Rejected")
         public Integer rejected;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Sent")
         public Integer sent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Succeeded")
         public Integer succeeded;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TimeOut")
         public Integer timeOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

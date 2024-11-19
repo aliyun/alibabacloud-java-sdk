@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchQueryDeviceDetailResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class BatchQueryDeviceDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,36 +95,54 @@ public class BatchQueryDeviceDetailResponseBody extends TeaModel {
     public static class BatchQueryDeviceDetailResponseBodyDataData extends TeaModel {
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The DeviceSecret of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mz2Canp4GB7qRVf1OYPNtRqB2anu****</p>
          */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
         /**
          * <p>The firmware version number of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1.0.0.0</p>
          */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
         /**
          * <p>The activation time of the device. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-21 20:33:00</p>
          */
         @NameInMap("GmtActive")
         public String gmtActive;
 
         /**
          * <p>The creation time of the device. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-21 20:31:42</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The unique ID of the device. The device ID is issued by IoT Platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         @NameInMap("IotId")
         public String iotId;
@@ -127,15 +155,22 @@ public class BatchQueryDeviceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **0**: device. Sub-devices cannot be mounted on a gateway. A device can connect to IoT Platform directly or as a sub-device of a gateway.</p>
-         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</p>
+         * <ul>
+         * <li><strong>0</strong>: device. Sub-devices cannot be mounted on a gateway. A device can connect to IoT Platform directly or as a sub-device of a gateway.</li>
+         * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NodeType")
         public Integer nodeType;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
@@ -148,29 +183,42 @@ public class BatchQueryDeviceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the region where the device resides. The region is the same as the region where IoT Platform resides. You can view the region in the IoT Platform console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The status of the device. Valid values:</p>
-         * <br>
-         * <p>*   **ONLINE**: The device is online.</p>
-         * <p>*   **OFFLINE**: The device is offline.</p>
-         * <p>*   **UNACTIVE**: The device is not activated.</p>
-         * <p>*   **DISABLE**: The device is disabled.</p>
+         * <ul>
+         * <li><strong>ONLINE</strong>: The device is online.</li>
+         * <li><strong>OFFLINE</strong>: The device is offline.</li>
+         * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+         * <li><strong>DISABLE</strong>: The device is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The activation time of the device. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-21T12:31:42.000Z</p>
          */
         @NameInMap("UtcActive")
         public String utcActive;
 
         /**
          * <p>The creation time of the device. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-21T12:31:42.000Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;

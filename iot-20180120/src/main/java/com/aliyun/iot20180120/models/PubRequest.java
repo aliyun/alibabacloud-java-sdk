@@ -6,45 +6,62 @@ import com.aliyun.tea.*;
 public class PubRequest extends TeaModel {
     /**
      * <p>The content type of the message when you use MQTT 5.0 for communication.</p>
-     * <br>
      * <p>The content type is usually MIME, such as text or plain********.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("ContentType")
     public String contentType;
 
     /**
      * <p>The related data in the request/response communication mode when you use MQTT 5.0. You can specify this parameter as needed.</p>
-     * <br>
      * <p>A message recipient can process the request based on the data.</p>
-     * <br>
-     * <p>>  You must convert the related data into binary data and perform Base64 encoding to generate a value of the string type.</p>
+     * <blockquote>
+     * <p> You must convert the related data into binary data and perform Base64 encoding to generate a value of the string type.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aGVsbG8****</p>
      */
     @NameInMap("CorrelationData")
     public String correlationData;
 
     /**
      * <p>The name of the MQTT cloud gateway.</p>
-     * <br>
-     * <p>>When you publish a message to an MQTT cloud gateway, you must specify this parameter.</p>
+     * <blockquote>
+     * <p>When you publish a message to an MQTT cloud gateway, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>device1</p>
      */
     @NameInMap("DeviceName")
     public String deviceName;
 
     /**
-     * <p>The ID of the instance. You can obtain the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must specify this parameter. Otherwise, the call fails.</p>
-     * <p>>*   If the **Overview** page or the instance ID is not displayed in the IoT Platform console, ignore this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can obtain the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must specify this parameter. Otherwise, the call fails.</li>
+     * <li>If the <strong>Overview</strong> page or the instance ID is not displayed in the IoT Platform console, ignore this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The body of the message that you want to publish.</p>
-     * <br>
      * <p>To generate a message body, you must convert the raw message into binary data and perform Base64 encoding.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJ0ZXN0IjoidGFzayBwdWIgYnJvYWRjYXN0In0=</p>
      */
     @NameInMap("MessageContent")
     public String messageContent;
@@ -54,34 +71,44 @@ public class PubRequest extends TeaModel {
 
     /**
      * <p>The payload identifier of the message when you use MQTT 5.0 for communication. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The message is unknown byte data.</p>
-     * <p>*   **1**: The payload of the message is UTF-8 encoded character data.</p>
+     * <ul>
+     * <li><strong>0</strong>: The message is unknown byte data.</li>
+     * <li><strong>1</strong>: The payload of the message is UTF-8 encoded character data.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PayloadFormatIndicator")
     public Integer payloadFormatIndicator;
 
     /**
-     * <p>The **ProductKey** of the product to which the device that receives the message belongs.</p>
+     * <p>The <strong>ProductKey</strong> of the product to which the device that receives the message belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1Q5XoY****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The quality of service (QoS) level of the message. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The message is published at most once.</p>
-     * <p>*   **1**: The message is published at least once. If a PUBACK response is not returned after you publish a QoS 1 message, the message is pushed to the device again when the device reconnects to IoT Platform.</p>
-     * <br>
-     * <p>Default value: **0**.</p>
-     * <br>
-     * <p>For more information about message communication, see [Limits](~~30527~~).</p>
+     * <ul>
+     * <li><strong>0</strong>: The message is published at most once.</li>
+     * <li><strong>1</strong>: The message is published at least once. If a PUBACK response is not returned after you publish a QoS 1 message, the message is pushed to the device again when the device reconnects to IoT Platform.</li>
+     * </ul>
+     * <p>Default value: <strong>0</strong>.</p>
+     * <p>For more information about message communication, see <a href="https://help.aliyun.com/document_detail/30527.html">Limits</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Qos")
     public Integer qos;
 
     /**
-     * <p>The response topic in the request/response communication mode when you use MQTT 5.0. For more information, see [MQTT 5.0](~~30540~~).</p>
+     * <p>The response topic in the request/response communication mode when you use MQTT 5.0. For more information, see <a href="https://help.aliyun.com/document_detail/30540.html">MQTT 5.0</a>.</p>
      */
     @NameInMap("ResponseTopic")
     public String responseTopic;
@@ -94,13 +121,15 @@ public class PubRequest extends TeaModel {
 
     /**
      * <p>The custom topic for the device that receives the message.</p>
-     * <br>
-     * <p>*   Topic format: `/${productKey}/${deviceName}/user/${TopicShortName}`.</p>
-     * <p>*   You must specify the **Subscribe** permission, or **Publish and Subscribe** permissions for the topic.</p>
-     * <br>
-     * <p>> Make sure that the device subscribes to the topic before you call the Pub operation. Otherwise, the device cannot receive the message.</p>
-     * <br>
-     * <p>You can view the custom topics of a product on the **Topic Categories** tab of the **Product Details** page, or by calling the [QueryProductTopic](~~69647~~) operation. You can view the topics to which the device subscribes on the **Topic List** tab of the **Device Details** page.</p>
+     * <ul>
+     * <li>Topic format: <code>/${productKey}/${deviceName}/user/${TopicShortName}</code>.</li>
+     * <li>You must specify the <strong>Subscribe</strong> permission, or <strong>Publish and Subscribe</strong> permissions for the topic.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Make sure that the device subscribes to the topic before you call the Pub operation. Otherwise, the device cannot receive the message.</p>
+     * </blockquote>
+     * <p>You can view the custom topics of a product on the <strong>Topic Categories</strong> tab of the <strong>Product Details</strong> page, or by calling the <a href="https://help.aliyun.com/document_detail/69647.html">QueryProductTopic</a> operation. You can view the topics to which the device subscribes on the <strong>Topic List</strong> tab of the <strong>Device Details</strong> page.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TopicFullName")
     public String topicFullName;
@@ -228,16 +257,20 @@ public class PubRequest extends TeaModel {
     public static class PubRequestUserProp extends TeaModel {
         /**
          * <p>The custom property key that is specified when you use MQTT 5.0 for communication.</p>
-         * <br>
-         * <p>This parameter must be used together with the **UserProp.N.Value** parameter.</p>
+         * <p>This parameter must be used together with the <strong>UserProp.N.Value</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The custom property value that is specified when you use MQTT 5.0 for communication.</p>
-         * <br>
-         * <p>This parameter must be used together with the **UserProp.N.Key** parameter.</p>
+         * <p>This parameter must be used together with the <strong>UserProp.N.Key</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryDeviceInfoResponseBody extends TeaModel {
     /**
      * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information about the device returned if the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,27 +95,43 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
     public static class QueryDeviceInfoResponseBodyData extends TeaModel {
         /**
          * <p>The DeviceSecret of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mz2Canp4GB7qRVf1OYPNtRqB2anu****</p>
          */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The ProductKey of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>detectors_in_beijing</p>
          */
         @NameInMap("Nickname")
         public String nickname;
 
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1rYuVF****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

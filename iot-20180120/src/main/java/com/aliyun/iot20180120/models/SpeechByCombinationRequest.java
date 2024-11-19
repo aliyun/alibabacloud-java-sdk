@@ -4,27 +4,61 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SpeechByCombinationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>wav</p>
+     */
     @NameInMap("AudioFormat")
     public String audioFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZFBDZ</p>
+     */
     @NameInMap("CombinationList")
     public java.util.List<String> combinationList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnforceFlag")
     public Boolean enforceFlag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Q7uOhVRdZRRlDnTLv****00100</p>
+     */
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42000011392021112380********</p>
+     */
     @NameInMap("SpeechId")
     public String speechId;
 

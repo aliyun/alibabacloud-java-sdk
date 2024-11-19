@@ -5,21 +5,28 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceGroupListResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The group information returned if the call succeeds. For more information, see the GroupInfo parameter.</p>
-     * <br>
-     * <p>>  The returned group information is sorted in reverse chronological order in which the groups are created.</p>
+     * <blockquote>
+     * <p> The returned group information is sorted in reverse chronological order in which the groups are created.</p>
+     * </blockquote>
      */
     @NameInMap("Data")
     public QueryDeviceGroupListResponseBodyData data;
@@ -32,33 +39,49 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BEFCA316-D6C7-470C-81ED-1FF4FFD4AA0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of records that were returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -143,30 +166,45 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
     public static class QueryDeviceGroupListResponseBodyDataGroupInfo extends TeaModel {
         /**
          * <p>The description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usefulGroup</p>
          */
         @NameInMap("GroupDesc")
         public String groupDesc;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Kzt9FD8wje8o****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The type of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LINK_PLATFORM_DYNAMIC</p>
          */
         @NameInMap("GroupType")
         public String groupType;
 
         /**
          * <p>The time when the group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-09T02:58:34.000Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;

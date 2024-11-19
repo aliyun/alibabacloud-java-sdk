@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BindLicenseProductRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot-23***</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>480P</p>
+     */
     @NameInMap("LicenseCode")
     public String licenseCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV***</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

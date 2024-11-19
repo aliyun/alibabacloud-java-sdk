@@ -6,22 +6,30 @@ import com.aliyun.tea.*;
 public class CreateLoRaNodesTaskRequest extends TeaModel {
     /**
      * <p>The LoRaWAN devices.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> deviceInfo;
 
     /**
-     * <p>The instance ID. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>  If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
-     * <br>
-     * <p>For more information, see the [Overview](~~356505~~) topic of IoT instances.</p>
+     * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+     * </blockquote>
+     * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The ProductKey of the product to which the devices belong.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
@@ -58,12 +66,18 @@ public class CreateLoRaNodesTaskRequest extends TeaModel {
     public static class CreateLoRaNodesTaskRequestDeviceInfo extends TeaModel {
         /**
          * <p>The DevEUI of the LoRaWAN device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d896e0efff00****</p>
          */
         @NameInMap("DevEui")
         public String devEui;
 
         /**
          * <p>The PIN code of the LoRaWAN device. The value of the parameter is used to verify the DevEUI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         @NameInMap("PinCode")
         public String pinCode;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateProductTagsResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class CreateProductTagsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful. The tags were attached to the product.</p>
-     * <p>*   **false**: The call failed. This value indicates that the tags failed to be attached to the product.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful. The tags were attached to the product.</li>
+     * <li><strong>false</strong>: The call failed. This value indicates that the tags failed to be attached to the product.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +95,18 @@ public class CreateProductTagsResponseBody extends TeaModel {
     public static class CreateProductTagsResponseBodyInvalidProductTagsProductTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>room</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123$</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

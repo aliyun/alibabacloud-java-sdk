@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speechsolution.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySpeechPushJobSpeechResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>speech solution has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AF71BF1D-B552-47CD-B34B-352557627992</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechPushJobSpeechResponseBodyDataListItemsSpeechListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SYS_TONE_0</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Xiaoyun</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
@@ -125,18 +153,30 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechPushJobSpeechResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ZFDZ</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
         @NameInMap("SpeechList")
         public QuerySpeechPushJobSpeechResponseBodyDataListItemsSpeechList speechList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
+         */
         @NameInMap("SpeechType")
         public String speechType;
 
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Xiaoyun</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
@@ -210,12 +250,24 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySpeechPushJobSpeechResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

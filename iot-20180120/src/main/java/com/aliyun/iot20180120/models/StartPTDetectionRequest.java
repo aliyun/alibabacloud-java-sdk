@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class StartPTDetectionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlgorithmInstanceUid")
     public String algorithmInstanceUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DataCollectionTime")
     public Long dataCollectionTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

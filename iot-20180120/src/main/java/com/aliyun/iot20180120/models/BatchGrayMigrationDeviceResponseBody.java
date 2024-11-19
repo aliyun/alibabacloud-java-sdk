@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGrayMigrationDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class BatchGrayMigrationDeviceResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +77,27 @@ public class BatchGrayMigrationDeviceResponseBody extends TeaModel {
     }
 
     public static class BatchGrayMigrationDeviceResponseBodyDataDetailsItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>light</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDEED</p>
+         */
         @NameInMap("Status")
         public String status;
 

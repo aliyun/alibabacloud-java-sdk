@@ -5,34 +5,47 @@ import com.aliyun.tea.*;
 
 public class QueryClientIdsResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ClientIDs returned if the call is successful. For more information, see **DynamicRegClientIds**.</p>
+     * <p>The ClientIDs returned if the call is successful. For more information, see <strong>DynamicRegClientIds</strong>.</p>
      */
     @NameInMap("Data")
     public QueryClientIdsResponseBodyData data;
 
     /**
      * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89F22330-BAEE-<strong><strong>-</strong></strong>-41BA46D6E267</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class QueryClientIdsResponseBody extends TeaModel {
     public static class QueryClientIdsResponseBodyDataDynamicRegClientIds extends TeaModel {
         /**
          * <p>The ClientID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9rSzYt4js92********f000112</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The time when the ClientID was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1636514022424</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -127,6 +146,9 @@ public class QueryClientIdsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y4u2weAI********HMle1234</p>
          */
         @NameInMap("IotId")
         public String iotId;

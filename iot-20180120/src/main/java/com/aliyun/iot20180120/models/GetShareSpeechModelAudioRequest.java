@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetShareSpeechModelAudioRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot-2w****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Md3ZiTL888K9llXDy7890***********</p>
+     */
     @NameInMap("ShareTaskId")
     public String shareTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WSD****</p>
+     */
     @NameInMap("SpeechModelCodeList")
     public java.util.List<String> speechModelCodeList;
 

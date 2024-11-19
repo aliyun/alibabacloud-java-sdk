@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceTunnelShareStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetDeviceTunnelShareStatusResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACC1D51C-1A58-440E-92A7-71AB61C6595A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class GetDeviceTunnelShareStatusResponseBody extends TeaModel {
     }
 
     public static class GetDeviceTunnelShareStatusResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1617941371000</p>
+         */
         @NameInMap("GmtOpened")
         public Long gmtOpened;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsOpen")
         public Boolean isOpen;
 
+        /**
+         * <strong>example:</strong>
+         * <p>848bbfa0e9a31e579502869920b4d4c********</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18f72f95cad34ca3aeabeeefcb******</p>
+         */
         @NameInMap("ShareId")
         public String shareId;
 

@@ -4,9 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class InvokeDataAPIServiceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:iot:<em>:127103983461</em>***:serveapi/device/getDeviceCountByStatus2</p>
+     */
     @NameInMap("ApiSrn")
     public String apiSrn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -43,18 +53,38 @@ public class InvokeDataAPIServiceRequest extends TeaModel {
     }
 
     public static class InvokeDataAPIServiceRequestParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>VARCHAR</p>
+         */
         @NameInMap("ListParamType")
         public String listParamType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
+         */
         @NameInMap("ListParamValue")
         public java.util.List<String> listParamValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>status</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VARCHAR</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 

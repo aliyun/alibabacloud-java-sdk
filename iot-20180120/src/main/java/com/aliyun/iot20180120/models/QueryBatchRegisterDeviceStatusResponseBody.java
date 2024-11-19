@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryBatchRegisterDeviceStatusResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
-     * <br>
-     * <p>>  X.509 certificates are available only for devices in the China (Shanghai) region. If devices do not reside in the China (Shanghai) region, you cannot generate X.509 certificates for the devices and the iot.device.RegionNotSupportX509 error code is returned.</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * <blockquote>
+     * <p> X.509 certificates are available only for devices in the China (Shanghai) region. If devices do not reside in the China (Shanghai) region, you cannot generate X.509 certificates for the devices and the iot.device.RegionNotSupportX509 error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -26,15 +30,22 @@ public class QueryBatchRegisterDeviceStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -187,37 +198,49 @@ public class QueryBatchRegisterDeviceStatusResponseBody extends TeaModel {
         public QueryBatchRegisterDeviceStatusResponseBodyDataInvalidDetailList invalidDetailList;
 
         /**
-         * <p>*   If the value of the **Status** parameter is **CHECK_FAILED** or **CREATE_FAILED**, some devices failed to be created and the names of the devices that failed to be created are returned in this parameter.</p>
-         * <p>*   If the value of the **Status** parameter is **CHECK_SUCCESS** or **CREATE_SUCCESS**, all devices are created and an empty array is returned in this parameter.</p>
+         * <ul>
+         * <li>If the value of the <strong>Status</strong> parameter is <strong>CHECK_FAILED</strong> or <strong>CREATE_FAILED</strong>, some devices failed to be created and the names of the devices that failed to be created are returned in this parameter.</li>
+         * <li>If the value of the <strong>Status</strong> parameter is <strong>CHECK_SUCCESS</strong> or <strong>CREATE_SUCCESS</strong>, all devices are created and an empty array is returned in this parameter.</li>
+         * </ul>
          */
         @NameInMap("InvalidList")
         public QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList invalidList;
 
         /**
          * <p>The processing status and result. Valid values:</p>
-         * <br>
-         * <p>*   **CHECK**: The system is verifying device names.</p>
-         * <br>
-         * <p>*   **CHECK_SUCCESS**: All devices in the application form are verified.</p>
-         * <br>
-         * <p>*   **CHECK_FAILED**: All devices in the application form failed to be verified.</p>
-         * <br>
-         * <p>*   **CREATE**: The system is creating devices.</p>
-         * <br>
-         * <p>*   **CREATE_SUCCESS**: All devices in the application form are created.</p>
-         * <br>
-         * <p>> If the authentication type of the product to which the devices belong is X.509, all devices and the related X.509 certificates are created.</p>
-         * <br>
-         * <p>*   **CREATE_FAILED**: Some devices in the application form failed to be created.</p>
-         * <br>
-         * <p>> If a device or X.509 certificate fails to be created in the current batch when the authentication type is X.509, all devices fail to be created.</p>
+         * <ul>
+         * <li><p><strong>CHECK</strong>: The system is verifying device names.</p>
+         * </li>
+         * <li><p><strong>CHECK_SUCCESS</strong>: All devices in the application form are verified.</p>
+         * </li>
+         * <li><p><strong>CHECK_FAILED</strong>: All devices in the application form failed to be verified.</p>
+         * </li>
+         * <li><p><strong>CREATE</strong>: The system is creating devices.</p>
+         * </li>
+         * <li><p><strong>CREATE_SUCCESS</strong>: All devices in the application form are created.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If the authentication type of the product to which the devices belong is X.509, all devices and the related X.509 certificates are created.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>CREATE_FAILED</strong>: Some devices in the application form failed to be created.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If a device or X.509 certificate fails to be created in the current batch when the authentication type is X.509, all devices fail to be created.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>*   If the value of the **Status** parameter is **CHECK_FAILED** or **CREATE_FAILED**, some devices failed to be created and the names of the created devices are returned in this parameter.</p>
-         * <p>*   If the value of the **Status** parameter is **CHECK_SUCCESS** or **CREATE_SUCCESS**, all devices are created and an empty array is returned in this parameter.</p>
+         * <ul>
+         * <li>If the value of the <strong>Status</strong> parameter is <strong>CHECK_FAILED</strong> or <strong>CREATE_FAILED</strong>, some devices failed to be created and the names of the created devices are returned in this parameter.</li>
+         * <li>If the value of the <strong>Status</strong> parameter is <strong>CHECK_SUCCESS</strong> or <strong>CREATE_SUCCESS</strong>, all devices are created and an empty array is returned in this parameter.</li>
+         * </ul>
          */
         @NameInMap("ValidList")
         public QueryBatchRegisterDeviceStatusResponseBodyDataValidList validList;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDeviceDistributeJobRequest extends TeaModel {
     /**
      * <p>The ID of the distribution task. The ID globally identifies the task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UbmsMHmkqv0PiAG****010001</p>
      */
     @NameInMap("JobId")
     public String jobId;

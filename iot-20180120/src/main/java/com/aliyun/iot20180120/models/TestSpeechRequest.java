@@ -4,33 +4,77 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class TestSpeechRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>wav</p>
+     */
     @NameInMap("AudioFormat")
     public String audioFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableSoundCode")
     public Boolean enableSoundCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4de2c367**<strong>8c585e5992</strong></p>
+     */
     @NameInMap("ProjectCode")
     public String projectCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;SoundCodeContent&quot;: &quot;<a href="http://www.taobao.com">www.taobao.com</a>&quot;, &quot;AdditionalDuration&quot;: 3}</p>
+     */
     @NameInMap("SoundCodeConfig")
     public java.util.Map<String, ?> soundCodeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SpeechRate")
     public Integer speechRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("SpeechType")
     public String speechType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Text")
     public String text;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Siyue</p>
+     */
     @NameInMap("Voice")
     public String voice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Volume")
     public Integer volume;
 

@@ -4,33 +4,87 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateSharePromotionSpeechModelRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wav</p>
+     */
     @NameInMap("AudioFormat")
     public String audioFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZFDZ</p>
+     */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-cv3********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61******_****<em>4901</em><strong><strong>_47</strong></strong>*******</p>
+     */
     @NameInMap("SharePromotionActivityId")
     public String sharePromotionActivityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52******_7<strong>e_4</strong>3_9<strong>e_61</strong>********</p>
+     */
     @NameInMap("ShareTaskCode")
     public String shareTaskCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("SpeechModelType")
     public String speechModelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SpeechRate")
     public Integer speechRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Text")
     public String text;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Xiaoyun</p>
+     */
     @NameInMap("Voice")
     public String voice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Volume")
     public Integer volume;
 

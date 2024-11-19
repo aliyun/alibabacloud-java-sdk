@@ -5,24 +5,37 @@ import com.aliyun.tea.*;
 
 public class DetachDestinationRequest extends TeaModel {
     /**
-     * <p>The ID of the data destination. You can call the [ListDestination](~~433025~~) operation to query data destinations and obtain the ID of the **data destination**.</p>
+     * <p>The ID of the data destination. You can call the <a href="https://help.aliyun.com/document_detail/433025.html">ListDestination</a> operation to query data destinations and obtain the ID of the <strong>data destination</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1002</p>
      */
     @NameInMap("DestinationId")
     public Long destinationId;
 
     /**
-     * <p>The ID of the instance. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</p>
-     * <p>>*   If no **Overview** page or ID is generated for your instance, you do not need to configure this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</li>
+     * <li>If no <strong>Overview</strong> page or ID is generated for your instance, you do not need to configure this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-2w****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The ID of the parser. You can call the [ListParser](~~444814~~) operation to query parsers and obtain the ID of the **parser**.</p>
+     * <p>The ID of the parser. You can call the <a href="https://help.aliyun.com/document_detail/444814.html">ListParser</a> operation to query parsers and obtain the ID of the <strong>parser</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("ParserId")
     public Long parserId;

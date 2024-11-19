@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceBySQLResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,21 +27,31 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>If you specify `SELECT count(*) FROM device` in the SQL-like statement, the number of rows that match the specified conditions is returned.</p>
+     * <p>If you specify <code>SELECT count(*) FROM device</code> in the SQL-like statement, the number of rows that match the specified conditions is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -99,6 +112,9 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     public static class QueryDeviceBySQLResponseBodyDataGroups extends TeaModel {
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1d21d2fas</p>
          */
         @NameInMap("GroupId")
         public String groupId;
@@ -121,12 +137,18 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     public static class QueryDeviceBySQLResponseBodyDataOTAModules extends TeaModel {
         /**
          * <p>The version number of each OTA module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1-dads2-dad2</p>
          */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
         /**
          * <p>The name of the OTA module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SomeSampleModule</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
@@ -157,12 +179,18 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     public static class QueryDeviceBySQLResponseBodyDataTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Color</p>
          */
         @NameInMap("TagName")
         public String tagName;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Red</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -193,24 +221,36 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     public static class QueryDeviceBySQLResponseBodyData extends TeaModel {
         /**
          * <p>The time when the device was activated. The time is in the GMT format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-04 16:38:18.607</p>
          */
         @NameInMap("ActiveTime")
         public String activeTime;
 
         /**
          * <p>The name of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The time when the device was created. The time is in the GMT format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-04 16:38:17.000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the device information was last updated. The time is in the GMT format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-04 16:38:19.000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -223,6 +263,9 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         @NameInMap("IotId")
         public String iotId;
@@ -240,18 +283,25 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         public java.util.List<QueryDeviceBySQLResponseBodyDataOTAModules> OTAModules;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The status of the device. Valid values:</p>
-         * <br>
-         * <p>*   **ONLINE**: The device is online.</p>
-         * <p>*   **OFFLINE**: The device is offline.</p>
-         * <p>*   **UNACTIVE**: The device is not activated.</p>
-         * <p>*   **DISABLE**: The device is disabled.</p>
+         * <ul>
+         * <li><strong>ONLINE</strong>: The device is online.</li>
+         * <li><strong>OFFLINE</strong>: The device is offline.</li>
+         * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+         * <li><strong>DISABLE</strong>: The device is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;

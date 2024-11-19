@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetDownloadFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetDownloadFileResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>no authorization.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BB71E443-4447-4024-A000-EDE09934****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class GetDownloadFileResponseBody extends TeaModel {
     }
 
     public static class GetDownloadFileResponseBodyDataHeader extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>user_name_alias</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAY</p>
+         */
         @NameInMap("DimDateClass")
         public String dimDateClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_name</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INTEGER</p>
+         */
         @NameInMap("FieldType")
         public String fieldType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{xxx:xxxx}</p>
+         */
         @NameInMap("GeoClass")
         public String geoClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HOUR/DAY/MONTH</p>
+         */
         @NameInMap("TimeClass")
         public String timeClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>date</p>
+         */
         @NameInMap("TypeClass")
         public String typeClass;
 
@@ -150,9 +194,17 @@ public class GetDownloadFileResponseBody extends TeaModel {
     }
 
     public static class GetDownloadFileResponseBodyDataQuerySettingAstExpr extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;header&quot;:{&quot;fieldName&quot;:&quot;xxx&quot;},&quot;operator&quot;:&quot;GreaterThanOrEqual&quot;,&quot;value&quot;:12345}</p>
+         */
         @NameInMap("Expr")
         public String expr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>binaryOp</p>
+         */
         @NameInMap("ExprType")
         public String exprType;
 
@@ -180,21 +232,45 @@ public class GetDownloadFileResponseBody extends TeaModel {
     }
 
     public static class GetDownloadFileResponseBodyDataQuerySettingSelectedHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>user_name_alias</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAY</p>
+         */
         @NameInMap("DimDateClass")
         public String dimDateClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_name</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INTEGER</p>
+         */
         @NameInMap("FieldType")
         public String fieldType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{xxx:xxx}</p>
+         */
         @NameInMap("GeoClass")
         public String geoClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HOUR/DAY/MONTH</p>
+         */
         @NameInMap("TimeClass")
         public String timeClass;
 
@@ -284,36 +360,76 @@ public class GetDownloadFileResponseBody extends TeaModel {
     }
 
     public static class GetDownloadFileResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AsyncExecute")
         public Boolean asyncExecute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1658406464534</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_download_flie</p>
+         */
         @NameInMap("CsvFileName")
         public String csvFileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx-data-download-sh.oss-cn-shanghai.aliyuncs.com/data/download/6B761BxxxxxxxxAAA0BF03D32C80E/62da39b9xxxxxx5a7b953376/download_file_name.csv?Expires=1658469132&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=rRL%xxxxxxx%3D">https://xxxxx-data-download-sh.oss-cn-shanghai.aliyuncs.com/data/download/6B761BxxxxxxxxAAA0BF03D32C80E/62da39b9xxxxxx5a7b953376/download_file_name.csv?Expires=1658469132&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=rRL%xxxxxxx%3D</a></p>
+         */
         @NameInMap("CsvUrl")
         public String csvUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1658406465000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("Header")
         public java.util.List<GetDownloadFileResponseBodyDataHeader> header;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62d949808bc742187xxxxxx</p>
+         */
         @NameInMap("LongJobId")
         public String longJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PreviewSize")
         public Integer previewSize;
 
@@ -323,12 +439,24 @@ public class GetDownloadFileResponseBody extends TeaModel {
         @NameInMap("Result")
         public java.util.List<java.util.Map<String, ?>> result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;a&quot;:123}</p>
+         */
         @NameInMap("ResultDataInString")
         public String resultDataInString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

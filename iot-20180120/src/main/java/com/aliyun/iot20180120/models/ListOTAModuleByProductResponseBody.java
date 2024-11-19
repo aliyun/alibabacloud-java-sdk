@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListOTAModuleByProductResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class ListOTAModuleByProductResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74C2BB8D-1D6F-41F5-AE68-6B2310883F63</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -97,24 +107,36 @@ public class ListOTAModuleByProductResponseBody extends TeaModel {
 
         /**
          * <p>The time when the OTA module was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-13T09:46Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The last time when the OTA module was updated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-19T09:46Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The name of the OTA module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>barcodeScanner</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The ProductKey of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aluctKe****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

@@ -5,134 +5,140 @@ import com.aliyun.tea.*;
 
 public class CreateThingModelRequest extends TeaModel {
     /**
-     * <p>The identifier of the custom TSL module. Each identifier is unique in a product. The identifier must be 1 to 30 characters in length, and can contain letters, digits, and underscores (\_).</p>
-     * <br>
-     * <p>This parameter must be used in combination with the **FunctionBlockName** parameter. If you do not specify this parameter, the system imports the default module.</p>
+     * <p>The identifier of the custom TSL module. Each identifier is unique in a product. The identifier must be 1 to 30 characters in length, and can contain letters, digits, and underscores (_).</p>
+     * <p>This parameter must be used in combination with the <strong>FunctionBlockName</strong> parameter. If you do not specify this parameter, the system imports the default module.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BatteryModule</p>
      */
     @NameInMap("FunctionBlockId")
     public String functionBlockId;
 
     /**
-     * <p>The name of the custom module. The name must be 4 to 30 characters in length, and can contain letters, digits, and underscores (\_).</p>
-     * <br>
-     * <p>This parameter must be used in combination with the **FunctionBlockId** parameter. If you do not specify this parameter, the system imports the default module.</p>
+     * <p>The name of the custom module. The name must be 4 to 30 characters in length, and can contain letters, digits, and underscores (_).</p>
+     * <p>This parameter must be used in combination with the <strong>FunctionBlockId</strong> parameter. If you do not specify this parameter, the system imports the default module.</p>
      */
     @NameInMap("FunctionBlockName")
     public String functionBlockName;
 
     /**
-     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
-     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The **ProductKey** of the product.</p>
-     * <br>
-     * <p>You can view the ProductKey on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the [QueryProductList](~~69271~~) operation.</p>
+     * <p>The <strong>ProductKey</strong> of the product.</p>
+     * <p>You can view the ProductKey on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The details of the new features.</p>
-     * <br>
-     * <p>>  You can specify a maximum of 10 features.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can specify a maximum of 10 features.</p>
+     * </blockquote>
      * <p>Example:</p>
-     * <br>
-     * <p>```</p>
-     * <br>
-     * <p>{</p>
-     * <p>  "properties": [</p>
-     * <p>    {</p>
-     * <p>      "custom": true,</p>
-     * <p>      "dataSpecsList": [</p>
-     * <p>        {</p>
-     * <p>          "childDataType": "TEXT",</p>
-     * <p>          "childName": "CCID number of the device SIM card",</p>
-     * <p>          "dataSpecs": {</p>
-     * <p>            "custom": true,</p>
-     * <p>            "dataType": "TEXT",</p>
-     * <p>            "length": 20</p>
-     * <p>          },</p>
-     * <p>          "dataType": "STRUCT",</p>
-     * <p>          "identifier": "CCID",</p>
-     * <p>          "name": "CCID number of the device SIM card"</p>
-     * <p>        },</p>
-     * <p>        {</p>
-     * <p>          "childDataType": "INT",</p>
-     * <p>          "childName": "Battery power",</p>
-     * <p>          "dataSpecs": {</p>
-     * <p>            "custom": true,</p>
-     * <p>            "dataType": "INT",</p>
-     * <p>            "max": "60000",</p>
-     * <p>            "min": "0",</p>
-     * <p>            "step": "1"</p>
-     * <p>          },</p>
-     * <p>          "dataType": "STRUCT",</p>
-     * <p>          "identifier": "battery",</p>
-     * <p>          "name": "Battery power"</p>
-     * <p>        },</p>
-     * <p>        {</p>
-     * <p>          "childDataType": "TEXT",</p>
-     * <p>          "childName": "Other information",</p>
-     * <p>          "dataSpecs": {</p>
-     * <p>            "custom": true,</p>
-     * <p>            "dataType": "TEXT",</p>
-     * <p>            "length": 1024</p>
-     * <p>          },</p>
-     * <p>          "dataType": "STRUCT",</p>
-     * <p>          "identifier": "other_info",</p>
-     * <p>          "name": "Other information"</p>
-     * <p>        }</p>
-     * <p>      ],</p>
-     * <p>      "dataType": "STRUCT",</p>
-     * <p>      "identifier": "DEV_INFO",</p>
-     * <p>      "name": "Device information",</p>
-     * <p>      "productKey": "a1T***",</p>
-     * <p>      "propertyId": 18786548,</p>
-     * <p>      "required": false,</p>
-     * <p>      "rwFlag": "READ_ONLY"</p>
-     * <p>    },</p>
-     * <p>    {</p>
-     * <p>      "custom": true,</p>
-     * <p>      "dataSpecs": {</p>
-     * <p>        "childDataType": "INT",</p>
-     * <p>        "custom": true,</p>
-     * <p>        "dataType": "ARRAY",</p>
-     * <p>        "size": 1,</p>
-     * <p>        "dataSpecs": {</p>
-     * <p>          "custom": true,</p>
-     * <p>          "dataType": "INT",</p>
-     * <p>          "max": "65535",</p>
-     * <p>          "min": "0",</p>
-     * <p>          "step": "1",</p>
-     * <p>          "unit": "ppm",</p>
-     * <p>          "unitName": "Parts per million"</p>
-     * <p>        }</p>
-     * <p>      },</p>
-     * <p>      "dataType": "ARRAY",</p>
-     * <p>      "identifier": "airRH_SR",</p>
-     * <p>      "name": "Dehumidifier humidity",</p>
-     * <p>      "productKey": "a1T***",</p>
-     * <p>      "propertyId": 18786551,</p>
-     * <p>      "required": false,</p>
-     * <p>      "rwFlag": "READ_ONLY"</p>
-     * <p>    }</p>
-     * <p>  ],</p>
-     * <p>  "services": [...],</p>
-     * <p>  "events": [...]</p>
-     * <p>}</p>
-     * <p>                                </p>
-     * <p>```</p>
-     * <br>
-     * <p>In the **properties** structure of the **ThingModelJson** parameter, you can use the **extendConfig** parameter to define the extended information of the TSL model. For more information, see [Data structure of ThingModelJson](~~150457~~).</p>
+     * <pre><code>
+     * {
+     *   &quot;properties&quot;: [
+     *     {
+     *       &quot;custom&quot;: true,
+     *       &quot;dataSpecsList&quot;: [
+     *         {
+     *           &quot;childDataType&quot;: &quot;TEXT&quot;,
+     *           &quot;childName&quot;: &quot;CCID number of the device SIM card&quot;,
+     *           &quot;dataSpecs&quot;: {
+     *             &quot;custom&quot;: true,
+     *             &quot;dataType&quot;: &quot;TEXT&quot;,
+     *             &quot;length&quot;: 20
+     *           },
+     *           &quot;dataType&quot;: &quot;STRUCT&quot;,
+     *           &quot;identifier&quot;: &quot;CCID&quot;,
+     *           &quot;name&quot;: &quot;CCID number of the device SIM card&quot;
+     *         },
+     *         {
+     *           &quot;childDataType&quot;: &quot;INT&quot;,
+     *           &quot;childName&quot;: &quot;Battery power&quot;,
+     *           &quot;dataSpecs&quot;: {
+     *             &quot;custom&quot;: true,
+     *             &quot;dataType&quot;: &quot;INT&quot;,
+     *             &quot;max&quot;: &quot;60000&quot;,
+     *             &quot;min&quot;: &quot;0&quot;,
+     *             &quot;step&quot;: &quot;1&quot;
+     *           },
+     *           &quot;dataType&quot;: &quot;STRUCT&quot;,
+     *           &quot;identifier&quot;: &quot;battery&quot;,
+     *           &quot;name&quot;: &quot;Battery power&quot;
+     *         },
+     *         {
+     *           &quot;childDataType&quot;: &quot;TEXT&quot;,
+     *           &quot;childName&quot;: &quot;Other information&quot;,
+     *           &quot;dataSpecs&quot;: {
+     *             &quot;custom&quot;: true,
+     *             &quot;dataType&quot;: &quot;TEXT&quot;,
+     *             &quot;length&quot;: 1024
+     *           },
+     *           &quot;dataType&quot;: &quot;STRUCT&quot;,
+     *           &quot;identifier&quot;: &quot;other_info&quot;,
+     *           &quot;name&quot;: &quot;Other information&quot;
+     *         }
+     *       ],
+     *       &quot;dataType&quot;: &quot;STRUCT&quot;,
+     *       &quot;identifier&quot;: &quot;DEV_INFO&quot;,
+     *       &quot;name&quot;: &quot;Device information&quot;,
+     *       &quot;productKey&quot;: &quot;a1T***&quot;,
+     *       &quot;propertyId&quot;: 18786548,
+     *       &quot;required&quot;: false,
+     *       &quot;rwFlag&quot;: &quot;READ_ONLY&quot;
+     *     },
+     *     {
+     *       &quot;custom&quot;: true,
+     *       &quot;dataSpecs&quot;: {
+     *         &quot;childDataType&quot;: &quot;INT&quot;,
+     *         &quot;custom&quot;: true,
+     *         &quot;dataType&quot;: &quot;ARRAY&quot;,
+     *         &quot;size&quot;: 1,
+     *         &quot;dataSpecs&quot;: {
+     *           &quot;custom&quot;: true,
+     *           &quot;dataType&quot;: &quot;INT&quot;,
+     *           &quot;max&quot;: &quot;65535&quot;,
+     *           &quot;min&quot;: &quot;0&quot;,
+     *           &quot;step&quot;: &quot;1&quot;,
+     *           &quot;unit&quot;: &quot;ppm&quot;,
+     *           &quot;unitName&quot;: &quot;Parts per million&quot;
+     *         }
+     *       },
+     *       &quot;dataType&quot;: &quot;ARRAY&quot;,
+     *       &quot;identifier&quot;: &quot;airRH_SR&quot;,
+     *       &quot;name&quot;: &quot;Dehumidifier humidity&quot;,
+     *       &quot;productKey&quot;: &quot;a1T***&quot;,
+     *       &quot;propertyId&quot;: 18786551,
+     *       &quot;required&quot;: false,
+     *       &quot;rwFlag&quot;: &quot;READ_ONLY&quot;
+     *     }
+     *   ],
+     *   &quot;services&quot;: [...],
+     *   &quot;events&quot;: [...]
+     * }
+     *                                 
+     * </code></pre>
+     * <p>In the <strong>properties</strong> structure of the <strong>ThingModelJson</strong> parameter, you can use the <strong>extendConfig</strong> parameter to define the extended information of the TSL model. For more information, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</p>
      */
     @NameInMap("ThingModelJson")
     public String thingModelJson;

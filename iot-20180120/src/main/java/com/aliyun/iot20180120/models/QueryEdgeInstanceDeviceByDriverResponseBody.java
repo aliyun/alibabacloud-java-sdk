@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryEdgeInstanceDeviceByDriverResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C2AEE142-A9ED-46C5-9EA4-BF0817F0D556</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceDeviceByDriverResponseBodyDataDeviceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Hathoyxglj9jpYPyw3WN******</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
@@ -84,15 +104,27 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceDeviceByDriverResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("DeviceList")
         public java.util.List<QueryEdgeInstanceDeviceByDriverResponseBodyDataDeviceList> deviceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

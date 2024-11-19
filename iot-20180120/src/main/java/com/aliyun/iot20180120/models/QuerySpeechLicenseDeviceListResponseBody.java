@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QuerySpeechLicenseDeviceListResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QuerySpeechLicenseDeviceListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,58 +95,84 @@ public class QuerySpeechLicenseDeviceListResponseBody extends TeaModel {
     public static class QuerySpeechLicenseDeviceListResponseBodyDataDeviceListItem extends TeaModel {
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The status of the device.</p>
-         * <br>
-         * <p>*   **ONLINE**: The device is online.</p>
-         * <p>*   **OFFLINE**: The device is offline.</p>
-         * <p>*   **UNACTIVE**: The device is not activated.</p>
-         * <p>*   **DISABLE**: The device is disabled.</p>
-         * <p>*   **DELETE**: The device is deleted.</p>
+         * <ul>
+         * <li><strong>ONLINE</strong>: The device is online.</li>
+         * <li><strong>OFFLINE</strong>: The device is offline.</li>
+         * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+         * <li><strong>DISABLE</strong>: The device is disabled.</li>
+         * <li><strong>DELETE</strong>: The device is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("DeviceStatus")
         public String deviceStatus;
 
         /**
          * <p>The expiration time of the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620624606000</p>
          */
         @NameInMap("ExpiryTime")
         public Long expiryTime;
 
         /**
          * <p>Indicates whether the device belongs to the specified device group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("InSpecifiedGroup")
         public Boolean inSpecifiedGroup;
 
         /**
          * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The license status.</p>
-         * <br>
-         * <p>*   **NORMAL**: The license is valid.</p>
-         * <p>*   **EXPIRE**: The license is expired.</p>
-         * <p>*   **EXPIRING**: The license is about to expire.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The license is valid.</li>
+         * <li><strong>EXPIRE</strong>: The license is expired.</li>
+         * <li><strong>EXPIRING</strong>: The license is about to expire.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("LicenseStatus")
         public String licenseStatus;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The ProductName of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ProductName")
         public String productName;
@@ -240,18 +276,27 @@ public class QuerySpeechLicenseDeviceListResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageId")
         public Integer pageId;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Total")
         public Integer total;

@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryShareProductNameByProductKeyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speech.InvalidIotInstanceId</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryShareProductNameByProductKeyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Invalid instance ID.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

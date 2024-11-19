@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceSpeechResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speechsolution.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryDeviceSpeechResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>speech solution has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class QueryDeviceSpeechResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceSpeechResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>wav</p>
+         */
         @NameInMap("AudioFormat")
         public String audioFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZFDZ</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("Size")
         public Float size;
 
@@ -128,12 +156,24 @@ public class QueryDeviceSpeechResponseBody extends TeaModel {
         @NameInMap("List")
         public QueryDeviceSpeechResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

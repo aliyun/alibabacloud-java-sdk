@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BindLicenseDeviceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see the "Error codes" section in this topic.</p>
+     * <p>The error code returned if the request fails. For more information, see the &quot;Error codes&quot; section in this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4F94B97-1D64-4080-BFD2-67461667AA43</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,30 +95,45 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
     public static class BindLicenseDeviceResponseBodyData extends TeaModel {
         /**
          * <p>The unique ID that can be used to query the progress of the batch binding operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         @NameInMap("CheckProgressId")
         public String checkProgressId;
 
         /**
          * <p>The number of devices that failed to be bound to the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FailSum")
         public Long failSum;
 
         /**
          * <p>The progress of the batch binding operation. The progress is a percentage. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The URL of the file that contains unbound devices. The devices failed to be bound to the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://***</p>
          */
         @NameInMap("ResultCsvFile")
         public String resultCsvFile;
 
         /**
          * <p>The number of devices to which the license is successfully bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SuccessSum")
         public Long successSum;

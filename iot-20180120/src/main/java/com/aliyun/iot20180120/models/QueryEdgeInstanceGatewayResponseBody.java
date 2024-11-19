@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
     /**
-     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message that is returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,12 +30,18 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28D159F4-980F-423D-95F0-F705E9DFC016</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
     public static class QueryEdgeInstanceGatewayResponseBodyGatewayList extends TeaModel {
         /**
          * <p>The name of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway_01</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The version number of Link IoT Edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.0.0</p>
          */
         @NameInMap("EdgeVersion")
         public String edgeVersion;
 
         /**
          * <p>The ID of the gateway in IoT Platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LuD9x5hiRUdVemWU****000101</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The key that uniquely identifies the product to which the gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1mAdeG****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

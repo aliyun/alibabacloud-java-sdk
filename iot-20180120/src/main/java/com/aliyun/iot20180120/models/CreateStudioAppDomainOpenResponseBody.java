@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +77,52 @@ public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
     }
 
     public static class CreateStudioAppDomainOpenResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a12******</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.test.com">www.aliyun.test.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1573</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YES</p>
+         */
         @NameInMap("IsBeian")
         public String isBeian;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a12*******</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C70B541046F64EAABE3*******</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 

@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +77,66 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
     }
 
     public static class QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a12*******</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1619598445000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1619598445000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1548</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YES</p>
+         */
         @NameInMap("IsBeian")
         public String isBeian;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a123********</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C70B541046F64EAAB*********</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -194,15 +242,31 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         @NameInMap("List")
         public QueryStudioAppDomainListOpenResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 

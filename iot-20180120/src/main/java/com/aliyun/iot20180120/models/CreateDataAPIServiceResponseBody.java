@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDataAPIServiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>57b144cf-09fc-4916-a272-a62902d5b207</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +77,24 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
     }
 
     public static class CreateDataAPIServiceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acs:iot:<em>:127103983461</em>***:serveapi/device/getDeviceCountByStatus2</p>
+         */
         @NameInMap("ApiSrn")
         public String apiSrn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1557839468865</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1557839468865</p>
+         */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListProductByTagsResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,24 +20,32 @@ public class ListProductByTagsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The details of the products returned if the call is successful. The details are included in the **ProductInfo** parameter.</p>
-     * <br>
-     * <p>>  The returned product information is sorted in reverse-chronological order based on the time when the products were created.</p>
+     * <p>The details of the products returned if the call is successful. The details are included in the <strong>ProductInfo</strong> parameter.</p>
+     * <blockquote>
+     * <p> The returned product information is sorted in reverse-chronological order based on the time when the products were created.</p>
+     * </blockquote>
      */
     @NameInMap("ProductInfos")
     public ListProductByTagsResponseBodyProductInfos productInfos;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,27 +98,40 @@ public class ListProductByTagsResponseBody extends TeaModel {
     public static class ListProductByTagsResponseBodyProductInfosProductInfo extends TeaModel {
         /**
          * <p>The time when the product was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545355537000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test product.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The node type of the product. Valid values:</p>
-         * <br>
-         * <p>*   **0**: device. Sub-devices cannot be attached to a device. A device can connect to IoT Platform directly or as a sub-device of a gateway.</p>
-         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</p>
+         * <ul>
+         * <li><strong>0</strong>: device. Sub-devices cannot be attached to a device. A device can connect to IoT Platform directly or as a sub-device of a gateway.</li>
+         * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NodeType")
         public Integer nodeType;
 
         /**
          * <p>The ProductKey of the product. A ProductKey is a globally unique identifier (GUID) issued by IoT Platform to a new product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

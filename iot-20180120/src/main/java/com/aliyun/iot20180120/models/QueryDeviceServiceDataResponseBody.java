@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceServiceDataResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code that is returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. The ID uniquely identifies the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +95,18 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
     public static class QueryDeviceServiceDataResponseBodyDataListServiceInfo extends TeaModel {
         /**
          * <p>The identifier of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Set</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
-         * <p>The input parameter of the service. The value is a string in the MAP format. Syntax: `key:value`.</p>
+         * <p>The input parameter of the service. The value is a string in the MAP format. Syntax: <code>key:value</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;LightAdjustLevel\&quot;:123}</p>
          */
         @NameInMap("InputData")
         public String inputData;
@@ -102,13 +118,19 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output parameter of the service. The value is a string in the MAP format. Syntax: `key:value`.</p>
+         * <p>The output parameter of the service. The value is a string in the MAP format. Syntax: <code>key:value</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;code\&quot;:200,\&quot;data\&quot;:{},\&quot;id\&quot;:\&quot;100686\&quot;,\&quot;message\&quot;:\&quot;success\&quot;,\&quot;version\&quot;:\&quot;1.0\&quot;}</p>
          */
         @NameInMap("OutputData")
         public String outputData;
 
         /**
          * <p>The time when the service was called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579249499000</p>
          */
         @NameInMap("Time")
         public String time;
@@ -188,19 +210,24 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
 
         /**
          * <p>The start time of service call records on the next page. </p>
-         * <br>
-         * <p>If you call the QueryDeviceServiceData operation to query the service call records on the next page, you must set the **StartTime** parameter to the value of this parameter.</p>
+         * <p>If you call the QueryDeviceServiceData operation to query the service call records on the next page, you must set the <strong>StartTime</strong> parameter to the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579335899000</p>
          */
         @NameInMap("NextTime")
         public Long nextTime;
 
         /**
          * <p>Indicates whether the next page exists.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>If the return value of the **NextValid** parameter is **true**, you can use the value of the **NextTime** parameter as the value of the **StartTime** parameter when you query the next page of results.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>If the return value of the <strong>NextValid</strong> parameter is <strong>true</strong>, you can use the value of the <strong>NextTime</strong> parameter as the value of the <strong>StartTime</strong> parameter when you query the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NextValid")
         public Boolean nextValid;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryPageByApplyIdResponseBody extends TeaModel {
     /**
-     * <p>The registered device list information returned if the call succeeds. The **ApplyDeviceInfo** parameter includes the details of the registered devices.</p>
+     * <p>The registered device list information returned if the call succeeds. The <strong>ApplyDeviceInfo</strong> parameter includes the details of the registered devices.</p>
      */
     @NameInMap("ApplyDeviceList")
     public QueryPageByApplyIdResponseBodyApplyDeviceList applyDeviceList;
 
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](/help/en/iot-platform/latest/bce100).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="/help/en/iot-platform/latest/bce100">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,39 +27,58 @@ public class QueryPageByApplyIdResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of devices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -141,26 +163,39 @@ public class QueryPageByApplyIdResponseBody extends TeaModel {
     public static class QueryPageByApplyIdResponseBodyApplyDeviceListApplyDeviceInfo extends TeaModel {
         /**
          * <p>The ID of the device (expired).</p>
-         * <br>
-         * <p>>  This parameter is no longer used. Do not use this parameter to identify a device. You can use the **IotId** parameter or a combination of the **ProductKey** and **DeviceName** parameters to identify a device.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. Do not use this parameter to identify a device. You can use the <strong>IotId</strong> parameter or a combination of the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters to identify a device.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gQG2GJ2y10m6hIk8****</p>
          */
         @NameInMap("DeviceId")
         public String deviceId;
 
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The DeviceSecret of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SkfeXXKrTgp1DbDxYr74mfJ5cnui****</p>
          */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
         /**
          * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vWxNur6BUApsqjv9****000100</p>
          */
         @NameInMap("IotId")
         public String iotId;

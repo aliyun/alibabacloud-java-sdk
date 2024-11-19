@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySceneRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySceneRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D4C3331B-0FA8-4A05-AFE2-54F698EDEAF7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,41 @@ public class QuerySceneRuleResponseBody extends TeaModel {
     }
 
     public static class QuerySceneRuleResponseBodyDataRuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1582004185000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582098176000</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         @NameInMap("RuleDescription")
         public String ruleDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f041397879ad4d89822811d741******</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RuleStatus")
         public Integer ruleStatus;
 
@@ -139,15 +175,27 @@ public class QuerySceneRuleResponseBody extends TeaModel {
     }
 
     public static class QuerySceneRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("RuleList")
         public java.util.List<QuerySceneRuleResponseBodyDataRuleList> ruleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

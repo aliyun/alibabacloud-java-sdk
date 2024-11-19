@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class InvokeDataAPIServiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E68FE5DC-4D7B-4987-B785-DF8C6F191F5D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -103,21 +115,37 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
     }
 
     public static class InvokeDataAPIServiceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acs:iot:<em>:127103983461</em>***:serveapi/device/getDeviceCountByStatus2</p>
+         */
         @NameInMap("ApiSrn")
         public String apiSrn;
 
         @NameInMap("FieldNameList")
         public InvokeDataAPIServiceResponseBodyDataFieldNameList fieldNameList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("ResultList")
         public InvokeDataAPIServiceResponseBodyDataResultList resultList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

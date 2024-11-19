@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.soundcodeservice.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySoundCodeScheduleListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sound code service has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +81,73 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
     }
 
     public static class QuerySoundCodeScheduleListResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-28</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23:59</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620634297000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INNER</p>
+         */
         @NameInMap("OpenType")
         public String openType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
+         */
         @NameInMap("ScheduleCode")
         public String scheduleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-28</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WORKING</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -205,12 +261,24 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySoundCodeScheduleListResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UnbindApplicationFromEdgeInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>361368ba5a094da9bf5625d092******</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tb4r9k3GWHJFWv******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

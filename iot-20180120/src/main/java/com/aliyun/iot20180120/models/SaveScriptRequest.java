@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SaveScriptRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot-n8t***</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("ParserId")
     public Long parserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>var data = payload(&quot;json&quot;)</p>
+     */
     @NameInMap("ScriptDraft")
     public String scriptDraft;
 

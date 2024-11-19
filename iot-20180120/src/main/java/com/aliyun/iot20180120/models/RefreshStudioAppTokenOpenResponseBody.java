@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RefreshStudioAppTokenOpenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class RefreshStudioAppTokenOpenResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +77,38 @@ public class RefreshStudioAppTokenOpenResponseBody extends TeaModel {
     }
 
     public static class RefreshStudioAppTokenOpenResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a12*******</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>webApp</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YES</p>
+         */
         @NameInMap("IsEnable")
         public String isEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cf245ddebd******</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("Type")
         public String type;
 

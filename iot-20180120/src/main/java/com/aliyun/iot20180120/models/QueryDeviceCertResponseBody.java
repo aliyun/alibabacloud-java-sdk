@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceCertResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryDeviceCertResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +77,31 @@ public class QueryDeviceCertResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceCertResponseBodyDeviceCertInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>636217374433****</p>
+         */
         @NameInMap("CertSN")
         public String certSN;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tXHf4ezGEHcwdyMwoCDHGBmk9avi****</p>
+         */
         @NameInMap("Certificate")
         public String certificate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CqXL5h5ysRTA4NxjABjj0010fa****</p>
+         */
         @NameInMap("PrivateKey")
         public String privateKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

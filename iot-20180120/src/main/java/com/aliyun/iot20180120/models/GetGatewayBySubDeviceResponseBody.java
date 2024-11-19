@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetGatewayBySubDeviceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,101 +95,150 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
     public static class GetGatewayBySubDeviceResponseBodyData extends TeaModel {
         /**
          * <p>The DeviceName of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The DeviceSecret of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dCYdTU3gw5Z77bsHjPk6lPHPVnBT****</p>
          */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
         /**
          * <p>The firmware version number of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1.0.1</p>
          */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
         /**
          * <p>The activation time of the gateway. The time is displayed in GMT. The time is the local time of the region where the gateway resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-18 23:25:30</p>
          */
         @NameInMap("GmtActive")
         public String gmtActive;
 
         /**
          * <p>The creation time of the gateway. The time is displayed in GMT. The time is the local time of the region where the gateway resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-18 16:58:33</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The last online time of the gateway. The time is displayed in GMT. The time is the local time of the region where the gateway resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-20 17:41:04</p>
          */
         @NameInMap("GmtOnline")
         public String gmtOnline;
 
         /**
          * <p>The IP address of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.<strong>.1</strong>.**</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The node type. The value 1 indicates that the device is a gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>The **ProductKey** of the product to which the gateway belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The name of the product to which the gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LinkIoT</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The status of the gateway device. Valid values:</p>
-         * <br>
-         * <p>*   **online**: The device is online.</p>
-         * <p>*   **offline**: The device is offline.</p>
-         * <p>*   **unactive**: The device is not activated.</p>
-         * <p>*   **disable**: The device is disabled.</p>
+         * <ul>
+         * <li><strong>online</strong>: The device is online.</li>
+         * <li><strong>offline</strong>: The device is offline.</li>
+         * <li><strong>unactive</strong>: The device is not activated.</li>
+         * <li><strong>disable</strong>: The device is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The activation time of the gateway. The time is displayed in UTC. The actual time of the region where the gateway resides is calculated based on the time zone of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-18T15:25:30.176Z</p>
          */
         @NameInMap("UtcActive")
         public String utcActive;
 
         /**
          * <p>The creation time of the gateway. The time is displayed in UTC. The actual time of the region where the gateway resides is calculated based on the time zone of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-18T08:58:33.000Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The last online time of the gateway. The time is displayed in UTC. The actual time of the region where the gateway resides is calculated based on the time zone of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-20T09:41:04.879Z</p>
          */
         @NameInMap("UtcOnline")
         public String utcOnline;
 
         /**
          * <p>The ID of the gateway device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyjPSDQE1L22z1d****000100</p>
          */
         @NameInMap("iotId")
         public String iotId;
 
         /**
          * <p>The region where the gateway resides. This region corresponds to the region that is displayed in the IoT Platform console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("region")
         public String region;

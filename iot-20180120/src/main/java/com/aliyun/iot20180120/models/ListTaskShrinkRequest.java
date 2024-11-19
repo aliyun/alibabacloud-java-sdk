@@ -4,21 +4,47 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListTaskShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Device")
     public String deviceShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sGWotgRk***010001</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22dhgg***</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>QUEUED</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public BatchGetEdgeInstanceChannelResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5B86570E-C1A7-4569-BF7B-F7F09EB35BEB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5d6016035c1a451daf174b1051******</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;protocol\&quot;:\&quot;TCP\&quot;, \&quot;ip\&quot;:\&quot;1.2.3.4\&quot;, \&quot;port\&quot;:1}</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JSON</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -136,9 +168,17 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceChannelResponseBodyDataChannel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BE0BD49EF5EF4D119D09CC1B25******</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>le_name0</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 

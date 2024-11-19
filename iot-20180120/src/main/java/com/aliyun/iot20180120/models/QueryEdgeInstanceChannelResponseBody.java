@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryEdgeInstanceChannelResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AA1EF007-0455-43C7-8E03-39D0BA20F4F5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5d6016035c1a451daf174b1051******</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;protocol\&quot;:\&quot;TCP\&quot;, \&quot;ip\&quot;:\&quot;1.2.3.4\&quot;, \&quot;port\&quot;:1}</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JSON</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -136,24 +168,48 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceChannelResponseBodyDataChannelListChannel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BE0BD49EF5EF4D119D09CC1B25******</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>le_name0</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
         @NameInMap("ConfigList")
         public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigList configList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-16 23:06:52</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1584371212000</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-16 23:06:52</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1584371212000</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
@@ -243,12 +299,24 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         @NameInMap("ChannelList")
         public QueryEdgeInstanceChannelResponseBodyDataChannelList channelList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

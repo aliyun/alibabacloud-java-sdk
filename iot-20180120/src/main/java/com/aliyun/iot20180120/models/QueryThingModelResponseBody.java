@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryThingModelResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,22 +26,32 @@ public class QueryThingModelResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The **ProductKey** of the product.</p>
+     * <p>The <strong>ProductKey</strong> of the product.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,8 +112,7 @@ public class QueryThingModelResponseBody extends TeaModel {
     public static class QueryThingModelResponseBodyData extends TeaModel {
         /**
          * <p>The features of the TSL model. The TSL data format of the default module is different from the TSL data format of a custom module.</p>
-         * <br>
-         * <p>For more information about the data format of the ThingModelJson parameter, see [Data structure of ThingModelJson](~~150457~~).</p>
+         * <p>For more information about the data format of the ThingModelJson parameter, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</p>
          */
         @NameInMap("ThingModelJson")
         public String thingModelJson;

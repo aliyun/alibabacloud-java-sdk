@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListParserDestinationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class ListParserDestinationResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,21 +80,45 @@ public class ListParserDestinationResponseBody extends TeaModel {
         @NameInMap("Configuration")
         public String configuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1003</p>
+         */
         @NameInMap("DestinationId")
         public Long destinationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsFailover")
         public Boolean isFailover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DataPurpose</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>REPUBLISH</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-27T12:45:43.000Z</p>
+         */
         @NameInMap("UtcCreated")
         public String utcCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-27T12:45:43.000Z</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 

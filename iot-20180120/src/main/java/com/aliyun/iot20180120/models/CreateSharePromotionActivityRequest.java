@@ -4,15 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateSharePromotionActivityRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1694315533000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-cv3********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task01</p>
+     */
     @NameInMap("SharePromotionActivityName")
     public String sharePromotionActivityName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1691547072000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

@@ -4,18 +4,37 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDestinationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Configuration")
     public String configuration;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-2w****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DataPurpose</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REPUBLISH</p>
+     */
     @NameInMap("Type")
     public String type;
 

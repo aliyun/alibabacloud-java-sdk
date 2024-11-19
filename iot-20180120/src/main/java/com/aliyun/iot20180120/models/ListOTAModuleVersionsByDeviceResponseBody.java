@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The module version information returned if the call is successful. The information was submitted by the device. For more information, see the **SimpleOTAModuleInfo** parameter in this table.</p>
+     * <p>The module version information returned if the call is successful. The information was submitted by the device. For more information, see the <strong>SimpleOTAModuleInfo</strong> parameter in this table.</p>
      */
     @NameInMap("Data")
     public ListOTAModuleVersionsByDeviceResponseBodyData data;
@@ -30,33 +36,49 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of module versions returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291438BA-6E10-4C4C-B761-243B9A0D324F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of module versions that was submitted by the device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -141,30 +163,45 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
     public static class ListOTAModuleVersionsByDeviceResponseBodyDataSimpleOTAModuleInfo extends TeaModel {
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDevice</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QjIFT***000101</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The name of the OTA module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>barcodeScanner</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The module version that was submitted by the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("ModuleVersion")
         public String moduleVersion;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aluctKe****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

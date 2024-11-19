@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchGetEdgeDriverResponseBody extends TeaModel {
     /**
-     * <p>The error code. Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     * <p>The error code. Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A42CAB88-6E26-4DC7-9A35-584D17E82DE0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. true indicates that the call was successful. false indicates that the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,74 +94,106 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
     public static class BatchGetEdgeDriverResponseBodyDriverList extends TeaModel {
         /**
          * <p>The CPU architecture that the driver supports. Valid values:</p>
-         * <br>
-         * <p>*   ARMv7</p>
-         * <p>*   ARMv7-HF</p>
-         * <p>*   AArch64</p>
-         * <p>*   x86-64</p>
-         * <p>*   x86</p>
+         * <ul>
+         * <li>ARMv7</li>
+         * <li>ARMv7-HF</li>
+         * <li>AArch64</li>
+         * <li>x86-64</li>
+         * <li>x86</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86-64</p>
          */
         @NameInMap("CpuArch")
         public String cpuArch;
 
         /**
          * <p>The ID of the driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fec565038d7544978d9aed5c1a******</p>
          */
         @NameInMap("DriverId")
         public String driverId;
 
         /**
          * <p>The name of the driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyLedDriver</p>
          */
         @NameInMap("DriverName")
         public String driverName;
 
         /**
          * <p>The communications protocol that the driver uses. Valid values:</p>
-         * <br>
-         * <p>*   modbus: Modbus protocol</p>
-         * <p>*   opc-ua: OPC UA protocol</p>
-         * <p>*   customize: custom protocol</p>
+         * <ul>
+         * <li>modbus: Modbus protocol</li>
+         * <li>opc-ua: OPC UA protocol</li>
+         * <li>customize: custom protocol</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("DriverProtocol")
         public String driverProtocol;
 
         /**
          * <p>The time when the driver was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581912859713</p>
          */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
         /**
          * <p>The time when the driver was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581912859713</p>
          */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
         /**
          * <p>Indicates whether the driver is a built-in driver.</p>
-         * <br>
-         * <p>*   true: indicates that the driver is a built-in driver, that is, the driver code is pre-configured on the gateway device.</p>
-         * <p>*   false: indicates that the driver is not a built-in driver.</p>
+         * <ul>
+         * <li>true: indicates that the driver is a built-in driver, that is, the driver code is pre-configured on the gateway device.</li>
+         * <li>false: indicates that the driver is not a built-in driver.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsBuiltIn")
         public Boolean isBuiltIn;
 
         /**
          * <p>The language in which the driver is programmed. Valid values:</p>
-         * <br>
-         * <p>*   nodejs8: Node.js v8</p>
-         * <p>*   python3: Python v3.5</p>
-         * <p>*   c: C</p>
+         * <ul>
+         * <li>nodejs8: Node.js v8</li>
+         * <li>python3: Python v3.5</li>
+         * <li>c: C</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>c</p>
          */
         @NameInMap("Runtime")
         public String runtime;
 
         /**
          * <p>The type of the driver. Valid values:</p>
-         * <br>
-         * <p>*   0: official driver</p>
-         * <p>*   1: custom driver</p>
+         * <ul>
+         * <li>0: official driver</li>
+         * <li>1: custom driver</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Integer type;

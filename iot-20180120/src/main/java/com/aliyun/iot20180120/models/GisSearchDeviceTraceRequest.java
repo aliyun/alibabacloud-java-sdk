@@ -4,21 +4,55 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GisSearchDeviceTraceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mock_device_name</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1645071254000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-a****13l</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MapMatch")
     public Integer mapMatch;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g3r****Vjta</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1645071254000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

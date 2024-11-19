@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GisSearchDeviceTraceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GisSearchDeviceTraceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4C717018-B6D4-5EB0-8495-2A4FF08D58CA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
     }
 
     public static class GisSearchDeviceTraceResponseBodyDataPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1645071254000</p>
+         */
         @NameInMap("LocateTime")
         public Long locateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120.0,30.0</p>
+         */
         @NameInMap("Location")
         public String location;
 
@@ -95,12 +119,20 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
     }
 
     public static class GisSearchDeviceTraceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mock_device_name</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
         @NameInMap("Points")
         public java.util.List<GisSearchDeviceTraceResponseBodyDataPoints> points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>g3r****Vjta</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

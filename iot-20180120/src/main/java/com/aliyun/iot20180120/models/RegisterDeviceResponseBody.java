@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class RegisterDeviceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class RegisterDeviceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,43 +95,60 @@ public class RegisterDeviceResponseBody extends TeaModel {
     public static class RegisterDeviceResponseBodyData extends TeaModel {
         /**
          * <p>The DevEUI of the LoRaWAN device. This parameter is returned only when you create a LoRaWAN device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e8SDdgeIlk3nED****</p>
          */
         @NameInMap("DevEui")
         public String devEui;
 
         /**
          * <p>The DeviceName of the device.</p>
-         * <br>
-         * <p>> Keep the information confidential.</p>
+         * <blockquote>
+         * <p>Keep the information confidential.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The DeviceSecret of the device.</p>
-         * <br>
-         * <p>> Keep the information confidential.</p>
+         * <blockquote>
+         * <p>Keep the information confidential.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mz2Canp4GB7qRVf1OYPNtRqB2anu****</p>
          */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
         /**
          * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
-         * <br>
-         * <p>> Keep the information confidential.</p>
+         * <blockquote>
+         * <p>Keep the information confidential.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1O4YPNtRqB2anumz2Canp4GB7q****</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The JoinEUI of the LoRaWAN device. This parameter is returned only when you create a LoRaWAN device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ede4tde8erth****</p>
          */
         @NameInMap("JoinEui")
         public String joinEui;
 
         /**
          * <p>The alias of the device.</p>
-         * <br>
          * <p>If you do not specify an alias for the device, this parameter is empty.</p>
          */
         @NameInMap("Nickname")
@@ -129,6 +156,9 @@ public class RegisterDeviceResponseBody extends TeaModel {
 
         /**
          * <p>The ProductKey of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

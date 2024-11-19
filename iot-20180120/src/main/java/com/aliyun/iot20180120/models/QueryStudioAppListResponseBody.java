@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioAppListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryStudioAppListResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +77,73 @@ public class QueryStudioAppListResponseBody extends TeaModel {
     }
 
     public static class QueryStudioAppListResponseBodyDataListAppInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a123********</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>322******</p>
+         */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a605*******</p>
+         */
         @NameInMap("AppSecret")
         public String appSecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-25 16:20:53</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-04-10 15:06:23</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-04-15 19:11:32</p>
+         */
         @NameInMap("GmtRelease")
         public String gmtRelease;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a123********</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>webApp</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -205,15 +257,31 @@ public class QueryStudioAppListResponseBody extends TeaModel {
         @NameInMap("List")
         public QueryStudioAppListResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 

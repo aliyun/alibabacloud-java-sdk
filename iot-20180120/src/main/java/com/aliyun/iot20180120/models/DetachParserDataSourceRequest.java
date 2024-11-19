@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DetachParserDataSourceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("DataSourceId")
     public Long dataSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-2w****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("ParserId")
     public Long parserId;
 

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceFileListResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -30,33 +36,49 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -141,24 +163,36 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
     public static class QueryDeviceFileListResponseBodyDataFileSummary extends TeaModel {
         /**
          * <p>The ID of each file. The ID is the unique identifier for the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xL0G67MBLBDtkR7GCfT******</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
          * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testFile2.txt</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The size of the file. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
          * <p>The time when the file was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-21T08:45:42.000Z</p>
          */
         @NameInMap("UtcCreatedOn")
         public String utcCreatedOn;

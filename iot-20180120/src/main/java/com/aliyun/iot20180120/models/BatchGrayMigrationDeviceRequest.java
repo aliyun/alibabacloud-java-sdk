@@ -4,9 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGrayMigrationDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>light</p>
+     */
     @NameInMap("DeviceNames")
     public java.util.List<String> deviceNames;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

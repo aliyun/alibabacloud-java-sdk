@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDeviceConfigResponseBody extends TeaModel {
     /**
-     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class BatchGetEdgeInstanceDeviceConfigResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4A102C2-36A5-4964-9694-0F8EFF95CCA8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class BatchGetEdgeInstanceDeviceConfigResponseBody extends TeaModel {
     public static class BatchGetEdgeInstanceDeviceConfigResponseBodyDeviceConfigListConfig extends TeaModel {
         /**
          * <p>The configuration content or the Object Storage Service (OSS) path of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;test\&quot;: \&quot;device_config_demo\&quot;}</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The format of the configuration. Valid values: KV (key-value pair), JSON (JSON string), and FILE (configuration file).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         @NameInMap("Format")
         public String format;
@@ -124,6 +142,9 @@ public class BatchGetEdgeInstanceDeviceConfigResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjI0Sd124XFYyjBY****000101</p>
          */
         @NameInMap("IotId")
         public String iotId;

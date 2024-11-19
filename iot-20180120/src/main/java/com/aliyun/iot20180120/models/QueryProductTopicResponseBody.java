@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryProductTopicResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The list of topic categories returned if the call is successful. For more information, see **ProductTopicInfo**.</p>
+     * <p>The list of topic categories returned if the call is successful. For more information, see <strong>ProductTopicInfo</strong>.</p>
      */
     @NameInMap("Data")
     public QueryProductTopicResponseBodyData data;
@@ -24,15 +27,22 @@ public class QueryProductTopicResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B953EAFF-CFF6-4FF8-BC94-8B89F018E4DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,6 +98,9 @@ public class QueryProductTopicResponseBody extends TeaModel {
 
         /**
          * <p>The description of the topic category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topicDesc</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -97,28 +110,38 @@ public class QueryProductTopicResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the topic category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>821****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The operation that devices can perform on the topic category. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Publish.</p>
-         * <p>*   **1**: Subscribe.</p>
-         * <p>*   **2**: Publish and Subscribe.</p>
+         * <ul>
+         * <li><strong>0</strong>: Publish.</li>
+         * <li><strong>1</strong>: Subscribe.</li>
+         * <li><strong>2</strong>: Publish and Subscribe.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Operation")
         public String operation;
 
         /**
          * <p>The ProductKey of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HMyB***</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
-         * <p>The topic category that does not include the \_productKey\_ and \_deviceName\_ levels.</p>
+         * <p>The topic category that does not include the <em>productKey</em> and <em>deviceName</em> levels.</p>
          */
         @NameInMap("TopicShortName")
         public String topicShortName;

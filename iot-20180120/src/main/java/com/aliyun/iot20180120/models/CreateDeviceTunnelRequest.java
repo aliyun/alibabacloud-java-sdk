@@ -7,18 +7,38 @@ public class CreateDeviceTunnelRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>light</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Q7uOhVRdZRRlDnTLv***00100</p>
+     */
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-<em><strong>-v64</strong></em></p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a1BwAGV***</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>reboot</p>
+     */
     @NameInMap("Udi")
     public String udi;
 

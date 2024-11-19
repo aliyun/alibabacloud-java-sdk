@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The update task information returned if the call is successful. For more information, see the following **SimpleOTATaskInfo**.</p>
+     * <p>The update task information returned if the call is successful. For more information, see the following <strong>SimpleOTATaskInfo</strong>.</p>
      */
     @NameInMap("Data")
     public ListOTAUnfinishedTaskByDeviceResponseBodyData data;
@@ -24,15 +27,22 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A59D3BE1-E9A3-43F3-9B50-B7C8DE165D9B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,83 +95,123 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
     public static class ListOTAUnfinishedTaskByDeviceResponseBodyDataSimpleOTATaskInfo extends TeaModel {
         /**
          * <p>The firmware version after the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.1</p>
          */
         @NameInMap("DestVersion")
         public String destVersion;
 
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The ID of the update package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q3j9OYBjUAZMv1hlMgdo03****</p>
          */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
         /**
          * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nadRdeffljdEndlfadgadfse****</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The ID of the update batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7glPHmaDYLAYMD1HHutT02****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The name of the OTA module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WifiConfigModify</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The ProductKey of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1GUfrM****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The name of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyProduct</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The firmware version before the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("SrcVersion")
         public String srcVersion;
 
         /**
          * <p>The ID of the update task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y3tOmCDNgpR8F9jnVEzC01****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The status of the update task.</p>
-         * <br>
-         * <p>*   **CONFIRM**: The update task is pending confirmation.</p>
-         * <p>*   **QUEUED**: The update notification is to be pushed.</p>
-         * <p>*   **NOTIFIED**: The update notification is pushed to the device.</p>
-         * <p>*   **IN_PROGRESS**: The update task is in progress.</p>
+         * <ul>
+         * <li><strong>CONFIRM</strong>: The update task is pending confirmation.</li>
+         * <li><strong>QUEUED</strong>: The update notification is to be pushed.</li>
+         * <li><strong>NOTIFIED</strong>: The update notification is pushed to the device.</li>
+         * <li><strong>IN_PROGRESS</strong>: The update task is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONFIRM</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
         /**
          * <p>The time when the update task was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-04T03:38:22.000Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The time when the update task was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-04T03:38:22.000Z</p>
          */
         @NameInMap("UtcModified")
         public String utcModified;

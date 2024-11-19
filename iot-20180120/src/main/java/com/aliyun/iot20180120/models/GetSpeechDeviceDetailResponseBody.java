@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetSpeechDeviceDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speechsolution.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetSpeechDeviceDetailResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>speech solution has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class GetSpeechDeviceDetailResponseBody extends TeaModel {
     }
 
     public static class GetSpeechDeviceDetailResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("AvailableSpace")
         public Float availableSpace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620624606000</p>
+         */
         @NameInMap("SpeechListUpdateTime")
         public Long speechListUpdateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("TotalSpace")
         public Float totalSpace;
 

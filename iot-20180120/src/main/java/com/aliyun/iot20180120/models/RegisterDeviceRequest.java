@@ -6,78 +6,102 @@ import com.aliyun.tea.*;
 public class RegisterDeviceRequest extends TeaModel {
     /**
      * <p>The AppKey of the LoRaWAN device.</p>
-     * <br>
-     * <p>When you create a LoRaWAN device, set **LoraNodeType** to **USERDEFINED**. This parameter is required.</p>
+     * <p>When you create a LoRaWAN device, set <strong>LoraNodeType</strong> to <strong>USERDEFINED</strong>. This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>674f***</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
     /**
      * <p>The DevEUI of the LoRaWAN device.</p>
-     * <br>
      * <p>This parameter is required when you create a LoRaWAN device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e8SDdgeIlk3nED****</p>
      */
     @NameInMap("DevEui")
     public String devEui;
 
     /**
-     * <p>The DeviceName of the device. The name must be 4 to 32 characters in length, and can contain letters, digits, hyphens (-), underscores (\_), at signs (@), periods (.), and colons (:).</p>
-     * <br>
+     * <p>The DeviceName of the device. The name must be 4 to 32 characters in length, and can contain letters, digits, hyphens (-), underscores (_), at signs (@), periods (.), and colons (:).</p>
      * <p>You can use a combination of the DeviceName and ProductKey parameters to identify a device.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, IoT Platform randomly generates a DeviceName.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, IoT Platform randomly generates a DeviceName.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>light</p>
      */
     @NameInMap("DeviceName")
     public String deviceName;
 
     /**
-     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
-     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The JoinEUI of the LoRaWAN device.</p>
-     * <br>
-     * <p>When you create a LoRaWAN device, set **LoraNodeType** to **USERDEFINED**. This parameter is required.</p>
+     * <p>When you create a LoRaWAN device, set <strong>LoraNodeType</strong> to <strong>USERDEFINED</strong>. This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ede4tde8erth****</p>
      */
     @NameInMap("JoinEui")
     public String joinEui;
 
     /**
      * <p>The type of the LoRaWAN device. Valid values:</p>
-     * <br>
-     * <p>*   **ALIYUNDEFINED**: The device is issued by Alibaba Cloud. You must specify **DevEui** and **PinCode**.</p>
-     * <p>*   **USERDEFINED**: The device is user-defined. You must specify **DevEui**, **JoinEui**, and **AppKey**.</p>
+     * <ul>
+     * <li><strong>ALIYUNDEFINED</strong>: The device is issued by Alibaba Cloud. You must specify <strong>DevEui</strong> and <strong>PinCode</strong>.</li>
+     * <li><strong>USERDEFINED</strong>: The device is user-defined. You must specify <strong>DevEui</strong>, <strong>JoinEui</strong>, and <strong>AppKey</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUNDEFINED</p>
      */
     @NameInMap("LoraNodeType")
     public String loraNodeType;
 
     /**
-     * <p>The alias of the device. The alias must be 4 to 64 characters in length, and can contain letters, digits, and underscores (\_).</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, IoT Platform does not generate an alias for the device.</p>
+     * <p>The alias of the device. The alias must be 4 to 64 characters in length, and can contain letters, digits, and underscores (_).</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, IoT Platform does not generate an alias for the device.</p>
+     * </blockquote>
      */
     @NameInMap("Nickname")
     public String nickname;
 
     /**
      * <p>The PIN code of the LoRaWAN device. This parameter is used to verify the DevEUI.</p>
-     * <br>
-     * <p>When you create a LoRaWAN device, set **LoraNodeType** to **ALIYUNDEFINED**. This parameter is required.</p>
+     * <p>When you create a LoRaWAN device, set <strong>LoraNodeType</strong> to <strong>ALIYUNDEFINED</strong>. This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DIe80dfeg*****</p>
      */
     @NameInMap("PinCode")
     public String pinCode;
 
     /**
      * <p>The ProductKey of the product to which the device belongs. A ProductKey is a GUID that is issued by IoT Platform to a product.</p>
-     * <br>
-     * <p>You can use the IoT Platform console or call the [QueryProductList](~~69271~~) operation to view the information about all products within the current account.</p>
+     * <p>You can use the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to view the information about all products within the current account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

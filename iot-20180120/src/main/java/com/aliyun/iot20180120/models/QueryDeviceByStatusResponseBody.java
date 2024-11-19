@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceByStatusResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The device list information returned if the call succeeds. The **SimpleDeviceInfo** parameter includes the details of the devices.</p>
+     * <p>The device list information returned if the call succeeds. The <strong>SimpleDeviceInfo</strong> parameter includes the details of the devices.</p>
      */
     @NameInMap("Data")
     public QueryDeviceByStatusResponseBodyData data;
@@ -24,39 +27,58 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of devices returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -141,65 +163,96 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
     public static class QueryDeviceByStatusResponseBodyDataSimpleDeviceInfo extends TeaModel {
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The secret of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sLefbFmN9SYfnWLJTePG893XNuRV****</p>
          */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
         /**
          * <p>The time when the device was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-18 10:46:32</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the device information was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-18 10:46:32</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Av8NGHGtwPrH9BYGLMBi00****</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The alias of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SensorInShanghai</p>
          */
         @NameInMap("Nickname")
         public String nickname;
 
         /**
          * <p>The ProductKey of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The status of the device. Valid values:</p>
-         * <br>
-         * <p>*   **UNACTIVE**: The device is not activated.</p>
-         * <p>*   **ONLINE**: The device is online.</p>
-         * <p>*   **OFFLINE**: The device is offline.</p>
-         * <p>*   **DISABLE**: The device is disabled.</p>
+         * <ul>
+         * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+         * <li><strong>ONLINE</strong>: The device is online.</li>
+         * <li><strong>OFFLINE</strong>: The device is offline.</li>
+         * <li><strong>DISABLE</strong>: The device is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the device was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-18T02:46:32.000Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The time when the device information was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-18T02:46:32.000Z</p>
          */
         @NameInMap("UtcModified")
         public String utcModified;
