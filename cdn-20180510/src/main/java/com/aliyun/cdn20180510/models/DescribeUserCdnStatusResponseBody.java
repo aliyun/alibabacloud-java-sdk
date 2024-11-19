@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserCdnStatusResponseBody extends TeaModel {
     /**
+     * <p>Indicates whetherAlibaba Cloud CDN is activated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,12 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>Indicates whether your account has overdue payments.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +27,8 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
     public Boolean inDebt;
 
     /**
+     * <p>Indicates whether the grace period for your overdue payments expired.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +36,8 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
     public Boolean inDebtOverdue;
 
     /**
+     * <p>Indicates whether the service is available.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +45,8 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
     public Boolean onService;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>39B1DC7F-9D25-5D54-8F02-6EE26A7F48CA</p>
      */
