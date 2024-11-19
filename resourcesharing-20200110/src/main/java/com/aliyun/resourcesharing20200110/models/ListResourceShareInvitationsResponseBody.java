@@ -59,7 +59,41 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
 
     public static class ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails extends TeaModel {
         /**
-         * <p>The type of the sharing operation. Valid values:</p>
+         * <p>This parameter is deprecated. The OperationType parameter is used instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Associate</p>
+         */
+        @NameInMap("AssociateType")
+        public String associateType;
+
+        /**
+         * <p>The failure description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You cannot access the specified resource at this time.</p>
+         */
+        @NameInMap("FailureDescription")
+        public String failureDescription;
+
+        /**
+         * <p>The failure cause. Valid values:</p>
+         * <ul>
+         * <li>Unavailable: The resource cannot be shared.</li>
+         * <li>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</li>
+         * <li>ZonalResourceInaccessible: The resource is unavailable in this region.</li>
+         * <li>InternalError: An internal error occurred during the check.</li>
+         * <li>UnsupportedOperation: You cannot perform this operation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unavailable</p>
+         */
+        @NameInMap("FailureReason")
+        public String failureReason;
+
+        /**
+         * <p>The operation type. Valid values:</p>
          * <ul>
          * <li>Associate</li>
          * <li>Disassociate</li>
@@ -68,15 +102,6 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Associate</p>
          */
-        @NameInMap("AssociateType")
-        public String associateType;
-
-        @NameInMap("FailureDescription")
-        public String failureDescription;
-
-        @NameInMap("FailureReason")
-        public String failureReason;
-
         @NameInMap("OperationType")
         public String operationType;
 
@@ -100,14 +125,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The failure status. Valid values:</p>
-         * <ul>
-         * <li>Unavailable: The resource cannot be shared.</li>
-         * <li>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</li>
-         * <li>ZonalResourceInaccessible: The resource is unavailable in this region.</li>
-         * <li>UnsupportedOperation: The operation is not allowed because another association exists.</li>
-         * <li>InternalError: An internal error occurred during the check.</li>
-         * </ul>
+         * <p>This parameter is deprecated. The FailureReason parameter is used instead.</p>
          * 
          * <strong>example:</strong>
          * <p>Unavailable</p>
@@ -116,7 +134,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The failure cause.</p>
+         * <p>This parameter is deprecated. The FailureDescription parameter is used instead.</p>
          * 
          * <strong>example:</strong>
          * <p>You cannot access the specified resource at this time.</p>

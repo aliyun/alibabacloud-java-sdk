@@ -48,7 +48,7 @@ public class ListResourceShareAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
@@ -70,6 +70,7 @@ public class ListResourceShareAssociationsRequest extends TeaModel {
 
     /**
      * <p>The IDs of the resource shares.</p>
+     * <p>Valid values of N: 1 to 5. This indicates that a maximum of five resource shares can be specified at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>rs-6GRmdD3X****</p>
