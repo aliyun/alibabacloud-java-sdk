@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRouteTableResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,24 +30,35 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether all the message routing relationships between topics are established.</p>
-     * <br>
-     * <p>*   **true**: All the message routing relationships between topics are established.</p>
-     * <p>*   **false**: Not all the message routing relationships between topics are established.</p>
+     * <ul>
+     * <li><strong>true</strong>: All the message routing relationships between topics are established.</li>
+     * <li><strong>false</strong>: Not all the message routing relationships between topics are established.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsAllSucceed")
     public Boolean isAllSucceed;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FCC27691-9151-4B93-9622-9C90F30542EC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

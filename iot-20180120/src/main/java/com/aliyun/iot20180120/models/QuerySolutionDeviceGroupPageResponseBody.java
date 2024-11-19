@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.tcloud.ProjectNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySolutionDeviceGroupPageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project not found</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
     }
 
     public static class QuerySolutionDeviceGroupPageResponseBodyDataListItemName extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("DeviceCount")
         public Long deviceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1356565656</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1357865658</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("GroupDesc")
         public String groupDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test***</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -161,12 +201,24 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySolutionDeviceGroupPageResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

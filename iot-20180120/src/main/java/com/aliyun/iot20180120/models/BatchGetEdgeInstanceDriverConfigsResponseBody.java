@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
     /**
-     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6113390-F507-458B-8544-7B01F945630B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
     public static class BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList extends TeaModel {
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dac71722ceac4a299dbf3e8dc3c8****</p>
          */
         @NameInMap("ConfigId")
         public String configId;
 
         /**
          * <p>The configuration content or the Object Storage Service (OSS) path of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;test\&quot;:123}</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The format of the configuration. Valid values: KV (key-value pair), JSON (JSON string), and FILE (configuration file).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The key of the configuration. If multiple configurations are available, keywords can be used to identify the configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("Key")
         public String key;
@@ -152,6 +176,9 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>021d154d2a2f4dd7a489773d9e04****</p>
          */
         @NameInMap("DriverId")
         public String driverId;

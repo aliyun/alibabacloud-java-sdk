@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class QueryTopicReverseRouteTableRequest extends TeaModel {
     /**
      * <p>The region where your devices reside. The region you specify must match the region that is specified in the console. Example: cn-shanghai.</p>
-     * <br>
-     * <p>>  This parameter is no longer used as an operation-specific request parameter. It is included in common request parameters.</p>
+     * <blockquote>
+     * <p> This parameter is no longer used as an operation-specific request parameter. It is included in common request parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The destination topic that receives messages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Topic")
     public String topic;

@@ -4,18 +4,42 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateSoundCodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST123</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OPEN</p>
+     */
     @NameInMap("OpenType")
     public String openType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
+     */
     @NameInMap("SoundCodeContent")
     public String soundCodeContent;
 

@@ -4,12 +4,30 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchAddDataForApiSourceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cxatswiniekxw***</p>
+     */
     @NameInMap("ApiId")
     public String apiId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;value1&quot;,&quot;ts&quot;:1637658286000},{&quot;key&quot;:&quot;value2&quot;,&quot;ts&quot;:1637658287000}]</p>
+     */
     @NameInMap("ContentList")
     public String contentList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-0pp1n*****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

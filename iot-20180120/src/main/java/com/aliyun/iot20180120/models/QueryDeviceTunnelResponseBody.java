@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceTunnelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryDeviceTunnelResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,36 +80,80 @@ public class QueryDeviceTunnelResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONNECTED</p>
+         */
         @NameInMap("DeviceConnState")
         public String deviceConnState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>light</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv***00100</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a1rYuVF***</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DISCONNECTED</p>
+         */
         @NameInMap("SourceConnState")
         public String sourceConnState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d4098041-a560-***</p>
+         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN</p>
+         */
         @NameInMap("TunnelState")
         public String tunnelState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reboot</p>
+         */
         @NameInMap("Udi")
         public String udi;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-22T12:44:12.000Z</p>
+         */
         @NameInMap("UtcClosed")
         public String utcClosed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-22T12:44:12.000Z</p>
+         */
         @NameInMap("UtcCreated")
         public String utcCreated;
 

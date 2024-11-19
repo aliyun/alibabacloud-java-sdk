@@ -4,21 +4,47 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateSchedulePeriodRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Md3ZiTL888K9llXDy7890***********</p>
+     */
     @NameInMap("PeriodCode")
     public String periodCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
+     */
     @NameInMap("SoundCodeContent")
     public String soundCodeContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

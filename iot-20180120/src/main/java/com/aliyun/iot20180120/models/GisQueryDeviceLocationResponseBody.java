@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GisQueryDeviceLocationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<GisQueryDeviceLocationResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4C717018-B6D4-5EB0-8495-2A4FF08D58CA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +81,58 @@ public class GisQueryDeviceLocationResponseBody extends TeaModel {
     }
 
     public static class GisQueryDeviceLocationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>90000</p>
+         */
         @NameInMap("Adcode")
         public Long adcode;
 
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CoordinateSystem")
         public Integer coordinateSystem;
 
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mock_device_name</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30.0</p>
+         */
         @NameInMap("Latitude")
         public Float latitude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120.0</p>
+         */
         @NameInMap("Longitude")
         public Float longitude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>g3r****Vjta</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

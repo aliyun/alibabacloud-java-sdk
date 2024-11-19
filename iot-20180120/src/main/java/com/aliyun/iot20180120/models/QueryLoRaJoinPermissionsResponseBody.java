@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +17,24 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
     @NameInMap("JoinPermissions")
     public QueryLoRaJoinPermissionsResponseBodyJoinPermissions joinPermissions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +92,45 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
     }
 
     public static class QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>A</p>
+         */
         @NameInMap("ClassMode")
         public String classMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80***</p>
+         */
         @NameInMap("JoinPermissionId")
         public String joinPermissionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ForTest</p>
+         */
         @NameInMap("JoinPermissionName")
         public String joinPermissionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOCAL</p>
+         */
         @NameInMap("JoinPermissionType")
         public String joinPermissionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1375364789****</p>
+         */
         @NameInMap("OwnerAliyunPk")
         public String ownerAliyunPk;
 

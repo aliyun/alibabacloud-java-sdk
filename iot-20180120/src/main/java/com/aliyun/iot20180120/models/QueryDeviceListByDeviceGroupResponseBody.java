@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The device list information returned if the call succeeds. For more information, see the following **SimpleDeviceInfo** parameter.</p>
+     * <p>The device list information returned if the call succeeds. For more information, see the following <strong>SimpleDeviceInfo</strong> parameter.</p>
      */
     @NameInMap("Data")
     public QueryDeviceListByDeviceGroupResponseBodyData data;
@@ -24,39 +27,58 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B1A921D9-1061-4D45-9F12-EA6B0FDEDE30</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of devices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -141,24 +163,36 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
     public static class QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo extends TeaModel {
         /**
          * <p>The name of each device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ios_1207_08</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TfmUAeJjQQhCPH84UVNn0010c6****</p>
          */
         @NameInMap("IotId")
         public String iotId;
 
         /**
          * <p>The ProductKey of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1hWjHD****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The ProductName of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WIFIdevice</p>
          */
         @NameInMap("ProductName")
         public String productName;

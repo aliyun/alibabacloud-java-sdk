@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ReupgradeOTATaskResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,15 +21,22 @@ public class ReupgradeOTATaskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291438BA-6E10-4C4C-B761-243B9A0D324F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;

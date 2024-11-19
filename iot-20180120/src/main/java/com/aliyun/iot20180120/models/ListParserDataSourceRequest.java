@@ -4,15 +4,35 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListParserDataSourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot-2w****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DataSource</p>
+     */
     @NameInMap("SearchName")
     public String searchName;
 

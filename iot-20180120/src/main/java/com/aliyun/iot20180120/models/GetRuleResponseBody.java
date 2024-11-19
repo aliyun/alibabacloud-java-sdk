@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetRuleResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,6 +21,9 @@ public class GetRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58D4CEC0-3E95-4DBE-AFC1-809D1400E52F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,9 +36,13 @@ public class GetRuleResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,109 +95,160 @@ public class GetRuleResponseBody extends TeaModel {
     public static class GetRuleResponseBodyRuleInfo extends TeaModel {
         /**
          * <p>The ID of the user who created the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000000000</p>
          */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
         /**
          * <p>The time when the rule was created. The time is displayed in UTC-6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thu Feb 28 14:14:33 CST 2019</p>
          */
         @NameInMap("Created")
         public String created;
 
         /**
-         * <p>The data type of the rule. Valid values: **JSON** and **BINARY** .</p>
+         * <p>The data type of the rule. Valid values: <strong>JSON</strong> and <strong>BINARY</strong> .</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The time when the rule was last modified. The time is displayed in UTC-6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thu Feb 28 14:20:58 CST 2019</p>
          */
         @NameInMap("Modified")
         public String modified;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iotrules</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ProductKey of the product to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1KiV******</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The description of this rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule1Desc</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
-         * <p>The values of **Select** in the SQL statements of the rule.</p>
+         * <p>The values of <strong>Select</strong> in the SQL statements of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deviceName() as deviceName</p>
          */
         @NameInMap("Select")
         public String select;
 
         /**
-         * <p>The topic to which the rule applies. The topic does not include the ProductKey level. Format: `${deviceName}/topicShortName`. ${deviceName} indicates the name of the device, and topicShortName indicates the custom name of the topic.</p>
-         * <br>
-         * <p>>  For information about how to use the `+` or `#` wildcard in a topic, see [Topic wildcards](~~73731~~).</p>
+         * <p>The topic to which the rule applies. The topic does not include the ProductKey level. Format: <code>${deviceName}/topicShortName</code>. ${deviceName} indicates the name of the device, and topicShortName indicates the custom name of the topic.</p>
+         * <blockquote>
+         * <p> For information about how to use the <code>+</code> or <code>#</code> wildcard in a topic, see <a href="https://help.aliyun.com/document_detail/73731.html">Topic wildcards</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>+/user/pm25data</p>
          */
         @NameInMap("ShortTopic")
         public String shortTopic;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **RUNNING**: Running</p>
-         * <p>*   **STOP**: Stopped</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: Running</li>
+         * <li><strong>STOP</strong>: Stopped</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The complete topic to which the rule applies. Format: `${productKey}/${deviceName}/topicShortName`.</p>
-         * <br>
-         * <p>>  For information about how to use the `+` or `#` wildcard in a topic, see [Topic wildcards](~~73731~~).</p>
+         * <p>The complete topic to which the rule applies. Format: <code>${productKey}/${deviceName}/topicShortName</code>.</p>
+         * <blockquote>
+         * <p> For information about how to use the <code>+</code> or <code>#</code> wildcard in a topic, see <a href="https://help.aliyun.com/document_detail/73731.html">Topic wildcards</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/a1QsMlL44pp/+/user/pm25data</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
          * <p>The type of the topic. This parameter is returned if you set the SQL statement for the rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: a basic communication topic or TSL communication topic.</p>
-         * <p>*   **1**: a custom topic.</p>
-         * <p>*   **2**: a device status topic.</p>
-         * <br>
-         * <p>If no SQL statement is set for the rule, the value **-1** is returned.</p>
+         * <ul>
+         * <li><strong>0</strong>: a basic communication topic or TSL communication topic.</li>
+         * <li><strong>1</strong>: a custom topic.</li>
+         * <li><strong>2</strong>: a device status topic.</li>
+         * </ul>
+         * <p>If no SQL statement is set for the rule, the value <strong>-1</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TopicType")
         public Integer topicType;
 
         /**
          * <p>The time when the rule was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-28T06:14:33.000Z</p>
          */
         @NameInMap("UtcCreated")
         public String utcCreated;
 
         /**
          * <p>The time when the rule was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-28T06:20:58.000Z</p>
          */
         @NameInMap("UtcModified")
         public String utcModified;
 
         /**
-         * <p>The **Where** query condition in the SQL statements of the rule.</p>
+         * <p>The <strong>Where</strong> query condition in the SQL statements of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Temperature&gt;35</p>
          */
         @NameInMap("Where")
         public String where;

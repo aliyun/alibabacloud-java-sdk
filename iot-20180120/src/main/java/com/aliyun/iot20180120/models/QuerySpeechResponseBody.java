@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speechsolution.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySpeechResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>speech solution has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class QuerySpeechResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechResponseBodyDataSoundCodeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AdditionalDuration")
         public Integer additionalDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
+         */
         @NameInMap("SoundCodeContent")
         public String soundCodeContent;
 
@@ -95,33 +119,69 @@ public class QuerySpeechResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>wav</p>
+         */
         @NameInMap("AudioFormat")
         public String audioFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>identifying</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableSoundCode")
         public Boolean enableSoundCode;
 
         @NameInMap("SoundCodeConfig")
         public QuerySpeechResponseBodyDataSoundCodeConfig soundCodeConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
+         */
         @NameInMap("SpeechCode")
         public String speechCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("SpeechType")
         public String speechType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Siyue</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 

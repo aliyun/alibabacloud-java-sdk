@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speechsolution.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySpeechListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>speech solution has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class QuerySpeechListResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechListResponseBodyDataListItemsSpeechListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>identifying</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
+         */
         @NameInMap("SpeechCode")
         public String speechCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Siyue</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
@@ -136,24 +168,48 @@ public class QuerySpeechListResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechListResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>wav</p>
+         */
         @NameInMap("AudioFormat")
         public String audioFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>identifying</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
+         */
         @NameInMap("SpeechCode")
         public String speechCode;
 
         @NameInMap("SpeechList")
         public QuerySpeechListResponseBodyDataListItemsSpeechList speechList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("SpeechType")
         public String speechType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Siyue</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
@@ -243,12 +299,24 @@ public class QuerySpeechListResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySpeechListResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

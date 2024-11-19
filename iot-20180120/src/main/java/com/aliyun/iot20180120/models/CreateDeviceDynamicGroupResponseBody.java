@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4D6D7F71-1C94-4160-8511-EFF4B8F0634D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +77,38 @@ public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
     }
 
     public static class CreateDeviceDynamicGroupResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>product_key = &quot;a1***&quot; and name LIKE &quot;test%&quot;</p>
+         */
         @NameInMap("DynamicGroupExpression")
         public String dynamicGroupExpression;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupDesc")
         public String groupDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HtMLECKbdJQL***</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>grouptest</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-17T11:19:31.000Z</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 

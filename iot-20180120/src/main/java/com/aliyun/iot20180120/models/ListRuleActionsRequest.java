@@ -5,20 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListRuleActionsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. On the **Overview** page in the IoT Platform console, you can view the **ID** of the instance.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</p>
-     * <p>>*   If the **Overview** page or instance ID is not displayed in the IoT Platform console, you do not need to configure this parameter.</p>
-     * <br>
-     * <p>For more information about the instance, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. On the <strong>Overview</strong> page in the IoT Platform console, you can view the <strong>ID</strong> of the instance.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</li>
+     * <li>If the <strong>Overview</strong> page or instance ID is not displayed in the IoT Platform console, you do not need to configure this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information about the instance, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>You can log on to the IoT Platform console and go to the details page of the instance that you want to manage. On the instance details page, choose **Rules Engine** > **Data Forwarding** to obtain the rule ID. Alternatively, you can call the [ListRule](~~69486~~) operation to view the value of the **Id** parameter in the response.</p>
+     * <p>You can log on to the IoT Platform console and go to the details page of the instance that you want to manage. On the instance details page, choose <strong>Rules Engine</strong> &gt; <strong>Data Forwarding</strong> to obtain the rule ID. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/69486.html">ListRule</a> operation to view the value of the <strong>Id</strong> parameter in the response.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

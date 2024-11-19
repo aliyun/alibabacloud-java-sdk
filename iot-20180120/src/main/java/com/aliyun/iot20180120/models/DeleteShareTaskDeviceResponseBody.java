@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteShareTaskDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DeleteShareTaskDeviceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>An internal error occurred. Try again later.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AF71BF1D-B552-47CD-B34B-352557627992</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class DeleteShareTaskDeviceResponseBody extends TeaModel {
     }
 
     public static class DeleteShareTaskDeviceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
+         */
         @NameInMap("ProgressId")
         public String progressId;
 

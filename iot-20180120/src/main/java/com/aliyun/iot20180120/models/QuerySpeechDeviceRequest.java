@@ -4,24 +4,54 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechDeviceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("AvailableSpace")
     public String availableSpace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>smaller</p>
+     */
     @NameInMap("AvailableSpaceScope")
     public String availableSpaceScope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageId")
     public Integer pageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4de2c367**<strong>8c585e5992</strong></p>
+     */
     @NameInMap("ProjectCode")
     public String projectCode;
 

@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetDataAPIServiceDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>57b144cf-09fc-4916-a272-a62902d5b207</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,15 +80,31 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Example")
         public String example;
 
+        /**
+         * <strong>example:</strong>
+         * <p>status</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INTEGER</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -150,15 +178,31 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Example")
         public String example;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deviceCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INTEGER</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -229,6 +273,10 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SELECT COUNT(*) FROM ${system.device} WHERE status = 1</p>
+         */
         @NameInMap("OriginSql")
         public String originSql;
 
@@ -238,6 +286,10 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         @NameInMap("ResponseParams")
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParams responseParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SELECT COUNT(*) as deviceCount FROM ${system.device} WHERE status = ${status}</p>
+         */
         @NameInMap("TemplateSql")
         public String templateSql;
 
@@ -281,15 +333,31 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataAPIServiceDetailResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/device/getDeviceCountByStatus</p>
+         */
         @NameInMap("ApiPath")
         public String apiPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs:iot:<em>:127103983461</em>***:serveapi/device/getDeviceCountByStatus2</p>
+         */
         @NameInMap("ApiSrn")
         public String apiSrn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1557839468865</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JSON</p>
+         */
         @NameInMap("DateFormat")
         public String dateFormat;
 
@@ -299,18 +367,34 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1557839468865</p>
+         */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GET/POST</p>
+         */
         @NameInMap("RequestMethod")
         public String requestMethod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
+         */
         @NameInMap("RequestProtocol")
         public String requestProtocol;
 
         @NameInMap("SqlTemplateDTO")
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO sqlTemplateDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

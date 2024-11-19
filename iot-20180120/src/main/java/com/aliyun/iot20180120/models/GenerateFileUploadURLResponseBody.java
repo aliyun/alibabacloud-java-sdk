@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GenerateFileUploadURLResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +77,41 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
     }
 
     public static class GenerateFileUploadURLResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://iotx-bucket-name.oss-***.aliyuncs.com">https://iotx-bucket-name.oss-***.aliyuncs.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("ObjectStorage")
         public String objectStorage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cS8uRRy54Rsz****</p>
+         */
         @NameInMap("OssAccessKeyId")
         public String ossAccessKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF****</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v6lViO4FBvfquajQjg20K5hK****</p>
+         */
         @NameInMap("Signature")
         public String signature;
 

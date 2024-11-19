@@ -4,30 +4,68 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateSoundCodeScheduleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-03-31</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23:59</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Md3ZiTL888K9llXDy7890***********</p>
+     */
     @NameInMap("ScheduleCode")
     public String scheduleCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-03-31</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WORKING</p>
+     */
     @NameInMap("Status")
     public String status;
 

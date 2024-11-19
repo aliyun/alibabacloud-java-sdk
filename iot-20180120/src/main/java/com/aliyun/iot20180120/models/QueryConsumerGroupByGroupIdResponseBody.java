@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryConsumerGroupByGroupIdResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryConsumerGroupByGroupIdResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73B9DF43-7780-47DE-8BED-077729D28BD2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +95,18 @@ public class QueryConsumerGroupByGroupIdResponseBody extends TeaModel {
     public static class QueryConsumerGroupByGroupIdResponseBodyData extends TeaModel {
         /**
          * <p>The time when the consumer group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format. The time is displayed in UTC and accurate to milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-20T00:05:20.000Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nJRaJPn5U1JITGf******</p>
          */
         @NameInMap("GroupId")
         public String groupId;

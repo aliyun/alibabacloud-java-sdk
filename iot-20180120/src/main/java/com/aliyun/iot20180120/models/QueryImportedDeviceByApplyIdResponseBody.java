@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryImportedDeviceByApplyIdResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,45 +21,67 @@ public class QueryImportedDeviceByApplyIdResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A system exception occurred.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The **ProductKey** of the product to which the devices belong.</p>
+     * <p>The <strong>ProductKey</strong> of the product to which the devices belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalPage")
     public Integer totalPage;
@@ -141,30 +166,45 @@ public class QueryImportedDeviceByApplyIdResponseBody extends TeaModel {
     public static class QueryImportedDeviceByApplyIdResponseBodyDeviceListDevice extends TeaModel {
         /**
          * <p>The DeviceName of the device.</p>
-         * <br>
-         * <p>>  Keep the information confidential.</p>
+         * <blockquote>
+         * <p> Keep the information confidential.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The DeviceSecret of the device.</p>
-         * <br>
-         * <p>>  Keep the information confidential.</p>
+         * <blockquote>
+         * <p> Keep the information confidential.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>b4d43f7******10ba5e5</p>
          */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The serial number (SN) of the device.</p>
-         * <br>
-         * <p>> If you did not specify an SN for the device, this parameter is empty.</p>
+         * <blockquote>
+         * <p>If you did not specify an SN for the device, this parameter is empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>QC4******001</p>
          */
         @NameInMap("Sn")
         public String sn;

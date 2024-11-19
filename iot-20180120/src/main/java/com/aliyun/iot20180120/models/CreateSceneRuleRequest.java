@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateSceneRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -13,6 +17,12 @@ public class CreateSceneRuleRequest extends TeaModel {
     @NameInMap("RuleDescription")
     public String ruleDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

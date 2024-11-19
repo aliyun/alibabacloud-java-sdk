@@ -6,40 +6,56 @@ import com.aliyun.tea.*;
 public class QueryConsumerGroupListRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether to perform a fuzzy search. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a fuzzy search. You must specify the **GroupName** parameter.</p>
-     * <p>*   **false**: queries all consumer groups of the current account.</p>
-     * <br>
-     * <p>Default value: **false**.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a fuzzy search. You must specify the <strong>GroupName</strong> parameter.</li>
+     * <li><strong>false</strong>: queries all consumer groups of the current account.</li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Fuzzy")
     public Boolean fuzzy;
 
     /**
-     * <p>The name of the consumer group to be queried. This parameter is required if the **Fuzzy** parameter is set to **true**.</p>
+     * <p>The name of the consumer group to be queried. This parameter is required if the <strong>Fuzzy</strong> parameter is set to <strong>true</strong>.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
-     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 1000.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

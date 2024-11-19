@@ -4,144 +4,203 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscribeRelationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>nJRaJPn5U1JITGfjBO9l00****</p>
+     */
     @NameInMap("ConsumerGroupIds")
     public java.util.List<String> consumerGroupIds;
 
     /**
      * <p>Specifies whether to push upstream device messages. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeviceDataFlag")
     public Boolean deviceDataFlag;
 
     /**
      * <p>Specifies whether to push messages about device lifecycle changes. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeviceLifeCycleFlag")
     public Boolean deviceLifeCycleFlag;
 
     /**
      * <p>Specifies whether to push messages about device status changes. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeviceStatusChangeFlag")
     public Boolean deviceStatusChangeFlag;
 
     /**
      * <p>Specifies whether to push messages about device tag changes. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes. This parameter is valid only if you set the **Type** parameter to **AMQP**.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes. This parameter is valid only if you set the <strong>Type</strong> parameter to <strong>AMQP</strong>.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeviceTagFlag")
     public Boolean deviceTagFlag;
 
     /**
      * <p>Specifies whether to push messages about topological relationship changes of devices. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes. This parameter is valid only for gateway products.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes. This parameter is valid only for gateway products.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeviceTopoLifeCycleFlag")
     public Boolean deviceTopoLifeCycleFlag;
 
     /**
      * <p>Specifies whether to push messages when a gateway detects new sub-devices. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes. This parameter is valid only for gateway products.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes. This parameter is valid only for gateway products.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("FoundDeviceListFlag")
     public Boolean foundDeviceListFlag;
 
     /**
-     * <p>The ID of the instance. You can view the ID of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</p>
-     * <p>>*   If no **Overview** page or **ID** is generated for your instance, you do not need to configure this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</li>
+     * <li>If no <strong>Overview</strong> page or <strong>ID</strong> is generated for your instance, you do not need to configure this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The configurations of the MNS queue. If you set the **Type** parameter to **AMQP**, this parameter is required.</p>
-     * <br>
-     * <p>For more information, see the "Definition of the MnsConfiguration parameter" section.</p>
+     * <p>The configurations of the MNS queue. If you set the <strong>Type</strong> parameter to <strong>AMQP</strong>, this parameter is required.</p>
+     * <p>For more information, see the &quot;Definition of the MnsConfiguration parameter&quot; section.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;queueName&quot;: &quot;mns-test-topic1&quot;,     &quot;regionName&quot;: &quot;cn-shanghai&quot;,     &quot;role&quot;: {         &quot;roleArn&quot;: &quot;acs:ram::5645***:role/aliyuniotaccessingmnsrole&quot;,         &quot;roleName&quot;: &quot;AliyunIOTAccessingMNSRole&quot;     } }</p>
      */
     @NameInMap("MnsConfiguration")
     public String mnsConfiguration;
 
     /**
      * <p>Specifies whether to push notifications about the status of over-the-air (OTA) update batches. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("OtaEventFlag")
     public Boolean otaEventFlag;
 
     /**
      * <p>Specifies whether to push notifications about the status of OTA update batches. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes. This parameter is valid only if you set the **Type** parameter to **AMQP**.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes. This parameter is valid only if you set the <strong>Type</strong> parameter to <strong>AMQP</strong>.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("OtaJobFlag")
     public Boolean otaJobFlag;
 
     /**
      * <p>Specifies whether to push messages about the version numbers of OTA modules. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes. This parameter is valid only if you set the **Type** parameter to **AMQP**.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes. This parameter is valid only if you set the <strong>Type</strong> parameter to <strong>AMQP</strong>.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("OtaVersionFlag")
     public Boolean otaVersionFlag;
 
     /**
-     * <p>The **ProductKey** of the product that is specified for the subscription.</p>
+     * <p>The <strong>ProductKey</strong> of the product that is specified for the subscription.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1fyXVF****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>Specifies whether to receive the messages of a specific subscribed product.</p>
-     * <br>
-     * <p>If you subscribe to JT/T 808 gateway products, you must configure the **SubscribeFlags** parameter. Set the value to the following code.</p>
-     * <br>
-     * <p>```</p>
-     * <br>
-     * <p>{</p>
-     * <p>    "jt808DeviceDataFlag": true</p>
-     * <p>}</p>
-     * <p>```</p>
+     * <p>If you subscribe to JT/T 808 gateway products, you must configure the <strong>SubscribeFlags</strong> parameter. Set the value to the following code.</p>
+     * <pre><code>
+     * {
+     *     &quot;jt808DeviceDataFlag&quot;: true
+     * }
+     * </code></pre>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;jt808DeviceDataFlag&quot;: true }</p>
      */
     @NameInMap("SubscribeFlags")
     public String subscribeFlags;
 
     /**
      * <p>Specifies whether to push upstream historical Thing Specification Language (TSL) data. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ThingHistoryFlag")
     public Boolean thingHistoryFlag;
 
     /**
      * <p>The type of the subscription. Valid values:</p>
-     * <br>
-     * <p>*   **MNS**</p>
-     * <p>*   **AMQP**</p>
+     * <ul>
+     * <li><strong>MNS</strong></li>
+     * <li><strong>AMQP</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AMQP</p>
      */
     @NameInMap("Type")
     public String type;

@@ -5,34 +5,47 @@ import com.aliyun.tea.*;
 
 public class QueryProductCertInfoResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingProductKey</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ProductKey is mandatory for this action.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The returned certificate information that includes the value of the **IssueModel** parameter.</p>
+     * <p>The returned certificate information that includes the value of the <strong>IssueModel</strong> parameter.</p>
      */
     @NameInMap("ProductCertInfo")
     public QueryProductCertInfoResponseBodyProductCertInfo productCertInfo;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>57b144cf-09fc-4916-a272-a62902d5b207</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,9 +98,13 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
     public static class QueryProductCertInfoResponseBodyProductCertInfo extends TeaModel {
         /**
          * <p>The source from which the X.509 certificate is issued.</p>
-         * <br>
-         * <p>*   **1**: The X.509 certificate is issued by IoT Platform.</p>
-         * <p>*   **3**: The X.509 certificate is issued by a third-party platform.</p>
+         * <ul>
+         * <li><strong>1</strong>: The X.509 certificate is issued by IoT Platform.</li>
+         * <li><strong>3</strong>: The X.509 certificate is issued by a third-party platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IssueModel")
         public Integer issueModel;

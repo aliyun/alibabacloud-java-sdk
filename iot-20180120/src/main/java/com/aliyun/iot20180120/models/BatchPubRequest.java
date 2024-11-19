@@ -10,24 +10,33 @@ public class BatchPubRequest extends TeaModel {
     @NameInMap("CorrelationData")
     public String correlationData;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newdevice1</p>
+     */
     @NameInMap("DeviceName")
     public java.util.List<String> deviceName;
 
     /**
-     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
-     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The body of the message to be published. The maximum size of a message is 256 KB.</p>
-     * <br>
-     * <p>To generate a message body, you must convert the raw message into binary data and perform Base64 encoding.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MessageContent")
     public String messageContent;
@@ -39,20 +48,28 @@ public class BatchPubRequest extends TeaModel {
     public Integer payloadFormatIndicator;
 
     /**
-     * <p>The **ProductKey** of the product to which the device belongs.</p>
+     * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The quality of service (QoS) level of the message. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The message is published at most once.</p>
-     * <p>*   **1**: The message is published at least once.</p>
-     * <br>
-     * <p>Default value: **0**.</p>
-     * <br>
-     * <p>>  IoT Platform stores QoS 1 messages for up to 7 days. IoT Platform does not store QoS 0 messages.</p>
+     * <ul>
+     * <li><strong>0</strong>: The message is published at most once.</li>
+     * <li><strong>1</strong>: The message is published at least once.</li>
+     * </ul>
+     * <p>Default value: <strong>0</strong>.</p>
+     * <blockquote>
+     * <p> IoT Platform stores QoS 1 messages for up to 7 days. IoT Platform does not store QoS 0 messages.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Qos")
     public Integer qos;
@@ -65,16 +82,19 @@ public class BatchPubRequest extends TeaModel {
 
     /**
      * <p>The suffix of the custom topic.</p>
-     * <br>
-     * <p>A custom topic is in the following format: `/${productKey}/${deviceName}/user/${TopicShortName}`. ${TopicShortName} specifies the suffix.</p>
-     * <br>
-     * <p>>  You must specify the Subscribe permission, or Publish and Subscribe permissions for the topic. Make sure that all devices subscribe to the topic.</p>
-     * <br>
+     * <p>A custom topic is in the following format: <code>/${productKey}/${deviceName}/user/${TopicShortName}</code>. ${TopicShortName} specifies the suffix.</p>
+     * <blockquote>
+     * <p> You must specify the Subscribe permission, or Publish and Subscribe permissions for the topic. Make sure that all devices subscribe to the topic.</p>
+     * </blockquote>
      * <p>You can use the following methods to view custom topics:</p>
-     * <br>
-     * <p>*   On the **Topic Categories** tab of the Product Details page, view the custom topics of the product.</p>
-     * <p>*   On the **Topic List** tab of the Device Details page, view the custom topics to which the device has subscribed.</p>
-     * <p>*   Call the [QueryProductTopic](~~69647~~) operation to query the custom topics of the product.</p>
+     * <ul>
+     * <li>On the <strong>Topic Categories</strong> tab of the Product Details page, view the custom topics of the product.</li>
+     * <li>On the <strong>Topic List</strong> tab of the Device Details page, view the custom topics to which the device has subscribed.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/69647.html">QueryProductTopic</a> operation to query the custom topics of the product.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>get</p>
      */
     @NameInMap("TopicShortName")
     public String topicShortName;

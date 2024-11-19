@@ -4,12 +4,25 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchSetEdgeInstanceDeviceConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceConfigs")
     public java.util.List<BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs> deviceConfigs;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3APY0tPLhmgGtx0****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -43,9 +56,21 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends TeaModel {
     }
 
     public static class BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;: &quot;device_config_demo&quot;}</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjI0Sd124XFYyjBY****000101</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 

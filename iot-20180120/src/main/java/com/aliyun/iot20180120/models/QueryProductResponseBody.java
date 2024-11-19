@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryProductResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryProductResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4F94B97-1D64-4080-BFD2-67461667AA43</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,40 +95,46 @@ public class QueryProductResponseBody extends TeaModel {
     public static class QueryProductResponseBodyData extends TeaModel {
         /**
          * <p>The type of the product. This parameter indicates whether a Thing Specification Language (TSL) model was used.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   **iothub_senior**: A TSL model was used.</p>
-         * <p>*   **iothub**: No TSL model was used.</p>
+         * <ul>
+         * <li><strong>iothub_senior</strong>: A TSL model was used.</li>
+         * <li><strong>iothub</strong>: No TSL model was used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>iothub_senior</p>
          */
         @NameInMap("AliyunCommodityCode")
         public String aliyunCommodityCode;
 
         /**
          * <p>The authentication method that was used to connect the devices of the product to IoT Platform. Valid values:</p>
-         * <br>
-         * <p>*   **secret**: DeviceSecrets were used to authenticate the devices.</p>
-         * <p>*   **id2**: IoT Internet Device ID was used to authenticate the devices.</p>
-         * <p>*   **x509**: X.509 certificates were used to authenticate the devices.</p>
+         * <ul>
+         * <li><strong>secret</strong>: DeviceSecrets were used to authenticate the devices.</li>
+         * <li><strong>id2</strong>: IoT Internet Device ID was used to authenticate the devices.</li>
+         * <li><strong>x509</strong>: X.509 certificates were used to authenticate the devices.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>secret</p>
          */
         @NameInMap("AuthType")
         public String authType;
 
         /**
          * <p>The identifier of the category to which the product belongs.</p>
-         * <br>
          * <p>This parameter is returned if the product uses the TSL model of a standard category that is pre-defined by IoT Platform.</p>
-         * <br>
          * <p>This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lighting</p>
          */
         @NameInMap("CategoryKey")
         public String categoryKey;
 
         /**
          * <p>The name of the product category.</p>
-         * <br>
          * <p>This parameter is returned if the product uses the TSL model of a standard category that is pre-defined by IoT Platform.</p>
-         * <br>
          * <p>This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior.</p>
          */
         @NameInMap("CategoryName")
@@ -126,11 +142,14 @@ public class QueryProductResponseBody extends TeaModel {
 
         /**
          * <p>The data format that was used by a communication protocol to transmit data between the devices and IoT Platform. This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   **0**: custom. A custom serial data format was used. In this case, the device can submit raw data, such as binary data streams. IoT Platform converts the raw data into standard Alink JSON data by using a specified data parsing script.</p>
-         * <p>*   **1**: Alink JSON. Alink JSON data is transmitted between the devices and IoT Platform. Alink is a data exchange protocol that is pre-defined by IoT Platform.</p>
+         * <ul>
+         * <li><strong>0</strong>: custom. A custom serial data format was used. In this case, the device can submit raw data, such as binary data streams. IoT Platform converts the raw data into standard Alink JSON data by using a specified data parsing script.</li>
+         * <li><strong>1</strong>: Alink JSON. Alink JSON data is transmitted between the devices and IoT Platform. Alink is a data exchange protocol that is pre-defined by IoT Platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DataFormat")
         public Integer dataFormat;
@@ -143,56 +162,81 @@ public class QueryProductResponseBody extends TeaModel {
 
         /**
          * <p>The number of devices under the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeviceCount")
         public Integer deviceCount;
 
         /**
          * <p>The time when the product was created. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581595942000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>Indicates whether IoT Internet Device ID was enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: IoT Internet Device ID was enabled.</p>
-         * <p>*   **false**: IoT Internet Device ID was disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: IoT Internet Device ID was enabled.</li>
+         * <li><strong>false</strong>: IoT Internet Device ID was disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Id2")
         public Boolean id2;
 
         /**
          * <p>The network connection method. Valid values:</p>
-         * <br>
-         * <p>*   **3**: Wi-Fi.</p>
-         * <p>*   **6**: cellular network (2G/3G/4G/5G).</p>
-         * <p>*   **7**: Ethernet.</p>
-         * <p>*   **8**: others.</p>
+         * <ul>
+         * <li><strong>3</strong>: Wi-Fi.</li>
+         * <li><strong>6</strong>: cellular network (2G/3G/4G/5G).</li>
+         * <li><strong>7</strong>: Ethernet.</li>
+         * <li><strong>8</strong>: others.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NetType")
         public Integer netType;
 
         /**
          * <p>The node type of the product. This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior. Valid values:</p>
-         * <br>
-         * <p>*   **0**: device. Sub-devices cannot be attached to a device. A device can connect to IoT Platform directly or as a sub-device of a gateway.</p>
-         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</p>
+         * <ul>
+         * <li><strong>0</strong>: device. Sub-devices cannot be attached to a device. A device can connect to IoT Platform directly or as a sub-device of a gateway.</li>
+         * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NodeType")
         public Integer nodeType;
 
         /**
          * <p>Indicates whether the operation was called by the owner of the product.</p>
-         * <br>
-         * <p>*   **true**: yes.</p>
-         * <p>*   **false**: no.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Owner")
         public Boolean owner;
 
         /**
          * <p>The ProductKey of the product. When you create a product, a ProductKey is the globally unique identifier (GUID) that is issued by IoT Platform to the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1T27vz****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
@@ -205,52 +249,64 @@ public class QueryProductResponseBody extends TeaModel {
 
         /**
          * <p>The ProductSecret of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U5tW7i44uilc****</p>
          */
         @NameInMap("ProductSecret")
         public String productSecret;
 
         /**
          * <p>The status of the product.</p>
-         * <br>
-         * <p>*   **DEVELOPMENT_STATUS**: The product is being developed.</p>
-         * <p>*   **RELEASE_STATUS**: The product was published.</p>
+         * <ul>
+         * <li><strong>DEVELOPMENT_STATUS</strong>: The product is being developed.</li>
+         * <li><strong>RELEASE_STATUS</strong>: The product was published.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVELOPMENT_STATUS</p>
          */
         @NameInMap("ProductStatus")
         public String productStatus;
 
         /**
          * <p>The type of the protocol that was used by the sub-devices to connect with a gateway.</p>
-         * <br>
          * <p>This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior and the NodeType parameter is set to 1. Valid values:</p>
-         * <br>
-         * <p>*   **modbus**: Modbus.</p>
-         * <p>*   **opc-ua**: OPC UA.</p>
-         * <p>*   **customize**: custom protocol.</p>
-         * <p>*   **ble**: BLE.</p>
-         * <p>*   **zigbee**: ZigBee.</p>
+         * <ul>
+         * <li><strong>modbus</strong>: Modbus.</li>
+         * <li><strong>opc-ua</strong>: OPC UA.</li>
+         * <li><strong>customize</strong>: custom protocol.</li>
+         * <li><strong>ble</strong>: BLE.</li>
+         * <li><strong>zigbee</strong>: ZigBee.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>modbus</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The level of the data verification. Valid values:</p>
-         * <br>
-         * <p>*   **2**: no verification. IoT Platform does not verify the data. All data is forwarded.</p>
-         * <br>
-         * <p>    In the IoT Platform console, the data is not displayed on the TSL Data tab of the Device Details page.</p>
-         * <br>
-         * <p>*   **1**: low-level verification. IoT Platform verifies only the identifier and dataType fields of the data. All data is forwarded.</p>
-         * <br>
-         * <p>*   **0**: high-level verification. IoT Platform verifies all fields of the data. Only the data that passes the verification is forwarded.</p>
-         * <br>
-         * <p>    The products that were created before October 14, 2020 support only high-level verification.</p>
-         * <br>
+         * <ul>
+         * <li><p><strong>2</strong>: no verification. IoT Platform does not verify the data. All data is forwarded.</p>
+         * <p>In the IoT Platform console, the data is not displayed on the TSL Data tab of the Device Details page.</p>
+         * </li>
+         * <li><p><strong>1</strong>: low-level verification. IoT Platform verifies only the identifier and dataType fields of the data. All data is forwarded.</p>
+         * </li>
+         * <li><p><strong>0</strong>: high-level verification. IoT Platform verifies all fields of the data. Only the data that passes the verification is forwarded.</p>
+         * <p>The products that were created before October 14, 2020 support only high-level verification.</p>
+         * </li>
+         * </ul>
          * <p>The products that were created on October 14, 2020 or later support low-level verification or no verification.</p>
-         * <br>
          * <p>After verification, you can view the data that passes or fails the verification.</p>
-         * <br>
-         * <p>*   In the IoT Platform console, the data is displayed on the **TSL Data** tab of the **Device Details** page. The data that fails the verification is not displayed.</p>
-         * <p>*   You can view the data that fails the verification in the **checkFailedData** parameter of the forwarded data. For more information, see [Data formats](~~73736~~).</p>
+         * <ul>
+         * <li>In the IoT Platform console, the data is displayed on the <strong>TSL Data</strong> tab of the <strong>Device Details</strong> page. The data that fails the verification is not displayed.</li>
+         * <li>You can view the data that fails the verification in the <strong>checkFailedData</strong> parameter of the forwarded data. For more information, see <a href="https://help.aliyun.com/document_detail/73736.html">Data formats</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ValidateType")
         public Integer validateType;

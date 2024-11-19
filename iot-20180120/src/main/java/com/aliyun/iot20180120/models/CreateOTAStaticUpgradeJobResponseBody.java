@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateOTAStaticUpgradeJobResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingFirmwareId</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class CreateOTAStaticUpgradeJobResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FirmwareId is mandatory for this action.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29EC7245-0FA4-4BB6-B4F5-5F04818FDFB1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class CreateOTAStaticUpgradeJobResponseBody extends TeaModel {
     public static class CreateOTAStaticUpgradeJobResponseBodyData extends TeaModel {
         /**
          * <p>The unique identifier of the update batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wahVIzGkCMuAUE2gDERM02****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The time when the update batch was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-04T06:22:19.566Z</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;

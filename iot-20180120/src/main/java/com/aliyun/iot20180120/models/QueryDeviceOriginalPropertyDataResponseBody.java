@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceOriginalPropertyDataResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.device.InvalidIoTId</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryDeviceOriginalPropertyDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +95,18 @@ public class QueryDeviceOriginalPropertyDataResponseBody extends TeaModel {
     public static class QueryDeviceOriginalPropertyDataResponseBodyDataListPropertyInfo extends TeaModel {
         /**
          * <p>The time when the property was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516541885630</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Value")
         public String value;
@@ -146,17 +162,23 @@ public class QueryDeviceOriginalPropertyDataResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the next page exists. </p>
-         * <br>
-         * <p>- **true**: The next page exists.</p>
-         * <p>- **false**: The next page does not exist.</p>
-         * <br>
-         * <p>If **true** is returned for the **NextValid** parameter, you can add the value of the **NextPageToken** parameter to the next request. This way, you can query the data that is not included in the current query.</p>
+         * <ul>
+         * <li><strong>true</strong>: The next page exists.</li>
+         * <li><strong>false</strong>: The next page does not exist.</li>
+         * </ul>
+         * <p>If <strong>true</strong> is returned for the <strong>NextValid</strong> parameter, you can add the value of the <strong>NextPageToken</strong> parameter to the next request. This way, you can query the data that is not included in the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NextValid")
         public Boolean nextValid;
 
         /**
          * <p>The token that is used to retrieve the next page of the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bo***x44Qx</p>
          */
         @NameInMap("nextPageToken")
         public String nextPageToken;

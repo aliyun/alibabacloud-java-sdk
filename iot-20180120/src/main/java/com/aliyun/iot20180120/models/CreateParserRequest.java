@@ -7,9 +7,19 @@ public class CreateParserRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-n8t***</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DataParser</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -6,50 +6,72 @@ import com.aliyun.tea.*;
 public class QuerySpeechLicenseDeviceListRequest extends TeaModel {
     /**
      * <p>The ID of a device group. The InSpecifiedGroup response parameter indicates whether the devices belong to the specified group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4de2c367**<strong>8c585e5992</strong></p>
      */
     @NameInMap("CheckGroupId")
     public String checkGroupId;
 
     /**
      * <p>The keyword in the DeviceName of the device whose information you want to query. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DeviceName")
     public String deviceName;
 
     /**
-     * <p>The instance ID. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>  You must specify this parameter for a public instance of the new version or an Enterprise Edition instance. You do not need to specify this parameter for a public instance of the previous version.</p>
-     * <br>
-     * <p>For more information, see the [Overview](~~356505~~) topic of IoT instances.</p>
+     * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <p> You must specify this parameter for a public instance of the new version or an Enterprise Edition instance. You do not need to specify this parameter for a public instance of the previous version.</p>
+     * </blockquote>
+     * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-e3***</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The license status.</p>
-     * <br>
-     * <p>*   **NORMAL**: The license is valid.</p>
-     * <p>*   **EXPIRE**: The license is expired.</p>
-     * <p>*   **EXPIRING**: The license is about to expire.</p>
+     * <ul>
+     * <li><strong>NORMAL</strong>: The license is valid.</li>
+     * <li><strong>EXPIRE</strong>: The license is expired.</li>
+     * <li><strong>EXPIRING</strong>: The license is about to expire.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("LicenseStatusList")
     public java.util.List<String> licenseStatusList;
 
     /**
      * <p>The page number. Valid values: 1 to 10000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageId")
     public Integer pageId;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The **ProductKey** of the product to which the devices belong.</p>
+     * <p>The <strong>ProductKey</strong> of the product to which the devices belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

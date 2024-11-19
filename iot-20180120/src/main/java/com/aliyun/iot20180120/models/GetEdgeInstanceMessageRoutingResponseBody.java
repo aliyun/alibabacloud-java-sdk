@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeInstanceMessageRoutingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetEdgeInstanceMessageRoutingResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8A248DEC-887C-4A37-8DE5-E128FFA3698D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class GetEdgeInstanceMessageRoutingResponseBody extends TeaModel {
     }
 
     public static class GetEdgeInstanceMessageRoutingResponseBodyDataRouteContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Qos")
         public String qos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>le_object_detector</p>
+         */
         @NameInMap("SourceApplicationName")
         public String sourceApplicationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>object_detector_app</p>
+         */
         @NameInMap("SourceFcFunctionName")
         public String sourceFcFunctionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EdgeFC</p>
+         */
         @NameInMap("SourceFcServiceName")
         public String sourceFcServiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>le_object_detector</p>
+         */
         @NameInMap("TargetApplicationName")
         public String targetApplicationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lightSensorDataFilter</p>
+         */
         @NameInMap("TargetFcFunctionName")
         public String targetFcFunctionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EdgeFC</p>
+         */
         @NameInMap("TargetFcServiceName")
         public String targetFcServiceName;
 
@@ -150,36 +194,76 @@ public class GetEdgeInstanceMessageRoutingResponseBody extends TeaModel {
     }
 
     public static class GetEdgeInstanceMessageRoutingResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-05-25 19:54:59</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1590407699000</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-05-25 19:54:59</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1590407699000</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sample</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("RouteContext")
         public GetEdgeInstanceMessageRoutingResponseBodyDataRouteContext routeContext;
 
+        /**
+         * <strong>example:</strong>
+         * <h1></h1>
+         */
         @NameInMap("SourceData")
         public String sourceData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>device</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>58c46749ac934db3925fe5********</p>
+         */
         @NameInMap("TargetData")
         public String targetData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IotHub</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
         @NameInMap("TopicFilter")
         public String topicFilter;
 

@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetParserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class GetParserResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +77,62 @@ public class GetParserResponseBody extends TeaModel {
     }
 
     public static class GetParserResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1003</p>
+         */
         @NameInMap("DataSourceId")
         public Long dataSourceId;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DataParser</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("ParserId")
         public Long parserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>var data = payload(&quot;json&quot;); var h = data.items.Humidity.value; var t = data.items.Temperature.value; writeTsdb(1000,timestamp(),&quot;temperature&quot;, t , {&quot;deviceName&quot;:deviceName()}); writeTsdb(1000,timestamp(),&quot;humidity&quot;, h , {&quot;deviceName&quot;:deviceName()});</p>
+         */
         @NameInMap("Script")
         public String script;
 
+        /**
+         * <strong>example:</strong>
+         * <p>var data = payload(&quot;json&quot;); var h = data.items.Humidity.value; var t = data.items.Temperature.value; writeTsdb(1000,timestamp(),&quot;temperature&quot;, t , {&quot;deviceName&quot;:deviceName()}); writeTsdb(1000,timestamp(),&quot;humidity&quot;, h , {&quot;deviceName&quot;:deviceName()});</p>
+         */
         @NameInMap("ScriptDraft")
         public String scriptDraft;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STOP</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-27T12:45:43.000Z</p>
+         */
         @NameInMap("UtcCreated")
         public String utcCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-27T12:45:43.000Z</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 

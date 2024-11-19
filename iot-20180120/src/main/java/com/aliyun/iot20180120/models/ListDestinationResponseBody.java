@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDestinationResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,33 +27,49 @@ public class ListDestinationResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -139,38 +158,57 @@ public class ListDestinationResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the data destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1003</p>
          */
         @NameInMap("DestinationId")
         public Long destinationId;
 
         /**
          * <p>Indicates whether the data destination is configured to receive error operation data. Error operation data is the data that failed to be forwarded for two consecutive times.</p>
-         * <br>
-         * <p>*   **true**: The data destination is configured to receive error operation data.</p>
-         * <p>*   **false**: The data destination is configured to receive regular data instead of error operation data.</p>
-         * <br>
-         * <p>Default value: **false**.</p>
+         * <ul>
+         * <li><strong>true</strong>: The data destination is configured to receive error operation data.</li>
+         * <li><strong>false</strong>: The data destination is configured to receive regular data instead of error operation data.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsFailover")
         public Boolean isFailover;
 
         /**
          * <p>The name of the data destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataPurpose</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The action of forwarding data to the data destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REPUBLISH</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The time when the data destination was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the `yyyy-MM-dd\"T\"HH:mm:ss.SSS\"Z\"` format.</p>
+         * <p>The time when the data destination was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss.SSS\\&quot;Z\\&quot;</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-27T12:45:43.000Z</p>
          */
         @NameInMap("UtcCreated")
         public String utcCreated;

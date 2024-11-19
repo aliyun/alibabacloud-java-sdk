@@ -4,15 +4,35 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GenerateFileUploadURLRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEVICE_JOB_FILE</p>
+     */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>file1</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bin</p>
+     */
     @NameInMap("FileSuffix")
     public String fileSuffix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

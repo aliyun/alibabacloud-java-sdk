@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The data returned in the **List** parameter if the call is successful.</p>
+     * <p>The data returned in the <strong>List</strong> parameter if the call is successful.</p>
      */
     @NameInMap("Data")
     public QueryDeviceDesiredPropertyResponseBodyData data;
@@ -24,15 +27,22 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,44 +95,66 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
     public static class QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo extends TeaModel {
         /**
          * <p>The data type of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>int</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The identifier of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Temperature</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The name of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>airconditioning</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the desired value of the property was last modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579335899000</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The unit of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>℃</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The desired value of the property.</p>
-         * <br>
-         * <p>>  If you call the [ClearDeviceDesiredProperty](~~477431~~) operation to delete the desired value of the property, the **Value** parameter is not returned.</p>
+         * <blockquote>
+         * <p> If you call the <a href="https://help.aliyun.com/document_detail/477431.html">ClearDeviceDesiredProperty</a> operation to delete the desired value of the property, the <strong>Value</strong> parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>The version of the desired value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public Long version;
@@ -211,7 +243,7 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
 
     public static class QueryDeviceDesiredPropertyResponseBodyData extends TeaModel {
         /**
-         * <p>The desired property information returned in the **DesiredPropertyInfo** parameter.</p>
+         * <p>The desired property information returned in the <strong>DesiredPropertyInfo</strong> parameter.</p>
          */
         @NameInMap("List")
         public QueryDeviceDesiredPropertyResponseBodyDataList list;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,16 +95,23 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
     public static class PageQuerySpeechBroadcastHourResponseBodyDataResultDataData extends TeaModel {
         /**
          * <p>Indicates whether the speech was successfully broadcasted. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The speech was successfully broadcasted.</p>
-         * <p>*   **1**: The speech was repeatedly broadcasted.</p>
-         * <p>*   **2**: The speech does not exist.</p>
+         * <ul>
+         * <li><strong>0</strong>: The speech was successfully broadcasted.</li>
+         * <li><strong>1</strong>: The speech was repeatedly broadcasted.</li>
+         * <li><strong>2</strong>: The speech does not exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
@@ -106,31 +123,46 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sd34****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
 
         /**
          * <p>The code of the sharing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ebed9280_ba25_48df_80c2_****</p>
          */
         @NameInMap("ShareTaskCode")
         public String shareTaskCode;
 
         /**
          * <p>The ID of the speech that was broadcasted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42000011392021112380****</p>
          */
         @NameInMap("SpeechId")
         public String speechId;
 
         /**
          * <p>The content of the broadcasted speech. The parameter value is a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ANC&quot;,&quot;CDF&quot;]</p>
          */
         @NameInMap("Speechs")
         public String speechs;
 
         /**
          * <p>The start time of speech broadcasting. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663210172207</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
@@ -228,20 +260,28 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
     public static class PageQuerySpeechBroadcastHourResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageId")
         public Integer pageId;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
-         * <br>
-         * <p>If **PageToken** is empty, no next page exists.</p>
+         * <p>If <strong>PageToken</strong> is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         @NameInMap("PageToken")
         public String pageToken;
@@ -254,6 +294,9 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Total")
         public Integer total;

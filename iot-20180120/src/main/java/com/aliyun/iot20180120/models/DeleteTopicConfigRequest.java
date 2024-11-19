@@ -7,9 +7,15 @@ public class DeleteTopicConfigRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TopicFullName")
     public String topicFullName;
 

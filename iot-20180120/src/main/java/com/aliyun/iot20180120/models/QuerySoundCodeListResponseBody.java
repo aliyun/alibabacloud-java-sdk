@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySoundCodeListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.soundcodeservice.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySoundCodeListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sound code service has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class QuerySoundCodeListResponseBody extends TeaModel {
     }
 
     public static class QuerySoundCodeListResponseBodyDataListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620634297000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN</p>
+         */
         @NameInMap("OpenType")
         public String openType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
+         */
         @NameInMap("SoundCode")
         public String soundCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
+         */
         @NameInMap("SoundCodeContent")
         public String soundCodeContent;
 
@@ -161,12 +201,24 @@ public class QuerySoundCodeListResponseBody extends TeaModel {
         @NameInMap("List")
         public QuerySoundCodeListResponseBodyDataList list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

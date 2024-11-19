@@ -7,6 +7,9 @@ public class QueryTopicConfigRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

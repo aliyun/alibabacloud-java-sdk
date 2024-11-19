@@ -4,21 +4,45 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ModifyOTAFirmwareRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OTA function updated</p>
+     */
     @NameInMap("FirmwareDesc")
     public String firmwareDesc;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s8SSHiKjpBfrM3BSN0z803****</p>
+     */
     @NameInMap("FirmwareId")
     public String firmwareId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Firmwaretest</p>
+     */
     @NameInMap("FirmwareName")
     public String firmwareName;
 
     @NameInMap("FirmwareUdi")
     public String firmwareUdi;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-0pp1n8t****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1uctKe****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

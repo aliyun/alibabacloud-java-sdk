@@ -7,6 +7,12 @@ public class GetSoundCodeScheduleRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Md3ZiTL888K9llXDy7890***********</p>
+     */
     @NameInMap("ScheduleCode")
     public String scheduleCode;
 

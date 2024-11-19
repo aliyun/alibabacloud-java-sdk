@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DeviceDriverList")
     public java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> deviceDriverList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E8D82F7A-0F84-4BD3-AE8A-5444A5B42800</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9c1ae7bd59f1469abbdccc9592******</p>
+         */
         @NameInMap("DriverId")
         public String driverId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Hathoyxglj9jpYPyw3WN******</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 

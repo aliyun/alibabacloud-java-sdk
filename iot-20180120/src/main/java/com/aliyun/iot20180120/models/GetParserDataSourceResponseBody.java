@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetParserDataSourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class GetParserDataSourceResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +77,34 @@ public class GetParserDataSourceResponseBody extends TeaModel {
     }
 
     public static class GetParserDataSourceResponseBodyDataSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11111111000000111</p>
+         */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("DataSourceId")
         public Long dataSourceId;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DataSource</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-27T12:45:43.000Z</p>
+         */
         @NameInMap("UtcCreated")
         public String utcCreated;
 

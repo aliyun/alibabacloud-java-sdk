@@ -5,17 +5,24 @@ import com.aliyun.tea.*;
 
 public class QueryProductCertInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can view the ID of the instance on the **Overview** page in the IoT Platform console.****</p>
-     * <br>
-     * <p>>  If your instance has an ID, you must specify the ID for this parameter. If you do not specify the instance ID, the call fails. If no Overview page or ID is generated for your instance, you do not need to configure this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.****</p>
+     * <blockquote>
+     * <p> If your instance has an ID, you must specify the ID for this parameter. If you do not specify the instance ID, the call fails. If no Overview page or ID is generated for your instance, you do not need to configure this parameter.</p>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The ProductKey of the product.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2YwD23****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryJobResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A6BEAB33-03E6-4CE0-A94F-9E24C5512BAD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,9 +80,17 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TTTejn***</p>
+         */
         @NameInMap("Sign")
         public String sign;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SHA256</p>
+         */
         @NameInMap("SignMethod")
         public String signMethod;
 
@@ -106,9 +126,17 @@ public class QueryJobResponseBody extends TeaModel {
     }
 
     public static class QueryJobResponseBodyDataRolloutConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaximumPerMinute")
         public Integer maximumPerMinute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Qos1</p>
+         */
         @NameInMap("MessageQoS")
         public String messageQoS;
 
@@ -136,9 +164,17 @@ public class QueryJobResponseBody extends TeaModel {
     }
 
     public static class QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a1Ix***</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nCwfSBzc***</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
@@ -188,12 +224,24 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("TargetDevices")
         public QueryJobResponseBodyDataTargetConfigTargetDevices targetDevices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TargetGroup")
         public String targetGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nCwfSBzc***</p>
+         */
         @NameInMap("TargetProduct")
         public String targetProduct;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DEVICE_LIST</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -237,6 +285,10 @@ public class QueryJobResponseBody extends TeaModel {
     }
 
     public static class QueryJobResponseBodyDataTimeoutConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("InProgressTimeoutInMinutes")
         public Integer inProgressTimeoutInMinutes;
 
@@ -256,6 +308,10 @@ public class QueryJobResponseBody extends TeaModel {
     }
 
     public static class QueryJobResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>jobDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -265,18 +321,34 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("JobFile")
         public QueryJobResponseBodyDataJobFile jobFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>450407b***</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tes</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
         @NameInMap("RolloutConfig")
         public QueryJobResponseBodyDataRolloutConfig rolloutConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1557062301656</p>
+         */
         @NameInMap("ScheduledTime")
         public Long scheduledTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CANCELLED</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -286,12 +358,24 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("TimeoutConfig")
         public QueryJobResponseBodyDataTimeoutConfig timeoutConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SET_PROPERTY</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-13T04:09:51.000Z</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-13T04:10:00.000Z</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 

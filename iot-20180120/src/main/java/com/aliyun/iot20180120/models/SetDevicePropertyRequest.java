@@ -6,54 +6,73 @@ import com.aliyun.tea.*;
 public class SetDevicePropertyRequest extends TeaModel {
     /**
      * <p>The DeviceName of the device.</p>
-     * <br>
-     * <p>> If you configure this parameter, you must specify a value for the **ProductKey** parameter.</p>
+     * <blockquote>
+     * <p>If you configure this parameter, you must specify a value for the <strong>ProductKey</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>light</p>
      */
     @NameInMap("DeviceName")
     public String deviceName;
 
     /**
      * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
-     * <br>
-     * <p>> The IotId parameter specifies a globally unique identifier (GUID) for the device. The value of the **IotId** parameter corresponds to a combination of the values of the **ProductKey** and **DeviceName** parameters. If you specify a value for this parameter, you do not need to configure the **ProductKey** or **DeviceName** parameter. If you specify values for the **IotId**, **ProductKey**, and **DeviceName** parameters, the value of the **IotId** parameter takes precedence.</p>
+     * <blockquote>
+     * <p>The IotId parameter specifies a globally unique identifier (GUID) for the device. The value of the <strong>IotId</strong> parameter corresponds to a combination of the values of the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters. If you specify a value for this parameter, you do not need to configure the <strong>ProductKey</strong> or <strong>DeviceName</strong> parameter. If you specify values for the <strong>IotId</strong>, <strong>ProductKey</strong>, and <strong>DeviceName</strong> parameters, the value of the <strong>IotId</strong> parameter takes precedence.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Q7uOhVRdZRRlDnTLv****00100</p>
      */
     @NameInMap("IotId")
     public String iotId;
 
     /**
-     * <p>The ID of the elastic container instance. You can view the ID of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</p>
-     * <p>>*   If no **Overview** page or **ID** is generated for your instance, you do not need to configure this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the elastic container instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</li>
+     * <li>If no <strong>Overview</strong> page or <strong>ID</strong> is generated for your instance, you do not need to configure this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-v64*****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The properties that you want to specify. The properties must be in the JSON format.</p>
-     * <br>
-     * <p>Each property consists of a **key-value pair in the key:value format**. Separate multiple properties with commas (,).</p>
-     * <br>
+     * <p>Each property consists of a <strong>key-value pair in the key:value format</strong>. Separate multiple properties with commas (,).</p>
      * <p>For example, you can configure the following properties for a smart lamp:</p>
-     * <br>
-     * <p>*   A switch property whose key is **Switch** and whose data type is **BOOLEAN**. The value is **1**. The value 1 indicates that the light is on.</p>
-     * <p>*   A color property whose key is **Color** and whose data type is **STRING**. The value is **blue**.</p>
-     * <br>
+     * <ul>
+     * <li>A switch property whose key is <strong>Switch</strong> and whose data type is <strong>BOOLEAN</strong>. The value is <strong>1</strong>. The value 1 indicates that the light is on.</li>
+     * <li>A color property whose key is <strong>Color</strong> and whose data type is <strong>STRING</strong>. The value is <strong>blue</strong>.</li>
+     * </ul>
      * <p>In this case, you can specify the following properties in the JSON format:</p>
-     * <br>
-     * <p>`Items={"Switch":1,"Color":"blue"}`</p>
-     * <br>
-     * <p>>  If you specify properties for the custom module testFb, set the Items parameter to `{"testFb:Switch":1,"testFb:Color":"blue"}`. The testFb module is not the default module.</p>
+     * <p><code>Items={&quot;Switch&quot;:1,&quot;Color&quot;:&quot;blue&quot;}</code></p>
+     * <blockquote>
+     * <p> If you specify properties for the custom module testFb, set the Items parameter to <code>{&quot;testFb:Switch&quot;:1,&quot;testFb:Color&quot;:&quot;blue&quot;}</code>. The testFb module is not the default module.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Switch&quot;:1,&quot;Color&quot;:&quot;blue&quot;}</p>
      */
     @NameInMap("Items")
     public String items;
 
     /**
      * <p>The ProductKey of the product to which the device belongs.</p>
-     * <br>
-     * <p>> If you configure this parameter, you must also specify a value for the **DeviceName** parameter.</p>
+     * <blockquote>
+     * <p>If you configure this parameter, you must also specify a value for the <strong>DeviceName</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

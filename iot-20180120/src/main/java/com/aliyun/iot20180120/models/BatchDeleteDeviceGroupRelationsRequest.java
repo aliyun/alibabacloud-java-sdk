@@ -9,17 +9,26 @@ public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
 
     /**
      * <p>The ID of the group. The ID is the globally unique identifier (GUID) for the group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>W16X8Tvdosec****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
-     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
@@ -56,12 +65,20 @@ public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
     public static class BatchDeleteDeviceGroupRelationsRequestDevice extends TeaModel {
         /**
          * <p>The names of the devices to be removed. You can specify a maximum of 200 devices.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHuPo6sZzv7pOzYh****</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The ProductKeys of the products to which the devices belong. You can specify a maximum of 200 ProductKeys.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1kORrK****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

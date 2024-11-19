@@ -5,33 +5,46 @@ import com.aliyun.tea.*;
 
 public class ReBindLicenseDeviceRequest extends TeaModel {
     /**
-     * <p>The **DeviceNames** of all devices to which you want to rebind a license.</p>
-     * <br>
-     * <p>You can call the [QueryDevice](~~69905~~) operation to query the **DeviceNames** of all devices that belong to a specific product.</p>
+     * <p>The <strong>DeviceNames</strong> of all devices to which you want to rebind a license.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69905.html">QueryDevice</a> operation to query the <strong>DeviceNames</strong> of all devices that belong to a specific product.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DeviceNameList")
     public java.util.List<String> deviceNameList;
 
     /**
-     * <p>The instance ID. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>  You must specify the ID of a public instance of the new version or an Enterprise Edition instance. Otherwise, the request fails. You do not need to specify the ID of a public instance of the previous version.</p>
-     * <br>
-     * <p>For more information, see [Overview](~~356505~~) of IoT instances.</p>
+     * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <p> You must specify the ID of a public instance of the new version or an Enterprise Edition instance. Otherwise, the request fails. You do not need to specify the ID of a public instance of the previous version.</p>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> of IoT instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-e3***</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The license type. Set the value to **LINK_SPEECH_COMMON_LICENSE**.</p>
+     * <p>The license type. Set the value to <strong>LINK_SPEECH_COMMON_LICENSE</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LINK_SPEECH_COMMON_LICENSE</p>
      */
     @NameInMap("LicenseCode")
     public String licenseCode;
 
     /**
-     * <p>The **ProductKey** of the product to which the devices belong.</p>
-     * <br>
-     * <p>You can go to the IoT Platform console or call the [QueryProductList](~~69271~~) operation to view the information about all products of the instance.</p>
+     * <p>The <strong>ProductKey</strong> of the product to which the devices belong.</p>
+     * <p>You can go to the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to view the information about all products of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2YwD23***</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

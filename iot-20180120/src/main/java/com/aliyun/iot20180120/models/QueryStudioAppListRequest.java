@@ -4,21 +4,49 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioAppListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("FuzzyName")
     public String fuzzyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a123********</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;webApp&quot;, &quot;mobileApp&quot;]</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

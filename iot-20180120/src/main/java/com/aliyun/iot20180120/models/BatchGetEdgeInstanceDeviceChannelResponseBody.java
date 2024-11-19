@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DeviceChannelList")
     public java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> deviceChannelList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>029BC40B-8353-48B3-94C3-7ABF296F0AE5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BE0BD49EF5EF4D119D09CC1B25******</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>le_name_update</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Hathoyxglj9jpYPyw3WN0******</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 

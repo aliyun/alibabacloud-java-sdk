@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class QueryTaskResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512FF8FD-A97F-4AAF-B0A2-7BE3D3A19BB3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +77,87 @@ public class QueryTaskResponseBody extends TeaModel {
     }
 
     public static class QueryTaskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mydevice</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDjhI****01</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sGWotgRkutxX*****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MyTestJobIax6Eq</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>this is message about task execution</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a1S****</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;msg&quot;:&quot;this is message reported by device&quot; }</p>
+         */
         @NameInMap("StatusDetail")
         public String statusDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MSnT9***q010101</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-21T13:03:56.000Z</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-21T13:03:53.000Z</p>
+         */
         @NameInMap("UtcQueueTime")
         public String utcQueueTime;
 

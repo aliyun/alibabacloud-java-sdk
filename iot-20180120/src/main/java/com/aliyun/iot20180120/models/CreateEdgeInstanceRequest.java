@@ -6,45 +6,61 @@ import com.aliyun.tea.*;
 public class CreateEdgeInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the Internet of Things (IoT) service instance. This parameter is not required for public instances. However, this parameter is required for the instances that you have purchased.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The name of the edge instance.</p>
-     * <br>
-     * <p>An instance name cannot exceed 20 characters in length and can contain uppercase letters, lowercase letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>An instance name cannot exceed 20 characters in length and can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LinkIoTEdge_Node</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The specification of the edge instance.</p>
-     * <br>
-     * <p>*   10: Lite Edition.</p>
-     * <p>*   20: Standard Edition.</p>
-     * <p>*   30: Pro Edition.</p>
-     * <br>
+     * <ul>
+     * <li>10: Lite Edition.</li>
+     * <li>20: Standard Edition.</li>
+     * <li>30: Pro Edition.</li>
+     * </ul>
      * <p>Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Spec")
     public Integer spec;
 
     /**
-     * <p>The tags of the edge instance. Syntax of a tag: `key:value`. Multiple tags are separated with commas (,), for example, `k1:v1,k2:v2`.</p>
-     * <br>
-     * <p>*   Note the following limits on tag keys:</p>
-     * <br>
-     * <p>    *   Tag values cannot be left empty.</p>
-     * <p>    *   Tag keys must be unique in the edge instance.</p>
-     * <p>    *   Tag keys only support letters.</p>
-     * <p>    *   Each tag key cannot exceed 20 characters in length.</p>
-     * <br>
-     * <p>*   Note the following limits on tag values:</p>
-     * <br>
-     * <p>    *   Tag values cannot be left empty.</p>
-     * <p>    *   A tag value can contain uppercase letters, lowercase letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>    *   Each tag value cannot exceed 20 characters in length.</p>
+     * <p>The tags of the edge instance. Syntax of a tag: <code>key:value</code>. Multiple tags are separated with commas (,), for example, <code>k1:v1,k2:v2</code>.</p>
+     * <ul>
+     * <li><p>Note the following limits on tag keys:</p>
+     * <ul>
+     * <li>Tag values cannot be left empty.</li>
+     * <li>Tag keys must be unique in the edge instance.</li>
+     * <li>Tag keys only support letters.</li>
+     * <li>Each tag key cannot exceed 20 characters in length.</li>
+     * </ul>
+     * </li>
+     * <li><p>Note the following limits on tag values:</p>
+     * <ul>
+     * <li>Tag values cannot be left empty.</li>
+     * <li>A tag value can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>Each tag value cannot exceed 20 characters in length.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>k1:v1,k2:v2</p>
      */
     @NameInMap("Tags")
     public String tags;

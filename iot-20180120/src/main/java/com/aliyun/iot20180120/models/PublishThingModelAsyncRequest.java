@@ -10,6 +10,9 @@ public class PublishThingModelAsyncRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

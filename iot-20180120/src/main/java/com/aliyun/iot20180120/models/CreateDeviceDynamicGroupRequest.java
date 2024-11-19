@@ -4,15 +4,37 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceDynamicGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>product_key = &quot;a1***&quot; and name LIKE &quot;test%&quot;</p>
+     */
     @NameInMap("DynamicGroupExpression")
     public String dynamicGroupExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("GroupDesc")
     public String groupDesc;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grouptest</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-***</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

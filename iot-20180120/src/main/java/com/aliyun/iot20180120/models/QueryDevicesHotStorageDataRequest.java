@@ -4,36 +4,91 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicesHotStorageDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Asc")
     public Integer asc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>device1</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1579249499000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>temperature</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>y4u2weAI********HMle1234</p>
+     */
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-2w****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Bo***x44Qx</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1579249499000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserTopic")
     public String userTopic;
 

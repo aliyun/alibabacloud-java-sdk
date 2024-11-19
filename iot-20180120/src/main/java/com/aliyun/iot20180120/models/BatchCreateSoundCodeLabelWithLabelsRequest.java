@@ -4,15 +4,35 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateSoundCodeLabelWithLabelsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Labels")
     public java.util.List<String> labels;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Md3ZiTL888K9llXDy7890***********</p>
+     */
     @NameInMap("ScheduleCode")
     public String scheduleCode;
 

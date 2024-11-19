@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ReBindLicenseDeviceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class ReBindLicenseDeviceResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>An internal error occurred. Try again later.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AF71BF1D-B552-47CD-B34B-352557627992</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,30 +98,45 @@ public class ReBindLicenseDeviceResponseBody extends TeaModel {
     public static class ReBindLicenseDeviceResponseBodyData extends TeaModel {
         /**
          * <p>The unique ID that can be used to query the progress of the batch rebinding operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         @NameInMap("CheckProgressId")
         public String checkProgressId;
 
         /**
          * <p>The number of devices that failed to be rebound to the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FailSum")
         public Long failSum;
 
         /**
          * <p>The progress of the batch rebinding operation. The progress is a percentage. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The URL of the file that contains unbound devices. The devices failed to be rebound with the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://***</p>
          */
         @NameInMap("ResultCsvFile")
         public String resultCsvFile;
 
         /**
          * <p>The number of devices to which the license is rebound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SuccessSum")
         public Long successSum;

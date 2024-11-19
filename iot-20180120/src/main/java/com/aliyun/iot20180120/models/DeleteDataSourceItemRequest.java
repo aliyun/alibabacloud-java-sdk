@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataSourceItemRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("DataSourceId")
     public Long dataSourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>129322</p>
+     */
     @NameInMap("DataSourceItemId")
     public Long dataSourceItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot-0pp1n8t****</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetSpeechVoiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.speechsolution.NotSigned</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetSpeechVoiceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>speech solution has not been signed</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F94F72A5-82F0-496F-9AC2-3DBCFF77608A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,6 +84,10 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Xiaoyun</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -117,6 +137,10 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tongyong</p>
+         */
         @NameInMap("Value")
         public String value;
 

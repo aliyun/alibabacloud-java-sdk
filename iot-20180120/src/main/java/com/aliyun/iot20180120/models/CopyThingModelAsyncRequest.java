@@ -10,9 +10,15 @@ public class CopyThingModelAsyncRequest extends TeaModel {
     @NameInMap("SourceModelVersion")
     public String sourceModelVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceProductKey")
     public String sourceProductKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetProductKey")
     public String targetProductKey;
 

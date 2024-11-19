@@ -5,34 +5,50 @@ import com.aliyun.tea.*;
 
 public class GetLoraNodesTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A system exception occurred.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of devices that were created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("SuccessCount")
     public Long successCount;
@@ -42,21 +58,31 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
 
     /**
      * <p>The task ID returned if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>625***</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The task status.</p>
-     * <br>
-     * <p>*   **RUNNING**: The task is in progress.</p>
-     * <p>*   **FINISH**: The task is completed.</p>
+     * <ul>
+     * <li><strong>RUNNING</strong>: The task is in progress.</li>
+     * <li><strong>FINISH</strong>: The task is completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("TaskState")
     public String taskState;
 
     /**
      * <p>The total number of devices that you want to create.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

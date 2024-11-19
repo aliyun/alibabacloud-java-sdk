@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +17,24 @@ public class ListTaskResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>223sdf***</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512FF8FD-A97F-4AAF-B0A2-7BE3D3A19BB3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,33 +92,73 @@ public class ListTaskResponseBody extends TeaModel {
     }
 
     public static class ListTaskResponseBodyDataData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mydevice</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDjhIC***i000101</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sGWotg***010001</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MyTestJobIax6Eq</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a1S0OM***</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MSnT9wl***q010101</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-21T13:03:56.000Z</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-21T13:03:53.000Z</p>
+         */
         @NameInMap("UtcQueueTime")
         public String utcQueueTime;
 

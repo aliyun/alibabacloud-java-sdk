@@ -4,33 +4,81 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nF9oXo7kLRWQ********</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>le_lite1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("RouteId")
     public Long routeId;
 
+    /**
+     * <strong>example:</strong>
+     * <h1></h1>
+     */
     @NameInMap("SourceData")
     public String sourceData;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58c46749ac934db3925fe5********</p>
+     */
     @NameInMap("TargetData")
     public String targetData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TargetIotHubQos")
     public Integer targetIotHubQos;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>function</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("TopicFilter")
     public String topicFilter;
 

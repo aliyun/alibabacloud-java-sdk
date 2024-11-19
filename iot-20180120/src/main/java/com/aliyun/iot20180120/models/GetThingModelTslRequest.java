@@ -5,47 +5,58 @@ import com.aliyun.tea.*;
 
 public class GetThingModelTslRequest extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BatteryModule</p>
      */
     @NameInMap("FunctionBlockId")
     public String functionBlockId;
 
     /**
      * <p>The ProductKey of the product.</p>
-     * <br>
-     * <p>You can view the ProductKey on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the [QueryProductList](~~69271~~) operation.</p>
+     * <p>You can view the ProductKey on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>Specifies whether to retrieve a simplified TSL model.</p>
-     * <br>
-     * <p>*   **true**: retrieves a simplified TSL model.</p>
-     * <br>
-     * <p>    A simplified TSL model includes only the **identifier** and **dataType** attributes of properties, services, events, and related input or output parameters. Simplified TSL models can be used by device developers for reference.</p>
-     * <br>
-     * <p>*   **false**: retrieves the complete TSL model.</p>
-     * <br>
-     * <p>    A complete TSL model includes all the parameters and values of properties, services, and events. Complete TSL models can be used by cloud application developers for reference.</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>true</strong>: retrieves a simplified TSL model.</p>
+     * <p>A simplified TSL model includes only the <strong>identifier</strong> and <strong>dataType</strong> attributes of properties, services, events, and related input or output parameters. Simplified TSL models can be used by device developers for reference.</p>
+     * </li>
+     * <li><p><strong>false</strong>: retrieves the complete TSL model.</p>
+     * <p>A complete TSL model includes all the parameters and values of properties, services, and events. Complete TSL models can be used by cloud application developers for reference.</p>
+     * </li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.0.0</p>
      */
     @NameInMap("ModelVersion")
     public String modelVersion;
 
     /**
      * <p>The version number of the TSL model to be queried.</p>
-     * <br>
      * <p>If you do not specify this parameter, IoT Platform returns the draft TSL model that is unpublished.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
 
     /**
      * <p>The identifier of the custom TSL module. Each identifier is unique in a product.</p>
-     * <br>
      * <p>If you do not specify this parameter, the default module is queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Simple")
     public Boolean simple;

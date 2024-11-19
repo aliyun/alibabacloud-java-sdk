@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>An internal error occurred. Try again later.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AF71BF1D-B552-47CD-B34B-352557627992</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +98,27 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
     public static class GetSpeechLicenseDeviceStatisticsResponseBodyData extends TeaModel {
         /**
          * <p>The number of available licenses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AvailableQuota")
         public Integer availableQuota;
 
         /**
          * <p>The number of expired licenses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ExpiredQuota")
         public Integer expiredQuota;
 
         /**
          * <p>The number of licenses that are about to expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ExpiringQuota")
         public Integer expiringQuota;

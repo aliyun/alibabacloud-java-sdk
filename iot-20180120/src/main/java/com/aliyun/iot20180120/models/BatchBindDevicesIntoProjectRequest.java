@@ -4,12 +4,25 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchBindDevicesIntoProjectRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Devices")
     public java.util.List<BatchBindDevicesIntoProjectRequestDevices> devices;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a12******</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -43,9 +56,21 @@ public class BatchBindDevicesIntoProjectRequest extends TeaModel {
     }
 
     public static class BatchBindDevicesIntoProjectRequestDevices extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ee2******</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

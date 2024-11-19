@@ -4,21 +4,31 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchImportDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceList")
     public java.util.List<BatchImportDeviceRequestDeviceList> deviceList;
 
     /**
-     * <p>The instance ID. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
-     * <br>
-     * <p>>  If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
-     * <br>
-     * <p>For more information, see the [Overview](~~356505~~) topic of IoT instances.</p>
+     * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+     * <blockquote>
+     * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+     * </blockquote>
+     * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
-     * <p>The **ProductKey** of the gateway product to which the devices belong.</p>
+     * <p>The <strong>ProductKey</strong> of the gateway product to which the devices belong.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
@@ -53,9 +63,15 @@ public class BatchImportDeviceRequest extends TeaModel {
     }
 
     public static class BatchImportDeviceRequestDeviceList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 

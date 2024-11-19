@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryProductListResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryProductListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B4ECF2C-6222-42EC-A4B5-C12202E71CEA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,54 +95,77 @@ public class QueryProductListResponseBody extends TeaModel {
     public static class QueryProductListResponseBodyDataListProductInfo extends TeaModel {
         /**
          * <p>The authentication method that was used to connect the devices of the product to IoT Platform. Valid values:</p>
-         * <br>
-         * <p>*   **secret**: DeviceSecrets were used to authenticate the devices.</p>
-         * <p>*   **id2**: IoT Internet Device ID was used to authenticate the devices.</p>
-         * <p>*   **x509**: X.509 certificates were used to authenticate the devices.</p>
+         * <ul>
+         * <li><strong>secret</strong>: DeviceSecrets were used to authenticate the devices.</li>
+         * <li><strong>id2</strong>: IoT Internet Device ID was used to authenticate the devices.</li>
+         * <li><strong>x509</strong>: X.509 certificates were used to authenticate the devices.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>secret</p>
          */
         @NameInMap("AuthType")
         public String authType;
 
         /**
          * <p>The data format that was used by a communication protocol to transmit data between the devices and IoT Platform. This parameter is available only if the AliyunCommodityCode parameter is set to iothub_senior.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   **0**: custom. A custom serial data format was used. In this case, the device can submit raw data, such as binary data streams. IoT Platform converts the raw data into standard Alink JSON data by using a specified data parsing script.</p>
-         * <p>*   **1**: Alink JSON. Alink JSON data is transmitted between the devices and IoT Platform. Alink is a data exchange protocol that is pre-defined by IoT Platform.</p>
+         * <ul>
+         * <li><strong>0</strong>: custom. A custom serial data format was used. In this case, the device can submit raw data, such as binary data streams. IoT Platform converts the raw data into standard Alink JSON data by using a specified data parsing script.</li>
+         * <li><strong>1</strong>: Alink JSON. Alink JSON data is transmitted between the devices and IoT Platform. Alink is a data exchange protocol that is pre-defined by IoT Platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DataFormat")
         public Integer dataFormat;
 
         /**
          * <p>The description of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test product.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The number of devices in the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         @NameInMap("DeviceCount")
         public Integer deviceCount;
 
         /**
          * <p>The time when the product was created. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581595942000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The node type of the product. This parameter is available only if the AliyunCommodityCode parameter is set to iothub_senior. Valid values:</p>
-         * <br>
-         * <p>*   **0**: device. Sub-devices cannot be attached to a device. A device can be directly connected to IoT Platform or connected to IoT Platform as a sub-device of a gateway.</p>
-         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain topological relationships with sub-devices, and synchronize topological relationships to IoT Platform.</p>
+         * <ul>
+         * <li><strong>0</strong>: device. Sub-devices cannot be attached to a device. A device can be directly connected to IoT Platform or connected to IoT Platform as a sub-device of a gateway.</li>
+         * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain topological relationships with sub-devices, and synchronize topological relationships to IoT Platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NodeType")
         public Integer nodeType;
 
         /**
          * <p>The ProductKey of the product. When you create a product, a ProductKey is a globally unique identifier (GUID) that is issued by IoT Platform to the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1T27vz****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;
@@ -236,32 +269,45 @@ public class QueryProductListResponseBody extends TeaModel {
     public static class QueryProductListResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The details of the products.</p>
-         * <br>
-         * <p>>  The returned product information is sorted in reverse-chronological order based on the time when the products were created.</p>
+         * <blockquote>
+         * <p> The returned product information is sorted in reverse-chronological order based on the time when the products were created.</p>
+         * </blockquote>
          */
         @NameInMap("List")
         public QueryProductListResponseBodyDataList list;
 
         /**
          * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         @NameInMap("PageCount")
         public Integer pageCount;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>184</p>
          */
         @NameInMap("Total")
         public Integer total;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryThingModelExtendConfigPublishedResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class QueryThingModelExtendConfigPublishedResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,9 +94,11 @@ public class QueryThingModelExtendConfigPublishedResponseBody extends TeaModel {
 
     public static class QueryThingModelExtendConfigPublishedResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the extended TSL parameters. For more information about the definition of extended parameters, see [CreateThingModel](~~150323~~).</p>
-         * <br>
-         * <p>For more information, see [Data structure of ThingModelJson](~~150457~~).</p>
+         * <p>The information about the extended TSL parameters. For more information about the definition of extended parameters, see <a href="https://help.aliyun.com/document_detail/150323.html">CreateThingModel</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;profile\&quot;:{\&quot;productKey\&quot;:\&quot;a114x******\&quot;},\&quot;properties\&quot;:[{\&quot;originalDataType\&quot;:{\&quot;specs\&quot;:{\&quot;registerCount\&quot;:1,\&quot;reverseRegister\&quot;:0,\&quot;swap16\&quot;:0},\&quot;type\&quot;:\&quot;bool\&quot;},\&quot;identifier\&quot;:\&quot;WakeUpData\&quot;,\&quot;registerAddress\&quot;:\&quot;0x04\&quot;,\&quot;scaling\&quot;:1,\&quot;writeFunctionCode\&quot;:0,\&quot;operateType\&quot;:\&quot;inputStatus\&quot;,\&quot;pollingTime\&quot;:1000,\&quot;trigger\&quot;:1}]}</p>
          */
         @NameInMap("Configuration")
         public String configuration;

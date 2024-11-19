@@ -4,12 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserDefineTableDataByPrimaryKeyShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Conditions")
     public String conditionsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TableIdentifier")
     public String tableIdentifier;
 

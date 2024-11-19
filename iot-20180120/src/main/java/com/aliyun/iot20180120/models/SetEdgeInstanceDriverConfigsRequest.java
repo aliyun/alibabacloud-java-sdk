@@ -4,15 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetEdgeInstanceDriverConfigsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<SetEdgeInstanceDriverConfigsRequestConfigs> configs;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>021d154d2a2f4dd7a489773d9e04****</p>
+     */
     @NameInMap("DriverId")
     public String driverId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3APY0tPLhmgGtx0****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -54,12 +73,28 @@ public class SetEdgeInstanceDriverConfigsRequest extends TeaModel {
     }
 
     public static class SetEdgeInstanceDriverConfigsRequestConfigs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:123}</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 

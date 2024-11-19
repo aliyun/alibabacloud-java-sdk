@@ -5,26 +5,39 @@ import com.aliyun.tea.*;
 
 public class ReupgradeOTATaskRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can view the ID of an instance on the **Overview** page in the IoT Platform console.****</p>
-     * <br>
-     * <p>>*   If the instance has an ID, you must specify the **IotInstanceId** parameter. If you do not specify this parameter, the call fails.</p>
-     * <p>>*   If the instance does not have an **ID** or no **Overview** page is displayed for the instance, you do not need to specify this parameter.</p>
-     * <br>
-     * <p>For more information, see [Instance overview](~~356505~~).</p>
+     * <p>The ID of the instance. You can view the ID of an instance on the <strong>Overview</strong> page in the IoT Platform console.****</p>
+     * <blockquote>
+     * <ul>
+     * <li>If the instance has an ID, you must specify the <strong>IotInstanceId</strong> parameter. If you do not specify this parameter, the call fails.</li>
+     * <li>If the instance does not have an <strong>ID</strong> or no <strong>Overview</strong> page is displayed for the instance, you do not need to specify this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Instance overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot-v64***</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The ID of the update batch.</p>
-     * <br>
-     * <p>After you call the [CreateOTAStaticUpgradeJob](~~147496~~) or [CreateOTADynamicUpgradeJob](~~147887~~) operation to create an update batch, the **JobId** parameter is returned.</p>
-     * <br>
-     * <p>You can also view the **batch ID** on the **Firmware Details** page in the IoT Platform console.</p>
+     * <p>After you call the <a href="https://help.aliyun.com/document_detail/147496.html">CreateOTAStaticUpgradeJob</a> or <a href="https://help.aliyun.com/document_detail/147887.html">CreateOTADynamicUpgradeJob</a> operation to create an update batch, the <strong>JobId</strong> parameter is returned.</p>
+     * <p>You can also view the <strong>batch ID</strong> on the <strong>Firmware Details</strong> page in the IoT Platform console.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7glPHmaDYLAYMD1HHutT02****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>y3tOmCDNgpR8F9jnVEzC01****</p>
+     */
     @NameInMap("TaskId")
     public java.util.List<String> taskId;
 

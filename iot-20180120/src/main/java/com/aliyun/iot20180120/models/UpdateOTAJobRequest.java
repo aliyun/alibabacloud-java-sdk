@@ -7,9 +7,15 @@ public class UpdateOTAJobRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaximumPerMinute")
     public Integer maximumPerMinute;
 
@@ -19,12 +25,18 @@ public class UpdateOTAJobRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<UpdateOTAJobRequestTags> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetSelection")
     public String targetSelection;
 
     @NameInMap("TimeoutInMinutes")
     public Integer timeoutInMinutes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UpgradeType")
     public String upgradeType;
 
@@ -98,9 +110,15 @@ public class UpdateOTAJobRequest extends TeaModel {
     }
 
     public static class UpdateOTAJobRequestTags extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 

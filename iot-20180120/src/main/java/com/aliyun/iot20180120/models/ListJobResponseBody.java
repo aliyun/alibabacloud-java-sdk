@@ -4,6 +4,10 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,18 +17,38 @@ public class ListJobResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BF449394-1C7D-4144-B7C4-9C3FA29F8B64</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -98,27 +122,59 @@ public class ListJobResponseBody extends TeaModel {
     }
 
     public static class ListJobResponseBodyDataData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Z20nyanW5****010001</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MyTestJobOEfwJN</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1557062301656</p>
+         */
         @NameInMap("ScheduledTime")
         public Long scheduledTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CUSTOM_JOB</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-21T11:45:37.000Z</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-21T17:15:46.000Z</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 

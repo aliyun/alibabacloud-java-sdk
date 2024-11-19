@@ -4,18 +4,34 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySummarySceneRuleLogResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySummarySceneRuleLogResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2279A994-3E7D-4EC6-BD17-FA0D0EC2EC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class QuerySummarySceneRuleLogResponseBody extends TeaModel {
     }
 
     public static class QuerySummarySceneRuleLogResponseBodyDataLogListLogInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1582373706</p>
+         */
         @NameInMap("LogTime")
         public Integer logTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a6a5b5df1582373508176121******</p>
+         */
         @NameInMap("TraceId")
         public String traceId;
 
@@ -125,15 +153,27 @@ public class QuerySummarySceneRuleLogResponseBody extends TeaModel {
     }
 
     public static class QuerySummarySceneRuleLogResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("LogList")
         public QuerySummarySceneRuleLogResponseBodyDataLogList logList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

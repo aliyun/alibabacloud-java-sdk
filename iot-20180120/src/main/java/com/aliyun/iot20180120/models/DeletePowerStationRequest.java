@@ -4,12 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeletePowerStationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlgorithmInstanceUid")
     public String algorithmInstanceUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PowerStationUid")
     public String powerStationUid;
 

@@ -4,9 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryMessageInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot-cn-0pp1n8t***</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>323455***</p>
+     */
     @NameInMap("UniMsgId")
     public String uniMsgId;
 

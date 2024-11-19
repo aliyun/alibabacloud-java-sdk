@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetThingModelTslPublishedResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.system.SystemException</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,15 +27,22 @@ public class GetThingModelTslPublishedResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,6 +95,9 @@ public class GetThingModelTslPublishedResponseBody extends TeaModel {
     public static class GetThingModelTslPublishedResponseBodyData extends TeaModel {
         /**
          * <p>The string of the TSL model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;schema\&quot;:\&quot;<a href="https://iotx-tsl.oss-ap-southeast-1.aliyuncs.com/schema.json%5C%5C%22,%5C%5C%22profile%5C%5C%22:%7B%5C%5C%22productKey%5C%5C%22:%5C%5C%22a14TeWI****%5C%5C%22%7D,%5C%5C%22properties%5C%5C%22:%5B%7B%5C%5C%22identifier%5C%5C%22:%5C%5C%22Humidity%5C%5C%22%7D%5D%7D">https://iotx-tsl.oss-ap-southeast-1.aliyuncs.com/schema.json\\&quot;,\\&quot;profile\\&quot;:{\\&quot;productKey\\&quot;:\\&quot;a14TeWI****\\&quot;},\\&quot;properties\\&quot;:[{\\&quot;identifier\\&quot;:\\&quot;Humidity\\&quot;}]}</a></p>
          */
         @NameInMap("TslStr")
         public String tslStr;

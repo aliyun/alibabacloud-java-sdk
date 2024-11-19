@@ -4,18 +4,38 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RefreshDeviceTunnelSharePasswordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request parameter error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f5c96d7e792af75da33a81dc87982ea********</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46AF6619-EFF3-4B77-A90B-B9EAA0C6D1AF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

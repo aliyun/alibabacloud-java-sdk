@@ -4,9 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CloseDeviceTunnelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iot-<em><strong>-v6</strong></em></p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d4098041-a560-***</p>
+     */
     @NameInMap("TunnelId")
     public String tunnelId;
 

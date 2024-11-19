@@ -6,66 +6,87 @@ import com.aliyun.tea.*;
 public class UpdateEdgeInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the edge instance. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the edge instance.</p>
-     * <p>*   false: disables the edge instance.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables the edge instance.</li>
+     * <li>false: disables the edge instance.</li>
+     * </ul>
      * <p>If you do not set this parameter, this parameter is not updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("BizEnable")
     public Boolean bizEnable;
 
     /**
-     * <p>The ID of the edge instance. To obtain the instance ID, perform the following steps: Log on to the [Link IoT Edge console](https://iot.console.aliyun.com/le/instance/list). On the **Edge Instances** page, move the pointer over the name of the edge instance that you want to update and obtain the instance ID.</p>
-     * <br>
-     * <p>You can also call the [QueryEdgeInstance](~~135214~~) operation to query the instance ID.</p>
+     * <p>The ID of the edge instance. To obtain the instance ID, perform the following steps: Log on to the <a href="https://iot.console.aliyun.com/le/instance/list">Link IoT Edge console</a>. On the <strong>Edge Instances</strong> page, move the pointer over the name of the edge instance that you want to update and obtain the instance ID.</p>
+     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/135214.html">QueryEdgeInstance</a> operation to query the instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3APY0tPLhmgGtx0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the Internet of Things (IoT) service instance. This parameter is not required for the public instance but required for Enterprise Edition instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot_instc_pu****_c*-v64********</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>The name of the edge instance.</p>
-     * <br>
-     * <p>The name can be up to 20 characters in length and can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>The name can be up to 20 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LinkIoTEdge_Node</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The specifications of the edge instance. Valid values:</p>
-     * <br>
-     * <p>*   10: Lite Edition</p>
-     * <p>*   20: Standard Edition</p>
-     * <p>*   30: Pro Edition</p>
-     * <br>
+     * <ul>
+     * <li>10: Lite Edition</li>
+     * <li>20: Standard Edition</li>
+     * <li>30: Pro Edition</li>
+     * </ul>
      * <p>If you do not set this parameter, this parameter is not updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Spec")
     public Integer spec;
 
     /**
-     * <p>The tags of the edge instance. Each tag is a key-value pair. Multiple tags are separated with commas (,). Example: `k1:v1,k2:v2`.</p>
-     * <br>
-     * <p>*   Take note of the following limits on tag keys:</p>
-     * <br>
-     * <p>    *   Tag keys cannot be left empty.</p>
-     * <p>    *   Tag keys must be unique in the edge instance.</p>
-     * <p>    *   Tag keys support only letters.</p>
-     * <p>    *   Each tag key can be up to 20 characters in length.</p>
-     * <br>
-     * <p>*   Take note of the following limits on tag values:</p>
-     * <br>
-     * <p>    *   Tag values cannot be left empty.</p>
-     * <p>    *   A tag value can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>    *   Each tag value can be up to 20 characters in length.</p>
-     * <br>
+     * <p>The tags of the edge instance. Each tag is a key-value pair. Multiple tags are separated with commas (,). Example: <code>k1:v1,k2:v2</code>.</p>
+     * <ul>
+     * <li><p>Take note of the following limits on tag keys:</p>
+     * <ul>
+     * <li>Tag keys cannot be left empty.</li>
+     * <li>Tag keys must be unique in the edge instance.</li>
+     * <li>Tag keys support only letters.</li>
+     * <li>Each tag key can be up to 20 characters in length.</li>
+     * </ul>
+     * </li>
+     * <li><p>Take note of the following limits on tag values:</p>
+     * <ul>
+     * <li>Tag values cannot be left empty.</li>
+     * <li>A tag value can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>Each tag value can be up to 20 characters in length.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>If you do not set this parameter, this parameter is not updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k1:v1,k2:v2</p>
      */
     @NameInMap("Tags")
     public String tags;
