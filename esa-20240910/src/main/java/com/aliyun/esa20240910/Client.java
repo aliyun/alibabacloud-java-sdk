@@ -1190,7 +1190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建边缘容器应用的版本</p>
+     * <p>Creates a version for a containerized application. You can iterate the application based on the version.</p>
      * 
      * @param tmpReq CreateEdgeContainerAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1240,7 +1240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建边缘容器应用的版本</p>
+     * <p>Creates a version for a containerized application. You can iterate the application based on the version.</p>
      * 
      * @param request CreateEdgeContainerAppVersionRequest
      * @return CreateEdgeContainerAppVersionResponse
@@ -3786,40 +3786,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询加速服务节点IP段列表</p>
-     * 
-     * @param request DescribeIPRangeListRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeIPRangeListResponse
-     */
-    public DescribeIPRangeListResponse describeIPRangeListWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeIPRangeList"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIPRangeListResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询加速服务节点IP段列表</p>
-     * @return DescribeIPRangeListResponse
-     */
-    public DescribeIPRangeListResponse describeIPRangeList() throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeIPRangeListWithOptions(runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>查询账户的KV状态信</p>
      * 
      * @param request DescribeKvAccountStatusRequest
@@ -5651,7 +5617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下客户端证书列表</p>
+     * <p>Queries client certificates configured for a website.</p>
      * 
      * @param request ListClientCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5679,7 +5645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下客户端证书列表</p>
+     * <p>Queries client certificates configured for a website.</p>
      * 
      * @param request ListClientCertificatesRequest
      * @return ListClientCertificatesResponse

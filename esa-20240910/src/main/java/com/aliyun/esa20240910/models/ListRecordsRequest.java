@@ -30,7 +30,7 @@ public class ListRecordsRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("Proxied")
-    public String proxied;
+    public Boolean proxied;
 
     /**
      * <strong>example:</strong>
@@ -98,11 +98,11 @@ public class ListRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRecordsRequest setProxied(String proxied) {
+    public ListRecordsRequest setProxied(Boolean proxied) {
         this.proxied = proxied;
         return this;
     }
-    public String getProxied() {
+    public Boolean getProxied() {
         return this.proxied;
     }
 
