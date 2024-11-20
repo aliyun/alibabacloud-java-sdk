@@ -68,12 +68,8 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
     }
 
     public static class DescribeFaceGuardRiskResponseBodyResultObject extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ROOT,VPN,HOOK</p>
-         */
-        @NameInMap("RiakTags")
-        public String riakTags;
+        @NameInMap("CertifyId")
+        public String certifyId;
 
         /**
          * <strong>example:</strong>
@@ -91,17 +87,20 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         @NameInMap("RiskExtends")
         public String riskExtends;
 
+        @NameInMap("RiskTags")
+        public String riskTags;
+
         public static DescribeFaceGuardRiskResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaceGuardRiskResponseBodyResultObject self = new DescribeFaceGuardRiskResponseBodyResultObject();
             return TeaModel.build(map, self);
         }
 
-        public DescribeFaceGuardRiskResponseBodyResultObject setRiakTags(String riakTags) {
-            this.riakTags = riakTags;
+        public DescribeFaceGuardRiskResponseBodyResultObject setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
             return this;
         }
-        public String getRiakTags() {
-            return this.riakTags;
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
         public DescribeFaceGuardRiskResponseBodyResultObject setRiskExtends(String riskExtends) {
@@ -110,6 +109,14 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
         public String getRiskExtends() {
             return this.riskExtends;
+        }
+
+        public DescribeFaceGuardRiskResponseBodyResultObject setRiskTags(String riskTags) {
+            this.riskTags = riskTags;
+            return this;
+        }
+        public String getRiskTags() {
+            return this.riskTags;
         }
 
     }

@@ -1354,21 +1354,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public Id2MetaVerifyResponse id2MetaVerifyWithOptions(Id2MetaVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
-            query.put("IdentifyNum", request.identifyNum);
+            body.put("IdentifyNum", request.identifyNum);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
-            query.put("ParamType", request.paramType);
+            body.put("ParamType", request.paramType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
-            query.put("UserName", request.userName);
+            body.put("UserName", request.userName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "Id2MetaVerify"),
@@ -1742,25 +1742,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public Mobile3MetaDetailVerifyResponse mobile3MetaDetailVerifyWithOptions(Mobile3MetaDetailVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
-            query.put("IdentifyNum", request.identifyNum);
+            body.put("IdentifyNum", request.identifyNum);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
-            query.put("Mobile", request.mobile);
+            body.put("Mobile", request.mobile);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
-            query.put("ParamType", request.paramType);
+            body.put("ParamType", request.paramType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
-            query.put("UserName", request.userName);
+            body.put("UserName", request.userName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "Mobile3MetaDetailVerify"),
@@ -1798,25 +1798,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public Mobile3MetaSimpleVerifyResponse mobile3MetaSimpleVerifyWithOptions(Mobile3MetaSimpleVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
-            query.put("IdentifyNum", request.identifyNum);
+            body.put("IdentifyNum", request.identifyNum);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
-            query.put("Mobile", request.mobile);
+            body.put("Mobile", request.mobile);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
-            query.put("ParamType", request.paramType);
+            body.put("ParamType", request.paramType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
-            query.put("UserName", request.userName);
+            body.put("UserName", request.userName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "Mobile3MetaSimpleVerify"),
@@ -1854,17 +1854,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public MobileDetectResponse mobileDetectWithOptions(MobileDetectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.mobiles)) {
-            query.put("Mobiles", request.mobiles);
+            body.put("Mobiles", request.mobiles);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
-            query.put("ParamType", request.paramType);
+            body.put("ParamType", request.paramType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "MobileDetect"),
@@ -1902,17 +1902,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public MobileOnlineStatusResponse mobileOnlineStatusWithOptions(MobileOnlineStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
-            query.put("Mobile", request.mobile);
+            body.put("Mobile", request.mobile);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
-            query.put("ParamType", request.paramType);
+            body.put("ParamType", request.paramType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "MobileOnlineStatus"),
@@ -1950,17 +1950,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public MobileOnlineTimeResponse mobileOnlineTimeWithOptions(MobileOnlineTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
-            query.put("Mobile", request.mobile);
+            body.put("Mobile", request.mobile);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
-            query.put("ParamType", request.paramType);
+            body.put("ParamType", request.paramType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "MobileOnlineTime"),
