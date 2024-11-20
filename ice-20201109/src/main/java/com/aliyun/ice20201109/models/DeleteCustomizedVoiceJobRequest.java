@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomizedVoiceJobRequest extends TeaModel {
     /**
+     * <p>The ID of the human voice cloning job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

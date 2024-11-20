@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DecryptKMSDataKeyResponseBody extends TeaModel {
+    /**
+     * <p>The information about the decryption result.</p>
+     */
     @NameInMap("DataKey")
     public DecryptKMSDataKeyResponseBodyDataKey dataKey;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
 
     public static class DecryptKMSDataKeyResponseBodyDataKey extends TeaModel {
         /**
+         * <p>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</p>
+         * 
          * <strong>example:</strong>
          * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
          */
@@ -44,6 +51,8 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         public String keyId;
 
         /**
+         * <p>The plaintext that is generated after decryption.</p>
+         * 
          * <strong>example:</strong>
          * <p>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</p>
          */

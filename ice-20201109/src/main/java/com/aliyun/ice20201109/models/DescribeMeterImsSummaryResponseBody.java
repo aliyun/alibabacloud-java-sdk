@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribeMeterImsSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The usage statistics of IMS.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsSummaryResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
      */
@@ -37,22 +42,44 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
 
     public static class DescribeMeterImsSummaryResponseBodyData extends TeaModel {
         /**
+         * <p>The duration of video editing.</p>
+         * 
          * <strong>example:</strong>
          * <p>8722</p>
          */
         @NameInMap("EditingDuration")
         public String editingDuration;
 
+        /**
+         * <p>The duration of live editing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("LiveEditDuration")
         public String liveEditDuration;
 
+        /**
+         * <p>The duration of live stream recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("LiveRecordDuration")
         public String liveRecordDuration;
 
+        /**
+         * <p>The number of live stream snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("LiveSnapshotCount")
         public String liveSnapshotCount;
 
         /**
+         * <p>The duration of live stream transcoding.</p>
+         * 
          * <strong>example:</strong>
          * <p>12356</p>
          */
@@ -60,6 +87,8 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
         public Long liveTranscodeDuration;
 
         /**
+         * <p>The duration of AI processing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -67,6 +96,8 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
         public Long mpsAiDuration;
 
         /**
+         * <p>The duration of video-on-demand (VOD) transcoding.</p>
+         * 
          * <strong>example:</strong>
          * <p>17337</p>
          */
@@ -74,6 +105,8 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
         public Long mpsTranscodeDuration;
 
         /**
+         * <p>The duration of audio and video enhancement.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */

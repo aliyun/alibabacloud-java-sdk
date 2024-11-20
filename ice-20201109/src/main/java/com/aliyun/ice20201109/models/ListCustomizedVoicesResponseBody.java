@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListCustomizedVoicesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListCustomizedVoicesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -15,6 +20,12 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
 
     public static class ListCustomizedVoicesResponseBodyDataCustomizedVoiceList extends TeaModel {
         /**
+         * <p>The media asset ID of the sample audio file.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
          */
@@ -59,6 +72,12 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         public String demoAudioMediaId;
 
         /**
+         * <p>The gender. Valid values:</p>
+         * <ul>
+         * <li>female</li>
+         * <li>male</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>male</p>
          */
@@ -66,25 +85,53 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         public String gender;
 
         /**
+         * <p>The scenario. Valid values:</p>
+         * <ul>
+         * <li>story</li>
+         * <li>interaction</li>
+         * <li>navigation</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>story</p>
          */
         @NameInMap("Scenario")
         public String scenario;
 
+        /**
+         * <ul>
+         * <li><p>The voice type. Valid values:</p>
+         * <ul>
+         * <li>Basic</li>
+         * <li>Standard</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The voice description.</p>
+         */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
         /**
+         * <p>The voice ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xiaozhuan</p>
          */
         @NameInMap("VoiceId")
         public String voiceId;
 
+        /**
+         * <p>The voice name.</p>
+         */
         @NameInMap("VoiceName")
         public String voiceName;
 
@@ -152,10 +199,15 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
     }
 
     public static class ListCustomizedVoicesResponseBodyData extends TeaModel {
+        /**
+         * <p>The queried personalized human voices.</p>
+         */
         @NameInMap("CustomizedVoiceList")
         public java.util.List<ListCustomizedVoicesResponseBodyDataCustomizedVoiceList> customizedVoiceList;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>41</p>
          */

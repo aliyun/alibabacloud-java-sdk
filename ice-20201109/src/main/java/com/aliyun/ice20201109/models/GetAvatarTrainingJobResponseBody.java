@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetAvatarTrainingJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned if the request was successful.</p>
+     */
     @NameInMap("Data")
     public GetAvatarTrainingJobResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -15,6 +20,8 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,20 +58,30 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetAvatarTrainingJobResponseBodyDataAvatarTrainingJob extends TeaModel {
+        /**
+         * <p>The description of the digital human.</p>
+         */
         @NameInMap("AvatarDescription")
         public String avatarDescription;
 
         /**
+         * <p>The ID of the digital human.</p>
+         * 
          * <strong>example:</strong>
          * <p>Avatar-XXXX</p>
          */
         @NameInMap("AvatarId")
         public String avatarId;
 
+        /**
+         * <p>The name of the digital human.</p>
+         */
         @NameInMap("AvatarName")
         public String avatarName;
 
         /**
+         * <p>The type of the digital human.</p>
+         * 
          * <strong>example:</strong>
          * <p>2DAvatar</p>
          */
@@ -72,6 +89,11 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         public String avatarType;
 
         /**
+         * <ul>
+         * <li>The time when the first training was initiated.</li>
+         * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:40Z</p>
          */
@@ -79,6 +101,8 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         public String firstTrainingTime;
 
         /**
+         * <p>The ID of the digital human training job.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>55d86f7f4587943ce7734d6b</strong></strong></p>
          */
@@ -86,16 +110,26 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <ul>
+         * <li>The time when the last training was initiated.</li>
+         * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:40Z</p>
          */
         @NameInMap("LastTrainingTime")
         public String lastTrainingTime;
 
+        /**
+         * <p>The status description.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>The media asset ID of the portrait image.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
          */
@@ -103,6 +137,11 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         public String portrait;
 
         /**
+         * <ul>
+         * <li>The state of the digital human training job.</li>
+         * <li>Valid values: Init, Queuing, Training, Success, and Fail.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -110,6 +149,8 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The thumbnail URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
          */
@@ -117,6 +158,8 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         public String thumbnail;
 
         /**
+         * <p>Indicates whether the input video supports alpha channels.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -124,6 +167,8 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         public Boolean transparent;
 
         /**
+         * <p>The ID of the video used for training.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
          */
@@ -242,6 +287,9 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetAvatarTrainingJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the digital human training job.</p>
+         */
         @NameInMap("AvatarTrainingJob")
         public GetAvatarTrainingJobResponseBodyDataAvatarTrainingJob avatarTrainingJob;
 

@@ -23,6 +23,9 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
+    @NameInMap("UserData")
+    public String userData;
+
     /**
      * <strong>example:</strong>
      * <p>877ae632caae49b1afc81c2e8194ffb4</p>
@@ -57,6 +60,14 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     }
     public String getTemplateConfigShrink() {
         return this.templateConfigShrink;
+    }
+
+    public GenerateAIAgentCallShrinkRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public GenerateAIAgentCallShrinkRequest setUserId(String userId) {

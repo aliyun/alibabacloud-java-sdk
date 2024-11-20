@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>627B30EB-1D0A-5C6D-8467-431626E0FA10</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried speaker groups.</p>
+     */
     @NameInMap("VoiceGroups")
     public java.util.List<ListSmartVoiceGroupsResponseBodyVoiceGroups> voiceGroups;
 
@@ -35,22 +41,36 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListSmartVoiceGroupsResponseBodyVoiceGroupsVoiceList extends TeaModel {
+        /**
+         * <p>The speaker description.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The speaker name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The remarks of the speaker.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
         @NameInMap("SupportSampleRate")
         public String supportSampleRate;
 
+        /**
+         * <p>The tag of the speaker type.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
         /**
+         * <p>The speaker ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhitian</p>
          */
@@ -58,6 +78,15 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         public String voice;
 
         /**
+         * <p>The speaker type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Male</li>
+         * <li>Female</li>
+         * <li>Boy</li>
+         * <li>Girl</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Female</p>
          */
@@ -65,6 +94,8 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         public String voiceType;
 
         /**
+         * <p>The URL of the sample audio file.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://***.com/zhiqing.mp3</p>
          */
@@ -143,9 +174,15 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListSmartVoiceGroupsResponseBodyVoiceGroups extends TeaModel {
+        /**
+         * <p>The name of the speaker group.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The speakers.</p>
+         */
         @NameInMap("VoiceList")
         public java.util.List<ListSmartVoiceGroupsResponseBodyVoiceGroupsVoiceList> voiceList;
 

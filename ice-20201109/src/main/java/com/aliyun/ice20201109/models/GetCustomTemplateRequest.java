@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCustomTemplateRequest extends TeaModel {
     /**
+     * <p>The template subtype.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetCustomTemplateRequest extends TeaModel {
     public Integer subtype;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
      */
@@ -19,6 +23,8 @@ public class GetCustomTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The ID of the template type that is used to query the default template. This parameter is required if TemplateId is not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

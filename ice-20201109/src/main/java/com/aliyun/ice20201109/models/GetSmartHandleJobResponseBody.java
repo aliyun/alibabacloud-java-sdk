@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSmartHandleJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The job results.</p>
+     */
     @NameInMap("JobResult")
     public GetSmartHandleJobResponseBodyJobResult jobResult;
 
     /**
+     * <p>The job results.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,16 +29,30 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     public String output;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the intelligent job.</p>
+     */
     @NameInMap("SmartJobInfo")
     public GetSmartHandleJobResponseBodySmartJobInfo smartJobInfo;
 
     /**
+     * <p>The job state.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Finished</li>
+     * <li>Failed</li>
+     * <li>Executing</li>
+     * <li>Created</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Finished</p>
      */
@@ -39,6 +60,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     public String state;
 
     /**
+     * <p>The user-defined data in the JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;user&quot;:&quot;data&quot;}</p>
      */
@@ -108,16 +131,16 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     public static class GetSmartHandleJobResponseBodyJobResult extends TeaModel {
         /**
-         * <p>智能分析结果</p>
+         * <p>The AI analysis result.</p>
          * 
          * <strong>example:</strong>
-         * <p>拆条或智能标签信息</p>
+         * <p>Intelligent segmentation or tagging information</p>
          */
         @NameInMap("AiResult")
         public String aiResult;
 
         /**
-         * <p>媒资Id</p>
+         * <p>The ID of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -125,6 +148,12 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The token usage. This parameter is returned only for keyword-based text generation jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;total_tokens&quot;:100}</p>
+         */
         @NameInMap("Usage")
         public String usage;
 
@@ -161,6 +190,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     public static class GetSmartHandleJobResponseBodySmartJobInfoInputConfig extends TeaModel {
         /**
+         * <p>The OSS URL or the ID of the material in the media asset library.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
@@ -184,7 +215,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     public static class GetSmartHandleJobResponseBodySmartJobInfoOutputConfig extends TeaModel {
         /**
-         * <p>OSS Bucket</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -193,7 +224,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>OSS Object</p>
+         * <p>The OSS object.</p>
          * 
          * <strong>example:</strong>
          * <p>test-object</p>
@@ -226,6 +257,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     public static class GetSmartHandleJobResponseBodySmartJobInfo extends TeaModel {
         /**
+         * <p>The time when the job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
@@ -233,16 +266,23 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The job description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试描述</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The input configurations.</p>
+         */
         @NameInMap("InputConfig")
         public GetSmartHandleJobResponseBodySmartJobInfoInputConfig inputConfig;
 
         /**
+         * <p>The job type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ASR</p>
          */
@@ -250,16 +290,23 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The time when the job was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The output configurations.</p>
+         */
         @NameInMap("OutputConfig")
         public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig;
 
         /**
+         * <p>The job title.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试标题</p>
          */
@@ -267,7 +314,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>userid。</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1974526429******</p>

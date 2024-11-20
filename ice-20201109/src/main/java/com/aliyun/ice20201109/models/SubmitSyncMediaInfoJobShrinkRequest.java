@@ -5,22 +5,30 @@ import com.aliyun.tea.*;
 
 public class SubmitSyncMediaInfoJobShrinkRequest extends TeaModel {
     /**
+     * <p>The input of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-name</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The scheduling parameters. This parameter is optional.</p>
+     */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
     /**
+     * <p>The user data.</p>
+     * 
      * <strong>example:</strong>
      * <p>user-data</p>
      */

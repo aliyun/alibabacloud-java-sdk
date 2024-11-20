@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetPackageJobResponseBody extends TeaModel {
+    /**
+     * <p>The information about the packaging job.</p>
+     */
     @NameInMap("PackageJob")
     public GetPackageJobResponseBodyPackageJob packageJob;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
      */
@@ -37,6 +42,12 @@ public class GetPackageJobResponseBody extends TeaModel {
 
     public static class GetPackageJobResponseBodyPackageJobInputsInput extends TeaModel {
         /**
+         * <p>The media object.</p>
+         * <ul>
+         * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
+         * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/video.mp4</p>
          */
@@ -44,6 +55,12 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String media;
 
         /**
+         * <p>The type of the media object. Valid values:</p>
+         * <ul>
+         * <li>OSS: an Object Storage Service (OSS) object.</li>
+         * <li>Media: a media asset.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -74,6 +91,9 @@ public class GetPackageJobResponseBody extends TeaModel {
     }
 
     public static class GetPackageJobResponseBodyPackageJobInputs extends TeaModel {
+        /**
+         * <p>The information about the input stream file.</p>
+         */
         @NameInMap("Input")
         public GetPackageJobResponseBodyPackageJobInputsInput input;
 
@@ -94,6 +114,12 @@ public class GetPackageJobResponseBody extends TeaModel {
 
     public static class GetPackageJobResponseBodyPackageJobOutput extends TeaModel {
         /**
+         * <p>The media object.</p>
+         * <ul>
+         * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
+         * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/video.m3u8</p>
          */
@@ -101,6 +127,12 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String media;
 
         /**
+         * <p>The type of the media object. Valid values:</p>
+         * <ul>
+         * <li>OSS: an OSS object.</li>
+         * <li>Media: a media asset.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -132,6 +164,8 @@ public class GetPackageJobResponseBody extends TeaModel {
 
     public static class GetPackageJobResponseBodyPackageJob extends TeaModel {
         /**
+         * <p>The error code returned if the job fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
          */
@@ -139,6 +173,8 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-08T11:34:05Z</p>
          */
@@ -146,16 +182,23 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-08T11:44:05Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The input of the job.</p>
+         */
         @NameInMap("Inputs")
         public java.util.List<GetPackageJobResponseBodyPackageJobInputs> inputs;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ab4802364a2e49208c99efab82dfa8e8</p>
          */
@@ -163,6 +206,8 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The error message that is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>Resource content bad.</p>
          */
@@ -170,6 +215,8 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The time when the job was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-08T11:44:05Z</p>
          */
@@ -177,16 +224,23 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The name of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The output of the job.</p>
+         */
         @NameInMap("Output")
         public GetPackageJobResponseBodyPackageJobOutput output;
 
         /**
+         * <p>The URL of the output file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/output.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/output.m3u8</a></p>
          */
@@ -194,6 +248,8 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String outputUrl;
 
         /**
+         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>36f3fee40aa047c0b067d0fb85edc12b</p>
          */
@@ -201,6 +257,8 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
+         * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -208,6 +266,8 @@ public class GetPackageJobResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The state of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>Init</p>
          */
@@ -215,16 +275,31 @@ public class GetPackageJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-08T11:34:05Z</p>
          */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <p>The source of the job. Valid values:</p>
+         * <ul>
+         * <li>API</li>
+         * <li>WorkFlow</li>
+         * <li>Console</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 
         /**
+         * <p>The user-defined data.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;param&quot;: &quot;value&quot;}</p>
          */

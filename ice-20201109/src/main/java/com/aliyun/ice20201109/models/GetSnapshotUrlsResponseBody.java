@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSnapshotUrlsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of snapshot URLs.</p>
+     */
     @NameInMap("SnapshotUrls")
     public java.util.List<String> snapshotUrls;
 
     /**
+     * <p>The total number of snapshots.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
     public Integer total;
 
     /**
+     * <p>The URL of the WebVTT file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt">http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt</a></p>
      */

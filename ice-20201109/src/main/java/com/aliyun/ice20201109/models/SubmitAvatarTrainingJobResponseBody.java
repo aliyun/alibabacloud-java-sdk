@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitAvatarTrainingJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitAvatarTrainingJobResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
      */
@@ -15,6 +20,8 @@ public class SubmitAvatarTrainingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class SubmitAvatarTrainingJobResponseBody extends TeaModel {
 
     public static class SubmitAvatarTrainingJobResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the digital human training job.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>29faef8144638ba42eb8e037</strong></strong></p>
          */

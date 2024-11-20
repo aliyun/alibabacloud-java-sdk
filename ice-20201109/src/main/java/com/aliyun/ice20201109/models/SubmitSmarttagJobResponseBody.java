@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitSmarttagJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the smart tagging job. We recommend that you save this ID for subsequent calls of other operations.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitSmarttagJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

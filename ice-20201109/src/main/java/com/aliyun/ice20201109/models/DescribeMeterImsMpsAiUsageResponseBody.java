@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
+    /**
+     * <p>The usage statistics of IMS on AI processing of MPS.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsMpsAiUsageResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
      */
@@ -37,6 +42,8 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
 
     public static class DescribeMeterImsMpsAiUsageResponseBodyData extends TeaModel {
         /**
+         * <p>The usage duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>644</p>
          */
@@ -44,12 +51,17 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1656950400</p>
          */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <p>The AI type. Valid values:</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,10 +4,21 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateDNADBRequest extends TeaModel {
+    /**
+     * <p>The description of the media fingerprint library.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The model of the media fingerprint library. Valid values:</p>
+     * <ul>
+     * <li><strong>Video</strong></li>
+     * <li><strong>Audio</strong></li>
+     * <li><strong>Image</strong></li>
+     * <li><strong>Text</strong> (supported only in the China (Shanghai) region)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Video</p>
      */
@@ -15,6 +26,7 @@ public class CreateDNADBRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The name of the media fingerprint library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

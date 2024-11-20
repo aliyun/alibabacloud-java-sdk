@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListSystemTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried templates.</p>
+     */
     @NameInMap("SystemTemplateList")
     public java.util.List<ListSystemTemplatesResponseBodySystemTemplateList> systemTemplateList;
 
     /**
+     * <p>The total number of templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -52,6 +59,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
 
     public static class ListSystemTemplatesResponseBodySystemTemplateList extends TeaModel {
         /**
+         * <p>The template state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -59,6 +68,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The subtype ID of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -66,6 +77,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         public Integer subtype;
 
         /**
+         * <p>The subtype name of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>Remux</p>
          */
@@ -73,6 +86,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         public String subtypeName;
 
         /**
+         * <p>The template parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
          */
@@ -80,6 +95,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>S00000001-000000</p>
          */
@@ -87,6 +104,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>FLV-COPY</p>
          */
@@ -94,6 +113,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
+         * <p>The type ID of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -101,6 +122,8 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         public Integer type;
 
         /**
+         * <p>The type name of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>TranscodeTemplate</p>
          */

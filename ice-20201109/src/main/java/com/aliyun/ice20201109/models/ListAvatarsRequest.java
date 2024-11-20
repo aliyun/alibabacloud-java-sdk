@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListAvatarsRequest extends TeaModel {
     /**
+     * <ul>
+     * <li>The type of the digital human.</li>
+     * <li>2DAvatar</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2DAvatar</p>
      */
@@ -12,6 +17,11 @@ public class ListAvatarsRequest extends TeaModel {
     public String avatarType;
 
     /**
+     * <ul>
+     * <li>The page number.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +29,11 @@ public class ListAvatarsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <ul>
+     * <li>The number of entries per page.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

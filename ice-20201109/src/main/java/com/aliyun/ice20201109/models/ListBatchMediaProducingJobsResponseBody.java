@@ -4,10 +4,16 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
+    /**
+     * <p>The queried quick video production jobs.</p>
+     */
     @NameInMap("EditingBatchJobList")
     public java.util.List<ListBatchMediaProducingJobsResponseBodyEditingBatchJobList> editingBatchJobList;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -15,6 +21,8 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>8EqYpQbZ6Eh7+Zz8DxVYoQ==</p>
      */
@@ -22,7 +30,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -69,6 +77,8 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
 
     public static class ListBatchMediaProducingJobsResponseBodyEditingBatchJobList extends TeaModel {
         /**
+         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-09T06:38:09Z</p>
          */
@@ -76,6 +86,8 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         public String completeTime;
 
         /**
+         * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-09T06:36:48Z</p>
          */
@@ -83,6 +95,8 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The editing configurations. For more information, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;MediaConfig&quot;: {
@@ -99,13 +113,24 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         @NameInMap("EditingConfig")
         public String editingConfig;
 
+        /**
+         * <p>The extended information of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>The input configurations.</p>
+         */
         @NameInMap("InputConfig")
         public String inputConfig;
 
         /**
+         * <p>The ID of the quick video production job.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>7ecbee4c6d9b8474498e</strong></strong></strong></p>
          */
@@ -113,6 +138,13 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Script: script-based editing job that mixes media assets.</li>
+         * <li>Smart_Mix: intelligent editing job that mixes media assets.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Script</p>
          */
@@ -120,6 +152,8 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The time when the job was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-09T06:37:58Z</p>
          */
@@ -127,6 +161,8 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The output configurations. For more information, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
@@ -141,12 +177,24 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         public String outputConfig;
 
         /**
+         * <p>The job state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Init</li>
+         * <li>Failed</li>
+         * <li>Processing</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/zh/ims/use-cases/to-configure-a-callback-when-a-clip-completes">Configure a callback upon editing completion</a>.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

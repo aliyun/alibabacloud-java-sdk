@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTemplateMaterialsRequest extends TeaModel {
     /**
+     * <p>The materials that you want to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;music.mp3&quot;,&quot;config.json&quot;,&quot;assets/1.jpg&quot;]</p>
      */
@@ -12,6 +14,7 @@ public class GetTemplateMaterialsRequest extends TeaModel {
     public String fileList;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

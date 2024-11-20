@@ -23,6 +23,9 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public AIAgentTemplateConfig templateConfig;
 
+    @NameInMap("UserData")
+    public String userData;
+
     /**
      * <strong>example:</strong>
      * <p>877ae632caae49b1afc81c2e8194ffb4</p>
@@ -57,6 +60,14 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     }
     public AIAgentTemplateConfig getTemplateConfig() {
         return this.templateConfig;
+    }
+
+    public GenerateAIAgentCallRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public GenerateAIAgentCallRequest setUserId(String userId) {

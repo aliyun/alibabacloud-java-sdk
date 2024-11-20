@@ -12,6 +12,8 @@ public class AddTemplateRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The URL of the template thumbnail.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
      */
@@ -19,6 +21,8 @@ public class AddTemplateRequest extends TeaModel {
     public String coverUrl;
 
     /**
+     * <p>The name of the custom template.</p>
+     * 
      * <strong>example:</strong>
      * <p>视频添加水印模板</p>
      */
@@ -26,6 +30,8 @@ public class AddTemplateRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the template preview video.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
      */
@@ -33,6 +39,8 @@ public class AddTemplateRequest extends TeaModel {
     public String previewMedia;
 
     /**
+     * <p>The IDs of the materials associated with the template for use by the regular template editor.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;video&quot;:[&quot;1805a0c6ca544fb395a06ca683619655&quot;]}</p>
      */
@@ -40,6 +48,20 @@ public class AddTemplateRequest extends TeaModel {
     public String relatedMediaids;
 
     /**
+     * <p>The source from which the template is created. Valid values:</p>
+     * <ul>
+     * <li>OpenAPI</li>
+     * <li>AliyunConsole</li>
+     * <li>WebSDK</li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
      */
@@ -47,6 +69,26 @@ public class AddTemplateRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The template state. Valid values:</p>
+     * <ul>
+     * <li>Available: The template is available.</li>
+     * <li>Created: The template is created but not ready for use.</li>
+     * <li>Uploading: The video is being uploaded.</li>
+     * <li>Processing: The advanced template is being processed.</li>
+     * <li>UploadFailed: Failed to upload the video.</li>
+     * <li>ProcessFailed: Failed to process the advanced template.</li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */
@@ -54,6 +96,18 @@ public class AddTemplateRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The template type. Valid values:</p>
+     * <ul>
+     * <li>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</li>
+     * <li>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Timeline</p>
      */

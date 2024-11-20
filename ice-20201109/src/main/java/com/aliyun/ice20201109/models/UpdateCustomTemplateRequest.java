@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomTemplateRequest extends TeaModel {
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-template</p>
      */
@@ -12,6 +14,8 @@ public class UpdateCustomTemplateRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The <a href="https://help.aliyun.com/document_detail/448291.html">template parameters</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;param&quot;: &quot;sample&quot;}</p>
      */
@@ -19,6 +23,7 @@ public class UpdateCustomTemplateRequest extends TeaModel {
     public String templateConfig;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

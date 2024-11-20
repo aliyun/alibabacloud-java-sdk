@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DecryptKMSDataKeyRequest extends TeaModel {
     /**
+     * <p>The ciphertext that you want to decrypt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

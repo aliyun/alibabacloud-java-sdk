@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDNADBRequest extends TeaModel {
     /**
+     * <p>The ID of the media fingerprint library that you want to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

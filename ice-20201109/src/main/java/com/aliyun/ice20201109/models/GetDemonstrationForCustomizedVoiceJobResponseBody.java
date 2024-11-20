@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetDemonstrationForCustomizedVoiceJobResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -15,6 +20,12 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
 
     public static class GetDemonstrationForCustomizedVoiceJobResponseBodyDataDemonstrationList extends TeaModel {
         /**
+         * <p>The sequence number of the text, which corresponds to the AduioRecordId parameter to be passed during audio check.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -59,12 +72,23 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         public Integer audioId;
 
         /**
+         * <p>The URL of the sample audio.</p>
+         * <ul>
+         * <li><p>The value is an Object Storage Service (OSS) URL.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>: The URL expires in 12 hours.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav">http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav</a></p>
          */
         @NameInMap("DemoAudio")
         public String demoAudio;
 
+        /**
+         * <p>The text content to be read.</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -100,6 +124,9 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
     }
 
     public static class GetDemonstrationForCustomizedVoiceJobResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of 20 text entries to be read and the corresponding sample audio.</p>
+         */
         @NameInMap("DemonstrationList")
         public java.util.List<GetDemonstrationForCustomizedVoiceJobResponseBodyDataDemonstrationList> demonstrationList;
 

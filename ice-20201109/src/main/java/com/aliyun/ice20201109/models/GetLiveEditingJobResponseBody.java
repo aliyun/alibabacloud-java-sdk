@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveEditingJobResponseBody extends TeaModel {
+    /**
+     * <p>The information about the live editing job.</p>
+     */
     @NameInMap("LiveEditingJob")
     public GetLiveEditingJobResponseBodyLiveEditingJob liveEditingJob;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobLiveStreamConfig extends TeaModel {
         /**
+         * <p>The name of the application to which the live stream belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>app</p>
          */
@@ -44,6 +51,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The domain name of the live stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>domain.com</p>
          */
@@ -51,6 +60,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The name of the live stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>streamName</p>
          */
@@ -90,6 +101,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobMediaProduceConfig extends TeaModel {
         /**
+         * <p>The editing mode. Default value: Accurate.</p>
+         * 
          * <strong>example:</strong>
          * <p>Accurate</p>
          */
@@ -113,6 +126,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobOutputMediaConfig extends TeaModel {
         /**
+         * <p>The bitrate of the output file. Unit: Kbit/s. You can leave this parameter empty. The default value is the maximum bitrate of the input materials.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -120,6 +135,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public Long bitrate;
 
         /**
+         * <p>If OutputMediaTarget is set to vod-media, this parameter indicates the file name of the output file. The value contains the file name extension but not the path.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.mp4</p>
          */
@@ -127,6 +144,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The height of the output file. You can leave this parameter empty. The default value is the maximum height of the input materials.</p>
+         * 
          * <strong>example:</strong>
          * <p>480</p>
          */
@@ -134,6 +153,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>The URL of the output file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://testice-testbucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://testice-testbucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
          */
@@ -141,6 +162,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String mediaURL;
 
         /**
+         * <p>If OutputMediaTarget is set to vod-media, this parameter indicates the storage location of the media asset in ApsaraVideo VOD. The storage location is the path of the file in ApsaraVideo VOD, excluding the prefix http://. Example: outin-xxxxxx.oss-cn-shanghai.aliyuncs.com.</p>
+         * 
          * <strong>example:</strong>
          * <p>outin-xxxxxx.oss-cn-shanghai.aliyuncs.com</p>
          */
@@ -148,6 +171,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String storageLocation;
 
         /**
+         * <p>The ID of the VOD transcoding template group. If VOD transcoding is not required, set the value to VOD_NO_TRANSCODE.</p>
+         * 
          * <strong>example:</strong>
          * <p>VOD_NO_TRANSCODE</p>
          */
@@ -155,6 +180,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String vodTemplateGroupId;
 
         /**
+         * <p>The width of the output file. You can leave this parameter empty. The default value is the maximum width of the input materials.</p>
+         * 
          * <strong>example:</strong>
          * <p>640</p>
          */
@@ -226,6 +253,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJob extends TeaModel {
         /**
+         * <p>The clips.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;StartTime\&quot;: \&quot; 2021-06-21T08:01:00Z\&quot;,  \&quot;EndTime\&quot;: \&quot; 2021-06-21T08:03:00Z\&quot; }]</p>
          */
@@ -233,6 +262,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String clips;
 
         /**
+         * <p>The response code. Note: Pay attention to this parameter if the job failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
          */
@@ -240,6 +271,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The time when the live editing job was completed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:52Z</p>
          */
@@ -247,6 +280,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String completeTime;
 
         /**
+         * <p>The time when the live editing job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:40Z</p>
          */
@@ -254,26 +289,38 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The ID of the live editing job.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The live editing configurations.</p>
+         */
         @NameInMap("LiveStreamConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobLiveStreamConfig liveStreamConfig;
 
         /**
+         * <p>The media asset ID of the output file.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>0cc6ba49eab379332c5b</strong></strong></p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The production configurations.</p>
+         */
         @NameInMap("MediaProduceConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobMediaProduceConfig mediaProduceConfig;
 
         /**
+         * <p>The URL of the output file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4</a></p>
          */
@@ -281,6 +328,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String mediaURL;
 
         /**
+         * <p>The returned message. Note: Pay attention to this parameter if the job failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>The specific parameter LiveStreamConfig is not valid.</p>
          */
@@ -288,16 +337,23 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The time when the live editing job was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:49Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The storage configurations of the output file.</p>
+         */
         @NameInMap("OutputMediaConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobOutputMediaConfig outputMediaConfig;
 
         /**
+         * <p>The ID of the live editing project.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
          */
@@ -305,6 +361,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The state of the live editing job. Valid values: Init, Queuing, Processing, Success, and Failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -312,6 +370,8 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The user-defined data.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;: &quot;value\&quot;}</p>
          */

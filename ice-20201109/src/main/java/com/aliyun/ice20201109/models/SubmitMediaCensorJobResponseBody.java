@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaCensorJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the content moderation job. We recommend that you save this ID for subsequent calls of other operations.</p>
+     * 
      * <strong>example:</strong>
      * <p>88c6ca184c0e47098a5b665e2****</p>
      */
@@ -12,6 +14,8 @@ public class SubmitMediaCensorJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
      */

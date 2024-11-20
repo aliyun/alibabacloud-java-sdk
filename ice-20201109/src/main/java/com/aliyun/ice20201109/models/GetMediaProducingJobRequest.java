@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMediaProducingJobRequest extends TeaModel {
     /**
+     * <p>The ID of the media editing and production job.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
      */

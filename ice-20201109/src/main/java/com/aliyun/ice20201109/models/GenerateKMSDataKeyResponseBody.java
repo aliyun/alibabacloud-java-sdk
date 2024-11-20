@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GenerateKMSDataKeyResponseBody extends TeaModel {
+    /**
+     * <p>The information about the data key.</p>
+     */
     @NameInMap("DataKey")
     public GenerateKMSDataKeyResponseBodyDataKey dataKey;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
 
     public static class GenerateKMSDataKeyResponseBodyDataKey extends TeaModel {
         /**
+         * <p>The ciphertext of the encrypted data key. This parameter is used as CipherText when you create a transcoding job.</p>
+         * 
          * <strong>example:</strong>
          * <p>ODZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmS7FmDBBQ0BkKsQrtRnidtPwirmDcS0ZuJCU41xxAAWk4Z8qsADfbV0b+i6kQmlvj79dJdGOvtX69Uycs901qOjop4bTS****</p>
          */
@@ -44,6 +51,8 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         public String ciphertextBlob;
 
         /**
+         * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>7906979c-8e06-46a2-be2d-68e3ccbc****</p>
          */
@@ -51,6 +60,8 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         public String keyId;
 
         /**
+         * <p>The Base64-encoded plaintext of the data key.</p>
+         * 
          * <strong>example:</strong>
          * <p>QmFzZTY0IGVuY29kZWQgcGxhaW50****</p>
          */

@@ -4,22 +4,43 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitTextGenerateJobRequest extends TeaModel {
+    /**
+     * <p>The job description, which can be up to 1,024 bytes in length and must be encoded in UTF-8.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The text generation configurations, including keywords and the requirements for the word count and number of output copies.</p>
+     */
     @NameInMap("GenerateConfig")
     public String generateConfig;
 
+    /**
+     * <p>The job title.</p>
+     * <p>The job title can be up to 128 bytes in length.</p>
+     * <p>The value must be encoded in UTF-8.</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The job type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>MarketingCopy: the marketing copy.</li>
+     * <li>Title: the short video title.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MarketingCopy</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

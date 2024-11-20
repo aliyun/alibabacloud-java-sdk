@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomTemplateRequest extends TeaModel {
     /**
+     * <p>The ID of the custom template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

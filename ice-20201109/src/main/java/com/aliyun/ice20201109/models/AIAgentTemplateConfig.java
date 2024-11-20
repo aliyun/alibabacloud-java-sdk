@@ -64,6 +64,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("MaxIdleTime")
+        public Integer maxIdleTime;
+
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
 
@@ -81,6 +84,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("Volume")
         public Long volume;
+
+        @NameInMap("WorkflowOverrideParams")
+        public String workflowOverrideParams;
 
         public static AIAgentTemplateConfigAvatarChat3D build(java.util.Map<String, ?> map) throws Exception {
             AIAgentTemplateConfigAvatarChat3D self = new AIAgentTemplateConfigAvatarChat3D();
@@ -143,6 +149,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigAvatarChat3D setMaxIdleTime(Integer maxIdleTime) {
+            this.maxIdleTime = maxIdleTime;
+            return this;
+        }
+        public Integer getMaxIdleTime() {
+            return this.maxIdleTime;
+        }
+
         public AIAgentTemplateConfigAvatarChat3D setUseVoiceprint(Boolean useVoiceprint) {
             this.useVoiceprint = useVoiceprint;
             return this;
@@ -191,6 +205,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.volume;
         }
 
+        public AIAgentTemplateConfigAvatarChat3D setWorkflowOverrideParams(String workflowOverrideParams) {
+            this.workflowOverrideParams = workflowOverrideParams;
+            return this;
+        }
+        public String getWorkflowOverrideParams() {
+            return this.workflowOverrideParams;
+        }
+
     }
 
     public static class AIAgentTemplateConfigVisionChat extends TeaModel {
@@ -215,6 +237,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("MaxIdleTime")
+        public Integer maxIdleTime;
+
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
 
@@ -232,6 +257,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("Volume")
         public Long volume;
+
+        @NameInMap("WorkflowOverrideParams")
+        public String workflowOverrideParams;
 
         public static AIAgentTemplateConfigVisionChat build(java.util.Map<String, ?> map) throws Exception {
             AIAgentTemplateConfigVisionChat self = new AIAgentTemplateConfigVisionChat();
@@ -294,6 +322,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigVisionChat setMaxIdleTime(Integer maxIdleTime) {
+            this.maxIdleTime = maxIdleTime;
+            return this;
+        }
+        public Integer getMaxIdleTime() {
+            return this.maxIdleTime;
+        }
+
         public AIAgentTemplateConfigVisionChat setUseVoiceprint(Boolean useVoiceprint) {
             this.useVoiceprint = useVoiceprint;
             return this;
@@ -342,11 +378,25 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.volume;
         }
 
+        public AIAgentTemplateConfigVisionChat setWorkflowOverrideParams(String workflowOverrideParams) {
+            this.workflowOverrideParams = workflowOverrideParams;
+            return this;
+        }
+        public String getWorkflowOverrideParams() {
+            return this.workflowOverrideParams;
+        }
+
     }
 
     public static class AIAgentTemplateConfigVoiceChat extends TeaModel {
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
+
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
+
+        @NameInMap("AvatarUrlType")
+        public String avatarUrlType;
 
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
@@ -362,6 +412,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("Greeting")
         public String greeting;
+
+        @NameInMap("MaxIdleTime")
+        public Integer maxIdleTime;
 
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
@@ -381,6 +434,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Volume")
         public Long volume;
 
+        @NameInMap("WorkflowOverrideParams")
+        public String workflowOverrideParams;
+
         public static AIAgentTemplateConfigVoiceChat build(java.util.Map<String, ?> map) throws Exception {
             AIAgentTemplateConfigVoiceChat self = new AIAgentTemplateConfigVoiceChat();
             return TeaModel.build(map, self);
@@ -392,6 +448,22 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getAsrMaxSilence() {
             return this.asrMaxSilence;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setAvatarUrlType(String avatarUrlType) {
+            this.avatarUrlType = avatarUrlType;
+            return this;
+        }
+        public String getAvatarUrlType() {
+            return this.avatarUrlType;
         }
 
         public AIAgentTemplateConfigVoiceChat setBailianAppParams(String bailianAppParams) {
@@ -432,6 +504,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public String getGreeting() {
             return this.greeting;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setMaxIdleTime(Integer maxIdleTime) {
+            this.maxIdleTime = maxIdleTime;
+            return this;
+        }
+        public Integer getMaxIdleTime() {
+            return this.maxIdleTime;
         }
 
         public AIAgentTemplateConfigVoiceChat setUseVoiceprint(Boolean useVoiceprint) {
@@ -480,6 +560,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Long getVolume() {
             return this.volume;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setWorkflowOverrideParams(String workflowOverrideParams) {
+            this.workflowOverrideParams = workflowOverrideParams;
+            return this;
+        }
+        public String getWorkflowOverrideParams() {
+            return this.workflowOverrideParams;
         }
 
     }
