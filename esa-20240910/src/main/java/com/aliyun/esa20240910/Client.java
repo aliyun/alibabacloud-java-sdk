@@ -2194,7 +2194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建等候室</p>
+     * <p>Creates a waiting room for a website.</p>
      * 
      * @param tmpReq CreateWaitingRoomRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2296,7 +2296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建等候室</p>
+     * <p>Creates a waiting room for a website.</p>
      * 
      * @param request CreateWaitingRoomRequest
      * @return CreateWaitingRoomResponse

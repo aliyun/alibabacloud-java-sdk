@@ -105,6 +105,9 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         @NameInMap("Bps")
         public Long bps;
 
+        @NameInMap("Coverage")
+        public String coverage;
+
         /**
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,6 +128,9 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
          */
         @NameInMap("EventId")
         public String eventId;
+
+        @NameInMap("EventResult")
+        public String eventResult;
 
         /**
          * <strong>example:</strong>
@@ -181,6 +187,14 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             return this.bps;
         }
 
+        public DescribeDDoSAllEventListResponseBodyDataList setCoverage(String coverage) {
+            this.coverage = coverage;
+            return this;
+        }
+        public String getCoverage() {
+            return this.coverage;
+        }
+
         public DescribeDDoSAllEventListResponseBodyDataList setCps(Long cps) {
             this.cps = cps;
             return this;
@@ -203,6 +217,14 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         }
         public String getEventId() {
             return this.eventId;
+        }
+
+        public DescribeDDoSAllEventListResponseBodyDataList setEventResult(String eventResult) {
+            this.eventResult = eventResult;
+            return this;
+        }
+        public String getEventResult() {
+            return this.eventResult;
         }
 
         public DescribeDDoSAllEventListResponseBodyDataList setEventType(String eventType) {
