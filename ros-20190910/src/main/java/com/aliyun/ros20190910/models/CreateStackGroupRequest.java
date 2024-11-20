@@ -106,6 +106,9 @@ public class CreateStackGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("StackArn")
+    public String stackArn;
+
     /**
      * <p>The name of the stack group. The name must be unique within a region.\
      * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
@@ -245,6 +248,14 @@ public class CreateStackGroupRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateStackGroupRequest setStackArn(String stackArn) {
+        this.stackArn = stackArn;
+        return this;
+    }
+    public String getStackArn() {
+        return this.stackArn;
     }
 
     public CreateStackGroupRequest setStackGroupName(String stackGroupName) {

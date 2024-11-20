@@ -741,6 +741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.stackArn)) {
+            query.put("StackArn", request.stackArn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.stackGroupName)) {
             query.put("StackGroupName", request.stackGroupName);
         }
@@ -3484,6 +3488,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTemplateSummaryResponse getTemplateSummary(GetTemplateSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTemplateSummaryWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq ImportStacksToStackGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportStacksToStackGroupResponse
+     */
+    public ImportStacksToStackGroupResponse importStacksToStackGroupWithOptions(ImportStacksToStackGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ImportStacksToStackGroupShrinkRequest request = new ImportStacksToStackGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationPreferences)) {
+            request.operationPreferencesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationPreferences, "OperationPreferences", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceDirectoryFolderIds)) {
+            request.resourceDirectoryFolderIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceDirectoryFolderIds, "ResourceDirectoryFolderIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stackArns)) {
+            request.stackArnsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stackArns, "StackArns", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationDescription)) {
+            query.put("OperationDescription", request.operationDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationPreferencesShrink)) {
+            query.put("OperationPreferences", request.operationPreferencesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryFolderIdsShrink)) {
+            query.put("ResourceDirectoryFolderIds", request.resourceDirectoryFolderIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stackArnsShrink)) {
+            query.put("StackArns", request.stackArnsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stackGroupName)) {
+            query.put("StackGroupName", request.stackGroupName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportStacksToStackGroup"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportStacksToStackGroupResponse());
+    }
+
+    /**
+     * @param request ImportStacksToStackGroupRequest
+     * @return ImportStacksToStackGroupResponse
+     */
+    public ImportStacksToStackGroupResponse importStacksToStackGroup(ImportStacksToStackGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importStacksToStackGroupWithOptions(request, runtime);
     }
 
     /**
