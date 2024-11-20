@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetCustomizedVoiceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetCustomizedVoiceResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -15,6 +20,12 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
 
     public static class GetCustomizedVoiceResponseBodyDataCustomizedVoice extends TeaModel {
         /**
+         * <p>The media asset ID of the sample audio file.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>42d3c312402982be65975f5b</strong></strong></p>
          */
@@ -59,6 +72,12 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         public String demoAudioMediaId;
 
         /**
+         * <p>The gender. Valid values:</p>
+         * <ul>
+         * <li>female</li>
+         * <li>male</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>female</p>
          */
@@ -66,22 +85,38 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         public String gender;
 
         /**
+         * <p>The demonstration scenario.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>story</strong></li>
+         * <li><strong>interaction</strong></li>
+         * <li><strong>navigation</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>interaction</p>
          */
         @NameInMap("Scenario")
         public String scenario;
 
+        /**
+         * <p>The voice description.</p>
+         */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
         /**
+         * <p>The voice ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xiaozhuan</p>
          */
         @NameInMap("VoiceId")
         public String voiceId;
 
+        /**
+         * <p>The voice name.</p>
+         */
         @NameInMap("VoiceName")
         public String voiceName;
 
@@ -141,6 +176,9 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
     }
 
     public static class GetCustomizedVoiceResponseBodyData extends TeaModel {
+        /**
+         * <p>The personalized human voice.</p>
+         */
         @NameInMap("CustomizedVoice")
         public GetCustomizedVoiceResponseBodyDataCustomizedVoice customizedVoice;
 

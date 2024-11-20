@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried digital humans.</p>
+     */
     @NameInMap("SmartSysAvatarModelList")
     public java.util.List<ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList> smartSysAvatarModelList;
 
     /**
+     * <p>The total number of system digital human images returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -52,38 +59,71 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
 
     public static class ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList extends TeaModel {
         /**
+         * <p>The ID of the digital human. The ID is required to submit a separate digital human rendering job or use the digital human image in an intelligent timeline.</p>
+         * 
          * <strong>example:</strong>
          * <p>yunqiao</p>
          */
         @NameInMap("AvatarId")
         public String avatarId;
 
+        /**
+         * <p>The name of the digital human.</p>
+         */
         @NameInMap("AvatarName")
         public String avatarName;
 
+        /**
+         * <p>The video bitrate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("Bitrate")
         public Integer bitrate;
 
         /**
+         * <p>The sample thumbnail URL of the digital human.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4</a></p>
          */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <p>The video height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <p>Indicates whether portrait mask rendering is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputMask")
         public Boolean outputMask;
 
         /**
+         * <p>The sample video URL of the digital human.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4</a></p>
          */
         @NameInMap("VideoUrl")
         public String videoUrl;
 
+        /**
+         * <p>The video width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("Width")
         public Integer width;
 

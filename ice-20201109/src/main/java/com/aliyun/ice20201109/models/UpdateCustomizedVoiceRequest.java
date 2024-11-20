@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomizedVoiceRequest extends TeaModel {
     /**
+     * <p>The media asset ID of the sample audio file.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
      */
@@ -12,6 +14,7 @@ public class UpdateCustomizedVoiceRequest extends TeaModel {
     public String demoAudioMediaId;
 
     /**
+     * <p>The voice ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

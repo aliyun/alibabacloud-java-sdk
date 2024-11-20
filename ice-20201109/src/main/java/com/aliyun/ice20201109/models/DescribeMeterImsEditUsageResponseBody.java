@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
+    /**
+     * <p>The usage statistics of IMS on VOD editing.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsEditUsageResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F3AE2C6-5CC6-5712-BAC5-5A735A157687</p>
      */
@@ -37,6 +42,8 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
 
     public static class DescribeMeterImsEditUsageResponseBodyData extends TeaModel {
         /**
+         * <p>The usage duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.23</p>
          */
@@ -44,6 +51,8 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The video profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080P</p>
          */
@@ -51,6 +60,8 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1656950400</p>
          */

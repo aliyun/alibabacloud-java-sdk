@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitSportsHighlightsJobRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The input configurations.</p>
+     */
     @NameInMap("InputConfig")
     public String inputConfig;
 
     /**
+     * <p>The output configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
@@ -26,6 +33,9 @@ public class SubmitSportsHighlightsJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    /**
+     * <p>The user-defined data.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

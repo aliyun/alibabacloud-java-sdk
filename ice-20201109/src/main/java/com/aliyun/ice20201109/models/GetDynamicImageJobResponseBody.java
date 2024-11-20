@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetDynamicImageJobResponseBody extends TeaModel {
+    /**
+     * <p>The information about the snapshot job.</p>
+     */
     @NameInMap("DynamicImageJob")
     public GetDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
      */
@@ -37,7 +42,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobInputOssFile extends TeaModel {
         /**
-         * <p>OSS Bucket</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -46,7 +51,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>OSS Location</p>
+         * <p>The OSS location.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai</p>
@@ -55,7 +60,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>OSS Object</p>
+         * <p>The OSS object.</p>
          * 
          * <strong>example:</strong>
          * <p>sample-input.mp4</p>
@@ -96,16 +101,32 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobInput extends TeaModel {
         /**
+         * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+         * <ol>
+         * <li>OSS://bucket/object</li>
+         * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+         * </ol>
+         * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/sample-input.mp4</p>
          */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>The three key elements of OSS.</p>
+         */
         @NameInMap("OssFile")
         public GetDynamicImageJobResponseBodyDynamicImageJobInputOssFile ossFile;
 
         /**
+         * <p>The type of the input file. Valid values:</p>
+         * <ol>
+         * <li>OSS: an Object Storage Service (OSS) object.</li>
+         * <li>Media: a media asset.</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -145,7 +166,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobOutputOssFile extends TeaModel {
         /**
-         * <p>OSS Bucket</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>sample-bucket</p>
@@ -154,7 +175,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>OSS Location</p>
+         * <p>The OSS location.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai</p>
@@ -163,7 +184,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>OSS Object</p>
+         * <p>The OSS object.</p>
          * 
          * <strong>example:</strong>
          * <p>path/to/object</p>
@@ -204,16 +225,27 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobOutput extends TeaModel {
         /**
+         * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+         * <ol>
+         * <li>OSS://bucket/object</li>
+         * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>The three key elements of OSS.</p>
+         */
         @NameInMap("OssFile")
         public GetDynamicImageJobResponseBodyDynamicImageJobOutputOssFile ossFile;
 
         /**
+         * <p>The type of the input file. Valid values: OSS: an OSS object. Media: a media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>Media</p>
          */
@@ -253,6 +285,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJob extends TeaModel {
         /**
+         * <p>Error codes</p>
+         * 
          * <strong>example:</strong>
          * <p>ResourceNotFound</p>
          */
@@ -260,6 +294,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The time when the job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
          */
@@ -267,16 +303,23 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the job was complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:30:54Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The input of the job.</p>
+         */
         @NameInMap("Input")
         public GetDynamicImageJobResponseBodyDynamicImageJobInput input;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
@@ -284,6 +327,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The error message that is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>The specified resource for &quot;CustomTemplate&quot; could not be found.</p>
          */
@@ -291,6 +336,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The time when the job was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:30:54Z</p>
          */
@@ -298,16 +345,23 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The name of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>SampleJob</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The output of the job.</p>
+         */
         @NameInMap("Output")
         public GetDynamicImageJobResponseBodyDynamicImageJobOutput output;
 
         /**
+         * <p>The URL of the output animated image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif</a></p>
          */
@@ -315,6 +369,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String outputUrl;
 
         /**
+         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
@@ -322,6 +378,14 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
+         * <p>The state of the job.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Init: The job is submitted.</li>
+         * <li>Success: The job is successful.</li>
+         * <li>Fail: The job failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -329,6 +393,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
          */
@@ -336,6 +402,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String submitTime;
 
         /**
+         * <p>The animation template configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;Fps&quot;:5,&quot;Height&quot;:1080,&quot;Width&quot;:1920}</p>
          */
@@ -343,6 +411,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
@@ -350,6 +420,14 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The request trigger source.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Console</li>
+         * <li>Workflow</li>
+         * <li>API</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>API</p>
          */
@@ -357,6 +435,8 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         public String triggerSource;
 
         /**
+         * <p>The user-defined data.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;sampleParam&quot;: &quot;sampleValue&quot;}</p>
          */

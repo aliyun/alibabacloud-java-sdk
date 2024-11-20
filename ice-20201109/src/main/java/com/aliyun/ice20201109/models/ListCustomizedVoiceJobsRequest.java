@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomizedVoiceJobsRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +14,27 @@ public class ListCustomizedVoiceJobsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the human voice cloning job. Valid values:</p>
+     * <ul>
+     * <li>Basic</li>
+     * <li>Standard</li>
+     * </ul>
+     * <blockquote>
+     * <p>: If you do not specify this parameter, the default value Basic is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
     @NameInMap("Type")
     public String type;
 

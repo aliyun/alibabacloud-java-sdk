@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDemonstrationForCustomizedVoiceJobRequest extends TeaModel {
     /**
+     * <p>The demonstration scenario.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>story</strong></li>
+     * <li><strong>interaction</strong></li>
+     * <li><strong>navigation</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -11,6 +11,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     public SubmitSyncMediaInfoJobResponseBodyMediaInfoJob mediaInfoJob;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
      */
@@ -40,6 +42,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobInput extends TeaModel {
         /**
+         * <p>The media object. If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported. If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/video.mp4</p>
          */
@@ -47,6 +51,12 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String media;
 
         /**
+         * <p>The type of the media object. Valid values:</p>
+         * <ul>
+         * <li>OSS: an OSS object.</li>
+         * <li>Media: a media asset.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -78,6 +88,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyAudioStreamInfoList extends TeaModel {
         /**
+         * <p>The bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.f</p>
          */
@@ -85,6 +97,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The sound channel layout.</p>
+         * 
          * <strong>example:</strong>
          * <p>stereo</p>
          */
@@ -92,6 +106,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String channelLayout;
 
         /**
+         * <p>The number of sound channels.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -99,6 +115,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String channels;
 
         /**
+         * <p>The name of the encoding format.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAC (Advanced Audio Coding)</p>
          */
@@ -106,6 +124,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
+         * <p>The encoding format.</p>
+         * 
          * <strong>example:</strong>
          * <p>aac</p>
          */
@@ -113,6 +133,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecName;
 
         /**
+         * <p>The encoder tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>0x000f</p>
          */
@@ -120,6 +142,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecTag;
 
         /**
+         * <p>The name of the encoder tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>[15][0][0][0]</p>
          */
@@ -127,6 +151,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
+         * <p>The time base of the encoder.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/44100</p>
          */
@@ -134,6 +160,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
+         * <p>The duration of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>403.039989</p>
          */
@@ -141,6 +169,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The sequence number of the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -148,6 +178,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String index;
 
         /**
+         * <p>The language of the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>us</p>
          */
@@ -155,6 +187,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String lang;
 
         /**
+         * <p>The sample format.</p>
+         * 
          * <strong>example:</strong>
          * <p>fltp</p>
          */
@@ -162,6 +196,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String sampleFmt;
 
         /**
+         * <p>The sampling rate. Unit: Hz.</p>
+         * 
          * <strong>example:</strong>
          * <p>44100</p>
          */
@@ -169,6 +205,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String sampleRate;
 
         /**
+         * <p>The start time of the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.473556</p>
          */
@@ -176,6 +214,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/90000</p>
          */
@@ -311,6 +351,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyFileBasicInfo extends TeaModel {
         /**
+         * <p>The video bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>888.563</p>
          */
@@ -318,6 +360,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The duration of the video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>403.039999</p>
          */
@@ -325,6 +369,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>file.m3u8</p>
          */
@@ -332,6 +378,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>31737</p>
          */
@@ -339,6 +387,11 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String fileSize;
 
         /**
+         * <p>The state of the file. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -346,6 +399,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String fileStatus;
 
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>source_file</p>
          */
@@ -353,6 +408,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8</a></p>
          */
@@ -360,6 +417,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The name of the video format.</p>
+         * 
          * <strong>example:</strong>
          * <p>hls,applehttp</p>
          */
@@ -367,6 +426,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String formatName;
 
         /**
+         * <p>The height of the output video.</p>
+         * 
          * <strong>example:</strong>
          * <p>478</p>
          */
@@ -374,6 +435,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String height;
 
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>999e68259c924f52a6be603cbb3f91cc</p>
          */
@@ -381,6 +444,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The region in which the file resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -388,6 +453,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The width of the output video.</p>
+         * 
          * <strong>example:</strong>
          * <p>848</p>
          */
@@ -499,6 +566,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyVideoStreamInfoList extends TeaModel {
         /**
+         * <p>The average frame rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>25.0</p>
          */
@@ -506,6 +575,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String avgFps;
 
         /**
+         * <p>The bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>888.563</p>
          */
@@ -513,6 +584,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String bitRate;
 
         /**
+         * <p>The name of the encoding format.</p>
+         * 
          * <strong>example:</strong>
          * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
          */
@@ -520,6 +593,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
+         * <p>The encoding format.</p>
+         * 
          * <strong>example:</strong>
          * <p>h264</p>
          */
@@ -527,6 +602,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecName;
 
         /**
+         * <p>The tag of the encoding format.</p>
+         * 
          * <strong>example:</strong>
          * <p>0x001b</p>
          */
@@ -534,6 +611,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecTag;
 
         /**
+         * <p>The tag string of the encoding format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[27][0][0][0]</p>
          */
@@ -541,6 +620,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
+         * <p>The time base of the encoder.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/50</p>
          */
@@ -548,6 +629,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
+         * <p>The display aspect ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>16:9</p>
          */
@@ -555,6 +638,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String dar;
 
         /**
+         * <p>The duration of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>403.039989</p>
          */
@@ -562,6 +647,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The frame rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>25.0</p>
          */
@@ -569,6 +656,13 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String fps;
 
         /**
+         * <p>Indicates whether the video stream contains bidirectional frames (B-frames). Valid values:</p>
+         * <ul>
+         * <li>0: The stream contains no B-frames.</li>
+         * <li>1: The stream contains one B-frame.</li>
+         * <li>2: The stream contains multiple consecutive B-frames.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -576,6 +670,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String hasBFrames;
 
         /**
+         * <p>The height of the output video.</p>
+         * 
          * <strong>example:</strong>
          * <p>478</p>
          */
@@ -583,6 +679,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String height;
 
         /**
+         * <p>The sequence number of the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -590,6 +688,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String index;
 
         /**
+         * <p>The language of the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -597,6 +697,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String lang;
 
         /**
+         * <p>The codec level.</p>
+         * 
          * <strong>example:</strong>
          * <p>31</p>
          */
@@ -604,6 +706,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The total number of frames.</p>
+         * 
          * <strong>example:</strong>
          * <p>10040</p>
          */
@@ -611,6 +715,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String numFrames;
 
         /**
+         * <p>The pixel format.</p>
+         * 
          * <strong>example:</strong>
          * <p>yuv420p</p>
          */
@@ -618,6 +724,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String pixFmt;
 
         /**
+         * <p>The encoder profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>High</p>
          */
@@ -625,6 +733,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <p>The rotation angle of the video image.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -632,6 +742,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String rotate;
 
         /**
+         * <p>The aspect ratio of the area from which the sampling points are collected.</p>
+         * 
          * <strong>example:</strong>
          * <p>478:477</p>
          */
@@ -639,6 +751,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String sar;
 
         /**
+         * <p>The start time of the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.473556</p>
          */
@@ -646,6 +760,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/90000</p>
          */
@@ -653,6 +769,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String timeBase;
 
         /**
+         * <p>The width of the output video.</p>
+         * 
          * <strong>example:</strong>
          * <p>848</p>
          */
@@ -851,12 +969,21 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoProperty extends TeaModel {
+        /**
+         * <p>The information about the audio stream.</p>
+         */
         @NameInMap("AudioStreamInfoList")
         public java.util.List<SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyAudioStreamInfoList> audioStreamInfoList;
 
+        /**
+         * <p>The basic file information.</p>
+         */
         @NameInMap("FileBasicInfo")
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyFileBasicInfo fileBasicInfo;
 
+        /**
+         * <p>The information about the video stream.</p>
+         */
         @NameInMap("VideoStreamInfoList")
         public java.util.List<SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyVideoStreamInfoList> videoStreamInfoList;
 
@@ -893,6 +1020,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobScheduleConfig extends TeaModel {
         /**
+         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>e37ebee5d98b4781897f6086e89f9c56</p>
          */
@@ -900,6 +1029,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
+         * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -931,6 +1062,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJob extends TeaModel {
         /**
+         * <p>Indicates whether asynchronous processing was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -938,26 +1071,38 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public Boolean async;
 
         /**
+         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The input of the job.</p>
+         */
         @NameInMap("Input")
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobInput input;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ab4802364a2e49208c99efab82dfa8e8</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The details of the media information.</p>
+         */
         @NameInMap("MediaInfoProperty")
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoProperty mediaInfoProperty;
 
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-name</p>
          */
@@ -965,16 +1110,23 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4879B9DE-E4B6-19DC-91F5-9D5F4DCE4168</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The scheduling information.</p>
+         */
         @NameInMap("ScheduleConfig")
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobScheduleConfig scheduleConfig;
 
         /**
+         * <p>The state of the job. Valid values: Init (the job is submitted), Success (the job is successful), and Fail (the job failed).</p>
+         * 
          * <strong>example:</strong>
          * <p>Init</p>
          */
@@ -982,6 +1134,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The job submission information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -989,6 +1143,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public java.util.Map<String, ?> submitResultJson;
 
         /**
+         * <p>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
          */
@@ -996,6 +1152,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String submitTime;
 
         /**
+         * <p>The source of the job. Valid values: API, WorkFlow, and Console.</p>
+         * 
          * <strong>example:</strong>
          * <p>API</p>
          */
@@ -1003,6 +1161,8 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         public String triggerSource;
 
         /**
+         * <p>The user data.</p>
+         * 
          * <strong>example:</strong>
          * <p>user-data</p>
          */

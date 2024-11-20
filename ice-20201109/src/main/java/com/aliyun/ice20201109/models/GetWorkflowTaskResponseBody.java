@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowTaskResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>0C-7870-15FE-B96F-8880BB</strong></strong></strong></p>
@@ -13,6 +13,9 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the workflow task.</p>
+     */
     @NameInMap("WorkflowTask")
     public GetWorkflowTaskResponseBodyWorkflowTask workflowTask;
 
@@ -39,6 +42,8 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
 
     public static class GetWorkflowTaskResponseBodyWorkflowTaskWorkflow extends TeaModel {
         /**
+         * <p>The time when the workflow was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-27T10:02:12Z</p>
          */
@@ -46,16 +51,28 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the workflow was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-29T02:06:19Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The workflow name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The workflow state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Inactive</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -63,6 +80,14 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The workflow type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Customize: custom workflow.</li>
+         * <li>System: system workflow.</li>
+         * <li>Common: user-created workflow.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Common</p>
          */
@@ -70,6 +95,8 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>63dca94c609de02ac0d1</strong></strong></strong></p>
          */
@@ -132,10 +159,15 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowTaskResponseBodyWorkflowTask extends TeaModel {
+        /**
+         * <p>The results for all nodes of the workflow task.</p>
+         */
         @NameInMap("ActivityResults")
         public String activityResults;
 
         /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-01-04T02:05:17Z</p>
          */
@@ -143,6 +175,8 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the task was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-01-04T02:06:19Z</p>
          */
@@ -150,6 +184,16 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String finishTime;
 
         /**
+         * <p>The task state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Init: The task is being initialized.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Canceled: The task is canceled.</li>
+         * <li>Processing: The task is in progress.</li>
+         * <li>Succeed: The task is successful.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Succeed</p>
          */
@@ -157,6 +201,8 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the workflow task.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
          */
@@ -164,6 +210,8 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The input of the workflow task.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *       &quot;Type&quot;: &quot;Media&quot;,
@@ -174,12 +222,17 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         public String taskInput;
 
         /**
+         * <p>The user-defined field that was specified when the workflow task was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
          */
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <p>The workflow Information.</p>
+         */
         @NameInMap("Workflow")
         public GetWorkflowTaskResponseBodyWorkflowTaskWorkflow workflow;
 

@@ -4,10 +4,14 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryIProductionJobRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The ID of the intelligent production job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

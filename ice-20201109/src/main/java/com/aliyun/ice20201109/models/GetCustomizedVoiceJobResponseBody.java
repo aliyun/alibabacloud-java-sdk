@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetCustomizedVoiceJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned if the request was successful.</p>
+     */
     @NameInMap("Data")
     public GetCustomizedVoiceJobResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -15,6 +20,12 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,45 +62,111 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
     }
 
     public static class GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob extends TeaModel {
+        /**
+         * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-07T02:27:08Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The gender. Valid values:</p>
+         * <ul>
+         * <li>female</li>
+         * <li>male</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>female</p>
+         */
         @NameInMap("Gender")
         public String gender;
 
         /**
+         * <p>The ID of the human voice cloning job.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The status description.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The scenario. Valid values:</p>
+         * <ul>
+         * <li>story</li>
+         * <li>interaction</li>
+         * <li>navigation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>story</p>
+         */
         @NameInMap("Scenario")
         public String scenario;
 
         /**
+         * <p>The job state. Valid values:</p>
+         * <ul>
+         * <li>Initialization</li>
+         * <li>AudioDetecting</li>
+         * <li>PreTraining</li>
+         * <li>Training</li>
+         * <li>Success</li>
+         * <li>Fail</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Fail</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the human voice cloning job. Valid values:</p>
+         * <ul>
+         * <li>Basic</li>
+         * <li>Standard</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The voice description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an exclusive voice</p>
+         */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
         /**
+         * <p>The voice ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xiaozhuan</p>
          */
         @NameInMap("VoiceId")
         public String voiceId;
 
+        /**
+         * <p>The voice name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Xiaozhuan</p>
+         */
         @NameInMap("VoiceName")
         public String voiceName;
 
@@ -181,6 +258,9 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
     }
 
     public static class GetCustomizedVoiceJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the human voice cloning job.</p>
+         */
         @NameInMap("CustomizedVoiceJob")
         public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob customizedVoiceJob;
 

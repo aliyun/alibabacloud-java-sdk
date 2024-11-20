@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSystemTemplatesRequest extends TeaModel {
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>SampleTemplate</p>
      */
@@ -12,6 +14,8 @@ public class ListSystemTemplatesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListSystemTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20 Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ListSystemTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The template state. Valid values: Normal, Invisible, and All.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -33,6 +41,8 @@ public class ListSystemTemplatesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The subtype ID of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListSystemTemplatesRequest extends TeaModel {
     public String subtype;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
      */
@@ -47,6 +59,7 @@ public class ListSystemTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The template type. Separate multiple types with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

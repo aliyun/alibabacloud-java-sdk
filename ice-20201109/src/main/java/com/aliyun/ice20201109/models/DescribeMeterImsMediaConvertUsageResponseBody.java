@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
+    /**
+     * <p>The usage statistics of IMS on VOD transcoding.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsMediaConvertUsageResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FBBB5210-2B78-58FB-A6FE-9DD887BB2C61</p>
      */
@@ -37,6 +42,8 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
 
     public static class DescribeMeterImsMediaConvertUsageResponseBodyData extends TeaModel {
         /**
+         * <p>The usage duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -44,6 +51,8 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The transcoding specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>H264.HD</p>
          */
@@ -51,6 +60,8 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
         public String specification;
 
         /**
+         * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1656950400</p>
          */

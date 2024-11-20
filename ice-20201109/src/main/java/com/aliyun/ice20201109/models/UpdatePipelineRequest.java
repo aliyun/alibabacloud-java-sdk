@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePipelineRequest extends TeaModel {
     /**
+     * <p>The name of the MPS queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-pipeline</p>
      */
@@ -12,6 +14,7 @@ public class UpdatePipelineRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the MPS queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdatePipelineRequest extends TeaModel {
     public String pipelineId;
 
     /**
+     * <p>The priority of the MPS queue. Valid values: 1 to 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -28,6 +33,13 @@ public class UpdatePipelineRequest extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>The state of the MPS queue.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Active</li>
+     * <li>Paused</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Paused</p>
      */

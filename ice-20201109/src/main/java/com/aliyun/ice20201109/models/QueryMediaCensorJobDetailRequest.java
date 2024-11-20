@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMediaCensorJobDetailRequest extends TeaModel {
     /**
+     * <p>The ID of the content moderation job. You can obtain the job ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/444848.html">SubmitMediaCensorJob</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class QueryMediaCensorJobDetailRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Default value: <strong>30</strong>.</li>
+     * <li>Valid values: <strong>1 to 300</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -21,6 +28,8 @@ public class QueryMediaCensorJobDetailRequest extends TeaModel {
     public Long maximumPageSize;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>ae0fd49c0840e14daf0d66a75b83****</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAvatarsResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListAvatarsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -15,6 +20,12 @@ public class ListAvatarsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,20 +62,30 @@ public class ListAvatarsResponseBody extends TeaModel {
     }
 
     public static class ListAvatarsResponseBodyDataAvatarList extends TeaModel {
+        /**
+         * <p>The description of the digital human.</p>
+         */
         @NameInMap("AvatarDescription")
         public String avatarDescription;
 
         /**
+         * <p>The ID of the digital human.</p>
+         * 
          * <strong>example:</strong>
          * <p>Avatar-XXX</p>
          */
         @NameInMap("AvatarId")
         public String avatarId;
 
+        /**
+         * <p>The name of the digital human.</p>
+         */
         @NameInMap("AvatarName")
         public String avatarName;
 
         /**
+         * <p>The type of the digital human.</p>
+         * 
          * <strong>example:</strong>
          * <p>2DAvatar</p>
          */
@@ -72,6 +93,8 @@ public class ListAvatarsResponseBody extends TeaModel {
         public String avatarType;
 
         /**
+         * <p>The media asset ID of the portrait image.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
          */
@@ -79,12 +102,20 @@ public class ListAvatarsResponseBody extends TeaModel {
         public String portrait;
 
         /**
+         * <p>The thumbnail URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
          */
         @NameInMap("Thumbnail")
         public String thumbnail;
 
+        /**
+         * <p>Indicates whether the digital human image supports the alpha channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Transparent")
         public Boolean transparent;
 
@@ -152,10 +183,15 @@ public class ListAvatarsResponseBody extends TeaModel {
     }
 
     public static class ListAvatarsResponseBodyData extends TeaModel {
+        /**
+         * <p>The queried digital humans.</p>
+         */
         @NameInMap("AvatarList")
         public java.util.List<ListAvatarsResponseBodyDataAvatarList> avatarList;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the workflow task.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
      */

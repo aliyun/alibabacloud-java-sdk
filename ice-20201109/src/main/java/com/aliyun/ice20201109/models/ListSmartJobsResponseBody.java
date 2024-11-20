@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSmartJobsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned on a single page. The value is set to the maximum number of entries returned on each page except for the last page. Valid example: 10,10,5. Invalid example: 10,5,10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListSmartJobsResponseBody extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBB6BC61D08</p>
      */
@@ -19,16 +23,23 @@ public class ListSmartJobsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>9262E3DA-07FA-4862-FCBB6BC61D08</strong></strong>*</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried intelligent jobs.</p>
+     */
     @NameInMap("SmartJobList")
     public java.util.List<ListSmartJobsResponseBodySmartJobList> smartJobList;
 
     /**
+     * <p>Optional. The total number of entries returned. By default, this parameter is not returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>110</p>
      */
@@ -82,6 +93,8 @@ public class ListSmartJobsResponseBody extends TeaModel {
 
     public static class ListSmartJobsResponseBodySmartJobListInputConfig extends TeaModel {
         /**
+         * <p>The information about the input file.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
          */
@@ -89,6 +102,8 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String inputFile;
 
         /**
+         * <p>The keyword information.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试关键词</p>
          */
@@ -120,7 +135,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
 
     public static class ListSmartJobsResponseBodySmartJobListOutputConfig extends TeaModel {
         /**
-         * <p>OSS Bucket</p>
+         * <p>The Object Storage Service (OSS) bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -129,7 +144,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>OSS Object</p>
+         * <p>The OSS object.</p>
          * 
          * <strong>example:</strong>
          * <p>test-object</p>
@@ -162,6 +177,8 @@ public class ListSmartJobsResponseBody extends TeaModel {
 
     public static class ListSmartJobsResponseBodySmartJobList extends TeaModel {
         /**
+         * <p>The time when the job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
@@ -169,6 +186,8 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The job description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试描述</p>
          */
@@ -176,16 +195,23 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The editing configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;AudioConfig&quot;:{},&quot;InputConfig&quot;:&quot;&quot;}</p>
          */
         @NameInMap("EditingConfig")
         public String editingConfig;
 
+        /**
+         * <p>The input configurations.</p>
+         */
         @NameInMap("InputConfig")
         public ListSmartJobsResponseBodySmartJobListInputConfig inputConfig;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
@@ -193,6 +219,15 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Finished: The job is complete.</li>
+         * <li>Failed: The job failed.</li>
+         * <li>Executing: The job is in progress.</li>
+         * <li>Created: The job is created.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
@@ -200,6 +235,14 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String jobState;
 
         /**
+         * <p>The job type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ASR: ASR job.</li>
+         * <li>DynamicChart: dynamic chart job.</li>
+         * <li>TextToSpeech: intelligent audio production job.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ASR</p>
          */
@@ -207,16 +250,23 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The time when the job was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The output configurations.</p>
+         */
         @NameInMap("OutputConfig")
         public ListSmartJobsResponseBodySmartJobListOutputConfig outputConfig;
 
         /**
+         * <p>The job title.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试标题</p>
          */
@@ -224,6 +274,8 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The user-defined data.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;user&quot;:&quot;data&quot;}</p>
          */
@@ -231,6 +283,8 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public String userData;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1084506228******</p>
          */

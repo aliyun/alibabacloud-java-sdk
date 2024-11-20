@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>42-E8E1-4FBB-8E52-F4225C</strong></strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class StartWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the workflow task.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>22dad741d086a50325f9</strong></strong></strong></p>
      */

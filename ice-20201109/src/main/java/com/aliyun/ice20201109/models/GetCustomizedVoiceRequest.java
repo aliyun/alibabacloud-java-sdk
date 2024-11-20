@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCustomizedVoiceRequest extends TeaModel {
     /**
+     * <p>The voice ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xiaozhuan</p>
      */

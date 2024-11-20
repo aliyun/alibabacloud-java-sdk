@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class SubmitPackageJobShrinkRequest extends TeaModel {
     /**
+     * <p>The input of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Inputs")
     public String inputsShrink;
 
     /**
+     * <p>The name of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-name</p>
      */
@@ -18,15 +21,21 @@ public class SubmitPackageJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The output of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
     public String outputShrink;
 
+    /**
+     * <p>The scheduling settings.</p>
+     */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
     /**
+     * <p>The user-defined data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;param&quot;: &quot;value&quot;}</p>
      */

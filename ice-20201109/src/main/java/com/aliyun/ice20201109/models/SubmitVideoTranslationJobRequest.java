@@ -67,8 +67,12 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The user data.</li>
+     * <li>The user-defined data.</li>
+     * <li>The data must be in the JSON format, and can be up to 512 characters in length.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
      */
     @NameInMap("UserData")
     public String userData;

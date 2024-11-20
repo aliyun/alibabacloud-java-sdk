@@ -136,6 +136,9 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
         @NameInMap("VoiceprintId")
         public String voiceprintId;
 
+        @NameInMap("Volume")
+        public Long volume;
+
         public static StartRtcRobotInstanceRequestConfig build(java.util.Map<String, ?> map) throws Exception {
             StartRtcRobotInstanceRequestConfig self = new StartRtcRobotInstanceRequestConfig();
             return TeaModel.build(map, self);
@@ -203,6 +206,14 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
         }
         public String getVoiceprintId() {
             return this.voiceprintId;
+        }
+
+        public StartRtcRobotInstanceRequestConfig setVolume(Long volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Long getVolume() {
+            return this.volume;
         }
 
     }

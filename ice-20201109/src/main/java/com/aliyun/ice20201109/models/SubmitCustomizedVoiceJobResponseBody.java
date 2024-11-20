@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitCustomizedVoiceJobResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -15,6 +20,12 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
 
     public static class SubmitCustomizedVoiceJobResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the human voice cloning job.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
          */
@@ -59,6 +72,8 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The voice ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xiaozhuan</p>
          */

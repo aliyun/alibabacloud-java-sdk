@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSnapshotUrlsRequest extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
@@ -12,6 +14,12 @@ public class GetSnapshotUrlsRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The order that you use to sort the query results. Valid values: Asc and Desc.</p>
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -19,6 +27,8 @@ public class GetSnapshotUrlsRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,8 @@ public class GetSnapshotUrlsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 30. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +45,8 @@ public class GetSnapshotUrlsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The authentication timeout period. Unit: seconds Default value: 3600. Maximum value: 129600 (36 hours).</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */

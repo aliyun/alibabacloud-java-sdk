@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveEditingJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the live editing job.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The media asset ID of the output file.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
      */
@@ -19,6 +23,8 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>The URL of the output file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4</a></p>
      */
@@ -26,6 +32,8 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String mediaURL;
 
     /**
+     * <p>The ID of the live editing project.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
      */
@@ -33,6 +41,8 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
      */
@@ -40,6 +50,8 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>d7578s4h75ci945c14b</strong></strong></p>
      */

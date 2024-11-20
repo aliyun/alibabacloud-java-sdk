@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSmartJobRequest extends TeaModel {
     /**
+     * <p>The IDs of the jobs to delete. Separate multiple IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>042d5e4db6866f6289d1</strong></strong></strong></p>
      */

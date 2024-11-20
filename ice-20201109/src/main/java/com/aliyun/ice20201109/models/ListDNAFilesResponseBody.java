@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListDNAFilesResponseBody extends TeaModel {
+    /**
+     * <p>The queried files.</p>
+     */
     @NameInMap("FileList")
     public java.util.List<ListDNAFilesResponseBodyFileList> fileList;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>ae0fd49c0840e14daf0d66a75b83****</p>
      */
@@ -15,6 +20,8 @@ public class ListDNAFilesResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2AE89FA5-E620-56C7-9B80-75D09757385A</p>
      */
@@ -52,6 +59,8 @@ public class ListDNAFilesResponseBody extends TeaModel {
 
     public static class ListDNAFilesResponseBodyFileListInputFile extends TeaModel {
         /**
+         * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-bucket</p>
          */
@@ -59,6 +68,8 @@ public class ListDNAFilesResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The OSS region in which the input file resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-beijing</p>
          */
@@ -66,6 +77,8 @@ public class ListDNAFilesResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>The name of the OSS object that is used as the input file.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-****.mp4</p>
          */
@@ -104,10 +117,15 @@ public class ListDNAFilesResponseBody extends TeaModel {
     }
 
     public static class ListDNAFilesResponseBodyFileList extends TeaModel {
+        /**
+         * <p>The Object Storage Service (OSS) information about the input file.</p>
+         */
         @NameInMap("InputFile")
         public ListDNAFilesResponseBodyFileListInputFile inputFile;
 
         /**
+         * <p>The primary key of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>ae0fd49c0840e14daf0d66a75b83****</p>
          */

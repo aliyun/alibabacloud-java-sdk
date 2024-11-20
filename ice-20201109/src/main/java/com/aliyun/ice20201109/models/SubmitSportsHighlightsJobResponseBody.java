@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitSportsHighlightsJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the sports highlights job.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitSportsHighlightsJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
      */

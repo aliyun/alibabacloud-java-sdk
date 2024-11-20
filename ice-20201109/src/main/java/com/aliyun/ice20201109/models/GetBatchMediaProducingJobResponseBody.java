@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetBatchMediaProducingJobResponseBody extends TeaModel {
+    /**
+     * <p>The information about the quick video production job.</p>
+     */
     @NameInMap("EditingBatchJob")
     public GetBatchMediaProducingJobResponseBodyEditingBatchJob editingBatchJob;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList extends TeaModel {
         /**
+         * <p>The error code that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidMaterial.NotFound</p>
          */
@@ -44,6 +51,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>The specified clips id not found:[&quot;<strong><strong>30d0b5e871eebb2ff7f6c75a</strong></strong>&quot;]</p>
          */
@@ -51,6 +60,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The subjob ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>8e81933d44e3ae69e2f81485</strong></strong></p>
          */
@@ -58,6 +69,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The ID of the output media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>1470b11171ee9d19e7e6c66a</strong></strong></p>
          */
@@ -65,16 +78,30 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The URL of the output file.</p>
+         * 
          * <strong>example:</strong>
          * <p>http:/xxx.oss-cn-shanghai.aliyuncs.com/xxx_0.mp4</p>
          */
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        /**
+         * <p>The ID of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>7cc47fe04eaa81bd853acb6a</strong></strong></p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
         /**
+         * <p>The subjob state. Valid values:</p>
+         * <p>Init: The subjob is initialized.</p>
+         * <p>Processing: The subjob is in progress.</p>
+         * <p>Success: The subjob is successful.</p>
+         * <p>Failed: The subjob failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -145,13 +172,28 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     }
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJob extends TeaModel {
+        /**
+         * <p>The time when the job was complete.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-13T08:57:07Z</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-13T08:47:07Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
+         * <p>The editing configurations. For more information, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;MediaConfig&quot;: {
@@ -169,6 +211,10 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String editingConfig;
 
         /**
+         * <p>The extended information. This parameter contains the following fields:</p>
+         * <p>ErrorCode: the error code of the main job.</p>
+         * <p>ErrorMessage: the error message of the main job.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;ErrorCode&quot;: &quot;InvalidMaterial.NotFound&quot;,
@@ -178,10 +224,15 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>The input configurations. For more information, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</p>
+         */
         @NameInMap("InputConfig")
         public String inputConfig;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>b6b2750d4308892ac3330238</strong></strong></p>
          */
@@ -191,10 +242,19 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>The time when the job was last modified.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-13T08:57:07Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
+         * <p>The output configurations. For more information, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
@@ -209,16 +269,26 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String outputConfig;
 
         /**
+         * <p>The job state. Valid values:</p>
+         * <p>Init: The job is initialized.</p>
+         * <p>Processing: The job is in progress.</p>
+         * <p>Finished: The job is complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The quick video production subjobs.</p>
+         */
         @NameInMap("SubJobList")
         public java.util.List<GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList> subJobList;
 
         /**
+         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html?spm=a2c4g.439285.0.i1#section-urj-v3f-0s1">UserData</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
          */

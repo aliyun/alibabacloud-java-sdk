@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPipelineRequest extends TeaModel {
     /**
+     * <p>The ID of the MPS queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
