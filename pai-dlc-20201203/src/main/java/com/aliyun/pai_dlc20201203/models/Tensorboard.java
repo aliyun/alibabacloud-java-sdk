@@ -155,8 +155,8 @@ public class Tensorboard extends TeaModel {
     @NameInMap("Username")
     public String username;
 
-    @NameInMap("Workspaceid")
-    public String workspaceid;
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static Tensorboard build(java.util.Map<String, ?> map) throws Exception {
         Tensorboard self = new Tensorboard();
@@ -395,12 +395,12 @@ public class Tensorboard extends TeaModel {
         return this.username;
     }
 
-    public Tensorboard setWorkspaceid(String workspaceid) {
-        this.workspaceid = workspaceid;
+    public Tensorboard setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
-    public String getWorkspaceid() {
-        return this.workspaceid;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
