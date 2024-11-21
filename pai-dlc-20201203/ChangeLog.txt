@@ -1,3 +1,7 @@
+2024-11-21 Version: 1.4.13
+- Update API ListJobs: add param OversoldInfo.
+
+
 2024-11-18 Version: 1.4.12
 - Update API UpdateTensorboard: add param Priority.
 

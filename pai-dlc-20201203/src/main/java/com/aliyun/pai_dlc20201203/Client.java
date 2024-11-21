@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "pai-dlc.aliyuncs.com"),
@@ -1132,6 +1131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldInfo)) {
+            query.put("OversoldInfo", request.oversoldInfo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

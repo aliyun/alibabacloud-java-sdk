@@ -63,6 +63,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
+    @NameInMap("OversoldInfo")
+    public String oversoldInfo;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -213,6 +216,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public ListJobsRequest setOversoldInfo(String oversoldInfo) {
+        this.oversoldInfo = oversoldInfo;
+        return this;
+    }
+    public String getOversoldInfo() {
+        return this.oversoldInfo;
     }
 
     public ListJobsRequest setPageNumber(Integer pageNumber) {
