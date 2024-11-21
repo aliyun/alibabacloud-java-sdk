@@ -36,7 +36,7 @@ public class ListSearchLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>host:172.16.**.** AND content:netty</p>
+     * <p>host:<code>172.16.**.**</code> AND content:netty</p>
      */
     @NameInMap("query")
     public String query;

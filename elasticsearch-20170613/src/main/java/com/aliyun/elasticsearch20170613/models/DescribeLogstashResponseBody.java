@@ -129,7 +129,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
          * <p>The tags added to the ALB instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.**.**</p>
+         * <p><code>172.16.**.**</code></p>
          */
         @NameInMap("host")
         public String host;

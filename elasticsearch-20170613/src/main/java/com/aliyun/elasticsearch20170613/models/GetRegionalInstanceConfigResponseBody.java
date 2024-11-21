@@ -362,6 +362,151 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
 
+    public static class GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange extends TeaModel {
+        @NameInMap("maxAmount")
+        public Integer maxAmount;
+
+        @NameInMap("minAmount")
+        public Integer minAmount;
+
+        public static GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange build(java.util.Map<String, ?> map) throws Exception {
+            GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange self = new GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange setMaxAmount(Integer maxAmount) {
+            this.maxAmount = maxAmount;
+            return this;
+        }
+        public Integer getMaxAmount() {
+            return this.maxAmount;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange setMinAmount(Integer minAmount) {
+            this.minAmount = minAmount;
+            return this;
+        }
+        public Integer getMinAmount() {
+            return this.minAmount;
+        }
+
+    }
+
+    public static class GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines extends TeaModel {
+        @NameInMap("maxSize")
+        public Integer maxSize;
+
+        @NameInMap("minSize")
+        public Integer minSize;
+
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
+        public static GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines build(java.util.Map<String, ?> map) throws Exception {
+            GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines self = new GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines setMaxSize(Integer maxSize) {
+            this.maxSize = maxSize;
+            return this;
+        }
+        public Integer getMaxSize() {
+            return this.maxSize;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines setMinSize(Integer minSize) {
+            this.minSize = minSize;
+            return this;
+        }
+        public Integer getMinSize() {
+            return this.minSize;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+    }
+
+    public static class GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList extends TeaModel {
+        @NameInMap("diskType")
+        public String diskType;
+
+        @NameInMap("maxSize")
+        public Integer maxSize;
+
+        @NameInMap("minSize")
+        public Integer minSize;
+
+        @NameInMap("scaleLimit")
+        public Integer scaleLimit;
+
+        @NameInMap("subClassificationConfines")
+        public java.util.List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines> subClassificationConfines;
+
+        @NameInMap("valueLimitSet")
+        public java.util.List<Integer> valueLimitSet;
+
+        public static GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList build(java.util.Map<String, ?> map) throws Exception {
+            GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList self = new GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList setMaxSize(Integer maxSize) {
+            this.maxSize = maxSize;
+            return this;
+        }
+        public Integer getMaxSize() {
+            return this.maxSize;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList setMinSize(Integer minSize) {
+            this.minSize = minSize;
+            return this;
+        }
+        public Integer getMinSize() {
+            return this.minSize;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList setScaleLimit(Integer scaleLimit) {
+            this.scaleLimit = scaleLimit;
+            return this;
+        }
+        public Integer getScaleLimit() {
+            return this.scaleLimit;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList setSubClassificationConfines(java.util.List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines> subClassificationConfines) {
+            this.subClassificationConfines = subClassificationConfines;
+            return this;
+        }
+        public java.util.List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines> getSubClassificationConfines() {
+            return this.subClassificationConfines;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList setValueLimitSet(java.util.List<Integer> valueLimitSet) {
+            this.valueLimitSet = valueLimitSet;
+            return this;
+        }
+        public java.util.List<Integer> getValueLimitSet() {
+            return this.valueLimitSet;
+        }
+
+    }
+
     public static class GetRegionalInstanceConfigResponseBodyResult extends TeaModel {
         @NameInMap("clientNodeAmountRange")
         public GetRegionalInstanceConfigResponseBodyResultClientNodeAmountRange clientNodeAmountRange;
@@ -398,6 +543,15 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
         @NameInMap("versions")
         public java.util.List<String> versions;
+
+        @NameInMap("warmNodeAmountRange")
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange warmNodeAmountRange;
+
+        @NameInMap("warmNodeDiskList")
+        public java.util.List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList> warmNodeDiskList;
+
+        @NameInMap("warmNodeSpecs")
+        public java.util.List<String> warmNodeSpecs;
 
         public static GetRegionalInstanceConfigResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetRegionalInstanceConfigResponseBodyResult self = new GetRegionalInstanceConfigResponseBodyResult();
@@ -498,6 +652,30 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
         }
         public java.util.List<String> getVersions() {
             return this.versions;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResult setWarmNodeAmountRange(GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange warmNodeAmountRange) {
+            this.warmNodeAmountRange = warmNodeAmountRange;
+            return this;
+        }
+        public GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange getWarmNodeAmountRange() {
+            return this.warmNodeAmountRange;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResult setWarmNodeDiskList(java.util.List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList> warmNodeDiskList) {
+            this.warmNodeDiskList = warmNodeDiskList;
+            return this;
+        }
+        public java.util.List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList> getWarmNodeDiskList() {
+            return this.warmNodeDiskList;
+        }
+
+        public GetRegionalInstanceConfigResponseBodyResult setWarmNodeSpecs(java.util.List<String> warmNodeSpecs) {
+            this.warmNodeSpecs = warmNodeSpecs;
+            return this;
+        }
+        public java.util.List<String> getWarmNodeSpecs() {
+            return this.warmNodeSpecs;
         }
 
     }

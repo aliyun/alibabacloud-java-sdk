@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloseManagedIndexResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
@@ -12,6 +14,14 @@ public class CloseManagedIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the index\&quot;s cloud management has been successfully closed:</p>
+     * <ul>
+     * <li><p>true: Success</p>
+     * </li>
+     * <li><p>false: Failure</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

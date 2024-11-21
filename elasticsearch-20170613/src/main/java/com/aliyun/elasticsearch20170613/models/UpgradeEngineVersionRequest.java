@@ -91,6 +91,9 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     }
 
     public static class UpgradeEngineVersionRequestPlugins extends TeaModel {
+        @NameInMap("enable")
+        public String enable;
+
         @NameInMap("fileVersion")
         public String fileVersion;
 
@@ -103,6 +106,14 @@ public class UpgradeEngineVersionRequest extends TeaModel {
         public static UpgradeEngineVersionRequestPlugins build(java.util.Map<String, ?> map) throws Exception {
             UpgradeEngineVersionRequestPlugins self = new UpgradeEngineVersionRequestPlugins();
             return TeaModel.build(map, self);
+        }
+
+        public UpgradeEngineVersionRequestPlugins setEnable(String enable) {
+            this.enable = enable;
+            return this;
+        }
+        public String getEnable() {
+            return this.enable;
         }
 
         public UpgradeEngineVersionRequestPlugins setFileVersion(String fileVersion) {
