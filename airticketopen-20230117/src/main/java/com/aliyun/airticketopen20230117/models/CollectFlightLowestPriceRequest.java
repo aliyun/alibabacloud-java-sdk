@@ -7,63 +7,23 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("lowestPriceFlightList")
-    public java.util.List<CollectFlightLowestPriceRequestLowestPriceFlightList> lowestPriceFlightList;
+    @NameInMap("lowest_price_flight_info_list")
+    public java.util.List<CollectFlightLowestPriceRequestLowestPriceFlightInfoList> lowestPriceFlightInfoList;
 
     public static CollectFlightLowestPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         CollectFlightLowestPriceRequest self = new CollectFlightLowestPriceRequest();
         return TeaModel.build(map, self);
     }
 
-    public CollectFlightLowestPriceRequest setLowestPriceFlightList(java.util.List<CollectFlightLowestPriceRequestLowestPriceFlightList> lowestPriceFlightList) {
-        this.lowestPriceFlightList = lowestPriceFlightList;
+    public CollectFlightLowestPriceRequest setLowestPriceFlightInfoList(java.util.List<CollectFlightLowestPriceRequestLowestPriceFlightInfoList> lowestPriceFlightInfoList) {
+        this.lowestPriceFlightInfoList = lowestPriceFlightInfoList;
         return this;
     }
-    public java.util.List<CollectFlightLowestPriceRequestLowestPriceFlightList> getLowestPriceFlightList() {
-        return this.lowestPriceFlightList;
+    public java.util.List<CollectFlightLowestPriceRequestLowestPriceFlightInfoList> getLowestPriceFlightInfoList() {
+        return this.lowestPriceFlightInfoList;
     }
 
-    public static class CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo extends TeaModel {
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CA123,CA456</p>
-         */
-        @NameInMap("departure_flight_number")
-        public String departureFlightNumber;
-
-        /**
-         * <strong>example:</strong>
-         * <p>CA123,CA456</p>
-         */
-        @NameInMap("return_flight_number")
-        public String returnFlightNumber;
-
-        public static CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo build(java.util.Map<String, ?> map) throws Exception {
-            CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo self = new CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo setDepartureFlightNumber(String departureFlightNumber) {
-            this.departureFlightNumber = departureFlightNumber;
-            return this;
-        }
-        public String getDepartureFlightNumber() {
-            return this.departureFlightNumber;
-        }
-
-        public CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo setReturnFlightNumber(String returnFlightNumber) {
-            this.returnFlightNumber = returnFlightNumber;
-            return this;
-        }
-        public String getReturnFlightNumber() {
-            return this.returnFlightNumber;
-        }
-
-    }
-
-    public static class CollectFlightLowestPriceRequestLowestPriceFlightList extends TeaModel {
+    public static class CollectFlightLowestPriceRequestLowestPriceFlightInfoList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          * 
@@ -93,9 +53,12 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA123,CA456</p>
          */
-        @NameInMap("flight_number_info")
-        public CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo flightNumberInfo;
+        @NameInMap("departure_flight_number")
+        public String departureFlightNumber;
 
         /**
          * <p>This parameter is required.</p>
@@ -121,6 +84,22 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String returnDate;
 
         /**
+         * <strong>example:</strong>
+         * <p>CA123,CA456</p>
+         */
+        @NameInMap("return_flight_number")
+        public String returnFlightNumber;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
+         */
+        @NameInMap("solution_id")
+        public String solutionId;
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,12 +117,12 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         @NameInMap("trip_type")
         public Integer tripType;
 
-        public static CollectFlightLowestPriceRequestLowestPriceFlightList build(java.util.Map<String, ?> map) throws Exception {
-            CollectFlightLowestPriceRequestLowestPriceFlightList self = new CollectFlightLowestPriceRequestLowestPriceFlightList();
+        public static CollectFlightLowestPriceRequestLowestPriceFlightInfoList build(java.util.Map<String, ?> map) throws Exception {
+            CollectFlightLowestPriceRequestLowestPriceFlightInfoList self = new CollectFlightLowestPriceRequestLowestPriceFlightInfoList();
             return TeaModel.build(map, self);
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setArrivalCity(String arrivalCity) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setArrivalCity(String arrivalCity) {
             this.arrivalCity = arrivalCity;
             return this;
         }
@@ -151,7 +130,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
             return this.arrivalCity;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setDepartureCity(String departureCity) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setDepartureCity(String departureCity) {
             this.departureCity = departureCity;
             return this;
         }
@@ -159,7 +138,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
             return this.departureCity;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setDepartureDate(String departureDate) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setDepartureDate(String departureDate) {
             this.departureDate = departureDate;
             return this;
         }
@@ -167,15 +146,15 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
             return this.departureDate;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setFlightNumberInfo(CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo flightNumberInfo) {
-            this.flightNumberInfo = flightNumberInfo;
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setDepartureFlightNumber(String departureFlightNumber) {
+            this.departureFlightNumber = departureFlightNumber;
             return this;
         }
-        public CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo getFlightNumberInfo() {
-            return this.flightNumberInfo;
+        public String getDepartureFlightNumber() {
+            return this.departureFlightNumber;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setMarketTotalPrice(Double marketTotalPrice) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setMarketTotalPrice(Double marketTotalPrice) {
             this.marketTotalPrice = marketTotalPrice;
             return this;
         }
@@ -183,7 +162,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
             return this.marketTotalPrice;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setRequestId(String requestId) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setRequestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
@@ -191,7 +170,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
             return this.requestId;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setReturnDate(String returnDate) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setReturnDate(String returnDate) {
             this.returnDate = returnDate;
             return this;
         }
@@ -199,7 +178,23 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
             return this.returnDate;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setSuezTotalPrice(Double suezTotalPrice) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setReturnFlightNumber(String returnFlightNumber) {
+            this.returnFlightNumber = returnFlightNumber;
+            return this;
+        }
+        public String getReturnFlightNumber() {
+            return this.returnFlightNumber;
+        }
+
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setSolutionId(String solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public String getSolutionId() {
+            return this.solutionId;
+        }
+
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setSuezTotalPrice(Double suezTotalPrice) {
             this.suezTotalPrice = suezTotalPrice;
             return this;
         }
@@ -207,7 +202,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
             return this.suezTotalPrice;
         }
 
-        public CollectFlightLowestPriceRequestLowestPriceFlightList setTripType(Integer tripType) {
+        public CollectFlightLowestPriceRequestLowestPriceFlightInfoList setTripType(Integer tripType) {
             this.tripType = tripType;
             return this;
         }
