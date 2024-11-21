@@ -45,7 +45,7 @@ public class GetTransferableNodesResponseBody extends TeaModel {
          * <p>The IP address of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.**.**</p>
+         * <p><code>192.168.**.**</code></p>
          */
         @NameInMap("host")
         public String host;

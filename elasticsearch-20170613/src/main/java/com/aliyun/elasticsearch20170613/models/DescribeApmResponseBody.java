@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeApmResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>97597D87-8066-5493-B692-5C50DA236D68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("Result")
     public DescribeApmResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class DescribeApmResponseBody extends TeaModel {
 
     public static class DescribeApmResponseBodyResult extends TeaModel {
         /**
+         * <p>Instance domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>apm-cn-i7m2fuae****.apm.elasticsearch.aliyuncs.com:8200</p>
          */
@@ -44,6 +51,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String apmServerDomain;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-16T07:15:51.967Z</p>
          */
@@ -51,6 +60,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>Deployed replica count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -58,6 +69,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public Long deployedReplica;
 
         /**
+         * <p>Instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>APMtest</p>
          */
@@ -65,6 +78,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Instance expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>4792752000000</p>
          */
@@ -72,6 +87,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>apm-cn-i7m2fuae****</p>
          */
@@ -79,6 +96,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -86,6 +105,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public Long nodeAmount;
 
         /**
+         * <p>Associated Elasticsearch instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-i7m2fsfhc001x****</p>
          */
@@ -93,6 +114,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String outputES;
 
         /**
+         * <p>Username of the associated Elasticsearch instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>elastic</p>
          */
@@ -100,6 +123,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String outputESUserName;
 
         /**
+         * <p>User account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>133071096032****</p>
          */
@@ -107,6 +132,14 @@ public class DescribeApmResponseBody extends TeaModel {
         public String ownerId;
 
         /**
+         * <p>Payment method, with the following values:</p>
+         * <ul>
+         * <li><p>postpaid: Pay-as-you-go.</p>
+         * </li>
+         * <li><p>prepaid: Subscription.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>postpaid</p>
          */
@@ -114,6 +147,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String paymentType;
 
         /**
+         * <p>Region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -121,6 +156,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>Replica count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -128,6 +165,14 @@ public class DescribeApmResponseBody extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>Specification, with the following values:</p>
+         * <ul>
+         * <li><p>C1M2 (1 core, 2 GB)</p>
+         * </li>
+         * <li><p>C2M4 (2 cores, 4 GB)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>C1M2</p>
          */
@@ -135,6 +180,20 @@ public class DescribeApmResponseBody extends TeaModel {
         public String resourceSpec;
 
         /**
+         * <p>Lifecycle status, with the following values:</p>
+         * <ul>
+         * <li><p>CREATING: Creating.</p>
+         * </li>
+         * <li><p>ACTIVATING: Activating.</p>
+         * </li>
+         * <li><p>ACTIVE: Active.</p>
+         * </li>
+         * <li><p>INACTIVE: Frozen.</p>
+         * </li>
+         * <li><p>INVALID: Invalid.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -142,6 +201,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Version information.</p>
+         * 
          * <strong>example:</strong>
          * <p>7.10.2</p>
          */
@@ -149,6 +210,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String version;
 
         /**
+         * <p>VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1530vdhqkamm9s0****</p>
          */
@@ -156,6 +219,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>Availability zone where the switch is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -163,6 +228,8 @@ public class DescribeApmResponseBody extends TeaModel {
         public String vsArea;
 
         /**
+         * <p>Switch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1j1mql6r9g5vfb4****</p>
          */

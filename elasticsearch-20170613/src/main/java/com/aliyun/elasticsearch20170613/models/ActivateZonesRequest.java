@@ -4,6 +4,12 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ActivateZonesRequest extends TeaModel {
+    /**
+     * <p>请求体参数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cn-hangzhou-i&quot;,&quot;cn-hangzhou-h&quot;]</p>
+     */
     @NameInMap("body")
     public String body;
 

@@ -99,7 +99,7 @@ public class ListSearchLogResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>{&quot;level&quot;: &quot;info&quot;, &quot;host&quot;: &quot;192.168.**.**&quot;, &quot;time&quot;: &quot;2019-03-18T08:16:12.741Z&quot;,&quot;content&quot;: &quot;[o.e.c.r.a.AllocationService] [MnNASM_] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[my_index][3]] ...]).&quot;}</p>
+         * <p>{&quot;level&quot;: &quot;info&quot;, &quot;host&quot;: &quot;<code>192.168.**.**</code>&quot;, &quot;time&quot;: &quot;2019-03-18T08:16:12.741Z&quot;,&quot;content&quot;: &quot;[o.e.c.r.a.AllocationService] [MnNASM_] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[my_index][3]] ...]).&quot;}</p>
          */
         @NameInMap("contentCollection")
         public java.util.Map<String, ?> contentCollection;
@@ -108,7 +108,7 @@ public class ListSearchLogResponseBody extends TeaModel {
          * <p>Details of the log entry. Different content fields are returned for different log types.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.**.**</p>
+         * <p><code>192.168.**.**</code></p>
          */
         @NameInMap("host")
         public String host;

@@ -5,19 +5,40 @@ import com.aliyun.tea.*;
 
 public class CapacityPlanRequest extends TeaModel {
     /**
+     * <p>Indicates whether there is a need for complex aggregation queries. Options:</p>
+     * <ul>
+     * <li>true: Yes</li>
+     * <li>false (default): No</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("complexQueryAvailable")
     public Boolean complexQueryAvailable;
 
+    /**
+     * <p>Disk usage status.</p>
+     */
     @NameInMap("dataInfo")
     public java.util.List<CapacityPlanRequestDataInfo> dataInfo;
 
+    /**
+     * <p>Metrics information including disk usage, search and write operations, aggregation requests, etc.</p>
+     */
     @NameInMap("metric")
     public java.util.List<CapacityPlanRequestMetric> metric;
 
     /**
+     * <p>Usage scenarios, options:</p>
+     * <ul>
+     * <li>general: General scenario</li>
+     * <li>analysisVisualization: Data analysis scenario</li>
+     * <li>dbAcceleration: Database acceleration scenario</li>
+     * <li>search: Search scenario</li>
+     * <li>log: Log scenario</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>general</p>
      */
@@ -63,6 +84,16 @@ public class CapacityPlanRequest extends TeaModel {
 
     public static class CapacityPlanRequestDataInfo extends TeaModel {
         /**
+         * <p>Disk data metric code. Options:</p>
+         * <ul>
+         * <li>totalRawData: Raw data information</li>
+         * <li>document: Data document information, estimated document count</li>
+         * <li>dailyIncrement: Daily data growth</li>
+         * <li>dailyIncrementDoc: Daily incremental document count</li>
+         * <li>retentionTime: Data retention period</li>
+         * <li>replica: Replica settings</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>totalRawData</p>
          */
@@ -70,6 +101,8 @@ public class CapacityPlanRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>Disk usage metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -77,6 +110,8 @@ public class CapacityPlanRequest extends TeaModel {
         public Long size;
 
         /**
+         * <p>Total number of data entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -84,6 +119,12 @@ public class CapacityPlanRequest extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>Disk data type. Options:</p>
+         * <ul>
+         * <li>hot: Hot data</li>
+         * <li>warm: Cold data</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>hot</p>
          */
@@ -91,6 +132,12 @@ public class CapacityPlanRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>Data or time unit. Options:</p>
+         * <ul>
+         * <li>Data units: MiB, GiB, TB, PB</li>
+         * <li>Time units: DAYS, WEEKS, MONTHS, YEARS</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MiB</p>
          */
@@ -146,6 +193,8 @@ public class CapacityPlanRequest extends TeaModel {
 
     public static class CapacityPlanRequestMetric extends TeaModel {
         /**
+         * <p>Average QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -153,6 +202,12 @@ public class CapacityPlanRequest extends TeaModel {
         public Integer averageQps;
 
         /**
+         * <p>Search or write metric code. Options:</p>
+         * <ul>
+         * <li>write: Write</li>
+         * <li>search: Search</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>write</p>
          */
@@ -160,6 +215,8 @@ public class CapacityPlanRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>Concurrent number.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -167,6 +224,8 @@ public class CapacityPlanRequest extends TeaModel {
         public Long concurrent;
 
         /**
+         * <p>Peak QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -174,6 +233,8 @@ public class CapacityPlanRequest extends TeaModel {
         public Integer peakQps;
 
         /**
+         * <p>Expected average response time, unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -181,6 +242,8 @@ public class CapacityPlanRequest extends TeaModel {
         public Integer responseTime;
 
         /**
+         * <p>Throughput, unit: MB/S.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -188,6 +251,12 @@ public class CapacityPlanRequest extends TeaModel {
         public Long throughput;
 
         /**
+         * <p>Search/write peak type. Options:</p>
+         * <ul>
+         * <li>common: Regular</li>
+         * <li>peak: Peak</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>common</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CapacityPlanResponseBody extends TeaModel {
     /**
-     * <p>The response of the request.</p>
+     * <p>ID of the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>E91B7129-A669-4D9D-A743-F90A0FF1F5EF</p>
@@ -14,7 +14,7 @@ public class CapacityPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The extension configuration information.</p>
+     * <p>Returned result of the request.</p>
      */
     @NameInMap("Result")
     public CapacityPlanResponseBodyResult result;
@@ -42,7 +42,10 @@ public class CapacityPlanResponseBody extends TeaModel {
 
     public static class CapacityPlanResponseBodyResultExtendConfigs extends TeaModel {
         /**
-         * <p>The size of the disk. Unit: GiB.</p>
+         * <p>Configuration type, with a single value: sharedDisk.</p>
+         * <blockquote>
+         * <p>This extendConfigs attribute may appear when the planned instance type is Advanced.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>sharedDisk</p>
@@ -51,10 +54,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>The type of the disk. Valid value: CPFS_PREMIUM.</p>
-         * <blockquote>
-         * <p> The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).</p>
-         * </blockquote>
+         * <p>Disk size, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -63,12 +63,10 @@ public class CapacityPlanResponseBody extends TeaModel {
         public Long disk;
 
         /**
-         * <p>The version type. Valid values:</p>
-         * <ul>
-         * <li>advanced: enhanced edition</li>
-         * <li>x-pack: Commercial Edition</li>
-         * <li>community: community version</li>
-         * </ul>
+         * <p>Disk type, with a single value: CPFS_PREMIUM.</p>
+         * <blockquote>
+         * <p>This extendConfigs attribute may appear when the planned instance type is Advanced.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>CPFS_PREMIUM</p>
@@ -109,7 +107,7 @@ public class CapacityPlanResponseBody extends TeaModel {
 
     public static class CapacityPlanResponseBodyResultNodeConfigurations extends TeaModel {
         /**
-         * <p>The number of CPUs of the cloud desktop.</p>
+         * <p>Number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +116,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         public Long amount;
 
         /**
-         * <p>The size of the disk. Unit: GiB.</p>
+         * <p>Number of CPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,14 +125,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         public Long cpu;
 
         /**
-         * <p>The type of the hard disk. Valid values:</p>
-         * <ul>
-         * <li>cloud_essd: enhanced SSD (ESSD)</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>local_ssd: local SSD</li>
-         * <li>local_efficiency: local ultra disk</li>
-         * </ul>
+         * <p>Disk size, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -143,7 +134,19 @@ public class CapacityPlanResponseBody extends TeaModel {
         public Long disk;
 
         /**
-         * <p>The memory size of the current node role.</p>
+         * <p>Disk type, with meanings as follows:</p>
+         * <ul>
+         * <li><p>cloud_essd: ESSD Cloud Disk</p>
+         * </li>
+         * <li><p>cloud_ssd: SSD Cloud Disk</p>
+         * </li>
+         * <li><p>cloud_efficiency: Efficient Cloud Disk</p>
+         * </li>
+         * <li><p>local_ssd: Local SSD Disk</p>
+         * </li>
+         * <li><p>local_efficiency: Local Efficient Disk</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -152,15 +155,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The type of the node. Supported types are as follows:</p>
-         * <ul>
-         * <li>WORKER: data node</li>
-         * <li>WORKER_WARM: cold data node</li>
-         * <li>MASTER: dedicated master node</li>
-         * <li>KIBANA: Kibana node</li>
-         * <li>COORDINATING: client node</li>
-         * <li>ELASTIC_WORKER: elastic node</li>
-         * </ul>
+         * <p>Specified memory size for the current node role.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -169,10 +164,20 @@ public class CapacityPlanResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The result calculated based on the capacity planning. No default value is available. The values are as follows:</p>
+         * <p>Node type, with supported types as follows:</p>
          * <ul>
-         * <li>true: indicates that the number of data nodes calculated by capacity planning exceeds the threshold of 50.</li>
-         * <li>false: The number of data nodes calculated by capacity planning is less than 50.</li>
+         * <li><p>WORKER: Data Node</p>
+         * </li>
+         * <li><p>WORKER_WARM: Cold Data Node</p>
+         * </li>
+         * <li><p>MASTER: Dedicated Master Node</p>
+         * </li>
+         * <li><p>KIBANA: Kibana Node</p>
+         * </li>
+         * <li><p>COORDINATING: Coordinator Node</p>
+         * </li>
+         * <li><p>ELASTIC_WORKER: Elastic Node</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,16 +243,21 @@ public class CapacityPlanResponseBody extends TeaModel {
 
     public static class CapacityPlanResponseBodyResult extends TeaModel {
         /**
-         * <p>The type of the configuration. Set the value to sharedDisk.</p>
-         * <blockquote>
-         * <p> The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).</p>
-         * </blockquote>
+         * <p>Extended configuration information.</p>
          */
         @NameInMap("ExtendConfigs")
         public java.util.List<CapacityPlanResponseBodyResultExtendConfigs> extendConfigs;
 
         /**
-         * <p>The node information.</p>
+         * <p>Edition type, with values meaning as follows:</p>
+         * <ul>
+         * <li><p>advanced: Enhanced Edition</p>
+         * </li>
+         * <li><p>x-pack: Commercial Edition</p>
+         * </li>
+         * <li><p>community: Community Edition</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>
@@ -256,12 +266,20 @@ public class CapacityPlanResponseBody extends TeaModel {
         public String instanceCategory;
 
         /**
-         * <p>The number of cores.</p>
+         * <p>Node information.</p>
          */
         @NameInMap("NodeConfigurations")
         public java.util.List<CapacityPlanResponseBodyResultNodeConfigurations> nodeConfigurations;
 
         /**
+         * <p>Based on the capacity planning calculation, there is no default value. The meanings of the values are as follows:</p>
+         * <ul>
+         * <li><p>true: Represents an oversized cluster, indicating that the number of data nodes calculated by the capacity planning exceeds the threshold of 50.</p>
+         * </li>
+         * <li><p>false: The number of data nodes calculated by the capacity planning is within 50.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -300,7 +300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>容量规划</p>
+     * <p>Capacity Planning</p>
      * 
      * @param request CapacityPlanRequest
      * @param headers map
@@ -346,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>容量规划</p>
+     * <p>Capacity Planning</p>
      * 
      * @param request CapacityPlanRequest
      * @return CapacityPlanResponse
@@ -451,7 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭索引托管</p>
+     * <p>Disable Managed Index</p>
      * 
      * @param request CloseManagedIndexRequest
      * @param headers map
@@ -485,7 +485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭索引托管</p>
+     * <p>Disable Managed Index</p>
      * 
      * @param request CloseManagedIndexRequest
      * @return CloseManagedIndexResponse
@@ -1041,7 +1041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call deactivatezones to offline part of the zone when multiple zones are available. And you need to migrate the nodes in the offline zone to other zones.</p>
+     * <p>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</p>
      * 
      * @param request DeactivateZonesRequest
      * @param headers map
@@ -1076,7 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call deactivatezones to offline part of the zone when multiple zones are available. And you need to migrate the nodes in the offline zone to other zones.</p>
+     * <p>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</p>
      * 
      * @param request DeactivateZonesRequest
      * @return DeactivateZonesResponse
@@ -1708,7 +1708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeApm</p>
+     * <p>Describe APM</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1734,7 +1734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeApm</p>
+     * <p>Describe APM</p>
      * @return DescribeApmResponse
      */
     public DescribeApmResponse describeApm(String instanceId) throws Exception {
