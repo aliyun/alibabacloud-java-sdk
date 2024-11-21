@@ -210,7 +210,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
          * <p>10000</p>
          */
         @NameInMap("processedRows")
-        public Integer processedRows;
+        public Long processedRows;
 
         /**
          * <p>Indicates whether the query result is complete. Valid values:</p>
@@ -375,11 +375,11 @@ public class GetLogsV2ResponseBody extends TeaModel {
             return this.processedBytes;
         }
 
-        public GetLogsV2ResponseBodyMeta setProcessedRows(Integer processedRows) {
+        public GetLogsV2ResponseBodyMeta setProcessedRows(Long processedRows) {
             this.processedRows = processedRows;
             return this;
         }
-        public Integer getProcessedRows() {
+        public Long getProcessedRows() {
             return this.processedRows;
         }
 

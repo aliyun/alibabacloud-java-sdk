@@ -11,6 +11,9 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     @NameInMap("currentCount")
     public Integer currentCount;
 
+    /**
+     * <p>The data of the policies that are matched against the query conditions. The data is returned based on paginated results.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListCollectionPoliciesResponseBodyData> data;
 
@@ -84,6 +87,8 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         public String destRegion;
 
         /**
+         * <p>The data retention period for centralized storage. Unit: days.</p>
+         * 
          * <strong>example:</strong>
          * <p>your-sls-logstore-ttl</p>
          */
@@ -262,6 +267,9 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyData extends TeaModel {
+        /**
+         * <p>The configuration for centralized storage.</p>
+         */
         @NameInMap("centralizeConfig")
         public ListCollectionPoliciesResponseBodyDataCentralizeConfig centralizeConfig;
 

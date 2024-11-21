@@ -4,9 +4,19 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateTicketRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("accessTokenExpirationTime")
     public Long accessTokenExpirationTime;
 
+    /**
+     * <p>The validity period of the ticket that is used for logon-free access. Unit: seconds. Default value: 86400. Maximum value: 2592000. The value 86400 specifies one day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
+     */
     @NameInMap("expirationTime")
     public Long expirationTime;
 

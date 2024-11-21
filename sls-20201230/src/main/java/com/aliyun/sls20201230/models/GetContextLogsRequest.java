@@ -44,16 +44,6 @@ public class GetContextLogsRequest extends TeaModel {
     @NameInMap("pack_meta")
     public String packMeta;
 
-    /**
-     * <p>The type of the data in the Logstore. Set the value to context_log.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>context_log</p>
-     */
-    @NameInMap("type")
-    public String type;
-
     public static GetContextLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetContextLogsRequest self = new GetContextLogsRequest();
         return TeaModel.build(map, self);
@@ -89,14 +79,6 @@ public class GetContextLogsRequest extends TeaModel {
     }
     public String getPackMeta() {
         return this.packMeta;
-    }
-
-    public GetContextLogsRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }

@@ -28,16 +28,16 @@ public class ConsumeProcessor extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>consume-processor-1</p>
+     * <p>字段过滤处理</p>
      */
-    @NameInMap("processorId")
-    public String processorId;
+    @NameInMap("displayName")
+    public String displayName;
 
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>字段过滤处理</p>
+     * <p>consume-processor-1</p>
      */
     @NameInMap("processorName")
     public String processorName;
@@ -78,12 +78,12 @@ public class ConsumeProcessor extends TeaModel {
         return this.description;
     }
 
-    public ConsumeProcessor setProcessorId(String processorId) {
-        this.processorId = processorId;
+    public ConsumeProcessor setDisplayName(String displayName) {
+        this.displayName = displayName;
         return this;
     }
-    public String getProcessorId() {
-        return this.processorId;
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public ConsumeProcessor setProcessorName(String processorName) {

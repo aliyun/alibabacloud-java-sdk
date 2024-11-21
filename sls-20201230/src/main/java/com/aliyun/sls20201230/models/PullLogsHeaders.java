@@ -3,30 +3,23 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class GetLogsV2Headers extends TeaModel {
+public class PullLogsHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The compression format.</p>
-     * <ul>
-     * <li>For Java, Python, and Go, only the lz4 and gzip algorithms are supported for decompression.</li>
-     * <li>For PHP, JavaScript, and C#, only the gzip algorithm is supported for decompression.</li>
-     * </ul>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>lz4</p>
      */
     @NameInMap("Accept-Encoding")
     public String acceptEncoding;
 
-    public static GetLogsV2Headers build(java.util.Map<String, ?> map) throws Exception {
-        GetLogsV2Headers self = new GetLogsV2Headers();
+    public static PullLogsHeaders build(java.util.Map<String, ?> map) throws Exception {
+        PullLogsHeaders self = new PullLogsHeaders();
         return TeaModel.build(map, self);
     }
 
-    public GetLogsV2Headers setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public PullLogsHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -34,7 +27,7 @@ public class GetLogsV2Headers extends TeaModel {
         return this.commonHeaders;
     }
 
-    public GetLogsV2Headers setAcceptEncoding(String acceptEncoding) {
+    public PullLogsHeaders setAcceptEncoding(String acceptEncoding) {
         this.acceptEncoding = acceptEncoding;
         return this;
     }

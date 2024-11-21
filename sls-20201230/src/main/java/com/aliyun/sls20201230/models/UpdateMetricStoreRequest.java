@@ -4,20 +4,36 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetricStoreRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic sharding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
     /**
+     * <p>The maximum number of shards into which existing shards can be automatically split. This parameter is valid only when you set the autoSplit parameter to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>64</p>
      */
     @NameInMap("maxSplitShard")
     public Integer maxSplitShard;
 
+    /**
+     * <p>The type of the Metricstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("mode")
     public String mode;
 
     /**
+     * <p>The retention period of the metric data. Unit: days.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */

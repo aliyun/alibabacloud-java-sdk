@@ -27,7 +27,7 @@ public class GetLogsRequest extends TeaModel {
     public Integer from;
 
     /**
-     * <p>The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Minimum value: 0. Maximum value: 100. Default value: 100.</p>
+     * <p>The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Minimum value: 0. Maximum value: 100. Default value: 100. For more information, see <a href="https://help.aliyun.com/document_detail/89994.html">Perform paged queries</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -36,7 +36,7 @@ public class GetLogsRequest extends TeaModel {
     public Long line;
 
     /**
-     * <p>The line from which the query starts. This parameter takes effect only when the query parameter is set to a search statement. Default value: 0.</p>
+     * <p>The line from which the query starts. This parameter takes effect only when the query parameter is set to a search statement. Default value: 0. For more information, see <a href="https://help.aliyun.com/document_detail/89994.html">Perform paged queries</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -112,7 +112,7 @@ public class GetLogsRequest extends TeaModel {
     public Integer to;
 
     /**
-     * <p>The topic of the logs. The default value is double quotation marks (&quot;&quot;). For more information, see <a href="https://help.aliyun.com/document_detail/48881.html">Topic</a>.</p>
+     * <p>The topic of the logs. The default value is an empty string. For more information, see <a href="https://help.aliyun.com/document_detail/48881.html">Topic</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>topic</p>

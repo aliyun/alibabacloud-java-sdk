@@ -159,6 +159,13 @@ public class LogtailConfig extends TeaModel {
         @NameInMap("region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>logs</p>
+         */
+        @NameInMap("telemetryType")
+        public String telemetryType;
+
         public static LogtailConfigOutputDetail build(java.util.Map<String, ?> map) throws Exception {
             LogtailConfigOutputDetail self = new LogtailConfigOutputDetail();
             return TeaModel.build(map, self);
@@ -186,6 +193,14 @@ public class LogtailConfig extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public LogtailConfigOutputDetail setTelemetryType(String telemetryType) {
+            this.telemetryType = telemetryType;
+            return this;
+        }
+        public String getTelemetryType() {
+            return this.telemetryType;
         }
 
     }
