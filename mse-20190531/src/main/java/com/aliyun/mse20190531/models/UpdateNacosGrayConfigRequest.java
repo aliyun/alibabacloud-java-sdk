@@ -41,6 +41,12 @@ public class UpdateNacosGrayConfigRequest extends TeaModel {
     @NameInMap("GrayRule")
     public String grayRule;
 
+    @NameInMap("GrayRuleName")
+    public String grayRuleName;
+
+    @NameInMap("GrayRulePriority")
+    public Integer grayRulePriority;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -72,6 +78,9 @@ public class UpdateNacosGrayConfigRequest extends TeaModel {
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
+
+    @NameInMap("OpType")
+    public String opType;
 
     /**
      * <strong>example:</strong>
@@ -139,6 +148,22 @@ public class UpdateNacosGrayConfigRequest extends TeaModel {
         return this.grayRule;
     }
 
+    public UpdateNacosGrayConfigRequest setGrayRuleName(String grayRuleName) {
+        this.grayRuleName = grayRuleName;
+        return this;
+    }
+    public String getGrayRuleName() {
+        return this.grayRuleName;
+    }
+
+    public UpdateNacosGrayConfigRequest setGrayRulePriority(Integer grayRulePriority) {
+        this.grayRulePriority = grayRulePriority;
+        return this;
+    }
+    public Integer getGrayRulePriority() {
+        return this.grayRulePriority;
+    }
+
     public UpdateNacosGrayConfigRequest setGrayType(String grayType) {
         this.grayType = grayType;
         return this;
@@ -169,6 +194,14 @@ public class UpdateNacosGrayConfigRequest extends TeaModel {
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public UpdateNacosGrayConfigRequest setOpType(String opType) {
+        this.opType = opType;
+        return this;
+    }
+    public String getOpType() {
+        return this.opType;
     }
 
     public UpdateNacosGrayConfigRequest setRegionId(String regionId) {
