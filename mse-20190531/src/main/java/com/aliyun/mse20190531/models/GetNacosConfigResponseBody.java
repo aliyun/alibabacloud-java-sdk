@@ -95,6 +95,58 @@ public class GetNacosConfigResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetNacosConfigResponseBodyConfigurationGrayVersions extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Rule")
+        public String rule;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetNacosConfigResponseBodyConfigurationGrayVersions build(java.util.Map<String, ?> map) throws Exception {
+            GetNacosConfigResponseBodyConfigurationGrayVersions self = new GetNacosConfigResponseBodyConfigurationGrayVersions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetNacosConfigResponseBodyConfigurationGrayVersions setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetNacosConfigResponseBodyConfigurationGrayVersions setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public GetNacosConfigResponseBodyConfigurationGrayVersions setRule(String rule) {
+            this.rule = rule;
+            return this;
+        }
+        public String getRule() {
+            return this.rule;
+        }
+
+        public GetNacosConfigResponseBodyConfigurationGrayVersions setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class GetNacosConfigResponseBodyConfiguration extends TeaModel {
         /**
          * <p>The name of the application.</p>
@@ -149,6 +201,9 @@ public class GetNacosConfigResponseBody extends TeaModel {
          */
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
+
+        @NameInMap("GrayVersions")
+        public java.util.List<GetNacosConfigResponseBodyConfigurationGrayVersions> grayVersions;
 
         /**
          * <p>The name of the configuration group.</p>
@@ -237,6 +292,14 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
         public String getEncryptedDataKey() {
             return this.encryptedDataKey;
+        }
+
+        public GetNacosConfigResponseBodyConfiguration setGrayVersions(java.util.List<GetNacosConfigResponseBodyConfigurationGrayVersions> grayVersions) {
+            this.grayVersions = grayVersions;
+            return this;
+        }
+        public java.util.List<GetNacosConfigResponseBodyConfigurationGrayVersions> getGrayVersions() {
+            return this.grayVersions;
         }
 
         public GetNacosConfigResponseBodyConfiguration setGroup(String group) {

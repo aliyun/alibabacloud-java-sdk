@@ -27,6 +27,9 @@ public class ListListenersByConfigRequest extends TeaModel {
     @NameInMap("DataId")
     public String dataId;
 
+    @NameInMap("ExtGrayRules")
+    public java.util.List<ListListenersByConfigRequestExtGrayRules> extGrayRules;
+
     /**
      * <p>The name of the group.</p>
      * <p>This parameter is required.</p>
@@ -86,6 +89,14 @@ public class ListListenersByConfigRequest extends TeaModel {
         return this.dataId;
     }
 
+    public ListListenersByConfigRequest setExtGrayRules(java.util.List<ListListenersByConfigRequestExtGrayRules> extGrayRules) {
+        this.extGrayRules = extGrayRules;
+        return this;
+    }
+    public java.util.List<ListListenersByConfigRequestExtGrayRules> getExtGrayRules() {
+        return this.extGrayRules;
+    }
+
     public ListListenersByConfigRequest setGroup(String group) {
         this.group = group;
         return this;
@@ -116,6 +127,58 @@ public class ListListenersByConfigRequest extends TeaModel {
     }
     public String getRequestPars() {
         return this.requestPars;
+    }
+
+    public static class ListListenersByConfigRequestExtGrayRules extends TeaModel {
+        @NameInMap("GrayRule")
+        public String grayRule;
+
+        @NameInMap("GrayRuleName")
+        public String grayRuleName;
+
+        @NameInMap("GrayRulePriority")
+        public Integer grayRulePriority;
+
+        @NameInMap("GrayRuleType")
+        public String grayRuleType;
+
+        public static ListListenersByConfigRequestExtGrayRules build(java.util.Map<String, ?> map) throws Exception {
+            ListListenersByConfigRequestExtGrayRules self = new ListListenersByConfigRequestExtGrayRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenersByConfigRequestExtGrayRules setGrayRule(String grayRule) {
+            this.grayRule = grayRule;
+            return this;
+        }
+        public String getGrayRule() {
+            return this.grayRule;
+        }
+
+        public ListListenersByConfigRequestExtGrayRules setGrayRuleName(String grayRuleName) {
+            this.grayRuleName = grayRuleName;
+            return this;
+        }
+        public String getGrayRuleName() {
+            return this.grayRuleName;
+        }
+
+        public ListListenersByConfigRequestExtGrayRules setGrayRulePriority(Integer grayRulePriority) {
+            this.grayRulePriority = grayRulePriority;
+            return this;
+        }
+        public Integer getGrayRulePriority() {
+            return this.grayRulePriority;
+        }
+
+        public ListListenersByConfigRequestExtGrayRules setGrayRuleType(String grayRuleType) {
+            this.grayRuleType = grayRuleType;
+            return this;
+        }
+        public String getGrayRuleType() {
+            return this.grayRuleType;
+        }
+
     }
 
 }

@@ -2701,10 +2701,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BetaIps", request.betaIps);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
-            query.put("Content", request.content);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
             query.put("DataId", request.dataId);
         }
@@ -2733,8 +2729,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("Content", request.content);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateNacosConfig"),
@@ -9572,12 +9574,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries listeners based on configuration information.</p>
      * 
-     * @param request ListListenersByConfigRequest
+     * @param tmpReq ListListenersByConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListListenersByConfigResponse
      */
-    public ListListenersByConfigResponse listListenersByConfigWithOptions(ListListenersByConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListListenersByConfigResponse listListenersByConfigWithOptions(ListListenersByConfigRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListListenersByConfigShrinkRequest request = new ListListenersByConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extGrayRules)) {
+            request.extGrayRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extGrayRules, "ExtGrayRules", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -9585,6 +9593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
             query.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extGrayRulesShrink)) {
+            query.put("ExtGrayRules", request.extGrayRulesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.group)) {
@@ -14215,6 +14227,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新服务</p>
+     * 
+     * @param tmpReq UpdateGatewayServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGatewayServiceResponse
+     */
+    public UpdateGatewayServiceResponse updateGatewayServiceWithOptions(UpdateGatewayServiceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateGatewayServiceShrinkRequest request = new UpdateGatewayServiceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ipList)) {
+            request.ipListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ipList, "IpList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("GatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipListShrink)) {
+            query.put("IpList", request.ipListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicePort)) {
+            query.put("ServicePort", request.servicePort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceProtocol)) {
+            query.put("ServiceProtocol", request.serviceProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsSetting)) {
+            query.put("TlsSetting", request.tlsSetting);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGatewayService"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGatewayServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新服务</p>
+     * 
+     * @param request UpdateGatewayServiceRequest
+     * @return UpdateGatewayServiceResponse
+     */
+    public UpdateGatewayServiceResponse updateGatewayService(UpdateGatewayServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGatewayServiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates the health check policy of a specified service in a cloud-native gateway.</p>
      * 
      * @param tmpReq UpdateGatewayServiceCheckRequest
@@ -14881,10 +14975,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BetaIps", request.betaIps);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
-            query.put("Content", request.content);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
             query.put("DataId", request.dataId);
         }
@@ -14921,8 +15011,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("Content", request.content);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateNacosConfig"),
@@ -14986,6 +15082,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GrayRule", request.grayRule);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.grayRuleName)) {
+            query.put("GrayRuleName", request.grayRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grayRulePriority)) {
+            query.put("GrayRulePriority", request.grayRulePriority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.grayType)) {
             query.put("GrayType", request.grayType);
         }
@@ -15000,6 +15104,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opType)) {
+            query.put("OpType", request.opType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

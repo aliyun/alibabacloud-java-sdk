@@ -35,12 +35,6 @@ public class CreateNacosConfigRequest extends TeaModel {
     @NameInMap("BetaIps")
     public String betaIps;
 
-    /**
-     * <p>The content of the configuration.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>asdf</p>
-     */
     @NameInMap("Content")
     public String content;
 

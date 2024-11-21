@@ -179,6 +179,12 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
+        @NameInMap("MatchRuleName")
+        public String matchRuleName;
+
+        @NameInMap("MatchRuleType")
+        public String matchRuleType;
+
         /**
          * <p>The verification string.</p>
          * 
@@ -225,6 +231,22 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getLabels() {
             return this.labels;
+        }
+
+        public ListListenersByConfigResponseBodyListeners setMatchRuleName(String matchRuleName) {
+            this.matchRuleName = matchRuleName;
+            return this;
+        }
+        public String getMatchRuleName() {
+            return this.matchRuleName;
+        }
+
+        public ListListenersByConfigResponseBodyListeners setMatchRuleType(String matchRuleType) {
+            this.matchRuleType = matchRuleType;
+            return this;
+        }
+        public String getMatchRuleType() {
+            return this.matchRuleType;
         }
 
         public ListListenersByConfigResponseBodyListeners setMd5(String md5) {

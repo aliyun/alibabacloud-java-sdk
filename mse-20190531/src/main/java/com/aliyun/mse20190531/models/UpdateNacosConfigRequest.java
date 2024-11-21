@@ -35,12 +35,6 @@ public class UpdateNacosConfigRequest extends TeaModel {
     @NameInMap("BetaIps")
     public String betaIps;
 
-    /**
-     * <p>The content of the configuration.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>attribute1=1221111\r\nattribute2=Chinese\r\nattribute3=abc11\r\nattribute4=1.00111</p>
-     */
     @NameInMap("Content")
     public String content;
 
