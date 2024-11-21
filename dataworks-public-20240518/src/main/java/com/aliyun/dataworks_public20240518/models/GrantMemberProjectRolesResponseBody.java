@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GrantMemberProjectRolesResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>2d9ced66-38ef-4923-baf6-391dd3a7e656</p>
      */

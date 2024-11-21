@@ -5,19 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityResultsResponseBody extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>200</p>
+     * <p>The pagination information.</p>
      */
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("PagingInfo")
     public ListDataQualityResultsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-4ED0-9441</p>
      */
@@ -27,22 +22,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
     public static ListDataQualityResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataQualityResultsResponseBody self = new ListDataQualityResultsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDataQualityResultsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListDataQualityResultsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ListDataQualityResultsResponseBody setPagingInfo(ListDataQualityResultsResponseBodyPagingInfo pagingInfo) {
@@ -77,11 +56,12 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String referencedValue;
 
         /**
+         * <p>The comparison result between the value of CheckedValue and the threshold. Valid values:</p>
          * <ul>
-         * <li>ERROR</li>
-         * <li>PASSED</li>
-         * <li>WARNED</li>
-         * <li>CRITICAL</li>
+         * <li>Error</li>
+         * <li>Passed</li>
+         * <li>Warned</li>
+         * <li>Critical</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -318,13 +298,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds thresholds;
 
         /**
+         * <p>The threshold calculation method. Valid values:</p>
          * <ul>
-         * <li>FIXED</li>
-         * <li>FLUCTATION</li>
-         * <li>AUTO</li>
-         * <li>AVERAGE</li>
-         * <li>VARIANCE</li>
-         * <li>FLUCTATION_DISCREATE</li>
+         * <li>Fixed</li>
+         * <li>Fluctation</li>
+         * <li>FluctationDiscreate</li>
+         * <li>Auto</li>
+         * <li>Average</li>
+         * <li>Variance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,8 +354,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String errorDataFilter;
 
         /**
+         * <p>The type of the operation. Valid values:</p>
          * <ul>
-         * <li>SAVE_ERROR_DATA</li>
+         * <li>SaveErrorData</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,21 +390,23 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleSamplingConfig extends TeaModel {
         /**
+         * <p>The metrics used for sampling. Valid values:</p>
          * <ul>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
+         * <li>Count: the number of rows in the table.</li>
+         * <li>Min: the minimum value of the field.</li>
+         * <li>Max: the maximum value of the field.</li>
+         * <li>Avg: the average value of the field.</li>
+         * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
+         * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
+         * <li>DuplicatedCount: the number of duplicated values of the field.</li>
+         * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
+         * <li>TableSize: the table size.</li>
+         * <li>NullValueCount: the number of rows in which the field value is null.</li>
+         * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
+         * <li>GroupCount: the field value and the number of rows for each field value.</li>
+         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
+         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
+         * <li>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -493,14 +477,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget extends TeaModel {
         /**
+         * <p>The type of the database to which the table belongs. Valid values:</p>
          * <ul>
-         * <li>MAX_COMPUTE</li>
-         * <li>EMR</li>
-         * <li>CDH</li>
-         * <li>HOLOGRES</li>
-         * <li>ANALYTICDB_FOR_POSTGRESQL</li>
-         * <li>ANALYTICDB_FOR_MYSQL</li>
-         * <li>STAR_ROCKS</li>
+         * <li>maxcompute</li>
+         * <li>emr</li>
+         * <li>cdh</li>
+         * <li>hologres</li>
+         * <li>analyticdb_for_postgresql</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>starrocks</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -524,8 +509,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
+         * <p>The type of the monitored object. Valid values:</p>
          * <ul>
-         * <li>TABLE</li>
+         * <li>Table</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -574,6 +560,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRule extends TeaModel {
+        /**
+         * <p>The check settings for sample data.</p>
+         */
         @NameInMap("CheckingConfig")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfig checkingConfig;
 
@@ -591,6 +580,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The operations that you can perform after the rule-based check fails.</p>
+         */
         @NameInMap("ErrorHandlers")
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleErrorHandlers> errorHandlers;
 
@@ -611,13 +603,17 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The sampling settings.</p>
+         */
         @NameInMap("SamplingConfig")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleSamplingConfig samplingConfig;
 
         /**
+         * <p>The strength of the rule. Valid values:</p>
          * <ul>
-         * <li>HIGH</li>
-         * <li>NORMAL</li>
+         * <li>High</li>
+         * <li>Normal</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -626,6 +622,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The monitored object of the rule.</p>
+         */
         @NameInMap("Target")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget target;
 
@@ -754,6 +753,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The check details.</p>
+         */
         @NameInMap("Details")
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsDetails> details;
 
@@ -764,6 +766,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The snapshot of the rule configuration when the check starts.</p>
+         */
         @NameInMap("Rule")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRule rule;
 
@@ -783,12 +788,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String sample;
 
         /**
+         * <p>The status of the check result. Valid values:</p>
          * <ul>
-         * <li>RUNNING</li>
-         * <li>ERROR</li>
-         * <li>PASSED</li>
-         * <li>WARNED</li>
-         * <li>CRITICAL</li>
+         * <li>Running</li>
+         * <li>Error</li>
+         * <li>Passed</li>
+         * <li>Warned</li>
+         * <li>Critical</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -868,6 +874,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityResultsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The data quality check results.</p>
+         */
         @NameInMap("DataQualityResults")
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResults> dataQualityResults;
 

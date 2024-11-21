@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityResultsRequest extends TeaModel {
     /**
+     * <p>The beginning of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-01</p>
      */
@@ -12,6 +14,8 @@ public class ListDataQualityResultsRequest extends TeaModel {
     public String bizdateFrom;
 
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-04</p>
      */

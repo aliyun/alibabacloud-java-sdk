@@ -92,7 +92,13 @@ public class ListTaskInstancesRequest extends TeaModel {
      * <p>ODPS_SQL</p>
      */
     @NameInMap("TaskType")
-    public Integer taskType;
+    public String taskType;
+
+    @NameInMap("TriggerRecurrence")
+    public String triggerRecurrence;
+
+    @NameInMap("TriggerType")
+    public String triggerType;
 
     /**
      * <strong>example:</strong>
@@ -224,12 +230,28 @@ public class ListTaskInstancesRequest extends TeaModel {
         return this.taskName;
     }
 
-    public ListTaskInstancesRequest setTaskType(Integer taskType) {
+    public ListTaskInstancesRequest setTaskType(String taskType) {
         this.taskType = taskType;
         return this;
     }
-    public Integer getTaskType() {
+    public String getTaskType() {
         return this.taskType;
+    }
+
+    public ListTaskInstancesRequest setTriggerRecurrence(String triggerRecurrence) {
+        this.triggerRecurrence = triggerRecurrence;
+        return this;
+    }
+    public String getTriggerRecurrence() {
+        return this.triggerRecurrence;
+    }
+
+    public ListTaskInstancesRequest setTriggerType(String triggerType) {
+        this.triggerType = triggerType;
+        return this;
+    }
+    public String getTriggerType() {
+        return this.triggerType;
     }
 
     public ListTaskInstancesRequest setWorkflowId(Long workflowId) {

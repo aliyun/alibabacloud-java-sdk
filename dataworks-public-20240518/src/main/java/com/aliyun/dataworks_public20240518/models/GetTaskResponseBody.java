@@ -66,12 +66,11 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>pre.odps_sql_demo_0</p>
-         */
-        @NameInMap("Upstream")
-        public String upstream;
+        @NameInMap("UpstreamOutput")
+        public String upstreamOutput;
+
+        @NameInMap("UpstreamTaskId")
+        public String upstreamTaskId;
 
         public static GetTaskResponseBodyTaskDependencies build(java.util.Map<String, ?> map) throws Exception {
             GetTaskResponseBodyTaskDependencies self = new GetTaskResponseBodyTaskDependencies();
@@ -86,12 +85,20 @@ public class GetTaskResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetTaskResponseBodyTaskDependencies setUpstream(String upstream) {
-            this.upstream = upstream;
+        public GetTaskResponseBodyTaskDependencies setUpstreamOutput(String upstreamOutput) {
+            this.upstreamOutput = upstreamOutput;
             return this;
         }
-        public String getUpstream() {
-            return this.upstream;
+        public String getUpstreamOutput() {
+            return this.upstreamOutput;
+        }
+
+        public GetTaskResponseBodyTaskDependencies setUpstreamTaskId(String upstreamTaskId) {
+            this.upstreamTaskId = upstreamTaskId;
+            return this;
+        }
+        public String getUpstreamTaskId() {
+            return this.upstreamTaskId;
         }
 
     }
@@ -103,13 +110,6 @@ public class GetTaskResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
-
-        /**
-         * <strong>example:</strong>
-         * <p>TaskContext</p>
-         */
-        @NameInMap("Scope")
-        public String scope;
 
         /**
          * <strong>example:</strong>
@@ -136,14 +136,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public GetTaskResponseBodyTaskInputsVariables setScope(String scope) {
-            this.scope = scope;
-            return this;
-        }
-        public String getScope() {
-            return this.scope;
         }
 
         public GetTaskResponseBodyTaskInputsVariables setType(String type) {
@@ -216,13 +208,6 @@ public class GetTaskResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>TaskContext</p>
-         */
-        @NameInMap("Scope")
-        public String scope;
-
-        /**
-         * <strong>example:</strong>
          * <p>Constant</p>
          */
         @NameInMap("Type")
@@ -246,14 +231,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public GetTaskResponseBodyTaskOutputsVariables setScope(String scope) {
-            this.scope = scope;
-            return this;
-        }
-        public String getScope() {
-            return this.scope;
         }
 
         public GetTaskResponseBodyTaskOutputsVariables setType(String type) {
@@ -1072,6 +1049,9 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("Inputs")
         public GetTaskResponseBodyTaskInputs inputs;
 
+        @NameInMap("InstanceMode")
+        public String instanceMode;
+
         /**
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -1251,6 +1231,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public GetTaskResponseBodyTaskInputs getInputs() {
             return this.inputs;
+        }
+
+        public GetTaskResponseBodyTask setInstanceMode(String instanceMode) {
+            this.instanceMode = instanceMode;
+            return this;
+        }
+        public String getInstanceMode() {
+            return this.instanceMode;
         }
 
         public GetTaskResponseBodyTask setModifyTime(Long modifyTime) {

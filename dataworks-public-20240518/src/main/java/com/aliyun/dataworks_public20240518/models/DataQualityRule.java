@@ -60,7 +60,7 @@ public class DataQualityRule extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>system::user_defined</p>
+     * <p>SYSTEM:user_defined_sql</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

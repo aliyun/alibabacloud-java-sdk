@@ -223,6 +223,9 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         @NameInMap("Owner")
         public String owner;
 
+        @NameInMap("PeriodNumber")
+        public Integer periodNumber;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -445,6 +448,14 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
+        }
+
+        public ListTaskInstancesResponseBodyPagingInfoTaskInstances setPeriodNumber(Integer periodNumber) {
+            this.periodNumber = periodNumber;
+            return this;
+        }
+        public Integer getPeriodNumber() {
+            return this.periodNumber;
         }
 
         public ListTaskInstancesResponseBodyPagingInfoTaskInstances setPriority(Integer priority) {

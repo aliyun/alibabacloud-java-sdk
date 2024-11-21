@@ -3,23 +3,20 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class GetTaskInstanceRequest extends TeaModel {
+public class DeleteAlertRuleRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>105412</p>
      */
     @NameInMap("Id")
     public Long id;
 
-    public static GetTaskInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetTaskInstanceRequest self = new GetTaskInstanceRequest();
+    public static DeleteAlertRuleRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAlertRuleRequest self = new DeleteAlertRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetTaskInstanceRequest setId(Long id) {
+    public DeleteAlertRuleRequest setId(Long id) {
         this.id = id;
         return this;
     }

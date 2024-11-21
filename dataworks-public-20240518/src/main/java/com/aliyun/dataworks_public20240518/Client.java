@@ -198,6 +198,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建自定义监控报警规则</p>
+     * 
+     * @param tmpReq CreateAlertRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAlertRuleResponse
+     */
+    public CreateAlertRuleResponse createAlertRuleWithOptions(CreateAlertRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAlertRuleShrinkRequest request = new CreateAlertRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.triggerCondition)) {
+            request.triggerConditionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.triggerCondition, "TriggerCondition", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerConditionShrink)) {
+            query.put("TriggerCondition", request.triggerConditionShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAlertRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAlertRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义监控报警规则</p>
+     * 
+     * @param request CreateAlertRuleRequest
+     * @return CreateAlertRuleResponse
+     */
+    public CreateAlertRuleResponse createAlertRule(CreateAlertRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAlertRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建数据集成报警规则</p>
      * 
      * @param tmpReq CreateDIAlarmRuleRequest
@@ -1066,6 +1136,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除自定义监控报警规则</p>
+     * 
+     * @param request DeleteAlertRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAlertRuleResponse
+     */
+    public DeleteAlertRuleResponse deleteAlertRuleWithOptions(DeleteAlertRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAlertRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义监控报警规则</p>
+     * 
+     * @param request DeleteAlertRuleRequest
+     * @return DeleteAlertRuleResponse
+     */
+    public DeleteAlertRuleResponse deleteAlertRule(DeleteAlertRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAlertRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an alert rule configured for a synchronization task.</p>
      * 
      * @param request DeleteDIAlarmRuleRequest
@@ -1434,7 +1548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除工作空间成员</p>
+     * <p>Removes a member from a workspace.</p>
      * 
      * @param request DeleteProjectMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1470,7 +1584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除工作空间成员</p>
+     * <p>Removes a member from a workspace.</p>
      * 
      * @param request DeleteProjectMemberRequest
      * @return DeleteProjectMemberResponse
@@ -1838,6 +1952,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecDeploymentStageResponse execDeploymentStage(ExecDeploymentStageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.execDeploymentStageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义监控报警规则</p>
+     * 
+     * @param request GetAlertRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAlertRuleResponse
+     */
+    public GetAlertRuleResponse getAlertRuleWithOptions(GetAlertRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlertRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAlertRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义监控报警规则</p>
+     * 
+     * @param request GetAlertRuleRequest
+     * @return GetAlertRuleResponse
+     */
+    public GetAlertRuleResponse getAlertRule(GetAlertRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAlertRuleWithOptions(request, runtime);
     }
 
     /**
@@ -2214,7 +2368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工作空间成员详情</p>
+     * <p>Queries the details about a member in a workspace.</p>
      * 
      * @param request GetProjectMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2250,7 +2404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工作空间成员详情</p>
+     * <p>Queries the details about a member in a workspace.</p>
      * 
      * @param request GetProjectMemberRequest
      * @return GetProjectMemberResponse
@@ -2463,6 +2617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about an instance.</p>
+     * 
      * @param request GetTaskInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskInstanceResponse
@@ -2488,6 +2645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about an instance.</p>
+     * 
      * @param request GetTaskInstanceRequest
      * @return GetTaskInstanceResponse
      */
@@ -2572,7 +2732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>授予工作空间成员角色</p>
+     * <p>Assigns roles to members in a workspace.</p>
      * 
      * @param tmpReq GrantMemberProjectRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2618,7 +2778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>授予工作空间成员角色</p>
+     * <p>Assigns roles to members in a workspace.</p>
      * 
      * @param request GrantMemberProjectRolesRequest
      * @return GrantMemberProjectRolesResponse
@@ -2674,6 +2834,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportWorkflowDefinitionResponse importWorkflowDefinition(ImportWorkflowDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页获取自定义监控报警规则</p>
+     * 
+     * @param tmpReq ListAlertRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAlertRulesResponse
+     */
+    public ListAlertRulesResponse listAlertRulesWithOptions(ListAlertRulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAlertRulesShrinkRequest request = new ListAlertRulesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskIds)) {
+            request.taskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIds, "TaskIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.types)) {
+            request.typesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.types, "Types", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiver)) {
+            query.put("Receiver", request.receiver);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIdsShrink)) {
+            query.put("TaskIds", request.taskIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typesShrink)) {
+            query.put("Types", request.typesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAlertRules"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAlertRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页获取自定义监控报警规则</p>
+     * 
+     * @param request ListAlertRulesRequest
+     * @return ListAlertRulesResponse
+     */
+    public ListAlertRulesResponse listAlertRules(ListAlertRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAlertRulesWithOptions(request, runtime);
     }
 
     /**
@@ -2884,7 +3122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListDataQualityEvaluationTaskInstances</p>
+     * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
      * 
      * @param request ListDataQualityEvaluationTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2912,7 +3150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListDataQualityEvaluationTaskInstances</p>
+     * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
      * 
      * @param request ListDataQualityEvaluationTaskInstancesRequest
      * @return ListDataQualityEvaluationTaskInstancesResponse
@@ -2923,6 +3161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of data quality monitoring tasks by page.</p>
+     * 
      * @param request ListDataQualityEvaluationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityEvaluationTasksResponse
@@ -2948,6 +3189,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of data quality monitoring tasks by page.</p>
+     * 
      * @param request ListDataQualityEvaluationTasksRequest
      * @return ListDataQualityEvaluationTasksResponse
      */
@@ -2992,7 +3236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>质量监控规则分页查询</p>
+     * <p>Queries a list of data quality monitoring rules by page.</p>
      * 
      * @param request ListDataQualityRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3020,7 +3264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>质量监控规则分页查询</p>
+     * <p>Queries a list of data quality monitoring rules by page.</p>
      * 
      * @param request ListDataQualityRulesRequest
      * @return ListDataQualityRulesResponse
@@ -3386,7 +3630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询工作空间成员详情</p>
+     * <p>Queries details about members in a workspace.</p>
      * 
      * @param tmpReq ListProjectMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3444,7 +3688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询工作空间成员详情</p>
+     * <p>Queries details about members in a workspace.</p>
      * 
      * @param request ListProjectMembersRequest
      * @return ListProjectMembersResponse
@@ -3858,6 +4102,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
             body.put("TaskType", request.taskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerRecurrence)) {
+            body.put("TriggerRecurrence", request.triggerRecurrence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerType)) {
+            body.put("TriggerType", request.triggerType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workflowId)) {
@@ -4690,7 +4942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>撤销工作空间成员的角色</p>
+     * <p>Revokes roles that are assigned to a member in a workspace.</p>
      * 
      * @param tmpReq RevokeMemberProjectRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4736,7 +4988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>撤销工作空间成员的角色</p>
+     * <p>Revokes roles that are assigned to a member in a workspace.</p>
      * 
      * @param request RevokeMemberProjectRolesRequest
      * @return RevokeMemberProjectRolesResponse
@@ -5016,6 +5268,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TriggerSchedulerTaskInstanceResponse triggerSchedulerTaskInstance(TriggerSchedulerTaskInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.triggerSchedulerTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义监控报警规则</p>
+     * 
+     * @param tmpReq UpdateAlertRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAlertRuleResponse
+     */
+    public UpdateAlertRuleResponse updateAlertRuleWithOptions(UpdateAlertRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAlertRuleShrinkRequest request = new UpdateAlertRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.triggerCondition)) {
+            request.triggerConditionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.triggerCondition, "TriggerCondition", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerConditionShrink)) {
+            query.put("TriggerCondition", request.triggerConditionShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAlertRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAlertRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义监控报警规则</p>
+     * 
+     * @param request UpdateAlertRuleRequest
+     * @return UpdateAlertRuleResponse
+     */
+    public UpdateAlertRuleResponse updateAlertRule(UpdateAlertRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAlertRuleWithOptions(request, runtime);
     }
 
     /**
