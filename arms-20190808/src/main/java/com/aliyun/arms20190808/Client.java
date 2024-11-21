@@ -5214,6 +5214,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Example Query metric details about an Addon.</p>
+     * 
+     * @param request DescribeAddonMetricsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAddonMetricsResponse
+     */
+    public DescribeAddonMetricsResponse describeAddonMetricsWithOptions(DescribeAddonMetricsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonVersion)) {
+            query.put("AddonVersion", request.addonVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("AliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentType)) {
+            query.put("EnvironmentType", request.environmentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAddonMetrics"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAddonMetricsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Example Query metric details about an Addon.</p>
+     * 
+     * @param request DescribeAddonMetricsRequest
+     * @return DescribeAddonMetricsResponse
+     */
+    public DescribeAddonMetricsResponse describeAddonMetrics(DescribeAddonMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAddonMetricsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the release information of an add-on by name.</p>
      * 
      * @param request DescribeAddonReleaseRequest
@@ -9518,6 +9578,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>环境addon列表</p>
+     * 
+     * @param request ListEnvironmentAddonsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnvironmentAddonsResponse
+     */
+    public ListEnvironmentAddonsResponse listEnvironmentAddonsWithOptions(ListEnvironmentAddonsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            query.put("EnvironmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnvironmentAddons"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnvironmentAddonsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>环境addon列表</p>
+     * 
+     * @param request ListEnvironmentAddonsRequest
+     * @return ListEnvironmentAddonsResponse
+     */
+    public ListEnvironmentAddonsResponse listEnvironmentAddons(ListEnvironmentAddonsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnvironmentAddonsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>环境的告警组列表</p>
+     * 
+     * @param request ListEnvironmentAlertRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnvironmentAlertRulesResponse
+     */
+    public ListEnvironmentAlertRulesResponse listEnvironmentAlertRulesWithOptions(ListEnvironmentAlertRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
+            query.put("AddonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            query.put("EnvironmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            query.put("Scene", request.scene);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnvironmentAlertRules"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnvironmentAlertRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>环境的告警组列表</p>
+     * 
+     * @param request ListEnvironmentAlertRulesRequest
+     * @return ListEnvironmentAlertRulesResponse
+     */
+    public ListEnvironmentAlertRulesResponse listEnvironmentAlertRules(ListEnvironmentAlertRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnvironmentAlertRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries information about a dashboard of an environment instance.</p>
      * 
      * @param request ListEnvironmentDashboardsRequest
@@ -9622,6 +9786,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListEnvironmentFeaturesResponse listEnvironmentFeatures(ListEnvironmentFeaturesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEnvironmentFeaturesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>环境中的kube资源列表</p>
+     * 
+     * @param tmpReq ListEnvironmentKubeResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnvironmentKubeResourcesResponse
+     */
+    public ListEnvironmentKubeResourcesResponse listEnvironmentKubeResourcesWithOptions(ListEnvironmentKubeResourcesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListEnvironmentKubeResourcesShrinkRequest request = new ListEnvironmentKubeResourcesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelSelectors)) {
+            request.labelSelectorsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelSelectors, "LabelSelectors", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            query.put("EnvironmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kind)) {
+            query.put("Kind", request.kind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelSelectorsShrink)) {
+            query.put("LabelSelectors", request.labelSelectorsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnvironmentKubeResources"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnvironmentKubeResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>环境中的kube资源列表</p>
+     * 
+     * @param request ListEnvironmentKubeResourcesRequest
+     * @return ListEnvironmentKubeResourcesResponse
+     */
+    public ListEnvironmentKubeResourcesResponse listEnvironmentKubeResources(ListEnvironmentKubeResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnvironmentKubeResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>环境指标target列表</p>
+     * 
+     * @param request ListEnvironmentMetricTargetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnvironmentMetricTargetsResponse
+     */
+    public ListEnvironmentMetricTargetsResponse listEnvironmentMetricTargetsWithOptions(ListEnvironmentMetricTargetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            query.put("EnvironmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            query.put("JobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnvironmentMetricTargets"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnvironmentMetricTargetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>环境指标target列表</p>
+     * 
+     * @param request ListEnvironmentMetricTargetsRequest
+     * @return ListEnvironmentMetricTargetsResponse
+     */
+    public ListEnvironmentMetricTargetsResponse listEnvironmentMetricTargets(ListEnvironmentMetricTargetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnvironmentMetricTargetsWithOptions(request, runtime);
     }
 
     /**

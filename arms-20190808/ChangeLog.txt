@@ -1,3 +1,11 @@
+2024-11-21 Version: 9.2.0
+- Support API DescribeAddonMetrics.
+- Support API ListEnvironmentAddons.
+- Support API ListEnvironmentAlertRules.
+- Support API ListEnvironmentKubeResources.
+- Support API ListEnvironmentMetricTargets.
+
+
 2024-10-17 Version: 9.1.4
 - Update API GetRumExceptionStack: update response param.
 - Update API GetStack: add param SpanID.
