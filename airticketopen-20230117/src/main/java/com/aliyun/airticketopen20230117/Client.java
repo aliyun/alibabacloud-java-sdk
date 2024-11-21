@@ -763,13 +763,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CollectFlightLowestPriceShrinkRequest request = new CollectFlightLowestPriceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lowestPriceFlightList)) {
-            request.lowestPriceFlightListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lowestPriceFlightList, "lowestPriceFlightList", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lowestPriceFlightInfoList)) {
+            request.lowestPriceFlightInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lowestPriceFlightInfoList, "lowest_price_flight_info_list", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.lowestPriceFlightListShrink)) {
-            body.put("lowestPriceFlightList", request.lowestPriceFlightListShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.lowestPriceFlightInfoListShrink)) {
+            body.put("lowest_price_flight_info_list", request.lowestPriceFlightInfoListShrink);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();

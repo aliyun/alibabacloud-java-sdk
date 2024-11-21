@@ -11,6 +11,10 @@ public class CollectFlightLowestPriceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("data")
     public java.util.Map<String, ?> data;
 
