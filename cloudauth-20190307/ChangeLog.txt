@@ -1,3 +1,7 @@
+2024-11-21 Version: 3.3.0
+- Support API Id2MetaStandardVerify.
+
+
 2024-11-20 Version: 3.2.1
 - Update API DescribeFaceGuardRisk: update response param.
 - Update API Id2MetaVerify: update param IdentifyNum.
