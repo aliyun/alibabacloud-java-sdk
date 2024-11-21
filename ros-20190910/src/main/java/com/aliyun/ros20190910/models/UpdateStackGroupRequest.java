@@ -60,6 +60,9 @@ public class UpdateStackGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeploymentOptions")
+    public java.util.List<String> deploymentOptions;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -261,6 +264,14 @@ public class UpdateStackGroupRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateStackGroupRequest setDeploymentOptions(java.util.List<String> deploymentOptions) {
+        this.deploymentOptions = deploymentOptions;
+        return this;
+    }
+    public java.util.List<String> getDeploymentOptions() {
+        return this.deploymentOptions;
     }
 
     public UpdateStackGroupRequest setDeploymentTargets(UpdateStackGroupRequestDeploymentTargets deploymentTargets) {

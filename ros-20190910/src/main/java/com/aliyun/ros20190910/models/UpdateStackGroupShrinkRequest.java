@@ -60,6 +60,9 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeploymentOptions")
+    public java.util.List<String> deploymentOptions;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -261,6 +264,14 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateStackGroupShrinkRequest setDeploymentOptions(java.util.List<String> deploymentOptions) {
+        this.deploymentOptions = deploymentOptions;
+        return this;
+    }
+    public java.util.List<String> getDeploymentOptions() {
+        return this.deploymentOptions;
     }
 
     public UpdateStackGroupShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
