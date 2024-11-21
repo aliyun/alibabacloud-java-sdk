@@ -96,6 +96,9 @@ public class CheckResultResponseBody extends TeaModel {
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
+        @NameInMap("ExtInfo")
+        public String extInfo;
+
         /**
          * <strong>example:</strong>
          * <p>**</p>
@@ -152,6 +155,14 @@ public class CheckResultResponseBody extends TeaModel {
         }
         public String getExtIdInfo() {
             return this.extIdInfo;
+        }
+
+        public CheckResultResponseBodyResult setExtInfo(String extInfo) {
+            this.extInfo = extInfo;
+            return this;
+        }
+        public String getExtInfo() {
+            return this.extInfo;
         }
 
         public CheckResultResponseBodyResult setExtRiskInfo(String extRiskInfo) {
