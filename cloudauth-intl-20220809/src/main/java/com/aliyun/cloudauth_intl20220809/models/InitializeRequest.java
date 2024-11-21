@@ -105,6 +105,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("Ocr")
     public String ocr;
 
+    @NameInMap("ProcedurePriority")
+    public String procedurePriority;
+
     /**
      * <strong>example:</strong>
      * <p>eKYC</p>
@@ -299,6 +302,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getOcr() {
         return this.ocr;
+    }
+
+    public InitializeRequest setProcedurePriority(String procedurePriority) {
+        this.procedurePriority = procedurePriority;
+        return this;
+    }
+    public String getProcedurePriority() {
+        return this.procedurePriority;
     }
 
     public InitializeRequest setProductCode(String productCode) {
