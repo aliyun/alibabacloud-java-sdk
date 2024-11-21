@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectMembersResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListProjectMembersResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9FBBBB1F-DD5E-5D8E-8F50-37F77460F056</p>
      */
@@ -37,16 +42,27 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     public static class ListProjectMembersResponseBodyPagingInfoProjectMembersRoles extends TeaModel {
         /**
+         * <p>The code of the role.</p>
+         * 
          * <strong>example:</strong>
          * <p>role_project_guest</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The name of the role.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The type of the role. Valid values:</p>
+         * <ul>
+         * <li>UserCustom: custom role</li>
+         * <li>System: built-in role</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */
@@ -86,16 +102,27 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     public static class ListProjectMembersResponseBodyPagingInfoProjectMembers extends TeaModel {
         /**
+         * <p>The ID of the DataWorks workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>62136</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The roles that are assigned to the member.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<ListProjectMembersResponseBodyPagingInfoProjectMembersRoles> roles;
 
         /**
+         * <p>The status of the member. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Forbidden</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -103,6 +130,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the account used by the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>123422344899</p>
          */
@@ -150,6 +179,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     public static class ListProjectMembersResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -157,16 +188,23 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The members in the workspace.</p>
+         */
         @NameInMap("ProjectMembers")
         public java.util.List<ListProjectMembersResponseBodyPagingInfoProjectMembers> projectMembers;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRulesRequest extends TeaModel {
     /**
+     * <p>The ID of the data quality monitoring task that is associated with the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -12,6 +14,8 @@ public class ListDataQualityRulesRequest extends TeaModel {
     public Long dataQualityEvaluationTaskId;
 
     /**
+     * <p>The name of the rule. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>unit_test</p>
      */
@@ -19,6 +23,8 @@ public class ListDataQualityRulesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListDataQualityRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ListDataQualityRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10002</p>
      */
@@ -40,6 +50,8 @@ public class ListDataQualityRulesRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The ID of the table that is limited by the rule in Data Map.</p>
+     * 
      * <strong>example:</strong>
      * <p>odps.unit_test.tb_unit_test</p>
      */

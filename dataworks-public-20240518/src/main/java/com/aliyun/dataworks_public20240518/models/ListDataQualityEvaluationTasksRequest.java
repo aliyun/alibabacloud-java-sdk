@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDataQualityEvaluationTasksRequest extends TeaModel {
+    /**
+     * <p>The name of the data quality monitoring task. Fuzzy match is supported.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -29,6 +38,8 @@ public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The ID of the table in Data Map.</p>
+     * 
      * <strong>example:</strong>
      * <p>odps.unit_test.tb_unit_test</p>
      */

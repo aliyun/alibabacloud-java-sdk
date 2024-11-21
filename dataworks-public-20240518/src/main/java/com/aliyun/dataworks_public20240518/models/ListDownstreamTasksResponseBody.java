@@ -248,6 +248,9 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("InstanceMode")
+        public String instanceMode;
+
         /**
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -316,6 +319,9 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
 
         @NameInMap("RuntimeResource")
         public ListDownstreamTasksResponseBodyPagingInfoTasksRuntimeResource runtimeResource;
+
+        @NameInMap("StepType")
+        public String stepType;
 
         /**
          * <strong>example:</strong>
@@ -399,6 +405,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListDownstreamTasksResponseBodyPagingInfoTasks setInstanceMode(String instanceMode) {
+            this.instanceMode = instanceMode;
+            return this;
+        }
+        public String getInstanceMode() {
+            return this.instanceMode;
         }
 
         public ListDownstreamTasksResponseBodyPagingInfoTasks setModifyTime(Long modifyTime) {
@@ -487,6 +501,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         }
         public ListDownstreamTasksResponseBodyPagingInfoTasksRuntimeResource getRuntimeResource() {
             return this.runtimeResource;
+        }
+
+        public ListDownstreamTasksResponseBodyPagingInfoTasks setStepType(String stepType) {
+            this.stepType = stepType;
+            return this;
+        }
+        public String getStepType() {
+            return this.stepType;
         }
 
         public ListDownstreamTasksResponseBodyPagingInfoTasks setTenantId(Long tenantId) {

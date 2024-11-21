@@ -233,6 +233,9 @@ public class ListTasksResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("InstanceMode")
+        public String instanceMode;
+
         /**
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -384,6 +387,14 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListTasksResponseBodyPagingInfoTasks setInstanceMode(String instanceMode) {
+            this.instanceMode = instanceMode;
+            return this;
+        }
+        public String getInstanceMode() {
+            return this.instanceMode;
         }
 
         public ListTasksResponseBodyPagingInfoTasks setModifyTime(Long modifyTime) {
