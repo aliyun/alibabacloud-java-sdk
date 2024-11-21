@@ -12,6 +12,8 @@ public class RefreshTokenRequest extends TeaModel {
     public Long accessTokenExpirationTime;
 
     /**
+     * <p>The ticket that is used for logon-free access.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJ***************.eyJ******************.KUT****************</p>
      */

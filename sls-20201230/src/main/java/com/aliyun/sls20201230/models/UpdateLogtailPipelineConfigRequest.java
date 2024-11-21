@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     /**
      * <p>The aggregation plug-ins.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when extended plug-ins are used. You can use only one aggregation plug-in.</p>
+     * </blockquote>
      */
     @NameInMap("aggregators")
     public java.util.List<java.util.Map<String, ?>> aggregators;
 
     /**
      * <p>The name of the configuration.</p>
+     * <blockquote>
+     * <p> The value of this parameter must be the same as the value of configName in the outer layer.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,27 +27,35 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     public String configName;
 
     /**
-     * <p>The data output plug-ins.</p>
+     * <p>The output plug-ins.</p>
+     * <blockquote>
+     * <p> You can use only one Simple Log Service output plug-in.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("flushers")
     public java.util.List<java.util.Map<String, ?>> flushers;
 
     /**
-     * <p>The global configuration.</p>
+     * <p>The global settings.</p>
+     * <p>**</p>
+     * <hr>
      */
     @NameInMap("global")
     public java.util.Map<String, ?> global;
 
     /**
-     * <p>The data source plug-ins.</p>
+     * <p>The input plug-ins.</p>
+     * <blockquote>
+     * <p> You can configure only one input plug-in.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;
 
     /**
-     * <p>The sample log.</p>
+     * <p>The sample log. You can specify multiple sample logs.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-14 11:13:29.796 | DEBUG    | <strong>main</strong>:<module>:1 - hello world</p>
@@ -51,6 +65,23 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
 
     /**
      * <p>The processing plug-ins.</p>
+     * <blockquote>
+     * <p> Logtail supports native plug-ins and extended plug-ins for data processing. For more information, see <a href="https://help.aliyun.com/document_detail/64957.html">Logtail plug-ins overview</a>.</p>
+     * </blockquote>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can use native plug-ins only to collect text logs.</p>
+     * </li>
+     * <li><p>You cannot add native plug-ins and extended plug-ins at the same time.</p>
+     * </li>
+     * <li><p>When you add native plug-ins, take note of the following items:</p>
+     * <ul>
+     * <li>You must add one of the following Logtail plug-ins for data processing as the first plug-in: Data Parsing (Regex Mode), Data Parsing (Delimiter Mode), Data Parsing (JSON Mode), Data Parsing (NGINX Mode), Data Parsing (Apache Mode), and Data Parsing (IIS Mode).</li>
+     * <li>After you add the first plug-in, you can add one Time Parsing plug-in, one Data Filtering plug-in, and multiple Data Masking plug-ins.</li>
+     * </ul>
+     * </li>
+     * </ul>
      */
     @NameInMap("processors")
     public java.util.List<java.util.Map<String, ?>> processors;

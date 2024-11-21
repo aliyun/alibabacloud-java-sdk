@@ -35,7 +35,7 @@ public class CreateSavedSearchRequest extends TeaModel {
     public String savedsearchName;
 
     /**
-     * <p>The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the <code>Search statement|Analytic statement</code> format. For more information about search statements and analytic statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis overview</a>.</p>
+     * <p>The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the <code>Search statement|Analytic statement</code> format. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis overview</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,8 @@ public class CreateSavedSearchRequest extends TeaModel {
     public String searchQuery;
 
     /**
-     * <p>The topic of the log.</p>
+     * <p>The topic of the logs.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>theme</p>

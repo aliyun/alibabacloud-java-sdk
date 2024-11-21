@@ -4,23 +4,44 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateMetricStoreRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic sharding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
     /**
+     * <p>The maximum number of shards into which existing shards can be automatically split. This parameter is valid only when you set the autoSplit parameter to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>64</p>
      */
     @NameInMap("maxSplitShard")
     public Integer maxSplitShard;
 
+    /**
+     * <p>The type of the metric data. Example: prometheus.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prometheus</p>
+     */
     @NameInMap("metricType")
     public String metricType;
 
+    /**
+     * <p>The type of the Metricstore. For example, you can set the parameter to standard to query Standard Metricstores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("mode")
     public String mode;
 
     /**
+     * <p>The name of the Metricstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +51,7 @@ public class CreateMetricStoreRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of shards in the Metricstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +61,7 @@ public class CreateMetricStoreRequest extends TeaModel {
     public Integer shardCount;
 
     /**
+     * <p>The retention period of the metric data in the Metricstore. Unit: days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

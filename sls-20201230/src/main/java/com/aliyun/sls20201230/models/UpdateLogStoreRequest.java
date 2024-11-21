@@ -102,9 +102,6 @@ public class UpdateLogStoreRequest extends TeaModel {
     @NameInMap("mode")
     public String mode;
 
-    @NameInMap("processorId")
-    public String processorId;
-
     /**
      * <p>The number of shards.</p>
      * <blockquote>
@@ -217,14 +214,6 @@ public class UpdateLogStoreRequest extends TeaModel {
     }
     public String getMode() {
         return this.mode;
-    }
-
-    public UpdateLogStoreRequest setProcessorId(String processorId) {
-        this.processorId = processorId;
-        return this;
-    }
-    public String getProcessorId() {
-        return this.processorId;
     }
 
     public UpdateLogStoreRequest setShardCount(Integer shardCount) {

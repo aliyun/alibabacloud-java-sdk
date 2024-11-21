@@ -4,10 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMetricStoresRequest extends TeaModel {
+    /**
+     * <p>The type of the Metricstore. For example, you can set the parameter to standard to query Standard Metricstores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("mode")
     public String mode;
 
     /**
+     * <p>The name of the Metricstore. Fuzzy search is supported. If you do not specify this parameter, all Metricstores are involved.</p>
+     * 
      * <strong>example:</strong>
      * <p>metric_store</p>
      */
@@ -15,6 +23,8 @@ public class ListMetricStoresRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The start position of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +32,8 @@ public class ListMetricStoresRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */

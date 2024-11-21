@@ -7,14 +7,11 @@ public class LogGroup extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
+    @NameInMap("LogItems")
+    public java.util.List<LogItem> logItems;
+
     @NameInMap("LogTags")
     public java.util.List<LogTag> logTags;
-
-    /**
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("Logs")
-    public java.util.List<LogItem> logs;
 
     /**
      * <strong>example:</strong>
@@ -24,8 +21,6 @@ public class LogGroup extends TeaModel {
     public String source;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>topic-test</p>
      */
@@ -37,20 +32,20 @@ public class LogGroup extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public LogGroup setLogItems(java.util.List<LogItem> logItems) {
+        this.logItems = logItems;
+        return this;
+    }
+    public java.util.List<LogItem> getLogItems() {
+        return this.logItems;
+    }
+
     public LogGroup setLogTags(java.util.List<LogTag> logTags) {
         this.logTags = logTags;
         return this;
     }
     public java.util.List<LogTag> getLogTags() {
         return this.logTags;
-    }
-
-    public LogGroup setLogs(java.util.List<LogItem> logs) {
-        this.logs = logs;
-        return this;
-    }
-    public java.util.List<LogItem> getLogs() {
-        return this.logs;
     }
 
     public LogGroup setSource(String source) {

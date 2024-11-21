@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDashboardRequest extends TeaModel {
     /**
-     * <p>The attributes of the dashboard.</p>
+     * <p>The attribute values of the dashboard.</p>
      */
     @NameInMap("attribute")
     public java.util.Map<String, String> attribute;

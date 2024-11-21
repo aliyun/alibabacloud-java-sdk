@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMetricStoreResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the automatic sharding feature is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public Boolean autoSplit;
 
     /**
+     * <p>The creation time. The value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1698933894</p>
      */
@@ -19,6 +23,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The last update time. The value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1712023974</p>
      */
@@ -26,6 +32,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public Long lastModifyTime;
 
     /**
+     * <p>The maximum number of shards into which existing shards can be automatically split.</p>
+     * 
      * <strong>example:</strong>
      * <p>64</p>
      */
@@ -33,6 +41,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public Integer maxSplitShard;
 
     /**
+     * <p>The metric type of the Metricstore. Example: prometheus.</p>
+     * 
      * <strong>example:</strong>
      * <p>prometheus</p>
      */
@@ -40,6 +50,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The specification type of the Metricstore. Example: standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>standard</p>
      */
@@ -47,6 +59,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public String mode;
 
     /**
+     * <p>The name of the Metricstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_metric_store</p>
      */
@@ -54,6 +68,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of shards.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -61,6 +77,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public Integer shardCount;
 
     /**
+     * <p>The retention period. Unit: days.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
