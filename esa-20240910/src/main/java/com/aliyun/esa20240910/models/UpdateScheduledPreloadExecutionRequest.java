@@ -4,10 +4,17 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateScheduledPreloadExecutionRequest extends TeaModel {
+    /**
+     * <p>The end time of the prefetch plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-05-31T18:10:48.849+08:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>The ID of the prefetch plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,12 +23,30 @@ public class UpdateScheduledPreloadExecutionRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The time interval between each batch execution. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
+    /**
+     * <p>The number of URLs prefetched in each batch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("SliceLen")
     public Integer sliceLen;
 
+    /**
+     * <p>The start time of the prefetch plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-05-31T17:10:48.849+08:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -4,24 +4,48 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
+    /**
+     * <p>The information about prefetch plans that failed to be created.</p>
+     */
     @NameInMap("FailedExecutions")
     public java.util.List<CreateScheduledPreloadExecutionsResponseBodyFailedExecutions> failedExecutions;
 
+    /**
+     * <p>The information about plan failures.</p>
+     */
     @NameInMap("FailedMessages")
     public java.util.List<String> failedMessages;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of prefetch plans that are created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
+    /**
+     * <p>The information about created prefetch plans.</p>
+     */
     @NameInMap("SuccessExecutions")
     public java.util.List<CreateScheduledPreloadExecutionsResponseBodySuccessExecutions> successExecutions;
 
+    /**
+     * <p>The total number of new plans requested.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -79,27 +103,82 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     }
 
     public static class CreateScheduledPreloadExecutionsResponseBodyFailedExecutions extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15685865xxx14622</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <p>The end time of the prefetch plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-03T02:43:35Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the prefetch plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66599bd7397885b43804901c</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The time interval between each batch execution. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The ID of the prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>665d3af3621bccf3fe29e1a4</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The number of URLs prefetched in each batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SliceLen")
         public Integer sliceLen;
 
+        /**
+         * <p>The start time of the prefetch plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-02T02:43:35Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the prefetch plan. Valid values:</p>
+         * <ul>
+         * <li><strong>waiting</strong></li>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>stopped</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -175,27 +254,82 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     }
 
     public static class CreateScheduledPreloadExecutionsResponseBodySuccessExecutions extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15685865xxx14622</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <p>The end time of the prefetch plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-03T02:43:35Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the prefetch plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66599bd7397885b43804901c</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The time interval between each batch execution. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The ID of the prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>665d3af3621bccf3fe29e1a4</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The number of URLs prefetched in each batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SliceLen")
         public Integer sliceLen;
 
+        /**
+         * <p>The start time of the prefetch plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-02T02:43:35Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the prefetch plan. Valid values:</p>
+         * <ul>
+         * <li><strong>waiting</strong></li>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>stopped</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
+         */
         @NameInMap("Status")
         public String status;
 

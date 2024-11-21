@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListResponseBody extends TeaModel {
     /**
-     * <p>自定义响应页面描述</p>
+     * <p>The description of the custom list.</p>
      * 
      * <strong>example:</strong>
      * <p>a custom list</p>
@@ -14,7 +14,7 @@ public class GetListResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>自定义响应页面ID</p>
+     * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
      * 
      * <strong>example:</strong>
      * <p>40000001</p>
@@ -22,10 +22,15 @@ public class GetListResponseBody extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The items in the custom list, which are displayed as an array.</p>
+     */
     @NameInMap("Items")
     public java.util.List<String> items;
 
     /**
+     * <p>The type of the custom list.</p>
+     * 
      * <strong>example:</strong>
      * <p>ip</p>
      */
@@ -33,7 +38,7 @@ public class GetListResponseBody extends TeaModel {
     public String kind;
 
     /**
-     * <p>自定义响应页面名称</p>
+     * <p>The name of the custom list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +48,7 @@ public class GetListResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -52,6 +57,8 @@ public class GetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the custom list was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */

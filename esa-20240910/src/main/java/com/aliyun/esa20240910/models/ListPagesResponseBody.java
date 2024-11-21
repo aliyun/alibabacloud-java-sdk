@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPagesResponseBody extends TeaModel {
     /**
+     * <p>The page number returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,17 +14,22 @@ public class ListPagesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The custom error pages. Each element in the array contains error page-specific information.</p>
+     */
     @NameInMap("Pages")
     public java.util.List<ListPagesResponseBodyPages> pages;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -31,6 +38,8 @@ public class ListPagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of custom error pages after filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,6 +47,8 @@ public class ListPagesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The number of custom error pages that you created.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -99,7 +110,7 @@ public class ListPagesResponseBody extends TeaModel {
 
     public static class ListPagesResponseBodyPages extends TeaModel {
         /**
-         * <p>自定义响应页面内容BASE64编码</p>
+         * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +120,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>自定义响应页面内容类型</p>
+         * <p>The Content-Type field in the HTTP header.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +130,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>自定义响应页面描述</p>
+         * <p>The description of the custom error page.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom deny page</p>
@@ -128,6 +139,8 @@ public class ListPagesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
+         * 
          * <strong>example:</strong>
          * <p>50000001</p>
          */
@@ -135,6 +148,8 @@ public class ListPagesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The type of the custom error page.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -142,6 +157,8 @@ public class ListPagesResponseBody extends TeaModel {
         public String kind;
 
         /**
+         * <p>The name of the custom error page.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */
@@ -149,6 +166,8 @@ public class ListPagesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The time when the custom error page was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */

@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
     /**
+     * <p>The plan ID.<a href="~~2850189~~"></a></p>
+     * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The quotas and their actual usage in the plan.</p>
+     */
     @NameInMap("Quotas")
     public java.util.List<ListInstanceQuotasWithUsageResponseBodyQuotas> quotas;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>85H66C7B-671A-4297-9187-2C4477247A74</p>
@@ -24,6 +29,13 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The plan status. Valid values:</p>
+     * <ul>
+     * <li>online: The plan is in service.</li>
+     * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
+     * <li>disable: The plan is released.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */
@@ -69,6 +81,8 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
 
     public static class ListInstanceQuotasWithUsageResponseBodyQuotasSiteUsage extends TeaModel {
         /**
+         * <p>The website ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>34818329392****</p>
          */
@@ -76,6 +90,8 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         public Long siteId;
 
         /**
+         * <p>The website name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.top</p>
          */
@@ -83,6 +99,8 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         public String siteName;
 
         /**
+         * <p>The quota usage of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -122,6 +140,8 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
 
     public static class ListInstanceQuotasWithUsageResponseBodyQuotas extends TeaModel {
         /**
+         * <p>The quota name.</p>
+         * 
          * <strong>example:</strong>
          * <p>redirect_rules|rule_quota</p>
          */
@@ -129,16 +149,23 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         public String quotaName;
 
         /**
+         * <p>The quota value.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("QuotaValue")
         public String quotaValue;
 
+        /**
+         * <p>The usage of the quota in each website associated with the plan.</p>
+         */
         @NameInMap("SiteUsage")
         public java.util.List<ListInstanceQuotasWithUsageResponseBodyQuotasSiteUsage> siteUsage;
 
         /**
+         * <p>The quota usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

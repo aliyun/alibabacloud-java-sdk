@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWaitingRoomRulesResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID, which is used to trace a call.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
@@ -13,6 +13,9 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The waiting room bypass rules.</p>
+     */
     @NameInMap("WaitingRoomRules")
     public java.util.List<ListWaitingRoomRulesResponseBodyWaitingRoomRules> waitingRoomRules;
 
@@ -39,6 +42,8 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
 
     public static class ListWaitingRoomRulesResponseBodyWaitingRoomRules extends TeaModel {
         /**
+         * <p>The rule content, which is a policy or conditional expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
          */
@@ -46,6 +51,12 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
+         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -53,6 +64,8 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -60,6 +73,8 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>37286782688****</p>
          */

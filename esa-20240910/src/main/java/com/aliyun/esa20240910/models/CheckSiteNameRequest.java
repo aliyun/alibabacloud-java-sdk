@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckSiteNameRequest extends TeaModel {
     /**
+     * <p>The website name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

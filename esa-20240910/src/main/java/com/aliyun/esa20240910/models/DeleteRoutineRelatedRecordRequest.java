@@ -5,18 +5,38 @@ import com.aliyun.tea.*;
 
 public class DeleteRoutineRelatedRecordRequest extends TeaModel {
     /**
+     * <p>The routine name.</p>
+     * 
      * <strong>example:</strong>
      * <p>DeleteRoutineRelatedRecord</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The record ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("RecordId")
     public Long recordId;
 
+    /**
+     * <p>The record name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-xxx.example.com</p>
+     */
     @NameInMap("RecordName")
     public String recordName;
 
+    /**
+     * <p>The website ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("SiteId")
     public Long siteId;
 

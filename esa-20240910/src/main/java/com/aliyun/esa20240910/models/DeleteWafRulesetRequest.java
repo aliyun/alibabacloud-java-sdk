@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWafRulesetRequest extends TeaModel {
     /**
+     * <p>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteWafRulesetRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DeleteWafRulesetRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The version of the website.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

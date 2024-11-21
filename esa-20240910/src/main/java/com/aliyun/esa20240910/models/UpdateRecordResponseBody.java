@@ -4,6 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateRecordResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

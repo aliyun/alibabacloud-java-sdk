@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetKvRequest extends TeaModel {
     /**
+     * <p>Specifies whether to decode the value by using Base 64. If you call the <a href="https://help.aliyun.com/document_detail/2850482.html">PutKv</a> operation and set the Base64 parameter to true, set this parameter to true to read the original content.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class GetKvRequest extends TeaModel {
     public Boolean base64;
 
     /**
+     * <p>The key name for the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class GetKvRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

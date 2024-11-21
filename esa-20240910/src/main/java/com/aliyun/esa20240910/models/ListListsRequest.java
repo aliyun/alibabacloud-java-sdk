@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListListsRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListListsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListListsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query arguments in the JSON format, which contain filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>ListLists</p>
      */
@@ -55,10 +61,18 @@ public class ListListsRequest extends TeaModel {
     }
 
     public static class ListListsRequestQueryArgs extends TeaModel {
+        /**
+         * <p>Specifies whether to sort the returned data in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Desc")
         public Boolean desc;
 
         /**
+         * <p>The list description for fuzzy search.</p>
+         * 
          * <strong>example:</strong>
          * <p>a custom list</p>
          */
@@ -66,6 +80,8 @@ public class ListListsRequest extends TeaModel {
         public String descriptionLike;
 
         /**
+         * <p>The list ID for fuzzy search.</p>
+         * 
          * <strong>example:</strong>
          * <p>40000001</p>
          */
@@ -73,6 +89,8 @@ public class ListListsRequest extends TeaModel {
         public String idLike;
 
         /**
+         * <p>The list content for fuzzy search.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.1.1.1</p>
          */
@@ -87,6 +105,8 @@ public class ListListsRequest extends TeaModel {
         public String kind;
 
         /**
+         * <p>The list name and content for fuzzy search.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.1.1.1</p>
          */
@@ -94,6 +114,8 @@ public class ListListsRequest extends TeaModel {
         public String nameItemLike;
 
         /**
+         * <p>The list name for fuzzy search.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */
@@ -101,6 +123,8 @@ public class ListListsRequest extends TeaModel {
         public String nameLike;
 
         /**
+         * <p>The column by which you want to sort the returned data.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */

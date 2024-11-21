@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetWafQuotaRequest extends TeaModel {
     /**
+     * <p>The type of WAF resources. Valid values:</p>
+     * <ul>
+     * <li>managed_rules_group: the managed rule group.</li>
+     * <li>list: the custom list.</li>
+     * <li>page: the custom error page.</li>
+     * <li>scene_policy: the scenario-specific policy.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>page</p>
      */

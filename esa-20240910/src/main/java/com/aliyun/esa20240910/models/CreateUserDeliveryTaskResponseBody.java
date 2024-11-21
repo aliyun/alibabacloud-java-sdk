@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     /**
+     * <p>The data center. Valid values:</p>
+     * <ul>
+     * <li>cn: the Chinese mainland.</li>
+     * <li>sg: outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn</p>
      */
@@ -12,7 +18,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2CCD40B1-3F20-5FF0-8A67-E3F34B87744F</p>
@@ -21,6 +27,8 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the delivery task.</p>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */
@@ -28,6 +36,8 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The name of the delivery task.</p>
+     * 
      * <strong>example:</strong>
      * <p>er-http</p>
      */

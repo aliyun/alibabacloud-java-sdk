@@ -4,11 +4,19 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateRecordShrinkRequest extends TeaModel {
+    /**
+     * <p>The origin authentication information of the CNAME record.</p>
+     */
     @NameInMap("AuthConf")
     public String authConfShrink;
 
     /**
-     * <p>业务场景</p>
+     * <p>The business scenario of the record for acceleration. Leave the parameter empty if your record is not proxied. Valid values:</p>
+     * <ul>
+     * <li><strong>image_video</strong>: video and image.</li>
+     * <li><strong>api</strong>: API.</li>
+     * <li><strong>web</strong>: web page.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>web</p>
@@ -17,6 +25,8 @@ public class CreateRecordShrinkRequest extends TeaModel {
     public String bizName;
 
     /**
+     * <p>The comment of the record. The maximum length is 100 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a remark.</p>
      */
@@ -24,6 +34,7 @@ public class CreateRecordShrinkRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The DNS record information. The format of this field varies based on the record type. For more information, see <a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">References</a> .</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,11 +45,25 @@ public class CreateRecordShrinkRequest extends TeaModel {
     @NameInMap("Data")
     public String dataShrink;
 
+    /**
+     * <p>The origin host policy. This policy takes effect when the record type is CNAME. You can set the policy in two modes:</p>
+     * <ul>
+     * <li><strong>follow_hostname</strong>: Follow the host record.</li>
+     * <li><strong>follow_origin_domain</strong>: match the origin\&quot;s domain name.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>follow_origin_domain</p>
+     */
     @NameInMap("HostPolicy")
     public String hostPolicy;
 
     /**
-     * <p>是否代理加速</p>
+     * <p>Specifies whether to proxy the record. Only CNAME and A/AAAA records can be proxied. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,7 +72,7 @@ public class CreateRecordShrinkRequest extends TeaModel {
     public Boolean proxied;
 
     /**
-     * <p>记录名称</p>
+     * <p>The record name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +82,7 @@ public class CreateRecordShrinkRequest extends TeaModel {
     public String recordName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +92,16 @@ public class CreateRecordShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The origin type for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
+     * <ul>
+     * <li><strong>OSS</strong>: OSS bucket.</li>
+     * <li><strong>S3</strong>: S3 bucket.</li>
+     * <li><strong>LB</strong>: load balancer.</li>
+     * <li><strong>OP</strong>: origin pool.</li>
+     * <li><strong>Domain</strong>: domain name.</li>
+     * </ul>
+     * <p>If you do not pass this parameter or if you leave its value empty, Domain is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -73,6 +109,8 @@ public class CreateRecordShrinkRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -80,7 +118,7 @@ public class CreateRecordShrinkRequest extends TeaModel {
     public Integer ttl;
 
     /**
-     * <p>记录类型</p>
+     * <p>The type of the DNS record. For example, A/AAAA, TXT, MX, or CNAME.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserDeliveryTaskStatusRequest extends TeaModel {
     /**
+     * <p>Enables or disables the delivery task. Valid values: online and offline.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateUserDeliveryTaskStatusRequest extends TeaModel {
     public String method;
 
     /**
+     * <p>The name of the delivery task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

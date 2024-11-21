@@ -5,11 +5,20 @@ import com.aliyun.tea.*;
 
 public class BlockObjectResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The blocking task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15940956620</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

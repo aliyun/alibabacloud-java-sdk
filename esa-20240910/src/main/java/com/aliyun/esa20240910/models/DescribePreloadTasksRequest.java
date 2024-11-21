@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePreloadTasksRequest extends TeaModel {
     /**
+     * <p>The content to prefetch. Exact match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://a.com/1.jpg?b=2">http://a.com/1.jpg?b=2</a></p>
      */
@@ -12,6 +14,11 @@ public class DescribePreloadTasksRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-23T06:23:00Z</p>
      */
@@ -19,6 +26,8 @@ public class DescribePreloadTasksRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +35,8 @@ public class DescribePreloadTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +44,8 @@ public class DescribePreloadTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789****</p>
      */
@@ -40,6 +53,8 @@ public class DescribePreloadTasksRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-22T17:00:00Z</p>
      */
@@ -47,6 +62,13 @@ public class DescribePreloadTasksRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><strong>Complete</strong>: The task is complete.</li>
+     * <li><strong>Refreshing</strong>: The task is running.</li>
+     * <li><strong>Failed</strong>: The task failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Complete</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckSiteProjectNameRequest extends TeaModel {
     /**
+     * <p>The name of the real-time log delivery task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CheckSiteProjectNameRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>12312312213212</p>
      */

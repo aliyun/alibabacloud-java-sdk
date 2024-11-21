@@ -5,18 +5,38 @@ import com.aliyun.tea.*;
 
 public class DeleteRoutineRelatedRouteRequest extends TeaModel {
     /**
+     * <p>The routine name.</p>
+     * 
      * <strong>example:</strong>
      * <p>DeleteRoutineRelatedRoute</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The route URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em>.example.com/path1</em></p>
+     */
     @NameInMap("Route")
     public String route;
 
+    /**
+     * <p>The route ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c3b82a3d1524e9f750da11d0cc0be0a</p>
+     */
     @NameInMap("RouteId")
     public String routeId;
 
+    /**
+     * <p>The website ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54362329990032</p>
+     */
     @NameInMap("SiteId")
     public Long siteId;
 

@@ -4,11 +4,20 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class PublishRoutineCodeVersionResponseBody extends TeaModel {
+    /**
+     * <p>The code version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710120201067203242</p>
+     */
     @NameInMap("CodeVersion")
     public String codeVersion;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class VerifySiteResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the verification passed. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class VerifySiteResponseBody extends TeaModel {
     public Boolean passed;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>
      */

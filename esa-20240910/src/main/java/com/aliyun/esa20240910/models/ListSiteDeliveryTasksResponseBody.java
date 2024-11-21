@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSiteDeliveryTasksResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,7 +23,7 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
@@ -27,10 +31,15 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The delivery tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListSiteDeliveryTasksResponseBodyTasks> tasks;
 
     /**
+     * <p>The total number of log delivery tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -84,6 +93,14 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
 
     public static class ListSiteDeliveryTasksResponseBodyTasks extends TeaModel {
         /**
+         * <p>The log category. Valid values:</p>
+         * <ul>
+         * <li>dcdn_log_access_l1 (default): access logs.</li>
+         * <li>dcdn_log_er: Edge Routine logs.</li>
+         * <li>dcdn_log_waf: firewall logs.</li>
+         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>dcdn_log_access_l1</p>
          */
@@ -91,6 +108,12 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         public String businessType;
 
         /**
+         * <p>The data center. Valid values:</p>
+         * <ul>
+         * <li>cn: the Chinese mainland.</li>
+         * <li>sg: outside the Chinese mainland.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn</p>
          */
@@ -98,6 +121,16 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         public String dataCenter;
 
         /**
+         * <p>The destination of the delivery. Valid values:</p>
+         * <ol>
+         * <li>sls: Alibaba Cloud Simple Log Service (SLS).</li>
+         * <li>http: HTTP server.</li>
+         * <li>aws3: Amazon Simple Storage Service (S3).</li>
+         * <li>oss: Alibaba Cloud Object Storage Service (OSS).</li>
+         * <li>kafka: Kafka.</li>
+         * <li>aws3cmpt: S3-compatible storage service.</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>sls</p>
          */
@@ -105,6 +138,12 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         public String deliveryType;
 
         /**
+         * <p>The status of the delivery task.</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */
@@ -112,6 +151,8 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The name of the delivery task.</p>
+         * 
          * <strong>example:</strong>
          * <p>cdn-test-task</p>
          */

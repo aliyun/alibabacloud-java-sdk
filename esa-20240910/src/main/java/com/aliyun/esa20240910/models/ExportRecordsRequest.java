@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportRecordsRequest extends TeaModel {
     /**
+     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */

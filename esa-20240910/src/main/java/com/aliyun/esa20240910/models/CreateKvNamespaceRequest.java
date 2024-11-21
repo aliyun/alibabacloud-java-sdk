@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateKvNamespaceRequest extends TeaModel {
     /**
+     * <p>The description of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test namespace.</p>
      */
@@ -12,6 +14,7 @@ public class CreateKvNamespaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

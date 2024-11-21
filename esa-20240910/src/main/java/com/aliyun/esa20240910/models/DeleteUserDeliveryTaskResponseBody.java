@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserDeliveryTaskResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>952ea16b-1f05-4a76-bb32-420282d8aeb9</p>

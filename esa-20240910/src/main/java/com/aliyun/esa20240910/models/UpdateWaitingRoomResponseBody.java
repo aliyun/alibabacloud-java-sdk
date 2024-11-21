@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWaitingRoomResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0195619f-eab3-4a66-ac00-ed53d913e72e</p>
      */

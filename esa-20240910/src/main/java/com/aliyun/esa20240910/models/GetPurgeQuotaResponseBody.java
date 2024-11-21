@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPurgeQuotaResponseBody extends TeaModel {
     /**
+     * <p>The total quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>100000</p>
      */
@@ -12,7 +14,7 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     public String quota;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -21,6 +23,8 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The quota usage.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

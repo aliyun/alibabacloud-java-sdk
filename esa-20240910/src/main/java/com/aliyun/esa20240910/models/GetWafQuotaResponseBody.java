@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetWafQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The quota information returned.</p>
+     */
     @NameInMap("Quota")
     public GetWafQuotaResponseBodyQuota quota;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -38,18 +41,33 @@ public class GetWafQuotaResponseBody extends TeaModel {
     }
 
     public static class GetWafQuotaResponseBodyQuotaList extends TeaModel {
+        /**
+         * <p>Indicates whether custom lists are enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The quota information about all item types in the custom lists.</p>
+         */
         @NameInMap("Items")
         public java.util.Map<String, QuotaListItemsValue> items;
 
+        /**
+         * <p>The maximum number of items in each custom list.</p>
+         */
         @NameInMap("NumberItemsPerList")
         public WafQuotaInteger numberItemsPerList;
 
+        /**
+         * <p>The maximum number of items in all custom lists.</p>
+         */
         @NameInMap("NumberItemsTotal")
         public WafQuotaInteger numberItemsTotal;
 
+        /**
+         * <p>The maximum number of custom lists.</p>
+         */
         @NameInMap("NumberTotal")
         public WafQuotaInteger numberTotal;
 
@@ -101,9 +119,15 @@ public class GetWafQuotaResponseBody extends TeaModel {
     }
 
     public static class GetWafQuotaResponseBodyQuotaManagedRulesGroup extends TeaModel {
+        /**
+         * <p>Indicates whether the WAF managed rule group is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The maximum number of WAF managed rule groups.</p>
+         */
         @NameInMap("NumberTotal")
         public WafQuotaInteger numberTotal;
 
@@ -131,12 +155,21 @@ public class GetWafQuotaResponseBody extends TeaModel {
     }
 
     public static class GetWafQuotaResponseBodyQuotaPage extends TeaModel {
+        /**
+         * <p>The quota information about custom error pages of all Content-Types.</p>
+         */
         @NameInMap("ContentTypes")
         public java.util.Map<String, QuotaPageContentTypesValue> contentTypes;
 
+        /**
+         * <p>Indicates whether custom error pages are enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The maximum number of custom error pages.</p>
+         */
         @NameInMap("NumberTotal")
         public WafQuotaInteger numberTotal;
 
@@ -172,9 +205,15 @@ public class GetWafQuotaResponseBody extends TeaModel {
     }
 
     public static class GetWafQuotaResponseBodyQuotaScenePolicy extends TeaModel {
+        /**
+         * <p>Indicates whether scenario-specific policies are enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The maximum number of scenario-specific policies.</p>
+         */
         @NameInMap("NumberTotal")
         public WafQuotaInteger numberTotal;
 
@@ -202,15 +241,27 @@ public class GetWafQuotaResponseBody extends TeaModel {
     }
 
     public static class GetWafQuotaResponseBodyQuota extends TeaModel {
+        /**
+         * <p>The quota information about custom lists.</p>
+         */
         @NameInMap("List")
         public GetWafQuotaResponseBodyQuotaList list;
 
+        /**
+         * <p>The quota information about WAF managed rule groups.</p>
+         */
         @NameInMap("ManagedRulesGroup")
         public GetWafQuotaResponseBodyQuotaManagedRulesGroup managedRulesGroup;
 
+        /**
+         * <p>The quota information about custom error pages.</p>
+         */
         @NameInMap("Page")
         public GetWafQuotaResponseBodyQuotaPage page;
 
+        /**
+         * <p>The quota information about scenario-specific policies.</p>
+         */
         @NameInMap("ScenePolicy")
         public GetWafQuotaResponseBodyQuotaScenePolicy scenePolicy;
 

@@ -4,12 +4,21 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateSiteCustomLogRequest extends TeaModel {
+    /**
+     * <p>The cookie fields.</p>
+     */
     @NameInMap("Cookies")
     public java.util.List<String> cookies;
 
+    /**
+     * <p>The request header fields.</p>
+     */
     @NameInMap("RequestHeaders")
     public java.util.List<String> requestHeaders;
 
+    /**
+     * <p>The response header fields.</p>
+     */
     @NameInMap("ResponseHeaders")
     public java.util.List<String> responseHeaders;
 

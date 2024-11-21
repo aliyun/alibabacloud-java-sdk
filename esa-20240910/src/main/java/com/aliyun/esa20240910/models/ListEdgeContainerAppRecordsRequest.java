@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeContainerAppRecordsRequest extends TeaModel {
     /**
+     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class ListEdgeContainerAppRecordsRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The sorting field. Valid values:</p>
+     * <ul>
+     * <li>CreateTime: the time when the domain name was associated.</li>
+     * <li>CreateTime: the time when the domain name was last modified.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -21,6 +28,12 @@ public class ListEdgeContainerAppRecordsRequest extends TeaModel {
     public String orderKey;
 
     /**
+     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <ul>
+     * <li>ASC: in ascending order.</li>
+     * <li>DESC: in descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -28,6 +41,8 @@ public class ListEdgeContainerAppRecordsRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +50,8 @@ public class ListEdgeContainerAppRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +59,8 @@ public class ListEdgeContainerAppRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The keyword that is used for the search.</p>
+     * 
      * <strong>example:</strong>
      * <p>ver-1006157458290860032</p>
      */

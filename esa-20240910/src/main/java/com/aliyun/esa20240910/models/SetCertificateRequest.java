@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetCertificateRequest extends TeaModel {
     /**
+     * <p>The certificate ID on Certificate Management Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>30000478</p>
      */
@@ -12,6 +14,8 @@ public class SetCertificateRequest extends TeaModel {
     public Long casId;
 
     /**
+     * <p>The certificate content.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
      */
@@ -19,6 +23,8 @@ public class SetCertificateRequest extends TeaModel {
     public String certificate;
 
     /**
+     * <p>The certificate ID on ESA.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001303</p>
      */
@@ -26,6 +32,8 @@ public class SetCertificateRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The certificate name.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourCertName</p>
      */
@@ -36,6 +44,8 @@ public class SetCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The private key of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
      */
@@ -43,6 +53,8 @@ public class SetCertificateRequest extends TeaModel {
     public String privateKey;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -53,6 +65,7 @@ public class SetCertificateRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +75,11 @@ public class SetCertificateRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The certificate type. Valid values:</p>
+     * <ul>
+     * <li>cas: a certificate purchased by using Certificate Management Service.</li>
+     * <li>upload: a custom certificate that you upload.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +89,8 @@ public class SetCertificateRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>Specifies whether to update the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

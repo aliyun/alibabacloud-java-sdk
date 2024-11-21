@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetWafRulesetRequest extends TeaModel {
     /**
+     * <p>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000001</p>
      */
@@ -12,6 +14,8 @@ public class GetWafRulesetRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The WAF rule category of rulesets to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>http_bot</p>
      */
@@ -19,6 +23,8 @@ public class GetWafRulesetRequest extends TeaModel {
     public String phase;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -4,51 +4,138 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetScheduledPreloadJobResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15685865xxx14622</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 
+    /**
+     * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-06-02T02:23:26Z</p>
+     */
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    /**
+     * <p>The domain names to be prefetched.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testurl.com</p>
+     */
     @NameInMap("Domains")
     public String domains;
 
+    /**
+     * <p>The error message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>invalid domain:test.com</p>
+     */
     @NameInMap("ErrorInfo")
     public String errorInfo;
 
+    /**
+     * <p>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
+     */
     @NameInMap("FailedFileOss")
     public String failedFileOss;
 
+    /**
+     * <p>The ID of the URL list file, which can be used during downloads.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>665d3b48621bccf3fe29e1a7</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
+    /**
+     * <p>The ID of the prefetch task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>665d3af3621bccf3fe29e1a4</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The method to submit the URLs to be prefetched.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("InsertWay")
     public String insertWay;
 
+    /**
+     * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The website ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>190007158391808</p>
+     */
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>The number of submitted prefetch tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskSubmitted")
     public Integer taskSubmitted;
 
+    /**
+     * <p>The task type. Valid values: refresh and preload.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>preload</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>The total number of URLs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("UrlCount")
     public Integer urlCount;
 
+    /**
+     * <p>The number of submitted URLs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UrlSubmitted")
     public Integer urlSubmitted;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadFileAdvanceRequest extends TeaModel {
     /**
+     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class UploadFileAdvanceRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The type of the purge or prefetch task. Valid values:</p>
+     * <ul>
+     * <li><strong>file</strong> (default): purges the cache by file.</li>
+     * <li><strong>preload</strong>: prefetches the file.</li>
+     * <li><strong>directory</strong>: purges the cache by directory.</li>
+     * <li><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,7 @@ public class UploadFileAdvanceRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The name of the upload task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,7 @@ public class UploadFileAdvanceRequest extends TeaModel {
     public String uploadTaskName;
 
     /**
+     * <p>The OSS URL of the file that contains resources to be purged or prefetched.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSiteDeliveryTaskResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>

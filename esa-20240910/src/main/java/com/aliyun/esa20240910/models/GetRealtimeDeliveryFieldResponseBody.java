@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetRealtimeDeliveryFieldResponseBody extends TeaModel {
+    /**
+     * <p>The fields returned.</p>
+     */
     @NameInMap("FieldContent")
     public java.util.Map<String, FieldContentValue> fieldContent;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>

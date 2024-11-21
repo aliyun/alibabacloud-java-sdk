@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDoSAllEventListResponseBody extends TeaModel {
+    /**
+     * <p>The DDoS attack events.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeDDoSAllEventListResponseBodyDataList> dataList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,7 +29,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D73A4243-CFBD-5110-876F-09237E77ECBD</p>
@@ -31,6 +38,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7096621098****</p>
      */
@@ -38,6 +47,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +110,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
 
     public static class DescribeDDoSAllEventListResponseBodyDataList extends TeaModel {
         /**
+         * <p>The peak of volumetric attacks. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -109,6 +122,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String coverage;
 
         /**
+         * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -116,6 +131,9 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public Long cps;
 
         /**
+         * <p>The time when the DDoS attack ends.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-12T15:59:59Z</p>
          */
@@ -123,6 +141,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The attack event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>web-cc_1</p>
          */
@@ -133,6 +153,13 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String eventResult;
 
         /**
+         * <p>The type of DDoS attacks that was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>web-cc</strong>: web resource exhaustion attacks.</li>
+         * <li><strong>cc</strong>: connection flood attacks.</li>
+         * <li><strong>traffic</strong>: volumetric attacks.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>web-cc</p>
          */
@@ -140,6 +167,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>The peak of volumetric attacks. Unit: packets per second (PPS).</p>
+         * 
          * <strong>example:</strong>
          * <p>12000</p>
          */
@@ -147,6 +176,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public Long pps;
 
         /**
+         * <p>The peak QPS of web resource exhaustion attacks.</p>
+         * 
          * <strong>example:</strong>
          * <p>7692</p>
          */
@@ -154,6 +185,9 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public Long qps;
 
         /**
+         * <p>The time when the DDoS attack starts.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-12T15:00:00Z</p>
          */
@@ -161,6 +195,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The attack target.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -168,6 +204,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String target;
 
         /**
+         * <p>The ID of the web resource exhaustion attack target.</p>
+         * 
          * <strong>example:</strong>
          * <p>000000000155****</p>
          */

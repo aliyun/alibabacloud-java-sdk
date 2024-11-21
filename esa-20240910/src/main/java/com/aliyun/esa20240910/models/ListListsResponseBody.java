@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListListsResponseBody extends TeaModel {
+    /**
+     * <p>The array that contains list information, including list data after paging.</p>
+     */
     @NameInMap("Lists")
     public java.util.List<ListListsResponseBodyLists> lists;
 
     /**
+     * <p>The page number returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListListsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,7 +29,7 @@ public class ListListsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -31,6 +38,8 @@ public class ListListsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of filtered lists.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -38,6 +47,8 @@ public class ListListsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The number of created lists.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -99,7 +110,7 @@ public class ListListsResponseBody extends TeaModel {
 
     public static class ListListsResponseBodyLists extends TeaModel {
         /**
-         * <p>自定义响应页面描述</p>
+         * <p>The list description.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom list</p>
@@ -108,6 +119,8 @@ public class ListListsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
+         * 
          * <strong>example:</strong>
          * <p>40000001</p>
          */
@@ -115,6 +128,8 @@ public class ListListsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The list type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -122,6 +137,8 @@ public class ListListsResponseBody extends TeaModel {
         public String kind;
 
         /**
+         * <p>The length of the list information array, which indicates how many items the list contains.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -129,6 +146,8 @@ public class ListListsResponseBody extends TeaModel {
         public Long length;
 
         /**
+         * <p>The list name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */
@@ -136,6 +155,8 @@ public class ListListsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The time when the list was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ActivateClientCertificateResponseBody extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>babaded901474b9693acf530e0fb****</p>
      */
@@ -12,6 +14,8 @@ public class ActivateClientCertificateResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
@@ -19,6 +23,8 @@ public class ActivateClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */
@@ -26,6 +32,8 @@ public class ActivateClientCertificateResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The website name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

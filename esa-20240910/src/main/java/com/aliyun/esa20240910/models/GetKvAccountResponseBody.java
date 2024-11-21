@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetKvAccountResponseBody extends TeaModel {
     /**
+     * <p>The available capacity of all namespaces in the account. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1073741824</p>
      */
@@ -12,6 +14,8 @@ public class GetKvAccountResponseBody extends TeaModel {
     public Long capacity;
 
     /**
+     * <p>The available capacity of all namespaces in the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>1 GB</p>
      */
@@ -19,6 +23,8 @@ public class GetKvAccountResponseBody extends TeaModel {
     public String capacityString;
 
     /**
+     * <p>The used capacity of all namespaces in the account. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>10048576</p>
      */
@@ -26,16 +32,23 @@ public class GetKvAccountResponseBody extends TeaModel {
     public Long capacityUsed;
 
     /**
+     * <p>The used capacity of all namespaces in the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>100 MB</p>
      */
     @NameInMap("CapacityUsedString")
     public String capacityUsedString;
 
+    /**
+     * <p>The namespaces in the account.</p>
+     */
     @NameInMap("NamespaceList")
     public java.util.List<GetKvAccountResponseBodyNamespaceList> namespaceList;
 
     /**
+     * <p>The maximum number of namespaces that can be created in the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class GetKvAccountResponseBody extends TeaModel {
     public Integer namespaceQuota;
 
     /**
+     * <p>The number of created namespaces that store key-value data in the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -50,6 +65,8 @@ public class GetKvAccountResponseBody extends TeaModel {
     public Integer namespaceUsed;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
      */
@@ -57,6 +74,12 @@ public class GetKvAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether Edge KV is activated for the Alibaba Cloud account.</p>
+     * <ul>
+     * <li><strong>online</strong></li>
+     * <li><strong>offline</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */
@@ -142,6 +165,8 @@ public class GetKvAccountResponseBody extends TeaModel {
 
     public static class GetKvAccountResponseBodyNamespaceList extends TeaModel {
         /**
+         * <p>The available capacity of the namespace. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1073741824</p>
          */
@@ -149,6 +174,8 @@ public class GetKvAccountResponseBody extends TeaModel {
         public Long capacity;
 
         /**
+         * <p>The available capacity of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>1 GB</p>
          */
@@ -156,6 +183,8 @@ public class GetKvAccountResponseBody extends TeaModel {
         public String capacityString;
 
         /**
+         * <p>The used capacity of the namespace. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100048576</p>
          */
@@ -163,6 +192,8 @@ public class GetKvAccountResponseBody extends TeaModel {
         public Long capacityUsed;
 
         /**
+         * <p>The used capacity of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>100 MB</p>
          */
@@ -170,6 +201,8 @@ public class GetKvAccountResponseBody extends TeaModel {
         public String capacityUsedString;
 
         /**
+         * <p>The description of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>the first namespace</p>
          */
@@ -177,6 +210,8 @@ public class GetKvAccountResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_namespace</p>
          */
@@ -184,6 +219,8 @@ public class GetKvAccountResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The ID of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>643355322374688768</p>
          */
@@ -191,6 +228,14 @@ public class GetKvAccountResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
+         * <p>The status of the namespace. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: normal.</li>
+         * <li><strong>delete</strong>: pending deletion.</li>
+         * <li><strong>deleting</strong>: being deleted.</li>
+         * <li><strong>deleted</strong>: deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */

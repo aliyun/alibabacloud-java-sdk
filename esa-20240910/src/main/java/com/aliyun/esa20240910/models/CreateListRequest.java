@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateListRequest extends TeaModel {
     /**
+     * <p>The description of the list that you want to create.</p>
+     * 
      * <strong>example:</strong>
      * <p>a custom list</p>
      */
@@ -12,6 +14,8 @@ public class CreateListRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The items in the list that you want to create.</p>
+     * 
      * <strong>example:</strong>
      * <p>a custom list</p>
      */
@@ -19,6 +23,8 @@ public class CreateListRequest extends TeaModel {
     public java.util.List<String> items;
 
     /**
+     * <p>The type of the list that you want to create.</p>
+     * 
      * <strong>example:</strong>
      * <p>ip</p>
      */
@@ -26,6 +32,7 @@ public class CreateListRequest extends TeaModel {
     public String kind;
 
     /**
+     * <p>The name of the list that you want to create.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

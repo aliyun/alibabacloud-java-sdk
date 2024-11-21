@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResetScheduledPreloadJobRequest extends TeaModel {
     /**
+     * <p>The ID of the scheduled prefetch task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ResetScheduledPreloadJob</p>
      */

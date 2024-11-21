@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUploadTaskResponseBody extends TeaModel {
     /**
+     * <p>The error message returned when the file upload task failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>invalid url</p>
      */
@@ -12,7 +14,7 @@ public class GetUploadTaskResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ET5BF670-09D5-4D0B-BEBY-D96A2A52****</p>
@@ -21,6 +23,16 @@ public class GetUploadTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task status.</p>
+     * <ul>
+     * <li><strong>INIT</strong>: The task is being initialized.</li>
+     * <li><strong>activacted</strong>: The task is activated.</li>
+     * <li><strong>running</strong>: The task is running.</li>
+     * <li><strong>success</strong>: The task is successful.</li>
+     * <li><strong>partial</strong>: The task is partially successful.</li>
+     * <li><strong>fail</strong>: The task failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */

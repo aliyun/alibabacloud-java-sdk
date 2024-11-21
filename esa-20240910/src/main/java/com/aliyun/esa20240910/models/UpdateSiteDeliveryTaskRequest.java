@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     /**
+     * <p>The log category. Valid values:</p>
+     * <ul>
+     * <li>dcdn_log_access_l1 (default): access logs.</li>
+     * <li>dcdn_log_er: Edge Routine logs.</li>
+     * <li>dcdn_log_waf: firewall logs.</li>
+     * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dcdn_log_er</p>
      */
@@ -12,6 +20,8 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     public String businessType;
 
     /**
+     * <p>The discard rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -19,6 +29,7 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     public Float discardRate;
 
     /**
+     * <p>The log fields that you want to include in real-time logs to be delivered. Separate the log fields with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +39,8 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     public String fieldName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -35,6 +48,7 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The name of the delivery task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

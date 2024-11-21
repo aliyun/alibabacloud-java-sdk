@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckUserProjectNameResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the name is valid. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class CheckUserProjectNameResponseBody extends TeaModel {
     public Boolean check;
 
     /**
+     * <p>The reason why the name passed or failed the check.</p>
+     * 
      * <strong>example:</strong>
      * <p>project name pass the check</p>
      */
@@ -19,6 +27,8 @@ public class CheckUserProjectNameResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the real-time log delivery task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ali-dcdn-log-56</p>
      */
@@ -26,6 +36,8 @@ public class CheckUserProjectNameResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
      */

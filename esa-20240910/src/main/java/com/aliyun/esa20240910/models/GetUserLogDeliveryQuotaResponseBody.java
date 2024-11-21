@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetUserLogDeliveryQuotaResponseBody extends TeaModel {
     /**
+     * <p>The log category. Valid values:</p>
+     * <ul>
+     * <li>dcdn_log_access_l1 (default): access logs.</li>
+     * <li>dcdn_log_er: Edge Routine logs.</li>
+     * <li>dcdn_log_waf: firewall logs.</li>
+     * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dcdn_log_access_l1</p>
      */
@@ -12,6 +20,8 @@ public class GetUserLogDeliveryQuotaResponseBody extends TeaModel {
     public String businessType;
 
     /**
+     * <p>The remaining quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,7 +29,7 @@ public class GetUserLogDeliveryQuotaResponseBody extends TeaModel {
     public Long freeQuota;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>

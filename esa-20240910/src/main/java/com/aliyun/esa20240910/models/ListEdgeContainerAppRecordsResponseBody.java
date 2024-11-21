@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The details about the associated domain names.</p>
+     */
     @NameInMap("Records")
     public java.util.List<ListEdgeContainerAppRecordsResponseBodyRecords> records;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
      */
@@ -29,6 +38,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of domain names that are associated with the specified application.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
 
     public static class ListEdgeContainerAppRecordsResponseBodyRecords extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-88068867578379****</p>
          */
@@ -89,6 +102,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The CNAME of the associated domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>kdxceo****.yun****.com</p>
          */
@@ -96,6 +111,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public String cname;
 
         /**
+         * <p>The configuration ID of the associated domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>27522948436****</p>
          */
@@ -103,6 +120,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public Long configId;
 
         /**
+         * <p>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-24T02:01:11Z</p>
          */
@@ -110,6 +129,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The record ID of the associated domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>266****</p>
          */
@@ -117,6 +138,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public Long recordId;
 
         /**
+         * <p>The associated domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>a.example.com</p>
          */
@@ -124,6 +147,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public String recordName;
 
         /**
+         * <p>The scheduling domain ID of the associated domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -131,6 +156,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public Integer schemdId;
 
         /**
+         * <p>The website ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5407498413****</p>
          */
@@ -138,6 +165,8 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
+         * <p>The time when the scheduling domain ID or CNAME was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-22T08:32:02Z</p>
          */

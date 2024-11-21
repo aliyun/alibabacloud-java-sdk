@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSiteCoverageRequest extends TeaModel {
     /**
+     * <p>The desired service location. Valid values:</p>
+     * <ul>
+     * <li><strong>domestic</strong>: the Chinese mainland</li>
+     * <li><strong>global</strong>: global</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,7 @@ public class UpdateSiteCoverageRequest extends TeaModel {
     public String coverage;
 
     /**
+     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

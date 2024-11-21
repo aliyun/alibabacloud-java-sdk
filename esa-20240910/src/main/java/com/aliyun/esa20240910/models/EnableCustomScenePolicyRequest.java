@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableCustomScenePolicyRequest extends TeaModel {
     /**
+     * <p>The policy ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

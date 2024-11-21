@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListEdgeContainerAppsResponseBody extends TeaModel {
+    /**
+     * <p>The queried applications.</p>
+     */
     @NameInMap("Apps")
     public java.util.List<ListEdgeContainerAppsResponseBodyApps> apps;
 
     /**
+     * <p>The page number. Default value: <strong>1</strong>. Valid values: 1 to 65535.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2430E05E-1340-5773-B5E1-B743929F46F2</p>
      */
@@ -29,6 +38,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
 
     public static class ListEdgeContainerAppsResponseBodyAppsHealthCheck extends TeaModel {
         /**
+         * <p>The number of consecutive failed health checks for an application to be considered unhealthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -89,6 +102,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public Integer failTimes;
 
         /**
+         * <p>The domain name that is used for health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -96,6 +111,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The range of health check status codes that indicate successful health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>http_2XX</p>
          */
@@ -103,6 +120,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String httpCode;
 
         /**
+         * <p>The interval between health checks. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -110,6 +129,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public Integer interval;
 
         /**
+         * <p>The HTTP method used for health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>GET</p>
          */
@@ -117,6 +138,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The health check port.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -124,6 +147,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The number of consecutive successful health checks for an application to be considered healthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -131,6 +156,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public Integer succTimes;
 
         /**
+         * <p>The timeout period of health checks. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -138,6 +165,12 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
+         * <p>The type of health checks. Valid values:</p>
+         * <ul>
+         * <li>l7</li>
+         * <li>l4</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>l7</p>
          */
@@ -145,6 +178,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The health check URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>/health_check</p>
          */
@@ -240,6 +275,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
 
     public static class ListEdgeContainerAppsResponseBodyApps extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-88068867578379****</p>
          */
@@ -247,6 +284,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The time when the version was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-01T16:16:27.418298794+08:00</p>
          */
@@ -254,6 +293,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The domain name associated with the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -261,26 +302,45 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The type of the gateway. Valid values:</p>
+         * <ul>
+         * <li>l7: Layer 7 gateway.</li>
+         * <li>l4: Layer 4 gateway.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>l7</p>
          */
         @NameInMap("GatewayType")
         public String gatewayType;
 
+        /**
+         * <p>The information about health checks.</p>
+         */
         @NameInMap("HealthCheck")
         public ListEdgeContainerAppsResponseBodyAppsHealthCheck healthCheck;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The progress of the application creation task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Percentage")
         public Integer percentage;
 
         /**
+         * <p>Indicates whether QUIC is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -288,6 +348,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String quicCid;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test app</p>
          */
@@ -295,6 +357,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String remarks;
 
         /**
+         * <p>The server port. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -302,6 +366,13 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public Integer servicePort;
 
         /**
+         * <p>The status of the application. Valid values:</p>
+         * <ul>
+         * <li>creating: The application is being created.</li>
+         * <li>failed: The application failed to be created.</li>
+         * <li>created: The application is created.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>created</p>
          */
@@ -309,6 +380,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -316,6 +389,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public Integer targetPort;
 
         /**
+         * <p>The time when the application was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-11-15T12:11:02Z</p>
          */
@@ -323,6 +398,8 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The number of versions of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

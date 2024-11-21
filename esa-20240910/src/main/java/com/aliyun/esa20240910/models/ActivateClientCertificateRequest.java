@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ActivateClientCertificateRequest extends TeaModel {
     /**
+     * <p>The certificate ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2852848.html">ListClientCertificates</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ActivateClientCertificateRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

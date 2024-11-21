@@ -5,15 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineRelatedRecordRequest extends TeaModel {
     /**
+     * <p>The routine name.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateRoutineRelatedRecord</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The record name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-record-1.example.com</p>
+     */
     @NameInMap("RecordName")
     public String recordName;
 
+    /**
+     * <p>The website ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54362329990032</p>
+     */
     @NameInMap("SiteId")
     public Long siteId;
 

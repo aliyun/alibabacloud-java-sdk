@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListKvsResponseBody extends TeaModel {
+    /**
+     * <p>The key-value pairs.</p>
+     */
     @NameInMap("Keys")
     public java.util.List<ListKvsResponseBodyKeys> keys;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -15,6 +20,8 @@ public class ListKvsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -22,6 +29,8 @@ public class ListKvsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
@@ -29,6 +38,8 @@ public class ListKvsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -82,6 +93,8 @@ public class ListKvsResponseBody extends TeaModel {
 
     public static class ListKvsResponseBodyKeys extends TeaModel {
         /**
+         * <p>The key name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Key1</p>
          */
@@ -89,6 +102,8 @@ public class ListKvsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The time when the key was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-13T07:46:03Z</p>
          */

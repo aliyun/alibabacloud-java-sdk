@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEdgeRoutinePlansResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,17 +14,22 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The plans.</p>
+     */
     @NameInMap("PlanInfo")
     public java.util.List<ListEdgeRoutinePlansResponseBodyPlanInfo> planInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -31,6 +38,8 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -38,6 +47,8 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +110,12 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
 
     public static class ListEdgeRoutinePlansResponseBodyPlanInfo extends TeaModel {
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PREPAY: subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
          */
@@ -106,6 +123,8 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         public String billingMode;
 
         /**
+         * <p>The maximum number of versions that each routine supports.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -113,6 +132,8 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         public String erRoutineCodeVersionQuota;
 
         /**
+         * <p>The maximum of routines that can be created.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -120,6 +141,8 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         public String erRoutineQuota;
 
         /**
+         * <p>The maximum number of websites with which each routine can be associated.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -127,6 +150,12 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         public String erRoutineRouteSiteCountQuota;
 
         /**
+         * <p>The payment method. Valid values:</p>
+         * <ul>
+         * <li>er_free</li>
+         * <li>er_pay</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>er_free</p>
          */
@@ -134,6 +163,8 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         public String paymentMethod;
 
         /**
+         * <p>The plan name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_plan</p>
          */

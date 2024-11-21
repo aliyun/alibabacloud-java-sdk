@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPagesRequest extends TeaModel {
     /**
+     * <p>The page number. Valid values: <strong>1 to 100000</strong>. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListPagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

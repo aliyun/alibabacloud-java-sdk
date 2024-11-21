@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomScenePolicyResponseBody extends TeaModel {
     /**
+     * <p>The time when the policy expires.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-03T19:00:00Z</p>
      */
@@ -12,16 +15,23 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The policy name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The IDs of websites associated.</p>
+     */
     @NameInMap("Objects")
     public java.util.List<String> objects;
 
     /**
+     * <p>The policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,7 +39,7 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
     public Long policyId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -38,6 +48,9 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the policy takes effect.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-03T16:00:00Z</p>
      */
@@ -45,6 +58,11 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The name of the policy template. Valid value:</p>
+     * <ul>
+     * <li><strong>promotion</strong>: major events.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>promotion</p>
      */

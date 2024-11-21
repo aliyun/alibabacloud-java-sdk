@@ -5,15 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineRelatedRouteRequest extends TeaModel {
     /**
+     * <p>The routine name.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateRoutineRelatedRoute</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em>.example.com/path1</em></p>
+     */
     @NameInMap("Route")
     public String route;
 
+    /**
+     * <p>The website ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54362329990032</p>
+     */
     @NameInMap("SiteId")
     public Long siteId;
 

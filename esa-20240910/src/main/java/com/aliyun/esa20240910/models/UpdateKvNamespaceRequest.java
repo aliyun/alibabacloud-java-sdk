@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateKvNamespaceRequest extends TeaModel {
     /**
+     * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateKvNamespaceRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The new name of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

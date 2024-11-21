@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafPhasesRequest extends TeaModel {
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,12 @@ public class ListWafPhasesRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>The version of the website.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SiteVersion")
     public Integer siteVersion;
 

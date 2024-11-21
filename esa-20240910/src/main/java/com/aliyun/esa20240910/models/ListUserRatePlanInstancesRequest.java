@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListUserRatePlanInstancesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to query only the plans that have remaining quota for associating websites. Valid values:</p>
+     * <ul>
+     * <li>true: queries only the plans that have remaining quota for associating websites.</li>
+     * <li>false: queries all plans in your account.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String checkRemainingSiteQuota;
 
     /**
+     * <p>The plan ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
      */
@@ -19,6 +27,8 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,8 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -33,6 +45,12 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sorting field. By default, the queried plans are sorted by purchase time. Valid values:</p>
+     * <ul>
+     * <li>CreateTime: the time when the plans were purchased.</li>
+     * <li>ExpireTime: the time when the plans expire.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -40,6 +58,12 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The order in which you want to sort the query results. Default value: desc. Valid values:</p>
+     * <ul>
+     * <li>asc: in ascending order.</li>
+     * <li>desc: in descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -47,6 +71,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String sortOrder;
 
     /**
+     * <p>The plan status. Valid values:</p>
+     * <ul>
+     * <li>online: The plan is in service.</li>
+     * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
+     * <li>disable: The plan is released.</li>
+     * <li>overdue: The plan is stopped due to overdue payments.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRoutineRequest extends TeaModel {
     /**
+     * <p>The routine name.</p>
+     * 
      * <strong>example:</strong>
      * <p>GetRoutine</p>
      */

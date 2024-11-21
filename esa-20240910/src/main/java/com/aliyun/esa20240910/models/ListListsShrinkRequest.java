@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListListsShrinkRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListListsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListListsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query arguments in the JSON format, which contain filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>ListLists</p>
      */

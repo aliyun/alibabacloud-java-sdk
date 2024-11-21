@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeContainerLogsResponseBody extends TeaModel {
+    /**
+     * <p>The logs.</p>
+     */
     @NameInMap("Items")
     public java.util.List<String> items;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>

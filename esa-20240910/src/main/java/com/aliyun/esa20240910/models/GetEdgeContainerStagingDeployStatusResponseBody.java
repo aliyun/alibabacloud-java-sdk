@@ -4,30 +4,99 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the container is ready.</p>
+     * <ul>
+     * <li>ok</li>
+     * <li>unready</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("ContainersReady")
     public String containersReady;
 
+    /**
+     * <p>The time when the container was created. The value is a timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-24T06:46:35Z</p>
+     */
     @NameInMap("CreationTimestamp")
     public String creationTimestamp;
 
+    /**
+     * <p>The initialization status of the container.</p>
+     * <ul>
+     * <li>ok</li>
+     * <li>unready</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Initialized")
     public String initialized;
 
+    /**
+     * <p>The status of the container in the staging environment.</p>
+     * <ul>
+     * <li>NoContainer: created.</li>
+     * <li>Running: running.</li>
+     * <li>Failed: abnormal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Phase")
     public String phase;
 
+    /**
+     * <p>The details of container restart.</p>
+     */
     @NameInMap("PodRestartState")
     public GetEdgeContainerStagingDeployStatusResponseBodyPodRestartState podRestartState;
 
+    /**
+     * <p>Indicates whether domain names are associated with the container.</p>
+     * <ul>
+     * <li>ok</li>
+     * <li>unready</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Ready")
     public String ready;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F2C992B-3FE2-5EBB-A61F-F9DD4EB257DA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The scheduling status of the container.</p>
+     * <ul>
+     * <li>ok</li>
+     * <li>unready</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Scheduled")
     public String scheduled;
 
+    /**
+     * <p>The virtual IP addresses.</p>
+     */
     @NameInMap("VIPs")
     public java.util.List<String> VIPs;
 
@@ -109,9 +178,21 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     }
 
     public static class GetEdgeContainerStagingDeployStatusResponseBodyPodRestartState extends TeaModel {
+        /**
+         * <p>The reason for the last restart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOMKilled</p>
+         */
         @NameInMap("LastTerminatedReason")
         public String lastTerminatedReason;
 
+        /**
+         * <p>The number of times that the container restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RestartCount")
         public Integer restartCount;
 

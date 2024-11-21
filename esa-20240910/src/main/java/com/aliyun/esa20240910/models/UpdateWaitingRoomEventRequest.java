@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
+     * <p>The content of the custom waiting room page. You must specify this parameter if you set WaitingRoomType to custom. The content must be Base64-encoded.</p>
+     * 
      * <strong>example:</strong>
      * <p>html-yets-maqi1111</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String customPageHtml;
 
     /**
+     * <p>The description of the waiting room.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://yywyyw.com">http://yywyyw.com</a></p>
      */
@@ -19,6 +23,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether to disable session renewal. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>off</p>
      */
@@ -26,6 +36,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String disableSessionRenewalEnable;
 
     /**
+     * <p>Specifies whether to enable the waiting room event. Valid values:</p>
+     * <ul>
+     * <li><code>on</code></li>
+     * <li><code>off</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -33,6 +49,8 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String enable;
 
     /**
+     * <p>The end time of the event. This value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1719849600</p>
      */
@@ -40,6 +58,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Specifies whether to enable JSON response. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>off</p>
      */
@@ -47,16 +71,28 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String jsonResponseEnable;
 
     /**
+     * <p>The default language. Valid values:</p>
+     * <ul>
+     * <li><code>enus</code>: English.</li>
+     * <li><code>zhcn</code>: Simplified Chinese.</li>
+     * <li><code>zhhk</code>: Traditional Chinese.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enus</p>
      */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The name of the waiting room event.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The maximum number of new users per minute.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -64,6 +100,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String newUsersPerMinute;
 
     /**
+     * <p>Specifies whether to enable pre-queuing.</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -71,6 +113,8 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String preQueueEnable;
 
     /**
+     * <p>The start time for pre-queuing.</p>
+     * 
      * <strong>example:</strong>
      * <p>1719763200</p>
      */
@@ -78,6 +122,14 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String preQueueStartTime;
 
     /**
+     * <p>The queuing method. Valid values:</p>
+     * <ul>
+     * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
+     * <li>fifo: Users gain access to the origin in order of arrival.</li>
+     * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
+     * <li>reject-all: All requests are blocked from accessing the origin.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>fifo</p>
      */
@@ -85,6 +137,13 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String queuingMethod;
 
     /**
+     * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+     * <ul>
+     * <li>200</li>
+     * <li>202</li>
+     * <li>429</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -92,6 +151,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String queuingStatusCode;
 
     /**
+     * <p>Specifies whether to enable random queuing.</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -99,6 +164,8 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String randomPreQueueEnable;
 
     /**
+     * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -106,6 +173,7 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String sessionDuration;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,6 +183,8 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The start time of the event. This value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1719763200</p>
      */
@@ -122,6 +192,8 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The maximum number of active users.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -129,6 +201,8 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public String totalActiveUsers;
 
     /**
+     * <p>The ID of the waiting room event, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>89677721098****</p>
      */
@@ -136,6 +210,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     public Long waitingRoomEventId;
 
     /**
+     * <p>The type of the waiting room. Valid values:</p>
+     * <ul>
+     * <li>default</li>
+     * <li>custom</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEdgeContainerAppsRequest extends TeaModel {
     /**
+     * <p>The sorting field. This parameter is left empty by default. Valid values:</p>
+     * <ul>
+     * <li>Name: the version name.</li>
+     * <li>CreateTime: the time when the version was created.</li>
+     * <li>UpdateTime: the time when the version was last modified.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -12,6 +19,12 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public String orderKey;
 
     /**
+     * <p>The order in which you want to sort the query results. This parameter is left empty by default. Valid values:</p>
+     * <ul>
+     * <li>ASC: in ascending order.</li>
+     * <li>DESC: in descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -19,6 +32,8 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The page number. Default value: <strong>1</strong>. Valid values: 1 to 65535.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +41,8 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Valid values: 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +50,8 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>ver-1005682639679266816</p>
      */
@@ -40,6 +59,12 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public String searchKey;
 
     /**
+     * <p>The search criterion based on which you want to perform fuzzy search. Valid values:</p>
+     * <ul>
+     * <li>Appid: the application ID.</li>
+     * <li>Name: the application name.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Appid</p>
      */

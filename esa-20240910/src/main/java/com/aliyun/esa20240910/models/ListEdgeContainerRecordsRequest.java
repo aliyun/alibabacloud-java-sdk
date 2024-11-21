@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEdgeContainerRecordsRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListEdgeContainerRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,14 @@ public class ListEdgeContainerRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The match mode to filter the record names:</p>
+     * <ul>
+     * <li><strong>fuzzy</strong></li>
+     * <li><strong>prefix</strong></li>
+     * <li><strong>suffix</strong></li>
+     * <li><strong>exact</strong> (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>fuzzy</p>
      */
@@ -26,6 +38,8 @@ public class ListEdgeContainerRecordsRequest extends TeaModel {
     public String recordMatchType;
 
     /**
+     * <p>The record name.</p>
+     * 
      * <strong>example:</strong>
      * <p>a.example.com</p>
      */
@@ -33,6 +47,7 @@ public class ListEdgeContainerRecordsRequest extends TeaModel {
     public String recordName;
 
     /**
+     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEdgeContainerAppRequest extends TeaModel {
     /**
+     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-1232321454***</p>
      */

@@ -4,9 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class QuotaListItemsValue extends TeaModel {
+    /**
+     * <p>Indicates whether the item type is configured in the custom list.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The format restrictions for the item type in the custom list.</p>
+     */
     @NameInMap("Value")
     public WafQuotaString value;
 

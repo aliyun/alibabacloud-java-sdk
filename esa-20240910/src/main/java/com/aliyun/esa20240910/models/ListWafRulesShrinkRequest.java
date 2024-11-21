@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWafRulesShrinkRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>http_custom</p>
      */
@@ -12,6 +14,8 @@ public class ListWafRulesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListWafRulesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The WAF rule category. You can filter rules of a specific category.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class ListWafRulesShrinkRequest extends TeaModel {
     public String phase;
 
     /**
+     * <p>The filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>http_custom</p>
      */
@@ -33,6 +41,7 @@ public class ListWafRulesShrinkRequest extends TeaModel {
     public String queryArgsShrink;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class ListWafRulesShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The version of the website.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

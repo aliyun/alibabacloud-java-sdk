@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEdgeContainerAppRecordRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteEdgeContainerAppRecordRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The associated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteEdgeContainerAppRecordRequest extends TeaModel {
     public String recordName;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5407498413****</p>
      */

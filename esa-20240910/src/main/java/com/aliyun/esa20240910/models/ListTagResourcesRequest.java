@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The maximum number of tags to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxItem;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <blockquote>
+     * <p> This parameter is not required for the first request. If not all results are returned in one query, you can specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAZjtYxxxxxxxx</p>
      */
@@ -22,7 +29,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>要创建并绑定标签的资源所在的地域ID。</p>
+     * <p>The ID of the region where the resources reside.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +39,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源ID,最多 50个子项</p>
+     * <p>The website information. Valid values of he number of website IDs: <strong>1</strong> to <strong>50</strong>.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +57,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>A list of tags. You can enter up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -123,7 +134,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>标签键</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -132,7 +143,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

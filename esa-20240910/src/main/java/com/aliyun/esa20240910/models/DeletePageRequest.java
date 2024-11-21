@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePageRequest extends TeaModel {
     /**
+     * <p>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

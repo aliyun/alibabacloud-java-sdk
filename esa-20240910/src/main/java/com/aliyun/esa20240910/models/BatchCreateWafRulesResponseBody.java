@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateWafRulesResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the WAF rules.<a href="~~2850237~~"></a></p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -16,6 +19,12 @@ public class BatchCreateWafRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the WAF ruleset.<a href="~~2850233~~"></a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000001</p>
+     */
     @NameInMap("RulesetId")
     public Long rulesetId;
 
