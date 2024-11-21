@@ -27,6 +27,9 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeploymentOptions")
+    public java.util.List<String> deploymentOptions;
+
     /**
      * <p>The folders in which ROS deploy stacks in service-managed permission model.</p>
      * <blockquote>
@@ -178,6 +181,14 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateStackInstancesShrinkRequest setDeploymentOptions(java.util.List<String> deploymentOptions) {
+        this.deploymentOptions = deploymentOptions;
+        return this;
+    }
+    public java.util.List<String> getDeploymentOptions() {
+        return this.deploymentOptions;
     }
 
     public CreateStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
