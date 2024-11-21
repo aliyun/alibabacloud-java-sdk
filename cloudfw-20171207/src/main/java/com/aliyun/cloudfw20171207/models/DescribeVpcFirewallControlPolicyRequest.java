@@ -32,7 +32,6 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -87,7 +86,6 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <p>Maximum value: 50.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
