@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test rollback app</p>
      */
@@ -21,6 +24,7 @@ public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
     public String remarks;
 
     /**
+     * <p>The ID of version that you want to roll back.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

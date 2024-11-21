@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSiteDeliveryTaskRequest extends TeaModel {
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456***</p>
      */
@@ -12,6 +14,7 @@ public class GetSiteDeliveryTaskRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The name of the delivery task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

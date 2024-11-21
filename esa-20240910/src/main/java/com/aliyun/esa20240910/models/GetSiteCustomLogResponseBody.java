@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSiteCustomLogResponseBody extends TeaModel {
     /**
+     * <p>The ID of the custom log field configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>6befa4aa-2a94-4f51-a245-295787192d2c</p>
      */
@@ -12,17 +14,22 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Indicates whether the custom configuration exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsExist")
     public Boolean isExist;
 
+    /**
+     * <p>The custom fields.</p>
+     */
     @NameInMap("LogCustomField")
     public GetSiteCustomLogResponseBodyLogCustomField logCustomField;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6befa4aa-2a94-4f51-a245-295787192d2c</p>
@@ -31,6 +38,8 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>167026711***</p>
      */
@@ -83,12 +92,21 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
     }
 
     public static class GetSiteCustomLogResponseBodyLogCustomField extends TeaModel {
+        /**
+         * <p>The cookie fields.</p>
+         */
         @NameInMap("Cookies")
         public java.util.List<String> cookies;
 
+        /**
+         * <p>The request header fields.</p>
+         */
         @NameInMap("RequestHeaders")
         public java.util.List<String> requestHeaders;
 
+        /**
+         * <p>The response header fields.</p>
+         */
         @NameInMap("ResponseHeaders")
         public java.util.List<String> responseHeaders;
 

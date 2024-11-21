@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWafManagedRulesResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,16 +23,23 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The managed rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<ListWafManagedRulesResponseBodyRules> rules;
 
     /**
+     * <p>The total number of filtered rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
 
     public static class ListWafManagedRulesResponseBodyRules extends TeaModel {
         /**
+         * <p>The action that WAF performs on requests that match the managed rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>deny</p>
          */
@@ -89,16 +102,23 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The ID of the managed rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>100001</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the managed rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The protection level of the managed rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -106,6 +126,8 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         public Integer protectionLevel;
 
         /**
+         * <p>The status of the protection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */

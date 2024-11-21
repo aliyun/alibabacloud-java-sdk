@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWaitingRoomEventRequest extends TeaModel {
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteWaitingRoomEventRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The ID of the waiting room event.</p>
+     * 
      * <strong>example:</strong>
      * <p>302909890***</p>
      */

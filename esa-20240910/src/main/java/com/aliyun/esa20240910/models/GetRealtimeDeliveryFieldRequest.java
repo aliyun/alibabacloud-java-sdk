@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeDeliveryFieldRequest extends TeaModel {
     /**
+     * <p>The log category. Valid values:</p>
+     * <ul>
+     * <li><strong>dcdn_log_access_l1</strong> (default): access logs.</li>
+     * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
+     * <li><strong>dcdn_log_waf</strong>: firewall logs.</li>
+     * <li><strong>dcdn_log_ipa</strong>: TCP/UDP proxy logs.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

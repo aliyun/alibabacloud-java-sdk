@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomScenePolicyResponseBody extends TeaModel {
     /**
+     * <p>The policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,7 +14,7 @@ public class DeleteCustomScenePolicyResponseBody extends TeaModel {
     public Long policyId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5CC228B4-7A67-4016-9C9F-4A4133494A91</p>

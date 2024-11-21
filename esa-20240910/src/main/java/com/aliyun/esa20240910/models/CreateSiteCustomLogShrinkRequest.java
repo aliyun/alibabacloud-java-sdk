@@ -4,16 +4,27 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateSiteCustomLogShrinkRequest extends TeaModel {
+    /**
+     * <p>The cookie fields.</p>
+     */
     @NameInMap("Cookies")
     public String cookiesShrink;
 
+    /**
+     * <p>The request header fields.</p>
+     */
     @NameInMap("RequestHeaders")
     public String requestHeadersShrink;
 
+    /**
+     * <p>The response header fields.</p>
+     */
     @NameInMap("ResponseHeaders")
     public String responseHeadersShrink;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>11223</p>
      */

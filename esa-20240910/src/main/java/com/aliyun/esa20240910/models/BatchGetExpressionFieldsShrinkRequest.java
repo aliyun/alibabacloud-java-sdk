@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     /**
+     * <p>The regular expressions.</p>
+     * 
      * <strong>example:</strong>
      * <p>http_bot</p>
      */
@@ -12,6 +14,8 @@ public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     public String expressionsShrink;
 
     /**
+     * <p>The WAF rule category.</p>
+     * 
      * <strong>example:</strong>
      * <p>http_bot</p>
      */
@@ -19,6 +23,8 @@ public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     public String phase;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

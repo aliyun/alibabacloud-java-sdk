@@ -4,10 +4,18 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CommitRoutineStagingCodeRequest extends TeaModel {
+    /**
+     * <p>The description of the code version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description of this code ver</p>
+     */
     @NameInMap("CodeDescription")
     public String codeDescription;
 
     /**
+     * <p>The routine name.</p>
+     * 
      * <strong>example:</strong>
      * <p>CommitRoutineStagingCode</p>
      */

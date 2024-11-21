@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListUserRatePlanInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The queried plans.</p>
+     */
     @NameInMap("InstanceInfo")
     public java.util.List<ListUserRatePlanInstancesResponseBodyInstanceInfo> instanceInfo;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,7 +29,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-3C82-72F8FD6DA2FE</p>
@@ -31,6 +38,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>68</p>
      */
@@ -38,6 +47,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +110,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
 
     public static class ListUserRatePlanInstancesResponseBodyInstanceInfoSites extends TeaModel {
         /**
+         * <p>The website ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456****</p>
          */
@@ -106,6 +119,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public Long siteId;
 
         /**
+         * <p>The website name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -113,6 +128,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String siteName;
 
         /**
+         * <p>The website status. Valid values:</p>
+         * <ul>
+         * <li>pending: The website is to be configured.</li>
+         * <li>active: The website is active.</li>
+         * <li>offline: The website is suspended.</li>
+         * <li>moved: The website has been added and verified by another Alibaba Cloud account.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pending</p>
          */
@@ -152,6 +175,12 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
 
     public static class ListUserRatePlanInstancesResponseBodyInstanceInfo extends TeaModel {
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PREPAY: subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PREPAY</p>
          */
@@ -162,6 +191,13 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String botInstanceLevel;
 
         /**
+         * <p>The service locations for the websites that can be associated with the plan. Multiple values are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>domestic: the Chinese mainland.</li>
+         * <li>overseas: outside the Chinese mainland.</li>
+         * <li>global: global.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>domestic,overseas</p>
          */
@@ -169,6 +205,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String coverages;
 
         /**
+         * <p>The time when the plan was purchased.</p>
+         * 
          * <strong>example:</strong>
          * <p>YYYY-MM-DDThh:mm:ssZ</p>
          */
@@ -188,6 +226,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String ddosInstanceLevel;
 
         /**
+         * <p>The subscription duration of the plan. Unit: month.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -201,6 +241,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String edgeWafRequest;
 
         /**
+         * <p>The time when the plan expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>YYYY-MM-DDThh:mm:ssZ</p>
          */
@@ -208,6 +250,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The plan ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sp-xcdn-96wblslz****</p>
          */
@@ -221,6 +265,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String layer4TrafficIntl;
 
         /**
+         * <p>The plan name.</p>
+         * 
          * <strong>example:</strong>
          * <p>basic</p>
          */
@@ -231,6 +277,12 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String planTraffic;
 
         /**
+         * <p>The plan type. Valid values:</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>enterprise</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -238,12 +290,17 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String planType;
 
         /**
+         * <p>The maximum number of websites that can be associated with the plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("SiteQuota")
         public String siteQuota;
 
+        /**
+         * <p>The websites that have been associated with the plan.</p>
+         */
         @NameInMap("Sites")
         public java.util.List<ListUserRatePlanInstancesResponseBodyInstanceInfoSites> sites;
 
@@ -254,6 +311,13 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public String staticRequest;
 
         /**
+         * <p>The plan status. Valid values:</p>
+         * <ul>
+         * <li>online: The plan is in service.</li>
+         * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
+         * <li>disable: The plan is released.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */

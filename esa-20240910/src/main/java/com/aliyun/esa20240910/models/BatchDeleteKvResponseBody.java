@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteKvResponseBody extends TeaModel {
+    /**
+     * <p>The keys that failed to be deleted.</p>
+     */
     @NameInMap("FailKeys")
     public java.util.List<String> failKeys;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -16,6 +19,9 @@ public class BatchDeleteKvResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The keys that are deleted.</p>
+     */
     @NameInMap("SuccessKeys")
     public java.util.List<String> successKeys;
 

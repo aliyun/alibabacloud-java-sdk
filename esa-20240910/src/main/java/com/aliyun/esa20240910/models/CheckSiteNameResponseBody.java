@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CheckSiteNameResponseBody extends TeaModel {
     /**
+     * <p>The description of the verification result. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong>: The verification is successful.</li>
+     * <li><strong>Site.AlreadyExist</strong>: The website domain name has already been added.</li>
+     * <li><strong>Site.InvalidName</strong>: Invalid website domain name.</li>
+     * <li><strong>Site.SubSiteUnavailable</strong>: Subdomains are not allowed.</li>
+     * <li><strong>Site.InternalError</strong>: An internal error occurs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,16 +21,31 @@ public class CheckSiteNameResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>Indicates whether a subdomain is specified. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IsSubSite")
     public Boolean isSubSite;
 
+    /**
+     * <p>The verification message.</p>
+     */
     @NameInMap("Messeage")
     public String messeage;
 
     /**
+     * <p>Indicates whether the verification passed.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,6 +53,8 @@ public class CheckSiteNameResponseBody extends TeaModel {
     public Boolean passed;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
      */

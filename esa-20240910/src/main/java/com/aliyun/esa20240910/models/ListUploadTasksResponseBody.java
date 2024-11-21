@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUploadTasksResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6D****</p>
@@ -13,6 +13,9 @@ public class ListUploadTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The file upload tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListUploadTasksResponseBodyTasks> tasks;
 
@@ -39,6 +42,8 @@ public class ListUploadTasksResponseBody extends TeaModel {
 
     public static class ListUploadTasksResponseBodyTasks extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-26T01:56:15Z</p>
          */
@@ -46,6 +51,8 @@ public class ListUploadTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error message returned when the file upload task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>invalid url</p>
          */
@@ -53,6 +60,14 @@ public class ListUploadTasksResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The error code. Multiple error codes are separated by commas (,).</p>
+         * <ul>
+         * <li><strong>InvalidUrl</strong>: The URL format is incorrect.</li>
+         * <li><strong>InvalidDomain</strong>: The domain ownership fails to be verified.</li>
+         * <li><strong>QuotaExcess</strong>: The quota limit has been reached.</li>
+         * <li><strong>OtherErrors</strong>: Other errors.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>InvalidUrl,InvalidDomain</p>
          */
@@ -60,6 +75,13 @@ public class ListUploadTasksResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The task status.</p>
+         * <ul>
+         * <li><strong>Complete</strong>: The task is complete.</li>
+         * <li><strong>Refreshing</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Complete</p>
          */
@@ -67,6 +89,14 @@ public class ListUploadTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>file</strong>: purges the cache by file URL.</li>
+         * <li><strong>preload</strong>: prefetches files.</li>
+         * <li><strong>directory</strong>: purges the cache by directory.</li>
+         * <li><strong>ignoreparams</strong>: purges the cache by URL with specified parameters ignored.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>file</p>
          */
@@ -74,6 +104,8 @@ public class ListUploadTasksResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The ID of the file upload task.</p>
+         * 
          * <strong>example:</strong>
          * <p>159253299357****</p>
          */
@@ -81,6 +113,8 @@ public class ListUploadTasksResponseBody extends TeaModel {
         public String uploadId;
 
         /**
+         * <p>The name of the file upload task.</p>
+         * 
          * <strong>example:</strong>
          * <p>purge_file_task</p>
          */

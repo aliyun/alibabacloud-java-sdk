@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetSiteWafSettingsRequest extends TeaModel {
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>The version of the website.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SiteVersion")
     public Integer siteVersion;
 

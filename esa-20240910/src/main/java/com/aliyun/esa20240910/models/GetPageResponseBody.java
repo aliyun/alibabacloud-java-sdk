@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPageResponseBody extends TeaModel {
     /**
-     * <p>自定义响应页面内容BASE64编码</p>
+     * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetPageResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>自定义响应页面内容类型</p>
+     * <p>The Content-Type field in the HTTP header.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetPageResponseBody extends TeaModel {
     public String contentType;
 
     /**
-     * <p>自定义响应页面描述</p>
+     * <p>The description of the custom error page.</p>
      * 
      * <strong>example:</strong>
      * <p>a custom deny page</p>
@@ -34,7 +34,7 @@ public class GetPageResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>自定义响应页面ID</p>
+     * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
      * 
      * <strong>example:</strong>
      * <p>50000001</p>
@@ -43,6 +43,8 @@ public class GetPageResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The type of the custom response page.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -50,7 +52,7 @@ public class GetPageResponseBody extends TeaModel {
     public String kind;
 
     /**
-     * <p>自定义响应页面名称</p>
+     * <p>The name of the custom response page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +62,7 @@ public class GetPageResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -69,6 +71,8 @@ public class GetPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the custom error page was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */

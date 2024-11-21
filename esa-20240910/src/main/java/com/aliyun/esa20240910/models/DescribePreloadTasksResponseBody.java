@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePreloadTasksResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,16 +23,23 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<DescribePreloadTasksResponseBodyTasks> tasks;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>83</p>
      */
@@ -82,6 +93,8 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
 
     public static class DescribePreloadTasksResponseBodyTasks extends TeaModel {
         /**
+         * <p>The prefetched content.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://a.com/1.jpg?b=2">http://a.com/1.jpg?b=2</a></p>
          */
@@ -89,6 +102,8 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-28 14:28:57</p>
          */
@@ -96,6 +111,13 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error message returned upon a prefetch task failure. Valid values:</p>
+         * <ul>
+         * <li><strong>Internal Error</strong></li>
+         * <li><strong>Origin Timeout</strong></li>
+         * <li><strong>Origin Return StatusCode 5XX</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Internal Error</p>
          */
@@ -103,6 +125,8 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The progress of the task, in percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>100%</p>
          */
@@ -110,6 +134,13 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         public String process;
 
         /**
+         * <p>The task status.</p>
+         * <ul>
+         * <li><strong>Complete</strong>: The task is complete.</li>
+         * <li><strong>Refreshing</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Complete</p>
          */
@@ -117,6 +148,8 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the queried task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1597854579687428</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutKvResponseBody extends TeaModel {
     /**
+     * <p>The length of the value in the key-value pair.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,7 +14,7 @@ public class PutKvResponseBody extends TeaModel {
     public String length;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -21,6 +23,8 @@ public class PutKvResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The content of the key. If the content has more than 256 characters in length, the system displays the first 100 and the last 100 characters, and omits the middle part.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

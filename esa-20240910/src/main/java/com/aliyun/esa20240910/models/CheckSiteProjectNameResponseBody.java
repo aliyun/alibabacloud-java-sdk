@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckSiteProjectNameResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the task name is valid. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
     public Boolean check;
 
     /**
+     * <p>The result description.</p>
+     * 
      * <strong>example:</strong>
      * <p>project name pass the check</p>
      */
@@ -19,6 +27,8 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the real-time log delivery task.</p>
+     * 
      * <strong>example:</strong>
      * <p>dcdn_waf_userAccount_log</p>
      */
@@ -26,6 +36,8 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
      */

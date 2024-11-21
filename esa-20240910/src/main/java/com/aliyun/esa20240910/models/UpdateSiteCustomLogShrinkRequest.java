@@ -4,12 +4,21 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateSiteCustomLogShrinkRequest extends TeaModel {
+    /**
+     * <p>The cookie fields.</p>
+     */
     @NameInMap("Cookies")
     public String cookiesShrink;
 
+    /**
+     * <p>The request header fields.</p>
+     */
     @NameInMap("RequestHeaders")
     public String requestHeadersShrink;
 
+    /**
+     * <p>The response header fields.</p>
+     */
     @NameInMap("ResponseHeaders")
     public String responseHeadersShrink;
 

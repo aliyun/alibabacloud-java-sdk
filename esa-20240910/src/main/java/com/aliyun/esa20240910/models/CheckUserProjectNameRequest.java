@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUserProjectNameRequest extends TeaModel {
     /**
+     * <p>The name of the real-time log delivery task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

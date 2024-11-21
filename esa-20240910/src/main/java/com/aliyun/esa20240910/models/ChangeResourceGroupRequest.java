@@ -8,6 +8,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the resource group to which you want to move the website.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */

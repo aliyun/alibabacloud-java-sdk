@@ -4,14 +4,23 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetCacheReserveSpecificationResponseBody extends TeaModel {
+    /**
+     * <p>The capacities of cache reserve instances that can be created.</p>
+     */
     @NameInMap("CacheReserveCapacity")
     public java.util.List<String> cacheReserveCapacity;
 
+    /**
+     * <p>The regions in which cache reserve instances can be created.</p>
+     */
     @NameInMap("CacheReserveRegion")
     public java.util.List<String> cacheReserveRegion;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

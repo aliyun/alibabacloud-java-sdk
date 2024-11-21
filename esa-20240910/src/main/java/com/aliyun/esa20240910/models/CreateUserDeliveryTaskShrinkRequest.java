@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The log category. Valid values:</p>
+     * <ul>
+     * <li>dcdn_log_access_l1 (default): access logs.</li>
+     * <li>dcdn_log_er: Edge Routine logs.</li>
+     * <li>dcdn_log_waf: firewall logs.</li>
+     * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,11 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public String businessType;
 
     /**
+     * <p>The data center. Valid values:</p>
+     * <ul>
+     * <li>cn: the Chinese mainland.</li>
+     * <li>sg: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +35,15 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public String dataCenter;
 
     /**
+     * <p>The destination of the delivery. Valid values:</p>
+     * <ol>
+     * <li>sls: Alibaba Cloud SLS.</li>
+     * <li>http: HTTP server.</li>
+     * <li>aws3: Amazon S3.</li>
+     * <li>oss: Alibaba Cloud OSS.</li>
+     * <li>kafka: Kafka.</li>
+     * <li>aws3cmpt: S3-compatible storage service.</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +53,8 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public String deliveryType;
 
     /**
+     * <p>The discard rate. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -39,6 +62,7 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public Float discardRate;
 
     /**
+     * <p>The log field. If you specify multiple fields, separate them with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,22 +71,38 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     @NameInMap("FieldName")
     public String fieldName;
 
+    /**
+     * <p>The configurations for delivery to an HTTP server.</p>
+     */
     @NameInMap("HttpDelivery")
     public String httpDeliveryShrink;
 
+    /**
+     * <p>The configurations for delivery to Kafka.</p>
+     */
     @NameInMap("KafkaDelivery")
     public String kafkaDeliveryShrink;
 
+    /**
+     * <p>The configurations for delivery to OSS.</p>
+     */
     @NameInMap("OssDelivery")
     public String ossDeliveryShrink;
 
+    /**
+     * <p>The configurations for delivery to Amazon S3 or an S3-compatible service.</p>
+     */
     @NameInMap("S3Delivery")
     public String s3DeliveryShrink;
 
+    /**
+     * <p>The configurations for delivery to SLS.</p>
+     */
     @NameInMap("SlsDelivery")
     public String slsDeliveryShrink;
 
     /**
+     * <p>The task name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

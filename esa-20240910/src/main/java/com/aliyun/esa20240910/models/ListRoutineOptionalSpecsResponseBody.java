@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890ABCDEF01234567890ABCDEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The available specifications.</p>
+     */
     @NameInMap("Specs")
     public java.util.List<ListRoutineOptionalSpecsResponseBodySpecs> specs;
 
@@ -35,9 +41,25 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
     }
 
     public static class ListRoutineOptionalSpecsResponseBodySpecs extends TeaModel {
+        /**
+         * <p>Indicates whether the specification is available. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsAvailable")
         public Boolean isAvailable;
 
+        /**
+         * <p>The specification name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ms</p>
+         */
         @NameInMap("SpecName")
         public String specName;
 

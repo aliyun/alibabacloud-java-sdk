@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineRequest extends TeaModel {
     /**
+     * <p>The routine description.</p>
+     * 
      * <strong>example:</strong>
      * <p>the description of this routine</p>
      */
@@ -12,6 +14,8 @@ public class CreateRoutineRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The routine name, which must be unique in the same account.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-routine1</p>
      */
@@ -19,6 +23,8 @@ public class CreateRoutineRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The specification of the routine.</p>
+     * 
      * <strong>example:</strong>
      * <p>5ms</p>
      */

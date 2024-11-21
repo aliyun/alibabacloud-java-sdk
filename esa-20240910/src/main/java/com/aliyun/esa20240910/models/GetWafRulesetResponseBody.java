@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWafRulesetResponseBody extends TeaModel {
     /**
-     * <p>自定义响应页面ID</p>
+     * <p>The ruleset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
@@ -14,7 +14,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>自定义响应页面名称</p>
+     * <p>The ruleset name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>自定义响应页面内容类型</p>
+     * <p>The WAF rule category of the ruleset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
     public String phase;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -42,13 +42,21 @@ public class GetWafRulesetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The rule configurations in the ruleset.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<WafRuleConfig> rules;
 
+    /**
+     * <p>The configurations shared by the rules in the ruleset.</p>
+     */
     @NameInMap("Shared")
     public WafBatchRuleShared shared;
 
     /**
+     * <p>The ruleset status.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -56,6 +64,8 @@ public class GetWafRulesetResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The time when the ruleset was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */

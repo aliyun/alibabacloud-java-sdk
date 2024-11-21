@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRoutineRelatedRecordResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
@@ -13,6 +13,16 @@ public class DeleteRoutineRelatedRecordResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful.</p>
+     * <ul>
+     * <li>OK</li>
+     * <li>Fail</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Status")
     public String status;
 

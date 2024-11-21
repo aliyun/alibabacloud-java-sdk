@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWaitingRoomsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID, which is used to trace a call.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
@@ -13,6 +13,9 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The waiting rooms.</p>
+     */
     @NameInMap("WaitingRooms")
     public java.util.List<ListWaitingRoomsResponseBodyWaitingRooms> waitingRooms;
 
@@ -39,6 +42,8 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
 
     public static class ListWaitingRoomsResponseBodyWaitingRoomsHostNameAndPath extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -46,6 +51,8 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/test</p>
          */
@@ -53,6 +60,8 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The subdomain.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.</p>
          */
@@ -92,19 +101,33 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
 
     public static class ListWaitingRoomsResponseBodyWaitingRooms extends TeaModel {
         /**
+         * <p>The name of the custom cookie.</p>
+         * 
          * <strong>example:</strong>
          * <p>__aliwaitingroom_example</p>
          */
         @NameInMap("CookieName")
         public String cookieName;
 
+        /**
+         * <p>The HTML content or identifier of the custom queuing page. This parameter is valid only when <code>WaitingRoomType</code> is set to <code>custom</code>. The content must be URL-encoded.</p>
+         */
         @NameInMap("CustomPageHtml")
         public String customPageHtml;
 
+        /**
+         * <p>The description of the waiting room.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether session renewal is disabled. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -112,16 +135,31 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String disableSessionRenewalEnable;
 
         /**
+         * <p>Indicates whether the waiting room is enabled. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
         @NameInMap("Enable")
         public String enable;
 
+        /**
+         * <p>The hostname and path.</p>
+         */
         @NameInMap("HostNameAndPath")
         public java.util.List<ListWaitingRoomsResponseBodyWaitingRoomsHostNameAndPath> hostNameAndPath;
 
         /**
+         * <p>Indicates whether JSON response is enabled. If you set this parameter to on, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -129,16 +167,28 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String jsonResponseEnable;
 
         /**
+         * <p>The language of the waiting room page. This parameter is returned when the waiting room type is set to default. Valid values:</p>
+         * <ul>
+         * <li>enus: English.</li>
+         * <li>zhcn: Simplified Chinese.</li>
+         * <li>zhhk: Traditional Chinese.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>zhcn</p>
          */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>The name of the waiting room.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The maximum number of new users per minute.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -146,6 +196,12 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String newUsersPerMinute;
 
         /**
+         * <p>Indicates whether all requests must be queued. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -153,6 +209,14 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String queueAllEnable;
 
         /**
+         * <p>The queuing method. Valid values:</p>
+         * <ul>
+         * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
+         * <li>fifo: Users gain access to the origin in order of arrival.</li>
+         * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
+         * <li>reject-all: Users are blocked from reaching the origin.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>random</p>
          */
@@ -160,6 +224,13 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String queuingMethod;
 
         /**
+         * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+         * <ul>
+         * <li>200</li>
+         * <li>202</li>
+         * <li>429</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -167,6 +238,8 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String queuingStatusCode;
 
         /**
+         * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
@@ -174,6 +247,8 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String sessionDuration;
 
         /**
+         * <p>The maximum number of active users.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -181,6 +256,8 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String totalActiveUsers;
 
         /**
+         * <p>The unique ID of the waiting room.</p>
+         * 
          * <strong>example:</strong>
          * <p>6a51d5bc6460887abd1291dc7d4d****</p>
          */
@@ -188,6 +265,12 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         public String waitingRoomId;
 
         /**
+         * <p>The type of the waiting room. Valid values:</p>
+         * <ul>
+         * <li>default</li>
+         * <li>custom</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */

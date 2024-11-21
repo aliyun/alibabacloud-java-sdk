@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserDeliveryTasksResponseBody extends TeaModel {
     /**
+     * <p>The page number returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,7 +23,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1f94c47f-3a1a-4f69-8d6c-bfeee1b49aab</p>
@@ -27,10 +31,15 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The delivery tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListUserDeliveryTasksResponseBodyTasks> tasks;
 
     /**
+     * <p>The total number of delivery tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>68</p>
      */
@@ -84,6 +93,8 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
 
     public static class ListUserDeliveryTasksResponseBodyTasks extends TeaModel {
         /**
+         * <p>The log category.</p>
+         * 
          * <strong>example:</strong>
          * <p>dcdn_log_er</p>
          */
@@ -91,6 +102,12 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         public String businessType;
 
         /**
+         * <p>The data center. Valid values:</p>
+         * <ol>
+         * <li>cn: the Chinese mainland.</li>
+         * <li>sg: outside the Chinese mainland.</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>cn</p>
          */
@@ -98,6 +115,8 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         public String dataCenter;
 
         /**
+         * <p>The delivery destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -105,6 +124,8 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         public String deliveryType;
 
         /**
+         * <p>The status of the delivery task.</p>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */
@@ -112,6 +133,8 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The name of the delivery task.</p>
+         * 
          * <strong>example:</strong>
          * <p>testoss11</p>
          */

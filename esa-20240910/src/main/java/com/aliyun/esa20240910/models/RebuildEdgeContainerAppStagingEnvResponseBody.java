@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebuildEdgeContainerAppStagingEnvResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-3C82-72F8FD6DA2FE</p>

@@ -4,10 +4,18 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateWafRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the WAF rule.<a href="~~2850237~~"></a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>20000001</p>
+     */
     @NameInMap("Id")
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
      */

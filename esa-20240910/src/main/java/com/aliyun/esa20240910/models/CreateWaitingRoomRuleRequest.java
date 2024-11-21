@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWaitingRoomRuleRequest extends TeaModel {
     /**
+     * <p>The rule content, which is a policy or conditional expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class CreateWaitingRoomRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Specifies whether to enable the rule. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,7 @@ public class CreateWaitingRoomRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>The rule name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,7 @@ public class CreateWaitingRoomRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +49,7 @@ public class CreateWaitingRoomRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The ID of the waiting room to be bypassed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

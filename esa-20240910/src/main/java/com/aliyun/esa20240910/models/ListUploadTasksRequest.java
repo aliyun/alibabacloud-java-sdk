@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUploadTasksRequest extends TeaModel {
     /**
+     * <p>The time when the task ends. Specify the time in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-12-06T12:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class ListUploadTasksRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -19,6 +23,8 @@ public class ListUploadTasksRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The time when the task starts. Specify the time in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-11-29T00:00:00Z</p>
      */
@@ -26,6 +32,14 @@ public class ListUploadTasksRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The task type. Valid values:</p>
+     * <ul>
+     * <li><strong>file</strong>: purges the cache by file URL.</li>
+     * <li><strong>preload</strong>: prefetches files.</li>
+     * <li><strong>directory</strong>: purges the cache by directory.</li>
+     * <li><strong>ignoreparams</strong>: purges the cache by URL with specified parameters ignored.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>file</p>
      */

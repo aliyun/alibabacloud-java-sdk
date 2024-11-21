@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
     /**
+     * <p>The level of HTTP DDoS attack protection.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,7 +14,7 @@ public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
     public String globalMode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
@@ -21,6 +23,8 @@ public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */

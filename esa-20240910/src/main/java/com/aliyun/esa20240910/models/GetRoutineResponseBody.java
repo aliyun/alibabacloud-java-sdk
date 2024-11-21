@@ -4,29 +4,62 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetRoutineResponseBody extends TeaModel {
+    /**
+     * <p>The code versions.</p>
+     */
     @NameInMap("CodeVersions")
     public java.util.List<GetRoutineResponseBodyCodeVersions> codeVersions;
 
+    /**
+     * <p>The time when the routine was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-03-11T01:23:21Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The default record name to access.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>routine1.example.com</p>
+     */
     @NameInMap("DefaultRelatedRecord")
     public String defaultRelatedRecord;
 
+    /**
+     * <p>The description of the routine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The information about the environments.</p>
+     */
     @NameInMap("Envs")
     public java.util.List<GetRoutineResponseBodyEnvs> envs;
 
+    /**
+     * <p>The records associated with the routine.</p>
+     */
     @NameInMap("RelatedRecords")
     public java.util.List<GetRoutineResponseBodyRelatedRecords> relatedRecords;
 
+    /**
+     * <p>The routes associated with the routine.</p>
+     */
     @NameInMap("RelatedRoutes")
     public java.util.List<GetRoutineResponseBodyRelatedRoutes> relatedRoutes;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -101,12 +134,30 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyCodeVersions extends TeaModel {
+        /**
+         * <p>The description of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test ver code desc</p>
+         */
         @NameInMap("CodeDescription")
         public String codeDescription;
 
+        /**
+         * <p>The code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067203242</p>
+         */
         @NameInMap("CodeVersion")
         public String codeVersion;
 
+        /**
+         * <p>The time when the code version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11T01:23:21Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -142,18 +193,45 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyEnvs extends TeaModel {
+        /**
+         * <p>The regions for canary release.</p>
+         */
         @NameInMap("CanaryAreaList")
         public java.util.List<String> canaryAreaList;
 
+        /**
+         * <p>The version number for canary release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067577628</p>
+         */
         @NameInMap("CanaryCodeVersion")
         public String canaryCodeVersion;
 
+        /**
+         * <p>The version number of the code in the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067577628</p>
+         */
         @NameInMap("CodeVersion")
         public String codeVersion;
 
+        /**
+         * <p>The environment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>production</p>
+         */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ms</p>
+         */
         @NameInMap("SpecName")
         public String specName;
 
@@ -205,15 +283,39 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyRelatedRecords extends TeaModel {
+        /**
+         * <p>The record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>509348423011904</p>
+         */
         @NameInMap("RecordId")
         public Long recordId;
 
+        /**
+         * <p>The record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-record-1.example.com</p>
+         */
         @NameInMap("RecordName")
         public String recordName;
 
+        /**
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54362329990032</p>
+         */
         @NameInMap("SiteId")
         public Long siteId;
 
+        /**
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("SiteName")
         public String siteName;
 
@@ -257,15 +359,39 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyRelatedRoutes extends TeaModel {
+        /**
+         * <p>The route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em>.example.com/path1</em></p>
+         */
         @NameInMap("Route")
         public String route;
 
+        /**
+         * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d501cb8a2c951f32922d260040780c06</p>
+         */
         @NameInMap("RouteId")
         public String routeId;
 
+        /**
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54362329990032</p>
+         */
         @NameInMap("SiteId")
         public Long siteId;
 
+        /**
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("SiteName")
         public String siteName;
 

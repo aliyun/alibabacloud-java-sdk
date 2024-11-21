@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomScenePolicyRequest extends TeaModel {
     /**
+     * <p>The time when the policy expires.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class CreateCustomScenePolicyRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,8 @@ public class CreateCustomScenePolicyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>7096621098****</p>
      */
@@ -30,6 +35,8 @@ public class CreateCustomScenePolicyRequest extends TeaModel {
     public String objects;
 
     /**
+     * <p>The time when the policy takes effect.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,10 @@ public class CreateCustomScenePolicyRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The name of the policy template. Valid value:</p>
+     * <ul>
+     * <li><strong>promotion</strong>: major events.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

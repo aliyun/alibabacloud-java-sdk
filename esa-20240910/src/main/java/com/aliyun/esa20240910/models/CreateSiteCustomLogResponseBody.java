@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSiteCustomLogResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>073bd613-6e72-4461-b6bc-19326dfc6a9c</p>

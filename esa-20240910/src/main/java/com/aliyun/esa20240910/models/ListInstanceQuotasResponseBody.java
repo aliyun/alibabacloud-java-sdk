@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListInstanceQuotasResponseBody extends TeaModel {
     /**
+     * <p>The plan ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The quotas in the plan.</p>
+     */
     @NameInMap("Quotas")
     public java.util.List<ListInstanceQuotasResponseBodyQuotas> quotas;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>
@@ -24,6 +29,13 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The plan status. Valid values:</p>
+     * <ul>
+     * <li>online: The plan is in service.</li>
+     * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
+     * <li>disable: The plan is released.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */
@@ -69,6 +81,8 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
 
     public static class ListInstanceQuotasResponseBodyQuotas extends TeaModel {
         /**
+         * <p>The quota name.</p>
+         * 
          * <strong>example:</strong>
          * <p>customHttpCert</p>
          */
@@ -76,6 +90,8 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         public String quotaName;
 
         /**
+         * <p>The quota value.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -83,6 +99,15 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         public String quotaValue;
 
         /**
+         * <p>The threshold type of the quota. Valid values:</p>
+         * <ul>
+         * <li>value: enumerates the values of the quota.</li>
+         * <li>bool: specifies whether the quota is available.</li>
+         * <li>num: the upper limit of the quota.</li>
+         * <li>range: the value range for the quota.</li>
+         * <li>custom: other types than the preceding four quota threshold types.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>bool</p>
          */

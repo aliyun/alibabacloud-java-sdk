@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
@@ -14,6 +14,12 @@ public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the delivery task. Valid values:</p>
+     * <ul>
+     * <li><strong>online</strong></li>
+     * <li><strong>offline</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */
@@ -21,6 +27,8 @@ public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The name of the delivery task.</p>
+     * 
      * <strong>example:</strong>
      * <p>cdn-test-task</p>
      */

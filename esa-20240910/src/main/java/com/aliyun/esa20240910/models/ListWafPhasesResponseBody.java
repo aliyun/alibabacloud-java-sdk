@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListWafPhasesResponseBody extends TeaModel {
+    /**
+     * <p>The WAF rule categories.</p>
+     */
     @NameInMap("Phases")
     public java.util.List<ListWafPhasesResponseBodyPhases> phases;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -38,15 +41,33 @@ public class ListWafPhasesResponseBody extends TeaModel {
     }
 
     public static class ListWafPhasesResponseBodyPhasesRulesets extends TeaModel {
+        /**
+         * <p>The ID of the WAF ruleset.<a href="~~2850233~~"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The rule configurations in the WAF ruleset.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<WafRuleConfig> rules;
 
+        /**
+         * <p>The configurations shared by the rules in the WAF ruleset.</p>
+         */
         @NameInMap("Shared")
         public WafBatchRuleShared shared;
 
@@ -90,9 +111,18 @@ public class ListWafPhasesResponseBody extends TeaModel {
     }
 
     public static class ListWafPhasesResponseBodyPhases extends TeaModel {
+        /**
+         * <p>The name of the WAF rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom</p>
+         */
         @NameInMap("Phase")
         public String phase;
 
+        /**
+         * <p>The WAF rulesets.</p>
+         */
         @NameInMap("Rulesets")
         public java.util.List<ListWafPhasesResponseBodyPhasesRulesets> rulesets;
 

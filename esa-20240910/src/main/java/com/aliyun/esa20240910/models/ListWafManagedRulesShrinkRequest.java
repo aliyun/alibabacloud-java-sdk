@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListWafManagedRulesShrinkRequest extends TeaModel {
     /**
+     * <p>The attack type. Valid values:</p>
+     * <ul>
+     * <li>SQL injection</li>
+     * <li>Cross-site scripting</li>
+     * <li>Code execution</li>
+     * <li>CRLF</li>
+     * <li>Local file inclusion</li>
+     * <li>Remote file inclusion</li>
+     * <li>webshell</li>
+     * <li>Cross-site request forgery</li>
+     * <li>Others</li>
+     * <li>SEMA</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +27,7 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     public Integer attackType;
 
     /**
+     * <p>The ID of the WAF rule, which can be obtained by calling the <a href="~~ListWafRules~~">ListWafRules</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +37,12 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -30,6 +50,8 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +59,8 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -46,10 +70,14 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     @NameInMap("ProtectionLevel")
     public Integer protectionLevel;
 
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("QueryArgs")
     public String queryArgsShrink;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

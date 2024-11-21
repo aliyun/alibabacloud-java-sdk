@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerTerminalResponseBody extends TeaModel {
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>c497b44c2a59f4ae0bd2826edc40a2c6e</p>
      */
@@ -12,6 +14,8 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
     public String cluster;
 
     /**
+     * <p>The container name.</p>
+     * 
      * <strong>example:</strong>
      * <p>worker0</p>
      */
@@ -19,6 +23,8 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
     public String container;
 
     /**
+     * <p>The name of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>ns1</p>
      */
@@ -26,6 +32,8 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The name of the container group.</p>
+     * 
      * <strong>example:</strong>
      * <p>1775b9e0-8463-457e-89e8-fb7b6d125b2e</p>
      */
@@ -33,7 +41,7 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
     public String pod;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
@@ -42,6 +50,8 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af22f4xxxxxxxxxxxxxxxxxx</p>
      */
@@ -49,6 +59,8 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The information about the shared token.</p>
+     * 
      * <strong>example:</strong>
      * <p>af22f4-xxxxx-xxxx-xxxx-xxxx</p>
      */

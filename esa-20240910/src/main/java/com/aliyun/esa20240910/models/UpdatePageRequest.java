@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePageRequest extends TeaModel {
     /**
+     * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class UpdatePageRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The Content-Type field in the HTTP header. Valid values:</p>
+     * <ul>
+     * <li>text/html</li>
+     * <li>application/json</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,8 @@ public class UpdatePageRequest extends TeaModel {
     public String contentType;
 
     /**
+     * <p>The description of the custom error page.</p>
+     * 
      * <strong>example:</strong>
      * <p>a custom deny page</p>
      */
@@ -30,6 +38,7 @@ public class UpdatePageRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +48,7 @@ public class UpdatePageRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The name of the custom error page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

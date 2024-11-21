@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchPutKvShrinkRequest extends TeaModel {
     /**
+     * <p>The key-value pairs that you want to configure at a time. The total size can be up to 2 MB (2 × 1000 × 1000).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("KvList")
     public String kvListShrink;
 
     /**
+     * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSiteDeliveryTaskStatusRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the delivery task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateSiteDeliveryTaskStatusRequest extends TeaModel {
     public String method;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -21,6 +24,7 @@ public class UpdateSiteDeliveryTaskStatusRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The name of the delivery task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

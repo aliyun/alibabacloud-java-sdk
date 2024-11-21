@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKvNamespaceResponseBody extends TeaModel {
     /**
+     * <p>The description of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test ns.</p>
      */
@@ -12,6 +14,8 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The updated name of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>new_ns1</p>
      */
@@ -19,6 +23,8 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The ID of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>643355322374688768</p>
      */
@@ -26,6 +32,8 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
@@ -33,6 +41,14 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the namespace. Valid values:</p>
+     * <ul>
+     * <li><strong>online</strong>: normal.</li>
+     * <li><strong>delete</strong>: pending deletion.</li>
+     * <li><strong>deleting</strong>: being deleted.</li>
+     * <li><strong>deleted</strong>: deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */

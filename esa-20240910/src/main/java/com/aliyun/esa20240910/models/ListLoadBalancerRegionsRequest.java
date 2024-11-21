@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLoadBalancerRegionsRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListLoadBalancerRegionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */

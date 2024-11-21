@@ -4,19 +4,42 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class PublishRoutineCodeVersionShrinkRequest extends TeaModel {
+    /**
+     * <p>The regions for canary release.</p>
+     */
     @NameInMap("CanaryAreaList")
     public String canaryAreaListShrink;
 
+    /**
+     * <p>The version number for canary release.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710120201067203242</p>
+     */
     @NameInMap("CanaryCodeVersion")
     public String canaryCodeVersion;
 
+    /**
+     * <p>The code version to be released.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710120201067203242</p>
+     */
     @NameInMap("CodeVersion")
     public String codeVersion;
 
+    /**
+     * <p>The environment name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>production</p>
+     */
     @NameInMap("Env")
     public String env;
 
     /**
+     * <p>The routine name.</p>
+     * 
      * <strong>example:</strong>
      * <p>PublishRoutineCodeVersion</p>
      */

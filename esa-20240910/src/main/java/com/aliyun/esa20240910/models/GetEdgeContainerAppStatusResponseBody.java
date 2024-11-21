@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
+    /**
+     * <p>The status of the application.</p>
+     */
     @NameInMap("AppStatus")
     public GetEdgeContainerAppStatusResponseBodyAppStatus appStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>
      */
@@ -56,6 +61,8 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppStatusResponseBodyAppStatus extends TeaModel {
         /**
+         * <p>The base version of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>ver-123123123123****</p>
          */
@@ -63,6 +70,14 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public String baseLineVersion;
 
         /**
+         * <p>The deployment status of the application.</p>
+         * <ul>
+         * <li><strong>undeploy</strong>: The application is not deployed.</li>
+         * <li><strong>deploying</strong>: The application is being deployed.</li>
+         * <li><strong>deployed</strong>: The application is deployed.</li>
+         * <li><strong>undeploying</strong>: The deployment is being canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>undeploy</p>
          */
@@ -70,6 +85,8 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public String deployStatus;
 
         /**
+         * <p>The time when the application was deployed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-25T05:58:05Z</p>
          */
@@ -77,6 +94,8 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public String deployTime;
 
         /**
+         * <p>The release version of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>ver-123123123123****</p>
          */
@@ -84,16 +103,30 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public String deployedVersion;
 
         /**
+         * <p>The expected release percentage of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>50%</p>
          */
         @NameInMap("ExpectPercentage")
         public Integer expectPercentage;
 
+        /**
+         * <p>Specifies whether to fully release the version. This parameter takes effect only when PublishType is set to region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FullRelease")
         public Boolean fullRelease;
 
         /**
+         * <p>The environment to which the application was released. Valid values:</p>
+         * <ul>
+         * <li><strong>prod</strong>: the production environment.</li>
+         * <li><strong>staging</strong>: the staging environment.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>prod</p>
          */
@@ -101,6 +134,8 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public String publishEnv;
 
         /**
+         * <p>The release percentage of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>50%</p>
          */
@@ -108,6 +143,14 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public Integer publishPercentage;
 
         /**
+         * <p>The release status of the application. Valid values:</p>
+         * <ul>
+         * <li><strong>publishing</strong></li>
+         * <li><strong>published</strong></li>
+         * <li><strong>rollbacking</strong></li>
+         * <li><strong>rollbacked</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pubishing</p>
          */
@@ -115,26 +158,46 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public String publishStatus;
 
         /**
+         * <p>The time when the application was released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-25T05:58:05Z</p>
          */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <p>Specifies how the version is released. Valid values:</p>
+         * <ul>
+         * <li>percentage: releases the version by percentage.</li>
+         * <li>region: releases the version by region.</li>
+         * </ul>
+         * <p>If you do not specify this parameter, the version is released by percentage by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>percentage</p>
+         */
         @NameInMap("PublishType")
         public String publishType;
 
         /**
+         * <p>The release version of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>ver-123123123123****</p>
          */
         @NameInMap("PublishingVersion")
         public String publishingVersion;
 
+        /**
+         * <p>The regions to which the version is released.</p>
+         */
         @NameInMap("Regions")
         public GetEdgeContainerAppStatusResponseBodyAppStatusRegions regions;
 
         /**
+         * <p>The time when the last rollback was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-25T05:58:05Z</p>
          */
@@ -142,6 +205,8 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public String rollbackTime;
 
         /**
+         * <p>The time when the application deployment was canceled. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-25T05:58:05Z</p>
          */

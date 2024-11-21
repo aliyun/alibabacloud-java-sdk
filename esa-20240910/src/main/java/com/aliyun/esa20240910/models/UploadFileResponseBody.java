@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadFileResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
@@ -14,6 +14,8 @@ public class UploadFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the file upload task. You can use this ID for task submission or query subsequently.</p>
+     * 
      * <strong>example:</strong>
      * <p>159253299357****</p>
      */

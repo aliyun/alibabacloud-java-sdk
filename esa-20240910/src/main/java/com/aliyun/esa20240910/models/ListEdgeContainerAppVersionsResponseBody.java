@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
@@ -26,12 +32,17 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The versions.</p>
+     */
     @NameInMap("Versions")
     public java.util.List<ListEdgeContainerAppVersionsResponseBodyVersions> versions;
 
@@ -82,6 +93,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
 
     public static class ListEdgeContainerAppVersionsResponseBodyVersionsContainersProbeContent extends TeaModel {
         /**
+         * <p>The probe command.</p>
+         * 
          * <strong>example:</strong>
          * <p>openresty -g  &quot;daemon off;</p>
          */
@@ -89,6 +102,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String command;
 
         /**
+         * <p>The number of consecutive failed health checks required for a container to be considered as unhealthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -96,6 +111,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public Integer failureThreshold;
 
         /**
+         * <p>The domain name that is used for health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -103,6 +120,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The request headers that are included in the container health check request.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Content-Type\&quot;:\&quot;application/json\&quot;}</p>
          */
@@ -110,6 +129,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String httpHeaders;
 
         /**
+         * <p>The latency for container probe initialization.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -117,6 +138,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public Integer initialDelaySeconds;
 
         /**
+         * <p>The path of the container health check.</p>
+         * 
          * <strong>example:</strong>
          * <p>/health_check</p>
          */
@@ -124,6 +147,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The interval between container health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -131,6 +156,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public Integer periodSeconds;
 
         /**
+         * <p>The port of the container health check.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -138,6 +165,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol that the container health check request uses.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -145,6 +174,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String scheme;
 
         /**
+         * <p>The number of consecutive successful health checks required for a container to be considered as healthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -152,6 +183,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public Integer successThreshold;
 
         /**
+         * <p>The timeout period of the container health check.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -255,6 +288,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
 
     public static class ListEdgeContainerAppVersionsResponseBodyVersionsContainers extends TeaModel {
         /**
+         * <p>The arguments that are passed to the container startup command.</p>
+         * 
          * <strong>example:</strong>
          * <p>-c a=1</p>
          */
@@ -262,6 +297,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String args;
 
         /**
+         * <p>The command that is used to start the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>openresty -g \&quot;daemon off;\&quot;</p>
          */
@@ -269,6 +306,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String command;
 
         /**
+         * <p>The environment variables of the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENV=prod</p>
          */
@@ -276,6 +315,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String envVariables;
 
         /**
+         * <p>The address of the container image.</p>
+         * 
          * <strong>example:</strong>
          * <p>nginx</p>
          */
@@ -283,6 +324,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String image;
 
         /**
+         * <p>The container name.</p>
+         * 
          * <strong>example:</strong>
          * <p>container1</p>
          */
@@ -290,6 +333,9 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The command that is run before the container is started. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\\]}}</code>.</p>
+         * <p>If you want to cancel this configuration, set the parameter value to <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;bash\&quot;,\&quot;-c\&quot;,\&quot;cd /home/admin/</p>
          */
@@ -297,16 +343,23 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String postStart;
 
         /**
+         * <p>The command that is run before the container is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>sh stop.sh</p>
          */
         @NameInMap("PreStop")
         public String preStop;
 
+        /**
+         * <p>The container probe content.</p>
+         */
         @NameInMap("ProbeContent")
         public ListEdgeContainerAppVersionsResponseBodyVersionsContainersProbeContent probeContent;
 
         /**
+         * <p>The probe type of the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>httpGet</p>
          */
@@ -314,6 +367,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String probeType;
 
         /**
+         * <p>The compute specification of the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>1C2G</p>
          */
@@ -409,16 +464,23 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
 
     public static class ListEdgeContainerAppVersionsResponseBodyVersions extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-88068867578379****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The containers in the version.</p>
+         */
         @NameInMap("Containers")
         public java.util.List<ListEdgeContainerAppVersionsResponseBodyVersionsContainers> containers;
 
         /**
+         * <p>The time when the version was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-10T02:53:16Z</p>
          */
@@ -426,6 +488,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the version was last released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-10T02:48:36Z</p>
          */
@@ -433,6 +497,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String lastPublishTime;
 
         /**
+         * <p>The version name.</p>
+         * 
          * <strong>example:</strong>
          * <p>version01</p>
          */
@@ -440,6 +506,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The time when the version was released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-10T02:48:36Z</p>
          */
@@ -447,6 +515,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String publishTime;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test version</p>
          */
@@ -454,6 +524,13 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String remarks;
 
         /**
+         * <p>The status of the current version. Valid values:</p>
+         * <ul>
+         * <li><strong>created</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>creating</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>created</p>
          */
@@ -461,6 +538,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the version was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-16 10:51:00</p>
          */
@@ -468,6 +547,8 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ver-87962637161651****</p>
          */

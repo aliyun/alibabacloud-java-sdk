@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class BatchGetExpressionFieldsResponseBody extends TeaModel {
+    /**
+     * <p>The fields that match the regular expressions.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<BatchGetExpressionFieldsResponseBodyFields> fields;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -38,10 +41,15 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
     }
 
     public static class BatchGetExpressionFieldsResponseBodyFields extends TeaModel {
+        /**
+         * <p>The fields that match the regular expression.</p>
+         */
         @NameInMap("Fields")
         public java.util.List<String> fields;
 
         /**
+         * <p>The ID of the regular expression, which corresponds to the expression ID in the request parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWaitingRoomRulesRequest extends TeaModel {
     /**
+     * <p>Optional. The rule name, which can be used to query a specific bypass rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,7 @@ public class ListWaitingRoomRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListWaitingRoomRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The ID of the waiting room to be bypassed, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWatingRooms</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ListWaitingRoomRulesRequest extends TeaModel {
     public String waitingRoomId;
 
     /**
+     * <p>Optional. The rule ID, which can be used to query a specific rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>37286782688****</p>
      */

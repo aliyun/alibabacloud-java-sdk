@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetErServiceResponseBody extends TeaModel {
     /**
+     * <p>The billing mode. Valid values:</p>
+     * <ul>
+     * <li>er_paymode: billed for customers on the China site.</li>
+     * <li>er_freemode: free for customers on the China site.</li>
+     * <li>er_paymodeintl: billed for customers on the International site.</li>
+     * <li>err_freemodeintl: free for customers on the International site</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>er_paymode</p>
      */
@@ -12,7 +20,7 @@ public class GetErServiceResponseBody extends TeaModel {
     public String planName;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
@@ -21,6 +29,13 @@ public class GetErServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The service status. Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Running</li>
+     * <li>NotOpened</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

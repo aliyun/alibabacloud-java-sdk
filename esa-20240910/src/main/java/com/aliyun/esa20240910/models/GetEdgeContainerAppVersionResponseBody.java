@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the version.</p>
+     */
     @NameInMap("Version")
     public GetEdgeContainerAppVersionResponseBodyVersion version;
 
@@ -37,6 +42,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppVersionResponseBodyVersionContainersACRImageInfo extends TeaModel {
         /**
+         * <p>The domain name of the Container Registry image.</p>
+         * 
          * <strong>example:</strong>
          * <p>*.mooc.seewo.com</p>
          */
@@ -44,6 +51,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The ID of the Container Registry instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>xcdn-9ak2thl14z5s</p>
          */
@@ -51,6 +60,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Indicates whether the image is an enterprise-level image.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -58,6 +69,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public Boolean isEnterpriseRegistry;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -65,6 +78,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>crr-zeu0xyk28alyxozh</p>
          */
@@ -72,6 +87,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String repoId;
 
         /**
+         * <p>The name of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_1</p>
          */
@@ -79,6 +96,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String repoName;
 
         /**
+         * <p>The namespace to which the image repository belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>wpy1</p>
          */
@@ -86,6 +105,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-healthy-100-soa-1710987653</p>
          */
@@ -93,6 +114,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>The URL of the Container Registry image tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-shenzhen.aliyuncs.com/lihetech/easywits_server_exam:3.40.2</p>
          */
@@ -180,6 +203,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppVersionResponseBodyVersionContainersProbeContent extends TeaModel {
         /**
+         * <p>The probe command.</p>
+         * 
          * <strong>example:</strong>
          * <p>sh test.sh</p>
          */
@@ -187,6 +212,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String command;
 
         /**
+         * <p>The number of consecutive failed health checks required for a container to be considered as unhealthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -194,6 +221,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public Integer failureThreshold;
 
         /**
+         * <p>The domain name that is used for health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -201,6 +230,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The request headers that are included in the container health check request.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;Content-Type\&quot;:\&quot;application/json</p>
          */
@@ -208,6 +239,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String httpHeaders;
 
         /**
+         * <p>The latency for container probe initialization.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -215,6 +248,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public Integer initialDelaySeconds;
 
         /**
+         * <p>The path of the container health check.</p>
+         * 
          * <strong>example:</strong>
          * <p>/health_check</p>
          */
@@ -222,6 +257,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The interval between container health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -229,6 +266,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public Integer periodSeconds;
 
         /**
+         * <p>The port of the container health check. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -236,6 +275,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol that the container health check request uses.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -243,6 +284,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String scheme;
 
         /**
+         * <p>The number of consecutive successful health checks required for a container to be considered as healthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -250,6 +293,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public Integer successThreshold;
 
         /**
+         * <p>The timeout period of the container health check.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -352,10 +397,15 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
     }
 
     public static class GetEdgeContainerAppVersionResponseBodyVersionContainers extends TeaModel {
+        /**
+         * <p>The information about the Container Registry image.</p>
+         */
         @NameInMap("ACRImageInfo")
         public GetEdgeContainerAppVersionResponseBodyVersionContainersACRImageInfo ACRImageInfo;
 
         /**
+         * <p>The arguments that are passed to the container startup command.</p>
+         * 
          * <strong>example:</strong>
          * <p>-c /path/config.toml</p>
          */
@@ -363,6 +413,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String args;
 
         /**
+         * <p>The command that is used to start the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>sh abc.sh 1 2 3</p>
          */
@@ -370,6 +422,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String command;
 
         /**
+         * <p>The environment variables.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENV=prod</p>
          */
@@ -377,6 +431,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String envVariables;
 
         /**
+         * <p>The image address.</p>
+         * 
          * <strong>example:</strong>
          * <p>nginx:1.14.0</p>
          */
@@ -384,6 +440,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String image;
 
         /**
+         * <p>Indicates whether the image is a Container Registry image.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -391,6 +449,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public Boolean isACRImage;
 
         /**
+         * <p>The version name.</p>
+         * 
          * <strong>example:</strong>
          * <p>version01</p>
          */
@@ -398,6 +458,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The command that is run before the container is started. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\\]}}</code>. If you want to cancel this configuration, set the parameter value to <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;touch\&quot;,\&quot;/home/admin/checkpoststartV1\&quot;]}}</p>
          */
@@ -405,16 +467,23 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String postStart;
 
         /**
+         * <p>The command that is run before the container is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>sh prestop.sh &quot;echo hello world&quot;</p>
          */
         @NameInMap("PreStop")
         public String preStop;
 
+        /**
+         * <p>The probe content.</p>
+         */
         @NameInMap("ProbeContent")
         public GetEdgeContainerAppVersionResponseBodyVersionContainersProbeContent probeContent;
 
         /**
+         * <p>The probe type.</p>
+         * 
          * <strong>example:</strong>
          * <p>httpGet</p>
          */
@@ -422,12 +491,17 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String probeType;
 
         /**
+         * <p>The compute specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>1C2G</p>
          */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The storage capacity of the container. Valid values: 0.5G, 10G, 20G, and 30G.</p>
+         */
         @NameInMap("Storage")
         public String storage;
 
@@ -544,16 +618,23 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppVersionResponseBodyVersion extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-88068867578379****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The container images deployed for this version.</p>
+         */
         @NameInMap("Containers")
         public java.util.List<GetEdgeContainerAppVersionResponseBodyVersionContainers> containers;
 
         /**
+         * <p>The time when the version was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-01T09:32:33Z</p>
          */
@@ -561,6 +642,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the version was last released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-25T04:58:05Z</p>
          */
@@ -568,6 +651,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String lastPublishTime;
 
         /**
+         * <p>The version name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -575,6 +660,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The time when the version was released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-14T02:04:03Z</p>
          */
@@ -582,6 +669,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String publishTime;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -589,6 +678,13 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String remarks;
 
         /**
+         * <p>The status of the current version. Valid values:</p>
+         * <ul>
+         * <li>created: The version is created.</li>
+         * <li>failed: The version failed to be created.</li>
+         * <li>creating: The version is being created.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>created</p>
          */
@@ -596,6 +692,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the version was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-03T10:52:52Z</p>
          */
@@ -603,6 +701,8 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The ID of the created version.</p>
+         * 
          * <strong>example:</strong>
          * <p>ver-87962637161651****</p>
          */

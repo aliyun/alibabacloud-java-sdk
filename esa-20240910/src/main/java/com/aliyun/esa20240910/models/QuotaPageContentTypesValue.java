@@ -4,9 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class QuotaPageContentTypesValue extends TeaModel {
+    /**
+     * <p>Indicates whether the custom error pages of the Content-Type are configured.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The maximum length of the custom error pages of the Content-Type.</p>
+     */
     @NameInMap("ContentLength")
     public WafQuotaInteger contentLength;
 

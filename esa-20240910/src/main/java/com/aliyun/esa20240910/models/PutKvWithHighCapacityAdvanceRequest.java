@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutKvWithHighCapacityAdvanceRequest extends TeaModel {
     /**
+     * <p>The key name. The name can be up to 512 characters in length and cannot contain spaces or backslashes (\\).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PutKvWithHighCapacityAdvanceRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class PutKvWithHighCapacityAdvanceRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The download URL of the key-value pair that you want to upload. This parameter is automatically filled in when you use the SDK to call the operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

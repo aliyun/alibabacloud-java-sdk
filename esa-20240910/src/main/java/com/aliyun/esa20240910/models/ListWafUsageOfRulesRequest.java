@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWafUsageOfRulesRequest extends TeaModel {
     /**
+     * <p>The WAF rule category.</p>
+     * 
      * <strong>example:</strong>
      * <p>http_anti_scan</p>
      */
@@ -12,6 +14,8 @@ public class ListWafUsageOfRulesRequest extends TeaModel {
     public String phase;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>ListWafUsageOfRules</p>
      */

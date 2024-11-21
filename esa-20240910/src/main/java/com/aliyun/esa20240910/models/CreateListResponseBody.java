@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateListResponseBody extends TeaModel {
     /**
+     * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
+     * 
      * <strong>example:</strong>
      * <p>40000001</p>
      */
@@ -12,7 +14,7 @@ public class CreateListResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>

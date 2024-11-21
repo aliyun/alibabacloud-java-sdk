@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRecordResponseBody extends TeaModel {
     /**
+     * <p>The record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */
@@ -12,6 +14,8 @@ public class CreateRecordResponseBody extends TeaModel {
     public Long recordId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */

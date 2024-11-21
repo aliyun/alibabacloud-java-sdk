@@ -5,18 +5,32 @@ import com.aliyun.tea.*;
 
 public class BlockObjectRequest extends TeaModel {
     /**
+     * <p>The content to block.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public java.util.List<String> content;
 
+    /**
+     * <p>The blocking period that you can extend. Set the value to 2year.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2year</p>
+     */
     @NameInMap("Extension")
     public String extension;
 
+    /**
+     * <p>The period of time during which the URL is blocked. Unit: seconds. Specify this parameter if Type is set to block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>864000</p>
+     */
     @NameInMap("Maxage")
     public Integer maxage;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +40,15 @@ public class BlockObjectRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The type. Valid values:</p>
+     * <ul>
+     * <li><strong>block</strong></li>
+     * <li><strong>unblock</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>block</p>
      */
     @NameInMap("Type")
     public String type;

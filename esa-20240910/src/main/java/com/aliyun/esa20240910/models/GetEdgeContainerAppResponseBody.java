@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppResponseBody extends TeaModel {
+    /**
+     * <p>The basic information about the application.</p>
+     */
     @NameInMap("App")
     public GetEdgeContainerAppResponseBodyApp app;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
      */
@@ -37,6 +42,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppResponseBodyAppHealthCheck extends TeaModel {
         /**
+         * <p>The number of consecutive failed health checks required for an application to be considered as unhealthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -44,6 +51,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public Integer failTimes;
 
         /**
+         * <p>The domain name that is used for health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -51,6 +60,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The range of health check status codes that indicate successful health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>http_2xx</p>
          */
@@ -58,6 +69,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String httpCode;
 
         /**
+         * <p>The interval between health checks. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -65,6 +78,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public Integer interval;
 
         /**
+         * <p>The HTTP method that the health check request uses.</p>
+         * 
          * <strong>example:</strong>
          * <p>HEAD</p>
          */
@@ -72,6 +87,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The health check port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -79,6 +96,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The number of consecutive successful health checks required for an application to be considered as healthy.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -86,6 +105,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public Integer succTimes;
 
         /**
+         * <p>The timeout period of the health check. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -93,6 +114,12 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
+         * <p>The health check type. Valid values:</p>
+         * <ul>
+         * <li>l7</li>
+         * <li>l4</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>l7</p>
          */
@@ -100,6 +127,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The health check URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>/health_check</p>
          */
@@ -195,6 +224,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppResponseBodyApp extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-88068867578379****</p>
          */
@@ -202,6 +233,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The time when the application was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-25T05:58:05Z</p>
          */
@@ -209,6 +242,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The domain name that is associated with the application. If no domain name is associated with the application, the value is an empty string.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.1feel.cn">www.1feel.cn</a></p>
          */
@@ -216,16 +251,27 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The type of the gateway. Valid values:</p>
+         * <ul>
+         * <li>l7: Layer 7 gateway.</li>
+         * <li>l4: Layer 4 gateway.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>l7</p>
          */
         @NameInMap("GatewayType")
         public String gatewayType;
 
+        /**
+         * <p>The information about health checks.</p>
+         */
         @NameInMap("HealthCheck")
         public GetEdgeContainerAppResponseBodyAppHealthCheck healthCheck;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app1</p>
          */
@@ -233,6 +279,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether QUIC is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -240,6 +288,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String quicCid;
 
         /**
+         * <p>The remarks about the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>test app</p>
          */
@@ -247,6 +297,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String remarks;
 
         /**
+         * <p>The server port. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -254,6 +306,13 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public Integer servicePort;
 
         /**
+         * <p>The status of the application. Valid values:</p>
+         * <ul>
+         * <li>creating: The application is being created.</li>
+         * <li>failed: The application failed to be created.</li>
+         * <li>created: The application is created.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>created</p>
          */
@@ -261,6 +320,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -268,6 +329,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public Integer targetPort;
 
         /**
+         * <p>The time when the application was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-26T02:35:58Z</p>
          */
@@ -275,6 +338,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The number of versions of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

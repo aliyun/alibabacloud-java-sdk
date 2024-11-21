@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetKvResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
      */
@@ -12,6 +14,8 @@ public class GetKvResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The value of the key.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_value</p>
      */
