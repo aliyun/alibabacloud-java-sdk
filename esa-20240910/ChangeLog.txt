@@ -1,3 +1,10 @@
+2024-11-22 Version: 2.7.0
+- Support API CreateSiteFunction.
+- Support API DeleteSiteFunction.
+- Support API ListSiteFunctions.
+- Support API UpdateSiteFunction.
+
+
 2024-11-21 Version: 2.6.0
 - Support API CreateOriginProtection.
 - Support API DeleteOriginProtection.
