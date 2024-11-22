@@ -14,7 +14,7 @@ public class ListCloudResourcesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The data returned for the request.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListCloudResourcesResponseBodyData> data;
@@ -29,7 +29,7 @@ public class ListCloudResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of certificate authority (CA) certificates per page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -129,9 +129,9 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         public String certStartTime;
 
         /**
-         * <p>The AccessKey ID used to access cloud resources.</p>
+         * <p>The AccessKey ID that is used to access cloud resources.</p>
          * <blockquote>
-         * <p> This parameter is required only when you deploy certificates to services of multiple clouds.</p>
+         * <p> This parameter is returned only when you deploy certificates to cloud services of third-party clouds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,10 +141,13 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         public String cloudAccessId;
 
         /**
-         * <p>The cloud service provider of the cloud resource. Valid values:</p>
+         * <p>The cloud service provider.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><strong>aliyun</strong>: Alibaba Cloud</li>
-         * <li><strong>Tencent</strong>: Tencent Cloud</li>
+         * <li>Tencent</li>
+         * <li>Huawei</li>
+         * <li>Aws</li>
+         * <li>aliyun</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,8 +202,8 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether HTTPS is enabled for the cloud resource. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes.</li>
+         * <li><strong>0</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>

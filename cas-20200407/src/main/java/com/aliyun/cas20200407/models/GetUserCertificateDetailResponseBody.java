@@ -36,6 +36,12 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String cert;
 
     /**
+     * <p>The certificate chain.</p>
+     */
+    @NameInMap("CertChain")
+    public java.util.List<GetUserCertificateDetailResponseBodyCertChain> certChain;
+
+    /**
      * <p>The unique identifier of the certificate. The value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</p>
      * 
      * <strong>example:</strong>
@@ -134,7 +140,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-upload-50yf1q</p>
@@ -224,7 +230,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String sans;
 
     /**
-     * <p>The certificate serial No.</p>
+     * <p>The serial number of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>06ea4879591ddf84e6c8b6ba43607ccf</p>
@@ -233,7 +239,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String serialNo;
 
     /**
-     * <p>The certificate sha2 value.</p>
+     * <p>The SHA-2 value of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>840707695D5EE41323102DDC2CB4924AA561012FBDC4E1A6324147119ED3C339</p>
@@ -299,6 +305,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
     public String getCert() {
         return this.cert;
+    }
+
+    public GetUserCertificateDetailResponseBody setCertChain(java.util.List<GetUserCertificateDetailResponseBodyCertChain> certChain) {
+        this.certChain = certChain;
+        return this;
+    }
+    public java.util.List<GetUserCertificateDetailResponseBodyCertChain> getCertChain() {
+        return this.certChain;
     }
 
     public GetUserCertificateDetailResponseBody setCertIdentifier(String certIdentifier) {
@@ -499,6 +513,99 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
+    }
+
+    public static class GetUserCertificateDetailResponseBodyCertChain extends TeaModel {
+        /**
+         * <p>The common name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("CommonName")
+        public String commonName;
+
+        /**
+         * <p>The common name of the issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Encryption Everywhere DV TLS CA - G2</p>
+         */
+        @NameInMap("IssuerCommonName")
+        public String issuerCommonName;
+
+        /**
+         * <p>The end of the validity period of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17322613180000</p>
+         */
+        @NameInMap("NotAfter")
+        public Long notAfter;
+
+        /**
+         * <p>The beginning of the validity period of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17322633180000</p>
+         */
+        @NameInMap("NotBefore")
+        public Long notBefore;
+
+        /**
+         * <p>The remaining days of the certificate validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("RemainDay")
+        public Integer remainDay;
+
+        public static GetUserCertificateDetailResponseBodyCertChain build(java.util.Map<String, ?> map) throws Exception {
+            GetUserCertificateDetailResponseBodyCertChain self = new GetUserCertificateDetailResponseBodyCertChain();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserCertificateDetailResponseBodyCertChain setCommonName(String commonName) {
+            this.commonName = commonName;
+            return this;
+        }
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        public GetUserCertificateDetailResponseBodyCertChain setIssuerCommonName(String issuerCommonName) {
+            this.issuerCommonName = issuerCommonName;
+            return this;
+        }
+        public String getIssuerCommonName() {
+            return this.issuerCommonName;
+        }
+
+        public GetUserCertificateDetailResponseBodyCertChain setNotAfter(Long notAfter) {
+            this.notAfter = notAfter;
+            return this;
+        }
+        public Long getNotAfter() {
+            return this.notAfter;
+        }
+
+        public GetUserCertificateDetailResponseBodyCertChain setNotBefore(Long notBefore) {
+            this.notBefore = notBefore;
+            return this;
+        }
+        public Long getNotBefore() {
+            return this.notBefore;
+        }
+
+        public GetUserCertificateDetailResponseBodyCertChain setRemainDay(Integer remainDay) {
+            this.remainDay = remainDay;
+            return this;
+        }
+        public Integer getRemainDay() {
+            return this.remainDay;
+        }
+
     }
 
 }
