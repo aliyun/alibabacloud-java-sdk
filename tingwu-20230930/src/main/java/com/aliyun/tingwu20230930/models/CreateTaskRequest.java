@@ -79,6 +79,9 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestInput extends TeaModel {
+        @NameInMap("AudioChannelMode")
+        public String audioChannelMode;
+
         /**
          * <strong>example:</strong>
          * <p><a href="http://xxx.com/zzz/1.wav">http://xxx.com/zzz/1.wav</a></p>
@@ -134,6 +137,14 @@ public class CreateTaskRequest extends TeaModel {
         public static CreateTaskRequestInput build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestInput self = new CreateTaskRequestInput();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestInput setAudioChannelMode(String audioChannelMode) {
+            this.audioChannelMode = audioChannelMode;
+            return this;
+        }
+        public String getAudioChannelMode() {
+            return this.audioChannelMode;
         }
 
         public CreateTaskRequestInput setFileUrl(String fileUrl) {
