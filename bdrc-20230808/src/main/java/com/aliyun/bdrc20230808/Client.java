@@ -197,6 +197,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeResourcesResponse describeResourcesWithOptions(DescribeResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataRedundancyType)) {
+            query.put("DataRedundancyType", request.dataRedundancyType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.failedRuleTemplate)) {
             query.put("FailedRuleTemplate", request.failedRuleTemplate);
         }
@@ -223,6 +227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
             query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageClass)) {
+            query.put("StorageClass", request.storageClass);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

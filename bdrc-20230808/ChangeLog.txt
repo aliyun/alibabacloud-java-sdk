@@ -1,3 +1,10 @@
+2024-11-22 Version: 1.0.1
+- Update API DescribeResources: add param DataRedundancyType.
+- Update API DescribeResources: add param StorageClass.
+- Update API DescribeResources: update response param.
+- Update API DescribeTopRiskyResources: update response param.
+
+
 2024-10-09 Version: 1.0.0
 - Generated java 2023-08-08 for BDRC.
 
