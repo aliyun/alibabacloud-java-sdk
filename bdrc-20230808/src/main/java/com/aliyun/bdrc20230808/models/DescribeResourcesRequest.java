@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeResourcesRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>LRS</p>
+     */
+    @NameInMap("DataRedundancyType")
+    public String dataRedundancyType;
+
+    /**
+     * <strong>example:</strong>
      * <p>rule-000c***yc9</p>
      */
     @NameInMap("FailedRuleTemplate")
@@ -53,9 +60,24 @@ public class DescribeResourcesRequest extends TeaModel {
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ARCHIVE</p>
+     */
+    @NameInMap("StorageClass")
+    public String storageClass;
+
     public static DescribeResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcesRequest self = new DescribeResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeResourcesRequest setDataRedundancyType(String dataRedundancyType) {
+        this.dataRedundancyType = dataRedundancyType;
+        return this;
+    }
+    public String getDataRedundancyType() {
+        return this.dataRedundancyType;
     }
 
     public DescribeResourcesRequest setFailedRuleTemplate(String failedRuleTemplate) {
@@ -112,6 +134,14 @@ public class DescribeResourcesRequest extends TeaModel {
     }
     public String getSortOrder() {
         return this.sortOrder;
+    }
+
+    public DescribeResourcesRequest setStorageClass(String storageClass) {
+        this.storageClass = storageClass;
+        return this;
+    }
+    public String getStorageClass() {
+        return this.storageClass;
     }
 
 }

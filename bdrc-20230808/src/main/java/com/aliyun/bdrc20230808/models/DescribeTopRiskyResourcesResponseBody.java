@@ -64,6 +64,9 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("DataRedundancyType")
+        public String dataRedundancyType;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -155,6 +158,9 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageClass")
+        public String storageClass;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -222,6 +228,14 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeTopRiskyResourcesResponseBodyDataContent setDataRedundancyType(String dataRedundancyType) {
+            this.dataRedundancyType = dataRedundancyType;
+            return this;
+        }
+        public String getDataRedundancyType() {
+            return this.dataRedundancyType;
         }
 
         public DescribeTopRiskyResourcesResponseBodyDataContent setEnableCheck(Boolean enableCheck) {
@@ -326,6 +340,14 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeTopRiskyResourcesResponseBodyDataContent setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public DescribeTopRiskyResourcesResponseBodyDataContent setTotalDataSize(Long totalDataSize) {

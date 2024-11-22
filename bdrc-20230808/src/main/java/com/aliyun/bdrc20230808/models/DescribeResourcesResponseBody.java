@@ -64,6 +64,9 @@ public class DescribeResourcesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("DataRedundancyType")
+        public String dataRedundancyType;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -155,6 +158,9 @@ public class DescribeResourcesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageClass")
+        public String storageClass;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -222,6 +228,14 @@ public class DescribeResourcesResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeResourcesResponseBodyDataContent setDataRedundancyType(String dataRedundancyType) {
+            this.dataRedundancyType = dataRedundancyType;
+            return this;
+        }
+        public String getDataRedundancyType() {
+            return this.dataRedundancyType;
         }
 
         public DescribeResourcesResponseBodyDataContent setEnableCheck(Boolean enableCheck) {
@@ -326,6 +340,14 @@ public class DescribeResourcesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeResourcesResponseBodyDataContent setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public DescribeResourcesResponseBodyDataContent setTotalDataSize(Long totalDataSize) {
