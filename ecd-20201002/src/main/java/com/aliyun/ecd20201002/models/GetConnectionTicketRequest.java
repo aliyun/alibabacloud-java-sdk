@@ -78,6 +78,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("Tag")
+    public java.util.List<GetConnectionTicketRequestTag> tag;
+
     /**
      * <strong>example:</strong>
      * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
@@ -189,6 +192,14 @@ public class GetConnectionTicketRequest extends TeaModel {
         return this.sessionId;
     }
 
+    public GetConnectionTicketRequest setTag(java.util.List<GetConnectionTicketRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<GetConnectionTicketRequestTag> getTag() {
+        return this.tag;
+    }
+
     public GetConnectionTicketRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -203,6 +214,36 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getUuid() {
         return this.uuid;
+    }
+
+    public static class GetConnectionTicketRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetConnectionTicketRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            GetConnectionTicketRequestTag self = new GetConnectionTicketRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConnectionTicketRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetConnectionTicketRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
