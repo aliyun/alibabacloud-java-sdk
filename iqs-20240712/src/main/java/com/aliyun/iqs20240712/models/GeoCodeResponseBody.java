@@ -21,6 +21,9 @@ public class GeoCodeResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     /**
      * <strong>example:</strong>
      * <p>True</p>
@@ -55,6 +58,14 @@ public class GeoCodeResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GeoCodeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GeoCodeResponseBody setSuccess(Boolean success) {

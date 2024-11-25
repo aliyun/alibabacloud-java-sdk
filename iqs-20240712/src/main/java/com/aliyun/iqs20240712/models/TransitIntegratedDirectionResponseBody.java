@@ -21,6 +21,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -55,6 +58,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public TransitIntegratedDirectionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public TransitIntegratedDirectionResponseBody setSuccess(Boolean success) {
