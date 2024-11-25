@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLiveTranscodeJobsRequest extends TeaModel {
     /**
+     * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs. If you search for jobs by name, fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>24ecbb5c-4f98-4194-9400-f17102e27fc5</p>
      */
@@ -12,6 +14,8 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public String keyWord;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,12 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+     * <ul>
+     * <li>asc</li>
+     * <li>desc</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -33,6 +45,12 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The start mode of the transcoding job.</p>
+     * <ul>
+     * <li>0: The transcoding job immediately starts.</li>
+     * <li>1: The transcoding job starts at the scheduled time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -40,6 +58,9 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer startMode;
 
     /**
+     * <p>The state of the job.</p>
+     * <p>0: The job is not started. 1: The job is in progress. 2: The job is stopped.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +68,14 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The type of the template used by the transcoding job.</p>
+     * <ul>
+     * <li>normal</li>
+     * <li>narrow-band</li>
+     * <li>audio-only</li>
+     * <li>origin</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */

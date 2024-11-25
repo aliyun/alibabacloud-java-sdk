@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveSnapshotJobRequest extends TeaModel {
     /**
+     * <p>The snapshot callback URL.</p>
+     * <ul>
+     * <li>It cannot exceed 255 characters in length.</li>
+     * <li>Both HTTP and HTTPS URLs are supported.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></p>
      */
@@ -12,24 +18,31 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
     public String callbackUrl;
 
     /**
+     * <p>The name of the job.</p>
+     * <ul>
+     * <li>It cannot exceed 128 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
+     * <p>The information about the output snapshot.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotOutput")
     public SubmitLiveSnapshotJobRequestSnapshotOutput snapshotOutput;
 
     /**
+     * <p>The information about the input stream.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public SubmitLiveSnapshotJobRequestStreamInput streamInput;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,6 +98,7 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
 
     public static class SubmitLiveSnapshotJobRequestSnapshotOutput extends TeaModel {
         /**
+         * <p>The bucket of the snapshot output endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +108,7 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The output endpoint of the snapshot.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,6 +118,7 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The storage type of the snapshot. The value can only be oss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +160,7 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
 
     public static class SubmitLiveSnapshotJobRequestStreamInput extends TeaModel {
         /**
+         * <p>The type of the input stream. The value can only be rtmp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +170,10 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The URL of the input stream.</p>
+         * <ul>
+         * <li>It cannot exceed 255 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendLiveTranscodeJobCommandRequest extends TeaModel {
     /**
+     * <p>The operation command. Only the stop command is supported. This command is used to stop a transcoding job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SendLiveTranscodeJobCommandRequest extends TeaModel {
     public String command;
 
     /**
+     * <p>The ID of the transcoding job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

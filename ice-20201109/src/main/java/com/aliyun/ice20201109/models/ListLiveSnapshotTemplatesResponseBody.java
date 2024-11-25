@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -26,16 +32,23 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The sorting order of the results by creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The list of the templates.</p>
+     */
     @NameInMap("TemplateList")
     public java.util.List<ListLiveSnapshotTemplatesResponseBodyTemplateList> templateList;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -97,6 +110,8 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveSnapshotTemplatesResponseBodyTemplateList extends TeaModel {
         /**
+         * <p>The time when the job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-20T02:48:58Z</p>
          */
@@ -104,16 +119,23 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The template name.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -121,6 +143,13 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         public Integer timeInterval;
 
         /**
+         * <p>The type of the template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>system</li>
+         * <li>custom</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */

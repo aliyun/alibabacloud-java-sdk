@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveTranscodeJobRequest extends TeaModel {
     /**
+     * <p>The name of the transcoding job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The start mode of the transcoding job.</p>
+     * <ul>
+     * <li>0: The transcoding job immediately starts.</li>
+     * <li>1: The transcoding job starts at the scheduled time.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +29,14 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
     public Integer startMode;
 
     /**
+     * <p>The information about the input stream.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public SubmitLiveTranscodeJobRequestStreamInput streamInput;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,10 +45,14 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The configuration of a timed transcoding job. This parameter is required if you set StartMode to 1.</p>
+     */
     @NameInMap("TimedConfig")
     public SubmitLiveTranscodeJobRequestTimedConfig timedConfig;
 
     /**
+     * <p>The information about the transcoding output.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TranscodeOutput")
@@ -101,6 +113,7 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
 
     public static class SubmitLiveTranscodeJobRequestStreamInput extends TeaModel {
         /**
+         * <p>The URL of the input stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +123,7 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
         public String inputUrl;
 
         /**
+         * <p>The type of the input stream. The value can only be rtmp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +157,8 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
 
     public static class SubmitLiveTranscodeJobRequestTimedConfig extends TeaModel {
         /**
+         * <p>The stop time of the transcoding job. Note: The time span between the stop time and the current time cannot exceed seven days.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-20T08:20:32Z</p>
          */
@@ -150,6 +166,8 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The start time of the transcoding job. Note: The time span between the start time and the current time cannot exceed seven days.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-02-21T00:00:00Z</p>
          */
@@ -181,6 +199,8 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
 
     public static class SubmitLiveTranscodeJobRequestTranscodeOutput extends TeaModel {
         /**
+         * <p>The streaming domain name of ApsaraVideo Live.</p>
+         * 
          * <strong>example:</strong>
          * <p>mydomain</p>
          */
@@ -188,6 +208,7 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The type of the output stream. A value of LiveCenter indicates that the URL of the output stream is generated based on the domain name of ApsaraVideo Live. The value can only be LiveCenter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

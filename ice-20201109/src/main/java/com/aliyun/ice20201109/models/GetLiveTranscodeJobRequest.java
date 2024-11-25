@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLiveTranscodeJobRequest extends TeaModel {
     /**
+     * <p>The ID of the transcoding job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

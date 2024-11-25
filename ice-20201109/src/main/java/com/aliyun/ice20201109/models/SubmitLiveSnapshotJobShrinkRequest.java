@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveSnapshotJobShrinkRequest extends TeaModel {
     /**
+     * <p>The snapshot callback URL.</p>
+     * <ul>
+     * <li>It cannot exceed 255 characters in length.</li>
+     * <li>Both HTTP and HTTPS URLs are supported.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></p>
      */
@@ -12,24 +18,31 @@ public class SubmitLiveSnapshotJobShrinkRequest extends TeaModel {
     public String callbackUrl;
 
     /**
+     * <p>The name of the job.</p>
+     * <ul>
+     * <li>It cannot exceed 128 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
+     * <p>The information about the output snapshot.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotOutput")
     public String snapshotOutputShrink;
 
     /**
+     * <p>The information about the input stream.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public String streamInputShrink;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

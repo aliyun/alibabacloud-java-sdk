@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveRecordTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5330CF-B4C8-5BEF-AA6B-8E70BD20FAEE</p>
      */

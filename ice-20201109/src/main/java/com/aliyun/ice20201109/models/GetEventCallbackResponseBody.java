@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEventCallbackResponseBody extends TeaModel {
     /**
+     * <p>The authentication key. This parameter is returned only for HTTP callbacks.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestKey001</p>
      */
@@ -12,6 +14,12 @@ public class GetEventCallbackResponseBody extends TeaModel {
     public String authKey;
 
     /**
+     * <p>Specifies whether callback authentication is enabled. This parameter is returned only for <strong>HTTP</strong> callbacks. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,6 +27,8 @@ public class GetEventCallbackResponseBody extends TeaModel {
     public String authSwitch;
 
     /**
+     * <p>The name of the Simple Message Queue (SMQ) queue to which callback messages are sent.</p>
+     * 
      * <strong>example:</strong>
      * <p>ice-callback-queue</p>
      */
@@ -26,6 +36,12 @@ public class GetEventCallbackResponseBody extends TeaModel {
     public String callbackQueueName;
 
     /**
+     * <p>The callback method. Valid values:</p>
+     * <ul>
+     * <li><strong>HTTP</strong></li>
+     * <li><strong>MNS</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -33,6 +49,8 @@ public class GetEventCallbackResponseBody extends TeaModel {
     public String callbackType;
 
     /**
+     * <p>The callback URL to which event notifications are sent.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxx.yyy/callback">http://xxx.yyy/callback</a></p>
      */
@@ -40,6 +58,8 @@ public class GetEventCallbackResponseBody extends TeaModel {
     public String callbackURL;
 
     /**
+     * <p>The type of the callback event. Multiple values are separated with commas (,). For more information about callback event types, see <a href="https://help.aliyun.com/document_detail/441362.html">Event notification content</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>ProduceMediaComplete,TranscodeComplete</p>
      */
@@ -47,6 +67,8 @@ public class GetEventCallbackResponseBody extends TeaModel {
     public String eventTypeList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

@@ -976,8 +976,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建直播录制模板</p>
+     * <p>Creates a live stream recording template to submit live stream recording jobs.</p>
      * 
      * @param tmpReq CreateLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1018,8 +1021,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建直播录制模板</p>
+     * <p>Creates a live stream recording template to submit live stream recording jobs.</p>
      * 
      * @param request CreateLiveRecordTemplateRequest
      * @return CreateLiveRecordTemplateResponse
@@ -1031,7 +1037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建直播截图模板</p>
+     * <p>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</p>
      * 
      * @param request CreateLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1075,7 +1081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建直播截图模板</p>
+     * <p>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</p>
      * 
      * @param request CreateLiveSnapshotTemplateRequest
      * @return CreateLiveSnapshotTemplateResponse
@@ -1087,7 +1093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建转码模版</p>
+     * <p>Creates a live stream transcoding template to submit live stream transcoding jobs.</p>
      * 
      * @param tmpReq CreateLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1133,7 +1139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建转码模版</p>
+     * <p>Creates a live stream transcoding template to submit live stream transcoding jobs.</p>
      * 
      * @param request CreateLiveTranscodeTemplateRequest
      * @return CreateLiveTranscodeTemplateResponse
@@ -1913,7 +1919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实时媒体服务-删除录制文件</p>
+     * <p>Deletes live stream recording files. You can choose to delete only the recording files or delete both the recording files and the original Object Storage Service (OSS) files.</p>
      * 
      * @param request DeleteLiveRecordFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1949,7 +1955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实时媒体服务-删除录制文件</p>
+     * <p>Deletes live stream recording files. You can choose to delete only the recording files or delete both the recording files and the original Object Storage Service (OSS) files.</p>
      * 
      * @param request DeleteLiveRecordFilesRequest
      * @return DeleteLiveRecordFilesResponse
@@ -1961,7 +1967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除直播录制模板</p>
+     * <p>Deletes a live stream recording template without affecting existing jobs.</p>
      * 
      * @param request DeleteLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1993,7 +1999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除直播录制模板</p>
+     * <p>Deletes a live stream recording template without affecting existing jobs.</p>
      * 
      * @param request DeleteLiveRecordTemplateRequest
      * @return DeleteLiveRecordTemplateResponse
@@ -2005,7 +2011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除直播截图文件</p>
+     * <p>Deletes live stream snapshot files. You can choose to delete only the snapshot files or delete both the snapshot files and the original Object Storage Service (OSS) files.</p>
      * 
      * @param tmpReq DeleteLiveSnapshotFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2051,7 +2057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除直播截图文件</p>
+     * <p>Deletes live stream snapshot files. You can choose to delete only the snapshot files or delete both the snapshot files and the original Object Storage Service (OSS) files.</p>
      * 
      * @param request DeleteLiveSnapshotFilesRequest
      * @return DeleteLiveSnapshotFilesResponse
@@ -2063,7 +2069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除直播截图模板</p>
+     * <p>Deletes a live stream snapshot template.</p>
      * 
      * @param request DeleteLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2095,7 +2101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除直播截图模板</p>
+     * <p>Deletes a live stream snapshot template.</p>
      * 
      * @param request DeleteLiveSnapshotTemplateRequest
      * @return DeleteLiveSnapshotTemplateResponse
@@ -2151,7 +2157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定转码模版</p>
+     * <p>Deletes a live stream transcoding template.</p>
      * 
      * @param request DeleteLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2183,7 +2189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定转码模版</p>
+     * <p>Deletes a live stream transcoding template.</p>
      * 
      * @param request DeleteLiveTranscodeTemplateRequest
      * @return DeleteLiveTranscodeTemplateResponse
@@ -3919,7 +3925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取事件回调地址</p>
+     * <p>Queries event callback configurations.</p>
      * 
      * @param request GetEventCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3943,7 +3949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取事件回调地址</p>
+     * <p>Queries event callback configurations.</p>
      * @return GetEventCallbackResponse
      */
     public GetEventCallbackResponse getEventCallback() throws Exception {
@@ -4053,7 +4059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录制任务明细</p>
+     * <p>Queries the information about a live stream recording job.</p>
      * 
      * @param request GetLiveRecordJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4081,7 +4087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录制任务明细</p>
+     * <p>Queries the information about a live stream recording job.</p>
      * 
      * @param request GetLiveRecordJobRequest
      * @return GetLiveRecordJobResponse
@@ -4093,7 +4099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播录制模板详情</p>
+     * <p>Queries the information about a live stream recording template or a snapshot of the template.</p>
      * 
      * @param request GetLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4121,7 +4127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播录制模板详情</p>
+     * <p>Queries the information about a live stream recording template or a snapshot of the template.</p>
      * 
      * @param request GetLiveRecordTemplateRequest
      * @return GetLiveRecordTemplateResponse
@@ -4133,7 +4139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图任务</p>
+     * <p>Queries the information a live stream snapshot job.</p>
      * 
      * @param request GetLiveSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4161,7 +4167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图任务</p>
+     * <p>Queries the information a live stream snapshot job.</p>
      * 
      * @param request GetLiveSnapshotJobRequest
      * @return GetLiveSnapshotJobResponse
@@ -4173,7 +4179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图模板</p>
+     * <p>Queries the information about a live stream snapshot template.</p>
      * 
      * @param request GetLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4201,7 +4207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图模板</p>
+     * <p>Queries the information about a live stream snapshot template.</p>
      * 
      * @param request GetLiveSnapshotTemplateRequest
      * @return GetLiveSnapshotTemplateResponse
@@ -4213,7 +4219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码任务详情</p>
+     * <p>Queries the information about a live stream transcoding job.</p>
      * 
      * @param request GetLiveTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4245,7 +4251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码任务详情</p>
+     * <p>Queries the information about a live stream transcoding job.</p>
      * 
      * @param request GetLiveTranscodeJobRequest
      * @return GetLiveTranscodeJobResponse
@@ -4257,7 +4263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码模版详情</p>
+     * <p>Queries the information a live stream transcoding template.</p>
      * 
      * @param request GetLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4289,7 +4295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码模版详情</p>
+     * <p>Queries the information a live stream transcoding template.</p>
      * 
      * @param request GetLiveTranscodeTemplateRequest
      * @return GetLiveTranscodeTemplateResponse
@@ -6091,7 +6097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录制文件</p>
+     * <p>Queries all recording index files in the specified period of time.</p>
      * 
      * @param request ListLiveRecordFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6119,7 +6125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录制文件</p>
+     * <p>Queries all recording index files in the specified period of time.</p>
      * 
      * @param request ListLiveRecordFilesRequest
      * @return ListLiveRecordFilesResponse
@@ -6131,7 +6137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录制任务</p>
+     * <p>Queries a list of live stream recording jobs by page.</p>
      * 
      * @param request ListLiveRecordJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6159,7 +6165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录制任务</p>
+     * <p>Queries a list of live stream recording jobs by page.</p>
      * 
      * @param request ListLiveRecordJobsRequest
      * @return ListLiveRecordJobsResponse
@@ -6171,7 +6177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播录制模板</p>
+     * <p>Queries a list of live stream recording templates.</p>
      * 
      * @param request ListLiveRecordTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6199,7 +6205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播录制模板</p>
+     * <p>Queries a list of live stream recording templates.</p>
      * 
      * @param request ListLiveRecordTemplatesRequest
      * @return ListLiveRecordTemplatesResponse
@@ -6211,7 +6217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图文件列表</p>
+     * <p>Queries a list of live stream snapshot files by page.</p>
      * 
      * @param request ListLiveSnapshotFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6239,7 +6245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图文件列表</p>
+     * <p>Queries a list of live stream snapshot files by page.</p>
      * 
      * @param request ListLiveSnapshotFilesRequest
      * @return ListLiveSnapshotFilesResponse
@@ -6251,7 +6257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图任务列表</p>
+     * <p>Queries a list of live stream snapshot jobs by page.</p>
      * 
      * @param request ListLiveSnapshotJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6279,7 +6285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图任务列表</p>
+     * <p>Queries a list of live stream snapshot jobs by page.</p>
      * 
      * @param request ListLiveSnapshotJobsRequest
      * @return ListLiveSnapshotJobsResponse
@@ -6291,7 +6297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图模板列表</p>
+     * <p>Queries a list of live stream snapshot templates by page.</p>
      * 
      * @param request ListLiveSnapshotTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6319,7 +6325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询直播截图模板列表</p>
+     * <p>Queries a list of live stream snapshot templates by page.</p>
      * 
      * @param request ListLiveSnapshotTemplatesRequest
      * @return ListLiveSnapshotTemplatesResponse
@@ -6331,7 +6337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码任务列表</p>
+     * <p>Queries a list of live stream transcoding jobs.</p>
      * 
      * @param request ListLiveTranscodeJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6387,7 +6393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码任务列表</p>
+     * <p>Queries a list of live stream transcoding jobs.</p>
      * 
      * @param request ListLiveTranscodeJobsRequest
      * @return ListLiveTranscodeJobsResponse
@@ -6399,7 +6405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码模版列表</p>
+     * <p>Queries a list of live stream transcoding templates.</p>
      * 
      * @param request ListLiveTranscodeTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6455,7 +6461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询转码模版列表</p>
+     * <p>Queries a list of live stream transcoding templates.</p>
      * 
      * @param request ListLiveTranscodeTemplatesRequest
      * @return ListLiveTranscodeTemplatesResponse
@@ -8815,7 +8821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送实时截图任务指令</p>
+     * <p>Sends a command to process a live stream snapshot job.</p>
      * 
      * @param request SendLiveSnapshotJobCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8851,7 +8857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送实时截图任务指令</p>
+     * <p>Sends a command to process a live stream snapshot job.</p>
      * 
      * @param request SendLiveSnapshotJobCommandRequest
      * @return SendLiveSnapshotJobCommandResponse
@@ -8863,7 +8869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给指定转码任务发实时命令</p>
+     * <p>Sends a command to process a live stream transcoding job.</p>
      * 
      * @param request SendLiveTranscodeJobCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8899,7 +8905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给指定转码任务发实时命令</p>
+     * <p>Sends a command to process a live stream transcoding job.</p>
      * 
      * @param request SendLiveTranscodeJobCommandRequest
      * @return SendLiveTranscodeJobCommandResponse
@@ -9059,7 +9065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置事件回调地址</p>
+     * <p>Configures a callback method for one or more events.</p>
      * 
      * @param request SetEventCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9111,7 +9117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置事件回调地址</p>
+     * <p>Configures a callback method for one or more events.</p>
      * 
      * @param request SetEventCallbackRequest
      * @return SetEventCallbackResponse
@@ -9647,7 +9653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交虚拟人视频合成任务</p>
+     * <p>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</p>
      * 
      * @param request SubmitAvatarVideoJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9699,7 +9705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交虚拟人视频合成任务</p>
+     * <p>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</p>
      * 
      * @param request SubmitAvatarVideoJobRequest
      * @return SubmitAvatarVideoJobResponse
@@ -10262,8 +10268,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
+     * Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
+     * If the preset recording template does not meet your requirements, you can create a custom recording template.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交录制任务</p>
+     * <p>Submits a live stream recording job.</p>
      * 
      * @param tmpReq SubmitLiveRecordJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10320,8 +10331,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
+     * Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
+     * If the preset recording template does not meet your requirements, you can create a custom recording template.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交录制任务</p>
+     * <p>Submits a live stream recording job.</p>
      * 
      * @param request SubmitLiveRecordJobRequest
      * @return SubmitLiveRecordJobResponse
@@ -10333,7 +10349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建直播截图任务</p>
+     * <p>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</p>
      * 
      * @param tmpReq SubmitLiveSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10391,7 +10407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建直播截图任务</p>
+     * <p>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</p>
      * 
      * @param request SubmitLiveSnapshotJobRequest
      * @return SubmitLiveSnapshotJobResponse
@@ -10402,8 +10418,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</p>
+     * <ul>
+     * <li>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交转码任务</p>
+     * <p>Submits a live stream transcoding job.</p>
      * 
      * @param tmpReq SubmitLiveTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10468,8 +10490,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</p>
+     * <ul>
+     * <li>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交转码任务</p>
+     * <p>Submits a live stream transcoding job.</p>
      * 
      * @param request SubmitLiveTranscodeJobRequest
      * @return SubmitLiveTranscodeJobResponse
@@ -11838,8 +11866,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only user-created templates can be updated. The preset template cannot be updated.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改直播录制模板</p>
+     * <p>Updates the information about a live stream recording template.</p>
      * 
      * @param tmpReq UpdateLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11884,8 +11915,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only user-created templates can be updated. The preset template cannot be updated.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改直播录制模板</p>
+     * <p>Updates the information about a live stream recording template.</p>
      * 
      * @param request UpdateLiveRecordTemplateRequest
      * @return UpdateLiveRecordTemplateResponse
@@ -11897,7 +11931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新直播截图模板</p>
+     * <p>Updates the information about a live stream snapshot template.</p>
      * 
      * @param request UpdateLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11945,7 +11979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新直播截图模板</p>
+     * <p>Updates the information about a live stream snapshot template.</p>
      * 
      * @param request UpdateLiveSnapshotTemplateRequest
      * @return UpdateLiveSnapshotTemplateResponse
@@ -11956,8 +11990,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</p>
+     * <ul>
+     * <li>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新转码任务配置</p>
+     * <p>Updates the information about a live stream transcoding job.</p>
      * 
      * @param tmpReq UpdateLiveTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12018,8 +12058,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</p>
+     * <ul>
+     * <li>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新转码任务配置</p>
+     * <p>Updates the information about a live stream transcoding job.</p>
      * 
      * @param request UpdateLiveTranscodeJobRequest
      * @return UpdateLiveTranscodeJobResponse
@@ -12031,7 +12077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新转码模版</p>
+     * <p>Updates the information about a live stream transcoding template.</p>
      * 
      * @param tmpReq UpdateLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12077,7 +12123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新转码模版</p>
+     * <p>Updates the information about a live stream transcoding template.</p>
      * 
      * @param request UpdateLiveTranscodeTemplateRequest
      * @return UpdateLiveTranscodeTemplateResponse

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveSnapshotJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of jobs.</p>
+     */
     @NameInMap("JobList")
     public java.util.List<ListLiveSnapshotJobsResponseBodyJobList> jobList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -29,6 +38,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The sorting order of the jobs by creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -36,6 +47,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -97,6 +110,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
 
     public static class ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput extends TeaModel {
         /**
+         * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>testbucket</p>
          */
@@ -104,6 +119,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyuncs.com</p>
          */
@@ -111,6 +128,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The storage type. The value can only be oss.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -150,6 +169,8 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
 
     public static class ListLiveSnapshotJobsResponseBodyJobList extends TeaModel {
         /**
+         * <p>The time when the template was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-20T02:48:58Z</p>
          */
@@ -157,19 +178,35 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The name of the job.</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>The output information.</p>
+         */
         @NameInMap("SnapshotOutput")
         public ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput snapshotOutput;
 
         /**
+         * <p>The state of the job.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>init: The job is not started.</li>
+         * <li>paused: The job is paused.</li>
+         * <li>started: The job is in progress.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>started</p>
          */
@@ -177,16 +214,23 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The template name.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

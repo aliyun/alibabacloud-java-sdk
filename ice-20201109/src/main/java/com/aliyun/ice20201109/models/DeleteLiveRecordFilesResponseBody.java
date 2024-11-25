@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRecordFilesResponseBody extends TeaModel {
+    /**
+     * <p>The list of files deleted.</p>
+     */
     @NameInMap("DeleteFileInfoList")
     public java.util.List<DeleteLiveRecordFilesResponseBodyDeleteFileInfoList> deleteFileInfoList;
 
     /**
+     * <p>The description of the state returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -54,6 +59,8 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
 
     public static class DeleteLiveRecordFilesResponseBodyDeleteFileInfoList extends TeaModel {
         /**
+         * <p>The code that identifies the result of the deletion.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -61,6 +68,8 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The result of deletion.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -68,6 +77,8 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The ID of the deleted recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>13cbb83e-043c-4728-ac35-*****</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveRecordTemplateRequest extends TeaModel {
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The ID of the template to be deleted. To obtain the template ID, log on to the <a href="https://ice.console.aliyun.com/live-processing/template/list/record">Intelligent Media Services (IMS) console</a>, choose Real-time Media Processing &gt; Template Management, and then click the Recording tab. Alternatively, find the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/448213.html">CreateLiveRecordTemplate</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

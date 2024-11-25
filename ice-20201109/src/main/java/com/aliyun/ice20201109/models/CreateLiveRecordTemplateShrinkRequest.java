@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateLiveRecordTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>代表资源名称的资源属性字段</p>
+     * <p>The name of the template.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>录制格式</p>
+     * <p>The list of recording formats.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordFormat")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveRecordJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the recording job.</p>
+     * 
      * <strong>example:</strong>
      * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
      */
@@ -12,6 +14,8 @@ public class SubmitLiveRecordJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
      */

@@ -137,6 +137,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        @NameInMap("Progress")
+        public Integer progress;
+
         /**
          * <p>The ID of the online editing project.</p>
          * 
@@ -288,6 +291,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
         public String getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public GetMediaProducingJobResponseBodyMediaProducingJob setProgress(Integer progress) {
+            this.progress = progress;
+            return this;
+        }
+        public Integer getProgress() {
+            return this.progress;
         }
 
         public GetMediaProducingJobResponseBodyMediaProducingJob setProjectId(String projectId) {

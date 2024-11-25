@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,20 @@ public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The configuration of the template.</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
     /**
+     * <p>The type of the template. Valid values:</p>
+     * <ul>
+     * <li>normal</li>
+     * <li>narrow-band</li>
+     * <li>audio-only</li>
+     * <li>origin</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

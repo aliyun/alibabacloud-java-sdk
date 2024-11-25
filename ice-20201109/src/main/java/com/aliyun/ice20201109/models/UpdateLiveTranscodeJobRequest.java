@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveTranscodeJobRequest extends TeaModel {
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,18 +15,29 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The name of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>mytest3</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The information about the input stream.</p>
+     */
     @NameInMap("StreamInput")
     public UpdateLiveTranscodeJobRequestStreamInput streamInput;
 
+    /**
+     * <p>The configuration of a timed transcoding job.</p>
+     */
     @NameInMap("TimedConfig")
     public UpdateLiveTranscodeJobRequestTimedConfig timedConfig;
 
+    /**
+     * <p>The information about the transcoding output.</p>
+     */
     @NameInMap("TranscodeOutput")
     public UpdateLiveTranscodeJobRequestTranscodeOutput transcodeOutput;
 
@@ -76,6 +88,7 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
 
     public static class UpdateLiveTranscodeJobRequestStreamInput extends TeaModel {
         /**
+         * <p>The URL of the input stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +98,7 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
         public String inputUrl;
 
         /**
+         * <p>The type of the input stream. The value can only be rtmp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +132,8 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
 
     public static class UpdateLiveTranscodeJobRequestTimedConfig extends TeaModel {
         /**
+         * <p>The stop time of the transcoding job. Note: The time span between the stop time and the current time cannot exceed seven days.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-05T06:08:31Z</p>
          */
@@ -125,6 +141,8 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The start time of the transcoding job. Note: The time span between the start time and the current time cannot exceed seven days.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-06-19T02:16:41Z</p>
          */
@@ -156,6 +174,7 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
 
     public static class UpdateLiveTranscodeJobRequestTranscodeOutput extends TeaModel {
         /**
+         * <p>The streaming domain name of ApsaraVideo Live.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +184,7 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The type of the output stream. A value of LiveCenter indicates that the URL of the output stream is generated based on the domain name of ApsaraVideo Live. The value can only be LiveCenter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
