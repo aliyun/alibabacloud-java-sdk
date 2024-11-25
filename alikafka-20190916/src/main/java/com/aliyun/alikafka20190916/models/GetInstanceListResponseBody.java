@@ -526,6 +526,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("AutoCreateTopicEnable")
         public Boolean autoCreateTopicEnable;
 
+        @NameInMap("BackupZoneId")
+        public String backupZoneId;
+
         /**
          * <p>The parameters that are returned for the ApsaraMQ for Confluent instance.</p>
          */
@@ -996,6 +999,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public Boolean getAutoCreateTopicEnable() {
             return this.autoCreateTopicEnable;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setBackupZoneId(String backupZoneId) {
+            this.backupZoneId = backupZoneId;
+            return this;
+        }
+        public String getBackupZoneId() {
+            return this.backupZoneId;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setConfluentConfig(GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig confluentConfig) {
