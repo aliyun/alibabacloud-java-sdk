@@ -28,6 +28,9 @@ public class Task extends TeaModel {
     @NameInMap("creator")
     public Long creator;
 
+    @NameInMap("credential")
+    public TaskCredential credential;
+
     @NameInMap("defaultCatalogId")
     public String defaultCatalogId;
 
@@ -42,6 +45,9 @@ public class Task extends TeaModel {
 
     @NameInMap("deploymentId")
     public String deploymentId;
+
+    @NameInMap("environmentId")
+    public String environmentId;
 
     @NameInMap("extraArtifactIds")
     public java.util.List<String> extraArtifactIds;
@@ -223,6 +229,14 @@ public class Task extends TeaModel {
         return this.creator;
     }
 
+    public Task setCredential(TaskCredential credential) {
+        this.credential = credential;
+        return this;
+    }
+    public TaskCredential getCredential() {
+        return this.credential;
+    }
+
     public Task setDefaultCatalogId(String defaultCatalogId) {
         this.defaultCatalogId = defaultCatalogId;
         return this;
@@ -261,6 +275,14 @@ public class Task extends TeaModel {
     }
     public String getDeploymentId() {
         return this.deploymentId;
+    }
+
+    public Task setEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    public String getEnvironmentId() {
+        return this.environmentId;
     }
 
     public Task setExtraArtifactIds(java.util.List<String> extraArtifactIds) {
@@ -485,6 +507,102 @@ public class Task extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class TaskCredential extends TeaModel {
+        @NameInMap("accessId")
+        public String accessId;
+
+        @NameInMap("accessUrl")
+        public String accessUrl;
+
+        @NameInMap("expire")
+        public Long expire;
+
+        @NameInMap("host")
+        public String host;
+
+        @NameInMap("path")
+        public String path;
+
+        @NameInMap("policy")
+        public String policy;
+
+        @NameInMap("securityToken")
+        public String securityToken;
+
+        @NameInMap("signature")
+        public String signature;
+
+        public static TaskCredential build(java.util.Map<String, ?> map) throws Exception {
+            TaskCredential self = new TaskCredential();
+            return TeaModel.build(map, self);
+        }
+
+        public TaskCredential setAccessId(String accessId) {
+            this.accessId = accessId;
+            return this;
+        }
+        public String getAccessId() {
+            return this.accessId;
+        }
+
+        public TaskCredential setAccessUrl(String accessUrl) {
+            this.accessUrl = accessUrl;
+            return this;
+        }
+        public String getAccessUrl() {
+            return this.accessUrl;
+        }
+
+        public TaskCredential setExpire(Long expire) {
+            this.expire = expire;
+            return this;
+        }
+        public Long getExpire() {
+            return this.expire;
+        }
+
+        public TaskCredential setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public TaskCredential setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public TaskCredential setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public TaskCredential setSecurityToken(String securityToken) {
+            this.securityToken = securityToken;
+            return this;
+        }
+        public String getSecurityToken() {
+            return this.securityToken;
+        }
+
+        public TaskCredential setSignature(String signature) {
+            this.signature = signature;
+            return this;
+        }
+        public String getSignature() {
+            return this.signature;
+        }
+
     }
 
 }

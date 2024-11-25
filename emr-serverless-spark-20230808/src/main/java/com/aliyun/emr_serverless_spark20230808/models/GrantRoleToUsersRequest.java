@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantRoleToUsersRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:emr::w-975bcfda9625****:role/Owner</p>
@@ -13,6 +13,9 @@ public class GrantRoleToUsersRequest extends TeaModel {
     @NameInMap("roleArn")
     public String roleArn;
 
+    /**
+     * <p>The user ARNs.</p>
+     */
     @NameInMap("userArns")
     public java.util.List<String> userArns;
 

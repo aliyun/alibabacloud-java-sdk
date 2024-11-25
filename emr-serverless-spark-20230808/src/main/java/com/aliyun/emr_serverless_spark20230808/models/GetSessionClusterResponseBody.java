@@ -213,6 +213,9 @@ public class GetSessionClusterResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        @NameInMap("domainInner")
+        public String domainInner;
+
         /**
          * <strong>example:</strong>
          * <p>TSK-xxxxxxxx</p>
@@ -233,6 +236,9 @@ public class GetSessionClusterResponseBody extends TeaModel {
          */
         @NameInMap("fusion")
         public Boolean fusion;
+
+        @NameInMap("gmtCreate")
+        public Long gmtCreate;
 
         /**
          * <strong>example:</strong>
@@ -272,6 +278,9 @@ public class GetSessionClusterResponseBody extends TeaModel {
          */
         @NameInMap("sessionClusterId")
         public String sessionClusterId;
+
+        @NameInMap("startTime")
+        public Long startTime;
 
         /**
          * <p>作业状态。</p>
@@ -362,6 +371,14 @@ public class GetSessionClusterResponseBody extends TeaModel {
             return this.domain;
         }
 
+        public GetSessionClusterResponseBodySessionCluster setDomainInner(String domainInner) {
+            this.domainInner = domainInner;
+            return this;
+        }
+        public String getDomainInner() {
+            return this.domainInner;
+        }
+
         public GetSessionClusterResponseBodySessionCluster setDraftId(String draftId) {
             this.draftId = draftId;
             return this;
@@ -384,6 +401,14 @@ public class GetSessionClusterResponseBody extends TeaModel {
         }
         public Boolean getFusion() {
             return this.fusion;
+        }
+
+        public GetSessionClusterResponseBodySessionCluster setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public GetSessionClusterResponseBodySessionCluster setKind(String kind) {
@@ -424,6 +449,14 @@ public class GetSessionClusterResponseBody extends TeaModel {
         }
         public String getSessionClusterId() {
             return this.sessionClusterId;
+        }
+
+        public GetSessionClusterResponseBodySessionCluster setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
         public GetSessionClusterResponseBodySessionCluster setState(String state) {

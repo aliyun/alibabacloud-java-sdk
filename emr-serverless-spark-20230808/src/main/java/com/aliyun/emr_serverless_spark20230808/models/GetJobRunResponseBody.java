@@ -137,6 +137,9 @@ public class GetJobRunResponseBody extends TeaModel {
         @NameInMap("endTime")
         public Long endTime;
 
+        @NameInMap("environmentId")
+        public String environmentId;
+
         /**
          * <p>The timeout period of the job.</p>
          * 
@@ -289,6 +292,14 @@ public class GetJobRunResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public GetJobRunResponseBodyJobRun setEnvironmentId(String environmentId) {
+            this.environmentId = environmentId;
+            return this;
+        }
+        public String getEnvironmentId() {
+            return this.environmentId;
         }
 
         public GetJobRunResponseBodyJobRun setExecutionTimeoutSeconds(Integer executionTimeoutSeconds) {
