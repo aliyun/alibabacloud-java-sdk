@@ -470,6 +470,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceImageOptions extends TeaModel {
         /**
+         * <p>Indicates whether the operating system supports access to disks over the NVMe protocol. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only if you specify CURRENT_OS_NVME_SUPPORTED in AdditionalAttributes in the request.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

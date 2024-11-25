@@ -77,12 +77,51 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions extends TeaModel {
+        @NameInMap("Core")
+        public Integer core;
+
+        @NameInMap("CoreFactor")
+        public Integer coreFactor;
+
+        @NameInMap("HyperThreadingAdjustable")
+        public Boolean hyperThreadingAdjustable;
+
+        /**
+         * <p>The CPU topology types of the instance type.</p>
+         */
         @NameInMap("SupportedTopologyTypes")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes;
+
+        @NameInMap("ThreadsPerCore")
+        public Integer threadsPerCore;
 
         public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setCore(Integer core) {
+            this.core = core;
+            return this;
+        }
+        public Integer getCore() {
+            return this.core;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setCoreFactor(Integer coreFactor) {
+            this.coreFactor = coreFactor;
+            return this;
+        }
+        public Integer getCoreFactor() {
+            return this.coreFactor;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setHyperThreadingAdjustable(Boolean hyperThreadingAdjustable) {
+            this.hyperThreadingAdjustable = hyperThreadingAdjustable;
+            return this;
+        }
+        public Boolean getHyperThreadingAdjustable() {
+            return this.hyperThreadingAdjustable;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setSupportedTopologyTypes(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes) {
@@ -91,6 +130,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes getSupportedTopologyTypes() {
             return this.supportedTopologyTypes;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setThreadsPerCore(Integer threadsPerCore) {
+            this.threadsPerCore = threadsPerCore;
+            return this;
+        }
+        public Integer getThreadsPerCore() {
+            return this.threadsPerCore;
         }
 
     }
@@ -236,6 +283,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
+        /**
+         * <p>The CPU options.</p>
+         */
         @NameInMap("CpuOptions")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions cpuOptions;
 
@@ -467,6 +517,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
+
+        @NameInMap("JumboFrameSupport")
+        public Boolean jumboFrameSupport;
 
         /**
          * <p>The number of local disks per instance.</p>
@@ -820,6 +873,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public String getInstanceTypeId() {
             return this.instanceTypeId;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setJumboFrameSupport(Boolean jumboFrameSupport) {
+            this.jumboFrameSupport = jumboFrameSupport;
+            return this;
+        }
+        public Boolean getJumboFrameSupport() {
+            return this.jumboFrameSupport;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setLocalStorageAmount(Integer localStorageAmount) {

@@ -11,7 +11,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public ModifyInstanceSpecRequestTemporary temporary;
 
     /**
-     * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+     * <p>Specifies whether to allow cross-cluster instance type upgrade.</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>

@@ -852,6 +852,16 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String hostName;
 
         /**
+         * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
+         * <blockquote>
+         * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes, by using instance metadata</a>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -859,6 +869,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String httpEndpoint;
 
         /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -866,6 +880,16 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public Integer httpPutResponseHopLimit;
 
         /**
+         * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
+         * <ul>
+         * <li>optional: The security hardening mode (IMDSv2) is not forcefully used.</li>
+         * <li>required: The security hardening mode (IMDSv2) is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * </ul>
+         * <p>Default value: optional.</p>
+         * <blockquote>
+         * <p> For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes, by using instance metadata</a>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>optional</p>
          */

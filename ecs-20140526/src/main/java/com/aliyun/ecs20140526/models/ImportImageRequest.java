@@ -61,14 +61,28 @@ public class ImportImageRequest extends TeaModel {
     public String detectionStrategy;
 
     /**
-     * <p>The information about the custom image.</p>
+     * <p>The information of disks from which the custom images are created.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The attributes of the custom image.</p>
+     */
     @NameInMap("Features")
     public ImportImageRequestFeatures features;
 
@@ -383,11 +397,11 @@ public class ImportImageRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The size of disk N in the custom image. Unit: GiB</p>
+         * <p>The size of disk N in the custom image. Unit: GiB.</p>
          * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</li>
-         * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</li>
+         * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
+         * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
          * </ul>
          * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
          * <blockquote>
@@ -404,8 +418,8 @@ public class ImportImageRequest extends TeaModel {
          * <p>The size of disk N in the custom image after the image is imported.</p>
          * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</li>
-         * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</li>
+         * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
+         * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
          * </ul>
          * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
          * 
@@ -507,6 +521,16 @@ public class ImportImageRequest extends TeaModel {
     }
 
     public static class ImportImageRequestFeatures extends TeaModel {
+        /**
+         * <p>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+         * <ul>
+         * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+         * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>supported</p>
+         */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
 
