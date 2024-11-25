@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of transcoding templates.</p>
+     */
     @NameInMap("TemplateContentList")
     public java.util.List<ListLiveTranscodeTemplatesResponseBodyTemplateContentList> templateContentList;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -52,6 +59,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigAudioParams extends TeaModel {
         /**
+         * <p>The audio bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -59,6 +68,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The number of sound channels.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -66,6 +77,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String channels;
 
         /**
+         * <p>The audio codec.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAC</p>
          */
@@ -73,6 +86,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String codec;
 
         /**
+         * <p>The encoding profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>aac_low</p>
          */
@@ -80,6 +95,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <p>The audio sampling rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>44100</p>
          */
@@ -135,6 +152,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigVideoParams extends TeaModel {
         /**
+         * <p>The video bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2500</p>
          */
@@ -142,6 +161,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The encoding format.</p>
+         * 
          * <strong>example:</strong>
          * <p>264</p>
          */
@@ -149,6 +170,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String codec;
 
         /**
+         * <p>The video frame rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -156,6 +179,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String fps;
 
         /**
+         * <p>The group of pictures (GOP) of the output video. Unit: frame.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -163,6 +188,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String gop;
 
         /**
+         * <p>The vertical resolution of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */
@@ -170,6 +197,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String height;
 
         /**
+         * <p>The encoding profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -177,6 +206,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <p>The horizontal resolution of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */
@@ -247,9 +278,15 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfig extends TeaModel {
+        /**
+         * <p>The audio parameters.</p>
+         */
         @NameInMap("AudioParams")
         public ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigAudioParams audioParams;
 
+        /**
+         * <p>The video parameters.</p>
+         */
         @NameInMap("VideoParams")
         public ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigVideoParams videoParams;
 
@@ -278,6 +315,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeTemplatesResponseBodyTemplateContentList extends TeaModel {
         /**
+         * <p>The category of the template. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -285,6 +324,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The time when the job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-20T03:26:36Z</p>
          */
@@ -292,16 +333,23 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_template</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The configuration of the template.</p>
+         */
         @NameInMap("TemplateConfig")
         public ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfig templateConfig;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9b1571b513cb44f7a1ba6ae561ff46f7</p>
          */
@@ -309,6 +357,8 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The type of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveSnapshotJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitLiveSnapshotJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

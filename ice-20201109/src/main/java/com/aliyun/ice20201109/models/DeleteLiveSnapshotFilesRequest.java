@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveSnapshotFilesRequest extends TeaModel {
     /**
+     * <p>The list of timestamps when the jobs were created. The values are UNIX timestamps representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A maximum of 200 jobs can be deleted at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateTimestampList")
     public java.util.List<Long> createTimestampList;
 
     /**
+     * <p>Specifies whether to delete the original files at the same time. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,6 +21,7 @@ public class DeleteLiveSnapshotFilesRequest extends TeaModel {
     public Boolean deleteOriginalFile;
 
     /**
+     * <p>The ID of the snapshot job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLiveSnapshotTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class CreateLiveSnapshotTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
      */

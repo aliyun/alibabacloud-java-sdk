@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveRecordJobRequest extends TeaModel {
     /**
-     * <p>代表资源名称的资源属性字段</p>
+     * <p>The name of the recording job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>回调地址</p>
+     * <p>The callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
@@ -24,19 +24,21 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     public String notifyUrl;
 
     /**
+     * <p>The storage address of the recording.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordOutput")
     public SubmitLiveRecordJobRequestRecordOutput recordOutput;
 
     /**
+     * <p>The URL of the live stream.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public SubmitLiveRecordJobRequestStreamInput streamInput;
 
     /**
-     * <p>录制模板ID</p>
+     * <p>The ID of the recording template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +94,8 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
 
     public static class SubmitLiveRecordJobRequestRecordOutput extends TeaModel {
         /**
+         * <p>The bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>imsbucket1</p>
          */
@@ -99,6 +103,8 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The endpoint of the storage service.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou.aliyuncs.com</p>
          */
@@ -106,6 +112,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The type of the storage address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +154,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
 
     public static class SubmitLiveRecordJobRequestStreamInput extends TeaModel {
         /**
+         * <p>The type of the live stream URL. The value can only be rtmp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,8 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The URL of the live stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/live/stream1</p>
          */

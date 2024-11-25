@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetEventCallbackRequest extends TeaModel {
     /**
+     * <p>The authentication key. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits. This parameter takes effect only if you set CallbackType to <strong>HTTP</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestKey001</p>
      */
@@ -12,6 +14,12 @@ public class SetEventCallbackRequest extends TeaModel {
     public String authKey;
 
     /**
+     * <p>Specifies whether to enable callback authentication. This parameter takes effect only if you set CallbackType to <strong>HTTP</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,6 +27,8 @@ public class SetEventCallbackRequest extends TeaModel {
     public String authSwitch;
 
     /**
+     * <p>The name of the Simple Message Queue (SMQ) queue in the region. The name must start with ice-callback-.</p>
+     * 
      * <strong>example:</strong>
      * <p>ice-callback-queue</p>
      */
@@ -26,6 +36,12 @@ public class SetEventCallbackRequest extends TeaModel {
     public String callbackQueueName;
 
     /**
+     * <p>The callback method. Valid values:</p>
+     * <ul>
+     * <li><strong>HTTP</strong></li>
+     * <li><strong>MNS</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -33,6 +49,8 @@ public class SetEventCallbackRequest extends TeaModel {
     public String callbackType;
 
     /**
+     * <p>The callback URL. This parameter is required if you set CallbackType to <strong>HTTP</strong>. The callback URL cannot exceed 256 bytes in length. You can specify only one callback URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxx.yyy/callback">http://xxx.yyy/callback</a></p>
      */
@@ -40,6 +58,8 @@ public class SetEventCallbackRequest extends TeaModel {
     public String callbackURL;
 
     /**
+     * <p>The type of the callback event. You can specify multiple values separated with commas (,). ProduceMediaComplete: indicates that the editing and production task is complete.</p>
+     * 
      * <strong>example:</strong>
      * <p>ProduceMediaComplete</p>
      */

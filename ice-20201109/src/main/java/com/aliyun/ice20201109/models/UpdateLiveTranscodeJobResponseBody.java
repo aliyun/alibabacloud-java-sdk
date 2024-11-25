@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveTranscodeJobResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordFilesResponseBody extends TeaModel {
+    /**
+     * <p>The list of index files.</p>
+     */
     @NameInMap("Files")
     public java.util.List<ListLiveRecordFilesResponseBodyFiles> files;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DE24625C-7C0F-4020-8448-****</p>
      */
@@ -29,6 +38,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The sorting order of the index files by creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -36,6 +47,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The total number of files that meet the specified conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -97,6 +110,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
 
     public static class ListLiveRecordFilesResponseBodyFiles extends TeaModel {
         /**
+         * <p>The time when the file was created in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2016-05-27T09:40:56Z</p>
          */
@@ -104,6 +119,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The recording length. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -111,6 +128,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public Float duration;
 
         /**
+         * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015-12-01T07:36:10Z</p>
          */
@@ -118,6 +137,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The format of the recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>m3u8</p>
          */
@@ -125,6 +146,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String format;
 
         /**
+         * <p>The height of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>640</p>
          */
@@ -132,6 +155,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>The ID of the recording job.</p>
+         * 
          * <strong>example:</strong>
          * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
          */
@@ -139,6 +164,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The name of the recording job.</p>
+         * 
          * <strong>example:</strong>
          * <p>LiveRecordJob***</p>
          */
@@ -146,6 +173,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The ID of the index file.</p>
+         * 
          * <strong>example:</strong>
          * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
          */
@@ -153,16 +182,23 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String recordId;
 
         /**
+         * <p>The storage information about the recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;Type&quot;: &quot;oss&quot;, &quot;Endpoint&quot;:&quot;oss-cn-shanghai.aliyuncs.com&quot;, &quot;Bucket&quot;: &quot;test-bucket&quot; }</p>
          */
         @NameInMap("RecordOutput")
         public String recordOutput;
 
+        /**
+         * <p>The URL of the index file.</p>
+         */
         @NameInMap("RecordUrl")
         public String recordUrl;
 
         /**
+         * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015-12-01T07:36:00Z</p>
          */
@@ -170,6 +206,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The name of the live stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>LiveStream***</p>
          */
@@ -177,6 +215,8 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         public String streamUrl;
 
         /**
+         * <p>The width of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>480</p>
          */

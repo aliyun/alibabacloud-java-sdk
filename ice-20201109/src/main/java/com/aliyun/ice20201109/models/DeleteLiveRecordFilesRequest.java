@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveRecordFilesRequest extends TeaModel {
     /**
+     * <p>The collection of IDs of recording files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordIds")
     public java.util.List<String> recordIds;
 
     /**
+     * <p>Specifies whether to delete the original files in OSS.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

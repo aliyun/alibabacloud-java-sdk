@@ -4,13 +4,20 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveTranscodeTemplateShrinkRequest extends TeaModel {
+    /**
+     * <p>The template name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The configuration of the template.</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
     /**
+     * <p>The template ID. To obtain the template ID, log on to the <a href="https://ims.console.aliyun.com/summary">Intelligent Media Services (IMS) console</a>, choose Real-time Media Processing &gt; Template Management, and then click the Transcoding tab. Alternatively, find the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/449217.html">CreateLiveTranscodeTemplate</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

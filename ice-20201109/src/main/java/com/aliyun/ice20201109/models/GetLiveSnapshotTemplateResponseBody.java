@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
     /**
+     * <p>The time when the configuration was modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-02-02T22:22:22Z</p>
      */
@@ -12,6 +14,8 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The time when the template was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-02-02T22:22:22Z</p>
      */
@@ -19,6 +23,8 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
     public String lastModified;
 
     /**
+     * <p>The naming format of the snapshot captured in overwrite mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>snapshot/{JobId}.jpg</p>
      */
@@ -26,6 +32,8 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
     public String overwriteFormat;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -33,6 +41,8 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The naming format of the snapshot captured in time series mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
      */
@@ -40,16 +50,23 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
     public String sequenceFormat;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The template name.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The interval between two adjacent snapshots.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -57,6 +74,13 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
     public Integer timeInterval;
 
     /**
+     * <p>The type of the template.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>system</li>
+     * <li>custom</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */

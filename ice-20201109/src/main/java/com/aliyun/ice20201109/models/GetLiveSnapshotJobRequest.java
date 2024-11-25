@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLiveSnapshotJobRequest extends TeaModel {
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

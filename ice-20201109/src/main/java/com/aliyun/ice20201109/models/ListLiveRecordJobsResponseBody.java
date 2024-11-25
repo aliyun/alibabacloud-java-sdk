@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of live stream recording jobs.</p>
+     */
     @NameInMap("LiveRecordJobs")
     public java.util.List<ListLiveRecordJobsResponseBodyLiveRecordJobs> liveRecordJobs;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A27DFFA4-F272-5563-8363-CB0BC42740BA</p>
      */
@@ -29,6 +38,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -36,6 +47,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>180</p>
      */
@@ -97,6 +110,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
     public static class ListLiveRecordJobsResponseBodyLiveRecordJobsRecordOutput extends TeaModel {
         /**
+         * <p>The bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>imsbucket1</p>
          */
@@ -104,6 +119,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The endpoint of the storage service.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou.aliyuncs.com</p>
          */
@@ -111,6 +128,13 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The type of the storage address.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>vod</li>
+         * <li>oss</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -150,6 +174,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
     public static class ListLiveRecordJobsResponseBodyLiveRecordJobsStreamInput extends TeaModel {
         /**
+         * <p>The type of the live stream URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp</p>
          */
@@ -157,6 +183,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The URL of the live stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp://example-live.com/live/stream1</p>
          */
@@ -188,7 +216,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
     public static class ListLiveRecordJobsResponseBodyLiveRecordJobs extends TeaModel {
         /**
-         * <p>代表创建时间的资源属性字段</p>
+         * <p>The time when the job was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +226,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the recording job.</p>
+         * 
          * <strong>example:</strong>
          * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
          */
@@ -205,13 +235,13 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>代表资源名称的资源属性字段</p>
+         * <p>The name of the recording job.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>回调地址</p>
+         * <p>The callback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
@@ -219,21 +249,29 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
+        /**
+         * <p>The storage address of the recording.</p>
+         */
         @NameInMap("RecordOutput")
         public ListLiveRecordJobsResponseBodyLiveRecordJobsRecordOutput recordOutput;
 
         /**
+         * <p>The state of the recording job.</p>
+         * 
          * <strong>example:</strong>
          * <p>paused</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The URL of the live stream.</p>
+         */
         @NameInMap("StreamInput")
         public ListLiveRecordJobsResponseBodyLiveRecordJobsStreamInput streamInput;
 
         /**
-         * <p>录制模板ID</p>
+         * <p>The ID of the recording template.</p>
          * 
          * <strong>example:</strong>
          * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
@@ -242,6 +280,8 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The name of the recording template.</p>
+         * 
          * <strong>example:</strong>
          * <p>test template</p>
          */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetLiveRecordTemplateResponseBody extends TeaModel {
     /**
-     * <p>录制模板</p>
+     * <p>The recording template.</p>
      */
     @NameInMap("RecordTemplate")
     public GetLiveRecordTemplateResponseBodyRecordTemplate recordTemplate;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C892855F-95DF-50D6-A28C-279ABDB76810</p>
      */
@@ -40,6 +42,8 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
 
     public static class GetLiveRecordTemplateResponseBodyRecordTemplateRecordFormatList extends TeaModel {
         /**
+         * <p>The duration of the recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>7200</p>
          */
@@ -47,7 +51,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public Integer cycleDuration;
 
         /**
-         * <p>格式</p>
+         * <p>The output file format.</p>
          * 
          * <strong>example:</strong>
          * <p>m3u8</p>
@@ -56,7 +60,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>Oss对象名，不包含后缀</p>
+         * <p>The name of the recording file that is stored in Object Storage Service (OSS).</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{Sequence}{EscapedStartTime}{EscapedEndTime}</p>
@@ -65,6 +69,8 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String ossObjectPrefix;
 
         /**
+         * <p>The duration of a single segment. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -72,7 +78,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public Integer sliceDuration;
 
         /**
-         * <p>切片Oss对象名，不包含后缀</p>
+         * <p>The name of the TS segment.</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
@@ -129,7 +135,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
 
     public static class GetLiveRecordTemplateResponseBodyRecordTemplate extends TeaModel {
         /**
-         * <p>代表创建时间的资源属性字段</p>
+         * <p>The time when the job was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +145,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>代表创建时间的资源属性字段</p>
+         * <p>The time when the template was last modified.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +155,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>代表资源名称的资源属性字段</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>test template</p>
@@ -158,13 +164,13 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>录制格式</p>
+         * <p>The list of recording formats.</p>
          */
         @NameInMap("RecordFormatList")
         public java.util.List<GetLiveRecordTemplateResponseBodyRecordTemplateRecordFormatList> recordFormatList;
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
@@ -173,7 +179,12 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>代表资源名称的资源属性字段</p>
+         * <p>The type of the template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>system</li>
+         * <li>custom</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>custom</p>

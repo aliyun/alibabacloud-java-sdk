@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveTranscodeJobShrinkRequest extends TeaModel {
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,18 +15,29 @@ public class UpdateLiveTranscodeJobShrinkRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The name of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>mytest3</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The information about the input stream.</p>
+     */
     @NameInMap("StreamInput")
     public String streamInputShrink;
 
+    /**
+     * <p>The configuration of a timed transcoding job.</p>
+     */
     @NameInMap("TimedConfig")
     public String timedConfigShrink;
 
+    /**
+     * <p>The information about the transcoding output.</p>
+     */
     @NameInMap("TranscodeOutput")
     public String transcodeOutputShrink;
 
