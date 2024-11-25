@@ -102,7 +102,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String configFileName;
 
         /**
-         * <p>The key of the configuration item.</p>
+         * <p>The key of the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>spark.app.name</p>
@@ -111,7 +111,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String configItemKey;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration value.</p>
          * 
          * <strong>example:</strong>
          * <p>test_application</p>
@@ -287,6 +287,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        @NameInMap("domainInner")
+        public String domainInner;
+
         /**
          * <p>The ID of the job that is associated with the session.</p>
          * 
@@ -304,6 +307,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
          */
         @NameInMap("fusion")
         public Boolean fusion;
+
+        @NameInMap("gmtCreate")
+        public Long gmtCreate;
 
         /**
          * <p>The session type.</p>
@@ -356,6 +362,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("sessionClusterId")
         public String sessionClusterId;
 
+        @NameInMap("startTime")
+        public Long startTime;
+
         /**
          * <p>The status of the session.</p>
          * 
@@ -381,7 +390,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user</p>
@@ -452,6 +461,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
             return this.domain;
         }
 
+        public ListSessionClustersResponseBodySessionClusters setDomainInner(String domainInner) {
+            this.domainInner = domainInner;
+            return this;
+        }
+        public String getDomainInner() {
+            return this.domainInner;
+        }
+
         public ListSessionClustersResponseBodySessionClusters setDraftId(String draftId) {
             this.draftId = draftId;
             return this;
@@ -466,6 +483,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public Boolean getFusion() {
             return this.fusion;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public ListSessionClustersResponseBodySessionClusters setKind(String kind) {
@@ -506,6 +531,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public String getSessionClusterId() {
             return this.sessionClusterId;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
         public ListSessionClustersResponseBodySessionClusters setState(String state) {

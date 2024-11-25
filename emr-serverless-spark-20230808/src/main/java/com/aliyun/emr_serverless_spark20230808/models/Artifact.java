@@ -10,6 +10,9 @@ public class Artifact extends TeaModel {
     @NameInMap("bizId")
     public String bizId;
 
+    @NameInMap("catagoryBizId")
+    public String catagoryBizId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -18,6 +21,9 @@ public class Artifact extends TeaModel {
 
     @NameInMap("credential")
     public Credential credential;
+
+    @NameInMap("fullPath")
+    public java.util.List<String> fullPath;
 
     /**
      * <p>This parameter is required.</p>
@@ -62,6 +68,14 @@ public class Artifact extends TeaModel {
         return this.bizId;
     }
 
+    public Artifact setCatagoryBizId(String catagoryBizId) {
+        this.catagoryBizId = catagoryBizId;
+        return this;
+    }
+    public String getCatagoryBizId() {
+        return this.catagoryBizId;
+    }
+
     public Artifact setCreator(Long creator) {
         this.creator = creator;
         return this;
@@ -76,6 +90,14 @@ public class Artifact extends TeaModel {
     }
     public Credential getCredential() {
         return this.credential;
+    }
+
+    public Artifact setFullPath(java.util.List<String> fullPath) {
+        this.fullPath = fullPath;
+        return this;
+    }
+    public java.util.List<String> getFullPath() {
+        return this.fullPath;
     }
 
     public Artifact setGmtCreated(String gmtCreated) {

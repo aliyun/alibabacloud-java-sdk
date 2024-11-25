@@ -508,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取日志内容</p>
+     * <p>Obtains the log content.</p>
      * 
      * @param request ListLogContentsRequest
      * @param headers map
@@ -554,7 +554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取日志内容</p>
+     * <p>Obtains the log content.</p>
      * 
      * @param request ListLogContentsRequest
      * @return ListLogContentsResponse
@@ -630,7 +630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of sessions.</p>
+     * <p>Queries the list of sessions.</p>
      * 
      * @param request ListSessionClustersRequest
      * @param headers map
@@ -684,7 +684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of sessions.</p>
+     * <p>Queries the list of sessions.</p>
      * 
      * @param request ListSessionClustersRequest
      * @return ListSessionClustersResponse
@@ -697,7 +697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作空间队列列表</p>
+     * <p>Queries the list of queues in a Spark workspace.</p>
      * 
      * @param request ListWorkspaceQueuesRequest
      * @param headers map
@@ -735,7 +735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作空间队列列表</p>
+     * <p>Queries the list of queues in a Spark workspace.</p>
      * 
      * @param request ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
