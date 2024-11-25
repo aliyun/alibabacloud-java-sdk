@@ -43,8 +43,6 @@ public class ListFeatureEntitiesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

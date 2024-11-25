@@ -43,8 +43,6 @@ public class ListLabelTablesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>project1</p>
      */
