@@ -33,8 +33,6 @@ public class ListTasksShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
