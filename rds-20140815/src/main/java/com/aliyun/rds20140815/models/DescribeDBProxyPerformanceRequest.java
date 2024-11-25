@@ -36,6 +36,9 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    @NameInMap("Dimension")
+    public String dimension;
+
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
@@ -124,6 +127,14 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     }
     public String getDBProxyInstanceType() {
         return this.DBProxyInstanceType;
+    }
+
+    public DescribeDBProxyPerformanceRequest setDimension(String dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+    public String getDimension() {
+        return this.dimension;
     }
 
     public DescribeDBProxyPerformanceRequest setEndTime(String endTime) {

@@ -15,15 +15,15 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The network type of the proxy endpoint. Valid values:</p>
+     * <p>The network type of the database proxy endpoint. Valid values:</p>
      * <ul>
      * <li><strong>Public</strong>: Internet</li>
      * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
      * <li><strong>Classic</strong>: classic network</li>
      * </ul>
-     * <p>If the instance runs MySQL, the default value of this parameter is <strong>Classic</strong>.</p>
+     * <p>If the instance runs MySQL, the default value is <strong>Classic</strong>.</p>
      * <blockquote>
-     * <p>If the instance runs PostgreSQL, you must set this parameter to <strong>Public</strong> or <strong>VPC</strong>.</p>
+     * <p> If the instance runs PostgreSQL, you must set this parameter to <strong>Public</strong> or <strong>VPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyConnectStringNetType;
 
     /**
-     * <p>The ID of the dedicated proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
+     * <p>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the database proxy endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyEndpointId;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -52,9 +52,9 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The new prefix of the proxy endpoint. Enter a prefix.</p>
+     * <p>The prefix of the new database proxy endpoint. A custom value is supported.</p>
      * <blockquote>
-     * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
+     * <p> You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,9 +64,9 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyNewConnectString;
 
     /**
-     * <p>The port number that is associated with the proxy endpoint. Enter a port number.</p>
+     * <p>The port number that is associated with the database proxy endpoint. A custom value is supported.</p>
      * <blockquote>
-     * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
+     * <p> You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

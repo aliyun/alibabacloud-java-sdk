@@ -122,6 +122,43 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public String effectiveTime;
 
         /**
+         * <p>The minimum recommended disk capacity for upgrading. Unit: GB.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("RecommendDiskSize")
+        public Integer recommendDiskSize;
+
+        /**
+         * <p>The minimum recommended memory for upgrading. Unit: GB.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("RecommendLeastMemSize")
+        public Integer recommendLeastMemSize;
+
+        /**
+         * <p>Recommended memory when upgrading. Unit: GB.</p>
+         * <p>When the memory of the instance is greater than or equal to the recommended memory, it will be upgraded at the fastest speed to minimize the read-only time of the instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
+        @NameInMap("RecommendMemSize")
+        public Integer recommendMemSize;
+
+        /**
          * <p>The result of the upgrade check.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -192,6 +229,30 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
         public String getEffectiveTime() {
             return this.effectiveTime;
+        }
+
+        public DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems setRecommendDiskSize(Integer recommendDiskSize) {
+            this.recommendDiskSize = recommendDiskSize;
+            return this;
+        }
+        public Integer getRecommendDiskSize() {
+            return this.recommendDiskSize;
+        }
+
+        public DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems setRecommendLeastMemSize(Integer recommendLeastMemSize) {
+            this.recommendLeastMemSize = recommendLeastMemSize;
+            return this;
+        }
+        public Integer getRecommendLeastMemSize() {
+            return this.recommendLeastMemSize;
+        }
+
+        public DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems setRecommendMemSize(Integer recommendMemSize) {
+            this.recommendMemSize = recommendMemSize;
+            return this;
+        }
+        public Integer getRecommendMemSize() {
+            return this.recommendMemSize;
         }
 
         public DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems setResult(String result) {

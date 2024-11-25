@@ -49,6 +49,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DataDisks")
     public DescribeRCInstanceAttributeResponseBodyDataDisks dataDisks;
 
+    @NameInMap("DbType")
+    public String dbType;
+
     /**
      * <p>The attributes of the dedicated hosts.</p>
      * 
@@ -418,6 +421,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public DescribeRCInstanceAttributeResponseBodyDataDisks getDataDisks() {
         return this.dataDisks;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setDbType(String dbType) {
+        this.dbType = dbType;
+        return this;
+    }
+    public String getDbType() {
+        return this.dbType;
     }
 
     public DescribeRCInstanceAttributeResponseBody setDedicatedHostAttribute(DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute) {

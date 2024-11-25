@@ -619,7 +619,7 @@ public class RunRCInstancesRequest extends TeaModel {
          * <p>20</p>
          */
         @NameInMap("Size")
-        public String size;
+        public Integer size;
 
         public static RunRCInstancesRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             RunRCInstancesRequestSystemDisk self = new RunRCInstancesRequestSystemDisk();
@@ -634,11 +634,11 @@ public class RunRCInstancesRequest extends TeaModel {
             return this.category;
         }
 
-        public RunRCInstancesRequestSystemDisk setSize(String size) {
+        public RunRCInstancesRequestSystemDisk setSize(Integer size) {
             this.size = size;
             return this;
         }
-        public String getSize() {
+        public Integer getSize() {
             return this.size;
         }
 

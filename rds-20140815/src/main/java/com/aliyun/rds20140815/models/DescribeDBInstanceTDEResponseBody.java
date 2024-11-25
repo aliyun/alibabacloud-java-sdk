@@ -14,6 +14,15 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public DescribeDBInstanceTDEResponseBodyDatabases databases;
 
     /**
+     * <p>The ID of the custom key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
+     */
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
+    /**
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +69,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     }
     public DescribeDBInstanceTDEResponseBodyDatabases getDatabases() {
         return this.databases;
+    }
+
+    public DescribeDBInstanceTDEResponseBody setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
     }
 
     public DescribeDBInstanceTDEResponseBody setRequestId(String requestId) {

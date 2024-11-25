@@ -522,6 +522,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>挂载RC云盘</p>
+     * 
+     * @param request AttachRCDiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachRCDiskResponse
+     */
+    public AttachRCDiskResponse attachRCDiskWithOptions(AttachRCDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteWithInstance)) {
+            query.put("DeleteWithInstance", request.deleteWithInstance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachRCDisk"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachRCDiskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>挂载RC云盘</p>
+     * 
+     * @param request AttachRCDiskRequest
+     * @return AttachRCDiskResponse
+     */
+    public AttachRCDiskResponse attachRCDisk(AttachRCDiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachRCDiskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds RDS Custom nodes to a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param tmpReq AttachRCInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachRCInstancesResponse
+     */
+    public AttachRCInstancesResponse attachRCInstancesWithOptions(AttachRCInstancesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachRCInstancesShrinkRequest request = new AttachRCInstancesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPair)) {
+            query.put("KeyPair", request.keyPair);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachRCInstances"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachRCInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds RDS Custom nodes to a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request AttachRCInstancesRequest
+     * @return AttachRCInstancesResponse
+     */
+    public AttachRCInstancesResponse attachRCInstances(AttachRCInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachRCInstancesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -691,33 +813,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported Engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
      * </ul>
-     * <h3>Related Function Documentation</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Notice: Before using this interface, please carefully read the function documentation to ensure you fully understand the prerequisites and the impact of using the interface before proceeding with the operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/104183.html">RDS MySQL Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104452.html">RDS PostgreSQL Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104451.html">RDS SQL Server Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104454.html">RDS MariaDB Scheduled Events</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB instances</a></li>
      * </ul>
-     * <h3>Usage Restrictions</h3>
-     * <p>The task cannot be canceled under the following conditions:</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Tasks cannot be canceled in the following situations:</p>
      * <ul>
-     * <li><code>allowCancel</code> is 0.</li>
+     * <li>The allowCancel parameter is set to 0.</li>
      * <li>The current time is later than the task start time.</li>
-     * <li>The task status is not 3 (waiting for execution).</li>
+     * <li>The status of the task is not set to 3. The value 3 specifies that the task is waiting to be executed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This interface is used to cancel maintenance tasks that have not yet started.</p>
+     * <p>Cancels O\&amp;M tasks that are not started.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -769,33 +891,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported Engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
      * </ul>
-     * <h3>Related Function Documentation</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Notice: Before using this interface, please carefully read the function documentation to ensure you fully understand the prerequisites and the impact of using the interface before proceeding with the operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/104183.html">RDS MySQL Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104452.html">RDS PostgreSQL Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104451.html">RDS SQL Server Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104454.html">RDS MariaDB Scheduled Events</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB instances</a></li>
      * </ul>
-     * <h3>Usage Restrictions</h3>
-     * <p>The task cannot be canceled under the following conditions:</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Tasks cannot be canceled in the following situations:</p>
      * <ul>
-     * <li><code>allowCancel</code> is 0.</li>
+     * <li>The allowCancel parameter is set to 0.</li>
      * <li>The current time is later than the task start time.</li>
-     * <li>The task status is not 3 (waiting for execution).</li>
+     * <li>The status of the task is not set to 3. The value 3 specifies that the task is waiting to be executed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This interface is used to cancel maintenance tasks that have not yet started.</p>
+     * <p>Cancels O\&amp;M tasks that are not started.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
@@ -2369,6 +2491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoRenew", request.autoRenew);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.babelfishConfig)) {
             query.put("BabelfishConfig", request.babelfishConfig);
         }
@@ -2487,6 +2613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
             query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3615,70 +3745,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
-     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a diagnostic report.</p>
-     * 
-     * @param request CreateDiagnosticReportRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateDiagnosticReportResponse
-     */
-    public CreateDiagnosticReportResponse createDiagnosticReportWithOptions(CreateDiagnosticReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            query.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
-            query.put("StartTime", request.startTime);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateDiagnosticReport"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDiagnosticReportResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
-     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a diagnostic report.</p>
-     * 
-     * @param request CreateDiagnosticReportRequest
-     * @return CreateDiagnosticReportResponse
-     */
-    public CreateDiagnosticReportResponse createDiagnosticReport(CreateDiagnosticReportRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDiagnosticReportWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
      * <li>MySQL</li>
@@ -4408,17 +4474,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>PostgreSQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
-     * <h3><a href="#"></a>Precautions</h3>
-     * <p>Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Install only the extensions that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
      * <ul>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Extensions supported by ApsaraDB RDS for PostgreSQL</a>.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of an instance.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported extensions</a>.</li>
+     * <li>You can call an API operation to query the major engine version of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4499,17 +4565,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>PostgreSQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
-     * <h3><a href="#"></a>Precautions</h3>
-     * <p>Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Install only the extensions that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
      * <ul>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Extensions supported by ApsaraDB RDS for PostgreSQL</a>.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of an instance.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported extensions</a>.</li>
+     * <li>You can call an API operation to query the major engine version of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4562,6 +4628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Strategy", request.strategy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4589,6 +4659,192 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRCDeploymentSetResponse createRCDeploymentSet(CreateRCDeploymentSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRCDeploymentSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a data disk for an RDS Custom instance.</p>
+     * 
+     * @param request CreateRCDiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRCDiskResponse
+     */
+    public CreateRCDiskResponse createRCDiskWithOptions(CreateRCDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskCategory)) {
+            query.put("DiskCategory", request.diskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskName)) {
+            query.put("DiskName", request.diskName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
+            query.put("InstanceChargeType", request.instanceChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.performanceLevel)) {
+            query.put("PerformanceLevel", request.performanceLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
+            query.put("SnapshotId", request.snapshotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRCDisk"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRCDiskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a data disk for an RDS Custom instance.</p>
+     * 
+     * @param request CreateRCDiskRequest
+     * @return CreateRCDiskResponse
+     */
+    public CreateRCDiskResponse createRCDisk(CreateRCDiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRCDiskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>In the following scenarios, you cannot create snapshots for a specific disk:</p>
+     * <ul>
+     * <li>The number of manual snapshots of the disk has reached 256.</li>
+     * <li>A snapshot is being created for the disk.</li>
+     * <li>The instance to which the disk is attached has never been started.</li>
+     * <li>The instance to which the disk is attached is not in the <strong>Stopped</strong> or <strong>Running</strong> state.
+     * When you create a snapshot, take note of the following items:</li>
+     * <li>If a snapshot is being created, the snapshot cannot be used to create a custom image by calling the CreateImage operation.</li>
+     * <li>When a snapshot is being created for a disk that is attached to an RDS Custom instance, do not change the instance state.</li>
+     * <li>You can create snapshots for a disk that is in the <strong>Expired</strong> state. If the release time scheduled for a disk arrives when a snapshot is being created for the disk, the snapshot in the Creating state is deleted when the disk is released.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a snapshot for a cloud disk.</p>
+     * 
+     * @param request CreateRCSnapshotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRCSnapshotResponse
+     */
+    public CreateRCSnapshotResponse createRCSnapshotWithOptions(CreateRCSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instantAccess)) {
+            query.put("InstantAccess", request.instantAccess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instantAccessRetentionDays)) {
+            query.put("InstantAccessRetentionDays", request.instantAccessRetentionDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionDays)) {
+            query.put("RetentionDays", request.retentionDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRCSnapshot"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRCSnapshotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>In the following scenarios, you cannot create snapshots for a specific disk:</p>
+     * <ul>
+     * <li>The number of manual snapshots of the disk has reached 256.</li>
+     * <li>A snapshot is being created for the disk.</li>
+     * <li>The instance to which the disk is attached has never been started.</li>
+     * <li>The instance to which the disk is attached is not in the <strong>Stopped</strong> or <strong>Running</strong> state.
+     * When you create a snapshot, take note of the following items:</li>
+     * <li>If a snapshot is being created, the snapshot cannot be used to create a custom image by calling the CreateImage operation.</li>
+     * <li>When a snapshot is being created for a disk that is attached to an RDS Custom instance, do not change the instance state.</li>
+     * <li>You can create snapshots for a disk that is in the <strong>Expired</strong> state. If the release time scheduled for a disk arrives when a snapshot is being created for the disk, the snapshot in the Creating state is deleted when the disk is released.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a snapshot for a cloud disk.</p>
+     * 
+     * @param request CreateRCSnapshotRequest
+     * @return CreateRCSnapshotResponse
+     */
+    public CreateRCSnapshotResponse createRCSnapshot(CreateRCSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRCSnapshotWithOptions(request, runtime);
     }
 
     /**
@@ -4629,6 +4885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bpeEnabled)) {
@@ -4717,6 +4977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
             query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -6549,6 +6813,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a RDS Custom node from a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param tmpReq DeleteRCClusterNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRCClusterNodesResponse
+     */
+    public DeleteRCClusterNodesResponse deleteRCClusterNodesWithOptions(DeleteRCClusterNodesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteRCClusterNodesShrinkRequest request = new DeleteRCClusterNodesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodes)) {
+            request.nodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodes, "Nodes", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodesShrink)) {
+            query.put("Nodes", request.nodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRCClusterNodes"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRCClusterNodesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a RDS Custom node from a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request DeleteRCClusterNodesRequest
+     * @return DeleteRCClusterNodesResponse
+     */
+    public DeleteRCClusterNodesResponse deleteRCClusterNodes(DeleteRCClusterNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRCClusterNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a deployment set for an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId and DeploymentSetId.</p>
      * 
      * @param request DeleteRCDeploymentSetRequest
@@ -6593,6 +6923,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRCDeploymentSetResponse deleteRCDeploymentSet(DeleteRCDeploymentSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRCDeploymentSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Manual snapshots of the disk are retained.</li>
+     * <li>The disk must be in the Unattached (Available) state.</li>
+     * <li>If no disk with the specified disk ID exists, the request will be ignored.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go data disk. The data disk can be a basic disk, an ultra disk, a standard SSD, or an Enterprise SSD (ESSD).</p>
+     * 
+     * @param request DeleteRCDiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRCDiskResponse
+     */
+    public DeleteRCDiskResponse deleteRCDiskWithOptions(DeleteRCDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRCDisk"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRCDiskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Manual snapshots of the disk are retained.</li>
+     * <li>The disk must be in the Unattached (Available) state.</li>
+     * <li>If no disk with the specified disk ID exists, the request will be ignored.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go data disk. The data disk can be a basic disk, an ultra disk, a standard SSD, or an Enterprise SSD (ESSD).</p>
+     * 
+     * @param request DeleteRCDiskRequest
+     * @return DeleteRCDiskResponse
+     */
+    public DeleteRCDiskResponse deleteRCDisk(DeleteRCDiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRCDiskWithOptions(request, runtime);
     }
 
     /**
@@ -6717,6 +7111,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRCInstancesResponse deleteRCInstances(DeleteRCInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRCInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>If the specified snapshot ID does not exist, the request will be ignored.</li>
+     * <li>If the snapshot is used to create custom images, the snapshot cannot be deleted. You must delete the created custom images before you can delete the snapshot.</li>
+     * <li>If the snapshot is used to create cloud disks and <code>Force</code> is not specified or is set to <code>false</code>, the snapshot cannot be directly deleted. If you want to delete the snapshot, set <code>Force</code> to true to forcefully delete the snapshot. The cloud disks created from the snapshot cannot be re-initialized after the snapshot is forcefully deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a cloud disk snapshot.</p>
+     * 
+     * @param request DeleteRCSnapshotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRCSnapshotResponse
+     */
+    public DeleteRCSnapshotResponse deleteRCSnapshotWithOptions(DeleteRCSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
+            query.put("SnapshotId", request.snapshotId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRCSnapshot"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRCSnapshotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>If the specified snapshot ID does not exist, the request will be ignored.</li>
+     * <li>If the snapshot is used to create custom images, the snapshot cannot be deleted. You must delete the created custom images before you can delete the snapshot.</li>
+     * <li>If the snapshot is used to create cloud disks and <code>Force</code> is not specified or is set to <code>false</code>, the snapshot cannot be directly deleted. If you want to delete the snapshot, set <code>Force</code> to true to forcefully delete the snapshot. The cloud disks created from the snapshot cannot be re-initialized after the snapshot is forcefully deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a cloud disk snapshot.</p>
+     * 
+     * @param request DeleteRCSnapshotRequest
+     * @return DeleteRCSnapshotResponse
+     */
+    public DeleteRCSnapshotResponse deleteRCSnapshot(DeleteRCSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRCSnapshotWithOptions(request, runtime);
     }
 
     /**
@@ -9580,6 +10042,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例资源使用情况</p>
+     * 
      * @param request DescribeCustinsResourceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCustinsResourceInfoResponse
@@ -9625,6 +10090,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例资源使用情况</p>
+     * 
      * @param request DescribeCustinsResourceInfoRequest
      * @return DescribeCustinsResourceInfoResponse
      */
@@ -11874,7 +12342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the settings of the dedicated proxy for an instance.</p>
+     * <p>Queries the settings of the database proxy feature for an instance.</p>
      * 
      * @param request DescribeDBProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11941,7 +12409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the settings of the dedicated proxy for an instance.</p>
+     * <p>Queries the settings of the database proxy feature for an instance.</p>
      * 
      * @param request DescribeDBProxyRequest
      * @return DescribeDBProxyResponse
@@ -12084,6 +12552,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBProxyInstanceType)) {
             query.put("DBProxyInstanceType", request.DBProxyInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dimension)) {
+            query.put("Dimension", request.dimension);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -13510,6 +13982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询主机组弹性策略参数</p>
+     * 
      * @param request DescribeHostGroupElasticStrategyParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHostGroupElasticStrategyParametersResponse
@@ -13551,6 +14026,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询主机组弹性策略参数</p>
+     * 
      * @param request DescribeHostGroupElasticStrategyParametersRequest
      * @return DescribeHostGroupElasticStrategyParametersResponse
      */
@@ -15718,6 +16196,164 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Kubeconfig files store identity and authentication information that is used by clients to access ACK clusters. To use kubectl to manage an ACK cluster, you must use the kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the kubeconfig file of a Container Service for Kubernetes (ACK) cluster in which an RDS Custom instance resides.</p>
+     * 
+     * @param request DescribeRCClusterConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCClusterConfigResponse
+     */
+    public DescribeRCClusterConfigResponse describeRCClusterConfigWithOptions(DescribeRCClusterConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.temporaryDurationMinutes)) {
+            query.put("TemporaryDurationMinutes", request.temporaryDurationMinutes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCClusterConfig"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCClusterConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Kubeconfig files store identity and authentication information that is used by clients to access ACK clusters. To use kubectl to manage an ACK cluster, you must use the kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the kubeconfig file of a Container Service for Kubernetes (ACK) cluster in which an RDS Custom instance resides.</p>
+     * 
+     * @param request DescribeRCClusterConfigRequest
+     * @return DescribeRCClusterConfigResponse
+     */
+    public DescribeRCClusterConfigResponse describeRCClusterConfig(DescribeRCClusterConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCClusterConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the RDS custom nodes in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request DescribeRCClusterNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCClusterNodesResponse
+     */
+    public DescribeRCClusterNodesResponse describeRCClusterNodesWithOptions(DescribeRCClusterNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCClusterNodes"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCClusterNodesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the RDS custom nodes in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
+     * @param request DescribeRCClusterNodesRequest
+     * @return DescribeRCClusterNodesResponse
+     */
+    public DescribeRCClusterNodesResponse describeRCClusterNodes(DescribeRCClusterNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCClusterNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries Container Service for Kubernetes (ACK) clusters to which RDS Custom nodes reside in a specific region.</p>
+     * 
+     * @param request DescribeRCClustersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCClustersResponse
+     */
+    public DescribeRCClustersResponse describeRCClustersWithOptions(DescribeRCClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCClusters"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCClustersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries Container Service for Kubernetes (ACK) clusters to which RDS Custom nodes reside in a specific region.</p>
+     * 
+     * @param request DescribeRCClustersRequest
+     * @return DescribeRCClustersResponse
+     */
+    public DescribeRCClustersResponse describeRCClusters(DescribeRCClustersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCClustersWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the details of one or more deployment sets for RDS Custom instances. Before you call this operation, you must specify parameters such as DeploymentSetIds, Strategy, and DeploymentSetName.</p>
      * 
@@ -15755,6 +16391,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRCDeploymentSetsResponse describeRCDeploymentSets(DescribeRCDeploymentSetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRCDeploymentSetsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the disk information about an RDS Custom instance.</p>
+     * 
+     * @param request DescribeRCDisksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCDisksResponse
+     */
+    public DescribeRCDisksResponse describeRCDisksWithOptions(DescribeRCDisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCDisks"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCDisksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the disk information about an RDS Custom instance.</p>
+     * 
+     * @param request DescribeRCDisksRequest
+     * @return DescribeRCDisksResponse
+     */
+    public DescribeRCDisksResponse describeRCDisks(DescribeRCDisksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCDisksWithOptions(request, runtime);
     }
 
     /**
@@ -15807,7 +16483,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribeRCInstanceAttributeResponse describeRCInstanceAttributeWithOptions(DescribeRCInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -15816,7 +16500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2014-08-15"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -15835,6 +16519,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRCInstanceAttributeResponse describeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRCInstanceAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The address returned is valid only for 15 seconds. If you do not use the returned address to establish a connection within 15 seconds, the address expires and you must call the operation again to obtain a new address.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Virtual Network Computing (VNC) logon address of an RDS Custom instance.</p>
+     * 
+     * @param request DescribeRCInstanceVncUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCInstanceVncUrlResponse
+     */
+    public DescribeRCInstanceVncUrlResponse describeRCInstanceVncUrlWithOptions(DescribeRCInstanceVncUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCInstanceVncUrl"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCInstanceVncUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The address returned is valid only for 15 seconds. If you do not use the returned address to establish a connection within 15 seconds, the address expires and you must call the operation again to obtain a new address.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Virtual Network Computing (VNC) logon address of an RDS Custom instance.</p>
+     * 
+     * @param request DescribeRCInstanceVncUrlRequest
+     * @return DescribeRCInstanceVncUrlResponse
+     */
+    public DescribeRCInstanceVncUrlResponse describeRCInstanceVncUrl(DescribeRCInstanceVncUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCInstanceVncUrlWithOptions(request, runtime);
     }
 
     /**
@@ -15939,6 +16681,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRCMetricListResponse describeRCMetricList(DescribeRCMetricListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRCMetricListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of snapshots. The details include the status of the snapshots, the amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
+     * 
+     * @param request DescribeRCSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCSnapshotsResponse
+     */
+    public DescribeRCSnapshotsResponse describeRCSnapshotsWithOptions(DescribeRCSnapshotsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotIds)) {
+            query.put("SnapshotIds", request.snapshotIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCSnapshots"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCSnapshotsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of snapshots. The details include the status of the snapshots, the amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
+     * 
+     * @param request DescribeRCSnapshotsRequest
+     * @return DescribeRCSnapshotsResponse
+     */
+    public DescribeRCSnapshotsResponse describeRCSnapshots(DescribeRCSnapshotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCSnapshotsWithOptions(request, runtime);
     }
 
     /**
@@ -18422,6 +19224,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Detaches a pay-as-you-go data disk or a system disk from an RDS Custom instance.</p>
+     * 
+     * @param request DetachRCDiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachRCDiskResponse
+     */
+    public DetachRCDiskResponse detachRCDiskWithOptions(DetachRCDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteWithInstance)) {
+            query.put("DeleteWithInstance", request.deleteWithInstance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachRCDisk"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachRCDiskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Detaches a pay-as-you-go data disk or a system disk from an RDS Custom instance.</p>
+     * 
+     * @param request DetachRCDiskRequest
+     * @return DetachRCDiskResponse
+     */
+    public DetachRCDiskResponse detachRCDisk(DetachRCDiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachRCDiskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -18572,12 +19430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
-     * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
-     * </ul>
+     * <p>RDS MySQL</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the topology of an instance.</p>
@@ -18621,12 +19474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
-     * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
-     * </ul>
+     * <p>RDS MySQL</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the topology of an instance.</p>
@@ -18911,6 +19759,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
             query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
@@ -22613,6 +23465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PayType", request.payType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.readOnlyDBInstanceClass)) {
             query.put("ReadOnlyDBInstanceClass", request.readOnlyDBInstanceClass);
         }
@@ -22961,21 +23817,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL<blockquote>
-     * <p> Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * <p> Starting October 17, 2023, ApsaraDB RDS for MySQL instances that run RDS Cluster Edition offer one free-of-charge dedicated database proxy for each unit in phases. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One dedicated proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy feature of ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable the database proxy feature of ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the dedicated proxy feature for an instance.</p>
+     * <p>Enables or modifies the database proxy feature for an instance.</p>
      * 
      * @param tmpReq ModifyDBProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23077,21 +23933,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL<blockquote>
-     * <p> Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * <p> Starting October 17, 2023, ApsaraDB RDS for MySQL instances that run RDS Cluster Edition offer one free-of-charge dedicated database proxy for each unit in phases. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One dedicated proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy feature of ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable the database proxy feature of ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the dedicated proxy feature for an instance.</p>
+     * <p>Enables or modifies the database proxy feature for an instance.</p>
      * 
      * @param request ModifyDBProxyRequest
      * @return ModifyDBProxyResponse
@@ -23249,22 +24105,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the database proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes an endpoint that is used to connect to the dedicated proxy of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the database proxy endpoint of an instance.</p>
      * 
      * @param request ModifyDBProxyEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23332,22 +24188,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the database proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes an endpoint that is used to connect to the dedicated proxy of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the database proxy endpoint of an instance.</p>
      * 
      * @param request ModifyDBProxyEndpointAddressRequest
      * @return ModifyDBProxyEndpointAddressResponse
@@ -23681,15 +24537,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
      * <li>SQL Server</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
-     * <p>&lt;props=&quot;china&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.
-     * &lt;props=&quot;intl&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a>.</p>
+     * <p>You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses cloud disks to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.</p>
      * <blockquote>
-     * <p>: Before you call this operation, read the preceding topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -23753,15 +24608,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
      * <li>SQL Server</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
-     * <p>&lt;props=&quot;china&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.
-     * &lt;props=&quot;intl&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a>.</p>
+     * <p>You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses cloud disks to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.</p>
      * <blockquote>
-     * <p>: Before you call this operation, read the preceding topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -24857,6 +25711,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies specific attributes of an RDS Custom instance, such as the password or hostname.</p>
+     * 
+     * @param request ModifyRCInstanceAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyRCInstanceAttributeResponse
+     */
+    public ModifyRCInstanceAttributeResponse modifyRCInstanceAttributeWithOptions(ModifyRCInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
+            query.put("HostName", request.hostName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reboot)) {
+            query.put("Reboot", request.reboot);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyRCInstanceAttribute"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRCInstanceAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies specific attributes of an RDS Custom instance, such as the password or hostname.</p>
+     * 
+     * @param request ModifyRCInstanceAttributeRequest
+     * @return ModifyRCInstanceAttributeResponse
+     */
+    public ModifyRCInstanceAttributeResponse modifyRCInstanceAttribute(ModifyRCInstanceAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyRCInstanceAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改RDS用户专属主机实例付费类型</p>
      * 
      * @param request ModifyRCInstanceChargeTypeRequest
@@ -24917,6 +25831,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyRCInstanceChargeTypeResponse modifyRCInstanceChargeType(ModifyRCInstanceChargeTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRCInstanceChargeTypeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改RC实例描述</p>
+     * 
+     * @param request ModifyRCInstanceDescriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyRCInstanceDescriptionResponse
+     */
+    public ModifyRCInstanceDescriptionResponse modifyRCInstanceDescriptionWithOptions(ModifyRCInstanceDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceDescription)) {
+            query.put("InstanceDescription", request.instanceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyRCInstanceDescription"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRCInstanceDescriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改RC实例描述</p>
+     * 
+     * @param request ModifyRCInstanceDescriptionRequest
+     * @return ModifyRCInstanceDescriptionResponse
+     */
+    public ModifyRCInstanceDescriptionResponse modifyRCInstanceDescription(ModifyRCInstanceDescriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyRCInstanceDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the key pair of an RDS Custom instance.</p>
+     * 
+     * @param request ModifyRCInstanceKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyRCInstanceKeyPairResponse
+     */
+    public ModifyRCInstanceKeyPairResponse modifyRCInstanceKeyPairWithOptions(ModifyRCInstanceKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reboot)) {
+            query.put("Reboot", request.reboot);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyRCInstanceKeyPair"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRCInstanceKeyPairResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the key pair of an RDS Custom instance.</p>
+     * 
+     * @param request ModifyRCInstanceKeyPairRequest
+     * @return ModifyRCInstanceKeyPairResponse
+     */
+    public ModifyRCInstanceKeyPairResponse modifyRCInstanceKeyPair(ModifyRCInstanceKeyPairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyRCInstanceKeyPairWithOptions(request, runtime);
     }
 
     /**
@@ -25782,6 +26804,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除节点创建订单预检查</p>
+     * 
      * @param tmpReq PreCheckCreateOrderForDeleteDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PreCheckCreateOrderForDeleteDBNodesResponse
@@ -25873,6 +26898,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除节点创建订单预检查</p>
+     * 
      * @param request PreCheckCreateOrderForDeleteDBNodesRequest
      * @return PreCheckCreateOrderForDeleteDBNodesResponse
      */
@@ -26955,6 +27983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoRenew", request.autoRenew);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -26969,6 +28001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
             query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -27025,6 +28061,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RenewInstanceResponse renewInstance(RenewInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更换rds custom实例系统盘</p>
+     * 
+     * @param request ReplaceRCInstanceSystemDiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReplaceRCInstanceSystemDiskResponse
+     */
+    public ReplaceRCInstanceSystemDiskResponse replaceRCInstanceSystemDiskWithOptions(ReplaceRCInstanceSystemDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isLocalDisk)) {
+            query.put("IsLocalDisk", request.isLocalDisk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReplaceRCInstanceSystemDisk"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReplaceRCInstanceSystemDiskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更换rds custom实例系统盘</p>
+     * 
+     * @param request ReplaceRCInstanceSystemDiskRequest
+     * @return ReplaceRCInstanceSystemDiskResponse
+     */
+    public ReplaceRCInstanceSystemDiskResponse replaceRCInstanceSystemDisk(ReplaceRCInstanceSystemDiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.replaceRCInstanceSystemDiskWithOptions(request, runtime);
     }
 
     /**
@@ -27240,6 +28340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -27997,21 +29101,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL</li>
      * <li>SQL Server</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/462504.html">Start an ApsaraDB RDS for SQL instance</a></p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Resume an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Resume an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Resume an ApsaraDB RDS for SQL Server instance</a></li>
-     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Resumes an instance.</p>
@@ -28110,21 +29210,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL</li>
      * <li>SQL Server</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/462504.html">Start an ApsaraDB RDS for SQL instance</a></p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Resume an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Resume an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Resume an ApsaraDB RDS for SQL Server instance</a></li>
-     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Resumes an instance.</p>
@@ -28195,13 +29291,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     *   <a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Suspend an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Suspend an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></li>
-     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Suspends an ApsaraDB RDS instance.</p>
@@ -28260,13 +29352,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     *   <a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Suspend an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Suspend an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></li>
-     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Suspends an ApsaraDB RDS instance.</p>
@@ -28907,6 +29995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoRenew", request.autoRenew);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessInfo)) {
             query.put("BusinessInfo", request.businessInfo);
         }
@@ -28933,6 +30025,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
             query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {

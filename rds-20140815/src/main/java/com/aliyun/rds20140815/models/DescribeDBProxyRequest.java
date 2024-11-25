@@ -15,7 +15,7 @@ public class DescribeDBProxyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>

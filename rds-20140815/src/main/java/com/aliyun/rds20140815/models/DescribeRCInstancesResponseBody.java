@@ -91,6 +91,58 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeRCInstancesResponseBodyRCInstancesTagResources extends TeaModel {
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeRCInstancesResponseBodyRCInstancesTagResources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCInstancesResponseBodyRCInstancesTagResources self = new DescribeRCInstancesResponseBodyRCInstancesTagResources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTagResources setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTagResources setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTagResources setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTagResources setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeRCInstancesResponseBodyRCInstances extends TeaModel {
         /**
          * <p>The cluster name.</p>
@@ -189,6 +241,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TagResources")
+        public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> tagResources;
+
         /**
          * <p>The VPC ID.</p>
          * 
@@ -197,6 +252,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         @NameInMap("VpcId")
         public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeRCInstancesResponseBodyRCInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCInstancesResponseBodyRCInstances self = new DescribeRCInstancesResponseBodyRCInstances();
@@ -291,12 +349,28 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeRCInstancesResponseBodyRCInstances setTagResources(java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> tagResources) {
+            this.tagResources = tagResources;
+            return this;
+        }
+        public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> getTagResources() {
+            return this.tagResources;
+        }
+
         public DescribeRCInstancesResponseBodyRCInstances setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

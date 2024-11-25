@@ -88,13 +88,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public String DBProxyInstanceStatus;
 
     /**
-     * <p>The type of the database proxy that is enabled on the instance.</p>
+     * <p>The type of the database proxy that is enabled on the instance. Valid values:</p>
      * <ul>
-     * <li>1: shared proxy</li>
-     * <li>2: dedicated proxy</li>
+     * <li>1: shared database proxy</li>
+     * <li>2: dedicated database proxy</li>
+     * <li>3: general-purpose database proxy</li>
      * </ul>
      * <blockquote>
-     * <p> ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
+     * <p> ApsaraDB RDS for PostgreSQL does not support shared database proxies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -103,19 +104,27 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>Internal parameters, no need to pay attention.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("DBProxyKindCode")
     public String DBProxyKindCode;
 
+    /**
+     * <p>The proxy node list.</p>
+     */
     @NameInMap("DBProxyNodes")
     public DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes;
 
     /**
-     * <p>Connection Persistence State. </p>
-     * <p>Valid values:</p>
+     * <p>The status of persistence connections. Valid values:</p>
      * <ul>
-     * <li>Enabled: Enabled</li>
-     * <li>Disabled: Disabled</li>
-     * <li>Unsupported: The instance does not support connection persistence</li>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * <li><strong>Unsupported</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -511,16 +520,30 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes extends TeaModel {
+        /**
+         * <p>The number of cpu cores for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cpuCores")
         public String cpuCores;
 
         /**
+         * <p>The proxy node id.</p>
+         * 
          * <strong>example:</strong>
          * <p>pn-xxxxxxx01</p>
          */
         @NameInMap("nodeId")
         public String nodeId;
 
+        /**
+         * <p>The id of the availability zone where the node is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-c</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

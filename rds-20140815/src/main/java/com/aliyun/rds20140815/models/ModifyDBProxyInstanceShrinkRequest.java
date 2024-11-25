@@ -50,6 +50,12 @@ public class ModifyDBProxyInstanceShrinkRequest extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>List of proxy nodes.</p>
+     * <blockquote>
+     * <p>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</p>
+     * </blockquote>
+     */
     @NameInMap("DBProxyNodes")
     public String DBProxyNodesShrink;
 
@@ -80,6 +86,12 @@ public class ModifyDBProxyInstanceShrinkRequest extends TeaModel {
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>The list of available zones for migration agents.</p>
+     * <blockquote>
+     * <p>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</p>
+     * </blockquote>
+     */
     @NameInMap("MigrateAZ")
     public String migrateAZShrink;
 

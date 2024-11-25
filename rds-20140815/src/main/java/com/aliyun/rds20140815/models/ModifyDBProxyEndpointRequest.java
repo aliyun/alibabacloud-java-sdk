@@ -112,9 +112,33 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("DbEndpointType")
     public String dbEndpointType;
 
+    /**
+     * <p>The specified time takes effect. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
+     * <blockquote>
+     * <p>This parameter must be passed when EffectiveTime is SpecificTime.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-06T07:08:09Z</p>
+     */
     @NameInMap("EffectiveSpecificTime")
     public String effectiveSpecificTime;
 
+    /**
+     * <p>Effective time, value:</p>
+     * <ul>
+     * <li><p><strong>Immediate</strong>: effective immediately.</p>
+     * </li>
+     * <li><p><strong>MaintainTime</strong>: effective during the operational and maintainable time period, see ModifyDBInstanceMaintainTime.</p>
+     * </li>
+     * <li><p><strong>SpecificTime</strong>: effective at a specified time.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: MaintainTime.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaintainTime</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -185,6 +209,8 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Specifies the switch ID corresponding to the availability zone of the proxy connection address. By default, it is the switch ID corresponding to the default terminal of the proxy instance. You can query the created switch by calling the DescribeVSwitches interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-uf6adz52c2p****</p>
      */

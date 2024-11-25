@@ -179,6 +179,9 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        @NameInMap("Service")
+        public String service;
+
         /**
          * <p>The format in which the value of the performance metric is returned.</p>
          * 
@@ -205,6 +208,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setService(String service) {
+            this.service = service;
+            return this;
+        }
+        public String getService() {
+            return this.service;
         }
 
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setValueFormat(String valueFormat) {

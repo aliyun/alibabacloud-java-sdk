@@ -50,6 +50,12 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>List of proxy nodes.</p>
+     * <blockquote>
+     * <p>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</p>
+     * </blockquote>
+     */
     @NameInMap("DBProxyNodes")
     public java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes;
 
@@ -80,6 +86,12 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>The list of available zones for migration agents.</p>
+     * <blockquote>
+     * <p>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</p>
+     * </blockquote>
+     */
     @NameInMap("MigrateAZ")
     public java.util.List<ModifyDBProxyInstanceRequestMigrateAZ> migrateAZ;
 
@@ -224,6 +236,11 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
 
     public static class ModifyDBProxyInstanceRequestDBProxyNodes extends TeaModel {
         /**
+         * <p>The number of cpu cores for the node, valid values: <strong>1</strong> to <strong>16</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -231,6 +248,11 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         public String cpuCores;
 
         /**
+         * <p>The number of proxy nodes in the availability zone, valid values: <strong>1</strong> to <strong>16</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -238,6 +260,11 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         public String nodeCounts;
 
         /**
+         * <p>The id of the availability zone where the node is located.</p>
+         * <blockquote>
+         * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>cn-hagnzhou-c</p>
          */
@@ -276,9 +303,27 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     }
 
     public static class ModifyDBProxyInstanceRequestMigrateAZ extends TeaModel {
+        /**
+         * <p>The proxy connection address ID. You can obtain it through the DescribeDBProxyEndpoint interface.</p>
+         * <blockquote>
+         * <p>This parameter is required when MigrateAZ is selected.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>yhw429********</p>
+         */
         @NameInMap("dbProxyEndpointId")
         public String dbProxyEndpointId;
 
+        /**
+         * <p>The target VSwitchId corresponding to the proxy instance migration.</p>
+         * <blockquote>
+         * <p>This parameter is required when MigrateAZ is selected.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-sw0qq49d1m****</p>
+         */
         @NameInMap("destVSwitchId")
         public String destVSwitchId;
 

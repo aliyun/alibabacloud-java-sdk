@@ -30,7 +30,7 @@ public class DescribeTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: any non-zero positive integer. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +39,7 @@ public class DescribeTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

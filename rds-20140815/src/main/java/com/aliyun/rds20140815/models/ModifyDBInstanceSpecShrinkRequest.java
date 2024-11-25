@@ -237,6 +237,15 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
+    /**
+     * <p>Target specifications for read-only instances when changing a MySQL high-availability local disk instance to a cloud disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysqlro.n2.large.c</p>
+     */
     @NameInMap("ReadOnlyDBInstanceClass")
     public String readOnlyDBInstanceClass;
 
@@ -487,6 +496,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public ModifyDBInstanceSpecShrinkRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public ModifyDBInstanceSpecShrinkRequest setReadOnlyDBInstanceClass(String readOnlyDBInstanceClass) {
