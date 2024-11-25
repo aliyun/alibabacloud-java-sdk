@@ -10,15 +10,20 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</p>
      * <ul>
-     * <li><p>true: The payment is automatically completed.</p>
-     * <p>**</p>
-     * <p><strong>Note</strong> Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
-     * </li>
-     * <li><p>false: An order is generated but no payment is made.</p>
-     * </li>
+     * <li>true: The payment is automatically completed.</li>
+     * <li>false: An order is generated but no payment is made.</li>
      * </ul>
      * <p>Default value: true.</p>
-     * <p>When <code>OperatorType</code> is set to <code>downgrade</code>, <code>AutoPay</code> is ignored.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</p>
+     * </li>
+     * <li><p>If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * </li>
+     * <li><p>If you set <code>OperatorType</code> to <code>downgrade</code>, <code>AutoPay</code> is ignored.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -85,7 +90,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</li>
      * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
      * </ul>
-     * <p>Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * <p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -146,12 +151,12 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</p>
      * <ul>
-     * <li>true: restart the instance immediately after the instance type is changed.</li>
-     * <li>false: does not restart the instance immediately after the instance type is changed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> If the instance is in the <strong>Stopping</strong> state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the <code>RebootWhenFinished</code> parameter to true.</p>
+     * <p> If the instance is in the <strong>Stopped</strong> state, the instance remains in the Stopped state and no operations are performed, regardless of whether <code>RebootWhenFinished</code> is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

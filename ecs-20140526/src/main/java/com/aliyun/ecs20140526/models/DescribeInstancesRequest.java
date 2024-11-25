@@ -10,10 +10,11 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The additional attributes. Valid values of N: 1 to 20. Valid values:</p>
      * <ul>
-     * <li>META_OPTIONS: instance metadata</li>
-     * <li>DDH_CLUSTER: dedicated host cluster</li>
-     * <li>NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI</li>
-     * <li>CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance</li>
+     * <li>META_OPTIONS: instance metadata.</li>
+     * <li>DDH_CLUSTER: dedicated host cluster.</li>
+     * <li>NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI.</li>
+     * <li>CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance.</li>
+     * <li>CURRENT_OS_NVME_SUPPORTED: specifies whether the operating system supports access to disks over the Non-Volatile Memory Express (NVMe) protocol.</li>
      * </ul>
      * 
      * <strong>example:</strong>

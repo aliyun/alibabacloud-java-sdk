@@ -108,8 +108,8 @@ public class CreateSnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <p>The name cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The retention period of the snapshot. Unit: days. Valid values: 1 to 65536. After the retention period ends, the snapshot is automatically released.</p>
+     * <p>This parameter is left empty by default, which indicates that the snapshot is not automatically released.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -118,8 +118,10 @@ public class CreateSnapshotRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <p>The name cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length and start with a letter. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <blockquote>
+     * <p> The name cannot start with http:// or https://. The name cannot start with <code>auto</code> because the names of automatic snapshots start with auto.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>testSnapshotName</p>

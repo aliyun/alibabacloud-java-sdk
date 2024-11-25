@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyElasticityAssuranceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8455DD10-84F8-43C9-8365-5F448EB169B6</p>

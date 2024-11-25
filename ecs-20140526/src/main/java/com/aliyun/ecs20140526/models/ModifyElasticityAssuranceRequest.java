@@ -7,6 +7,12 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,6 +25,18 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The total number of instances to reserve for the elasticity assurance. Valid values: Number of created instances to 1000. This parameter cannot be changed at the same time with other parameters.----This parameter is exclusive with other parameters in the same request. ?</p>
+     * <blockquote>
+     * <p> Capacity scale-in, not capacity scale-out, is supported.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
@@ -133,7 +151,7 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>eapTestName</p>

@@ -33,7 +33,7 @@ public class ResizeDiskRequest extends TeaModel {
      * <ul>
      * <li><p>Basic disk (cloud): 20 to 500.</p>
      * </li>
-     * <li><p>ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.</p>
+     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.</p>
      * <ul>
      * <li>PL0 ESSD: 1 to 2048.</li>
      * <li>PL1 ESSD: 20 to 2048.</li>
@@ -53,17 +53,17 @@ public class ResizeDiskRequest extends TeaModel {
      * </li>
      * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
      * </li>
-     * <li><p>ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <code>PerformanceLevel</code> value in the response.</p>
+     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <code>PerformanceLevel</code> value in the response.</p>
      * <ul>
-     * <li>PL0 ESSD: 1 to 32768.</li>
-     * <li>PL1 ESSD: 20 to 32768.</li>
-     * <li>PL2 ESSD: 461 to 32768.</li>
-     * <li>PL3 ESSD: 1261 to 32768.</li>
+     * <li>PL0 ESSD: 1 to 65536.</li>
+     * <li>PL1 ESSD: 20 to 65536.</li>
+     * <li>PL2 ESSD: 461 to 65536.</li>
+     * <li>PL3 ESSD: 1261 to 65536.</li>
      * </ul>
      * </li>
      * <li><p>Basic disk (cloud): 5 to 2000.</p>
      * </li>
-     * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 32768.</p>
+     * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.</p>
      * </li>
      * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
      * </li>
@@ -73,7 +73,7 @@ public class ResizeDiskRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p> The new disk capacity must be larger than the original disk capacity.</p>
+     * <p> The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -98,8 +98,8 @@ public class ResizeDiskRequest extends TeaModel {
     /**
      * <p>The method that you want to use to resize the disk. Valid values:</p>
      * <ul>
-     * <li>offline (default): resizes the disk offline. After you resize a disk offline, you must restart the associated instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the resizing operation to take effect. For information about how to restart an ECS instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>.</li>
-     * <li>online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the associated instance. You can resize ultra disks, standard SSDs, Enterprise SSDs (ESSDs), and elastic ephemeral disks online.</li>
+     * <li>offline (default): resizes the disk offline. After you resize a disk offline, you must restart the ECS instance to which the disk is attached in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to allow the resizing operation to take effect. For information about how to restart an ECS instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an ECS instance</a>.</li>
+     * <li>online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the ECS instance to which the disk is attached. You can resize ultra disks, standard SSDs, Enterprise SSDs (ESSDs), and elastic ephemeral disks online.</li>
      * </ul>
      * 
      * <strong>example:</strong>

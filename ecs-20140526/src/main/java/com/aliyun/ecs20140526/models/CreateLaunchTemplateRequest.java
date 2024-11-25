@@ -130,6 +130,16 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String hostName;
 
     /**
+     * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * <p>Default value: enabled.</p>
+     * <blockquote>
+     * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
@@ -137,6 +147,10 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String httpEndpoint;
 
     /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -144,6 +158,16 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public Integer httpPutResponseHopLimit;
 
     /**
+     * <p>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <ul>
+     * <li>optional: does not forcefully use the security hardening mode (IMDSv2).</li>
+     * <li>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+     * </ul>
+     * <p>Default value: optional.</p>
+     * <blockquote>
+     * <p> For information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>optional</p>
      */

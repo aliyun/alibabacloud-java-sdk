@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class AttachDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to attach the disk as a system disk.</p>
+     * <p>Specifies whether to attach the disk as the system disk. Valid values:</p>
+     * <ul>
+     * <li>true: attaches the disk as the system disk.</li>
+     * <li>false: does not attach the disk as the system disk.</li>
+     * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
      * <p> You can set <code>Bootable</code> to true only if the instance does not have a system disk.</p>
@@ -18,7 +22,7 @@ public class AttachDiskRequest extends TeaModel {
     public Boolean bootable;
 
     /**
-     * <p>Specifies whether to release the disk when the instance is released.</p>
+     * <p>Specifies whether to release the disk when the instance is released. Valid values:</p>
      * <ul>
      * <li>true: releases the disk when the instance is released.</li>
      * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
@@ -28,7 +32,7 @@ public class AttachDiskRequest extends TeaModel {
      * <ul>
      * <li>If <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <code>DeleteWithInstance</code> to <code>false</code>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</li>
      * <li>If you want to attach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
-     * <li>This parameter is unavailable for disks for which the multi-attach feature is enabled.</li>
+     * <li>You cannot specify DeleteWithInstance for disks for which the multi-attach feature is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,12 +67,15 @@ public class AttachDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to forcefully attach the disk to the instance.</p>
+     * <p>Specifies whether to force attach the disk to the instance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: force attaches the disk to the instance.</li>
+     * <li>false: does not force attach the disk to the instance.</li>
      * </ul>
      * <p>Default value: false.</p>
+     * <blockquote>
+     * <p> You can set this parameter to true only for Regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>

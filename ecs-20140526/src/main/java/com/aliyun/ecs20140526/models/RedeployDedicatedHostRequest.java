@@ -14,6 +14,16 @@ public class RedeployDedicatedHostRequest extends TeaModel {
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Reboot</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("MigrationType")
+    public String migrationType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -47,6 +57,14 @@ public class RedeployDedicatedHostRequest extends TeaModel {
     }
     public String getDedicatedHostId() {
         return this.dedicatedHostId;
+    }
+
+    public RedeployDedicatedHostRequest setMigrationType(String migrationType) {
+        this.migrationType = migrationType;
+        return this;
+    }
+    public String getMigrationType() {
+        return this.migrationType;
     }
 
     public RedeployDedicatedHostRequest setOwnerAccount(String ownerAccount) {
