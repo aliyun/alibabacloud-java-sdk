@@ -17,6 +17,12 @@ public class DescribeRCImageListRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("ImageName")
+    public String imageName;
+
     /**
      * <p>The page number.</p>
      * 
@@ -65,6 +71,22 @@ public class DescribeRCImageListRequest extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public DescribeRCImageListRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeRCImageListRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
     }
 
     public DescribeRCImageListRequest setPageNumber(Integer pageNumber) {

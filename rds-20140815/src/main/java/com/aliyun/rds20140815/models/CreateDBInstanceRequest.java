@@ -37,7 +37,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature. You must make sure that your account balance is sufficient.</li>
+     * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
      * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
      * </ul>
      * <blockquote>
@@ -68,6 +68,19 @@ public class CreateDBInstanceRequest extends TeaModel {
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
+
+    /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: uses a coupon.</li>
+     * <li><strong>false</strong> (default): does not use a coupon.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
 
     /**
      * <p>The configuration of the Babelfish feature for the instance that runs PostgreSQL.</p>
@@ -141,10 +154,11 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
      * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
      * </ul>
-     * <p>**</p>
-     * <p><strong>Note</strong> This parameter is required when you create a serverless instance.</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is required when you create a serverless instance.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>HighAvailability</p>
@@ -440,17 +454,13 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
-     * </li>
-     * <li><p>RDS instances that run SQL Server: <code>_ent</code> specifies SQL Server EE (Always On), <code>_ent_ha</code> specifies SQL Server EE, <code>_std_ha</code> specifies SQL Server SE, and <code>_web</code> specifies SQL Server Web.</p>
-     * </li>
-     * <li><p>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</p>
-     * </li>
-     * <li><p>Babelfish is supported only for RDS instances that run PostgreSQL 15.</p>
-     * </li>
+     * <li>ApsaraDB RDS for MariaDB does not support serverless instances.</li>
+     * <li>RDS instances that run SQL Server: <code>_ent</code> specifies SQL Server EE (Always On), <code>_ent_ha</code> specifies SQL Server EE, <code>_std_ha</code> specifies SQL Server SE, and <code>_web</code> specifies SQL Server Web.</li>
+     * <li>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</li>
+     * <li>Babelfish is supported only for RDS instances that run PostgreSQL 15.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -462,7 +472,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
      * <li><strong>Classic</strong>: the classic network</li>
      * </ul>
      * <blockquote>
@@ -553,6 +563,15 @@ public class CreateDBInstanceRequest extends TeaModel {
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
+
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliwood-1688-mobile-promotion</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
@@ -790,10 +809,11 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
+     * <p>The vSwitch ID. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
      * <ul>
      * <li>If you set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>, you must also specify this parameter.</li>
-     * <li>If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</li>
+     * <li>If you set the <strong>ZoneSlaveId1</strong> parameter to a value that is not <strong>Auto</strong>, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,). The ZoneSlaveId1 parameter specifies the zone ID of the secondary node.</li>
+     * <li>The value cannot contain <code>spaces</code>, exclamation points <code>(!)</code>, or special characters such as number signs <code>(#)</code>, dollar signs <code>($)</code>, ampersands <code>(&amp;)</code>, and percent signs <code>(%)</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -841,7 +861,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String zoneIdSlave1;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>The zone ID of the other secondary node. When you create an ApsaraDB RDS for MySQL cluster, you can create one to two secondary nodes for the cluster. This parameter applies if you create a cluster that contains two secondary nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-d</p>
@@ -884,6 +904,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateDBInstanceRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public CreateDBInstanceRequest setBabelfishConfig(String babelfishConfig) {
@@ -1126,6 +1154,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.privateIpAddress;
     }
 
+    public CreateDBInstanceRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
     public CreateDBInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -1349,7 +1385,7 @@ public class CreateDBInstanceRequest extends TeaModel {
          * <ul>
          * <li>Serverless ApsaraDB RDS for MySQL instances: <strong>0.5 to 32</strong>.</li>
          * <li>Serverless ApsaraDB RDS for SQL Server instances: <strong>2 to 8</strong>. Only integers are supported.</li>
-         * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 14</strong>.</li>
+         * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 14</strong></li>
          * </ul>
          * <blockquote>
          * <p> The value of this parameter must be less than or equal to the value of the <strong>MaxCapacity</strong> parameter.</p>

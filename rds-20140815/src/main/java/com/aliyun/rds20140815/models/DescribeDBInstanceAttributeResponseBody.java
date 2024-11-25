@@ -1109,6 +1109,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
+        /**
+         * <p>Indicates whether auto scaling is being performed on the instance. If the value <strong>true</strong> is returned, auto scaling is being performed on the instance. If no value is returned, auto scaling is not being performed on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MultipleTempUpgrade")
         public Boolean multipleTempUpgrade;
 

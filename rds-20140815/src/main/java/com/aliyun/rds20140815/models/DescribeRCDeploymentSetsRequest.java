@@ -68,6 +68,9 @@ public class DescribeRCDeploymentSetsRequest extends TeaModel {
     @NameInMap("Strategy")
     public String strategy;
 
+    @NameInMap("Tag")
+    public String tag;
+
     public static DescribeRCDeploymentSetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCDeploymentSetsRequest self = new DescribeRCDeploymentSetsRequest();
         return TeaModel.build(map, self);
@@ -119,6 +122,14 @@ public class DescribeRCDeploymentSetsRequest extends TeaModel {
     }
     public String getStrategy() {
         return this.strategy;
+    }
+
+    public DescribeRCDeploymentSetsRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
 }

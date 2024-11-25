@@ -13,6 +13,15 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CheckAccountNameAvailableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckAccountNameAvailableResponseBody self = new CheckAccountNameAvailableResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +33,14 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CheckAccountNameAvailableResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

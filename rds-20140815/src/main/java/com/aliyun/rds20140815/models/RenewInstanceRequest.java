@@ -43,6 +43,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
@@ -83,6 +86,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("Period")
     public Integer period;
 
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -108,6 +114,14 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public RenewInstanceRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public RenewInstanceRequest setClientToken(String clientToken) {
@@ -140,6 +154,14 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public Integer getPeriod() {
         return this.period;
+    }
+
+    public RenewInstanceRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public RenewInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {

@@ -23,6 +23,9 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The additional business information about the instance.</p>
      * 
@@ -87,6 +90,9 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -120,6 +126,14 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     }
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public TransformDBInstancePayTypeRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public TransformDBInstancePayTypeRequest setBusinessInfo(String businessInfo) {
@@ -176,6 +190,14 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public TransformDBInstancePayTypeRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public TransformDBInstancePayTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

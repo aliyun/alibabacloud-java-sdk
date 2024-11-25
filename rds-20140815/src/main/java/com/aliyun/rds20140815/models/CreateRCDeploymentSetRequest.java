@@ -83,6 +83,9 @@ public class CreateRCDeploymentSetRequest extends TeaModel {
     @NameInMap("Strategy")
     public String strategy;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateRCDeploymentSetRequestTag> tag;
+
     public static CreateRCDeploymentSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRCDeploymentSetRequest self = new CreateRCDeploymentSetRequest();
         return TeaModel.build(map, self);
@@ -142,6 +145,44 @@ public class CreateRCDeploymentSetRequest extends TeaModel {
     }
     public String getStrategy() {
         return this.strategy;
+    }
+
+    public CreateRCDeploymentSetRequest setTag(java.util.List<CreateRCDeploymentSetRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateRCDeploymentSetRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateRCDeploymentSetRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateRCDeploymentSetRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateRCDeploymentSetRequestTag self = new CreateRCDeploymentSetRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRCDeploymentSetRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateRCDeploymentSetRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

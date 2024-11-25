@@ -205,6 +205,77 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources extends TeaModel {
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources extends TeaModel {
+        @NameInMap("TagResources")
+        public java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources> tagResources;
+
+        public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources setTagResources(java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources> tagResources) {
+            this.tagResources = tagResources;
+            return this;
+        }
+        public java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources> getTagResources() {
+            return this.tagResources;
+        }
+
+    }
+
     public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet extends TeaModel {
         /**
          * <p>The details of the capacities of the deployment set. This parameter is valid only when the deployment set contains existing RDS Custom instances. The value contains the details of the capacities of the deployment set in different zones.</p>
@@ -311,6 +382,9 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         @NameInMap("Strategy")
         public String strategy;
 
+        @NameInMap("TagResources")
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources tagResources;
+
         public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet();
             return TeaModel.build(map, self);
@@ -410,6 +484,14 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
         public String getStrategy() {
             return this.strategy;
+        }
+
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setTagResources(DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources tagResources) {
+            this.tagResources = tagResources;
+            return this;
+        }
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources getTagResources() {
+            return this.tagResources;
         }
 
     }

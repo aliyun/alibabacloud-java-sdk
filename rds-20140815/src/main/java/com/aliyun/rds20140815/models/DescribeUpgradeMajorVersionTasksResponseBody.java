@@ -168,6 +168,16 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The end time of the switching from the original instance to the new instance.</p>
+         * <p>Expressed in Unix timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1714237539000</p>
+         */
+        @NameInMap("SwitchEndTime")
+        public String switchEndTime;
+
+        /**
          * <p>The time at which your workloads are switched over from the original instance to the new instance.</p>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
          * 
@@ -285,6 +295,14 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public DescribeUpgradeMajorVersionTasksResponseBodyItems setSwitchEndTime(String switchEndTime) {
+            this.switchEndTime = switchEndTime;
+            return this;
+        }
+        public String getSwitchEndTime() {
+            return this.switchEndTime;
         }
 
         public DescribeUpgradeMajorVersionTasksResponseBodyItems setSwitchTime(String switchTime) {

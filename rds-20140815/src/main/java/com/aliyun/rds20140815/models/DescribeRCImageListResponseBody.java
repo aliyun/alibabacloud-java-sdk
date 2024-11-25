@@ -180,6 +180,9 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("IsPublic")
         public Boolean isPublic;
 
+        @NameInMap("IsSupportRdsCustom")
+        public Boolean isSupportRdsCustom;
+
         /**
          * <p>The display name of the operating system in Chinese.</p>
          */
@@ -304,6 +307,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
         public Boolean getIsPublic() {
             return this.isPublic;
+        }
+
+        public DescribeRCImageListResponseBodyImages setIsSupportRdsCustom(Boolean isSupportRdsCustom) {
+            this.isSupportRdsCustom = isSupportRdsCustom;
+            return this;
+        }
+        public Boolean getIsSupportRdsCustom() {
+            return this.isSupportRdsCustom;
         }
 
         public DescribeRCImageListResponseBodyImages setOSName(String OSName) {

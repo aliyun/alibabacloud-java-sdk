@@ -20,6 +20,9 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("DiskId")
+    public String diskId;
+
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
@@ -84,6 +87,14 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public ResizeRCInstanceDiskRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
     }
 
     public ResizeRCInstanceDiskRequest setDryRun(Boolean dryRun) {

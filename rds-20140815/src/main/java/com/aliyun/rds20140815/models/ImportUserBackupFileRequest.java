@@ -40,6 +40,15 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5****</p>
+     */
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    /**
      * <p>The version of the database engine that is run on the self-managed MySQL database and ApsaraDB RDS for MySQL instance. Set the value to <strong>5.7</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -148,6 +157,14 @@ public class ImportUserBackupFileRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public ImportUserBackupFileRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public ImportUserBackupFileRequest setEngineVersion(String engineVersion) {

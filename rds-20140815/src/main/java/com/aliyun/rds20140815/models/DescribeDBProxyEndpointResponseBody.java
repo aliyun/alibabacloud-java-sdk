@@ -54,12 +54,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following fields:</p>
+     * <p>The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following parameters:</p>
      * <ul>
      * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: the status of the transaction splitting feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
-     * <li><strong>ConnectionPersist</strong>: the status of the connection pooling feature. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session connection pooling feature is enabled. The value 2 indicates that the transaction connection pooling feature is enabled.</li>
+     * <li><strong>ConnectionPersist</strong>: the status of the connection pooling feature. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session-level connection pooling feature is enabled. The value 2 indicates that the transaction-level connection pooling feature is enabled.</li>
      * <li><strong>ReadWriteSpliting</strong>: the status of the read/write splitting feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
-     * <li><strong>PinPreparedStmt</strong>: an internal field that is available only for ApsaraDB RDS for PostgreSQL instances.</li>
+     * <li><strong>AZProximityAccess</strong>: the status of the nearest access feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
+     * <li><strong>PinPreparedStmt</strong>: an internal parameter that is available only for ApsaraDB RDS for PostgrSQL instances.</li>
      * </ul>
      * <blockquote>
      * <p> If the instance runs PostgreSQL, you can change only the value of the <strong>ReadWriteSpliting</strong> field. The <strong>TransactionReadSqlRouteOptimizeStatus</strong> and <strong>PinPreparedStmt</strong> fields are set to their default values 1.</p>
@@ -71,6 +72,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyFeatures")
     public String DBProxyFeatures;
 
+    /**
+     * <p>The proxy nodes that are associated with the proxy terminal.</p>
+     */
     @NameInMap("DBProxyNodes")
     public DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes;
 
@@ -96,9 +100,21 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DbProxyEndpointReadWriteMode")
     public String dbProxyEndpointReadWriteMode;
 
+    /**
+     * <p>The vSwitch ID of the proxy terminal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-****</p>
+     */
     @NameInMap("DbProxyEndpointVswitchId")
     public String dbProxyEndpointVswitchId;
 
+    /**
+     * <p>The zone ID of the proxy terminal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-c</p>
+     */
     @NameInMap("DbProxyEndpointZoneId")
     public String dbProxyEndpointZoneId;
 
@@ -289,12 +305,30 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes extends TeaModel {
+        /**
+         * <p>The number of CPU cores of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cpuCores")
         public String cpuCores;
 
+        /**
+         * <p>The ID of the node in the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn-xxxxxxx01</p>
+         */
         @NameInMap("nodeId")
         public String nodeId;
 
+        /**
+         * <p>The zone ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-c</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
