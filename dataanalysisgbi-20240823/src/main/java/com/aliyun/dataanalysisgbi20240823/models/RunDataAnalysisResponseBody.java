@@ -4,12 +4,29 @@ package com.aliyun.dataanalysisgbi20240823.models;
 import com.aliyun.tea.*;
 
 public class RunDataAnalysisResponseBody extends TeaModel {
+    @NameInMap("code")
+    public String code;
+
     @NameInMap("data")
     public RunDataAnalysisResponseBodyData data;
+
+    @NameInMap("httpStatusCode")
+    public Long httpStatusCode;
+
+    @NameInMap("message")
+    public String message;
 
     public static RunDataAnalysisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunDataAnalysisResponseBody self = new RunDataAnalysisResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RunDataAnalysisResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public RunDataAnalysisResponseBody setData(RunDataAnalysisResponseBodyData data) {
@@ -18,6 +35,22 @@ public class RunDataAnalysisResponseBody extends TeaModel {
     }
     public RunDataAnalysisResponseBodyData getData() {
         return this.data;
+    }
+
+    public RunDataAnalysisResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public RunDataAnalysisResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class RunDataAnalysisResponseBodyDataSqlData extends TeaModel {
@@ -143,6 +176,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         @NameInMap("evidence")
         public String evidence;
 
+        @NameInMap("httpStatusCode")
+        public Long httpStatusCode;
+
         /**
          * <strong>example:</strong>
          * <p>DA2578F7-88A5-5D6E-9305-33E724E97D60</p>
@@ -210,6 +246,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         }
         public String getEvidence() {
             return this.evidence;
+        }
+
+        public RunDataAnalysisResponseBodyData setHttpStatusCode(Long httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+        public Long getHttpStatusCode() {
+            return this.httpStatusCode;
         }
 
         public RunDataAnalysisResponseBodyData setRequestId(String requestId) {
