@@ -13,6 +13,13 @@ public class HttpApiInfoByName extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Http</p>
+     */
+    @NameInMap("type")
+    public String type;
+
+    /**
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("versionEnabled")
@@ -32,6 +39,14 @@ public class HttpApiInfoByName extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public HttpApiInfoByName setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public HttpApiInfoByName setVersionEnabled(Boolean versionEnabled) {

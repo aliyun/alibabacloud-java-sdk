@@ -3,7 +3,7 @@ package com.aliyun.apig20240327.models;
 
 import com.aliyun.tea.*;
 
-public class ListGatewayRoutesResponse extends TeaModel {
+public class GetHttpApiRouteResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListGatewayRoutesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListGatewayRoutesResponseBody body;
+    public GetHttpApiRouteResponseBody body;
 
-    public static ListGatewayRoutesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListGatewayRoutesResponse self = new ListGatewayRoutesResponse();
+    public static GetHttpApiRouteResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetHttpApiRouteResponse self = new GetHttpApiRouteResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListGatewayRoutesResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetHttpApiRouteResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListGatewayRoutesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListGatewayRoutesResponse setStatusCode(Integer statusCode) {
+    public GetHttpApiRouteResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListGatewayRoutesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListGatewayRoutesResponse setBody(ListGatewayRoutesResponseBody body) {
+    public GetHttpApiRouteResponse setBody(GetHttpApiRouteResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListGatewayRoutesResponseBody getBody() {
+    public GetHttpApiRouteResponseBody getBody() {
         return this.body;
     }
 

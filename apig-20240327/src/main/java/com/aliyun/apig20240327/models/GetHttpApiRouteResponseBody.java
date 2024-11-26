@@ -3,13 +3,16 @@ package com.aliyun.apig20240327.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateGatewayServiceResponseBody extends TeaModel {
+public class GetHttpApiRouteResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public HttpRoute data;
 
     /**
      * <strong>example:</strong>
@@ -20,17 +23,17 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
+     * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    public static UpdateGatewayServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateGatewayServiceResponseBody self = new UpdateGatewayServiceResponseBody();
+    public static GetHttpApiRouteResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetHttpApiRouteResponseBody self = new GetHttpApiRouteResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateGatewayServiceResponseBody setCode(String code) {
+    public GetHttpApiRouteResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -38,7 +41,15 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateGatewayServiceResponseBody setMessage(String message) {
+    public GetHttpApiRouteResponseBody setData(HttpRoute data) {
+        this.data = data;
+        return this;
+    }
+    public HttpRoute getData() {
+        return this.data;
+    }
+
+    public GetHttpApiRouteResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -46,7 +57,7 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateGatewayServiceResponseBody setRequestId(String requestId) {
+    public GetHttpApiRouteResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

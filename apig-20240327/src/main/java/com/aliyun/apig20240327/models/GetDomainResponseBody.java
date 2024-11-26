@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDomainResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public GetDomainResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetDomainResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used for tracing the API call chain.</p>
+     * 
      * <strong>example:</strong>
      * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
      */
@@ -65,8 +74,40 @@ public class GetDomainResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetDomainResponseBodyDataStatisticsInfo extends TeaModel {
+        @NameInMap("resourceStatistics")
+        public java.util.List<ResourceStatistic> resourceStatistics;
+
+        @NameInMap("totalCount")
+        public String totalCount;
+
+        public static GetDomainResponseBodyDataStatisticsInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetDomainResponseBodyDataStatisticsInfo self = new GetDomainResponseBodyDataStatisticsInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDomainResponseBodyDataStatisticsInfo setResourceStatistics(java.util.List<ResourceStatistic> resourceStatistics) {
+            this.resourceStatistics = resourceStatistics;
+            return this;
+        }
+        public java.util.List<ResourceStatistic> getResourceStatistics() {
+            return this.resourceStatistics;
+        }
+
+        public GetDomainResponseBodyDataStatisticsInfo setTotalCount(String totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public String getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
     public static class GetDomainResponseBodyData extends TeaModel {
         /**
+         * <p>Encryption algorithm name</p>
+         * 
          * <strong>example:</strong>
          * <p>RSA</p>
          */
@@ -74,6 +115,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String algorithm;
 
         /**
+         * <p>Cloud Shield CA certificate identity.</p>
+         * 
          * <strong>example:</strong>
          * <p>223576-cn-hangzhou</p>
          */
@@ -81,6 +124,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String caCertIndentifier;
 
         /**
+         * <p>Cloud Shield certificate identity.</p>
+         * 
          * <strong>example:</strong>
          * <p>123576-cn-hangzhou</p>
          */
@@ -88,6 +133,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String certIndentifier;
 
         /**
+         * <p>Certificate name</p>
+         * 
          * <strong>example:</strong>
          * <p>test-cert</p>
          */
@@ -95,6 +142,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String certName;
 
         /**
+         * <p>Where it was created from.</p>
+         * 
          * <strong>example:</strong>
          * <p>Console</p>
          */
@@ -102,6 +151,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String createFrom;
 
         /**
+         * <p>Creation timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */
@@ -109,6 +160,8 @@ public class GetDomainResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>Whether it is the default domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -116,6 +169,8 @@ public class GetDomainResponseBody extends TeaModel {
         public Boolean _default;
 
         /**
+         * <p>Domain ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-cq1m3utlhtgvgkv7sitg</p>
          */
@@ -123,6 +178,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String domainId;
 
         /**
+         * <p>Setting for HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -130,6 +187,8 @@ public class GetDomainResponseBody extends TeaModel {
         public Boolean forceHttps;
 
         /**
+         * <p>HTTP/2 setting.</p>
+         * 
          * <strong>example:</strong>
          * <p>Open</p>
          */
@@ -137,6 +196,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String http2Option;
 
         /**
+         * <p>Certificate issuer.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
          */
@@ -144,6 +205,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>Domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc.com</p>
          */
@@ -151,6 +214,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Certificate expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */
@@ -158,6 +223,8 @@ public class GetDomainResponseBody extends TeaModel {
         public Long notAfterTimstamp;
 
         /**
+         * <p>Certificate effective time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */
@@ -165,20 +232,36 @@ public class GetDomainResponseBody extends TeaModel {
         public Long notBeforeTimestamp;
 
         /**
+         * <p>The protocol types supported by the domain.</p>
+         * <ul>
+         * <li>HTTP: Supports only HTTP protocol.</li>
+         * <li>HTTPS: Supports only HTTPS protocol.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
         @NameInMap("protocol")
         public String protocol;
 
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
         /**
+         * <p>All domain names bound to the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
          */
         @NameInMap("sans")
         public String sans;
 
+        @NameInMap("statisticsInfo")
+        public GetDomainResponseBodyDataStatisticsInfo statisticsInfo;
+
         /**
+         * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+         * 
          * <strong>example:</strong>
          * <p>TLS 1.3</p>
          */
@@ -186,6 +269,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String tlsMax;
 
         /**
+         * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>TLS 1.0</p>
          */
@@ -193,6 +278,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String tlsMin;
 
         /**
+         * <p>Update timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */
@@ -324,12 +411,28 @@ public class GetDomainResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        public GetDomainResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetDomainResponseBodyData setSans(String sans) {
             this.sans = sans;
             return this;
         }
         public String getSans() {
             return this.sans;
+        }
+
+        public GetDomainResponseBodyData setStatisticsInfo(GetDomainResponseBodyDataStatisticsInfo statisticsInfo) {
+            this.statisticsInfo = statisticsInfo;
+            return this;
+        }
+        public GetDomainResponseBodyDataStatisticsInfo getStatisticsInfo() {
+            return this.statisticsInfo;
         }
 
         public GetDomainResponseBodyData setTlsMax(String tlsMax) {

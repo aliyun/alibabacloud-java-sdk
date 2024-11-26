@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
+     * <p>CA Certificate Identifier.</p>
+     * 
      * <strong>example:</strong>
-     * <p>194445-cn-hangzhou</p>
+     * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
      */
-    @NameInMap("caCertIndentifier")
-    public String caCertIndentifier;
+    @NameInMap("caCertIdentifier")
+    public String caCertIdentifier;
 
     /**
+     * <p>Certificate Unique Identifier.</p>
+     * 
      * <strong>example:</strong>
-     * <p>194445-cn-hangzhou</p>
+     * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
      */
-    @NameInMap("certIndentifier")
-    public String certIndentifier;
+    @NameInMap("certIdentifier")
+    public String certIdentifier;
 
     /**
+     * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +32,8 @@ public class CreateDomainRequest extends TeaModel {
     public Boolean forceHttps;
 
     /**
+     * <p>HTTP/2 settings.</p>
+     * 
      * <strong>example:</strong>
      * <p>Open</p>
      */
@@ -33,6 +41,7 @@ public class CreateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,11 @@ public class CreateDomainRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The protocol type supported by the domain.</p>
+     * <ul>
+     * <li>HTTP: Supports only HTTP protocol.</li>
+     * <li>HTTPS: Supports only HTTPS protocol.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +64,12 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("protocol")
     public String protocol;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
+     * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+     * 
      * <strong>example:</strong>
      * <p>TLS1.3</p>
      */
@@ -58,6 +77,8 @@ public class CreateDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
+     * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>TLS1.0</p>
      */
@@ -69,20 +90,20 @@ public class CreateDomainRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateDomainRequest setCaCertIndentifier(String caCertIndentifier) {
-        this.caCertIndentifier = caCertIndentifier;
+    public CreateDomainRequest setCaCertIdentifier(String caCertIdentifier) {
+        this.caCertIdentifier = caCertIdentifier;
         return this;
     }
-    public String getCaCertIndentifier() {
-        return this.caCertIndentifier;
+    public String getCaCertIdentifier() {
+        return this.caCertIdentifier;
     }
 
-    public CreateDomainRequest setCertIndentifier(String certIndentifier) {
-        this.certIndentifier = certIndentifier;
+    public CreateDomainRequest setCertIdentifier(String certIdentifier) {
+        this.certIdentifier = certIdentifier;
         return this;
     }
-    public String getCertIndentifier() {
-        return this.certIndentifier;
+    public String getCertIdentifier() {
+        return this.certIdentifier;
     }
 
     public CreateDomainRequest setForceHttps(Boolean forceHttps) {
@@ -115,6 +136,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public CreateDomainRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDomainRequest setTlsMax(String tlsMax) {

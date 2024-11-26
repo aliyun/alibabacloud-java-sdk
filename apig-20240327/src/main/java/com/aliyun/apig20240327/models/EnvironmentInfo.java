@@ -25,6 +25,13 @@ public class EnvironmentInfo extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxxx</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("subDomainInfos")
     public java.util.List<SubDomainInfo> subDomainInfos;
 
@@ -90,6 +97,14 @@ public class EnvironmentInfo extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public EnvironmentInfo setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public EnvironmentInfo setSubDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {

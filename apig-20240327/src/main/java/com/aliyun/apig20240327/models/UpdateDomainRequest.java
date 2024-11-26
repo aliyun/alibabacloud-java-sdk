@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainRequest extends TeaModel {
     /**
+     * <p>Cloud Shield CA certificate identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>123455-cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDomainRequest extends TeaModel {
     public String caCertIndentifier;
 
     /**
+     * <p>Cloud Shield certificate identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>123458-cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class UpdateDomainRequest extends TeaModel {
     public String certIndentifier;
 
     /**
+     * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +32,8 @@ public class UpdateDomainRequest extends TeaModel {
     public Boolean forceHttps;
 
     /**
+     * <p>HTTP/2 settings.</p>
+     * 
      * <strong>example:</strong>
      * <p>Open</p>
      */
@@ -33,6 +41,11 @@ public class UpdateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
+     * <p>The protocol type supported by the domain.</p>
+     * <ul>
+     * <li>HTTP: Supports only HTTP protocol.</li>
+     * <li>HTTPS: Supports only HTTPS protocol.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +55,8 @@ public class UpdateDomainRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+     * 
      * <strong>example:</strong>
      * <p>TLS 1.3</p>
      */
@@ -49,6 +64,8 @@ public class UpdateDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
+     * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>TLS 1.0</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateHttpApiOperationRequest extends TeaModel {
+    /**
+     * <p>List of operation definitions.</p>
+     */
     @NameInMap("operations")
     public java.util.List<HttpApiOperation> operations;
 

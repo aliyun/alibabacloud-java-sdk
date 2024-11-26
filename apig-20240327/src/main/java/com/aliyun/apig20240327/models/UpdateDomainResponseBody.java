@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,14 @@ public class UpdateDomainResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     */
+    @NameInMap("data")
+    public UpdateDomainResponseBodyData data;
+
+    /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +29,8 @@ public class UpdateDomainResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used for tracing the API call chain.</p>
+     * 
      * <strong>example:</strong>
      * <p>4BACB05C-3FE2-588F-9148-700C5C026B74</p>
      */
@@ -38,6 +50,14 @@ public class UpdateDomainResponseBody extends TeaModel {
         return this.code;
     }
 
+    public UpdateDomainResponseBody setData(UpdateDomainResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateDomainResponseBodyData getData() {
+        return this.data;
+    }
+
     public UpdateDomainResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -52,6 +72,31 @@ public class UpdateDomainResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class UpdateDomainResponseBodyData extends TeaModel {
+        /**
+         * <p>Deploy revision id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apr-xxx</p>
+         */
+        @NameInMap("deployRevisionId")
+        public String deployRevisionId;
+
+        public static UpdateDomainResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDomainResponseBodyData self = new UpdateDomainResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDomainResponseBodyData setDeployRevisionId(String deployRevisionId) {
+            this.deployRevisionId = deployRevisionId;
+            return this;
+        }
+        public String getDeployRevisionId() {
+            return this.deployRevisionId;
+        }
+
     }
 
 }

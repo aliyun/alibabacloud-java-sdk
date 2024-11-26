@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateEnvironmentResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public CreateEnvironmentResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateEnvironmentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used for tracing the API call chain.</p>
+     * 
      * <strong>example:</strong>
      * <p>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</p>
      */
@@ -67,6 +76,8 @@ public class CreateEnvironmentResponseBody extends TeaModel {
 
     public static class CreateEnvironmentResponseBodyData extends TeaModel {
         /**
+         * <p>Environment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */

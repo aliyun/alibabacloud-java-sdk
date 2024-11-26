@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateEnvironmentRequest extends TeaModel {
     /**
+     * <p>Environment alias.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试环境</p>
      */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <p>Description of the environment, which can include information such as the purpose of the environment and its owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是xxx的xx项目测试环境</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Gateway ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +34,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>Environment name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +42,9 @@ public class CreateEnvironmentRequest extends TeaModel {
      */
     @NameInMap("name")
     public String name;
+
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
 
     public static CreateEnvironmentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEnvironmentRequest self = new CreateEnvironmentRequest();
@@ -66,6 +81,14 @@ public class CreateEnvironmentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateEnvironmentRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

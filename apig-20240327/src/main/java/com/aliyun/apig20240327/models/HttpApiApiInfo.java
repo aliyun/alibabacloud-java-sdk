@@ -4,12 +4,18 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiApiInfo extends TeaModel {
+    @NameInMap("aiProtocols")
+    public java.util.List<String> aiProtocols;
+
     /**
      * <strong>example:</strong>
      * <p>/v1</p>
      */
     @NameInMap("basePath")
     public String basePath;
+
+    @NameInMap("deployConfigs")
+    public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     @NameInMap("description")
     public String description;
@@ -24,6 +30,9 @@ public class HttpApiApiInfo extends TeaModel {
     @NameInMap("httpApiId")
     public String httpApiId;
 
+    @NameInMap("ingressInfo")
+    public HttpApiApiInfoIngressInfo ingressInfo;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,6 +43,20 @@ public class HttpApiApiInfo extends TeaModel {
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Rest</p>
+     */
+    @NameInMap("type")
+    public String type;
+
     @NameInMap("versionInfo")
     public HttpApiVersionInfo versionInfo;
 
@@ -42,12 +65,28 @@ public class HttpApiApiInfo extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public HttpApiApiInfo setAiProtocols(java.util.List<String> aiProtocols) {
+        this.aiProtocols = aiProtocols;
+        return this;
+    }
+    public java.util.List<String> getAiProtocols() {
+        return this.aiProtocols;
+    }
+
     public HttpApiApiInfo setBasePath(String basePath) {
         this.basePath = basePath;
         return this;
     }
     public String getBasePath() {
         return this.basePath;
+    }
+
+    public HttpApiApiInfo setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+        this.deployConfigs = deployConfigs;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     public HttpApiApiInfo setDescription(String description) {
@@ -74,6 +113,14 @@ public class HttpApiApiInfo extends TeaModel {
         return this.httpApiId;
     }
 
+    public HttpApiApiInfo setIngressInfo(HttpApiApiInfoIngressInfo ingressInfo) {
+        this.ingressInfo = ingressInfo;
+        return this;
+    }
+    public HttpApiApiInfoIngressInfo getIngressInfo() {
+        return this.ingressInfo;
+    }
+
     public HttpApiApiInfo setName(String name) {
         this.name = name;
         return this;
@@ -90,395 +137,28 @@ public class HttpApiApiInfo extends TeaModel {
         return this.protocols;
     }
 
+    public HttpApiApiInfo setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public HttpApiApiInfo setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
     public HttpApiApiInfo setVersionInfo(HttpApiVersionInfo versionInfo) {
         this.versionInfo = versionInfo;
         return this;
     }
     public HttpApiVersionInfo getVersionInfo() {
         return this.versionInfo;
-    }
-
-    public static class HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>gs-xxx</p>
-         */
-        @NameInMap("gatewayServiceId")
-        public String gatewayServiceId;
-
-        @NameInMap("match")
-        public HttpApiBackendMatchConditions match;
-
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
-        @NameInMap("name")
-        public String name;
-
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
-        @NameInMap("namespace")
-        public String namespace;
-
-        /**
-         * <strong>example:</strong>
-         * <p>8080</p>
-         */
-        @NameInMap("port")
-        public Integer port;
-
-        /**
-         * <strong>example:</strong>
-         * <p>HTTP</p>
-         */
-        @NameInMap("protocol")
-        public String protocol;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("weight")
-        public Integer weight;
-
-        public static HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs build(java.util.Map<String, ?> map) throws Exception {
-            HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs self = new HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs();
-            return TeaModel.build(map, self);
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs setGatewayServiceId(String gatewayServiceId) {
-            this.gatewayServiceId = gatewayServiceId;
-            return this;
-        }
-        public String getGatewayServiceId() {
-            return this.gatewayServiceId;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs setMatch(HttpApiBackendMatchConditions match) {
-            this.match = match;
-            return this;
-        }
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-    }
-
-    public static class HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>gs-xxx</p>
-         */
-        @NameInMap("gatewayServiceId")
-        public String gatewayServiceId;
-
-        @NameInMap("match")
-        public HttpApiBackendMatchConditions match;
-
-        /**
-         * <strong>example:</strong>
-         * <p>test-function</p>
-         */
-        @NameInMap("name")
-        public String name;
-
-        /**
-         * <strong>example:</strong>
-         * <p>LATEST</p>
-         */
-        @NameInMap("qualifier")
-        public String qualifier;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("weight")
-        public Integer weight;
-
-        public static HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs build(java.util.Map<String, ?> map) throws Exception {
-            HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs self = new HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs();
-            return TeaModel.build(map, self);
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs setGatewayServiceId(String gatewayServiceId) {
-            this.gatewayServiceId = gatewayServiceId;
-            return this;
-        }
-        public String getGatewayServiceId() {
-            return this.gatewayServiceId;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs setMatch(HttpApiBackendMatchConditions match) {
-            this.match = match;
-            return this;
-        }
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs setQualifier(String qualifier) {
-            this.qualifier = qualifier;
-            return this;
-        }
-        public String getQualifier() {
-            return this.qualifier;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-    }
-
-    public static class HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>gs-xxx</p>
-         */
-        @NameInMap("gatewayServiceId")
-        public String gatewayServiceId;
-
-        /**
-         * <strong>example:</strong>
-         * <p>DEFAULT_GROUP</p>
-         */
-        @NameInMap("groupName")
-        public String groupName;
-
-        @NameInMap("match")
-        public HttpApiBackendMatchConditions match;
-
-        /**
-         * <strong>example:</strong>
-         * <p>springboot-test</p>
-         */
-        @NameInMap("name")
-        public String name;
-
-        /**
-         * <strong>example:</strong>
-         * <p>public</p>
-         */
-        @NameInMap("namespace")
-        public String namespace;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("weight")
-        public Integer weight;
-
-        public static HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs build(java.util.Map<String, ?> map) throws Exception {
-            HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs self = new HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs();
-            return TeaModel.build(map, self);
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs setGatewayServiceId(String gatewayServiceId) {
-            this.gatewayServiceId = gatewayServiceId;
-            return this;
-        }
-        public String getGatewayServiceId() {
-            return this.gatewayServiceId;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs setMatch(HttpApiBackendMatchConditions match) {
-            this.match = match;
-            return this;
-        }
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-    }
-
-    public static class HttpApiApiInfoEnvironmentsCloudProductConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>CS</p>
-         */
-        @NameInMap("cloudProductType")
-        public String cloudProductType;
-
-        @NameInMap("containerServiceConfigs")
-        public java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs> containerServiceConfigs;
-
-        @NameInMap("functionConfigs")
-        public java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs> functionConfigs;
-
-        @NameInMap("mseNacosConfigs")
-        public java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs> mseNacosConfigs;
-
-        public static HttpApiApiInfoEnvironmentsCloudProductConfig build(java.util.Map<String, ?> map) throws Exception {
-            HttpApiApiInfoEnvironmentsCloudProductConfig self = new HttpApiApiInfoEnvironmentsCloudProductConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfig setCloudProductType(String cloudProductType) {
-            this.cloudProductType = cloudProductType;
-            return this;
-        }
-        public String getCloudProductType() {
-            return this.cloudProductType;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfig setContainerServiceConfigs(java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs> containerServiceConfigs) {
-            this.containerServiceConfigs = containerServiceConfigs;
-            return this;
-        }
-        public java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigContainerServiceConfigs> getContainerServiceConfigs() {
-            return this.containerServiceConfigs;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfig setFunctionConfigs(java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs> functionConfigs) {
-            this.functionConfigs = functionConfigs;
-            return this;
-        }
-        public java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigFunctionConfigs> getFunctionConfigs() {
-            return this.functionConfigs;
-        }
-
-        public HttpApiApiInfoEnvironmentsCloudProductConfig setMseNacosConfigs(java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs> mseNacosConfigs) {
-            this.mseNacosConfigs = mseNacosConfigs;
-            return this;
-        }
-        public java.util.List<HttpApiApiInfoEnvironmentsCloudProductConfigMseNacosConfigs> getMseNacosConfigs() {
-            return this.mseNacosConfigs;
-        }
-
-    }
-
-    public static class HttpApiApiInfoEnvironmentsDnsConfigs extends TeaModel {
-        @NameInMap("dnsList")
-        public java.util.List<String> dnsList;
-
-        @NameInMap("match")
-        public HttpApiBackendMatchConditions match;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("weight")
-        public Integer weight;
-
-        public static HttpApiApiInfoEnvironmentsDnsConfigs build(java.util.Map<String, ?> map) throws Exception {
-            HttpApiApiInfoEnvironmentsDnsConfigs self = new HttpApiApiInfoEnvironmentsDnsConfigs();
-            return TeaModel.build(map, self);
-        }
-
-        public HttpApiApiInfoEnvironmentsDnsConfigs setDnsList(java.util.List<String> dnsList) {
-            this.dnsList = dnsList;
-            return this;
-        }
-        public java.util.List<String> getDnsList() {
-            return this.dnsList;
-        }
-
-        public HttpApiApiInfoEnvironmentsDnsConfigs setMatch(HttpApiBackendMatchConditions match) {
-            this.match = match;
-            return this;
-        }
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
-        }
-
-        public HttpApiApiInfoEnvironmentsDnsConfigs setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
     }
 
     public static class HttpApiApiInfoEnvironmentsGatewayInfo extends TeaModel {
@@ -553,6 +233,13 @@ public class HttpApiApiInfo extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>svc-xxx</p>
+         */
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        /**
+         * <strong>example:</strong>
          * <p>v1</p>
          */
         @NameInMap("version")
@@ -610,6 +297,14 @@ public class HttpApiApiInfo extends TeaModel {
             return this.protocol;
         }
 
+        public HttpApiApiInfoEnvironmentsServiceConfigs setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
         public HttpApiApiInfoEnvironmentsServiceConfigs setVersion(String version) {
             this.version = version;
             return this;
@@ -628,47 +323,70 @@ public class HttpApiApiInfo extends TeaModel {
 
     }
 
-    public static class HttpApiApiInfoEnvironmentsVipConfigs extends TeaModel {
-        @NameInMap("endpoints")
-        public java.util.List<String> endpoints;
-
-        @NameInMap("match")
-        public HttpApiBackendMatchConditions match;
+    public static class HttpApiApiInfoEnvironmentsSubDomains extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-xxx</p>
+         */
+        @NameInMap("domainId")
+        public String domainId;
 
         /**
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
-        @NameInMap("weight")
-        public Integer weight;
+        @NameInMap("name")
+        public String name;
 
-        public static HttpApiApiInfoEnvironmentsVipConfigs build(java.util.Map<String, ?> map) throws Exception {
-            HttpApiApiInfoEnvironmentsVipConfigs self = new HttpApiApiInfoEnvironmentsVipConfigs();
+        /**
+         * <strong>example:</strong>
+         * <p>Internet</p>
+         */
+        @NameInMap("networkType")
+        public String networkType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        public static HttpApiApiInfoEnvironmentsSubDomains build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiApiInfoEnvironmentsSubDomains self = new HttpApiApiInfoEnvironmentsSubDomains();
             return TeaModel.build(map, self);
         }
 
-        public HttpApiApiInfoEnvironmentsVipConfigs setEndpoints(java.util.List<String> endpoints) {
-            this.endpoints = endpoints;
+        public HttpApiApiInfoEnvironmentsSubDomains setDomainId(String domainId) {
+            this.domainId = domainId;
             return this;
         }
-        public java.util.List<String> getEndpoints() {
-            return this.endpoints;
+        public String getDomainId() {
+            return this.domainId;
         }
 
-        public HttpApiApiInfoEnvironmentsVipConfigs setMatch(HttpApiBackendMatchConditions match) {
-            this.match = match;
+        public HttpApiApiInfoEnvironmentsSubDomains setName(String name) {
+            this.name = name;
             return this;
         }
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
+        public String getName() {
+            return this.name;
         }
 
-        public HttpApiApiInfoEnvironmentsVipConfigs setWeight(Integer weight) {
-            this.weight = weight;
+        public HttpApiApiInfoEnvironmentsSubDomains setNetworkType(String networkType) {
+            this.networkType = networkType;
             return this;
         }
-        public Integer getWeight() {
-            return this.weight;
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public HttpApiApiInfoEnvironmentsSubDomains setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }
@@ -695,14 +413,15 @@ public class HttpApiApiInfo extends TeaModel {
         @NameInMap("backendType")
         public String backendType;
 
-        @NameInMap("cloudProductConfig")
-        public HttpApiApiInfoEnvironmentsCloudProductConfig cloudProductConfig;
-
         @NameInMap("customDomains")
         public java.util.List<HttpApiDomainInfo> customDomains;
 
-        @NameInMap("dnsConfigs")
-        public java.util.List<HttpApiApiInfoEnvironmentsDnsConfigs> dnsConfigs;
+        /**
+         * <strong>example:</strong>
+         * <p>Deployed</p>
+         */
+        @NameInMap("deployStatus")
+        public String deployStatus;
 
         /**
          * <strong>example:</strong>
@@ -721,18 +440,11 @@ public class HttpApiApiInfo extends TeaModel {
         @NameInMap("name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Published</p>
-         */
-        @NameInMap("publishStatus")
-        public String publishStatus;
-
         @NameInMap("serviceConfigs")
         public java.util.List<HttpApiApiInfoEnvironmentsServiceConfigs> serviceConfigs;
 
-        @NameInMap("vipConfigs")
-        public java.util.List<HttpApiApiInfoEnvironmentsVipConfigs> vipConfigs;
+        @NameInMap("subDomains")
+        public java.util.List<HttpApiApiInfoEnvironmentsSubDomains> subDomains;
 
         public static HttpApiApiInfoEnvironments build(java.util.Map<String, ?> map) throws Exception {
             HttpApiApiInfoEnvironments self = new HttpApiApiInfoEnvironments();
@@ -763,14 +475,6 @@ public class HttpApiApiInfo extends TeaModel {
             return this.backendType;
         }
 
-        public HttpApiApiInfoEnvironments setCloudProductConfig(HttpApiApiInfoEnvironmentsCloudProductConfig cloudProductConfig) {
-            this.cloudProductConfig = cloudProductConfig;
-            return this;
-        }
-        public HttpApiApiInfoEnvironmentsCloudProductConfig getCloudProductConfig() {
-            return this.cloudProductConfig;
-        }
-
         public HttpApiApiInfoEnvironments setCustomDomains(java.util.List<HttpApiDomainInfo> customDomains) {
             this.customDomains = customDomains;
             return this;
@@ -779,12 +483,12 @@ public class HttpApiApiInfo extends TeaModel {
             return this.customDomains;
         }
 
-        public HttpApiApiInfoEnvironments setDnsConfigs(java.util.List<HttpApiApiInfoEnvironmentsDnsConfigs> dnsConfigs) {
-            this.dnsConfigs = dnsConfigs;
+        public HttpApiApiInfoEnvironments setDeployStatus(String deployStatus) {
+            this.deployStatus = deployStatus;
             return this;
         }
-        public java.util.List<HttpApiApiInfoEnvironmentsDnsConfigs> getDnsConfigs() {
-            return this.dnsConfigs;
+        public String getDeployStatus() {
+            return this.deployStatus;
         }
 
         public HttpApiApiInfoEnvironments setEnvironmentId(String environmentId) {
@@ -811,14 +515,6 @@ public class HttpApiApiInfo extends TeaModel {
             return this.name;
         }
 
-        public HttpApiApiInfoEnvironments setPublishStatus(String publishStatus) {
-            this.publishStatus = publishStatus;
-            return this;
-        }
-        public String getPublishStatus() {
-            return this.publishStatus;
-        }
-
         public HttpApiApiInfoEnvironments setServiceConfigs(java.util.List<HttpApiApiInfoEnvironmentsServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
             return this;
@@ -827,12 +523,124 @@ public class HttpApiApiInfo extends TeaModel {
             return this.serviceConfigs;
         }
 
-        public HttpApiApiInfoEnvironments setVipConfigs(java.util.List<HttpApiApiInfoEnvironmentsVipConfigs> vipConfigs) {
-            this.vipConfigs = vipConfigs;
+        public HttpApiApiInfoEnvironments setSubDomains(java.util.List<HttpApiApiInfoEnvironmentsSubDomains> subDomains) {
+            this.subDomains = subDomains;
             return this;
         }
-        public java.util.List<HttpApiApiInfoEnvironmentsVipConfigs> getVipConfigs() {
-            return this.vipConfigs;
+        public java.util.List<HttpApiApiInfoEnvironmentsSubDomains> getSubDomains() {
+            return this.subDomains;
+        }
+
+    }
+
+    public static class HttpApiApiInfoIngressInfoEnvironmentInfo extends TeaModel {
+        @NameInMap("environmentId")
+        public String environmentId;
+
+        public static HttpApiApiInfoIngressInfoEnvironmentInfo build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiApiInfoIngressInfoEnvironmentInfo self = new HttpApiApiInfoIngressInfoEnvironmentInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiApiInfoIngressInfoEnvironmentInfo setEnvironmentId(String environmentId) {
+            this.environmentId = environmentId;
+            return this;
+        }
+        public String getEnvironmentId() {
+            return this.environmentId;
+        }
+
+    }
+
+    public static class HttpApiApiInfoIngressInfoK8sClusterInfo extends TeaModel {
+        @NameInMap("clusterId")
+        public String clusterId;
+
+        public static HttpApiApiInfoIngressInfoK8sClusterInfo build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiApiInfoIngressInfoK8sClusterInfo self = new HttpApiApiInfoIngressInfoK8sClusterInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiApiInfoIngressInfoK8sClusterInfo setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+    }
+
+    public static class HttpApiApiInfoIngressInfo extends TeaModel {
+        @NameInMap("environmentInfo")
+        public HttpApiApiInfoIngressInfoEnvironmentInfo environmentInfo;
+
+        @NameInMap("ingressClass")
+        public String ingressClass;
+
+        @NameInMap("k8sClusterInfo")
+        public HttpApiApiInfoIngressInfoK8sClusterInfo k8sClusterInfo;
+
+        @NameInMap("overrideIngressIp")
+        public Boolean overrideIngressIp;
+
+        @NameInMap("sourceId")
+        public String sourceId;
+
+        @NameInMap("watchNamespace")
+        public String watchNamespace;
+
+        public static HttpApiApiInfoIngressInfo build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiApiInfoIngressInfo self = new HttpApiApiInfoIngressInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiApiInfoIngressInfo setEnvironmentInfo(HttpApiApiInfoIngressInfoEnvironmentInfo environmentInfo) {
+            this.environmentInfo = environmentInfo;
+            return this;
+        }
+        public HttpApiApiInfoIngressInfoEnvironmentInfo getEnvironmentInfo() {
+            return this.environmentInfo;
+        }
+
+        public HttpApiApiInfoIngressInfo setIngressClass(String ingressClass) {
+            this.ingressClass = ingressClass;
+            return this;
+        }
+        public String getIngressClass() {
+            return this.ingressClass;
+        }
+
+        public HttpApiApiInfoIngressInfo setK8sClusterInfo(HttpApiApiInfoIngressInfoK8sClusterInfo k8sClusterInfo) {
+            this.k8sClusterInfo = k8sClusterInfo;
+            return this;
+        }
+        public HttpApiApiInfoIngressInfoK8sClusterInfo getK8sClusterInfo() {
+            return this.k8sClusterInfo;
+        }
+
+        public HttpApiApiInfoIngressInfo setOverrideIngressIp(Boolean overrideIngressIp) {
+            this.overrideIngressIp = overrideIngressIp;
+            return this;
+        }
+        public Boolean getOverrideIngressIp() {
+            return this.overrideIngressIp;
+        }
+
+        public HttpApiApiInfoIngressInfo setSourceId(String sourceId) {
+            this.sourceId = sourceId;
+            return this;
+        }
+        public String getSourceId() {
+            return this.sourceId;
+        }
+
+        public HttpApiApiInfoIngressInfo setWatchNamespace(String watchNamespace) {
+            this.watchNamespace = watchNamespace;
+            return this;
+        }
+        public String getWatchNamespace() {
+            return this.watchNamespace;
         }
 
     }

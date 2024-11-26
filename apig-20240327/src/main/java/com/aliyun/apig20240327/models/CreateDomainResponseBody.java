@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDomainResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public CreateDomainResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateDomainResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used for tracing the API call chain.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C2D1C68-0D93-5561-8EE6-FDB7BF067A30</p>
      */
@@ -67,6 +76,8 @@ public class CreateDomainResponseBody extends TeaModel {
 
     public static class CreateDomainResponseBodyData extends TeaModel {
         /**
+         * <p>Domain ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-cpu1aullhtgkidg7sa4g</p>
          */
