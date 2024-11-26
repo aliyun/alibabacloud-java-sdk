@@ -140,20 +140,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>评论生成服务</p>
      * 
-     * @param request RunCommentGenerationRequest
+     * @param tmpReq RunCommentGenerationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunCommentGenerationResponse
      */
-    public RunCommentGenerationResponse runCommentGenerationWithOptions(String workspaceId, RunCommentGenerationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RunCommentGenerationResponse runCommentGenerationWithOptions(String workspaceId, RunCommentGenerationRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunCommentGenerationShrinkRequest request = new RunCommentGenerationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lengthRange)) {
+            request.lengthRangeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lengthRange, "lengthRange", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sentiment)) {
+            request.sentimentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sentiment, "sentiment", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.type)) {
+            request.typeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.type, "type", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowEmoji)) {
+            body.put("allowEmoji", request.allowEmoji);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("extraInfo", request.extraInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.length)) {
             body.put("length", request.length);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lengthRangeShrink)) {
+            body.put("lengthRange", request.lengthRangeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.numComments)) {
             body.put("numComments", request.numComments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sentimentShrink)) {
+            body.put("sentiment", request.sentimentShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceMaterial)) {
@@ -162,6 +196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.style)) {
             body.put("style", request.style);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typeShrink)) {
+            body.put("type", request.typeShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

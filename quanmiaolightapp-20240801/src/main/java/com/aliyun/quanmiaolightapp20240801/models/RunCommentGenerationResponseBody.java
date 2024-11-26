@@ -13,6 +13,9 @@ public class RunCommentGenerationResponseBody extends TeaModel {
     @NameInMap("payload")
     public RunCommentGenerationResponseBodyPayload payload;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static RunCommentGenerationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunCommentGenerationResponseBody self = new RunCommentGenerationResponseBody();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class RunCommentGenerationResponseBody extends TeaModel {
     }
     public RunCommentGenerationResponseBodyPayload getPayload() {
         return this.payload;
+    }
+
+    public RunCommentGenerationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RunCommentGenerationResponseBodyHeader extends TeaModel {
