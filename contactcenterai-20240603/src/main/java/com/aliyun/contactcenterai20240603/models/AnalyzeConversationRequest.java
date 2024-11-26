@@ -47,6 +47,9 @@ public class AnalyzeConversationRequest extends TeaModel {
     @NameInMap("stream")
     public Boolean stream;
 
+    @NameInMap("timeConstraintList")
+    public java.util.List<String> timeConstraintList;
+
     @NameInMap("userProfiles")
     public java.util.List<AnalyzeConversationRequestUserProfiles> userProfiles;
 
@@ -125,6 +128,14 @@ public class AnalyzeConversationRequest extends TeaModel {
     }
     public Boolean getStream() {
         return this.stream;
+    }
+
+    public AnalyzeConversationRequest setTimeConstraintList(java.util.List<String> timeConstraintList) {
+        this.timeConstraintList = timeConstraintList;
+        return this;
+    }
+    public java.util.List<String> getTimeConstraintList() {
+        return this.timeConstraintList;
     }
 
     public AnalyzeConversationRequest setUserProfiles(java.util.List<AnalyzeConversationRequestUserProfiles> userProfiles) {

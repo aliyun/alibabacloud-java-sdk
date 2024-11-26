@@ -3,7 +3,7 @@ package com.aliyun.contactcenterai20240603.models;
 
 import com.aliyun.tea.*;
 
-public class CreateConversationAnalysisTaskResponse extends TeaModel {
+public class AnalyzeImageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateConversationAnalysisTaskResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateConversationAnalysisTaskResponseBody body;
+    public AnalyzeImageResponseBody body;
 
-    public static CreateConversationAnalysisTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateConversationAnalysisTaskResponse self = new CreateConversationAnalysisTaskResponse();
+    public static AnalyzeImageResponse build(java.util.Map<String, ?> map) throws Exception {
+        AnalyzeImageResponse self = new AnalyzeImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateConversationAnalysisTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public AnalyzeImageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateConversationAnalysisTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateConversationAnalysisTaskResponse setStatusCode(Integer statusCode) {
+    public AnalyzeImageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateConversationAnalysisTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateConversationAnalysisTaskResponse setBody(CreateConversationAnalysisTaskResponseBody body) {
+    public AnalyzeImageResponse setBody(AnalyzeImageResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateConversationAnalysisTaskResponseBody getBody() {
+    public AnalyzeImageResponseBody getBody() {
         return this.body;
     }
 
