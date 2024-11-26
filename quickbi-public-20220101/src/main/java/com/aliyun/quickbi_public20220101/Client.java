@@ -217,6 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddUserResponse addUserWithOptions(AddUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
             query.put("AccountName", request.accountName);
         }
@@ -4876,6 +4880,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetDataLevelPermissionWhiteListResponse setDataLevelPermissionWhiteList(SetDataLevelPermissionWhiteListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDataLevelPermissionWhiteListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>问数能力开放</p>
+     * 
+     * @param request SmartqQueryAbilityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SmartqQueryAbilityResponse
+     */
+    public SmartqQueryAbilityResponse smartqQueryAbilityWithOptions(SmartqQueryAbilityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cubeId)) {
+            query.put("CubeId", request.cubeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userQuestion)) {
+            query.put("UserQuestion", request.userQuestion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SmartqQueryAbility"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SmartqQueryAbilityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>问数能力开放</p>
+     * 
+     * @param request SmartqQueryAbilityRequest
+     * @return SmartqQueryAbilityResponse
+     */
+    public SmartqQueryAbilityResponse smartqQueryAbility(SmartqQueryAbilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.smartqQueryAbilityWithOptions(request, runtime);
     }
 
     /**

@@ -4,6 +4,10 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserRequest extends TeaModel {
+    @NameInMap("AccountId")
+    @Deprecated
+    public String accountId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -53,6 +57,14 @@ public class AddUserRequest extends TeaModel {
     public static AddUserRequest build(java.util.Map<String, ?> map) throws Exception {
         AddUserRequest self = new AddUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddUserRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public AddUserRequest setAccountName(String accountName) {
