@@ -16,6 +16,9 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
     @NameInMap("msg")
     public String msg;
 
+    @NameInMap("reference")
+    public java.util.List<AICreateSessionMessageResponseBodyReference> reference;
+
     @NameInMap("requestId")
     public String requestId;
 
@@ -59,6 +62,14 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
         return this.msg;
     }
 
+    public AICreateSessionMessageResponseBody setReference(java.util.List<AICreateSessionMessageResponseBodyReference> reference) {
+        this.reference = reference;
+        return this;
+    }
+    public java.util.List<AICreateSessionMessageResponseBodyReference> getReference() {
+        return this.reference;
+    }
+
     public AICreateSessionMessageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -73,6 +84,36 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public static class AICreateSessionMessageResponseBodyReference extends TeaModel {
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static AICreateSessionMessageResponseBodyReference build(java.util.Map<String, ?> map) throws Exception {
+            AICreateSessionMessageResponseBodyReference self = new AICreateSessionMessageResponseBodyReference();
+            return TeaModel.build(map, self);
+        }
+
+        public AICreateSessionMessageResponseBodyReference setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public AICreateSessionMessageResponseBodyReference setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
     }
 
 }
