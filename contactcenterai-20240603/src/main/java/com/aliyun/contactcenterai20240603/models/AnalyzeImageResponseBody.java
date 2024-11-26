@@ -3,17 +3,7 @@ package com.aliyun.contactcenterai20240603.models;
 
 import com.aliyun.tea.*;
 
-public class AnalyzeConversationResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>InvalidUser.NotFound</p>
-     */
-    @NameInMap("errorCode")
-    public String errorCode;
-
-    @NameInMap("errorInfo")
-    public String errorInfo;
-
+public class AnalyzeImageResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>stop</p>
@@ -21,15 +11,23 @@ public class AnalyzeConversationResponseBody extends TeaModel {
     @NameInMap("finishReason")
     public String finishReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("inputTokens")
     public String inputTokens;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("outputTokens")
     public String outputTokens;
 
     /**
      * <strong>example:</strong>
-     * <p>968A8634-FA2C-5381-9B3E-C552DED7E8BF</p>
+     * <p>9*****-AE0D-5EE3-B1AF-48632CB0831C</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -44,31 +42,19 @@ public class AnalyzeConversationResponseBody extends TeaModel {
     @NameInMap("text")
     public String text;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("totalTokens")
     public String totalTokens;
 
-    public static AnalyzeConversationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AnalyzeConversationResponseBody self = new AnalyzeConversationResponseBody();
+    public static AnalyzeImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AnalyzeImageResponseBody self = new AnalyzeImageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AnalyzeConversationResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public AnalyzeConversationResponseBody setErrorInfo(String errorInfo) {
-        this.errorInfo = errorInfo;
-        return this;
-    }
-    public String getErrorInfo() {
-        return this.errorInfo;
-    }
-
-    public AnalyzeConversationResponseBody setFinishReason(String finishReason) {
+    public AnalyzeImageResponseBody setFinishReason(String finishReason) {
         this.finishReason = finishReason;
         return this;
     }
@@ -76,7 +62,7 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return this.finishReason;
     }
 
-    public AnalyzeConversationResponseBody setInputTokens(String inputTokens) {
+    public AnalyzeImageResponseBody setInputTokens(String inputTokens) {
         this.inputTokens = inputTokens;
         return this;
     }
@@ -84,7 +70,7 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return this.inputTokens;
     }
 
-    public AnalyzeConversationResponseBody setOutputTokens(String outputTokens) {
+    public AnalyzeImageResponseBody setOutputTokens(String outputTokens) {
         this.outputTokens = outputTokens;
         return this;
     }
@@ -92,7 +78,7 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return this.outputTokens;
     }
 
-    public AnalyzeConversationResponseBody setRequestId(String requestId) {
+    public AnalyzeImageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -100,7 +86,7 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AnalyzeConversationResponseBody setSuccess(Boolean success) {
+    public AnalyzeImageResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -108,7 +94,7 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return this.success;
     }
 
-    public AnalyzeConversationResponseBody setText(String text) {
+    public AnalyzeImageResponseBody setText(String text) {
         this.text = text;
         return this;
     }
@@ -116,7 +102,7 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return this.text;
     }
 
-    public AnalyzeConversationResponseBody setTotalTokens(String totalTokens) {
+    public AnalyzeImageResponseBody setTotalTokens(String totalTokens) {
         this.totalTokens = totalTokens;
         return this;
     }

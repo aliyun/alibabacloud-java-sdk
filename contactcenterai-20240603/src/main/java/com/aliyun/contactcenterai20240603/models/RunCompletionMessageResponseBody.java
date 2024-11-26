@@ -17,6 +17,15 @@ public class RunCompletionMessageResponseBody extends TeaModel {
     @NameInMap("Text")
     public String text;
 
+    @NameInMap("inputTokens")
+    public String inputTokens;
+
+    @NameInMap("outputTokens")
+    public String outputTokens;
+
+    @NameInMap("totalTokens")
+    public String totalTokens;
+
     public static RunCompletionMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunCompletionMessageResponseBody self = new RunCompletionMessageResponseBody();
         return TeaModel.build(map, self);
@@ -44,6 +53,30 @@ public class RunCompletionMessageResponseBody extends TeaModel {
     }
     public String getText() {
         return this.text;
+    }
+
+    public RunCompletionMessageResponseBody setInputTokens(String inputTokens) {
+        this.inputTokens = inputTokens;
+        return this;
+    }
+    public String getInputTokens() {
+        return this.inputTokens;
+    }
+
+    public RunCompletionMessageResponseBody setOutputTokens(String outputTokens) {
+        this.outputTokens = outputTokens;
+        return this;
+    }
+    public String getOutputTokens() {
+        return this.outputTokens;
+    }
+
+    public RunCompletionMessageResponseBody setTotalTokens(String totalTokens) {
+        this.totalTokens = totalTokens;
+        return this;
+    }
+    public String getTotalTokens() {
+        return this.totalTokens;
     }
 
 }
