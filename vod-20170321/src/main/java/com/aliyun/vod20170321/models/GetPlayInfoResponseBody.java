@@ -125,6 +125,18 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Encrypt")
         public Long encrypt;
 
+        /**
+         * <p>The encryption type of the media stream. Valid values:</p>
+         * <ul>
+         * <li><strong>License</strong>: decryption on local devices</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the encryption type is <strong>License</strong>, only ApsaraVideo Player SDK can be used to play videos.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>License</p>
+         */
         @NameInMap("EncryptMode")
         public String encryptMode;
 
