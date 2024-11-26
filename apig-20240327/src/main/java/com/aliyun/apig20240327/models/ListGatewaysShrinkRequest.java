@@ -3,7 +3,7 @@ package com.aliyun.apig20240327.models;
 
 import com.aliyun.tea.*;
 
-public class ListGatewaysRequest extends TeaModel {
+public class ListGatewaysShrinkRequest extends TeaModel {
     /**
      * <p>Query exactly by gateway ID.</p>
      * 
@@ -53,14 +53,14 @@ public class ListGatewaysRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("tags")
-    public java.util.List<ListGatewaysRequestTags> tags;
+    public String tagsShrink;
 
-    public static ListGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListGatewaysRequest self = new ListGatewaysRequest();
+    public static ListGatewaysShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListGatewaysShrinkRequest self = new ListGatewaysShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListGatewaysRequest setGatewayId(String gatewayId) {
+    public ListGatewaysShrinkRequest setGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
@@ -68,7 +68,7 @@ public class ListGatewaysRequest extends TeaModel {
         return this.gatewayId;
     }
 
-    public ListGatewaysRequest setKeyword(String keyword) {
+    public ListGatewaysShrinkRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -76,7 +76,7 @@ public class ListGatewaysRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListGatewaysRequest setName(String name) {
+    public ListGatewaysShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -84,7 +84,7 @@ public class ListGatewaysRequest extends TeaModel {
         return this.name;
     }
 
-    public ListGatewaysRequest setPageNumber(Integer pageNumber) {
+    public ListGatewaysShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -92,7 +92,7 @@ public class ListGatewaysRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListGatewaysRequest setPageSize(Integer pageSize) {
+    public ListGatewaysShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -100,7 +100,7 @@ public class ListGatewaysRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListGatewaysRequest setResourceGroupId(String resourceGroupId) {
+    public ListGatewaysShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -108,42 +108,12 @@ public class ListGatewaysRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListGatewaysRequest setTags(java.util.List<ListGatewaysRequestTags> tags) {
-        this.tags = tags;
+    public ListGatewaysShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<ListGatewaysRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class ListGatewaysRequestTags extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("value")
-        public String value;
-
-        public static ListGatewaysRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListGatewaysRequestTags self = new ListGatewaysRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListGatewaysRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListGatewaysRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

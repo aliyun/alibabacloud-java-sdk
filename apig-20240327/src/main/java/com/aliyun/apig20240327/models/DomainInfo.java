@@ -25,6 +25,13 @@ public class DomainInfo extends TeaModel {
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxxx</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("status")
     public String status;
 
@@ -90,6 +97,14 @@ public class DomainInfo extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public DomainInfo setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DomainInfo setStatus(String status) {

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDomainsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public ListDomainsResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListDomainsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used for tracing the API call chain.</p>
+     * 
      * <strong>example:</strong>
      * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>
      */
@@ -66,10 +75,15 @@ public class ListDomainsResponseBody extends TeaModel {
     }
 
     public static class ListDomainsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of domain information.</p>
+         */
         @NameInMap("items")
         public java.util.List<DomainInfo> items;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -77,6 +91,8 @@ public class ListDomainsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -84,6 +100,8 @@ public class ListDomainsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */

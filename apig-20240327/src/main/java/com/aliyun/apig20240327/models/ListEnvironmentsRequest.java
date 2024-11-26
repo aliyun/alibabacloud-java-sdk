@@ -4,10 +4,18 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentsRequest extends TeaModel {
+    /**
+     * <p>Environment alias, fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("aliasLike")
     public String aliasLike;
 
     /**
+     * <p>Gateway ID, exact search.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-cptv6ktlhtgnqr73h8d1</p>
      */
@@ -15,6 +23,8 @@ public class ListEnvironmentsRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>Gateway name, fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-gw</p>
      */
@@ -22,6 +32,8 @@ public class ListEnvironmentsRequest extends TeaModel {
     public String gatewayNameLike;
 
     /**
+     * <p>Environment name, fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -29,6 +41,8 @@ public class ListEnvironmentsRequest extends TeaModel {
     public String nameLike;
 
     /**
+     * <p>Page number, default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,11 +50,16 @@ public class ListEnvironmentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
 
     public static ListEnvironmentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEnvironmentsRequest self = new ListEnvironmentsRequest();
@@ -93,6 +112,14 @@ public class ListEnvironmentsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEnvironmentsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

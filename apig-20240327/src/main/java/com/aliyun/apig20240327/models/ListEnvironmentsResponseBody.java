@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Paged query environment list response.</p>
+     */
     @NameInMap("data")
     public ListEnvironmentsResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListEnvironmentsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used for tracing the call chain.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE857A85-251D-5018-8103-A38957D71E20</p>
      */
@@ -66,10 +75,15 @@ public class ListEnvironmentsResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of environment information.</p>
+         */
         @NameInMap("items")
         public java.util.List<EnvironmentInfo> items;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -77,6 +91,8 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -84,6 +100,8 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */

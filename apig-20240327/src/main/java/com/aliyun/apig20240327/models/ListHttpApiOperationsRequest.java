@@ -5,16 +5,35 @@ import com.aliyun.tea.*;
 
 public class ListHttpApiOperationsRequest extends TeaModel {
     /**
+     * <p>Filter the operation list based on a specific consumer authorization rule ID, and the interface list in the response only contains authorized operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-xxx</p>
+     */
+    @NameInMap("consumerAuthorizationRuleId")
+    public String consumerAuthorizationRuleId;
+
+    /**
+     * <p>List interfaces by Method.</p>
+     * 
      * <strong>example:</strong>
      * <p>GET</p>
      */
     @NameInMap("method")
     public String method;
 
+    /**
+     * <p>Search operations by exact name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>getUserInfo</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>Search operations by name prefix.</p>
+     * 
      * <strong>example:</strong>
      * <p>GetUser</p>
      */
@@ -22,6 +41,8 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String nameLike;
 
     /**
+     * <p>Page number, starting from 1, default is 1 if not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +50,8 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, valid range [1, 100], default is 10 if not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,15 +59,43 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Search operations by path prefix.</p>
+     * 
      * <strong>example:</strong>
      * <p>/v1</p>
      */
     @NameInMap("pathLike")
     public String pathLike;
 
+    /**
+     * <p>Each operation information in the response carries a list of authorization rules for the specified consumer under the specified environment ID. The withConsumerInEnvironmentId field needs to be additionally specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxx</p>
+     */
+    @NameInMap("withConsumerInEnvironmentId")
+    public String withConsumerInEnvironmentId;
+
+    /**
+     * <p>Each operation information in the response carries a list of authorization rules for the specified consumer under the specified environment ID. The withConsumerInEnvironmentId field needs to be additionally specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cs-xxx</p>
+     */
+    @NameInMap("withConsumerInfoById")
+    public String withConsumerInfoById;
+
     public static ListHttpApiOperationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHttpApiOperationsRequest self = new ListHttpApiOperationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListHttpApiOperationsRequest setConsumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
+        this.consumerAuthorizationRuleId = consumerAuthorizationRuleId;
+        return this;
+    }
+    public String getConsumerAuthorizationRuleId() {
+        return this.consumerAuthorizationRuleId;
     }
 
     public ListHttpApiOperationsRequest setMethod(String method) {
@@ -93,6 +144,22 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     }
     public String getPathLike() {
         return this.pathLike;
+    }
+
+    public ListHttpApiOperationsRequest setWithConsumerInEnvironmentId(String withConsumerInEnvironmentId) {
+        this.withConsumerInEnvironmentId = withConsumerInEnvironmentId;
+        return this;
+    }
+    public String getWithConsumerInEnvironmentId() {
+        return this.withConsumerInEnvironmentId;
+    }
+
+    public ListHttpApiOperationsRequest setWithConsumerInfoById(String withConsumerInfoById) {
+        this.withConsumerInfoById = withConsumerInfoById;
+        return this;
+    }
+    public String getWithConsumerInfoById() {
+        return this.withConsumerInfoById;
     }
 
 }

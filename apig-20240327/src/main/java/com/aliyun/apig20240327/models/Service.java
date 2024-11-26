@@ -3,15 +3,29 @@ package com.aliyun.apig20240327.models;
 
 import com.aliyun.tea.*;
 
-public class GatewayService extends TeaModel {
+public class Service extends TeaModel {
     @NameInMap("addresses")
     public java.util.List<String> addresses;
+
+    @NameInMap("aiServiceConfig")
+    public AiServiceConfig aiServiceConfig;
 
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
-    @NameInMap("gatewayServiceId")
-    public String gatewayServiceId;
+    /**
+     * <strong>example:</strong>
+     * <p>gw-xxxx</p>
+     */
+    @NameInMap("gatewayId")
+    public String gatewayId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>publich</p>
+     */
+    @NameInMap("groupName")
+    public String groupName;
 
     @NameInMap("healthCheck")
     public ServiceHealthCheck healthCheck;
@@ -26,7 +40,14 @@ public class GatewayService extends TeaModel {
     public String namespace;
 
     @NameInMap("ports")
-    public java.util.List<GatewayServicePorts> ports;
+    public java.util.List<ServicePorts> ports;
+
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
+    @NameInMap("protocol")
+    public String protocol;
 
     /**
      * <strong>example:</strong>
@@ -34,6 +55,16 @@ public class GatewayService extends TeaModel {
      */
     @NameInMap("qualifier")
     public String qualifier;
+
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("serviceId")
+    public String serviceId;
 
     @NameInMap("sourceType")
     public String sourceType;
@@ -44,12 +75,12 @@ public class GatewayService extends TeaModel {
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 
-    public static GatewayService build(java.util.Map<String, ?> map) throws Exception {
-        GatewayService self = new GatewayService();
+    public static Service build(java.util.Map<String, ?> map) throws Exception {
+        Service self = new Service();
         return TeaModel.build(map, self);
     }
 
-    public GatewayService setAddresses(java.util.List<String> addresses) {
+    public Service setAddresses(java.util.List<String> addresses) {
         this.addresses = addresses;
         return this;
     }
@@ -57,7 +88,15 @@ public class GatewayService extends TeaModel {
         return this.addresses;
     }
 
-    public GatewayService setCreateTimestamp(Long createTimestamp) {
+    public Service setAiServiceConfig(AiServiceConfig aiServiceConfig) {
+        this.aiServiceConfig = aiServiceConfig;
+        return this;
+    }
+    public AiServiceConfig getAiServiceConfig() {
+        return this.aiServiceConfig;
+    }
+
+    public Service setCreateTimestamp(Long createTimestamp) {
         this.createTimestamp = createTimestamp;
         return this;
     }
@@ -65,15 +104,23 @@ public class GatewayService extends TeaModel {
         return this.createTimestamp;
     }
 
-    public GatewayService setGatewayServiceId(String gatewayServiceId) {
-        this.gatewayServiceId = gatewayServiceId;
+    public Service setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
         return this;
     }
-    public String getGatewayServiceId() {
-        return this.gatewayServiceId;
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
-    public GatewayService setHealthCheck(ServiceHealthCheck healthCheck) {
+    public Service setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public Service setHealthCheck(ServiceHealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
     }
@@ -81,7 +128,7 @@ public class GatewayService extends TeaModel {
         return this.healthCheck;
     }
 
-    public GatewayService setHealthStatus(String healthStatus) {
+    public Service setHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
         return this;
     }
@@ -89,7 +136,7 @@ public class GatewayService extends TeaModel {
         return this.healthStatus;
     }
 
-    public GatewayService setName(String name) {
+    public Service setName(String name) {
         this.name = name;
         return this;
     }
@@ -97,7 +144,7 @@ public class GatewayService extends TeaModel {
         return this.name;
     }
 
-    public GatewayService setNamespace(String namespace) {
+    public Service setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -105,15 +152,23 @@ public class GatewayService extends TeaModel {
         return this.namespace;
     }
 
-    public GatewayService setPorts(java.util.List<GatewayServicePorts> ports) {
+    public Service setPorts(java.util.List<ServicePorts> ports) {
         this.ports = ports;
         return this;
     }
-    public java.util.List<GatewayServicePorts> getPorts() {
+    public java.util.List<ServicePorts> getPorts() {
         return this.ports;
     }
 
-    public GatewayService setQualifier(String qualifier) {
+    public Service setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String getProtocol() {
+        return this.protocol;
+    }
+
+    public Service setQualifier(String qualifier) {
         this.qualifier = qualifier;
         return this;
     }
@@ -121,7 +176,23 @@ public class GatewayService extends TeaModel {
         return this.qualifier;
     }
 
-    public GatewayService setSourceType(String sourceType) {
+    public Service setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public Service setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    public Service setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
@@ -129,7 +200,7 @@ public class GatewayService extends TeaModel {
         return this.sourceType;
     }
 
-    public GatewayService setUnhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
+    public Service setUnhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
         this.unhealthyEndpoints = unhealthyEndpoints;
         return this;
     }
@@ -137,7 +208,7 @@ public class GatewayService extends TeaModel {
         return this.unhealthyEndpoints;
     }
 
-    public GatewayService setUpdateTimestamp(Long updateTimestamp) {
+    public Service setUpdateTimestamp(Long updateTimestamp) {
         this.updateTimestamp = updateTimestamp;
         return this;
     }
@@ -145,7 +216,7 @@ public class GatewayService extends TeaModel {
         return this.updateTimestamp;
     }
 
-    public static class GatewayServicePorts extends TeaModel {
+    public static class ServicePorts extends TeaModel {
         @NameInMap("name")
         public String name;
 
@@ -155,12 +226,12 @@ public class GatewayService extends TeaModel {
         @NameInMap("protocol")
         public String protocol;
 
-        public static GatewayServicePorts build(java.util.Map<String, ?> map) throws Exception {
-            GatewayServicePorts self = new GatewayServicePorts();
+        public static ServicePorts build(java.util.Map<String, ?> map) throws Exception {
+            ServicePorts self = new ServicePorts();
             return TeaModel.build(map, self);
         }
 
-        public GatewayServicePorts setName(String name) {
+        public ServicePorts setName(String name) {
             this.name = name;
             return this;
         }
@@ -168,7 +239,7 @@ public class GatewayService extends TeaModel {
             return this.name;
         }
 
-        public GatewayServicePorts setPort(Integer port) {
+        public ServicePorts setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -176,7 +247,7 @@ public class GatewayService extends TeaModel {
             return this.port;
         }
 
-        public GatewayServicePorts setProtocol(String protocol) {
+        public ServicePorts setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }

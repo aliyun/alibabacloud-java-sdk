@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddGatewaySecurityGroupRuleResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class AddGatewaySecurityGroupRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class AddGatewaySecurityGroupRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2A6E90D5-A711-54F4-A489-E33C2021EDDF</p>
      */

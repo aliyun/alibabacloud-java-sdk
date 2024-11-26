@@ -5,11 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvironmentRequest extends TeaModel {
     /**
+     * <p>Environment alias.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试环境</p>
      */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <p>Description of the environment, which can include information such as the purpose of the environment and its users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是xx的xx项目测试环境</p>
+     */
     @NameInMap("description")
     public String description;
 

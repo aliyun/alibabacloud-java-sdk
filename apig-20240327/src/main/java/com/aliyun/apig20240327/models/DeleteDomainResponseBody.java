@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDomainResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteDomainResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used for tracing the API call chain.</p>
+     * 
      * <strong>example:</strong>
      * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
      */

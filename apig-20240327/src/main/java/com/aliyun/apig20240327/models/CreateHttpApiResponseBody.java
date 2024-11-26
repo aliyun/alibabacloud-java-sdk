@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>API information.</p>
+     */
     @NameInMap("data")
     public CreateHttpApiResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateHttpApiResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1994B10-C6A8-58FA-8347-6A08B0D4EFDE</p>
      */
@@ -66,9 +75,21 @@ public class CreateHttpApiResponseBody extends TeaModel {
     }
 
     public static class CreateHttpApiResponseBodyData extends TeaModel {
+        /**
+         * <p>HTTP API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
+         */
         @NameInMap("httpApiId")
         public String httpApiId;
 
+        /**
+         * <p>Name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-api</p>
+         */
         @NameInMap("name")
         public String name;
 
