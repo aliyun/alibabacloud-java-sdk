@@ -119,7 +119,6 @@ public class EnrichRequest extends TeaModel {
     public static class EnrichRequestJourneyParamListSegmentParamList extends TeaModel {
         /**
          * <p>arrival airport code (capitalized)</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MFM</p>
@@ -156,7 +155,6 @@ public class EnrichRequest extends TeaModel {
 
         /**
          * <p>departure airport code (capitalized)</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>PVG</p>
@@ -175,7 +173,6 @@ public class EnrichRequest extends TeaModel {
 
         /**
          * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
