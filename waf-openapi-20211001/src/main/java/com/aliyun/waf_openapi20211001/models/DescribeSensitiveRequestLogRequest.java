@@ -108,7 +108,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     /**
      * <p>The type of the sensitive data.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported types of sensitive data.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

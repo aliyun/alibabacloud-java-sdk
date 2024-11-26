@@ -49,10 +49,10 @@ public class CreateApiExportRequest extends TeaModel {
     public String param;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>Language type. Valid values:</p>
      * <ul>
-     * <li><strong>cn</strong> (default): Chinese mainland.</li>
-     * <li><strong>cn-hongkong</strong>: outside the Chinese mainland.</li>
+     * <li><strong>cn</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

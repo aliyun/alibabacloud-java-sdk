@@ -70,6 +70,9 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
 
         /**
          * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <blockquote>
+         * <p>Notice: The parameter has been deprecated, it is recommended to use the Timestamp parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1723435200</p>

@@ -58,7 +58,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The business purpose of the API.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the business purpose of the API.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purpose of the API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The sensitive data type in the request.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The sensitive data type in the response.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
