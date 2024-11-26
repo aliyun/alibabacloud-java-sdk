@@ -115,6 +115,9 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         @NameInMap("MountType")
         public String mountType;
 
+        @NameInMap("Phase")
+        public String phase;
+
         /**
          * <p>The ID of the edge node.</p>
          * 
@@ -167,6 +170,14 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
         public String getMountType() {
             return this.mountType;
+        }
+
+        public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setPhase(String phase) {
+            this.phase = phase;
+            return this;
+        }
+        public String getPhase() {
+            return this.phase;
         }
 
         public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setRegionId(String regionId) {

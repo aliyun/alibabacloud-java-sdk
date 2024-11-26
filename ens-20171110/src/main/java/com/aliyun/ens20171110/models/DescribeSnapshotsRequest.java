@@ -22,6 +22,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnsRegionIds")
+    public String ensRegionIds;
+
     /**
      * <p>The ID of the instance.</p>
      * 
@@ -58,6 +61,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    @NameInMap("SnapshotName")
+    public String snapshotName;
+
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
         return TeaModel.build(map, self);
@@ -77,6 +83,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeSnapshotsRequest setEnsRegionIds(String ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public String getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     public DescribeSnapshotsRequest setInstanceId(String instanceId) {
@@ -109,6 +123,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    public DescribeSnapshotsRequest setSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    public String getSnapshotName() {
+        return this.snapshotName;
     }
 
 }
