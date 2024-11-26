@@ -85,6 +85,8 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceInstanceId;
 
     /**
+     * <p>The name of the instance that is added to WAF.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-name</p>
      */
@@ -111,12 +113,16 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The cloud service to which the resource belongs. Valid values:</p>
+     * <p>The cloud service to which the resource belongs. If you do not specify this parameter, the system automatically returns the Application Load Balancer (ALB), Microservices Engine (MSE), Function Compute, and Serverless App Engine (SAE) resources that are added to WAF. Valid values:</p>
      * <ul>
-     * <li><strong>alb</strong>: Application Load Balancer (ALB).</li>
-     * <li><strong>mse</strong>: Microservices Engine (MSE).</li>
+     * <li><strong>alb</strong>: ALB.</li>
+     * <li><strong>mse</strong>: MSE.</li>
      * <li><strong>fc</strong>: Function Compute.</li>
-     * <li><strong>sae</strong>: Serverless App Engine (SAE).</li>
+     * <li><strong>sae</strong>: SAE.</li>
+     * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+     * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
+     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+     * <li><strong>nlb</strong>: Network Load Balancer (NLB).</li>
      * </ul>
      * <blockquote>
      * <p> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>

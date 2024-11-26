@@ -11,7 +11,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
     public java.util.List<DescribeApisecAbnormalDomainStatisticResponseBodyData> data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Id of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-CC6E-4F3E-80A6-3014***B11AE</p>

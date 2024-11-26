@@ -11,7 +11,6 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
      * <li><strong>cn-beijing</strong>: China (Beijing).</li>
      * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
      * <li><strong>ap-southeast-1</strong>: Singapore.</li>
-     * <li><strong>ap-southeast-2</strong>: Australia (Sydney).</li>
      * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
      * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
      * <li><strong>ap-southeast-6</strong>: Philippines (Manila).</li>

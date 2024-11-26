@@ -30,7 +30,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     /**
      * <p>The type of the risk.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported types of risks.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of risks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     /**
      * <p>The business purpose of the API.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -59,6 +59,11 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
 
     public static class DescribeCloudResourcesResponseBodyCloudResources extends TeaModel {
         /**
+         * <p>The number of the HTTP ports that are added to WAF.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the cloud service is ECS or CLB.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -66,6 +71,11 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public Integer httpPortCount;
 
         /**
+         * <p>The number of the HTTPS ports that are added to WAF.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the cloud service is ECS or CLB.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +120,8 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceInstance;
 
         /**
+         * <p>The ID of the instance that is added to WAF.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-uf60ub45fr9b***</p>
          */
@@ -117,6 +129,8 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
+         * <p>The IP address of the instance that is added to WAF.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -124,6 +138,8 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceInstanceIp;
 
         /**
+         * <p>The name of the instance that is added to WAF.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-name</p>
          */
@@ -147,6 +163,9 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
          * <li><strong>mse</strong>: MSE.</li>
          * <li><strong>fc</strong>: Function Compute.</li>
          * <li><strong>sae</strong>: SAE.</li>
+         * <li><strong>ecs</strong>: ECS.</li>
+         * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+         * <li><strong>clb7</strong>: Layer 7 CLB.</li>
          * </ul>
          * 
          * <strong>example:</strong>

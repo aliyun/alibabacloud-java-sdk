@@ -103,6 +103,9 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         @NameInMap("MatchedHost")
         public String matchedHost;
 
+        @NameInMap("RemoteCountryId")
+        public String remoteCountryId;
+
         /**
          * <p>The time when the request was initiated. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
@@ -173,6 +176,14 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         }
         public String getMatchedHost() {
             return this.matchedHost;
+        }
+
+        public DescribeSensitiveRequestLogResponseBodyData setRemoteCountryId(String remoteCountryId) {
+            this.remoteCountryId = remoteCountryId;
+            return this;
+        }
+        public String getRemoteCountryId() {
+            return this.remoteCountryId;
         }
 
         public DescribeSensitiveRequestLogResponseBodyData setRequestTime(Long requestTime) {

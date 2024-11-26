@@ -94,7 +94,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         /**
          * <p>The type of the security event.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported types of security events.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of security events.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

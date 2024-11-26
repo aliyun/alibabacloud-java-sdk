@@ -88,7 +88,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         /**
          * <p>The business purpose of the API.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the business purpose of the API.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purpose of the API.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         /**
          * <p>The type of the event.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported event types.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

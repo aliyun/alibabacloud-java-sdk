@@ -11,7 +11,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
     public java.util.List<DescribeApisecEventDomainStatisticResponseBodyData> data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Id of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-*******-80A6-3014697B11AE</p>
