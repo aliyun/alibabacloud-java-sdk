@@ -62,6 +62,9 @@ public class UpdateVideoInfoRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    @NameInMap("UserData")
+    public String userData;
+
     /**
      * <p>The ID of the video.</p>
      * <p>This parameter is required.</p>
@@ -115,6 +118,14 @@ public class UpdateVideoInfoRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public UpdateVideoInfoRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public UpdateVideoInfoRequest setVideoId(String videoId) {

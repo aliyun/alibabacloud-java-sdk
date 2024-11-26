@@ -288,6 +288,9 @@ public class GetVideoInfoResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("UserData")
+        public String userData;
+
         /**
          * <p>The ID of the media file.</p>
          * 
@@ -476,6 +479,14 @@ public class GetVideoInfoResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetVideoInfoResponseBodyVideo setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
         public GetVideoInfoResponseBodyVideo setVideoId(String videoId) {

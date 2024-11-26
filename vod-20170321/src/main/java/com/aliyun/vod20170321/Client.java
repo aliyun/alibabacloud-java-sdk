@@ -12033,6 +12033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Title", request.title);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.videoId)) {
             query.put("VideoId", request.videoId);
         }
