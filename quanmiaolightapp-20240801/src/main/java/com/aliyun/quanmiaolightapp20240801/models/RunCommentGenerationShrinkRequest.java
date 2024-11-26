@@ -3,7 +3,7 @@ package com.aliyun.quanmiaolightapp20240801.models;
 
 import com.aliyun.tea.*;
 
-public class RunCommentGenerationRequest extends TeaModel {
+public class RunCommentGenerationShrinkRequest extends TeaModel {
     @NameInMap("allowEmoji")
     public Boolean allowEmoji;
 
@@ -19,7 +19,7 @@ public class RunCommentGenerationRequest extends TeaModel {
     public String length;
 
     @NameInMap("lengthRange")
-    public java.util.Map<String, ?> lengthRange;
+    public String lengthRangeShrink;
 
     @NameInMap("modelId")
     public String modelId;
@@ -32,7 +32,7 @@ public class RunCommentGenerationRequest extends TeaModel {
     public String numComments;
 
     @NameInMap("sentiment")
-    public java.util.Map<String, ?> sentiment;
+    public String sentimentShrink;
 
     @NameInMap("sourceMaterial")
     public String sourceMaterial;
@@ -42,14 +42,14 @@ public class RunCommentGenerationRequest extends TeaModel {
     public String style;
 
     @NameInMap("type")
-    public java.util.Map<String, ?> type;
+    public String typeShrink;
 
-    public static RunCommentGenerationRequest build(java.util.Map<String, ?> map) throws Exception {
-        RunCommentGenerationRequest self = new RunCommentGenerationRequest();
+    public static RunCommentGenerationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RunCommentGenerationShrinkRequest self = new RunCommentGenerationShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RunCommentGenerationRequest setAllowEmoji(Boolean allowEmoji) {
+    public RunCommentGenerationShrinkRequest setAllowEmoji(Boolean allowEmoji) {
         this.allowEmoji = allowEmoji;
         return this;
     }
@@ -57,7 +57,7 @@ public class RunCommentGenerationRequest extends TeaModel {
         return this.allowEmoji;
     }
 
-    public RunCommentGenerationRequest setExtraInfo(String extraInfo) {
+    public RunCommentGenerationShrinkRequest setExtraInfo(String extraInfo) {
         this.extraInfo = extraInfo;
         return this;
     }
@@ -65,7 +65,7 @@ public class RunCommentGenerationRequest extends TeaModel {
         return this.extraInfo;
     }
 
-    public RunCommentGenerationRequest setLength(String length) {
+    public RunCommentGenerationShrinkRequest setLength(String length) {
         this.length = length;
         return this;
     }
@@ -73,15 +73,15 @@ public class RunCommentGenerationRequest extends TeaModel {
         return this.length;
     }
 
-    public RunCommentGenerationRequest setLengthRange(java.util.Map<String, ?> lengthRange) {
-        this.lengthRange = lengthRange;
+    public RunCommentGenerationShrinkRequest setLengthRangeShrink(String lengthRangeShrink) {
+        this.lengthRangeShrink = lengthRangeShrink;
         return this;
     }
-    public java.util.Map<String, ?> getLengthRange() {
-        return this.lengthRange;
+    public String getLengthRangeShrink() {
+        return this.lengthRangeShrink;
     }
 
-    public RunCommentGenerationRequest setModelId(String modelId) {
+    public RunCommentGenerationShrinkRequest setModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
@@ -89,7 +89,7 @@ public class RunCommentGenerationRequest extends TeaModel {
         return this.modelId;
     }
 
-    public RunCommentGenerationRequest setNumComments(String numComments) {
+    public RunCommentGenerationShrinkRequest setNumComments(String numComments) {
         this.numComments = numComments;
         return this;
     }
@@ -97,15 +97,15 @@ public class RunCommentGenerationRequest extends TeaModel {
         return this.numComments;
     }
 
-    public RunCommentGenerationRequest setSentiment(java.util.Map<String, ?> sentiment) {
-        this.sentiment = sentiment;
+    public RunCommentGenerationShrinkRequest setSentimentShrink(String sentimentShrink) {
+        this.sentimentShrink = sentimentShrink;
         return this;
     }
-    public java.util.Map<String, ?> getSentiment() {
-        return this.sentiment;
+    public String getSentimentShrink() {
+        return this.sentimentShrink;
     }
 
-    public RunCommentGenerationRequest setSourceMaterial(String sourceMaterial) {
+    public RunCommentGenerationShrinkRequest setSourceMaterial(String sourceMaterial) {
         this.sourceMaterial = sourceMaterial;
         return this;
     }
@@ -113,7 +113,7 @@ public class RunCommentGenerationRequest extends TeaModel {
         return this.sourceMaterial;
     }
 
-    public RunCommentGenerationRequest setStyle(String style) {
+    public RunCommentGenerationShrinkRequest setStyle(String style) {
         this.style = style;
         return this;
     }
@@ -121,12 +121,12 @@ public class RunCommentGenerationRequest extends TeaModel {
         return this.style;
     }
 
-    public RunCommentGenerationRequest setType(java.util.Map<String, ?> type) {
-        this.type = type;
+    public RunCommentGenerationShrinkRequest setTypeShrink(String typeShrink) {
+        this.typeShrink = typeShrink;
         return this;
     }
-    public java.util.Map<String, ?> getType() {
-        return this.type;
+    public String getTypeShrink() {
+        return this.typeShrink;
     }
 
 }
