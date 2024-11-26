@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>qianzhou20211111</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>qianzhou20211111</name>
   <description>Alibaba Cloud qianzhou (20211111) SDK for Java
