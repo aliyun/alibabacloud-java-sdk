@@ -12,6 +12,9 @@ public class OnsMessageTraceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EAE5BE23-37A1-4354-94D6-E44AE17E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,34 @@ public class OnsMessageTraceResponseBody extends TeaModel {
     public static class OnsMessageTraceResponseBodyDataMessageTrack extends TeaModel {
         /**
          * <p>The ID of the consumer group that subscribes to the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         @NameInMap("ConsumerGroup")
         public String consumerGroup;
 
         /**
-         * <p>The ID of the instance where the message that you want to query resides.</p>
+         * <p>The ID of the instance to which the message you want to query belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The status of the message. Valid values:</p>
-         * <br>
-         * <p>*   **CONSUMED**: The message is consumed.</p>
-         * <p>*   **CONSUMED_BUT_FILTERED:** No consumer groups subscribe to the message. The message is filtered out and not consumed.</p>
-         * <p>*   **NOT_CONSUME_YET**: The message is pending to be consumed.</p>
-         * <p>*   **NOT_ONLINE**: The consumer group is offline.</p>
-         * <p>*   **UNKNOWN**: The message is not consumed due to unknown reasons.</p>
+         * <ul>
+         * <li><strong>CONSUMED</strong>: The message is consumed.</li>
+         * <li><strong>CONSUMED_BUT_FILTERED</strong>: No consumer group subscribes to the message. The message is filtered out and not consumed.</li>
+         * <li><strong>NOT_CONSUME_YET</strong>: The message is not consumed.</li>
+         * <li><strong>NOT_ONLINE</strong>: The consumer group is offline.</li>
+         * <li><strong>UNKNOWN</strong>: The message is not consumed due to unknown reasons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSUMED</p>
          */
         @NameInMap("TrackType")
         public String trackType;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsGroupSubDetailResponseBody extends TeaModel {
     /**
-     * <p>The data that is returned.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public OnsGroupSubDetailResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3364E875-013B-442A-BC3C-C1A84DC6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,20 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
     public static class OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList extends TeaModel {
         /**
          * <p>The expression based on which consumers in the consumer group subscribe to the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("SubString")
         public String subString;
 
         /**
          * <p>The name of the topic to which consumers in the consumer group subscribe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -95,23 +106,32 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
     public static class OnsGroupSubDetailResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the consumer group that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The consumption mode. Valid values:</p>
-         * <br>
-         * <p>*   **CLUSTERING**: the clustering consumption mode</p>
-         * <p>*   **BROADCASTING**: the broadcasting consumption mode</p>
-         * <br>
-         * <p>For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).</p>
+         * <ul>
+         * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
+         * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
+         * </ul>
+         * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTERING</p>
          */
         @NameInMap("MessageModel")
         public String messageModel;
 
         /**
          * <p>Indicates whether consumers in the group are online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;

@@ -5,24 +5,35 @@ import com.aliyun.tea.*;
 
 public class OnsGroupConsumerUpdateRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group for which you want to configure the read permissions.</p>
+     * <p>The ID of the consumer group for which you want to configure read permissions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_groupId</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the instance to which the consumer group you want to configure belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>Specifies whether to authorize the consumer group with the specified ID to read messages. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Authorize the consumer group with the specified ID to read messages.</p>
-     * <p>*   **false**: Do not authorize the consumer group with the specified group ID to read messages.</p>
-     * <br>
-     * <p>Default value: **true**.</p>
+     * <p>Specifies whether to authorize the consumer group to read messages. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The consumer group can read messages.</li>
+     * <li><strong>false</strong>: The consumer group cannot read messages.</li>
+     * </ul>
+     * <p>Default value: <strong>true</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ReadEnable")
     public Boolean readEnable;

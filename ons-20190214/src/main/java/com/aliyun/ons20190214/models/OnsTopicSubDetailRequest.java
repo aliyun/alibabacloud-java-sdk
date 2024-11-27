@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class OnsTopicSubDetailRequest extends TeaModel {
     /**
      * <p>The ID of the instance that contains the topic you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the topic that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Topic")
     public String topic;

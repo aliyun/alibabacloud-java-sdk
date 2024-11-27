@@ -5,40 +5,63 @@ import com.aliyun.tea.*;
 
 public class OnsTrendTopicInputTpsRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1570852800000</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates the end of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1570868400000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The ID of the Message Queue for Apache RocketMQ instance which contains the topic you want to query.</p>
+     * <p>The ID of the instance to which the topic you want to query belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The sampling period. Unit: minutes. Valid values: 1, 5, and 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Period")
     public Long period;
 
     /**
      * <p>The name of the topic that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Topic")
     public String topic;
 
     /**
      * <p>The type of information that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **0**: the number of the messages that are published to the specified topic during each sampling period.</p>
-     * <p>*   **1**: the TPS for message publishing to the specified topic during each sampling period.</p>
+     * <ul>
+     * <li><strong>0</strong>: the number of messages that are published to the topic during each sampling period.</li>
+     * <li><strong>1</strong>: the TPS for message publishing in the topic during each sampling period.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Type")
     public Integer type;

@@ -12,6 +12,9 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6CC46974-65E8-4C20-AB07-D20D102E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,57 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
     public static class OnsInstanceBaseInfoResponseBodyInstanceBaseInfoEndpoints extends TeaModel {
         /**
          * <p>The private HTTP endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://138015630679****.mqrest.cn-chengdu-internal.aliyuncs.com">http://138015630679****.mqrest.cn-chengdu-internal.aliyuncs.com</a></p>
          */
         @NameInMap("HttpInternalEndpoint")
         public String httpInternalEndpoint;
 
         /**
          * <p>The public HTTP endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://138015630679****.mqrest.cn-chengdu.aliyuncs.com">http://138015630679****.mqrest.cn-chengdu.aliyuncs.com</a></p>
          */
         @NameInMap("HttpInternetEndpoint")
         public String httpInternetEndpoint;
 
         /**
          * <p>The public HTTPS endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://138015630679****.mqrest.cn-chengdu.aliyuncs.com">https://138015630679****.mqrest.cn-chengdu.aliyuncs.com</a></p>
          */
         @NameInMap("HttpInternetSecureEndpoint")
         public String httpInternetSecureEndpoint;
 
         /**
          * <p>The private TCP endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://MQ_INST_138015630679****_BAAy1Hac.cn-chengdu.mq-internal.aliyuncs.com:8080">http://MQ_INST_138015630679****_BAAy1Hac.cn-chengdu.mq-internal.aliyuncs.com:8080</a></p>
          */
         @NameInMap("TcpEndpoint")
         public String tcpEndpoint;
 
         /**
          * <p>The public TCP endpoint of the instance.</p>
-         * <br>
-         * <p>*   Only instances that are deployed in the China (Chengdu), China (Qingdao), or China (Shenzhen) region can be accessed by using public TCP endpoints.</p>
-         * <br>
-         * <p>*   Before you use a public TCP endpoint, make sure that your client SDK meets the following requirements:</p>
-         * <br>
-         * <p>    *   TCP client SDK for Java: V2.0.0.Final or later For more information, see [Release notes for the SDK for Java](~~325569~~).</p>
-         * <p>    *   TCP client SDK for C++: V3.0.0 or later For more information, see [Release notes for the SDK for C++](~~325570~~).</p>
-         * <br>
-         * <p>*   You must pay the data transfer cost when you use a public TCP endpoint. For more information, see [Internet traffic fee](~~325571~~).</p>
+         * <ul>
+         * <li><p>Only instances that are deployed in the China (Chengdu), China (Qingdao), or China (Shenzhen) region can be accessed by using public TCP endpoints.</p>
+         * </li>
+         * <li><p>Before you use a public TCP endpoint, make sure that your client SDK meets the following requirements:</p>
+         * <ul>
+         * <li>TCP client SDK for Java: V2.0.0.Final or later For more information, see <a href="https://help.aliyun.com/document_detail/325569.html">Release notes for the SDK for Java</a>.</li>
+         * <li>TCP client SDK for C++: V3.0.0 or later For more information, see <a href="https://help.aliyun.com/document_detail/325570.html">Release notes for the SDK for C++</a>.</li>
+         * </ul>
+         * </li>
+         * <li><p>You are charged for Internet traffic when you use a public TCP endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/325571.html">Internet traffic fee</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://MQ_INST_138015630679****_BAAy1Hac.mq.cn-chengdu.aliyuncs.com:80">http://MQ_INST_138015630679****_BAAy1Hac.mq.cn-chengdu.aliyuncs.com:80</a></p>
          */
         @NameInMap("TcpInternetEndpoint")
         public String tcpInternetEndpoint;
@@ -125,93 +146,140 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
     }
 
     public static class OnsInstanceBaseInfoResponseBodyInstanceBaseInfo extends TeaModel {
+        /**
+         * <p>The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570701259403</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The endpoints that correspond to different protocols.</p>
+         * <p>The endpoints used to access ApsaraMQ for RocketMQ over different protocols.</p>
          */
         @NameInMap("Endpoints")
         public OnsInstanceBaseInfoResponseBodyInstanceBaseInfoEndpoints endpoints;
 
         /**
          * <p>Indicates whether the instance uses a namespace. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</p>
-         * <p>*   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
+         * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_138015630679****_BAAy1Hac</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
-         * <br>
-         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The instance is being deployed. This value is valid only for Enterprise Platinum Edition instances.</p>
-         * <p>*   **2**: The instance has overdue payments. This value is valid only for Standard Edition instances.</p>
-         * <p>*   **5**: The instance is running. This value is valid for Standard Edition instances and Enterprise Platinum Edition instances.</p>
-         * <p>*   **7**: The instance is being upgraded and is running. This value is valid only for Enterprise Platinum Edition instances.</p>
+         * <ul>
+         * <li><strong>0</strong>: The instance is being deployed. This value is valid only for Enterprise Platinum Edition instances.</li>
+         * <li><strong>2</strong>: The instance has overdue payments. This value is valid only for Standard Edition instances.</li>
+         * <li><strong>5</strong>: The instance is running. This value is valid for Standard Edition instances and Enterprise Platinum Edition instances.</li>
+         * <li><strong>7</strong>: The instance is being upgraded and is running. This value is valid only for Enterprise Platinum Edition instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("InstanceStatus")
         public Integer instanceStatus;
 
         /**
          * <p>The instance type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The instance is a Standard Edition instance that uses the pay-as-you-go billing method.</p>
-         * <p>*   **2**: The instance is an Enterprise Platinum Edition instance that uses the subscription billing method.</p>
-         * <br>
-         * <p>For information about the editions and specifications of Message Queue for Apache RocketMQ instances, see [Instance editions](~~185261~~).</p>
+         * <ul>
+         * <li><strong>1</strong>: Standard Edition instances that use the pay-as-you-go billing method.</li>
+         * <li><strong>2</strong>: Enterprise Platinum Edition instances that use the subscription billing method.</li>
+         * </ul>
+         * <p>For information about the editions and specifications of ApsaraMQ for RocketMQ instances, see <a href="https://help.aliyun.com/document_detail/185261.html">Instance editions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InstanceType")
         public Integer instanceType;
 
         /**
-         * <p>The maximum transactions per second (TPS) for sending and receiving messages. Valid values: 5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 800000, and 1000000.</p>
-         * <br>
-         * <p>For more information, see the description on the buy page.</p>
-         * <br>
-         * <p>>  This parameter is available only for Message Queue for Apache RocketMQ instances of the Enterprise Platinum Edition.</p>
+         * <p>The maximum messaging transactions per second (TPS). Valid values: 5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 800000, and 1000000.</p>
+         * <p>You can view the details about messaging TPS on the buy page of ApsaraMQ for RocketMQ.</p>
+         * <blockquote>
+         * <p>This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("MaxTps")
         public Long maxTps;
 
         /**
-         * <p>The point in time when the Enterprise Platinum Edition instance expires.</p>
+         * <p>The time when the Enterprise Platinum Edition instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603555200000</p>
          */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ons-cn-m7r1r5f****</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The maximum number of topics that can be created on the instance. Valid values: 25, 50, 100, 300, and 500.</p>
-         * <br>
-         * <p>>  This parameter is available only for Message Queue for Apache RocketMQ instances of the Enterprise Platinum Edition.</p>
+         * <blockquote>
+         * <p>This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("TopicCapacity")
         public Integer topicCapacity;
 
+        /**
+         * <p>The commodity ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ons-cn-m7r1r5f****</p>
+         */
         @NameInMap("spInstanceId")
         public String spInstanceId;
 
+        /**
+         * <p>The commodity type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("spInstanceType")
         public Integer spInstanceType;
 

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class OnsConsumerGetConnectionRequest extends TeaModel {
     /**
      * <p>The ID of the consumer group whose client connection status you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_consumer_id</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the instance to which the consumer group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

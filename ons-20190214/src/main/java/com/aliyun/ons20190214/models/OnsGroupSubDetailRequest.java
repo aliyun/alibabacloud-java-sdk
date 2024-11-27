@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class OnsGroupSubDetailRequest extends TeaModel {
     /**
      * <p>The ID of the consumer group that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_group_id</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the instance to which the consumer group you want to query belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
     /**
-     * <p>The data that is returned.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public OnsTrendTopicInputTpsResponseBodyData data;
 
     /**
-     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E213AD8A-0730-4B3D-A35A-340DA47D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
 
     public static class OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo extends TeaModel {
         /**
-         * <p>Indicates the timestamp. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The X axis. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570852800000</p>
          */
         @NameInMap("X")
         public Long x;
 
         /**
-         * <p>Indicates the TPS for message publishing or the number of messages that are published to the topic.</p>
+         * <p>The Y axis. This parameter indicates the TPS for message publishing or the number of messages that are published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Y")
         public Float y;
@@ -94,25 +103,34 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
 
     public static class OnsTrendTopicInputTpsResponseBodyData extends TeaModel {
         /**
-         * <p>The data set that is returned based on each sampling period.</p>
+         * <p>The data set returned based on sampling period.</p>
          */
         @NameInMap("Records")
         public OnsTrendTopicInputTpsResponseBodyDataRecords records;
 
         /**
-         * <p>The name of the table that stores the data.</p>
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx%test trend of received messages</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The unit of the timestamp. Unit: milliseconds.</p>
+         * <p>The unit of the timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>time</p>
          */
         @NameInMap("XUnit")
         public String XUnit;
 
         /**
-         * <p>The unit of the value of the Y parameter.</p>
+         * <p>The unit of the Y axis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg</p>
          */
         @NameInMap("YUnit")
         public String YUnit;

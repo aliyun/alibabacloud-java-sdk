@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class OnsInstanceBaseInfoRequest extends TeaModel {
     /**
      * <p>The ID of the instance that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_138015630679****_BAAy1Hac</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

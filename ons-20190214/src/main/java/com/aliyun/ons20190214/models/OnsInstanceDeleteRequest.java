@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class OnsInstanceDeleteRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_188077086902****_BXSuW61e</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

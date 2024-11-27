@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class OnsMessageGetByKeyRequest extends TeaModel {
     /**
-     * <p>The ID of the instance where the message that you want to query resides.</p>
+     * <p>The ID of the instance to which the messages that you want to query belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The key of the message that you want to query.</p>
+     * <p>The key of the messages that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>messageKey1</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The topic that contains the message that you want to query.</p>
+     * <p>The topic that contains the messages that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-mq_topic</p>
      */
     @NameInMap("Topic")
     public String topic;

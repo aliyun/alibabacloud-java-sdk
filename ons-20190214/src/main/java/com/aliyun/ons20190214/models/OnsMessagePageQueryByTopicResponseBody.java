@@ -12,6 +12,9 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5DC2A47E-2B31-4722-96C8-FA59C9*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,19 +43,25 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
     public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
         /**
          * <p>The name of the attribute. Valid values:</p>
-         * <br>
-         * <p>*   **TRACE_ON**: indicates whether a trace of the message exists.</p>
-         * <p>*   **KEYS**: indicates the key of the message.</p>
-         * <p>*   **TAGS**: indicates the tag that is attached to the message.</p>
-         * <p>*   **INSTANCE_ID**: indicates the ID of the instance that contains the message.</p>
-         * <br>
-         * <p>For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).</p>
+         * <ul>
+         * <li><strong>TRACE_ON</strong>: indicates whether a trace of the message exists.</li>
+         * <li><strong>KEYS</strong>: indicates the key of the message.</li>
+         * <li><strong>TAGS</strong>: indicates the tag of the message.</li>
+         * <li><strong>INSTANCE_ID</strong>: indicates the ID of the instance that contains the message.</li>
+         * </ul>
+         * <p>For information about the terms that are used in ApsaraMQ for RocketMQ see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TAGS</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagA</p>
          */
         @NameInMap("Value")
         public String value;
@@ -102,30 +111,45 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
     public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo extends TeaModel {
         /**
          * <p>The cyclic redundancy check (CRC) value of the message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>914112295</p>
          */
         @NameInMap("BodyCRC")
         public Integer bodyCRC;
 
         /**
          * <p>The producer client that generated the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.<em><strong>.</strong></em>:59270</p>
          */
         @NameInMap("BornHost")
         public String bornHost;
 
         /**
-         * <p>The timestamp when the message was generated. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the message was generated. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570760999721</p>
          */
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E0578FE110F18B4AAC235C05F2*****</p>
          */
         @NameInMap("MsgId")
         public String msgId;
@@ -137,31 +161,46 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
         public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList;
 
         /**
-         * <p>The number of retries that Message Queue for Apache RocketMQ performed to send the message to consumers.</p>
+         * <p>The number of retries that were performed to send the message to consumers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReconsumeTimes")
         public Integer reconsumeTimes;
 
         /**
-         * <p>The Message Queue for Apache RocketMQ broker that stores the message.</p>
+         * <p>The ApsaraMQ for RocketMQ broker that stores the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.193.<em><strong>.</strong></em>:10911</p>
          */
         @NameInMap("StoreHost")
         public String storeHost;
 
         /**
          * <p>The size of the message. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>406</p>
          */
         @NameInMap("StoreSize")
         public Integer storeSize;
 
         /**
-         * <p>The timestamp when the Message Queue for Apache RocketMQ broker stored the message. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the ApsaraMQ for RocketMQ broker stored the message. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570760999811</p>
          */
         @NameInMap("StoreTimestamp")
         public Long storeTimestamp;
 
         /**
          * <p>The topic to which the message belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -283,24 +322,33 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
     public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
         /**
          * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("MaxPageCount")
         public Long maxPageCount;
 
         /**
-         * <p>The information about messages on the returned page. The information that is contained in this parameter is the same as the information that is returned by the [OnsMessageGetByMsgId](~~29607~~) operation.</p>
+         * <p>The information about messages on the returned page. The information that is contained in this parameter is the same as the information that is returned by the <a href="https://help.aliyun.com/document_detail/29607.html">OnsMessageGetByMsgId</a> operation.</p>
          */
         @NameInMap("MsgFoundList")
         public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList msgFoundList;
 
         /**
-         * <p>The ID of the query task. The first time you call this operation to query the dead-letter messages that are sent to a specified consumer group within a specified time range, this parameter is returned. You can use the task ID to query the details of dead-letter messages on other returned pages.</p>
+         * <p>The ID of the query task. The first time you call this operation to query the messages that are sent to a specified consumer group within a specified time range, this parameter is returned. You can use the task ID to query the details of messages on other returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0BC1310300002A9F000021E4D7A48346</p>
          */
         @NameInMap("TaskId")
         public String taskId;

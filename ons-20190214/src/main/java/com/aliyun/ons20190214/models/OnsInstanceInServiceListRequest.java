@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsInstanceInServiceListRequest extends TeaModel {
     /**
-     * <p>The list of tags that are attached to the instance. A maximum of 20 tags can be included in a list.</p>
+     * <p>Specifies whether you want the resource information to be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("NeedResourceInfo")
+    public Boolean needResourceInfo;
+
+    /**
+     * <p>The tags that you want to attach to the instance. You can attach up to 20 tags to the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<OnsInstanceInServiceListRequestTag> tag;
@@ -13,6 +22,14 @@ public class OnsInstanceInServiceListRequest extends TeaModel {
     public static OnsInstanceInServiceListRequest build(java.util.Map<String, ?> map) throws Exception {
         OnsInstanceInServiceListRequest self = new OnsInstanceInServiceListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OnsInstanceInServiceListRequest setNeedResourceInfo(Boolean needResourceInfo) {
+        this.needResourceInfo = needResourceInfo;
+        return this;
+    }
+    public Boolean getNeedResourceInfo() {
+        return this.needResourceInfo;
     }
 
     public OnsInstanceInServiceListRequest setTag(java.util.List<OnsInstanceInServiceListRequestTag> tag) {
@@ -25,19 +42,27 @@ public class OnsInstanceInServiceListRequest extends TeaModel {
 
     public static class OnsInstanceInServiceListRequestTag extends TeaModel {
         /**
-         * <p>The key of a tag that is attached to the instances you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the instances that use the specified tags. If you do not include these parameters in a request, this operation queries all instances that you can access.</p>
-         * <br>
-         * <p>*   The value of this parameter cannot be an empty string.</p>
-         * <p>*   The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key. This parameter is not required. If you configure this parameter, you must also configure <strong>Value</strong>.**** If you configure Key and Value in a request, this operation queries only the instances that use the specified tags. If you do not configure these parameters in a request, this operation queries all instances that you can access.</p>
+         * <ul>
+         * <li>The value of this parameter cannot be an empty string.</li>
+         * <li>The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CartService</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of a tag that is attached to the instances you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the instances that use the specified tags. If you do not include these parameters in a request, this operation queries all instances that you can access.</p>
-         * <br>
-         * <p>*   The value of this parameter can be an empty string.</p>
-         * <p>*   The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value. This parameter is not required. If you configure this parameter, you must also configure <strong>Key</strong>.**** If you configure Key and Value in a request, this operation queries only the instances that use the specified tags. If you do not configure these parameters in a request, this operation queries all instances that you can access.</p>
+         * <ul>
+         * <li>The value of this parameter can be an empty string.</li>
+         * <li>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SericeA</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OnsTopicCreateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6949B58-223E-4B75-B4FE-7797C15E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

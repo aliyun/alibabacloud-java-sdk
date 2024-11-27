@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsConsumerAccumulateResponseBody extends TeaModel {
     /**
-     * <p>The information about message accumulation of topics to which the consumer group subscribes.</p>
+     * <p>The message accumulation information about topics to which the specified consumer subscribes.</p>
      */
     @NameInMap("Data")
     public OnsConsumerAccumulateResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE817BFF-B389-43CD-9419-95011AC9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
     public static class OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo extends TeaModel {
         /**
          * <p>The maximum latency of message consumption in the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("DelayTime")
         public Long delayTime;
 
         /**
          * <p>The point in time when the latest consumed message in the topic was produced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566231000000</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq-topic</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
          * <p>The number of accumulated messages in the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;
@@ -123,39 +138,55 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
     public static class OnsConsumerAccumulateResponseBodyData extends TeaModel {
         /**
          * <p>The transactions per second (TPS) for message consumption performed by consumers in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ConsumeTps")
         public Float consumeTps;
 
         /**
          * <p>The consumption latency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("DelayTime")
         public Long delayTime;
 
         /**
-         * <p>The information about each topic to which the consumer group subscribes. If the **Detail** parameter in the request is set to **false**, the value of this parameter is empty.</p>
+         * <p>The information about each topic to which the consumer group subscribes. If the <strong>Detail</strong> parameter in the request is set to <strong>false</strong>, the value of this parameter is empty.</p>
          */
         @NameInMap("DetailInTopicList")
         public OnsConsumerAccumulateResponseBodyDataDetailInTopicList detailInTopicList;
 
         /**
-         * <p>The point in time when the latest message that was consumed by a consumer in the consumer group was produced.</p>
+         * <p>The point in time when the latest message consumed by a consumer in the consumer group was produced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566231000000</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         /**
-         * <p>Indicates whether the consumer group is online. The group is online if one of the consumers in the group is online. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The consumer group is online.</p>
-         * <p>*   **false**: The consumer group is offline.</p>
+         * <p>Indicates whether the consumer group is online. The consumer group is online if one of the consumers in the group is online. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The consumer group is online.</li>
+         * <li><strong>false</strong>: The consumer group is offline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
         /**
          * <p>The total number of accumulated messages in all topics to which the consumer group subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;
