@@ -1,0 +1,85 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ens20171110.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeInstanceSDGStatusShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aic-xxxxx</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("SDGIds")
+    public String SDGIdsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("Status")
+    public String status;
+
+    public static DescribeInstanceSDGStatusShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceSDGStatusShrinkRequest self = new DescribeInstanceSDGStatusShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceSDGStatusShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstanceSDGStatusShrinkRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstanceSDGStatusShrinkRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeInstanceSDGStatusShrinkRequest setSDGIdsShrink(String SDGIdsShrink) {
+        this.SDGIdsShrink = SDGIdsShrink;
+        return this;
+    }
+    public String getSDGIdsShrink() {
+        return this.SDGIdsShrink;
+    }
+
+    public DescribeInstanceSDGStatusShrinkRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+}
