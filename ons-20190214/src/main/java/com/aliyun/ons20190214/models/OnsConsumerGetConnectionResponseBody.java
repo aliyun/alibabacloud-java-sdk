@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsConsumerGetConnectionResponseBody extends TeaModel {
     /**
-     * <p>The data that is returned.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public OnsConsumerGetConnectionResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE4140C7-F42D-473D-A5FF-B1E31692****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +42,37 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
 
     public static class OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo extends TeaModel {
         /**
-         * <p>The IP address and port number of the consumer instance.</p>
+         * <p>The IP address and port number of the consumer client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.121.**</p>
          */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
         /**
-         * <p>The ID of the consumer instance.</p>
+         * <p>The ID of the consumer client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.121.**@24813#-1999745829#-1737591554#453111174894656</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The programming language in which the consumer application was developed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The version of the consumer client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V4_3_6</p>
          */
         @NameInMap("Version")
         public String version;
@@ -122,7 +137,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
 
     public static class OnsConsumerGetConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The connection information about the consumers in the specified group.</p>
+         * <p>The client connection information of the consumer group.</p>
          */
         @NameInMap("ConnectionList")
         public OnsConsumerGetConnectionResponseBodyDataConnectionList connectionList;

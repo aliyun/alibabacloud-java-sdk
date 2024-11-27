@@ -5,31 +5,50 @@ import com.aliyun.tea.*;
 
 public class OnsTraceQueryByMsgIdRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1570852800000</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1570968000000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The ID of the Message Queue for Apache RocketMQ instance which contains the specified topic.</p>
+     * <p>The ID of the ApsaraMQ for RocketMQ instance that contains the specified topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the message that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E05791C117818B4AAC23B1BB0CE****</p>
      */
     @NameInMap("MsgId")
     public String msgId;
 
     /**
-     * <p>The topic in which the message you want to query is stored.</p>
+     * <p>The topic that contains the message you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Topic")
     public String topic;

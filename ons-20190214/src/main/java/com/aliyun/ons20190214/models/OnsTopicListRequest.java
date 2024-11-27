@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OnsTopicListRequest extends TeaModel {
     /**
      * <p>The ID of the instance that contains the topics you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_188077086902****_BXSuW61e</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,11 +20,20 @@ public class OnsTopicListRequest extends TeaModel {
     public java.util.List<OnsTopicListRequestTag> tag;
 
     /**
-     * <p>The name of the topic that you want to query. This parameter is required when you want to query a specific topic. If you do not include this parameter in a request, all topics that you can access are queried.</p>
+     * <p>The name of the topic that you want to query. This parameter is required if you want to query a specific topic. If you do not include this parameter in a request, all topics that you can access are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Topic")
     public String topic;
 
+    /**
+     * <p>The user ID of the topic owner. Set this parameter to an Alibaba Cloud account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>138015630679****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -64,19 +76,29 @@ public class OnsTopicListRequest extends TeaModel {
 
     public static class OnsTopicListRequestTag extends TeaModel {
         /**
-         * <p>The key of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Value** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
-         * <br>
-         * <p>*   The value of this parameter cannot be an empty string.</p>
-         * <p>*   The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of the tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Value</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tag. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+         * <ul>
+         * <li>The value of this parameter cannot be an empty string.</li>
+         * <li>A tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CartService</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
-         * <br>
-         * <p>*   The value of this parameter can be an empty string.</p>
-         * <p>*   The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of the tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Key</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tag. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+         * <ul>
+         * <li>The value of this parameter can be an empty string.</li>
+         * <li>A tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceA</p>
          */
         @NameInMap("Value")
         public String value;

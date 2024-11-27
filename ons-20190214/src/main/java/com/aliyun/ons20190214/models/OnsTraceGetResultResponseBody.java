@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class OnsTraceGetResultResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84EE24D2-851F-40D6-B99E-4D6AB909****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,61 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
     public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo extends TeaModel {
         /**
          * <p>The address of the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>30.5.**.**</code></p>
          */
         @NameInMap("ClientHost")
         public String clientHost;
 
         /**
          * <p>The period of time that the system took to consume the message. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         @NameInMap("CostTime")
         public Integer costTime;
 
         /**
-         * <p>The number of attempts that the Message Queue for Apache RocketMQ broker tried to send the message to the consumer.</p>
+         * <p>The number of attempts that the ApsaraMQ for RocketMQ broker tried to send the message to the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReconsumeTimes")
         public Integer reconsumeTimes;
 
         /**
          * <p>Indicates whether the message is consumed. Valid values:</p>
-         * <br>
-         * <p>*   **CONSUME_FAILED**: The message failed to be consumed.</p>
-         * <p>*   **CONSUME_SUCCESS**: The message is consumed.</p>
-         * <p>*   **CONSUME_NOT_RETURN:** No responses are returned.</p>
-         * <p>*   **SEND_UNKNOWN:** The message is a transactional message and is not committed.</p>
-         * <p>*   **SEND_DELAY:** The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</p>
+         * <ul>
+         * <li><strong>CONSUME_FAILED</strong>: The message failed to be consumed.</li>
+         * <li><strong>CONSUME_SUCCESS</strong>: The message is consumed.</li>
+         * <li><strong>CONSUME_NOT_RETURN:</strong> No responses are returned.</li>
+         * <li><strong>SEND_UNKNOWN:</strong> The message is a transactional message and is not committed.</li>
+         * <li><strong>SEND_DELAY:</strong> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSUME_SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the group that contains the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test</p>
          */
         @NameInMap("SubGroupName")
         public String subGroupName;
 
         /**
          * <p>The earliest point in time when the message was consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570851590511</p>
          */
         @NameInMap("SubTime")
         public Long subTime;
@@ -163,18 +185,27 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
         /**
          * <p>The number of consumption failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
         /**
          * <p>The ID of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test</p>
          */
         @NameInMap("SubGroupName")
         public String subGroupName;
 
         /**
          * <p>The number of successful consumptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SuccessCount")
         public Integer successCount;
@@ -240,48 +271,70 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
     public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo extends TeaModel {
         /**
          * <p>The address of the producer that generated the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>30.5.**.**</code></p>
          */
         @NameInMap("BornHost")
         public String bornHost;
 
         /**
          * <p>The period of time that the system took to send the message. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("CostTime")
         public Integer costTime;
 
         /**
          * <p>The ID of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0BC1F01800002A9F000000531246****</p>
          */
         @NameInMap("MsgId")
         public String msgId;
 
         /**
          * <p>The key of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORDERID_100</p>
          */
         @NameInMap("MsgKey")
         public String msgKey;
 
         /**
          * <p>The ID of the group that contains the producer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test</p>
          */
         @NameInMap("PubGroupName")
         public String pubGroupName;
 
         /**
          * <p>The point in time when the message was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570850870478</p>
          */
         @NameInMap("PubTime")
         public Long pubTime;
 
         /**
          * <p>Indicates whether the message is sent. Valid values:</p>
-         * <br>
-         * <p>*   **SEND_SUCCESS**: The message is sent.</p>
-         * <p>*   **SEND_FAILED**: The message failed to be sent.</p>
-         * <p>*   **SEND_ROLLBACK:** The message is a transactional message and is rolled back.</p>
-         * <p>*   **SEND_UNKNOWN:** The message is a transactional message and is not committed.</p>
-         * <p>*   **SEND_DELAY:** The message is a scheduled or delayed message and is waiting to be sent at the specified point in time.</p>
+         * <ul>
+         * <li><strong>SEND_SUCCESS</strong>: The message is sent.</li>
+         * <li><strong>SEND_FAILED</strong>: The message failed to be sent.</li>
+         * <li><strong>SEND_ROLLBACK:</strong> The message is a transactional message and is rolled back.</li>
+         * <li><strong>SEND_UNKNOWN:</strong> The message is a transactional message and is not committed.</li>
+         * <li><strong>SEND_DELAY:</strong> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SEND_SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
@@ -294,12 +347,18 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
         /**
          * <p>The tag of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagA</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The topic in which the message is stored.</p>
+         * <p>The topic to which the message belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -413,46 +472,68 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
     public static class OnsTraceGetResultResponseBodyTraceData extends TeaModel {
         /**
          * <p>The point in time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570966857000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The ID of the instance that contains the message.</p>
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the message that is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E05791C117818B4AAC23B1BB0CE****</p>
          */
         @NameInMap("MsgId")
         public String msgId;
 
         /**
          * <p>The key of the message that is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORDERID_100</p>
          */
         @NameInMap("MsgKey")
         public String msgKey;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>272967562652883649157096685****</p>
          */
         @NameInMap("QueryId")
         public String queryId;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **finish**: The task is complete.</p>
-         * <p>*   **working**: The task is in progress.</p>
-         * <p>*   **removed**: The task is deleted.</p>
+         * <ul>
+         * <li><strong>finish</strong>: The task is complete.</li>
+         * <li><strong>working</strong>: The task is in progress.</li>
+         * <li><strong>removed</strong>: The task is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The topic in which the message is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -465,12 +546,18 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
         /**
          * <p>The most recent point in time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570966877000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the user who created the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27296756265288****</p>
          */
         @NameInMap("UserId")
         public String userId;

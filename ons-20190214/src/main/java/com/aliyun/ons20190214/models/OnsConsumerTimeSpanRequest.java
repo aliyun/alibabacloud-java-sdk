@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class OnsConsumerTimeSpanRequest extends TeaModel {
     /**
      * <p>The ID of the consumer group whose reset time range you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_group_id</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the instance to which the consumer group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The topic to which the consumer group subscribes.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-mq_topic</p>
      */
     @NameInMap("Topic")
     public String topic;

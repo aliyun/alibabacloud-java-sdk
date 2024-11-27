@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsConsumerTimeSpanResponseBody extends TeaModel {
     /**
-     * <p>The query results.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public OnsConsumerTimeSpanResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A07E3902-B92E-44A6-B6C5-6AA111111****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
     public static class OnsConsumerTimeSpanResponseBodyData extends TeaModel {
         /**
          * <p>The most recent point in time when a message in the topic was consumed by the customer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570761026400</p>
          */
         @NameInMap("ConsumeTimeStamp")
         public Long consumeTimeStamp;
 
         /**
          * <p>The ID of the instance to which the consumer group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The earliest point in time when a message was published to the topic.</p>
+         * <p>The point in time when the earliest stored message was published to the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570761026804</p>
          */
         @NameInMap("MaxTimeStamp")
         public Long maxTimeStamp;
 
         /**
-         * <p>The most recent point in time when a message was published to the topic.</p>
+         * <p>The point in time when the most recently stored message was published to the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570701231122</p>
          */
         @NameInMap("MinTimeStamp")
         public Long minTimeStamp;
 
         /**
          * <p>The name of the topic that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         @NameInMap("Topic")
         public String topic;

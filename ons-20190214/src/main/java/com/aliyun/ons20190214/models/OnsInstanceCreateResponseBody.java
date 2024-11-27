@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsInstanceCreateResponseBody extends TeaModel {
     /**
-     * <p>The results that are returned.</p>
+     * <p>The result returned.</p>
      */
     @NameInMap("Data")
     public OnsInstanceCreateResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A07E3902-B92E-44A6-B6C5-6AA111111****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,14 +43,21 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
     public static class OnsInstanceCreateResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the instance that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BXSuW61e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The edition of the instance. Valid value:</p>
-         * <br>
-         * <p>*   **1**: Standard Edition</p>
+         * <p>The edition of the instance that you created. Valid value:</p>
+         * <ul>
+         * <li><strong>1</strong>: Standard Edition instances</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceType")
         public Integer instanceType;

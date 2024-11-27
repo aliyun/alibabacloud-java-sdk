@@ -12,6 +12,9 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D94CC769-4DC3-4690-A868-9D0631B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

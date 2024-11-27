@@ -12,6 +12,9 @@ public class OnsTopicListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A978869-7681-4529-B470-107E1379****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class OnsTopicListResponseBody extends TeaModel {
 
     public static class OnsTopicListResponseBodyDataPublishInfoDoTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CartService</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SrviceA</p>
          */
         @NameInMap("Value")
         public String value;
@@ -94,72 +103,103 @@ public class OnsTopicListResponseBody extends TeaModel {
 
     public static class OnsTopicListResponseBodyDataPublishInfoDo extends TeaModel {
         /**
-         * <p>The point in time when the topic was created.</p>
+         * <p>The time when the topic was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570700947000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>Indicates whether the instance that contains the topic uses a namespace. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</p>
-         * <p>*   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
+         * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within an instance and across all instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
         /**
          * <p>The ID of the instance that contains the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BXSuW61e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The type of the messages. Valid values:</p>
-         * <br>
-         * <p>*   **0**: normal messages</p>
-         * <p>*   **1**: partitionally ordered messages</p>
-         * <p>*   **2**: globally ordered messages</p>
-         * <p>*   **4**: transactional messages</p>
-         * <p>*   **5**: scheduled or delayed messages</p>
+         * <p>The message type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: normal messages</li>
+         * <li><strong>1</strong>: partitionally ordered messages</li>
+         * <li><strong>2</strong>: globally ordered messages</li>
+         * <li><strong>4</strong>: transactional messages</li>
+         * <li><strong>5</strong>: scheduled or delayed messages</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MessageType")
         public Integer messageType;
 
         /**
-         * <p>The user ID of the topic owner.</p>
+         * <p>The user ID of the topic owner. The value of this parameter is an Alibaba account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138015630679****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The code of the relationship between the current account and the topic. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The current account is the owner of the topic.</p>
-         * <p>*   **2**: The current account can publish messages to the topic.</p>
-         * <p>*   **4**: The current account can subscribe to the topic.</p>
-         * <p>*   **6**: The current account can publish messages to and subscribe to the topic.</p>
+         * <p>Indicates the relationship between the current account and the topic. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The current account is the owner of the topic.</li>
+         * <li><strong>2</strong>: The current account can publish messages to the topic.</li>
+         * <li><strong>4</strong>: The current account can subscribe to the topic.</li>
+         * <li><strong>6</strong>: The current account can publish messages to and subscribe to the topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Relation")
         public Integer relation;
 
         /**
-         * <p>The name of the relationship between the current account and the topic. The value of this parameter indicates that the current account is the owner of the topic, the current account can publish messages to the topic, the current account can subscribe to the topic, or the current account can publish messages to and subscribe to the topic.</p>
+         * <p>The relationship between the current account and the topic. The value of this parameter indicates whether the current account is the owner of the topic, and whether the current account can subscribe or publish messages to the topic. the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Publish and subscribe</p>
          */
         @NameInMap("RelationName")
         public String relationName;
 
         /**
          * <p>The description of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The status of the topic. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The topic is being created.</p>
-         * <p>*   **1**: The topic is being used.</p>
+         * <p>The status of the topic that is asynchronously created. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The topic is being created.</li>
+         * <li><strong>1</strong>: The topic is being used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
@@ -171,7 +211,10 @@ public class OnsTopicListResponseBody extends TeaModel {
         public OnsTopicListResponseBodyDataPublishInfoDoTags tags;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Topic")
         public String topic;

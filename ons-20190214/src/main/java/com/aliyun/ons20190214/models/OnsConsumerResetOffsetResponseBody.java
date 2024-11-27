@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OnsConsumerResetOffsetResponseBody extends TeaModel {
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D52C68F8-EC5D-4294-BFFF-1A6A25AF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

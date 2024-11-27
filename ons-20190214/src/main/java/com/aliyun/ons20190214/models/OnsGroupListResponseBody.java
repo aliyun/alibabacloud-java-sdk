@@ -12,6 +12,9 @@ public class OnsGroupListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16996623-AC4A-43AF-9248-FD9D2D75****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class OnsGroupListResponseBody extends TeaModel {
 
     public static class OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of the tag that is attached to the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CartService</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of the tag that is attached to the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceA</p>
          */
         @NameInMap("Value")
         public String value;
@@ -94,49 +103,72 @@ public class OnsGroupListResponseBody extends TeaModel {
 
     public static class OnsGroupListResponseBodyDataSubscribeInfoDo extends TeaModel {
         /**
-         * <p>The time when the group was created.</p>
+         * <p>The point in time when the consumer group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568896605000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The protocol over which the queried consumer groups consume messages. All clients in a consumer group communicate with the Message Queue for Apache RocketMQ broker over the same protocol. A consumer group cannot contain TCP clients and HTTP clients at the same time. You must create different consumer groups for TCP clients and HTTP clients. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**: indicates that the consumer group consumes messages over TCP.</p>
-         * <p>*   **http**: indicates that the consumer group consumes messages over HTTP.</p>
+         * <p>The protocol over which the queried consumer group publishes and subscribes to messages. All clients in a consumer group communicate with the ApsaraMQ for RocketMQ broker over the same protocol. You must create different consumer groups for TCP clients and HTTP clients. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: indicates that the consumer group publishes and subscribes to messages over TCP.</li>
+         * <li><strong>http</strong>: indicates that the consumer group publishes and subscribes to messages over HTTP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("GroupType")
         public String groupType;
 
         /**
          * <p>Indicates whether the instance uses a namespace. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</p>
-         * <p>*   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
+         * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the user who created the consumer group.</p>
+         * <p>The Alibaba Cloud account ID of the user who created the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138015630679****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The description of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -148,7 +180,10 @@ public class OnsGroupListResponseBody extends TeaModel {
         public OnsGroupListResponseBodyDataSubscribeInfoDoTags tags;
 
         /**
-         * <p>The time when the group ID was updated.</p>
+         * <p>The most recent point in time when the consumer group was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570700979000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

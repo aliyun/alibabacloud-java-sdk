@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsConsumerStatusResponseBody extends TeaModel {
     /**
-     * <p>The query results.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public OnsConsumerStatusResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10EDC518-10E7-4B34-92FB-171235FA****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     public static class OnsConsumerStatusResponseBodyDataConnectionSetConnectionDo extends TeaModel {
         /**
          * <p>The IP address and port number of the consumer instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.121.**</p>
          */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
         /**
          * <p>The ID of the consumer instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.121.**@25560#-1999745829#-1737591554#458773089270275</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>The programming language that the consumer client supports.</p>
+         * <p>The programming language in which the consumer is developed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The private or public IP address of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.74.**</p>
          */
         @NameInMap("RemoteIP")
         public String remoteIP;
 
         /**
          * <p>The version of the consumer client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V4_3_6_SNAPSHOT</p>
          */
         @NameInMap("Version")
         public String version;
@@ -156,6 +174,9 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoJstackThreadTrackDo extends TeaModel {
         /**
          * <p>The name of the thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsumeMessageThread_0</p>
          */
         @NameInMap("Thread")
         public String thread;
@@ -211,36 +232,45 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoRunningDataListConsumerRunningDataDo extends TeaModel {
         /**
          * <p>The number of messages that failed to be consumed each hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailedCountPerHour")
         public Long failedCountPerHour;
 
         /**
          * <p>The TPS for failed message consumption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailedTps")
         public Float failedTps;
 
         /**
-         * <p>The ID of the consumer group.</p>
-         */
-        @NameInMap("GroupId")
-        public String groupId;
-
-        /**
          * <p>The TPS for successful message consumption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OkTps")
         public Float okTps;
 
         /**
          * <p>The consumption RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Rt")
         public Float rt;
 
         /**
          * <p>The name of the topic to which the consumer subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -264,14 +294,6 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         }
         public Float getFailedTps() {
             return this.failedTps;
-        }
-
-        public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoRunningDataListConsumerRunningDataDo setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
         }
 
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoRunningDataListConsumerRunningDataDo setOkTps(Float okTps) {
@@ -341,12 +363,20 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoSubscriptionSetSubscriptionData extends TeaModel {
         /**
          * <p>The expression that is used to specify the tags of messages in the subscribed topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("SubString")
         public String subString;
 
         /**
          * <p>The subscription version. The value is of the LONG type and is automatically incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570701364301</p>
          */
         @NameInMap("SubVersion")
         public Long subVersion;
@@ -359,6 +389,9 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         /**
          * <p>The name of the topic to which the consumer subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -424,52 +457,70 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDo extends TeaModel {
         /**
          * <p>The ID of the consumer instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>30.5.**.**</code>@25560#-1999745829#-1737591554#458773089270275</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The connection information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
          * <p>The consumption mode. Valid values:</p>
-         * <br>
-         * <p>*   **CLUSTERING:** the clustering consumption mode</p>
-         * <p>*   **BROADCASTING:** the broadcasting consumption mode</p>
-         * <br>
-         * <p>For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).</p>
+         * <ul>
+         * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
+         * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
+         * </ul>
+         * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTERING</p>
          */
         @NameInMap("ConsumeModel")
         public String consumeModel;
 
         /**
          * <p>The mode in which the consumer consumes messages. Valid values:</p>
-         * <br>
-         * <p>*   **PUSH:** The Message Queue for Apache RocketMQ broker pushes messages to the consumer.</p>
-         * <p>*   **PULL:** The consumer pulls messages from the Message Queue for Apache RocketMQ broker.</p>
+         * <ul>
+         * <li><strong>PUSH</strong>: The ApsaraMQ for RocketMQ broker pushes messages to the consumer.</li>
+         * <li><strong>PULL</strong>: The consumer pulls messages from the ApsaraMQ for RocketMQ broker.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUSH</p>
          */
         @NameInMap("ConsumeType")
         public String consumeType;
 
         /**
-         * <p>The information about thread stack traces. If you want to obtain the information about thread stack traces, make sure that the **NeedJstack** parameter in the request is set to **true**. If the NeedJstack parameter is not set to true, the value of this parameter is empty.</p>
+         * <p>The information about thread stack traces. If you want to obtain the information about thread stack traces, make sure that the <strong>NeedJstack</strong> parameter in the request is set to <strong>true</strong>. If the NeedJstack parameter is not set to true, the value of this parameter is empty.</p>
          */
         @NameInMap("Jstack")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoJstack jstack;
 
         /**
          * <p>The programming language that the consumer supports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The most recent point in time when a message was consumed.</p>
-         * <br>
          * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570701368114</p>
          */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
@@ -482,8 +533,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         /**
          * <p>The earliest point in time when a message was consumed.</p>
-         * <br>
          * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570701361528</p>
          */
         @NameInMap("StartTimeStamp")
         public Long startTimeStamp;
@@ -496,12 +549,18 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         /**
          * <p>The number of consumer threads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ThreadCount")
         public Integer threadCount;
 
         /**
          * <p>The version of the consumer client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V4_3_6</p>
          */
         @NameInMap("Version")
         public String version;
@@ -631,26 +690,37 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     public static class OnsConsumerStatusResponseBodyDataDetailInTopicListDetailInTopicDo extends TeaModel {
         /**
          * <p>The latency of message consumption in the topic. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DelayTime")
         public Long delayTime;
 
         /**
          * <p>The most recent point in time when a message was consumed.</p>
-         * <br>
          * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570701259403</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
          * <p>The number of accumulated messages in the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;
@@ -722,76 +792,103 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         /**
          * <p>The consumption mode. Valid values:</p>
-         * <br>
-         * <p>*   **CLUSTERING:** the clustering consumption mode</p>
-         * <p>*   **BROADCASTING:** the broadcasting consumption mode</p>
-         * <br>
-         * <p>For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).</p>
+         * <ul>
+         * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
+         * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
+         * </ul>
+         * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTERING</p>
          */
         @NameInMap("ConsumeModel")
         public String consumeModel;
 
         /**
          * <p>The TPS for message consumption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ConsumeTps")
         public Float consumeTps;
 
         /**
-         * <p>The details of online consumers in the consumer group, including the information about the thread stack traces and the consumption response time (RT). If you want to obtain the details of online consumers in the consumer group, make sure that the **Detail** parameter in the request is set to **true**. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
+         * <p>The details of online consumers in the consumer group, including the information about the thread stack traces and the consumption response time (RT). If you want to obtain the details of online consumers in the consumer group, make sure that the <strong>Detail</strong> parameter in the request is set to <strong>true</strong>. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
          */
         @NameInMap("ConsumerConnectionInfoList")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoList consumerConnectionInfoList;
 
         /**
-         * <p>The maximum latency of message consumption in all topics to which the consumer group subscribe. Unit: milliseconds.</p>
+         * <p>The maximum latency of message consumption in all topics to which the consumer group subscribes. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100857</p>
          */
         @NameInMap("DelayTime")
         public Long delayTime;
 
         /**
-         * <p>The information about message consumption by topic. If you want to obtain the information about the consumption status of each topic, make sure that the **Detail** parameter in the request is set to **true**. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
+         * <p>The information about message consumption by topic. If you want to obtain the information about the consumption status of each topic, make sure that the <strong>Detail</strong> parameter in the request is set to <strong>true</strong>. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
          */
         @NameInMap("DetailInTopicList")
         public OnsConsumerStatusResponseBodyDataDetailInTopicList detailInTopicList;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The most recent point in time when a message was consumed.</p>
-         * <br>
          * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566883844954</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         /**
          * <p>Indicates whether the consumer group is online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
         /**
          * <p>Indicates whether load balancing is performed as expected. Valid values:</p>
-         * <br>
-         * <p>*   **true:** Load balancing is performed as expected.</p>
-         * <p>*   **false:** Load balancing is not performed as expected.</p>
+         * <ul>
+         * <li><strong>true</strong>: Load balancing is performed as expected.</li>
+         * <li><strong>false</strong>: Load balancing is not performed as expected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RebalanceOK")
         public Boolean rebalanceOK;
 
         /**
          * <p>Indicates whether all consumers in the consumer group subscribe to the same topics and tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SubscriptionSame")
         public Boolean subscriptionSame;
 
         /**
          * <p>The total number of accumulated messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>197</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;

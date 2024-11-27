@@ -5,39 +5,57 @@ import com.aliyun.tea.*;
 
 public class OnsConsumerResetOffsetRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group for which you want to reset the consumer offset.</p>
+     * <p>The ID of the consumer group whose dead-letter message you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_consumer_id</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the instance to which the consumer group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The timestamp to which you want to reset the consumer offset. This parameter takes effect only when the **Type** parameter is set to **1**. Unit: milliseconds.</p>
+     * <p>The timestamp to which you want to reset the consumer offset. This parameter takes effect only when the <strong>Type</strong> parameter is set to <strong>1</strong>. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1591153871000</p>
      */
     @NameInMap("ResetTimestamp")
     public Long resetTimestamp;
 
     /**
      * <p>The name of the topic for which you want to reset the consumer offset.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-mq-topic</p>
      */
     @NameInMap("Topic")
     public String topic;
 
     /**
      * <p>The method that you want to use to clear accumulated messages. Valid values:</p>
-     * <br>
-     * <p>*   **0:** All accumulated messages are cleared. Messages that are not consumed are ignored. Consumers in the specified consumer group consume only messages that are published to the topic after the current point in time.</p>
-     * <br>
-     * <p>If "reconsumeLater" is returned, the accumulated messages are not cleared because the system is retrying to send the messages to consumers.</p>
-     * <br>
-     * <p>*   **1:** The messages that were published to the topic before a specified point in time are cleared. You must specify a point in time. Consumers in the specified consumer group consume only the messages that are published to the topic after the specified point in time.</p>
-     * <br>
-     * <p>You can specify a point in time within the time range that is from the earliest point in time when a message was published to the topic to the most recent point in time when a message was published to the topic. Points in time that are not within the allowed time range are invalid.</p>
+     * <ul>
+     * <li><strong>0:</strong> All accumulated messages are cleared. Messages that are not consumed are ignored. Consumers in the specified consumer group consume only messages that are published to the topic after the specified point in time.</li>
+     * </ul>
+     * <p>If &quot;reconsumeLater&quot; is returned, the accumulated messages are not cleared because the system is retrying to resend the messages to consumers.</p>
+     * <ul>
+     * <li><strong>1:</strong> The messages that were published to the topic before the specified point in time are cleared. You must specify a point in time. Consumers in the specified consumer group consume only the messages that are published to the topic after the specified point in time.</li>
+     * </ul>
+     * <p>You can specify a point in time from the earliest point in time when a message was published to the topic to the most recent point in time when a message was published to the topic. Points in time that are not within the allowed time range are invalid.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Type")
     public Integer type;

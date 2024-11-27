@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsRegionListResponseBody extends TeaModel {
     /**
-     * <p>The information about the message that is queried.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public OnsRegionListResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72D14A84-45E5-4E01-A6DB-F63C4721****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,20 +42,86 @@ public class OnsRegionListResponseBody extends TeaModel {
 
     public static class OnsRegionListResponseBodyDataRegionDo extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The channel name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
+         */
+        @NameInMap("ChannelName")
+        public String channelName;
+
+        /**
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1411623866000</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("OnsRegionId")
         public String onsRegionId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The time when the instance was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1411623866000</p>
+         */
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
         public static OnsRegionListResponseBodyDataRegionDo build(java.util.Map<String, ?> map) throws Exception {
             OnsRegionListResponseBodyDataRegionDo self = new OnsRegionListResponseBodyDataRegionDo();
             return TeaModel.build(map, self);
+        }
+
+        public OnsRegionListResponseBodyDataRegionDo setChannelName(String channelName) {
+            this.channelName = channelName;
+            return this;
+        }
+        public String getChannelName() {
+            return this.channelName;
+        }
+
+        public OnsRegionListResponseBodyDataRegionDo setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public OnsRegionListResponseBodyDataRegionDo setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public OnsRegionListResponseBodyDataRegionDo setOnsRegionId(String onsRegionId) {
@@ -69,6 +138,14 @@ public class OnsRegionListResponseBody extends TeaModel {
         }
         public String getRegionName() {
             return this.regionName;
+        }
+
+        public OnsRegionListResponseBodyDataRegionDo setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

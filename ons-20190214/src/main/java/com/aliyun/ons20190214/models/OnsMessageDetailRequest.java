@@ -5,19 +5,31 @@ import com.aliyun.tea.*;
 
 public class OnsMessageDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the Message Queue for Apache RocketMQ Instance.</p>
+     * <p>The ID of the ApsaraMQ for RocketMQ Instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_184681981******_BXig0x6A</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the message that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E0578FE110F18B4AAC235C0******</p>
      */
     @NameInMap("MsgId")
     public String msgId;
 
     /**
      * <p>The name of the topic in which the message you want to query is stored.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-mq_topic</p>
      */
     @NameInMap("Topic")
     public String topic;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class OnsGroupDeleteRequest extends TeaModel {
     /**
      * <p>The ID of the consumer group that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_groupId</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the Message Queue for Apache RocketMQ instance that contains the specified group.</p>
+     * <p>The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

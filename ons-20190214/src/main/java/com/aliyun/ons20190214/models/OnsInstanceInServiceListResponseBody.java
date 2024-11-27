@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsInstanceInServiceListResponseBody extends TeaModel {
     /**
-     * <p>The returned list of all published instances.</p>
+     * <p>The returned information about the queried instances.</p>
      */
     @NameInMap("Data")
     public OnsInstanceInServiceListResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0598E46F-DB06-40E2-AD7B-C45923EE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
 
     public static class OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CartService</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceA</p>
          */
         @NameInMap("Value")
         public String value;
@@ -93,56 +102,90 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
     }
 
     public static class OnsInstanceInServiceListResponseBodyDataInstanceVO extends TeaModel {
+        /**
+         * <p>The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640847284000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>Indicates whether the instance uses a namespace. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</p>
-         * <p>*   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.</p>
+         * <p>The number of consumer groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("GroupCount")
+        public Integer groupCount;
+
+        /**
+         * <p>Indicates whether a namespace is used for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A separate namespace is used for the instance. The identifier of each resource in the instance must be unique within the instance. However, the identifier of a resource in the instance can be the same as the identifier of a resource in another instance that uses a different namespace.</li>
+         * <li><strong>false</strong>: A separate namespace is not used for the instance. The name of each resource must be globally unique within the instance and across all instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BXSuW61e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
-         * <br>
-         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+         * <p>The instance name.</p>
+         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The instance is being deployed. This value is valid only for Enterprise Platinum Edition instances.</p>
-         * <p>*   **2**: The instance has overdue payments. This value is valid only for Standard Edition instances.</p>
-         * <p>*   **5**: The instance is running. This value is valid for Standard Edition instances and Enterprise Platinum Edition instances.</p>
-         * <p>*   **7**: The instance is being upgraded and is running. This value is valid only for Enterprise Platinum Edition instances.</p>
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The instance is being deployed. This value is valid only for Enterprise Platinum Edition instances.</li>
+         * <li><strong>2</strong>: The instance has overdue payments. This value is valid only for Standard Edition instances.</li>
+         * <li><strong>5</strong>: The instance is running. This value is valid only for Standard Edition instances and Enterprise Platinum Edition instances.</li>
+         * <li><strong>7</strong>: The instance is being upgraded and is running. This value is valid only for Enterprise Platinum Edition instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("InstanceStatus")
         public Integer instanceStatus;
 
         /**
          * <p>The instance type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Standard Edition</p>
-         * <p>*   **2**: Enterprise Platinum Edition</p>
-         * <br>
-         * <p>For more information about the instance editions and differences between the editions, see [Instance editions](~~185261~~).</p>
+         * <ul>
+         * <li><strong>1</strong>: Standard Edition</li>
+         * <li><strong>2</strong>: Enterprise Platinum Edition</li>
+         * </ul>
+         * <p>For information about the instance editions and the differences between the editions, see <a href="https://help.aliyun.com/document_detail/185261.html">Instance editions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InstanceType")
         public Integer instanceType;
 
         /**
-         * <p>The point in time when the instance expires. If the instance is an Enterprise Platinum Edition instance, this parameter is returned.</p>
+         * <p>The time when the instance expires. If the instance is of Enterprise Platinum Edition, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1551024000000</p>
          */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
@@ -152,6 +195,15 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
          */
         @NameInMap("Tags")
         public OnsInstanceInServiceListResponseBodyDataInstanceVOTags tags;
+
+        /**
+         * <p>The number of topics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TopicCount")
+        public Integer topicCount;
 
         public static OnsInstanceInServiceListResponseBodyDataInstanceVO build(java.util.Map<String, ?> map) throws Exception {
             OnsInstanceInServiceListResponseBodyDataInstanceVO self = new OnsInstanceInServiceListResponseBodyDataInstanceVO();
@@ -164,6 +216,14 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setGroupCount(Integer groupCount) {
+            this.groupCount = groupCount;
+            return this;
+        }
+        public Integer getGroupCount() {
+            return this.groupCount;
         }
 
         public OnsInstanceInServiceListResponseBodyDataInstanceVO setIndependentNaming(Boolean independentNaming) {
@@ -220,6 +280,14 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         }
         public OnsInstanceInServiceListResponseBodyDataInstanceVOTags getTags() {
             return this.tags;
+        }
+
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setTopicCount(Integer topicCount) {
+            this.topicCount = topicCount;
+            return this;
+        }
+        public Integer getTopicCount() {
+            return this.topicCount;
         }
 
     }

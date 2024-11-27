@@ -5,31 +5,50 @@ import com.aliyun.tea.*;
 
 public class OnsMessagePushRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer. You can call the [OnsConsumerGetConnection](~~29598~~) operation to query the ID of each consumer in a consumer group.</p>
+     * <p>The ID of the consumer client. You can call the <a href="https://help.aliyun.com/document_detail/29598.html">OnsConsumerGetConnection</a> operation to query client IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30.5.121.**@24813#-1999745829#-1737591554#453111174894656</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
-     * <p>The ID of the consumer group. For information about what a consumer group is, see [Terms](~~29533~~).</p>
+     * <p>The ID of the consumer group. For information about what a consumer group is, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_group_id</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the Message Queue for Apache RocketMQ instance to which the specified consumer group belongs.</p>
+     * <p>The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the message.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0BC1669963053CF68F733BB70396****</p>
      */
     @NameInMap("MsgId")
     public String msgId;
 
     /**
      * <p>The topic to which the message is pushed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-mq_topic</p>
      */
     @NameInMap("Topic")
     public String topic;

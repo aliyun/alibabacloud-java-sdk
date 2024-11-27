@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class OnsTopicStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance that contains the topic you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_188077086902****_BXSuW61e</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the topic that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Topic")
     public String topic;

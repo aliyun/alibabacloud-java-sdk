@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The token that determines the start point of the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0****be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>301D2CBE-66F8-403D-AEC0-82582478****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the resource and tags, including the resource ID, the resource type, and the keys and values of tags.</p>
+     * <p>Details of the resource and tags, including the resource ID, the resource type, tag keys, and tag values.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -53,35 +59,51 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BXSuW61e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>Indicates the ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TopicA</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource to which you want to attach tags.</p>
-         * <br>
-         * <p>*   ALIYUN::MQ::INSTANCE: indicates that the resource is an instance.</p>
-         * <p>*   ALIYUN::MQ::TOPIC: indicates that the resource is a topic.</p>
-         * <p>*   ALIYUN::MQ::GROUP: indicates that the resource is a group.</p>
+         * <p>The type of the resource whose tags you want to query.</p>
+         * <ul>
+         * <li>ALIYUN::MQ::INSTANCE: indicates that the resource is a ApsaraMQ for RocketMQ instance.</li>
+         * <li>ALIYUN::MQ::TOPIC: indicates that the resource is a topic.</li>
+         * <li>ALIYUN::MQ::GROUP: indicates that the resource is a group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::MQ::TOPIC</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CartService</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceA</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

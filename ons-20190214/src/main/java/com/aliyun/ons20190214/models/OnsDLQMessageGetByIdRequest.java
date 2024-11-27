@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class OnsDLQMessageGetByIdRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group whose dead-letter messages you want to query.</p>
+     * <p>The ID of the consumer group whose dead-letter message you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test_group_id</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the instance to which the message you want to query belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ_INST_111111111111_DOxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the dead-letter message that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0BC16699165C03B925DB8A404E2D****</p>
      */
     @NameInMap("MsgId")
     public String msgId;

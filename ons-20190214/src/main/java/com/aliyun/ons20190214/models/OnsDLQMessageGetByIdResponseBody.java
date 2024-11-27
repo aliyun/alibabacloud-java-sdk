@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
     /**
-     * <p>The returned results.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public OnsDLQMessageGetByIdResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A07E3902-B92E-44A6-B6C5-6AA111111****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,19 +43,25 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
     public static class OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty extends TeaModel {
         /**
          * <p>The name of the attribute. Valid values:</p>
-         * <br>
-         * <p>*   **TRACE_ON**: indicates whether a trace of the message exists.</p>
-         * <p>*   **KEYS**: indicates the message key of the message.</p>
-         * <p>*   **TAGS**: indicates the tag that is attached to the message.</p>
-         * <p>*   **INSTANCE_ID**: indicates the ID of the instance that contains the dead-letter message.</p>
-         * <br>
-         * <p>For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).</p>
+         * <ul>
+         * <li><strong>TRACE_ON</strong>: indicates whether the message trace exists.</li>
+         * <li><strong>KEYS</strong>: indicates the key of the message.</li>
+         * <li><strong>TAGS</strong>: indicates the tag that is attached to the message.</li>
+         * <li><strong>INSTANCE_ID</strong>: indicates the ID of the instance that contains the message.</li>
+         * </ul>
+         * <p>For information about the terms that are used in ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TAGS</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagA</p>
          */
         @NameInMap("Value")
         public String value;
@@ -102,30 +111,45 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
     public static class OnsDLQMessageGetByIdResponseBodyData extends TeaModel {
         /**
          * <p>The cyclic redundancy check (CRC) value of the message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>914112295</p>
          */
         @NameInMap("BodyCRC")
         public Integer bodyCRC;
 
         /**
          * <p>The producer instance that generated the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>42.120.**.**</code>:64646</p>
          */
         @NameInMap("BornHost")
         public String bornHost;
 
         /**
-         * <p>The timestamp that indicates the point in time when the dead-letter message was generated. Unit: milliseconds.</p>
+         * <p>The timestamp that indicates the point in time when the message was generated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570761026630</p>
          */
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the dead-letter message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0BC16699165C03B925DB8A404E2D****</p>
          */
         @NameInMap("MsgId")
         public String msgId;
@@ -137,31 +161,46 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
         public OnsDLQMessageGetByIdResponseBodyDataPropertyList propertyList;
 
         /**
-         * <p>The number of retries that Message Queue for Apache RocketMQ performed to send the message to consumers.</p>
+         * <p>The number of retries that were performed to send the message to consumers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReconsumeTimes")
         public Integer reconsumeTimes;
 
         /**
-         * <p>The Message Queue for Apache RocketMQ broker that stores the message.</p>
+         * <p>The ApsaraMQ for RocketMQ broker that stores the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.220.<em><strong>.</strong></em>:10911</p>
          */
         @NameInMap("StoreHost")
         public String storeHost;
 
         /**
          * <p>The size of the message. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407</p>
          */
         @NameInMap("StoreSize")
         public Integer storeSize;
 
         /**
-         * <p>The timestamp when the Message Queue for Apache RocketMQ broker stored the message. Unit: milliseconds.</p>
+         * <p>The timestamp that indicates the point in time when the ApsaraMQ for RocketMQ broker stored the message. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570761026708</p>
          */
         @NameInMap("StoreTimestamp")
         public Long storeTimestamp;
 
         /**
          * <p>The topic to which the message belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         @NameInMap("Topic")
         public String topic;
