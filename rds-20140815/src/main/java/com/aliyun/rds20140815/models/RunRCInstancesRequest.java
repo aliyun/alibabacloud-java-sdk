@@ -234,6 +234,9 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
     /**
      * <p>The specification of the system disk.</p>
      */
@@ -471,6 +474,14 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public RunRCInstancesRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
     }
 
     public RunRCInstancesRequest setSystemDisk(RunRCInstancesRequestSystemDisk systemDisk) {

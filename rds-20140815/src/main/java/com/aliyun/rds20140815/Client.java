@@ -24007,6 +24007,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DbEndpointAliases", request.dbEndpointAliases);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dbEndpointMinSlaveCount)) {
+            query.put("DbEndpointMinSlaveCount", request.dbEndpointMinSlaveCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbEndpointOperator)) {
             query.put("DbEndpointOperator", request.dbEndpointOperator);
         }
@@ -29045,6 +29049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
             query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spotStrategy)) {
+            query.put("SpotStrategy", request.spotStrategy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskShrink)) {

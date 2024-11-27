@@ -222,6 +222,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
@@ -339,6 +342,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setStatus(String status) {

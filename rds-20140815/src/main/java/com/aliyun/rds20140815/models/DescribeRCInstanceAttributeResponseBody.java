@@ -318,6 +318,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
@@ -669,6 +672,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public String getSerialNumber() {
         return this.serialNumber;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
     }
 
     public DescribeRCInstanceAttributeResponseBody setStatus(String status) {
