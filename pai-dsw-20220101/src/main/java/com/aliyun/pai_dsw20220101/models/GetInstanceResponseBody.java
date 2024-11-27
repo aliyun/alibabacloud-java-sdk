@@ -251,6 +251,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Tags")
+    public java.util.List<GetInstanceResponseBodyTags> tags;
+
     /**
      * <strong>example:</strong>
      * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/</a></p>
@@ -620,6 +623,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetInstanceResponseBody setTags(java.util.List<GetInstanceResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetInstanceResponseBodyTags> getTags() {
+        return this.tags;
     }
 
     public GetInstanceResponseBody setTerminalUrl(String terminalUrl) {
@@ -1501,6 +1512,36 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getSharedMemory() {
             return this.sharedMemory;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetInstanceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyTags self = new GetInstanceResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetInstanceResponseBodyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

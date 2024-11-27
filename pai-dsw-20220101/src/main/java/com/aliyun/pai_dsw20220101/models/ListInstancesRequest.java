@@ -117,6 +117,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<ListInstancesRequestTag> tag;
+
     /**
      * <strong>example:</strong>
      * <p>40823</p>
@@ -313,12 +316,50 @@ public class ListInstancesRequest extends TeaModel {
         return this.status;
     }
 
+    public ListInstancesRequest setTag(java.util.List<ListInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListInstancesRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class ListInstancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesRequestTag self = new ListInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

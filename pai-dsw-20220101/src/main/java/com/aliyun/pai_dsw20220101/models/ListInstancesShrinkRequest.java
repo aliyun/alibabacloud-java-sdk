@@ -117,6 +117,9 @@ public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public String tagShrink;
+
     /**
      * <strong>example:</strong>
      * <p>40823</p>
@@ -311,6 +314,14 @@ public class ListInstancesShrinkRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListInstancesShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
     public ListInstancesShrinkRequest setWorkspaceId(String workspaceId) {

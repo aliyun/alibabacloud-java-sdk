@@ -100,6 +100,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateInstanceRequestTag> tag;
+
     /**
      * <strong>example:</strong>
      * <p>1612285282502324</p>
@@ -255,6 +258,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public CreateInstanceRequest setTag(java.util.List<CreateInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateInstanceRequest setUserId(String userId) {
@@ -640,6 +651,36 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getSharedMemory() {
             return this.sharedMemory;
+        }
+
+    }
+
+    public static class CreateInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestTag self = new CreateInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

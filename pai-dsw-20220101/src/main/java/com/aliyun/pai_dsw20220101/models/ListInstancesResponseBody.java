@@ -860,6 +860,36 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListInstancesResponseBodyInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesTags self = new ListInstancesResponseBodyInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListInstancesResponseBodyInstancesTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesUserVpc extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1163,6 +1193,9 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListInstancesResponseBodyInstancesTags> tags;
 
         /**
          * <strong>example:</strong>
@@ -1485,6 +1518,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListInstancesResponseBodyInstances setTags(java.util.List<ListInstancesResponseBodyInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyInstancesTags> getTags() {
+            return this.tags;
         }
 
         public ListInstancesResponseBodyInstances setTerminalUrl(String terminalUrl) {
