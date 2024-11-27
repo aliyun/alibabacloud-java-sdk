@@ -12,12 +12,18 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the host accounts that are associated with the shared key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,24 +60,36 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
     public static class ListHostAccountsForHostShareKeyResponseBodyHostAccounts extends TeaModel {
         /**
          * <p>The name of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root1234</p>
          */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
         /**
          * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1113</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The ID of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1235</p>
          */
         @NameInMap("HostsAccountId")
         public String hostsAccountId;
 
         /**
-         * <p>The O\&M protocol.</p>
+         * <p>The O\&amp;M protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         @NameInMap("ProtocolName")
         public String protocolName;

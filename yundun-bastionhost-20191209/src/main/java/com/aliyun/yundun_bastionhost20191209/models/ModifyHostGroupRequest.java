@@ -5,37 +5,57 @@ import com.aliyun.tea.*;
 
 public class ModifyHostGroupRequest extends TeaModel {
     /**
-     * <p>The new description of the host group. The value can be up to 500 characters in length.</p>
+     * <p>The new remarks of the asset group. The remarks can be up to 500 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The ID of the host group that you want to modify.</p>
-     * <br>
-     * <p>> You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
+     * <p>The ID of the asset group that you want to modify.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HostGroupId")
     public String hostGroupId;
 
     /**
-     * <p>The new name of the host group. The name can be up to 128 characters in length.</p>
+     * <p>The new name of the asset group. The name can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group01</p>
      */
     @NameInMap("HostGroupName")
     public String hostGroupName;
 
     /**
-     * <p>The ID of the bastion host on which you want to modify the information about the host group.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>The ID of the bastion host whose asset group you want to modify.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host on which you want to modify the information about the host group.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>The region ID of the bastion host whose asset group you want to modify.</p>
+     * <blockquote>
+     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

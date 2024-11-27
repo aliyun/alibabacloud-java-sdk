@@ -12,12 +12,18 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of host groups returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,18 +60,27 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
     public static class ListHostGroupsForUserGroupResponseBodyHostGroups extends TeaModel {
         /**
          * <p>The description of the host group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The ID of the host group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
         /**
          * <p>The name of the host group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         @NameInMap("HostGroupName")
         public String hostGroupName;

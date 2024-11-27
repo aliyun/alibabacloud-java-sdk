@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListTagKeysResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50177258-E817-4D2F-A5C6-3FD7BC4806E3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     /**
      * <p>The total number of tags returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListTagKeysResponseBody extends TeaModel {
     public static class ListTagKeysResponseBodyTagKeys extends TeaModel {
         /**
          * <p>The total number of tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TagCount")
         public Integer tagCount;
 
         /**
          * <p>The name of the tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key2</p>
          */
         @NameInMap("TagKey")
         public String tagKey;

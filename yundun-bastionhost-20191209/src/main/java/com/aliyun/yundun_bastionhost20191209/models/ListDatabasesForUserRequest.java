@@ -4,30 +4,102 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesForUserRequest extends TeaModel {
+    /**
+     * <p>The address of the database to query. Only exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><code>47.101.**.**</code></p>
+     */
     @NameInMap("DatabaseAddress")
     public String databaseAddress;
 
+    /**
+     * <p>The name of the database to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL-8.0</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The engine of the database to query. Valid values:</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
+     */
     @NameInMap("DatabaseType")
     public String databaseType;
 
+    /**
+     * <p>The bastion host ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-tl32swayw7o</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the network domain where the database to query resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 
+    /**
+     * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.\
+     * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The region ID of the bastion host.</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the user to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

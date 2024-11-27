@@ -6,32 +6,44 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion hosts to which you want to create and add tags.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>An array that consists of IDs of bastion hosts.</p>
-     * <br>
      * <p>Valid values: 1 to 20.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query IDs of bastion hosts.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query IDs of bastion hosts.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-78v1gc****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
-     * <p>Set the value to **INSTANCE**, which indicates that the resource is a bastion host.</p>
+     * <p>Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a bastion host.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>An array that consists of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -75,26 +87,32 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The value can be up to 128 characters in length but cannot be an empty string.</p>
-         * <br>
-         * <p>*   The value cannot start with **aliyun** or **acs:**. The value cannot contain **http://** or **https://**.</p>
+         * <p>The tag key of the bastion host. You can specify up to 20 tags for the bastion host.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Thekey cannot be an empty string. The key can be up to 128 characters in length. </li>
+         * <li>It cannot start with <strong>aliyun</strong> or <strong>acs:</strong>, and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>operation</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.\</p>
-         * <p>Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The value can be up to 128 characters in length or an empty string.</p>
-         * <br>
-         * <p>*   The value cannot start with **aliyun** or **acs:**. The value cannot contain **http://** or **https://**.</p>
+         * <p>The tag value of the bastion host.\
+         * You can specify up to 20 tags for the bastion host.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value can be a string of up to 128 characters or an empty string.</li>
+         * <li>It cannot start with <strong>aliyun</strong> or <strong>acs:</strong>, and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>operation_test</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetUserGroupResponseBody extends TeaModel {
     public static class GetUserGroupResponseBodyUserGroup extends TeaModel {
         /**
          * <p>The description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
         /**
          * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroup01</p>
          */
         @NameInMap("UserGroupName")
         public String userGroupName;

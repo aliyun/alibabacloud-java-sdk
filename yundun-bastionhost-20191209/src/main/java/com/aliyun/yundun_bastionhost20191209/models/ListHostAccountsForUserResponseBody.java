@@ -12,12 +12,18 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of host accounts that were queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,36 +60,53 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
     public static class ListHostAccountsForUserResponseBodyHostAccounts extends TeaModel {
         /**
          * <p>The ID of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
         /**
          * <p>The name of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
         /**
          * <p>The ID of the host for which the host accounts were queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>Indicates whether the user is authorized to manage the host account. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsAuthorized")
         public Boolean isAuthorized;
 
         /**
          * <p>The protocol that is used by the host. Valid values:</p>
-         * <br>
-         * <p>*   **SSH**</p>
-         * <p>*   **RDP**</p>
+         * <ul>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         @NameInMap("ProtocolName")
         public String protocolName;

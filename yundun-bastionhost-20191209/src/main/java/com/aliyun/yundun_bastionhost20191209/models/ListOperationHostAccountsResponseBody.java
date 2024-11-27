@@ -4,12 +4,27 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListOperationHostAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The host accounts returned.</p>
+     */
     @NameInMap("HostAccounts")
     public java.util.List<ListOperationHostAccountsResponseBodyHostAccounts> hostAccounts;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of host accounts returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,9 +58,15 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
     }
 
     public static class ListOperationHostAccountsResponseBodyHostAccountsSSHConfig extends TeaModel {
+        /**
+         * <p>Indicates whether SFTP channels are enabled for the account.</p>
+         */
         @NameInMap("EnableSFTPChannel")
         public Boolean enableSFTPChannel;
 
+        /**
+         * <p>Indicates whether SSH channels are enabled for the account.</p>
+         */
         @NameInMap("EnableSSHChannel")
         public Boolean enableSSHChannel;
 
@@ -73,27 +94,80 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
     }
 
     public static class ListOperationHostAccountsResponseBodyHostAccounts extends TeaModel {
+        /**
+         * <p>Indicates whether a password is configured for the host account.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
+        /**
+         * <p>The host account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
+        /**
+         * <p>The host account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
+        /**
+         * <p>The host ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>１</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The ID of the shared key that is associated with the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
+        /**
+         * <p>The fingerprint of the private key for the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<strong>:</strong></p>
+         */
         @NameInMap("PrivateKeyFingerprint")
         public String privateKeyFingerprint;
 
+        /**
+         * <p>The protocol that is used by the host account.</p>
+         * <ul>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH</p>
+         */
         @NameInMap("ProtocolName")
         public String protocolName;
 
+        /**
+         * <p>Indicates whether the Secure File Transfer Protocol (SFTP) channels or the SSH channels are enabled for the host account that uses the SSH protocol.</p>
+         */
         @NameInMap("SSHConfig")
         public ListOperationHostAccountsResponseBodyHostAccountsSSHConfig SSHConfig;
 

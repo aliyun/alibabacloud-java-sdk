@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class GetUserRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host on which you want to query the user.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the bastion host on which you want to query the user.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the user.</p>
-     * <br>
-     * <p>> You can call the [ListUsers](~~204522~~) operation to query the ID of the user.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserId")
     public String userId;

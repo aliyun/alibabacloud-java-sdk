@@ -12,12 +12,18 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of public keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,30 +60,45 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
     public static class ListUserPublicKeysResponseBodyPublicKeys extends TeaModel {
         /**
          * <p>The description of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The fingerprint of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d8:7d:b6:27:70:2d:07:fb:c6:b6:66:0a:86:7b:0f:9a</p>
          */
         @NameInMap("FingerPrint")
         public String fingerPrint;
 
         /**
          * <p>The ID of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PublicKeyId")
         public String publicKeyId;
 
         /**
          * <p>The name of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Keyname</p>
          */
         @NameInMap("PublicKeyName")
         public String publicKeyName;
 
         /**
          * <p>The ID of the user to which the public key belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UserId")
         public String userId;

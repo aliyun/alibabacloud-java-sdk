@@ -5,86 +5,128 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
-     * <p>The display name of the user to be queried. Only exact match is supported.</p>
+     * <p>The display name of the user that you want to query. Only exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The ID of the Bastionhost instance to which the users to be queried belong.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>The ID of the bastion host whose users you want to query.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The mobile number of the user to be queried. Only exact match is supported.</p>
+     * <p>The mobile phone number of the user that you want to query. Only exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1359999****</p>
      */
     @NameInMap("Mobile")
     public String mobile;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>The value of the PageSize parameter must not exceed 100. By default, the number of entries on each page is 20. If you do not set the PageSize parameter, 20 entries are returned per page by default.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <p>The number of entries per page.\
+     * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The region ID of the Bastionhost instance to which the users to be queried belong.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>The region ID of the bastion host whose users you want to query.</p>
+     * <blockquote>
+     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The source of the user to be queried. Valid values:</p>
-     * <br>
-     * <p>*   **Local**: a local user</p>
-     * <p>*   **Ram**: a RAM user</p>
+     * <p>The type of the user that you want to query. Valid values:</p>
+     * <ul>
+     * <li><strong>Local</strong>: a local user.</li>
+     * <li><strong>Ram</strong>: a Resource Access Management (RAM) user.</li>
+     * <li><strong>AD</strong>: an Active Directory (AD)-authenticated user.</li>
+     * <li><strong>LDAP</strong>: a Lightweight Directory Access Protocol (LDAP)-authenticated user.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Local</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The unique ID of the user to be queried. Only exact match is supported.</p>
-     * <br>
-     * <p>>  This parameter uniquely identifies a RAM user of the Bastionhost instance. This parameter takes effect only when the **Source** parameter is set to **Ram**. You can call the [ListUsers](~~28684~~) operation to obtain the unique ID of the user from the **UserId** response parameter.</p>
+     * <p>The unique ID of the user that you want to query. Only exact match is supported.</p>
+     * <blockquote>
+     * <p> This parameter uniquely identifies a RAM user of the bastion host. This parameter is valid if <strong>Source</strong> is set to <strong>Ram</strong>. You can call the <a href="https://help.aliyun.com/document_detail/28684.html">ListUsers</a> operation in RAM to obtain the unique ID of the user from the <strong>UserId</strong> response parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>122748924538****</p>
      */
     @NameInMap("SourceUserId")
     public String sourceUserId;
 
     /**
-     * <p>The ID of the user group to be queried.</p>
-     * <br>
-     * <p>>  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
+     * <p>The ID of the user group to which the user you want to query belongs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the user group ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
     /**
-     * <p>The logon name of the user to be queried. Only exact match is supported.</p>
+     * <p>The logon name of the user that you want to query. Only exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
-     * <p>The status of the user to be queried. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: The user can access the Bastionhost instance.</p>
-     * <p>*   **Frozen**: The user is locked and cannot access the Bastionhost instance.</p>
-     * <p>*   **Expired**: The user has expired and cannot access the Bastionhost instance.</p>
+     * <p>The state of the user that you want to query. Valid values:</p>
+     * <ul>
+     * <li><strong>Normal</strong>: The user is in normal state.</li>
+     * <li><strong>Frozen</strong>: The user is locked.</li>
+     * <li><strong>Expired</strong>: The user has expired.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("UserState")
     public String userState;

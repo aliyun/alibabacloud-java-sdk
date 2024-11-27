@@ -6,33 +6,52 @@ import com.aliyun.tea.*;
 public class ResetHostAccountCredentialRequest extends TeaModel {
     /**
      * <p>The type of the logon credential that you want to delete. Valid values:</p>
-     * <br>
-     * <p>*   **Password**</p>
-     * <p>*   **PrivateKey**</p>
+     * <ul>
+     * <li><strong>Password</strong></li>
+     * <li><strong>PrivateKey</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Password</p>
      */
     @NameInMap("CredentialType")
     public String credentialType;
 
     /**
      * <p>The ID of the host account for which the logon credential is to be deleted.</p>
-     * <br>
-     * <p>>  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HostAccountId")
     public String hostAccountId;
 
     /**
      * <p>The ID of the bastion host from which you want to delete the logon credential for the host account.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the bastion host from which you want to delete the logon credential for the host account.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

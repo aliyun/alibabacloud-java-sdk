@@ -12,12 +12,18 @@ public class ListHostsForUserResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of hosts returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,48 +60,71 @@ public class ListHostsForUserResponseBody extends TeaModel {
     public static class ListHostsForUserResponseBodyHosts extends TeaModel {
         /**
          * <p>The endpoint type of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: public endpoint</p>
-         * <p>*   **Private**: internal endpoint</p>
+         * <ul>
+         * <li><strong>Public</strong>: public endpoint</li>
+         * <li><strong>Private</strong>: internal endpoint</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
         /**
          * <p>The description of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The name of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host01</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
         /**
          * <p>The public endpoint of the host. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.158.XX.XX</p>
          */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
         /**
          * <p>The operating system of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Linux**</p>
-         * <p>*   **Windows**</p>
+         * <ul>
+         * <li><strong>Linux</strong></li>
+         * <li><strong>Windows</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("OSType")
         public String OSType;

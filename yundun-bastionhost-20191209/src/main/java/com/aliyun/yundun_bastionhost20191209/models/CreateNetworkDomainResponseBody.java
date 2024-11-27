@@ -4,9 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkDomainResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the network domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31</p>
+     */
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2873E9C-A7EA-5735-845C-65D3792623D2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

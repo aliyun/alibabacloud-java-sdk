@@ -6,53 +6,82 @@ import com.aliyun.tea.*;
 public class ListHostAccountsForUserRequest extends TeaModel {
     /**
      * <p>The name of the host account that you want to query. Exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("HostAccountName")
     public String hostAccountName;
 
     /**
      * <p>The ID of the host to query.</p>
-     * <br>
-     * <p>> You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HostId")
     public String hostId;
 
     /**
      * <p>The ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.\</p>
-     * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <p>The number of entries to return on each page.\
+     * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The region ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the user for which you want to query authorized host accounts.</p>
-     * <br>
-     * <p>> You can call the [ListUsers](~~204522~~) operation to query the ID of the user.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserId")
     public String userId;

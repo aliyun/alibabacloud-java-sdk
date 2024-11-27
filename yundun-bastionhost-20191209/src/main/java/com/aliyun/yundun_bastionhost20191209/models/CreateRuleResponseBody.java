@@ -4,9 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BFA818E3-0A53-51F4-8DB5-AF2A62A6D042</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The authorization rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

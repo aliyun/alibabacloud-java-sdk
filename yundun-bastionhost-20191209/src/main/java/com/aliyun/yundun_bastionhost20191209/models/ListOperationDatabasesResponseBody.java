@@ -4,12 +4,27 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListOperationDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>The databases returned.</p>
+     */
     @NameInMap("Databases")
     public java.util.List<ListOperationDatabasesResponseBodyDatabases> databases;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,39 +58,130 @@ public class ListOperationDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListOperationDatabasesResponseBodyDatabases extends TeaModel {
+        /**
+         * <p>The address type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
+         */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
+        /**
+         * <p>The remarks of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpp</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zDatabase</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The port of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("DatabasePort")
         public Long databasePort;
 
+        /**
+         * <p>The private address of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-b******9b.mysql.rds.aliyuncs.com</p>
+         */
         @NameInMap("DatabasePrivateAddress")
         public String databasePrivateAddress;
 
+        /**
+         * <p>The public address of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf******p45.mysql.rds.aliyuncs.com</p>
+         */
         @NameInMap("DatabasePublicAddress")
         public String databasePublicAddress;
 
+        /**
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("DatabaseType")
         public String databaseType;
 
+        /**
+         * <p>The database type. Valid values:</p>
+         * <ul>
+         * <li><strong>Local</strong>: on-premises database.</li>
+         * <li><strong>Rds</strong>: ApsaraDB RDS instance.</li>
+         * <li><strong>PolarDB</strong>: PolarDB cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Local</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The ID of the ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9225bhipya******</p>
+         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
+        /**
+         * <p>The region ID of the ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("SourceInstanceRegionId")
         public String sourceInstanceRegionId;
 
+        /**
+         * <p>The database status. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Release</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("SourceInstanceState")
         public String sourceInstanceState;
 

@@ -4,9 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetPolicyAssetScopeResponseBody extends TeaModel {
+    /**
+     * <p>The assets to which the control policy applies.</p>
+     */
     @NameInMap("AssetScope")
     public GetPolicyAssetScopeResponseBodyAssetScope assetScope;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,31 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
     }
 
     public static class GetPolicyAssetScopeResponseBodyAssetScopeDatabases extends TeaModel {
+        /**
+         * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: The control policy applies to all database accounts of the database.</li>
+         * <li><strong>AccountId</strong>: The control policy applies to specified database accounts of the database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AccountId</p>
+         */
         @NameInMap("AccountScopeType")
         public String accountScopeType;
 
+        /**
+         * <p>The IDs of database accounts to which the control policy applies.</p>
+         */
         @NameInMap("DatabaseAccountIds")
         public java.util.List<String> databaseAccountIds;
 
+        /**
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
@@ -73,12 +101,31 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
     }
 
     public static class GetPolicyAssetScopeResponseBodyAssetScopeHostGroups extends TeaModel {
+        /**
+         * <p>The asset accounts to which the control policy applies.</p>
+         */
         @NameInMap("AccountNames")
         public java.util.List<String> accountNames;
 
+        /**
+         * <p>The scope of asset accounts to which the control policy applies. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: The control policy applies to all accounts in the asset group.</li>
+         * <li><strong>AccountName</strong>: The control policy applies to specified accounts in the asset group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("AccountScopeType")
         public String accountScopeType;
 
+        /**
+         * <p>The asset group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
@@ -114,12 +161,31 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
     }
 
     public static class GetPolicyAssetScopeResponseBodyAssetScopeHosts extends TeaModel {
+        /**
+         * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: The control policy applies to all accounts of the host.</li>
+         * <li><strong>AccountId</strong>: The control policy applies to specified accounts of the host.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("AccountScopeType")
         public String accountScopeType;
 
+        /**
+         * <p>The host accounts to which the control policy applies.</p>
+         */
         @NameInMap("HostAccountIds")
         public java.util.List<String> hostAccountIds;
 
+        /**
+         * <p>The host ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
@@ -155,15 +221,36 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
     }
 
     public static class GetPolicyAssetScopeResponseBodyAssetScope extends TeaModel {
+        /**
+         * <p>The databases and database accounts to which the control policy applies.</p>
+         */
         @NameInMap("Databases")
         public java.util.List<GetPolicyAssetScopeResponseBodyAssetScopeDatabases> databases;
 
+        /**
+         * <p>The asset groups and asset accounts to which the control policy applies.</p>
+         */
         @NameInMap("HostGroups")
         public java.util.List<GetPolicyAssetScopeResponseBodyAssetScopeHostGroups> hostGroups;
 
+        /**
+         * <p>The hosts and host accounts to which the control policy applies.</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<GetPolicyAssetScopeResponseBodyAssetScopeHosts> hosts;
 
+        /**
+         * <p>The scope of assets to which the control policy applies.</p>
+         * <ul>
+         * <li><p>If <strong>All</strong> is returned for this parameter, the control policy applies to all assets.</p>
+         * </li>
+         * <li><p>If no value is returned for this parameter, the control policy applies to the assets specified in the return values of Databases, HostGroups, and Hosts.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("ScopeType")
         public String scopeType;
 

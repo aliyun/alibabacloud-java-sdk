@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class GetUserResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the user that was queried.</p>
+     * <p>The detailed information about the queried user.</p>
      */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
@@ -40,94 +43,148 @@ public class GetUserResponseBody extends TeaModel {
     public static class GetUserResponseBodyUser extends TeaModel {
         /**
          * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bob</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672502400</p>
          */
         @NameInMap("EffectiveEndTime")
         public Long effectiveEndTime;
 
         /**
          * <p>The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669630029</p>
          */
         @NameInMap("EffectiveStartTime")
         public Long effectiveStartTime;
 
         /**
          * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1099**@qq.com</p>
          */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>This parameter is required if LanguageStatus is set to Custom.</p>
+         * <ul>
+         * <li><strong>zh-cn</strong>: simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>Indicates whether notifications are sent in the language specified in the global settings or a custom language.</p>
+         * <ul>
+         * <li><strong>Global</strong>: Global</li>
+         * <li><strong>Custom</strong>: Custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
+         */
         @NameInMap("LanguageStatus")
         public String languageStatus;
 
         /**
          * <p>The mobile phone number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1359999****</p>
          */
         @NameInMap("Mobile")
         public String mobile;
 
         /**
          * <p>The location in which the mobile number of the user is registered. Valid values:</p>
-         * <br>
-         * <p>*   **CN**: the Chinese mainland, whose country calling code is +86</p>
-         * <p>*   **HK**: Hong Kong (China), whose country calling code is +852</p>
-         * <p>*   **MO**: Macao (China), whose country calling code is +853</p>
-         * <p>*   **TW**: Taiwan (China), whose country calling code is +886</p>
-         * <p>*   **RU**: Russia, whose country calling code is +7</p>
-         * <p>*   **SG**: Singapore, whose country calling code is +65</p>
-         * <p>*   **MY**: Malaysia, whose country calling code is +60</p>
-         * <p>*   **ID**: Indonesia, whose country calling code is +62</p>
-         * <p>*   **DE**: Germany, whose country calling code is +49</p>
-         * <p>*   **AU**: Australia, whose country calling code is +61</p>
-         * <p>*   **US**: US, whose country calling code is +1</p>
-         * <p>*   **AE**: United Arab Emirates, whose country calling code is +971</p>
-         * <p>*   **JP:** Japan, whose country calling code is +81</p>
-         * <p>*   **GB**: UK, whose country calling code is +44</p>
-         * <p>*   **IN**: India, whose country calling code is +91</p>
-         * <p>*   **KR**: Republic of Korea, whose country calling code is +82</p>
-         * <p>*   **PH**: Philippines, whose country calling code is +63</p>
-         * <p>*   **CH**: Switzerland, whose country calling code is +41</p>
-         * <p>*   **SE**: Sweden, whose country calling code is +46</p>
+         * <ul>
+         * <li><strong>CN</strong>: the Chinese mainland, whose country calling code is +86</li>
+         * <li><strong>HK</strong>: Hong Kong (China), whose country calling code is +852</li>
+         * <li><strong>MO</strong>: Macao (China), whose country calling code is +853</li>
+         * <li><strong>TW</strong>: Taiwan (China), whose country calling code is +886</li>
+         * <li><strong>RU</strong>: Russia, whose country calling code is +7</li>
+         * <li><strong>SG</strong>: Singapore, whose country calling code is +65</li>
+         * <li><strong>MY</strong>: Malaysia, whose country calling code is +60</li>
+         * <li><strong>ID</strong>: Indonesia, whose country calling code is +62</li>
+         * <li><strong>DE</strong>: Germany, whose country calling code is +49</li>
+         * <li><strong>AU</strong>: Australia, whose country calling code is +61</li>
+         * <li><strong>US</strong>: US, whose country calling code is +1</li>
+         * <li><strong>AE</strong>: United Arab Emirates, whose country calling code is +971</li>
+         * <li><strong>JP:</strong> Japan, whose country calling code is +81</li>
+         * <li><strong>GB</strong>: UK, whose country calling code is +44</li>
+         * <li><strong>IN</strong>: India, whose country calling code is +91</li>
+         * <li><strong>KR</strong>: Republic of Korea, whose country calling code is +82</li>
+         * <li><strong>PH</strong>: Philippines, whose country calling code is +63</li>
+         * <li><strong>CH</strong>: Switzerland, whose country calling code is +41</li>
+         * <li><strong>SE</strong>: Sweden, whose country calling code is +46</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("MobileCountryCode")
         public String mobileCountryCode;
 
         /**
          * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NeedResetPassword")
         public Boolean needResetPassword;
 
         /**
          * <p>The source of the user. Valid values:</p>
-         * <br>
-         * <p>*   **Local**: a local user</p>
-         * <p>*   **Ram**: a RAM user</p>
+         * <ul>
+         * <li><strong>Local</strong>: a local user</li>
+         * <li><strong>Ram</strong>: a RAM user</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The unique ID of the user.</p>
-         * <br>
-         * <p>> This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
+         * <blockquote>
+         * <p>This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if the <strong>Source</strong> parameter is set to <strong>Ram</strong>. No value is returned for this parameter if the <strong>Source</strong> parameter is set to <strong>Local</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>122748924538****</p>
          */
         @NameInMap("SourceUserId")
         public String sourceUserId;
@@ -140,22 +197,32 @@ public class GetUserResponseBody extends TeaModel {
 
         /**
          * <p>The two-factor authentication status of the user. Valid values:</p>
-         * <br>
-         * <p>*   **Global**: The global settings are used.</p>
-         * <p>*   **Disable**: The two-factor authentication is disabled.</p>
-         * <p>*   **Enable**: The two-factor authentication is enabled and the user-specific setting is used.</p>
+         * <ul>
+         * <li><strong>Global</strong>: The global settings are used.</li>
+         * <li><strong>Disable</strong>: The two-factor authentication is disabled.</li>
+         * <li><strong>Enable</strong>: The two-factor authentication is enabled and the user-specific setting is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         @NameInMap("TwoFactorStatus")
         public String twoFactorStatus;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The logon name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcabc_def</p>
          */
         @NameInMap("UserName")
         public String userName;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +42,37 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
 
     public static class AttachHostAccountsToHostShareKeyResponseBodyResults extends TeaModel {
         /**
-         * <p>The error code returned. If **OK** is returned, the association was successful. If another error code is returned, the association failed.</p>
+         * <p>The error code returned. If <strong>OK</strong> is returned, the association was successful. If another error code is returned, the association failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The ID of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1201</p>
          */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
         /**
          * <p>The ID of the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10267</p>
          */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The host account does not exist</p>
          */
         @NameInMap("Message")
         public String message;

@@ -6,37 +6,56 @@ import com.aliyun.tea.*;
 public class ListUserPublicKeysRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host on which you want to query all public keys of the user.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.\</p>
-     * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <p>The number of entries to return on each page.\
+     * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The region ID of the bastion host on which you want to query all public keys of the user.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the user whose public keys you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("UserId")
     public String userId;

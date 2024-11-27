@@ -4,9 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GenerateAssetOperationTokenResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("AssetOperationToken")
     public GenerateAssetOperationTokenResponseBodyAssetOperationToken assetOperationToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +41,69 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
     }
 
     public static class GenerateAssetOperationTokenResponseBodyAssetOperationToken extends TeaModel {
+        /**
+         * <p>The remaining number of times that you can use the O\&amp;M token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CountLeft")
         public Long countLeft;
 
+        /**
+         * <p>The time when the O\&amp;M token expires. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709110797</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>Indicates whether the number of times that you can use the O\&amp;M token is limited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasCountLimit")
         public Boolean hasCountLimit;
 
+        /**
+         * <p>The maximum number of renewals. A value of 0 indicates that renewal is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxRenewCount")
         public Long maxRenewCount;
 
+        /**
+         * <p>The number of times the O\&amp;M token is renewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RenewCount")
         public Long renewCount;
 
+        @NameInMap("SsoUrl")
+        public String ssoUrl;
+
+        /**
+         * <p>The O\&amp;M token that you apply for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NmYyMmEzNmMwYzljNGY******</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <p>The ID of the O\&amp;M token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TokenId")
         public String tokenId;
 
@@ -96,6 +150,14 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         }
         public Long getRenewCount() {
             return this.renewCount;
+        }
+
+        public GenerateAssetOperationTokenResponseBodyAssetOperationToken setSsoUrl(String ssoUrl) {
+            this.ssoUrl = ssoUrl;
+            return this;
+        }
+        public String getSsoUrl() {
+            return this.ssoUrl;
         }
 
         public GenerateAssetOperationTokenResponseBodyAssetOperationToken setToken(String token) {

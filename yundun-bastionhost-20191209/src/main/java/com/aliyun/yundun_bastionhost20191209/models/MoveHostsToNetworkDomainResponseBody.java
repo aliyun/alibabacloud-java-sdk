@@ -4,9 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9B9E190-9C8E-5FEE-B963-7E9F1FD7FB4E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the call.</p>
+     */
     @NameInMap("Results")
     public java.util.List<MoveHostsToNetworkDomainResponseBodyResults> results;
 
@@ -32,12 +41,30 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
     }
 
     public static class MoveHostsToNetworkDomainResponseBodyResults extends TeaModel {
+        /**
+         * <p>The return code that indicates whether the host is added to the network domain.</p>
+         * <blockquote>
+         * <p>The code LICENSE_OUT_OF_LIMIT indicates that the network domain feature is not supported by the current Bastionhost edition.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The host ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The error message that is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 

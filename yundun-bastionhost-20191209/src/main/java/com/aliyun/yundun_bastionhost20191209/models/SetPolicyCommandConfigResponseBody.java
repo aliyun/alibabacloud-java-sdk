@@ -4,6 +4,12 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class SetPolicyCommandConfigResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F6C075F-FC86-476E-943B-097BD4E12948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

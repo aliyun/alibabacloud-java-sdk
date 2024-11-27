@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class EnableInstancePublicAccessResponseBody extends TeaModel {
     /**
      * <p>The ID of the bastion host whose Internet access is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-78v1gh****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D47B5043-FDD6-4FBE-976E-5FC67A23578F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

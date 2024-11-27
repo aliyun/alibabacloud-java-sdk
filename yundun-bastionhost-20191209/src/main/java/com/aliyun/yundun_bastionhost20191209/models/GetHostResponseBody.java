@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetHostResponseBody extends TeaModel {
     /**
-     * <p>The information about the host that was queried.</p>
+     * <p>The returned information about the host.</p>
      */
     @NameInMap("Host")
     public GetHostResponseBodyHost host;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,22 +42,32 @@ public class GetHostResponseBody extends TeaModel {
 
     public static class GetHostResponseBodyHostProtocols extends TeaModel {
         /**
-         * <p>The fingerprint of the host. This parameter uniquely identifies a host.</p>
+         * <p>The fingerprint of the host. This parameter uniquely identifies a host. A value is returned for this parameter only if you have performed O\&amp;M operations on the host by using the bastion host. Otherwise, no value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-ed25519|3e:46:5a:e1:1f:0d:39:7e:61:35:d5:fa:7b:2b:<strong>:</strong></p>
          */
         @NameInMap("HostFingerPrint")
         public String hostFingerPrint;
 
         /**
          * <p>The service port of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The protocol that is used to connect to the host. Valid values:</p>
-         * <br>
-         * <p>*   **SSH**</p>
-         * <p>*   **RDP**</p>
+         * <ul>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         @NameInMap("ProtocolName")
         public String protocolName;
@@ -93,54 +106,80 @@ public class GetHostResponseBody extends TeaModel {
     public static class GetHostResponseBodyHost extends TeaModel {
         /**
          * <p>The address type of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: a public address</p>
-         * <p>*   **Private**: a private address</p>
+         * <ul>
+         * <li><strong>Public</strong>: a public address</li>
+         * <li><strong>Private</strong>: a private address</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
         /**
          * <p>The description of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
         /**
          * <p>The public address of the host. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
         /**
-         * <p>The ID of the new network domain to which the host belongs.</p>
+         * <p>The ID of the network domain to which the host belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NetworkDomainId")
         public String networkDomainId;
 
         /**
          * <p>The operating system of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Linux**</p>
-         * <p>*   **Windows**</p>
+         * <ul>
+         * <li><strong>Linux</strong></li>
+         * <li><strong>Windows</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("OSType")
         public String OSType;
@@ -153,27 +192,39 @@ public class GetHostResponseBody extends TeaModel {
 
         /**
          * <p>The source of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Local**: a host in a data center</p>
-         * <p>*   **Ecs**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **Rds**: a host in an ApsaraDB MyBase dedicated cluster</p>
+         * <ul>
+         * <li><strong>Local</strong>: a host in a data center</li>
+         * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
-         * <br>
-         * <p>>  If **Local** is returned for the **Source** parameter, no value is returned for this parameter.</p>
+         * <blockquote>
+         * <p> If <strong>Local</strong> is returned for the <strong>Source</strong> parameter, no value is returned for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19ienyt0yax748****</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
         /**
          * <p>The status of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **Release**: released</p>
+         * <ul>
+         * <li><strong>Normal</strong>: normal</li>
+         * <li><strong>Release</strong>: released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("SourceInstanceState")
         public String sourceInstanceState;

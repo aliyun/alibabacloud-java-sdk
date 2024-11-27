@@ -4,6 +4,12 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DisableRuleResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98DBE5C2-7D7A-5393-9E5A-71074336D33B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

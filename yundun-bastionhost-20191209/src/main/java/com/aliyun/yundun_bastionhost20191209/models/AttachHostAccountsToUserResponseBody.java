@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class AttachHostAccountsToUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +42,26 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
 
     public static class AttachHostAccountsToUserResponseBodyResultsHostAccounts extends TeaModel {
         /**
-         * <p>The return code that indicates whether the user was authorized to manage the specified host account. Valid values:</p>
-         * <br>
-         * <p>*   **OK**: The call was successful.</p>
-         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+         * <p>The return code that indicates whether the user was authorized to manage the host accounts. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The call was successful.</li>
+         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
+         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
+         * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The ID of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostAccountId")
         public String hostAccountId;
@@ -96,32 +106,44 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
     public static class AttachHostAccountsToUserResponseBodyResults extends TeaModel {
         /**
          * <p>The return code that indicates whether the call was successful. Valid values:</p>
-         * <br>
-         * <p>*   **OK**: The call was successful.</p>
-         * <br>
-         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-         * <br>
-         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-         * <br>
-         * <p>> Make sure that the request parameters are valid and call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-         * <br>
-         * <p>> Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+         * <ul>
+         * <li><p><strong>OK</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
+         * </li>
+         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Make sure that the request parameters are valid and call the operation again.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The result of authorizing the specified user to manage the specified host accounts.</p>
+         * <p>The result of authorizing the user to manage the host accounts.</p>
          */
         @NameInMap("HostAccounts")
         public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts;
 
         /**
          * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;
@@ -134,6 +156,9 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UserId")
         public String userId;

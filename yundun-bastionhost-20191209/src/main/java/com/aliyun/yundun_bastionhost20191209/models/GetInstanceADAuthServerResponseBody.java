@@ -12,6 +12,9 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89398CFB-4EB6-4C7E-BB3C-EF213AC8FA50</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,78 +43,116 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
     public static class GetInstanceADAuthServerResponseBodyAD extends TeaModel {
         /**
          * <p>The distinguished name (DN) of the AD server account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn=Manager,dc=test,dc=com</p>
          */
         @NameInMap("Account")
         public String account;
 
         /**
          * <p>The Base DN of the AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc=test,dc=com</p>
          */
         @NameInMap("BaseDN")
         public String baseDN;
 
         /**
          * <p>The domain on the AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The field that is used to indicate the email address of a user on the AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emailAttr</p>
          */
         @NameInMap("EmailMapping")
         public String emailMapping;
 
         /**
          * <p>The condition that is used to filter users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(&amp;(objectClass=top))</p>
          */
         @NameInMap("Filter")
         public String filter;
 
         /**
          * <p>Indicates whether passwords are required. Valid values:</p>
-         * <br>
-         * <p>*   **true**:</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong>:</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
         /**
          * <p>Indicates whether SSL is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsSSL")
         public Boolean isSSL;
 
         /**
          * <p>The field that is used to indicate the mobile phone number of a user on the AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mobileAttr</p>
          */
         @NameInMap("MobileMapping")
         public String mobileMapping;
 
         /**
          * <p>The field that is used to indicate the name of a user on the AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nameAttr</p>
          */
         @NameInMap("NameMapping")
         public String nameMapping;
 
         /**
          * <p>The port that is used to access the AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
-         * <p>The address of the LDAP server.</p>
+         * <p>The address of the AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Server")
         public String server;
 
         /**
-         * <p>The address of the secondary LDAP server.</p>
+         * <p>The address of the secondary AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("StandbyServer")
         public String standbyServer;

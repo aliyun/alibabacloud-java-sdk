@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetInstanceLDAPAuthServerRequest extends TeaModel {
     /**
-     * <p>Indicates whether passwords are required. Valid values:</p>
-     * <br>
-     * <p>*   **true**: required</p>
-     * <p>*   **false**: not required</p>
+     * <p>The ID of the bastion host.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetInstanceLDAPAuthServer**.</p>
+     * <p>The region ID of the bastion host.</p>
+     * <blockquote>
+     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

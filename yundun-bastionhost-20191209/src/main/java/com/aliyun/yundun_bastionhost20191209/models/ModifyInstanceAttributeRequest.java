@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The description of the bastion host.</p>
-     * <br>
-     * <p>> The description can contain only letters, digits, underscores (\_), and hyphens (-). The description can be up to 30 characters in length.</p>
+     * <blockquote>
+     * <p>The description must be up to 30 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Bastionhost demo</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the bastion host.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-78v1gh****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the bastion host.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

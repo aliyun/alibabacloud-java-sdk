@@ -12,12 +12,18 @@ public class ListHostShareKeysResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the shared keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,30 +60,45 @@ public class ListHostShareKeysResponseBody extends TeaModel {
     public static class ListHostShareKeysResponseBodyHostShareKeys extends TeaModel {
         /**
          * <p>The number of the associated host accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostAccountCount")
         public Long hostAccountCount;
 
         /**
-         * <p>The ID of the host account.</p>
+         * <p>The shared key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10247</p>
          */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
         /**
          * <p>The name of the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("HostShareKeyName")
         public String hostShareKeyName;
 
         /**
-         * <p>The time when the shared key was last modified.</p>
+         * <p>The time when the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644806406</p>
          */
         @NameInMap("LastModifyKeyAt")
         public Long lastModifyKeyAt;
 
         /**
          * <p>The fingerprint of the private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("PrivateKeyFingerPrint")
         public String privateKeyFingerPrint;

@@ -4,9 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkDomainResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the network domain.</p>
+     */
     @NameInMap("NetworkDomain")
     public GetNetworkDomainResponseBodyNetworkDomain networkDomain;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05F59944-2E24-595C-B21A-8C9955E60FAF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +41,98 @@ public class GetNetworkDomainResponseBody extends TeaModel {
     }
 
     public static class GetNetworkDomainResponseBodyNetworkDomainProxies extends TeaModel {
+        /**
+         * <p>The IP address of the proxy server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>47.102.**.**</code></p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>Indicates whether the proxy server has a password. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
+        /**
+         * <p>The node type of the proxy server. Valid values:</p>
+         * <ul>
+         * <li><strong>Master</strong>: primary proxy server.</li>
+         * <li><strong>Slave</strong>: secondary proxy server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Master</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>The port of the proxy server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The status of the proxy server.</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Unavailable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unavailable</p>
+         */
         @NameInMap("ProxyState")
         public String proxyState;
 
+        /**
+         * <p>The error code that indicates the status of the proxy server.</p>
+         * <ul>
+         * <li><strong>CHECK_PWD_FAILED</strong>: The password is invalid.</li>
+         * <li><strong>CHECK_PWD_TIMEOUT</strong>: The password verification session timed out.</li>
+         * <li><strong>CHECK_PWD_NETWORK_ERR</strong>: A network error occurred.</li>
+         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_PWD_TIMEOUT</p>
+         */
         @NameInMap("ProxyStateErrorCode")
         public String proxyStateErrorCode;
 
+        /**
+         * <p>The proxy type. Valid values:</p>
+         * <ul>
+         * <li><strong>SSHProxy</strong></li>
+         * <li><strong>HTTPProxy</strong></li>
+         * <li><strong>Socks5Proxy</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPProxy</p>
+         */
         @NameInMap("ProxyType")
         public String proxyType;
 
+        /**
+         * <p>The username of the proxy server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("User")
         public String user;
 
@@ -128,21 +208,62 @@ public class GetNetworkDomainResponseBody extends TeaModel {
     }
 
     public static class GetNetworkDomainResponseBodyNetworkDomain extends TeaModel {
+        /**
+         * <p>The remarks of the network domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>Indicates whether the network domain is a built-in network domain.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Default")
         public Boolean _default;
 
+        /**
+         * <p>The network domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NetworkDomainId")
         public String networkDomainId;
 
+        /**
+         * <p>The name of the network domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH Proxy</p>
+         */
         @NameInMap("NetworkDomainName")
         public String networkDomainName;
 
+        /**
+         * <p>The connection mode of the network domain. Valid values:</p>
+         * <ul>
+         * <li>Direct</li>
+         * <li>Proxy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Proxy</p>
+         */
         @NameInMap("NetworkDomainType")
         public String networkDomainType;
 
+        /**
+         * <p>The information about the proxy servers.</p>
+         */
         @NameInMap("Proxies")
         public java.util.List<GetNetworkDomainResponseBodyNetworkDomainProxies> proxies;
 

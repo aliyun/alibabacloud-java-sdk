@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ConfigInstanceSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The ID of the bastion host for which security groups were configured.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-78v1gh****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ECCC399-4D35-48A7-8379-5C6180E66235</p>
      */
     @NameInMap("RequestId")
     public String requestId;
