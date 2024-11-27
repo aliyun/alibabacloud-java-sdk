@@ -406,6 +406,24 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         public Long templateId;
 
         /**
+         * <p>Third-party approval flow remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("ThirdpartyWorkflowComment")
+        public String thirdpartyWorkflowComment;
+
+        /**
+         * <p>The third-party approval flow link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx">https://xxx</a></p>
+         */
+        @NameInMap("ThirdpartyWorkflowUrl")
+        public String thirdpartyWorkflowUrl;
+
+        /**
          * <p>The title of the approval process.</p>
          * 
          * <strong>example:</strong>
@@ -505,6 +523,22 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
         public Long getTemplateId() {
             return this.templateId;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setThirdpartyWorkflowComment(String thirdpartyWorkflowComment) {
+            this.thirdpartyWorkflowComment = thirdpartyWorkflowComment;
+            return this;
+        }
+        public String getThirdpartyWorkflowComment() {
+            return this.thirdpartyWorkflowComment;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setThirdpartyWorkflowUrl(String thirdpartyWorkflowUrl) {
+            this.thirdpartyWorkflowUrl = thirdpartyWorkflowUrl;
+            return this;
+        }
+        public String getThirdpartyWorkflowUrl() {
+            return this.thirdpartyWorkflowUrl;
         }
 
         public GetApprovalDetailResponseBodyApprovalDetail setTitle(String title) {
