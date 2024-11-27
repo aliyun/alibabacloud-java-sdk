@@ -44,6 +44,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
+    @NameInMap("DBProxyEndpointMinSlaveCount")
+    public String DBProxyEndpointMinSlaveCount;
+
     /**
      * <p>An internal parameter. You can ignore this parameter.</p>
      * 
@@ -206,6 +209,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
+    }
+
+    public DescribeDBProxyEndpointResponseBody setDBProxyEndpointMinSlaveCount(String DBProxyEndpointMinSlaveCount) {
+        this.DBProxyEndpointMinSlaveCount = DBProxyEndpointMinSlaveCount;
+        return this;
+    }
+    public String getDBProxyEndpointMinSlaveCount() {
+        return this.DBProxyEndpointMinSlaveCount;
     }
 
     public DescribeDBProxyEndpointResponseBody setDBProxyEngineType(String DBProxyEngineType) {

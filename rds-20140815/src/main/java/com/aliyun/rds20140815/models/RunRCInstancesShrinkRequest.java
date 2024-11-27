@@ -234,6 +234,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
     /**
      * <p>The specification of the system disk.</p>
      */
@@ -471,6 +474,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public RunRCInstancesShrinkRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
     }
 
     public RunRCInstancesShrinkRequest setSystemDiskShrink(String systemDiskShrink) {

@@ -70,6 +70,9 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("DbEndpointAliases")
     public String dbEndpointAliases;
 
+    @NameInMap("DbEndpointMinSlaveCount")
+    public String dbEndpointMinSlaveCount;
+
     /**
      * <p>The type of operation that you want to perform. Valid values:</p>
      * <ul>
@@ -260,6 +263,14 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     }
     public String getDbEndpointAliases() {
         return this.dbEndpointAliases;
+    }
+
+    public ModifyDBProxyEndpointRequest setDbEndpointMinSlaveCount(String dbEndpointMinSlaveCount) {
+        this.dbEndpointMinSlaveCount = dbEndpointMinSlaveCount;
+        return this;
+    }
+    public String getDbEndpointMinSlaveCount() {
+        return this.dbEndpointMinSlaveCount;
     }
 
     public ModifyDBProxyEndpointRequest setDbEndpointOperator(String dbEndpointOperator) {
