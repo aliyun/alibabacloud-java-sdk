@@ -1454,6 +1454,12 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtVlContent extends TeaModel {
+        /**
+         * <p>the vl output content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a cat</p>
+         */
         @NameInMap("OutputText")
         public String outputText;
 
@@ -1515,6 +1521,9 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("TextInImage")
         public ImageModerationResponseBodyDataExtTextInImage textInImage;
 
+        /**
+         * <p>the vl output content</p>
+         */
         @NameInMap("VlContent")
         public ImageModerationResponseBodyDataExtVlContent vlContent;
 

@@ -387,6 +387,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>图片批量调用</p>
+     * 
+     * @param request ImageBatchModerationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImageBatchModerationResponse
+     */
+    public ImageBatchModerationResponse imageBatchModerationWithOptions(ImageBatchModerationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.services)) {
+            query.put("Services", request.services);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImageBatchModeration"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageBatchModerationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>图片批量调用</p>
+     * 
+     * @param request ImageBatchModerationRequest
+     * @return ImageBatchModerationResponse
+     */
+    public ImageBatchModerationResponse imageBatchModeration(ImageBatchModerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.imageBatchModerationWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</p>
      * 
