@@ -597,6 +597,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>将某个SDG attach到对应的AIC上</p>
+     * 
+     * @param tmpReq AttachInstanceSDGRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachInstanceSDGResponse
+     */
+    public AttachInstanceSDGResponse attachInstanceSDGWithOptions(AttachInstanceSDGRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachInstanceSDGShrinkRequest request = new AttachInstanceSDGShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SDGId)) {
+            query.put("SDGId", request.SDGId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachInstanceSDG"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachInstanceSDGResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将某个SDG attach到对应的AIC上</p>
+     * 
+     * @param request AttachInstanceSDGRequest
+     * @return AttachInstanceSDGResponse
+     */
+    public AttachInstanceSDGResponse attachInstanceSDG(AttachInstanceSDGRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachInstanceSDGWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
@@ -7746,6 +7800,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>描述某个AIC实例下的SDG挂载情况</p>
+     * 
+     * @param tmpReq DescribeInstanceSDGStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceSDGStatusResponse
+     */
+    public DescribeInstanceSDGStatusResponse describeInstanceSDGStatusWithOptions(DescribeInstanceSDGStatusRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeInstanceSDGStatusShrinkRequest request = new DescribeInstanceSDGStatusShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.SDGIds)) {
+            request.SDGIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.SDGIds, "SDGIds", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceSDGStatus"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceSDGStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>描述某个AIC实例下的SDG挂载情况</p>
+     * 
+     * @param request DescribeInstanceSDGStatusRequest
+     * @return DescribeInstanceSDGStatusResponse
+     */
+    public DescribeInstanceSDGStatusResponse describeInstanceSDGStatus(DescribeInstanceSDGStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceSDGStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the instance specifications that you can purchase.</p>
      * 
      * @param request DescribeInstanceSpecRequest
@@ -10329,6 +10429,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解除SDG的attach状态</p>
+     * 
+     * @param tmpReq DetachInstanceSDGRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachInstanceSDGResponse
+     */
+    public DetachInstanceSDGResponse detachInstanceSDGWithOptions(DetachInstanceSDGRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetachInstanceSDGShrinkRequest request = new DetachInstanceSDGShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SDGId)) {
+            query.put("SDGId", request.SDGId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachInstanceSDG"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachInstanceSDGResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解除SDG的attach状态</p>
+     * 
+     * @param request DetachInstanceSDGRequest
+     * @return DetachInstanceSDGResponse
+     */
+    public DetachInstanceSDGResponse detachInstanceSDG(DetachInstanceSDGRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachInstanceSDGWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -12402,6 +12556,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyVSwitchAttributeResponse modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVSwitchAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将已经attach在instance上的SDG实际部署到对应的AIC</p>
+     * 
+     * @param tmpReq MountInstanceSDGRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MountInstanceSDGResponse
+     */
+    public MountInstanceSDGResponse mountInstanceSDGWithOptions(MountInstanceSDGRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MountInstanceSDGShrinkRequest request = new MountInstanceSDGShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SDGId)) {
+            query.put("SDGId", request.SDGId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MountInstanceSDG"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MountInstanceSDGResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将已经attach在instance上的SDG实际部署到对应的AIC</p>
+     * 
+     * @param request MountInstanceSDGRequest
+     * @return MountInstanceSDGResponse
+     */
+    public MountInstanceSDGResponse mountInstanceSDG(MountInstanceSDGRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.mountInstanceSDGWithOptions(request, runtime);
     }
 
     /**
@@ -16080,6 +16288,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnloadRegionSDGResponse unloadRegionSDG(UnloadRegionSDGRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unloadRegionSDGWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将已经Mount的SDG从对应的Instance上解除下来，恢复到attach状态</p>
+     * 
+     * @param tmpReq UnmountInstanceSDGRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnmountInstanceSDGResponse
+     */
+    public UnmountInstanceSDGResponse unmountInstanceSDGWithOptions(UnmountInstanceSDGRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UnmountInstanceSDGShrinkRequest request = new UnmountInstanceSDGShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SDGId)) {
+            query.put("SDGId", request.SDGId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnmountInstanceSDG"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnmountInstanceSDGResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将已经Mount的SDG从对应的Instance上解除下来，恢复到attach状态</p>
+     * 
+     * @param request UnmountInstanceSDGRequest
+     * @return UnmountInstanceSDGResponse
+     */
+    public UnmountInstanceSDGResponse unmountInstanceSDG(UnmountInstanceSDGRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unmountInstanceSDGWithOptions(request, runtime);
     }
 
     /**
