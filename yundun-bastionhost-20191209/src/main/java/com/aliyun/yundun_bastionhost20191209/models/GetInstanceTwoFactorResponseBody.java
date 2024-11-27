@@ -12,6 +12,9 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,25 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
     public static class GetInstanceTwoFactorResponseBodyConfig extends TeaModel {
         /**
          * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableTwoFactor")
         public Boolean enableTwoFactor;
 
         /**
-         * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.</p>
-         * <br>
-         * <p>> If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
+         * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: <code>0 to 168</code>. Unit: hours.</p>
+         * <blockquote>
+         * <p>If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SkipTwoFactorTime")
         public Long skipTwoFactorTime;

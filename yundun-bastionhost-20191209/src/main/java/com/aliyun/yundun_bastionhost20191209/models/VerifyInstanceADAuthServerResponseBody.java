@@ -4,6 +4,10 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class VerifyInstanceADAuthServerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8F1085E3-F048-5F34-B650-F145216E4AA5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

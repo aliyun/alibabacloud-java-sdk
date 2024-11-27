@@ -4,12 +4,27 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListDatabaseAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The returned database accounts.</p>
+     */
     @NameInMap("DatabaseAccounts")
     public java.util.List<ListDatabaseAccountsResponseBodyDatabaseAccounts> databaseAccounts;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F6C075F-FC86-476E-943B-097BD4E12948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of database accounts returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,18 +58,52 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
     }
 
     public static class ListDatabaseAccountsResponseBodyDatabaseAccounts extends TeaModel {
+        /**
+         * <p>The database account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59</p>
+         */
         @NameInMap("DatabaseAccountId")
         public String databaseAccountId;
 
+        /**
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DatabaseAccountName")
         public String databaseAccountName;
 
+        /**
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The name of the database. A value is returned for this parameter if the engine of the database with the specified database ID is PostgreSQL or Oracle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orcl</p>
+         */
         @NameInMap("DatabaseSchema")
         public String databaseSchema;
 
+        /**
+         * <p>Indicates whether the database account has a password. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasPassword")
         public String hasPassword;
 

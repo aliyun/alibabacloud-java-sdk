@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyInstanceLDAPAuthServerResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8F1085E3-F048-5F34-B650-F145216E4AA4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

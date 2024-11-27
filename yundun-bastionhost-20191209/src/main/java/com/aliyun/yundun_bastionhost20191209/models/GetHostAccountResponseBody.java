@@ -12,6 +12,9 @@ public class GetHostAccountResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,80 @@ public class GetHostAccountResponseBody extends TeaModel {
     public static class GetHostAccountResponseBodyHostAccount extends TeaModel {
         /**
          * <p>Indicates whether a password is configured for the host account. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
         /**
          * <p>The ID of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
         /**
          * <p>The name of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
         /**
          * <p>The ID of the host to which the host account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The ID of the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
         /**
          * <p>The name of the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("HostShareKeyName")
         public String hostShareKeyName;
 
         /**
          * <p>The fingerprint of the private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<strong>:</strong></p>
          */
         @NameInMap("PrivateKeyFingerprint")
         public String privateKeyFingerprint;
 
         /**
          * <p>The protocol that is used by the host. Valid values:</p>
-         * <br>
-         * <p>*   **SSH**</p>
-         * <p>*   **RDP**</p>
+         * <ul>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         @NameInMap("ProtocolName")
         public String protocolName;

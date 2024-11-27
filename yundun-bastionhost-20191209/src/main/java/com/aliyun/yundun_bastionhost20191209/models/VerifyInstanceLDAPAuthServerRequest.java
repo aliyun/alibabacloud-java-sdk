@@ -4,33 +4,83 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn=Manager,dc=test,dc=com</p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc=test,dc=com</p>
+     */
     @NameInMap("BaseDN")
     public String baseDN;
 
+    /**
+     * <strong>example:</strong>
+     * <p>(objectClass=top)</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSSL")
     public String isSSL;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>389</p>
+     */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("Server")
     public String server;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("StandbyServer")
     public String standbyServer;
 

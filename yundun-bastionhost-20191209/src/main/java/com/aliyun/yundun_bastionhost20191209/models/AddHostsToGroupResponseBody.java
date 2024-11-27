@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddHostsToGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>81500666-d7f5-4143-8329-0223cc738105</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,38 +43,54 @@ public class AddHostsToGroupResponseBody extends TeaModel {
     public static class AddHostsToGroupResponseBodyResults extends TeaModel {
         /**
          * <p>The return code that indicates whether the call was successful. Valid values:</p>
-         * <br>
-         * <p>*   **OK**: The call was successful.</p>
-         * <br>
-         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-         * <br>
-         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-         * <br>
-         * <p>>Make sure that the request parameters are valid and call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-         * <br>
-         * <p>>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+         * <ul>
+         * <li><p><strong>OK</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
+         * </li>
+         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
+         * <blockquote>
+         * <p>Make sure that the request parameters are valid and call the operation again.</p>
+         * </blockquote>
+         * </li>
+         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
+         * <blockquote>
+         * <p>Make sure that the specified bastion host ID and host IDs are valid. Then, call the operation again.</p>
+         * </blockquote>
+         * </li>
+         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The ID of the host group.</p>
+         * <p>The asset group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
         /**
-         * <p>The ID of the host.</p>
+         * <p>The host ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("Message")
         public String message;

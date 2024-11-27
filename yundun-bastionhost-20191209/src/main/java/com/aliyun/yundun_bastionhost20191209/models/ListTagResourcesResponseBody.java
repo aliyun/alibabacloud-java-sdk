@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token for starting the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>134D6018-EB68-4B7C-BABF-4DB09023E014</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information about Bastionhost instances and the tags bound to Bastionhost instances.</p>
-     * <br>
      * <p>The following information is included: instance ID, resource type, tag key, and tag value.</p>
      */
     @NameInMap("TagResources")
@@ -56,26 +61,37 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1gc****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
-         * <br>
          * <p>The returned value is INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testapi</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

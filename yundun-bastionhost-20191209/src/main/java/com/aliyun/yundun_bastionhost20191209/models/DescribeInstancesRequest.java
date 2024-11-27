@@ -6,44 +6,63 @@ import com.aliyun.tea.*;
 public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>An array that consists of the IDs of the bastion hosts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-78v1ghxxxxx</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
      * <p>The status of the bastion host. Valid values:</p>
-     * <br>
-     * <p>*   **PENDING**: The bastion host is not initialized.</p>
-     * <p>*   **CREATING**: The bastion host is being created.</p>
-     * <p>*   **RUNNING**: The bastion host is running.</p>
-     * <p>*   **EXPIRED**: The bastion host expired.</p>
-     * <p>*   **CREATE_FAILED**: The bastion host fails to be created.</p>
-     * <p>*   **UPGRADING**: The configurations of the bastion host are being changed.</p>
-     * <p>*   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.</p>
+     * <ul>
+     * <li><strong>PENDING</strong>: The bastion host is not initialized.</li>
+     * <li><strong>CREATING</strong>: The bastion host is being created.</li>
+     * <li><strong>RUNNING</strong>: The bastion host is running.</li>
+     * <li><strong>EXPIRED</strong>: The bastion host expired.</li>
+     * <li><strong>CREATE_FAILED</strong>: The bastion host fails to be created.</li>
+     * <li><strong>UPGRADING</strong>: The configurations of the bastion host are being changed.</li>
+     * <li><strong>UPGRADE_FAILED</strong>: The configurations of the bastion host fail to be changed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the bastion host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the bastion host belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm26ougi****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -118,12 +137,18 @@ public class DescribeInstancesRequest extends TeaModel {
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testapi</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetHostShareKeyResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **GetHostShareKey**.</p>
+     * <p>The returned information about the shared key.</p>
      */
     @NameInMap("HostShareKey")
     public GetHostShareKeyResponseBodyHostShareKey hostShareKey;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,17 +42,38 @@ public class GetHostShareKeyResponseBody extends TeaModel {
 
     public static class GetHostShareKeyResponseBodyHostShareKey extends TeaModel {
         /**
-         * <p>The fingerprint of the private key.</p>
+         * <p>The ID of the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10427</p>
          */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
+        /**
+         * <p>The name of the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("HostShareKeyName")
         public String hostShareKeyName;
 
+        /**
+         * <p>The time when the information about the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644287246</p>
+         */
         @NameInMap("LastModifyKeyAt")
         public Long lastModifyKeyAt;
 
+        /**
+         * <p>The fingerprint of the private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PrivateKeyFingerPrint")
         public String privateKeyFingerPrint;
 

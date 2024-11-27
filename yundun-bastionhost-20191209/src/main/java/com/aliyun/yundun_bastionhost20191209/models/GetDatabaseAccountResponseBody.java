@@ -4,9 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetDatabaseAccountResponseBody extends TeaModel {
+    /**
+     * <p>The returned information about the database account.</p>
+     */
     @NameInMap("DatabaseAccount")
     public GetDatabaseAccountResponseBodyDatabaseAccount databaseAccount;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FA06D274-8D0A-59FB-8B7E-584C0EEBBFFF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,57 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
     }
 
     public static class GetDatabaseAccountResponseBodyDatabaseAccount extends TeaModel {
+        /**
+         * <p>The database account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("DatabaseAccountId")
         public String databaseAccountId;
 
+        /**
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uac</p>
+         */
         @NameInMap("DatabaseAccountName")
         public String databaseAccountName;
 
+        /**
+         * <p>The database name. A value is returned for this parameter if the database engine is PostgreSQL or Oracle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orcl</p>
+         */
         @NameInMap("DatabaseSchema")
         public String databaseSchema;
 
+        /**
+         * <p>Indicates whether the database account has a password.
+         * Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
+        /**
+         * <p>The logon attribute. A value is returned for this parameter if the database engine is Oracle. Valid values:</p>
+         * <ul>
+         * <li>SERVICENAME</li>
+         * <li>SID</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SID</p>
+         */
         @NameInMap("LoginAttribute")
         public String loginAttribute;
 

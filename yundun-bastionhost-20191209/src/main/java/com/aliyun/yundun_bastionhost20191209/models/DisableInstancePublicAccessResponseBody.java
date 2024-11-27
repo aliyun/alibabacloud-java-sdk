@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DisableInstancePublicAccessResponseBody extends TeaModel {
     /**
      * <p>The ID of the bastion host whose Internet access is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-78v1gh****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76FAAF15-D3A3-4099-9941-FC408D9FDB4C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

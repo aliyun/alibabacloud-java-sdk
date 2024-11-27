@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetHostGroupResponseBody extends TeaModel {
     /**
-     * <p>The details of the host group returned.</p>
+     * <p>The returned detailed information about the asset group.</p>
      */
     @NameInMap("HostGroup")
     public GetHostGroupResponseBodyHostGroup hostGroup;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +42,28 @@ public class GetHostGroupResponseBody extends TeaModel {
 
     public static class GetHostGroupResponseBodyHostGroup extends TeaModel {
         /**
-         * <p>The description of the host group.</p>
+         * <p>The remarks of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The ID of the host group.</p>
+         * <p>The asset group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
         /**
-         * <p>The name of the host group.</p>
+         * <p>The name of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Host group 1</p>
          */
         @NameInMap("HostGroupName")
         public String hostGroupName;

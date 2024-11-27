@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListHostGroupsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the host groups.</p>
+     * <p>The asset groups returned.</p>
      */
     @NameInMap("HostGroups")
     public java.util.List<ListHostGroupsResponseBodyHostGroups> hostGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of host groups returned.</p>
+     * <p>The total number of asset groups returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -53,25 +59,37 @@ public class ListHostGroupsResponseBody extends TeaModel {
 
     public static class ListHostGroupsResponseBodyHostGroups extends TeaModel {
         /**
-         * <p>The description of the host group.</p>
+         * <p>The remarks of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The ID of the host group.</p>
+         * <p>The asset group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
         /**
-         * <p>The name of the host group.</p>
+         * <p>The name of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Host group 1</p>
          */
         @NameInMap("HostGroupName")
         public String hostGroupName;
 
         /**
-         * <p>The number of hosts in the host group.</p>
+         * <p>The number of hosts in the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MemberCount")
         public Integer memberCount;

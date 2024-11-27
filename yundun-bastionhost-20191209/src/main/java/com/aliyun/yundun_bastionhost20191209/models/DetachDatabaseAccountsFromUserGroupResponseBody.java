@@ -4,9 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC528ED1-C302-56E5-9CB5-ADA625D64FF9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the call.</p>
+     */
     @NameInMap("Results")
     public java.util.List<DetachDatabaseAccountsFromUserGroupResponseBodyResults> results;
 
@@ -32,12 +41,30 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
     }
 
     public static class DetachDatabaseAccountsFromUserGroupResponseBodyResultsDatabaseAccounts extends TeaModel {
+        /**
+         * <p>The error code that is returned. If OK is returned, the operation was successful. If other error codes are returned, the operation failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The ID of the database account on which the permissions are revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("DatabaseAccountId")
         public String databaseAccountId;
 
+        /**
+         * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -73,18 +100,45 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
     }
 
     public static class DetachDatabaseAccountsFromUserGroupResponseBodyResults extends TeaModel {
+        /**
+         * <p>The error code that is returned. If OK is returned, the operation was successful. If other error codes are returned, the operation failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>A list that shows the authorization results of the database accounts.</p>
+         */
         @NameInMap("DatabaseAccounts")
         public java.util.List<DetachDatabaseAccountsFromUserGroupResponseBodyResultsDatabaseAccounts> databaseAccounts;
 
+        /**
+         * <p>The ID of the database on which the permissions are revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 

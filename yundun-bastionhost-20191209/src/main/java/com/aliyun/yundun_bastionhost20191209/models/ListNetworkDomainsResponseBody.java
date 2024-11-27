@@ -4,12 +4,27 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The network domains that are returned.</p>
+     */
     @NameInMap("NetworkDomains")
     public java.util.List<ListNetworkDomainsResponseBodyNetworkDomains> networkDomains;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of network domains that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,9 +58,29 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
     }
 
     public static class ListNetworkDomainsResponseBodyNetworkDomainsProxiesState extends TeaModel {
+        /**
+         * <p>The node type of the proxy server. Valid values:</p>
+         * <ul>
+         * <li><strong>Master</strong>: primary proxy server.</li>
+         * <li><strong>Slave</strong>: secondary proxy server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Master</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>The status of the proxy server.</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Unavailable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("ProxyState")
         public String proxyState;
 
@@ -73,18 +108,56 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
     }
 
     public static class ListNetworkDomainsResponseBodyNetworkDomains extends TeaModel {
+        /**
+         * <p>The remarks of the network domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>Indicates whether the network domain is built-in.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Default")
         public Boolean _default;
 
+        /**
+         * <p>The network domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NetworkDomainId")
         public String networkDomainId;
 
+        /**
+         * <p>The name of the network domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("NetworkDomainName")
         public String networkDomainName;
 
+        /**
+         * <p>The connection mode of the network domain. Valid values:</p>
+         * <ul>
+         * <li><strong>Direct</strong></li>
+         * <li><strong>Proxy</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Proxy</p>
+         */
         @NameInMap("NetworkDomainType")
         public String networkDomainType;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UnlockUsersResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,43 @@ public class UnlockUsersResponseBody extends TeaModel {
     public static class UnlockUsersResponseBodyResults extends TeaModel {
         /**
          * <p>The result of the call. Valid values:</p>
-         * <br>
-         * <p>*   **OK**: The call was successful.</p>
-         * <br>
-         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-         * <br>
-         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-         * <br>
-         * <p>    **</p>
-         * <br>
-         * <p>    **Note**Make sure that the request parameters are valid and call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-         * <br>
-         * <p>    **</p>
-         * <br>
-         * <p>    **Note**Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+         * <ul>
+         * <li><p><strong>OK</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
+         * </li>
+         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>Make sure that the request parameters are valid and call the operation again.</p>
+         * </li>
+         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
+         * </li>
+         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>１</p>
          */
         @NameInMap("UserId")
         public String userId;

@@ -6,41 +6,63 @@ import com.aliyun.tea.*;
 public class ModifyInstanceTwoFactorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable two-factor authentication. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables two-factor authentication.</p>
-     * <p>*   **false**: disables two-factor authentication.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableTwoFactor")
     public String enableTwoFactor;
 
     /**
      * <p>The ID of the bastion host.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the bastion host.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The duration within which two-factor authentication is not required after a user passes two-factor authentication. Valid values: 0 to 168. Unit: hours. If you set this parameter to 0, the user must pass two-factor authentication every time the user logs on to the bastion host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SkipTwoFactorTime")
     public String skipTwoFactorTime;
 
     /**
-     * <p>One or more methods that are used to send a verification code if two-factor authentication is enabled. If you set the EnableTwoFactor parameter to true, you must specify at least one method. Valid values:</p>
-     * <br>
-     * <p>*   **sms**: text message</p>
-     * <p>*   **email**: email</p>
-     * <p>*   **dingtalk**: Notice in DingTalk</p>
+     * <p>The method used to send a verification code for two-factor authentication. If EnableTwoFactor is set to true, you must specify at least one method. Valid values:</p>
+     * <ul>
+     * <li><strong>sms:</strong> text message.</li>
+     * <li><strong>email</strong>: email.</li>
+     * <li><strong>dingtalk</strong>: notice in DingTalk.</li>
+     * <li><strong>totp</strong>: one-time password (OTP) token.</li>
+     * <li><strong>gmusbkey</strong>: SM-based USB key.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sms&quot;]</p>
      */
     @NameInMap("TwoFactorMethods")
     public String twoFactorMethods;

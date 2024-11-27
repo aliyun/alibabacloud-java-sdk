@@ -4,12 +4,27 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesForUserResponseBody extends TeaModel {
+    /**
+     * <p>The databases returned.</p>
+     */
     @NameInMap("Databases")
     public java.util.List<ListDatabasesForUserResponseBodyDatabases> databases;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8A665B9-8550-4942-9DEE-73198051856B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of databases returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,36 +58,120 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
     }
 
     public static class ListDatabasesForUserResponseBodyDatabases extends TeaModel {
+        /**
+         * <p>The address type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
+         */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
+        /**
+         * <p>The remarks of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL56</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("DatabasePort")
         public Long databasePort;
 
+        /**
+         * <p>The internal endpoint of the database. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-wz97******</p>
+         */
         @NameInMap("DatabasePrivateAddress")
         public String databasePrivateAddress;
 
+        /**
+         * <p>The public endpoint of the database. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf65******</p>
+         */
         @NameInMap("DatabasePublicAddress")
         public String databasePublicAddress;
 
+        /**
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("DatabaseType")
         public String databaseType;
 
+        /**
+         * <p>The ID of the network domain where the database resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NetworkDomainId")
         public String networkDomainId;
 
+        /**
+         * <p>The database type. Valid values:</p>
+         * <ul>
+         * <li><strong>Local</strong>: on-premises database.</li>
+         * <li><strong>Rds</strong>: ApsaraDB RDS instance.</li>
+         * <li><strong>PolarDB</strong>: PolarDB cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Local</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The ID of the ApsaraDB RDS instance or PolarDB cluster.</p>
+         * <blockquote>
+         * <p> No value is returned for this parameter if <strong>Source</strong> is set to <strong>Local</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9fv2hwux78x9h1pmje</p>
+         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 

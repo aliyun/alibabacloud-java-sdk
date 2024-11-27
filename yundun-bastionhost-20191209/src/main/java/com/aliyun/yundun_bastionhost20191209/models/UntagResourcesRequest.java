@@ -6,42 +6,54 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all tags that are added to the bastion host.</p>
-     * <br>
-     * <p>*   If you specify TagKey.N, the value of this parameter can only be **false**, which indicates that only a specified tag is deleted.</p>
-     * <p>*   If you do not specify TagKey.N and the value of this parameter is **true**, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is **false**, no tags are deleted.</p>
+     * <ul>
+     * <li>If you specify TagKey.N, the value of this parameter can only be <strong>false</strong>, which indicates that only a specified tag is deleted.</li>
+     * <li>If you do not specify TagKey.N and the value of this parameter is <strong>true</strong>, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is <strong>false</strong>, no tags are deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The region ID of the bastion host to query.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>An array that consists of IDs of bastion hosts.</p>
-     * <br>
      * <p>Valid values: 1 to 20.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
-     * <p>Set the value to **INSTANCE**, which indicates that the resource is a bastion host.</p>
+     * <p>Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a bastion host.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The key of tag N.</p>
-     * <br>
      * <p>Valid values of N: 1 to 20.</p>
      */
     @NameInMap("TagKey")

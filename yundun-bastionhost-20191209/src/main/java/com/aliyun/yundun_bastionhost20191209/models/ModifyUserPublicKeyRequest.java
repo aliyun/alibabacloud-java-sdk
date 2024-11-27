@@ -6,42 +6,68 @@ import com.aliyun.tea.*;
 public class ModifyUserPublicKeyRequest extends TeaModel {
     /**
      * <p>The new description of the user group. The description can be up to 500 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The ID of the bastion host that is used to modify the public key of the user.</p>
-     * <br>
-     * <p>> You can call the [describeinstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>The ID of the bastion host on which you want to modify the public key of a user.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-nif236pmc1u</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The new public key.</p>
-     * <br>
-     * <p>> The public key must be encoded in Base64.</p>
+     * <blockquote>
+     * <p> Specify a Base64-encoded string.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUhVcjY4UENFYWFzZjFYRVpNYTVsMlNBQytHV3FpeXVsRVpndkV4dmlPM28gcm9vdEA5NjBkMmNhOTcwYjU=</p>
      */
     @NameInMap("PublicKey")
     public String publicKey;
 
     /**
      * <p>The ID of the public key that you want to modify.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/477555.html">ListUserPublicKeys</a> operation to query the public key ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PublicKeyId")
     public String publicKeyId;
 
     /**
      * <p>The name of the public key that you want to modify. This name can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("PublicKeyName")
     public String publicKeyName;
 
     /**
      * <p>The region ID of the bastion host that is used to modify the public key of the user.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

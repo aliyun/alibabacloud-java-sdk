@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTwoFactorResponseBody extends TeaModel {
     /**
-     * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: 0 to 168. Unit: hours. If you set this parameter to 0, the local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9CE1A352-15E9-5EB4-B589-87A8DEECB20D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

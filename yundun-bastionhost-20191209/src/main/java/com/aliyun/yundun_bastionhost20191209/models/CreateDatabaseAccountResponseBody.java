@@ -4,9 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateDatabaseAccountResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
     @NameInMap("DatabaseAccountId")
     public String databaseAccountId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B07C465D-B09F-54DD-8FEC-90788BEABAFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

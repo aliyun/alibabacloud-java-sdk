@@ -1,3 +1,21 @@
+2024-11-27 Version: 1.3.0
+- Support API CreateExportConfigJob.
+- Support API CreateOperationTicket.
+- Support API GetExportConfigJob.
+- Support API GetInstanceStoreInfo.
+- Update API AcceptOperationTicket: add param Comment.
+- Update API AcceptOperationTicket: update param EffectCount.
+- Update API AcceptOperationTicket: update param EffectEndTime.
+- Update API AcceptOperationTicket: update param EffectStartTime.
+- Update API GenerateAssetOperationToken: add param DatabaseSchema.
+- Update API GenerateAssetOperationToken: add param LoginAttribute.
+- Update API GenerateAssetOperationToken: add param OperationMode.
+- Update API GenerateAssetOperationToken: add param SsoClient.
+- Update API GenerateAssetOperationToken: update response param.
+- Update API ListOperationTickets: update response param.
+- Update API RejectOperationTicket: add param Comment.
+
+
 2024-04-12 Version: 1.2.0
 - Support API AddDatabasesToGroup.
 - Support API AttachDatabaseAccountsToUser.

@@ -5,51 +5,83 @@ import com.aliyun.tea.*;
 
 public class ListHostGroupsForUserRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the host group to query. The name can be up to 128 characters in length. Only exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group</p>
      */
     @NameInMap("HostGroupName")
     public String hostGroupName;
 
     /**
-     * <p>The host groups returned.</p>
+     * <p>The ID of the bastion host whose user you want to query.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave the PageSize parameter empty.</p>
+     * <p>The category of the host groups to query. Valid values:</p>
+     * <ul>
+     * <li><strong>Authorized</strong> (default): queries the host groups that the user is authorized to manage.</li>
+     * <li><strong>Unauthorized</strong>: queries the host groups that the user is not authorized to manage.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Authorized</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
-     * <p>The ID of the host group.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>１</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The ID of the user.</p>
-     * <br>
-     * <p>>  You can call the [ListUsers](~~204522~~) operation to query the ID of the user.</p>
+     * <p>The number of entries per page.\
+     * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The region ID of the bastion host whose user you want to query.</p>
+     * <blockquote>
+     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to query the host groups that the user is authorized or not authorized to manage.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>The user ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>１</p>
      */
     @NameInMap("UserId")
     public String userId;

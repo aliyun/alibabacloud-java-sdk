@@ -4,9 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetRuleResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned information about the authorization rule.</p>
+     */
     @NameInMap("Rule")
     public GetRuleResponseBodyRule rule;
 
@@ -32,6 +41,12 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRuleDatabasesDatabaseAccounts extends TeaModel {
+        /**
+         * <p>The ID of the database account that the policy authorizes users to manage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("DatabaseAccountId")
         public String databaseAccountId;
 
@@ -51,9 +66,18 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRuleDatabases extends TeaModel {
+        /**
+         * <p>The database accounts on which permissions are granted by using the authorization rule.</p>
+         */
         @NameInMap("DatabaseAccounts")
         public java.util.List<GetRuleResponseBodyRuleDatabasesDatabaseAccounts> databaseAccounts;
 
+        /**
+         * <p>The ID of the database that the policy authorizes users to manage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
@@ -81,9 +105,18 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRuleHostGroups extends TeaModel {
+        /**
+         * <p>The asset accounts on which permissions are granted by using the authorization rule.</p>
+         */
         @NameInMap("HostAccountNames")
         public java.util.List<String> hostAccountNames;
 
+        /**
+         * <p>The ID of the asset group that the policy authorizes users to manage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
@@ -111,6 +144,12 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRuleHostsHostAccounts extends TeaModel {
+        /**
+         * <p>The ID of the host account that the policy authorizes users to manage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
@@ -130,9 +169,18 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRuleHosts extends TeaModel {
+        /**
+         * <p>The host accounts that the policy authorizes users to manage.</p>
+         */
         @NameInMap("HostAccounts")
         public java.util.List<GetRuleResponseBodyRuleHostsHostAccounts> hostAccounts;
 
+        /**
+         * <p>The ID of the host that the policy authorizes users to manage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
@@ -160,6 +208,12 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRuleUserGroups extends TeaModel {
+        /**
+         * <p>The ID of the authorized user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
@@ -179,6 +233,12 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRuleUsers extends TeaModel {
+        /**
+         * <p>The ID of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -198,33 +258,78 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyRule extends TeaModel {
+        /**
+         * <p>The remarks of the authorization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The databases on which permissions are granted by using the authorization rule.</p>
+         */
         @NameInMap("Databases")
         public java.util.List<GetRuleResponseBodyRuleDatabases> databases;
 
+        /**
+         * <p>The end time of the validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698720972</p>
+         */
         @NameInMap("EffectiveEndTime")
         public String effectiveEndTime;
 
+        /**
+         * <p>The start time of the validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687140883</p>
+         */
         @NameInMap("EffectiveStartTime")
         public String effectiveStartTime;
 
+        /**
+         * <p>The asset groups on which permissions are granted by using the authorization rule.</p>
+         */
         @NameInMap("HostGroups")
         public java.util.List<GetRuleResponseBodyRuleHostGroups> hostGroups;
 
+        /**
+         * <p>The information about the hosts that the policy authorizes users to manage.</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<GetRuleResponseBodyRuleHosts> hosts;
 
+        /**
+         * <p>The ID of the authorization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the authorization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The authorized user groups.</p>
+         */
         @NameInMap("UserGroups")
         public java.util.List<GetRuleResponseBodyRuleUserGroups> userGroups;
 
+        /**
+         * <p>The authorized users.</p>
+         */
         @NameInMap("Users")
         public java.util.List<GetRuleResponseBodyRuleUsers> users;
 

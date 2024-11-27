@@ -10,6 +10,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("InstanceAttribute")
     public DescribeInstanceAttributeResponseBodyInstanceAttribute instanceAttribute;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -37,18 +43,26 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAttributeResponseBodyInstanceAttributePorts extends TeaModel {
         /**
          * <p>The custom port.</p>
-         * <br>
-         * <p>>  You can change only the SSH and RDP ports. If O\&M ports are not specified, the value of the StandardPort parameter is returned.</p>
+         * <blockquote>
+         * <p>Only the SSH and RDP ports can be changed. If no custom O\&amp;M port is specified for the bastion host, the value of StandardPort is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>600xx</p>
          */
         @NameInMap("CustomPort")
         public Integer customPort;
 
         /**
          * <p>The standard port of the bastion host. Valid values:</p>
-         * <br>
-         * <p>*   **SSH**: 60022</p>
-         * <p>*   **RDP**: 63389</p>
-         * <p>*   **HTTPS**: 443</p>
+         * <ul>
+         * <li><strong>SSH</strong>: 60022.</li>
+         * <li><strong>RDP</strong>: 63389.</li>
+         * <li><strong>HTTPS</strong>: 443.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60022</p>
          */
         @NameInMap("StandardPort")
         public Integer standardPort;
@@ -77,96 +91,258 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttribute extends TeaModel {
+        /**
+         * <p>The IDs of authorized security groups.</p>
+         */
         @NameInMap("AuthorizedSecurityGroups")
         public java.util.List<String> authorizedSecurityGroups;
 
         /**
          * <p>The total bandwidth of the bastion host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         /**
-         * <p>The extra bandwidth plan of the bastion host.</p>
+         * <p>The bandwidth plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("BandwidthPackage")
         public String bandwidthPackage;
 
+        /**
+         * <p>The status of the database O&amp;M feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disable</p>
+         */
         @NameInMap("DbOperationModule")
         public String dbOperationModule;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the Elastic Network Interface (ENI).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1455jrzwm7moaxxxxx</p>
+         */
         @NameInMap("EniInstanceId")
         public String eniInstanceId;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578326400000</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1ghxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>PENDING: The instance is not initialized.</li>
+         * <li>CREATING: The instance is being created.</li>
+         * <li>RUNNING: The instance is running.</li>
+         * <li>EXPIRED: The instance expired.</li>
+         * <li>CREATE_FAILED: The instance fails to be created.</li>
+         * <li>UPGRADING: The configurations of the instance are being changed.</li>
+         * <li>UPGRADE_FAILED: The configurations of the instance fail to be changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drawvxalwb-public.bastionhost.aliyuncs.com</p>
+         */
         @NameInMap("InternetEndpoint")
         public String internetEndpoint;
 
+        /**
+         * <p>The private endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drawvxalwb.bastionhost.aliyuncs.com</p>
+         */
         @NameInMap("IntranetEndpoint")
         public String intranetEndpoint;
 
+        /**
+         * <p>The license code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bhah_ent_50_asset</p>
+         */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
+        /**
+         * <p>The status of the automatic password change feature.</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
         @NameInMap("ModifyPasswordModule")
         public String modifyPasswordModule;
 
+        /**
+         * <p>The status of the network domain feature.</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
         @NameInMap("NetworkProxyModule")
         public String networkProxyModule;
 
+        /**
+         * <p>An array that consists of the O&amp;M ports of the bastion host.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> ports;
 
+        /**
+         * <p>An array that consists of the egress private IP addresses of the bastion host.</p>
+         */
         @NameInMap("PrivateExportIps")
         public java.util.List<String> privateExportIps;
 
+        /**
+         * <p>The private IP addresses that are allowed to access the instance.</p>
+         */
         @NameInMap("PrivateWhiteList")
         public java.util.List<String> privateWhiteList;
 
+        /**
+         * <p>An array that consists of the egress public IP addresses of the bastion host.</p>
+         */
         @NameInMap("PublicExportIps")
         public java.util.List<String> publicExportIps;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("PublicIps")
         public java.util.List<String> publicIps;
 
+        /**
+         * <p>Indicates whether the Bastionhost instance can be accessed over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PublicNetworkAccess")
         public Boolean publicNetworkAccess;
 
+        /**
+         * <p>The public IP addresses that are allowed to access the instance.</p>
+         */
         @NameInMap("PublicWhiteList")
         public java.util.List<String> publicWhiteList;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzc427dbl2shy</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The IDs of the security groups to which the instance belongs.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <p>The time when the instance started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577681345000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The storage capacity of the bastion host. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2199023255552</p>
+         */
         @NameInMap("Storage")
         public Long storage;
 
+        /**
+         * <p>The ID of the VPC to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1c85tzgqu1bf5bxxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch to which the instance connects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1xfwzzfti0kjbfxxxxx</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The status of the web terminal.</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
         @NameInMap("WebTerminalModule")
         public String webTerminalModule;
 

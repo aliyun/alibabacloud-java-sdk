@@ -4,33 +4,116 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListOperationHostsRequest extends TeaModel {
+    /**
+     * <p>The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.162.172.132</p>
+     */
     @NameInMap("HostAddress")
     public String hostAddress;
 
+    /**
+     * <p>The name of the host that you want to query. Only exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The ID of the bastion host.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-09k22avmw0q</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The operating system of the host that you want to query. Valid values:</p>
+     * <ul>
+     * <li><strong>Linux</strong></li>
+     * <li><strong>Windows</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Linux</p>
+     */
     @NameInMap("OSType")
     public String OSType;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.\
+     * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The region ID of the bastion host.</p>
+     * <blockquote>
+     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The source of the host that you want to query. Valid values:</p>
+     * <ul>
+     * <li><strong>Local</strong></li>
+     * <li><strong>Ecs</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Local</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The ID of the Elastic Compute Service (ECS) instance. Exact match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp19ienyt0yax748****</p>
+     */
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
 
+    /**
+     * <p>The status of the host that you want to query. Valid values:</p>
+     * <ul>
+     * <li><strong>Normal</strong></li>
+     * <li><strong>Release</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("SourceInstanceState")
     public String sourceInstanceState;
 

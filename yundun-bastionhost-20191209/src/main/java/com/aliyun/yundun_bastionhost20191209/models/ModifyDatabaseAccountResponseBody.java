@@ -4,6 +4,12 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyDatabaseAccountResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>850FA4B4-5BD2-5269-903E-3B7E07E6C975</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

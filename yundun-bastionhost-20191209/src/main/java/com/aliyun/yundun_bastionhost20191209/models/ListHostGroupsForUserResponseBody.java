@@ -5,21 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListHostGroupsForUserResponseBody extends TeaModel {
     /**
-     * <p>ListHostGroupsForUser</p>
+     * <p>The host groups returned.</p>
      */
     @NameInMap("HostGroups")
     public java.util.List<ListHostGroupsForUserResponseBodyHostGroups> hostGroups;
 
     /**
-     * <p>Queries the host groups that a specified user is authorized or not authorized to manage.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).</p>
-     * <br>
-     * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
+     * <p>The total number of host groups returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -55,17 +59,29 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
 
     public static class ListHostGroupsForUserResponseBodyHostGroups extends TeaModel {
         /**
-         * <p>ListHostGroupsForUser</p>
+         * <p>The remarks of the host group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>WB662865</p>
+         * <p>The host group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>１</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
+        /**
+         * <p>The name of the host group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
+         */
         @NameInMap("HostGroupName")
         public String hostGroupName;
 

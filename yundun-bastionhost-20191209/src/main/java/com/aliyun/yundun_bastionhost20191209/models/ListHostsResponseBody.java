@@ -12,12 +12,18 @@ public class ListHostsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of hosts returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,81 +60,119 @@ public class ListHostsResponseBody extends TeaModel {
     public static class ListHostsResponseBodyHosts extends TeaModel {
         /**
          * <p>The address type of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: a public address</p>
-         * <p>*   **Private**: a private address</p>
+         * <ul>
+         * <li><strong>Public</strong>: a public address</li>
+         * <li><strong>Private</strong>: a private address</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
         /**
          * <p>The description of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The number of host accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostAccountCount")
         public Integer hostAccountCount;
 
         /**
          * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The name of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The private address of the host. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
         /**
          * <p>The public address of the host. The value is a domain name or an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
         /**
          * <p>The operating system of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Linux**</p>
-         * <p>*   **Windows**</p>
+         * <ul>
+         * <li><strong>Linux</strong></li>
+         * <li><strong>Windows</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("OSType")
         public String OSType;
 
         /**
          * <p>The source of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Local**: a host in a data center</p>
-         * <p>*   **Ecs**: an ECS instance</p>
-         * <p>*   **Rds**: a host in an ApsaraDB MyBase dedicated cluster</p>
+         * <ul>
+         * <li><strong>Local</strong>: a host in a data center</li>
+         * <li><strong>Ecs</strong>: an ECS instance</li>
+         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
-         * <br>
-         * <p>> No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
+         * <blockquote>
+         * <p>No value is returned for this parameter if the <strong>Source</strong> parameter is set to <strong>Local</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19ienyt0yax748****</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
         /**
          * <p>The status of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **Release**: released</p>
+         * <ul>
+         * <li><strong>Normal</strong>: normal</li>
+         * <li><strong>Release</strong>: released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("SourceInstanceState")
         public String sourceInstanceState;

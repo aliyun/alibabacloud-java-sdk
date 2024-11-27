@@ -4,15 +4,50 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class AttachDatabaseAccountsToUserRequest extends TeaModel {
+    /**
+     * <p>An array that consists of database objects.</p>
+     * <blockquote>
+     * <p> You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user is authorized to manage only the databases.</p>
+     * </blockquote>
+     */
     @NameInMap("Databases")
     public java.util.List<AttachDatabaseAccountsToUserRequestDatabases> databases;
 
+    /**
+     * <p>The ID of the bastion host whose user you want to grant permissions.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-wwo36qbv601</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the bastion host.</p>
+     * <blockquote>
+     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the user to be authorized.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -54,9 +89,18 @@ public class AttachDatabaseAccountsToUserRequest extends TeaModel {
     }
 
     public static class AttachDatabaseAccountsToUserRequestDatabases extends TeaModel {
+        /**
+         * <p>An array that consists of database account IDs.</p>
+         */
         @NameInMap("DatabaseAccountIds")
         public java.util.List<String> databaseAccountIds;
 
+        /**
+         * <p>The ID of the database that you want to authorize the user to manage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 

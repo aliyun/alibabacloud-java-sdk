@@ -6,28 +6,44 @@ import com.aliyun.tea.*;
 public class CreateUserGroupRequest extends TeaModel {
     /**
      * <p>The description of the user group. The description can be up to 500 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The ID of the bastion host for which you want to create a user group.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bastionhost-cn-st220aw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the bastion host for which you want to create a user group.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <blockquote>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the user group that you want to create. This name can be a up to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group</p>
      */
     @NameInMap("UserGroupName")
     public String userGroupName;
