@@ -143,6 +143,9 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
     }
 
     public static class GetRumExceptionStackResponseBodyData extends TeaModel {
+        @NameInMap("BinaryImages")
+        public String binaryImages;
+
         @NameInMap("CrashAddress")
         public String crashAddress;
 
@@ -176,6 +179,14 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         public static GetRumExceptionStackResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRumExceptionStackResponseBodyData self = new GetRumExceptionStackResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetRumExceptionStackResponseBodyData setBinaryImages(String binaryImages) {
+            this.binaryImages = binaryImages;
+            return this;
+        }
+        public String getBinaryImages() {
+            return this.binaryImages;
         }
 
         public GetRumExceptionStackResponseBodyData setCrashAddress(String crashAddress) {

@@ -1,3 +1,7 @@
+2024-11-27 Version: 9.2.1
+- Update API GetRumExceptionStack: update response param.
+
+
 2024-11-21 Version: 9.2.0
 - Support API DescribeAddonMetrics.
 - Support API ListEnvironmentAddons.
