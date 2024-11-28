@@ -4,6 +4,9 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class ImageBatchModerationRequest extends TeaModel {
+    @NameInMap("Service")
+    public String service;
+
     /**
      * <strong>example:</strong>
      * <p>{
@@ -14,16 +17,17 @@ public class ImageBatchModerationRequest extends TeaModel {
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 
-    /**
-     * <strong>example:</strong>
-     * <p>baselineCheck,tonalityImprove</p>
-     */
-    @NameInMap("Services")
-    public String services;
-
     public static ImageBatchModerationRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageBatchModerationRequest self = new ImageBatchModerationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImageBatchModerationRequest setService(String service) {
+        this.service = service;
+        return this;
+    }
+    public String getService() {
+        return this.service;
     }
 
     public ImageBatchModerationRequest setServiceParameters(String serviceParameters) {
@@ -32,14 +36,6 @@ public class ImageBatchModerationRequest extends TeaModel {
     }
     public String getServiceParameters() {
         return this.serviceParameters;
-    }
-
-    public ImageBatchModerationRequest setServices(String services) {
-        this.services = services;
-        return this;
-    }
-    public String getServices() {
-        return this.services;
     }
 
 }

@@ -397,12 +397,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImageBatchModerationResponse imageBatchModerationWithOptions(ImageBatchModerationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
-            query.put("ServiceParameters", request.serviceParameters);
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.services)) {
-            query.put("Services", request.services);
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
