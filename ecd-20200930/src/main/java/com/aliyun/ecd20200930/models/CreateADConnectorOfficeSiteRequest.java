@@ -31,7 +31,6 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
 
     /**
      * <p>The ID of the CEN instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-3gwy16dojz1m65****</p>
@@ -59,7 +58,6 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
      * <li><code>172.16.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
      * <li><code>192.168.0.0/16</code> (subnet mask range: 16 to 24 bits)</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>
@@ -251,6 +249,9 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     @NameInMap("SubDomainName")
     public String subDomainName;
 
+    @NameInMap("VSwitchId")
+    public java.util.List<String> vSwitchId;
+
     /**
      * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain the verification code.</p>
      * 
@@ -431,6 +432,14 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     }
     public String getSubDomainName() {
         return this.subDomainName;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setVSwitchId(java.util.List<String> vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public java.util.List<String> getVSwitchId() {
+        return this.vSwitchId;
     }
 
     public CreateADConnectorOfficeSiteRequest setVerifyCode(String verifyCode) {

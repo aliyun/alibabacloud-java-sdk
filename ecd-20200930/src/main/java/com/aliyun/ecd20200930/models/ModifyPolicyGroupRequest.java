@@ -622,6 +622,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("WatermarkType")
     public String watermarkType;
 
+    @NameInMap("WyAssistant")
+    public String wyAssistant;
+
     public static ModifyPolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyGroupRequest self = new ModifyPolicyGroupRequest();
         return TeaModel.build(map, self);
@@ -1097,6 +1100,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getWatermarkType() {
         return this.watermarkType;
+    }
+
+    public ModifyPolicyGroupRequest setWyAssistant(String wyAssistant) {
+        this.wyAssistant = wyAssistant;
+        return this;
+    }
+    public String getWyAssistant() {
+        return this.wyAssistant;
     }
 
     public static class ModifyPolicyGroupRequestAuthorizeAccessPolicyRule extends TeaModel {

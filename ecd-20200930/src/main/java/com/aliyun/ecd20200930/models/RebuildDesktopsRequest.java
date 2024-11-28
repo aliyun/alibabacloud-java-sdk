@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebuildDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
+     * <p>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +23,19 @@ public class RebuildDesktopsRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The OS language. Only system images are supported, and Linux cloud computers support only English.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>en-US: English</li>
+     * <li>zh-HK: Traditional Chinese (Hong Kong, China)</li>
+     * <li>zh-CN: Simplified Chinese</li>
+     * <li>ja-JP: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("Language")
     public String language;
 
@@ -60,7 +73,7 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

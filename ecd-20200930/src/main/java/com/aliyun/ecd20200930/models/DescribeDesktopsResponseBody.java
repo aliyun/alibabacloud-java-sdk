@@ -19,6 +19,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -58,6 +64,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    public DescribeDesktopsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDesktopsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeDesktopsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -75,6 +97,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsResponseBodyDesktopsDisks extends TeaModel {
+        @NameInMap("DiskCategory")
+        public String diskCategory;
+
         /**
          * <p>The disk ID.</p>
          * 
@@ -137,6 +162,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public static DescribeDesktopsResponseBodyDesktopsDisks build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopsResponseBodyDesktopsDisks self = new DescribeDesktopsResponseBodyDesktopsDisks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDisks setDiskCategory(String diskCategory) {
+            this.diskCategory = diskCategory;
+            return this;
+        }
+        public String getDiskCategory() {
+            return this.diskCategory;
         }
 
         public DescribeDesktopsResponseBodyDesktopsDisks setDiskId(String diskId) {

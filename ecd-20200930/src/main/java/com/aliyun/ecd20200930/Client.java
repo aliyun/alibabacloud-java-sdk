@@ -1605,6 +1605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubDomainName", request.subDomainName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.verifyCode)) {
             query.put("VerifyCode", request.verifyCode);
         }
@@ -1653,7 +1657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Apsara File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.</p>
+     * <p>Creates a File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.</p>
      * 
      * @param request CreateAndBindNasFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1713,7 +1717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Apsara File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.</p>
+     * <p>Creates a File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.</p>
      * 
      * @param request CreateAndBindNasFileSystemRequest
      * @return CreateAndBindNasFileSystemResponse
@@ -2355,6 +2359,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProfileFollowSwitch", request.profileFollowSwitch);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ratioThreshold)) {
             query.put("RatioThreshold", request.ratioThreshold);
         }
@@ -2548,12 +2556,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates cloud computers. If you specify end users when you create cloud computers, the cloud computers are assigned to the end users after the cloud computers are created.</p>
      * 
-     * @param request CreateDesktopsRequest
+     * @param tmpReq CreateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDesktopsResponse
      */
-    public CreateDesktopsResponse createDesktopsWithOptions(CreateDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateDesktopsResponse createDesktopsWithOptions(CreateDesktopsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDesktopsShrinkRequest request = new CreateDesktopsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.desktopAttachment)) {
+            request.desktopAttachmentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.desktopAttachment, "DesktopAttachment", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             query.put("Amount", request.amount);
@@ -2577,6 +2591,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopAttachmentShrink)) {
+            query.put("DesktopAttachment", request.desktopAttachmentShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopMemberIp)) {
@@ -2639,12 +2657,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotPolicyId)) {
             query.put("SnapshotPolicyId", request.snapshotPolicyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerGroupId)) {
+            query.put("TimerGroupId", request.timerGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userAssignMode)) {
@@ -2834,6 +2860,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
+     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
+     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
+     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
+     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Create a NAS file system.</p>
+     * 
      * @param request CreateNASFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNASFileSystemResponse
@@ -2883,6 +2926,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
+     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
+     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
+     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
+     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Create a NAS file system.</p>
+     * 
      * @param request CreateNASFileSystemRequest
      * @return CreateNASFileSystemResponse
      */
@@ -3207,6 +3267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkType)) {
             query.put("WatermarkType", request.watermarkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wyAssistant)) {
+            query.put("WyAssistant", request.wyAssistant);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4075,7 +4139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
+     * <p>Before you delete a File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
      * <blockquote>
      * <p>Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
      * </blockquote>
@@ -4117,7 +4181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
+     * <p>Before you delete a File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
      * <blockquote>
      * <p>Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
      * </blockquote>
@@ -5651,6 +5715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopTypeId", request.desktopTypeId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopTypeIdList)) {
+            query.put("DesktopTypeIdList", request.desktopTypeIdList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gpuCount)) {
             query.put("GpuCount", request.gpuCount);
         }
@@ -5667,12 +5735,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MemorySize", request.memorySize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
             query.put("OrderType", request.orderType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
+            query.put("SortType", request.sortType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5808,6 +5888,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.osTypes)) {
             query.put("OsTypes", request.osTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
@@ -6233,7 +6321,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribeFotaPendingDesktopsResponse describeFotaPendingDesktopsWithOptions(DescribeFotaPendingDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopName)) {
+            query.put("DesktopName", request.desktopName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskUid)) {
+            query.put("TaskUid", request.taskUid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -6242,7 +6358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2020-09-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -6627,6 +6743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndUserId", request.endUserId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeInvokeDesktops)) {
+            query.put("IncludeInvokeDesktops", request.includeInvokeDesktops);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeOutput)) {
             query.put("IncludeOutput", request.includeOutput);
         }
@@ -6728,8 +6848,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeModificationPriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeModificationPriceResponse
+     */
+    public DescribeModificationPriceResponse describeModificationPriceWithOptions(DescribeModificationPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rootDiskSizeGib)) {
+            query.put("RootDiskSizeGib", request.rootDiskSizeGib);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDiskSizeGib)) {
+            query.put("UserDiskSizeGib", request.userDiskSizeGib);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeModificationPrice"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeModificationPriceResponse());
+    }
+
+    /**
+     * @param request DescribeModificationPriceRequest
+     * @return DescribeModificationPriceResponse
+     */
+    public DescribeModificationPriceResponse describeModificationPrice(DescribeModificationPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeModificationPriceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
-     * <p>Queries the information about Apsara File Storage NAS (NAS) file systems.</p>
+     * <p>Queries the information about File Storage NAS (NAS) file systems.</p>
      * 
      * @param request DescribeNASFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6781,7 +6963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Apsara File Storage NAS (NAS) file systems.</p>
+     * <p>Queries the information about File Storage NAS (NAS) file systems.</p>
      * 
      * @param request DescribeNASFileSystemsRequest
      * @return DescribeNASFileSystemsResponse
@@ -7010,56 +7192,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Bandwidth", request.bandwidth);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.bundleModels)) {
-            query.put("BundleModels", request.bundleModels);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduCdsEnable)) {
-            query.put("EduCdsEnable", request.eduCdsEnable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduCdsSize)) {
-            query.put("EduCdsSize", request.eduCdsSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduCommittedTime)) {
-            query.put("EduCommittedTime", request.eduCommittedTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduDesktopBundleId)) {
-            query.put("EduDesktopBundleId", request.eduDesktopBundleId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduDesktopNum)) {
-            query.put("EduDesktopNum", request.eduDesktopNum);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduRoomClassify)) {
-            query.put("EduRoomClassify", request.eduRoomClassify);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduStudentBundleId)) {
-            query.put("EduStudentBundleId", request.eduStudentBundleId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduStudentNum)) {
-            query.put("EduStudentNum", request.eduStudentNum);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduTeacherBundleId)) {
-            query.put("EduTeacherBundleId", request.eduTeacherBundleId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eduTeacherNum)) {
-            query.put("EduTeacherNum", request.eduTeacherNum);
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            query.put("Duration", request.duration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupDesktopCount)) {
             query.put("GroupDesktopCount", request.groupDesktopCount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.hardwareVersion)) {
-            query.put("HardwareVersion", request.hardwareVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
@@ -7070,16 +7208,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InternetChargeType", request.internetChargeType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
-            query.put("NetworkType", request.networkType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
             query.put("OsType", request.osType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.packageSize)) {
-            query.put("PackageSize", request.packageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -7102,28 +7232,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceType", request.resourceType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.rootDiskPerformanceLevel)) {
-            query.put("RootDiskPerformanceLevel", request.rootDiskPerformanceLevel);
+        if (!com.aliyun.teautil.Common.isUnset(request.rootDiskCategory)) {
+            query.put("RootDiskCategory", request.rootDiskCategory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rootDiskSizeGib)) {
             query.put("RootDiskSizeGib", request.rootDiskSizeGib);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.spPeriodInfo)) {
-            query.put("SpPeriodInfo", request.spPeriodInfo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.spPrice)) {
-            query.put("SpPrice", request.spPrice);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.spType)) {
-            query.put("SpType", request.spType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userDiskPerformanceLevel)) {
-            query.put("UserDiskPerformanceLevel", request.userDiskPerformanceLevel);
+        if (!com.aliyun.teautil.Common.isUnset(request.userDiskCategory)) {
+            query.put("UserDiskCategory", request.userDiskCategory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userDiskSizeGib)) {
@@ -7414,6 +7532,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeRefundPriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRefundPriceResponse
+     */
+    public DescribeRefundPriceResponse describeRefundPriceWithOptions(DescribeRefundPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundType)) {
+            query.put("RefundType", request.refundType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRefundPrice"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRefundPriceResponse());
+    }
+
+    /**
+     * @param request DescribeRefundPriceRequest
+     * @return DescribeRefundPriceResponse
+     */
+    public DescribeRefundPriceResponse describeRefundPrice(DescribeRefundPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRefundPriceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).</p>
      * 
@@ -7459,6 +7623,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeRenewalPriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRenewalPriceResponse
+     */
+    public DescribeRenewalPriceResponse describeRenewalPriceWithOptions(DescribeRenewalPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRenewalPrice"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRenewalPriceResponse());
+    }
+
+    /**
+     * @param request DescribeRenewalPriceRequest
+     * @return DescribeRenewalPriceResponse
+     */
+    public DescribeRenewalPriceResponse describeRenewalPrice(DescribeRenewalPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRenewalPriceWithOptions(request, runtime);
     }
 
     /**
@@ -9219,12 +9441,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDirectoryUsersResponse listDirectoryUsersWithOptions(ListDirectoryUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assignedInfo)) {
+            query.put("AssignedInfo", request.assignedInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
             query.put("DirectoryId", request.directoryId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeAssignedUser)) {
+            query.put("IncludeAssignedUser", request.includeAssignedUser);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -9241,6 +9471,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
+            query.put("SortType", request.sortType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9410,8 +9644,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListOfficeSiteUsersResponse listOfficeSiteUsersWithOptions(ListOfficeSiteUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assignedInfo)) {
+            query.put("AssignedInfo", request.assignedInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeAssignedUser)) {
+            query.put("IncludeAssignedUser", request.includeAssignedUser);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -9432,6 +9674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
+            query.put("SortType", request.sortType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -10400,6 +10646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.downloadUploadEndUserIds)) {
             query.put("DownloadUploadEndUserIds", request.downloadUploadEndUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noDownloadNoUploadEndUserIds)) {
+            query.put("NoDownloadNoUploadEndUserIds", request.noDownloadNoUploadEndUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -11642,7 +11892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the mount target of an Apsara File Storage NAS (NAS) file system.</p>
+     * <p>Modifies the mount target of a File Storage NAS (NAS) file system.</p>
      * 
      * @param request ModifyNASDefaultMountTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11685,7 +11935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the mount target of an Apsara File Storage NAS (NAS) file system.</p>
+     * <p>Modifies the mount target of a File Storage NAS (NAS) file system.</p>
      * 
      * @param request ModifyNASDefaultMountTargetRequest
      * @return ModifyNASDefaultMountTargetResponse
@@ -12232,6 +12482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WatermarkType", request.watermarkType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.wyAssistant)) {
+            query.put("WyAssistant", request.wyAssistant);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -12503,13 +12757,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you change the image of a cloud computer, take note of the following limits:</p>
+     * <p>Take note of the following limits when you change an image:</p>
      * <ul>
-     * <li>You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).</li>
-     * <li>GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
-     * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:</li>
-     * <li>Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.</li>
-     * <li>If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.</li>
+     * <li>You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Singapore, and Japan (Tokyo).</li>
+     * <li>GPU images and non-GPU images cannot be exchanged. Graphic-based cloud computers can only use GPU-accelerated images. The other cloud computers can only use non-GPU-accelerated images.
+     * After the image of a cloud computer is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:</li>
+     * <li>Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer become unavailable. The system automatically deletes the snapshots.</li>
+     * <li>If the OS of the image is changed, the data in the data disk of the original cloud computer is cleared, and the snapshots that are created based on the data disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disk of the original cloud computer is retained, and the snapshots that are created based on the data disk of the original cloud computer can still be used.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12561,13 +12815,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you change the image of a cloud computer, take note of the following limits:</p>
+     * <p>Take note of the following limits when you change an image:</p>
      * <ul>
-     * <li>You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).</li>
-     * <li>GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
-     * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:</li>
-     * <li>Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.</li>
-     * <li>If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.</li>
+     * <li>You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Singapore, and Japan (Tokyo).</li>
+     * <li>GPU images and non-GPU images cannot be exchanged. Graphic-based cloud computers can only use GPU-accelerated images. The other cloud computers can only use non-GPU-accelerated images.
+     * After the image of a cloud computer is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:</li>
+     * <li>Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer become unavailable. The system automatically deletes the snapshots.</li>
+     * <li>If the OS of the image is changed, the data in the data disk of the original cloud computer is cleared, and the snapshots that are created based on the data disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disk of the original cloud computer is retained, and the snapshots that are created based on the data disk of the original cloud computer can still be used.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12761,6 +13015,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveUserFromDesktopOversoldUserGroupResponse removeUserFromDesktopOversoldUserGroup(RemoveUserFromDesktopOversoldUserGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeUserFromDesktopOversoldUserGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request RenewDesktopGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewDesktopGroupResponse
+     */
+    public RenewDesktopGroupResponse renewDesktopGroupWithOptions(RenewDesktopGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopGroupId)) {
+            query.put("DesktopGroupId", request.desktopGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewDesktopGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewDesktopGroupResponse());
+    }
+
+    /**
+     * @param request RenewDesktopGroupRequest
+     * @return RenewDesktopGroupResponse
+     */
+    public RenewDesktopGroupResponse renewDesktopGroup(RenewDesktopGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewDesktopGroupWithOptions(request, runtime);
     }
 
     /**
@@ -13038,7 +13350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the mount target of an Apsara File Storage NAS (NAS) file system.</p>
+     * <p>Resets the mount target of a File Storage NAS (NAS) file system.</p>
      * 
      * @param request ResetNASDefaultMountTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13077,7 +13389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the mount target of an Apsara File Storage NAS (NAS) file system.</p>
+     * <p>Resets the mount target of a File Storage NAS (NAS) file system.</p>
      * 
      * @param request ResetNASDefaultMountTargetRequest
      * @return ResetNASDefaultMountTargetResponse
@@ -14325,6 +14637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
+            query.put("SystemDiskSize", request.systemDiskSize);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

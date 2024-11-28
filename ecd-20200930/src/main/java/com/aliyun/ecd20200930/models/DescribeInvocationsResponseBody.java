@@ -412,6 +412,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        @NameInMap("InvokeDesktopCount")
+        public Integer invokeDesktopCount;
+
+        @NameInMap("InvokeDesktopSucceedCount")
+        public Integer invokeDesktopSucceedCount;
+
         /**
          * <p>The cloud desktops on which the command is executed.</p>
          */
@@ -470,6 +476,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getInvocationStatus() {
             return this.invocationStatus;
+        }
+
+        public DescribeInvocationsResponseBodyInvocations setInvokeDesktopCount(Integer invokeDesktopCount) {
+            this.invokeDesktopCount = invokeDesktopCount;
+            return this;
+        }
+        public Integer getInvokeDesktopCount() {
+            return this.invokeDesktopCount;
+        }
+
+        public DescribeInvocationsResponseBodyInvocations setInvokeDesktopSucceedCount(Integer invokeDesktopSucceedCount) {
+            this.invokeDesktopSucceedCount = invokeDesktopSucceedCount;
+            return this;
+        }
+        public Integer getInvokeDesktopSucceedCount() {
+            return this.invokeDesktopSucceedCount;
         }
 
         public DescribeInvocationsResponseBodyInvocations setInvokeDesktops(java.util.List<DescribeInvocationsResponseBodyInvocationsInvokeDesktops> invokeDesktops) {

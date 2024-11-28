@@ -59,6 +59,9 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("AssignedDesktopNumber")
+        public Integer assignedDesktopNumber;
+
         /**
          * <p>The display name of the user.</p>
          * 
@@ -67,6 +70,9 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
          */
         @NameInMap("DisplayName")
         public String displayName;
+
+        @NameInMap("Email")
+        public String email;
 
         /**
          * <p>The name of the AD user.</p>
@@ -77,9 +83,20 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         @NameInMap("EndUser")
         public String endUser;
 
+        @NameInMap("Phone")
+        public String phone;
+
         public static ListOfficeSiteUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListOfficeSiteUsersResponseBodyUsers self = new ListOfficeSiteUsersResponseBodyUsers();
             return TeaModel.build(map, self);
+        }
+
+        public ListOfficeSiteUsersResponseBodyUsers setAssignedDesktopNumber(Integer assignedDesktopNumber) {
+            this.assignedDesktopNumber = assignedDesktopNumber;
+            return this;
+        }
+        public Integer getAssignedDesktopNumber() {
+            return this.assignedDesktopNumber;
         }
 
         public ListOfficeSiteUsersResponseBodyUsers setDisplayName(String displayName) {
@@ -90,12 +107,28 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             return this.displayName;
         }
 
+        public ListOfficeSiteUsersResponseBodyUsers setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
         public ListOfficeSiteUsersResponseBodyUsers setEndUser(String endUser) {
             this.endUser = endUser;
             return this;
         }
         public String getEndUser() {
             return this.endUser;
+        }
+
+        public ListOfficeSiteUsersResponseBodyUsers setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
         }
 
     }

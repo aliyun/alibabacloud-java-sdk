@@ -86,6 +86,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        @NameInMap("GpuMemory")
+        public Integer gpuMemory;
+
         /**
          * <p>The GPU memory.</p>
          * 
@@ -112,6 +115,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
          */
         @NameInMap("MemorySize")
         public String memorySize;
+
+        @NameInMap("Scopes")
+        public java.util.List<String> scopes;
+
+        @NameInMap("StockState")
+        public String stockState;
 
         /**
          * <p>The size of the system disk. Unit: GiB.</p>
@@ -167,6 +176,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             return this.gpuCount;
         }
 
+        public DescribeDesktopTypesResponseBodyDesktopTypes setGpuMemory(Integer gpuMemory) {
+            this.gpuMemory = gpuMemory;
+            return this;
+        }
+        public Integer getGpuMemory() {
+            return this.gpuMemory;
+        }
+
         public DescribeDesktopTypesResponseBodyDesktopTypes setGpuSpec(String gpuSpec) {
             this.gpuSpec = gpuSpec;
             return this;
@@ -189,6 +206,22 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
         public String getMemorySize() {
             return this.memorySize;
+        }
+
+        public DescribeDesktopTypesResponseBodyDesktopTypes setScopes(java.util.List<String> scopes) {
+            this.scopes = scopes;
+            return this;
+        }
+        public java.util.List<String> getScopes() {
+            return this.scopes;
+        }
+
+        public DescribeDesktopTypesResponseBodyDesktopTypes setStockState(String stockState) {
+            this.stockState = stockState;
+            return this;
+        }
+        public String getStockState() {
+            return this.stockState;
         }
 
         public DescribeDesktopTypesResponseBodyDesktopTypes setSystemDiskSize(String systemDiskSize) {

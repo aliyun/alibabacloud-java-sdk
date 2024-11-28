@@ -200,6 +200,12 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("OsTypes")
     public java.util.List<String> osTypes;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
      * <p>The ID of the policy.</p>
      * 
@@ -457,6 +463,22 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public java.util.List<String> getOsTypes() {
         return this.osTypes;
+    }
+
+    public DescribeDesktopsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDesktopsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDesktopsRequest setPolicyGroupId(String policyGroupId) {

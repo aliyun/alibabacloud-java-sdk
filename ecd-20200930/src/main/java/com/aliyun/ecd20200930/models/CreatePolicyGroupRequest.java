@@ -871,6 +871,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("WatermarkType")
     public String watermarkType;
 
+    @NameInMap("WyAssistant")
+    public String wyAssistant;
+
     public static CreatePolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyGroupRequest self = new CreatePolicyGroupRequest();
         return TeaModel.build(map, self);
@@ -1322,6 +1325,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getWatermarkType() {
         return this.watermarkType;
+    }
+
+    public CreatePolicyGroupRequest setWyAssistant(String wyAssistant) {
+        this.wyAssistant = wyAssistant;
+        return this;
+    }
+    public String getWyAssistant() {
+        return this.wyAssistant;
     }
 
     public static class CreatePolicyGroupRequestAuthorizeAccessPolicyRule extends TeaModel {

@@ -173,7 +173,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The Apsara File Storage NAS (NAS) file system that is used after data roaming is enabled.</p>
+     * <p>The File Storage NAS (NAS) file system that is used after data roaming is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>04f314****</p>
@@ -309,6 +309,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
      */
     @NameInMap("ProfileFollowSwitch")
     public Boolean profileFollowSwitch;
+
+    @NameInMap("PromotionId")
+    public String promotionId;
 
     /**
      * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. <code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%</code>. When the specified threshold is reached, new cloud desktops are automatically created. When the specified threshold is not reached, idle cloud desktops are released.</p>
@@ -635,6 +638,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public Boolean getProfileFollowSwitch() {
         return this.profileFollowSwitch;
+    }
+
+    public CreateDesktopGroupRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public CreateDesktopGroupRequest setRatioThreshold(Float ratioThreshold) {

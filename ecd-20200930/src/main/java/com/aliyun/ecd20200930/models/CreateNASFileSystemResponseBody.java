@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNASFileSystemResponseBody extends TeaModel {
     /**
+     * <p>ID of the NAS file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>04f314****</p>
      */
@@ -12,6 +14,8 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>Name of the NAS file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>testNAS</p>
      */
@@ -19,6 +23,8 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     public String fileSystemName;
 
     /**
+     * <p>Mount point domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
      */
@@ -26,6 +32,8 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     public String mountTargetDomain;
 
     /**
+     * <p>Workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
      */
@@ -33,6 +41,8 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
      */

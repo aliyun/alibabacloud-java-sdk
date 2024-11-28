@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDesktopsRequest extends TeaModel {
+public class CreateDesktopsShrinkRequest extends TeaModel {
     /**
      * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: 1.</p>
      * 
@@ -47,7 +47,7 @@ public class CreateDesktopsRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("BundleModels")
-    public java.util.List<CreateDesktopsRequestBundleModels> bundleModels;
+    public java.util.List<CreateDesktopsShrinkRequestBundleModels> bundleModels;
 
     /**
      * <p>The billing method of the cloud computers.</p>
@@ -75,7 +75,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String chargeType;
 
     @NameInMap("DesktopAttachment")
-    public CreateDesktopsRequestDesktopAttachment desktopAttachment;
+    public String desktopAttachmentShrink;
 
     /**
      * <p>The private IP address of the cloud computer.</p>
@@ -132,7 +132,7 @@ public class CreateDesktopsRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("DesktopTimers")
-    public java.util.List<CreateDesktopsRequestDesktopTimers> desktopTimers;
+    public java.util.List<CreateDesktopsShrinkRequestDesktopTimers> desktopTimers;
 
     /**
      * <blockquote>
@@ -189,7 +189,7 @@ public class CreateDesktopsRequest extends TeaModel {
      * </blockquote>
      */
     @NameInMap("MonthDesktopSetting")
-    public CreateDesktopsRequestMonthDesktopSetting monthDesktopSetting;
+    public CreateDesktopsShrinkRequestMonthDesktopSetting monthDesktopSetting;
 
     /**
      * <p>The office network ID.</p>
@@ -276,7 +276,7 @@ public class CreateDesktopsRequest extends TeaModel {
      * <p>The tags that you want to add to the cloud desktop.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateDesktopsRequestTag> tag;
+    public java.util.List<CreateDesktopsShrinkRequestTag> tag;
 
     @NameInMap("TimerGroupId")
     public String timerGroupId;
@@ -314,7 +314,7 @@ public class CreateDesktopsRequest extends TeaModel {
      * <p>Details about the custom command scripts.</p>
      */
     @NameInMap("UserCommands")
-    public java.util.List<CreateDesktopsRequestUserCommands> userCommands;
+    public java.util.List<CreateDesktopsShrinkRequestUserCommands> userCommands;
 
     /**
      * <blockquote>
@@ -356,12 +356,12 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
-    public static CreateDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDesktopsRequest self = new CreateDesktopsRequest();
+    public static CreateDesktopsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDesktopsShrinkRequest self = new CreateDesktopsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDesktopsRequest setAmount(Integer amount) {
+    public CreateDesktopsShrinkRequest setAmount(Integer amount) {
         this.amount = amount;
         return this;
     }
@@ -369,7 +369,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.amount;
     }
 
-    public CreateDesktopsRequest setAutoPay(Boolean autoPay) {
+    public CreateDesktopsShrinkRequest setAutoPay(Boolean autoPay) {
         this.autoPay = autoPay;
         return this;
     }
@@ -377,7 +377,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public CreateDesktopsRequest setAutoRenew(Boolean autoRenew) {
+    public CreateDesktopsShrinkRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
@@ -385,7 +385,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateDesktopsRequest setBundleId(String bundleId) {
+    public CreateDesktopsShrinkRequest setBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
     }
@@ -393,15 +393,15 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.bundleId;
     }
 
-    public CreateDesktopsRequest setBundleModels(java.util.List<CreateDesktopsRequestBundleModels> bundleModels) {
+    public CreateDesktopsShrinkRequest setBundleModels(java.util.List<CreateDesktopsShrinkRequestBundleModels> bundleModels) {
         this.bundleModels = bundleModels;
         return this;
     }
-    public java.util.List<CreateDesktopsRequestBundleModels> getBundleModels() {
+    public java.util.List<CreateDesktopsShrinkRequestBundleModels> getBundleModels() {
         return this.bundleModels;
     }
 
-    public CreateDesktopsRequest setChargeType(String chargeType) {
+    public CreateDesktopsShrinkRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
@@ -409,15 +409,15 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public CreateDesktopsRequest setDesktopAttachment(CreateDesktopsRequestDesktopAttachment desktopAttachment) {
-        this.desktopAttachment = desktopAttachment;
+    public CreateDesktopsShrinkRequest setDesktopAttachmentShrink(String desktopAttachmentShrink) {
+        this.desktopAttachmentShrink = desktopAttachmentShrink;
         return this;
     }
-    public CreateDesktopsRequestDesktopAttachment getDesktopAttachment() {
-        return this.desktopAttachment;
+    public String getDesktopAttachmentShrink() {
+        return this.desktopAttachmentShrink;
     }
 
-    public CreateDesktopsRequest setDesktopMemberIp(String desktopMemberIp) {
+    public CreateDesktopsShrinkRequest setDesktopMemberIp(String desktopMemberIp) {
         this.desktopMemberIp = desktopMemberIp;
         return this;
     }
@@ -425,7 +425,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.desktopMemberIp;
     }
 
-    public CreateDesktopsRequest setDesktopName(String desktopName) {
+    public CreateDesktopsShrinkRequest setDesktopName(String desktopName) {
         this.desktopName = desktopName;
         return this;
     }
@@ -433,7 +433,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.desktopName;
     }
 
-    public CreateDesktopsRequest setDesktopNameSuffix(Boolean desktopNameSuffix) {
+    public CreateDesktopsShrinkRequest setDesktopNameSuffix(Boolean desktopNameSuffix) {
         this.desktopNameSuffix = desktopNameSuffix;
         return this;
     }
@@ -441,15 +441,15 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.desktopNameSuffix;
     }
 
-    public CreateDesktopsRequest setDesktopTimers(java.util.List<CreateDesktopsRequestDesktopTimers> desktopTimers) {
+    public CreateDesktopsShrinkRequest setDesktopTimers(java.util.List<CreateDesktopsShrinkRequestDesktopTimers> desktopTimers) {
         this.desktopTimers = desktopTimers;
         return this;
     }
-    public java.util.List<CreateDesktopsRequestDesktopTimers> getDesktopTimers() {
+    public java.util.List<CreateDesktopsShrinkRequestDesktopTimers> getDesktopTimers() {
         return this.desktopTimers;
     }
 
-    public CreateDesktopsRequest setDirectoryId(String directoryId) {
+    public CreateDesktopsShrinkRequest setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
@@ -457,7 +457,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public CreateDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
+    public CreateDesktopsShrinkRequest setEndUserId(java.util.List<String> endUserId) {
         this.endUserId = endUserId;
         return this;
     }
@@ -465,7 +465,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.endUserId;
     }
 
-    public CreateDesktopsRequest setGroupId(String groupId) {
+    public CreateDesktopsShrinkRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
@@ -473,7 +473,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.groupId;
     }
 
-    public CreateDesktopsRequest setHostname(String hostname) {
+    public CreateDesktopsShrinkRequest setHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
@@ -481,15 +481,15 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.hostname;
     }
 
-    public CreateDesktopsRequest setMonthDesktopSetting(CreateDesktopsRequestMonthDesktopSetting monthDesktopSetting) {
+    public CreateDesktopsShrinkRequest setMonthDesktopSetting(CreateDesktopsShrinkRequestMonthDesktopSetting monthDesktopSetting) {
         this.monthDesktopSetting = monthDesktopSetting;
         return this;
     }
-    public CreateDesktopsRequestMonthDesktopSetting getMonthDesktopSetting() {
+    public CreateDesktopsShrinkRequestMonthDesktopSetting getMonthDesktopSetting() {
         return this.monthDesktopSetting;
     }
 
-    public CreateDesktopsRequest setOfficeSiteId(String officeSiteId) {
+    public CreateDesktopsShrinkRequest setOfficeSiteId(String officeSiteId) {
         this.officeSiteId = officeSiteId;
         return this;
     }
@@ -497,7 +497,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.officeSiteId;
     }
 
-    public CreateDesktopsRequest setPeriod(Integer period) {
+    public CreateDesktopsShrinkRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
@@ -505,7 +505,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.period;
     }
 
-    public CreateDesktopsRequest setPeriodUnit(String periodUnit) {
+    public CreateDesktopsShrinkRequest setPeriodUnit(String periodUnit) {
         this.periodUnit = periodUnit;
         return this;
     }
@@ -513,7 +513,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public CreateDesktopsRequest setPolicyGroupId(String policyGroupId) {
+    public CreateDesktopsShrinkRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
     }
@@ -521,7 +521,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.policyGroupId;
     }
 
-    public CreateDesktopsRequest setPromotionId(String promotionId) {
+    public CreateDesktopsShrinkRequest setPromotionId(String promotionId) {
         this.promotionId = promotionId;
         return this;
     }
@@ -529,7 +529,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.promotionId;
     }
 
-    public CreateDesktopsRequest setRegionId(String regionId) {
+    public CreateDesktopsShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -537,7 +537,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateDesktopsRequest setResourceGroupId(String resourceGroupId) {
+    public CreateDesktopsShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -545,7 +545,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateDesktopsRequest setSnapshotPolicyId(String snapshotPolicyId) {
+    public CreateDesktopsShrinkRequest setSnapshotPolicyId(String snapshotPolicyId) {
         this.snapshotPolicyId = snapshotPolicyId;
         return this;
     }
@@ -553,15 +553,15 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.snapshotPolicyId;
     }
 
-    public CreateDesktopsRequest setTag(java.util.List<CreateDesktopsRequestTag> tag) {
+    public CreateDesktopsShrinkRequest setTag(java.util.List<CreateDesktopsShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateDesktopsRequestTag> getTag() {
+    public java.util.List<CreateDesktopsShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public CreateDesktopsRequest setTimerGroupId(String timerGroupId) {
+    public CreateDesktopsShrinkRequest setTimerGroupId(String timerGroupId) {
         this.timerGroupId = timerGroupId;
         return this;
     }
@@ -569,7 +569,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.timerGroupId;
     }
 
-    public CreateDesktopsRequest setUserAssignMode(String userAssignMode) {
+    public CreateDesktopsShrinkRequest setUserAssignMode(String userAssignMode) {
         this.userAssignMode = userAssignMode;
         return this;
     }
@@ -577,15 +577,15 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.userAssignMode;
     }
 
-    public CreateDesktopsRequest setUserCommands(java.util.List<CreateDesktopsRequestUserCommands> userCommands) {
+    public CreateDesktopsShrinkRequest setUserCommands(java.util.List<CreateDesktopsShrinkRequestUserCommands> userCommands) {
         this.userCommands = userCommands;
         return this;
     }
-    public java.util.List<CreateDesktopsRequestUserCommands> getUserCommands() {
+    public java.util.List<CreateDesktopsShrinkRequestUserCommands> getUserCommands() {
         return this.userCommands;
     }
 
-    public CreateDesktopsRequest setUserName(String userName) {
+    public CreateDesktopsShrinkRequest setUserName(String userName) {
         this.userName = userName;
         return this;
     }
@@ -593,7 +593,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.userName;
     }
 
-    public CreateDesktopsRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+    public CreateDesktopsShrinkRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
         this.volumeEncryptionEnabled = volumeEncryptionEnabled;
         return this;
     }
@@ -601,7 +601,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.volumeEncryptionEnabled;
     }
 
-    public CreateDesktopsRequest setVolumeEncryptionKey(String volumeEncryptionKey) {
+    public CreateDesktopsShrinkRequest setVolumeEncryptionKey(String volumeEncryptionKey) {
         this.volumeEncryptionKey = volumeEncryptionKey;
         return this;
     }
@@ -609,7 +609,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.volumeEncryptionKey;
     }
 
-    public CreateDesktopsRequest setVpcId(String vpcId) {
+    public CreateDesktopsShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -617,7 +617,7 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public static class CreateDesktopsRequestBundleModels extends TeaModel {
+    public static class CreateDesktopsShrinkRequestBundleModels extends TeaModel {
         /**
          * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.</p>
          * 
@@ -694,12 +694,12 @@ public class CreateDesktopsRequest extends TeaModel {
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
-        public static CreateDesktopsRequestBundleModels build(java.util.Map<String, ?> map) throws Exception {
-            CreateDesktopsRequestBundleModels self = new CreateDesktopsRequestBundleModels();
+        public static CreateDesktopsShrinkRequestBundleModels build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsShrinkRequestBundleModels self = new CreateDesktopsShrinkRequestBundleModels();
             return TeaModel.build(map, self);
         }
 
-        public CreateDesktopsRequestBundleModels setAmount(Integer amount) {
+        public CreateDesktopsShrinkRequestBundleModels setAmount(Integer amount) {
             this.amount = amount;
             return this;
         }
@@ -707,7 +707,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.amount;
         }
 
-        public CreateDesktopsRequestBundleModels setBundleId(String bundleId) {
+        public CreateDesktopsShrinkRequestBundleModels setBundleId(String bundleId) {
             this.bundleId = bundleId;
             return this;
         }
@@ -715,7 +715,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.bundleId;
         }
 
-        public CreateDesktopsRequestBundleModels setDesktopName(String desktopName) {
+        public CreateDesktopsShrinkRequestBundleModels setDesktopName(String desktopName) {
             this.desktopName = desktopName;
             return this;
         }
@@ -723,7 +723,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.desktopName;
         }
 
-        public CreateDesktopsRequestBundleModels setEndUserIds(java.util.List<String> endUserIds) {
+        public CreateDesktopsShrinkRequestBundleModels setEndUserIds(java.util.List<String> endUserIds) {
             this.endUserIds = endUserIds;
             return this;
         }
@@ -731,7 +731,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.endUserIds;
         }
 
-        public CreateDesktopsRequestBundleModels setHostname(String hostname) {
+        public CreateDesktopsShrinkRequestBundleModels setHostname(String hostname) {
             this.hostname = hostname;
             return this;
         }
@@ -739,7 +739,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.hostname;
         }
 
-        public CreateDesktopsRequestBundleModels setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+        public CreateDesktopsShrinkRequestBundleModels setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.volumeEncryptionEnabled = volumeEncryptionEnabled;
             return this;
         }
@@ -747,7 +747,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.volumeEncryptionEnabled;
         }
 
-        public CreateDesktopsRequestBundleModels setVolumeEncryptionKey(String volumeEncryptionKey) {
+        public CreateDesktopsShrinkRequestBundleModels setVolumeEncryptionKey(String volumeEncryptionKey) {
             this.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
@@ -757,114 +757,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     }
 
-    public static class CreateDesktopsRequestDesktopAttachment extends TeaModel {
-        @NameInMap("DataDiskCategory")
-        public String dataDiskCategory;
-
-        @NameInMap("DataDiskPerLevel")
-        public String dataDiskPerLevel;
-
-        @NameInMap("DataDiskSize")
-        public Integer dataDiskSize;
-
-        @NameInMap("DefaultLanguage")
-        public String defaultLanguage;
-
-        @NameInMap("DesktopType")
-        public String desktopType;
-
-        @NameInMap("ImageId")
-        public String imageId;
-
-        @NameInMap("SystemDiskCategory")
-        public String systemDiskCategory;
-
-        @NameInMap("SystemDiskPerLevel")
-        public String systemDiskPerLevel;
-
-        @NameInMap("SystemDiskSize")
-        public Integer systemDiskSize;
-
-        public static CreateDesktopsRequestDesktopAttachment build(java.util.Map<String, ?> map) throws Exception {
-            CreateDesktopsRequestDesktopAttachment self = new CreateDesktopsRequestDesktopAttachment();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setDataDiskCategory(String dataDiskCategory) {
-            this.dataDiskCategory = dataDiskCategory;
-            return this;
-        }
-        public String getDataDiskCategory() {
-            return this.dataDiskCategory;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setDataDiskPerLevel(String dataDiskPerLevel) {
-            this.dataDiskPerLevel = dataDiskPerLevel;
-            return this;
-        }
-        public String getDataDiskPerLevel() {
-            return this.dataDiskPerLevel;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setDataDiskSize(Integer dataDiskSize) {
-            this.dataDiskSize = dataDiskSize;
-            return this;
-        }
-        public Integer getDataDiskSize() {
-            return this.dataDiskSize;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setDefaultLanguage(String defaultLanguage) {
-            this.defaultLanguage = defaultLanguage;
-            return this;
-        }
-        public String getDefaultLanguage() {
-            return this.defaultLanguage;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setDesktopType(String desktopType) {
-            this.desktopType = desktopType;
-            return this;
-        }
-        public String getDesktopType() {
-            return this.desktopType;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setImageId(String imageId) {
-            this.imageId = imageId;
-            return this;
-        }
-        public String getImageId() {
-            return this.imageId;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setSystemDiskCategory(String systemDiskCategory) {
-            this.systemDiskCategory = systemDiskCategory;
-            return this;
-        }
-        public String getSystemDiskCategory() {
-            return this.systemDiskCategory;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setSystemDiskPerLevel(String systemDiskPerLevel) {
-            this.systemDiskPerLevel = systemDiskPerLevel;
-            return this;
-        }
-        public String getSystemDiskPerLevel() {
-            return this.systemDiskPerLevel;
-        }
-
-        public CreateDesktopsRequestDesktopAttachment setSystemDiskSize(Integer systemDiskSize) {
-            this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-    }
-
-    public static class CreateDesktopsRequestDesktopTimers extends TeaModel {
+    public static class CreateDesktopsShrinkRequestDesktopTimers extends TeaModel {
         /**
          * <p>Specifies whether to allow the end user to configure the scheduled task.</p>
          * 
@@ -979,12 +872,12 @@ public class CreateDesktopsRequest extends TeaModel {
         @NameInMap("TimerType")
         public String timerType;
 
-        public static CreateDesktopsRequestDesktopTimers build(java.util.Map<String, ?> map) throws Exception {
-            CreateDesktopsRequestDesktopTimers self = new CreateDesktopsRequestDesktopTimers();
+        public static CreateDesktopsShrinkRequestDesktopTimers build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsShrinkRequestDesktopTimers self = new CreateDesktopsShrinkRequestDesktopTimers();
             return TeaModel.build(map, self);
         }
 
-        public CreateDesktopsRequestDesktopTimers setAllowClientSetting(Boolean allowClientSetting) {
+        public CreateDesktopsShrinkRequestDesktopTimers setAllowClientSetting(Boolean allowClientSetting) {
             this.allowClientSetting = allowClientSetting;
             return this;
         }
@@ -992,7 +885,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.allowClientSetting;
         }
 
-        public CreateDesktopsRequestDesktopTimers setCronExpression(String cronExpression) {
+        public CreateDesktopsShrinkRequestDesktopTimers setCronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
             return this;
         }
@@ -1000,7 +893,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.cronExpression;
         }
 
-        public CreateDesktopsRequestDesktopTimers setEnforce(Boolean enforce) {
+        public CreateDesktopsShrinkRequestDesktopTimers setEnforce(Boolean enforce) {
             this.enforce = enforce;
             return this;
         }
@@ -1008,7 +901,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.enforce;
         }
 
-        public CreateDesktopsRequestDesktopTimers setInterval(Integer interval) {
+        public CreateDesktopsShrinkRequestDesktopTimers setInterval(Integer interval) {
             this.interval = interval;
             return this;
         }
@@ -1016,7 +909,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.interval;
         }
 
-        public CreateDesktopsRequestDesktopTimers setOperationType(String operationType) {
+        public CreateDesktopsShrinkRequestDesktopTimers setOperationType(String operationType) {
             this.operationType = operationType;
             return this;
         }
@@ -1024,7 +917,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.operationType;
         }
 
-        public CreateDesktopsRequestDesktopTimers setResetType(String resetType) {
+        public CreateDesktopsShrinkRequestDesktopTimers setResetType(String resetType) {
             this.resetType = resetType;
             return this;
         }
@@ -1032,7 +925,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.resetType;
         }
 
-        public CreateDesktopsRequestDesktopTimers setTimerType(String timerType) {
+        public CreateDesktopsShrinkRequestDesktopTimers setTimerType(String timerType) {
             this.timerType = timerType;
             return this;
         }
@@ -1042,7 +935,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     }
 
-    public static class CreateDesktopsRequestMonthDesktopSetting extends TeaModel {
+    public static class CreateDesktopsShrinkRequestMonthDesktopSetting extends TeaModel {
         /**
          * <blockquote>
          * <p>This parameter is not publicly available.</p>
@@ -1076,12 +969,12 @@ public class CreateDesktopsRequest extends TeaModel {
         @NameInMap("UseDuration")
         public Integer useDuration;
 
-        public static CreateDesktopsRequestMonthDesktopSetting build(java.util.Map<String, ?> map) throws Exception {
-            CreateDesktopsRequestMonthDesktopSetting self = new CreateDesktopsRequestMonthDesktopSetting();
+        public static CreateDesktopsShrinkRequestMonthDesktopSetting build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsShrinkRequestMonthDesktopSetting self = new CreateDesktopsShrinkRequestMonthDesktopSetting();
             return TeaModel.build(map, self);
         }
 
-        public CreateDesktopsRequestMonthDesktopSetting setBuyerId(Long buyerId) {
+        public CreateDesktopsShrinkRequestMonthDesktopSetting setBuyerId(Long buyerId) {
             this.buyerId = buyerId;
             return this;
         }
@@ -1089,7 +982,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.buyerId;
         }
 
-        public CreateDesktopsRequestMonthDesktopSetting setDesktopId(String desktopId) {
+        public CreateDesktopsShrinkRequestMonthDesktopSetting setDesktopId(String desktopId) {
             this.desktopId = desktopId;
             return this;
         }
@@ -1097,7 +990,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.desktopId;
         }
 
-        public CreateDesktopsRequestMonthDesktopSetting setUseDuration(Integer useDuration) {
+        public CreateDesktopsShrinkRequestMonthDesktopSetting setUseDuration(Integer useDuration) {
             this.useDuration = useDuration;
             return this;
         }
@@ -1107,7 +1000,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     }
 
-    public static class CreateDesktopsRequestTag extends TeaModel {
+    public static class CreateDesktopsShrinkRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify 1 to 20 keys for a tag.</p>
          * 
@@ -1126,12 +1019,12 @@ public class CreateDesktopsRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateDesktopsRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateDesktopsRequestTag self = new CreateDesktopsRequestTag();
+        public static CreateDesktopsShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsShrinkRequestTag self = new CreateDesktopsShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateDesktopsRequestTag setKey(String key) {
+        public CreateDesktopsShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -1139,7 +1032,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateDesktopsRequestTag setValue(String value) {
+        public CreateDesktopsShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -1149,7 +1042,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     }
 
-    public static class CreateDesktopsRequestUserCommands extends TeaModel {
+    public static class CreateDesktopsShrinkRequestUserCommands extends TeaModel {
         /**
          * <p>The command content.</p>
          * 
@@ -1216,12 +1109,12 @@ public class CreateDesktopsRequest extends TeaModel {
         @NameInMap("ContentType")
         public String contentType;
 
-        public static CreateDesktopsRequestUserCommands build(java.util.Map<String, ?> map) throws Exception {
-            CreateDesktopsRequestUserCommands self = new CreateDesktopsRequestUserCommands();
+        public static CreateDesktopsShrinkRequestUserCommands build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsShrinkRequestUserCommands self = new CreateDesktopsShrinkRequestUserCommands();
             return TeaModel.build(map, self);
         }
 
-        public CreateDesktopsRequestUserCommands setContent(String content) {
+        public CreateDesktopsShrinkRequestUserCommands setContent(String content) {
             this.content = content;
             return this;
         }
@@ -1229,7 +1122,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.content;
         }
 
-        public CreateDesktopsRequestUserCommands setContentEncoding(String contentEncoding) {
+        public CreateDesktopsShrinkRequestUserCommands setContentEncoding(String contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
@@ -1237,7 +1130,7 @@ public class CreateDesktopsRequest extends TeaModel {
             return this.contentEncoding;
         }
 
-        public CreateDesktopsRequestUserCommands setContentType(String contentType) {
+        public CreateDesktopsShrinkRequestUserCommands setContentType(String contentType) {
             this.contentType = contentType;
             return this;
         }

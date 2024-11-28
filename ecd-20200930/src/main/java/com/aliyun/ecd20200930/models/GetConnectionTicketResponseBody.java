@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
+    @NameInMap("DesktopId")
+    public String desktopId;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -13,6 +16,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskCode")
+    public String taskCode;
+
     /**
      * <p>The ID of the cloud computer connection task.</p>
      * 
@@ -21,6 +27,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      */
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("TaskMessage")
+    public String taskMessage;
 
     /**
      * <p>The task status.</p>
@@ -78,6 +87,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetConnectionTicketResponseBody setDesktopId(String desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public String getDesktopId() {
+        return this.desktopId;
+    }
+
     public GetConnectionTicketResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -86,12 +103,28 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetConnectionTicketResponseBody setTaskCode(String taskCode) {
+        this.taskCode = taskCode;
+        return this;
+    }
+    public String getTaskCode() {
+        return this.taskCode;
+    }
+
     public GetConnectionTicketResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public GetConnectionTicketResponseBody setTaskMessage(String taskMessage) {
+        this.taskMessage = taskMessage;
+        return this;
+    }
+    public String getTaskMessage() {
+        return this.taskMessage;
     }
 
     public GetConnectionTicketResponseBody setTaskStatus(String taskStatus) {
