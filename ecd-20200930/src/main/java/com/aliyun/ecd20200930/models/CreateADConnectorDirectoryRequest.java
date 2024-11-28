@@ -51,7 +51,7 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>127.0.**.**</p>
+     * <p><code>127.0.**.**</code></p>
      */
     @NameInMap("DnsAddress")
     public java.util.List<String> dnsAddress;
@@ -169,7 +169,7 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
      * If you specify the <code>SubDomainName</code> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
      * 
      * <strong>example:</strong>
-     * <p>127.0.**.**</p>
+     * <p><code>127.0.**.**</code></p>
      */
     @NameInMap("SubDomainDnsAddress")
     public java.util.List<String> subDomainDnsAddress;

@@ -1236,6 +1236,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RemoteCoordinate")
         public String remoteCoordinate;
 
+        @NameInMap("ResourceRegionId")
+        public String resourceRegionId;
+
         /**
          * <p>The effective scope of the policy. Valid values:</p>
          * <ul>
@@ -1462,6 +1465,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("WatermarkType")
         public String watermarkType;
+
+        @NameInMap("WyAssistant")
+        public String wyAssistant;
 
         public static DescribePolicyGroupsResponseBodyDescribePolicyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribePolicyGroupsResponseBodyDescribePolicyGroups self = new DescribePolicyGroupsResponseBodyDescribePolicyGroups();
@@ -1924,6 +1930,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.remoteCoordinate;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setResourceRegionId(String resourceRegionId) {
+            this.resourceRegionId = resourceRegionId;
+            return this;
+        }
+        public String getResourceRegionId() {
+            return this.resourceRegionId;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setScope(String scope) {
             this.scope = scope;
             return this;
@@ -2138,6 +2152,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getWatermarkType() {
             return this.watermarkType;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWyAssistant(String wyAssistant) {
+            this.wyAssistant = wyAssistant;
+            return this;
+        }
+        public String getWyAssistant() {
+            return this.wyAssistant;
         }
 
     }

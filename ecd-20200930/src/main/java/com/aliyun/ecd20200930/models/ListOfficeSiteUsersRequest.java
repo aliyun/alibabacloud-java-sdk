@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersRequest extends TeaModel {
+    @NameInMap("AssignedInfo")
+    public String assignedInfo;
+
     /**
      * <p>The query string for fuzzy query.</p>
      * 
@@ -12,6 +15,9 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
      */
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("IncludeAssignedUser")
+    public Boolean includeAssignedUser;
 
     /**
      * <p>The number of entries per page.</p>
@@ -64,9 +70,20 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SortType")
+    public String sortType;
+
     public static ListOfficeSiteUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOfficeSiteUsersRequest self = new ListOfficeSiteUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOfficeSiteUsersRequest setAssignedInfo(String assignedInfo) {
+        this.assignedInfo = assignedInfo;
+        return this;
+    }
+    public String getAssignedInfo() {
+        return this.assignedInfo;
     }
 
     public ListOfficeSiteUsersRequest setFilter(String filter) {
@@ -75,6 +92,14 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public ListOfficeSiteUsersRequest setIncludeAssignedUser(Boolean includeAssignedUser) {
+        this.includeAssignedUser = includeAssignedUser;
+        return this;
+    }
+    public Boolean getIncludeAssignedUser() {
+        return this.includeAssignedUser;
     }
 
     public ListOfficeSiteUsersRequest setMaxResults(Integer maxResults) {
@@ -115,6 +140,14 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListOfficeSiteUsersRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
 }

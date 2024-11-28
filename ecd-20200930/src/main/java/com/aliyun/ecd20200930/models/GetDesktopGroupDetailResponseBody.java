@@ -533,7 +533,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer minDesktopsCount;
 
         /**
-         * <p>The ID of the Apsara File Storage NAS (NAS) file system for the user data roaming feature.</p>
+         * <p>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</p>
          * 
          * <strong>example:</strong>
          * <p>0783b4****</p>

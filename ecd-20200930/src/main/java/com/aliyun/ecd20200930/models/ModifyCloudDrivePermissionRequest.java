@@ -26,6 +26,9 @@ public class ModifyCloudDrivePermissionRequest extends TeaModel {
     @NameInMap("DownloadUploadEndUserIds")
     public java.util.List<String> downloadUploadEndUserIds;
 
+    @NameInMap("NoDownloadNoUploadEndUserIds")
+    public java.util.List<String> noDownloadNoUploadEndUserIds;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -63,6 +66,14 @@ public class ModifyCloudDrivePermissionRequest extends TeaModel {
     }
     public java.util.List<String> getDownloadUploadEndUserIds() {
         return this.downloadUploadEndUserIds;
+    }
+
+    public ModifyCloudDrivePermissionRequest setNoDownloadNoUploadEndUserIds(java.util.List<String> noDownloadNoUploadEndUserIds) {
+        this.noDownloadNoUploadEndUserIds = noDownloadNoUploadEndUserIds;
+        return this;
+    }
+    public java.util.List<String> getNoDownloadNoUploadEndUserIds() {
+        return this.noDownloadNoUploadEndUserIds;
     }
 
     public ModifyCloudDrivePermissionRequest setRegionId(String regionId) {

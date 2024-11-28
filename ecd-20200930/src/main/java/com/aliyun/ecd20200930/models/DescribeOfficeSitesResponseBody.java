@@ -28,6 +28,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -273,6 +279,36 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts extends TeaModel {
+        @NameInMap("amount")
+        public Long amount;
+
+        @NameInMap("resourceType")
+        public String resourceType;
+
+        public static DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts self = new DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts setAmount(Long amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Long getAmount() {
+            return this.amount;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class DescribeOfficeSitesResponseBodyOfficeSites extends TeaModel {
         /**
          * <p>Details of AD connectors.</p>
@@ -366,6 +402,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("CustomAccessPoint")
+        public String customAccessPoint;
 
         /**
          * <p>The ID of the security group.</p>
@@ -496,7 +535,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean enableServiceRoute;
 
         /**
-         * <p>An array of Apsara File Storage NAS (NAS) file system IDs.</p>
+         * <p>An array of File Storage NAS (NAS) file system IDs.</p>
          */
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
@@ -556,6 +595,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
+
+        @NameInMap("NmVersion")
+        public String nmVersion;
 
         /**
          * <p>The IDs of the office networks.</p>
@@ -630,6 +672,20 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("RdsLicenseStatus")
         public String rdsLicenseStatus;
 
+        @NameInMap("ResourceAmounts")
+        public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> resourceAmounts;
+
+        /**
+         * <p>The security protection setting of the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SASE: SASE is configured.</li>
+         * <li>OFF: No security protection setting is configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SASE</p>
+         */
         @NameInMap("SecurityProtection")
         public String securityProtection;
 
@@ -691,6 +747,17 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("SubDomainName")
         public String subDomainName;
 
+        /**
+         * <p>The subnet mode of the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: disabled.</li>
+         * <li>1: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SubnetMode")
         public String subnetMode;
 
@@ -711,6 +778,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         @NameInMap("TotalEdsCountForGroup")
         public Long totalEdsCountForGroup;
+
+        @NameInMap("TotalResourceAmount")
+        public Long totalResourceAmount;
 
         /**
          * <blockquote>
@@ -836,6 +906,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setCustomAccessPoint(String customAccessPoint) {
+            this.customAccessPoint = customAccessPoint;
+            return this;
+        }
+        public String getCustomAccessPoint() {
+            return this.customAccessPoint;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setCustomSecurityGroupId(String customSecurityGroupId) {
@@ -998,6 +1076,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.networkPackageId;
         }
 
+        public DescribeOfficeSitesResponseBodyOfficeSites setNmVersion(String nmVersion) {
+            this.nmVersion = nmVersion;
+            return this;
+        }
+        public String getNmVersion() {
+            return this.nmVersion;
+        }
+
         public DescribeOfficeSitesResponseBodyOfficeSites setOfficeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
             return this;
@@ -1052,6 +1138,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getRdsLicenseStatus() {
             return this.rdsLicenseStatus;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setResourceAmounts(java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> resourceAmounts) {
+            this.resourceAmounts = resourceAmounts;
+            return this;
+        }
+        public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> getResourceAmounts() {
+            return this.resourceAmounts;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setSecurityProtection(String securityProtection) {
@@ -1124,6 +1218,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public Long getTotalEdsCountForGroup() {
             return this.totalEdsCountForGroup;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setTotalResourceAmount(Long totalResourceAmount) {
+            this.totalResourceAmount = totalResourceAmount;
+            return this;
+        }
+        public Long getTotalResourceAmount() {
+            return this.totalResourceAmount;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setTrustPassword(String trustPassword) {

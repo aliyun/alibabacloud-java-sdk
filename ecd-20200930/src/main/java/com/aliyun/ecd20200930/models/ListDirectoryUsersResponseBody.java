@@ -58,6 +58,9 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     }
 
     public static class ListDirectoryUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("AssignedDesktopNumber")
+        public Integer assignedDesktopNumber;
+
         /**
          * <p>The display name of the user.</p>
          * 
@@ -66,6 +69,9 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
          */
         @NameInMap("DisplayName")
         public String displayName;
+
+        @NameInMap("Email")
+        public String email;
 
         /**
          * <p>The name of the user.</p>
@@ -76,9 +82,20 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("EndUser")
         public String endUser;
 
+        @NameInMap("Phone")
+        public String phone;
+
         public static ListDirectoryUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListDirectoryUsersResponseBodyUsers self = new ListDirectoryUsersResponseBodyUsers();
             return TeaModel.build(map, self);
+        }
+
+        public ListDirectoryUsersResponseBodyUsers setAssignedDesktopNumber(Integer assignedDesktopNumber) {
+            this.assignedDesktopNumber = assignedDesktopNumber;
+            return this;
+        }
+        public Integer getAssignedDesktopNumber() {
+            return this.assignedDesktopNumber;
         }
 
         public ListDirectoryUsersResponseBodyUsers setDisplayName(String displayName) {
@@ -89,12 +106,28 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             return this.displayName;
         }
 
+        public ListDirectoryUsersResponseBodyUsers setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
         public ListDirectoryUsersResponseBodyUsers setEndUser(String endUser) {
             this.endUser = endUser;
             return this;
         }
         public String getEndUser() {
             return this.endUser;
+        }
+
+        public ListDirectoryUsersResponseBodyUsers setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
         }
 
     }

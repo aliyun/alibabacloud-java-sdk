@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDirectoryUsersRequest extends TeaModel {
+    @NameInMap("AssignedInfo")
+    public String assignedInfo;
+
     /**
      * <p>The ID of the AD directory.</p>
      * <p>This parameter is required.</p>
@@ -22,6 +25,9 @@ public class ListDirectoryUsersRequest extends TeaModel {
      */
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("IncludeAssignedUser")
+    public Boolean includeAssignedUser;
 
     /**
      * <p>The number of entries to return on each page.</p>
@@ -62,9 +68,20 @@ public class ListDirectoryUsersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SortType")
+    public String sortType;
+
     public static ListDirectoryUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDirectoryUsersRequest self = new ListDirectoryUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDirectoryUsersRequest setAssignedInfo(String assignedInfo) {
+        this.assignedInfo = assignedInfo;
+        return this;
+    }
+    public String getAssignedInfo() {
+        return this.assignedInfo;
     }
 
     public ListDirectoryUsersRequest setDirectoryId(String directoryId) {
@@ -81,6 +98,14 @@ public class ListDirectoryUsersRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public ListDirectoryUsersRequest setIncludeAssignedUser(Boolean includeAssignedUser) {
+        this.includeAssignedUser = includeAssignedUser;
+        return this;
+    }
+    public Boolean getIncludeAssignedUser() {
+        return this.includeAssignedUser;
     }
 
     public ListDirectoryUsersRequest setMaxResults(Integer maxResults) {
@@ -113,6 +138,14 @@ public class ListDirectoryUsersRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListDirectoryUsersRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
 }

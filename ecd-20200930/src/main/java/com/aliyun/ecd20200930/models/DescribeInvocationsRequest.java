@@ -55,6 +55,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    @NameInMap("IncludeInvokeDesktops")
+    public Boolean includeInvokeDesktops;
+
     /**
      * <p>Specifies whether to return command outputs in the response. Valid values:</p>
      * <ul>
@@ -170,6 +173,14 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeInvocationsRequest setIncludeInvokeDesktops(Boolean includeInvokeDesktops) {
+        this.includeInvokeDesktops = includeInvokeDesktops;
+        return this;
+    }
+    public Boolean getIncludeInvokeDesktops() {
+        return this.includeInvokeDesktops;
     }
 
     public DescribeInvocationsRequest setIncludeOutput(Boolean includeOutput) {

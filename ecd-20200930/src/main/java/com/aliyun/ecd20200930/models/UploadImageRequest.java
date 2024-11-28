@@ -141,6 +141,9 @@ public class UploadImageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SystemDiskSize")
+    public String systemDiskSize;
+
     public static UploadImageRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadImageRequest self = new UploadImageRequest();
         return TeaModel.build(map, self);
@@ -232,6 +235,14 @@ public class UploadImageRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UploadImageRequest setSystemDiskSize(String systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
+        return this;
+    }
+    public String getSystemDiskSize() {
+        return this.systemDiskSize;
     }
 
 }

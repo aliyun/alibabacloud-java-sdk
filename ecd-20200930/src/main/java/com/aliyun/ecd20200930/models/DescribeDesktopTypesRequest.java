@@ -194,6 +194,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("DesktopTypeId")
     public String desktopTypeId;
 
+    @NameInMap("DesktopTypeIdList")
+    public java.util.List<String> desktopTypeIdList;
+
     /**
      * <p>The number of GPUs.</p>
      * 
@@ -278,6 +281,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("MemorySize")
     public Integer memorySize;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     /**
      * <p>The order type.</p>
      * 
@@ -296,6 +302,12 @@ public class DescribeDesktopTypesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Scope")
+    public String scope;
+
+    @NameInMap("SortType")
+    public String sortType;
 
     public static DescribeDesktopTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopTypesRequest self = new DescribeDesktopTypesRequest();
@@ -342,6 +354,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
         return this.desktopTypeId;
     }
 
+    public DescribeDesktopTypesRequest setDesktopTypeIdList(java.util.List<String> desktopTypeIdList) {
+        this.desktopTypeIdList = desktopTypeIdList;
+        return this;
+    }
+    public java.util.List<String> getDesktopTypeIdList() {
+        return this.desktopTypeIdList;
+    }
+
     public DescribeDesktopTypesRequest setGpuCount(Float gpuCount) {
         this.gpuCount = gpuCount;
         return this;
@@ -374,6 +394,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
         return this.memorySize;
     }
 
+    public DescribeDesktopTypesRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
     public DescribeDesktopTypesRequest setOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -388,6 +416,22 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDesktopTypesRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
+    }
+
+    public DescribeDesktopTypesRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
 }

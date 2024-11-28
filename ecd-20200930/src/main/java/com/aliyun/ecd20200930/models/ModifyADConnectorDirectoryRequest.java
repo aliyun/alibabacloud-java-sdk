@@ -36,7 +36,7 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
      * <p>The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.</p>
      * 
      * <strong>example:</strong>
-     * <p>127.0.**.**</p>
+     * <p><code>127.0.**.**</code></p>
      */
     @NameInMap("DnsAddress")
     public java.util.List<String> dnsAddress;
@@ -120,7 +120,7 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
      * If you specify the <code>SubDomainName</code> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
      * 
      * <strong>example:</strong>
-     * <p>127.0.**.**</p>
+     * <p><code>127.0.**.**</code></p>
      */
     @NameInMap("SubDomainDnsAddress")
     public java.util.List<String> subDomainDnsAddress;

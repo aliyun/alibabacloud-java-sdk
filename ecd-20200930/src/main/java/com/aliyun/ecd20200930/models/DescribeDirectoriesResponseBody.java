@@ -79,7 +79,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
          * <p>The connection address.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.17.**.**</p>
+         * <p><code>172.17.**.**</code></p>
          */
         @NameInMap("ADConnectorAddress")
         public String ADConnectorAddress;
@@ -313,12 +313,24 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         @NameInMap("ADConnectors")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesADConnectors> ADConnectors;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dc001</p>
+         */
         @NameInMap("AdHostname")
         public String adHostname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dc002</p>
+         */
         @NameInMap("BackupDCHostname")
         public String backupDCHostname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.2.100</p>
+         */
         @NameInMap("BackupDns")
         public String backupDns;
 
@@ -488,7 +500,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public Boolean enableInternetAccess;
 
         /**
-         * <p>The IDs of Apsara File Storage NAS (NAS) file systems.</p>
+         * <p>The IDs of File Storage NAS (NAS) file systems.</p>
          */
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
