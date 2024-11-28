@@ -11387,6 +11387,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Priority", request.priority);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateGroupId)) {
             query.put("TemplateGroupId", request.templateGroupId);
         }

@@ -1,3 +1,7 @@
+2024-11-28 Version: 3.3.2
+- Update API SubmitTranscodeJobs: add param SessionId.
+
+
 2024-11-26 Version: 3.3.1
 - Update API GetVideoInfo: update response param.
 - Update API GetVideoInfos: update response param.
