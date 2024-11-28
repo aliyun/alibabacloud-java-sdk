@@ -56,6 +56,9 @@ public class SubmitTranscodeJobsRequest extends TeaModel {
     @NameInMap("Priority")
     public String priority;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     /**
      * <p>The ID of the transcoding template group that you want to use. To view the template group ID, perform the following operations: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Transcoding Template Groups</strong>.</p>
      * <p>This parameter is required.</p>
@@ -127,6 +130,14 @@ public class SubmitTranscodeJobsRequest extends TeaModel {
     }
     public String getPriority() {
         return this.priority;
+    }
+
+    public SubmitTranscodeJobsRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public SubmitTranscodeJobsRequest setTemplateGroupId(String templateGroupId) {
