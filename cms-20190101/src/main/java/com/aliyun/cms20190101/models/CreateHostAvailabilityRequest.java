@@ -18,7 +18,7 @@ public class CreateHostAvailabilityRequest extends TeaModel {
     public java.util.List<CreateHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList;
 
     /**
-     * <p>The information about the resources for which alerts are triggered.</p>
+     * <p>The resources for which alerts are triggered.</p>
      */
     @NameInMap("AlertConfigTargetList")
     public java.util.List<CreateHostAvailabilityRequestAlertConfigTargetList> alertConfigTargetList;
@@ -585,13 +585,13 @@ public class CreateHostAvailabilityRequest extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
          * <ul>
-         * <li><p>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
+         * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
          * </li>
          * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
          * </li>
-         * <li><p>{regionId}: the region ID of the message queue or topic.</p>
+         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
          * </li>
-         * <li><p>{Resource type}: the type of the resource that triggers the alert. Valid values:</p>
+         * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
          * <ul>
          * <li><strong>queues</strong></li>
          * <li><strong>topics</strong></li>

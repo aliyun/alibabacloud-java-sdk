@@ -19,7 +19,7 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>N/A.</p>
+     * <p>None.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")
@@ -56,11 +56,11 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
 
     public static class PutMetricRuleTargetsRequestTargets extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Message Service (MNS), Auto Scaling, Simple Log Service, and Function Compute are supported.</p>
-         * <p>The following part describes the ARN of MNS and the parameters provided by the ARN:</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Simple Message Queue (formerly MNS) (SMQ), Auto Scaling, Simple Log Service, and Function Compute are supported.</p>
+         * <p>The following part describes the ARN of SMQ and the parameters in the ARN:</p>
          * <p><code>acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>.</p>
          * <ul>
-         * <li><p>{regionId}: the region ID of the message queue or topic.</p>
+         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
          * </li>
          * <li><p>{userId}: the ID of the Alibaba Cloud account that owns the resource.</p>
          * </li>
@@ -103,7 +103,7 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The JSON-formatted parameters of the alert callback.</p>
+         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>

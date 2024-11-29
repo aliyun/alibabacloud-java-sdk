@@ -427,7 +427,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
          * <li>UIS: Ultimate Internet Service (UIS)</li>
          * <li>nls: Intelligent Speech Interaction</li>
          * <li>ots: Tablestore</li>
-         * <li>NAS: Apsara File Storage NAS</li>
+         * <li>NAS: File Storage NAS</li>
          * <li>ECI: Elastic Container Instance (ECI)</li>
          * <li>OpenAPI: OpenAPI Explorer</li>
          * <li>pvtzpost: Alibaba Cloud DNS PrivateZone</li>
@@ -596,6 +596,12 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;NotSendOK&quot;: true
+         * }</p>
+         */
         @NameInMap("Options")
         public String options;
 
