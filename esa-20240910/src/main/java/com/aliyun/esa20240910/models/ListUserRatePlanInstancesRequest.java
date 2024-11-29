@@ -44,6 +44,9 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RemainingExpireDays")
+    public Integer remainingExpireDays;
+
     /**
      * <p>The sorting field. By default, the queried plans are sorted by purchase time. Valid values:</p>
      * <ul>
@@ -123,6 +126,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUserRatePlanInstancesRequest setRemainingExpireDays(Integer remainingExpireDays) {
+        this.remainingExpireDays = remainingExpireDays;
+        return this;
+    }
+    public Integer getRemainingExpireDays() {
+        return this.remainingExpireDays;
     }
 
     public ListUserRatePlanInstancesRequest setSortBy(String sortBy) {

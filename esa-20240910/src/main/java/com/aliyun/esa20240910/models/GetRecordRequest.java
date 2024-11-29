@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRecordRequest extends TeaModel {
     /**
+     * <p>The record ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
