@@ -157,6 +157,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("ServiceStatus")
+    public java.util.List<String> serviceStatus;
+
     /**
      * <p>The status of the instance. Valid values:</p>
      * <ul>
@@ -317,6 +320,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public DescribeInstancesRequest setServiceStatus(java.util.List<String> serviceStatus) {
+        this.serviceStatus = serviceStatus;
+        return this;
+    }
+    public java.util.List<String> getServiceStatus() {
+        return this.serviceStatus;
     }
 
     public DescribeInstancesRequest setStatus(String status) {
