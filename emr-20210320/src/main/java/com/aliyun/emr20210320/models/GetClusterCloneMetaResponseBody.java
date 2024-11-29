@@ -50,6 +50,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @NameInMap("MaxCapacity")
         public Integer maxCapacity;
 
+        @NameInMap("MaxOnDemandCapacity")
+        public Integer maxOnDemandCapacity;
+
         /**
          * <p>The minimum number of nodes in the node group. Default value: 0.</p>
          * 
@@ -70,6 +73,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
         public Integer getMaxCapacity() {
             return this.maxCapacity;
+        }
+
+        public Constraints setMaxOnDemandCapacity(Integer maxOnDemandCapacity) {
+            this.maxOnDemandCapacity = maxOnDemandCapacity;
+            return this;
+        }
+        public Integer getMaxOnDemandCapacity() {
+            return this.maxOnDemandCapacity;
         }
 
         public Constraints setMinCapacity(Integer minCapacity) {
@@ -228,6 +239,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @NameInMap("ScalingPolicyId")
         public String scalingPolicyId;
 
+        @NameInMap("ScalingPolicyType")
+        public String scalingPolicyType;
+
         /**
          * <p>The list of auto scaling rules.</p>
          */
@@ -269,6 +283,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
         public String getScalingPolicyId() {
             return this.scalingPolicyId;
+        }
+
+        public ScalingPolicies setScalingPolicyType(String scalingPolicyType) {
+            this.scalingPolicyType = scalingPolicyType;
+            return this;
+        }
+        public String getScalingPolicyType() {
+            return this.scalingPolicyType;
         }
 
         public ScalingPolicies setScalingRules(java.util.List<ScalingRules> scalingRules) {
@@ -353,6 +375,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
          */
         @NameInMap("ClusterType")
         public String clusterType;
+
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
 
         /**
          * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
@@ -528,6 +553,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        public ClusterCloneMeta setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public ClusterCloneMeta setDeployMode(String deployMode) {

@@ -130,6 +130,9 @@ public class NodeGroupConfig extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("PrivatePoolOptions")
+    public PrivatePoolOptions privatePoolOptions;
+
     /**
      * <p>抢占式Spot实例出价价格。参数SpotStrategy取值为SpotWithPriceLimit时生效。数组元数个数N的取值范围：0~100。</p>
      */
@@ -307,6 +310,14 @@ public class NodeGroupConfig extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public NodeGroupConfig setPrivatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public PrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public NodeGroupConfig setSpotBidPrices(java.util.List<SpotBidPrice> spotBidPrices) {

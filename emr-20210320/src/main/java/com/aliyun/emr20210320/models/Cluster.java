@@ -50,6 +50,13 @@ public class Cluster extends TeaModel {
     public Long createTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
+    /**
      * <p>部署模式。</p>
      * 
      * <strong>example:</strong>
@@ -206,6 +213,14 @@ public class Cluster extends TeaModel {
     }
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    public Cluster setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public Cluster setDeployMode(String deployMode) {

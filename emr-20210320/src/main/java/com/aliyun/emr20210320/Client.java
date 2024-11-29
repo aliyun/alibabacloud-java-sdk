@@ -165,6 +165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterType", request.clusterType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deployMode)) {
             query.put("DeployMode", request.deployMode);
         }
@@ -363,6 +367,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DecreaseNodesResponse decreaseNodesWithOptions(DecreaseNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchInterval)) {
+            query.put("BatchInterval", request.batchInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.batchSize)) {
+            query.put("BatchSize", request.batchSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
         }
@@ -3999,6 +4011,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</p>
+     * 
      * @param tmpReq RunClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunClusterResponse
@@ -4065,6 +4083,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClusterType", request.clusterType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            body.put("DeletionProtection", request.deletionProtection);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deployMode)) {
             body.put("DeployMode", request.deployMode);
         }
@@ -4124,6 +4146,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request RunClusterRequest
      * @return RunClusterResponse
      */

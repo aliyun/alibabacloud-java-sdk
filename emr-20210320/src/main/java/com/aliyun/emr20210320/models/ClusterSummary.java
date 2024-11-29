@@ -65,6 +65,9 @@ public class ClusterSummary extends TeaModel {
     @NameInMap("CreateTime")
     public Long createTime;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     @NameInMap("Description")
     public String description;
 
@@ -187,6 +190,14 @@ public class ClusterSummary extends TeaModel {
     }
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    public ClusterSummary setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public ClusterSummary setDescription(String description) {
