@@ -4,6 +4,9 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class InitializeRequest extends TeaModel {
+    @NameInMap("AppQualityCheck")
+    public String appQualityCheck;
+
     @NameInMap("Authorize")
     public String authorize;
 
@@ -150,6 +153,14 @@ public class InitializeRequest extends TeaModel {
     public static InitializeRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeRequest self = new InitializeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitializeRequest setAppQualityCheck(String appQualityCheck) {
+        this.appQualityCheck = appQualityCheck;
+        return this;
+    }
+    public String getAppQualityCheck() {
+        return this.appQualityCheck;
     }
 
     public InitializeRequest setAuthorize(String authorize) {
