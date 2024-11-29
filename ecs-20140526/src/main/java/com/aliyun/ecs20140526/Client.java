@@ -6922,6 +6922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceTypeFamily", request.instanceTypeFamily);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeFamilyGroup)) {
+            query.put("InstanceTypeFamilyGroup", request.instanceTypeFamilyGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.offeringType)) {
             query.put("OfferingType", request.offeringType);
         }
@@ -19256,6 +19260,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSavingsPlanEstimationResponse describeSavingsPlanEstimationWithOptions(DescribeSavingsPlanEstimationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.estimationResource)) {
+            query.put("EstimationResource", request.estimationResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeScope)) {
+            query.put("InstanceTypeScope", request.instanceTypeScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.offeringType)) {
             query.put("OfferingType", request.offeringType);
         }
@@ -19328,6 +19340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceTypeFamily", request.instanceTypeFamily);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeFamilyGroup)) {
+            query.put("InstanceTypeFamilyGroup", request.instanceTypeFamilyGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.offeringType)) {
             query.put("OfferingType", request.offeringType);
         }
@@ -19383,7 +19399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rules of a security group.</p>
+     * <p>Queries the details of a specified security group and the security group rules of the security group.</p>
      * 
      * @param request DescribeSecurityGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19451,7 +19467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rules of a security group.</p>
+     * <p>Queries the details of a specified security group and the security group rules of the security group.</p>
      * 
      * @param request DescribeSecurityGroupAttributeRequest
      * @return DescribeSecurityGroupAttributeResponse
@@ -19543,15 +19559,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>  <strong>Paged query</strong>: We recommend that you specify <code>MaxResults</code> and <code>NextToken</code>.
+     *     *   If the response does not include <code>NextToken</code>, the current page of results is the last page and no more results are to be returned.
+     *     *   During a paged query, when you call the DescribeSecurityGroups operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results.
+     *     *   When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * <ul>
-     * <li>The basic information of security groups includes their IDs and descriptions. The response returns security groups in descending order of their IDs.</li>
-     * <li>We recommend that you use <code>MaxResults</code> and <code>NextToken</code> for a paged query. We recommend that you use <code>MaxResults</code> to specify the maximum number of entries to return for each request. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value that is returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call. If the return value of <code>NextToken</code> is empty, the current page of results is the last page and no more results are to be returned.</li>
      * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of security groups.</p>
+     * <p>Queries the basic information of security groups. You can query the information by various filter conditions, such as the region ID, security group ID, and security group type.</p>
      * 
      * @param request DescribeSecurityGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19663,15 +19680,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>  <strong>Paged query</strong>: We recommend that you specify <code>MaxResults</code> and <code>NextToken</code>.
+     *     *   If the response does not include <code>NextToken</code>, the current page of results is the last page and no more results are to be returned.
+     *     *   During a paged query, when you call the DescribeSecurityGroups operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results.
+     *     *   When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * <ul>
-     * <li>The basic information of security groups includes their IDs and descriptions. The response returns security groups in descending order of their IDs.</li>
-     * <li>We recommend that you use <code>MaxResults</code> and <code>NextToken</code> for a paged query. We recommend that you use <code>MaxResults</code> to specify the maximum number of entries to return for each request. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value that is returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call. If the return value of <code>NextToken</code> is empty, the current page of results is the last page and no more results are to be returned.</li>
      * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of security groups.</p>
+     * <p>Queries the basic information of security groups. You can query the information by various filter conditions, such as the region ID, security group ID, and security group type.</p>
      * 
      * @param request DescribeSecurityGroupsRequest
      * @return DescribeSecurityGroupsResponse
@@ -32458,7 +32476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rolls back a disk to the state at a specific point in time based on a snapshot of the disk.</p>
+     * <p>Rolls back a cloud disk to a snapshot from an earlier point in time.</p>
      * 
      * @param request ResetDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32523,7 +32541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rolls back a disk to the state at a specific point in time based on a snapshot of the disk.</p>
+     * <p>Rolls back a cloud disk to a snapshot from an earlier point in time.</p>
      * 
      * @param request ResetDiskRequest
      * @return ResetDiskResponse

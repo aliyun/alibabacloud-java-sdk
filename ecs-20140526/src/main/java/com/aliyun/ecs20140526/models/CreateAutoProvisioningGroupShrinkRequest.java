@@ -1803,6 +1803,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
 
+        @NameInMap("ImageId")
+        public String imageId;
+
         /**
          * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</p>
          * <ul>
@@ -1926,6 +1929,14 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         }
         public java.util.List<String> getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig setInstanceFamilyLevel(String instanceFamilyLevel) {

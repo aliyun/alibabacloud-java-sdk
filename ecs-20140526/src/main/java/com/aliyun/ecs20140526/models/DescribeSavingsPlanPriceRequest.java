@@ -10,6 +10,9 @@ public class DescribeSavingsPlanPriceRequest extends TeaModel {
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
+    @NameInMap("InstanceTypeFamilyGroup")
+    public String instanceTypeFamilyGroup;
+
     @NameInMap("OfferingType")
     public String offeringType;
 
@@ -47,6 +50,14 @@ public class DescribeSavingsPlanPriceRequest extends TeaModel {
     }
     public String getInstanceTypeFamily() {
         return this.instanceTypeFamily;
+    }
+
+    public DescribeSavingsPlanPriceRequest setInstanceTypeFamilyGroup(String instanceTypeFamilyGroup) {
+        this.instanceTypeFamilyGroup = instanceTypeFamilyGroup;
+        return this;
+    }
+    public String getInstanceTypeFamilyGroup() {
+        return this.instanceTypeFamilyGroup;
     }
 
     public DescribeSavingsPlanPriceRequest setOfferingType(String offeringType) {
