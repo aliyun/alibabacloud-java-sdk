@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeadLockDetailListRequest extends TeaModel {
     /**
-     * <p>The database name list.</p>
+     * <p>The name of the database. When you specify multiple databases, you must separate the database names with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>school1,school2</p>
@@ -24,7 +24,7 @@ public class GetDeadLockDetailListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the database instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

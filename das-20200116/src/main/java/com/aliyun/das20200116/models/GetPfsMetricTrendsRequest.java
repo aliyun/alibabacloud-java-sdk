@@ -43,7 +43,7 @@ public class GetPfsMetricTrendsRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.</p>
+     * <p> This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

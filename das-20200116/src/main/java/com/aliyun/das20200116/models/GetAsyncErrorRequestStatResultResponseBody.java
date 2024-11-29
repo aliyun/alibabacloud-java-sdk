@@ -145,7 +145,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
          * <p>The returned data of the asynchronous request.</p>
          */
         @NameInMap("result")
-        public java.util.List<java.util.Map<String, DataResultValue>> result;
+        public java.util.Map<String, DataResultValue> result;
 
         /**
          * <p>The ID of the asynchronous request.</p>
@@ -208,11 +208,11 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             return this.isFinish;
         }
 
-        public GetAsyncErrorRequestStatResultResponseBodyData setResult(java.util.List<java.util.Map<String, DataResultValue>> result) {
+        public GetAsyncErrorRequestStatResultResponseBodyData setResult(java.util.Map<String, DataResultValue> result) {
             this.result = result;
             return this;
         }
-        public java.util.List<java.util.Map<String, DataResultValue>> getResult() {
+        public java.util.Map<String, DataResultValue> getResult() {
             return this.result;
         }
 

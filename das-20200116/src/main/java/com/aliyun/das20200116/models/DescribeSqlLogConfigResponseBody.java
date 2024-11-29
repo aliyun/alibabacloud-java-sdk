@@ -14,7 +14,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data that is returned.</p>
      */
     @NameInMap("Data")
     public DescribeSqlLogConfigResponseBodyData data;

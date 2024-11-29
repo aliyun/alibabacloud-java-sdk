@@ -41,10 +41,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         public String clientAppName;
 
         /**
-         * <p>The time when the blocking data was collected.</p>
+         * <p>The time when the blocking data was collected. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1700065800000</p>
@@ -127,7 +127,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         public Long currentCollectionTime;
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>school</p>
@@ -181,7 +181,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         public String sqlText;
 
         /**
-         * <p>The time when the execution started.</p>
+         * <p>The time when the execution started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1608888296000</p>
@@ -190,7 +190,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The blocking duration. Unit: milliseconds.</p>
+         * <p>The duration of the blocking. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30000</p>
@@ -199,7 +199,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         public Long waitTimeMs;
 
         /**
-         * <p>The wait type.</p>
+         * <p>The wait type. For more information about wait types, see <a href="https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql?view=sql-server-ver15">sys.dm_os_wait_stats (Transact-SQL)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>MISCELLANEOUS</p>

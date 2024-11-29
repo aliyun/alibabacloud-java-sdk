@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class StopCloudBenchTaskResponse extends TeaModel {
+public class GetDeadlockHistogramResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class StopCloudBenchTaskResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public StopCloudBenchTaskResponseBody body;
+    public GetDeadlockHistogramResponseBody body;
 
-    public static StopCloudBenchTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        StopCloudBenchTaskResponse self = new StopCloudBenchTaskResponse();
+    public static GetDeadlockHistogramResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetDeadlockHistogramResponse self = new GetDeadlockHistogramResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopCloudBenchTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetDeadlockHistogramResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class StopCloudBenchTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public StopCloudBenchTaskResponse setStatusCode(Integer statusCode) {
+    public GetDeadlockHistogramResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class StopCloudBenchTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public StopCloudBenchTaskResponse setBody(StopCloudBenchTaskResponseBody body) {
+    public GetDeadlockHistogramResponse setBody(GetDeadlockHistogramResponseBody body) {
         this.body = body;
         return this;
     }
-    public StopCloudBenchTaskResponseBody getBody() {
+    public GetDeadlockHistogramResponseBody getBody() {
         return this.body;
     }
 

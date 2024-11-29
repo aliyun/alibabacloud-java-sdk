@@ -190,7 +190,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     /**
      * <p>The keyword that is used for the query.</p>
      * <blockquote>
-     * <p> The keyword must be at least four characters in length. You can specify multiple keywords that are separated by spaces. Fuzzy queries are not supported.</p>
+     * <p> Fuzzy search is not supported. You can query data by using multiple keywords. Separate keywords with spaces.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -251,9 +251,9 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String sqlType;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: millisecond.</p>
+     * <p>The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> You can query only the data generated after DAS Enterprise Edition V2 or V3 was enabled. The beginning of the time range to query can be up to seven days earlier than the current time.</p>
+     * <p> The beginning of the time range to query must be later than the time when DAS Enterprise Edition is enabled, and can be up to seven days earlier than the current time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

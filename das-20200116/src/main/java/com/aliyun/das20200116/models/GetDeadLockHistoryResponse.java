@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAdamBenchTaskResponse extends TeaModel {
+public class GetDeadLockHistoryResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateAdamBenchTaskResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateAdamBenchTaskResponseBody body;
+    public GetDeadLockHistoryResponseBody body;
 
-    public static CreateAdamBenchTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateAdamBenchTaskResponse self = new CreateAdamBenchTaskResponse();
+    public static GetDeadLockHistoryResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetDeadLockHistoryResponse self = new GetDeadLockHistoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateAdamBenchTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetDeadLockHistoryResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateAdamBenchTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateAdamBenchTaskResponse setStatusCode(Integer statusCode) {
+    public GetDeadLockHistoryResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateAdamBenchTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateAdamBenchTaskResponse setBody(CreateAdamBenchTaskResponseBody body) {
+    public GetDeadLockHistoryResponse setBody(GetDeadLockHistoryResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateAdamBenchTaskResponseBody getBody() {
+    public GetDeadLockHistoryResponseBody getBody() {
         return this.body;
     }
 
