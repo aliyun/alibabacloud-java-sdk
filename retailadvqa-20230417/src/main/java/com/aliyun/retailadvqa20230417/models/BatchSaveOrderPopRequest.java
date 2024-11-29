@@ -21,8 +21,32 @@ public class BatchSaveOrderPopRequest extends TeaModel {
     }
 
     public static class BatchSaveOrderPopRequestOrdersSubOrderModelList extends TeaModel {
+        @NameInMap("AdjustFee")
+        public String adjustFee;
+
+        @NameInMap("BuyerArea")
+        public String buyerArea;
+
+        @NameInMap("BuyerRate")
+        public String buyerRate;
+
+        @NameInMap("Cid")
+        public String cid;
+
+        @NameInMap("ConsignTime")
+        public String consignTime;
+
+        @NameInMap("DiscountFee")
+        public String discountFee;
+
         @NameInMap("Feature")
         public String feature;
+
+        @NameInMap("ItemMealId")
+        public String itemMealId;
+
+        @NameInMap("ItemMealName")
+        public String itemMealName;
 
         /**
          * <p>This parameter is required.</p>
@@ -42,8 +66,14 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         @NameInMap("OrderPayment")
         public String orderPayment;
 
+        @NameInMap("OrderTag")
+        public String orderTag;
+
         @NameInMap("OutProductId")
         public String outProductId;
+
+        @NameInMap("Payment")
+        public String payment;
 
         /**
          * <p>This parameter is required.</p>
@@ -60,8 +90,23 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         @NameInMap("ProductName")
         public String productName;
 
+        @NameInMap("ReceiverCity")
+        public String receiverCity;
+
+        @NameInMap("ReceiverState")
+        public String receiverState;
+
+        @NameInMap("RefundId")
+        public String refundId;
+
         @NameInMap("RefundStatus")
         public String refundStatus;
+
+        @NameInMap("SellerFlag")
+        public String sellerFlag;
+
+        @NameInMap("SellerRate")
+        public String sellerRate;
 
         /**
          * <p>This parameter is required.</p>
@@ -81,9 +126,60 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         @NameInMap("TotalFee")
         public String totalFee;
 
+        @NameInMap("TradeFrom")
+        public String tradeFrom;
+
         public static BatchSaveOrderPopRequestOrdersSubOrderModelList build(java.util.Map<String, ?> map) throws Exception {
             BatchSaveOrderPopRequestOrdersSubOrderModelList self = new BatchSaveOrderPopRequestOrdersSubOrderModelList();
             return TeaModel.build(map, self);
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setAdjustFee(String adjustFee) {
+            this.adjustFee = adjustFee;
+            return this;
+        }
+        public String getAdjustFee() {
+            return this.adjustFee;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setBuyerArea(String buyerArea) {
+            this.buyerArea = buyerArea;
+            return this;
+        }
+        public String getBuyerArea() {
+            return this.buyerArea;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setBuyerRate(String buyerRate) {
+            this.buyerRate = buyerRate;
+            return this;
+        }
+        public String getBuyerRate() {
+            return this.buyerRate;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setCid(String cid) {
+            this.cid = cid;
+            return this;
+        }
+        public String getCid() {
+            return this.cid;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setConsignTime(String consignTime) {
+            this.consignTime = consignTime;
+            return this;
+        }
+        public String getConsignTime() {
+            return this.consignTime;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setDiscountFee(String discountFee) {
+            this.discountFee = discountFee;
+            return this;
+        }
+        public String getDiscountFee() {
+            return this.discountFee;
         }
 
         public BatchSaveOrderPopRequestOrdersSubOrderModelList setFeature(String feature) {
@@ -92,6 +188,22 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         }
         public String getFeature() {
             return this.feature;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setItemMealId(String itemMealId) {
+            this.itemMealId = itemMealId;
+            return this;
+        }
+        public String getItemMealId() {
+            return this.itemMealId;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setItemMealName(String itemMealName) {
+            this.itemMealName = itemMealName;
+            return this;
+        }
+        public String getItemMealName() {
+            return this.itemMealName;
         }
 
         public BatchSaveOrderPopRequestOrdersSubOrderModelList setOpenSubOrderId(String openSubOrderId) {
@@ -110,12 +222,28 @@ public class BatchSaveOrderPopRequest extends TeaModel {
             return this.orderPayment;
         }
 
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setOrderTag(String orderTag) {
+            this.orderTag = orderTag;
+            return this;
+        }
+        public String getOrderTag() {
+            return this.orderTag;
+        }
+
         public BatchSaveOrderPopRequestOrdersSubOrderModelList setOutProductId(String outProductId) {
             this.outProductId = outProductId;
             return this;
         }
         public String getOutProductId() {
             return this.outProductId;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setPayment(String payment) {
+            this.payment = payment;
+            return this;
+        }
+        public String getPayment() {
+            return this.payment;
         }
 
         public BatchSaveOrderPopRequestOrdersSubOrderModelList setProductAmount(String productAmount) {
@@ -142,12 +270,52 @@ public class BatchSaveOrderPopRequest extends TeaModel {
             return this.productName;
         }
 
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setReceiverCity(String receiverCity) {
+            this.receiverCity = receiverCity;
+            return this;
+        }
+        public String getReceiverCity() {
+            return this.receiverCity;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setReceiverState(String receiverState) {
+            this.receiverState = receiverState;
+            return this;
+        }
+        public String getReceiverState() {
+            return this.receiverState;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setRefundId(String refundId) {
+            this.refundId = refundId;
+            return this;
+        }
+        public String getRefundId() {
+            return this.refundId;
+        }
+
         public BatchSaveOrderPopRequestOrdersSubOrderModelList setRefundStatus(String refundStatus) {
             this.refundStatus = refundStatus;
             return this;
         }
         public String getRefundStatus() {
             return this.refundStatus;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setSellerFlag(String sellerFlag) {
+            this.sellerFlag = sellerFlag;
+            return this;
+        }
+        public String getSellerFlag() {
+            return this.sellerFlag;
+        }
+
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setSellerRate(String sellerRate) {
+            this.sellerRate = sellerRate;
+            return this;
+        }
+        public String getSellerRate() {
+            return this.sellerRate;
         }
 
         public BatchSaveOrderPopRequestOrdersSubOrderModelList setStatus(String status) {
@@ -166,9 +334,26 @@ public class BatchSaveOrderPopRequest extends TeaModel {
             return this.totalFee;
         }
 
+        public BatchSaveOrderPopRequestOrdersSubOrderModelList setTradeFrom(String tradeFrom) {
+            this.tradeFrom = tradeFrom;
+            return this;
+        }
+        public String getTradeFrom() {
+            return this.tradeFrom;
+        }
+
     }
 
     public static class BatchSaveOrderPopRequestOrders extends TeaModel {
+        @NameInMap("AdjustFee")
+        public String adjustFee;
+
+        @NameInMap("BuyerArea")
+        public String buyerArea;
+
+        @NameInMap("BuyerRate")
+        public String buyerRate;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -186,6 +371,15 @@ public class BatchSaveOrderPopRequest extends TeaModel {
          */
         @NameInMap("ChannelOpenId")
         public String channelOpenId;
+
+        @NameInMap("CommissionFee")
+        public String commissionFee;
+
+        @NameInMap("ConsignTime")
+        public String consignTime;
+
+        @NameInMap("DiscountFee")
+        public String discountFee;
 
         @NameInMap("EndTime")
         public String endTime;
@@ -241,6 +435,27 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         @NameInMap("PlatformType")
         public String platformType;
 
+        @NameInMap("PointFee")
+        public String pointFee;
+
+        @NameInMap("PostFee")
+        public String postFee;
+
+        @NameInMap("RealPointFee")
+        public String realPointFee;
+
+        @NameInMap("ReceiverCity")
+        public String receiverCity;
+
+        @NameInMap("ReceiverState")
+        public String receiverState;
+
+        @NameInMap("SellerFlag")
+        public String sellerFlag;
+
+        @NameInMap("SellerRate")
+        public String sellerRate;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -249,6 +464,9 @@ public class BatchSaveOrderPopRequest extends TeaModel {
          */
         @NameInMap("ShopId")
         public String shopId;
+
+        @NameInMap("Sid")
+        public String sid;
 
         /**
          * <p>This parameter is required.</p>
@@ -277,9 +495,36 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         @NameInMap("buyerOpenUid")
         public String buyerOpenUid;
 
+        @NameInMap("tradeFrom")
+        public String tradeFrom;
+
         public static BatchSaveOrderPopRequestOrders build(java.util.Map<String, ?> map) throws Exception {
             BatchSaveOrderPopRequestOrders self = new BatchSaveOrderPopRequestOrders();
             return TeaModel.build(map, self);
+        }
+
+        public BatchSaveOrderPopRequestOrders setAdjustFee(String adjustFee) {
+            this.adjustFee = adjustFee;
+            return this;
+        }
+        public String getAdjustFee() {
+            return this.adjustFee;
+        }
+
+        public BatchSaveOrderPopRequestOrders setBuyerArea(String buyerArea) {
+            this.buyerArea = buyerArea;
+            return this;
+        }
+        public String getBuyerArea() {
+            return this.buyerArea;
+        }
+
+        public BatchSaveOrderPopRequestOrders setBuyerRate(String buyerRate) {
+            this.buyerRate = buyerRate;
+            return this;
+        }
+        public String getBuyerRate() {
+            return this.buyerRate;
         }
 
         public BatchSaveOrderPopRequestOrders setChannelCode(String channelCode) {
@@ -296,6 +541,30 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         }
         public String getChannelOpenId() {
             return this.channelOpenId;
+        }
+
+        public BatchSaveOrderPopRequestOrders setCommissionFee(String commissionFee) {
+            this.commissionFee = commissionFee;
+            return this;
+        }
+        public String getCommissionFee() {
+            return this.commissionFee;
+        }
+
+        public BatchSaveOrderPopRequestOrders setConsignTime(String consignTime) {
+            this.consignTime = consignTime;
+            return this;
+        }
+        public String getConsignTime() {
+            return this.consignTime;
+        }
+
+        public BatchSaveOrderPopRequestOrders setDiscountFee(String discountFee) {
+            this.discountFee = discountFee;
+            return this;
+        }
+        public String getDiscountFee() {
+            return this.discountFee;
         }
 
         public BatchSaveOrderPopRequestOrders setEndTime(String endTime) {
@@ -362,12 +631,76 @@ public class BatchSaveOrderPopRequest extends TeaModel {
             return this.platformType;
         }
 
+        public BatchSaveOrderPopRequestOrders setPointFee(String pointFee) {
+            this.pointFee = pointFee;
+            return this;
+        }
+        public String getPointFee() {
+            return this.pointFee;
+        }
+
+        public BatchSaveOrderPopRequestOrders setPostFee(String postFee) {
+            this.postFee = postFee;
+            return this;
+        }
+        public String getPostFee() {
+            return this.postFee;
+        }
+
+        public BatchSaveOrderPopRequestOrders setRealPointFee(String realPointFee) {
+            this.realPointFee = realPointFee;
+            return this;
+        }
+        public String getRealPointFee() {
+            return this.realPointFee;
+        }
+
+        public BatchSaveOrderPopRequestOrders setReceiverCity(String receiverCity) {
+            this.receiverCity = receiverCity;
+            return this;
+        }
+        public String getReceiverCity() {
+            return this.receiverCity;
+        }
+
+        public BatchSaveOrderPopRequestOrders setReceiverState(String receiverState) {
+            this.receiverState = receiverState;
+            return this;
+        }
+        public String getReceiverState() {
+            return this.receiverState;
+        }
+
+        public BatchSaveOrderPopRequestOrders setSellerFlag(String sellerFlag) {
+            this.sellerFlag = sellerFlag;
+            return this;
+        }
+        public String getSellerFlag() {
+            return this.sellerFlag;
+        }
+
+        public BatchSaveOrderPopRequestOrders setSellerRate(String sellerRate) {
+            this.sellerRate = sellerRate;
+            return this;
+        }
+        public String getSellerRate() {
+            return this.sellerRate;
+        }
+
         public BatchSaveOrderPopRequestOrders setShopId(String shopId) {
             this.shopId = shopId;
             return this;
         }
         public String getShopId() {
             return this.shopId;
+        }
+
+        public BatchSaveOrderPopRequestOrders setSid(String sid) {
+            this.sid = sid;
+            return this;
+        }
+        public String getSid() {
+            return this.sid;
         }
 
         public BatchSaveOrderPopRequestOrders setStatus(String status) {
@@ -400,6 +733,14 @@ public class BatchSaveOrderPopRequest extends TeaModel {
         }
         public String getBuyerOpenUid() {
             return this.buyerOpenUid;
+        }
+
+        public BatchSaveOrderPopRequestOrders setTradeFrom(String tradeFrom) {
+            this.tradeFrom = tradeFrom;
+            return this;
+        }
+        public String getTradeFrom() {
+            return this.tradeFrom;
         }
 
     }
