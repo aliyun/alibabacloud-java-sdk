@@ -98,9 +98,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The value of tag N to add to the resource.</p>
-     * <p>The value of this parameter can be an empty string and cannot exceed 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-     * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+     * <p>The tags that are added to the VPN gateway.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVpnGatewaysRequestTag> tag;
@@ -242,9 +240,8 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
 
     public static class DescribeVpnGatewaysRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key cannot be an empty string.</p>
-         * <p>It can be at most 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify at most 20 tag keys in each call.</p>
+         * <p>The tag key.</p>
+         * <p>You can specify at most 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -254,8 +251,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

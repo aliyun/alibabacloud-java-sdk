@@ -46,6 +46,9 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     @NameInMap("VcoRouteEntries")
     public java.util.List<DescribeVcoRouteEntriesResponseBodyVcoRouteEntries> vcoRouteEntries;
 
+    @NameInMap("VpnRouteCounts")
+    public java.util.List<DescribeVcoRouteEntriesResponseBodyVpnRouteCounts> vpnRouteCounts;
+
     public static DescribeVcoRouteEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVcoRouteEntriesResponseBody self = new DescribeVcoRouteEntriesResponseBody();
         return TeaModel.build(map, self);
@@ -91,6 +94,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         return this.vcoRouteEntries;
     }
 
+    public DescribeVcoRouteEntriesResponseBody setVpnRouteCounts(java.util.List<DescribeVcoRouteEntriesResponseBodyVpnRouteCounts> vpnRouteCounts) {
+        this.vpnRouteCounts = vpnRouteCounts;
+        return this;
+    }
+    public java.util.List<DescribeVcoRouteEntriesResponseBodyVpnRouteCounts> getVpnRouteCounts() {
+        return this.vpnRouteCounts;
+    }
+
     public static class DescribeVcoRouteEntriesResponseBodyVcoRouteEntries extends TeaModel {
         /**
          * <p>The list of autonomous system (AS) numbers that the BGP route goes through.</p>
@@ -128,6 +139,9 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
          */
         @NameInMap("NextHop")
         public String nextHop;
+
+        @NameInMap("NextHopTunnelIdList")
+        public java.util.List<String> nextHopTunnelIdList;
 
         /**
          * <p>The destination CIDR block of the route.</p>
@@ -236,6 +250,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             return this.nextHop;
         }
 
+        public DescribeVcoRouteEntriesResponseBodyVcoRouteEntries setNextHopTunnelIdList(java.util.List<String> nextHopTunnelIdList) {
+            this.nextHopTunnelIdList = nextHopTunnelIdList;
+            return this;
+        }
+        public java.util.List<String> getNextHopTunnelIdList() {
+            return this.nextHopTunnelIdList;
+        }
+
         public DescribeVcoRouteEntriesResponseBodyVcoRouteEntries setRouteDest(String routeDest) {
             this.routeDest = routeDest;
             return this;
@@ -282,6 +304,47 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
         public Integer getWeight() {
             return this.weight;
+        }
+
+    }
+
+    public static class DescribeVcoRouteEntriesResponseBodyVpnRouteCounts extends TeaModel {
+        @NameInMap("RouteCount")
+        public Integer routeCount;
+
+        @NameInMap("RouteEntryType")
+        public String routeEntryType;
+
+        @NameInMap("Source")
+        public String source;
+
+        public static DescribeVcoRouteEntriesResponseBodyVpnRouteCounts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVcoRouteEntriesResponseBodyVpnRouteCounts self = new DescribeVcoRouteEntriesResponseBodyVpnRouteCounts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVcoRouteEntriesResponseBodyVpnRouteCounts setRouteCount(Integer routeCount) {
+            this.routeCount = routeCount;
+            return this;
+        }
+        public Integer getRouteCount() {
+            return this.routeCount;
+        }
+
+        public DescribeVcoRouteEntriesResponseBodyVpnRouteCounts setRouteEntryType(String routeEntryType) {
+            this.routeEntryType = routeEntryType;
+            return this;
+        }
+        public String getRouteEntryType() {
+            return this.routeEntryType;
+        }
+
+        public DescribeVcoRouteEntriesResponseBodyVpnRouteCounts setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
     }

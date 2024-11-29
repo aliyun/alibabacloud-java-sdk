@@ -6168,10 +6168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
+     * <h2>Usage notes</h2>
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
+     * <li>When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
      * <li>After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.</li>
      * <li><strong>CreateNatGateway</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the task.<ul>
      * <li>If a NAT gateway is in the <strong>Creating</strong> state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.</li>
@@ -6179,7 +6179,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * It takes 1 to 3 minutes to create a NAT gateway.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>CreateNatGateway</strong> operation within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6313,10 +6312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
+     * <h2>Usage notes</h2>
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
+     * <li>When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
      * <li>After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.</li>
      * <li><strong>CreateNatGateway</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the task.<ul>
      * <li>If a NAT gateway is in the <strong>Creating</strong> state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.</li>
@@ -6324,7 +6323,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * It takes 1 to 3 minutes to create a NAT gateway.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>CreateNatGateway</strong> operation within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7800,14 +7798,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the task.
+     * <p>  <strong>CreateSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
      *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being created.
      *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL server is created.</p>
      * <ul>
-     * <li>You cannot call the <strong>CreateSslVpnServer</strong> operation to create multiple SSL servers at a time for the same VPN gateway.</li>
+     * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2526913.html">CreateVpnGateway</a>.</p>
+     * <h3><a href="#"></a>Prerequisite</h3>
+     * <ul>
+     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates an SSL server.</p>
@@ -7910,14 +7911,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the task.
+     * <p>  <strong>CreateSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
      *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being created.
      *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL server is created.</p>
      * <ul>
-     * <li>You cannot call the <strong>CreateSslVpnServer</strong> operation to create multiple SSL servers at a time for the same VPN gateway.</li>
+     * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2526913.html">CreateVpnGateway</a>.</p>
+     * <h3><a href="#"></a>Prerequisite</h3>
+     * <ul>
+     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates an SSL server.</p>
@@ -9433,6 +9437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableNatTraversal", request.enableNatTraversal);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableTunnelsBgp)) {
+            query.put("EnableTunnelsBgp", request.enableTunnelsBgp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
         }
@@ -9489,8 +9497,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tags", request.tags);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelOptionsSpecification)) {
+            bodyFlat.put("TunnelOptionsSpecification", request.tunnelOptionsSpecification);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateVpnAttachment"),
@@ -29657,6 +29676,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableNatTraversal", request.enableNatTraversal);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableTunnelsBgp)) {
+            query.put("EnableTunnelsBgp", request.enableTunnelsBgp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
         }
@@ -29709,8 +29732,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VpnConnectionId", request.vpnConnectionId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelOptionsSpecification)) {
+            bodyFlat.put("TunnelOptionsSpecification", request.tunnelOptionsSpecification);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyVpnAttachmentAttribute"),

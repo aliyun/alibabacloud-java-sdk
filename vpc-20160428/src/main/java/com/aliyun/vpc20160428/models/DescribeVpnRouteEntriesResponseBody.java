@@ -40,6 +40,9 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    @NameInMap("VpnRouteCounts")
+    public DescribeVpnRouteEntriesResponseBodyVpnRouteCounts vpnRouteCounts;
+
     /**
      * <p>The list of route entries.</p>
      */
@@ -83,12 +86,80 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public DescribeVpnRouteEntriesResponseBody setVpnRouteCounts(DescribeVpnRouteEntriesResponseBodyVpnRouteCounts vpnRouteCounts) {
+        this.vpnRouteCounts = vpnRouteCounts;
+        return this;
+    }
+    public DescribeVpnRouteEntriesResponseBodyVpnRouteCounts getVpnRouteCounts() {
+        return this.vpnRouteCounts;
+    }
+
     public DescribeVpnRouteEntriesResponseBody setVpnRouteEntries(DescribeVpnRouteEntriesResponseBodyVpnRouteEntries vpnRouteEntries) {
         this.vpnRouteEntries = vpnRouteEntries;
         return this;
     }
     public DescribeVpnRouteEntriesResponseBodyVpnRouteEntries getVpnRouteEntries() {
         return this.vpnRouteEntries;
+    }
+
+    public static class DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount extends TeaModel {
+        @NameInMap("RouteCount")
+        public Integer routeCount;
+
+        @NameInMap("RouteEntryType")
+        public String routeEntryType;
+
+        @NameInMap("Source")
+        public String source;
+
+        public static DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount self = new DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount setRouteCount(Integer routeCount) {
+            this.routeCount = routeCount;
+            return this;
+        }
+        public Integer getRouteCount() {
+            return this.routeCount;
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount setRouteEntryType(String routeEntryType) {
+            this.routeEntryType = routeEntryType;
+            return this;
+        }
+        public String getRouteEntryType() {
+            return this.routeEntryType;
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+    }
+
+    public static class DescribeVpnRouteEntriesResponseBodyVpnRouteCounts extends TeaModel {
+        @NameInMap("VpnRouteCount")
+        public java.util.List<DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount> vpnRouteCount;
+
+        public static DescribeVpnRouteEntriesResponseBodyVpnRouteCounts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnRouteEntriesResponseBodyVpnRouteCounts self = new DescribeVpnRouteEntriesResponseBodyVpnRouteCounts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteCounts setVpnRouteCount(java.util.List<DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount> vpnRouteCount) {
+            this.vpnRouteCount = vpnRouteCount;
+            return this;
+        }
+        public java.util.List<DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount> getVpnRouteCount() {
+            return this.vpnRouteCount;
+        }
+
     }
 
     public static class DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry extends TeaModel {

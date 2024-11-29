@@ -94,6 +94,9 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
+    @NameInMap("EnableTunnelsBgp")
+    public Boolean enableTunnelsBgp;
+
     /**
      * <p>The configuration of Phase 1 negotiations.</p>
      */
@@ -189,6 +192,9 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("TunnelOptionsSpecification")
+    public java.util.List<ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification> tunnelOptionsSpecification;
 
     /**
      * <p>The health check configuration of the IPsec-VPN connection.</p>
@@ -289,6 +295,14 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         return this.enableNatTraversal;
     }
 
+    public ModifyVpnAttachmentAttributeResponseBody setEnableTunnelsBgp(Boolean enableTunnelsBgp) {
+        this.enableTunnelsBgp = enableTunnelsBgp;
+        return this;
+    }
+    public Boolean getEnableTunnelsBgp() {
+        return this.enableTunnelsBgp;
+    }
+
     public ModifyVpnAttachmentAttributeResponseBody setIkeConfig(ModifyVpnAttachmentAttributeResponseBodyIkeConfig ikeConfig) {
         this.ikeConfig = ikeConfig;
         return this;
@@ -367,6 +381,14 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ModifyVpnAttachmentAttributeResponseBody setTunnelOptionsSpecification(java.util.List<ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification> tunnelOptionsSpecification) {
+        this.tunnelOptionsSpecification = tunnelOptionsSpecification;
+        return this;
+    }
+    public java.util.List<ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification> getTunnelOptionsSpecification() {
+        return this.tunnelOptionsSpecification;
     }
 
     public ModifyVpnAttachmentAttributeResponseBody setVcoHealthCheck(ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck vcoHealthCheck) {
@@ -637,6 +659,357 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         }
         public String getIpsecPfs() {
             return this.ipsecPfs;
+        }
+
+    }
+
+    public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig extends TeaModel {
+        @NameInMap("LocalAsn")
+        public Long localAsn;
+
+        @NameInMap("LocalBgpIp")
+        public String localBgpIp;
+
+        @NameInMap("PeerAsn")
+        public Long peerAsn;
+
+        @NameInMap("PeerBgpIp")
+        public String peerBgpIp;
+
+        @NameInMap("TunnelCidr")
+        public String tunnelCidr;
+
+        public static ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig self = new ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig setLocalAsn(Long localAsn) {
+            this.localAsn = localAsn;
+            return this;
+        }
+        public Long getLocalAsn() {
+            return this.localAsn;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig setLocalBgpIp(String localBgpIp) {
+            this.localBgpIp = localBgpIp;
+            return this;
+        }
+        public String getLocalBgpIp() {
+            return this.localBgpIp;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig setPeerAsn(Long peerAsn) {
+            this.peerAsn = peerAsn;
+            return this;
+        }
+        public Long getPeerAsn() {
+            return this.peerAsn;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig setPeerBgpIp(String peerBgpIp) {
+            this.peerBgpIp = peerBgpIp;
+            return this;
+        }
+        public String getPeerBgpIp() {
+            return this.peerBgpIp;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig setTunnelCidr(String tunnelCidr) {
+            this.tunnelCidr = tunnelCidr;
+            return this;
+        }
+        public String getTunnelCidr() {
+            return this.tunnelCidr;
+        }
+
+    }
+
+    public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig extends TeaModel {
+        @NameInMap("IkeAuthAlg")
+        public String ikeAuthAlg;
+
+        @NameInMap("IkeEncAlg")
+        public String ikeEncAlg;
+
+        @NameInMap("IkeLifetime")
+        public Long ikeLifetime;
+
+        @NameInMap("IkeMode")
+        public String ikeMode;
+
+        @NameInMap("IkePfs")
+        public String ikePfs;
+
+        @NameInMap("IkeVersion")
+        public String ikeVersion;
+
+        @NameInMap("LocalId")
+        public String localId;
+
+        @NameInMap("Psk")
+        public String psk;
+
+        @NameInMap("RemoteId")
+        public String remoteId;
+
+        public static ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig self = new ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setIkeAuthAlg(String ikeAuthAlg) {
+            this.ikeAuthAlg = ikeAuthAlg;
+            return this;
+        }
+        public String getIkeAuthAlg() {
+            return this.ikeAuthAlg;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setIkeEncAlg(String ikeEncAlg) {
+            this.ikeEncAlg = ikeEncAlg;
+            return this;
+        }
+        public String getIkeEncAlg() {
+            return this.ikeEncAlg;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setIkeLifetime(Long ikeLifetime) {
+            this.ikeLifetime = ikeLifetime;
+            return this;
+        }
+        public Long getIkeLifetime() {
+            return this.ikeLifetime;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setIkeMode(String ikeMode) {
+            this.ikeMode = ikeMode;
+            return this;
+        }
+        public String getIkeMode() {
+            return this.ikeMode;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setIkePfs(String ikePfs) {
+            this.ikePfs = ikePfs;
+            return this;
+        }
+        public String getIkePfs() {
+            return this.ikePfs;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setIkeVersion(String ikeVersion) {
+            this.ikeVersion = ikeVersion;
+            return this;
+        }
+        public String getIkeVersion() {
+            return this.ikeVersion;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setLocalId(String localId) {
+            this.localId = localId;
+            return this;
+        }
+        public String getLocalId() {
+            return this.localId;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setPsk(String psk) {
+            this.psk = psk;
+            return this;
+        }
+        public String getPsk() {
+            return this.psk;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig setRemoteId(String remoteId) {
+            this.remoteId = remoteId;
+            return this;
+        }
+        public String getRemoteId() {
+            return this.remoteId;
+        }
+
+    }
+
+    public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig extends TeaModel {
+        @NameInMap("IpsecAuthAlg")
+        public String ipsecAuthAlg;
+
+        @NameInMap("IpsecEncAlg")
+        public String ipsecEncAlg;
+
+        @NameInMap("IpsecLifetime")
+        public Long ipsecLifetime;
+
+        @NameInMap("IpsecPfs")
+        public String ipsecPfs;
+
+        public static ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig self = new ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig setIpsecAuthAlg(String ipsecAuthAlg) {
+            this.ipsecAuthAlg = ipsecAuthAlg;
+            return this;
+        }
+        public String getIpsecAuthAlg() {
+            return this.ipsecAuthAlg;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig setIpsecEncAlg(String ipsecEncAlg) {
+            this.ipsecEncAlg = ipsecEncAlg;
+            return this;
+        }
+        public String getIpsecEncAlg() {
+            return this.ipsecEncAlg;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig setIpsecLifetime(Long ipsecLifetime) {
+            this.ipsecLifetime = ipsecLifetime;
+            return this;
+        }
+        public Long getIpsecLifetime() {
+            return this.ipsecLifetime;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig setIpsecPfs(String ipsecPfs) {
+            this.ipsecPfs = ipsecPfs;
+            return this;
+        }
+        public String getIpsecPfs() {
+            return this.ipsecPfs;
+        }
+
+    }
+
+    public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification extends TeaModel {
+        @NameInMap("CustomerGatewayId")
+        public String customerGatewayId;
+
+        @NameInMap("EnableDpd")
+        public Boolean enableDpd;
+
+        @NameInMap("EnableNatTraversal")
+        public Boolean enableNatTraversal;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("TunnelBgpConfig")
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig;
+
+        @NameInMap("TunnelId")
+        public String tunnelId;
+
+        @NameInMap("TunnelIkeConfig")
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig tunnelIkeConfig;
+
+        @NameInMap("TunnelIndex")
+        public Integer tunnelIndex;
+
+        @NameInMap("TunnelIpsecConfig")
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig tunnelIpsecConfig;
+
+        public static ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification self = new ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setCustomerGatewayId(String customerGatewayId) {
+            this.customerGatewayId = customerGatewayId;
+            return this;
+        }
+        public String getCustomerGatewayId() {
+            return this.customerGatewayId;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setEnableDpd(Boolean enableDpd) {
+            this.enableDpd = enableDpd;
+            return this;
+        }
+        public Boolean getEnableDpd() {
+            return this.enableDpd;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setEnableNatTraversal(Boolean enableNatTraversal) {
+            this.enableNatTraversal = enableNatTraversal;
+            return this;
+        }
+        public Boolean getEnableNatTraversal() {
+            return this.enableNatTraversal;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setTunnelBgpConfig(ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig) {
+            this.tunnelBgpConfig = tunnelBgpConfig;
+            return this;
+        }
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig getTunnelBgpConfig() {
+            return this.tunnelBgpConfig;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setTunnelId(String tunnelId) {
+            this.tunnelId = tunnelId;
+            return this;
+        }
+        public String getTunnelId() {
+            return this.tunnelId;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setTunnelIkeConfig(ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig tunnelIkeConfig) {
+            this.tunnelIkeConfig = tunnelIkeConfig;
+            return this;
+        }
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig getTunnelIkeConfig() {
+            return this.tunnelIkeConfig;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setTunnelIndex(Integer tunnelIndex) {
+            this.tunnelIndex = tunnelIndex;
+            return this;
+        }
+        public Integer getTunnelIndex() {
+            return this.tunnelIndex;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification setTunnelIpsecConfig(ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig tunnelIpsecConfig) {
+            this.tunnelIpsecConfig = tunnelIpsecConfig;
+            return this;
+        }
+        public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig getTunnelIpsecConfig() {
+            return this.tunnelIpsecConfig;
         }
 
     }
