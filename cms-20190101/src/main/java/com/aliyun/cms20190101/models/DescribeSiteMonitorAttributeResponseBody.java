@@ -1108,6 +1108,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("header")
         public String header;
 
+        @NameInMap("host_binding")
+        public String hostBinding;
+
+        @NameInMap("host_binding_type")
+        public Integer hostBindingType;
+
         /**
          * <p>The HTTP request method. Valid values:</p>
          * <ul>
@@ -1517,6 +1523,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getHeader() {
             return this.header;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setHostBinding(String hostBinding) {
+            this.hostBinding = hostBinding;
+            return this;
+        }
+        public String getHostBinding() {
+            return this.hostBinding;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setHostBindingType(Integer hostBindingType) {
+            this.hostBindingType = hostBindingType;
+            return this;
+        }
+        public Integer getHostBindingType() {
+            return this.hostBindingType;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setHttpMethod(String httpMethod) {

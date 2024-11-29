@@ -100,13 +100,13 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
     public static class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget extends TeaModel {
         /**
-         * <p>The ARN of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. MNS, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The following part describes the ARN of MNS and the parameters in the ARN:</p>
+         * <p>The ARN of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. SMQ, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The following part describes the ARN of SMQ and the parameters in the ARN:</p>
          * <ul>
          * <li><p>{Service name abbreviation}: mns.</p>
          * </li>
          * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
          * </li>
-         * <li><p>{regionId}: the region ID of the message queue or topic.</p>
+         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
          * </li>
          * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
          * <ul>

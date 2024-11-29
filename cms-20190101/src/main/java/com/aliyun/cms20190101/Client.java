@@ -640,13 +640,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Prerequisites</h1>
+     * <h2><a href="#"></a>Prerequisites</h2>
      * <p>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</p>
-     * <h1>Description</h1>
-     * <p>In this example, a Logstore group named <code>Logstore_test</code> is created. The region ID is <code>cn-hangzhou</code>. The project is <code>aliyun-project</code>. The Logstore is <code>Logstore-ECS</code>. The response shows that the Logstore group is created.</p>
+     * <h2><a href="#"></a>Description</h2>
+     * <p>This topic provides an example on how to create a Logstore group named <code>Logstore_test</code>. The region ID is <code>cn-hangzhou</code>. The project is <code>aliyun-project</code>. The Logstore is <code>Logstore-ECS</code>. The response shows that the Logstore group is created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Logstore group for the metrics of Simple Log Service logs.</p>
+     * <p>Creates a Logstore group of Hybrid Cloud Monitoring.</p>
      * 
      * @param request CreateHybridMonitorSLSGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -686,13 +686,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Prerequisites</h1>
+     * <h2><a href="#"></a>Prerequisites</h2>
      * <p>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</p>
-     * <h1>Description</h1>
-     * <p>In this example, a Logstore group named <code>Logstore_test</code> is created. The region ID is <code>cn-hangzhou</code>. The project is <code>aliyun-project</code>. The Logstore is <code>Logstore-ECS</code>. The response shows that the Logstore group is created.</p>
+     * <h2><a href="#"></a>Description</h2>
+     * <p>This topic provides an example on how to create a Logstore group named <code>Logstore_test</code>. The region ID is <code>cn-hangzhou</code>. The project is <code>aliyun-project</code>. The Logstore is <code>Logstore-ECS</code>. The response shows that the Logstore group is created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Logstore group for the metrics of Simple Log Service logs.</p>
+     * <p>Creates a Logstore group of Hybrid Cloud Monitoring.</p>
      * 
      * @param request CreateHybridMonitorSLSGroupRequest
      * @return CreateHybridMonitorSLSGroupResponse
@@ -3959,7 +3959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example to show how to query the details of an event-triggered alert rule named <code>testRule</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the push channels of an event-triggered alert rule.</p>
+     * <p>Queries event-triggered alert rules.</p>
      * 
      * @param request DescribeEventRuleTargetListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3994,7 +3994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example to show how to query the details of an event-triggered alert rule named <code>testRule</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the push channels of an event-triggered alert rule.</p>
+     * <p>Queries event-triggered alert rules.</p>
      * 
      * @param request DescribeEventRuleTargetListRequest
      * @return DescribeEventRuleTargetListResponse
@@ -9593,6 +9593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
+     * <blockquote>
+     * <p> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Configures an alert rule.</p>
@@ -9706,6 +9709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
+     * <blockquote>
+     * <p> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Configures an alert rule.</p>
@@ -9721,6 +9727,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
+     * <blockquote>
+     * <p> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Creates multiple alert rules for the specified metric of a specified resource.</p>
@@ -9756,6 +9765,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
+     * <blockquote>
+     * <p> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Creates multiple alert rules for the specified metric of a specified resource.</p>

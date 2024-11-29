@@ -38,7 +38,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The information about the recipients in Message Service (MNS).</p>
+     * <p>The notifications of Simple Message Queue (formerly MNS) (SMQ).</p>
      */
     @NameInMap("MnsParameters")
     public DescribeEventRuleTargetListResponseBodyMnsParameters mnsParameters;
@@ -365,7 +365,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the MNS queue.</p>
+         * <p>The name of the SMQ queue.</p>
          * 
          * <strong>example:</strong>
          * <p>testQueue</p>
@@ -374,7 +374,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         public String queue;
 
         /**
-         * <p>The region where MNS is deployed.</p>
+         * <p>The region for SMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -383,7 +383,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The MNS topic.</p>
+         * <p>The SMQ topic.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_sample</p>

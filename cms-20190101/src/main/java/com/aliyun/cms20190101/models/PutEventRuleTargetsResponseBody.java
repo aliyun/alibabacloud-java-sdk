@@ -29,7 +29,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     public PutEventRuleTargetsResponseBodyFailedFcParameters failedFcParameters;
 
     /**
-     * <p>This parameter is returned if the specified queues in the request failed to be created or modified in MNS.</p>
+     * <p>This parameter is returned if the specified queues in the request failed to be created or modified in SMQ.</p>
      */
     @NameInMap("FailedMnsParameters")
     public PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters;
@@ -156,8 +156,8 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The alert level and the corresponding notification methods. Valid values:</p>
-         * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+         * <p>The alert notification methods. Valid values:</p>
+         * <p>4: Alert notifications are sent by using DingTalk and emails.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
