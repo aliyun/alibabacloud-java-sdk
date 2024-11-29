@@ -31,6 +31,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
+    @NameInMap("IspAffinity")
+    public Boolean ispAffinity;
+
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
      * 
@@ -169,6 +172,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     }
     public Integer getIdleTimeout() {
         return this.idleTimeout;
+    }
+
+    public DescribeSnatAttributeResponseBody setIspAffinity(Boolean ispAffinity) {
+        this.ispAffinity = ispAffinity;
+        return this;
+    }
+    public Boolean getIspAffinity() {
+        return this.ispAffinity;
     }
 
     public DescribeSnatAttributeResponseBody setNatGatewayId(String natGatewayId) {
