@@ -1,3 +1,7 @@
+2024-11-29 Version: 6.2.1
+- Update API GetInstance: update response param.
+
+
 2024-11-21 Version: 6.2.0
 - Support API ListCheckProcesses.
 
