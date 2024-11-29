@@ -21,18 +21,15 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The alert contact group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>云账号报警联系人</p>
      */
     @NameInMap("ContactGroup")
     public String contactGroup;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. </li>
-     * <li><strong>false</strong> (default): sends the request.</li>
+     * <li><strong>true</strong>: performs a dry run for the request, but does not create a service instance.</li>
+     * <li><strong>false</strong>: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +39,11 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Indicates whether the service instance supports the operation feature.</p>
+     * <p>Specifies whether the service instance supports the hosted O\&amp;M feature. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,7 +52,11 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean enableInstanceOps;
 
     /**
-     * <p>Whether to enable Prometheus monitoring.</p>
+     * <p>Specifies whether to enable the Prometheus monitoring feature. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -101,11 +106,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Whether the resource pays automatically.Valid values:</p>
+     * <p>Specifies whether to automatically deduct the resource fees from the account balance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ResourceAutoPay")
     public Boolean resourceAutoPay;
@@ -149,9 +157,6 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The package name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>套餐一</p>
      */
     @NameInMap("SpecificationName")
     public String specificationName;
@@ -164,21 +169,15 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the template.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>模板1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The trial type of serviceInstance. 
-     * Valid values:</p>
+     * <p>The trial type of the service instance. Valid values:</p>
      * <ul>
-     * <li>Created: </li>
-     * <li>Deploying</li>
-     * <li>DeployedFailed</li>
-     * <li>Deployed</li>
+     * <li><strong>Trial</strong>: Trials are supported.</li>
+     * <li><strong>NotTrial</strong>: Trials are not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -359,7 +358,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public Boolean autoPay;
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal for the service instance. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -371,6 +370,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>302070970220</p>
+         */
         @NameInMap("CouponId")
         public String couponId;
 
@@ -386,9 +391,9 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         /**
          * <p>The unit of the subscription duration. Valid values:</p>
          * <ul>
-         * <li>Year</li>
-         * <li>Month</li>
-         * <li>Day</li>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * <li><strong>Day</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

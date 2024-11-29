@@ -1,3 +1,11 @@
+2024-11-29 Version: 3.4.0
+- Support API GetService.
+- Support API ListServices.
+- Update API GetServiceInstance: update response param.
+- Update API ListServiceInstanceLogs: update response param.
+- Update API ListServiceInstanceResources: add param Filters.
+
+
 2024-07-26 Version: 3.3.0
 - Support API ListServiceInstanceUpgradeHistory.
 - Support API RollbackServiceInstance.
