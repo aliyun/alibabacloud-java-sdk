@@ -25,6 +25,33 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String expireTimeStart;
 
     /**
+     * <p>The filter conditions. Vaild values:</p>
+     * <ul>
+     * <li><p>ExpireTimeStart：
+     * Query start time for Subscription resource expiration.
+     * <notice>Notice Note: Only supports querying service instances on private deployments.&gt;Notice: </p>
+     * </li>
+     * <li><p>ExpireTimeEnd：Query end time for Subscription resource expiration.
+     * <notice>Notice Note: Only supports querying service instances on private deployments.&gt;Notice: </p>
+     * </li>
+     * <li><p>PayType：The billing method of the read-only instance. 
+     * <notice>Notice Note: Only supports querying service instances on private deployments.<notice> </p>
+     * <p> Valid values:</p>
+     * <ul>
+     * <li><p>PayAsYouGo</p>
+     * </li>
+     * <li><p>Subscription</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>ResourceARN：The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+     * </li>
+     * </ul>
+     */
+    @NameInMap("Filters")
+    public java.util.List<ListServiceInstanceResourcesRequestFilters> filters;
+
+    /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -124,6 +151,14 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
         return this.expireTimeStart;
     }
 
+    public ListServiceInstanceResourcesRequest setFilters(java.util.List<ListServiceInstanceResourcesRequestFilters> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.List<ListServiceInstanceResourcesRequestFilters> getFilters() {
+        return this.filters;
+    }
+
     public ListServiceInstanceResourcesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -186,6 +221,51 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     }
     public java.util.List<ListServiceInstanceResourcesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public static class ListServiceInstanceResourcesRequestFilters extends TeaModel {
+        /**
+         * <p>Vaild values:</p>
+         * <ul>
+         * <li>ExpireTimeStart</li>
+         * <li>ExpireTimeEnd</li>
+         * <li>PayType</li>
+         * <li>ResourceARN</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ExpireTimeStart</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The value of the filter condition.</p>
+         */
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static ListServiceInstanceResourcesRequestFilters build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceInstanceResourcesRequestFilters self = new ListServiceInstanceResourcesRequestFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstanceResourcesRequestFilters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListServiceInstanceResourcesRequestFilters setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
     public static class ListServiceInstanceResourcesRequestTag extends TeaModel {
