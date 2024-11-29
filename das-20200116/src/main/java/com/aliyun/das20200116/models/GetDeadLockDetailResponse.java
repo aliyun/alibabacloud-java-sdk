@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class SyncHDMAliyunResourceResponse extends TeaModel {
+public class GetDeadLockDetailResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SyncHDMAliyunResourceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SyncHDMAliyunResourceResponseBody body;
+    public GetDeadLockDetailResponseBody body;
 
-    public static SyncHDMAliyunResourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        SyncHDMAliyunResourceResponse self = new SyncHDMAliyunResourceResponse();
+    public static GetDeadLockDetailResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetDeadLockDetailResponse self = new GetDeadLockDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public SyncHDMAliyunResourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetDeadLockDetailResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SyncHDMAliyunResourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public SyncHDMAliyunResourceResponse setStatusCode(Integer statusCode) {
+    public GetDeadLockDetailResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SyncHDMAliyunResourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SyncHDMAliyunResourceResponse setBody(SyncHDMAliyunResourceResponseBody body) {
+    public GetDeadLockDetailResponse setBody(GetDeadLockDetailResponseBody body) {
         this.body = body;
         return this;
     }
-    public SyncHDMAliyunResourceResponseBody getBody() {
+    public GetDeadLockDetailResponseBody getBody() {
         return this.body;
     }
 

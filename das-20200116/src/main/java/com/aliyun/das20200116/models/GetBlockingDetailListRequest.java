@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBlockingDetailListRequest extends TeaModel {
     /**
-     * <p>The database name list.</p>
-     * <ul>
-     * <li>Separate multiple database names with commas (,).</li>
-     * </ul>
+     * <p>The name of the database. Separate multiple database names with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>school1,school2</p>
@@ -27,7 +24,7 @@ public class GetBlockingDetailListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The database instance ID.</p>
+     * <p>The ID of the database instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +52,7 @@ public class GetBlockingDetailListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The hash value of the SQL statement.</p>
+     * <p>The hash value of the SQL statement. The hash values of SQL statements of the same type are the same.</p>
      * 
      * <strong>example:</strong>
      * <p>DC08B955CAD25E7B</p>
@@ -64,7 +61,7 @@ public class GetBlockingDetailListRequest extends TeaModel {
     public String queryHash;
 
     /**
-     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

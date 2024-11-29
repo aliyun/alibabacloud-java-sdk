@@ -14,7 +14,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetPfsSqlSummariesResponseBodyData data;
@@ -313,7 +313,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p>This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+         * <p> This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1208,7 +1208,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         public Object extra;
 
         /**
-         * <p>The detailed information.</p>
+         * <p>The details of the data returned.</p>
          */
         @NameInMap("List")
         public java.util.List<GetPfsSqlSummariesResponseBodyDataList> list;

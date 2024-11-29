@@ -14,7 +14,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The configurations of the auto scaling feature.</p>
+     * <p>The configurations of the auto scaling feature for instances.</p>
      */
     @NameInMap("Data")
     public DescribeAutoScalingConfigResponseBodyData data;
@@ -544,10 +544,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         public Integer maxReadOnlyNodes;
 
         /**
-         * <p>The maximum specifications to which the database instance can be upgraded. For more information about the specifications of each type of supported database instances, see the following topics:</p>
+         * <p>The maximum specifications to which the cluster can be scaled up. For more information about the specifications of each type of supported database instances, see the following topics:</p>
          * <ul>
-         * <li>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a>.</li>
-         * <li>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs): <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a>.</li>
+         * <li>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications of PolarDB for MySQL Enterprise Edition</a></li>
+         * <li>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></li>
          * </ul>
          * 
          * <strong>example:</strong>

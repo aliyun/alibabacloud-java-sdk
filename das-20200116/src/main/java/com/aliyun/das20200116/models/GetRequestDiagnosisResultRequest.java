@@ -15,7 +15,10 @@ public class GetRequestDiagnosisResultRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The unique ID of the diagnostics task. You can call the <a href="https://help.aliyun.com/document_detail/341609.html">CreateRequestDiagnosis</a> operation to query the diagnostics task ID.</p>
+     * <p>The unique ID of the diagnostic task.<a href="~~341609~~"></a></p>
+     * <blockquote>
+     * <p> If you set MessageId to the task ID of the automatic SQL optimization feature, no result is returned.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
