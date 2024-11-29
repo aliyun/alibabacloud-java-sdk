@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSavingsPlanEstimationRequest extends TeaModel {
+    @NameInMap("EstimationResource")
+    public String estimationResource;
+
+    @NameInMap("InstanceTypeScope")
+    public String instanceTypeScope;
+
     @NameInMap("OfferingType")
     public String offeringType;
 
@@ -25,6 +31,22 @@ public class DescribeSavingsPlanEstimationRequest extends TeaModel {
     public static DescribeSavingsPlanEstimationRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSavingsPlanEstimationRequest self = new DescribeSavingsPlanEstimationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSavingsPlanEstimationRequest setEstimationResource(String estimationResource) {
+        this.estimationResource = estimationResource;
+        return this;
+    }
+    public String getEstimationResource() {
+        return this.estimationResource;
+    }
+
+    public DescribeSavingsPlanEstimationRequest setInstanceTypeScope(String instanceTypeScope) {
+        this.instanceTypeScope = instanceTypeScope;
+        return this;
+    }
+    public String getInstanceTypeScope() {
+        return this.instanceTypeScope;
     }
 
     public DescribeSavingsPlanEstimationRequest setOfferingType(String offeringType) {
