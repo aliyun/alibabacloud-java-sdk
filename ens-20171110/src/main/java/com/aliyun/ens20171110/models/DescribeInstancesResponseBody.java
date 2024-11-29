@@ -1255,6 +1255,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("SecurityGroupIds")
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
 
+        @NameInMap("ServiceStatus")
+        public String serviceStatus;
+
         /**
          * <p>The instance type.</p>
          * 
@@ -1505,6 +1508,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setServiceStatus(String serviceStatus) {
+            this.serviceStatus = serviceStatus;
+            return this;
+        }
+        public String getServiceStatus() {
+            return this.serviceStatus;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setSpecName(String specName) {

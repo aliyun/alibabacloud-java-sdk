@@ -157,6 +157,9 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("ServiceStatus")
+    public String serviceStatusShrink;
+
     /**
      * <p>The status of the instance. Valid values:</p>
      * <ul>
@@ -317,6 +320,14 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public DescribeInstancesShrinkRequest setServiceStatusShrink(String serviceStatusShrink) {
+        this.serviceStatusShrink = serviceStatusShrink;
+        return this;
+    }
+    public String getServiceStatusShrink() {
+        return this.serviceStatusShrink;
     }
 
     public DescribeInstancesShrinkRequest setStatus(String status) {
