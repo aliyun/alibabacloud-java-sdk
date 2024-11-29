@@ -290,6 +290,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("NodeName")
         public String nodeName;
 
+        @NameInMap("Owner")
+        public String owner;
+
         /**
          * <p>The parameters related to the node.</p>
          * 
@@ -298,6 +301,9 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         @NameInMap("ParamValues")
         public String paramValues;
+
+        @NameInMap("PeriodNumber")
+        public Integer periodNumber;
 
         /**
          * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8. A greater value indicates a higher priority. Default value: 1.</p>
@@ -544,12 +550,28 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.nodeName;
         }
 
+        public GetInstanceResponseBodyData setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
         public GetInstanceResponseBodyData setParamValues(String paramValues) {
             this.paramValues = paramValues;
             return this;
         }
         public String getParamValues() {
             return this.paramValues;
+        }
+
+        public GetInstanceResponseBodyData setPeriodNumber(Integer periodNumber) {
+            this.periodNumber = periodNumber;
+            return this;
+        }
+        public Integer getPeriodNumber() {
+            return this.periodNumber;
         }
 
         public GetInstanceResponseBodyData setPriority(Integer priority) {
