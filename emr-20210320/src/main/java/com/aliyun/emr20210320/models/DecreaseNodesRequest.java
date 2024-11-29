@@ -4,6 +4,12 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class DecreaseNodesRequest extends TeaModel {
+    @NameInMap("BatchInterval")
+    public Integer batchInterval;
+
+    @NameInMap("BatchSize")
+    public Integer batchSize;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -55,6 +61,22 @@ public class DecreaseNodesRequest extends TeaModel {
     public static DecreaseNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DecreaseNodesRequest self = new DecreaseNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DecreaseNodesRequest setBatchInterval(Integer batchInterval) {
+        this.batchInterval = batchInterval;
+        return this;
+    }
+    public Integer getBatchInterval() {
+        return this.batchInterval;
+    }
+
+    public DecreaseNodesRequest setBatchSize(Integer batchSize) {
+        this.batchSize = batchSize;
+        return this;
+    }
+    public Integer getBatchSize() {
+        return this.batchSize;
     }
 
     public DecreaseNodesRequest setClusterId(String clusterId) {

@@ -128,6 +128,9 @@ public class NodeGroup extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("PrivatePoolOptions")
+    public PrivatePoolOptions privatePoolOptions;
+
     /**
      * <p>存活节点数量。</p>
      * 
@@ -170,8 +173,6 @@ public class NodeGroup extends TeaModel {
     public NodeGroupStateChangeReason stateChangeReason;
 
     /**
-     * <p>节点组状态，NodeGroupState别名。</p>
-     * 
      * <strong>example:</strong>
      * <p>CREATED</p>
      */
@@ -314,6 +315,14 @@ public class NodeGroup extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public NodeGroup setPrivatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public PrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public NodeGroup setRunningNodeCount(Integer runningNodeCount) {

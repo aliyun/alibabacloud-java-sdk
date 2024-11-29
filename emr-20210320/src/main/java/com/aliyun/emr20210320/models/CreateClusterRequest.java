@@ -61,6 +61,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
      * <ul>
@@ -220,6 +223,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public CreateClusterRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public CreateClusterRequest setDeployMode(String deployMode) {
