@@ -85,6 +85,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>作废优惠券</p>
+     * 
+     * @param request CancelCouponRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelCouponResponse
+     */
+    public CancelCouponResponse cancelCouponWithOptions(CancelCouponRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.couponId)) {
+            query.put("CouponId", request.couponId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelCoupon"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCouponResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>作废优惠券</p>
+     * 
+     * @param request CancelCouponRequest
+     * @return CancelCouponResponse
+     */
+    public CancelCouponResponse cancelCoupon(CancelCouponRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelCouponWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
      * You can call this operation to cancel the subscription to only one type of bill at a time.
@@ -138,6 +182,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelSubscriptionBillResponse cancelSubscriptionBill(CancelSubscriptionBillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelSubscriptionBillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>优惠券审批状态列表</p>
+     * 
+     * @param request CouponApprovalStatusListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CouponApprovalStatusListResponse
+     */
+    public CouponApprovalStatusListResponse couponApprovalStatusListWithOptions(CouponApprovalStatusListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateStatus)) {
+            query.put("TemplateStatus", request.templateStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CouponApprovalStatusList"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CouponApprovalStatusListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>优惠券审批状态列表</p>
+     * 
+     * @param request CouponApprovalStatusListRequest
+     * @return CouponApprovalStatusListResponse
+     */
+    public CouponApprovalStatusListResponse couponApprovalStatusList(CouponApprovalStatusListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.couponApprovalStatusListWithOptions(request, runtime);
     }
 
     /**
@@ -396,6 +500,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeductOutstandingBalanceResponse deductOutstandingBalance(DeductOutstandingBalanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deductOutstandingBalanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>作废优惠券模板</p>
+     * 
+     * @param request DeleteCouponTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCouponTemplateResponse
+     */
+    public DeleteCouponTemplateResponse deleteCouponTemplateWithOptions(DeleteCouponTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCouponTemplate"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCouponTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>作废优惠券模板</p>
+     * 
+     * @param request DeleteCouponTemplateRequest
+     * @return DeleteCouponTemplateResponse
+     */
+    public DeleteCouponTemplateResponse deleteCouponTemplate(DeleteCouponTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCouponTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -662,6 +810,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAccountInfoResponse getAccountInfo(GetAccountInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccountInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优惠券模板详情</p>
+     * 
+     * @param request GetCouponTemplateDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCouponTemplateDetailResponse
+     */
+    public GetCouponTemplateDetailResponse getCouponTemplateDetailWithOptions(GetCouponTemplateDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCouponTemplateDetail"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCouponTemplateDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优惠券模板详情</p>
+     * 
+     * @param request GetCouponTemplateDetailRequest
+     * @return GetCouponTemplateDetailResponse
+     */
+    public GetCouponTemplateDetailResponse getCouponTemplateDetail(GetCouponTemplateDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCouponTemplateDetailWithOptions(request, runtime);
     }
 
     /**
