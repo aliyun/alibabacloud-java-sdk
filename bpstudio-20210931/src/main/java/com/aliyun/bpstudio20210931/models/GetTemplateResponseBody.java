@@ -102,6 +102,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        @NameInMap("Options")
+        public String options;
+
         /**
          * <p>The value of the variable.</p>
          * 
@@ -138,6 +141,14 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getDefaultValue() {
             return this.defaultValue;
+        }
+
+        public GetTemplateResponseBodyDataVariables setOptions(String options) {
+            this.options = options;
+            return this;
+        }
+        public String getOptions() {
+            return this.options;
         }
 
         public GetTemplateResponseBodyDataVariables setVariable(String variable) {
