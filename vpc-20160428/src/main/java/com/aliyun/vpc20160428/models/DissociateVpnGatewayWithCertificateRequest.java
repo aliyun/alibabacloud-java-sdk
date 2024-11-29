@@ -7,7 +7,7 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     /**
      * <p>The certificate ID.</p>
      * <blockquote>
-     * <p> The certificate ID refers to the ID generated after the SSL certificate is associated with a VPN gateway. It is not the ID of the certificate itself. You can call <a href="https://help.aliyun.com/document_detail/448813.html">ListVpnCertificateAssociations</a> to query certificate IDs.</p>
+     * <p>The certificate ID refers to the ID generated after the SSL certificate is associated with the VPN gateway. It is not the ID of the SSL certificate. You can call the <a href="https://help.aliyun.com/document_detail/2521961.html">ListVpnCertificateAssociations</a> operation to query certificate IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

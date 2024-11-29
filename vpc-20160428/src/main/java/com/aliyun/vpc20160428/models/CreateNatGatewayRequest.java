@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayRequest extends TeaModel {
+    /**
+     * <p>The access mode for reverse access to the VPC NAT gateway.</p>
+     */
     @NameInMap("AccessMode")
     public CreateNatGatewayRequestAccessMode accessMode;
 
@@ -51,13 +54,14 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>The mode in which the EIP is associated with the NAT gateway. Valid values:</p>
      * <ul>
-     * <li><p><strong>MULTI_BINDED</strong> (default): Multi-EIP-to-ENI mode.</p>
+     * <li><p><strong>MULTI_BINDED</strong>(default): the multi-EIP-to-ENI mode.</p>
      * </li>
-     * <li><p><strong>NAT</strong>: NAT mode. IPv4 gateways are supported in this mode.</p>
-     * <p>**</p>
-     * <p><strong>Note</strong> If a NAT gateway is associated with an EIP in NAT mode, the EIP occupies one private IP address in the vSwitch. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.</p>
+     * <li><p><strong>NAT</strong>: NAT mode, which is compatible with IPv4 addresses.</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>If an EIP is associated with a NAT gateway in NAT mode, the EIP occupies a private IP address of the vSwitch where the NAT gateway is deployed. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, EIPs cannot be associated with the NAT gateway. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>MULTI_BINDED</p>
@@ -73,7 +77,7 @@ public class CreateNatGatewayRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
@@ -100,7 +104,7 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The name of the NAT gateway.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
      * <p>If this parameter is not set, the system assigns a default name to the NAT gateway.</p>
      * 
      * <strong>example:</strong>
@@ -146,6 +150,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>PrivateLink is not supported by default. If you set the value to true, PrivateLink is supported.</p>
+     */
     @NameInMap("PrivateLinkEnabled")
     public Boolean privateLinkEnabled;
 
@@ -190,6 +197,9 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MULTI_BINDED</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateNatGatewayRequestTag> tag;
@@ -419,9 +429,33 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
 
     public static class CreateNatGatewayRequestAccessMode extends TeaModel {
+        /**
+         * <p>Access mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>route</strong>: route mode</p>
+         * </li>
+         * <li><p><strong>tunnel</strong>: tunnel mode</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter is specified, you must set <strong>PrivateLinkEnabled</strong> to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>route</p>
+         */
         @NameInMap("ModeValue")
         public String modeValue;
 
+        /**
+         * <p>Tunnel mode type:</p>
+         * <ul>
+         * <li><strong>geneve</strong>: Geneve type</li>
+         * </ul>
+         * <blockquote>
+         * <p>This value takes effect if the access mode is the tunnel mode.</p>
+         * </blockquote>
+         */
         @NameInMap("TunnelType")
         public String tunnelType;
 
@@ -450,7 +484,7 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     public static class CreateNatGatewayRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -459,7 +493,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -871,6 +871,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("TunnelIkeConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig tunnelIkeConfig;
 
+        @NameInMap("TunnelIndex")
+        public Integer tunnelIndex;
+
         /**
          * <p>The configurations of Phase 2 negotiations.</p>
          */
@@ -977,6 +980,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig getTunnelIkeConfig() {
             return this.tunnelIkeConfig;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions setTunnelIndex(Integer tunnelIndex) {
+            this.tunnelIndex = tunnelIndex;
+            return this;
+        }
+        public Integer getTunnelIndex() {
+            return this.tunnelIndex;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions setTunnelIpsecConfig(DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig tunnelIpsecConfig) {

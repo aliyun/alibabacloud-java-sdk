@@ -467,6 +467,9 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeRequestTunnelOptionsSpecification extends TeaModel {
+        @NameInMap("CustomerGatewayId")
+        public String customerGatewayId;
+
         /**
          * <p>Specifies whether to enable the dead peer detection (DPD) feature. Valid values:</p>
          * <ul>
@@ -524,6 +527,14 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
         public static ModifyTunnelAttributeRequestTunnelOptionsSpecification build(java.util.Map<String, ?> map) throws Exception {
             ModifyTunnelAttributeRequestTunnelOptionsSpecification self = new ModifyTunnelAttributeRequestTunnelOptionsSpecification();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyTunnelAttributeRequestTunnelOptionsSpecification setCustomerGatewayId(String customerGatewayId) {
+            this.customerGatewayId = customerGatewayId;
+            return this;
+        }
+        public String getCustomerGatewayId() {
+            return this.customerGatewayId;
         }
 
         public ModifyTunnelAttributeRequestTunnelOptionsSpecification setEnableDpd(Boolean enableDpd) {

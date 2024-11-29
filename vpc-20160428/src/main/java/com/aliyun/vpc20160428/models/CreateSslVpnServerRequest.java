@@ -102,17 +102,19 @@ public class CreateSslVpnServerRequest extends TeaModel {
     public Boolean compress;
 
     /**
-     * <p>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must configure <code>IDaaSInstanceId</code> and <code>IDaaSRegionId</code>. Valid values:</p>
+     * <p>Specifies whether to enable two-factor authentication. To enable two-factor authentication, you need to specify <code>IDaaSInstanceId</code>, <code>IDaaSRegionId</code>, and <code>IDaaSApplicationId</code>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables this feature.</li>
-     * <li><strong>false</strong> (default): disables this feature.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>Two-factor authentication supports only earlier versions of IDaaS instances. If you do not have and cannot create earlier versions of IDaaS instances, you cannot enable two-factor authentication.</li>
-     * <li>If two-factor authentication is already enabled for existing SSL servers, you can continue to use two-factor authentication.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If you use two-factor authentication for the first time, you need to complete <a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22%3A%5B%7B%22Service%22%3A%22VPN%22%2C%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunVpnAccessingIdaasRole%22%2C%22TemplateId%22%3A%22IdaasRole%22%7D%5D%7D%5D%2C%22ReturnUrl%22%3A%22https%3A%2F%2Fvpc.console.aliyun.com%2Fsslvpn%2Fcn-shanghai%2Fvpn-servers%22%7D">authorization</a> before you create an SSL server.</p>
+     * </li>
+     * <li><p>IDaaS EIAM 1.0 instances are no longer available for purchase. If your Alibaba Cloud account has IDaaS EIAM 1.0 instances, IDaaS EIAM 1.0 instances can be associated after two-factor authentication is enabled. If your Alibaba Cloud account does not have IDaaS EIAM 1.0 instances, only IDaaS EIAM 2.0 instances can be associated after two-factor authentication is enabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -120,11 +122,21 @@ public class CreateSslVpnServerRequest extends TeaModel {
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
+    /**
+     * <p>The ID of the IDaaS application.</p>
+     * <ul>
+     * <li>If an IDaaS EIAM 2.0 instance is associated, you need to specify an IDaaS application ID.</li>
+     * <li>If an IDaaS EIAM 1.0 instance is associated, you do not need to specify an IDaaS application ID.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>app_my6g4qmvnwxzj2f****</p>
+     */
     @NameInMap("IDaaSApplicationId")
     public String IDaaSApplicationId;
 
     /**
-     * <p>The Identity as a Service (IDaaS) instance ID.</p>
+     * <p>The ID of the IDaaS EIAM instance.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas-cn-hangzhou-p****</p>
@@ -133,7 +145,7 @@ public class CreateSslVpnServerRequest extends TeaModel {
     public String IDaaSInstanceId;
 
     /**
-     * <p>The ID of the region where the IDaaS instance is created.</p>
+     * <p>The region ID of the IDaaS EIAM instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

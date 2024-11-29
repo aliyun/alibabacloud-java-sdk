@@ -244,7 +244,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The automatically generated tag of the VPN gateway.</p>
+     * <p>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</p>
      * <ul>
      * <li><p><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports BGP. Valid values:</p>
      * <ul>
@@ -252,27 +252,33 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      * <li><strong>false</strong></li>
      * </ul>
      * </li>
-     * <li><p><strong>VisuallySsl</strong>: indicates whether the VPN gateway allows you to view information about connected SSL clients.</p>
+     * <li><p><strong>VisuallySsl</strong>: indicates whether the VPN gateway allows you to view the connection information of SSL clients. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
      * </ul>
      * </li>
-     * <li><p><strong>PbrPriority</strong>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes.</p>
+     * <li><p><strong>PbrPriority</strong>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
      * </ul>
      * </li>
-     * <li><p><strong>VpnNewImage</strong>: indicates whether the VPN gateway is upgraded.</p>
+     * <li><p><strong>VpnNewImage</strong>: indicates whether the VPN gateway is upgraded. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
      * </ul>
      * </li>
-     * <li><p><strong>description</strong></p>
+     * <li><p><strong>description</strong>: the description of the VPN gateway. This parameter is only for internal use.</p>
      * </li>
-     * <li><p><strong>VpnVersion</strong></p>
+     * <li><p><strong>VpnVersion</strong>: the version of the VPN gateway.</p>
+     * </li>
+     * <li><p><strong>IDaaSNewVersion</strong>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -283,7 +289,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     public String tag;
 
     /**
-     * <p>The tag value.</p>
+     * <p>The tags that are added to the VPN gateway.</p>
      */
     @NameInMap("Tags")
     public DescribeVpnGatewayResponseBodyTags tags;
@@ -316,8 +322,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The type of the VPN gateway.</p>
-     * <p>Only <strong>Normal</strong> may be returned, which indicates a standard VPN gateway.</p>
+     * <p>The type of VPN gateway. Only <strong>Normal</strong> may be returned, which indicates a standard VPN gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

@@ -91,6 +91,36 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         return this.vpnAttachments;
     }
 
+    public static class DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags self = new DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeVpnAttachmentsResponseBodyVpnAttachments extends TeaModel {
         /**
          * <p>The type of resource that is associated with the IPsec-VPN connection. The value is set to <strong>CEN</strong>, which indicates that the IPsec-VPN connection is associated with a transit router.</p>
@@ -140,6 +170,12 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags> tags;
 
         /**
          * <p>The ID of the transit router with which the IPsec-VPN connection is associated.</p>
@@ -202,6 +238,22 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeVpnAttachmentsResponseBodyVpnAttachments setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public DescribeVpnAttachmentsResponseBodyVpnAttachments setTags(java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags> getTags() {
+            return this.tags;
         }
 
         public DescribeVpnAttachmentsResponseBodyVpnAttachments setTransitRouterId(String transitRouterId) {

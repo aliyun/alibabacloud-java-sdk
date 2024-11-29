@@ -41,7 +41,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The VPN gateways.</p>
+     * <p>The information about the VPN gateways.</p>
      */
     @NameInMap("VpnGateways")
     public DescribeVpnGatewaysResponseBodyVpnGateways vpnGateways;
@@ -548,7 +548,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</p>
+         * <p>The tag that is automatically generated for the VPN gateway.</p>
          * <ul>
          * <li><p><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports BGP. Valid values:</p>
          * <ul>
@@ -570,13 +570,19 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>VpnNewImage</strong>: indicates whether the VPN gateway is upgraded. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
+         * <li><strong>true</strong>: queries only SQL templates that need to be optimized.</li>
          * <li><strong>false</strong>: does not query only SQL statements that need to be optimized.</li>
          * </ul>
          * </li>
          * <li><p><strong>description</strong>: the description of the VPN gateway. This parameter is only for internal use.</p>
          * </li>
          * <li><p><strong>VpnVersion</strong>: the version of the VPN gateway.</p>
+         * </li>
+         * <li><p><strong>IDaaSNewVersion</strong>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * </li>
          * </ul>
          * 
