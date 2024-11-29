@@ -264,6 +264,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
         @NameInMap("IngressOptions")
         public ListServiceSourceResponseBodyDataIngressOptions ingressOptions;
 
+        @NameInMap("Invalid")
+        public Boolean invalid;
+
         /**
          * <p>The name.</p>
          * 
@@ -381,6 +384,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
         public ListServiceSourceResponseBodyDataIngressOptions getIngressOptions() {
             return this.ingressOptions;
+        }
+
+        public ListServiceSourceResponseBodyData setInvalid(Boolean invalid) {
+            this.invalid = invalid;
+            return this;
+        }
+        public Boolean getInvalid() {
+            return this.invalid;
         }
 
         public ListServiceSourceResponseBodyData setName(String name) {
