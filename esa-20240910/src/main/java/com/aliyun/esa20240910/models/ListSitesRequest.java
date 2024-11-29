@@ -40,6 +40,9 @@ public class ListSitesRequest extends TeaModel {
     @NameInMap("OnlyEnterprise")
     public Boolean onlyEnterprise;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     /**
      * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
@@ -148,6 +151,14 @@ public class ListSitesRequest extends TeaModel {
     }
     public Boolean getOnlyEnterprise() {
         return this.onlyEnterprise;
+    }
+
+    public ListSitesRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public ListSitesRequest setPageNumber(Integer pageNumber) {

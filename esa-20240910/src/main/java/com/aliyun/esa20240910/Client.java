@@ -1154,6 +1154,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建客户端证书</p>
+     * 
+     * @param request CreateClientCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateClientCertificateResponse
+     */
+    public CreateClientCertificateResponse createClientCertificateWithOptions(CreateClientCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.CSR)) {
+            body.put("CSR", request.CSR);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pkeyType)) {
+            body.put("PkeyType", request.pkeyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityDays)) {
+            body.put("ValidityDays", request.validityDays);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateClientCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建客户端证书</p>
+     * 
+     * @param request CreateClientCertificateRequest
+     * @return CreateClientCertificateResponse
+     */
+    public CreateClientCertificateResponse createClientCertificate(CreateClientCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createClientCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</p>
      * 
      * @param request CreateCustomScenePolicyRequest
@@ -2265,8 +2323,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is used the first time you configure feature settings for your website. To modify existing feature settings, call the UpdateSiteFunction operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增站点功能配置</p>
+     * <p>Configures one or more feature settings for a website.</p>
      * 
      * @param tmpReq CreateSiteFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2487,8 +2548,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is used the first time you configure feature settings for your website. To modify existing feature settings, call the UpdateSiteFunction operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增站点功能配置</p>
+     * <p>Configures one or more feature settings for a website.</p>
      * 
      * @param request CreateSiteFunctionRequest
      * @return CreateSiteFunctionResponse
@@ -2990,6 +3054,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateWaitingRoomRuleResponse createWaitingRoomRule(CreateWaitingRoomRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createWaitingRoomRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除证书</p>
+     * 
+     * @param request DeleteCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCertificateResponse
+     */
+    public DeleteCertificateResponse deleteCertificateWithOptions(DeleteCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除证书</p>
+     * 
+     * @param request DeleteCertificateRequest
+     * @return DeleteCertificateResponse
+     */
+    public DeleteCertificateResponse deleteCertificate(DeleteCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除客户端CA证书</p>
+     * 
+     * @param request DeleteClientCaCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteClientCaCertificateResponse
+     */
+    public DeleteClientCaCertificateResponse deleteClientCaCertificateWithOptions(DeleteClientCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteClientCaCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientCaCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除客户端CA证书</p>
+     * 
+     * @param request DeleteClientCaCertificateRequest
+     * @return DeleteClientCaCertificateResponse
+     */
+    public DeleteClientCaCertificateResponse deleteClientCaCertificate(DeleteClientCaCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteClientCaCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除客户端证书</p>
+     * 
+     * @param request DeleteClientCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteClientCertificateResponse
+     */
+    public DeleteClientCertificateResponse deleteClientCertificateWithOptions(DeleteClientCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteClientCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除客户端证书</p>
+     * 
+     * @param request DeleteClientCertificateRequest
+     * @return DeleteClientCertificateResponse
+     */
+    public DeleteClientCertificateResponse deleteClientCertificate(DeleteClientCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteClientCertificateWithOptions(request, runtime);
     }
 
     /**
@@ -4736,6 +4920,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询证书quota及用量</p>
+     * 
+     * @param request GetCertificateQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCertificateQuotaResponse
+     */
+    public GetCertificateQuotaResponse getCertificateQuotaWithOptions(GetCertificateQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCertificateQuota"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCertificateQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询证书quota及用量</p>
+     * 
+     * @param request GetCertificateQuotaRequest
+     * @return GetCertificateQuotaResponse
+     */
+    public GetCertificateQuotaResponse getCertificateQuota(GetCertificateQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCertificateQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端CA证书信息</p>
+     * 
+     * @param request GetClientCaCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetClientCaCertificateResponse
+     */
+    public GetClientCaCertificateResponse getClientCaCertificateWithOptions(GetClientCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClientCaCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClientCaCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端CA证书信息</p>
+     * 
+     * @param request GetClientCaCertificateRequest
+     * @return GetClientCaCertificateResponse
+     */
+    public GetClientCaCertificateResponse getClientCaCertificate(GetClientCaCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getClientCaCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端证书以及证书信息</p>
+     * 
+     * @param request GetClientCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetClientCertificateResponse
+     */
+    public GetClientCertificateResponse getClientCertificateWithOptions(GetClientCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClientCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClientCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端证书以及证书信息</p>
+     * 
+     * @param request GetClientCertificateRequest
+     * @return GetClientCertificateResponse
+     */
+    public GetClientCertificateResponse getClientCertificate(GetClientCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getClientCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about a containerized application, including basic application configurations and health check configurations.</p>
      * 
      * @param request GetEdgeContainerAppRequest
@@ -5394,7 +5698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个记录信息</p>
+     * <p>Queries the configuration of a single DNS record, such as the record value, priority, and origin authentication setting (exclusive to CNAME records).</p>
      * 
      * @param request GetRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5422,7 +5726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个记录信息</p>
+     * <p>Queries the configuration of a single DNS record, such as the record value, priority, and origin authentication setting (exclusive to CNAME records).</p>
      * 
      * @param request GetRecordRequest
      * @return GetRecordResponse
@@ -6340,6 +6644,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCacheReserveInstancesResponse listCacheReserveInstances(ListCacheReserveInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCacheReserveInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询TLS密码套件列表</p>
+     * 
+     * @param request ListCiphersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCiphersResponse
+     */
+    public ListCiphersResponse listCiphersWithOptions(ListCiphersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCiphers"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCiphersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询TLS密码套件列表</p>
+     * 
+     * @param request ListCiphersRequest
+     * @return ListCiphersResponse
+     */
+    public ListCiphersResponse listCiphers(ListCiphersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCiphersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点下客户端CA证书列表</p>
+     * 
+     * @param request ListClientCaCertificatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListClientCaCertificatesResponse
+     */
+    public ListClientCaCertificatesResponse listClientCaCertificatesWithOptions(ListClientCaCertificatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListClientCaCertificates"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClientCaCertificatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点下客户端CA证书列表</p>
+     * 
+     * @param request ListClientCaCertificatesRequest
+     * @return ListClientCaCertificatesResponse
+     */
+    public ListClientCaCertificatesResponse listClientCaCertificates(ListClientCaCertificatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listClientCaCertificatesWithOptions(request, runtime);
     }
 
     /**
@@ -8635,6 +9019,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>吊销客户端证书</p>
+     * 
+     * @param request RevokeClientCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeClientCertificateResponse
+     */
+    public RevokeClientCertificateResponse revokeClientCertificateWithOptions(RevokeClientCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeClientCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeClientCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>吊销客户端证书</p>
+     * 
+     * @param request RevokeClientCertificateRequest
+     * @return RevokeClientCertificateResponse
+     */
+    public RevokeClientCertificateResponse revokeClientCertificate(RevokeClientCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeClientCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Rolls back a version of a containerized application.</p>
      * 
      * @param request RollbackEdgeContainerAppVersionRequest
@@ -10614,12 +11038,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>上传客户端CA证书</p>
+     * 
+     * @param request UploadClientCaCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadClientCaCertificateResponse
+     */
+    public UploadClientCaCertificateResponse uploadClientCaCertificateWithOptions(UploadClientCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certificate)) {
+            body.put("Certificate", request.certificate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadClientCaCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadClientCaCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传客户端CA证书</p>
+     * 
+     * @param request UploadClientCaCertificateRequest
+     * @return UploadClientCaCertificateResponse
+     */
+    public UploadClientCaCertificateResponse uploadClientCaCertificate(UploadClientCaCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uploadClientCaCertificateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * </blockquote>
      * <ul>
      * <li>The file can be up to 10 MB in size.</li>
-     * <li>After the file is uploaded, you can call <a href="~~SubmitUploadTask~~">SubmitUploadTask</a> to submit the purge or prefetch task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10671,7 +11148,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * <ul>
      * <li>The file can be up to 10 MB in size.</li>
-     * <li>After the file is uploaded, you can call <a href="~~SubmitUploadTask~~">SubmitUploadTask</a> to submit the purge or prefetch task.</li>
      * </ul>
      * 
      * <b>summary</b> : 

@@ -1,0 +1,177 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.esa20240910.models;
+
+import com.aliyun.tea.*;
+
+public class UploadClientCaCertificateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
+     */
+    @NameInMap("CommonName")
+    public String commonName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456aca66</p>
+     */
+    @NameInMap("FingerprintSha256")
+    public String fingerprintSha256;
+
+    /**
+     * <strong>example:</strong>
+     * <p>baba39055622c008b90285a8838ed09a</p>
+     */
+    @NameInMap("Id")
+    public String id;
+
+    /**
+     * <strong>example:</strong>
+     * <p>GlobalSign nv-sa</p>
+     */
+    @NameInMap("Issuer")
+    public String issuer;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2024-12-01T02:13:07Z</p>
+     */
+    @NameInMap("NotAfter")
+    public String notAfter;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2023-12-01T02:13:07Z</p>
+     */
+    @NameInMap("NotBefore")
+    public String notBefore;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
+     */
+    @NameInMap("SerialNumber")
+    public String serialNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>SHA256-RSA</p>
+     */
+    @NameInMap("SignatureAlgorithm")
+    public String signatureAlgorithm;
+
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
+    @NameInMap("Status")
+    public String status;
+
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
+    @NameInMap("ValidityDays")
+    public String validityDays;
+
+    public static UploadClientCaCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UploadClientCaCertificateResponseBody self = new UploadClientCaCertificateResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public UploadClientCaCertificateResponseBody setCommonName(String commonName) {
+        this.commonName = commonName;
+        return this;
+    }
+    public String getCommonName() {
+        return this.commonName;
+    }
+
+    public UploadClientCaCertificateResponseBody setFingerprintSha256(String fingerprintSha256) {
+        this.fingerprintSha256 = fingerprintSha256;
+        return this;
+    }
+    public String getFingerprintSha256() {
+        return this.fingerprintSha256;
+    }
+
+    public UploadClientCaCertificateResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
+    }
+
+    public UploadClientCaCertificateResponseBody setIssuer(String issuer) {
+        this.issuer = issuer;
+        return this;
+    }
+    public String getIssuer() {
+        return this.issuer;
+    }
+
+    public UploadClientCaCertificateResponseBody setNotAfter(String notAfter) {
+        this.notAfter = notAfter;
+        return this;
+    }
+    public String getNotAfter() {
+        return this.notAfter;
+    }
+
+    public UploadClientCaCertificateResponseBody setNotBefore(String notBefore) {
+        this.notBefore = notBefore;
+        return this;
+    }
+    public String getNotBefore() {
+        return this.notBefore;
+    }
+
+    public UploadClientCaCertificateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UploadClientCaCertificateResponseBody setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
+    public UploadClientCaCertificateResponseBody setSignatureAlgorithm(String signatureAlgorithm) {
+        this.signatureAlgorithm = signatureAlgorithm;
+        return this;
+    }
+    public String getSignatureAlgorithm() {
+        return this.signatureAlgorithm;
+    }
+
+    public UploadClientCaCertificateResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public UploadClientCaCertificateResponseBody setValidityDays(String validityDays) {
+        this.validityDays = validityDays;
+        return this;
+    }
+    public String getValidityDays() {
+        return this.validityDays;
+    }
+
+}

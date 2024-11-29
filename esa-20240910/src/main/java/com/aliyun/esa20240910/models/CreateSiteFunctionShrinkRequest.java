@@ -7,27 +7,48 @@ public class CreateSiteFunctionShrinkRequest extends TeaModel {
     @NameInMap("CacheReserve")
     public String cacheReserveShrink;
 
+    /**
+     * <p>The cache rules.</p>
+     */
     @NameInMap("CacheRules")
     public String cacheRulesShrink;
 
+    /**
+     * <p>The cache tags.</p>
+     */
     @NameInMap("CacheTags")
     public String cacheTagsShrink;
 
+    /**
+     * <p>The configuration of CNAME flattening.</p>
+     */
     @NameInMap("CnameFlattening")
     public String cnameFlatteningShrink;
 
+    /**
+     * <p>The configuration of a compression rule.</p>
+     */
     @NameInMap("CompressionRules")
     public String compressionRulesShrink;
 
     @NameInMap("CrossBorderOptimization")
     public String crossBorderOptimizationShrink;
 
+    /**
+     * <p>The configuration of development mode.</p>
+     */
     @NameInMap("DevelopmentMode")
     public String developmentModeShrink;
 
+    /**
+     * <p>The configuration of a request header modification rule.</p>
+     */
     @NameInMap("HttpRequestHeaderModificationRules")
     public String httpRequestHeaderModificationRulesShrink;
 
+    /**
+     * <p>The configuration of a response header modification rule.</p>
+     */
     @NameInMap("HttpResponseHeaderModificationRules")
     public String httpResponseHeaderModificationRulesShrink;
 
@@ -37,34 +58,59 @@ public class CreateSiteFunctionShrinkRequest extends TeaModel {
     @NameInMap("HttpsBasicConfiguration")
     public String httpsBasicConfigurationShrink;
 
+    /**
+     * <p>The configuration of image transformations.</p>
+     */
     @NameInMap("ImageTransform")
     public String imageTransformShrink;
 
+    /**
+     * <p>The IPv6 configuration.</p>
+     */
     @NameInMap("Ipv6")
     public String ipv6Shrink;
 
+    /**
+     * <p>The configuration of managed transforms.</p>
+     */
     @NameInMap("ManagedTransforms")
     public String managedTransformsShrink;
 
     @NameInMap("NetworkOptimization")
     public String networkOptimizationShrink;
 
+    /**
+     * <p>The configuration of origin protection.</p>
+     */
     @NameInMap("OriginProtection")
     public String originProtectionShrink;
 
+    /**
+     * <p>The configuration of an origin rule.</p>
+     */
     @NameInMap("OriginRules")
     public String originRulesShrink;
 
+    /**
+     * <p>The configuration of a redirect rule.</p>
+     */
     @NameInMap("RedirectRules")
     public String redirectRulesShrink;
 
+    /**
+     * <p>The configuration of a URL rewrite rule.</p>
+     */
     @NameInMap("RewriteUrlRules")
     public String rewriteUrlRulesShrink;
 
+    /**
+     * <p>The configuration of SEO crawler bypassing.</p>
+     */
     @NameInMap("SeoBypass")
     public String seoBypassShrink;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,12 +119,24 @@ public class CreateSiteFunctionShrinkRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>The configuration of site hold. After this feature is enabled, other accounts cannot add your website domain or its subdomains to ESA.</p>
+     */
     @NameInMap("SiteNameExclusive")
     public String siteNameExclusiveShrink;
 
+    /**
+     * <p>The configuration of temporarily pausing ESA proxy on the website. If you pause ESA proxy, all requests to the domains in your DNS records go directly to your origin server.</p>
+     */
     @NameInMap("SitePause")
     public String sitePauseShrink;
 
+    /**
+     * <p>The version number of the website. You can use this parameter to specify a version of your website to apply the new feature settings. By default, version 0 is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SiteVersion")
     public Integer siteVersion;
 

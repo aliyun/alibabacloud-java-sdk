@@ -242,6 +242,9 @@ public class ListSitesResponseBody extends TeaModel {
         @NameInMap("VerifyCode")
         public String verifyCode;
 
+        @NameInMap("VisitTime")
+        public String visitTime;
+
         public static ListSitesResponseBodySites build(java.util.Map<String, ?> map) throws Exception {
             ListSitesResponseBodySites self = new ListSitesResponseBodySites();
             return TeaModel.build(map, self);
@@ -365,6 +368,14 @@ public class ListSitesResponseBody extends TeaModel {
         }
         public String getVerifyCode() {
             return this.verifyCode;
+        }
+
+        public ListSitesResponseBodySites setVisitTime(String visitTime) {
+            this.visitTime = visitTime;
+            return this;
+        }
+        public String getVisitTime() {
+            return this.visitTime;
         }
 
     }
