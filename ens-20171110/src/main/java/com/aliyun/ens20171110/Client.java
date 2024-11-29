@@ -3313,6 +3313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IdleTimeout", request.idleTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ispAffinity)) {
+            query.put("IspAffinity", request.ispAffinity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
             query.put("NatGatewayId", request.natGatewayId);
         }
