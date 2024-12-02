@@ -235,6 +235,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ArtifactBuildProperty", request.artifactBuildPropertyShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactBuildType)) {
+            query.put("ArtifactBuildType", request.artifactBuildType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.artifactId)) {
             query.put("ArtifactId", request.artifactId);
         }

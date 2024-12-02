@@ -105,7 +105,95 @@ public class UpdateArtifactRequest extends TeaModel {
         return this.versionName;
     }
 
+    public static class UpdateArtifactRequestArtifactBuildPropertyBuildArgs extends TeaModel {
+        @NameInMap("ArgumentName")
+        public String argumentName;
+
+        @NameInMap("ArgumentValue")
+        public String argumentValue;
+
+        public static UpdateArtifactRequestArtifactBuildPropertyBuildArgs build(java.util.Map<String, ?> map) throws Exception {
+            UpdateArtifactRequestArtifactBuildPropertyBuildArgs self = new UpdateArtifactRequestArtifactBuildPropertyBuildArgs();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyBuildArgs setArgumentName(String argumentName) {
+            this.argumentName = argumentName;
+            return this;
+        }
+        public String getArgumentName() {
+            return this.argumentName;
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyBuildArgs setArgumentValue(String argumentValue) {
+            this.argumentValue = argumentValue;
+            return this;
+        }
+        public String getArgumentValue() {
+            return this.argumentValue;
+        }
+
+    }
+
+    public static class UpdateArtifactRequestArtifactBuildPropertyCodeRepo extends TeaModel {
+        @NameInMap("Branch")
+        public String branch;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("RepoName")
+        public String repoName;
+
+        public static UpdateArtifactRequestArtifactBuildPropertyCodeRepo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateArtifactRequestArtifactBuildPropertyCodeRepo self = new UpdateArtifactRequestArtifactBuildPropertyCodeRepo();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setBranch(String branch) {
+            this.branch = branch;
+            return this;
+        }
+        public String getBranch() {
+            return this.branch;
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setRepoName(String repoName) {
+            this.repoName = repoName;
+            return this;
+        }
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+    }
+
     public static class UpdateArtifactRequestArtifactBuildProperty extends TeaModel {
+        @NameInMap("BuildArgs")
+        public java.util.List<UpdateArtifactRequestArtifactBuildPropertyBuildArgs> buildArgs;
+
+        @NameInMap("CodeRepo")
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo codeRepo;
+
         /**
          * <p>The command content.</p>
          * <blockquote>
@@ -135,6 +223,9 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("CommandType")
         public String commandType;
 
+        @NameInMap("DockerfilePath")
+        public String dockerfilePath;
+
         /**
          * <p>The region ID where the source mirror image is located.</p>
          * <blockquote>
@@ -146,6 +237,9 @@ public class UpdateArtifactRequest extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("SourceContainerImage")
+        public String sourceContainerImage;
 
         /**
          * <p>The source image id. Supported Types:</p>
@@ -172,6 +266,22 @@ public class UpdateArtifactRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateArtifactRequestArtifactBuildProperty setBuildArgs(java.util.List<UpdateArtifactRequestArtifactBuildPropertyBuildArgs> buildArgs) {
+            this.buildArgs = buildArgs;
+            return this;
+        }
+        public java.util.List<UpdateArtifactRequestArtifactBuildPropertyBuildArgs> getBuildArgs() {
+            return this.buildArgs;
+        }
+
+        public UpdateArtifactRequestArtifactBuildProperty setCodeRepo(UpdateArtifactRequestArtifactBuildPropertyCodeRepo codeRepo) {
+            this.codeRepo = codeRepo;
+            return this;
+        }
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo getCodeRepo() {
+            return this.codeRepo;
+        }
+
         public UpdateArtifactRequestArtifactBuildProperty setCommandContent(String commandContent) {
             this.commandContent = commandContent;
             return this;
@@ -188,12 +298,28 @@ public class UpdateArtifactRequest extends TeaModel {
             return this.commandType;
         }
 
+        public UpdateArtifactRequestArtifactBuildProperty setDockerfilePath(String dockerfilePath) {
+            this.dockerfilePath = dockerfilePath;
+            return this;
+        }
+        public String getDockerfilePath() {
+            return this.dockerfilePath;
+        }
+
         public UpdateArtifactRequestArtifactBuildProperty setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public UpdateArtifactRequestArtifactBuildProperty setSourceContainerImage(String sourceContainerImage) {
+            this.sourceContainerImage = sourceContainerImage;
+            return this;
+        }
+        public String getSourceContainerImage() {
+            return this.sourceContainerImage;
         }
 
         public UpdateArtifactRequestArtifactBuildProperty setSourceImageId(String sourceImageId) {

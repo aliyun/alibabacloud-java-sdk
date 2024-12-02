@@ -10,6 +10,9 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     @NameInMap("ArtifactBuildProperty")
     public String artifactBuildPropertyShrink;
 
+    @NameInMap("ArtifactBuildType")
+    public String artifactBuildType;
+
     /**
      * <p>The ID of the deployment package.</p>
      * 
@@ -102,6 +105,14 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     }
     public String getArtifactBuildPropertyShrink() {
         return this.artifactBuildPropertyShrink;
+    }
+
+    public CreateArtifactShrinkRequest setArtifactBuildType(String artifactBuildType) {
+        this.artifactBuildType = artifactBuildType;
+        return this;
+    }
+    public String getArtifactBuildType() {
+        return this.artifactBuildType;
     }
 
     public CreateArtifactShrinkRequest setArtifactId(String artifactId) {
