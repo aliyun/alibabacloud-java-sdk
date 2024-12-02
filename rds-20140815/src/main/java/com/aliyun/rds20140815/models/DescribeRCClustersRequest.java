@@ -13,6 +13,9 @@ public class DescribeRCClustersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static DescribeRCClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCClustersRequest self = new DescribeRCClustersRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class DescribeRCClustersRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeRCClustersRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

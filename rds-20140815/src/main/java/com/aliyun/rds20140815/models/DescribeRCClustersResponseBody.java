@@ -41,6 +41,9 @@ public class DescribeRCClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeRCClustersResponseBodyClusters extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
         /**
          * <p>The cluster name.</p>
          * 
@@ -75,9 +78,20 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static DescribeRCClustersResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCClustersResponseBodyClusters self = new DescribeRCClustersResponseBodyClusters();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRCClustersResponseBodyClusters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public DescribeRCClustersResponseBodyClusters setClusterName(String clusterName) {
@@ -102,6 +116,14 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeRCClustersResponseBodyClusters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

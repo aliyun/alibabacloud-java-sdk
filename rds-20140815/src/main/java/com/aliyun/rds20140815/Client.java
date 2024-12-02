@@ -16324,6 +16324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -25839,7 +25843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改RC实例描述</p>
+     * <p>Modifies the name of an RDS Custom instance.</p>
      * 
      * @param request ModifyRCInstanceDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25879,7 +25883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改RC实例描述</p>
+     * <p>Modifies the name of an RDS Custom instance.</p>
      * 
      * @param request ModifyRCInstanceDescriptionRequest
      * @return ModifyRCInstanceDescriptionResponse

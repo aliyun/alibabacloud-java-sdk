@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
-     * <p>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: <code>Feature 1:Status;Feature 2:Status;...</code>. Do not add a semicolon (;) at the end of the value.</p>
-     * <p>Valid feature values:</p>
+     * <p>The capabilities that you want to enable for the proxy endpoint. If you specify more than one capability, separate the capabilities with semicolons (;). Format: <code>Capability 1:Status;Capability 2:Status;...</code>. Do not add a semicolon (;) at the end of the value.</p>
+     * <p>Valid capability values:</p>
      * <ul>
      * <li><strong>ReadWriteSpliting</strong>: read/write splitting</li>
      * <li><strong>ConnectionPersist</strong>: connection pooling</li>
      * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: transaction splitting</li>
+     * <li><strong>AZProximityAccess</strong>: nearest access</li>
      * </ul>
      * <p>Valid status values:</p>
      * <ul>
@@ -18,8 +19,13 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <li><strong>0</strong>: disabled</li>
      * </ul>
      * <blockquote>
-     * <p> If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by <strong>ReadWriteSpliting</strong>.</p>
      * </blockquote>
+     * <ul>
+     * <li><p>If the instance runs PostgreSQL, you can enable only read/write splitting, which is specified by <strong>ReadWriteSpliting</strong>.</p>
+     * </li>
+     * <li><p>Nearest access is supported only by dedicated database proxies for RDS instances that run MySQL.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ReadWriteSpliting:1;ConnectionPersist:0</p>
@@ -116,9 +122,9 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String dbEndpointType;
 
     /**
-     * <p>The specified time takes effect. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
+     * <p>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>This parameter must be passed when EffectiveTime is SpecificTime.</p>
+     * <p> If <strong>EffectiveTime</strong> is set to <strong>SpecificTime</strong>, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,16 +134,13 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String effectiveSpecificTime;
 
     /**
-     * <p>Effective time, value:</p>
+     * <p>The effective time. Valid values:</p>
      * <ul>
-     * <li><p><strong>Immediate</strong>: effective immediately.</p>
-     * </li>
-     * <li><p><strong>MaintainTime</strong>: effective during the operational and maintainable time period, see ModifyDBInstanceMaintainTime.</p>
-     * </li>
-     * <li><p><strong>SpecificTime</strong>: effective at a specified time.</p>
-     * </li>
+     * <li><strong>Immediate</strong>: The effective time is immediate.</li>
+     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>SpecificTime</strong>: The effective time is a specified point in time.</li>
      * </ul>
-     * <p>Default value: MaintainTime.</p>
+     * <p>Default value: <strong>MaintainTime</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MaintainTime</p>
@@ -151,11 +154,11 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
      * <p>The policy that is used to allocate read weights. Valid values:</p>
      * <ul>
-     * <li><strong>Standard</strong>: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</li>
-     * <li><strong>Custom</strong>: You must manually allocate read weights to the instance and its read-only instances.</li>
+     * <li><strong>Standard</strong> (default): The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.</li>
+     * <li><strong>Custom</strong>: You must manually allocate read weights to the primary and read-only instances.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a> and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+     * <p> You must specify this parameter when read/write splitting is enabled. For more information about the permission allocation policy, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a> and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -212,7 +215,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies the switch ID corresponding to the availability zone of the proxy connection address. By default, it is the switch ID corresponding to the default terminal of the proxy instance. You can query the created switch by calling the DescribeVSwitches interface.</p>
+     * <p>The ID of the vSwitch in the zone in which the proxy endpoint is specified. The default value is the ID of the vSwitch that corresponds to the default terminal of the database proxy. You can call the DescribeVSwitches operation to query existing vSwitches.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6adz52c2p****</p>

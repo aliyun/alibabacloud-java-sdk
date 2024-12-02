@@ -1,3 +1,9 @@
+2024-12-02 Version: 7.0.2
+- Update API CreateRCDisk: update param InstanceChargeType.
+- Update API DescribeRCClusters: add param VpcId.
+- Update API DescribeRCClusters: update response param.
+
+
 2024-11-27 Version: 7.0.1
 - Update API DescribeDBProxyEndpoint: update response param.
 - Update API DescribeRCInstanceAttribute: update response param.
