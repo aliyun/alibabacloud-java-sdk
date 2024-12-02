@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class File extends TeaModel {
+    @NameInMap("action_list")
+    public java.util.List<String> actionList;
+
     @NameInMap("category")
     public String category;
 
@@ -43,6 +46,9 @@ public class File extends TeaModel {
     @NameInMap("hidden")
     public Boolean hidden;
 
+    @NameInMap("id_path")
+    public String idPath;
+
     @NameInMap("image_media_metadata")
     public ImageMediaMetadata imageMediaMetadata;
 
@@ -57,6 +63,9 @@ public class File extends TeaModel {
 
     @NameInMap("name")
     public String name;
+
+    @NameInMap("name_path")
+    public String namePath;
 
     @NameInMap("parent_file_id")
     public String parentFileId;
@@ -100,6 +109,14 @@ public class File extends TeaModel {
     public static File build(java.util.Map<String, ?> map) throws Exception {
         File self = new File();
         return TeaModel.build(map, self);
+    }
+
+    public File setActionList(java.util.List<String> actionList) {
+        this.actionList = actionList;
+        return this;
+    }
+    public java.util.List<String> getActionList() {
+        return this.actionList;
     }
 
     public File setCategory(String category) {
@@ -206,6 +223,14 @@ public class File extends TeaModel {
         return this.hidden;
     }
 
+    public File setIdPath(String idPath) {
+        this.idPath = idPath;
+        return this;
+    }
+    public String getIdPath() {
+        return this.idPath;
+    }
+
     public File setImageMediaMetadata(ImageMediaMetadata imageMediaMetadata) {
         this.imageMediaMetadata = imageMediaMetadata;
         return this;
@@ -244,6 +269,14 @@ public class File extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public File setNamePath(String namePath) {
+        this.namePath = namePath;
+        return this;
+    }
+    public String getNamePath() {
+        return this.namePath;
     }
 
     public File setParentFileId(String parentFileId) {

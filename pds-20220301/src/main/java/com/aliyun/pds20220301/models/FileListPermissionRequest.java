@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class FileListPermissionRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,6 +16,7 @@ public class FileListPermissionRequest extends TeaModel {
 
     /**
      * <p>The file ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>4221bf6e6ab43a255edc4463bffa6f5f5d317401</p>

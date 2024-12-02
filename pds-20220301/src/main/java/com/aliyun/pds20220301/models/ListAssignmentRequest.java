@@ -16,6 +16,7 @@ public class ListAssignmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the managed resource, such as a group ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>105***b82</p>
@@ -25,6 +26,7 @@ public class ListAssignmentRequest extends TeaModel {
 
     /**
      * <p>The type of the managed resource. Set the value to RT_Group, which specifies that the administrators of a group are queried.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>RT_Group</p>

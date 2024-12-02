@@ -10,7 +10,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         com.aliyun.gateway.pds.Client gatewayClient = new com.aliyun.gateway.pds.Client();
         this._spi = gatewayClient;
-        this._signatureAlgorithm = "v2";
         this._disableHttp2 = true;
         this._endpointRule = "";
     }
