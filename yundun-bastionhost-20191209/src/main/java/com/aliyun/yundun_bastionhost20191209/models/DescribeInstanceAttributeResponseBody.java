@@ -90,7 +90,40 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Entry")
+        public String entry;
+
+        public static DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies self = new DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies setEntry(String entry) {
+            this.entry = entry;
+            return this;
+        }
+        public String getEntry() {
+            return this.entry;
+        }
+
+    }
+
     public static class DescribeInstanceAttributeResponseBodyInstanceAttribute extends TeaModel {
+        @NameInMap("AppOperationModule")
+        public String appOperationModule;
+
         /**
          * <p>The IDs of authorized security groups.</p>
          */
@@ -148,6 +181,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        @NameInMap("HSMModule")
+        public String HSMModule;
+
+        @NameInMap("IDaaSModule")
+        public String IDaaSModule;
+
         /**
          * <p>The ID of the instance.</p>
          * 
@@ -192,6 +231,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("IntranetEndpoint")
         public String intranetEndpoint;
+
+        @NameInMap("KmsSecretModule")
+        public String kmsSecretModule;
 
         /**
          * <p>The license code.</p>
@@ -273,6 +315,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("PublicWhiteList")
         public java.util.List<String> publicWhiteList;
 
+        @NameInMap("RDModule")
+        public String RDModule;
+
         /**
          * <p>The region ID of the instance.</p>
          * 
@@ -291,11 +336,20 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("RouterRules")
+        public java.util.List<String> routerRules;
+
+        @NameInMap("ScriptDeliverModule")
+        public String scriptDeliverModule;
+
         /**
          * <p>The IDs of the security groups to which the instance belongs.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
+
+        @NameInMap("SlaveVswitchId")
+        public String slaveVswitchId;
 
         /**
          * <p>The time when the instance started.</p>
@@ -346,9 +400,20 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("WebTerminalModule")
         public String webTerminalModule;
 
+        @NameInMap("WhiteListPolicies")
+        public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies> whiteListPolicies;
+
         public static DescribeInstanceAttributeResponseBodyInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAttributeResponseBodyInstanceAttribute self = new DescribeInstanceAttributeResponseBodyInstanceAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setAppOperationModule(String appOperationModule) {
+            this.appOperationModule = appOperationModule;
+            return this;
+        }
+        public String getAppOperationModule() {
+            return this.appOperationModule;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setAuthorizedSecurityGroups(java.util.List<String> authorizedSecurityGroups) {
@@ -407,6 +472,22 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setHSMModule(String HSMModule) {
+            this.HSMModule = HSMModule;
+            return this;
+        }
+        public String getHSMModule() {
+            return this.HSMModule;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setIDaaSModule(String IDaaSModule) {
+            this.IDaaSModule = IDaaSModule;
+            return this;
+        }
+        public String getIDaaSModule() {
+            return this.IDaaSModule;
+        }
+
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -437,6 +518,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public String getIntranetEndpoint() {
             return this.intranetEndpoint;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setKmsSecretModule(String kmsSecretModule) {
+            this.kmsSecretModule = kmsSecretModule;
+            return this;
+        }
+        public String getKmsSecretModule() {
+            return this.kmsSecretModule;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setLicenseCode(String licenseCode) {
@@ -519,6 +608,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.publicWhiteList;
         }
 
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setRDModule(String RDModule) {
+            this.RDModule = RDModule;
+            return this;
+        }
+        public String getRDModule() {
+            return this.RDModule;
+        }
+
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -535,12 +632,36 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setRouterRules(java.util.List<String> routerRules) {
+            this.routerRules = routerRules;
+            return this;
+        }
+        public java.util.List<String> getRouterRules() {
+            return this.routerRules;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setScriptDeliverModule(String scriptDeliverModule) {
+            this.scriptDeliverModule = scriptDeliverModule;
+            return this;
+        }
+        public String getScriptDeliverModule() {
+            return this.scriptDeliverModule;
+        }
+
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setSecurityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setSlaveVswitchId(String slaveVswitchId) {
+            this.slaveVswitchId = slaveVswitchId;
+            return this;
+        }
+        public String getSlaveVswitchId() {
+            return this.slaveVswitchId;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setStartTime(Long startTime) {
@@ -581,6 +702,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public String getWebTerminalModule() {
             return this.webTerminalModule;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setWhiteListPolicies(java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies> whiteListPolicies) {
+            this.whiteListPolicies = whiteListPolicies;
+            return this;
+        }
+        public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies> getWhiteListPolicies() {
+            return this.whiteListPolicies;
         }
 
     }

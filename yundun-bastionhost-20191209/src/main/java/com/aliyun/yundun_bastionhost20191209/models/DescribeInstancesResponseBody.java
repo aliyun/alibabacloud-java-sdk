@@ -58,6 +58,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("BandWidth")
+        public Long bandWidth;
+
         /**
          * <p>The remarks of the bastion host.</p>
          * 
@@ -196,6 +199,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SlaveVswitchId")
+        public String slaveVswitchId;
+
         /**
          * <p>The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.</p>
          * 
@@ -226,6 +232,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstances self = new DescribeInstancesResponseBodyInstances();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstances setBandWidth(Long bandWidth) {
+            this.bandWidth = bandWidth;
+            return this;
+        }
+        public Long getBandWidth() {
+            return this.bandWidth;
         }
 
         public DescribeInstancesResponseBodyInstances setDescription(String description) {
@@ -330,6 +344,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeInstancesResponseBodyInstances setSlaveVswitchId(String slaveVswitchId) {
+            this.slaveVswitchId = slaveVswitchId;
+            return this;
+        }
+        public String getSlaveVswitchId() {
+            return this.slaveVswitchId;
         }
 
         public DescribeInstancesResponseBodyInstances setStartTime(Long startTime) {

@@ -4,6 +4,12 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
+    @NameInMap("ClientSecurityGroupIds")
+    public java.util.List<String> clientSecurityGroupIds;
+
+    @NameInMap("EnablePortalPrivateAccess")
+    public Boolean enablePortalPrivateAccess;
+
     /**
      * <p>The ID of the bastion host that you want to enable.</p>
      * <blockquote>
@@ -36,6 +42,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("SlaveVswitchId")
+    public String slaveVswitchId;
+
     /**
      * <p>The ID of the vSwitch to which the bastion host belongs.</p>
      * 
@@ -48,6 +57,22 @@ public class StartInstanceRequest extends TeaModel {
     public static StartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRequest self = new StartInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartInstanceRequest setClientSecurityGroupIds(java.util.List<String> clientSecurityGroupIds) {
+        this.clientSecurityGroupIds = clientSecurityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getClientSecurityGroupIds() {
+        return this.clientSecurityGroupIds;
+    }
+
+    public StartInstanceRequest setEnablePortalPrivateAccess(Boolean enablePortalPrivateAccess) {
+        this.enablePortalPrivateAccess = enablePortalPrivateAccess;
+        return this;
+    }
+    public Boolean getEnablePortalPrivateAccess() {
+        return this.enablePortalPrivateAccess;
     }
 
     public StartInstanceRequest setInstanceId(String instanceId) {
@@ -72,6 +97,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
+    }
+
+    public StartInstanceRequest setSlaveVswitchId(String slaveVswitchId) {
+        this.slaveVswitchId = slaveVswitchId;
+        return this;
+    }
+    public String getSlaveVswitchId() {
+        return this.slaveVswitchId;
     }
 
     public StartInstanceRequest setVswitchId(String vswitchId) {
