@@ -66,15 +66,6 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Commodity")
     public GetServiceResponseBodyCommodity commodity;
 
-    /**
-     * <p>The commodity code of the service in Alibaba Cloud Marketplace.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cmjj00xxxx</p>
-     */
-    @NameInMap("CommodityCode")
-    public String commodityCode;
-
     @NameInMap("ComplianceMetadata")
     public GetServiceResponseBodyComplianceMetadata complianceMetadata;
 
@@ -95,15 +86,6 @@ public class GetServiceResponseBody extends TeaModel {
      */
     @NameInMap("CrossRegionConnectionStatus")
     public String crossRegionConnectionStatus;
-
-    /**
-     * <p>The validity period of the default license. Unit: day. Valid values: 1 to 1000.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("DefaultLicenseDays")
-    public Long defaultLicenseDays;
 
     /**
      * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
@@ -207,21 +189,6 @@ public class GetServiceResponseBody extends TeaModel {
     public String payFromType;
 
     /**
-     * <p>The billing method of the service. Valid values:</p>
-     * <ul>
-     * <li>Permanent: Once you purchase the service, you can use it permanently.</li>
-     * <li>Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.</li>
-     * <li>PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.</li>
-     * <li>CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Permanent</p>
-     */
-    @NameInMap("PayType")
-    public String payType;
-
-    /**
      * <p>The permissions on the service. Valid values:</p>
      * <ul>
      * <li>Deployable: Permissions to deploy the service.</li>
@@ -322,15 +289,6 @@ public class GetServiceResponseBody extends TeaModel {
      */
     @NameInMap("ServiceDiscoverable")
     public String serviceDiscoverable;
-
-    /**
-     * <p>The URL of the service documentation.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="http://example1.com">http://example1.com</a></p>
-     */
-    @NameInMap("ServiceDocUrl")
-    public String serviceDocUrl;
 
     @NameInMap("ServiceDocumentInfos")
     public java.util.List<GetServiceResponseBodyServiceDocumentInfos> serviceDocumentInfos;
@@ -636,14 +594,6 @@ public class GetServiceResponseBody extends TeaModel {
         return this.commodity;
     }
 
-    public GetServiceResponseBody setCommodityCode(String commodityCode) {
-        this.commodityCode = commodityCode;
-        return this;
-    }
-    public String getCommodityCode() {
-        return this.commodityCode;
-    }
-
     public GetServiceResponseBody setComplianceMetadata(GetServiceResponseBodyComplianceMetadata complianceMetadata) {
         this.complianceMetadata = complianceMetadata;
         return this;
@@ -666,14 +616,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getCrossRegionConnectionStatus() {
         return this.crossRegionConnectionStatus;
-    }
-
-    public GetServiceResponseBody setDefaultLicenseDays(Long defaultLicenseDays) {
-        this.defaultLicenseDays = defaultLicenseDays;
-        return this;
-    }
-    public Long getDefaultLicenseDays() {
-        return this.defaultLicenseDays;
     }
 
     public GetServiceResponseBody setDeployMetadata(String deployMetadata) {
@@ -746,14 +688,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getPayFromType() {
         return this.payFromType;
-    }
-
-    public GetServiceResponseBody setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
     }
 
     public GetServiceResponseBody setPermission(String permission) {
@@ -834,14 +768,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getServiceDiscoverable() {
         return this.serviceDiscoverable;
-    }
-
-    public GetServiceResponseBody setServiceDocUrl(String serviceDocUrl) {
-        this.serviceDocUrl = serviceDocUrl;
-        return this;
-    }
-    public String getServiceDocUrl() {
-        return this.serviceDocUrl;
     }
 
     public GetServiceResponseBody setServiceDocumentInfos(java.util.List<GetServiceResponseBodyServiceDocumentInfos> serviceDocumentInfos) {
