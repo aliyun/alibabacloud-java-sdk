@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOriginProtectionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C6B5E5A-42FC-5DF2-986C-4DAAE3C55086</p>
      */

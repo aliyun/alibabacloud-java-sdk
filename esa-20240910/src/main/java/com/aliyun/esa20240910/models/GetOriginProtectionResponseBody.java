@@ -4,16 +4,31 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetOriginProtectionResponseBody extends TeaModel {
+    /**
+     * <p>The IP whitelist for origin protection used by the website.</p>
+     */
     @NameInMap("CurrentIPWhitelist")
     public GetOriginProtectionResponseBodyCurrentIPWhitelist currentIPWhitelist;
 
+    /**
+     * <p>The IP whitelist for origin protection that has been updated.</p>
+     */
     @NameInMap("DiffIPWhitelist")
     public GetOriginProtectionResponseBodyDiffIPWhitelist diffIPWhitelist;
 
+    /**
+     * <p>The latest IP whitelist for origin protection.</p>
+     */
     @NameInMap("LatestIPWhitelist")
     public GetOriginProtectionResponseBodyLatestIPWhitelist latestIPWhitelist;
 
     /**
+     * <p>Indicates whether the IP whitelist for origin protection needs to be updated. If the currently used IP whitelist is different from the latest IP whitelist, it needs to be updated, and the value is true.</p>
+     * <ul>
+     * <li>true: The update is required.</li>
+     * <li>false: No update is required.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +36,12 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     public Boolean needUpdate;
 
     /**
+     * <p>Indicates whether IP convergence is enabled.</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -28,6 +49,12 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     public String originConverge;
 
     /**
+     * <p>Indicates whether origin protection is enabled.</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -35,6 +62,8 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     public String originProtection;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
      */
@@ -42,6 +71,8 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -118,9 +149,15 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     }
 
     public static class GetOriginProtectionResponseBodyCurrentIPWhitelist extends TeaModel {
+        /**
+         * <p>The IP whitelist for origin protection used by the website, specified as IPv4 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv4")
         public java.util.List<String> IPv4;
 
+        /**
+         * <p>The IP whitelist for origin protection used by the website, specified as IPv6 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv6")
         public java.util.List<String> IPv6;
 
@@ -148,9 +185,15 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     }
 
     public static class GetOriginProtectionResponseBodyDiffIPWhitelistAddedIPWhitelist extends TeaModel {
+        /**
+         * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv4")
         public java.util.List<String> IPv4;
 
+        /**
+         * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv6")
         public java.util.List<String> IPv6;
 
@@ -178,9 +221,15 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     }
 
     public static class GetOriginProtectionResponseBodyDiffIPWhitelistNoChangeIpWhitelist extends TeaModel {
+        /**
+         * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv4")
         public java.util.List<String> IPv4;
 
+        /**
+         * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv6")
         public java.util.List<String> IPv6;
 
@@ -208,9 +257,15 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     }
 
     public static class GetOriginProtectionResponseBodyDiffIPWhitelistRemovedIPWhitelist extends TeaModel {
+        /**
+         * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv4")
         public java.util.List<String> IPv4;
 
+        /**
+         * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv6")
         public java.util.List<String> IPv6;
 
@@ -238,12 +293,21 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     }
 
     public static class GetOriginProtectionResponseBodyDiffIPWhitelist extends TeaModel {
+        /**
+         * <p>The new IP whitelist for origin protection.</p>
+         */
         @NameInMap("AddedIPWhitelist")
         public GetOriginProtectionResponseBodyDiffIPWhitelistAddedIPWhitelist addedIPWhitelist;
 
+        /**
+         * <p>The IP whitelist for origin protection that remains unchanged.</p>
+         */
         @NameInMap("NoChangeIpWhitelist")
         public GetOriginProtectionResponseBodyDiffIPWhitelistNoChangeIpWhitelist noChangeIpWhitelist;
 
+        /**
+         * <p>The IP whitelist for origin protection that has been deleted.</p>
+         */
         @NameInMap("RemovedIPWhitelist")
         public GetOriginProtectionResponseBodyDiffIPWhitelistRemovedIPWhitelist removedIPWhitelist;
 
@@ -279,9 +343,15 @@ public class GetOriginProtectionResponseBody extends TeaModel {
     }
 
     public static class GetOriginProtectionResponseBodyLatestIPWhitelist extends TeaModel {
+        /**
+         * <p>The latest IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv4")
         public java.util.List<String> IPv4;
 
+        /**
+         * <p>The latest IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
+         */
         @NameInMap("IPv6")
         public java.util.List<String> IPv6;
 
