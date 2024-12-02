@@ -489,6 +489,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("ClusterName")
         public String clusterName;
 
+        @NameInMap("EnableHa")
+        public Boolean enableHa;
+
         /**
          * <strong>example:</strong>
          * <p>1721664000000</p>
@@ -662,6 +665,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public String getClusterName() {
             return this.clusterName;
+        }
+
+        public GetInstanceDetailResponseBodyData setEnableHa(Boolean enableHa) {
+            this.enableHa = enableHa;
+            return this;
+        }
+        public Boolean getEnableHa() {
+            return this.enableHa;
         }
 
         public GetInstanceDetailResponseBodyData setExpireTime(Long expireTime) {
