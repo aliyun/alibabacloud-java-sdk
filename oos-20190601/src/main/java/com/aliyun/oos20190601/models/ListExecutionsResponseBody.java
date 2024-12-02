@@ -268,6 +268,9 @@ public class ListExecutionsResponseBody extends TeaModel {
         @NameInMap("Mode")
         public String mode;
 
+        @NameInMap("NextScheduleTime")
+        public String nextScheduleTime;
+
         /**
          * <p>The output of the execution.</p>
          * 
@@ -553,6 +556,14 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public ListExecutionsResponseBodyExecutions setNextScheduleTime(String nextScheduleTime) {
+            this.nextScheduleTime = nextScheduleTime;
+            return this;
+        }
+        public String getNextScheduleTime() {
+            return this.nextScheduleTime;
         }
 
         public ListExecutionsResponseBodyExecutions setOutputs(String outputs) {

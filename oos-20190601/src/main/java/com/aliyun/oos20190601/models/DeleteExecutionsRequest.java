@@ -15,6 +15,12 @@ public class DeleteExecutionsRequest extends TeaModel {
     @NameInMap("ExecutionIds")
     public String executionIds;
 
+    /**
+     * <p>Whether to force delete the running task, the default value is false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
