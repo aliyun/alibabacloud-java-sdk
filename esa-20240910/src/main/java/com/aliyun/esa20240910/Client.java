@@ -1592,7 +1592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启源站防护</p>
+     * <p>Enables origin protection.</p>
      * 
      * @param request CreateOriginProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1624,7 +1624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启源站防护</p>
+     * <p>Enables origin protection.</p>
      * 
      * @param request CreateOriginProtectionRequest
      * @return CreateOriginProtectionResponse
@@ -3494,7 +3494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭源站防护功能</p>
+     * <p>Disables origin protection.</p>
      * 
      * @param request DeleteOriginProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3526,7 +3526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭源站防护功能</p>
+     * <p>Disables origin protection.</p>
      * 
      * @param request DeleteOriginProtectionRequest
      * @return DeleteOriginProtectionResponse
@@ -5040,6 +5040,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取客户端证书绑定的域名列表</p>
+     * 
+     * @param request GetClientCertificateHostnamesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetClientCertificateHostnamesResponse
+     */
+    public GetClientCertificateHostnamesResponse getClientCertificateHostnamesWithOptions(GetClientCertificateHostnamesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClientCertificateHostnames"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClientCertificateHostnamesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端证书绑定的域名列表</p>
+     * 
+     * @param request GetClientCertificateHostnamesRequest
+     * @return GetClientCertificateHostnamesResponse
+     */
+    public GetClientCertificateHostnamesResponse getClientCertificateHostnames(GetClientCertificateHostnamesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getClientCertificateHostnamesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about a containerized application, including basic application configurations and health check configurations.</p>
      * 
      * @param request GetEdgeContainerAppRequest
@@ -5534,7 +5574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点源站防护相关配置，查看回源IP白名单信息</p>
+     * <p>Queries the origin protection configurations of a website, including the origin protection, IP convergence, and the status and details of the IP whitelist for origin protection. The details includes the IP whitelist used by the website, the latest IP whitelist, and the differences between them.</p>
      * 
      * @param request GetOriginProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5562,7 +5602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点源站防护相关配置，查看回源IP白名单信息</p>
+     * <p>Queries the origin protection configurations of a website, including the origin protection, IP convergence, and the status and details of the IP whitelist for origin protection. The details includes the IP whitelist used by the website, the latest IP whitelist, and the differences between them.</p>
      * 
      * @param request GetOriginProtectionRequest
      * @return GetOriginProtectionResponse
@@ -9199,6 +9239,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>为客户端证书绑定域名</p>
+     * 
+     * @param tmpReq SetClientCertificateHostnamesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetClientCertificateHostnamesResponse
+     */
+    public SetClientCertificateHostnamesResponse setClientCertificateHostnamesWithOptions(SetClientCertificateHostnamesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SetClientCertificateHostnamesShrinkRequest request = new SetClientCertificateHostnamesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hostnames)) {
+            request.hostnamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hostnames, "Hostnames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostnamesShrink)) {
+            body.put("Hostnames", request.hostnamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetClientCertificateHostnames"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetClientCertificateHostnamesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为客户端证书绑定域名</p>
+     * 
+     * @param request SetClientCertificateHostnamesRequest
+     * @return SetClientCertificateHostnamesResponse
+     */
+    public SetClientCertificateHostnamesResponse setClientCertificateHostnames(SetClientCertificateHostnamesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setClientCertificateHostnamesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Configures smart HTTP DDoS protection.</p>
      * 
      * @param request SetHttpDDoSAttackIntelligentProtectionRequest
@@ -9629,7 +9729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改源站防护</p>
+     * <p>Enables or disables IP convergence.</p>
      * 
      * @param request UpdateOriginProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9665,7 +9765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改源站防护</p>
+     * <p>Enables or disables IP convergence.</p>
      * 
      * @param request UpdateOriginProtectionRequest
      * @return UpdateOriginProtectionResponse
@@ -9677,7 +9777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>确认更新站点回源IP白名单到最新版本</p>
+     * <p>Updates the IP whitelist for origin protection used by a website to the latest version.</p>
      * 
      * @param request UpdateOriginProtectionIpWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9709,7 +9809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>确认更新站点回源IP白名单到最新版本</p>
+     * <p>Updates the IP whitelist for origin protection used by a website to the latest version.</p>
      * 
      * @param request UpdateOriginProtectionIpWhiteListRequest
      * @return UpdateOriginProtectionIpWhiteListResponse

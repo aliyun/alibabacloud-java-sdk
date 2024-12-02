@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteOriginProtectionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
      */
