@@ -32,6 +32,9 @@ public class ListTagKeysRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The type of the resource.</p>
      * <p>Set the value to INSTANCE, which indicates that the resource is a bastion host.</p>
@@ -70,6 +73,14 @@ public class ListTagKeysRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListTagKeysRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListTagKeysRequest setResourceType(String resourceType) {

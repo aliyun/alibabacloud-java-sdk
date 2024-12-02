@@ -35,6 +35,9 @@ public class ConfigInstanceWhiteListRequest extends TeaModel {
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
 
+    @NameInMap("WhiteListPolicies")
+    public java.util.List<ConfigInstanceWhiteListRequestWhiteListPolicies> whiteListPolicies;
+
     public static ConfigInstanceWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigInstanceWhiteListRequest self = new ConfigInstanceWhiteListRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,44 @@ public class ConfigInstanceWhiteListRequest extends TeaModel {
     }
     public java.util.List<String> getWhiteList() {
         return this.whiteList;
+    }
+
+    public ConfigInstanceWhiteListRequest setWhiteListPolicies(java.util.List<ConfigInstanceWhiteListRequestWhiteListPolicies> whiteListPolicies) {
+        this.whiteListPolicies = whiteListPolicies;
+        return this;
+    }
+    public java.util.List<ConfigInstanceWhiteListRequestWhiteListPolicies> getWhiteListPolicies() {
+        return this.whiteListPolicies;
+    }
+
+    public static class ConfigInstanceWhiteListRequestWhiteListPolicies extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Entry")
+        public String entry;
+
+        public static ConfigInstanceWhiteListRequestWhiteListPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ConfigInstanceWhiteListRequestWhiteListPolicies self = new ConfigInstanceWhiteListRequestWhiteListPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ConfigInstanceWhiteListRequestWhiteListPolicies setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ConfigInstanceWhiteListRequestWhiteListPolicies setEntry(String entry) {
+            this.entry = entry;
+            return this;
+        }
+        public String getEntry() {
+            return this.entry;
+        }
+
     }
 
 }

@@ -835,6 +835,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WhiteList", request.whiteList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListPolicies)) {
+            query.put("WhiteListPolicies", request.whiteListPolicies);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2601,6 +2605,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>堡垒机实例列表</p>
+     * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstancesResponse
@@ -2658,6 +2665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>堡垒机实例列表</p>
+     * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -6249,6 +6259,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             query.put("ResourceType", request.resourceType);
         }
@@ -6299,6 +6313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
@@ -8969,6 +8987,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartInstanceResponse startInstanceWithOptions(StartInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientSecurityGroupIds)) {
+            query.put("ClientSecurityGroupIds", request.clientSecurityGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePortalPrivateAccess)) {
+            query.put("EnablePortalPrivateAccess", request.enablePortalPrivateAccess);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -8979,6 +9005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIds)) {
             query.put("SecurityGroupIds", request.securityGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slaveVswitchId)) {
+            query.put("SlaveVswitchId", request.slaveVswitchId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vswitchId)) {
