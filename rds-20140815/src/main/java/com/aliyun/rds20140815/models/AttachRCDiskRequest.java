@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachRCDiskRequest extends TeaModel {
     /**
+     * <p>The reserved parameter. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

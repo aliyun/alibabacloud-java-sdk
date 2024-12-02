@@ -44,6 +44,12 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
+    /**
+     * <p>The minimum number of reserved instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("DBProxyEndpointMinSlaveCount")
     public String DBProxyEndpointMinSlaveCount;
 
