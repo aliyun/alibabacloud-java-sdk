@@ -121,12 +121,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The end time of the instance maintenance window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1970-01-01T05:00Z</p>
      */
     @NameInMap("MaintainEndtime")
     public String maintainEndtime;
 
     /**
      * <p>The start time of the instance maintenance window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1970-01-01T02:00Z</p>
      */
     @NameInMap("MaintainStarttime")
     public String maintainStarttime;
@@ -141,7 +147,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public Long objectStoreSize;
 
     /**
-     * <p>地域ID。</p>
+     * <p>The Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -203,7 +209,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public Long storageSize;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The subdomain zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-h-aliyun</p>
@@ -211,11 +217,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("SubDomain")
     public String subDomain;
 
+    /**
+     * <p>The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: <code>{&quot;key1&quot;:&quot;value1&quot;}</code>.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeDBInstanceAttributeResponseBodyTags> tags;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp175iuvg8nxqraf2****</p>
@@ -224,7 +233,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>实例可用区ID</p>
+     * <p>The Zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-h</p>
@@ -533,6 +542,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test instance</p>
          */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
@@ -547,7 +559,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>修改时间。</p>
+         * <p>The modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-02T16:35:44+08:00</p>
@@ -563,6 +575,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
+
+        @NameInMap("ScalingRulesEnable")
+        public Boolean scalingRulesEnable;
 
         /**
          * <p>The time when the cluster started.</p>
@@ -691,6 +706,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.performanceLevel;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setScalingRulesEnable(Boolean scalingRulesEnable) {
+            this.scalingRulesEnable = scalingRulesEnable;
+            return this;
+        }
+        public Boolean getScalingRulesEnable() {
+            return this.scalingRulesEnable;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyDBClusterList setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -711,6 +734,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -718,6 +743,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */
