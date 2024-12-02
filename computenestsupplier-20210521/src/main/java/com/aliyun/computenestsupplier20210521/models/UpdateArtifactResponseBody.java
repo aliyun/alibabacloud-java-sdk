@@ -13,6 +13,9 @@ public class UpdateArtifactResponseBody extends TeaModel {
     @NameInMap("ArtifactBuildProperty")
     public String artifactBuildProperty;
 
+    @NameInMap("ArtifactBuildType")
+    public String artifactBuildType;
+
     /**
      * <p>The ID of the deployment package.</p>
      * 
@@ -93,6 +96,9 @@ public class UpdateArtifactResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("StatusDetail")
+    public String statusDetail;
+
     /**
      * <p>The ID of the region that supports the deployment package.</p>
      * 
@@ -126,6 +132,14 @@ public class UpdateArtifactResponseBody extends TeaModel {
     }
     public String getArtifactBuildProperty() {
         return this.artifactBuildProperty;
+    }
+
+    public UpdateArtifactResponseBody setArtifactBuildType(String artifactBuildType) {
+        this.artifactBuildType = artifactBuildType;
+        return this;
+    }
+    public String getArtifactBuildType() {
+        return this.artifactBuildType;
     }
 
     public UpdateArtifactResponseBody setArtifactId(String artifactId) {
@@ -190,6 +204,14 @@ public class UpdateArtifactResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public UpdateArtifactResponseBody setStatusDetail(String statusDetail) {
+        this.statusDetail = statusDetail;
+        return this;
+    }
+    public String getStatusDetail() {
+        return this.statusDetail;
     }
 
     public UpdateArtifactResponseBody setSupportRegionIds(String supportRegionIds) {

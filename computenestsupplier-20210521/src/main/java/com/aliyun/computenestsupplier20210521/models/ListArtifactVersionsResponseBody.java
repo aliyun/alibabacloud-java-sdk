@@ -101,6 +101,9 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         @NameInMap("ArtifactBuildProperty")
         public String artifactBuildProperty;
 
+        @NameInMap("ArtifactBuildType")
+        public String artifactBuildType;
+
         /**
          * <p>The ID of the deployment package.</p>
          * 
@@ -252,6 +255,14 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
         public String getArtifactBuildProperty() {
             return this.artifactBuildProperty;
+        }
+
+        public ListArtifactVersionsResponseBodyArtifacts setArtifactBuildType(String artifactBuildType) {
+            this.artifactBuildType = artifactBuildType;
+            return this;
+        }
+        public String getArtifactBuildType() {
+            return this.artifactBuildType;
         }
 
         public ListArtifactVersionsResponseBodyArtifacts setArtifactId(String artifactId) {

@@ -10,6 +10,9 @@ public class CreateArtifactRequest extends TeaModel {
     @NameInMap("ArtifactBuildProperty")
     public CreateArtifactRequestArtifactBuildProperty artifactBuildProperty;
 
+    @NameInMap("ArtifactBuildType")
+    public String artifactBuildType;
+
     /**
      * <p>The ID of the deployment package.</p>
      * 
@@ -104,6 +107,14 @@ public class CreateArtifactRequest extends TeaModel {
         return this.artifactBuildProperty;
     }
 
+    public CreateArtifactRequest setArtifactBuildType(String artifactBuildType) {
+        this.artifactBuildType = artifactBuildType;
+        return this;
+    }
+    public String getArtifactBuildType() {
+        return this.artifactBuildType;
+    }
+
     public CreateArtifactRequest setArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -176,7 +187,95 @@ public class CreateArtifactRequest extends TeaModel {
         return this.versionName;
     }
 
+    public static class CreateArtifactRequestArtifactBuildPropertyBuildArgs extends TeaModel {
+        @NameInMap("ArgumentName")
+        public String argumentName;
+
+        @NameInMap("ArgumentValue")
+        public String argumentValue;
+
+        public static CreateArtifactRequestArtifactBuildPropertyBuildArgs build(java.util.Map<String, ?> map) throws Exception {
+            CreateArtifactRequestArtifactBuildPropertyBuildArgs self = new CreateArtifactRequestArtifactBuildPropertyBuildArgs();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateArtifactRequestArtifactBuildPropertyBuildArgs setArgumentName(String argumentName) {
+            this.argumentName = argumentName;
+            return this;
+        }
+        public String getArgumentName() {
+            return this.argumentName;
+        }
+
+        public CreateArtifactRequestArtifactBuildPropertyBuildArgs setArgumentValue(String argumentValue) {
+            this.argumentValue = argumentValue;
+            return this;
+        }
+        public String getArgumentValue() {
+            return this.argumentValue;
+        }
+
+    }
+
+    public static class CreateArtifactRequestArtifactBuildPropertyCodeRepo extends TeaModel {
+        @NameInMap("Branch")
+        public String branch;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("RepoName")
+        public String repoName;
+
+        public static CreateArtifactRequestArtifactBuildPropertyCodeRepo build(java.util.Map<String, ?> map) throws Exception {
+            CreateArtifactRequestArtifactBuildPropertyCodeRepo self = new CreateArtifactRequestArtifactBuildPropertyCodeRepo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateArtifactRequestArtifactBuildPropertyCodeRepo setBranch(String branch) {
+            this.branch = branch;
+            return this;
+        }
+        public String getBranch() {
+            return this.branch;
+        }
+
+        public CreateArtifactRequestArtifactBuildPropertyCodeRepo setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public CreateArtifactRequestArtifactBuildPropertyCodeRepo setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public CreateArtifactRequestArtifactBuildPropertyCodeRepo setRepoName(String repoName) {
+            this.repoName = repoName;
+            return this;
+        }
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+    }
+
     public static class CreateArtifactRequestArtifactBuildProperty extends TeaModel {
+        @NameInMap("BuildArgs")
+        public java.util.List<CreateArtifactRequestArtifactBuildPropertyBuildArgs> buildArgs;
+
+        @NameInMap("CodeRepo")
+        public CreateArtifactRequestArtifactBuildPropertyCodeRepo codeRepo;
+
         /**
          * <p>The command content.</p>
          * <blockquote>
@@ -206,6 +305,9 @@ public class CreateArtifactRequest extends TeaModel {
         @NameInMap("CommandType")
         public String commandType;
 
+        @NameInMap("DockerfilePath")
+        public String dockerfilePath;
+
         /**
          * <p>The region ID where the source mirror image is located.</p>
          * <blockquote>
@@ -217,6 +319,9 @@ public class CreateArtifactRequest extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("SourceContainerImage")
+        public String sourceContainerImage;
 
         /**
          * <p>The source image id. Supported Types:</p>
@@ -243,6 +348,22 @@ public class CreateArtifactRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateArtifactRequestArtifactBuildProperty setBuildArgs(java.util.List<CreateArtifactRequestArtifactBuildPropertyBuildArgs> buildArgs) {
+            this.buildArgs = buildArgs;
+            return this;
+        }
+        public java.util.List<CreateArtifactRequestArtifactBuildPropertyBuildArgs> getBuildArgs() {
+            return this.buildArgs;
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setCodeRepo(CreateArtifactRequestArtifactBuildPropertyCodeRepo codeRepo) {
+            this.codeRepo = codeRepo;
+            return this;
+        }
+        public CreateArtifactRequestArtifactBuildPropertyCodeRepo getCodeRepo() {
+            return this.codeRepo;
+        }
+
         public CreateArtifactRequestArtifactBuildProperty setCommandContent(String commandContent) {
             this.commandContent = commandContent;
             return this;
@@ -259,12 +380,28 @@ public class CreateArtifactRequest extends TeaModel {
             return this.commandType;
         }
 
+        public CreateArtifactRequestArtifactBuildProperty setDockerfilePath(String dockerfilePath) {
+            this.dockerfilePath = dockerfilePath;
+            return this;
+        }
+        public String getDockerfilePath() {
+            return this.dockerfilePath;
+        }
+
         public CreateArtifactRequestArtifactBuildProperty setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setSourceContainerImage(String sourceContainerImage) {
+            this.sourceContainerImage = sourceContainerImage;
+            return this;
+        }
+        public String getSourceContainerImage() {
+            return this.sourceContainerImage;
         }
 
         public CreateArtifactRequestArtifactBuildProperty setSourceImageId(String sourceImageId) {
