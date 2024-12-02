@@ -7,42 +7,92 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     @NameInMap("ArchitectureType")
     public String architectureType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRE</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ha")
     public Boolean ha;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaResourceSpec")
     public String haResourceSpecShrink;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaVSwitchIds")
     public String haVSwitchIdsShrink;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaZoneId")
     public String haZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtc-e2e-test-pre</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     @NameInMap("MonitorType")
     public String monitorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500043499350689</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 
@@ -52,6 +102,9 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     @NameInMap("ResourceSpec")
     public String resourceSpecShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Storage")
     public String storageShrink;
 
@@ -61,12 +114,27 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2ze9xoh8qyt1rnxfmfcdi</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-g</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

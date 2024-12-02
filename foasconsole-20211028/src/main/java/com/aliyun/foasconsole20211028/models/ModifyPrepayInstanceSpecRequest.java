@@ -4,24 +4,55 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecRequest extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ha")
     public Boolean ha;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaResourceSpec")
     public ModifyPrepayInstanceSpecRequestHaResourceSpec haResourceSpec;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaVSwitchIds")
     public java.util.List<String> haVSwitchIds;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaZoneId")
     public String haZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-cn-wwo36qj4g06</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceSpec")
     public ModifyPrepayInstanceSpecRequestResourceSpec resourceSpec;
 
@@ -117,9 +148,21 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyPrepayInstanceSpecRequestResourceSpec extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 

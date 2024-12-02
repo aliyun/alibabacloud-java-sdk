@@ -4,24 +4,55 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ha")
     public Boolean ha;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaResourceSpec")
     public String haResourceSpecShrink;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaVSwitchIds")
     public String haVSwitchIdsShrink;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaZoneId")
     public String haZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-cn-wwo36qj4g06</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceSpec")
     public String resourceSpecShrink;
 

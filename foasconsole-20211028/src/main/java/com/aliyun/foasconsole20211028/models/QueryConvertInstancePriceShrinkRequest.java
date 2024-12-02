@@ -4,21 +4,54 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-cn-wwo36qj4g06</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAutoRenew")
     public Boolean isAutoRenew;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespaceResourceSpecs")
     public String namespaceResourceSpecsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 

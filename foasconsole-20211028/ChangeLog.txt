@@ -1,3 +1,12 @@
+2024-12-02 Version: 1.0.7
+- Update API CreateInstance: update param Storage.
+- Update API CreateInstance: update response param.
+- Update API DescribeInstances: update response param.
+- Update API DescribeSupportedRegions: update response param.
+- Update API QueryModifyInstancePrice: add param PromotionCode.
+- Update API QueryModifyInstancePrice: add param UsePromotionCode.
+
+
 2024-04-18 Version: 1.0.6
 - Update API CreateInstance: add param Tag.
 - Update API QueryConvertInstancePrice: update response param.

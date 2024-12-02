@@ -7,42 +7,92 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ArchitectureType")
     public String architectureType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRE</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ha")
     public Boolean ha;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaResourceSpec")
     public CreateInstanceRequestHaResourceSpec haResourceSpec;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaVSwitchIds")
     public java.util.List<String> haVSwitchIds;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaZoneId")
     public String haZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtc-e2e-test-pre</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     @NameInMap("MonitorType")
     public String monitorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500043499350689</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 
@@ -52,6 +102,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ResourceSpec")
     public CreateInstanceRequestResourceSpec resourceSpec;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Storage")
     public CreateInstanceRequestStorage storage;
 
@@ -61,12 +114,27 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2ze9xoh8qyt1rnxfmfcdi</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-g</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -282,9 +350,17 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestResourceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -312,6 +388,10 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestStorageOss extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss-flink-cn-shanghai-260343971602724445</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
@@ -331,12 +411,23 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestStorage extends TeaModel {
+        @NameInMap("FullyManaged")
+        public Boolean fullyManaged;
+
         @NameInMap("Oss")
         public CreateInstanceRequestStorageOss oss;
 
         public static CreateInstanceRequestStorage build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestStorage self = new CreateInstanceRequestStorage();
             return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestStorage setFullyManaged(Boolean fullyManaged) {
+            this.fullyManaged = fullyManaged;
+            return this;
+        }
+        public Boolean getFullyManaged() {
+            return this.fullyManaged;
         }
 
         public CreateInstanceRequestStorage setOss(CreateInstanceRequestStorageOss oss) {
