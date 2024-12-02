@@ -1046,6 +1046,36 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetServiceInstanceResponseBodyServiceUpgradableServiceInfos extends TeaModel {
+        @NameInMap("Version")
+        public String version;
+
+        @NameInMap("VersionName")
+        public String versionName;
+
+        public static GetServiceInstanceResponseBodyServiceUpgradableServiceInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceInstanceResponseBodyServiceUpgradableServiceInfos self = new GetServiceInstanceResponseBodyServiceUpgradableServiceInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyServiceUpgradableServiceInfos setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public GetServiceInstanceResponseBodyServiceUpgradableServiceInfos setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
+        }
+
+    }
+
     public static class GetServiceInstanceResponseBodyService extends TeaModel {
         /**
          * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
@@ -1158,6 +1188,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         @NameInMap("SupplierUrl")
         public String supplierUrl;
+
+        @NameInMap("UpgradableServiceInfos")
+        public java.util.List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> upgradableServiceInfos;
 
         /**
          * <p>The service versions that can be updated.</p>
@@ -1274,6 +1307,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
         public String getSupplierUrl() {
             return this.supplierUrl;
+        }
+
+        public GetServiceInstanceResponseBodyService setUpgradableServiceInfos(java.util.List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> upgradableServiceInfos) {
+            this.upgradableServiceInfos = upgradableServiceInfos;
+            return this;
+        }
+        public java.util.List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> getUpgradableServiceInfos() {
+            return this.upgradableServiceInfos;
         }
 
         public GetServiceInstanceResponseBodyService setUpgradableServiceVersions(java.util.List<String> upgradableServiceVersions) {
