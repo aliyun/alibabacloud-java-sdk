@@ -231,6 +231,9 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         @NameInMap("OrgId")
         public String orgId;
 
+        @NameInMap("RecycleBinSize")
+        public String recycleBinSize;
+
         /**
          * <p>The team space status. Valid values:</p>
          * <ul>
@@ -330,6 +333,14 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
         public String getOrgId() {
             return this.orgId;
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setRecycleBinSize(String recycleBinSize) {
+            this.recycleBinSize = recycleBinSize;
+            return this;
+        }
+        public String getRecycleBinSize() {
+            return this.recycleBinSize;
         }
 
         public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setStatus(String status) {
