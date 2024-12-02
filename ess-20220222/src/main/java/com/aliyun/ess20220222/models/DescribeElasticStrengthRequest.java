@@ -4,11 +4,26 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthRequest extends TeaModel {
+    @NameInMap("DataDiskCategories")
+    public java.util.List<String> dataDiskCategories;
+
+    @NameInMap("ImageFamily")
+    public String imageFamily;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("ImageName")
+    public String imageName;
+
     /**
      * <p>The instance types. The instance types specified by this parameter overwrite the instance types specified in the scaling configuration.</p>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
+
+    @NameInMap("Ipv6AddressCount")
+    public Integer ipv6AddressCount;
 
     /**
      * <p>The preemption policy that you want to apply to pay-as-you-go instances. The preemption policy specified by this parameter overwrites the preemption policy specified in the scaling configuration. Valid values:</p>
@@ -50,6 +65,9 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
 
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
     /**
      * <p>The categories of the system disks. The categories of the system disks specified by this parameter overwrite the categories of the system disks specified in the scaling configuration. Valid values:</p>
      * <ul>
@@ -62,9 +80,44 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     @NameInMap("SystemDiskCategories")
     public java.util.List<String> systemDiskCategories;
 
+    @NameInMap("VSwitchIds")
+    public java.util.List<String> vSwitchIds;
+
     public static DescribeElasticStrengthRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticStrengthRequest self = new DescribeElasticStrengthRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticStrengthRequest setDataDiskCategories(java.util.List<String> dataDiskCategories) {
+        this.dataDiskCategories = dataDiskCategories;
+        return this;
+    }
+    public java.util.List<String> getDataDiskCategories() {
+        return this.dataDiskCategories;
+    }
+
+    public DescribeElasticStrengthRequest setImageFamily(String imageFamily) {
+        this.imageFamily = imageFamily;
+        return this;
+    }
+    public String getImageFamily() {
+        return this.imageFamily;
+    }
+
+    public DescribeElasticStrengthRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeElasticStrengthRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
     }
 
     public DescribeElasticStrengthRequest setInstanceTypes(java.util.List<String> instanceTypes) {
@@ -73,6 +126,14 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    public DescribeElasticStrengthRequest setIpv6AddressCount(Integer ipv6AddressCount) {
+        this.ipv6AddressCount = ipv6AddressCount;
+        return this;
+    }
+    public Integer getIpv6AddressCount() {
+        return this.ipv6AddressCount;
     }
 
     public DescribeElasticStrengthRequest setPriorityStrategy(String priorityStrategy) {
@@ -107,12 +168,28 @@ public class DescribeElasticStrengthRequest extends TeaModel {
         return this.scalingGroupIds;
     }
 
+    public DescribeElasticStrengthRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
     public DescribeElasticStrengthRequest setSystemDiskCategories(java.util.List<String> systemDiskCategories) {
         this.systemDiskCategories = systemDiskCategories;
         return this;
     }
     public java.util.List<String> getSystemDiskCategories() {
         return this.systemDiskCategories;
+    }
+
+    public DescribeElasticStrengthRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
     }
 
 }
