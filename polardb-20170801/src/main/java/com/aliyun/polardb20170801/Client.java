@@ -862,7 +862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Database Cluster</p>
+     * <p>CreateDBCluster.</p>
      * 
      * @param request CreateDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1075,6 +1075,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tag", request.tag);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetMinorVersion)) {
+            query.put("TargetMinorVersion", request.targetMinorVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }
@@ -1110,7 +1114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Database Cluster</p>
+     * <p>CreateDBCluster.</p>
      * 
      * @param request CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -3074,7 +3078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询激活码详情</p>
+     * <p>Queries the details of an activation code.</p>
      * 
      * @param request DescribeActivationCodeDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3126,7 +3130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询激活码详情</p>
+     * <p>Queries the details of an activation code.</p>
      * 
      * @param request DescribeActivationCodeDetailsRequest
      * @return DescribeActivationCodeDetailsResponse
@@ -5804,7 +5808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看License订单详情</p>
+     * <p>Queries the information of a license order.</p>
      * 
      * @param request DescribeLicenseOrderDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5852,7 +5856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看License订单详情</p>
+     * <p>Queries the information of a license order.</p>
      * 
      * @param request DescribeLicenseOrderDetailsRequest
      * @return DescribeLicenseOrderDetailsResponse
@@ -9830,7 +9834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the hot standby node in a cluster.</p>
+     * <p>Enables or disables the failover with hot replica feature for a node in a cluster.</p>
      * 
      * @param request ModifyDBNodeHotReplicaModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9886,7 +9890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the hot standby node in a cluster.</p>
+     * <p>Enables or disables the failover with hot replica feature for a node in a cluster.</p>
      * 
      * @param request ModifyDBNodeHotReplicaModeRequest
      * @return ModifyDBNodeHotReplicaModeResponse

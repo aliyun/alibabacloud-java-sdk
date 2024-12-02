@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     /**
+     * <p>The number of generated activation codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Integer activatedCodeCount;
 
     /**
+     * <p>The maximum number of activation codes that you can apply for.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -19,6 +23,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Integer activationCodeQuota;
 
     /**
+     * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
+     * 
      * <strong>example:</strong>
      * <p>239618016570503</p>
      */
@@ -26,6 +32,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String aliyunOrderId;
 
     /**
+     * <p>Indicates whether activation codes can be generated without the system identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Boolean allowEmptySystemIdentifier;
 
     /**
+     * <p>The type of the engine. Valid values: PG, Oracle, and MySQL.</p>
+     * 
      * <strong>example:</strong>
      * <p>PG</p>
      */
@@ -40,6 +50,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String engine;
 
     /**
+     * <p>The time when the order was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-19 01:13:45</p>
      */
@@ -47,6 +59,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String gmtCreated;
 
     /**
+     * <p>The time when the order was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-16 16:46:20</p>
      */
@@ -54,6 +68,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>Indicates whether the order is a virtual order (virtual orders allow pre-generation of activation codes).</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -61,6 +77,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Boolean isVirtualOrder;
 
     /**
+     * <p>Indicates whether the virtual order is frozen (activation codes cannot be generated for a frozen virtual order).</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -68,6 +86,15 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Boolean isVirtualOrderFrozen;
 
     /**
+     * <p>The plan type. Valid values:</p>
+     * <ul>
+     * <li>single_node_subscribe</li>
+     * <li>single_node_long_term</li>
+     * <li>primary_backup_subscribe</li>
+     * <li>primary_backup_long_term</li>
+     * <li>pre_generation_long_term</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>pre_generation_long_term</p>
      */
@@ -75,6 +102,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String packageType;
 
     /**
+     * <p>The validity period of the plan, which is one year (common) or thirty years (long-term).</p>
+     * 
      * <strong>example:</strong>
      * <p>1 year</p>
      */
@@ -82,6 +111,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String packageValidity;
 
     /**
+     * <p>The plan validity period, one year (common) or thirty years (long-term).</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun_market</p>
      */
@@ -89,6 +120,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String purchaseChannel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C0ACF0-DD29-4B67-9190-B7A48C******</p>
      */
@@ -96,6 +129,8 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The virtual order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>239618016570503</p>
      */

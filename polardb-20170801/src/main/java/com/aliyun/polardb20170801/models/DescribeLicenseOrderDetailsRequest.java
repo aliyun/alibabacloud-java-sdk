@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLicenseOrderDetailsRequest extends TeaModel {
     /**
+     * <p>The Alibaba Cloud order ID (or virtual order ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

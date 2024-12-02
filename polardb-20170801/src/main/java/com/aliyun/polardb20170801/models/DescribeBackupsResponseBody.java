@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>The details of backup sets.</p>
+     * <p>The queried backup sets.</p>
      */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
@@ -37,6 +37,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4639948800</p>
+     */
     @NameInMap("TotalLevel2BackupSize")
     public String totalLevel2BackupSize;
 
@@ -218,10 +222,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The expected expiration time of the backup set.</p>
-         * <blockquote>
-         * <p>This parameter is supported only for instances that are enabled with sparse backup.</p>
-         * </blockquote>
+         * <p>The expected expiration time of the backup set (This parameter is supported only for clusters for which sparse backup is enabled).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-24T08:13:23Z</p>

@@ -57,7 +57,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The Query Type</p>
+     * <p>The query type.</p>
      * 
      * <strong>example:</strong>
      * <p>orca</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClassListResponseBody extends TeaModel {
     /**
-     * <p>The specifications of the cluster.</p>
+     * <p>The cluster specifications.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeClassListResponseBodyItems> items;

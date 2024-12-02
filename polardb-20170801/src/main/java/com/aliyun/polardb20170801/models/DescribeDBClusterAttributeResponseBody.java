@@ -289,6 +289,16 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("HotStandbyCluster")
     public String hotStandbyCluster;
 
+    /**
+     * <p>Indicates whether the automatic IMCI-based query acceleration feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><code>ON</code>: enabled</li>
+     * <li><code>OFF</code>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OFF</p>
+     */
     @NameInMap("ImciAutoIndex")
     public String imciAutoIndex;
 
@@ -578,7 +588,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>Storage billing type. Valid values are as follows:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>：Pay-as-you-go (by capacity). - <strong>Prepaid</strong>：Subscription (by space).</li>
+     * <li><strong>Postpaid</strong>: Pay-as-you-go (by capacity).</li>
+     * <li><strong>Prepaid</strong>: Subscription (by space).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -644,7 +655,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String subCategory;
 
     /**
-     * <p>Indicates whether the failover with hot replica feature is supported if the cluster has In-Memory Column Index (IMCI) nodes.</p>
+     * <p>Indicates whether queries based on In-Memory Column Indexes (IMCIs) are supported during and after a failover with hot replica.</p>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
