@@ -229,15 +229,17 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBNodeClass;
 
     /**
-     * <p>Number of standard edition nodes. Values are as follows:</p>
+     * <p>The number of nodes. This parameter is supported for Standard Edition clusters. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong> (default): Indicates there is only one read-write node.</li>
-     * <li><strong>2</strong>: Indicates there is one read-only node and one read-write node.<blockquote>
-     * <ul>
-     * <li>Enterprise edition defaults to 2 nodes, while the standard edition defaults to 1 node.</li>
-     * <li>Only supported by PolarDB MySQL edition.</li>
+     * <li><strong>1</strong> (default): only one primary node.</li>
+     * <li><strong>2</strong>: one read-only node and one primary node.</li>
      * </ul>
+     * <blockquote>
      * </blockquote>
+     * <ul>
+     * <li><p>By default, an Enterprise Edition cluster has two nodes and a Standard Edition cluster has one node.</p>
+     * </li>
+     * <li><p>This parameter is supported only for PolarDB for MySQL clusters.</p>
      * </li>
      * </ul>
      * 
@@ -737,6 +739,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateDBClusterRequestTag> tag;
 
+    @NameInMap("TargetMinorVersion")
+    public String targetMinorVersion;
+
     /**
      * <p>If the payment type is <strong>Prepaid</strong>, this parameter is required.</p>
      * <ul>
@@ -1194,6 +1199,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public java.util.List<CreateDBClusterRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateDBClusterRequest setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
     }
 
     public CreateDBClusterRequest setUsedTime(String usedTime) {

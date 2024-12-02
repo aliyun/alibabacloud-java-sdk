@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAITaskStatusResponseBody extends TeaModel {
     /**
      * <p>The name of the database account that is used to connect to the AI nodes in the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
