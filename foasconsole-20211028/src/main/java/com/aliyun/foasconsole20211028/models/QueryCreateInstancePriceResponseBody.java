@@ -7,6 +7,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     @NameInMap("PriceInfo")
     public QueryCreateInstancePriceResponseBodyPriceInfo priceInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -117,15 +121,31 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>￥1,391.5 优惠券 (有效期至 03/23/2022)</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>￥1,391.5 优惠券</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500011220010099</p>
+         */
         @NameInMap("PromotionOptionNo")
         public String promotionOptionNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
@@ -169,9 +189,17 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceResponseBodyPriceInfoRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>买满1年，立享官网价格8.5折优惠。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>587</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -199,27 +227,47 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ORDER.INST_HAS_UNPAID_ORDER</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
         @NameInMap("DepreciateInfo")
         public QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo depreciateInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>655.2</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>存在未支付订单，请先支付或取消原有订单</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4368</p>
+         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
@@ -232,6 +280,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         @NameInMap("StandPrice")
         public String standPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3712.8</p>
+         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 

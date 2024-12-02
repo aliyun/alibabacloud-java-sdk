@@ -4,24 +4,48 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportedRegionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("Regions")
     public java.util.List<DescribeSupportedRegionsResponseBodyRegions> regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B21DC47E-8928-199A-9F32-36D45E4693B4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -87,15 +111,45 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSupportedRegionsResponseBodyRegions extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Extra")
+        public String extra;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>华北2 (北京)</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
         public static DescribeSupportedRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeSupportedRegionsResponseBodyRegions self = new DescribeSupportedRegionsResponseBodyRegions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSupportedRegionsResponseBodyRegions setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeSupportedRegionsResponseBodyRegions setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
         }
 
         public DescribeSupportedRegionsResponseBodyRegions setRegion(String region) {

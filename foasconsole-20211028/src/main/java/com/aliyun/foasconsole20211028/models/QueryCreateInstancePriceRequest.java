@@ -7,12 +7,26 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     @NameInMap("ArchitectureType")
     public String architectureType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRE</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
@@ -22,18 +36,40 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     @NameInMap("Ha")
     public Boolean ha;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaResourceSpec")
     public QueryCreateInstancePriceRequestHaResourceSpec haResourceSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rtc-e2e-test-post</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500041860100636</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 
@@ -49,9 +85,17 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-2ze9xoh8qyt1rnxfmfcdi</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -197,9 +241,17 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceRequestHaResourceSpec extends TeaModel {
+        /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -227,9 +279,17 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceRequestResourceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -257,6 +317,10 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceRequestStorageOss extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>quicktracing</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 

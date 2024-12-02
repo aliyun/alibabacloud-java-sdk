@@ -7,23 +7,56 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     @NameInMap("Ha")
     public Boolean ha;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaResourceSpec")
     public QueryModifyInstancePriceRequestHaResourceSpec haResourceSpec;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaVSwitchIds")
     public java.util.List<String> haVSwitchIds;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaZoneId")
     public String haZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-cn-wwo36qj4g06</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceSpec")
     public QueryModifyInstancePriceRequestResourceSpec resourceSpec;
+
+    @NameInMap("UsePromotionCode")
+    public Boolean usePromotionCode;
 
     public static QueryModifyInstancePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryModifyInstancePriceRequest self = new QueryModifyInstancePriceRequest();
@@ -70,6 +103,14 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public QueryModifyInstancePriceRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
     public QueryModifyInstancePriceRequest setRegion(String region) {
         this.region = region;
         return this;
@@ -84,6 +125,14 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     }
     public QueryModifyInstancePriceRequestResourceSpec getResourceSpec() {
         return this.resourceSpec;
+    }
+
+    public QueryModifyInstancePriceRequest setUsePromotionCode(Boolean usePromotionCode) {
+        this.usePromotionCode = usePromotionCode;
+        return this;
+    }
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
     }
 
     public static class QueryModifyInstancePriceRequestHaResourceSpec extends TeaModel {
@@ -117,9 +166,21 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryModifyInstancePriceRequestResourceSpec extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
